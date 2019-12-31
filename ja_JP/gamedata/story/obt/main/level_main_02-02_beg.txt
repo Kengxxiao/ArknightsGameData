@@ -1,0 +1,213 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第十四关（前）
+
+// Comments
+
+[name="チェン"]   どうぞこちらへ。
+[Delay(time=0.3)]
+[PlaySound(key="$d_gen_dooropen", volume=0.7)]
+[character]
+[Dialog]
+
+[Background(image="bg_lungmen_o", width=1, height=1, fadetime=2)]
+
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+
+[Character(name="char_003_kalts_1",name2="char_2005_weiyw_1")]
+
+[Character(name="char_002_amiya_1")]
+
+[name="アーミヤ"]   ……ケルシー先生！
+
+[Character(name="char_003_kalts_1")]
+[Delay(time=0.6)]
+[name="ケルシー"]   ――アーミヤ……。
+
+[Character(name="char_003_kalts_1#3")]
+[name="ケルシー"]   ……{@nickname}。
+[name="ケルシー"]   なんだ君も来たのか。
+[PlaySound(key="$d_gen_doorclose", volume=0.5)]
+
+[Delay(time=1)]
+[Character(name="char_003_kalts_1#3", focus=-1)]
+
+[Decision(options="……。", values="1")]
+
+[Predicate(references="1")]
+
+[Character(name="char_010_chen_1")]
+
+[name="チェン"]   さて……。
+[name="チェン"]   ウェイ長官、ロドスの他の2名の代表も到着いたしました。
+[Character]
+[Dialog]
+[Character(name="char_2005_weiyw_1")]
+[Delay(time=1)]
+
+[name="ウェイ"]   そうか、ご苦労。ちょうど良い。
+[name="ウェイ"]   まぁ、掛けてくれ。一緒にケルシー君の解説を聞こうじゃないか。
+
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+
+[name="ケルシー"]   では続けます。現状の局面は、ミスター・ウェイもよくご存じかと思います。
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image(image="bg_0_tv",x=0, y=-20, xScale=1.1, yScale=1.1, fadetime=0)]
+[ImageTween(xFrom=0, yFrom=-20, xTo=0, yTo=0, xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=7, block=false)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[PlaySound(key="$slideshow", volume=0.2,channel="2", loop=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+
+[name="ケルシー"]   龍門は既に独自の情報網をお持ちだ。それを駆使ししてレユニオンに関する情報は毎日大量に収集されているかと思います。であれば、今回の件も座視できぬものと推察します。
+[name="ケルシー"]   しかし情報を収集しているだけでは、表面上の事象をさらっているだけに過ぎません。
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[image]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=2)]
+
+[name="チェン"]   ……。
+
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=1)]
+
+[name="ケルシー"]   また検疫所での簡単な検疫だけでは、レユニオンに対する根本的な対策になりません。それは龍門近衛局の皆さま自身が肌で感じているのではないでしょうか？
+[name="ケルシー"]   行動を起こそうとするレユニオンならば、大人しく検疫になぞ協力はしないでしょうし、龍門当局の対応に合わせて行動を起こすということもありません。つまり――
+[name="ケルシー"]   もし我々ロドスの協力なくして、龍門が現状の感染者対策のみを維持し続けるようであれば、これから起きるであろうレユニオンの攻撃により龍門は甚大な被害を被ることになります。
+
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=2)]
+
+[name="チェン"]   悪いが、一言いいか。
+[name="チェン"]   こと龍門の防衛に関しては、当然ながら我々近衛局がロドスの何倍も理解している。想定されるレユニオンの侵攻に関しても我々は既に準備を終えている。
+[name="チェン"]   ただ、そのプランは部外秘のものだ。そして君たちロドスに共有する義務もないからな。貴方の心配は無用のものだ。
+
+
+
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
+
+[name="ウェイ"]    ……。
+[name="ウェイ"]    構わない、ケルシー君、続けてくれ。
+
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+
+[name="ケルシー"]   龍門は丸腰の感染者ならば日常的に対処しているかと思いますが、集団でしかも暴徒と化した感染者と対峙したことはあるのでしょうか？　彼らの破壊力が龍門にどれだけの被害をもたらすのか、想定できているのでしょうか？
+[name="ケルシー"]   我々ロドスのこれまでの経験から言えば――感染者だけが、より効率的に感染者に対抗できる。
+
+[Character(name="char_2005_weiyw_1")]
+
+[name="ウェイ"]   では、ロドスはレユニオンと対峙したことで、彼らに対する有効な対策と経験を手に入れたと？
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+
+[Image(image="bg_0_rhodes2",x=0, y=0, xScale=1.2, yScale=1.2, fadetime=0)]
+[ImageTween(xFrom=0, yFrom=-0, xTo=0, yTo=0, xScaleFrom=1.2, yScaleFrom=1.2, xScaleTo=1, yScaleTo=1, duration=27, block=false)]
+
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+
+[name="ケルシー"]   まだその経験があるというだけです。残念ながら有効な対策を提示できるレベルには達しておりません。
+
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
+[CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=300, width=200, block=true)]
+[name="ウェイ"]   ほう――？
+[name="ウェイ"]   ロドスはチェルノボーグ事件に巻き込まれた際、数多くのレユニオンの情報を手に入れたと聞くが？
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+
+
+
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[name="ケルシー"]   ミスター・ウェイがどこでそれをお聞きになったかは知りませんが――
+[name="ケルシー"]   現時点で龍門と共有できる有効な対策に関する情報はありません。ただ、我々は経験則からの助言を行うためにこうしてミスター・ウエイとお会いしています。
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+
+
+[name="ウェイ"]   君たちが我々の有益なパートナーとなるかを決めるのは我々龍門だ。その程度の情報も我々に共有できないのであれば――
+[name="ウェイ"]   フッ。
+[name="ウェイ"]   龍門は君たちロドスの実力を認めることはできん。
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[character]
+[image]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
+[name="ケルシー"]   ミスター・ウエイ、これは誤解なきよう説明しておきますが――
+[name="ケルシー"]   ――ロドスが得ることができた経験と情報は、我々の実力に因るものだということを。
+//[name="凯尔希"]   目前没有什么人有过在天灾的环境之中与整合运动作战的经验。
+
+//[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
+
+//[name="魏彦吾"]   嗯——我认可这个说法。
+
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=2)]
+
+[name="チェン"]   しかし、何はどうあれ、レユニオンと同じ感染者による組織であるロドスを、安易に信用することなどできんな。
+
+[Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=1)]
+
+///[name="凯尔希"]   魏先生既不强求罗德岛摆明立场，也不怀疑罗德岛对任务的忠诚。
+[name="ケルシー"]   もしミス・チェンが龍門の安寧よりも、感染者への盲目的な処罰の方が重要だと考えるのであれば――
+[name="ケルシー"]   感染者である私は黙って貴方がたの法令に従い、捕縛されることにいたしましょう。そして牢獄の中から龍門がレユニオンの手により焼け落ちる様を見て、悲しみに暮れるといたします。
+[name="ケルシー"]   もう龍門に他の選択肢は残されていません。
+
+[Character(name="char_003_kalts_1", name2="char_010_chen_1#5", focus=2)]
+
+[Blocker(a=0.6, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=0.1, block=true)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
+[name="チェン"]   ――龍門は不遜な態度をとる者だからといって、その善意を拒む都市ではないが――
+[name="チェン"]   無意味な助言を無条件に受け入れる慈善団体というわけでもない。
+
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=1)]
+
+[name="ウェイ"]   待てチェン――
+
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=2)]
+
+[name="チェン"]   ウェイ長官、このような外部の感染者を龍門に引き入れ、機密性の高い任務を共にするのは不適切かと思われます。
+
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=1)]
+
+[name="ウェイ"]   冷静になれ、チェン隊長。彼らはあくまで客人だ。
+[name="ウェイ"]   ――この私の客人として対応せよ。
+
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=2)]
+
+[name="チェン"]   ……
+[name="チェン"]   ハッ、了解いたしました。
+
+[Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=2)]
+
+[name="チェン"]   彼らが龍門の法律に触れない限りは自重いたしす。長官。
+
+//[Character(name="char_2005_weiyw_1", name2="char_003_kalts_1", focus=1)]
+
+//[name="魏彦吾"]   请放心，罗德岛的诸位，我尊重任何潜在的合作伙伴。
+//[name="魏彦吾"]   但凯尔希小姐，我上了年纪，容易忘记谈话中那些零碎的内容......
+//[name="魏彦吾"]   你还想再说说吗？
+
+//[Character(name="char_2005_weiyw_1", name2="char_003_kalts_1", focus=2)]
+
+//[name="凯尔希"]   ——魏先生的意思是，我所阐述的事实，都不重要？
+
+[Character(name="char_2005_weiyw_1", name2="char_003_kalts_1", focus=1)]
+
+[name="ウェイ"]   客人がた、いや、すまない…。そうだ思い出した、こういう言葉があってな――
+[name="ウェイ"]   ――あぁ、そうだこう言うのだ……。
+[name="ウェイ"]   「朋友となるべき者を選ぶとき、重んじるのはただ一点のみ――
+[name="ウェイ"]   ――そは我と並び立つ実力なり」
+[name="ウェイ"]   聞くところによると、ロドスは龍門付近の感染者掃討任務に参加したそうだな？
+[name="ウェイ"]   チェン隊長、君の見立てだとロドスの軍事的な実力どのぐらいだと評価する？
+
+[Character(name="char_010_chen_1")]
+
+[name="チェン"]   ……では、私から見たロドスの現状について簡単にご説明いたします。
+[name="チェン"]   ――まずは――
+
+[stopSound(channel="2", fadetime=1)]
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

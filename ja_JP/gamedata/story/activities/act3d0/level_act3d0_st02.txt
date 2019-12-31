@@ -1,0 +1,129 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（前）
+
+// Comments
+
+
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8,crossfade=1)]
+[Delay(time=1)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(image="ac3_volcano",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=1, block=true)]
+[name="艾雅法拉"]   最后，根据同位素的对比情况以及多种样本的最终分析，基本可以确认你们的猜想是对的。
+[name="艾雅法拉"]   火山活动频率确实处于一个异常的爬升状态，虽然不至于马上爆发天灾，但是并不能对其视而不见。
+[name="艾雅法拉"]   火山活动应该会在二至四周之内到达临界点，之后就会引起火山天灾的爆发。
+[name="艾雅法拉"]   可能的话，最好马上安排市民进行避难准备。                    
+[name="艾雅法拉"]   ......以上，就是根据你们给出的情报得出的结论。
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(fadetime=0)]
+[Background(image="bg_hotel", fadetime=0)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   不愧是艾雅法拉，隔着联络竟然也能整整说了40分钟。
+[name="普罗旺斯"]   博士，你听懂了吗？
+[Decision(options="什么都没说一样。;嗯，结论我懂。",values="1;2")]
+[Predicate(references="1")]
+[name="普罗旺斯"]   我也觉得，反应过来的时候好像就结束了。
+[Predicate(references="2")]
+[name="普罗旺斯"]   哇，博士真厉害，我完完全全没有听明白......
+[Predicate(references="1;2")]
+[name="普罗旺斯"]   看那边那两个人的样子，我还以为只有我听不懂呢。
+[Character(name="char_348_ceylon_4#7",name2="char_166_skfire_3#2",focus=2)]
+[name="天火"]   不愧是艾雅法拉，连我都重新上了一课呢。
+[Character(name="char_348_ceylon_4#7",name2="char_166_skfire_3#2",focus=1)]
+[name="锡兰"]   原来如此，不愧是专家，收集的这些数据原来还能从这个方向解读。
+[name="锡兰"]   没想到在这里能够学到这样的知识，天哪，我应该全部用笔记下来！
+[Character]
+[name="艾雅法拉"]   虽然目前情报还比较有限，不过我的判断和你们是一样的，这座火山很有可能已经从休眠状态进入了活化状态。
+[name="艾雅法拉"]   可惜我不在现场，没办法对于火山的活动原因进行进一步的探索。
+[name="艾雅法拉"]   ......对不起，如果有更多的现场情报我们甚至能找到火山活动的契机，更精确地确定活动的周期。
+[name="艾雅法拉"]   如果那样的话也能方便市民们做好转移安排。
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   大家都明白你对火山的执着，艾雅法拉。
+[name="普罗旺斯"]   你已经帮了我们大忙了。辛苦你了。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Blocker(a=0, fadetime=1, block=false)]
+[PlayMusic(intro="$farce_intro", key="$farce_loop", volume=0.8, crossfade=1.5)]
+[Character(name="char_348_ceylon_4#4")]
+[name="锡兰"]   有你们这样专业的团队帮助我进行确认实在是太好了。
+[name="锡兰"]   可能是因为仪器的问题，汐斯塔的观测点一直都读不出任何数据异常来。
+[name="锡兰"]   看来为此我的东奔西走还是值得的。
+[name="锡兰"]   我们得赶快把这些消息带给市政府才行，不然后果肯定不堪设想。
+[Character(name="char_145_prove_1",name2="char_166_skfire_3#1",focus=2)]
+[name="天火"]   你的意思不会是说，汐斯塔市在这个时候举办了如此大规模的节日活动，却一点天灾的准备都没有吧。
+[Character(name="char_348_ceylon_4#2")]
+[name="锡兰"]   现在别说准备了，市民和游客甚至连天灾有可能产生都不知道。
+[name="锡兰"]   我父亲在三个月前前往新开发区进行工作了，要在几天后才能回来，现在城里大大小小的事情都交给了他的秘书克洛宁处理。
+[name="锡兰"]   而克洛宁也是这座城市的天灾信使，我们只需要现在回去市政府，带回数据和其他样本，就可以让他了解情况了。
+[name="锡兰"]   虽然我是市长的女儿，但是关于城市政府的事情我并没有太多参与。
+[Character(name="char_348_ceylon_4#4")]
+[name="锡兰"]   不过现在既然已经得到了确实的证明，就可以让家里的人帮助我了。
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   博士，我有一个想法，我去火山进一步确认情况，我想试着找一找艾雅法拉提到的契机。
+[name="普罗旺斯"]   锡兰这边能拜托你和其他人吗？
+[Decision(options="进入火山？那也太危险了？！",values="1")]
+[Predicate(references="1")]
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   天灾信使的工作总是危险的，放心吧，在这方面我还是很有经验的。
+[name="普罗旺斯"]   虽然远程通讯只能在旅馆进行，不过我会随时和博士保持联络的。
+[Character(name="char_145_prove_1",name2="char_166_skfire_3#1",focus=2)]
+[name="天火"]   我也和你一起去。
+[CharacterCutin(widgetID="1")]
+[Character(name="char_145_prove_1",name2="char_166_skfire_3#1",focus=1)]
+[name="普罗旺斯"]   欸。
+[Character(name="char_145_prove_1",name2="char_166_skfire_3#1",focus=2)]
+[name="天火"]   你有什么意见？我可不放心，万一你破坏了重要的研究数据怎么办。
+[name="天火"]   我当然是要跟你一起去。
+[Character(name="char_145_prove_1",name2="char_166_skfire_3#1",focus=1)]
+[name="普罗旺斯"]   呃，没有意见没有意见。
+[name="普罗旺斯"]   说起来，我们需要通知一下阿米娅吗？
+[Character(name="char_145_prove_1",name2="char_166_skfire_3#2",focus=2)]
+[name="天火"]   不用啦。小事一桩而已，有博士知道就够了。
+[Dialog]
+[Character]
+[Delay(time=0.5)]
+[Character(name="char_348_ceylon_4#2")]
+[name="锡兰"]   既然如此那我们就说定了，博士。也请你准备一下资料，我们下午两点就出发去市政厅。
+[Decision(options="没问题。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_348_ceylon_4#4")]
+[name="锡兰"]   呼，事情定下来后，总算可以稍微放松一下了。
+[name="锡兰"]   博士，我这里有一些从维多利亚带来的茶叶，来喝一杯茶吧。
+[Decision(options="好吧。;不必了。",values="2;3")]
+[Predicate(references="2")]
+[name="锡兰"]   我想你一定会喜欢的。
+
+[Predicate(references="3")]
+[name="锡兰"]   是不会泡茶吗？那我亲手帮你泡一杯吧。
+[Decision(options="好吧。;......不必了。",values="4;5")]
+[Predicate(references="4")]
+[name="锡兰"]   嗯哼，我想你一定会喜欢的。
+[Predicate(references="5")]
+[name="锡兰"]   真是个麻烦的人。
+[name="锡兰"]   这可是在维多利亚中数一数二的茶叶哦？
+
+[Decision(options="败给你了。;............不必了。",values="6;7")]
+[Predicate(references="6")]
+[name="锡兰"]   这就对了，我想你一定会喜欢的。
+[Predicate(references="7")]
+[name="锡兰"]   我的泡茶手艺可是很好的，不尝一下会抱憾终身哦？
+
+[Decision(options="...................好吧。",values="8")]
+[Predicate(references="8")]
+[name="锡兰"]   真是个顽固的人，非要我这么说才能接受。
+[name="锡兰"]   那么，请稍等片刻。
+
+[Predicate(references="2;4;6;8")]
+
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

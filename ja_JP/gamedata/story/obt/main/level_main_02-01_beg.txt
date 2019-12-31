@@ -1,0 +1,95 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第十三关（前）
+
+// Comments
+[stopmusic]
+
+[name=""]   a.m.5:57 / 曇天 / 視界：17km
+[name=""]   龍門外環区画から外部へ4km地点 荒野地帯
+[name=""]   チェルノボーグ救援作戦　4日後
+[dialog]
+[delay(time=1)]   
+
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[image(image="bg_2_call", fadetime=2)]
+
+[name="PRTS"]   Dr.{@nickname}、おはようございます。今回の休憩時間は99999999――――
+[name="PRTS"]   ――――時間です。
+[name="PRTS"]   いま目覚めるのは苦痛かと思いますが、すぐに作戦会議室に来るようにと指令が出ております。
+[name="PRTS"]   ドクター・ケルシーより「窓を開けて空気を入れ替え、適度にデッキに出て太陽の光に当たってビタミンDを不足させないように」と医学的見地からのアドバイスが入っております。
+[dialog]
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0, block=true)]
+[Image(fadetime=0)]
+
+[PlaySound(key="$d_gen_walk_n",volume=0.6)]
+[delay(time=1.5)]
+
+[Background(image="bg_bridge", width=1, height=1, fadetime=1, screenadapt="coverall")]
+
+[PlaySound(key="$d_gen_soldiersrun",volume=0.4)]
+[delay(time=1.4)]
+
+[delay(time=2)]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Delay(time=1.4)]
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]   あ、ドクター！　おはようございます。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  Dr.{@nickname}、来たか。
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]   身体の具合はどうですか？
+[Character(name="char_002_amiya_1#4")]
+[name="アーミヤ"]   どこか痛いですか？　昨日はまだ動き辛そうでしたから…。
+
+[Decision(options="もう大丈夫だ。アーミヤは？", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]   ええ、私もすっかり良くなりました。
+[Character(name="char_002_amiya_1#4")]
+[name="アーミヤ"]   それにこれから、まだ別の任務もありますから……。
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]   一日も早く体調を回復させて準備をしないと…。もちろんドクターもですよ。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  ではドクター、現状を説明しよう。
+[name="ドーベルマン"]  今回のチェルノボーグの作戦では損害こそ大きかったものの、ドクター、君の救出に成功し、レユニオンに関する情報も大量に手に入った。これは戦略的には作戦成功と言っていい。
+[name="ドーベルマン"]  そして、次の我々の行動だが、現在のロドスから最も近い移動都市、――――「龍門」と昨日交渉した結果、我々との情報交換に同意し、契約文章を取り交わすことができた。
+[name="ドーベルマン"]  そしてレユニオンのこれまでの動きから、奴らの次の目標は「龍門」であることも判明した。
+[name="ドーベルマン"]  詳細な部分はケルシー医師が先行して龍門に入り、調整しているためその判断を待たないといけないが…。
+
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]   龍門は、私たちが一時的に都市付近に逗留することを許可し、消耗した物資の補給も行ってくれるそうです。
+[name="アーミヤ"]   その代わりとして、ロドスは龍門外環の防衛任務を行うことになりました。
+[Character(name="char_002_amiya_1#4")]
+[name="アーミヤ"]   でも、今日こんなに早く来ていただいたのは、これを説明するだけではなくて……。
+
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  アーミヤ、私から説明しよう。
+[name="ドーベルマン"]  昨晩から今朝にかけて、チェルノボーグで暴れたレユニオンの生き残りが荒野で確認されている。奴らは龍門に向けて移動しており、もう午後には龍門に到達するとみられる。
+[name="ドーベルマン"]  それを撃退するため、我々は合意に基づき龍門第5区外環の防衛任務を行う必要がある。今回は更に多くのレユニオンが姿を見せるかもしれん。
+[name="ドーベルマン"]  前回とは戦況も異なるため、出発前に新しい戦術を覚えてもらう必要がある。ということで、まず今日は演習から始めて貰おう。
+
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]  あの…ドクター、今日もよろしくおねがいしますね……。
+[name="アーミヤ"]  頑張ってください！
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  では、状況を開始する。
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+
+[Background(image="bg_0_rhodes3", fadetime=0, screenadapt="coverall", screenadapt="coverall")]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=1, block=true)]
+[name="ドーベルマン"]  各自出発の準備を行ってくれ。ドクターは各オペレーターへの配置指示を済ませ、彼らにも準備をさせておいてくれ。
+[name="ドーベルマン"]  演習を終えたら、15分後には龍門へ向けて出発するぞ。
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[dialog]
+[image(fadetime=0)]
+
+[Delay(time=0.4)]
+[name="ドーベルマン"]  くれぐれも遅刻しないようにな。
+
+
+

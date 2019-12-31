@@ -1,0 +1,113 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三十二关（前）
+
+// Comments
+
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+
+[Character(name="char_002_amiya_1")]
+
+[name="アーミヤ"]   ここに……横たわっているのは、皆レユニオンのようです。
+[name="アーミヤ"]   ……一見すると普通の死体に見えますが、傷口から流れた血液がみぞれ状に凍っています。
+[name="アーミヤ"]   これは間違いなくフロストリーフさんの攻撃によるものです。
+[name="アーミヤ"]   ――あちらの廃墟には射撃された形跡が残っていますね。
+[name="アーミヤ"]   きっとメテオリーテさんの攻撃によるものかと……。
+
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="アーミヤ"]   （フロストリーフさん……ジェシカさん……メテオリーテさん……みんな、きっとまだ……）
+
+[Character(fadetime=0.6)]
+
+[CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="ケルシー"]   アーミヤ、救援部隊は全員任務を果たしロドスに帰還した。
+[name="ケルシー"]   メテオリーテたち以外の偵察チームは全て救援できたようだ。
+[name="ケルシー"]   幸いにして犠牲になったオペレーターはいなかった。だがそれに反して――
+[name="ケルシー"]   だが程度の差こそあれ、全員が凍傷を負っていた。
+[name="ケルシー"]   これは注目すべきポイントだ。
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+
+[Character(name="char_002_amiya_1#6")]
+
+[name="アーミヤ"]   ……凍傷？
+
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="ケルシー"]   全偵察チームより、廃都市内に特殊な行動をするレユニオンが居たと報告を受けている。
+[name="ケルシー"]   彼らは何か特別な目的を持って動いているようだ。どうやら盲目的に攻撃してくる普通のレユニオンの部隊とは違うらしい。
+[name="ケルシー"]   くれぐれも気をつけろ。
+
+[Character(name="char_002_amiya_1")]
+
+[name="アーミヤ"]   わ……わかりました。
+
+[Character(name="char_002_amiya_1", focus=-1)]
+
+[name="ケルシー"]   Dr.{@nickname}、君もわかったか？
+
+[Decision(options="わかった。", values="1")]
+
+[Predicate(references="1")]
+
+[name="ケルシー"]   頼むぞ。
+[name="ケルシー"]   私も少しやることができた。
+[name="ケルシー"]   アーミヤ、Dr.{@nickname}が頼りになるとはいえ、過信はするなよ。
+
+[Character(name="char_002_amiya_1")]
+
+[name="アーミヤ"]   ……。
+
+[Character(name="char_002_amiya_1", focus=-1)]
+
+[name="ケルシー"]   それと、指輪には常に気を配るように。
+
+[Character(name="char_002_amiya_1")]
+
+[name="アーミヤ"]   わかっています。
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+
+[Character(name="char_002_amiya_1", focus=-1)]
+
+[name="アーミヤ"]   ケルシー先生もドクターのことを心配しているんですね。
+[name="アーミヤ"]   それにしても…気づかないうちに――
+[Character(name="char_002_amiya_1#7")]
+
+[name="アーミヤ"]   こんな危険な獣のような敵が鋭利な爪を剥いていたなんて……。
+
+[Decision(options="レユニオンはすぐ近くまで迫ってきている。;今は進むしかない……。;彼らは何か我々に対する思惑があるようだ。", values="1;2;3")]
+
+[Predicate(references="1;2;3")]
+
+[Character(name="char_002_amiya_1#3")]
+
+[name="アーミヤ"]   はい……彼らは私たちを誘い込んでいるようにも思います……。
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="アーミヤ"]   ですが、今はその誘いに敢えて乗りましょう。
+[name="アーミヤ"]   ロドス各位へ、敵の防衛線を破ります。
+[name="アーミヤ"]   メテオリーテさんたちを取り戻し、チェンさんと合流しましょう！
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+
+
+[name="ケルシー"]   レッド、聞こえるか？
+[name="ケルシー"]   ああ、そうだ。
+[name="ケルシー"]   そうだ。スラム街東の入口で合流だ。
+[name="ケルシー"]   ああ、我々二人だけだ。
+[name="ケルシー"]   問題ない。
+[name="ケルシー"]   レユニオンが相手なら、我々二人だけでも十分だ。
+
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

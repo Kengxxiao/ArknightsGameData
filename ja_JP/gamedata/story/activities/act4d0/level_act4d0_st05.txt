@@ -1,0 +1,778 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（前）
+
+// Comments
+
+[Dialog]
+[Delay(time=1)]
+[Dialog]
+[Character]
+[Background(image="bg_light",screenadapt="coverall",fadetime=2)]
+[Delay(time=3)]
+
+一切都是白色的。
+ 
+头顶的天空与脚下的地面，目所能及之处，全都被安静的白色填满。
+纯白、寂静、空无一物。
+只有火苗摇曳燃烧。
+ 
+从某一个时间点起，悄然侵蚀梦境，又于梦醒时融化消弭。
+ 
+“这里是哪里？”
+无人应答。
+“我为什么会在这里？”
+无人应答。
+“我该怎么离开？”
+无人应答。
+ 
+“......”
+ 
+除了自己之外，谁都不在。
+除了自己之外，什么都没有。
+
+那么，
+所有的困惑就只剩下一个——
+
+“你......是什么？”
+ 
+......
+............
+ 
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, fadetime=1, block=true)]
+02:35 P.M.  天气/阴转小雨 
+罗德岛舰船，二号舱室，干员生活区 
+[Dialog]
+[Character(name="char_134_ifrit_5#7",fadetime=2,block=true)]
+[Delay(time=2)]
+[name="伊芙利特"]  ！！
+[name="伊芙利特"]  ......呼。
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"]  （又来了。怎么老做那个梦，那到底什么玩意啊。）
+[name="伊芙利特"]  （呃，头都睡扁了，好痛。）
+[name="伊芙利特"]  （抓头）烦死了，都是博士那家伙害的，这些题也太难写了吧！
+[name="伊芙利特"]  这什么怪题目啊，还要求面积？搞什么啊？
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_134_ifrit_5#4")]
+[name="伊芙利特"]  哇啊！
+[name="伊芙利特"]  停停停停。不是现在，别烧起来啊喂！
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"]  唔呃......
+[name="伊芙利特"]  还是把桌角烤焦了......算了，还好作业没事。
+[name="伊芙利特"]  博士那家伙......
+ 
+[Dialog]
+[Character]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"]  喂， 这些一定要都写完吗？真麻烦......
+[name="伊芙利特"]  啊？学起来对我有好处？
+[Character(name="char_134_ifrit_5#9")]
+[name="伊芙利特"]  废话，这我当然知道，要不然谁要跟你学！
+[name="伊芙利特"]  但是作业也太多了吧！而且这个词和这个词有什么区别啊......
+[name="伊芙利特"]  就因为我讲了你两句，赫默还拿走了我的辣椒干，这都怪你！
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  喂，你还笑？！
+ 
+[Decision(options="我知道她藏辣椒干的地方。;......;炭烤沙虫腿，来一根？",values="1;2;3")]
+
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"]  真的？！在哪？！
+[name="伊芙利特"]  真要跟你一起拿了，你和我肯定都会挨骂。
+
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  别一直笑啊，又不说话，很奇怪呀！
+[name="伊芙利特"]  你是不是压根就不想回答我啊？
+ 
+[Predicate(references="3")]
+[Character(name="char_134_ifrit_5#9")]
+[name="伊芙利特"]  恶，博士，这是什么？
+[name="伊芙利特"]  拿走拿走，我不要！——唔唔唔？
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"]  唔？
+[name="伊芙利特"]  （咀嚼）呃。
+[name="伊芙利特"]  （吞咽）咕嘟......啊？
+[name="伊芙利特"]  我，我吃了什么？
+[name="伊芙利特"]  算了......
+
+[Predicate(references="1;2;3")]
+[Character(name="char_134_ifrit_5#5")]
+[name="伊芙利特"]  对了，博士，赫默明天是不是要去出任务？
+[name="伊芙利特"]  带上我一起，怎么样？我的实力，你知道的对吧？
+[name="伊芙利特"]  你去和她说说，让我也去看看吧？
+ 
+[Decision(options="这次行动是收尾，你更擅长战斗吧？;这个月投诉有点多，先忍忍吧？",values="1;2")]
+
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"]  搞什么，你说的那些我也会啊？
+[name="伊芙利特"]  那为什么我们现在没得战斗，让我去啊，我一定要给其他人看看我的实力！
+ 
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  我这能烧干整个战场的火力，他们就是做不到才嫉妒我吧！
+[name="伊芙利特"]  我才不管那些人怎么说呢！
+
+
+[Predicate(references="1;2")]
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  赫默和你总该相信我吧？
+[name="伊芙利特"]  其他人不能理解，我没关系，又不关我的事，
+[name="伊芙利特"]  但为什么连你们也这么说！为什么呀！
+
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Decision(options="伊芙利特，冷静！",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#8")]
+[name="伊芙利特"]  咳！
+
+[Dialog]
+[Character]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+ 
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"]  烦死了。
+[name="伊芙利特"]  算了，去他的。我看看，这题这题还有这题......都填C。
+[name="伊芙利特"]  还有这题......看不太懂，算了随便写写。
+[Character(name="char_134_ifrit_5#1")]
+[name="伊芙利特"]  这样就成了......！
+[Dialog]
+
+[Character]
+[CameraShake(duration=0.3, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="医疗干员"]  到做检查的时间了，伊芙利特。
+[Character(name="char_134_ifrit_5#9")]
+[name="伊芙利特"]  恶。
+[name="伊芙利特"]  烦人的家伙来了。
+[Character(name="char_016_medic")]
+[name="医疗干员"]  怎么一股烧着了的味道......
+[name="医疗干员"]  伊芙利特？打扰一下。
+[name="医疗干员"]  今天要做一个血液源石结晶密度检查，请你配合......嗯？这桌子是怎么回事，怎么被烧焦了？
+[Character(name="char_016_medic",name2="char_134_ifrit_5#9",focus=2)]
+[name="伊芙利特"]  没什么。就是个意外。
+[Character(name="char_016_medic",name2="char_134_ifrit_5#9",focus=1)]
+[name="医疗干员"]  伊芙利特......这样很危险的。
+[name="医疗干员"]  罗德岛内部是不允许出现明火的，如果是你的话，更要好好控制。
+[name="医疗干员"]  我跟他们说了，不可以用抑制类的药物，但也需要你好好配合......
+[Character(name="char_016_medic",name2="char_134_ifrit_5#9",focus=2)]
+[name="伊芙利特"]  ......
+[name="伊芙利特"]  啰嗦死了。烦不烦啊！
+[Character(name="char_016_medic",name2="char_134_ifrit_5#9",focus=1)]
+[name="医疗干员"]  ......伊芙利特，我只是个普通的护士，我不太会带孩子，
+[name="医疗干员"]  如果可以的话，我们能好好交流......
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=2)]
+[name="伊芙利特"]  谁又是孩子了，你好烦啊？！
+[name="伊芙利特"]  为什么我要摊上你这种人，就不能让我一个人呆着吗？！
+
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=1)]
+[name="医疗干员"]  伊芙利特......我也有自己的工作的。
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=2)]
+[name="伊芙利特"]  那就别管我的事！说过好多次了，那些穿着白大褂的，我看见就难受！
+[name="伊芙利特"]  快让开，别挡着我出门。
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=1)]
+[name="医疗干员"]  可是，检查......
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=2)]
+[name="伊芙利特"]  我让你别挡路！
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_134_ifrit_5#4")]
+[name="伊芙利特"]  啊！！
+[name="伊芙利特"]  我，我的作业！烧，烧起来了！
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  你搞什么，搞什么啊？！
+[Character(name="char_016_medic",name2="char_134_ifrit_5#2",focus=1)]
+[name="医疗干员"]  伊芙利特！快，快灭火！
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  都说了，让我一个人呆着！！
+[name="伊芙利特"]  你怎么赔我！
+[Character(name="char_016_medic")]
+[name="医疗干员"]  不行，不行！我去叫夜莺小姐，请等一下！
+[Dialog]
+[Character(fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_134_ifrit_5#8")]
+[name="伊芙利特"]   ......不，不行。
+[name="伊芙利特"]   我又做了什么啊，可恶......
+[name="伊芙利特"]   哎，作业！
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"]   嗯......破破烂烂的。
+[name="伊芙利特"]   （赫默也不肯带上我。可恶，明明我那么强！）
+[name="伊芙利特"]   （现在博士也出去了，就只剩下那些讨人厌的白大褂......）
+[name="伊芙利特"]   （真烦，这么怕我的话干脆就离我远点啊。）
+[name="伊芙利特"]   （本子......稍稍烧焦了一点，不过还行吧？）
+[name="伊芙利特"]   （算了，总之先把练习题放到博士的办公桌上，应该就OK了？）
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+ 
+[Character(name="char_193_frostl_1#4",fadetime=0.5,block=true)]
+[Delay(time=2)] 
+[name="霜叶"]  ？ 
+[Character(name="char_193_frostl_1#6")]
+[name="霜叶"]  ......
+[name="霜叶"]  有什么事？
+[Character(name="char_144_red_7#7")]
+[CameraShake(duration=0.3, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="红"]  ！
+[Character(name="char_193_frostl_1#3")]
+[name="霜叶"]  你这样行动，一般干员会被吓到的。
+[Character(name="char_144_red_7#6")]
+[name="红"]  我只是在走路。
+[Character(name="char_193_frostl_1#3")]
+[name="霜叶"]  一般干员是不会在墙面上走路的。
+[Character(name="char_144_red_7#4")]
+[name="红"]  ？
+[Character(name="char_193_frostl_1#5")]
+[name="霜叶"]  算了。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=1)]
+[name="霜叶"]  你手上拿的是......
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=2)]
+[name="红"]  是作业。
+[name="红"]  麻烦。但凯尔希说，这要听博士的。红没得选。
+[name="红"]  这里你懂吗？这个词汇。红不理解。
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7",focus=1)]
+[name="霜叶"]  你居然会......居然会问我问题。
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7",focus=2)]
+[name="红"]  你不会吗？
+[Character(name="char_193_frostl_1#3",name2="char_144_red_7",focus=1)]
+[name="霜叶"]  我试试好了，就先让我看看吧。
+[name="霜叶"]  这个词，嗯，也不是很难理解。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_193_frostl_1")]
+[name="霜叶"]  ......大概就是这样。
+[name="霜叶"]  这样说，能懂吗？我怕我讲得不好。
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=2)]
+[name="红"]  可以。很清楚。
+
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=1)]
+[name="霜叶"]  那就好。
+[name="霜叶"]  不过，你其实也可以直接问博士？博士的解答，肯定比我的更准确。
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=2)]
+[name="红"]  也可以。但红觉得和霜叶说话轻松。
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=1)]
+[name="霜叶"]  ......这样。
+
+[Dialog]
+[Character]
+[name="？？？"]  你们堵在这干什么呢！
+[Character(name="char_134_ifrit_5",fadetime=0.5,block=true)]
+[Delay(time=1)]
+[name="伊芙利特"]  咦，这不是小红帽吗？真神奇，你居然没直接出现在课堂上......
+[Character(name="char_144_red_7")]
+[name="红"]  ——伊芙利特。
+[Character(name="char_193_frostl_1")]
+[name="霜叶"]  伊芙利特，别那么靠近她。
+[name="霜叶"]  红她有很强的防范意识，会下意识地反应，别被伤到。
+[Character(name="char_144_red_7")]
+[name="红"]  防范意识？
+[Character(name="char_193_frostl_1")]
+[name="霜叶"]  靠近你五厘米的东西会怎么样？
+[Character(name="char_144_red_7")]
+[name="红"]  红切掉。
+[Character(name="char_193_frostl_1")]
+[name="霜叶"]  你看。 
+[Character(name="char_134_ifrit_5",name2="char_193_frostl_1",focus=1)]
+[name="伊芙利特"]  哈......你这个冰块脸还挺了解她的嘛？
+[Character(name="char_134_ifrit_5",name2="char_193_frostl_1",focus=2)]
+[name="霜叶"]  干员手册我是有好好请教杜宾老师的。
+[Character(name="char_193_frostl_1",name2="char_144_red_7",focus=1)]
+[name="霜叶"]  不过红，对别的干员，可以稍微放轻松一些吗？
+[Character(name="char_193_frostl_1",name2="char_144_red_7#4",focus=2)]
+[name="红"]  ？
+[Character(name="char_193_frostl_1",name2="char_144_red_7#4",focus=1)]
+[name="霜叶"]  算了......
+[Character(name="char_134_ifrit_5#6")]
+[name="伊芙利特"]  噗，哈哈哈哈。
+[Character(name="char_134_ifrit_5#6",name2="char_144_red_7",focus=2)]
+[name="红"]  很好笑？
+[Character(name="char_134_ifrit_5#3",name2="char_144_red_7",focus=1)]
+[name="伊芙利特"]  唉？
+[Character(name="char_193_frostl_1")]
+[name="霜叶"]  红，她不是这个意思。
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"]  啧。
+[Character(name="char_134_ifrit_5#7",name2="char_193_frostl_1",focus=2)]
+[name="霜叶"]  嗯......？你藏在背后的是什么？
+[Character(name="char_134_ifrit_5#7",name2="char_193_frostl_1",focus=1)]
+[name="伊芙利特"]  啊？哦，是，是作业啦。
+[name="伊芙利特"]  本伊芙利特大人可是轻轻松松做完了啊。
+[Character(name="char_134_ifrit_5#7",name2="char_193_frostl_1",focus=2)]
+[name="霜叶"]  是吗......嗯，那就好。
+[Character(name="char_134_ifrit_5#7",name2="char_144_red_7",focus=2)]
+[name="红"]  红闻到了烧焦的味道。
+[name="红"]  伊芙利特，作业烧了。
+[Character(name="char_134_ifrit_5#8",name2="char_144_red_7",focus=1)]
+[name="伊芙利特"]  ......
+[name="伊芙利特"]  我不是有意的。
+[Character(name="char_134_ifrit_5#8",name2="char_144_red_7",focus=2)]
+[name="红"]  哦。
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=1)]
+[name="伊芙利特"]  ......你是不是觉得我没完成作业，用火烧掉了？
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=2)]
+[name="红"]  红不知道。
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=1)]
+[name="伊芙利特"]  想说就说啊，别这样说话。
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=2)]
+[name="红"]  ？
+[Character(name="char_193_frostl_1#6")]
+[name="霜叶"]  别，伊芙利特，红是真的不太会说......
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=2)]
+[name="红"]  你生气了？
+[Character(name="char_134_ifrit_5#9",name2="char_144_red_7",focus=1)]
+[name="伊芙利特"]  ......
+[name="伊芙利特"]  烦死了，好讨厌啊。我为什么要和你一起上课啊。
+[name="伊芙利特"]  今天怎么搞的，真是烦透了......怎么这么不走运啊我。
+[Character(name="char_134_ifrit_5#9",name2="char_193_frostl_1",focus=2)]
+[name="霜叶"]  冷静点，伊芙利特。
+[name="霜叶"]  我能感觉到周围的温度在升高，这很危险。
+[Character(name="char_134_ifrit_5#2",name2="char_193_frostl_1",focus=1)]
+[name="伊芙利特"]  ......啊？
+[name="伊芙利特"]  你懂什么啊？我好得很，别用那种好像什么都知道一样的语气和我说话！
+[Character(name="char_144_red_7#7")]
+[name="红"]  威胁？
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7#5",focus=1)]
+[name="霜叶"]  红，别会错意！她只是习惯了这么说话！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[stopmusic(fadetime=1)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+怪物。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+[Character(name="char_134_ifrit_5#9")]
+[name="伊芙利特"]  呃。
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7",focus=2)]
+[name="红"]  明白。
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  你哪里明白了......？
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+怪物。
+伤害别人的怪物。烧掉一切的怪物。克制不住自己的怪物。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+
+
+
+[Character(name="char_134_ifrit_5#9")]
+[name="伊芙利特"]  我，很痛，很痛啊......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+怪物。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_144_red_7#5")]
+[name="红"]  你要着火了？ 
+[Character(name="char_134_ifrit_5#2",name2="char_193_frostl_1#6",focus=2)]
+[name="霜叶"]  等一下，伊芙利特......不是现在。
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  关你们什么事？
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+怪物。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  你们又懂我哪些了？
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+怪物。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_193_frostl_1#6")]
+[name="霜叶"]  快住手！
+[Character(name="char_144_red_7#5")]
+[name="红"]  她威胁我。不，她威胁到了罗德岛。
+[Character(name="char_193_frostl_1#6",name2="char_144_red_7#5",focus=1)]
+[name="霜叶"]  不要动手，红！她只是一时发热！
+[name="霜叶"]  你们两个——
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  谁发热了？你是不是想说我头脑发热？我清醒得很！你那点冷气根本不顶用，快走开，你也想被烧成灰吗！
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+不要。不行。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+
+
+[Character(name="char_144_red_7#5")]
+[name="红"]  控制不了自己。很弱。
+[Character(name="char_134_ifrit_5#2")]
+[name="伊芙利特"]  小红帽，你会被烤焦！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+怪物。
+不，不可以，那些是朋友。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_193_frostl_1#6")]
+[name="霜叶"]  别！伊芙利特！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+怪物！
+不！我不是！！
+
+
+火焰在燃烧。
+火焰在疯狂的燃烧。
+巨大的怪物咯咯直笑。
+白色的房间被烧的又黑又焦。
+有人在哭，有人在跑。
+哎呀，这是哪里呢？
+有人走了过来，好熟悉，好高......
+ 
+[Character(name="char_134_ifrit_5#8")]
+[name="伊芙利特"]  不要......
+[name="伊芙利特"]  塞......救......大家......
+
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+
+
+[Dialog]
+[Character]
+[Character(name="char_249_muesys_8#8")]
+[name="？？？"] 哎呀，哎呀哎呀，大家这是在做什么呢。
+[name="？？？"] 伊芙芙？在走廊上点火可不行哦。塞雷娅知道了会生气的。当然，赫默也是。
+[name="？？？"] 去......！
+[Character(name="char_134_ifrit_5#4")]
+[name="伊芙利特"]  不，不是......你不是......
+[Character(name="char_249_muesys_8#8")]
+[name="？？？"] 水分子的集群，去让火焰安静下来吧......
+[Character(name="char_134_ifrit_5#3")]
+[CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="伊芙利特"]  ？！ 
+[name="伊芙利特"]  噗哈——这水也太冰了！
+[Character(name="char_134_ifrit_5#4")]
+[name="伊芙利特"]  哎......缪缪？！
+[name="伊芙利特"]  缪缪，帮帮我......我不想......
+[Dialog]
+[Character]
+[Character(name="char_249_muesys_8#1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="？？？"] 嘘——可不要告诉其他人我来玩哦。
+[name="？？？"] 没问题！就交给我吧。
+[name="？？？"] 呵呵，看到你还是这么有精神，我就放心啦。
+[name="？？？"] 不过，要好好遵守我们之间约定哦，伊芙芙？
+
+ 
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, fadetime=1, block=true)]
+ 
+粗暴。
+肆意。
+横行。
+总是在破坏。
+ 
+......
+我自己其实也是知道的。
+ 
+会痛的实验让人讨厌。
+ 
+那些白大褂的目光让人讨厌。
+ 
+这 片 大 地 让 人 讨 厌。
+ 
+说什么人生。
+说什么未来。
+只要我放一把火，只要火烧得够旺，所有那些用讨厌眼神看着我的人，那些白色的墙壁和刺鼻的消毒水，所有所有，全都会消失在火中。
+只要我喜欢的人还在就好了。
+其他人怎么样关我什么事？
+ 
+——在来到这里之前，我一直是这么想的。
+我一直觉得自己是这么想的。
+ 
+但是现在不一样了。
+
+粗暴。
+ 
+哎我当然知道。
+ 
+肆意。
+ 
+行啦我会小心点的。
+ 
+横行。
+......也没那么严重吧？
+总是在破坏。
+我也不想的啊！
+我又不是不明白，很多事情谁想这样啊。
+但至少，哼......
+你们说的，我有照着去做。
+我可不能烧掉罗德岛和作业。
+还有朋友，哼......我的朋友也一定要像我一样了不起呀！
+所以，没事的。我努力的还不够。我还要更加努力！
+
+看好了，我绝对要让你们大吃一惊！
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[Character(name="char_134_ifrit_5#7")]
+[CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="伊芙利特"]  哼！！
+ 
+[Decision(options=" 一下子毁了一整条过道？;炭烤沙虫腿，来一根？",values="1;2")]
+[Predicate(references="1")]
+[name="伊芙利特"] 才、才没有！烦死了，不要你管！
+[name="伊芙利特"] 唉......小红帽她们呢，没事吧......
+[name="伊芙利特"] 你让小红帽躲开了？哼，算你识相。
+[name="伊芙利特"] 我有危险？大家都有危险？啊......
+
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#9")]
+[name="伊芙利特"]  给我也来一根......不、不对！才不要吃啦！ 
+[name="伊芙利特"]  我也......吃不下去呀。
+
+[Predicate(references="1;2")]
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"]  那个、走廊的事、唔呃、我也不是有意要破坏的......总之，对、对不起啦！
+[name="伊芙利特"]  可恶，怎么会搞成这个样子......
+[name="伊芙利特"]  对了，不是要检查作业吗？给你！
+[CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+ 
+[Decision(options="这本本子，看起来饱经火灼啊。;......",values="1;2")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"]  唉，嫌弃的话就别拿啊！
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#9")]
+[name="伊芙利特"]  你能看出来这是什么，对吧。
+[Predicate(references="1;2")]
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"]  交给你了，这就是我的作业。
+[name="伊芙利特"]  出了点小岔子，变成这样......喂，你那是什么表情，你有什么意见吗！
+[name="伊芙利特"]  总之就是这样！不管你信不信，反正我写完了，我真的写完了！
+[name="伊芙利特"]  唔，顶、顶多就是撕坏了一点，被火烧了下，又被水浇了下。
+[name="伊芙利特"]  呃呃呃，还有瞎写的题目多了点嘛，今后我会好好写啦！
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"]  ......
+[name="伊芙利特"]  我又搞砸了。
+[name="伊芙利特"]  你要骂就骂吧。对不起。
+
+[Decision(options="伊芙利特，把手伸出来。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"]  啊？搞什么啊？
+[name="伊芙利特"]  喏。别打太狠哦！
+[CameraShake(duration=0.5, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=1)]
+[Character(name="char_134_ifrit_5#4")]
+[name="伊芙利特"]  唔？
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"]  这个是......干脆鬼椒？我最喜欢的辣椒干！
+[name="伊芙利特"]  欸、啊？是给我的？
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"]  什么啊......搞什么啊！混蛋，我告诉你，可别以为区区这么点零食，就能、就能......
+[name="伊芙利特"]  （大声吸鼻子）
+[name="伊芙利特"]  哈，算你上道！虽然我还是觉得你们这些穿白大褂的家伙有问题！
+[name="伊芙利特"]  你就也勉强算是个例外吧！（小声）
+[name="伊芙利特"]  不过我可警告你！别总是和赫默一样拿我当小孩子看！
+[name="伊芙利特"]  我真的会生气的！生气起来超——可怕的！
+ 
+[Decision(options="你是个很优秀的干员。;很有气势啊，伊芙芙。",values="1;2")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"]  呃、呃呃、突然说什么啊，这不是理所当然的吗！
+ 
+[Predicate(references="2")]
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"]  噗——咳、咳咳咳。
+[name="伊芙利特"]  谁告诉你这个称呼，不对，谁、谁允许你这样喊我的啊！
+ 
+[Predicate(references="1;2")]
+ 
+[Decision(options="下一次行动，你也出动吧。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#4")]
+[name="伊芙利特"]  ！！
+[name="伊芙利特"]  真的假的？！
+[Character(name="char_134_ifrit_5#6")]
+[name="伊芙利特"]  你的意思是下一次会让我也一起去咯？是这个意思吧？啊？你可别骗我啊！
+
+[Decision(options="但是......",values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_134_ifrit_5#4")]
+[name="伊芙利特"] 但是什么？
+[name="伊芙利特"] 欸你快说啊，不要让我急啊！
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"] 心平气和自己想？那是什么，我不懂你在说......
+[name="伊芙利特"] ......
+[name="伊芙利特"] 对了，得去道歉啊......
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"] 那个每天来看我的姐姐，我不是有意吓她的......我也不想对霜叶她们那么凶......
+[name="伊芙利特"] 唉，博士，帮我个忙吧，你帮我去跟她们说吧？
+
+[Decision(options="为什么不自己去说呢？;你又吓唬医疗干员了？",values="1;2")]
+[Predicate(references="1;2")]
+[name="伊芙利特"] 我......
+[name="伊芙利特"] 这次我肯定犯错了。
+[name="伊芙利特"] 虽然他们真的很烦人！但我确实不该那么做的吧…...
+[name="伊芙利特"] 我也不想你老因为这些事被别人说啊。
+
+[Decision(options="下次我们去海边玩的话，你要不要去？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#4")]
+[name="伊芙利特"] 海边？那是啥？
+[name="伊芙利特"] 啊无所谓，要去！我要去！
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"] 呃，不，为什么突然要带我去玩？博士你有点奇怪......
+
+[Decision(options="因为你表现必须好一点，我才能说服赫默。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#7")]
+[name="伊芙利特"] 切，什么嘛，还是想让我做这做那对吧？
+
+[Decision(options="自己去道歉吧？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_134_ifrit_5#3")]
+[name="伊芙利特"] 哼，放心！包在我身上，不就是道个歉嘛！
+[name="伊芙利特"] 我们约好了对吧？你可不能反悔不带我去哦！
+[Character(name="char_134_ifrit_5#5")]
+[name="伊芙利特"] 嘿嘿，海边！嗯，听起来就很有意思呢！
+[name="伊芙利特"] 博士！明天见！
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_light",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+
+[name="伊芙利特"] ......
+[name="伊芙利特"] 你是不是还在看？
+
+[Dialog]
+[Delay(time=1)]
+
+[name="伊芙利特"] 哼，我心里清楚得很，那些人怎么看我，怎么想我。
+[name="伊芙利特"] 但这有什么关系？我才不在乎，嘁，我才不要在乎。
+
+[Dialog]
+[Delay(time=1)]
+
+[name="伊芙利特"] 我一定会把你干掉！
+[name="伊芙利特"] 知道吗，就是你老害我丢脸，就是你老让麻烦事缠上我！
+
+没有我，你是什么？
+
+[name="伊芙利特"] 哈，你以为我还像以前一样怕你吗？
+[name="伊芙利特"] 老让我那么痛，老让所有人都那么痛......
+[name="伊芙利特"] 你这大胖子！傻瓜！肥胖火团！长角的热气球！
+
+呼呼，有意思。
+
+[name="伊芙利特"] 你看好了，以后我可不会再什么都烧了。
+[name="伊芙利特"] 我可是知道的，有东西能烧，有东西是不能的！
+
+没有不能被焚烧的事物！
+
+[name="伊芙利特"] 什么呀，我不愿意！
+[name="伊芙利特"] 本伊芙利特大人不愿意烧，那就是不能！
+[name="伊芙利特"] 那些挡着我的路的，我肯定一把火给他们全烧干净。
+[name="伊芙利特"] 但那些不能的，我是绝对不会动的！连一点火我都不会发出来！
+
+那我等着，小东西。
+[Dialog]
+[Character(name="char_134_ifrit_5#8",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="伊芙利特"]  ......
+[name="伊芙利特"]  迟早有一天......一定！
+
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

@@ -1,0 +1,267 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第四十关（前）
+
+// Comments
+
+
+[PlayMusic(intro="$frostnova_intro", key="$frostnova_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Image(image="avg_40_2", fadetime=1, block=true)]
+
+[CameraShake(duration=-1, xstrength=5, ystrength=5, vibrato=15, randomness=90, fadeout=true, block=false)]
+[name="ジェシカ"]   気温が……急激に低下している？
+[Blocker(a=0.05, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[name="ジェシカ"]   地面も結露していく……。
+[Blocker(a=0.1, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[name="ジェシカ"]   寒い……身体が凍えそう……。
+[name="ジェシカ"]   ……あのレユニオンのオブジェまで……どうして、そんなこと……！
+[name="ジェシカ"]   炎が消えて……鉛色の雲が空を覆っていく……。
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[name="ジェシカ"]   あ……あ…………！
+[Blocker(a=0.2, r=1, g=1, b=1, fadetime=1, block=true)]
+[name="アーミヤ"]   しっかりしてください！
+[name="アーミヤ"]   ジェシカさん！！
+[name="ジェシカ"]   ……。
+[name="ジェシカ"]   は、はいっ！
+[name="アーミヤ"]   意識をしっかり保って隊列を崩さないように！
+[name="ジェシカ"]   りょ、了解！
+[name="メテオリーテ"]   何してるの！　フロストリーフ！
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Dialog]
+[CameraShake(duration=1, xstrength=5, ystrength=5, vibrato=15, randomness=90, fadeout=true, block=false)]
+[Image(fadetime=1, block=true)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Background(image="bg_cher_6", width=1, height=1, fadetime=1, block=true)]
+
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]   あの敵が……このエリア全体の熱を奪っています！
+[name="アーミヤ"]   こんな広範囲まで！
+[Character(name="char_193_frostl_1")]
+[name="フロストリーフ"]   ……くっ、スノーデビルのプリンセスとはよく言ったものだ……。
+[name="フロストリーフ"]   私より体温が低い奴には……初めて会った。
+
+[Character(name="char_219_meteo_1")]
+[name="メテオリーテ"]   フロストリーフ！
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1", focus=1)]
+
+[name="フロストリーフ"]   メテオリーテ……私も……そちらに……。
+[name="フロストリーフ"]   そちらに戻って……お前たちの時間稼ぎをしたいところだけど……。
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=2)]
+[name="メテオリーテ"]   フロストリーフ！　あなた…。
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=1)]
+[name="フロストリーフ"]   だけど……私の身体は……もう凍り始めてる。
+[name="フロストリーフ"]   私の足は……もう動かない。
+
+[Character(name="char_193_frostl_1", name2="char_219_meteo_1#3", focus=2)]
+
+[name="メテオリーテ"]   フロストリーフ！！
+
+[Character(name="char_193_frostl_1")]
+
+[name="フロストリーフ"]   アーミヤ、皆を連れて包囲網を突破して！
+[name="フロストリーフ"]   一分もしないうちに、あの化物が……広場の全てを凍らせてしまう。
+[name="フロストリーフ"]   私の命を無駄にしないで。
+
+
+[CameraShake(duration=1, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=true)]
+
+[Character(name="char_002_amiya_1", name2="char_219_meteo_1#3", focus=2)]
+
+[name="メテオリーテ"]   アーミヤ……ダメ……ダメよ！
+
+[Character(name="char_002_amiya_1#7", name2="char_219_meteo_1#3", focus=1)]
+
+[name="アーミヤ"]   わかっています。
+[name="アーミヤ"]   フロストリーフさんを残して逃げたりはしません。
+[name="アーミヤ"]   誰一人として――見捨てたりはしません！
+[name="アーミヤ"]   私は敵の動きを止めます！
+[name="アーミヤ"]   メテオリーテさん――フロストリーフさんの救出を！！
+
+[Character(name="char_002_amiya_1#7", name2="char_219_meteo_1#3", focus=2)]
+
+[name="メテオリーテ"]   了解！
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="アーミヤ"]   ドクター！　各部隊の指揮を！
+
+[Character(name="char_002_amiya_1#7", focus=-1)]
+
+[Decision(options="言われるまでもない！;（頷く）;わかった！", values="1;2;3")]
+
+[Predicate(references="1;2;3")]
+
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+
+[Character(name="char_193_frostl_1")]
+
+[name="フロストリーフ"]   ――――
+[name="フロストリーフ"]   考えてみれば、このアーツは……。
+[name="フロストリーフ"]   一度しか使ったことがなかった。
+[name="フロストリーフ"]   ――「およそ血気あるもの……」
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Delay(time=1)]
+
+[Character(name="char_1505_frstar_1")]
+
+[name="フロストスター"]   フッ。
+[name="フロストスター"]   冷気には冷気を……か。
+
+[Character(name="char_193_frostl_1")]
+[name="フロストリーフ"]   ぐっ……！
+
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   舌が思い通りに動かなくなっただろう？
+
+[Character(name="char_193_frostl_1")]
+[name="フロストリーフ"]   貴様……。
+
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   ――――
+[name="フロストスター"]   スノーデビル、各自散開、配置につけ。
+
+[Character(name="char_1002_nsabr_1")]
+
+[name="レユニオン構成員"]   はっ。
+
+[Character(name="char_1505_frstar_1")]
+
+[name="フロストスター"]   同胞たちよ……。
+[name="フロストスター"]   邪魔な遮蔽物を破壊し、奴らのその血液まで凍らせてやれ。
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]   了解。
+
+[Dialog]
+[Character]
+[Delay(time=0.5)]
+
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]   「――予、汝の心知るものなり」
+
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]   呪文？
+[name="レユニオン構成員"]   ロドスのウサギ……。
+[name="レユニオン構成員"]   黒い……帯？　……あれはなんだ？
+[name="レユニオン構成員"]   な、何だあのアーツは――
+[name="レユニオン構成員"]   ま、待て、アレがこちらに飛んでくる……！？
+[name="レユニオン構成員"]   やめ――
+[name="レユニオン構成員"]   ――うわぁぁぁ！！！！
+
+[CameraShake(duration=1, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=true)]
+
+[name="レユニオン構成員"]   か、身体が！　熱い……！　熱い！
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]   メテオリーテさん！
+[Character(name="char_219_meteo_1")]
+[name="メテオリーテ"]   わかってる！
+[name="メテオリーテ"]   そのまま続けて！
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]   ぐぐ……やめ……寒い……！
+[name="レユニオン構成員"]   うあ……痛い、痛い！
+[name="レユニオン構成員"]   ……ぐっ……も、もうやめ……
+[Character(name="char_1505_frstar_1",name2="char_1002_nsabr_2",focus=1)]
+[name="フロストスター"]   ――！
+[name="フロストスター"]   早く！　別部隊の同胞たちをこれ以上やらせるな！
+[Character(name="char_1002_nsabr_2")]
+[name="レユニオン構成員"]   了解しました！
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   このアーツは……強力だ。
+[name="フロストスター"]   ――
+[Character(name="char_193_frostl_1")]
+[name="フロストリーフ"]   う……あ……。
+[name="フロストリーフ"]   お前は……これ以上……前に行かせない……。
+[name="フロストリーフ"]   ぐっ……。
+[name="フロストリーフ"]   ……。
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   アーツは使わせないぞ、小娘。
+[name="フロストスター"]   そのまま眠っていろ。
+[name="フロストスター"]   心配しなくとも、あとでお前の苦しみも終わらせてやる。
+[Character(name="char_219_meteo_1")]
+[name="メテオリーテ"]   ダメッ、フロストリーフ……！
+
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   ……。
+[name="フロストスター"]   そうか、お前がアーミヤか。
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]   ……！
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   ――
+[name="フロストスター"]   いい目をしている。
+[name="フロストスター"]   確かに戦士の目だ。
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]   ……。
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   ……悪いな。
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]   あなたは……どうして……
+
+
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   ……♬
+[name="フロストスター"]   ――♪――♬――
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Blocker(a=0.3, r=255, g=255, b=255, fadetime=3, block=true)]
+
+
+
+[Character(name="char_002_amiya_1#6")]
+[name="アーミヤ"]   ――！
+[name="アーミヤ"]   これは……？
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   ――♬――♬――
+[Character(name="char_002_amiya_1#6")]
+[name="アーミヤ"]   ……雪？
+
+[Character(name="char_1505_frstar_1")]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=3, block=true)]
+[name="フロストスター"]   ……♪
+[name="フロストスター"]   「眠れ、眠れ、
+[name="フロストスター"]   ハリネズミのお人形と小熊たち」……。
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Character(name="char_219_meteo_1#3")]
+
+[name="メテオリーテ"]   この気味の悪いメロディーは……。
+[name="メテオリーテ"]   ――アーツの詠唱よ！
+[Character(name="char_1505_frstar_1")]
+[name="フロストスター"]   「静かな黒に沈め……♩
+[name="フロストスター"]   ……私の、壊れたお人形とぬいぐるみ♬」
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+[Blocker(a=0.5, r=255, g=255, b=255, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#6")]
+[name="アーミヤ"]   ――
+[name="アーミヤ"]   彼女の周りに黒い氷の結晶が……凄い勢いで増えていく……？
+[Character(name="char_219_meteo_1#3")]
+[name="ジェシカ"]   結晶がゆっくり地面に落ちていきます！
+
+[Character(name="char_219_meteo_1#3")]
+[name="メテオリーテ"]   なっ……！　結晶に触れた地面が一瞬で……凍りついた？
+[name="メテオリーテ"]   地面が黒い氷に覆われて……。
+[name="メテオリーテ"]   しかも……広がっていく！？
+[Character(name="char_002_amiya_1#6")]
+[name="アーミヤ"]   氷の結晶が周りの地形を侵食していっています！
+[playsound(key="$d_gen_surfacefrozen", volume=0.8)]
+
+
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="アーミヤ"]   あの歌を止めないと！！
+
+[Character(name="char_002_amiya_1#7", focus=-1)]
+
+[Decision(options="ロドス各員へ、総攻撃を！", values="1")]
+
+[Predicate(references="1")]
+
+[PlaySound(key="$flashback", volume=0.7, Delay=0.3)]
+[PlaySound(key="$flashback", volume=0.7, Delay=0.7)]
+[Delay(time=0.2)]
+[Blocker(a=1,r=255, g=255, b=255, fadetime=0.3, block=true)]
+[Image]
+[Blocker(block=true, fadetime=0.5)]

@@ -1,0 +1,249 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（前）
+
+// Comments
+
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[Background(image="bg_beach", fadetime=2,x=-200, y=0,block=true)]
+[Delay(time=1)]
+[playsound(key="$beach", volume=0.7)]
+[Character(name="char_002_amiya_summer_2#1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="阿米娅"]   博士，这次我可要批评你了。
+[name="阿米娅"]   大家身上都多多少少有些轻伤，作为领队你也有责任的！
+[name="阿米娅"]   虽然古米已经给他们处理过了，但是下水的话，还是会影响到伤口的。
+[name="阿米娅"]   真是的，带队玩耍也别太过火呀......
+
+[Decision(options="抱歉。;这身泳装很适合你，阿米娅。",values="1;2")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_summer_2#1")]
+[name="阿米娅"]   唔，我也不是想破坏博士的好心情......
+
+[Predicate(references="2")]
+
+[Character(name="char_002_amiya_summer_2#2")]
+[name="阿米娅"]   是、是这样吗？是暴行姐姐给我挑的这件泳装，我还在害怕博士会不会不喜欢——
+[Character(name="char_002_amiya_summer_2#1")]
+[name="阿米娅"]   等等！不要想着岔开话题，Dr.{@nickname}！
+
+[Decision(options="我们这次可能确实做得有些过火......",values="1")]
+[Predicate(references="1")]
+
+
+[Character(name="char_002_amiya_summer_2#1")]
+[name="阿米娅"]   真是的，我也要好好说说赫拉格先生了！
+[name="阿米娅"]   明明让他监督你的，结果他也对你们睁一只眼闭一只眼......
+[name="阿米娅"]   在没有签订合约前，罗德岛不能插手任何独立城邦的内部问题。
+[name="阿米娅"]   要是被卷进城邦本地的麻烦，罗德岛的处境会变得非常艰难，甚至难以脱身。
+
+[Decision(options="其实，我们已经......",values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_summer_2#1")]
+[name="阿米娅"]   是啊，我知道的。
+[name="阿米娅"]   博士可真是做了件很危险的事情。
+[Character(name="char_002_amiya_summer_2#2")]
+[name="阿米娅"]   ——和狂热的歌迷起冲突什么的！博士好歹要有些大人样子呀。
+[name="阿米娅"]   再怎么喜欢一支乐队，也要和其他观众和平相处哦，更别说参与斗殴什么的了！
+
+[Decision(options="......？可我们是......",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_summer_2#2")]
+[name="阿米娅"]  （嘘！）
+[name="阿米娅"]  总之不要再问啦！整件事就是这样了！嗯！
+[name="阿米娅"]  下次可要好好注意哦？
+
+[Decision(options="我知道了。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_summer_2#2")]
+[name="阿米娅"]  嗯！
+[name="阿米娅"]  博士，快来吧，我在礁石另一边发现了很多好看的贝壳！海滩什么的，好有趣呀！
+[name="阿米娅"]  水不凉，嗯......
+
+[Decision(options="（跟着阿米娅走）;（向阿米娅泼水）;（拉住阿米娅的手）",values="1;2;3")]
+[Predicate(references="1")]
+[name="阿米娅"]  来，博士，这里走！
+[Predicate(references="2")]
+[name="阿米娅"]  哎！博士！别这样！
+[name="阿米娅"]  可恶！看招！哈哈哈哈......
+[Predicate(references="3")]
+[name="阿米娅"]  嘿嘿......
+[Predicate(references="1;2;3")]
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Blocker(a=0, fadetime=2, block=true)]
+
+
+
+[Character(name="avg_npc_024")]
+[name="赫尔曼"]   Dr.{@nickname}，你来了。
+[name="赫尔曼"]   我听锡兰说了你们罗德岛的事情，我很想跟你聊聊。
+[name="赫尔曼"]   如何，就陪我出去走走吧。
+[Decision(options="......好的。",values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_beach",x=200, y=0)]
+
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="avg_npc_024")]
+[name="赫尔曼"]   感谢你，罗德岛的博士。
+[name="赫尔曼"]   这次如果没有你的帮助，小女的鲁莽行动恐怕只会惨淡收场。
+[Decision(options="那不是鲁莽。;我并没有做太多的事情。;你应该感谢的人是锡兰才对。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="赫尔曼"]   克洛宁是我一手栽培起来的，他有野心，但也有这个能力，所以我这些年对他的一些小动作总是睁一只眼闭一只眼。
+[name="赫尔曼"]   但是，这几年，他有些走偏了，我对他并不放心。
+[name="赫尔曼"]   这一次，借着前往新开发区的机会，我留下黑，也是想让她看看这小子还能不能用。
+[name="赫尔曼"]   结果很遗憾。
+[Decision(options="为什么和我说这些？",values="1")]
+[Predicate(references="1")]
+[name="赫尔曼"]   ......我很喜欢沿着这片海滩散步。
+[name="赫尔曼"]   因为，芭芭拉——我的妻子，她就沉睡在这片海里。
+[name="赫尔曼"]   我还记得那一天，天气有点热，夕阳很好，就在这里，她和我说，“要是我们能永远生活在这里就好了”。
+[name="赫尔曼"]   转眼，就只留下了我一个人。
+[name="赫尔曼"]   博士，回头看看。
+[name="赫尔曼"]   你能明白吗？这座城市是我为她打造的天堂。
+[name="赫尔曼"]   而我为什么要告诉你这些......
+[name="赫尔曼"]   因为我看得出，你和我是同一种人。
+[name="赫尔曼"]   这个世界上，有些事不是靠好的那些东西就能解决的，有时候，必须借助一些所谓不好的东西。
+[Decision(options="我是。;我不是。;谁知道呢。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="赫尔曼"]   对我来说，善良与否在很久以前就没有任何意义了，有的只有结果，有的只有这座城市。
+[Decision(options="为什么不告诉锡兰？",values="1")]
+[Predicate(references="1")]
+[name="赫尔曼"]   我不是来寻求理解的，博士。
+[name="赫尔曼"]   我如果需要我女儿的理解，我和她就不会是现在这个样子。
+[name="赫尔曼"]   而且，告诉了她她就会理解吗？
+[name="赫尔曼"]   不会的，她还要很长时间才会理解，这个世界不是她想的那样条理有序。
+[name="赫尔曼"]   黑希望她永远不会理解，而我......很遗憾，我失去了选择的机会。
+[name="赫尔曼"]   博士，锡兰她想要加入你们，我让黑和她一起去，这些我都允许。
+[name="赫尔曼"]   因为这座汐斯塔已经不再是她的天堂了。
+[name="赫尔曼"]   我已经看过新的地质报表了。照这样下去，汐斯塔迟早会在迸发的岩浆中落下帷幕。
+[name="赫尔曼"]   我们推迟了那一天的到来。对你们今天的努力，我表示感激。
+[name="赫尔曼"]   这些年来我一直在寻找彻底解决这件事的办法。我找到了，但代价也很一样巨大。
+[name="赫尔曼"]   我一直投入精力的高新区，那将会是一座全新的移动城市，现在看来，那将会成为新的汐斯塔。
+[name="赫尔曼"]   我对这里的执着很深，但这并不意味着我会对身旁浅睡的火山熟视无睹。
+[name="赫尔曼"]   这次黑曜石节结束后，我们将迁进移动城市；现在的汐斯塔城将会被我们抛弃，迟早淹没在滚热的岩浆中。
+
+[Decision(options="那黑曜石节......",values="1")]
+[Predicate(references="1")]
+
+[name="赫尔曼"]   据说这片海洋有着它的边界。也有人对我说过，这里不是真正的大海，它的边界也许宽广，却有尽头。
+[name="赫尔曼"]   那么我们会环着这片海走下去。或许有一天，我们会真正回到起点。
+[name="赫尔曼"]   只是，这座有着美丽海滩和盛大的黑曜石节，以及这座能感受到火山气息的海滨城市本身——
+[name="赫尔曼"]   这座有着无数汐斯塔人回忆的汐斯塔，终究是不复存在了。
+[name="赫尔曼"]   也许有一天，你可以把我说的这些告诉她。
+[name="赫尔曼"]   你也可以永远都不告诉她。
+[name="赫尔曼"]   而有一天，当她需要一些帮助时，你可以来找我。
+[name="赫尔曼"]   无论汐斯塔在哪里，变换成何种模样，这座城市，永远会是她的后盾。
+[name="赫尔曼"]   不——该这么说。只要汐斯塔人还在，汐斯塔就永远在。她们这些年轻人才是真正的汐斯塔。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.5, block=true)]
+[Character]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="avg_npc_024")]
+[name="赫尔曼"]   趁现在，好好享受这次的黑曜石节吧。
+[name="赫尔曼"]   至少在找到新的理想场地之前，我们只能搁置和塞壬唱片之间的合作啦。我该去和他们好好谈谈了。
+[name="赫尔曼"]   黑似乎也有话想跟你说，她在那边。
+[name="赫尔曼"]   如果我说太多，她就更没话可说了。让她自己和你说吧。
+[Dialog]
+[Character]
+[Character(name="char_340_shwaz_2#3",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=1)]
+[name="黑"]   ......老爷。
+[Character(name="avg_npc_024")]
+[name="赫尔曼"]   别介意。之后是你们年轻人的事情了。
+
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Blocker(a=0, fadetime=1, block=true)]
+
+[Character(name="char_340_shwaz_2#1")]
+[name="黑"]   你好。
+[Decision(options="你的目的是什么？;你好，陌生人？;要不要喝一杯？",values="1;2;3")]
+[Predicate(references="1")]
+[name="黑"]   不用紧张，我已经不是你的敌人了。
+
+[Predicate(references="2")]
+[Character(name="char_340_shwaz_2#1")]
+[name="黑"]   呵，你好，陌生人。
+
+[Predicate(references="3")]
+[name="黑"]   现在就免了。
+[Predicate(references="1;2;3")]
+[name="黑"]   其实，也没有什么特别的。
+[name="黑"]   原本我是想教训你一顿的。小姐不该遇到这种危险。
+[name="黑"]   但我也要谢谢你。没有你，我和小姐也许永远没法解开误会。
+[name="黑"]   我一厢情愿地不想让她触碰这些事情，但也许你才是对的，她有自己的想法，也有自己的责任。
+[Decision(options="你不该替她做决定。;时光无法倒流，她已经是现在这样。;那真是对不起咯？",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="黑"]   ......谢谢你。如果不是你，我所珍视的一切都会被这座火山吞没。
+[name="黑"]   我欠了你很多。
+[Dialog]
+[Character]
+[Character(name="char_348_ceylon_4#6")]
+[name="锡兰"]   博士！
+[Character(name="char_348_ceylon_4#8")]
+[name="锡兰"]   咦，黑也在这儿吗？
+[Character(name="char_348_ceylon_4#8",name2="char_340_shwaz_2#1",focus=2)]
+[name="黑"]   ......小姐？
+[Character(name="char_348_ceylon_4#6",name2="char_340_shwaz_2#1",focus=1)]
+[name="锡兰"]   正好，我有一件重要的事要向你们宣布！
+[name="锡兰"]   我啊，准备向罗德岛投一份简历。
+[Decision(options="？！",values="1")]
+[Predicate(references="1")]
+[Character(name="char_348_ceylon_4#6")]
+[name="锡兰"]   之前我也说过吧，我本来就对你们公司有意向。
+
+[Decision(options="要加入我们可不轻松。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_348_ceylon_4#4")]
+[name="锡兰"]   嗯哼，我已经问过艾雅法拉小姐和天火小姐了，她们表示以我的能力绝对没有问题的。
+[name="锡兰"]   这次事情也让我看到了你们的实力，所以经过深思熟虑，做出了这个决定。
+[Character(name="char_348_ceylon_4#4",name2="char_340_shwaz_2#1",focus=2)]
+[name="黑"]   但是罗德岛不是一家单纯的制药公司......
+[Character(name="char_348_ceylon_4#6",name2="char_340_shwaz_2#1",focus=1)]
+[name="锡兰"]   所以我要你跟我一起去。
+[name="锡兰"]   顺便一提，爸爸那边也已经同意了。
+[Character(name="char_348_ceylon_4#6",name2="char_340_shwaz_2#5",focus=2)]
+[name="黑"]   ......我知道了，如你所愿，小姐。
+[Character(name="char_348_ceylon_4#6")]
+[name="锡兰"]   所以说呢，博士，从今往后，可就要请多关照啦。
+
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=1, block=true)]
+
+[name="锡兰"]   博士，快过来！实验要开始了！
+[name="锡兰"]   哎，算了，黑，快去把博士扛过来！
+[name="黑"]   .....我想博士也不至于听不到你这能够把天花板震翻的嗓音，小姐。
+[name="黑"]   ......博士，虽然不知道你还在等什么，不过现在这种状况，小姐是不会在乎你我在想什么的。
+[name="黑"]   还是麻烦你自己走过去吧。如果真要我扛着你去的话，可能会不太雅观。
+
+[Decision(options="这就来！;......;我会好好盯着她的，放心吧。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="ac3_kv",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=3, block=false)]
+
+[name="黑"]   嗯。
+[name="黑"]   小姐请等等，我们这就来。
+[name="黑"]   走吧，博士。
+
+[Image(fadetime=2)]
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

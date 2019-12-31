@@ -1,0 +1,205 @@
+//!torch
+[HEADER(is_tutorial=true, is_skippable=true, is_autoable=true, fit_mode="BLACK_MASK", deny_auto_switch_scene=true)] 引导2到主界面
+
+[stopmusic(fadetime=1)]
+[Background(image="bg_indoor_1", width=1, height=1, fadetime=1)]
+
+[Delay(time=1)]
+
+
+
+
+[Character(name="char_013_riop")]
+[name="前衛オペレーター"]   これで最後のひとりだ！
+
+[CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[name="レユニオン構成員"]   うわぁ！
+
+[Character(name="char_013_riop")]
+
+
+
+[Dialog]
+[Character(fadetime=0)]
+[Delay(time=0.5)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5)]
+[Character(name="char_013_riop")]
+
+[name="前衛オペレーター"]   目標は排除しました。敵小隊の撤退を確認！
+[name="前衛オペレーター"]   ……Dr.{@nickname}の指揮は、アーミヤさんが言った通り素晴らしいものでした。
+
+[Character(name="char_002_amiya_1#10")]
+
+[name="アーミヤ"]   はい、あっさり勝てましたね。
+[name="アーミヤ"]   ドクターが経験してきたものは、この程度ではありませんから。
+
+[Character(fatetime=0.5, block=true)]
+[delay=1]
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="レユニオン構成員"]   くっ……どうして……ウルサス人でもない連中が邪魔を……
+[name="レユニオン構成員"]   お前らなんかに……我々の仕事の邪魔はさせん！
+[dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$p_imp_whip_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_130_doberm_ex")]
+[name="？？？"]   そこまでだ！
+
+
+
+[Character(name="char_013_riop")]
+[name="前衛オペレーター"]   ド、ドーベルマン教官！
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=2)]
+[name="ドーベルマン"]   何をボヤッとしている！もう少しで蜂の巣になるところだったぞ！
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=1)]
+[name="前衛オペレーター"]   も、申し訳ございません！
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=2)]
+[name="ドーベルマン"]   急げ！隊列を立て直すぞ！
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=1)]
+[name="前衛オペレーター"]   はっ！
+
+
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]   ドーベルマンさん！来てくれたんですね！
+[Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=2)]
+[name="ドーベルマン"]   緊急事態だ。私の小隊もレユニオンから攻撃を受けた。
+[name="ドーベルマン"]   そちらも同様だろうと推察し、急行してきたというわけだ。
+[Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=1)]
+[name="アーミヤ"]   レユニオンは、どうして私たちを襲撃したのでしょうか……？
+[Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=2)]
+[name="ドーベルマン"]   感染者のための組織……盲目的な思想をもった危険な集団だとは思っていたが————
+[name="ドーベルマン"]   ————まさか武力蜂起するとはな。しかもウルサスの都市を選ぶなぞ正気とは思えん。
+[name="ドーベルマン"]   この状況は、さらなる混乱を招くことになるだろう。
+[name="ドーベルマン"]   アーミヤ、すぐにチェルノボーグを離れるぞ。
+[Character(name="char_002_amiya_1#1", name2="char_130_doberm_ex", focus=1)]
+[name="アーミヤ"]   わかりました。ドクターの救出にも成功しましたし、計画通り撤退しましょう。
+[Delay(time=0.5)]
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]    ——この方が……Dr.{@nickname}か？
+[Character(name="char_002_amiya_1")]
+[name="アーミヤ"]   はい、そうです。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]    Dr.{@nickname}、私のことは知らないかもしれんが、アーミヤのことはわかるだろう。安全のために——
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[name="アーミヤ"]   あ、あの……
+[name="アーミヤ"]   ドーベルマン教官、今のドクターは状況が芳しくなくて。
+[name="アーミヤ"]   簡単に言うと、ドクターは……記憶喪失なんです。
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=2)]
+[name="ドーベルマン"]    なに？記憶喪失だと？
+[name="ドーベルマン"]    ……困ったな。そんな状況で指揮権をこのドクターに委ねようとしているのか……
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[name="アーミヤ"]   ドクターは指揮官としての能力は失っていません。
+[name="アーミヤ"]   ……少なくとも、先程の戦いでそれは確認できました。
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=2)]
+[name="ドーベルマン"]   ……
+[name="ドーベルマン"]   わかった……。私はそんな簡単に見ず知らずの者を信じることはできんが……
+[name="ドーベルマン"]   アーミヤ、お前を信じよう。
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[name="アーミヤ"]   ……ありがとうございます。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]   Dr.{@nickname}、私は行動隊E1の隊長、ドーベルマンだ。
+[name="ドーベルマン"]   あなたをこのウルサスの都市——チェルノボーグから我々のロドスまで護送する。
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[image(image="avg_map_1")]
+[ImageTween(image="avg_map_1", tiled=true, xScaleTo=1.3, yScaleTo=1.3, xTo=-200, duration=75, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[name="ドーベルマン"]   ここはチェルノボーグの中枢エリアだ。西側から即時撤退するのが得策だろう。
+
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[ImageTween(image="avg_map_1", tiled=true, xScaleTo=1.8, yScaleTo=1.8, xTo=-200, duration=75, block=false)]
+[name="アーミヤ"]   本来なら……私とドーベルマン教官で自身の小隊をすべて召集した後、西の合流地点に集合し撤退信号を確認する計画でしたが……
+[name="アーミヤ"]   通信機器が使えなくなった今は、各自撤退するしかないですね……
+[name="ドーベルマン"]    ああ。それだけ順調に事が運べば良かったのだがな。
+[name="ドーベルマン"]    とはいえ、Dr.{@nickname}をここの棺桶から救出するのは今日が最後のチャンスだったからな。仕方なかろう。
+[name="ドーベルマン"]    だが……嫌な予感がするな。
+[character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[image]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+
+[Character(name="char_016_medic", name2="char_002_amiya_1", focus=1)]
+[name="医療オペレーター"]   ア、アーミヤさん！
+[Character(name="char_016_medic", name2="char_002_amiya_1#6", focus=2)]
+[name="アーミヤ"]   どうしましたか？
+[Character(name="char_016_medic", name2="char_002_amiya_1#6", focus=1)]
+[name="医療オペレーター"]   ロ……ロドスから通信が入りました！
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="アーミヤ"]   繋がったんですね！まさか、ケルシー先……。
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="？？？"]   まことに申し訳ございません。違います。
+[image(image="bg_2_call")]
+[PlaySound(key="$d_gen_transmissionget",volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+
+[Character(name="char_002_amiya_1#1", focus=1)]
+[name="アーミヤ"]   PRTS……？
+
+
+[Character(name="char_002_amiya_1#1", focus=-1)]
+[name="PRTS"]   アーミヤ様、ご報告いたします。ニューラルコネクタへの緊急接続申請が予期せぬ形で実行されました。
+[name="PRTS"]   現在、ロドスも通信妨害を受けており、接続が可能なのはニューラルコネクタのみとなっております。
+[name="PRTS"]   そのため、電波を使用した通信では、まだロドスに帰還していないケルシー様にコンタクトすることはできません。
+[name="PRTS"]   何はともあれ、アーミヤ様の安全が確認できましたので、私のミッションはこれで完了です。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]   こいつ……
+[name="ドーベルマン"]   こんなときに脳天気なことを。
+[Character(name="char_002_amiya_1#1", focus=-1)]
+[name="PRTS"]   ニューラルコネクタによるロドスの指揮を行う必要がなければ、間もなく接続を切断いたします。
+[name="PRTS"]   せっかくの皆さまのパーティのお邪魔をしたということであれば、謹んでお詫び申し上げます。
+[Character(name="char_002_amiya_1#5", focus=1)]
+[name="アーミヤ"]   待って！切らないで……手伝ってほしいことがあります。
+[name="アーミヤ"]   ドーベルマンさん、ドクターにはこれが必要です。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]   わかった、急げ。
+[Character(name="char_002_amiya_1#5", focus=1)]
+[name="アーミヤ"]   ドクター、このPRTSも私たちの……仲間です。次に何をしたら良いのか教えてくれるはずです。
+[name="アーミヤ"]   今は時間がありません。急ぎPRTSでロドスの支援ネットワークに接続してみます。
+[name="アーミヤ"]   そうすれば、これを利用して優位に指揮ができるはずです。
+[name="アーミヤ"]   声を出して指揮を取るのとは違いますから、始めは慣れないかもしれませんが、うまく利用できれば救援作戦が順調に進むはずです。
+[name="アーミヤ"]   ……私を信じて下さい。そしてドクターの思うがままに、ドクターが慣れている通りにやってみてください……
+[name="アーミヤ"]   PRTS……始めてください。
+[Character(name="char_002_amiya_1#1", focus=-1)]
+[name="PRTS"]   管理者としての権限認証が必要です、識別方法を選択してください。
+[Character(name="char_002_amiya_1#2", focus=1)]
+[name="アーミヤ"]   あの、ドクター……何か喋ってみてください。
+
+
+[Decision(options="（話す）", values="1")]
+
+[Predicate(references="1")]
+[PlaySound(key="$d_gen_transmissionget",volume=0.4)]
+[Character(name="char_002_amiya_1#3", focus=-1)]
+[name="PRTS"]   なぜ黙ったまま画面の中央にタッチしたのかは理解できませんが——
+[name="PRTS"]   ——あなたの指紋の識別が完了いたしました。プロファイル確認、権限レベル：8
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Background]
+[Character(fadetime=0)]
+//修改此处的image来切换cg
+[Image(image="avg_ep00",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+[name="PRTS"]   ——おかえりなさい。Dr.{@nickname}。
+[Delay(time=0.6)]
+[Background]
+[character]
+[Dialog]
+[Blocker(block=true)]
+[Image]
+[Blocker(afrom=0, a=1, fadetime=1, block=true)]
+[SkipToThis]
+[GotoPage(dest="home")]
