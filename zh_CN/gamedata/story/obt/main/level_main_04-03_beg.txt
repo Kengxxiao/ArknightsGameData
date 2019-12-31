@@ -1,0 +1,141 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三十二关（前）
+
+// Comments
+
+[Background(screenadapt="coverall", image="bg_ri_1", width=1, height=1, fadetime=1)]
+
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+
+[Character(name="char_003_kalts_1")]
+
+[name="凯尔希"]   知道了。
+[name="凯尔希"]   好的，保持联络。嗅到气味就立刻告诉我。
+[name="凯尔希"]   按第三个键就行。嗯。
+[name="凯尔希"]   ——嗯？Dr.{@nickname}？
+[name="凯尔希"]   阿米娅呢？
+
+[Character(name="char_003_kalts_1", focus=-1)]
+
+[Decision(options="阿米娅前往贫民区了。", values="1")]
+
+[Predicate(references="1")]
+
+[Character(name="char_003_kalts_1")]
+
+[name="凯尔希"]   ——你居然让她一个人去了。
+[name="凯尔希"]   ......也罢，至少有人保护她。
+[name="凯尔希"]   你跟着去了，大概率也只是个拖油瓶。这次就不怪罪你了。
+[name="凯尔希"]   你也是一个人回来的？
+[name="凯尔希"]   哦，企鹅物流。
+[name="凯尔希"]   你也要更加关注自己的人身安全。我们不是每次都能雇佣到可靠的本地向导的。
+[name="凯尔希"]   Dr.{@nickname}——
+[name="凯尔希"]   阿米娅不会在龙门逗留太长时间，毕竟之后还有任务。
+[name="凯尔希"]   你还会再一次面对他。
+[name="凯尔希"]   ——如果是我的话，会把当时没说出来的话，说出来。
+
+
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Background(screenadapt="coverall", image="bg_lungmen_m", fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Delay(time=0.6)]
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   啊，博士？
+[name="阿米娅"]   一直在等我吗......
+[name="阿米娅"]   对不起，让你久等了
+[name="阿米娅"]   嗯？我的表情与离开时不太一样？
+
+[Character(name="char_002_amiya_1#3")]
+
+[name="阿米娅"]   .....
+[name="阿米娅"]   发生了些事情。
+[name="阿米娅"]   我觉得......
+[name="阿米娅"]   也许陈长官，她也有着自己的想法。
+[name="阿米娅"]   即使她嘴巴很凶，即使她做了我难以接受的事情......
+[name="阿米娅"]   但也许......我们之间的隔阂也没有那么大。
+[name="阿米娅"]   她有她的责任。
+
+
+[Character(name="char_002_amiya_1#2")]
+
+[name="阿米娅"]   ......啊......原来是这样。
+[name="阿米娅"]   她也承担了很多吧。
+[name="阿米娅"]   也许我也......
+
+[Character(name="char_002_amiya_1#2", focus=-1)]
+
+[Decision(options="阿米娅，你也承担了许多事情。;......", values="1;2")]
+
+[Predicate(references="1;2")]
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   是吗......
+[name="阿米娅"]   我......只是没有其他的选择而已。
+
+[Character(name="char_002_amiya_1", focus=-1)]
+
+[Decision(options="至少阿米娅你坚持了自己的选择。;......", values="1;2")]
+
+[Predicate(references="1;2")]
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   ......如果导致那样的结果，也算是坚持的话。
+[name="阿米娅"]   博士没必要......这样安慰我的。
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   其实，我明白的。
+[name="阿米娅"]   我不知道......
+[name="阿米娅"]   我不知道，我们走到哪一天，这片大地才会变得不同......
+
+[Character(name="char_002_amiya_1#3")]
+
+[name="阿米娅"]   但，我明白。
+[name="阿米娅"]   我不会放弃。
+[name="阿米娅"]   我会承担任何后果，因为......这是我自己选的。
+
+
+[Character(name="char_002_amiya_1#3")]
+
+[name="阿米娅"]   博士......
+[name="阿米娅"]   你会......陪在我身边吗？
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   尽管......这种愧疚，会一直存在......
+[name="阿米娅"]   没能抓住大家的遗憾，没能救助朋友的遗憾......
+
+
+[Character(name="char_002_amiya_1#3")]
+
+[name="阿米娅"]   但我必须坦然面对。
+[name="阿米娅"]   和罗德岛的大家一起——
+[Delay(time=0.6)]
+[Dialog]
+
+[PlaySound(key="$phone")]
+[Delay(time=3)]
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]   嗯？是凯尔希医生的通讯......
+[name="阿米娅"]   凯尔希医生？请问有什么事？
+
+[Character(fadetime=0)]
+
+[name="凯尔希"]   阿米娅，有几支侦查小队发来了消息。
+[name="凯尔希"]   情况变得有些刻不容缓。
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="阿米娅"]   好的，我马上就来。
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

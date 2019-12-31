@@ -1,0 +1,192 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（后）
+
+// Comments
+// 从室内走向室外白光
+
+[Background(image="bg_cher_1",fadetime=1,screenadapt="coverall")]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+
+
+[CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[name="整合运动成员"]  呃 ......
+[name="整合运动成员"]  你们不是......乌萨斯......人......
+
+[Character(fadetime=0.7)]
+[Dialog]
+[Delay(time=0.7)]
+[Character(name="char_013_riop")]
+[name="近卫干员"]   呼，呼......
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  看来，他们没来及联络同伙。
+[name="杜宾"]  ......做的不错，Dr.{@nickname}。
+[name="杜宾"]  是该客观评价你的能力了。
+[Character(name="char_016_medic")]
+[name="医疗干员"]  咦，阿米娅......她去......
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   没事吧？
+[Character(name="char_002_amiya_1#2",focus=-1)]
+[name="女性"]   啊？谢，谢......
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   没事的，这是我们......
+[Character(name="char_002_amiya_1#2",focus=-1)]
+[name="女性"]   ......你，你也是感染者？
+[name="女性"]   你们要做什么！我，我的孩子......别伤害我们，求你了，我......
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   ......
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]   去找个安全的地方藏身。
+[Character(name="char_002_amiya_1",focus=-1)]
+[name="女性"]   呜，呜......宽恕我们......饶了我......
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[Character(name="char_016_medic")]
+[name="医疗干员"]  ......
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   各位休息好了吗？
+[Character(name="char_016_medic")]
+[name="医疗干员"]  啊，没事......
+
+[Decision(options="她为什么害怕你？", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   ......
+[name="阿米娅"]   Dr.{@nickname}......
+[name="阿米娅"]   类似的问题，你以前也问过呢。
+
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   因为我，得了病。
+[name="阿米娅"]   我，还有杜宾，罗德岛的大多数人，都得了病。
+[name="阿米娅"]   就连刚才那些整合运动的成员也是......
+[name="阿米娅"]   我们得了很重的病，让人害怕的病......
+[name="阿米娅"]   “矿石病”。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  ......得了矿石病的人，就是感染者。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   杜宾......
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  乌萨斯向来对感染者十分严苛。
+[name="杜宾"]  说起来，谁又不是呢。只是乌萨斯在这方面的举措，尤为冷酷罢了。
+[name="杜宾"]  宣传上让民众恐惧感染者，到了抓捕感染者的时候，民众自然就习以为常，甚至拍手称快。
+[name="杜宾"]  所以，整合运动才选择了这里......
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   只是......这次，似乎不再是简单的示威游行了。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  这一次，他们开始大规模地使用暴力。
+[name="杜宾"]  等到乌萨斯政府平息了事件，切尔诺伯格的感染者，只会遭到更残酷的对待。
+[name="杜宾"]  ......与之相反，有了Dr.{@nickname}你，罗德岛的处境，也许能有所改善。
+
+
+[Decision(options="......这和我也有关系？;......;那我还挺重要的。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  凯尔希和阿米娅都和我说过，你是最顶尖的矿石病研究学者。
+[name="杜宾"]  ......现在，你陷入了记忆丧失的困境，我很怀疑，你还能不能再派上用场。
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]   唔唔，杜宾教官，这么说好过分！
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  ......也许就和指挥一样，等你稍作复习，说不定就能重新掌握那些理论？
+[name="杜宾"]  毕竟你还是前线指挥官......
+[name="杜宾"]  其实之前，我怎么也没法把神经学博士和战术家联系在一起......
+[name="杜宾"]  看到你本人后，似乎好理解了一些。
+[name="杜宾"]  毕竟罗德岛本身就很像你的专业。
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[Character(name="char_016_medic")]
+[name="医疗干员"]   喂！你！别跑！该注射药剂了！
+[Character(name="char_016_medic",name2="char_013_riop",focus=2)]
+[name="近卫干员"]   啊？啊？我没事，我没事呀！我，我还不需要治疗！
+[Character(name="char_016_medic",name2="char_013_riop",focus=1)]
+[name="医疗干员"]   是定量药剂，延缓感染症状的！
+[name="医疗干员"]   你刚才不是还说头晕吗！
+[Character(name="char_016_medic",name2="char_013_riop",focus=2)]
+[name="近卫干员"]   那不是同一种症状吧！
+[Character(name="char_016_medic",name2="char_013_riop",focus=1)]
+[name="医疗干员"]   要是一会儿你的身体又出了问题，再碰上战斗怎么办？
+[name="医疗干员"]   为了大家的安全你也该好好注意！
+[Character(name="char_016_medic",name2="char_013_riop",focus=2)]
+[name="近卫干员"]   ......
+[Character(name="char_016_medic",name2="char_013_riop",focus=1)]
+[name="医疗干员"]   别动！我要扎了！
+[Character(name="char_016_medic",name2="char_013_riop",focus=2)]
+[name="近卫干员"]   啊！！
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  ......
+[name="杜宾"]  ......罗德岛就是这样，既要找出治疗感染者的办法，又要减少感染者带来的问题。
+[Character(name="char_130_doberm_ex",name2="char_002_amiya_1",focus=2)]
+[name="阿米娅"]   ——是的。光是研究治疗方法，或者仅仅去平息种种争端，都是不够的。
+[name="阿米娅"]   我们必须直面感染者带来的所有问题。
+[name="阿米娅"]   只有这样，罗德岛才能替感染者争取到一线生机......
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  作为感染者，我们也比普通人更能理解感染者。
+[name="杜宾"]  无论是普通人还是感染者，无论是和平还是纷争，罗德岛想要解决问题，而不是任由仇恨和疾病蔓延肆虐。
+[name="杜宾"]  Dr.{@nickname}，这可能也会是你职责的一部分。
+[name="杜宾"]  ......至少，这是我粗浅的请求。
+
+[Decision(options="你在说什么？？;......;我需要更慎重地思索一下。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  我们会留给你很多时间的，你可以慢慢理解。
+[name="杜宾"]  只不过，给我们的时间却不多了。
+[name="杜宾"]  整顿队伍，出发！
+[name="杜宾"]  前往汇合点的路上，还不知道有什么等着我们！
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Background]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[delay(time=1)]
+
+[name="杜宾"]  （阿米娅......）
+[name="杜宾"]  （切尔诺伯格现在的情况非常复杂，我们不能给整支救援队伍带去心理压力。但是......）
+[name="阿米娅"]  （我们......还有多长时间？）
+[name="杜宾"]  （......三小时。）
+[name="杜宾"]  （三小时之后，天灾将会吞没这个城市。）
+[name="杜宾"]  （等到天灾降临，一切就都完了。）
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Background(image="bg_cher_1",x=0, y=20, xScale=1.1, yScale=1.1, fadetime=1)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[Delay(time=1)]
+[Character(name="char_1502_crowns#2")]
+[name="？？？"]  ......
+[name="？？？"]  不确定因素。
+[name="？？？"]  去，通知其他人。
+[name="？？？"]  我们追。
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Dialog]
+[Image]
+

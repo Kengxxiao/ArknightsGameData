@@ -1,0 +1,267 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三十一（后）
+
+// Comments
+
+[stopmusic]
+
+
+
+
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+
+[name=""]   6:03 p.m. \ 多云 \ 能见度 19公里 
+[name=""]   龙门外荒漠 \ 14号设施
+
+[dialog]
+[delay(time=1)]   
+
+[Background(screenadapt="coverall", image="bg_cher_3", width=1, height=1, fadetime=1)]
+[Character(name="char_219_meteo_1#1")]
+
+[name="陨星"]   ......已经到达目标地点。
+[name="陨星"]   没有发现其它异常情况。
+[name="陨星"]   报告完毕。
+
+[Character(name="char_219_meteo_1")]
+[name="陨星"]   霜叶......你一路上，怎么总是皱着眉头？
+[Character(name="char_193_frostl_1")]
+
+[name="霜叶"]   我只是有点在意阿米娅她们的状况。
+
+[Character(name="char_219_meteo_1" )]
+
+[name="陨星"]   阿米娅她们已经顺利回到罗德岛了。
+[name="陨星"]   临光和杜宾一个星期前就已经动身前往龙门外的其他地区。
+[name="陨星"]   同时出动她们两个，应该也是挺艰难的任务。
+[name="陨星"]   黑钢和企鹅物流也有自己的事情要处理。
+
+[Character(name="char_259_Jessica_1")]
+
+[name="杰西卡"]   啊，雷蛇姐和芙兰卡姐......
+[name="杰西卡"]   她们，她们平安就好......
+
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+
+[name="陨星"]   你可也要好好加油才行。
+[name="陨星"]   芙兰卡把你交到我手上的时候，可是跟我说她很看好你的。
+
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=1)]
+
+[name="杰西卡"]   真......真的吗？
+
+[Character(name="char_259_Jessica_1", name2="char_219_meteo_1", focus=2)]
+
+[name="陨星"]   她说，前提是你别那么怯生生的。
+
+[Character(name="char_259_Jessica_1#4", name2="char_219_meteo_1", focus=1)]
+
+[name="杰西卡"]   呜......
+
+[Character(name="char_259_Jessica_1#4", name2="char_219_meteo_1", focus=2)]
+
+[name="陨星"]   ......别突然就一副要哭出来的样子呀！
+[name="陨星"]   你不是黑钢的一员吗......？
+
+[Character(name="char_259_Jessica_1#5", name2="char_219_meteo_1", focus=1)]
+
+[name="杰西卡"]   我，我没有......没有在哭......
+[Character(name="char_219_meteo_1")]
+
+[name="陨星"]   ......
+[name="陨星"]   ......不管怎么说，先继续任务吧。
+[name="陨星"]   我们接下来的任务，就是和各个侦察小队一同，侦察这座废城的各个区域。
+[name="陨星"]   除了搜救幸存者之外，还需要勘察一下状况。
+[name="陨星"]   如果出现了感染者问题，必须速战速决。
+[name="陨星"]   虽然不是什么特别危险的任务，但也得小心谨慎。
+[name="陨星"]   万一和整合运动有关的话，就将必要信息通知凯尔希医生并撤退。
+[Character(name="char_259_Jessica_1")]
+
+[name="杰西卡"]   嗯，嗯。
+
+[Character(name="char_193_frostl_1")]
+
+[name="霜叶"]   了解。
+
+[Character(name="char_219_meteo_1")]
+
+[name="陨星"]   接下来......该是我们认真工作的时候了。
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Character(fadetime=0)]
+
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1, delay=0.5)]
+
+
+[name=""]   6:12 p.m. \ 多云 \ 能见度 19公里 
+[name=""]   罗德岛
+[name=""]   废弃移动城市区块-"14号设施"被发现后 第2天 
+
+[Background(screenadapt="coverall", image="bg_bridge", width=1, height=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[Delay(time=0.8)]
+
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   啊......博士，你来了。
+
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+
+[name="德克萨斯"]   来得刚好，Dr.{@nickname}。
+
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+
+[name="能天使"]   我们这边的活儿也干的差不多了，得暂时离开一段时间~
+
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=-1)]
+
+[Decision(options="要走了吗？;......知道了。;我会想你们的。", values="1;2;3")]
+
+[Predicate(references="1;2;3")]
+
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=2)]
+
+[name="雷蛇"]   很快就能再见面的。
+
+[Character(name="char_106_franka_1", name2="char_107_liskam_1", focus=1)]
+
+[name="芙兰卡"]   只要过一小段时间，我们就能回到罗德岛重新待命。
+[name="芙兰卡"]   可不用太想我哦。
+
+[Character(name="char_106_franka_1", name2="char_103_angel_1", focus=2)]
+
+[name="能天使"]   唉唉，可惜可惜，我们这边没有那样的正经理由呢，德克萨斯。
+
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+
+[name="德克萨斯"]   你给我等等......
+
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=2)]
+
+[name="能天使"]   企鹅物流，马上要回去休假咯！
+[name="能天使"]   虽然只有宝贵的一天，但是！但是——
+
+[Character(name="char_102_texas_1", name2="char_103_angel_1", focus=1)]
+
+[name="德克萨斯"]   ......抱歉。不是适合在这种场合说的东西。
+[Delay(time=0.5)]
+[Character(name="char_002_amiya_1#2")]
+
+[name="阿米娅"]   不会......休息也是必要的。
+
+[Character(name="char_102_texas_1", name2="char_002_amiya_1", focus=1)]
+
+[name="德克萨斯"]   ......这句话，理应是我说给你听。
+
+[Character(name="char_102_texas_1", name2="char_002_amiya_1#6", focus=2)]
+
+[name="阿米娅"]   ......?
+
+[Character(name="char_103_angel_1", name2="char_002_amiya_1#6", focus=1)]
+
+[name="能天使"]   没错没错。阿米娅，你啊，也该好好休息一下了。
+
+[Character(name="char_103_angel_1", name2="char_002_amiya_1", focus=2)]
+
+[name="阿米娅"]   罗德岛还有必须要处理的事情......
+
+[Character(name="char_107_liskam_1", name2="char_002_amiya_1", focus=1)]
+
+[name="雷蛇"]   我能理解，但是阿米娅，你可不能给自己太多压力。
+
+[Character(name="char_106_franka_1", name2="char_002_amiya_1", focus=1)]
+
+[name="芙兰卡"]   即使信念强大，一直劳累下去，身体也会承受不住的。
+[name="芙兰卡"]   你可不能病倒了，大家都指望着你呢。
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   我......一直受到大家的关照。
+
+[Character(name="char_102_texas_1")]
+
+[name="德克萨斯"]   但你战斗的身姿也鼓励了大家。
+[name="德克萨斯"]   不论如何，这就够了。
+
+[Character(name="char_103_angel_1")]
+
+[name="能天使"]   趁这个机会，我要去罗德岛做个免费的身体检查，然后再回去。
+
+[Character(name="char_106_franka_1")]
+
+[name="芙兰卡"]   我们的任务也差不多结束了。接下来......
+[name="芙兰卡"]   阿米娅，{@nickname}博士。
+
+[Character(name="char_106_franka_1", focus=-1)]
+
+[Decision(options="——？;......", values="1;2")]
+
+[Predicate(references="1;2")]
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="阿米娅"]   我在听。
+
+[Character(name="char_106_franka_1", name2="char_103_angel_1", focus=0)]
+
+[name="芙兰卡&能天使"]   ——
+[name="芙兰卡&能天使"]   加油~&Cheer up !
+
+[Character(name="char_002_amiya_1#6")]
+
+[name="阿米娅"]   啊......啊？
+
+[Character(name="char_107_liskam_1", name2="char_102_texas_1", focus=1)]
+
+[name="雷蛇"]   汇报结束之后，我们会立即返回。
+
+[Character(name="char_107_liskam_1", name2="char_102_texas_1", focus=2)]
+
+[name="德克萨斯"]   无论如何，之后的生活，还要继续。
+[name="德克萨斯"]   阿米娅，保重。
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   大家......我......
+
+[Character(name="char_002_amiya_1#2")]
+
+[name="阿米娅"]   ......好。请多保重。
+[name="阿米娅"]   下次再见。
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Delay(time=0.6)]
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   ......
+[name="阿米娅"]   博士。
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="阿米娅"]   我得再去龙门外围的贫民区看看。应该能帮上忙。
+
+[Character(name="char_002_amiya_1#7", focus=-1)]
+
+[Decision(options="一个人去不要紧吗？;会不会很危险......;阿米娅，我陪你吧？", values="1;2;3")]
+
+[Predicate(references="1;2;3")]
+
+[Character(name="char_002_amiya_1#3")]
+
+[name="阿米娅"]   没事的，博士。
+[name="阿米娅"]   隶属罗德岛的干员，红，正在龙门执行其他任务。
+[name="阿米娅"]   她很厉害的！
+[name="阿米娅"]   有她在，你可以放心。
+
+
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,225 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第二十七关（前）
+
+// Comments
+
+
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+
+[Character(name="char_002_amiya_1#4")]
+
+[name="阿米娅"]   {@nickname}博士......
+[name="阿米娅"]   我......我不是......我......
+[Background(image="bg_wild_a", width=1, height=1, fadetime=1)]
+[Delay(time=1)]
+[Character(name="char_136_hsguma")]
+[name="星熊"]   雾散了。
+[name="星熊"]   近卫局发来通讯，他们发现了更多整合运动的踪迹。
+[name="星熊"]   说是在跟踪一个敌人，女性，白发——
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   ......
+[Character(name="char_002_amiya_1#4", name2="char_136_hsguma", focus=2)]
+[name="星熊"]   阿米娅，老陈催促我，让你......
+[Dialog(fadetime=0)]
+[Character(name="char_002_amiya_1#4")]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#4", name2="char_136_hsguma", focus=2)]
+
+[name="星熊"]   ......
+[name="星熊"]   ——你脸色不太好。
+
+[Character(name="char_002_amiya_1#4", name2="char_136_hsguma", focus=-1)]
+
+[Decision(options="交给我吧", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_136_hsguma")]
+[name="星熊"]   那......
+[name="星熊"]   那就交给你了，{@nickname}博士。
+[name="星熊"]   最好能在五分钟内出发。
+
+[Dialog]
+[Character(fadetime=0.6)]
+[Delay(time=0.6)]
+
+[Character(name="char_002_amiya_1#4")]
+
+[name="阿米娅"]   ......
+[name="阿米娅"]   ——{@nickname}博士——
+
+[Character(name="char_002_amiya_1#5", focus=-1)]
+
+[Decision(options="你是在害怕吗？;......难道说，你不喜欢这种力量？;阿米娅，没有必要后悔。", values="1;2;3")]
+
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#6")]
+
+[name="阿米娅"]   啊......？我......
+
+[Character(name="char_002_amiya_1#4")]
+
+[name="阿米娅"]   博士......我没有在害怕什么......
+[name="阿米娅"]   当然，我害怕，害怕再一次失去......所以才......
+[name="阿米娅"]   不，我只是不想的......
+
+[Predicate(references="2")]
+
+[Character(name="char_002_amiya_1#6")]
+
+[name="阿米娅"]   我......我不知道......
+
+[Character(name="char_002_amiya_1#4")]
+
+[name="阿米娅"]   我不知道该不该这么说......但我......
+[name="阿米娅"]   它不应该光是......伤害别人。
+[name="阿米娅"]   我不想让博士看到我，这么近的看到我......
+[name="阿米娅"]   ......夺走生命。
+
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   我没有后悔。
+[name="阿米娅"]   不，我是说......
+[name="阿米娅"]   我就是会为了博士而使用力量，无论他背负着什么，我不后悔杀死他。
+[name="阿米娅"]   但是，当然......原本，应该会有更好的办法吧。
+[name="阿米娅"]   因为没能找到那个办法，所以他死去了。
+[name="阿米娅"]   这一点......我很后悔。
+[name="阿米娅"]   我不希望......
+[name="阿米娅"]   不希望{@Nickname}你看到这样的我。
+[name="阿米娅"]   明明说着让这片大地的感染者从痛苦中脱身......
+[name="阿米娅"]   关键时刻，却还是要一次又一次的，说服自己，去剥夺感染者的生命。
+[name="阿米娅"]   我真是，太弱了。
+
+
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#4", focus=-1)]
+
+[Decision(options="阿米娅，至少你保护了我。", values="1")]
+
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   ——————
+[name="阿米娅"]   ......这是我应该做的。
+
+[Character(name="char_002_amiya_1#6")]
+[name="阿米娅"]   我明白了。
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   我从来都不认为，有什么事情真的命中注定。
+[name="阿米娅"]   只是，无论如何......无论我会走到哪一步......
+[name="阿米娅"]   我都会保护你的，博士。
+[name="阿米娅"]   我保证。
+
+
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2",focus=1)]
+[name="整合运动成员"]   不行！
+[name="整合运动成员"]   你们先走！
+[name="整合运动成员"]   我得去......得去把碎骨救回来！
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2",focus=2)]
+[name="整合运动成员"]   你疯了？
+[name="整合运动成员"]   你这是自投罗网......要去，就大家一起去！
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2",focus=1)]
+[name="整合运动成员"]   好！
+[name="整合运动成员"]   我可不能，不能让他在这荒野中......
+[Character(name="char_1002_nsabr_2",name2="char_1002_nsabr_2",focus=2)]
+[name="整合运动成员"]   那就上吧！
+
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+
+[Character(name="char_136_hsguma")]
+
+[name="星熊"]   怎么会——
+[name="星熊"]   整合运动......折返了？
+[name="星熊"]   他们要做什么——？！
+
+[Character(name="char_136_hsguma", name2="char_002_amiya_1#7", focus=2)]
+
+[name="阿米娅"]   星熊警官！快回撤！
+[Character(name="char_136_hsguma")]
+[name="星熊"]   近卫局，别懈怠！
+[name="星熊"]   准备好防御对方的攻击！
+[playsound(key="$p_imp_blunt_h", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="整合运动成员"]   掩护！掩护我！
+[name="整合运动成员"]   那个女人......
+[name="整合运动成员"]   不行，那个女人的盾，我们是越不过去的！
+[name="整合运动成员"]   快！迂回！趁他们还没反应过来......
+[name="整合运动成员"]   先把碎骨，把碎骨——
+[name="整合运动成员"]   把他抢回来！！
+
+
+[Character(name="char_136_hsguma")]
+
+[name="星熊"]   罗德岛！他们在转移目标，你们要注意！
+
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]   不好！
+[name="阿米娅"]   星熊警官！小心你的右边！
+
+[Character(name="char_136_hsguma")]
+
+[name="星熊"]   ——嗯——？
+
+[playsound(key="$p_imp_grenade_n", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+
+[Character(name="char_136_hsguma", name2="char_1504_cqbw", focus=2)]
+
+[name="W"]   呼呼，用盾挡开了？有些意思——
+
+[Character(name="char_136_hsguma", name2="char_1504_cqbw", focus=1)]
+
+[name="星熊"]   爆炸？整合运动的偷袭？！
+
+[Character(name="char_136_hsguma", name2="char_1504_cqbw", focus=2)]
+
+[name="W"]   当然不止是偷袭哦~
+[name="W"]   就请你在这里乖乖呆着，别向后去了哦？
+
+[CameraShake(duration=1, xstrength=14, ystrength=20, vibrato=30, randomness=90, fadeout=false)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.2, block=true)]
+[playsound(key="$p_imp_grenade_n", volume=0.7)]
+[Blocker(a=0, fadetime=0.3, block=false)]
+
+[Character(name="char_136_hsguma")]
+
+[name="星熊"]   啧——哪来的混蛋！
+[name="星熊"]   又是爆炸！
+[name="星熊"]   阿米娅！我遭到整合运动远程火力的压制！
+[name="星熊"]   其余的整合运动，正朝你们的方向快速移动！
+
+[Character(name="char_1504_cqbw")]
+
+[name="W"]   唔，这面盾还挺厚实的。
+[name="W"]   我似乎有点自找麻烦的意思呢......
+[name="W"]   算了，就当我帮整合运动一点小忙吧。
+[name="W"]   要让我看到有趣的事情哦。可别让我太失望了~
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="阿米娅"]   是切城的那个叫W的人！
+[name="阿米娅"]   难道说，陈长官他们被她甩掉了吗？！
+[name="阿米娅"]   小心敌人的突袭！迅速援护星熊警官！
+[name="阿米娅"]   还有很多敌人埋伏在周围！
+[name="阿米娅"]   只有暴露他们的踪迹，我们才能取得优势！
+[name="阿米娅"]   博士！请指挥各小队应对敌人的袭击！
+
+
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

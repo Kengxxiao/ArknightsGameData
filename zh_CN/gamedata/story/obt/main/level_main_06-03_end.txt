@@ -1,0 +1,189 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（后）
+
+// Comments
+
+
+[Delay(time=1)]
+[Background]
+
+有多少人死在你面前了？
+[Dialog]
+[Background(screenadapt="coverall", image="bg_uptown_2",fadetime=2,block=true)]
+[Delay(time=1)]
+[PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_1508_Faust_1#1")]
+[name="浮士德"]  ......
+[Character]
+[name="整合运动成员"]  （乌萨斯语）
+[Character(name="char_1508_Faust_1#1")]
+[name="浮士德"]  我会的。我会带回去的。
+[Character]
+[name="整合运动成员"]  ......（乌萨斯语）......？
+[Character(name="char_1508_Faust_1#1")]
+[name="浮士德"]  嗯。我不去切尔诺伯格。
+[name="浮士德"]  放心。
+[Character]
+[name="整合运动成员"]  ......
+[Character(name="char_1508_Faust_1#1")]
+[name="浮士德"]  这里很安全。
+[name="浮士德"]  睡吧。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+有多少人死在我面前了？
+[Dialog]
+[Blocker(a=0,fadetime=1, block=true)]
+[Character]
+[stopmusic(fadetime=1)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_367_swllow_1#2")]
+[name="？？？"]  放下武器！
+[Dialog]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+//修改此处的image来切换cg
+[Image(image="avg_6_8",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character]
+[ImageTween(xFrom=0, yFrom=0, xTo=-20, yTo=0, xScale=1.1, yScale=1.1,  duration=10, block=false)]
+//对话内容此处填入
+[name="灰喉"]  ......只有你一个？
+[Character(name="char_1508_Faust_1#1")]
+[name="浮士德"]  ......
+[Character(name="char_367_swllow_1#4",name2="char_1508_Faust_1#1",focus=1)]
+[name="灰喉"]  别回头。再动一下，我就射击！
+[Dialog]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+///////////////////////////
+[Delay(time=1)]
+[Character(name="char_367_swllow_1#4",name2="char_1508_Faust_1#1",focus=2)]
+[name="浮士德"]  弩手要先射击，再说话。
+[Dialog]
+[Character(name="char_1508_Faust_1#1")]
+[Delay(time=0.7)]
+[Character(fadetime=1,block=true)]
+[Delay(time=1)]
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  什么？身体......消失了？
+[name="灰喉"]  不......情报档案上有，你是他们的指挥官之一，浮士德。你的法术瞒不住我！
+[name="灰喉"]  我知道，我知道你的法术只对视觉起作用。只要我射击，你也一样会被弩箭刺穿。
+[Character]
+[name="浮士德"]  不会。
+[Character(name="char_367_swllow_1#4")]
+[name="灰喉"]  ——！
+[Dialog]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Delay(time=1)]
+[Character]
+[name="浮士德"]  你能预判我的动作？
+[Character(name="char_367_swllow_1#4")]
+[name="灰喉"]  ......
+[Character]
+[name="浮士德"]  我们，两个落单的弩手。同时按下扳机，我们都死。
+[name="浮士德"]  你的名字？
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  代号灰喉。你什么时候跳到我身后的？
+[Dialog]
+[Character]
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",fadetime=1,block=true)]
+[Delay(time=2)]
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=1)]
+[name="浮士德"]  你第三次眨眼的时候。
+[name="浮士德"]  ......你很爽快。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  你也和你的小队失散了。我不想杀伤没有战意的人。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=1)]
+[name="浮士德"]  我们是敌人。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  罗德岛想要救助感染者。我看到你在帮助感染者。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=1)]
+[name="浮士德"]  ......那是我的战友。你是我的敌人。
+[name="浮士德"]  罗德岛怎么会有这样幼稚的人？
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  是的，我很幼稚。我只会按命令做事。当我自己做决定时，我什么都做不了。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=1)]
+[name="浮士德"]  你要当心。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1#4",focus=2)]
+[name="灰喉"]  手指松开！
+[name="灰喉"]  你的弩没有连射机能。只要我躲过你的第一发射击，你就会死。别去按扳机。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1#4",focus=1)]
+[name="浮士德"]  只听从命令，一昧依赖别人的想法行动，最后会变成可怕的模样。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1#4",focus=2)]
+[name="灰喉"]  为什么？
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1#4",focus=1)]
+[name="浮士德"]  多数人只是盲从，他们会退缩，也会颤抖。他们并不真依赖谁，他们只是没有开始思考。
+[name="浮士德"]  ......而那些没有自己方向的人，只是种索求愿望来获得成就感和存在感的机器。
+[name="浮士德"]  开动，不断运作，投入愿望，实现愿望，把周围一切都吃掉，把许愿的人也吃掉。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  我不会。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=1)]
+[name="浮士德"]  你经历的还不够多。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  我看见你和刚才那个感染者最后的对话。你在做对的事。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=1)]
+[name="浮士德"]  你的对错和我无关。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  浮士德，你一直在避开近卫局，哪怕是落单的龙门近卫局，你也没有射击他们。这些我都看到了。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=1)]
+[name="浮士德"]  ......别把我的忍耐当成软弱。如果伏击的人是我，你已经死了。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  但你没有。
+[name="灰喉"]  你很累了。只要是用弩的人，都能看出你的疲劳。弦绷得太紧，这样下去一定会断掉。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=1)]
+[name="浮士德"]  ......作为弩手，你实在太多话。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  你也遭遇了那些特殊感染者，我们可以想办法。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1",focus=1)]
+[name="浮士德"]  你说的也许很对。
+[Character(name="char_1508_Faust_1#1",name2="char_367_swllow_1#4",focus=2)]
+[name="灰喉"]  等等！
+[Dialog]
+[Character(name="char_1508_Faust_1#1")]
+[Delay(time=0.7)]
+[Character(fadetime=1,block=true)]
+[Delay(time=1)]
+[name="浮士德"]  但我没有办法。
+[Character(name="char_367_swllow_1#4")]
+[name="灰喉"]  （在开始运动的一瞬间消失了？......没法判断他的位置！）
+[name="灰喉"]  ......
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  ......嗯？
+[name="灰喉"]  为什么不杀我？
+[Character]
+[name="浮士德"]  你没有射击我，我也没有。
+[name="浮士德"]  下次不会了。如果你没射杀我，我就会射杀你。
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  我没有恶意！
+[Character]
+[name="浮士德"]  那才最可怜。
+[name="浮士德"]  ......也许你需要别人回答你的问题。不回答，你就不懂。
+[name="浮士德"]  别有负担，杀人、被杀，这种事天天发生。你们罗德岛也不可能避过的。
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  ......为什么不能一起帮助他们？
+[Character]
+[name="浮士德"]  ——我很想答应你的要求，但我知道不可能。
+[name="浮士德"]  别再追踪我了。
+[name="浮士德"]  你和他们的接触太少了，大脑里满是错觉和误解。
+[name="浮士德"]  ......而我已经，没有任何办法了。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+有多少人因为我做了什么而死，又有多少人因为我什么都没做而死？
+[Background]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]
+
+

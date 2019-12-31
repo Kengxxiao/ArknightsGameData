@@ -1,0 +1,41 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 公开招募引导
+
+[PopupDialog(dialogHead="$avatar_amiya")] \
+博士，为了对抗将来更大的威胁，我们需要有更多的同伴参与行动。
+[PopupDialog(dialogHead="$avatar_sys")] \
+虽然能够像上次一样通过猎头进行干员寻访，但是根据计算，有限的资源不会给我们太多这样做的机会。使用<@tu.kw>公开招募</>可能是另一个选择。
+
+[GotoPage(dest="HOME", waitForSignal="home_routed")]
+[Tutorial(target="btn_normal_recruit", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+点击这里可以进入<@tu.kw>公开招募</>界面。
+
+[GotoPage(dest="recruit_normal", waitForSignal="recruit_normal_routed")]
+
+//----------- Recruit scene ------------
+
+[InputBlocker(blockInput=true, validX=-312, validY=81, validWidth=514, validHeight=260)]
+[Tutorial(target="pool_btn_recruit_first_empty_slot", searchBtnInChildren="true", waitForSignal="recruit_buildconfig_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+从这里开始公开招募干员。
+
+[InputBlocker(blockInput=true)]
+[Tutorial(focusX=-3, focusY=-57, focusWidth=555, focusHeight=148, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+在进行公开招募时，博士可以选择至多三项期望的干员特征，这很重要。
+
+[Tutorial(focusX=-91, focusY=155, focusWidth=735, focusHeight=211, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+并且花费时间越长，我们找到符合要求的干员的概率就越高。
+
+// panel_hotspot指向确认按钮
+[Tutorial(target="panel_hotspot", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+请点击这里尝试招募下干员吧！
+
+//--------------------------------------

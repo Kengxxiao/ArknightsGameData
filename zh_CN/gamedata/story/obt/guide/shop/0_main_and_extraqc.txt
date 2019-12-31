@@ -1,0 +1,75 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 商店：特别推荐和采购凭证
+
+//----------- shop scene ------------
+
+
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+//修改此处的image来切换cg
+[Background(image="bg_abyss_1",width=1.7, height=1.7)]
+//对话
+[Blocker(a=0, fadetime=0.6, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+
+//对话内容此处填入
+[Character(name="char_007_closre_1#3")]
+[name="？？？"]  诶，好久不见啊，亲爱的Dr.{@nickname}。收到我发给你的信了吗？
+
+[Decision(options="没有收到;收到了", values="1;2")]
+
+[Predicate(references="1")]
+[Character(name="char_007_closre_1#3")]
+[name="？？？"]   唔......没关系，看来这和我估计的情况相差还挺远的。
+[name="？？？"]   总之，不要在意信了，就当它没有存在过吧。
+
+[Predicate(references="2")]
+[Character(name="char_007_closre_1#3")]
+[name="？？？"]   噢噢，真不愧是博士......我知道你能办到。这可不是一件轻而易举的事情。
+[name="？？？"]   感觉只要再相处一段时间，我们就能有更多更深的共同语言了。
+//对话内容此处填入
+[Predicate]
+
+[name="？？？"]  嘿嘿，对了。你知道吗，虽然我是罗德岛舰船可靠性工程师......不过我同时也需要负责管理采购。
+[name="？？？"]  啊啊————！这里实在太暗了，这可不是增进感情的好地方。来吧博士，换个地方，我准备了一些新东西给你瞧瞧。
+[dialog]
+
+[Character]
+
+[Blocker(a=1, r=1,g=1, b=1, fadetime=0.6, block=true)]
+[Background(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+///////////////////////////
+
+[PopupDialog(dialogHead="$avatar_closure")] 过去在地下网络上的老朋友倒是给我提供了不少渠道。总之————
+[PopupDialog(dialogHead="$avatar_closure")] 客户至上！欢迎来到罗德岛采购中心。
+
+[Shop.SwitchTopTab(shopType="RECOMMENDSHOP")]
+[Tutorial(target="toptab_recommend", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+现在你看到的是<@tu.kw>推荐页面</>。
+
+[PopupDialog(dialogHead="$avatar_closure")] 这里陈列的都是我精心挑选的、物廉价美的好东西。
+[PopupDialog(dialogHead="$avatar_closure")] 只要Dr.{@nickname}一声令下，采购部就会立刻将货物送至到您的房间门口。
+[PopupDialog(dialogHead="$avatar_closure")] 这些东西有些是需要预算经费的，不过更多的是能用一些资源免费兑换的......
+[PopupDialog(dialogHead="$avatar_closure")] 不过无论如何，这里的物品质量都有十足的保证，Dr.{@nickname}可以放心挑选哦！
+
+[Tutorial(target="toptab_qc", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+来看看<@tu.kw>凭证商店</>吧。
+[Shop.SwitchTopTab(shopType="QCSHOP")]
+
+[PopupDialog(dialogHead="$avatar_closure")] 在凭证商店，Dr.{@nickname}可以用作战中获得的各种凭证。
+[PopupDialog(dialogHead="$avatar_closure")] 而凭证可以用来兑换物资。
+
+[Tutorial(target="qctab_extra", waitForSignal="shop_qc_subtab_switched", searchBtnInChildren=true, \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+举个例子，我们来看下<@tu.kw>采购凭证</>。
+
+[PopupDialog(dialogHead="$avatar_closure")] <@tu.kw>采购凭证</>是从物资筹备-资源保障作战任务中得到的奖励。
+[PopupDialog(dialogHead="$avatar_closure")] 随着Dr.{@nickname}参与的行动越来越多，<@tu.kw>采购凭证</>数量也会越来越多。
+[PopupDialog(dialogHead="$avatar_closure")] 在必要的时候，Dr.{@nickname}可以根据需要，来采购部兑换必要的物资。
+
+//--------------------------------------

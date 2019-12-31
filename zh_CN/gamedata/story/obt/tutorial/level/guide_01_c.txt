@@ -1,0 +1,25 @@
+[HEADER(is_tutorial=true)] 引导关卡1_c
+
+[Battle.Pause(pause=false)]
+[Delay(time=1)]
+[Battle.Pause(pause=true)]
+
+[PopupDialog(dialogHead="$avatar_amiya")] 啊小心，有新的敌人。
+
+[Battle.EnsureMinCost(cost=14)]
+
+[InputBlocker(blockInput=false)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_amiya", animStyle="Drag", \
+          startX=-63, startY=60, startAnchor="BottomRight", endX=55, endY=65)] \
+为了确保安全，现在需要放置一个<@tu.kw>远程单位</>到场地当中。
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_amiya", animStyle="Drag", \
+          startX=55, startY=65, endX=355, endY=65)] \
+能天使是一名狙击干员，她可以在远处攻击敌方单位，来帮助德克萨斯稳固阵线。目前来看门外的那些人已经无法进入了。
+[InputBlocker(blockInput=true)]
+
+[Battle.Pause(pause=false)]
+[Delay(time=1)]
+[Battle.Pause(pause=true)]
+
+[PopupDialog(dialogHead="$avatar_amiya")] 好了，现在博士需要静观其变，冷静等待战场的下一步变化。
+[PopupDialog(dialogHead="$avatar_amiya")] 虽然博士的身体还不适合战斗，但通过这样的合理指挥就能够保护大家。

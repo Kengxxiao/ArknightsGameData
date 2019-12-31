@@ -1,0 +1,95 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第十三关（前）
+
+// Comments
+[stopmusic]
+
+[name=""]   5:57 a.m. \ 多云 \ 能见度 17公里 
+[name=""]   龙门外环外4公里，荒漠 
+[name=""]   切尔诺伯格营救行动 结束后4天 
+[dialog]
+[delay(time=1)]   
+
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[image(image="bg_2_call", fadetime=2)]
+
+[name="PRTS"]   Dr.{@nickname}, 早上好。您已经休息了99999999————
+[name="PRTS"]   ————个小时。
+[name="PRTS"]   虽然我知道您很不愿意起床，不过有人需要您立刻前往作战会议室。
+[name="PRTS"]   另外来自凯尔希医生的医学建议，希望您多开窗保持通风，并且进入甲板晒太阳以平衡维生素D。
+[dialog]
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0, block=true)]
+[Image(fadetime=0)]
+
+[PlaySound(key="$d_gen_walk_n",volume=0.6)]
+[delay(time=1.5)]
+
+[Background(image="bg_bridge", width=1, height=1, fadetime=1, screenadapt="coverall")]
+
+[PlaySound(key="$d_gen_soldiersrun",volume=0.4)]
+[delay(time=1.4)]
+
+[delay(time=2)]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Delay(time=1.4)]
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   啊，是博士！早啊。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  {@nickname}博士，你来了。
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   博士身体好些了吗？
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   昨天看你好像还有些伤痛，行动不太方便。
+
+[Decision(options="我已经完全恢复了。你呢？", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   感觉今天活力满满的，已经没什么问题了！
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   毕竟接下来，我们还有别的任务......
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   需要早点作好准备。博士也要把快速调整当成常态哦。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  博士。
+[name="杜宾"]  之前我们在切城的行动，虽然遭受了很大损失，但是获得了不少关于整合运动的情报，而且还救出了博士您。
+[name="杜宾"]  根据昨天会谈的结果，我们最近的移动城市————“龙门”，已向我们发送了一份合作框架协议，同意与我们交换情报。
+[name="杜宾"]  而有迹象显示“龙门”已经成为整合运动下一个行动目标。
+[name="杜宾"]  关于其他的内容，还需经过尚在龙门城内的凯尔希医生同意后，才能定下来。
+
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   龙门暂时答应了我们停泊在城市附近的要求，然后他们愿意给予一部分我们在行动中损失的物资，以及消耗的补给。
+[name="阿米娅"]   作为交换，罗德岛需要协助龙门，进行城市外环的一些临时性防卫工作。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   不过今天这么早是因为......
+
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  我来说吧，阿米娅。
+[name="杜宾"]  从昨天晚上开始，又有一波切尔诺伯格的幸存者在荒野中被发现，他们正在移动前往龙门，预计下午到达。
+[name="杜宾"]  和之前几天一样，我们仍然需要对龙门5区的外围进行防卫工作，只不过这次，可能会混入更多的整合运动。
+[name="杜宾"]  战况有所不同，我们在出发之前需要告诉您一种新的战术策略。
+
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]  那么博士，今天还请多多指教......
+[name="阿米娅"]  加油！
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  那么......
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+
+[Background(image="bg_0_rhodes3", fadetime=0, screenadapt="coverall", screenadapt="coverall")]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=1, block=true)]
+[name="杜宾"]  请你们各自完成出发前的准备。博士请把准备好的编队配置命令下达给其他干员，让他们做好准备。
+[name="杜宾"]  完成演习后15分钟出发。
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[dialog]
+[image(fadetime=0)]
+
+[Delay(time=0.4)]
+[name="杜宾"]  这次，千万不要迟到。
+
+
+

@@ -1,0 +1,224 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（后）
+
+// Comments
+// 从室内走向室外白光
+[Dialog]
+[Character]
+[Delay(time=1)]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[PlayMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+//修改此处的image来切换cg
+[Image(image="avg_6_13",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character]
+[ImageTween(xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+//对话内容此处填入
+[delay(time=4)]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+///////////////////////////
+[Background(screenadapt="coverall", image="bg_indoor_n", width=1, height=1, fadetime=2,block=true)]
+[delay(time=1)]
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  ......
+[name="幻影弩手"]  他不哭了。
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=1)]
+[name="整合运动成员"]  他这个眼神，怎么和脑死了一样。
+[name="整合运动成员"]  他我可怜不起来。我可怜浮士德，他救了我的命，也是个好指挥官。
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  浮士德把梅菲斯特托付给了我们......这是他最后的命令。我们会做到。
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=1)]
+[name="整合运动成员"]  干我什么事？
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  一起出城，你们存活的可能性会大些。
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=1)]
+[name="整合运动成员"]  ......行，那走吧。
+[name="整合运动成员"]  你们要把他带去哪？
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  浮士德说过，不希望我们带他回切尔诺伯格。
+[name="幻影弩手"]  ......可他又有哪里可以去？
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=1)]
+[name="整合运动成员"]  你们跟浮士德多久了？
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  哈......一开始，是他跟着我们才对。
+[name="幻影弩手"]  四五年前，浮士德并不会用什么战术，弩箭用的也并不好。这些都是我们教他的。
+[name="幻影弩手"]  他不断地学，不断地练习，和雪怪切磋，和爱国者的士兵一起训练，他越来越强......
+[name="幻影弩手"]  爱国者和霜星都教过他。他成了我们的队长，虽然我们不怎么这么叫他，但他名副其实。
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=1)]
+[name="整合运动成员"]  ......你们很幸运。
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  不管梅菲斯特怎么样，浮士德从来没逼我们做过什么。
+[name="幻影弩手"]  射手们，不要省高爆弩弹了。
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=1)]
+[name="整合运动成员"]  这些弩弹，一会儿还能用来对付近卫局啊？
+[Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  浮士德一直坚持为我们死去的队友这么做。
+[name="幻影弩手"]  “表达敬意可以不算是浪费。”
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(screenadapt="coverall", image="bg_outcity_1", width=1, height=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]  灰喉？
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  他......
+[Character(name="char_002_amiya_1#4",name2="char_367_swllow_1",focus=1)]
+[name="阿米娅"]  如果我没记错，他应该是梅菲斯特身边的弩手，整合运动的另一位指挥官。
+[name="阿米娅"]  ......你认识他？
+[Character(name="char_002_amiya_1#4",name2="char_367_swllow_1#3",focus=2)]
+[name="灰喉"]  我不知道。我不知道自己和他......算不算认识。
+
+[Decision(options="罗德岛能做的事，好像真的不多。;......;我们真的有成功救下过什么感染者吗？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  是啊。
+[name="阿米娅"]  罗德岛就是这样......大多数时候，都是这样。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  但哪怕只有一点点能做的，我们也会去做。
+[name="阿米娅"]  我们一定会去做。
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  博士是在想过去的事情吗？
+[name="阿米娅"]  是在想......过去也看过许多次死亡？
+[name="阿米娅"]  我是猜不出博士的心思，也不想直接感知博士你的。
+[name="阿米娅"]  因为......我想博士有一天能亲自告诉我。
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  ......干员们付出了许多。
+[name="阿米娅"]  死亡会比拯救更令人印象深刻。任何一次死亡，都会很难忘。
+[name="阿米娅"]  但是我很清楚，如果没有干员们的努力，我们会看见更多死亡。
+[name="阿米娅"]  更多，更多，更多的死亡......
+[Predicate(references="1;2;3")]
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  以前我以为，罗德岛就是为了感染者去战斗的。
+[name="灰喉"]  可是现在，倒在我们手下的却都是感染者。
+[name="灰喉"]  阿米娅......
+[name="灰喉"]  罗德岛在为什么而战？
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_017_homura_3#9",fadetime=1,block=true)]
+[delay(time=1)]
+[name="煌"]  你现在问这种问题？
+[Character(name="char_017_homura_3#9",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]  煌。
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#4",focus=1)]
+[name="煌"]  ......你说吧。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  这个问题，我也常常问自己。
+[name="阿米娅"]  感染者，普通人，每天都在我们面前死去。
+[name="阿米娅"]  ......我们不会，也不应该只是“阻止一次死亡”。对于这片大地来说，这没有意义。
+[name="阿米娅"]  就像现在......就像我们面对的这场战斗一样。
+[name="阿米娅"]  让战斗双方死去的，绝不是一把弩，一个法术......一场爆炸或是一个伤口。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  我们要战胜的，是催生了这一切的......普通人对感染者的仇视，感染者对普通人的仇视，他们互相厮杀的理由。
+[name="阿米娅"]  我们要铲除滋生仇恨的土壤。既用药物，也用行动。
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_signalbomb")]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.3, block=true)]
+[delay(time=2.2)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_017_homura_3#5")]
+[name="煌"]  啊——
+[name="煌"]  那是不是整合运动发射的？
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#7",focus=2)]
+[name="阿米娅"]  ......是施加了源石技艺的弩弹。
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#7",focus=1)]
+[name="煌"]  好烂的烟火啊。
+[name="煌"]  按临光说的，在切尔诺伯格的时候，这长鳞的小子还有着相当强的战斗力。
+[name="煌"]  她说那时候她的胳膊都差点被打断，凭我对这个女人的了解，至少我肯定是打不断的。
+[name="煌"]  但刚才我只觉得他的弦已经完了，弩弹里也没剩下多少法术。
+[name="煌"]  怎么回事啊，臭小子。
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]  我想，他可能......没有理由再战斗下去了。
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#4",focus=1)]
+[name="煌"]  我说，阿米娅，有没有他用法术避过了攻击的可能性？
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]  ......抱歉。
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#4",focus=1)]
+[name="煌"]  道什么歉啊。我只是可惜那个小子。凭我一眼看穿人的本事看，他不坏。
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  现在说什么都太晚了。
+[Character(name="char_002_amiya_1#1",name2="char_367_swllow_1",focus=1)]
+[name="阿米娅"]  并不晚。
+[name="阿米娅"]  过去埋下的悲剧，现在开花结果......而未来的悲剧，我们还有能力去阻止。
+[Character(name="char_002_amiya_1#1",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  ......
+[name="灰喉"]  我去回收他的弩。
+[Dialog]
+[Character]
+[delay(time=1)]
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#1",focus=1)]
+[name="煌"]  她开窍了？
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#1",focus=2)]
+[name="阿米娅"]  你不知道她的过去吗？
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#1",focus=1)]
+[name="煌"]  她没告诉我啊？我们也没那么熟。
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]  她的父母是矿石病学者，为了感染者研究矿石病，却死在了一场感染者与当局发生的冲突之中。
+[name="阿米娅"]  她只是认为，我们遭遇的和她遭遇的并没有区别。
+[name="阿米娅"]  灰喉比你想的敏感得多。她大概只是不想表达。
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#4",focus=1)]
+[name="煌"]  不肯说出来，我哪知道......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  ......
+[Character(name="avg_npc_041")]
+[name="？？？"]  他是你的朋友吗？
+[Character(name="avg_npc_041",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  ......我不知道。
+[name="灰喉"]  你是谁？
+[Character(name="avg_npc_041",name2="char_367_swllow_1",focus=1)]
+[name="？？？"]  需要我自我介绍吗？
+[Character(name="avg_npc_041",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  不用了。
+[Character(name="avg_npc_041",name2="char_367_swllow_1",focus=1)]
+[name="？？？"]  和感染者做朋友是很危险的。
+[Character(name="avg_npc_041",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  我不在乎朋友是不是感染者。
+[Character(name="avg_npc_041",name2="char_367_swllow_1",focus=1)]
+[name="？？？"]  这样吗......
+[name="？？？"]  节哀顺变。
+[Character(name="avg_npc_041",name2="char_367_swllow_1",focus=2)]
+[name="灰喉"]  ......为什么要问我这些？
+[Character(name="avg_npc_041",name2="char_367_swllow_1",focus=1)]
+[name="？？？"]  因为我很怕你和感染者做朋友。
+[Dialog]
+[Character]
+[stopmusic(fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_017_homura_3#5",name2="char_002_amiya_1#1",focus=1)]
+[name="煌"]  阿米娅，通讯。
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]  这里是阿米娅。
+[name="阿米娅"]  嘉维尔？你在哪里？
+[Character(name="char_002_amiya_1#6")]
+[name="阿米娅"]  ......贫民区底部通道？有新通道，怎么会？
+[name="阿米娅"]  ......黑色雨披，以及......
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  雪怪小队？他们在和逃入贫民区的整合运动汇合？
+[Character(name="char_017_homura_3#9")]
+[name="煌"]  ......最坏的事儿还是发生了。
+
+
+[Dialog]
+[Delay(time=0.5)]
+[Blocker(a=1,r=0, g=0, b=0, fadetime=2, block=true)]
+

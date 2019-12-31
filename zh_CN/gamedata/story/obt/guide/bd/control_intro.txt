@@ -1,0 +1,46 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 基建副手引导
+
+
+
+[PopupDialog(dialogHead="$avatar_closure")] 这里就是<@tu.kw>基建控制中心</>了。除了我的小黑屋以外，这里也能算基建的中枢部分了。
+[PopupDialog(dialogHead="$avatar_closure")] 在控制中心你可以管理基建的各项事宜，并为罗德岛的基建配置<@tu.kw>副手</>。
+[PopupDialog(dialogHead="$avatar_closure")] 副手会担任各种管理工作，也能提高信赖度获取量，这是和干员们拉近关系建立信任的好方式哦。
+
+[Tutorial(target="btn_assist", waitForSignal="building_assist_report_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+点击打开副手界面
+
+[PopupDialog(dialogHead="$avatar_closure")] 副手是你管理基建的左膀右臂，他们将分别为你管理基建的各个楼层，并提交每日报告。
+[PopupDialog(dialogHead="$avatar_closure")] 因为能与你有更多交流，所以副手们在基建中的<@tu.kw>信赖度</>获取量会得到大幅度提升，并且每天可以获取的次数提升至两次。
+
+[Tutorial(target="pool_btn_building_assist_report_first_slot", searchBtnInChildren=true, waitForSignal="squadselect_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+首先点击设置总副手
+
+// Delay a single frame so that all cards are located correctly.
+[Delay(time="$f_delay_single_frame")]
+
+[Tutorial(target="pool_btn_squad_select_first_item", searchBtnInChildren=true, waitForSignal="squadselect_charcard_selected", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+点击选中干员
+
+[Tutorial(target="panel_hotspot", waitForSignal="building_assist_report_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", importantClick=true, \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+点击确认设置为副手
+
+[Tutorial(target="pool_btn_building_assist_report_first_slot", searchBtnInChildren=true, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+基建的总副手为你管理整个基建的运作，能够获得最高的信赖度加速。
+
+[Tutorial(target="pool_btn_building_assist_report_second_slot", searchBtnInChildren=true, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+各个楼层的副手则为你管理的各个基建楼层的运作，能够根据相应楼层的宿舍情况获得信赖度加速。
+
+[PopupDialog(dialogHead="$avatar_closure")] 和前面说的一样————建议博士你将当前最想要增进交流的干员设置为基建副手。
+[PopupDialog(dialogHead="$avatar_closure")] 大致就是这些了。如果有不明白的，回头看一下提示就行了。

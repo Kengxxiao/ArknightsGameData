@@ -1,0 +1,29 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 技能升级引导
+
+[PopupDialog(dialogHead="$avatar_sys")] 每位罗德岛的干员都有自己独特的作战技巧——<@tu.kw>技能</>。
+[PopupDialog(dialogHead="$avatar_sys")] 磨炼他们的技能和提升她们的等级一样，同样是作战中关键的一环。
+
+[GotoPage(dest="HOME", waitForSignal="home_routed")]
+[Tutorial(target="btn_character_repo", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+你应该已经知道进入干员管理界面的方法。
+
+[GotoPage(dest="char_repo", waitForSignal="character_repo_routed")]
+
+[PopupDialog(dialogHead="$avatar_sys")] 你也已经知道查看干员详细信息的方法。
+
+[Tutorial(target="pool_btn_char_repo_first_item", waitForSignal="character_info_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", protectTime=0.5, \
+          dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+点击查看该干员的详细信息。
+
+[Tutorial(target="hotspot_skill", waitForSignal="character_info_skill_select_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", protectTime=0.5, \
+          dialogHead="$avatar_sys")] \
+从这里进入技能详情界面。
+
+[Tutorial(target="lvl_up_button", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", protectTime=0.5, \
+          dialogHead="$avatar_sys")] \
+所有干员在开始时的技能等级都是共通的。点击这里就可以为她升级技能。

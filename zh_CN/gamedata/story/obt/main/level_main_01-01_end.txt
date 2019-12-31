@@ -1,0 +1,117 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第七关（后）
+
+// Comments
+
+[name=""]   时间未知 \ 天气未知 \ 能见度 低 
+[name=""]   切尔诺伯格 行动组E0所在地
+[name=""]   Dr.{@nickname}营救行动 第三阶段 
+
+[Background(image="bg_cher_1", width=1, height=1, fadetime=1)]
+[Delay(time=1)]
+[PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+
+
+[Character(name="char_016_medic")]
+[name="医疗干员"]  啊！
+[name="医疗干员"]  这个诊所......
+[name="医疗干员"]  阿米娅，是不是以前我们来过那个？
+[Character(name="char_016_medic",name2="char_002_amiya_1#1",focus=2)]
+[name="阿米娅"]  ......确实是......
+[name="阿米娅"]  只是怎么......已经变成了，这个样子？
+[Character(name="char_016_medic",name2="char_002_amiya_1#1",focus=1)]
+[name="医疗干员"]  已经人去楼空了......看来，是遭到了整合运动的袭击吧......
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]  ......
+[Character(name="char_002_amiya_1#4",name2="char_013_riop",focus=2)]
+[name="近卫干员"]  这难道就是那个感染者诊所，阿撒兹勒？
+[Character(name="char_002_amiya_1#4",name2="char_013_riop",focus=1)]
+[name="阿米娅"]  ......是。
+[Character(name="char_002_amiya_1#4",name2="char_013_riop",focus=2)]
+[name="近卫干员"]  明明掌握着整个切尔诺伯格的地下情报网，却不肯和我们合作......
+[name="近卫干员"]  那时，他们和整合运动之间的关系也十分模棱两可......
+[name="近卫干员"]  至少，如果他们当时肯向我们分享情报，或者仅仅是给个提示......
+[name="近卫干员"]  我们也许就早点能离开这里了。
+[name="近卫干员"]  这种下场，是他们自作自受！
+
+[Character(name="char_002_amiya_1", name2="char_013_riop", focus=1)]
+[name="阿米娅"]  也不全是这样......
+[Character(name="char_002_amiya_1", name2="char_013_riop", focus=2)]
+[name="近卫干员"]  阿米娅，当时和他们交涉时你也在场吧？
+[name="近卫干员"]  他们那傲慢冷漠的态度，我真是......
+[Character(name="char_014_riope" )]
+[name="Ace"]  不能怪罪他们。
+[Character(name="char_013_riop")]
+[name="近卫干员"]  头儿......
+
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[Image(image="bg_0_ori",x=-100, y=0, xScale=1.2, yScale=1.2, fadetime=1)]
+[ImageTween(xFrom=-100, yFrom=0, xTo=0, yTo=0, xScaleFrom=1.2, yScaleFrom=1.2, xScaleTo=1.2, yScaleTo=1.2, duration=10, block=false)]
+[name="Ace"]  感染者本就很难相信别人。
+[name="Ace"]  经历过那么多苦难，当然会变得保守与顽固。
+[name="阿米娅"]  至少他们那样做......我能理解，也愿意原谅他们。不提防他人，就会被他人伤害。
+[name="阿米娅"]  何况，就连感染者之间，也是没法轻易互相信任的。而且并不是每个人都愿意像我们一样冒险......
+
+[Blocker(a=1, r=0, g=0, b=0, block=true)]
+[Image]
+[Blocker(a=0, r=0, g=0, b=0, block=true)]
+[Background(image="bg_cher_1", width=1, height=1, fadetime=1)]
+
+[Decision(options="感染者诊所？", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]  啊......他们是一家只医治感染者的黑市诊所。
+[name="阿米娅"]  鉴于感染者的社会地位，大家是不可能在街道上抛头露面的。
+[name="阿米娅"]  有些不愿被抛进隔离区的感染者，依然也会在城市里，小心翼翼地掩藏自己的身姿，苟活着......
+[name="阿米娅"]  阿撒兹勒，就是向这些感染者提供服务的。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  ......它们，一定是拒绝了整合运动的合作要求。
+[name="阿米娅"]  博士，我之前和你说过，我们得了病吧？
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]  ......这种病，不仅会杀死我们，也会让我们拥有不同于常人的力量。
+[name="阿米娅"]  我不用法杖，就能释放源石技艺哦。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  然而，这种病，不止在生理上，会消磨我们的生命......
+[name="阿米娅"]  它也会让我们再也不能像正常人一样生活。正常人的社会，会剥去你的一切。
+[name="阿米娅"]  这座切尔诺伯格城，已经是所有规则的象征了。
+[name="阿米娅"]  驱逐感染者，消灭感染者，鄙夷感染者，恐惧感染者......
+[Character(name="char_148_nearl_1#2")]
+[name="临光"]  ......
+[name="临光"]  最后，落到如此下场。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  可是，又有多少感染者，会有机会，选择整合运动，甚至是其他的感染者组织，或者罗德岛？
+[name="阿米娅"]  大多数感染者，不过是失去了所有。
+[name="阿米娅"]  这个诊所，大概，也曾经是最后那么几个感染者，温暖的家吧......
+[name="阿米娅"]  矿石病是无药可医的。至少此时此刻，感染者只能在绝望中......痛苦地失去生命。
+[name="阿米娅"]  而后他们的遗体......也会成为新的传染源。
+[name="阿米娅"]  不同于常人的特殊力量，染上之后就必然会死去的可怕传染病——
+[name="阿米娅"]  感染者......被这片大地上的多数人所恐惧。
+[name="阿米娅"]  ——
+[name="阿米娅"]  光是这么两三句话，博士大概也没法切身体会吧。
+[name="阿米娅"]  但当你面对这些问题导致的后果时......你会明白的。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  你会明白，感染者的处境，究竟有多现实。
+[Character(name="char_002_amiya_1#4", name2="char_130_doberm_ex", focus=2)]
+[name="杜宾"]  像罗德岛这样不分彼此，或是整合运动那样狂热的排外拥内的感染者组织，都很少见。
+[name="杜宾"]  我能理解你的怒气，但我也能理解那个小诊所的苦衷。
+[Character(name="char_013_riop")]
+[name="近卫干员"]  ......我明白了。
+[name="近卫干员"]  可能，他们是真的碰上了什么问题吧......
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  至少现在，我们的怨气，都该和这个诊所的曾经一样，化作粉尘。
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]  罗德岛的各位都是好人。也许会有很多人因畏惧与敌意，相互间产生了种种隔阂......
+[name="阿米娅"]  但只要在罗德岛，大家一定能解开误会。
+[name="阿米娅"]  阿撒兹勒......罗德岛，又何尝不是一个阿撒兹勒呢？
+[Character(name="char_013_riop")]
+[name="近卫干员"]  ......阿米娅......
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]  我们走吧，博士。
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

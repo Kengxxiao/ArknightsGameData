@@ -1,0 +1,242 @@
+[HEADER(key="title_test", is_skippable=false, fit_mode="BLACK_MASK")] 危机合约
+
+// Comments
+[Dialog]
+[Background]
+[Character]
+[PlayMusic(intro="$lab_intro", key="$lab_loop", volume=0.6, crossfade=1, delay=0.5)]
+[delay(time=1)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[image(image="avg_9_2",xScale=1.1, yScale=1.1,block=false)]
+[imageTween(xScaleTo=1.3, yScaleTo=1.3,duration=30,block=false)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+——天灾。
+——不知从什么时候开始，天灾开始越发频繁，让大地支离破碎。
+人们躲藏在前人的智慧之中，用混凝土与金属建起躲避天灾的巢穴，称之为移动城邦。
+但天灾依旧无情地捕猎着地面上的一切生灵，创造着远远胜灾难本身的苦难。
+必须有人阻止灾难扩散，必须想办法从互相仇视、互相倾轧的城邦之间取得平衡——
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[image]
+[Background(image="bg_bridge",screenadapt="coverall")]
+否则在天灾撕裂我们之前，我们将无计可施。
+[Dialog]
+[stopmusic(fadetime=2)]
+[delay(time=2, black=true)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   ......你们来了，比预定的时间晚了一些。
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.6, crossfade=1, delay=0.5)]
+[Character(name="char_145_prove_1",name2="char_291_aglina_1",focus=2)]
+[name="安洁莉娜"]   抱、抱歉，稍微绕了点远路，
+[name="安洁莉娜"]   幸好有普罗旺斯姐姐，不然麻烦就大啦......
+[Character(name="char_145_prove_1",name2="char_291_aglina_1",focus=1)]
+[name="普罗旺斯"]   整合运动在各地造成的骚乱比想象中还要......哎，不过能平安无事就好。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   意料之中，现在的罗德岛就是面临这么多的麻烦。
+[name="杜宾"]   总之，辛苦二位了，但愿这份合约能为我们缓解窘境。
+[Character(name="char_130_doberm_ex",name2="char_291_aglina_1",focus=2)]
+[name="安洁莉娜"]   不光是我们难以获取物资补给......危机合约的合作人们似乎也都很煎熬。
+[name="安洁莉娜"]   大家都希望有一个人能够站出来，让这个几乎停滞的合约机制重新运转起来呢......
+[Character(name="char_145_prove_1",name2="char_291_aglina_1",focus=1)]
+[name="普罗旺斯"]   但你一路上都念叨着，可以为博士分担压力什么的——
+[Character(name="char_145_prove_1",name2="char_291_aglina_1",focus=2)]
+[name="安洁莉娜"]   这、这是每一位罗德岛干员的职责所在！
+[Character(name="char_145_prove_1",name2="char_291_aglina_1",focus=1)]
+[name="普罗旺斯"]   好，好。
+[name="普罗旺斯"]   ......不过，这也不是什么能立刻解决问题的万能道具啦，不如说，恰恰相反。
+[name="普罗旺斯"]   切尔诺伯格被天灾摧毁之后产生了多大的连锁反应，这份合约的厚度就能说明问题。
+[name="普罗旺斯"]   就算是为了让罗德岛得到及时的援助......这样危险的任务真的要让精疲力尽的干员们......
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   ......我明白你的担忧，但罗德岛从来就没有权利去考虑如何安然无恙地前进。
+[name="杜宾"]   况且真正做出选择的人，也不是我们。
+[Dialog]
+[Character]
+[delay(time=1)]
+[PlaySound(key="$dooropenquite", volume=0.9)]
+[PlaySound(key="$d_gen_walk_n")]
+[Decision(options="打扰了，杜宾教官。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   博士，还有阿米娅，你们来的正是时候。
+[Character]
+[Dialog]
+[Character(name="char_002_amiya_1#3",fadetime=1,block=true)]
+[delay(time=1)]
+[name="阿米娅"]   啊，杜宾教官，还有安洁莉娜小姐和普罗旺斯小姐！
+[name="阿米娅"]   任务辛苦了。既然二位已经回到了罗德岛，就意味着——
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   没错，我们重新签订了合作条款，以及合约的所有相关内容，基本都带回来了。
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   ——！太好了，谢谢你们！
+[Character(name="char_291_aglina_1")]
+[name="安洁莉娜"]   没事的，这也是信使的使命嘛。
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   既然我们已经确确实实地把所有文件都交到了杜宾教官手上，那接下来的事，就都交给博士啦。
+[name="普罗旺斯"]   如果是让博士来负责的话......你说对吧？
+[Character(name="char_291_aglina_1")]
+[name="安洁莉娜"]   嗯，我们信任博士。
+[name="安洁莉娜"]   只是......也不要太勉强自己，好吗？
+[Dialog]
+[Character]
+[Decision(options="呃，好的？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   啊......现在的博士，可能还不清楚状况吧？
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   ......博士记不起很多事情，可我们也没有时间让你循序渐进地理解这一切，请理解。
+[name="杜宾"]   普罗旺斯，安洁莉娜，再次感谢你们，你们可以抓紧时间休息了。
+[name="杜宾"]   博士和阿米娅，跟我来，关于危机合约的解释，边走边说吧。
+[Dialog]
+[Character]
+[stopmusic(fadetime=2)]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Decision(options="危机合约？那是什么？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   ......要从那儿开始解释吗？好吧，长话短说。
+[Dialog]
+[PlayMusic(intro="$lab_intro", key="$lab_loop", volume=0.6, crossfade=1, delay=0.5)]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+//修改此处的image来切换cg
+[Image(image="cc_start",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Character]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+//对话内容此处填入
+[name="杜宾"]   危机合约，独立于任何我们所知的政治实体，你可以理解为一套独立的情报交换机制。
+[name="杜宾"]   它接收由各种组织或个人发布的特殊任务，然后转送给有能力完成这些任务的人。
+[name="杜宾"]   过去，我们曾通过完成危机合约获取足以支撑罗德岛运转的各种物资。他们是罗德岛重要的合作伙伴。
+[name="杜宾"]   因为整合运动引起的冲突，我们与危机合约的联络一度断绝，不过在信使干员们的努力下，我们重新搭建起了交换途径。
+[name="杜宾"]   而眼下罗德岛的状况，想必博士也心知肚明。对于危机合约可能带来的任何一点利益，我们都必须重视。
+[Dialog]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.6, block=false)]
+///////////////////////////
+[delay(time=1)]
+[Dialog]
+[Character]
+[Decision(options="那对方的目的是什么？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]   为了减轻天灾所造成的影响......这是最初的目的。
+[name="阿米娅"]   毕竟最早，危机合约是由天灾信使们设立的。
+[name="阿米娅"]   ......尽管我们只是各取所需，但“危机合约”的确有个一以贯之的信条。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   “都是为了更多的生命。”他们总是标榜类似的话。
+[name="杜宾"]   我明白你的想法，这样空泛的口号的确会让人生疑，但我们过去的合作并不虚假，现在罗德岛会需要一份助力。
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]   ......杜宾教官说的对，无论如何，我们没有太多的选择。
+[name="阿米娅"]   博士，这些任务将会非常困难。但为了打破罗德岛面临的僵局，这将是我们唯一的突破口。
+[Dialog]
+[Character]
+[Decision(options="我明白了，我会尽力的。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]   ——谢谢，博士！
+[name="阿米娅"]   那么我这就为博士讲解一下合约的具体流程，杜宾教官，麻烦了——
+[Dialog]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+
+//修改此处的image来切换cg
+[Image(image="cc_cc",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Character]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+//对话内容此处填入
+[name="阿米娅"]   博士，请看。这是现在能够接触到的所有合约条目。
+[name="阿米娅"]   危机合约将针对具体任务内容，提供许多非强迫性的“可选合约”。
+[name="阿米娅"]   比如，在要求处理特殊目标的情况下，我们将会遇到有别于平时的敌人，或是为了达成目的而不得不采用特别的战术。
+[name="阿米娅"]   类似的合约会有很多，当然也不全是增加任务难度的内容！
+[name="阿米娅"]   偶尔也会得到来自危机合约的各种援助，反而会让任务变得更加轻松呢！
+[name="杜宾"]   合理利用支援固然是好事，但别忘了我们的目的。当我们索求援助，罗德岛就会一无所得，这点需要注意。
+[Dialog]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(fadetime=0)]
+[PlaySound(key="$d_gen_walk_n")]
+[Background(image="bg_lungmencommand",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=false)]
+///////////////////////////
+//////////////插入cg///////////////////
+[delay(time=2)]
+
+
+
+[showitem(image="item_cc_chose")]
+///////////////////////////
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   另外，一定程度上，危机合约为我们提供了自由选择的空间。但这并不是绝对自由的。
+[name="杜宾"]   干员们的作战区域非常广阔，这意味着我们可以同时挑选多项危机合约进行。
+[name="杜宾"]   但是，只要稍微想想就明白了吧？有些合约本身就是相互冲突的，
+[name="杜宾"]   想要同时完成反而会得不偿失，我们得避免这种情况。
+[name="杜宾"]   当然，同时进行多项合约也意味着行动难度的逐步增加，如果不能很好地进行统筹和指挥，后果不堪设想。
+[Dialog]
+[hideitem]
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   没事的，我相信博士！
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   ......我不会质疑博士的能力，这一点早就验证过无数次了，但我还是有必要重申一遍。
+//////////////插入cg///////////////////
+[showitem(image="item_cc_hard")]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   根据合约内容，我们将把任务难度划分为“普通”和“困难”两个梯度。
+[name="杜宾"]   当合约数量及危险等级评估系数在4及以下时，难度评估为“普通”。
+[name="杜宾"]   当危险等级评估系数在7及以上时，则为“困难”。
+[name="杜宾"]   而在一些较为特殊的行动地点中，危险等级会上升。
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]   这样区分也是为了防止罗德岛在履行合约时出现不必要的损失，
+[name="阿米娅"]   我们......真的不能再轻易失去更多了。
+[Dialog]
+[hideitem]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   没错。但这只是最基本的数据预测，实战中将会出现各种意料不到的情况，到那时.....就只能依赖博士的指挥了。
+///////////////////////////
+[Dialog]
+[Character]
+[Decision(options="没问题，交给我;我们不会失去任何东西的;......",values="1;2;3")]
+[Predicate(references="1;2;3")]              
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]   博士......
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   ......看你的样子，已经决定好该怎么做了。
+[name="杜宾"]   普罗旺斯和安洁莉娜带回了全部的可执行文件，剩下的你们自己翻翻看吧。
+[name="杜宾"]   博士，罗德岛现在的处境并不乐观，而现在，我们最有力的手段......就在你的手中。
+[name="杜宾"]   期待你的表现。
+[Dialog]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Background]
+[delay(time=1)]
+——“危机合约”。
+[delay(time=1)]
+[Character(fadetime=0)]
+//修改此处的image来切换cg
+[Image(image="cc_end",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+//对话内容此处填入
+不论出身，不论种族，不论善恶，只要你有足够的实力——活下来，处理目标，获得报酬。
+或是，处理危险的目标，获得巨额的报酬，以及，活下来。
+不管接下来发生的将是怎样前所未有的灾难，“危机合约”都将在阴暗处继续撑起一张无人知晓的网。
+这一切，都是为了更多的生命。
+[Dialog]
+//对话内容此处填入
+[stopmusic(fadetime=2)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+///////////////////////////
+
+

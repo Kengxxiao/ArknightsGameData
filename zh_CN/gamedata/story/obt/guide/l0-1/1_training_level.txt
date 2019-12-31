@@ -1,0 +1,40 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 训练关卡引导
+
+[PopupDialog(dialogHead="$avatar_amiya")] 博士，罗德岛的档案库中存放着杜宾老师指导的<@tu.kw>作战演习</>。
+[PopupDialog(dialogHead="$avatar_amiya")] 这些演习中包含了基础的作战技巧，相信掌握之后对博士一定大有帮助。
+[PopupDialog(dialogHead="$avatar_amiya")] 因为杜宾正在参加营救，所以她不能同时在训练场进行指导。
+[PopupDialog(dialogHead="$avatar_amiya")] 这边会回放她之前和接受过黑钢训练的干员杰西卡先进行的模拟训练。
+
+[GotoPage(dest="home", waitForSignal="home_routed")]
+
+[Tutorial(target="btn_battle", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+点击进入<@tu.kw>作战室</>
+
+[GotoPage(dest="STAGE", waitForSignal="stage_routed", zoneId="main_1", stageId="tr_01")]
+
+[Delay(time="$f_delay_scroll_stage_on_map")]
+
+[Tutorial(target="pool_btn_train_substage#tr_01", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+进行<@tu.kw>作战演习</>的关卡并<@tu.kw>不会消耗理智</>，可以随时进行反复尝试。
+
+[Tutorial(target="btn_start_battle", waitForSignal="squadhome_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+点击按钮进入战前编队页面。
+
+// Delay a little time so that the startBattleBtn won't be blocked by FastAction().
+[Delay(time="$f_delay_start_battle_btn")]
+
+[PopupDialog(focusX=-10, focusY=34, focusWidth=388, focusHeight=65, anchor="Bottom", \
+             animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",\
+             dialogHead="$avatar_amiya")] \
+博士，所有演习关卡的阵容都<@tu.kw>不可改变</>。如果遇到无法通过演习的情况，请多尝试不同的战术和部署位置。
+
+[Tutorial(target="hotspot_startbtn", waitForSignal="battle_start", importantClick=true, \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+点击按钮开始<@tu.kw>演习</>项目。

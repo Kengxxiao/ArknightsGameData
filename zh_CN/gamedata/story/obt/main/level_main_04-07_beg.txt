@@ -1,0 +1,113 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三十二关（前）
+
+// Comments
+
+[Background(screenadapt="coverall", image="bg_cher_2", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$cherimp_intro", key="$cherimp_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   这里......倒下的都是些整合运动。
+[name="阿米娅"]   ......这个，伤口流出的血液冻成了冰渣，其他部分却很完好。
+[name="阿米娅"]   确实是霜叶的技巧。
+[name="阿米娅"]   ——那边的废墟，应该是爆炸导致的。
+[name="阿米娅"]   应该是陨星炸出来的没错。
+
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="阿米娅"]   （霜叶......杰西卡......陨星......她们，一定还......）
+
+[Character(fadetime=0.6)]
+
+[CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=0, width=200, block=true)]
+[name="凯尔希"]   阿米娅，各救援小队都已抵达罗德岛、
+[name="凯尔希"]   我们救出了除了陨星她们以外的所有侦查小队。
+[name="凯尔希"]   没有干员在任务中牺牲。但相应的——
+[name="凯尔希"]   所有人都有不同程度的冻伤。
+[name="凯尔希"]   你要重视这点。
+[CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
+
+[Character(name="char_002_amiya_1#6")]
+
+[name="阿米娅"]   ......冻伤？
+
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="凯尔希"]   所有侦查小队都指出，分城中徘徊着一些特殊的整合运动成员。
+[name="凯尔希"]   他们有着特殊的作战方式，完全不像一般的整合运动成员那样盲目。
+[name="凯尔希"]   多加小心。
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   我......我明白。
+
+[Character(name="char_002_amiya_1", focus=-1)]
+
+[name="凯尔希"]   Dr.{@nickname}，你也明白吧？
+
+[Decision(options="明白", values="1")]
+
+[Predicate(references="1")]
+
+[name="凯尔希"]   那就好。
+[name="凯尔希"]   我也要去做一些事情了。
+[name="凯尔希"]   阿米娅，就算Dr.{@nickname}很有用，也别太过依靠一个人。
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   ......
+
+[Character(name="char_002_amiya_1", focus=-1)]
+
+[name="凯尔希"]   还有，注意戒指。
+
+[Character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   我知道。
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.2, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+
+[Character(name="char_002_amiya_1", focus=-1)]
+
+[name="阿米娅"]   其实凯尔希医生也很担心你的。
+[name="阿米娅"]   不知不觉中——
+[Character(name="char_002_amiya_1#7")]
+
+[name="阿米娅"]   危险的野兽露出他们的利爪了。
+
+[Decision(options="整合运动在我们的背后。;我们的退路......被切断了。;这些感染者暴徒，似乎对我们有些想法呢。", values="1;2;3")]
+
+[Predicate(references="1;2;3")]
+
+[Character(name="char_002_amiya_1#3")]
+
+[name="阿米娅"]   嗯......他们非常想要阻止我们撤退呢。
+
+[Character(name="char_002_amiya_1#7")]
+
+[name="阿米娅"]   然而，我们来到这里的目的，从来都不是逃跑。
+[name="阿米娅"]   罗德岛，冲破他们的防线。
+[name="阿米娅"]   让我们把陨星她们救回来！
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Background(fadetime=0)]
+
+
+[name="凯尔希"]   红，听得见吗？
+[name="凯尔希"]   啊啊，对。
+[name="凯尔希"]   没错。在贫民区东入口处会合。
+[name="凯尔希"]   嗯。就我们两个。
+[name="凯尔希"]   没问题的。
+[name="凯尔希"]   对付整合运动，我们两个已经足够了。
+
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

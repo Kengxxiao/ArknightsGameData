@@ -1,0 +1,283 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（前）
+
+// Comments
+
+[Dialog]
+[Character]
+[stopmusic]
+[Delay(time=1)]
+937年
+埃里克勋爵与匹斯堡议会大学李尔兰·D教授于城邦史标准论刊（《我们从哪里来？》，44期）发表了合著论文。
+论文声称，据多具已风化遗骸的鉴定结果。
+萨尔贡四号填埋窟的考察已得出关键性结论，即感染者的隔离和处决无疑与实在法同源。
+
+......
+综上所述，感染者受难的历史，自法律出现的时候就已经开始了。
+
+[Dialog]
+[Delay(time=2)]
+[Background(image="bg_undergroud_f",screenadapt="coverall",fadetime=2,block=true)]
+[delay(time=1)]
+[PlayMusic(intro="$frostnovadie_intro", key="$frostnovadie_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+龙门，基础支撑层，出口
+[Dialog]
+[Decision(options="霜星！", values="1")]
+[Predicate(references="1")]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+//修改此处的image来切换cg
+[Background]
+[Image(image="avg_6_1",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=1, block=false)]
+[Character]
+[ImageTween(xFrom=0, yFrom=0, xTo=-30, yTo=0, xScale=1.1, yScale=1.1, duration=10, block=false)]
+//对话内容此处填入
+[delay(time=1.5)]
+[Dialog]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+/////////////////////////////////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+//修改此处的image来切换cg
+[Background]
+[Image(image="avg_6_2",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=1, block=false)]
+[Character]
+[ImageTween(xFrom=0, yFrom=0, xTo=30, yTo=0, xScale=1.1, yScale=1.1, duration=10, block=false)]
+//对话内容此处填入
+[delay(time=1.5)]
+[name="霜星"]  现在，你们要和我战斗。
+[name="霜星"]  如果你们战胜我，有人能够侥幸活着——
+[Dialog]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+///////////////////////////
+[name="霜星"]  我愿意加入罗德岛，依你们的想法去对抗感染者共同的敌人。
+[name="霜星"]  这是我必须承担的责任。
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=0, fadetime=3, block=true)]
+
+8:50AM  龙门夺回近卫局大楼4小时后 近铜钟出口处
+[Dialog]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+//修改此处的image来切换cg
+[Image(image="avg_6_4",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=2, block=false)]
+[Character]
+[ImageTween(xFrom=0, yFrom=0, xTo=20, yTo=0, xScale=1.1, yScale=1.1, duration=15, block=false)]
+//对话内容此处填入
+龙门近卫局 暨 罗德岛制药公司
+
+龙门围剿行动 最后环节
+1：控制整合运动在龙门中的行动范围。由龙门近卫局主导完成。
+2：消灭龙门中残余的整合运动小队。由龙门近卫局主导完成。
+3：保证消灭整合运动行动指挥官或使其彻底失去影响力。由龙门近卫局主导完成。
+4：在整合运动撤入贫民区之前，消灭整合运动。由龙门近卫局与罗德岛合作完成。
+
+[Dialog]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Dialog]
+[delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_uptown_2", width=1, height=1,screenadapt="coverall")]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=0, fadetime=1, block=true)]
+“......请各位市民注意......正在进行疏散演习......”
+“......没有随行动指示进行避难的市民，请锁紧门窗，拉好窗帘，不要随意走出家门......”
+
+[name="？？？"]  吵死了。
+[name="？？？"]  把那个无人机射下来！
+[Dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[CameraShake(duration=1, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[CameraShake(duration=1, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[Character(name="char_1507_Mephisto_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="梅菲斯特"]  我们就只是个演习对象而已？居然想用这种把戏这种说辞，把我辛苦制造出的恐怖完全掩盖掉？
+[Character(name="char_1507_Mephisto_1#3")]
+[name="梅菲斯特"]  还敢用龙门语播一遍，乌萨斯语播一遍，又播一遍！
+[name="梅菲斯特"]  别被无人机干扰，走，都走！快点，避开主干道！
+[Character(name="avg_npc_016")]
+[name="幻影弩手"]  侦查小队三号也没消息了！
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  突，突击手的信号都消失了......
+[name="整合运动成员"]  外围保障小队的联络通道在一个接一个地断线！
+[Character(name="char_1507_Mephisto_1#3")]
+[name="梅菲斯特"]  可恨，可恶！
+[name="梅菲斯特"]  这种侮辱......这是对整合运动的羞辱！
+[name="梅菲斯特"]  怎么会这样，怎么会这样？该死的龙门，该死的龙门人！该死的非感染者！
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  （我从没见过他这样，他似乎很不安。）
+[name="幻影弩手"]  （浮士德，我们还有机会撤离吗？）
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=1)]
+[name="浮士德"] ......
+[name="浮士德"]  （我给你们创造空间。）
+[name="浮士德"]  （如果对手只有普通警力和龙门近卫局，以及罗德岛，我们一定能安全撤退。）
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  （什么意思？你是说，除了这些还有别的？）
+[Character]
+[name="梅菲斯特"]  烦死了......烦死了！根本说不通！！
+[name="梅菲斯特"]  跟不上我指挥的队伍，我要怎么样才能赢？
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=1)]
+[name="浮士德"]  （有人在监视我们。这座城市里有其它东西。）
+[name="浮士德"]  （做好准备，为了生存。）
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  （明白。）
+[name="幻影弩手"]  （......浮士德。）
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=1)]
+[name="浮士德"]  （嗯？）
+[Character(name="char_1508_Faust_1#1",name2="avg_npc_016",focus=2)]
+[name="幻影弩手"]  （我们相信你。）
+[Character(name="char_1508_Faust_1#1")]
+[name="浮士德"]  （......）
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_rooftop",screenadapt="coverall")]
+[delay(time=0.1)]
+[Blocker(a=0,fadetime=2,block=true)]
+9:20AM 近龙门近卫局某处 罗德岛行动小队预计巡逻点
+[Dialog]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+
+//修改此处的image来切换cg
+[Image(image="avg_6_5",x=0, y=0, xScale=1.2, yScale=1.2, fadetime=0)]
+[PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=0, fadetime=1, block=false)]
+[Character]
+[ImageTween(xFrom=0, yFrom=0, xTo=20, yTo=0, xScaleFrom=1.2, yScaleFrom=1.2, duration=15, block=false)]
+//对话内容此处填入
+[Delay(time=0.6)]
+[name="煌"]  这种事情居然也要感染者去做？罗德岛这回还真是接了个恶毒的活。
+[name="煌"]  龙门。哼，龙门，这么大的城市怎么可能没有自己对抗入侵势力的手段？
+[name="煌"]  让感染者协助普通人对抗感染者......
+[name="煌"]  算了，反正也不是第一次了。
+[Dialog]
+//对话内容此处填入
+[PlaySound(key="$rungeneral", volume=0.9)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=false)]
+///////////////////////////
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_building_3",screenadapt="coverall")]
+[Blocker(a=0,fadetime=2,block=true)]
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  快点干掉拦路的！身后的别管，突破他们的防御就行！
+[name="整合运动成员"]  只要穿过这条街，我们就有机会和第二大队汇合！
+[name="整合运动成员"]  别给他们反击的机会，我们已经不剩下多少人了——
+[Character]
+[name="？？？"]  现在不剩下多少人，一会儿可就一个都不剩了。
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  啊？！
+[Dialog]
+[Character]
+[CameraShake(duration=3, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[delay(time=2)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_017_homura_3#4",fadetime=1,block=true)]
+[delay(time=2)]
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  什么......什么人！从天上掉下来了？！
+[name="整合运动成员"]  退后，都退后！她可能......她可能会飞行！
+[Character(name="char_017_homura_3#7")]
+[name="煌"]  ......这个真不会！
+[Character(name="char_015_lmg")]
+[name="警员"]  识别码！
+[Character(name="char_017_homura_3#4",name2="char_015_lmg",focus=1)]
+[name="煌"]  你用仪器扫一下！
+[Character(name="char_017_homura_3#4")]
+[name="煌"]  （不好意思，我先和他们说点事！）
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  啊？
+[Character(name="char_017_homura_3#4",name2="char_015_lmg",focus=1)]
+[name="煌"]  龙门警员，听好！我是罗德岛的。
+[name="煌"]  别射击，我没心思再边打架边处理流矢了。
+[name="煌"]  这里交给我一个人就行，你们赶紧去下处封锁点吧。
+[Character(name="char_017_homura_3#4")]
+[name="煌"]  好啦，现在来解决我们这边的事情。
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  这个女人什么意思？
+[Character(name="char_017_homura_3#4")]
+[name="煌"]  我解释一下你们应该就懂了，大概？
+[name="煌"]  （深吸一口气）
+[Character(name="char_017_homura_3#6")]
+[name="煌"]  我是来自罗德岛的精英干员，煌。我的作战目标是让各位失去战斗能力。
+[name="煌"]  不管各位是抱着什么样的心态入侵他国城邦，我们都只以解除各位的武装为首要目的。
+[name="煌"]  不论各位对他人人身造成的伤害、损失以及事后的刑罚，至少，各位现在的抵抗没有任何意义。放下武器，你们还有机会。
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  啊？什么？你......
+[Character(name="char_017_homura_3#4")]
+[name="煌"]  同是感染者，给你们一条路选吧。
+[name="煌"]  立刻投降的话，我有资格抓你们去罗德岛，然后丢去个对感染者还算宽容的地方。
+[Dialog]
+[Character(name="char_1002_nsabr_1")]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=0.2)]
+[Character(name="char_017_homura_3#4")]
+[playsound(key="$sheildimpact")]
+[Blocker(a=1, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=0.7)]
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  赤手空拳就挡下来了？！
+[Character(name="char_017_homura_3#4")]
+[name="煌"]  既然你们反抗了，我就没什么话可说了。
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  我们难道就该乖乖被你抓住吗？你有毛病吧？
+[Character(name="char_017_homura_3#4")]
+[name="煌"]  没有！反抗是正当的，逃跑也是，这我完全赞成。
+[name="煌"]  只不过当你们开始反抗，我就必须用暴力回应你们了。
+[name="煌"]  要么这样吧，我不用电锯。
+[Character(name="char_017_homura_3#4")]
+[name="煌"]  抱歉，真不想对同胞动手的。
+[name="煌"]  ......龙门的天气好潮湿啊。
+[Dialog]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[name="整合运动成员"]  这只傻猫......在施术！她的身上在冒热气！
+//修改此处的image来切换cg
+[Image(image="avg_6_6",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xFrom=0, yFrom=0,xTo=-30,yT=0, duration=20, block=false)]
+//对话内容此处填入
+[name="煌"]  我的身上冒热气？猜错了。再猜猜看，是我身边的空气更热，还是你身边的空气更热？
+[name="煌"]  一起洗个萨米澡吧，我请。
+[Dialog]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+///////////////////////////
+[Dialog]
+[Delay(time=0.5)]
+[Blocker(a=1,r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(block=true, fadetime=0.5)]
+

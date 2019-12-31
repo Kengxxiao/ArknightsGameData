@@ -1,0 +1,32 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 基建-控制室升级
+
+[PopupDialog(dialogHead="$avatar_closure")] 博士，我们已经获得足够的材料来升级我们基建的控制中心。
+[PopupDialog(dialogHead="$avatar_closure")] 该开始动手了。
+
+[GotoPage(dest="home", waitForSignal="home_routed")]
+[Tutorial(target="btn_building", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+从此进入罗德岛基建系统。
+
+[GotoPage(dest="building", waitForSignal="building_routed")]
+
+//----------- Building scene ------------
+
+[PopupDialog(dialogHead="$avatar_closure")] 升级控制中心可以扩大整个基建系统的可使用范围，并且开放更多的制造和销售选项。
+
+[Building.EnsureOperationMode(mode="ARCHITECTURE")]
+[Building.FocusBRoom(roomId="slot_34")]
+[Delay(time=0.02)]
+
+[Tutorial(target="broom_tutorial_btn", waitForSignal="building_architecture_view_setup", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+选中控制中心
+
+[Tutorial(target="button_levelup", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+建议博士立即对控制中心进行升级。
+
+//--------------------------------------

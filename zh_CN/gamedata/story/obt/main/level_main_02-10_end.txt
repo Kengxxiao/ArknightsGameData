@@ -1,0 +1,141 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第二十二关（后）
+
+// Comments
+
+[Background(image="bg_lungmen_r", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$loading_intro", key="$loading_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+
+[Character(name="char_1500_skulsr")]
+[name="碎骨"]   唔......
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]   哈，哈......
+[Character(name="char_1002_nsabr_2")]
+[name="整合运动成员"]   咿——！
+[name="整合运动成员"]   碎骨，没事吧！
+
+[Character(name="char_1002_nsabr_2", name2="char_1500_skulsr", focus=2)]
+
+[name="碎骨"]   嘁，这帮家伙确实很棘手！
+
+[Character(name="char_1002_nsabr_2", name2="char_1500_skulsr", focus=1)]
+
+[name="整合运动成员"]   碎骨，W在通讯里说，她那边已经结束了！
+[name="整合运动成员"]   已经成功劫到了任务目标。
+[Character(name="char_1002_nsabr_2", name2="char_1500_skulsr", focus=2)]
+[name="碎骨"]   ......W她，得手了？
+
+[Character(name="char_1002_nsabr_2", name2="char_1500_skulsr", focus=1)]
+
+[name="整合运动成员"]   是的，她的袭击非常顺利！
+[name="整合运动成员"]   是不是，我们也该撤退了？
+[Character(name="char_1002_nsabr_2", name2="char_1500_skulsr", focus=2)]
+[name="碎骨"]   ......
+[name="碎骨"]   给塔露拉发送信号。
+
+[Character(name="char_1002_nsabr_2")]
+
+[name="整合运动成员"]   明白！
+[Dialog]
+[CameraShake(duration=0.5, xstrength=2, ystrength=3, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.5, fadetime=0.02, block=true)]
+[PlaySound(key="$d_gen_signalbomb")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+
+[delay(time=1.5)]
+
+[Blocker(a=0.7, r=1, g=0.1, b=0.3, fadetime=0.02, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+
+[Character(name="char_1500_skulsr")]
+[name="碎骨"]   ......撤退。
+[Dialog(fadetime=0.6)]
+[Delay(time=0.6)]
+[name="碎骨"]   哼，罗德岛的懦夫......
+[name="碎骨"]   下次见面就是死期了。
+
+[Dialog(fadetime=0.6)]
+[Character(fadetime=0.6)]
+[Delay(time=1)]
+
+[Character(name="char_002_amiya_1#6")]
+
+[name="阿米娅"]   ——整合运动——撤退了？
+
+[Character(name="char_106_franka_1", name2="char_002_amiya_1#6", focus=1)]
+
+[name="芙兰卡"]   撤退非常迅速，应该是事先策划好的。
+[name="芙兰卡"]   嘴上放狠话，跑得倒是很快啊。
+
+[Character(name="char_106_franka_1", name2="char_002_amiya_1#4", focus=2)]
+
+[name="阿米娅"]   ......
+
+[Character(name="char_106_franka_1", name2="char_002_amiya_1#7", focus=2)]
+
+[name="阿米娅"]   情况有些......不对劲。
+
+[Character(name="char_107_liskam_1", name2="char_002_amiya_1#7", focus=1)]
+
+[name="雷蛇"]   你是说——
+[Character(name="char_107_liskam_1", name2="char_002_amiya_1#7", focus=-1)]
+
+[Decision(options="指出整合运动的目标可能不是罗德岛", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#6")]
+
+[name="阿米娅"]   ——！
+
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]   整合运动确实可能，只是在拖延我们的脚步......
+[name="阿米娅"]   这样一来......
+[name="阿米娅"]   糟了，近卫局有危险！
+[name="阿米娅"]   ......我们应该立刻去支援陈长官！
+[name="阿米娅"]   芙兰卡，立刻召回侦察小队！
+[name="阿米娅"]   雷蛇，尝试联系陈长官！
+
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[Character(name="char_010_chen_1#2", name2="char_015_lmg", focus=1)]
+
+[name="陈"]   特别督察组的主力部队呢！怎么还没有增援我们！
+
+[Character(name="char_010_chen_1#2", name2="char_015_lmg", focus=2)]
+
+[name="近卫局队员"]   通讯说，他们被整合运动拖住了......！
+
+[Character(name="char_010_chen_1#2", name2="char_015_lmg", focus=1)]
+
+[name="陈"]   怎么可能，就凭整合运动那帮乌合之众！
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Character(name="char_010_chen_1#2", name2="char_015_lmg", focus=2)]
+
+[name="近卫局队员"]   ......而且对方只有......一个人......
+
+[Character(name="char_010_chen_1#3")]
+
+[name="陈"]   ......
+
+[Character(fadetime=0)]
+//修改此处的image来切换cg
+[Image(image="avg_ep02",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.6, block=false)]
+//对话内容此处填入
+[Character(name="char_010_chen_1#5")]
+
+[name="陈"]   除非......
+
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+
+
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

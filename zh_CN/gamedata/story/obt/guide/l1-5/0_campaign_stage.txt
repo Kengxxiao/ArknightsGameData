@@ -1,0 +1,57 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 剿灭作战引导
+
+[PopupDialog(dialogHead="$avatar_sys")] 在一些地区，我们与整合运动部队发生了大规模的交战，称之为<@tu.kw>剿灭作战</>。
+[PopupDialog(dialogHead="$avatar_amiya")] 嗯，是的。如果能够在这些战场上取得优势，就可以大幅度削减敌人的实力。
+[PopupDialog(dialogHead="$avatar_sys")] 现在，需要你亲自指挥这些重要的战斗。
+
+[GotoPage(dest="home", waitForSignal="home_routed")]
+
+[Tutorial(target="btn_battle", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+点击进入作战室界面
+
+[GotoPage(dest="stage", waitForSignal="stage_routed")]
+
+[Tutorial(target="pool_btn_zonetab_campaign", waitForSignal="zone_switched_or_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+进入剿灭作战战场选择页面
+
+[Tutorial(target="pool_btn_first_zonestage", waitForSignal="stagepreview_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+选择其中一个剿灭作战战场
+
+[Tutorial(focusX=-173, focusY=98, focusWidth=310, focusHeight=193, anchor="Right", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+剿灭作战的规则会与通常的作战稍有不同，请确保在进入前仔细阅读。
+
+[Tutorial(target="btn_enemy_handbook", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+博士，接下来的是重点。在剿灭作战行动中你会遭遇大量敌人，即使无法一次全部击败也不用灰心。
+
+[Tutorial(focusX=-97, focusY=-331, focusWidth=103, focusHeight=37, anchor="Right", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+即使没有击败全部敌人，也可以使用PRTS的代理作战。另外理智也会根据未击败的敌人数进行相应的返还，请务必大胆地进行尝试。
+
+[PopupDialog(dialogHead="$avatar_sys")] \
+完成剿灭作战后，会根据这次作战击败的人数得到相应的奖励。
+
+[Tutorial(target="panel_campaign_info", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+单次击败的敌人数越多，就可以获得更高的阶段奖励。不过注意每个阶段奖励只能获取一次。
+
+[Tutorial(focusX=207, focusY=62, focusWidth=390, focusHeight=77, anchor="BottomLeft", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+此外根据击败敌人数还会有每周<@tu.kw>合成玉</>奖励。这些奖励是各个剿灭作战之间共通的，并且会以周为单位进行刷新。
+
+[Tutorial(target="panel_campaign_info", waitForSignal="stage_campaign_break_detail_shown", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+点击这里就可以查看阶段奖励的详情了。

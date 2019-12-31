@@ -1,0 +1,401 @@
+//!torch
+[HEADER(is_tutorial=true, is_skippable=true, is_autoable=true, fit_mode="BLACK_MASK", deny_auto_switch_scene=true)] 初始引导
+
+// Comments
+[PlayMusic(key="$babel_loop", volume=0.8, delay=0.2)]
+
+[name=""]   哦，是你。
+[Dialog]
+[Image(image="bg_0_babel", fadetime=1, block=true)]
+[ImageTween(image="bg_0_babel", tiled=true, xScaleTo=1.05, yScaleTo=1.05, duration=3, block=false)]
+[ImageTween(image="bg_0_babel", tiled=true, xScaleTo=1.5, yScaleTo=1.5, duration=75, block=false)]
+[name=""]   离我们上一次见面，已经过去了很久。
+[name=""]   这段时间里......你一直徘徊在悬崖的边缘。
+[Dialog]
+[Delay(time=1.3)]
+[name=""]   你可能已经忘记了你的身份，但你还记得那个名字，这就够了。
+[Dialog]
+[name=""]   ——好了，别在这里逗留太久。
+[name=""]   毕竟，你既不是我的客人，也不应该出现在这里。
+[name=""]   她需要你。
+[Dialog]
+[Delay(time=1)]
+[name=""]   12月23日。
+[name=""]   你可能记不清这一天对你来说，究竟意味着什么。
+[name=""]   这会让你陷入十分危险的处境。
+[name=""]   ......
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Image]
+[name=""]   不。
+[name=""]   你必须想起来。
+
+[Dialog]
+[PlayMusic(intro="$ekg_loop", key="$ekg_loop", volume=0.8, delay=0)]
+//闪烁
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[CameraEffect(effect="Grayscale", fadetime=0, keep=true, initamount=0, amount=1)]
+[Image(image="bg_0_am", tiled=true, fadetime=0, block=false)]
+
+[Blocker(a=0, fadetime=0.3, block=true)]
+[CameraEffect(effect="Grayscale", fadetime=18, amount=0, block=false)]
+[Delay(time=2)]
+[name="模糊的声音"]   ......知觉......
+[name="模糊的声音"]   开始循环............阻升主......停跳液注入完成......
+[Dialog]
+[Delay(time=2)]
+[CameraEffect(effect="Grayscale", fadetime=8, amount=1, block=false)]
+[name="模糊的声音"]   ......体温过低............海克塞米松20cc，静推。
+[Dialog]
+[CameraEffect(effect="Grayscale", fadetime=8, amount=0, block=false)]
+[Delay(time=1)]
+[name="模糊的声音"]   止血钳！
+[name="模糊的声音"]   ......状态正常......开始切除......注意室颤......
+[Dialog]
+[Delay(time=1)]
+[name="模糊的声音"]   ......抱歉......
+[name="模糊的声音"]   又让你受苦了。
+[Delay(time=0.5)]
+
+[StopMusic(fadetime=1)]
+[Background(fadetime=1, block=false)]
+// 闪屏效果
+[PlaySound(key="$flashback", volume=0.3)]
+[PlaySound(key="$e_atk_arrow_h", volume=0.2, Delay=0.4)]
+[PlaySound(key="$flashback", volume=0.1, Delay=0.3)]
+
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=1, r=159, g=254, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=255, g=96, b=15, afrom=1, rfrom=14, gfrom=0, bfrom=15, fadetime=0.2, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, afrom=0.8, rfrom=255, gfrom=96, bfrom=15, fadetime=0.3, block=true)]
+[delay=0.5]
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[delay=1]
+[Blocker(a=1, r=225, g=225, b=225, afrom=1, rfrom=0, gfrom=0, bfrom=0, fadetime=2, block=true)]
+
+[Image(fadetime=0)]
+
+
+[Image(image="avg_0_2",x=-100, y=-50,xScale=1.3, yScale=1.3, fadetime=0)]
+
+[name="？？？"]   ......
+[name="？？？"]   博士......
+[Blocker(a=0, fadetime=10, block=false)]
+[name="？？？"]   .......手！
+[name="？？？"]   抓......紧！
+[name="？？？"]   抓紧我的手！！
+[Dialog(time=1)]
+[Delay(time=1)]
+
+// 镜头推移效果（阿米娅握手）
+
+
+[Blocker(a=0, fadetime=2, block=false)]
+[Delay(time=3)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Image(image="avg_0_1",x=-100, y=-50,xScale=1.3, yScale=1.3, fadetime=2)]
+[ImageTween(xFrom=-100, yFrom=-50, xTo=0, yTo=0, xScaleFrom=1.3, yScaleFrom=1.3, xScaleTo=1, yScaleTo=1, duration=35, block=false)]
+[name="？？？"]   ......
+[name="？？？"]   紧急......
+[name="？？？"]   ......救......
+[name="？？？"]   ......束了......！
+[Dialog]
+[Image(fadetime=2)]
+[Delay(time=2)]
+
+[Delay(time=1)]
+[Dialog]
+[Character(name="char_002_amiya_1#1")]
+[name="？？？"]   博士，博士！
+[Delay(time=1)]
+[Dialog]
+[name="？？？"]   医生，博士他还好吗？
+[name="？？？"]   刚才，刚才博士......明明已经拉住我的手了。
+[name="？？？"]   但是到现在，博士都没有清醒......怎么办......
+[Character(name="char_016_medic")]
+[name="医疗干员"]   阿米娅！别那么着急，稍微冷静点！
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]   啊......抱，抱歉。
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=1)]
+[name="医疗干员"]   一遇到和博士有关的事情，你就变得慌慌张张的。
+[name="医疗干员"]   只不过，阿米娅，如果博士还是.....你该怎么办？
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]   ——我做好心理准备了。就像我们之前说的那样做。
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=1)]
+[name="医疗干员"]   ......我知道了。就按你说的做。
+[Character(name="char_016_medic",name2="char_002_amiya_1#1",focus=2)]
+[name="阿米娅"]   那就......拜托你了。
+
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]   那博士......
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=1)]
+[name="医疗干员"]   放心吧阿米娅，博士的状况已经稳定了。
+[name="医疗干员"]   我再检查一次好了，包在我身上。
+[Character(name="char_016_medic",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]   那就......拜托你了！
+[Delay(time=1)]
+[Dialog]
+[Character(name="char_016_medic")]
+[name="医疗干员"]   嗯。呼吸比较微弱，血压正常。应该不要紧的。
+
+[Blocker(a=0.6, r=255, g=150, b=13, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_atk_blunt_n")]
+[CameraShake(duration=0.5, xstrength=3, ystrength=4, vibrato=30, randomness=90, block=true)]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[Background(image="bg_indoor_1", width=1, height=1, fadetime=0.5, block=true)]
+
+[Character(name="char_002_amiya_1#6")]
+[name="阿米娅"]   ——！
+[Character(name="char_016_medic")]
+[name="医疗干员"]   ......
+[name="医疗干员"]   你醒了？
+[name="医疗干员"]   阿米娅，成功了，博士清醒了！
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]   博士......？
+[name="阿米娅"]   太好了，太好了......博士......
+[Character(name="char_016_medic")]
+[name="医疗干员"]   啊，小心！你现在还不能......
+
+[Blocker(a=0.5, r=1, g=0.5, b=0.5, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0,fadetime=0.1, block=true)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
+
+[Character(name="char_016_medic")]
+[name="医疗干员"]   先别动，你的身体还没有完全适应。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   博士......？
+[Delay(time=1)]
+[Dialog]
+[Character(name="char_002_amiya_1#3", focus=-1)]
+
+[Decision(options="你们......是谁？", values="1")]
+
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#6")]
+[name="阿米娅"]   啊——博士——我......
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   ......
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]   我叫阿米娅。
+[name="阿米娅"]   我们是来救你的。
+
+[Decision(options="......我是......？", values="1")]
+
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   你......
+[name="阿米娅"]   你和我们一样，也是“罗德岛”组织的一员。
+[name="阿米娅"]   ......是我的同伴。
+[name="阿米娅"]   ——Dr.{@nickname}。
+[name="阿米娅"]   你是我，最重要的同伴。
+[name="阿米娅"]   博士......不记得了吗？
+
+
+[Decision(options="......我真的能相信你吗？;......;是吗......初次见面，阿米娅。", values="1;2;3")]
+
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   ......
+[name="阿米娅"]   我知道。我知道这对于博士你来说很难接受。
+[name="阿米娅"]   我没有奢望你现在就能回忆起过去，也不会要求你现在就信任我。
+
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   难道说，Dr.{@nickname}也不记得我了......
+[name="阿米娅"]   ......
+[name="阿米娅"]   就算是这样......我也不会放弃的。
+[name="阿米娅"]   我们为了找到你，已经付出了很多很多......
+
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#6")]
+[name="阿米娅"]   啊，你，你好。
+[name="阿米娅"]   ......
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   不，我不是......我不知道该怎么说......很多事情都不再是以前那样了。
+[name="阿米娅"]   就连我，肯定也变得和过去不一样......
+
+
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]   至少，对我来说，博士始终是我最重要的人。无论发生什么事，这一点是不会改变的。
+[name="阿米娅"]   所以，请你.....请你多给我一点时间。
+[name="阿米娅"]   哪怕只是一小段时间......
+
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#1",name2="char_016_medic",focus=2)]
+[name="医疗干员"]   博士真的......失忆了吗？
+[Character(name="char_002_amiya_1#1",name2="char_016_medic",focus=1)]
+[name="阿米娅"]   ......
+[name="阿米娅"]   没关系，如果，这样能给博士一点空间的话......
+
+[Decision(options="这里到底是......", values="1")]
+[Predicate(references="1")]
+
+[name="阿米娅"]   这里——
+[character(fadetime=0.5)]
+[CameraShake(duration=0.5, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=false)]
+[PlaySound(key="$b_char_rockexplo")]
+[StopMusic(fadetime=0.8)]
+[delay=0.6]
+[Character(name="char_002_amiya_1#6")]
+[name="阿米娅"]   诶？发生了什————
+[character(name="char_002_amiya_1#6", name2="char_013_riop",focus=2)]
+[name="全副武装的男性"]   阿米娅，有情况！
+[character(name="char_002_amiya_1#6", name2="char_013_riop",focus=2)]
+[name="全副武装的男性"]   有人闯进了设施！
+
+
+
+[Blocker(a=1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.6, block=true)]
+[delay=0.5]
+[Dialog]
+
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[CameraShake(duration=0.5, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=false)]
+[Character(name="char_1002_nsabr_1")]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$b_char_rockexplo")]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[Delay(time=0.7)]
+
+[character(name="char_002_amiya_1#6", name2="char_013_riop",focus=2)]
+[name="全副武装的男性"]   他们的打扮......不是乌萨斯士兵！
+[character(name="char_1002_nsabr_1")]
+[CameraShake(duration=1, xstrength=4, ystrength=4, vibrato=30, randomness=90, block=false)]
+[PlaySound(key="$d_gen_soldiersrun")]
+[name="整合运动成员"]   ——————
+
+[Dialog]
+[character(name="char_013_riop")]
+[name="全副武装的男性"]   你们想干什么！
+[Dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[character(name="char_013_riop")]
+[name="全副武装的男性"]   敌袭！阿米娅，敌人装备了重火力兵器！
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+
+[character(name="char_016_medic")]
+[name="医疗干员"]   唔唔唔唔！
+[character(name="char_002_amiya_1#7")]
+[name="阿米娅"]   大家注意！利用掩体，保护好博士！
+[name="阿米娅"]   这打扮难道是......整合运动？怎么会......
+[name="阿米娅"]   近卫人员......做好战斗准备！
+[character(name="char_013_riop")]
+[name="近卫干员"]   明白！
+[character]
+
+[CameraShake(duration=0.5, xstrength=8, ystrength=10, vibrato=30, randomness=90, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=1.5, block=true)]
+
+[character(name="char_013_riop")]
+[name="近卫干员"]   可恶，这些家伙是冲着博士来的吗！
+[character(name="char_002_amiya_1",name2="char_013_riop",focus=1)]
+[name="阿米娅"]   不......博士的存在不会有别人知道才对。
+[character(name="char_002_amiya_1#7",name2="char_013_riop",focus=1)]
+[name="阿米娅"]   凯尔希医生的远程通讯呢？
+[character(name="char_002_amiya_1",name2="char_013_riop",focus=2)]
+[name="近卫干员"]   不知道为什么，设备停止工作了！
+[character(name="char_002_amiya_1")]
+[name="阿米娅"]   ......有什么切断了我们之间的通讯。
+[name="阿米娅"]   乌萨斯政府发现了我们的行踪吗？
+
+[character(name="char_002_amiya_1",name2="char_013_riop",focus=2)]
+[name="近卫干员"]   现在要怎么办？
+[character(name="char_002_amiya_1")]
+[name="阿米娅"]   原本负责这次行动的凯尔希医生，现在没办法参与指挥......
+[name="阿米娅"]   ......
+[character(name="char_002_amiya_1#7")]
+[name="阿米娅"]   ————Dr.{@nickname}。
+[name="阿米娅"]   ————我希望，由博士来指挥。
+[Character(name="char_016_medic",name2="char_002_amiya_1",focus=1)]
+[name="医疗干员"]  这......会不会太冒险了，博士才刚刚......
+[Character(name="char_016_medic",name2="char_002_amiya_1",focus=2)]
+[name="阿米娅"]   ......我想......试一试。
+[character(name="char_002_amiya_1")]
+[name="阿米娅"]   虽然失去了记忆，但博士确实曾与我们......
+[name="阿米娅"]   ......一同战斗过。
+
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$flashback", volume=0.4)]
+[Background(image="bg_wild_a")]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="？？？"]   谢谢你教会了我这么多......
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$flashback", volume=0.1)]
+[CameraEffect(effect="Grayscale", amount=0)]
+[Background(image="bg_indoor_1")]
+
+[character(name="char_002_amiya_1#4")]
+[Blocker(a=0, fadetime=0.1, block=true)]
+
+
+
+[name="阿米娅"]   ......
+[character(name="char_002_amiya_1")]
+
+[name="阿米娅"]   我们一起经历了许多许多......
+[name="阿米娅"]   我知道的......博士你能为我们带来胜利。
+
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$flashback", volume=0.4)]
+[Background(image="bg_wild_a")]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[Character(name="char_002_amiya_1#8")]
+[Blocker(a=0, fadetime=0.2, block=true)]
+[name="？？？"]   你能为我们带来胜利。
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$flashback", volume=0.1)]
+[CameraEffect(effect="Grayscale", amount=0)]
+[Background(image="bg_indoor_1")]
+[Character(name="char_002_amiya_1")]
+[Blocker(a=0, fadetime=0.1, block=true)]
+
+[name="阿米娅"]   ......我明白这样突然请求你很失礼。 
+[name="阿米娅"]   但是，但是......拜托了，请你助我们一臂之力。
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   我也会辅助你的！
+
+
+[Decision(options="那就先打退他们！;......;我们只能反击了，是吗？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]   嗯......我也不想再把博士你卷入这些纷争。
+[name="阿米娅"]   但现在的我们，非常需要Dr.{@nickname}的智慧。
+[name="阿米娅"]   希望博士能在战斗中，把过去的感觉找回来。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]   ————也许连你自己都可能还不太相信......
+
+[Character]
+[Background]
+[name="阿米娅"]   但是我相信你。
+[Image(image="avg_0_3", fadetime=0.8)]
+[name="阿米娅"]   ——我相信你，一定可以的。
+
+[name="阿米娅"]   请指挥————罗德岛！
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
+
+[SkipToThis]
+[StartBattle(stageId="guide_01")]
+[Tutorial(waitForSignal="battle_start")]
+
+

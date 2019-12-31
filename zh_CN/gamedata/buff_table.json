@@ -1,0 +1,138 @@
+{
+  "sluggish": {
+    "buffKey": "sluggish",
+    "durationKey": "sluggish",
+    "overrideEffectKey": "buff_sluggish",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "MOVE_SPEED",
+          "formulaItem": "FINAL_SCALER",
+          "value": -0.8,
+          "loadFromBlackboard": false
+        }
+      ]
+    }
+  },
+  "stun": {
+    "buffKey": "stun",
+    "durationKey": "stun",
+    "overrideEffectKey": "buff_stun",
+    "attributes": {
+      "attributeModifiers": null,
+      "abnormalFlags": [
+          "STUNNED"
+      ]
+    }
+  },
+  "silence": {
+    "buffKey": "silence",
+    "durationKey": "silence",
+    "overrideEffectKey": "buff_silence",
+    "attributes": {
+      "attributeModifiers": null,
+      "abnormalFlags": [
+          "SILENCED"
+      ]
+    }
+  },
+  "weak": {
+    "buffKey": "weak",
+    "durationKey": null,
+    "templateKey": "scale_damage_on_hp_less",
+    "lifeTimeType": "INFINITY",
+    "priorityBBKeys": [
+      "damage_scale"
+    ],
+    "blackboard": [
+      {
+        "key": "hp_ratio",
+        "value": 0.4,
+        "valueStr": null
+      }
+    ]
+  },
+  "spRecover": {
+    "buffKey": "spRecover",
+    "durationKey": null,
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "SP_RECOVERY_PER_SEC",
+          "formulaItem": "ADDITION",
+          "value": 0.0,
+          "loadFromBlackboard": true
+        }
+      ]
+    },
+    "lifeTimeType": "INFINITY",
+    "priorityBBKeys": [
+      "sp_recovery_per_sec"
+    ],
+    "blackboard": []
+  },
+  "status_resistance[inf]": {
+    "buffKey": "status_resistance[inf]",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "ONE_MINUS_STATUS_RESISTANCE",
+          "formulaItem": "FINAL_SCALER",
+          "value": 0.0,
+          "loadFromBlackboard": true
+        }
+      ]
+    },
+    "lifeTimeType": "INFINITY",
+    "priorityBBKeys": [
+      "one_minus_status_resistance"
+    ],
+    "blackboard": []
+  },
+  "status_resistance[limit]": {
+    "buffKey": "status_resistance[limit]",
+    "durationKey": "status_resistance[limit]",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "ONE_MINUS_STATUS_RESISTANCE",
+          "formulaItem": "FINAL_SCALER",
+          "value": 0.0,
+          "loadFromBlackboard": true
+        }
+      ]
+    },
+    "priorityBBKeys": [
+      "one_minus_status_resistance"
+    ],
+    "blackboard": []
+  },
+  "e2c_freeze": {
+    "buffKey": "e2c_freeze",
+    "durationKey": "freeze",
+    "overrideEffectKey": "buff_frozen",
+    "attributes": {
+      "attributeModifiers": null,
+      "abnormalFlags": [
+          "FROZEN"
+      ]
+    }
+  },
+  "e2c_cold": {
+    "buffKey": "e2c_cold",
+    "durationKey": "freeze",
+    "templateKey": "e2c_cold",
+    "overrideEffectKey": "buff_cold",
+    "statusResistable": "YES",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "ATTACK_SPEED",
+          "formulaItem": "ADDITION",
+          "value": -30,
+          "loadFromBlackboard": false
+        }
+      ]
+    }
+  }
+}

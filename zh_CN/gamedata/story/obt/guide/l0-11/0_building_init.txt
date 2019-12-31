@@ -1,0 +1,102 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 基建引导Part0
+
+
+[PopupDialog(dialogHead="$avatar_sys")] 博士，胜利总是会付出相应的代价。
+
+[GotoPage(dest="home", waitForSignal="home_routed")]
+[Tutorial(target="btn_building", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+请前往基建。在那里，有一个人在等你。
+
+[GotoPage(dest="building", waitForSignal="building_routed")]
+
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+//修改此处的image来切换cg
+[Background(image="bg_abyss_1", width=1.7, height=1.7)]
+//对话
+[Blocker(a=0, fadetime=0.6, block=false)]
+
+//对话内容此处填入
+[Character(name="char_007_closre_1#3")]
+[name="？？？"]  博士，某种程度上......又见面了。
+[name="？？？"]  情况不容乐观，切尔诺伯格即将沦陷，而我在罗德岛能做的事情也比较有限。
+[name="？？？"]  现在我们需要恢复基建的使用，这样就能为之后的行动提供更多支援。
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Character(name="char_007_closre_1#1")]
+[Blocker(a=0, fadetime=0.6, block=true)]
+[name="？？？"]  啊对了，我一直都忘了你可能已经不记得我是谁了。
+
+
+//////////////插入cg///////////////////
+[Blocker(a=1, r=1,g=1, b=1, fadetime=0.6, block=true)]
+//修改此处的image来切换cg
+[Image(image="avg_closure")]
+[Character]
+//对话
+[Blocker(a=0, fadetime=0.6, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=0, xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+
+[name="可露希尔"]  我是罗德岛舰船可靠性工程师————可露希尔。
+[name="可露希尔"]  欢迎来到罗德岛基建群，以及————
+[name="可露希尔"]  今后请多多指教，Dr.{@nickname}！
+[dialog]
+
+[delay=0.6]
+
+[Blocker(a=1, r=1,g=1, b=1, fadetime=0.6, block=true)]
+[image(fadetime=0)]
+[Background(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=true)]
+///////////////////////////
+
+
+
+//----------- Building scene ------------
+
+[PopupDialog(dialogHead="$avatar_closure")] 在基建中，博士你可以建造各种设施换取各种资源，也可以对干员们的生活进行管理。
+[PopupDialog(dialogHead="$avatar_closure")] 当然因为整套系统才被修复不久，大部分房间还需要清理后才能使用。
+[PopupDialog(dialogHead="$avatar_closure")] 虽然我们损失了很多，不过，我们的征途才刚刚开始。而这里，将会是一直陪伴着我们征战远方的家。
+[PopupDialog(dialogHead="$avatar_closure")] 在开始实际操作之前，先为你介绍下基本功能吧。
+
+[Tutorial(focusX=-482, focusY=-38, focusWidth=195, focusHeight=41, anchor="TopRight",\
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+这里标识了闲置的无人机数量。清理房间和建造等操作都会使用到无人机。无人机在使用后需要充电维护一定时间才能再次投入工作。
+
+[Tutorial(focusX=-286, focusY=-38, focusWidth=195, focusHeight=41, anchor="TopRight",\
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+这里标识了罗德岛基建的电力供应状况。各项设施的正常运作都会需要电力。建造发电站可以提供更多的电力输出。
+
+[Tutorial(focusX=-95, focusY=-38, focusWidth=195, focusHeight=41, anchor="TopRight",\
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+这里标识了龙门币余额。毕竟，天上没有免费的馅饼，制造大部分材料都是要经费的。
+
+[PopupDialog(dialogHead="$avatar_sys")] 希望你能记住它们的含义。毕竟，这里可能是你以后最常来的地方之一。
+[PopupDialog(dialogHead="$avatar_closure")] 没关系，博士还需要一点时间去熟悉。这里可以慢慢调整成博士希望的样子。
+
+[Tutorial(target="archi_switch_hotspot", waitForSignal="building_opmode_changed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+所以，清理房间是开始任何工作的第一步。我们先切换到<@tu.kw>建造模式</>。
+
+[Building.EnsureOperationMode(mode="ARCHITECTURE")]
+[Building.FocusBRoom(roomId="slot_33")]
+[Delay(time="$f_delay_focus_building_broom")]
+
+[Tutorial(target="broom_tutorial_btn", waitForSignal="building_architecture_view_setup", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+电梯间是连接各个区域的通道。点击电梯间进行清理。
+
+[Delay(time="$f_delay_single_frame")]
+
+[Tutorial(target="btn_clean_confirm", waitForSignal="building_room_clean_confirmed", searchBtnInChildren=true, \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", importantClick=true, \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+选择进行清理。
+
+//--------------------------------------

@@ -1,0 +1,46 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 控制中枢3级 Part5
+
+//----------- Building scene ------------
+
+[PopupDialog(dialogHead="$avatar_closure")] 加工站主要用于材料的<@tu.kw>合成</>和<@tu.kw>分解</>。
+[PopupDialog(dialogHead="$avatar_closure")] 由于技术的改进，材料的合成和分解几乎可以在短时间内由机器自动完成，节约了宝贵的时间。
+
+[Tutorial(target="character_station", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+虽然加工过程是全自动的，但加工站中同样可以进驻干员。
+
+[Tutorial(target="character_station", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+在进驻角色的状态下进行加工的话，除了通常的产出外，有时会出现加工副产物，给你带来意外惊喜。
+
+[Tutorial(target="character_station", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+不过相应地，每次加工时也会一定程度消耗干员的心情值，如何取舍就看博士你的安排了。
+
+[PopupDialog(dialogHead="$avatar_closure")] 最后来尝试进行一次加工吧。
+
+[Tutorial(target="formula_frame", searchBtnInChildren=true, waitForSignal="building_workshop_formula_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+点击选择加工配方
+
+[Tutorial(target="panel_tab_build", searchBtnInChildren=true, waitForSignal="building_workshop_formula_filter_toggled", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+选择基建材料分类
+
+[Delay(time="$f_delay_single_frame")]
+
+[Tutorial(target="pool_btn_building_workshop_formula_first_item", searchBtnInChildren=true, waitForSignal="building_workshop_home_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+点击选中配方
+
+[Tutorial(target="start_work_btn", searchBtnInChildren=true, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")] \
+点击这里就可以开始加工了
+//--------------------------------------

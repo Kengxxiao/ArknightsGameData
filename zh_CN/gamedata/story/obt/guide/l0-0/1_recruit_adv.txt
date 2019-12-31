@@ -1,0 +1,38 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 高级干员招募引导
+
+[PopupDialog(dialogHead="$avatar_sys")] 未被损坏的记忆部分可能比想象的少。
+[PopupDialog(dialogHead="$avatar_sys")] 不过你已经懂得了基本的生存技巧，没有白费阿米娅对你的一片期待，以及她为了救你而准备的这些干员。
+
+[PopupDialog(dialogHead="$avatar_amiya")] 无论如何，整合运动造成的影响和破坏都超过了预期。博士，我们需要坚持下去。
+[PopupDialog(dialogHead="$avatar_sys")] 如果想要生存下去的话，需要扩充下罗德岛的成员配置。
+[PopupDialog(dialogHead="$avatar_amiya")] 博士，堆积着的档案已经很多了，当中一定有能够成为我们新的伙伴的人，从中招募些有可能加入我们的人吧。
+
+[GotoPage(dest="HOME", waitForSignal="home_routed")]
+[Tutorial(target="btn_advanced_recruit", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+博士，点击干员寻访按钮。
+
+[GotoPage(dest="recruit_advanced", waitForSignal="recruit_advanced_routed")]
+
+[PopupDialog(dialogHead="$avatar_sys")] 在这里你可以使用<@tu.kw>合成玉</>进行<@tu.kw>干员寻访</>。
+
+[Tutorial(target="panel_diamond_shard", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+合成玉是一种十分珍贵的资源，但同时也是干员寻访的必须品。使用前请务必仔细思考。
+
+//----------- Recruit scene ------------
+// recruitgacha_resumed等待再度回到抽卡页面
+[Tutorial(target="btn_gacha", waitForSignal="recruit_gacha_drawn", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", importantClick=true, \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+点击此处以招募干员。
+
+
+[InputBlocker(blockInput=false)]
+
+[Tutorial(waitForSignal="recruit_gachaeffect_shown")]
+
+[InputBlocker(blockInput=true)]
+//--------------------------------------
