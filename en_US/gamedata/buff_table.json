@@ -1,0 +1,90 @@
+{
+  "sluggish": {
+    "buffKey": "sluggish",
+    "durationKey": "sluggish",
+    "overrideEffectKey": "buff_sluggish",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "MOVE_SPEED",
+          "formulaItem": "FINAL_SCALER",
+          "value": -0.8,
+          "loadFromBlackboard": false
+        }
+      ]
+    }
+  },
+  "stun": {
+    "buffKey": "stun",
+    "durationKey": "stun",
+    "overrideEffectKey": "buff_stun",
+    "attributes": {
+      "attributeModifiers": null,
+      "abnormalFlags": [
+          "STUNNED"
+      ]
+    }
+  },
+  "silence": {
+    "buffKey": "silence",
+    "durationKey": "silence",
+    "overrideEffectKey": "buff_silence",
+    "attributes": {
+      "attributeModifiers": null,
+      "abnormalFlags": [
+          "SILENCED"
+      ]
+    }
+  },
+  "weak": {
+    "buffKey": "weak",
+    "durationKey": null,
+    "templateKey": "scale_damage_on_hp_less",
+    "lifeTimeType": "INFINITY",
+    "priorityBBKeys": [
+      "damage_scale"
+    ],
+    "blackboard": [
+      {
+        "key": "hp_ratio",
+        "value": 0.4,
+        "valueStr": null
+      }
+    ]
+  },
+  "status_resistance[inf]": {
+    "buffKey": "status_resistance[inf]",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "ONE_MINUS_STATUS_RESISTANCE",
+          "formulaItem": "FINAL_SCALER",
+          "value": 0.0,
+          "loadFromBlackboard": true
+        }
+      ]
+    },
+    "lifeTimeType": "INFINITY",
+    "priorityBBKeys": [
+      "oneMinusStatusResistance"
+    ],
+    "blackboard": []
+  },
+  "status_resistance[limit]": {
+    "buffKey": "status_resistance[limit]",
+    "durationKey": "status_resistance[limit]",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "ONE_MINUS_STATUS_RESISTANCE",
+          "formulaItem": "FINAL_SCALER",
+          "value": 0.0,
+          "loadFromBlackboard": true
+        }
+      ]
+    },
+    "priorityBBKeys": [
+      "oneMinusStatusResistance"
+    ]
+  }
+}

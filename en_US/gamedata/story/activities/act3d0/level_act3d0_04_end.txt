@@ -1,0 +1,90 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第六关（后）
+
+// Comments
+[Background(image="bg_hotel", fadetime=1)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5)]
+[Dialog]
+[Character]
+[Delay(time=1)]
+[Character(name="char_188_helage_1")]
+[name="Hellagur"]   This woman from Feline is not a nobody.
+
+[Decision(options="这还是难不倒你的。;将军，没受伤吧？",values="1;2")]
+[Predicate(references="1;2")]
+
+[name="Hellagur"]   Don't worry. Her men are just some mobs. Retreat was not problem for me after your safety is guaranteed.
+[name="Hellagur"]   But about the identity of that bodyguard, maybe I know something.
+[Decision(options="身份;难道说......",values="1;2")]
+[Predicate(references="1;2")]
+[name="Hellagur"]   Columbian, Feline, female, silver hair, amber eyes and black crossbow. A hitwoman, and a mercenary.
+[name="Hellagur"]   For a hitwoman, it's a shame to be famous, but what she did was way too astonishing.
+[name="Hellagur"]   One example, she destroyed one whole family in Columbia. That was a powerful family, but its core leaders were killed one after another within a few years, and it was eliminated in the end.
+[name="Hellagur"]   Another example, she hunted down a whole patrol. This patrol looted and killed the people at the borderline of Columbia. They called themselves the Conqueror of Barbarians, and kept using violence on other races, causing all kinds of tragedies.
+[name="Hellagur"]   In a month after that, they had been running away from someone in the forest, but they just died one after another until only one made it back to the city. That one became a disabled psycho.
+[name="Hellagur"]   Last example, the story of the man who told me all these.
+
+[Decision(options="又发生了什么？;请说吧，我不害怕。",values="1;2")]
+[Predicate(references="1;2")]
+
+[name="Hellagur"]   I'll skip to the point. He has a scar, and it covers from the left shoulder to the right heel.
+[name="Hellagur"]   Slaughterers are everywhere. I'm also one of them.
+[name="Hellagur"]   This hitwoman has gone missing for long.
+[name="Hellagur"]   But if they are the same person, we're gonna have big trouble.
+
+[Decision(options="水比想象中的深。;锡兰被蒙在鼓里？",values="1;2")]
+[Predicate(references="1;2")]
+[name="Hellagur"]   The Mayor does, probably.
+[name="Hellagur"]   Or rather, she works for the Mayor. I won't be surprised at all.
+
+[Character]
+
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=false)]
+(Glass broken)
+
+[Decision(options="锡兰？！;你从什么时候......",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_188_helage_1")]
+[name="Hellagur"]   Miss Ceylon, you don't have to hide.
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#8",focus=2)]
+[name="Ceylon"]   I-I was going to get you some water...
+[name="Ceylon"]   Mr. Hellagur, when did that mercenary start her career, and when did she go missing?
+
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#8",focus=1)]
+[name="Hellagur"]   I was still serving when she became famous.
+[name="Hellagur"]   She went missing a year ago, when that family was eliminated.
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#8",focus=2)]
+[name="Ceylon"]   ... Schwarz had been taking care of me, until 6 years ago.
+[name="Ceylon"]   But one day she said dad needed her to do something, and she just left. After that I only met her on Christmas every year, when she took me home.
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#3",focus=2)]
+[name="Ceylon"]   But-But she was just being harsh, and she was just obeying Cronin's order. Schwarz can't be a slaughterer!
+[name="Ceylon"]   Besides, are you trying to say my dad is behind Cronin's plot? !
+[name="Ceylon"]   No way!
+
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#3",focus=1)]
+[name="Hellagur"]   I won't draw any conclusion. But, as I said, your trust for others may not bring you their trust.
+[name="Hellagur"]   I don't care whether she trusts you or not. But I'm absolutely sure of the scars on her. They are caused by Ursusian standard weapons. That patrol was buried in the snow.
+[Character(name="char_188_helage_1")]
+[name="Hellagur"]   As you can see, Doctor.
+[name="Hellagur"]   If the City Council is behind the fake information of the volcano, maybe we should stay out of this.
+[name="Hellagur"]   Miss Ceylon, you should also recognize the truth.
+
+
+
+[Character(name="char_348_ceylon_4#9")]
+[name="Ceylon"]   I... I need to calm down.
+[Dialog]
+[Character(fadetime=1,block=true)]
+[PlaySound(key="$doorclosequite", volume=0.9)]
+[Delay(time=1)]
+
+[Character(name="char_188_helage_1")]
+[name="Hellagur"]  Doctor, please.
+
+[Decision(options="啊？;我是该做些什么吧？",values="1;2")]
+[Predicate(references="1;2")]
+[name="Hellagur"]   Of course. She needs someone who can understand her now.
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(fadetime=3,block=true)]
+[Image]

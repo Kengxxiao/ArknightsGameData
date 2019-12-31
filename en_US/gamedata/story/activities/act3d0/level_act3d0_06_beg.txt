@@ -1,0 +1,185 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第六关（后）
+
+// Comments
+[Background]
+[PlayMusic(intro="$fesready_intro", key="$fesready_loop", volume=0.8, crossfade=1.5)]
+
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.7, block=true)]
+[Character]
+[Background(image="bg_Festival_1",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.7, block=true)]
+
+[Character(name="avg_NPC_017_3",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="D.D.D."]   Guys!! Are you ready!!!
+[name="D.D.D."]   The greatest united concert of Obsidian Festival will start in 3 hours!
+[Character]
+[CameraShake(duration=2, xstrength=8, ystrength=8, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[name="Audience"]   Wowwwww!!!
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_offce")]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="avg_npc_023_2")]
+[name="Cronin"]    It's about time. As long as Schwarz and Rhodes Island can hold each other, things will go smooth here.
+[name="Cronin"]    I knew setting them against each other would work well. Hum.
+[name="Cronin"]    Hurry up! Get them away! Move fast or you won't get paid!
+[name="Cronin"]    Oh? What's that sound out there?
+
+
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_hotel",screenadapt="coverall" )]
+[Character]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Blocker(a=0, fadetime=2, block=false)]
+[Character(name="char_348_ceylon_4#2")]
+[name="Ceylon"]   Doctor, if we just rush into the broadcast tower, I'm sure we'll run into Cronin's ambush.
+[name="Ceylon"]   If you go with me, Schwarz will definitely try to disarm you guys first. In that case I can't contain her at all.
+[name="Ceylon"]   With support from the government, even if we capture the broadcast tower by force, my words will only confuse the people and even make them panic.
+[name="Ceylon"]   If Schwarz is guarding Cronin, she will be a big obstacle in your way.
+[name="Ceylon"]   More importantly, you may need to find out what Cronin is hiding.
+[name="Ceylon"]   Perhaps Cronin is really as innocent as a lamp...
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#2",focus=1)]
+[name="Hellagur"]     In that case, we just make him announce the news by force?
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#2",focus=2)]
+[name="Ceylon"]   Exactly. If that's the case, I don't mind using force. After all that's actually what I'm thinking.
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#2",focus=1)]
+[name="Hellagur"]     That's bold, Miss Ceylon, even a bit reckless.
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#2",focus=2)]
+[name="Ceylon"]   Rhodes Island has already used my data to prove the conclusion for me. If I don't do that, everyone in Siesta will get burned.
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#2",focus=1)]
+[name="Hellagur"]     I'm not trying to blame you, Miss Ceylon. It's just I don't get to decide if Rhodes Island will take part in it.
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#2",focus=2)]
+[name="Ceylon"]   You mean...
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#2",focus=1)]
+[name="Hellagur"]     Doctor. You're clear about the whole thing now. What should we do?
+
+
+[Decision(options="都到这一步了，必须做些什么！;......;让无辜的人受难，这违背了罗德岛的信条。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[Character(name="char_188_helage_1")]
+[name="Hellagur"]     So, who will be responsible for this?
+
+[Decision(options="只要没人发现，就没有人参与过！",values="1")]
+[Predicate(references="1")]
+[Character(name="char_188_helage_1#2")]
+[name="Hellagur"]     Oh you.
+[name="Hellagur"]     Miss Ceylon, let's go, before it's too late.
+[Character(name="char_348_ceylon_4#2")]
+[name="Ceylon"]   Doctor...
+
+[Decision(options="做你该做的事吧。",values="1")]
+[Predicate(references="1")]
+[name="Ceylon"]   Okay. I'll go contain Schwarz.
+[name="Ceylon"]   Besides, I have to do something. I need to know the answer...
+
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Delay(time=1)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_Festival_1",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.7, block=true)]
+
+[Character(name="char_348_ceylon_4#2",name2="char_340_shwaz_2#2",focus=1)]
+[name="Ceylon"]   Schwarz...
+[name="Ceylon"]   Why did you keep away from me?
+[Character(name="char_348_ceylon_4#2",name2="char_340_shwaz_2#3",focus=2)]
+[name="Schwarz"]   …
+[name="Schwarz"]   You have received higher education in Victoria, my lady. You deserve a better place. Please don't struggle with people like us in this city.
+[Character(name="char_348_ceylon_4#9",name2="char_340_shwaz_2#3",focus=1)]
+[name="Ceylon"]   ... No. That's not right at all.
+[name="Ceylon"]   Schwarz, do you know what I think of you? And what do you think of me?
+[Character(name="char_348_ceylon_4#9",name2="char_340_shwaz_2#3",focus=2)]
+[name="Schwarz"]   I am not the person you think I am, my lady.
+[Character(name="char_348_ceylon_4#8",name2="char_340_shwaz_2#3",focus=1)]
+[name="Ceylon"]   Is it because you used to kill people?
+[Character(name="char_348_ceylon_4#8",name2="char_340_shwaz_2#3",focus=2)]
+[name="Schwarz"]   …
+[Character(name="char_348_ceylon_4#8",name2="char_340_shwaz_2#3",focus=1)]
+[name="Ceylon"]   Because you've killed a lot of them?
+[Character(name="char_348_ceylon_4#8",name2="char_340_shwaz_2#3",focus=2)]
+[name="Schwarz"]   No, my lady. Enough.
+[Character(name="char_348_ceylon_4#5",name2="char_340_shwaz_2#3",focus=1)]
+[name="Ceylon"]   Maybe both of us have made a mistake, Schwarz.
+[Character(name="char_348_ceylon_4#5",name2="char_340_shwaz_2#3",focus=2)]
+[name="Schwarz"]   I don't want you to know that, my lady!
+[Character(name="char_348_ceylon_4#9",name2="char_340_shwaz_2#3",focus=1)]
+[name="Ceylon"]   I'm sorry.
+[Character(name="char_348_ceylon_4#9",name2="char_340_shwaz_2#3",focus=2)]
+[name="Schwarz"]   ... My lady?
+[Character(name="char_348_ceylon_4#9",name2="char_340_shwaz_2#3",focus=1)]
+[name="Ceylon"]   I already know. I already know your past... even if it's just a small part.
+[name="Ceylon"]   If you don't want me to know that, I understand, but sorry I can't say "I know nothing about it".
+[Character(name="char_348_ceylon_4#9",name2="char_340_shwaz_2#3",focus=2)]
+[name="Schwarz"]   No, my lady! You are not supposed to know that! You should have...
+[Character(name="char_348_ceylon_4#3",name2="char_340_shwaz_2#3",focus=1)]
+[name="Ceylon"]   Should have what? Studied well and ascended to the upper class? Forget it!
+[name="Ceylon"]   I'm not a spoiled child, or some ignorant little princess! I know there's something I must do!
+[name="Ceylon"]   To protect Siesta is dad's responsibility, your responsibility, and my responsibility!
+[name="Ceylon"]   You want me to stay out of this in order to protect me, right?
+[Character(name="char_348_ceylon_4#3",name2="char_340_shwaz_2#3",focus=2)]
+[name="Schwarz"]   No... I...
+[Character(name="char_348_ceylon_4#3",name2="char_340_shwaz_2#3",focus=1)]
+[name="Ceylon"]   You are just like dad. Arrange everything for me and think that's for my own good, but I don't think so!
+[name="Ceylon"]   There may be danger in what I do, you may have a dark past, so what!? Perhaps I'll cry and feel sad or even terrified when I actually go through them...
+[name="Ceylon"]   But, as long as you say "I need your help, Ceylon", I'll always be there! No matter what you say, I'll always listen to you!
+[name="Ceylon"]   That's what friends really do! If one of us just keeps giving, giving and giving, what kind of friends are we!?
+[Character(name="char_348_ceylon_4#5",name2="char_340_shwaz_2#3",focus=1)]
+[name="Ceylon"]   So, Schwarz, could you help me now?
+[name="Ceylon"]   You've asked me for the reason. And that's my answer...
+[name="Ceylon"]   So, could you give me an answer in return, Schwarz? If the past is in the past, can we be friends again? Like we did when I was a kid?
+[Character(name="char_348_ceylon_4#5",name2="char_340_shwaz_2#5",focus=2)]
+[name="Schwarz"]   My lady... I'm sorry. I apologize for my words and deeds. What I did has caused misunderstanding between us. It shouldn't have happened.
+[Character(name="char_348_ceylon_4#5",name2="char_340_shwaz_2#5",focus=1)]
+[name="Ceylon"]   Ah...
+[Character(name="char_348_ceylon_4#5",name2="char_340_shwaz_2#1",focus=2)]
+[name="Schwarz"]   My lady, you are my friend, and you'll always be.
+
+[Character(name="avg_npc_020")]
+[name="Cronin's Man"]   …
+[name="Cronin's Man"]   Hey, that's too long for a chit chat. You got a conclusion? What is it?
+
+[Character(name="char_348_ceylon_4#2",name2="char_340_shwaz_2#2",focus=2)]
+[name="Schwarz"]   My lady, now please tell me your next step.
+[Character(name="char_348_ceylon_4#7",name2="char_340_shwaz_2#2",focus=1)]
+[name="Ceylon"]   Huh? I... Well... I would like to spread the news about the Catastrophe through official channels.
+[name="Ceylon"]   Rhodes Island should be collecting evidence against Cronin now. Soon he'll be kicked out of the City Council...
+[name="Ceylon"]   But after the news is sent, probably the festival will have to be cancelled, and Siesta will have to move. I'm afraid...
+[Character(name="char_348_ceylon_4#7",name2="char_340_shwaz_2#2",focus=2)]
+[name="Schwarz"]   It's okay, my lady.
+[Character(name="char_348_ceylon_4#7",name2="char_340_shwaz_2#2",focus=1)]
+[name="Ceylon"]   Re-Really?
+[Character(name="char_348_ceylon_4#7",name2="char_340_shwaz_2#2",focus=2)]
+[name="Schwarz"]   If that's what you want, I'm with you.
+[Character(name="char_348_ceylon_4#4",name2="char_340_shwaz_2#2",focus=1)]
+[name="Ceylon"]   ... Schwarz...
+[Character(name="char_348_ceylon_4#4",name2="char_340_shwaz_2#2",focus=2)]
+[name="Schwarz"]   My lady, do you need me to protect you?
+[Character(name="char_348_ceylon_4#6",name2="char_340_shwaz_2#2",focus=1)]
+[name="Ceylon"]   Well, yes.
+[Character(name="char_348_ceylon_4#6",name2="char_340_shwaz_2#2",focus=2)]
+[name="Schwarz"]   Please take cover. It will be over in a minute.
+[Character(name="avg_npc_020")]
+[name="Cronin's Man"]   Schwarz, what are you doing? Are you gonna disobey Mr. Cronin's order?
+[Character(name="char_340_shwaz_2#2")]
+[name="Schwarz"]   Order? Support Cronin? That's just a disguise. I only got two orders, since the very beginning.
+[name="Schwarz"]   First, Mr. Jacobs asked me to collect evidence against Cronin, including those about his secret manipulation of V3 Industries and unauthorized exploit of obsidian.
+[name="Schwarz"]   Now that everything is clear, just cut the crap.
+[Character(name="avg_npc_020")]
+[name="Cronin's Man"]   Get-Get them! Both of them! Now!
+[Character(name="char_340_shwaz_2#4")]
+[name="Schwarz"]   Second, you heard her.
+[name="Schwarz"]   ... My lady asked me to protect her.
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(fadetime=3,block=true)]
+[Image]
+

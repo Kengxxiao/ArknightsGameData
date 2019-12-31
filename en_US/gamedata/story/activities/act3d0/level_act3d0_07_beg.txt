@@ -1,0 +1,69 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第六关（后）
+
+// Comments
+
+[Background]
+[PlayMusic(intro="$fesmetal_intro", key="$fesmetal_loop", volume=0.8, crossfade=1.5)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.7, block=true)]
+[Character]
+[Background(image="bg_Festival_2",screenadapt="coverall")]
+[Blocker(a=0, fadetime=0.7, block=true)]
+[Character(name="avg_npc_020")]
+[name="Staff"]   What happened? Hey?
+[Character(name="avg_npc_020",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]    Hmm? Anything happened out there? Is something going on?
+[Character(name="avg_npc_020",name2="npc_2004_Alty",focus=1)]
+[name="Staff"]   Please don't worry. Everything's normal. This way, please.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.7, block=true)]
+[Blocker(a=0, fadetime=0.7, block=true)]
+[Character(name="avg_npc_020")]
+[name="Staff"]   The guest is ready. 150 seconds to go.
+[name="Staff"]   Hurry up! Handle that thing out there.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.7, block=true)]
+[Blocker(a=0, fadetime=0.7, block=true)]
+
+[Character(name="avg_npc_023_2#2")]
+[name="Cronin"]   Your prestige has already fallen, Hermann!
+[name="Cronin"]   These people are all trained by me these years and they only work for me! They know what it means to work hard for a better life!
+[name="Cronin"]   Today is the climax of the festival. I'll take what I deserve and leave here.
+[name="Cronin"]   You still have no idea, huh?
+[name="Cronin"]   Let me tell you for mercy's sake. The data you got from the monitoring station is wrong! The volcano will soon become completely active.
+[name="Cronin"]   The Originium will spread along with the eruption. At least half of the city will be destroyed!
+[name="Cronin"]   But I won't lose anything, and I'll even come back after the eruption and mine the Originium here!
+[name="Cronin"]   Siesta is my paradise! I knew it! I love it as much as you do, Hermann!
+
+[Character(name="avg_npc_024")]
+[name="Hermann"]  How dare you say that!
+[Character(name="avg_npc_023_2#2")]
+[name="Cronin"]   Of course I can, as the Catastrophe Messenger of this city.
+[name="Cronin"]   But you can only witness your defeat and the destruction of Siesta!
+[name="Cronin"]   And, at long last, die with honor in the eruption. No one can bring these secrets out of this city, except me.
+
+
+[Decision(options="你的野心到此为止了。;做你的美梦！;你也太小看罗德岛了吧。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[name="Cronin"]   ... Rhodes, Island.
+[Character(name="avg_npc_024")]
+[name="Hermann"]   I'm so disappointed at you, Cronin.
+[Character(name="avg_npc_024",name2="avg_npc_023_2#2",focus=2)]
+[name="Cronin"]   Disappointed? You are disappointed? I should be the disappointed one!
+[name="Cronin"]   I will never forget those days, when I became homeless and had to sleep in a trash bin!
+[name="Cronin"]   Money is the gate to a new life. I understood it at that time! And what did you do? We worked so hard to make money, but you used to help those infected craps!?
+[name="Cronin"]   Are you gonna bury the value of Siesta with your hypocrisy!?
+[Character(name="avg_npc_024",name2="avg_npc_023_2#2",focus=1)]
+[name="Hermann"]   Take a good look at yourself, Cronin.
+[name="Hermann"]   And think about what you saw in the jail!
+[Dialog]
+[Character]
+[CameraShake(duration=2, xstrength=8, ystrength=8, vibrato=30, randomness=90, fadeout=true, block=false)]
+[playsound(key="$fireworks", volume=0.8)]
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(fadetime=3,block=true)]
+[Image]

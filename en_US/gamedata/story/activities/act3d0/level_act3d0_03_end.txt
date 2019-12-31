@@ -1,0 +1,74 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第五关（后）
+
+// Comments
+[Background(image="bg_beach", fadetime=1)]
+[PlayMusic(intro="$farce_intro", key="$farce_loop", volume=0.8, crossfade=1.5)]
+[playsound(key="$beach",volume=0.8, channel="beach")]
+[Delay(time=1)]
+[Character]
+[name="Bodyguard A"]   Ouch ouch! I'm roasted!
+[name="Bodyguard B"]   ... Eek! My hair!
+[name="Bodyguard A"]   Tsk! Fall back! Now!
+[Dialog]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.8, block=true)]
+[Character]
+[Blocker(a=0, fadetime=0.8, block=true)]
+[Character(name="char_134_ifrit_summer_1")]
+[name="Ifrit"]   Hahaha. Fighting is always the most fun, Doc!
+[name="Ifrit"]   Oh by the way, Doc, I did this for you and as you wish, I didn't go too far, so don't you tell Silence I had a fight!
+[name="Ifrit"]   I'll have even more homework if she knows it!
+[Decision(options="没问题。;作业你要自己努力。",values="1;2")]
+[Predicate(references="1")]
+[name="Ifrit"]   Haha, I knew you're a nice guy, Doc!
+
+[Predicate(references="2")]
+[name="Ifrit"]   Hum, it'll be your fault then!
+
+[Predicate(references="1;2")]
+[Character(name="char_134_ifrit_summer_1",name2="char_348_ceylon_4#8",focus=2)]
+[name="Ceylon"]   A flamethrower driven by Originium... with high power. Such an awesome Caster.
+[Character(name="char_134_ifrit_summer_1",name2="char_348_ceylon_4#8",focus=1)]
+[name="Ifrit"]   That's sharp, Missy. I'm super awesome!
+[Character(name="char_134_ifrit_summer_1",name2="char_348_ceylon_4#2",focus=2)]
+[name="Ceylon"]   My name is Ceylon.
+[name="Ceylon"]   Thank you for saving us.
+[Character(name="char_134_ifrit_summer_1",name2="char_348_ceylon_4#2",focus=1)]
+[name="Ifrit"]   Oh, um... It's okay. My-My pleasure.
+[name="Ifrit"]   Hey Doc, this lady is so gentle. What should I do now?
+[Decision(options="微笑。;鞠躬。;跳舞。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_134_ifrit_summer_1")]
+[name="Ifrit"]   Oh, okay. I'll try...
+[name="Ifrit"]   Wait. My barbecue! It's still on the grill! Gotta go!
+[name="Ifrit"]   Doc, Ceylon, come find me if you want some barbecue!
+[playsound(key="$runsand", volume=0.7)]
+[Dialog]
+[Character(fadetime=1,block=true)]
+[Delay(time=1)]
+[Decision(options="竟然直接就跑开了。",values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_348_ceylon_4#2")]
+[name="Ceylon"]   Doctor, let's go.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_hotel")]
+[stopmusic(fadetime=1)]
+[stopsound(key="$beach",channel="beach",fadetime=1)]
+[Blocker(a=0, fadetime=2, block=false)]
+[Character(name="char_188_helage_1")]
+[name="???"]   Doctor, I'm glad you're fine.
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#5",focus=2)]
+[name="Ceylon"]   Thank you so much, Mr. ...
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#5",focus=1)]
+[name="Hellagur"]   You can call me Hellagur.
+[name="Hellagur"]   Just like Doctor, I'm also from Rhodes Island.
+[Character(name="char_188_helage_1")]
+[name="Hellagur"]   Doctor, you got a minute? I have something to tell you.
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

@@ -1,0 +1,249 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（前）
+
+// Comments
+
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[Background(image="bg_beach", fadetime=2,x=-200, y=0,block=true)]
+[Delay(time=1)]
+[playsound(key="$beach", volume=0.7)]
+[Character(name="char_002_amiya_summer_2#1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Amiya"]   Doctor, I must blame you for this.
+[name="Amiya"]   Everyone's a bit injured. You're responsible for that as the leader!
+[name="Amiya"]   Gummy has treated them already, but it's still gonna hurt if they get into the water.
+[name="Amiya"]   Oh please, don't go too far even if we're on vacation.
+
+[Decision(options="抱歉。;这身泳装很适合你，阿米娅。",values="1;2")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_summer_2#1")]
+[name="Amiya"]   Well, I'm not trying to make you feel bad...
+
+[Predicate(references="2")]
+
+[Character(name="char_002_amiya_summer_2#2")]
+[name="Amiya"]   I-Is that so? Miss Savage picked it for me. I was thinking what if you don't like it...
+[Character(name="char_002_amiya_summer_2#1")]
+[name="Amiya"]   Wait! Don't you play that trick, Dr. {@nickname}!
+
+[Decision(options="我们这次可能确实做得有些过火......",values="1")]
+[Predicate(references="1")]
+
+
+[Character(name="char_002_amiya_summer_2#1")]
+[name="Amiya"]   And I gotta asked Mr. Hellagur why he didn't stop you!
+[name="Amiya"]   I told him to keep an eye on you. Turns out that was a blind eye...
+[name="Amiya"]   Before we sign a contract, Rhodes Island should stay out of the business of any independent cities.
+[name="Amiya"]   If we got dragged into the trouble here, Rhodes Island will be in a tight spot, and we may even get trapped.
+
+[Decision(options="其实，我们已经......",values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_summer_2#1")]
+[name="Amiya"]   Yeah, I know.
+[name="Amiya"]   That was really dangerous.
+[Character(name="char_002_amiya_summer_2#2")]
+[name="Amiya"]   Fighting crazy fans, seriously!? Be an adult, Doctor, at least act like one.
+[name="Amiya"]   No matter how much you like a band, you gotta be nice to other audience, let alone fighting them!
+
+[Decision(options="......？可我们是......",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_summer_2#2")]
+[name="Amiya"]  (Shh! )
+[name="Amiya"]  No more question! This is it! Okay!
+[name="Amiya"]  Be careful next time, okay?
+
+[Decision(options="我知道了。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_summer_2#2")]
+[name="Amiya"]  Sure!
+[name="Amiya"]  Doctor, come with me. I found a lot of beautiful shells on the other side of the rock! Beach is really fun!
+[name="Amiya"]  The water is not cold, Hmm...
+
+[Decision(options="（跟着阿米娅走）;（向阿米娅泼水）;（拉住阿米娅的手）",values="1;2;3")]
+[Predicate(references="1")]
+[name="Amiya"]  C'mon Doctor, this way!
+[Predicate(references="2")]
+[name="Amiya"]  Hey! Doctor! Stop it!
+[name="Amiya"]  Hum! Take this! Hahahaha...
+[Predicate(references="3")]
+[name="Amiya"]  Hehe...
+[Predicate(references="1;2;3")]
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Blocker(a=0, fadetime=2, block=true)]
+
+
+
+[Character(name="avg_npc_024")]
+[name="Hermann"]   Dr. {@nickname}, nice to see you.
+[name="Hermann"]   Ceylon told me things about Rhodes Island. I would like to talk to you.
+[name="Hermann"]   How about going on a walk with me.
+[Decision(options="......好的。",values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_beach",x=200, y=0)]
+
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="avg_npc_024")]
+[name="Hermann"]   Thank you, Doctor of Rhodes Island.
+[name="Hermann"]   If you didn't help my daughter, such a reckless operation would have ended in failure.
+[Decision(options="那不是鲁莽。;我并没有做太多的事情。;你应该感谢的人是锡兰才对。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="Hermann"]   I trained Cronin myself. He's ambitious, but capable as well. That's why I turned a blind eye on him these years.
+[name="Hermann"]   But he kinda went the wrong way lately. I can't completely trust him.
+[name="Hermann"]   I left Schwarz here on purpose when I went to the new development zone this time, just to see if he's still trustworthy.
+[name="Hermann"]   But the result is disappointing.
+[Decision(options="为什么和我说这些？",values="1")]
+[Predicate(references="1")]
+[name="Hermann"]   ... I like walking along this beach.
+[name="Hermann"]   Because Barbara, my wife, sleeps deep down this ocean.
+[name="Hermann"]   I still remember that day. It was a bit hot, and the setting sun was beautiful. She said to me "If only we could live here forever".
+[name="Hermann"]   And now I've been alone for long.
+[name="Hermann"]   Doctor, look back.
+[name="Hermann"]   Do you understand? This city is a paradise I build for her.
+[name="Hermann"]   As for why I say this to you...
+[name="Hermann"]   Because I can tell you and I are the same kinda person.
+[name="Hermann"]   In this world, not everything can be solved with those good things. Sometimes we have to use those bad things.
+[Decision(options="我是。;我不是。;谁知道呢。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="Hermann"]   Good and bad means nothing to me since long ago. All I care about is results, and this city.
+[Decision(options="为什么不告诉锡兰？",values="1")]
+[Predicate(references="1")]
+[name="Hermann"]   I'm not looking for someone who can understand me, Doctor.
+[name="Hermann"]   If I needed her understanding, we wouldn't have been like this now.
+[name="Hermann"]   Besides, do you really think she'll understand if I told her?
+[name="Hermann"]   No. She still needs a long time to understand the world is not so organized as she thinks.
+[name="Hermann"]   Schwarz hopes she doesn't understand it forever, while I... Pity but I lost the chance to make the choice.
+[name="Hermann"]   Doctor, Ceylon would like to join you, so I asked Schwarz to go with her. I'm fine with it.
+[name="Hermann"]   ‘Cause Siesta is not her paradise anymore.
+[name="Hermann"]   I checked the new geologic report. Siesta will come to an end in lava one day.
+[name="Hermann"]   We delayed its arrival. Thank you for your efforts.
+[name="Hermann"]   All these years I've been looking for a way to solve this problem thoroughly. I found it, but the price will be huge.
+[name="Hermann"]   The new development zone I've been working on will become a brand new mobile city. I think it will become a new Siesta.
+[name="Hermann"]   I have deep love for this place, but that doesn't mean I'll just ignore the volcano that is taking a nap beside us.
+[name="Hermann"]   After this festival, we'll abandon this Siesta and move into the mobile city. It will be buried by lava one day.
+
+[Decision(options="那黑曜石节......",values="1")]
+[Predicate(references="1")]
+
+[name="Hermann"]   I heard this ocean has its boundary. Some said it's not a real ocean. It may be wide, but not boundless.
+[name="Hermann"]   We'll go along its boundary then. Perhaps one day, we'll return to the starting point, for real.
+[name="Hermann"]   It's just this beautiful beach, this great Obsidian Festival, and this coastal city with volcanic smell...
+[name="Hermann"]   The Siesta that holds the memory of countless Siestan, will be gone forever.
+[name="Hermann"]   Perhaps one day, you can tell these words to her.
+[name="Hermann"]   Or not.
+[name="Hermann"]   And if one day she needs help, come find me.
+[name="Hermann"]   No matter where Siesta is or what it is like, this city will support her forever.
+[name="Hermann"]   No, I should say... As long as Siestans exist, Siesta exists. Young people like them are where Siesta really is.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.5, block=true)]
+[Character]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character(name="avg_npc_024")]
+[name="Hermann"]   Now seize the day and enjoy this Obsidian Festival.
+[name="Hermann"]   At least before we find another suitable stage, we can only suspend the cooperation with Monster Siren Records. I should go have a talk with them now.
+[name="Hermann"]   Seems Schwarz has something to tell you. She's over there.
+[name="Hermann"]   She will have nothing to say if I talk too much. Go talk to her.
+[Dialog]
+[Character]
+[Character(name="char_340_shwaz_2#3",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=1)]
+[name="Schwarz"]   ... Sir.
+[Character(name="avg_npc_024")]
+[name="Hermann"]   Never mind. The following will be between you young people.
+
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Blocker(a=0, fadetime=1, block=true)]
+
+[Character(name="char_340_shwaz_2#1")]
+[name="Schwarz"]   Hello.
+[Decision(options="你的目的是什么？;你好，陌生人？;要不要喝一杯？",values="1;2;3")]
+[Predicate(references="1")]
+[name="Schwarz"]   Easy. I'm not your enemy anymore.
+
+[Predicate(references="2")]
+[Character(name="char_340_shwaz_2#1")]
+[name="Schwarz"]   Hah, hi, stranger.
+
+[Predicate(references="3")]
+[name="Schwarz"]   Not for now.
+[Predicate(references="1;2;3")]
+[name="Schwarz"]   Actually I'm not gonna say anything special.
+[name="Schwarz"]   I was thinking of giving you a good beating. Miss Ceylon shouldn't be in such danger.
+[name="Schwarz"]   But I gotta thank you as well. We couldn't have cleared the air if it weren't for you.
+[name="Schwarz"]   All these years I had tried to keep her away from these things as I wished, but perhaps you're right. She has her own idea and responsibility.
+[Decision(options="你不该替她做决定。;时光无法倒流，她已经是现在这样。;那真是对不起咯？",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="Schwarz"]   ... Thank you. Everything I love would have been destroyed by this volcano if it weren't for you.
+[name="Schwarz"]   I owe you a lot.
+[Dialog]
+[Character]
+[Character(name="char_348_ceylon_4#6")]
+[name="Ceylon"]   Doc!
+[Character(name="char_348_ceylon_4#8")]
+[name="Ceylon"]   Hmm, Schwarz, what are you doing here?
+[Character(name="char_348_ceylon_4#8",name2="char_340_shwaz_2#1",focus=2)]
+[name="Schwarz"]   ... My lady?
+[Character(name="char_348_ceylon_4#6",name2="char_340_shwaz_2#1",focus=1)]
+[name="Ceylon"]   Just about the right time. I have something important to announce!
+[name="Ceylon"]   I am going to submit my resume to Rhodes Island.
+[Decision(options="？！",values="1")]
+[Predicate(references="1")]
+[Character(name="char_348_ceylon_4#6")]
+[name="Ceylon"]   As I said, I'm interested in your company.
+
+[Decision(options="要加入我们可不轻松。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_348_ceylon_4#4")]
+[name="Ceylon"]   Well, I already asked Miss Eyjafjalla and Miss Skyfire about it. They said I'm completely qualified.
+[name="Ceylon"]   And I saw what you got through this operation, so I thought deeply about it and made this decision.
+[Character(name="char_348_ceylon_4#4",name2="char_340_shwaz_2#1",focus=2)]
+[name="Schwarz"]   But Rhodes Island is not a simple drug company...
+[Character(name="char_348_ceylon_4#6",name2="char_340_shwaz_2#1",focus=1)]
+[name="Ceylon"]   That's why I want you to come with me.
+[name="Ceylon"]   By the way, dad already approved of it.
+[Character(name="char_348_ceylon_4#6",name2="char_340_shwaz_2#5",focus=2)]
+[name="Schwarz"]   ... Got it. As you wish, my lady.
+[Character(name="char_348_ceylon_4#6")]
+[name="Ceylon"]   So, Doctor, we're colleagues from now on.
+
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, fadetime=1, block=true)]
+
+[name="Ceylon"]   Doctor, c'mon! The experiment is about to start!
+[name="Ceylon"]   Alas, Schwarz, take Doctor here!
+[name="Schwarz"]   ... Your voice is loud enough to crack the ceiling, my lady. I don't think Doctor can't hear you.
+[name="Schwarz"]   ... Doctor, I don't know what you're waiting for, but in this case, Miss Ceylon won't care what we're thinking.
+[name="Schwarz"]   Please go there yourself. If I have to carry you there, it will be probably ugly.
+
+[Decision(options="这就来！;......;我会好好盯着她的，放心吧。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="ac3_kv",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=3, block=false)]
+
+[name="Schwarz"]   You're right.
+[name="Schwarz"]   Please wait, my lady, we'll be there in a minute.
+[name="Schwarz"]   Let's go, Doctor.
+
+[Image(fadetime=2)]
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

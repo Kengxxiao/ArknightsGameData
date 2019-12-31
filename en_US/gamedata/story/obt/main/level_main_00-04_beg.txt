@@ -1,0 +1,155 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（前）
+
+// Comments
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Background(screenadapt="coverall", image="bg_cher_5",fadetime=1,screenadapt="coverall")]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+
+
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Ace!
+[Character(fadetime=0.5)]
+[Character(name="char_014_riope" ,fadetime=0.6)]
+[delay=0.65]
+[Character(name="char_014_riope" )]
+[name="Ace"]  Looks like you all made it out alive.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  This isn't the rendezvous point... Why are you here alone?
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="Reunion Member"]   They're the ones who escaped from the central area! Don't let them get away!
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Tsk, they just keep coming after us!
+[name="Dobermann"]  Team E2, prepare to intercept--
+[Character(name="char_014_riope")]
+[name="Ace"]   Dobermann, don't get overzealous. Retreating is our top priority!
+[name="Ace"]   Amiya, Dr {@nickname}! Quick!
+
+[Character]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  It's not safe here either.
+[Character(name="char_014_riope")]
+[name="Ace"]  That's right. We still have to press on to the next rendezvous point.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Where's your team?
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="Reunion Member"]   Where are you rats hiding? Smoke them out!
+
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Here they come again!
+
+[Character(name="char_014_riope")]
+[name="Ace"]  Dr {@nickname}, please give us your orders.
+[name="Ace"]  Just like the good ol' days.
+
+[Decision(options="...?", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   Um, Ace...
+[name="Amiya"]   Actually, something unexpected has happened.
+[name="Amiya"]   Doctor... is suffering from amnesia.
+[Character(name="char_002_amiya_1#4",name2="char_014_riope",focus=2)]
+[name="Ace"]   ...I see.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]   I'm sorry, Ace... But compared to before, a lot has changed.
+[Character(name="char_002_amiya_1#4",name2="char_014_riope",focus=2)]
+[name="Ace"]   Is that so? You don't need to apologize to me.
+[name="Ace"]   Have the Doctor's commanding capabilities suffered as a result of the amnesia?
+[Character(name="char_002_amiya_1",name2="char_014_riope",focus=1)]
+[name="Amiya"]   ...As sharp as before.
+[name="Amiya"]   Doctor's decisionmaking is still absolutely reliable. I can promise you this.
+[Character(name="char_002_amiya_1",name2="char_014_riope",focus=2)]
+[name="Ace"]   Very well then. I'll follow the Doctor's orders then.
+[name="Ace"]   What has been lost can be found again.
+[name="Ace"]   Right now, there's a more imminent problem on our hands.
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="Reunion Member"]   They're over here! Hurry, let's get them! !
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Are you done chatting yet? I'm going to go crack some skulls!
+[Character(name="char_014_riope" )]
+[name="Ace"]   Dr {@nickname}, please give us your orders.
+[Character(name="char_1002_nsabr_2")]
+[name="Reunion Member"]   Go. Release your inner beast, and let them feel your fangs!
+
+
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Doctor! Ace! The enemy is right in front of us!
+[Character(name="char_014_riope" )]
+[name="Ace"]   ...
+
+[Decision(options="Move out immediately!;...Got it.;Seize the opportunity to disrupt the enemy's plans.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+
+[Character(name="char_014_riope" )]
+[name="Ace"]   Understood.
+[name="Ace"]   Team E3! Back up Dobermann!
+
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=1, crossfade=1.5)]
+[character(fadetime=0)]
+[Dialog(fadetime=0)]
+[PlaySound(key="$d_sp_ballista",volume=0.7)]
+[Blocker(a=1, r=100, g=100, b=100, fadetime=0.1,block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=1)]
+
+
+[name="Reunion Member"]   An ambush?!
+
+
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Team E3 has been moving undercover this whole time... I see, they've been waiting for us to pincer the enemy.
+[Character(name="char_014_riope" )]
+[name="Ace"]   When communications are jammed, our teams should operate near the rendezvous point. That way, even if something happens to me or the scout...
+[name="Ace"]   The broader operation can still be carried out. This is my decision-making.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  In other words, Ace, you left your team back at the rendezvous point and came here alone...
+[Character(name="char_014_riope" )]
+[name="Ace"]   After all, neutralizing threats around the rendezvous point is our top objective.
+[name="Ace"]   Of course, prioritizing checking on your status is a big risk. There's no way I could imperil the entire team.
+[name="Ace"]   The whole reason teams exist is to increase tactical efficiency, not the other way around.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Hah. Let's continue our discussion after we've taken care of Reunion!
+[Character(name="char_014_riope" )]
+[name="Ace"]   Amiya, you're up.
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]   Understood! I'll back you up with my Arts!
+[Character(name="char_014_riope" )]
+[name="Ace"]   Finally...
+[name="Ace"]   Dr {@nickname}, please command Rhodes Island.
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

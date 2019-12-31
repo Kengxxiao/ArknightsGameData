@@ -1,0 +1,186 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第四关（前）
+
+// Comments
+
+[Dialog]
+[Delay(time=1)]
+[PlayMusic(intro="$fesready_intro", key="$fesready_loop", volume=0.8, crossfade=1.5)]
+[Background(image="bg_sunnytown_2",screenadapt="coverall", fadetime=1,block=true)]
+[Dialog]
+[Character(name="char_348_ceylon_4#4",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Ceylon"]   Go across the Civic Square and the highest building over there is the City Hall.
+
+
+[Dialog]
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Delay(time=0.5)]
+[Character]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="avg_NPC_017_3",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="D.D.D."]   Guys at the venue, how you doin'!! Thank you all for coming! This is D.—D.—D.—!
+[Character]
+[CameraShake(duration=2, xstrength=8, ystrength=8, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[name="Audience"]   (Crazy cheer)
+[Character(name="avg_NPC_017_3")]
+[name="D.D.D."]   It's such a burning day and we're all gathering here for the same reason. That is...
+[Character]
+[CameraShake(duration=2, xstrength=8, ystrength=8, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[name="Audience"]   Mu—sic—!
+[Character(name="avg_NPC_017_3#2")]
+[name="D.D.D."]   What!? I can't hear you! Gimme your loudest voice and let the whole Siesta know what you want!!!
+[Character]
+[CameraShake(duration=2, xstrength=8, ystrength=8, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[name="Audience"]   Mu—sic—!!!
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="avg_NPC_017_3")]
+[name="D.D.D."]   Now... Raise your hands! Let's go!!
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.7, block=true)]
+[Delay(time=0.5)]
+[Character]
+[Blocker(a=0, fadetime=0.7, block=true)]
+[Character(name="char_348_ceylon_4#4")]
+[name="Ceylon"]   That happens everyday during the festival. After all, the concerts are the most popular part every year.
+[name="Ceylon"]   The major concert starts at night in Garrison Amusement Park, while at daytime, you can see small concerts in every district.
+[Decision(options="我已经热血沸腾了！;这样的音乐有点猛烈......",values="1;2")]
+[Predicate(references="1;2")]
+
+[name="Ceylon"]   Haha, I think so. Since I studied in Victoria, I've had a preference for more beautiful ones, like classical music.
+[name="Ceylon"]   The festival has invited artists on that field though, this kind of music is always more popular, as you can see.
+[Character(name="char_348_ceylon_4#4")]
+[name="Ceylon"]   I guess it started to get popular lately. People's favorite was jazz when I was a child.
+[name="Ceylon"]   I love spending the day in Second Avenue. With a few books with me, I can stay in the cafe there for a whole day.
+[name="Ceylon"]   I can listen to music while enjoying a cup of green tea in the sea breeze.
+[name="Ceylon"]   It was then I started to believe Siesta is the best city in the world.
+[Decision(options="看来你也爱着这个地方呢。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_348_ceylon_4#6")]
+[name="Ceylon"]   Of course! My family, and all those that can support me are here.
+[name="Ceylon"]   Besides dad, someone who means a lot to me also works at the City Hall.
+[name="Ceylon"]   You'll see her in a while. With her help, it will be much easier to let the others know how serious the problem is!
+[Decision(options="听起来你很信任她？;是你的母亲吗？",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_348_ceylon_4#4")]
+[name="Ceylon"]   My mother died when she gave birth to me. After that, dad buried himself in work.
+[name="Ceylon"]   Since I was a kid, she has been taking care of me as my bodyguard. Her name's Schwarz.
+[name="Ceylon"]   Whenever dad was busy at work, she was the one who kept me company with patience. We're not related by blood, but Schwarz is always family to me, just like a sister.
+[name="Ceylon"]   I will introduce you guys when you meet.
+[name="Ceylon"]   Look, Doctor, we've arrived. Let's get inside.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_offce")]
+[stopmusic(fadetime=3)]
+[Blocker(a=0, fadetime=2, block=true)]
+[PlaySound(key="$doorknockquite", volume=0.7)]
+[Delay(time=1)]
+[Character(name="avg_npc_020",screenadapt="coverall")]
+[name="Bodyguard"]   Mr. Cronin, Miss Ceylon would like to see you.
+[Character]
+[name="???"]   …
+[Character(name="avg_npc_023_2#3",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Cronin"]   What brought you to the City Hall, my lady?
+[name="Cronin"]   Everyone's busy with the festival right now.
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#2",focus=2)]
+[name="Ceylon"]   Cronin, I'll skip to the point. The volcano can erupt at anytime, maybe in a second, or in a few days.
+[name="Ceylon"]   All the tourists and citizens will be in danger. We need to guide them to evacuate or take shelter.
+[name="Ceylon"]   The Obsidian Festival must stop right away.
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#2",focus=1)]
+[name="Cronin"]   Oh my lady, do you know what you're talking about?
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5)]
+[name="Cronin"]   Others would have been driven out the second they talk to me like that.
+[name="Cronin"]   But this time, I'm willing to explain it, for you.
+[name="Cronin"]   You don't have to worry about the volcano, at all. I don't know where you got that news, but apparently it's nonsense.
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=2)]
+[name="Ceylon"]   ... Are you kidding me?
+[name="Ceylon"]   A lot of proofs are telling the volcano has become active again. It will probably erupt in a short time.
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=1)]
+[name="Cronin"]   For example?
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=2)]
+[name="Ceylon"]   Agitation of the Originium Slugs, unusual temperature and irritant gas. These are all strong proofs!
+[name="Ceylon"]   If you still don't buy it, read the materials I brought. It has the analysis and the conclusion.
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=1)]
+[name="Cronin"]   Strong? Did the slugs, the temperature or the gas told you that themselves?
+[name="Cronin"]   I don't get it. What do these groundless numbers have to do with the eruption?
+[name="Cronin"]   All I know is, the volcano observation system was designed by me and built by the Mayor, and it is working well.
+[name="Cronin"]   The current parameters are just like those in the past few years. The only difference is, if I have to name one, they look more stable now, I guess?
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=2)]
+[name="Ceylon"]   What are you talking about? The truth is out there...
+[Decision(options="你是天灾信使，却不懂这些？",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_023_2#3")]
+[name="Cronin"]   Who are you?
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#2",focus=2)]
+[name="Ceylon"]   Dr. {@nickname} is from a professional organization. He and his colleagues are experts in volcano science.
+[name="Ceylon"]   These parameters come from the analysis of their specialized department.
+
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#2",focus=1)]
+[name="Cronin"]   I see, I see.
+[name="Cronin"]   ... Hah, I got it.
+[name="Cronin"]   So it was you who fooled the Mayor's daughter, strange tourists.
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#2",focus=2)]
+[name="Ceylon"]   What are you talking about?
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#2",focus=1)]
+[name="Cronin"]   That's obvious, isn't it? My lady, you are fooled by this suspicious guy.
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=2)]
+[name="Ceylon"]   Cronin, what on earth are you talking about? You don't even believe me? !
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=1)]
+[name="Cronin"]   I'm saying, you've been studying abroad so there's something you don't know. Actually many people envy at the development of Siesta.
+[name="Cronin"]   This kind of people appears every year. They tried every means to stop our development. Menace, explosion, assassination. They don't just go for the Mayor. Even a normal employee like me went through this several times.
+[name="Cronin"]   Of course this is not the first time I heard the rumor about the eruption, but it IS the first time I heard such a real one. Even you buy it.
+[name="Cronin"]   I have to say these liars know the Mayor really well. They even know you're just back from your study.
+[name="Cronin"]   And they are bold, walking into the City Hall like going home.
+
+[Character(name="char_348_ceylon_4#3")]
+[name="Ceylon"]   ... I didn't know what you said, I have to say, but I'm telling the truth!
+[name="Ceylon"]   Those I trust can't be some suspicious outsiders!
+[Character(name="avg_npc_023_2#3")]
+[name="Cronin"]   For me, there's no difference between this so-called doctor and the liars in the past.
+[name="Cronin"]   They use every necessary means to take away this city!
+
+[Decision(options="欲加之罪，何患无辞。;这个笑话并不好笑。",values="1;2")]
+[Predicate(references="1")]
+[Character(name="avg_npc_023_2#3")]
+[name="Cronin"]   Beat a dog? Haha, that's just what liars would say.
+
+[Predicate(references="2")]
+[Character(name="avg_npc_023_2#3")]
+[name="Cronin"]   What a coincidence. I found your joke a bad one, too.
+
+[Predicate(references="1;2")]
+
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=1)]
+[name="Cronin"]   My lady, you're still young, so things like this may happen to you sometimes.
+[name="Cronin"]   Don't worry. These liars will have their punishment, I promise.
+
+[Character(name="avg_npc_023_2#3")]
+[PlayMusic(intro="$fesmetal_intro", key="$fesmetal_loop", volume=0.8, crossfade=1.5)]
+[name="Cronin"]   Security.
+[name="Cronin"]   Take them down.
+[Character(name="avg_npc_020")]
+[name="Bodyguard"]   Sure.
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=2)]
+[name="Ceylon"]   Cronin! So you won't even listen to me now?
+[name="Ceylon"]   You won't have your way as long as I'm here!
+[Character(name="avg_npc_023_2#3",name2="char_348_ceylon_4#3",focus=1)]
+[name="Cronin"]   What a pity. I can't just stand by and see how you violate the order of Siesta.
+[name="Cronin"]   C'mon. Arrest those liars!
+
+[Character(name="avg_npc_023_2#3")]
+[name="Cronin"]   And put Miss Ceylon under control as well! Don't hurt her. Just let her calm down a little bit!
+
+[Decision(options="锡兰，小心！;走！离开这里！",values="1;2")]
+[Predicate(references="1;2")]
+
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

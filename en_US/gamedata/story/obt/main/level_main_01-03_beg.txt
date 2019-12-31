@@ -1,0 +1,91 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第八关（前）
+
+// Comments
+
+[name=""]   Time - Unknown \ Weather - Unknown \ Visibility - Poor
+[name=""]   Chernobog - Operation Squad E0's Location
+[name=""]   Dr {@nickname} Rescue Operation, Phase 3
+[dialog]
+
+[Background(image="bg_cher_1", width=1, height=1, fadetime=1)]
+[PlayMusic(intro="$chernormal_intro", key="$chernormal_loop", volume=0.8, crossfade=1, delay=0.5)]
+[Delay(time=1)]
+
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  We have less than an hour left. We can't afford to make a detour...
+[name="Dobermann"]  The more time we waste, the more like we are to get caught in the Catastrophe.
+[name="Dobermann"]  We must directly cut across this area.
+[name="Dobermann"]  However, we won't be able to conceal our movements anymore given the size of our forces.
+[name="Dobermann"]  The possibility of getting ambushed when we're navigating through narrow streets is very high...
+[Character(name="char_148_nearl_1", name2="char_130_doberm_ex", focus=1)]
+[name="Nearl"]   What's the plan?
+[Character(name="char_148_nearl_1", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]   We don't have many options...
+[name="Dobermann"]  Dr {@nickname}, what's your assessment?
+
+
+[Decision(options="All we have to do is destroy them in a head-on attack!;...They can't stop us, probably...;It takes time for the enemy to regroup.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]  Reunion's forces are no match for us individually.
+[name="Dobermann"]  But most of the time, they try to overwhelm us with sheer numbers.
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]   If we can utilize our speed to constantly press forward while avoiding large-scale fights...
+
+
+[Predicate(references="2")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   They don't seem to have built any fortifications.
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]   If we're able to charge through their blockade...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Even though it looks like they have a numbers advantage, their loose formation won't be able to stop our advance.
+
+[Predicate(references="3")]
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   From what I've observed through our past battles, Reunion's communication methods are absolutely primitive.
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]   If we do this quickly, by the time they're able to regroup annd mount an effort to stop us...
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   We'll already be long gone by the time they get into formation.
+
+[Predicate]
+
+
+[Character(name="char_148_nearl_1")]
+[name="Nearl"]   Sounds good.
+[name="Nearl"]   We'll storm them, disrupt their formation, destroy their firebase, and then fall back quickly.
+[name="Nearl"]   Dobermann, are you testing me, or...
+
+[Character(name="char_002_amiya_1#1", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]  It's far easier to deal with threats we can see than to be stuck between a rock and a hard place.
+[name="Dobermann"]  I take it that these are Dr {@nickname}'s orders, Amiya?
+[Character(name="char_002_amiya_1#1", name2="char_130_doberm_ex", focus=1)]
+[name="Amiya"]  The situation is clear. I trust Doctor's decisions...
+[Character(name="char_002_amiya_1#1", name2="char_130_doberm_ex", focus=2)]
+[name="Dobermann"]   ...Trust isn't built so easily from just a single battle.
+[name="Dobermann"]   I do think highly of Dr {@nickname}, Amiya...
+[name="Dobermann"]   But don't let your guard down. Of course, there is nothing wrong with learning from the Doctor's wisdom, but remember, you can't fully rely on anyone else in this world.
+[Character(name="char_002_amiya_1#7", name2="char_130_doberm_ex", focus=1)]
+[name="Amiya"]  ...I know.
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Don't get me wrong, Doctor, I'm not trying to make things difficult for you.
+[name="Dobermann"]   But I hope you understand... Amiya still needs to learn and grow.
+[name="Dobermann"]   If you were in my position, you also wouldn't allow her to rely on someone else.
+[name="Dobermann"]   However, know that I've already acknowledged your abilities as a commander.
+
+[Decision(options="Thank you...", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_130_doberm_ex")]
+[name="Dobermann"]   Also, there's no reason to be so formal. We're comrades-in-arms now.
+[name="Dobermann"]   At least on the battlefield, I've already entrusted my life to you.
+[name="Dobermann"]   Enough with the chit-chatting though, let's hurry it up.
+[Character(name="char_148_nearl_1#1", name2="char_130_doberm_ex", focus=1)]
+[name="Nearl"]   That's right.
+[name="Nearl"]   There's an old saying in Kazimierz: "Death catches up to you when you stop to take a break."
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
