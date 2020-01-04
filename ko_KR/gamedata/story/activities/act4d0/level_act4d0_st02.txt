@@ -1,0 +1,432 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（前）
+
+// Comments
+
+[Dialog]
+[Delay(time=1)]
+[Character]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="整合运动术师"]     W，我们遇到了点麻烦。
+[name="W"]   嚯......值得你们用这个频道联系我，怎么？发现了什么有趣的事情？
+[name="整合运动术师"]     不太有趣，W，在你重整那些萨卡兹雇佣兵的时候，有一支队伍叛逃了。
+[name="整合运动术师"]     好像是支负责清扫战场的后勤队伍，所以我们直接发起了追击。
+[name="整合运动术师"]     意料之内的，他们变成了一盘散沙，一触即溃，开始向城外撤离。
+[name="W"]   可喜可贺。
+[name="整合运动术师"]     但，意料之外的情况是......我们派去追击的小队，和我们失去了联系。
+[name="整合运动术师"]     作为佣兵们的新领头人，希望你能给出合理的解释。
+[name="整合运动术师"]     我们的小队为什么人间蒸发了？
+
+[Dialog]
+[Background(image="bg_cher_3", width=1, height=1, fadetime=1, screenadapt="coverall",block=true)]
+01:13 P.M.    天气/晴
+切尔诺伯格，郊外，荒野
+
+[Dialog]
+[Character(name="char_1504_cqbw",fadetime=2,block=true)]
+[Delay(time=2)]
+[name="W"]   这种描述可不利于我理解喔？
+[Character]
+[name="整合运动术师"]     事实如此。协同小队没发现埋伏和陷阱，只知道敌人是萨卡兹人。
+[Character(name="char_1504_cqbw")]
+[name="W"]   那自然是萨卡兹了，我的佣兵还能有什么其他种族呢？不过，挺有趣的。接着说。
+[Character]
+[name="整合运动术师"]     最先接触的时候，目标被成功压制，出于谨慎，追击小队也有所保留。对方并不是什么强敌。
+[name="整合运动术师"]     然而某个时刻，通讯突然中断了。
+[Character(name="char_1504_cqbw")]
+[name="W"]   ......嗯，比起你们，真正的野兽更善于隐藏自己的尖牙利齿，你们这也太大意了吧。
+[Character]
+[name="整合运动术师"]     我们该怎么办？
+[Character(name="char_1504_cqbw")]
+[name="W"]   那些萨卡兹人有什么特点？
+[Character]
+[name="整合运动术师"]    ......不清楚，目击者大都失去了联络。从远处看，只知道有一名近身陷阵的战士。
+[Character(name="char_1504_cqbw")]
+[name="W"]   那就不要和他们正面接触。拖住那个人，我们一会见。
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_1002_nsabr_2")]
+[name="整合运动刀兵"]     出了什么事？
+[Character(name="char_1504_cqbw#3",name2="char_1002_nsabr_2",focus=1)]
+[name="W"]   没什么，只是有一支不够成熟的小队中了诱饵。
+[Character(name="char_1504_cqbw#3",name2="char_1002_nsabr_2",focus=2)]
+[name="整合运动刀兵"]     我们要去支援他们吗？
+[Character(name="char_1504_cqbw",name2="char_1002_nsabr_2",focus=1)]
+[name="W"]   唉，明明大家都有自己的工作，为什么不能各自处理好分内的事情呢？
+[name="W"]   嗯......不过这次就不深究了吧。毕竟我也非常在意我可怜的前领导带着哪些奇怪的萨卡兹人呢。
+[Character(name="char_1504_cqbw",name2="char_1002_nsabr_2",focus=2)]
+[name="整合运动刀兵"]     明白了。
+[Character(name="char_1002_nsabr_2")]
+[name="整合运动刀兵"]     通知全体小队，临战整备，转移到城郊。
+
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Delay(time=0.4)]
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Blocker(a=0, fadetime=3, block=true)]
+
+[character]
+[Dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Delay(time=0.5)]
+[Character(name="char_1011_wizard_1")]
+[name="整合运动术师"]     呃，该死，这家伙的动作又变快了！他还在隐藏实力吗？
+[character]
+[Dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Character(name="char_131_flameb_5#7")]
+[name="？？？"]   ......太弱小了，所谓的整合运动只有这种水平吗？
+[Character(name="char_1011_wizard_1")]
+[name="整合运动术师"]     你这家伙！竟然小看我们——
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Delay(time=0.4)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_1504_cqbw#3",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="W"]   呵......
+[name="W"]   本来就预想到会遇上几个老熟人，可没想到会是你啊。
+[Character(name="char_1011_wizard_1")]
+[name="整合运动术师"]     W，我们——
+[Character(name="char_1504_cqbw",name2="char_1011_wizard_1",focus=1)]
+[name="W"]   归队，除非你想送死。别摆出那副急着报仇的表情，他还没有使出全力。哦，想送死的话，我就不拦着你咯？
+[Character(name="char_1504_cqbw",name2="char_1011_wizard_1",focus=2)]
+[name="整合运动术师"]     ......收队。
+[Dialog]
+[character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_131_flameb_5#4",fadetime=2,block=true)]
+[Delay(time=3)]
+[Character(name="char_1504_cqbw#4")]
+[name="W"]   很久不见了，佣兵刀术师。
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     你——
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   现在，叫我W。
+[name="W"]   你呢？
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     炎客。你应该明白，于我而言，互报姓名的意义。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   哎呀，可怕可怕，过去你手刃那些家伙的时候，也会互报姓名吗？
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     委托和厮杀是不一样的。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   作为一个经历过那场战争的萨卡兹人忽然销声匿迹，很令人担心啊。
+[name="W"]   佣兵嘛，只不过是换了个领头人就要跑路，让人很心慌喔？
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     这无关紧要。
+[name="炎客"]     不过没想到，你的部下连让我报上名字的价值都没有。
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=1)]
+[name="W"]   那还真是荣幸......嗯，虽然他们成为我部下也没多长时间。啊，你是在邀请我杀了你？
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     不，我对你仰仗外力的战斗方式毫无兴趣。
+[name="炎客"]     但我得承认，战术也是一种技巧。如果你的战术比过去更加精湛，我愿意领教。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   ......奇怪，你过去不是那种“只要杀了目标怎么都好”的类型吗？
+[Character(name="char_1002_nsabr_2")]
+[name="整合运动刀兵"]     W，小队已经分散到了指定点，已经彻底切断了敌人的退路，他逃不掉的。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     我也没想到你能成为这些家伙的领导者，大家都在改变。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   这些家伙？啊......你是说整合运动？
+[name="W"]   还是说......萨卡兹们？
+[Character(name="char_1002_nsabr_2")]
+[name="整合运动刀兵"]     喝——！
+[Dialog]
+[Character(name="char_131_flameb_5#2")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=0.6)]
+[name="炎客"]     唔。
+[Character(name="char_131_flameb_5#2",name2="char_1002_nsabr_2",focus=2)]
+[name="整合运动刀兵"]     我是不会轻敌的，萨卡兹人，我注意你很久了。
+[name="整合运动刀兵"]     很可惜，你没有机会钻空子。
+[Character(name="char_131_flameb_5#4",name2="char_1002_nsabr_2",focus=1)]
+[name="炎客"]     原来如此，你也是......
+[name="炎客"]     这不是有意思多了吗，你能作为砥石为我所用吗？我的刀有些钝了。
+[Character(name="char_131_flameb_5#4",name2="char_1002_nsabr_2",focus=2)]
+[name="整合运动刀兵"]     挑衅？你也就现在能嚣张两下了！
+[Character(name="char_131_flameb_5#4",name2="char_1002_nsabr_2",focus=1)]
+[name="炎客"]     嗯，来吧。
+[Dialog]
+[Character(name="char_131_flameb_5#4")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="整合运动刀兵"]     唔呃！该死！你是怎么——
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="整合运动刀兵"]     呃——！
+[Character(name="char_131_flameb_5#4")]
+[name="炎客"]     你还有空说话吗？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Delay(time=0.4)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Character(name="char_1504_cqbw#3")]
+[name="W"]   ......意料之内，他变得更强了。
+[Character(name="char_1504_cqbw#3",name2="char_1011_wizard_1",focus=2)]
+[name="整合运动术师"]     W！我们为什么就站在这里看着！？只要你下令，他立刻就会灰飞烟灭了！
+[Character(name="char_1504_cqbw#4",name2="char_1011_wizard_1",focus=1)]
+[name="W"]   所以现在，我又能对你发号施令了？
+[Character(name="char_1504_cqbw#4",name2="char_1011_wizard_1",focus=2)]
+[name="整合运动术师"]     别在这种时候找茬！
+[Character(name="char_1504_cqbw#4",name2="char_1011_wizard_1",focus=1)]
+[name="W"]   但我确实不是你们的指挥官呀。
+[Character(name="char_1504_cqbw#4")]
+[name="W"]   提个建议，收手吧，别刺激他了，自找麻烦最好换个时间。
+[Dialog]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="整合运动刀兵"]     ......该死。
+[Character(name="char_1504_cqbw#3")]
+[name="W"]   不是吧？你难道真的打算单打独斗就解决他？别在这里搞笑啊。
+[Character(name="char_1002_nsabr_2")]
+[name="整合运动刀兵"]     嘁。
+[Dialog]
+[character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_131_flameb_5#2",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="炎客"]     下一个是谁？
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5#2",focus=1)]
+[name="W"]   这么着急，是赶着去赴谁的约吗？
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     我不是第一次杀出重围了。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   唔，嗯，原来如此。我想，你大概是在说内战时候的事吧？我有点兴趣，能说说吗？
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     没什么。被人埋伏，所有人死了而我还活着，就这么简单。
+[name="炎客"]     怎么样？还要继续吗？
+[name="炎客"]     对我来说，刚才的战斗还远远不够。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   不......我在想，也许你应该加入我们。
+[Character(name="char_1011_wizard_1")]
+[name="整合运动术师"]     W！？他这个叛逃者，已经杀了那么多整合运动的——
+[Character(name="char_1504_cqbw#1",name2="char_1011_wizard_1",focus=1)]
+[name="W"]   是我的佣兵们决定要用他，整合运动需要他。有意见？
+[Character(name="char_1504_cqbw#1",name2="char_1011_wizard_1",focus=2)]
+[name="整合运动术师"]     你！
+[Character(name="char_1504_cqbw#1",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     ......
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   不管怎么想，都是我们这边更有趣吧？战争，流血，还有那么多萨卡兹同僚......
+[name="W"]   你追求的一切在这里都是打折大放送哦。
+[name="W"]   当然，这份邀请也出于我个人的好奇心，我们一定有很多共同话题。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     我不这么认为。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   你也是感染者吧？加入整合运动又有什么不好呢？
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     无序的破坏，带着某种目的的集团暴行，我看不出能从这样的组织里得到什么。
+[name="炎客"]     战争？现在的你们不过是摩擦迸发出的点点火种，你应该知道真正的战争是什么样的。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   别这么说，我们也是有在努力工作的，何况整合运动之间也有区别嘛。
+[name="W"]   虽然我的前任上司喜欢更纯粹些的东西，但我可是无论什么都乐在其中啊。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     如果非要说的话......是呢，我想领教一下塔露拉的剑术。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   那个龙女？虽然我不想称赞她，但你基本没有一丁点胜算喔。
+[name="W"]   而且她那个，能算剑术吗？你在靠近她之前就会变成一块炭吧？
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     我知道。
+[name="炎客"]     当然，我也知道，如果我拒绝你的条件，我突围的机会同样小之又小。
+[name="炎客"]     可这又何妨？只有在令人窒息的枷锁中挣脱，我才有可能更进一步。
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=1)]
+[name="W"]   你......什么时候变得这么有情调了？
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     我只是在寻求自己活着的意义。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   好吧，随你怎么说。不要管那个龙女了，单纯加入佣兵队伍如何？
+[name="W"]   老工作的话，你也能更加得心应手吧。再说了，你不喜欢的上司，已经死了哦。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     你并不值得信任。你我都互相隐瞒了很多事情。
+[name="炎客"]     ......呵，有一个很不错的地方，那里比整合运动更适合磨砺我的刀刃。
+[name="炎客"]     我看到了。不久之前，我看到你和那个外来的萨卡兹人交易的场面。但除此之外，他们的战斗令我心动。
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=1)]
+[name="W"]   还有这种事？！
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     就算他最后被你除掉了，事实就是事实，依然在那里。遮掩是没用的。
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=1)]
+[name="W"]   唔。
+[name="W"]   真是败给你啦！行啦行啦。我确实和他口头约定好，让他干掉我的上司，方便我去做事呢。
+[name="W"]   毕竟大家也是老相识了嘛，面子也是要卖一个的。
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     但你不可能放过他们。
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=1)]
+[name="W"]   至少我放过了他想保护的人啊。
+[name="W"]   我答应他，会给罗德岛的救援队提供帮助——这和我杀死他这件事，也没什么矛盾吧？
+[name="W"]   再说了，我也有自己的规划，钓线总要放长一些才行。但手上的猎物，也没理由让他跑了。
+[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     就算这样，他也消灭了你好不容易弄到手的精英战士。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   够了！这事，我可还是很生气的！
+[name="W"]   唉。难得遇到一位旧识，本来还以为能搞好关系，最后还是你死我活，我也很伤心的。
+[Character(name="char_1002_nsabr_2")]
+[name="整合运动刀兵"]     ......W，我们必须动手了。拖得太久会影响既定的计划。
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=1)]
+[name="W"]   好啦，既然大家时间都很紧迫......你真的不打算改变你的看法？
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     自然不会。
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=1)]
+[name="W"]   最后一个问题，你现在的雇主是谁？啊，抱歉，反正你是不会说的吧。
+[name="W"]   但我大致猜得到。
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     是吗，我以为他们没有那么有名。
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=1)]
+[name="W"]   我有不少旧识在那里。欸，虽然我的旧识到处都是啦，你也算是呢。
+[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     前言不搭后语。
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
+[name="W"]   不，我要说的是，我也许清楚一些你以前的佣兵队伍被消灭的内幕。
+[name="W"]   尊敬的刀术师队长，策划了那次的阴谋，让你变成现在这样子的人，说不定就在你要去的地方哦？
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     是吗？
+[name="炎客"]     是吗......
+[name="炎客"]     有趣。
+[Character(name="char_1504_cqbw#5",name2="char_131_flameb_5",focus=1)]
+[name="W"]   啊哈哈，原来你不知道！当然了，我也是刚刚才知道。
+[name="W"]   很快你就会发现，事情肯定没你想的那么简单。
+[name="W"]   我很期待你会怎么做，呵呵，你总会做些什么的。
+[Character(name="char_1504_cqbw#5",name2="char_1011_wizard_1",focus=2)]
+[name="整合运动术师"]     W！你还要等到什么时候！？
+[Character(name="char_131_flameb_5")]
+[name="炎客"]     ......
+[Character(name="char_1504_cqbw#1")]
+[name="W"]   哎，说真的，我的萨卡兹们不会动手哦？要干活，你们自己去干。
+[name="W"]   刀术师——不，炎客，在之后的战斗里，你可能会死。
+[dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+//修改此处的image来切换cg
+[Image(image="avg_ac4_1",screenadapt="coverall", fadetime=0)]
+[Blocker(a=0, fadetime=2, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+//对话内容此处填入
+[name="炎客"]     久违的死局。我很兴奋。
+[name="W"]   久违的？这么说来，也许你佣兵队的全灭并没让你变得冷酷，反而让你变得快乐起来了？
+[name="炎客"]     我和你没有相像之处，W，快乐不是值得追求的目标。
+[name="炎客"]     “上一次”让我失去了很多东西，但我眼前的道路却变得明晰而清澈。
+[name="炎客"]     这一次，希望你们不要让我失望。
+[name="W"]   你居然在笑哎。
+[name="W"]   如果我说这次会饶你一命，你信吗？
+[name="炎客"]     我，也想这么问。
+[dialog]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Background]
+[Blocker(a=0, fadetime=0.6, block=false)]
+///////////////////////////
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Delay(time=0.5)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=0.5)]
+[PlaySound(key="$d_sp_ballista")]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Delay(time=0.5)]
+[stopmusic(fadetime=2)]
+[Delay(time=3)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Character(name="char_130_doberm_ex")]
+[Blocker(a=0, fadetime=3, block=true)]
+[PlayMusic(intro="$tech_intro", key="$tech_loop", volume=0.6, crossfade=1.5, delay=0.5)]
+[name="杜宾"]     合同内容——似乎没有要求你在正式登舰前，就和整合运动正面冲突。
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     是我个人的原因。
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=1)]
+[name="杜宾"]     我们欢迎感染者和有志于解决感染者问题的各类人才，但绝不接纳违反规则和条例的人。
+[name="杜宾"]     鉴于我们并不知道当时的具体情况，就不把这件事纳入考察了。
+[name="杜宾"]     下不为例。
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     如果有必要，就按你们的方式处理。
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=1)]
+[name="杜宾"]     我们已经处理过了。你的动机和个人诉求，我们不会纳入考量——不如说。
+[name="杜宾"]     如果判断你是罗德岛无法接纳的人，那么即使你既高尚又正直，我们也不能网开一面。
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     是的，仅仅是我的个人诉求。
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=1)]
+[name="杜宾"]     哼，不管这个，欢迎来到罗德岛。
+[name="杜宾"]     这么说吧，你的行为每时每刻，都会影响到身边干员，身边的干员也会针对你的行为作出决策。
+[name="杜宾"]     只要你遵守规则，罗德岛会十分宽容地对待你，无论你的过去怎么样。
+[name="杜宾"]     相反，听着，干员炎客，只要你做出哪怕一丁点出格的事情......
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=2)]
+[name="炎客"]     唔。
+[Character(name="char_130_doberm_ex",name2="char_131_flameb_5",focus=1)]
+[name="杜宾"]      接下来，我领你去医疗部门吧，有个人想见见你。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1,block=true)]
+[character]
+[Delay(time=0.5)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_131_flameb_5#3",fadetime=1,block=true)]
+[Delay(time=1)]
+[Decision(options="——你是？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_131_flameb_5")]
+[name="炎客"]     ......
+[name="炎客"]     你......
+
+[Decision(options="抱歉，借过。",values="1")]
+[Predicate(references="1")]
+[character]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=3)]
+[Character(name="char_131_flameb_5#4")]
+[name="炎客"]     ......呵。
+[name="炎客"]     真是这样。
+[name="炎客"]     W，你还真是诚实啊......
+[name="炎客"]     看来活久一点，确实有些益处。
+
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

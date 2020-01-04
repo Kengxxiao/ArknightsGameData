@@ -1,0 +1,57 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 剿灭作战引导
+
+[PopupDialog(dialogHead="$avatar_sys")] 이 구역에서는 저희와 리유니온이 대규모 전투를 벌이고 있습니다. 작전명은 <@tu.kw>섬멸 작전</>이라고 합니다.
+[PopupDialog(dialogHead="$avatar_amiya")] 네, 맞아요. 혹시 여기서 우세를 점할 수 있다면, 적의 전투력을 크게 저하시킬 수 있을 거예요.
+[PopupDialog(dialogHead="$avatar_sys")] 이런 중요한 전투는 반드시 박사님께서 직접 지휘해 주셔야 합니다.
+
+[GotoPage(dest="home", waitForSignal="home_routed")]
+
+[Tutorial(target="btn_battle", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+이곳을 터치해서 작전실로 이동해 주십시오.
+
+[GotoPage(dest="stage", waitForSignal="stage_routed")]
+
+[Tutorial(target="pool_btn_zonetab_campaign", waitForSignal="zone_switched_or_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+섬멸 작전의 전장 선택 화면이 표시됩니다.
+
+[Tutorial(target="pool_btn_first_zonestage", waitForSignal="stagepreview_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+작전 구역을 선택하여 주십시오.
+
+[Tutorial(focusX=-173, focusY=98, focusWidth=310, focusHeight=193, anchor="Right", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+섬멸 작전은 일반적인 작전들과 규칙이 다르기 때문에, 작전을 개시하기 전에 꼼꼼하게 규칙을 확인해 주셔야 합니다.
+
+[Tutorial(target="btn_enemy_handbook", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+박사님, 중요한 포인트를 하나 짚어 드릴게요. 섬멸 작전에서는 대규모의 적을 상대하게 돼요. 만약 한 번의 전투에서 모든 적을 쓰러뜨리지 못했다고 해도 아쉬워하실 필요는 없다는 뜻이죠.
+
+[Tutorial(focusX=-97, focusY=-331, focusWidth=103, focusHeight=37, anchor="Right", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+모든 적을 쓰러뜨리지 못했다고 해도 PRTS의 대리 지휘를 사용하시는 게 가능해요. 쓰러뜨리지 못한 적의 수만큼 소비한 이성도 반환되니 꼭 과감하게 도전해 보시기를 바랄게요.
+
+[PopupDialog(dialogHead="$avatar_sys")] \
+섬멸 작전이 끝나면 쓰러뜨린 적의 수에 따라 보상을 받으실 수 있습니다.
+
+[Tutorial(target="panel_campaign_info", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+전투에서 많은 적을 쓰러뜨릴수록 높은 등급의 보상이 주어지지만, 단계별 보상은 한 번씩만 받을 수 있으니 유념하여 주십시오.
+
+[Tutorial(focusX=207, focusY=62, focusWidth=390, focusHeight=77, anchor="BottomLeft", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+이것 외에도 쓰러뜨린 적의 수에 따라 매주 <@tu.kw>합성옥</> 보상을 받으실 수 있습니다. 이 보상은 모든 섬멸 작전에서 쓰러뜨린 적의 수를 합산한 값을 기준으로 주어지며, 일주일에 한 번씩 갱신됩니다.
+
+[Tutorial(target="panel_campaign_info", waitForSignal="stage_campaign_break_detail_shown", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+단계별 보상의 자세한 내용은 이곳을 터치하여 확인해 주세요.

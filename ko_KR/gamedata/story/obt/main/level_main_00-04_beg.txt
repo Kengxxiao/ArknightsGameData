@@ -1,0 +1,155 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（前）
+
+// Comments
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Background(screenadapt="coverall", image="bg_cher_5",fadetime=1,screenadapt="coverall")]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+
+
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  에이스!
+[Character(fadetime=0.5)]
+[Character(name="char_014_riope" ,fadetime=0.6)]
+[delay=0.65]
+[Character(name="char_014_riope" )]
+[name="에이스"]  모두 무사한 것 같군.
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  합류 지점에는 아직 도달하지 못했을 텐데… 왜 너 혼자 여기 있는 거지?
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="리유니온 멤버"]   중심 구역에서 도망친 놈들이다! 놓치지 마라!
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  큭, 대체 어디까지 쫓아올 셈이지.
+[name="도베르만"]  E2 팀, 공격…
+[Character(name="char_014_riope")]
+[name="에이스"]   도베르만! 전투에 집착하지 마라! 퇴각이 우선이다!
+[name="에이스"]   아미야, {@nickname} 박사! 서둘러라!
+
+[Character]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  여기도 안전하다고는 못 하겠군.
+[Character(name="char_014_riope")]
+[name="에이스"]  그래, 계속해서 합류 지점으로 이동해야 한다.
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  그보다 너희 팀원들은 어떻게 된 거지?
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="리유니온 멤버"]   어디 숨었나? 반드시 찾아내라!
+
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  또 추격자들인가!
+
+[Character(name="char_014_riope")]
+[name="에이스"]  {@nickname} 박사, 명령을 내려줘.
+[name="에이스"]  예전에 그랬던 것처럼 말이다.
+
+[Decision(options="……?", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#4")]
+[name="아미야"]   아, 에이스 씨…
+[name="아미야"]   상황이 조금, 변해서요…
+[name="아미야"]   박사님께선… 기억을 잃어버리셨어요.
+[Character(name="char_002_amiya_1#4",name2="char_014_riope",focus=2)]
+[name="에이스"]   …그랬군.
+[Character(name="char_002_amiya_1#4")]
+[name="아미야"]   죄송해요 에이스 씨, 많은 게… 변해버렸어요.
+[Character(name="char_002_amiya_1#4",name2="char_014_riope",focus=2)]
+[name="에이스"]   그런가, 그래도 네가 사과할 필요는 없어.
+[name="에이스"]   혹시 기억 상실 때문에 박사의 지휘 능력에 문제가 생긴 건가?
+[Character(name="char_002_amiya_1",name2="char_014_riope",focus=1)]
+[name="아미야"]   …아뇨, 지휘 능력에는 변함이 없으세요.
+[name="아미야"]   박사님의 지휘는 예전과 마찬가지로 큰 도움이 됩니다. 그건 제가 보증할게요.
+[Character(name="char_002_amiya_1",name2="char_014_riope",focus=2)]
+[name="에이스"]   그렇다면 문제없어. 박사의 지시에 따르겠다.
+[name="에이스"]   잃어버린 건 되찾으면 그만이다.
+[name="에이스"]   그보다 눈앞에 있는 문제를 해결하는 게 우선이겠지.
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="리유니온 멤버"]   놈들이 여기 있다! 공격! 지금 당장 공격해!
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  언제까지 이야기만 할 셈이지? 전투는 이미 시작됐다고!
+[Character(name="char_014_riope" )]
+[name="에이스"]   그럼 {@nickname} 박사, 명령을 내려줘.
+[Character(name="char_1002_nsabr_2")]
+[name="리유니온 멤버"]   좋아, 짐승들을 풀어라! 놈들에게 물려 뜯기는 고통을 가르쳐 줘라!
+
+
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  박사! 에이스! 적이 몰려온다!
+[Character(name="char_014_riope" )]
+[name="에이스"]   ……
+
+[Decision(options="전원, 전투 준비!;…알겠다.;이 틈을 타서 적의 계획을 무너뜨리자.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+
+[Character(name="char_014_riope" )]
+[name="에이스"]   알겠다.
+[name="에이스"]   E3 팀! 도베르만을 엄호하라!
+
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=1, crossfade=1.5)]
+[character(fadetime=0)]
+[Dialog(fadetime=0)]
+[PlaySound(key="$d_sp_ballista",volume=0.7)]
+[Blocker(a=1, r=100, g=100, b=100, fadetime=0.1,block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=1)]
+
+
+[name="리유니온 멤버"]   복병이 있었나?!
+
+
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]   E3 팀… 팀원들이 보이지 않았던 건 우리와 협력하여 적을 양쪽에서 습격하기 위해 숨어있었던 거군.
+[Character(name="char_014_riope" )]
+[name="에이스"]   통신 방해가 발생한 경우, 팀원들은 합류 지점 부근에 배치할 필요가 있었지. 그러면 나나 정찰을 나간 스카우터에게 무슨 일이 생겨도……
+[name="에이스"]   후퇴 작전은 차질없이 진행할 수 있거든. 내가 내린 판단이다.
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  그렇다면 넌 팀원들을 합류 지점 부근에 대기시키고, 너 혼자서…
+[Character(name="char_014_riope" )]
+[name="에이스"]   합류 지점 주변에 있는 위험 요소를 제거하는 게 우리의 주요 임무니까.
+[name="에이스"]   너희 상황을 확인하겠다고 임무 범위를 벗어나서 움직이는 건 너무 위험하지. 그렇다고 팀원 모두를 움직일 수도 없는 노릇이고.
+[name="에이스"]   우리 팀의 목적은 기본적으로 전황을 유리하게 끌고 나가는 것이지, 모두의 발목을 잡는 게 아니다.
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  흥. 네 수업은 적을 전부 처리하고 마저 듣기로 하지.
+[Character(name="char_014_riope" )]
+[name="에이스"]   아미야, 부탁한다.
+[Character(name="char_002_amiya_1#7")]
+[name="아미야"]   알겠습니다! 전 박사님을 보조하면서 아츠를 이용한 지원 공격을 맡을게요!
+[Character(name="char_014_riope" )]
+[name="에이스"]   드디어…
+[name="에이스"]   {@nickname} 박사, 로도스 아일랜드의 지휘를 부탁한다.
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
