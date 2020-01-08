@@ -1,7 +1,19 @@
 require "GlobalConfig";
+EntryTable = {}
+
 if CS.Torappu.VersionCompat.CUR_FUNC_VER ~= GlobalConfig.CUR_FUNC_VER then
   print("The version of lua not compatible with current c#!", 
     CS.Torappu.VersionCompat.CUR_FUNC_VER, GlobalConfig.CUR_FUNC_VER);
+
+  EntryTable.Init = function()
+  end
+  EntryTable.Dispose = function()
+    CS.Torappu.Lua.LuaEntry.Init = nil;
+    CS.Torappu.Lua.LuaEntry.Dispose = nil;
+    print("Disposed");
+  end
+  CS.Torappu.Lua.LuaEntry.Init = EntryTable.Init;
+  CS.Torappu.Lua.LuaEntry.Dispose = EntryTable.Dispose;
   return;
 end
 
@@ -60,8 +72,6 @@ local function DisposeFeature()
 
   CS.Torappu.Lua.LuaUIContext.SetDialogMgr(nil);
 end
-
-EntryTable = {}
 
 EntryTable.Init = function ()
   print("Init");
