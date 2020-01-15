@@ -18,13 +18,21 @@ function CheckinHotfixer:OnInit()
 end
 
 function DoInitFix(self,flag) 
+  self.m_objList:Clear()
   self:_DoInit(flag)
   for i,v in pairs(self.m_objList) do
-    local count_text_ten = CS.Torappu.Lua.LuaUIUtil.GetChild(v.gameObject,"count_back_ten")
-    local text = CS.Torappu.Lua.LuaUIUtil.GetChild(count_text_ten.gameObject,"Text")
-    local textScript = text:GetComponent("Text")
-    textScript.horizontalOverflow = CS.UnityEngine.HorizontalWrapMode.Overflow
-    textScript.verticalOverflow = CS.UnityEngine.VerticalWrapMode.Overflow
+    if (v~=nil) then
+      local count_text_ten = CS.Torappu.Lua.LuaUIUtil.GetChild(v.gameObject,"count_back_ten")
+      local text = CS.Torappu.Lua.LuaUIUtil.GetChild(count_text_ten.gameObject,"Text")
+      local textScript = text:GetComponent("Text")
+      textScript.horizontalOverflow = CS.UnityEngine.HorizontalWrapMode.Overflow
+      textScript.verticalOverflow = CS.UnityEngine.VerticalWrapMode.Overflow
+      local count_text_hundred = CS.Torappu.Lua.LuaUIUtil.GetChild(v.gameObject,"count_back_hund")
+      local text_h = CS.Torappu.Lua.LuaUIUtil.GetChild(count_text_hundred.gameObject,"Text")
+      local textScript_h = text_h:GetComponent("Text")
+      textScript_h.horizontalOverflow = CS.UnityEngine.HorizontalWrapMode.Overflow
+      textScript_h.verticalOverflow = CS.UnityEngine.VerticalWrapMode.Overflow
+    end
   end
 end
 
