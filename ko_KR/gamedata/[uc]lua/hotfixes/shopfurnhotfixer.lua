@@ -5,16 +5,7 @@ local eutil = CS.Torappu.Lua.Util
 ---@class ShopFurnHotfixer:HotfixBase
 local ShopFurnHotfixer = Class("ShopFurnHotfixer", HotfixBase)
 
-function ShopFurnHotfixer:OnInit()
-  xutil.hotfix_ex(CS.Torappu.UI.Shop.ShopDetailFurnView, "ApplyData",
-  function(self,viewModel,hub)
-    xpcall(ShopRepair, function(e)
-      eutil.LogError(e)
-    end,self,viewModel,hub)
-  end)
-end
-
-function ShopRepair(self,viewModel,hub) 
+local function _DoShopRepair(self,viewModel,hub)
   self:ApplyData(viewModel,hub)
   local coin_furn_part =  CS.Torappu.Lua.LuaUIUtil.GetChild(self.gameObject,"coin_furn_part")
   local unselectObj =  CS.Torappu.Lua.LuaUIUtil.GetChild(coin_furn_part,"unselect (1)")
@@ -29,7 +20,15 @@ function ShopRepair(self,viewModel,hub)
   local TextScript_d = Text_d:GetComponent("Text")
   TextScript_d.horizontalOverflow = CS.UnityEngine.HorizontalWrapMode.Wrap
   TextScript_d.resizeTextForBestFit = true
+end
 
+function ShopFurnHotfixer:OnInit()
+  xutil.hotfix_ex(CS.Torappu.UI.Shop.ShopDetailFurnView, "ApplyData",
+  function(self,viewModel,hub)
+    xpcall(_DoShopRepair, function(e)
+      eutil.LogError(e)
+    end,self,viewModel,hub)
+  end)
 end
 
 function ShopFurnHotfixer:OnDispose()
