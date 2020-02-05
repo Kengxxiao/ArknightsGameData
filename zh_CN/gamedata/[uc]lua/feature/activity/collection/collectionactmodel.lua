@@ -2,6 +2,7 @@ CollectionActID =
 {
   act3d5 = "act3d5",
   act4d5 = "act4d5",
+  act6d8 = "act6d8",
 }
 CollectionActID = Readonly(CollectionActID);
 
@@ -86,6 +87,14 @@ function CollectionActModel:GetActCfg(actid)
       baseColor = CS.UnityEngine.Color(0.973,0.412,0.000);--orange
       baseColorHex = "F86900";
       pointItemName = CS.Torappu.I18N.StringMap.Get("ACTIVITY_4D5_POINT_SIMPLE_NAME");
+      taskItemScale = 0.5;
+    };
+  elseif actid == CollectionActID.act6d8 then
+    return
+    {
+      baseColor = CS.UnityEngine.Color(1.000,0.255,0.157);--orange
+      baseColorHex = "ff4128";
+      pointItemName = CS.Torappu.I18N.StringMap.Get("ACTIVITY_6D8_POINT_SIMPLE_NAME");
       taskItemScale = 0.5;
     };
   end
