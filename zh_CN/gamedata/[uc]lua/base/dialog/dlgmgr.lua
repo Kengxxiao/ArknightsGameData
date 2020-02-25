@@ -40,7 +40,7 @@ function DlgMgr.CreateDlg(dlgClass, parent)
   local layout = parent:LoadLayout(layoutPath);
   assert(layout, "failed to load layout from:" .. layoutPath);
 
-  local go = CS.UnityEngine.GameObject.Instantiate(layout.gameObject, parent:GetRoot());
+  local go = CS.UnityEngine.GameObject.Instantiate(layout.gameObject, parent:GetHookRoot());
   ---@type DlgBase
   local dlg = dlgClass.new();
   dlg:Initialize(go, parent);

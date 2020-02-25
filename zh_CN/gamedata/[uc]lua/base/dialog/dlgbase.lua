@@ -129,8 +129,8 @@ function DlgBase:ClosedByParent()
 end
 
 ---@return Transform
-function DlgBase:GetRoot()
-  return self.m_parent:GetRoot();
+function DlgBase:GetHookRoot()
+  return self.m_parent:GetHookRoot();
 end
 
 ---@param key string
