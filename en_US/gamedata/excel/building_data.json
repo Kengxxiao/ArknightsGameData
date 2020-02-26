@@ -3330,6 +3330,34 @@
         }
       ]
     },
+    "char_281_popka": {
+      "charId": "char_281_popka",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&limit&cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_single&oneself[020]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_284_spot": {
       "charId": "char_284_spot",
       "maxManpower": 8640000,
@@ -4049,6 +4077,34 @@
           "buffData": [
             {
               "buffId": "train_spd&profession[011]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_253_greyy": {
+      "charId": "char_253_greyy",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[002]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[010]",
               "cond": {
                 "phase": 1,
                 "level": 1
@@ -4906,6 +4962,62 @@
         }
       ]
     },
+    "char_010_chen": {
+      "charId": "char_010_chen",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd&team[100]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_308_swire": {
+      "charId": "char_308_swire",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_tra_spd[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_103_angel": {
       "charId": "char_103_angel",
       "maxManpower": 8640000,
@@ -5217,6 +5329,17 @@
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, all Tradeposts' order efficiency <@cc.vup>+7%</> (only the most effective one will take effect when assigned Operators have the same skill effect)"
     },
+    "control_tra_spd[010]": {
+      "buffId": "control_tra_spd[010]",
+      "buffName": "Princess",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_t_spd",
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, all Tradeposts' order efficiency <@cc.vup>+7%</> (only the most effective one will take effect when assigned Operators have the same skill effect)"
+    },
     "control_mp_cost[000]": {
       "buffId": "control_mp_cost[000]",
       "buffName": "Capable Assistance",
@@ -5239,6 +5362,17 @@
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, Morale consumed per hour of all Operators in the Control Center <@cc.vup>-0.05</>"
     },
+    "control_mp_cost&faction[000]": {
+      "buffId": "control_mp_cost&faction[000]",
+      "buffName": "Integrity & Capability",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_lungmen",
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, every <@cc.kw>L.G.D.</> Operator can make the Mood consumed per hour of all Operators in the Control Center <@cc.vup>-0.05</>"
+    },
     "power_rec_spd[000]": {
       "buffId": "power_rec_spd[000]",
       "buffName": "Backup Energy",
@@ -5260,6 +5394,17 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "When this Operator is assigned to a Power Plant, drone recovery rate <@cc.vup>+15%</>"
+    },
+    "power_rec_spd[002]": {
+      "buffId": "power_rec_spd[002]",
+      "buffName": "Electrostatic Field",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd",
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "When this Operator is assigned to a Power Plant, drone recovery rate <@cc.vup>+20%</>"
     },
     "power_rec_spd[010]": {
       "buffId": "power_rec_spd[010]",
@@ -5436,6 +5581,17 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, productivity <@cc.vdown>-5%</>, capacity limit <@cc.vup>+18</> and Morale consumed per hour <@cc.vup>-0.25</>"
+    },
+    "manu_prod_spd&limit&cost[010]": {
+      "buffId": "manu_prod_spd&limit&cost[010]",
+      "buffName": "Trouble Maker",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&limit&cost",
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+25%</>, capacity limit <@cc.vdown>-12</> and Morale consumed per hour <@cc.vdown>+0.25</>"
     },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
@@ -6251,6 +6407,17 @@
       "roomType": "DORMITORY",
       "description": "When this Operator is assigned to a Dormitory, the recovered Morale of an Operator whose Morale is not full <@cc.vup>+0.35</> per hour (only the most effective one will take effect when assigned Operators have the same skill effect); Self Morale recovered per hour <@cc.vup>+0.35</>"
     },
+    "dorm_rec_single&oneself[020]": {
+      "buffId": "dorm_rec_single&oneself[020]",
+      "buffName": "Harmony",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_single&one",
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "When this Operator is assigned to a Dormitory, the recovered Morale of an Operator whose Morale is not full <@cc.vup>+0.4</> per hour (only the most effective one will take effect when assigned Operators have the same skill effect); Self Morale recovered per hour <@cc.vup>+0.2</>"
+    },
     "dorm_rec_single&oneself[021]": {
       "buffId": "dorm_rec_single&oneself[021]",
       "buffName": "Karlan Saint",
@@ -6459,6 +6626,17 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</> and it's easier to obtain the clues of <@cc.kw>Glasgow</>"
+    },
+    "meet_spd&team[100]": {
+      "buffId": "meet_spd&team[100]",
+      "buffName": "Police Superintendent",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd",
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>25%</>"
     }
   },
   "customData": {
@@ -9873,6 +10051,732 @@
         "processedByProductGroup": [],
         "canBeDestroy": false
       },
+      "furni_artdeco_barCeiling_01": {
+        "id": "furni_artdeco_barCeiling_01",
+        "name": "Inverted Pyramid Bar Ceiling",
+        "iconId": "furni_artdeco_barCeiling_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 9,
+        "depth": 3,
+        "height": 6,
+        "comfort": 165,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A modern bar ceiling designed for Rhodes Island. Only well-known wine connoisseurs at Rhodes Island can leave their own goblets on the ceiling.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_bar_01": {
+        "id": "furni_artdeco_bar_01",
+        "name": "Hotel Versatile Bar",
+        "iconId": "furni_artdeco_bar_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 9,
+        "depth": 3,
+        "height": 4,
+        "comfort": 250,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A special hotel bar designed for Rhodes Island. For the Colombians of the modern era, alcohol is dangerous and extravagant.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_barstool_01": {
+        "id": "furni_artdeco_barstool_01",
+        "name": "Barstool",
+        "iconId": "furni_artdeco_barstool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 70,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A standard barstool of the Modern Hotel designed for Rhodes Island. You will find fun here no matter how many of you there are.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_refrigerator_01": {
+        "id": "furni_artdeco_refrigerator_01",
+        "name": "Black-and-Gold Freezer",
+        "iconId": "furni_artdeco_refrigerator_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 7,
+        "comfort": 135,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A freezer as solid as a vault. Food from all over the world would be honored to be stored within it.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_framedArt_01": {
+        "id": "furni_artdeco_framedArt_01",
+        "name": "Stream-of-Consciousness Painting",
+        "iconId": "furni_artdeco_framedArt_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 90,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A painting by a modern Colombian painter. Though its design is simple and geometric, each viewer might perceive it differently.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_pianoKit_01": {
+        "id": "furni_artdeco_pianoKit_01",
+        "name": "William Piano with Bench",
+        "iconId": "furni_artdeco_pianoKit_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 9,
+        "depth": 8,
+        "height": 6,
+        "comfort": 580,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A piano tailor-made by William for Rhodes Island. The audience will be mesmerized by rich melodies as the pianist’s fingers dance across the keys.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_carpet_01": {
+        "id": "furni_artdeco_carpet_01",
+        "name": "Modern Hotel Carpet",
+        "iconId": "furni_artdeco_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 10,
+        "height": 1,
+        "comfort": 435,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A standard carpet of the Modern Hotel. The lines form arrows that point to all directions, just like the expanding Colombia back then.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_JukeBox_01": {
+        "id": "furni_artdeco_JukeBox_01",
+        "name": "Billboard Jukebox",
+        "iconId": "furni_artdeco_JukeBox_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 105,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A jukebox commonly seen all over Colombia. All you need for a good time is a coin and a song.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_wallLamp_01": {
+        "id": "furni_artdeco_wallLamp_01",
+        "name": "Modern Hotel Wall Light",
+        "iconId": "furni_artdeco_wallLamp_01",
+        "type": "WALLLAMP",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 1,
+        "height": 2,
+        "comfort": 35,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A standard wall light of the Modern Hotel. Turn it on to illuminate the future people dream about.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_abstractArt_01": {
+        "id": "furni_artdeco_abstractArt_01",
+        "name": "Modern Wall Decoration",
+        "iconId": "furni_artdeco_abstractArt_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 6,
+        "comfort": 115,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The masterpiece of a well-known Colombian designer. It exists only for decoration, a characteristic of the era.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_ceilingLamp_01": {
+        "id": "furni_artdeco_ceilingLamp_01",
+        "name": "Modern Hotel Ceiling Light",
+        "iconId": "furni_artdeco_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 95,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A standard glass ceiling light of the Modern Hotel. It's gorgeous and bright, and makes people look forward to the future.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_sofa_01": {
+        "id": "furni_artdeco_sofa_01",
+        "name": "Modern Hotel Sofa",
+        "iconId": "furni_artdeco_sofa_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 4,
+        "height": 3,
+        "comfort": 340,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A hotel sofa made by a craftsman that came with a small coffee table. Just lying on it will take you to cloud nine.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_coffeeTable_01": {
+        "id": "furni_artdeco_coffeeTable_01",
+        "name": "Modern Hotel Table",
+        "iconId": "furni_artdeco_coffeeTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 3,
+        "height": 3,
+        "comfort": 180,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A standard coffee table of the Modern Hotel with wine and glasses on it. Wine can only numb you, but who cares?",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_framedArt2_01": {
+        "id": "furni_artdeco_framedArt2_01",
+        "name": "\"Glorious Days\"",
+        "iconId": "furni_artdeco_framedArt2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 5,
+        "comfort": 100,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A famous work of a Colombian artist, it has been copied massively. Construction and union bring strength.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_floorLamp_01": {
+        "id": "furni_artdeco_floorLamp_01",
+        "name": "Modern Hotel Floor Lamp",
+        "iconId": "furni_artdeco_floorLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 120,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A standard floor lamp of the Modern Hotel. The brightness is slightly insufficient, but the ambience it creates is perfect.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_ceiling_01": {
+        "id": "furni_artdeco_ceiling_01",
+        "name": "Modern Hotel Ceiling",
+        "iconId": "furni_artdeco_ceiling_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 8,
+        "height": 2,
+        "comfort": 185,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Standard modern hotel-style ceiling with lights. Lighting is not its primary function.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_wallpaper_01": {
+        "id": "furni_artdeco_wallpaper_01",
+        "name": "Modern Hotel Wallpaper",
+        "iconId": "furni_artdeco_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "NONE",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A standard wallpaper of the Modern Hotel. The simple patterns and expensive materials show the superb technique and outstanding quality.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_floor_01": {
+        "id": "furni_artdeco_floor_01",
+        "name": "Brown Marble Floor",
+        "iconId": "furni_artdeco_floor_01",
+        "type": "FLOOR",
+        "location": "NONE",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A floor made of expensive marble. The grandeur of the past is reborn anew.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_showcase_01": {
+        "id": "furni_chen_showcase_01",
+        "name": "L.G.D. Bookcase",
+        "iconId": "furni_chen_showcase_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 8,
+        "comfort": 305,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A bookcase distributed by the L.G.D. Upon it are trophies, “The Complete Collection of Sherlock Holmes,” a Blue Heart Medal, and so on. Ch'en must have stuffed whatever she could here without thinking.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 200,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_weaponCabinet_01": {
+        "id": "furni_chen_weaponCabinet_01",
+        "name": "Ch'en's Weapon Rack",
+        "iconId": "furni_chen_weaponCabinet_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 8,
+        "comfort": 305,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Ch'en's weapon shelf. The soldiers of the L.G.D. have not slacked for even a second.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 200,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_supineBoard_01": {
+        "id": "furni_chen_supineBoard_01",
+        "name": "L.G.D. Supine Plate",
+        "iconId": "furni_chen_supineBoard_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 4,
+        "height": 2,
+        "comfort": 265,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A batch of supine plates ordered by the L.G.D. People who use it every day must be very persistent.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 173,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_honorMedal_01": {
+        "id": "furni_chen_honorMedal_01",
+        "name": "Ch'en's Certificate of Honor",
+        "iconId": "furni_chen_honorMedal_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 1,
+        "height": 5,
+        "comfort": 150,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Ch'en's medals and awards have been put into the frames of various sizes. They were hung up on the wall at the request of Ch'en's colleagues, but she was not a fan of this idea.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 108,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_cactusPottedPlant_01": {
+        "id": "furni_chen_cactusPottedPlant_01",
+        "name": "Potted Cactus Plant",
+        "iconId": "furni_chen_cactusPottedPlant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 155,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Ch’en's preferred plant plant. Actually, the reason why Ch'en likes cacti is because she often forgets to water her plants.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 113,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_desk_01": {
+        "id": "furni_chen_desk_01",
+        "name": "Ch'en's Desk",
+        "iconId": "furni_chen_desk_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 3,
+        "height": 5,
+        "comfort": 425,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An office table distributed by the L.G.D. It's covered with work materials and lozenges used by Ch'en after she scolds the subordinates. There’s also a tattered stuffed bear that Ch’en won’t throw away for whatever reason.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 250,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_chair_01": {
+        "id": "furni_chen_chair_01",
+        "name": "Ch'en's Chair",
+        "iconId": "furni_chen_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 3,
+        "height": 4,
+        "comfort": 190,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An office chair distributed by the L.G.D. Ch'en took off the switch to adjust it, which made it the most uncomfortable chair in the department.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 138,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_trash_01": {
+        "id": "furni_chen_trash_01",
+        "name": "L.G.D. Trash Can",
+        "iconId": "furni_chen_trash_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An office trash can distributed by the L.G.D. As you can see, this person does not take out the trash often.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 88,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_wingChunDummy_01": {
+        "id": "furni_chen_wingChunDummy_01",
+        "name": "L.G.D. Special Dummy",
+        "iconId": "furni_chen_wingChunDummy_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 5,
+        "comfort": 325,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A dummy for combat training. A martial artist must never slack on her training.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 213,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_investigationBoard_01": {
+        "id": "furni_chen_investigationBoard_01",
+        "name": "Office Clue Board",
+        "iconId": "furni_chen_investigationBoard_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 1,
+        "height": 7,
+        "comfort": 320,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A blackboard with all major operations of Reunion recorded on it. The way to break them is hidden in a certain clue.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 188,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_ceilingLight_R_01": {
+        "id": "furni_chen_ceilingLight_R_01",
+        "name": "L.G.D. Daylight Light",
+        "iconId": "furni_chen_ceilingLight_R_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 2,
+        "comfort": 80,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A ceiling light commonly used in the L.G.D. The police officers often complain that it's too bright in the office.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 48,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_ceilingLight_C_01": {
+        "id": "furni_chen_ceilingLight_C_01",
+        "name": "L.G.D. Fluorescent Light",
+        "iconId": "furni_chen_ceilingLight_C_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 6,
+        "height": 2,
+        "comfort": 85,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Another ceiling light commonly used in the L.G.D. Suspects sometimes want to complain the light is too bright, but they dare not say it.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 50,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_spotlight_01": {
+        "id": "furni_chen_spotlight_01",
+        "name": "L.G.D. Spotlight",
+        "iconId": "furni_chen_spotlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 2,
+        "comfort": 85,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A ceiling light with powerful light. It's obviously not used for everyday lighting.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 63,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_wallpaper_01": {
+        "id": "furni_chen_wallpaper_01",
+        "name": "L.G.D. Wallpaper",
+        "iconId": "furni_chen_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "NONE",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A wallpaper commonly used in the L.G.D. It’s clear that Ch'en doesn’t give too much thought to the decoration.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 158,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_floor_01": {
+        "id": "furni_chen_floor_01",
+        "name": "L.G.D. Stone Floor",
+        "iconId": "furni_chen_floor_01",
+        "type": "FLOOR",
+        "location": "NONE",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A stone floor commonly used in the L.G.D. Occasionally it's scrubbed clean.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 158,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
       "furni_dropS001_theLittleMermaid_01": {
         "id": "furni_dropS001_theLittleMermaid_01",
         "name": "Plaque - Foam",
@@ -10175,6 +11079,116 @@
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "\"Time and legend passed away together, but the melody still lingers in that city, soothing the frustrated.”",
         "obtainApproach": "The Knight & The Hunter quest reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_peanuts_01": {
+        "id": "furni_dropS003_peanuts_01",
+        "name": "Plaque - Peanuts",
+        "iconId": "furni_dropS003_peanuts_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "\"The seeds begin to grow when they fall into the soil, but they forget that they are allergic to maturity.\"",
+        "obtainApproach": "Dropped from the first clear reward of Challenge Mode 5-3",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_meno_01": {
+        "id": "furni_dropS003_meno_01",
+        "name": "Plaque - Mistakes",
+        "iconId": "furni_dropS003_meno_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "\"Stepping forward is no big deal, because an uninvited guest may appear with each step. So, only the result matters.\"",
+        "obtainApproach": "Dropped from the first clear reward of Challenge Mode 5-7",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_asLongAsFar_01": {
+        "id": "furni_dropS003_asLongAsFar_01",
+        "name": "Plaque - Legend",
+        "iconId": "furni_dropS003_asLongAsFar_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "“Once you fly far enough, you’ll stop thinking about the journey.”",
+        "obtainApproach": "Dropped from the first clear reward of Challenge Mode 5-10",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_fabric_01": {
+        "id": "furni_dropS003_fabric_01",
+        "name": "Plaque - Omitted",
+        "iconId": "furni_dropS003_fabric_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "\"Compared with implementing, designing may be more valuable in terms of creativity, but they are equally necessary to get the final result. \"",
+        "obtainApproach": "Dropped from the first clear reward of H5-2",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_zero_01": {
+        "id": "furni_dropS003_zero_01",
+        "name": "Plaque - Order",
+        "iconId": "furni_dropS003_zero_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "“Maybe there will be a language one day that we cannot understand, but that perhaps is only a testament to our superficiality. \"",
+        "obtainApproach": "Dropped from the first clear reward of H5-4",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -11961,6 +12975,240 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_artdeco": {
+        "id": "furni_set_artdeco",
+        "name": "Colombian Modern Hotel",
+        "desc": "A concept room imitating the standard style of Modern Hotel. It's reminiscent of the splendor of Colombia before the modern era.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_artdeco_barCeiling_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_artdeco_bar_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_artdeco_barstool_01",
+            "pos0": 2,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_artdeco_barstool_01",
+            "pos0": 4,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_artdeco_barstool_01",
+            "pos0": 6,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_artdeco_refrigerator_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_framedArt_01",
+            "pos0": 3,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_artdeco_pianoKit_01",
+            "pos0": 12,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_artdeco_carpet_01",
+            "pos0": 12,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_JukeBox_01",
+            "pos0": 9,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_wallLamp_01",
+            "pos0": 9,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_wallLamp_01",
+            "pos0": 24,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_abstractArt_01",
+            "pos0": 15,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_artdeco_ceilingLamp_01",
+            "pos0": 15,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_sofa_01",
+            "pos0": 22,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_coffeeTable_01",
+            "pos0": 25,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_framedArt2_01",
+            "pos0": 27,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_artdeco_floorLamp_01",
+            "pos0": 32,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_ceiling_01",
+            "pos0": 25,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
+      },
+      "furni_set_chen": {
+        "id": "furni_set_chen",
+        "name": "Ch'en's Office",
+        "desc": "A room imitating the office of Inspector Ch'en. It's used by Ch'en and plays an amazing role at Rhodes Island.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_chen_showcase_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_weaponCabinet_01",
+            "pos0": 4,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_supineBoard_01",
+            "pos0": 2,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_honorMedal_01",
+            "pos0": 8,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_chen_cactusPottedPlant_01",
+            "pos0": 8,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_chen_desk_01",
+            "pos0": 13,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_chair_01",
+            "pos0": 16,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_trash_01",
+            "pos0": 23,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_wingChunDummy_01",
+            "pos0": 29,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_chen_investigationBoard_01",
+            "pos0": 23,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_R_01",
+            "pos0": 1,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_R_01",
+            "pos0": 9,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_R_01",
+            "pos0": 17,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_R_01",
+            "pos0": 25,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 8,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 16,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 24,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 32,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_spotlight_01",
+            "pos0": 22,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_spotlight_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -12486,6 +13734,111 @@
           "furni_wooden_wallpaper_01",
           "furni_wooden_floor_01",
           "furni_wooden_deerHeads_01"
+        ]
+      },
+      "furni_set_artdeco_1": {
+        "id": "furni_set_artdeco_1",
+        "name": "Metropolitan Bar Set",
+        "themeId": "furni_set_artdeco",
+        "comfort": 225,
+        "count": 5,
+        "furniture": [
+          "furni_artdeco_barCeiling_01",
+          "furni_artdeco_bar_01",
+          "furni_artdeco_barstool_01",
+          "furni_artdeco_refrigerator_01",
+          "furni_artdeco_framedArt_01"
+        ]
+      },
+      "furni_set_artdeco_2": {
+        "id": "furni_set_artdeco_2",
+        "name": "Metropolitan Music Area Set",
+        "themeId": "furni_set_artdeco",
+        "comfort": 355,
+        "count": 5,
+        "furniture": [
+          "furni_artdeco_pianoKit_01",
+          "furni_artdeco_carpet_01",
+          "furni_artdeco_JukeBox_01",
+          "furni_artdeco_abstractArt_01",
+          "furni_artdeco_ceilingLamp_01"
+        ]
+      },
+      "furni_set_artdeco_3": {
+        "id": "furni_set_artdeco_3",
+        "name": "Metropolitan Rest Area Set",
+        "themeId": "furni_set_artdeco",
+        "comfort": 230,
+        "count": 5,
+        "furniture": [
+          "furni_artdeco_sofa_01",
+          "furni_artdeco_coffeeTable_01",
+          "furni_artdeco_framedArt2_01",
+          "furni_artdeco_floorLamp_01",
+          "furni_artdeco_ceiling_01"
+        ]
+      },
+      "furni_set_artdeco_4": {
+        "id": "furni_set_artdeco_4",
+        "name": "Modern Era Set",
+        "themeId": "furni_set_artdeco",
+        "comfort": 90,
+        "count": 3,
+        "furniture": [
+          "furni_artdeco_wallpaper_01",
+          "furni_artdeco_floor_01",
+          "furni_artdeco_wallLamp_01"
+        ]
+      },
+      "furni_set_chen_1": {
+        "id": "furni_set_chen_1",
+        "name": "Guard Department Business Set",
+        "themeId": "furni_set_chen",
+        "comfort": 300,
+        "count": 5,
+        "furniture": [
+          "furni_chen_desk_01",
+          "furni_chen_chair_01",
+          "furni_chen_trash_01",
+          "furni_chen_investigationBoard_01",
+          "furni_chen_spotlight_01"
+        ]
+      },
+      "furni_set_chen_2": {
+        "id": "furni_set_chen_2",
+        "name": "Ch'en's Private Decoration",
+        "themeId": "furni_set_chen",
+        "comfort": 185,
+        "count": 3,
+        "furniture": [
+          "furni_chen_showcase_01",
+          "furni_chen_weaponCabinet_01",
+          "furni_chen_honorMedal_01"
+        ]
+      },
+      "furni_set_chen_3": {
+        "id": "furni_set_chen_3",
+        "name": "Ch'en's Hobby Set",
+        "themeId": "furni_set_chen",
+        "comfort": 180,
+        "count": 3,
+        "furniture": [
+          "furni_chen_supineBoard_01",
+          "furni_chen_wingChunDummy_01",
+          "furni_chen_cactusPottedPlant_01"
+        ]
+      },
+      "furni_set_chen_4": {
+        "id": "furni_set_chen_4",
+        "name": "Guard Department Common Decoration",
+        "themeId": "furni_set_chen",
+        "comfort": 295,
+        "count": 4,
+        "furniture": [
+          "furni_chen_wallpaper_01",
+          "furni_chen_floor_01",
+          "furni_chen_ceilingLight_R_01",
+          "furni_chen_ceilingLight_C_01"
         ]
       }
     },
