@@ -3330,6 +3330,34 @@
         }
       ]
     },
+    "char_281_popka": {
+      "charId": "char_281_popka",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&limit&cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_single&oneself[020]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_284_spot": {
       "charId": "char_284_spot",
       "maxManpower": 8640000,
@@ -4049,6 +4077,34 @@
           "buffData": [
             {
               "buffId": "train_spd&profession[011]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_253_greyy": {
+      "charId": "char_253_greyy",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[002]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[010]",
               "cond": {
                 "phase": 1,
                 "level": 1
@@ -4906,6 +4962,62 @@
         }
       ]
     },
+    "char_010_chen": {
+      "charId": "char_010_chen",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd&team[100]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_308_swire": {
+      "charId": "char_308_swire",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_tra_spd[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_103_angel": {
       "charId": "char_103_angel",
       "maxManpower": 8640000,
@@ -5217,6 +5329,17 @@
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, 모든 무역소의 오더 수주 효율<@cc.vup>+7%</> (동종 효과 중 가장 높은 수치만 적용)"
     },
+    "control_tra_spd[010]": {
+      "buffId": "control_tra_spd[010]",
+      "buffName": "아가씨",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_t_spd",
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 모든 무역소의 오더 수주 효율<@cc.vup>+7%</> (동종 효과 중 가장 높은 수치만 적용)"
+    },
     "control_mp_cost[000]": {
       "buffId": "control_mp_cost[000]",
       "buffName": "오른팔",
@@ -5239,6 +5362,17 @@
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, 제어 센터 내의 모든 오퍼레이터의 시간당 컨디션 소모<@cc.vup>-0.05</>"
     },
+    "control_mp_cost&faction[000]": {
+      "buffId": "control_mp_cost&faction[000]",
+      "buffName": "덕재겸비",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_lungmen",
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 <@cc.kw>용문근위국</> 오퍼레이터는 제어 센터 내의 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+    },
     "power_rec_spd[000]": {
       "buffId": "power_rec_spd[000]",
       "buffName": "예비 에너지",
@@ -5260,6 +5394,17 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "발전소에 배치 시, 드론 회복 속도<@cc.vup>+15%</>"
+    },
+    "power_rec_spd[002]": {
+      "buffId": "power_rec_spd[002]",
+      "buffName": "정전기장",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd",
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "발전소에 배치 시, 드론 회복 속도<@cc.vup>+20%</>"
     },
     "power_rec_spd[010]": {
       "buffId": "power_rec_spd[010]",
@@ -5436,6 +5581,17 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, 생산력<@cc.vdown>-5%</>, 창고 용량 상한<@cc.vup>+18</>, 시간당 컨디션 소모<@cc.vup>-0.25</>"
+    },
+    "manu_prod_spd&limit&cost[010]": {
+      "buffId": "manu_prod_spd&limit&cost[010]",
+      "buffName": "트러블 메이커",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&limit&cost",
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 생산력<@cc.vup>+25%</>, 창고 용량 상한<@cc.vdown>-12</>, 시간당 컨디션 소모<@cc.vdown>+0.25</>"
     },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
@@ -6251,6 +6407,17 @@
       "roomType": "DORMITORY",
       "description": "숙소에 배치 시, 해당 숙소 안에 자신을 제외하고 컨디션이 가득차지 않은 임의 오퍼레이터의 시간당 컨디션 회복 속도<@cc.vup>+0.35</> (동종 효과 중 가장 높은 수치만 적용); 동시에 자신의 시간당 컨디션 회복 속도<@cc.vup>+0.35</>"
     },
+    "dorm_rec_single&oneself[020]": {
+      "buffId": "dorm_rec_single&oneself[020]",
+      "buffName": "조화",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_single&one",
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "숙소에 배치 시, 해당 숙소 안에 자신을 제외하고 컨디션이 가득차지 않은 임의 오퍼레이터의 시간당 컨디션 회복 속도<@cc.vup>+0.4</> (동종 효과 중 가장 높은 수치만 적용); 동시에 자신의 시간당 컨디션 회복 속도<@cc.vup>+0.2</>"
+    },
     "dorm_rec_single&oneself[021]": {
       "buffId": "dorm_rec_single&oneself[021]",
       "buffName": "카란 성녀",
@@ -6459,6 +6626,17 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "응접실에 배치 시, 단서 수집 속도<@cc.vup>10%</>, <@cc.kw>글래스고</> 단서 획득 확률 상승"
+    },
+    "meet_spd&team[100]": {
+      "buffId": "meet_spd&team[100]",
+      "buffName": "총경",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd",
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "응접실에 배치 시, 단서 수집 속도<@cc.vup>25%</>"
     }
   },
   "customData": {
@@ -8853,7 +9031,7 @@
         "height": 3,
         "comfort": 125,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "용문 양식을 본뜬 등받이가 낮은?의자. 구매자석.",
+        "description": "용문 양식을 본뜬 등받이가 낮은 의자. 구매자석.",
         "obtainApproach": "가구상점 구매",
         "processedProductId": "3401",
         "processedProductCount": 105,
@@ -9873,6 +10051,732 @@
         "processedByProductGroup": [],
         "canBeDestroy": false
       },
+      "furni_artdeco_barCeiling_01": {
+        "id": "furni_artdeco_barCeiling_01",
+        "name": "천장 와인잔 선반",
+        "iconId": "furni_artdeco_barCeiling_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 9,
+        "depth": 3,
+        "height": 6,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드를 위해 특별 제작한 모던한 선반. 로도스 아일랜드의 공인 소믈리에만이 이곳에 본인 전용의 와인잔을 올릴 수 있다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_bar_01": {
+        "id": "furni_artdeco_bar_01",
+        "name": "호텔 바카운터",
+        "iconId": "furni_artdeco_bar_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 9,
+        "depth": 3,
+        "height": 4,
+        "comfort": 250,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드를 위해 특별 제작한 호텔 바카운터. 모던 시대의 컬럼비아 사람에게 술은 위험하면서도 사치스러운 것이다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_barstool_01": {
+        "id": "furni_artdeco_barstool_01",
+        "name": "바 스툴",
+        "iconId": "furni_artdeco_barstool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 70,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드를 위해 특별 제작한 모던 호텔 표준 양식의 바스툴. 혼자서는 혼술, 둘이서는 러브샷, 셋이서는 건배!",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_refrigerator_01": {
+        "id": "furni_artdeco_refrigerator_01",
+        "name": "블랙 앤 골드 냉장고",
+        "iconId": "furni_artdeco_refrigerator_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 7,
+        "comfort": 135,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "금고처럼 건실한 냉장고. 세계 각지의 산해진미는 이 곳에 저장되는 것을 영광으로 생각해야 한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_framedArt_01": {
+        "id": "furni_artdeco_framedArt_01",
+        "name": "그림 《의식의 흐름》",
+        "iconId": "furni_artdeco_framedArt_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 90,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "컬럼비아 현대 화가가 창작한 그림. 기하학적인 도안을 이은 그림은 보는 이로 하여금 다른 작품에선 느껴본 적 없는 독보적인 무언가를 느끼게 만든다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_pianoKit_01": {
+        "id": "furni_artdeco_pianoKit_01",
+        "name": "윌리엄 피아노 세트",
+        "iconId": "furni_artdeco_pianoKit_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 9,
+        "depth": 8,
+        "height": 6,
+        "comfort": 580,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "윌리엄사에서 로도스 아일랜드를 위해 커스텀 제작한 피아노. 피아니스트의 손가락이 건반에서 살짝만 움직여도, 아름다운 음표가 대중들의 머리 속에서 춤을 춘다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_carpet_01": {
+        "id": "furni_artdeco_carpet_01",
+        "name": "모던 호텔 카펫",
+        "iconId": "furni_artdeco_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 10,
+        "height": 1,
+        "comfort": 435,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모던 호텔의 스탠다드 카펫. 선형의 화살표가 모든 방향을 가리키는 것이 그때 당시 끝없이 영역을 확장하던 컬럼비아를 연상시킨다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_JukeBox_01": {
+        "id": "furni_artdeco_JukeBox_01",
+        "name": "빌보드 주크박스",
+        "iconId": "furni_artdeco_JukeBox_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 105,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "컬럼비아의 모든 거리에서 흔히 볼 수 있는 주크박스. 동전 한 잎에 노래 한 곡, 그리고 펼쳐지는 아름다운 시간.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_wallLamp_01": {
+        "id": "furni_artdeco_wallLamp_01",
+        "name": "모던 호텔 벽등",
+        "iconId": "furni_artdeco_wallLamp_01",
+        "type": "WALLLAMP",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 1,
+        "height": 2,
+        "comfort": 35,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모던 호텔의 스탠다드 벽등. 전원을 키면, 사람들 꿈 속의 미래를 비춘다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_abstractArt_01": {
+        "id": "furni_artdeco_abstractArt_01",
+        "name": "모던 벽걸이 장식",
+        "iconId": "furni_artdeco_abstractArt_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 6,
+        "comfort": 115,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "컬럼비아 유명 디자이너의 대표작. 다른 기능은 없으며, 오로지 장식만을 위해 존재한다, 그 시대때는 그러하였다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_ceilingLamp_01": {
+        "id": "furni_artdeco_ceilingLamp_01",
+        "name": "모던 호텔 샹들리에",
+        "iconId": "furni_artdeco_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 95,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모던 호텔의 스탠다드 유리 샹들리에. 그 화려하고 환한 빛은 사람들로 하여금 자신도 모르게 미래의 모습에 대해 동경하게 한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_sofa_01": {
+        "id": "furni_artdeco_sofa_01",
+        "name": "모던 호텔 소파",
+        "iconId": "furni_artdeco_sofa_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 4,
+        "height": 3,
+        "comfort": 340,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "장인의 손으로 제작한 기계로 만든 호텔 소파. 티테이블은 증정품이다. 소파에 몸을 맡겨 앉아 있으면 구름에 떠있는 듯한 느낌이 들어 갖은 고뇌와 낙담이 연기처럼 사라진다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_coffeeTable_01": {
+        "id": "furni_artdeco_coffeeTable_01",
+        "name": "모던 호텔 티테이블",
+        "iconId": "furni_artdeco_coffeeTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 3,
+        "height": 3,
+        "comfort": 180,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모던 호텔의 스탠다드 티테이블. 풍미가 좋은 술과 술잔이 놓여져 있다. 음미하는 자신을 마비시키지만, 어느 누가 그걸 신경쓰겠는가?",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_framedArt2_01": {
+        "id": "furni_artdeco_framedArt2_01",
+        "name": "《찬란한 시대》",
+        "iconId": "furni_artdeco_framedArt2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 5,
+        "comfort": 100,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "어느 컬럼비아의 예술가가 만든 걸작. 이미 카피가 많이 제작되었다. 부대와 건물에 힘을 불러온다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_floorLamp_01": {
+        "id": "furni_artdeco_floorLamp_01",
+        "name": "모던 호텔 플로어램프",
+        "iconId": "furni_artdeco_floorLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 120,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모던 호텔의 스탠다드 플로어램프. 다소 낮은 밝기로 분위기 조성에는 완벽하다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_ceiling_01": {
+        "id": "furni_artdeco_ceiling_01",
+        "name": "모던 호텔 천장",
+        "iconId": "furni_artdeco_ceiling_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 8,
+        "height": 2,
+        "comfort": 185,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모던 호텔의 스탠다드 조명이 달린 천장. 기능적 측면에서 보자면 조명이 위주인 디자인은 아니다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_wallpaper_01": {
+        "id": "furni_artdeco_wallpaper_01",
+        "name": "모던 호텔 벽지",
+        "iconId": "furni_artdeco_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "NONE",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모던 호텔의 스탠다드 벽지. 간단한 패턴과 고가의 재료. 기술력의 표현이 정점에 달하여 탁이함이 살아 숨쉬는 것 같다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_artdeco_floor_01": {
+        "id": "furni_artdeco_floor_01",
+        "name": "갈색 대리석 바닥재",
+        "iconId": "furni_artdeco_floor_01",
+        "type": "FLOOR",
+        "location": "NONE",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "고가의 대리석을 이어 맞춘 보도블록. 빛이 바랬지만 화려함은 여전하다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_showcase_01": {
+        "id": "furni_chen_showcase_01",
+        "name": "용문근위국 책장",
+        "iconId": "furni_chen_showcase_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 8,
+        "comfort": 305,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문근위국에서 배분한 책꽂이. 트로피, 《수사대전》, 블루 하트 훈장 등등…그녀도 아마 겸사겸사 꽂아 넣은 것일 수도 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 200,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_weaponCabinet_01": {
+        "id": "furni_chen_weaponCabinet_01",
+        "name": "첸의 총기보관함",
+        "iconId": "furni_chen_weaponCabinet_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 8,
+        "comfort": 305,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "첸의 무기 수납고. 용문근위국의 전사는 한시도 긴장을 늦추지 않는다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 200,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_supineBoard_01": {
+        "id": "furni_chen_supineBoard_01",
+        "name": "용문근위국 싯업보드",
+        "iconId": "furni_chen_supineBoard_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 4,
+        "height": 2,
+        "comfort": 265,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문근위국에서 주문한 싯업보드. 매일 사용하는 사람은 정말 끈질긴 사람일 것이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 173,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_honorMedal_01": {
+        "id": "furni_chen_honorMedal_01",
+        "name": "첸의 명예훈장",
+        "iconId": "furni_chen_honorMedal_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 1,
+        "height": 5,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "첸의 무수한 영예와 표창장은 각종 크기의 전시창으로 제작되었다. 다른 용문근위국 인원들의 강력한 요구로 벽에 달았으나, 첸 본인은 썩 내키지 않아 했다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 108,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_cactusPottedPlant_01": {
+        "id": "furni_chen_cactusPottedPlant_01",
+        "name": "선인장 분재",
+        "iconId": "furni_chen_cactusPottedPlant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 155,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "첸이 기르고 있는 식물. 엄밀히 말하자면 잘못된 부분은 아니지만, 첸이 선인장을 기르는 원인은 물 주는 것을 자꾸 잊어버리기 때문이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 113,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_desk_01": {
+        "id": "furni_chen_desk_01",
+        "name": "첸의 사무용 책상",
+        "iconId": "furni_chen_desk_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 3,
+        "height": 5,
+        "comfort": 425,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문근위국에서 배분한 사무실 책상, 각종 업무 자료 및 첸이 경찰들에게 훈계를 한 뒤 목이 아플 때 복용하는 약품으로 인해 너저분하다. 이 외에도 너덜너덜한 작은 곰돌이 인형이 있으나, 첸은 계속하여 버리지 않았다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 250,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_chair_01": {
+        "id": "furni_chen_chair_01",
+        "name": "첸의 사무용 의자",
+        "iconId": "furni_chen_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 3,
+        "height": 4,
+        "comfort": 190,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문근위국에서 배분한 사무실 의자. 첸이 편의 각도를 조절하는 스위치를 망가트리는 바람에, 이 의자는 용문근위국에서 착용감이 가장 불편한 의자가 되었다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 138,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_trash_01": {
+        "id": "furni_chen_trash_01",
+        "name": "용문근위국 쓰레기통",
+        "iconId": "furni_chen_trash_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문근위국에서 배분한 사무실의 쓰레기통. 보다시피, 이 사람은 쓰레기통을 거의 비우지 않는다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 88,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_wingChunDummy_01": {
+        "id": "furni_chen_wingChunDummy_01",
+        "name": "용문근위국 특제 목인장",
+        "iconId": "furni_chen_wingChunDummy_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 5,
+        "comfort": 325,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "훈련용 목인장. 무술을 연마하는 사람은 일평생 연습을 게을리해서는 안된다는 점을 항상 명심해야 한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 213,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_investigationBoard_01": {
+        "id": "furni_chen_investigationBoard_01",
+        "name": "수사용 칠판",
+        "iconId": "furni_chen_investigationBoard_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 1,
+        "height": 7,
+        "comfort": 320,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "검은 칠판. 리유니온의 모든 중대한 일과 관련된 기록을 담고 있다. 돌파구 또한 어느 한 단서에 은밀히 숨겨져 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 188,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_ceilingLight_R_01": {
+        "id": "furni_chen_ceilingLight_R_01",
+        "name": "용문근위국 형광등 (가로)",
+        "iconId": "furni_chen_ceilingLight_R_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 2,
+        "comfort": 80,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문근위국에서 주로 사용하는 전등. 동료 경찰들은 사무실이 너무 밝다며 자주 불만을 호소하곤 한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 48,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_ceilingLight_C_01": {
+        "id": "furni_chen_ceilingLight_C_01",
+        "name": "용문근위국 형광등 (세로)",
+        "iconId": "furni_chen_ceilingLight_C_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 6,
+        "height": 2,
+        "comfort": 85,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "이것 또한 용문근위국에서 주료 사용하는 전등. 용의자들이 가끔 조명 밝기로 불만을 토로하고자 하나, 말할 용기가 없어 얘기를 꺼내지 못한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 50,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_spotlight_01": {
+        "id": "furni_chen_spotlight_01",
+        "name": "용문근위국 스포트라이트",
+        "iconId": "furni_chen_spotlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 2,
+        "comfort": 85,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "강렬한 밝기를 자랑하는 전등. 일상 생활에서 쓰이는 조명이 아님에는 분명하다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 63,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_wallpaper_01": {
+        "id": "furni_chen_wallpaper_01",
+        "name": "용문근위국 벽지",
+        "iconId": "furni_chen_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "NONE",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문근위국에서 주로 사용하는 벽지. 사실 첸은 실내 인테리어에 대해 곰곰이 생각해 본 적이 없다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 158,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_chen_floor_01": {
+        "id": "furni_chen_floor_01",
+        "name": "용문근위국 석재 바닥재",
+        "iconId": "furni_chen_floor_01",
+        "type": "FLOOR",
+        "location": "NONE",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문근위국의 통용 석재 바닥재. 가끔가다 정말 깔끔하게 청소할 때가 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 158,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
       "furni_dropS001_theLittleMermaid_01": {
         "id": "furni_dropS001_theLittleMermaid_01",
         "name": "플레이트 《거품》",
@@ -10175,6 +11079,116 @@
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "\"시간과 전설은 함께 흘러가고, 음율은 계속 도시를 배회하며 실의에 빠진 사람들을 보다듬어준다.\"",
         "obtainApproach": "<기병과 사냥꾼> 이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_peanuts_01": {
+        "id": "furni_dropS003_peanuts_01",
+        "name": "플레이트 《땅콩》",
+        "iconId": "furni_dropS003_peanuts_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "\"씨앗이 대지에 떨어지자마자 빠르게 성장한다. 성장통이 있다는 사실도 잊은채…\"",
+        "obtainApproach": "5-3 하드 모드 첫 클리어 획득",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_meno_01": {
+        "id": "furni_dropS003_meno_01",
+        "name": "플레이트 《실수》",
+        "iconId": "furni_dropS003_meno_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "\"걸음을 옮기는 건 작은 일 아니지만, 한 걸음 내딛을 때마다 불청객을 만나는 것은 큰일이다.\"",
+        "obtainApproach": "5-7 하드 모드 첫 클리어 획득",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_asLongAsFar_01": {
+        "id": "furni_dropS003_asLongAsFar_01",
+        "name": "플레이트 《전설》",
+        "iconId": "furni_dropS003_asLongAsFar_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "\"어느 구간을 넘어가면, 당신은 더 이상 개의치 않게 될 것이다.\"",
+        "obtainApproach": "5-10 하드 모드 첫 클리어 획득",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_fabric_01": {
+        "id": "furni_dropS003_fabric_01",
+        "name": "플레이트 《생략》",
+        "iconId": "furni_dropS003_fabric_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "\"설계가 실행보다 더 창조적인 가치가 있을지도 모르지만, 결국에는 둘 다 중요한 법.\"",
+        "obtainApproach": "H5-2 첫 클리어 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS003_zero_01": {
+        "id": "furni_dropS003_zero_01",
+        "name": "플레이트 《순서》",
+        "iconId": "furni_dropS003_zero_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "\"어쩌면 어떤 미지의 언어가 우리가 알수 없는 형태로 출현할 수도 있다. 그것은 단지 우리의 천박함을 검증할 뿐이다.\"",
+        "obtainApproach": "H5-4 첫 클리어 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -11961,6 +12975,240 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_artdeco": {
+        "id": "furni_set_artdeco",
+        "name": "컬럼비아 모던 호텔",
+        "desc": "현대 시대 진입 전의 번화기를 떠올리게 하는 호텔 비즈니스룸 모티브의 컨셉 룸.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_artdeco_barCeiling_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_artdeco_bar_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_artdeco_barstool_01",
+            "pos0": 2,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_artdeco_barstool_01",
+            "pos0": 4,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_artdeco_barstool_01",
+            "pos0": 6,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_artdeco_refrigerator_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_framedArt_01",
+            "pos0": 3,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_artdeco_pianoKit_01",
+            "pos0": 12,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_artdeco_carpet_01",
+            "pos0": 12,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_JukeBox_01",
+            "pos0": 9,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_wallLamp_01",
+            "pos0": 9,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_wallLamp_01",
+            "pos0": 24,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_abstractArt_01",
+            "pos0": 15,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_artdeco_ceilingLamp_01",
+            "pos0": 15,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_sofa_01",
+            "pos0": 22,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_coffeeTable_01",
+            "pos0": 25,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_framedArt2_01",
+            "pos0": 27,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_artdeco_floorLamp_01",
+            "pos0": 32,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_artdeco_ceiling_01",
+            "pos0": 25,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_artdeco_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
+      },
+      "furni_set_chen": {
+        "id": "furni_set_chen",
+        "name": "첸의 사무실",
+        "desc": "첸이 직접 쓰기 위해 자신의 사무실을 모티브로 만든 방. 로도스에서 묘한 작용을 하고 있다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_chen_showcase_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_weaponCabinet_01",
+            "pos0": 4,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_supineBoard_01",
+            "pos0": 2,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_honorMedal_01",
+            "pos0": 8,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_chen_cactusPottedPlant_01",
+            "pos0": 8,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_chen_desk_01",
+            "pos0": 13,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_chair_01",
+            "pos0": 16,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_trash_01",
+            "pos0": 23,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_wingChunDummy_01",
+            "pos0": 29,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_chen_investigationBoard_01",
+            "pos0": 23,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_R_01",
+            "pos0": 1,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_R_01",
+            "pos0": 9,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_R_01",
+            "pos0": 17,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_R_01",
+            "pos0": 25,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 8,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 16,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 24,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_ceilingLight_C_01",
+            "pos0": 32,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_chen_spotlight_01",
+            "pos0": 22,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_spotlight_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_chen_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -12486,6 +13734,111 @@
           "furni_wooden_wallpaper_01",
           "furni_wooden_floor_01",
           "furni_wooden_deerHeads_01"
+        ]
+      },
+      "furni_set_artdeco_1": {
+        "id": "furni_set_artdeco_1",
+        "name": "메트로폴리탄 바 세트",
+        "themeId": "furni_set_artdeco",
+        "comfort": 225,
+        "count": 5,
+        "furniture": [
+          "furni_artdeco_barCeiling_01",
+          "furni_artdeco_bar_01",
+          "furni_artdeco_barstool_01",
+          "furni_artdeco_refrigerator_01",
+          "furni_artdeco_framedArt_01"
+        ]
+      },
+      "furni_set_artdeco_2": {
+        "id": "furni_set_artdeco_2",
+        "name": "메트로폴리탄 뮤직 세트",
+        "themeId": "furni_set_artdeco",
+        "comfort": 355,
+        "count": 5,
+        "furniture": [
+          "furni_artdeco_pianoKit_01",
+          "furni_artdeco_carpet_01",
+          "furni_artdeco_JukeBox_01",
+          "furni_artdeco_abstractArt_01",
+          "furni_artdeco_ceilingLamp_01"
+        ]
+      },
+      "furni_set_artdeco_3": {
+        "id": "furni_set_artdeco_3",
+        "name": "메트로폴리탄 릴랙스 세트",
+        "themeId": "furni_set_artdeco",
+        "comfort": 230,
+        "count": 5,
+        "furniture": [
+          "furni_artdeco_sofa_01",
+          "furni_artdeco_coffeeTable_01",
+          "furni_artdeco_framedArt2_01",
+          "furni_artdeco_floorLamp_01",
+          "furni_artdeco_ceiling_01"
+        ]
+      },
+      "furni_set_artdeco_4": {
+        "id": "furni_set_artdeco_4",
+        "name": "모던 에이지 세트",
+        "themeId": "furni_set_artdeco",
+        "comfort": 90,
+        "count": 3,
+        "furniture": [
+          "furni_artdeco_wallpaper_01",
+          "furni_artdeco_floor_01",
+          "furni_artdeco_wallLamp_01"
+        ]
+      },
+      "furni_set_chen_1": {
+        "id": "furni_set_chen_1",
+        "name": "용문근위국 공무 세트",
+        "themeId": "furni_set_chen",
+        "comfort": 300,
+        "count": 5,
+        "furniture": [
+          "furni_chen_desk_01",
+          "furni_chen_chair_01",
+          "furni_chen_trash_01",
+          "furni_chen_investigationBoard_01",
+          "furni_chen_spotlight_01"
+        ]
+      },
+      "furni_set_chen_2": {
+        "id": "furni_set_chen_2",
+        "name": "첸의 개인물품",
+        "themeId": "furni_set_chen",
+        "comfort": 185,
+        "count": 3,
+        "furniture": [
+          "furni_chen_showcase_01",
+          "furni_chen_weaponCabinet_01",
+          "furni_chen_honorMedal_01"
+        ]
+      },
+      "furni_set_chen_3": {
+        "id": "furni_set_chen_3",
+        "name": "첸의 취미 세트",
+        "themeId": "furni_set_chen",
+        "comfort": 180,
+        "count": 3,
+        "furniture": [
+          "furni_chen_supineBoard_01",
+          "furni_chen_wingChunDummy_01",
+          "furni_chen_cactusPottedPlant_01"
+        ]
+      },
+      "furni_set_chen_4": {
+        "id": "furni_set_chen_4",
+        "name": "용문근위국 천장/벽/바닥",
+        "themeId": "furni_set_chen",
+        "comfort": 295,
+        "count": 4,
+        "furniture": [
+          "furni_chen_wallpaper_01",
+          "furni_chen_floor_01",
+          "furni_chen_ceilingLight_R_01",
+          "furni_chen_ceilingLight_C_01"
         ]
       }
     },
