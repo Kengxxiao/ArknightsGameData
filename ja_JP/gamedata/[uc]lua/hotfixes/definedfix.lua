@@ -5,7 +5,8 @@ local list =
   "HotFixes/ShopHotfixer",
   "HotFixes/Act4d0Hotfixer",
   "HotFixes/InventoryHotfixer",
-  "HotFixes/YostarSDKFixer"
+  "HotFixes/YostarSDKFixer",
+  "HotFixes/FurnShopHotfixer"
 };
 
 return list;
