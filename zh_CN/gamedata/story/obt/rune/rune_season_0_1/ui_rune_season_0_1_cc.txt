@@ -1,0 +1,90 @@
+[HEADER(key="title_test", is_skippable=false, fit_mode="BLACK_MASK")] 危机合约
+
+// Comments
+[Dialog]
+[delay(time=1)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.6, crossfade=1, delay=0.5)]
+[Background(image="bg_rhodescom",screenadapt="coverall",fadetime=1,block=true)]
+[delay(time=2, black=true)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_130_doberm_ex",fadetime=1,block=true)]
+[delay(time=1)]
+[name="杜宾"]   所有人都到了？
+[Character(name="char_002_amiya_1#1")]
+[name="阿米娅"]   嗯，各部门人员都到了，我们可以开始了。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   那么直接进入正题吧。普罗旺斯。
+[Character]
+[Dialog]
+[Character(name="char_145_prove_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="普罗旺斯"]   好的，那么我就开始了。
+[name="普罗旺斯"]   如大家所见，我们已经收到了来自危机合约的新联络。
+[name="普罗旺斯"]   罗德岛上次的合约完成情况远远超出了大家的意料，得到了危机合约机构的一致肯定。
+[name="普罗旺斯"]   博士精确地挑选了各项合约，在每一次战斗中完成多项指标，给危机合约机构留下深刻的印象。
+[name="普罗旺斯"]   即使是我们也没想到，适宜地安排干员进行作战会让效率提高如此之多。
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   因为博士的出色工作，不仅罗德岛本身获取了大量物资帮助，也平复了诸多地区的动乱。
+[Decision(options="我只是普通地完成工作而已。;啊，有吗？;因为阿米娅帮助了我很多。",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   博士也太谦虚了，您的付出大家都看在眼里的！
+[name="阿米娅"]   如果没有博士的指引的话，我们肯定没法完成那么多的合约需求。
+[Predicate(references="2")]
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   博士竟然完全没有觉察到吗？
+[name="普罗旺斯"]   在合约中体现的决断力原来只是下意识的判断？
+[name="普罗旺斯"]   不愧是博士！
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]   我也只是辅助而已，博士才是那个努力最多的人。
+[Predicate(references="1;2;3")]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   ......吹捧的话差不多就行，普罗旺斯继续说这次危机合约。
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   多亏了上次的成绩，罗德岛和危机合约机构总算是再次达成了稳定的协议关系。
+[name="普罗旺斯"]   在今后的时间里，每隔一段时间罗德岛都能稳定地接收到来自危机合约的委托了。
+[showitem(image="item_cc2_1")]
+///////////////////////////
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   这次的合约也同样指向多个地区，已经在相关文件上为博士标注了出来。
+[name="普罗旺斯"]   各个地区虽然遭到的问题不尽相同，但是都急切的需要帮助。
+[Dialog]
+[hideitem(fadetime=0.5,block=true)]
+[showitem(image="item_cc2_2")]
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   然后是各项合约细节内容，和以前一样，需要阿米娅和博士来进行确认和安排。
+[name="普罗旺斯"]   判断合约的难度并合理调度干员的工作，相信对你们来说一点都不陌生了。
+[Dialog]
+[hideitem(fadetime=0.5,block=true)]
+[showitem(image="item_cc2_4")]
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   随着合约内容危险性的提高，我们也采用了新的合约危险度检测机制。
+[name="普罗旺斯"]   通过专门的合约评估系统，我们会对每次作战的结果做出记录和数据收集。
+[name="普罗旺斯"]   为了避免出现意外，只有在合约完成数目逐渐提高之后，后续危险度评级更高的委托才会逐渐解锁。
+[name="普罗旺斯"]   相信我们可以循序渐进地完成这次的危机合约任务。
+[Dialog]
+[hideitem(fadetime=0.5,block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   想要获得更高回报，自然代表着更高风险。
+[name="杜宾"]   不管以前做的再好，现在也不能放松警惕。
+[showitem(image="item_cc2_5")]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]   与此相对，罗德岛内也设立了新的训练场地，专门为模拟各种合约条件进行作战演习。
+[name="杜宾"]   如果博士有需要，也可以多加利用。
+[name="杜宾"]   做好战前的准备永远都是胜利的第一步。
+[Dialog]
+[hideitem(fadetime=0.5,block=true)]
+[Character(name="char_145_prove_1")]
+[name="普罗旺斯"]   那么，危机合约————代号荒芜行动，正式转交给博士。
+[name="普罗旺斯"]   PRTS会做好后续的相关资料整理工作，如果还有疑问博士可以在管理界面进行再确认。
+[name="普罗旺斯"]   行动正式开始，祝大家一切顺利。
+[name="普罗旺斯"]   愿我们能为这片多灾的大地带去希望。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Image(fadetime=0)]
+[delay(time=1)]
+
+
