@@ -5315,6 +5315,117 @@
           "buffData": []
         }
       ]
+    },
+    "char_248_mgllan": {
+      "charId": "char_248_mgllan",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[011]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_131_flameb": {
+      "charId": "char_131_flameb",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_probability[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "workshop_formula_probability[020]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_279_excu": {
+      "charId": "char_279_excu",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[040]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost[003]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_190_clour": {
+      "charId": "char_190_clour",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_variable[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -5354,6 +5465,17 @@
     "control_mp_cost[001]": {
       "buffId": "control_mp_cost[001]",
       "buffName": "S.W.E.E.P.",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, Morale consumed per hour of all Operators in the Control Center <@cc.vup>-0.05</>"
+    },
+    "control_mp_cost[003]": {
+      "buffId": "control_mp_cost[003]",
+      "buffName": "Cleaning Agreement",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost",
       "buffColor": "#005752",
@@ -5592,6 +5714,17 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+25%</>, capacity limit <@cc.vdown>-12</> and Morale consumed per hour <@cc.vdown>+0.25</>"
+    },
+    "manu_prod_spd_variable[000]": {
+      "buffId": "manu_prod_spd_variable[000]",
+      "buffName": "Recycling",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_variable",
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, Operators assigned to the Factory increase all capacity limits, add <@cc.vup>2%</> productivity."
     },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
@@ -5912,6 +6045,17 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, the production rate of byproduct increases by <@cc.vup>50%</>"
     },
+    "workshop_proc_probability[011]": {
+      "buffId": "workshop_proc_probability[011]",
+      "buffName": "Multifunctional Robotter",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p",
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, the production rate of byproduct increases by <@cc.vup>50%</>"
+    },
     "workshop_proc_probability[020]": {
       "buffId": "workshop_proc_probability[020]",
       "buffName": "Meeboo: Processing",
@@ -5923,6 +6067,17 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, the production rate of byproduct increases by <@cc.vup>65%</>"
     },
+    "workshop_formula_cost[000]": {
+      "buffId": "workshop_formula_cost[000]",
+      "buffName": "Drone - Soaring Dragon",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost",
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, Morale consumed <@cc.kw>4</> and all above formulas <@cc.vup>-2</> Morale consumed."
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "Tech Theory",
@@ -5933,6 +6088,17 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Skill Summaries</>, the production rate of byproduct increases by <@cc.vup>70%</>"
+    },
+    "workshop_formula_probability[020]": {
+      "buffId": "workshop_formula_probability[020]",
+      "buffName": "Arise",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_skill",
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Skill Summaries</>, the production rate of byproduct increases by <@cc.vup>80%</>"
     },
     "workshop_formula_probability[100]": {
       "buffId": "workshop_formula_probability[100]",
@@ -10777,6 +10943,446 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_safetyZone_gate_01": {
+        "id": "furni_safetyZone_gate_01",
+        "name": "Cleanroom Disinfecting Quarters",
+        "iconId": "furni_safetyZone_gate_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 5,
+        "height": 7,
+        "comfort": 310,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A fully-sealed disinfecting room. Removing any dust or fluids from the surface of your body is of utmost priority.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 210,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_UVLamp_01": {
+        "id": "furni_safetyZone_UVLamp_01",
+        "name": "Cleanroom Antimicrobial Lamp",
+        "iconId": "furni_safetyZone_UVLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 110,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A UVC-producing quartz germicial lamp. A solid line of defense against bacteria, viruses, and protozoa.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 93,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_oxygenTank_01": {
+        "id": "furni_safetyZone_oxygenTank_01",
+        "name": "Supply Tanks",
+        "iconId": "furni_safetyZone_oxygenTank_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 245,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A tank containing necessary resources such as disinfectant and neutralizing agents. For use only during emergencies.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 168,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_stretcher_01": {
+        "id": "furni_safetyZone_stretcher_01",
+        "name": "Emergency Stretcher",
+        "iconId": "furni_safetyZone_stretcher_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 7,
+        "depth": 4,
+        "height": 6,
+        "comfort": 360,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An emergency stretcher stashed inside the cleanroom. I hope to never have to use it.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 245,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_hazmatSuit_01": {
+        "id": "furni_safetyZone_hazmatSuit_01",
+        "name": "Hazmat Suit",
+        "iconId": "furni_safetyZone_hazmatSuit_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 85,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A hazmat suit. The best way to protect yourself from environmental hazards is to isolate yourself.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 73,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_hazmatCoat_01": {
+        "id": "furni_safetyZone_hazmatCoat_01",
+        "name": "Protective Clothing",
+        "iconId": "furni_safetyZone_hazmatCoat_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 85,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A hazmat suit. Watch your step.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 73,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_shovel_01": {
+        "id": "furni_safetyZone_shovel_01",
+        "name": "Multifunctional Engineering Shovel",
+        "iconId": "furni_safetyZone_shovel_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 1,
+        "height": 2,
+        "comfort": 45,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A multifunctional engineering device. Some are known to use this as a weapon.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 38,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_box_01": {
+        "id": "furni_safetyZone_box_01",
+        "name": "Cleanroom Materials Box",
+        "iconId": "furni_safetyZone_box_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 175,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A kit containing a wide variety of supplies, making it suitable for just about any situation.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 133,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_partitionWall_01": {
+        "id": "furni_safetyZone_partitionWall_01",
+        "name": "Cleanroom Partition",
+        "iconId": "furni_safetyZone_partitionWall_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 7,
+        "height": 8,
+        "comfort": 245,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A partition used to seal off the cleanroom. Since when did this get here?",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_roboticArmVehicle_01": {
+        "id": "furni_safetyZone_roboticArmVehicle_01",
+        "name": "Cleanroom Lorry",
+        "iconId": "furni_safetyZone_roboticArmVehicle_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 4,
+        "comfort": 255,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A one-armed vehicle that can carry out precise tasks. It is generally only used in really bad situations.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 193,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_virusFilter_01": {
+        "id": "furni_safetyZone_virusFilter_01",
+        "name": "Multifunctional Sterilizer",
+        "iconId": "furni_safetyZone_virusFilter_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 7,
+        "depth": 4,
+        "height": 5,
+        "comfort": 335,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A multifunctional disinfecting device. It contains strong chemicals, so please follow the instructions carefully.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 228,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_pipeline1_01": {
+        "id": "furni_safetyZone_pipeline1_01",
+        "name": "Cleanroom Airduct",
+        "iconId": "furni_safetyZone_pipeline1_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 2,
+        "height": 2,
+        "comfort": 305,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A cleanroom air duct. All air entering the room has to be finely processed.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 208,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_pipeline2_01": {
+        "id": "furni_safetyZone_pipeline2_01",
+        "name": "Cleanroom Airflow Control Pipe",
+        "iconId": "furni_safetyZone_pipeline2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 1,
+        "height": 2,
+        "comfort": 135,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A cleanrom airflow control pipe. It is responsible for controlling the circulation of air.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 103,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_PipelineValve_01": {
+        "id": "furni_safetyZone_PipelineValve_01",
+        "name": "Cleanroom Pipe Valve",
+        "iconId": "furni_safetyZone_PipelineValve_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 8,
+        "comfort": 135,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A switch used to modulate the chamber pressure. The main console is located outside of the cabin.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 113,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_ceilingLight_01": {
+        "id": "furni_safetyZone_ceilingLight_01",
+        "name": "Cleanroom Fluorescent Lamp",
+        "iconId": "furni_safetyZone_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 105,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Fluorescent lights that were damaged in an emergency. Don't worry, the engineering staff will arrive shortly.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 88,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_ceiling_01": {
+        "id": "furni_safetyZone_ceiling_01",
+        "name": "Cleanroom Isolation Cloth",
+        "iconId": "furni_safetyZone_ceiling_01",
+        "type": "CEILING",
+        "location": "CEILINGDECAL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 315,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Brand new insulation for the roof of the clean room. It has not been used very long.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 215,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_downlight_01": {
+        "id": "furni_safetyZone_downlight_01",
+        "name": "Cleanroom Ceiling Light",
+        "iconId": "furni_safetyZone_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 55,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Don't turn off this light. Light is safety.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 48,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_carpet_01": {
+        "id": "furni_safetyZone_carpet_01",
+        "name": "Microfiber Towel",
+        "iconId": "furni_safetyZone_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 8,
+        "height": 1,
+        "comfort": 130,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A microfiber cloth that is very effective at holding dust and liquids. Must be cleaned or replaced frequently to ensure best results.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 98,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_wallpaper_01": {
+        "id": "furni_safetyZone_wallpaper_01",
+        "name": "Hazmat Partition",
+        "iconId": "furni_safetyZone_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The bulkhead of the cleanroom, required to maintain its ability to isolate and stop the spread of danger.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 180,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_floor_01": {
+        "id": "furni_safetyZone_floor_01",
+        "name": "Chemical-Resistant Deck",
+        "iconId": "furni_safetyZone_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An anti-chemical cleanroom deck, capable of withstanding erosion from chemicals.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 180,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
       "furni_dropS001_theLittleMermaid_01": {
         "id": "furni_dropS001_theLittleMermaid_01",
         "name": "Plaque - Foam",
@@ -11189,6 +11795,28 @@
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "“Maybe there will be a language one day that we cannot understand, but that perhaps is only a testament to our superficiality. \"",
         "obtainApproach": "Dropped from the first clear reward of H5-4",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS004_YMO_01": {
+        "id": "furni_dropS004_YMO_01",
+        "name": "Plaque - Mask",
+        "iconId": "furni_dropS003_zero_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "“Laugh at the passage of time, and weep at the passage of life. \"",
+        "obtainApproach": "Dropped from the first clear reward of SW-EV-5",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -13209,6 +13837,118 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_safetyZone": {
+        "id": "furni_set_safetyZone",
+        "name": "Airtight Anti-Chemical Safety Cabin",
+        "desc": "A sterile chamber with antibacterial and anti-chemical protection facilities. Only for use for emergencies and tasks that pose an imminent risk to health.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_safetyZone_gate_01",
+            "pos0": 2,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_UVLamp_01",
+            "pos0": 6,
+            "pos1": 9
+          },
+          {
+            "furnitureId": "furni_safetyZone_oxygenTank_01",
+            "pos0": 4,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_stretcher_01",
+            "pos0": 9,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_safetyZone_hazmatSuit_01",
+            "pos0": 11,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_safetyZone_hazmatCoat_01",
+            "pos0": 13,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_safetyZone_shovel_01",
+            "pos0": 15,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_safetyZone_box_01",
+            "pos0": 16,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_safetyZone_partitionWall_01",
+            "pos0": 20,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_roboticArmVehicle_01",
+            "pos0": 21,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_safetyZone_virusFilter_01",
+            "pos0": 26,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_pipeline1_01",
+            "pos0": 0,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_safetyZone_pipeline2_01",
+            "pos0": 4,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_safetyZone_PipelineValve_01",
+            "pos0": 18,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_ceilingLight_01",
+            "pos0": 11,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_ceiling_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_downlight_01",
+            "pos0": 7,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_downlight_01",
+            "pos0": 20,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_carpet_01",
+            "pos0": 6,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -13839,6 +14579,62 @@
           "furni_chen_floor_01",
           "furni_chen_ceilingLight_R_01",
           "furni_chen_ceilingLight_C_01"
+        ]
+      },
+      "furni_set_safetyZone_1": {
+        "id": "furni_set_safetyZone_1",
+        "name": "Cleanroom Disinfectant Kit",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 215,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_gate_01",
+          "furni_safetyZone_UVLamp_01",
+          "furni_safetyZone_pipeline1_01",
+          "furni_safetyZone_pipeline2_01",
+          "furni_safetyZone_PipelineValve_01"
+        ]
+      },
+      "furni_set_safetyZone_2": {
+        "id": "furni_set_safetyZone_2",
+        "name": "Cleanroom Protection Kit",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 145,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_stretcher_01",
+          "furni_safetyZone_carpet_01",
+          "furni_safetyZone_hazmatSuit_01",
+          "furni_safetyZone_hazmatCoat_01",
+          "furni_safetyZone_shovel_01"
+        ]
+      },
+      "furni_set_safetyZone_3": {
+        "id": "furni_set_safetyZone_3",
+        "name": "Cleanroom Cleaning Kit",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 290,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_oxygenTank_01",
+          "furni_safetyZone_box_01",
+          "furni_safetyZone_partitionWall_01",
+          "furni_safetyZone_roboticArmVehicle_01",
+          "furni_safetyZone_virusFilter_01"
+        ]
+      },
+      "furni_set_safetyZone_4": {
+        "id": "furni_set_safetyZone_4",
+        "name": "Cleanroom Base Kit",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 185,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_ceiling_01",
+          "furni_safetyZone_ceilingLight_01",
+          "furni_safetyZone_downlight_01",
+          "furni_safetyZone_wallpaper_01",
+          "furni_safetyZone_floor_01"
         ]
       }
     },
