@@ -5315,6 +5315,117 @@
           "buffData": []
         }
       ]
+    },
+    "char_248_mgllan": {
+      "charId": "char_248_mgllan",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[011]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_131_flameb": {
+      "charId": "char_131_flameb",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_probability[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "workshop_formula_probability[020]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_279_excu": {
+      "charId": "char_279_excu",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[040]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost[003]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_190_clour": {
+      "charId": "char_190_clour",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_variable[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -5354,6 +5465,17 @@
     "control_mp_cost[001]": {
       "buffId": "control_mp_cost[001]",
       "buffName": "S.W.E.E.P.",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、制御中枢内のオペレーターの体力消費が1時間ごと<@cc.vup>-0.05</>"
+    },
+    "control_mp_cost[003]": {
+      "buffId": "control_mp_cost[003]",
+      "buffName": "執行協定",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost",
       "buffColor": "#005752",
@@ -5592,6 +5714,17 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、製造効率<@cc.vup>+25%</>、保管上限<@cc.vdown>-12</>、体力消費が1時間ごと<@cc.vdown>+0.25</>"
+    },
+    "manu_prod_spd_variable[000]": {
+      "buffId": "manu_prod_spd_variable[000]",
+      "buffName": "再利用",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_variable",
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、保管上限1上昇につき、製造効率<@cc.vup>+2%</>"
     },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
@@ -5912,6 +6045,17 @@
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>任意の素材</>を加工時、副産物の入手確率<@cc.vup>+50%</>"
     },
+    "workshop_proc_probability[011]": {
+      "buffId": "workshop_proc_probability[011]",
+      "buffName": "多機能セオドライト",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p",
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>任意の素材</>を加工時、副産物の入手確率<@cc.vup>+50%</>"
+    },
     "workshop_proc_probability[020]": {
       "buffId": "workshop_proc_probability[020]",
       "buffName": "ミーボ加工型",
@@ -5923,6 +6067,17 @@
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>任意の素材</>を加工時、副産物の入手確率<@cc.vup>+65%</>"
     },
+    "workshop_formula_cost[000]": {
+      "buffId": "workshop_formula_cost[000]",
+      "buffName": "ドローン・DDF",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost",
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>任意の素材</>を加工時、体力消費が<@cc.kw>4</>以上の素材の体力消費が<@cc.vup>-2</>になる"
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "アーツ理論",
@@ -5933,6 +6088,17 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>アーツ学</>を加工時、副産物の入手確率<@cc.vup>+70%</>"
+    },
+    "workshop_formula_probability[020]": {
+      "buffId": "workshop_formula_probability[020]",
+      "buffName": "剣技の粋",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_skill",
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>アーツ学</>を加工時、副産物の入手確率<@cc.vup>+80%</>"
     },
     "workshop_formula_probability[100]": {
       "buffId": "workshop_formula_probability[100]",
@@ -10777,6 +10943,446 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_safetyZone_gate_01": {
+        "id": "furni_safetyZone_gate_01",
+        "name": "消毒室",
+        "iconId": "furni_safetyZone_gate_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 5,
+        "height": 7,
+        "comfort": 310,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "全閉式消毒室。汚染物質を完璧に落とすことが最重要。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 210,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_UVLamp_01": {
+        "id": "furni_safetyZone_UVLamp_01",
+        "name": "殺菌灯",
+        "iconId": "furni_safetyZone_UVLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 110,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "紫外線を発する殺菌灯。対ウイルスで最も有効な手段。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 93,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_oxygenTank_01": {
+        "id": "furni_safetyZone_oxygenTank_01",
+        "name": "補給資源缶",
+        "iconId": "furni_safetyZone_oxygenTank_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 245,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "消毒液や中和剤など、必要な物資が詰まったドラム缶。予想外の需要に備えて。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 168,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_stretcher_01": {
+        "id": "furni_safetyZone_stretcher_01",
+        "name": "急患ベッド",
+        "iconId": "furni_safetyZone_stretcher_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 7,
+        "depth": 4,
+        "height": 6,
+        "comfort": 360,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "急患用ベッド。使う日が来なければいいが。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 245,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_hazmatSuit_01": {
+        "id": "furni_safetyZone_hazmatSuit_01",
+        "name": "化学防護服A",
+        "iconId": "furni_safetyZone_hazmatSuit_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 85,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "常備されている化学防護服。ガスマスクつき。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 73,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_hazmatCoat_01": {
+        "id": "furni_safetyZone_hazmatCoat_01",
+        "name": "化学防護服B",
+        "iconId": "furni_safetyZone_hazmatCoat_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 85,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "常備されている化学防護服。入念なチェックを忘れずに。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 73,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_shovel_01": {
+        "id": "furni_safetyZone_shovel_01",
+        "name": "作業用シャベル",
+        "iconId": "furni_safetyZone_shovel_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 1,
+        "height": 2,
+        "comfort": 45,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "様々な作業に使われるシャベル。武器にしているオペレーターがいるとかいないとか。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 38,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_box_01": {
+        "id": "furni_safetyZone_box_01",
+        "name": "物資コンテナ",
+        "iconId": "furni_safetyZone_box_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 175,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "様々な物資が詰まった箱。資源の運用が問題解決への道。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 133,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_partitionWall_01": {
+        "id": "furni_safetyZone_partitionWall_01",
+        "name": "防護室隔壁",
+        "iconId": "furni_safetyZone_partitionWall_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 7,
+        "height": 8,
+        "comfort": 245,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "化学防護室に必要不可欠な隔壁。いつの間にここに？",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_roboticArmVehicle_01": {
+        "id": "furni_safetyZone_roboticArmVehicle_01",
+        "name": "防護室重機",
+        "iconId": "furni_safetyZone_roboticArmVehicle_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 4,
+        "comfort": 255,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "緻密な作業を行える単腕重機。相当状況がひどい時でないと使われない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 193,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_virusFilter_01": {
+        "id": "furni_safetyZone_virusFilter_01",
+        "name": "多機能消毒機",
+        "iconId": "furni_safetyZone_virusFilter_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 7,
+        "depth": 4,
+        "height": 5,
+        "comfort": 335,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "多機能な消毒機。強酸を内蔵しているため、取扱説明書に書かれていることを遵守して使用すること。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 228,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_pipeline1_01": {
+        "id": "furni_safetyZone_pipeline1_01",
+        "name": "エアーダクト",
+        "iconId": "furni_safetyZone_pipeline1_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 2,
+        "height": 2,
+        "comfort": 305,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "化学防護室のエアーダクト。室内の空気は再処理が必要。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 208,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_pipeline2_01": {
+        "id": "furni_safetyZone_pipeline2_01",
+        "name": "エアー配管",
+        "iconId": "furni_safetyZone_pipeline2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 1,
+        "height": 2,
+        "comfort": 135,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "化学防護室の配管。室内の空気の循環に必要。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 103,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_PipelineValve_01": {
+        "id": "furni_safetyZone_PipelineValve_01",
+        "name": "パイプラインバルブ",
+        "iconId": "furni_safetyZone_PipelineValve_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 8,
+        "comfort": 135,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "化学防護室の気圧調整に必要。室外にコントロールパネルがある。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 113,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_ceilingLight_01": {
+        "id": "furni_safetyZone_ceilingLight_01",
+        "name": "防護室蛍光灯",
+        "iconId": "furni_safetyZone_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 105,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "緊急案件の際に破損した蛍光灯。エンジニアオペレーターがすぐに来るから慌てずに。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 88,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_ceiling_01": {
+        "id": "furni_safetyZone_ceiling_01",
+        "name": "防護室天井",
+        "iconId": "furni_safetyZone_ceiling_01",
+        "type": "CEILING",
+        "location": "CEILINGDECAL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 315,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "革新的な天井カーテン。寿命は依然短いまま。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 215,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_downlight_01": {
+        "id": "furni_safetyZone_downlight_01",
+        "name": "防護室照明",
+        "iconId": "furni_safetyZone_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 55,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "絶対に停電しない電灯。光、それこそが安全。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 48,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_carpet_01": {
+        "id": "furni_safetyZone_carpet_01",
+        "name": "吸塵・吸水マット",
+        "iconId": "furni_safetyZone_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 8,
+        "height": 1,
+        "comfort": 130,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "粉塵と液体をがっちりからめ取る静電マット。こまめな掃除と交換をすることで、高い吸着性が保証される。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 98,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_wallpaper_01": {
+        "id": "furni_safetyZone_wallpaper_01",
+        "name": "防護室滅菌壁",
+        "iconId": "furni_safetyZone_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "化学防護室に必要不可欠な滅菌壁。危険が蔓延するのを阻止する。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 180,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_floor_01": {
+        "id": "furni_safetyZone_floor_01",
+        "name": "防護室装甲板",
+        "iconId": "furni_safetyZone_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "化学防護室に必要不可欠な床。どんな化学薬品の腐食にも耐える。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 180,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
       "furni_dropS001_theLittleMermaid_01": {
         "id": "furni_dropS001_theLittleMermaid_01",
         "name": "パネル「泡沫」",
@@ -11189,6 +11795,28 @@
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "「もし一つの言語が我々にとって理解不能な姿で現れたら、我々の浅はかさを検証するだろう。」",
         "obtainApproach": "H5-4初回クリア",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS004_YMO_01": {
+        "id": "furni_dropS004_YMO_01",
+        "name": "パネル「マスク」",
+        "iconId": "furni_dropS003_zero_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「時が流れれば笑い話になる。歳を取れば器も深くなる。」",
+        "obtainApproach": "SW-EV-5強襲作戦初回クリア",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -13209,6 +13837,118 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_safetyZone": {
+        "id": "furni_set_safetyZone",
+        "name": "気密性化学防護室",
+        "desc": "化学防護設備を揃えたバイオセーフティ施設がテーマ。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_safetyZone_gate_01",
+            "pos0": 2,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_UVLamp_01",
+            "pos0": 6,
+            "pos1": 9
+          },
+          {
+            "furnitureId": "furni_safetyZone_oxygenTank_01",
+            "pos0": 4,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_stretcher_01",
+            "pos0": 9,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_safetyZone_hazmatSuit_01",
+            "pos0": 11,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_safetyZone_hazmatCoat_01",
+            "pos0": 13,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_safetyZone_shovel_01",
+            "pos0": 15,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_safetyZone_box_01",
+            "pos0": 16,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_safetyZone_partitionWall_01",
+            "pos0": 20,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_roboticArmVehicle_01",
+            "pos0": 21,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_safetyZone_virusFilter_01",
+            "pos0": 26,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_pipeline1_01",
+            "pos0": 0,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_safetyZone_pipeline2_01",
+            "pos0": 4,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_safetyZone_PipelineValve_01",
+            "pos0": 18,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_ceilingLight_01",
+            "pos0": 11,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_ceiling_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_downlight_01",
+            "pos0": 7,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_downlight_01",
+            "pos0": 20,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_carpet_01",
+            "pos0": 6,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -13839,6 +14579,62 @@
           "furni_chen_floor_01",
           "furni_chen_ceilingLight_R_01",
           "furni_chen_ceilingLight_C_01"
+        ]
+      },
+      "furni_set_safetyZone_1": {
+        "id": "furni_set_safetyZone_1",
+        "name": "化学防護",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 215,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_gate_01",
+          "furni_safetyZone_UVLamp_01",
+          "furni_safetyZone_pipeline1_01",
+          "furni_safetyZone_pipeline2_01",
+          "furni_safetyZone_PipelineValve_01"
+        ]
+      },
+      "furni_set_safetyZone_2": {
+        "id": "furni_set_safetyZone_2",
+        "name": "安全処置",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 145,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_stretcher_01",
+          "furni_safetyZone_carpet_01",
+          "furni_safetyZone_hazmatSuit_01",
+          "furni_safetyZone_hazmatCoat_01",
+          "furni_safetyZone_shovel_01"
+        ]
+      },
+      "furni_set_safetyZone_3": {
+        "id": "furni_set_safetyZone_3",
+        "name": "物資/作業",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 290,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_oxygenTank_01",
+          "furni_safetyZone_box_01",
+          "furni_safetyZone_partitionWall_01",
+          "furni_safetyZone_roboticArmVehicle_01",
+          "furni_safetyZone_virusFilter_01"
+        ]
+      },
+      "furni_set_safetyZone_4": {
+        "id": "furni_set_safetyZone_4",
+        "name": "内装",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 185,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_ceiling_01",
+          "furni_safetyZone_ceilingLight_01",
+          "furni_safetyZone_downlight_01",
+          "furni_safetyZone_wallpaper_01",
+          "furni_safetyZone_floor_01"
         ]
       }
     },
