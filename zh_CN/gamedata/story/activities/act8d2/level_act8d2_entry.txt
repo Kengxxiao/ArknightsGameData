@@ -1,24 +1,89 @@
-[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第二关（前）
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
 
-// Comments
-[Background(image="bg_forest", fadetime=1)]
-[PlayMusic(intro="$path_intro", key="$path_loop", volume=0.8, crossfade=1.5)]
+
+
 [Dialog]
-[Character]
-[Delay(time=1)]
-[playsound(key="$leaveshake", volume=0.7)]
-[Character(name="char_145_prove_1",name2="char_166_skfire_3#1",focus=2,fadetime=1,block=true)]
-[Delay(time=1)]
-[name="天火"]   普罗旺斯。
-[name="天火"]   这是测试用脚本吗？
-[Character(name="char_145_prove_1",name2="char_166_skfire_3#1",focus=1)]
-[name="普罗旺斯"]   是的，少废话闭嘴站着就行。
-[Character(name="char_145_prove_1",name2="char_166_skfire_3#1",focus=2)]
-[name="天火"]  你胆子这么大敢这样跟我说话？
-[Character(name="char_145_prove_1",name2="char_166_skfire_3#1",focus=1)]
-[name="普罗旺斯"]   因为反正这是测试用脚本。
+[delay(time=1)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.6, crossfade=1, delay=0.5)]
+[Background(image="bg_rhodescom",screenadapt="coverall",fadetime=1,block=true)]
+[delay(time=2, black=true)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+
+[name="PRTS"]     1097年4月1日。第二季度文献调查，第122条记录。
+[Dialog]
+[Decision(options="......（呵欠）",values="1")]
+[Predicate(references="1")]
+
+[Decision(options="我想休息一下。;接下来......",values="1;2")]
+[Predicate(references="1")]
+[name="PRTS"]     您刚开始工作，现在还不能休息。
+[Predicate(references="1;2")]
+
+[Dialog]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Background]
+[delay(time=1)]
+[Character(fadetime=0)]
+//修改此处的image来切换cg
+[Image(image="avg_book1",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=1, block=false)]
+[ImageTween(xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+//对话内容此处填入
+[name="PRTS"]     接下来，这是第122本出土的典籍，也是这批中最后的一本。
+[name="PRTS"]     终于，在这批出土书籍里有一本看上去正经的古书了，而不是前面一百多本被意外埋到土里的财经杂志。
+[name="PRTS"]     根据提供者描述，这本书出土地点靠近米诺斯数个城邦移动轨迹。
+[Dialog]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Image]
+[Background(image="bg_black",screenadapt="coverall",block=true)]
+[Blocker(a=0, fadetime=1, block=true)]
+///////////////////////////
+[name="PRTS"]     现在解开固定条，扫描当中的内容。开始扫描......
+[name="PRTS"]     ......
+[name="PRTS"]     总体上来说，是一本讲述古国“阿加门”的历史故事的书籍。
+[name="PRTS"]     书中有诸多修改的痕迹，其中比较值得注意的是，这一页。
+[Dialog]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Background]
+[Character(fadetime=0)]
+//修改此处的image来切换cg
+[Image(image="avg_book2",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=2, block=false)]
+//对话内容此处填入
+[name="PRTS"]     这一页左边写着的是......“这是阿加门！！！” 阿加门是史料记载中的一个古国。
+[name="PRTS"]     而右边，看上去是一个古人留下的，用于隐藏特殊信息的图形纹章，用现代扫描技术甚至可以读出隐藏的信息。
+[Dialog]
+//对话内容此处填入
+[Decision(options="哇，古代人怎么可能会这么懂？",values="1")]
+[Predicate(references="1")]
+
+[name="PRTS"]     据说现在的一部分编码技术也是来自于古代的研究。
+[name="PRTS"]     古人也喜欢通过研究编码技术，来传递信息，用于分享战况、领主们的八卦新闻、超市优惠卷和游戏攻略秘籍等。
+[Dialog]
+[Decision(options="认真的吗？！",values="1")]
+[Predicate(references="1")]
+
+[name="PRTS"]     博士可以自行判断。
+[name="PRTS"]     至少，这与现代源石技艺的发展进程也有着异曲同工之妙。
+[name="PRTS"]     第一批次时代制式法杖的设计师们是一批出来创业的系统软件工程师。
+[name="PRTS"]     顺带一提，电子抽水马桶和城际终端彩票刮刮乐也是他们基于古代编码技术的发明。 
+[Dialog]
+[Decision(options="......",values="1")]
+[Predicate(references="1")]
+
+[name="PRTS"]     总之，我已经将所有信息传递至数据库。大致记载着古阿加门王国，一个关于执行正义的惩罚者的故事。
+[name="PRTS"]     接下来剩余的信息需要博士扫描这个纹章来解开了。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[name="PRTS"]     您一定会有所发现的。
+
 [Character(fadetiem=1)]
 [Dialog]
 [Delay(time=0.5)]
 [Dialog]
-[Blocker(block=true)]
+[Blocker(fadetime=1,block=true)]
