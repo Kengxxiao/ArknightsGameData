@@ -1,1 +1,1 @@
-švßJwåh×	YËv¬,÷SNpBÉğV`EìÓKC*T ›@(ıË“éØRğD±C±´ÓnæKA^G&u?lµSß˜Ğ% |=U>Q^hKñˆ_<UµÛ8êš¦©8~ç¾÷íIf×dÄ–·‹uj©ûPe|w/<-|O/u9ÜISWú%’Õñ_gé“×>Ëô!ÆD®ÊŠæÉ×àÕW››é2Q¦èß? €ìÒÌÏy¶œYaÉËğ ?gŠH¡ò‘wJ©‹ÃØwO•–^×å-‚lfqÔ)ÆAÍ3Óm
+Act6D8Dlg = DlgMgr.DefineDialog("Act6D8Dlg", "Activity/Act6D8/act_dlg", CollectionMainDlg);

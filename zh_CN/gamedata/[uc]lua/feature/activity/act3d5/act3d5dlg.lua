@@ -1,1 +1,1 @@
-•FÌˆvoáNžjZfF“|&µ<É™»Q¸¿ÅŒ)um´_ƒÆÏ÷`=‹¸JBüRpm®Ýeü;-ÅÅ—á;Ô‚·‘‰ƒª€¬y4èŠ’tbÜdŸ#2µ”´·Wã)qs6ÉºÏO~ ßfž0§,Å5ô%äý«Tú²Ìš`|z/<-|O/u9ÜISWú%’Õñ_gé“×>Ëô!ÆD®ÊŠæÉ×àÕÉk÷'¦”µ%³}Å½Ùþ“q<HàJ«¢&OE3èšùAroÅIò›Oðñw»?Çï¶­};á”¾ xÛ
+Act3D5Dlg = DlgMgr.DefineDialog("Act3D5Dlg", "Activity/Act3D5/Act3D5Dlg", CollectionMainDlg);
