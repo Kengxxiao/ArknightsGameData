@@ -1,0 +1,343 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+
+[stopmusic]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_barracks",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$m_bat_epic_intro", key="$m_bat_epic_loop", volume=0.4)]
+
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_ballista")]
+[delay(time=0.7)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+//雇佣兵营地
+[delay(time=2)]
+[Character(name="avg_npc_053",fadetime=0.5,block=true)]
+[PlaySound(key="$d_gen_soldiersrun", volume=0.9)]
+[delay(time=0.7)]
+[name="萨卡兹战士"]  嘁，这些家伙是上次的——他们怎么找到这里的！？
+[Character(name="avg_npc_053",name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  赶紧撤退！别磨蹭了！
+
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[Character(name="avg_npc_046",fadetime=1,block=true)]
+[delay(time=1)]
+[name="W"]  已经被包围了，敌人数量很多。
+[Dialog]
+
+[Character(name="avg_npc_053")]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="萨卡兹战士"]  那就赶紧找一个方向突破！！
+
+[Character(name="avg_npc_046")]
+[name="W"]  敌人的斥候已经解决了我们的所有岗哨，敌明我暗......
+
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  少废话！难道要站在这里等着被术师轰死吗！？
+[name="萨卡兹战士"]  等等，你是、你是赫德雷那边的......你为什么在这里？
+[Character(name="avg_npc_053",name2="avg_npc_046",focus=1)]
+[name="萨卡兹战士"]  赫德雷呢？他的人呢？他才是负责——
+[Dialog]
+[stopmusic(fadetime=0.6)]
+[Character(name="avg_npc_046")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$bottlebroken", volume=0.9)]
+[delay(time=2)]
+
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  你、你毁了我的通讯设备！你想做什么——！
+
+[Character(name="avg_npc_046")]
+[name="W"]  ......真吵啊。
+[name="W"]  负责巡逻的人的确是我喔，这样才方便在你们的营地周围设好源石炸药嘛。
+
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  ......你！赫德雷！你们出卖......！
+
+[Character(name="avg_npc_046")]
+[name="W"]  别说得这么难听。
+[name="W"]  我们只是要出趟远门，正好这时候有客人上门，总得有人留下看家嘛。
+[name="W"]  如果给客人留下些甜点，尽到待客之道，也就不至于再被穷追猛打了吧？
+[name="W"]  于是，就只好辛苦你们啦。
+
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  你、你早就该发现敌情，你是故意把我们留在这里送死——！？
+[Dialog]
+[Character]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_046")]
+[name="W"]  ......哼嗯。
+[name="W"]  你们就努力挣扎一下吧，拖得越久，我们就能走得越远。
+[name="W"]  ——再一次，由衷感谢你们。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_barracks",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+//内战战场背景
+
+[Character(name="avg_npc_047",fadetime=1,block=true)]
+[delay(time=1)]
+[name="赫德雷"]  命令是帮助其他没来得及逃走的小队，不过......
+[name="赫德雷"]  ......为什么没有其他人逃出来？
+[Character(name="avg_npc_047", name2="avg_npc_046", focus=2)]
+[name="W"]  他们自愿留下来殿后了。
+[name="W"]  放心吧，我给他们留下了一点小小的礼物......所以他们会帮我们拖住敌人的。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  ......我可不觉得这里会有谁舍己为人。
+[name="伊内丝"]  牺牲他人，优先保全自己的队伍，无可指摘的判断，用不着用谎言粉饰。
+[name="伊内丝"]  但对上司隐瞒实情就完全是另一回事了。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  ......
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  你骗不过我的眼睛，W，注意你自己的言行。
+[name="伊内丝"]  你嫩得很。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  ......铭记在心，伊内丝队长。
+[name="W"]  毕竟我们还要共处......很长时间。
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  现在怎么办？
+[Character(name="avg_npc_052",name2="avg_npc_047",focus=2)]
+[name="赫德雷"]  ——无妨，事情已经发生了，反正到最后都是殊途同归。
+[name="赫德雷"]  也许W的决定是对的。
+[Character(name="avg_npc_052", name2="avg_npc_047", focus=1)]
+[name="伊内丝"]  ......你真的这么想？
+[Character(name="avg_npc_052",name2="avg_npc_047",focus=2)]
+[name="赫德雷"]  我们和这处营地里的任何萨卡兹都没有一丁点关系。
+[name="赫德雷"]  他们的身份，他们的过往，他们的生和死，都和我们无关。
+[Character(name="avg_npc_046", name2="avg_npc_047", focus=1)]
+[name="W"]  真坚决啊。
+[Character(name="avg_npc_047")]
+[name="赫德雷"]  先谈工作，伊内丝，你和W分头带人离开，随军信使保持无线电静默，然后去指定地点汇合。
+[name="赫德雷"]  ......我之后会跟上的。
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  ......
+[Character(name="avg_npc_046")]
+[name="W"]  ......
+[Character(name="avg_npc_047")]
+[name="赫德雷"]  ......还有。
+[name="赫德雷"]  我不管你们怎么互相利用，不许直接向对方下手。
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  不直接就行？
+[Character(name="avg_npc_046")]
+[name="W"]  这倒是挺宽松的。
+[Character(name="avg_npc_047")]
+[name="赫德雷"]  ......唉。
+[name="赫德雷"]  我不希望这种情况出现，但说实话，我也管不着。
+[name="赫德雷"]  但如果想好好活下去，至少现在，就先让每一个萨卡兹物尽其用吧。
+
+[Dialog]
+[Blocker(fadetime=1,block=true)]
+
+赫德雷一直是这样。
+该想的事情，想得很少，想了也没用的事情，想得很多。
+......我不否认W是个优秀的战士，但是她欠缺了太多的东西。
+如果她只不过是一个非常非常善于战斗的萨卡兹......
+......哼。
+[stopmusic(fadetime=2)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_coldforest",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.6)]
+[Character(name="avg_npc_052",name2="avg_npc_046",fadetime=1,block=true)]
+[delay(time=2)]
+[Character(name="avg_npc_046")]
+[name="W"]  天还没黑，你就一定要自己生一簇篝火躲在这里吗？
+[name="W"]  不，你好像很喜欢篝火。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  ......但是我并不喜欢被人打扰。
+[name="伊内丝"]  你的队伍比预定的汇合时间慢了三个小时。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  那场袭击，是你和赫德雷规划好的吗？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  你去问赫德雷。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  他不知道这件事。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  ......那就只是偶然。在那里的雇佣兵都不是什么省油的灯，招来记恨，理所当然。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  什么嘛，我还以为是赫德雷故意暴露位置的呢。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  你觉得应该这么做？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  为什么不这么做？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  你怎么知道我们不是在骗你？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  想杀我你们早就动手了，这样做对各自有什么好处吗？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  哼......
+[name="伊内丝"]  在加入我们之前，你在哪里？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  欸，都事到如今了，还要搞入职面试吗？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  赫德雷从不追问队员的过去，但我不一样。
+
+[stopmusic(fadetime=1)]
+
+[Character(name="avg_npc_046")]
+[name="W"]  你的确和我们不一样。
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  你......想找茬吗？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  不过据我所知，伊内丝小姐似乎不太擅长近身搏杀。
+
+
+[Dialog]
+[Character]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+
+[Image(image="avg_ac9_5",x=20, y=0,xScale=1.05, yScale=1.05, fadetime=0)]
+[ImageTween(xFrom=20, yFrom=0, xTo=-20, yTo=0, xScale=1.05, yScale=1.05, duration=10, block=false)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+
+[playMusic(intro="$escape_intro", key="$escape_loop", volume=0.4)]
+//对话内容此处填入
+[name="W"]  ——！
+[name="伊内丝"]  教你一点吧，想要活得久些，就不要过于依赖你力量的某个部分。
+[name="伊内丝"]  每一个萨卡兹雇佣兵，都带着刀。
+[name="W"]  这我倒是有点意外，我以为那是你的法杖，不过——
+[name="W"]  ——呵，“萨卡兹雇佣兵”？你吗？
+[dialog]
+//对话内容此处填入
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=1,g=1, b=1, fadetime=0.1, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.8, block=true)]
+///////////////////////////
+
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  ——啧。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  我还是觉得你在白刃战里毫无胜算，不过，嗯，的确因为大意被摆了一道呢。
+[name="W"]  谢谢啦，只是在手臂上留下了一点小划痕，算是个便宜的教训。
+[name="W"]  在喜欢装神弄鬼留后手这点上，你和赫德雷还是挺像的。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  你才让我觉得奇怪，像你这么高调的雇佣兵，基本都死了。
+[name="伊内丝"]  或者说，你能在这么短的时间里引起那么多同行的兴趣，在你加入之前我却从未听说过你，怀疑是理所当然的。
+[name="伊内丝"]  你当时是故意靠近赫德雷的，为什么？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  你自己说过啊。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  什么？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  卡兹戴尔有很多人想要他的人头。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  ......你竟然能坦白地这么冷静，那为什么改变了主意？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  嗯......感觉这样更有赚头。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  你想要赚到什么？
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  ......不关你事。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  你动摇了，真有趣，明明随便找个借口就能搪塞过去。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  ——又是你的源石技艺？
+[name="W"]  真是讨人厌的眼睛，我的理由与你无关。
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=1)]
+[name="伊内丝"]  这就说不好了......
+[Character(name="avg_npc_052", name2="avg_npc_046", focus=2)]
+[name="W"]  ......
+
+[Dialog]
+[Character]
+[CameraShake(duration=2, xstrength=10, ystrength=12, vibrato=30, randomness=20, fadeout=true, block=false)]
+[stopmusic(fadetime=1)]
+[delay(time=1)]
+[Character(name="avg_npc_046")]
+[name="W"]  什么声音？
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  ......东面，有什么在靠近。
+[name="伊内丝"]  不止一支队伍，但应该只有一支队伍是真货。哼，真够谨慎......
+[Character(name="avg_npc_046")]
+[name="W"]  欸，听上去规模很大，他们雇了多少人？
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  ......赫德雷说的没错，这场战斗比以往都要庞大。
+[name="伊内丝"]  前面会是我们未曾经历过的战场。
+[Character(name="avg_npc_046")]
+[name="W"]  你怕了？
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  呵。
+[Character(name="avg_npc_046")]
+[name="W"]  赫德雷应该会和本队一起抵达这里，让信使打开无线电。
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  你敢命令我......？
+[Character(name="avg_npc_046")]
+[name="W"]  好好好，是是是......
+[name="W"]  你就继续守着这篝火吧。我去营地里看看情况。
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  ......
+[name="伊内丝"]  那个就是......巴别塔的......
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_coldforest",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[Character(name="avg_npc_047",fadetime=1,block=true)]
+[delay(time=1)]
+[playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.6)]
+[name="赫德雷"]  抱歉，中途修改了一次路线，浪费了一点时间。
+[name="赫德雷"]  但是从这里向前，工作才算真的开始。
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  全员就位。
+[Character(name="avg_npc_047", name2="avg_npc_046", focus=1)]
+[name="赫德雷"]  嗯......你那边呢？
+[Character(name="avg_npc_047", name2="avg_npc_046", focus=2)]
+[name="W"]  万无一失。
+[Character(name="avg_npc_047")]
+[name="赫德雷"]  ......从烧灼的草地和整齐开裂的泥土来看，你们两个似乎没在这里闲着。
+[Character(name="avg_npc_046")]
+[name="W"]  哎呀，只是热身运动，可算不上“直接出手”喔？
+[name="W"]  对吧？
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  放心吧。下一次我会在别人发现之前让你的尸首沉入暗影。
+[Character(name="avg_npc_047")]
+[name="赫德雷"]  ......唉。
+[name="赫德雷"]  重申一遍，我们的任务很简单，不要让任何人靠近目标。
+[name="赫德雷"]  把所有可疑的危险杜绝在这片峡谷之外，靠近的人无需警告，直接开火。
+[name="赫德雷"]  还有什么疑问吗？
+[Character(name="avg_npc_047", name2="avg_npc_046", focus=2)]
+[name="W"]  不，目的地是哪里？
+[Character(name="avg_npc_047", name2="avg_npc_046", focus=1)]
+[name="赫德雷"]  不能说。护卫任务是分段进行的，路线图已经分发下去，三天后抵达终点，会有人来交接。
+[Character(name="avg_npc_052",name2="avg_npc_047",focus=1)]
+[name="伊内丝"]  ......赫德雷。
+[name="伊内丝"]  他们运的是什么？
+[Character(name="avg_npc_052",name2="avg_npc_047",focus=2)]
+[name="赫德雷"]  这也是——慢着，伊内丝。
+[name="赫德雷"]  用你的法术试探运输队伍是违反合约的，不要小看他们，停手！
+[Character(name="avg_npc_052")]
+[name="伊内丝"]  可你说他们只是运输队——
+[name="伊内丝"]  运输队......不，是我先入为主了，这的确是需要保护的运输队——
+[name="伊内丝"]  但他们在运的是......巨大的，这个影子......
+[name="伊内丝"]  ......一艘船？不，是一副......
+[name="伊内丝"]  骨架？
+
+[stopmusic(fadetime=1)]
+[Dialog]
+[Blocker(fadetime=1,block=true)]

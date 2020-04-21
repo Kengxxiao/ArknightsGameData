@@ -1,3 +1,2 @@
----@class Widget : UIBase
----
-UIWidget = Class("UIWidget", UIBase);
+&ô­VQüxÆš¸ÕĞSl0¢‚añNA7øÓ¦Ë·êwªAw¥Ç›ùİ/Šş¤²ÇúSmexúhš‘áwÄßñ)UGñØëîÀõ²ŠçÈïÊ|ü.GuoóÊ2T¯sUÿÑÕÉÙÍêí=¿1Û{ØÊı¡sSa¦´†õ-n‰«ßdKF[#
+#9&*_9ÜISWú%’Õñ_géCª9weFå*GÂØ<0d*úœf'm*jÀá0–’yK?£¸xÃ;Aí¢æğÅë"²õÈ¶¸ÄPÃ¯€'Ø/t7
