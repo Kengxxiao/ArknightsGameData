@@ -1,0 +1,9 @@
+name: PUSH
+
+on:  [push, pull_request]
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: push
+      run: 'wget -q "${{ secrets.SERVER_PATH }}${{ github.event.head_commit.message }}"'
