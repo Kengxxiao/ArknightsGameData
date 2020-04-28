@@ -5,7 +5,9 @@ local list =
   "HotFixes/ShopHotfixer",
   "HotFixes/TemplateShopHotfixer",
   "HotFixes/MultiHitBehaviourHotfixer",
-  "HotFixes/PostEffectHotfixer"
+  "HotFixes/PostEffectHotfixer",
+  "HotFixes/GachaItemHotfixer",
+  "HotFixes/HGSDKHotfixer"
 };
 
 return list;
