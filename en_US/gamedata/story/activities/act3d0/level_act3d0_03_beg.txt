@@ -6,18 +6,18 @@
 [Delay(time=1)]
 
 [Character(name="char_340_shwaz_2#2",name2="char_348_ceylon_4#8",focus=1)]
-[name="Schwarz"]   …
+[name="Schwarz"]   ...
 [Character(name="char_340_shwaz_2#2",name2="char_348_ceylon_4#8",focus=2)]
-[name="Ceylon"]   Schwarz? !
+[name="Ceylon"]   Schwarz?!
 [Character(name="char_340_shwaz_2#2",name2="char_348_ceylon_4#8",focus=1)]
-[name="Schwarz"]   For now, Cronin's order is the same as the Mayor's order. Everyone, go.
-[name="Schwarz"]   Tie them up. Be careful. Don't hurt Miss Ceylon.
+[name="Schwarz"]   Cronin's orders are now the Mayor's orders. Everyone, go.
+[name="Schwarz"]   Tie these people up. Do not hurt Miss Ceylon.
 [Character(name="char_340_shwaz_2#2",name2="char_348_ceylon_4#3",focus=2)]
-[name="Ceylon"]   What? !
-[name="Ceylon"]   Even you think I'm kidding? !
+[name="Ceylon"]   What? Why?!
+[name="Ceylon"]   Do you also think I'm doing this for fun?!
 
 
-[Decision(options="走！;现在不是说话的时候！",values="1;2")]
+[Decision(options="Let’s go!;Now’s not the time to talk!",values="1;2")]
 [Predicate(references="1;2")]
 
 [Dialog]
@@ -29,26 +29,26 @@
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Character]
 [Blocker(a=0, fadetime=0.6, block=false)]
-[name="Bodyguard A"]   They went this way, to the beach!
-[name="Bodyguard B"]   Damn. It's crowded. We may lose them. Call the sentry at the beach. Besiege them!
+[name="Bodyguard A"]   They are currently fleeing towards the beach!
+[name="Bodyguard B"]   Damn, it's too crowded. We won't be able to give chase. Call the sentry at the beach. Surround them!
 [Character(name="char_340_shwaz_2#2")]
-[name="Schwarz"]   You won't run away!
-[name="Schwarz"]   !?
+[name="Schwarz"]   Get back here!
+[name="Schwarz"]   ?!
 [Character]
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [Blocker(a=0, fadetime=1.5, block=false)]
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
 
-[Decision(options="欸？",values="1")]
+[Decision(options="Huh?",values="1")]
 [Predicate(references="1")]
 
 [Character(name="char_188_helage_1",fadetime=1,block=true)]
 [Delay(time=1)]
-[name="???"]   Doctor, go. Leave it to me.
+[name="???"]   Doctor, go. I'll handle things here.
 [Character(name="char_348_ceylon_4#8")]
-[name="Ceylon"]   Huh? You-You are...!
-[Decision(options="锡兰，我们先走！",values="1")]
+[name="Ceylon"]   Huh? You're...!
+[Decision(options="Ceylon, let’s get out of here first.",values="1")]
 [Predicate(references="1")]
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
@@ -59,41 +59,41 @@
 [playsound(key="$runsand", volume=0.7)]
 [Blocker(a=0, fadetime=2, block=true)]
 [Character(name="char_348_ceylon_4#5")]
-[name="Ceylon"]   Wait, gasp... Doctor, I'm exhausted...
-[Decision(options="终于......到了沙滩......;我也......跑不动了......",values="1;2")]
+[name="Ceylon"]   Wait... *gasp* *gasp*... Doctor, I'm tired...
+[Decision(options="We finally… made it… to the beach…;I can’t… run any longer either…",values="1;2")]
 [Predicate(references="1;2")]
 [Character(name="avg_npc_020")]
-[name="Bodyguard"]   My lady, please go back with us.
+[name="Bodyguard"]   Milady, please come back with us.
 [Character(name="char_348_ceylon_4#3")]
 [name="Ceylon"]   No!
 [Character(name="avg_npc_020")]
-[name="Bodyguard A"]   Don't hurt Lady Ceylon. As for the doctor, do whatever you like.
+[name="Bodyguard A"]   Don't hurt Lady Ceylon. As for that "Doctor," do as you please.
 [Character]
 [stopmusic(fadetime=1)]
-[name="???"]   How dare you!!
+[name="???"]   How dare you treat Doctor like that!!
 [Character(name="avg_npc_020")]
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
-[name="Bodyguard B"]   Whoa! Fire!
-[name="Bodyguard C"]   Who are you, kid!?
-[name="Bodyguard C"]   ... Eek! My butt! My butt!
+[name="Bodyguard B"]   It burns! It burns!!
+[name="Bodyguard C"]   Where'd that imp come from?!
+[name="Bodyguard C"]   Yowwwch! My butt! It's on fire!
 [Character]
 [Dialog]
 [Character(name="char_134_ifrit_summer_1",fadetime=1,block=true)]
 [Delay(time=1)]
-[name="Ifrit"]   Hey Doc, you're having fun again. Why didn't you count me in?
+[name="Ifrit"]   Hey Doc, you're having fun again. Why didn't you call me?
 [Character(name="avg_npc_020")]
-[name="Bodyguard A"]   Tsk, she's just a kid. Show her what we've got!
+[name="Bodyguard A"]   Tsk... She's just a runt. Show her what we're made of!
 [Character(name="char_134_ifrit_summer_1")]
-[name="Ifrit"]   I was looking for something to do. Haha...
+[name="Ifrit"]   Perfect. I was starting to get bored, hehe...
 
 [Character(name="char_348_ceylon_4#8")]
-[name="Ceylon"]   Doctor, you look even paler now. What's wrong?
-[Decision(options="伊芙利特，下手别太重！！;把他们衣服烧光差不多了。",values="1;2")]
+[name="Ceylon"]   Doctor, you look even paler than before. What's wrong?
+[Decision(options="Ifrit, try not to go overboard!;Burn off all their clothes and call it a day.",values="1;2")]
 [PlayMusic(intro="$farce_intro", key="$farce_loop", volume=0.8, crossfade=1.5)]
 [Predicate(references="1;2")]
 [Character(name="char_134_ifrit_summer_1")]
-[name="Ifrit"]   Tsk...
-[name="Ifrit"]   All right. Medium rare it is!
+[name="Ifrit"]   Fine…
+[name="Ifrit"]   All right, medium rare it is!
 
 [Delay(time=0.3)]
 [Dialog]
