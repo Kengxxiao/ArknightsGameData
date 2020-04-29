@@ -6,18 +6,18 @@
 [Delay(time=1)]
 
 [Character(name="char_340_shwaz_2#2",name2="char_348_ceylon_4#8",focus=1)]
-[name="黑"]   ......
+[name="シュヴァルツ"]   ……。
 [Character(name="char_340_shwaz_2#2",name2="char_348_ceylon_4#8",focus=2)]
-[name="锡兰"]   黑？！
+[name="セイロン"]   シュヴァルツ！？
 [Character(name="char_340_shwaz_2#2",name2="char_348_ceylon_4#8",focus=1)]
-[name="黑"]   克洛宁的命令现在就是市长的命令，所有人，动手。
-[name="黑"]   把这些人都绑起来。注意不要伤到小姐了。
+[name="シュヴァルツ"]   今のクローニン様の命令は、市長閣下の命令と同じです。各員、行動開始。
+[name="シュヴァルツ"]   全員捕らえろ。お嬢様は絶対に傷つけないように。
 [Character(name="char_340_shwaz_2#2",name2="char_348_ceylon_4#3",focus=2)]
-[name="锡兰"]   你说什么？！
-[name="锡兰"]   你也以为我是在闹着玩吗？！
+[name="セイロン"]   何を言っているの！？
+[name="セイロン"]   わたくしが、ただワガママを言っているだけだと思っているの！？
 
 
-[Decision(options="走！;现在不是说话的时候！",values="1;2")]
+[Decision(options="逃げろ！;今そんな事を言っている暇はない！",values="1;2")]
 [Predicate(references="1;2")]
 
 [Dialog]
@@ -29,26 +29,26 @@
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Character]
 [Blocker(a=0, fadetime=0.6, block=false)]
-[name="保镖A"]   他们沿着这条路往沙滩跑了！
-[name="保镖B"]   啧，人太多了，不好追。联络沙滩的岗哨，围住他们！
+[name="護衛A"]   道沿いにビーチの方向へ逃げたぞ！
+[name="護衛B"]   チッ、人が多すぎる、追いづらいな。ビーチの見張りに連絡しろ、奴らを挟み撃ちにする！
 [Character(name="char_340_shwaz_2#2")]
-[name="黑"]   别想走！
-[name="黑"]   ！？
+[name="シュヴァルツ"]   逃さない！
+[name="シュヴァルツ"]   ！？
 [Character]
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [Blocker(a=0, fadetime=1.5, block=false)]
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
 
-[Decision(options="欸？",values="1")]
+[Decision(options="なにっ？",values="1")]
 [Predicate(references="1")]
 
 [Character(name="char_188_helage_1",fadetime=1,block=true)]
 [Delay(time=1)]
-[name="？？？"]   博士，走，这里先交给我。
+[name="？？？"]   ドクター、ここは私に任せてもらおう。行くんだ。
 [Character(name="char_348_ceylon_4#8")]
-[name="锡兰"]   欸？！你，你是......！
-[Decision(options="锡兰，我们先走！",values="1")]
+[name="セイロン"]   えっ！？　あ、貴方は……！
+[Decision(options="セイロン、早く逃げるぞ！",values="1")]
 [Predicate(references="1")]
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
@@ -59,41 +59,41 @@
 [playsound(key="$runsand", volume=0.7)]
 [Blocker(a=0, fadetime=2, block=true)]
 [Character(name="char_348_ceylon_4#5")]
-[name="锡兰"]   等一下，哈，哈......博士，我好累......
-[Decision(options="终于......到了沙滩......;我也......跑不动了......",values="1;2")]
+[name="セイロン"]   待って、はぁ……はぁ……ドクター、もう足が……。
+[Decision(options="やっと……ビーチに着いた……。;自分も……もう走れない……。",values="1;2")]
 [Predicate(references="1;2")]
 [Character(name="avg_npc_020")]
-[name="保镖"]   大小姐，请跟我们回去吧。
+[name="護衛"]   お嬢様、私たちと一緒に戻りましょう。
 [Character(name="char_348_ceylon_4#3")]
-[name="锡兰"]   我不要！
+[name="セイロン"]   嫌です！
 [Character(name="avg_npc_020")]
-[name="保镖A"]   别伤着大小姐，那个什么博士随便你们处置。
+[name="護衛A"]   お嬢様に怪我をさせるなよ。あのドクターとかいう奴は好きにしていい。
 [Character]
 [stopmusic(fadetime=1)]
-[name="？？？"]   谁敢随便处置博士！！
+[name="？？？"]   あぁん？誰がドクターを好きにしていいって！！？
 [Character(name="avg_npc_020")]
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
-[name="保镖B"]   好烫好烫！
-[name="保镖C"]   哪儿来的臭小鬼！
-[name="保镖C"]   噫！我的屁股！我的屁股！
+[name="護衛B"]   あっ、熱いっ！
+[name="護衛C"]   お前、どこのガキだ！
+[name="護衛C"]   うわっ！　ケツが燃えた！　ケツがああ！
 [Character]
 [Dialog]
 [Character(name="char_134_ifrit_summer_1",fadetime=1,block=true)]
 [Delay(time=1)]
-[name="伊芙利特"]   喂，博士，你又惹上什么好玩的事情了，怎么不叫上我？
+[name="イフリータ"]   おいドクター、また面白いことやってんな。オレサマを呼ばねーなんてツレねーじゃんか。
 [Character(name="avg_npc_020")]
-[name="保镖A"]   啧，只是一个臭小鬼，给她点颜色瞧瞧！
+[name="護衛A"]   チッ、ガキ一人だ、目にもの見せてやれ！
 [Character(name="char_134_ifrit_summer_1")]
-[name="伊芙利特"]   我正愁无聊呢，嘿嘿......
+[name="イフリータ"]   フンッ、ちょうど退屈してたんだ、へへ……。
 
 [Character(name="char_348_ceylon_4#8")]
-[name="锡兰"]   博士，你的脸色怎么变得比刚才还差？
-[Decision(options="伊芙利特，下手别太重！！;把他们衣服烧光差不多了。",values="1;2")]
+[name="セイロン"]   ドクター、急に顔色が悪くなっているような……どうなされたの？
+[Decision(options="イフリータ、あまりやりすぎるな！！;服を燃やす程度で十分だ。",values="1;2")]
 [PlayMusic(intro="$farce_intro", key="$farce_loop", volume=0.8, crossfade=1.5)]
 [Predicate(references="1;2")]
 [Character(name="char_134_ifrit_summer_1")]
-[name="伊芙利特"]   啧——
-[name="伊芙利特"]   那就三成！
+[name="イフリータ"]   チェッ。
+[name="イフリータ"]   じゃあミディアム・レアぐらいにしとくぜェ！
 
 [Delay(time=0.3)]
 [Dialog]
