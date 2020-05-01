@@ -1,0 +1,437 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Character]
+[Blocker(fadetime=1,block=true)]
+[Dialog(fadetime=2,block=true)]
+//切尔诺伯格下层
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_chercen_1",screenadapt="coverall")]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+切城中央区  1:20 p.m.
+[playMusic(intro="$batmeeting_intro", key="$batmeeting_loop", volume=0.4)]
+[Dialog]
+[Character(name="char_003_kalts_1",fadetime=1,block=true)]
+[delay(time=1)]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="凯尔希"]  Raidian，我是凯尔希。我们现在身处核心城中央区域的边缘。离仓库区出口四百一十米，17，67，西南方向。
+[name="凯尔希"]  你到位了吗？行动中有没有发生意外？
+[name="凯尔希"]  “畅通无阻”？
+[name="凯尔希"]  ......事实似乎与我们的推测完全吻合。
+[name="凯尔希"]  整合运动已经将游击队集中布置在了核心城的各个枢纽部分，其他地域则派驻了普通的整合运动与萨卡兹雇佣兵。
+[name="凯尔希"]  在所有区域都投入防卫力量极不明智，精锐会被集中在关键地域。如果我是整合运动的战地指挥官，我也会这么做。
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]  医生！
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  我知道你想和Raidian讨论，阿米娅。不用着急。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  我，我也要......
+[Character(name="char_003_kalts_1",name2="avg_npc_042",focus=1)]
+[name="凯尔希"]  ......我们还有任务。下次好吗？
+[Character(name="char_003_kalts_1",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  唔，嗯......好。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  Raidian，阿米娅会与你通话。
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]  好的！
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="阿米娅"]  Raidian，我是阿米娅。
+[Dialog]
+[Character]
+[Decision(options="（Raidian是位怎样的干员？）", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  （嗯......你也看到阿米娅和迷迭香的表情了。）
+[name="凯尔希"]  （Raidian是位受到低年龄层驻舰人员普遍喜爱的干员。对于成年人来说，她则可能显得有点过于热情友善。）
+[name="凯尔希"]  （和她矛盾最大的则是青少年。）
+
+[Decision(options="（为什么？）", values="1")]
+[Predicate(references="1")]
+
+[name="凯尔希"]  （建立自我认同的急切需要会与Raidian不合时宜的母性产生不小的冲突。）
+[name="凯尔希"]  （一般而言我不会把他们安排在同支小队。日后在安排时，这些细节你也可以参考手册。）
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  嗯......我看到了，Raidian，是的。
+[name="阿米娅"]  你说的没错。是，那不是普通游击战士的战术编排。应该说......唔......
+[Dialog]
+[Character]
+[Decision(options="像军人？", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]  对！Raidian，就像博士说的那样，虽然经过调整，但这里整合运动的战场部署，还是有着乌萨斯军制的影子。
+[name="阿米娅"]  经受了严格的军事训练......是的，很可能。
+[name="阿米娅"]  也许整合运动所谓的“中枢神经”人员，也是经过了一小段时间乌萨斯军事化训练的感染者。
+[name="阿米娅"]  只有他们才能担负起号召大量感染者的任务。
+[name="阿米娅"]  这场战斗，可以预见，我们绝对没可能轻松取胜。
+[name="阿米娅"]  嗯？不，我没关系。我和迷迭香，还有罗德岛的干员们......是自己要站在这里的。
+[name="阿米娅"]  嗯嗯，放心吧，Raidian. 我身边也有Dr.{@nickname}和凯尔希医生在。
+[Dialog]
+[Character]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  那么，阿米娅，我们要开始了。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  我知道了。那，Raidian，交给你和凯尔希医生了。
+[Character(name="char_003_kalts_1")]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="凯尔希"]  ......首先是利用好我们的通讯手段。
+[name="凯尔希"]  R-4小队，启动你们布设好的所有器械。
+[name="凯尔希"]  Raidian，在迷迭香开始施行法术的十分钟内，我们间的通讯一刻也不能断线，除非我们有人做出判断必须暂停。
+[name="凯尔希"]  持续运用源石技艺会让你感到不适，如果恶心感已经增长到了让你很难忍受的地步，立即服用我之前为你调配的辅助药物。
+[name="凯尔希"]  副作用是中度的眩晕感。虽然不会伤害你的神经系统，但会大幅消耗你的体力。
+[name="凯尔希"]  切记，不要过量用药，十分钟后，一切可以间歇进行。绝对不要透支身体。
+[name="凯尔希"]  委屈你了，Raidian。
+[Dialog]
+[Character]
+[delay(time=1)]
+[Character(name="char_003_kalts_1",name2="avg_npc_042",focus=1)]
+[name="凯尔希"]  迷迭香，所有敌人传令兵的特征都会通过Raidian发送的电信号直接输入你的携带终端。你来感知，你来记录。
+[name="凯尔希"]  即使他们的位置有所改变，你也要忍住，尽量别松开。抓到他们的感觉，然后再次记录。
+[name="凯尔希"]  延展你的身体，迷迭香，想象自己在这座城市里行走。
+[Character(name="char_003_kalts_1",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  我知道了，凯尔希医生。
+[Character(name="char_003_kalts_1",name2="char_002_amiya_1#7",focus=1)]
+[name="凯尔希"]  阿米娅......
+[Character(name="char_003_kalts_1",name2="char_002_amiya_1#7",focus=2)]
+[name="阿米娅"]  我知道。
+[Character(name="char_003_kalts_1",name2="char_002_amiya_1#7",focus=1)]
+[name="凯尔希"]  辛苦你们。一旦出现任何异常，我会打断你们的施术过程。如果身体感到疼痛，立刻说。
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]  迷迭香......我会靠近你一点。
+[Character(name="char_002_amiya_1#3",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  嗯，我也准备好了。我不害怕。阿米娅，不要怕我。
+[Character(name="char_002_amiya_1#3",name2="avg_npc_042",focus=1)]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="阿米娅"]  我不会的，我不害怕迷迭香。我们不会害怕。
+[Dialog]
+[Character]
+[Decision(options="她们额头相碰......", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  阿米娅在稳定迷迭香的情绪。
+[name="凯尔希"]  我建议你不要直视，Dr.{@nickname}。除了饱受惨剧折磨的战士外，我不建议任何人直视迷迭香法术本质的延展。
+
+[Decision(options="我没听错吧？！;......阿米娅......？;你岂不是在说小兔子她......", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[name="凯尔希"]  ——
+[name="凯尔希"]  我以为你能更早察觉到。
+[name="凯尔希"]  或者，你已经拥有了这种认知，却还没来及告诉我。
+[name="凯尔希"]  但是，是的，Dr.{@nickname}。
+[name="凯尔希"]  ......阿米娅或亲身、或在意识中历经的战斗，绝对不是一个个体人类该承受的。
+
+[Decision(options="你们......", values="1")]
+[Predicate(references="1")]
+
+[name="凯尔希"]  但是两个人也许可以。三个人也许也行。越多人分担，越多人承受。
+[name="凯尔希"]  Dr.{@nickname}，我不完全是在讲一种记忆或者战场的经验。这同时也包含了责任和体能两个范畴。
+[name="凯尔希"]  如果你想，可以去握住阿米娅的手替她分担。
+
+
+[Decision(options="（向阿米娅伸手）;（什么也不做）", values="1;2")]
+[Predicate(references="1;2")]
+
+[name="凯尔希"]  不，无论如何，今天还是不了。你我都有另外一项紧要任务去做。
+[name="凯尔希"]  我们需要在他们规划的空间里，为他们节省宝贵的时间。
+[name="凯尔希"]  ——
+[name="凯尔希"]  医药公司要深究问题起因，适应环境，合理分配职能，寻找突破口。
+[name="凯尔希"]  比起常规战争，我们的目标要小得多、精确得多。而小队打击任务，相较战争更接近一场手术。
+[name="凯尔希"]  战争贩子不在行的事情，却落在我们的专业范畴之内。
+[name="凯尔希"]  罗德岛在核心城进行的是一次斩首行动。我们设立的任务标的，无不围绕着消灭病灶展开。
+[name="凯尔希"]  可即使排除了病变，如果没能真正探明病因，那么问题不会得到根本性的解决。
+[name="凯尔希"]  Dr.{@nickname}，我也希望你能考虑一下这个问题。
+[name="凯尔希"]  ——我们的病人是谁？
+[name="凯尔希"]  是普通的感染者，是乌萨斯的被动感染者，是整合运动，还是这座城市？
+[name="凯尔希"]  它的病根又在哪里？
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  之前我们说过，整合运动没有维持城内的各个通讯节点。
+[name="凯尔希"]  现在我们可以清楚地看到，塔露拉为了让城内持续处于混乱状态，刻意保留了天灾带来的源石丛。
+[name="凯尔希"]  这会对通讯状况造成极大干扰。
+[name="凯尔希"]  即使是最先进的通讯设备也无法在这种情况下正常运作。
+[name="凯尔希"]  但现在，利用精英干员Raidian的能力，我们可以将原本混乱的电波加以区分。
+[name="凯尔希"]  所以，我们拥有更直观更便捷的通讯能力，这是战备的优势。
+
+[Decision(options="一项优势是不够的。", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  是的。
+[name="凯尔希"]  你也看见那些背着扩音装置的传令兵了，在这样原始的通讯环境下，游击队利用加密指令传递消息与命令。
+[name="凯尔希"]  我们还没成功掌握这片战场上传令兵的整体动向，但迷迭香会为我们找出来。
+[name="凯尔希"]  传令兵传递的讯息也许并不即时，同时也有距离上的限制，但在险恶环境中却最稳定，也最能维持纪律。
+[name="凯尔希"]  猜猜看，这种循环有什么问题？
+
+[Decision(options="是谁第一个发令的？;......起源。;部队不会只有传令兵，没有发令者。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凯尔希"]  是。
+[name="凯尔希"]  真正的指挥者隐藏了自己的位置。
+[name="凯尔希"]  如果是你，你会这么做，博士？
+
+
+[Decision(options="逼他出来！！;......诱饵。;得动点手脚才能见见他。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[name="凯尔希"]  对。
+[name="凯尔希"]  现在我们拥有了针对性的思维，这是战术的优势。
+[name="凯尔希"]  ......
+[name="凯尔希"]  博士，迷迭香正在释放的源石技艺，可以确定所有传令兵的即时位置和巡逻路线。
+[name="凯尔希"]  迷迭香将膨大她的意志，捕捉所有范围内的实在形体，但在这时，她的精神状态会逐渐陷入紊乱。
+[name="凯尔希"]  阿米娅正尝试抚平她的情绪。
+[name="凯尔希"]  Raidian是我们的通讯核心。依靠她的法术，我们能够在短时间内畅通无阻的进行交流。
+[name="凯尔希"]  我们只需要等迷迭香完成规划，然后行动。
+[name="凯尔希"]  这时，游击队则对我们依然一无所知。
+[name="凯尔希"]  他们不知道我们选择瓦解整个游击队的讯息传递方式，也不知道我们有应对布置在战场上的萨卡兹古老巫术的措施......
+[name="凯尔希"]  即使效果有限，我们也依然有。
+[name="凯尔希"]  击溃传令兵后，游击队也会做出反应，不到半小时，替补的传令兵就会开始运作，并且更难被袭击。
+[name="凯尔希"]  那时的他们会比现在更加警觉，近乎没有弱点。
+[name="凯尔希"]  以及，我们的位置和战术也会被洞悉，那时我们就会陷入困境。
+[name="凯尔希"]  但是，我们只系统地进攻一次。通过这仅仅一轮打击，我们逼出他们的指挥部队。
+[name="凯尔希"]  游击队不会想象另一支感染者特殊小队的存在。
+[name="凯尔希"]  这是我们战略上的优势。
+[Decision(options="我更在意它的实施过程。能成功吗？", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  ——我不会在这时候夸大其词。
+[name="凯尔希"]  Dr.{@nickname}，就算我们拥有这三项优势，我们失败的概率也比成功的概率更大。
+[Decision(options="那为什么要这么安排？", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  因为别的办法概率更低。
+[name="凯尔希"]  ......迷迭香应该要开始搜索了。屏住呼吸，不要看。
+[stopmusic(fadetime=2)]
+[Dialog]
+[Character]
+[name="迷迭香"]  ——第一次——
+[name="迷迭香"]  我......找到三个。
+[name="阿米娅"]  迷迭香......没问题的。过来些，再过来些。
+[name="迷迭香"]  ......四个。
+[name="阿米娅"]  你的耳朵。我食指这样划过你的耳朵......你能听到。这些只是想象的拼接，你都看过。
+[name="迷迭香"]  嗯......
+[name="迷迭香"]  五个。
+[Dialog]
+[delay(time=1)]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ......
+[name="凯尔希"]  博士，你害怕受伤吗？
+[Decision(options="......啊？", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  我们的三支作战队伍会分头作战。每支队伍负责不同区域内的敌人小队，瘫痪传令兵的，他们不能有任何发出讯号的机会。
+[name="凯尔希"]  甚至，我们的每个小队也会再重分配一次打击力量，这些我都已经规划完毕，你不用担心。
+[name="凯尔希"]  至于你，你要跟我走。
+[Decision(options="和你？！;......诱饵。;真的要吗？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凯尔希"]  请跟着你的保险专人一起行动。你无权拒绝，我想。
+[name="凯尔希"]  游击队配备着类似乌萨斯军队的优良军备，操持着比乌萨斯军更严厉更有效的纪律与战术。
+[name="凯尔希"]  萨卡兹，乌萨斯，黎博利等各种族围绕在同一个名字之下。
+[name="凯尔希"]  在我的保护下，你才是安全的。我不希望迷迭香失手杀掉你，也不希望阿米娅再为保护你而分心。Raidian，你甚至还没见过她。
+[name="凯尔希"]  在我身边，就不会有无谓的麻烦。
+[name="凯尔希"]  ......等等。
+[name="凯尔希"]  ——迷迭香？
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  啊......唔......
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="char_003_kalts_1#2")]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="凯尔希"]  Raidian，断开迷迭香的连接。现在！
+[name="凯尔希"]  阿米娅，她的精神状态？
+
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  可是、可是迷迭香......我摸索到的景象很稳定啊，没有任何奇怪的事情出现......不应该......
+[name="阿米娅"]  难道是......下坠？她......望着天空？
+[name="阿米娅"]  ......失落。她在失落。她在下坠。
+[Character(name="char_003_kalts_1#2")]
+[name="凯尔希"]  体温降低，呼吸急促......内啡肽水平急剧降低。
+[Decision(options="要紧急注射吗？", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  （摇头）
+[name="凯尔希"]  和Raidian使用辅助药物补充体力不同，迷迭香的源石技艺倾斜了她体内环境的恒定性，而且，并没有打破实质上的生理平衡。
+[name="凯尔希"]  注射激素能在数分钟内促进分泌，却会在事后令内分泌系统严重失调，甚至造成抑制机制丧失。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  我......我......
+[name="迷迭香"]  丢下我？为什么......我要......
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="迷迭香"]  ——为什么丢下我......？
+[Dialog]
+[Decision(options="但情况很凶险。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1#2")]
+[name="凯尔希"]  凶险不是我纵容自己无能的借口。
+[name="凯尔希"]  Dr.{@nickname}，损害生体机能的应急措施......我绝不会对他人使用。无论它多有效。
+[name="凯尔希"]  迷迭香遭遇的不是生理问题，那么，她的问题只能从她自身入手。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  迷迭香。
+[name="凯尔希"]  迷迭香，看看我的手。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  凯尔......希......医生......
+[Character(name="avg_npc_042",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  看，医生的手。
+[name="凯尔希"]  现在医生正把手放在你的脸上。凯尔希医生正托着你的脸。看我的脸。
+[Character(name="avg_npc_042",name2="char_003_kalts_1",focus=1)]
+[name="迷迭香"]  ......嗯。
+[Character(name="avg_npc_042",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  迷迭香，凯尔希没有太多时间陪伴你，阿米娅也是。
+[name="凯尔希"]  Outcast，Misery，煌，所有人都是。
+[name="凯尔希"]  但现在我和阿米娅，都在这里。
+[Character(name="avg_npc_042",name2="char_003_kalts_1",focus=1)]
+[name="迷迭香"]  嗯......嗯。
+[Character(name="avg_npc_042",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  加油，迷迭香。向前走。
+[Character(name="char_002_amiya_1#3",name2="avg_npc_042",focus=1)]
+[name="阿米娅"]  对，迷迭香......走到这里。走到这里来。这是甲板。
+[name="阿米娅"]  虽然很硬......但迷迭香，这是甲板，你可以踩在上面了。你不会踩空了。
+[name="阿米娅"]  这是罗德岛。
+[Character(name="avg_npc_042",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  我们和你一起。
+[Character(name="char_002_amiya_1#3",name2="avg_npc_042",focus=1)]
+[name="阿米娅"]  我和你一起。
+[stopmusic(fadetime=3)]
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ——我知道。
+[Dialog]
+[Character]
+[delay(time=1)]
+[Decision(options="她的呼吸......平稳下来了。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ......医生......给我。
+[name="迷迭香"]  把......数据。
+[Character(name="avg_npc_042",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  ——嗯。
+[name="凯尔希"]  Raidian，联通上迷迭香的终端。她没事了。
+[name="凯尔希"]  我保证。做吧。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ——第二次。
+[name="迷迭香"]  七个。
+[Dialog]
+[Character]
+[delay(time=1)]
+[Character(name="char_002_amiya_1")]
+[playMusic(intro="$storyendjp_intro", key="$storyendjp_loop", volume=0.4)]
+[name="阿米娅"]  我看到......
+[name="阿米娅"]  她......迷迭香现在站起来了。平静在她的意识里生长开花。嗯......就像毛绒绒的篮子一样，兜住了她的梦。
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]  没问题。没问题了，凯尔希医生。
+[Decision(options="毛绒绒的篮子......", values="1")]
+[Predicate(references="1")]
+[Decision(options="......小猫？;可爱。;很适合......你。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#5")]
+[name="阿米娅"]  （咦......？）
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  噗。
+[name="迷迭香"]  阿米娅脸红了，Dr.{@nickname}。
+[Character(name="char_002_amiya_1#5",name2="avg_npc_042",focus=1)]
+[name="阿米娅"]  ......我没想给你看这个呀！
+[Character(name="char_002_amiya_1#5",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  没事，嗯。没事。
+[name="迷迭香"]  再一次......再一次。阿米娅，我们向前走一点。我感受到了。
+[name="迷迭香"]  第三次。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ......凯尔希医生。我找到了。全部。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  我们准备好了。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  唔，谢谢你。也谢谢你，阿米娅。
+[Character(name="char_002_amiya_1#3",name2="avg_npc_042",focus=1)]
+[name="阿米娅"]  该做的事情不要谢，迷迭香......别谢。像我喜欢说的那样，对吧？
+[Character(name="char_002_amiya_1#3",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  嗯。但你带我走过了舰桥，走到了那座山上......云很好看。
+[name="迷迭香"]  路还很远。
+[name="迷迭香"]  阿米娅，我们行动吧。我们走下去。
+[Character(name="char_003_kalts_1")]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[stopmusic(fadetime=3)]
+[name="凯尔希"]  Raidian，分别接通。你可以五分钟时间稍事歇息。
+[name="凯尔希"]  阿米娅，迷迭香，保持通讯畅通。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  好。那么，Raidian，医生，迷迭香......
+[name="阿米娅"]  作战开始。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  你似乎还想问些什么。
+[Decision(options="你的语气比过去缓和了许多。", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  你不会只是想问这个。如果你想，我可以更严厉地对待你。
+[Decision(options="和我说说那只小猫。;......迷迭香。;我还是希望你谈谈那个银发女孩。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凯尔希"]  刚才，你的运气其实不错。
+[name="凯尔希"]  退一步讲，也许迷迭香不讨厌你。她克制了自己的发泄。
+[name="凯尔希"]  否则在你因好奇观看我和阿米娅对她进行引导时，你大概会因为看到她法术的实体而咬断自己的舌头。
+[name="凯尔希"]  ......迷迭香是在研究所里诞生的感染者。
+[name="凯尔希"]  和大多数实验感染者的悲惨遭遇不同：她没有因实验的日益残酷而随之死去。
+[name="凯尔希"]  随着项目的进展，整个研究所都被她一点一点地碾碎了。
+[name="凯尔希"]  不是研究所毁了她，是她毁了研究所。她的法术与她的精神状态连结在了一起。
+[name="凯尔希"]  找到她的组织秘密地把她渡让给罗德岛，以向外传达“迷迭香并不存在”的信号。
+[name="凯尔希"]  我知道你在想什么。不，无论是逼迫还是劝诱，我不允许任何一个有这种遭遇的感染者被编入干员队伍。
+[name="凯尔希"]  但是，迷迭香自己选择了责任、训练和伙伴关系。
+[name="凯尔希"]  在她无意识地施术不断造成损害的情况下，术师干员们决定训练她。她必须比其他人更快地成熟，而这同样是她自己的愿望。
+[name="凯尔希"]  我们不想把她弃置荒野。我们不想给她注射抑制药剂。我们不想让罗德岛也变成细碎的残渣。
+[name="凯尔希"]  这是我们不得已的解决方式。我们要训练她运用自己的法术，而不是放纵她，或是囚禁她。
+[name="凯尔希"]  她和阿米娅有一点很像，也有一点很不同。
+[Decision(options="别卖关子了。;......说清楚。;你这么说我不太懂。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凯尔希"]  那就听我说完吧，麻烦你。
+[name="凯尔希"]  她们的相像之处在于她们都愿意为了他人战斗不息。
+[name="凯尔希"]  至于不像的地方——
+[name="凯尔希"]  如你所知，阿米娅从来都不曾想要与人为敌。即使她被逼迫去这么做，即使她流着泪努力去这么做。即使她最后毁灭了敌人，也一样。
+[name="凯尔希"]  但迷迭香，我可以说，博士，迷迭香......
+[name="凯尔希"]  她从没有放弃过哪怕一次任务。无论是怎样战况，她都会妥善处理，也都会胜利。
+[name="凯尔希"]  你看到的，是既理智又不可理喻的歼灭战专员，迷迭香。
+[name="凯尔希"]  她成为精英干员没有别的原因，仅仅因为她在各方面的考核都达标，而不是别的。
+[name="凯尔希"]  畏惧她的干员们最后了解到她真实的样子，愿意把自己的性命交给她......
+[name="凯尔希"]  原因只在于她会保护干员们，她也会为了干员们动用自己全部的力量。
+[name="凯尔希"]  要是说煌是带领着自己的小队走下去并获得了所有人的尊敬，那么，迷迭香就是在所有人的支撑下战斗着。
+[name="凯尔希"]  回应了所有人的期待，并且超越他们的期待。
+[Decision(options="可让她参与这次作战也有现实的考量。", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  也有其他的干员具备与迷迭香的索敌能力类似的源石技艺，需要的施术条件则不一而同。
+[name="凯尔希"]  迷迭香不只能做到定位，你看过她战斗的模样。
+[name="凯尔希"]  Dr.{@nickname}。我们允许迷迭香参与任务，确实是因为她就是最适合这片战场的干员，以及她也认为自己是最适合这场战斗的干员。
+[name="凯尔希"]  她的源石技艺也足以帮助我与阿米娅对抗敌游击队的领袖......
+[name="凯尔希"]  “整合运动的爱国者”。
+[Decision(options="叶莲娜的......", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="迷迭香"]  凯尔希医生！废弃电车站，杂烩菜餐馆掉落的招牌后，第四中学门口，礼堂钟楼三楼！
+[Dialog]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  收到。
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[Character]
+[name="阿米娅"]  收到！凯尔希医生，我去礼堂！
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  那我们去第四中学。博士，走。
+[Decision(options="凯尔希医生，我能帮你指挥。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ——
+[name="凯尔希"]  正有此意。
+[name="凯尔希"]  我，迷迭香，阿米娅将负责瘫痪传令兵。而你......
+[name="凯尔希"]  Dr.{@nickname}，你要指挥各个小队的自由人，拖住游击队战士的脚步。
+[name="凯尔希"]  记住，我们只针对我们有能力去针对的敌人。
+[name="凯尔希"]  一旦游击队开始纠集，我们就立即撤退，我们为达成目标而来。我们没能力与他们正面对抗，也不要在脑海中独自勾勒类似的妄想。
+[name="凯尔希"]  这将是场漫长无比的战斗，我们的小队也可能出现伤亡，甚至完全落败。
+[name="凯尔希"]  那样的话，感染者的下一个黑暗纪元可能就此开始。
+[name="凯尔希"]  如果指挥部队拒不出现，也许是对我们最有利的结果。
+[name="凯尔希"]  我们长驱直入，直捣指挥塔和能源区，把他们甩在后头，让整合运动感染者自己处理感染者间的问题。
+[name="凯尔希"]  但他不会，这支游击队的指挥官不可能这么做。
+[name="凯尔希"]  他不会任由战况急转直下，更不会看着自己的队伍分崩离析。他维系这支队伍并不仅仅依靠信念，他彰显出的力量也会符合他的称谓。
+[name="凯尔希"]  这场战斗结束之后，如果一切顺利......在面对他们的指挥部队时，我们将全力以赴。
+[name="凯尔希"]  我们会直面博卓卡斯替。
+[Dialog]
+[Blocker(fadetime=3,block=true)]
+[Image]

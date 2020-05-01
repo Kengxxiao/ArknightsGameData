@@ -1,0 +1,328 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+
+[stopmusic]
+[Dialog]
+[Character]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_chercen_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+
+[name="阿米娅"]  第三传令兵，解除！
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="迷迭香"]  第七传令兵，成功摧毁！
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  第八传令兵，截获。
+[name="凯尔希"]  Radian，立刻展开佯攻！用你的法术扩大影响范围，直接种进他们神经系统里也可以！
+[name="凯尔希"]  把所有敌人都拉出去！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  哈，哈......太艰难了。各位都还好吗？
+[Character(name="char_002_amiya_1",name2="avg_npc_012",focus=2)]
+[name="罗德岛干员"]  现在还算没问题......但......真的太激烈了。我再怎么也没搞过这种规模的战斗......
+[name="罗德岛干员"]  这回要是能回得去，我想放假！
+[Character(name="char_002_amiya_1",name2="avg_npc_012",focus=1)]
+[name="阿米娅"]  好。我一定批准。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  但首先......先把这支小队吃下来！在这之后，提薪、长假、特派，都可以！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_058",fadetime=1,block=true)]
+[delay(time=1)]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="游击队战士"]  有敌军！
+[name="游击队战士"]  别被扰乱步调！重整队形！
+[name="游击队战士"]  东面出口正在激烈交火？别轻举妄动。我们缓步推过去，不要让敌人有可乘之机！
+[name="游击队战士"]  这战术不像乌萨斯，也不像炎。怎么回事？这次是谁？
+[name="游击队战士"]  长年伏击乌萨斯军，现在轮到我们被设计？
+[name="游击队战士"]  没有发生实质上的战斗？......孬种！小看游击队要付出代价！
+[name="游击队战士"]  小心祭坛！大尉给我们涂上的保护只能减轻影响。他叮嘱多次，如果不是必要，别走那里！
+[name="游击队战士"]  传令兵，快通知其他队伍。
+[name="游击队战士"]  ......没回音？
+[name="游击队战士"]  迫击炮手们呢？魔族佬呢？
+[name="游击队战士"]  ......
+[name="游击队战士"]  等一会儿。这里有事情不对劲。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="迷迭香"]  第十二组传令兵，摧毁！
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="罗德岛干员"]  游击队战士开始收紧队伍了！现在是我们通过的最好机会！
+[Dialog]
+[Decision(options="不！可能是陷阱！", values="1")]
+[Predicate(references="1")]
+
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="阿米娅"]  ......嗯......
+[name="阿米娅"]  明白。迷迭香，我们用法术搜索附近！
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="迷迭香"]  我够不到。敌人......有东西挡住了我。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  萨卡兹术师。只有他们有针对迷迭香这类法术的反制手段。
+[Character]
+[name="阿米娅"]  那交给我......！
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  Raidian，还能支撑多久？
+[name="凯尔希"]  ......我们会提速。
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="阿米娅"]  我......我找到了。是的。在他们依靠的建筑物内部，藏有许多狙击手和术师。
+[name="阿米娅"]  他们很平静......有一些激昂。但一点也不狂热。他们......坚守着据点。
+[name="阿米娅"]  ......职责。
+[name="阿米娅"]  博士说得对，那确实是陷阱。
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="迷迭香"]  我在你的位置附近了。我来。
+[name="阿米娅"]  能做到吗？
+[name="迷迭香"]  能。我不粉碎整栋楼，我只破坏他们在的那层的地形，不然他们会打扰我们。
+[name="迷迭香"]  阿米娅，我可以的。
+[name="阿米娅"]  嗯，迷迭香......我知道你能行。一定。
+[name="迷迭香"]  ......阿米娅会佩服我吗？
+[name="阿米娅"]  呃，什么？
+[name="迷迭香"]  我听煌说，很少能有人让阿米娅佩服呢。
+[name="阿米娅"]  佩服？啊......好像是说尊敬？不，我还不太会炎国的语言。应该是一个意思吧？
+[name="迷迭香"]  我不知道呀，阿米娅......
+[name="阿米娅"]  ......没事。因为我从一开始就很“佩服”迷迭香了。
+[name="阿米娅"]  迷迭香真的很厉害。我的话，我克制不住......
+[name="阿米娅"]  失去和孤独。
+[name="阿米娅"]  我不可能像迷迭香这样能忍受这些。我忍受不了。
+[name="迷迭香"]  阿米娅骗人。
+[name="阿米娅"]  ......
+[name="迷迭香"]  不过我没什么关系。阿米娅就算骗人，也是阿米娅。
+[name="迷迭香"]  佩服我......我这样的人，也行吗？
+[name="阿米娅"]  就像你说的，迷迭香。就因为迷迭香是迷迭香，我很尊敬你。无论是作为精英干员的你还是作为朋友的你。
+[name="阿米娅"]  迷迭香，加油。
+[name="迷迭香"]  嗯，加油。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_058",fadetime=1,block=true)]
+[delay(time=1)]
+[name="游击队战士"]  还没出现？他们在等什么？
+[name="游击队战士"]  不，不行！绝不允许离开这片区域！只要他们出现，我们就立刻反击！不能再失去更多联络人了！
+[name="游击队战士"]  等等。对面建筑物顶端站着的，是敌人？
+[Dialog]
+[Character]
+[Character(name="avg_npc_042",fadetime=1,block=true)]
+[delay(time=2)]
+[Character(name="avg_npc_058")]
+[name="游击队战士"]  ......猫？是只小菲林......？！
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="游击队战士"]  传令兵！快通知术师！敌人在街道另一侧的建筑物上布置了术师！
+[name="游击队战士"]  一定要摧毁她！
+[name="游击队战士"]  ——剑？武器？她从空中......
+[name="游击队战士"]  啊？漂浮在空中的武器？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="迷迭香"]  从这里，划到那里。
+[name="迷迭香"]  用手......抓住。用剑，划开。
+[name="迷迭香"]  ......就像横切开土豆。
+
+就像横切开土豆。
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=2, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$smallearthquake", volume=1)]
+[Delay(time=3)]
+
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  博士！到我身边来！
+
+[Decision(options="整栋楼被......拦腰划开？", values="1")]
+[Predicate(references="1")]
+
+[name="凯尔希"]  迷迭香在摧毁游击队的伏击点。当心落石！
+[Decision(options="......那究竟是什么？", values="1")]
+[Predicate(references="1")]
+
+[name="凯尔希"]  我假设你问的是迷迭香的法术。你看了这么多次，也许现在好向你解释一些了。
+[name="凯尔希"]  那是被她自己塑造成型的精神状态。你可以理解成迷迭香拥有“无法被观察、无法被施加作用的巨大形体”。
+[name="凯尔希"]  无形延伸了她的触感。她能抓握，挤压，拈起，以及甩开。
+[name="凯尔希"]  但相对于她的精神主观，这种法术实际上缺乏客观体现。
+[name="凯尔希"]  我们会被它施力，却不能对它施加力，也只能通过特殊的源石技艺析出“它确实存在”。
+[name="凯尔希"]  难理解也无所谓，这可能不是你的领域。
+[name="凯尔希"]  在被交予武器之前，迷迭香会造成更大程度的破坏。被移动城邦碾过般的光景，除了废墟，就只留下废墟中跪地大哭的幼年女性。
+[name="凯尔希"]  那种情况无论如何都不该再发生。
+[name="凯尔希"]  ......博士。走。
+[name="凯尔希"]  我看到了。指挥部队马上就会出现......
+[name="凯尔希"]  公园废墟的喷泉。底下应该建有水道。
+[name="凯尔希"]  竟藏身在那样毫不起眼的地方。
+[name="凯尔希"]  ......栖身灰鬃峰七天七夜，连最强盛时的征战骑士都被他欺骗的那场伏击战，或许也是真的。
+[name="凯尔希"]  就是现在，我们走。Dr.{@nickname}，事不宜迟。
+[name="凯尔希"]  Raidian，停止交火。找好隐蔽，现在我需要你专注提供通讯。
+[name="凯尔希"]  Mantra-2. 记录好我们所有的交谈。一字不落。
+
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="迷迭香"]  第十四组传令兵，成功截获。
+[name="迷迭香"]  阿米娅，凯尔希医生。我准备好了。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)] 
+
+[Character(name="avg_npc_058",name2="avg_npc_058",focus=1)]
+[name="游击队战士"]  （你没事吧......张嘴！看我！）
+[Character(name="avg_npc_058",name2="avg_npc_058",focus=2)]
+[name="游击队战士"]  （好，你醒着。我还好。没关系。你藏好，别被找到......我们要靠你重新组织队伍。）
+[Character(name="avg_npc_058",name2="avg_npc_058",focus=1)]
+[name="游击队战士"]  （我知道。我们来对抗敌人。你别出声！）
+[Character(name="avg_npc_058",name2="avg_npc_058",focus=2)]
+[name="游击队战士"]  （没事，我没受伤。这点小石子儿，比起乌萨斯人的破城矛，小意思。）
+[name="游击队战士"]  （别惊慌！我能拦下来，你得找机会！）
+[Character(name="avg_npc_058",name2="avg_npc_058",focus=1)]
+[name="游击队战士"]  ——
+[Character(name="avg_npc_058")]
+[name="游击队战士"]  你们！还在看什么！不敢进攻吗？
+[name="游击队战士"]  不管你们是哪国的部队，怎么现在不敢强攻了？害怕爱国者的血统和他的巫术吗？
+[name="游击队战士"]  有没有让你们想起和萨卡兹打仗的时候？那么比萨卡兹多那么多人，明明还打得赢，最后却必定会死伤无数！
+[name="游击队战士"]  但我们不止这点力气！你连我们的盾、我们的铠甲都打不穿！你在永不倒下的爱国者面前，什么都不是！
+[name="游击队战士"]  乌萨斯最伟大的战士......不用枪也不用盾牌，光是踩踏，就叫你们粉身碎骨。
+[name="游击队战士"]  你们......一文不值！
+[name="游击队战士"]  我们的战士很快就会重新聚集在这里！你们一个都别想跑。整合运动会让你们吃尽苦头！
+[name="游击队战士"]  你们这些压迫者......奴役我们感染者的人！你们必定会被整合运动吞没的！
+[name="游击队战士"]  整合运动——
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_002_amiya_1#7",fadetime=1,block=true)]
+[delay(time=1)]
+[name="阿米娅"]  ......整合运动也许已经背离你们了，先生。
+[Character(name="avg_npc_058")]
+[name="游击队战士"]  ——小女孩？
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ......
+[Character(name="avg_npc_058")]
+[name="游击队战士"]  ......两个......感染者小女孩？
+[name="游击队战士"]  你们干什么？！你们玩什么把戏！！
+[Character(name="avg_npc_042",name2="avg_npc_058",focus=1)]
+[name="迷迭香"]  让一让。
+[name="迷迭香"]  你身后的那个，我要破坏他背后的装置。
+[Character(name="avg_npc_042",name2="avg_npc_058",focus=2)]
+[name="游击队战士"]  ......
+[name="游击队战士"]  你以为就因为你长这样，我就会对你手下留情？
+[name="游击队战士"]  不要小看爱国者的盾卫！我们是感染者的盾......我站在这里，就是为了挡住你的攻击。
+[name="游击队战士"]  你敢攻击感染者，我就会生生掐死你！
+[Character(name="avg_npc_042",name2="avg_npc_058",focus=1)]
+[name="迷迭香"]  那我只能用武器说话了。
+[Character(name="avg_npc_042",name2="avg_npc_058",focus=2)]
+[name="游击队战士"]  你......你就是刚才那只猫。
+[name="游击队战士"]  你的剑......
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="传令兵"]  （卫士，你快走！去通知其他人！我没关系！）
+[Character(name="avg_npc_058")]
+[name="游击队战士"]  （那是你的职责，不是我的！！你必须活下来！！）
+[name="游击队战士"]  来啊，你打得穿这面盾吗？你捅得穿我的护甲吗？！
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  阿米娅。我没办法。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  可是......
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  我不会让他死。但他可能再也站不起来。
+
+[Decision(options="等——", values="1")]
+[Predicate(references="1")]
+
+
+[name="迷迭香"]  去吧。扎穿......
+[Character]
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=2, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_025_1#2")]
+[name="？？？"]  你，不能。
+[Dialog]
+[playsound(key="$p_imp_blunt_h")]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=1, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=2)]
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  ？！
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  怎么......徒手打偏了我的剑？
+[name="迷迭香"]  唔......手......很麻......
+[name="迷迭香"]  什么时候走到这里的？我没感受到......
+[name="迷迭香"]  不。咦......还是说......我以为是建筑倒塌的感觉，只是你走近了？
+[name="迷迭香"]  你一个人，不，你和你的队伍......连成一座......
+[name="迷迭香"]  ......山。
+[Character(name="avg_npc_025_1#2")]
+[name="？？？"]  ......
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="凯尔希"]  迷迭香，收队。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  但我......
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="凯尔希"]  迷迭香，这是命令。
+[name="凯尔希"]  命令。
+[Character(name="avg_npc_058")]
+[name="游击队战士"]  大尉......！
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_025_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="爱国者"]  你做的，够好。你走，归队。
+[name="爱国者"]  至于，你们......
+[name="爱国者"]  是罗德岛。
+[name="爱国者"]  现在的我，不管，你们身份。
+[name="爱国者"]  你们，攻击我的战士，你们，死。
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Character(name="char_003_kalts_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="凯尔希"]  身份是无所谓，但立场呢？
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  这，无关乎——
+[name="爱国者"]  等等......等等。
+[name="爱国者"]  你是......
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ......博卓卡斯替。
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  你......怎么会......
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  久违了。
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  你......凯尔希，女勋爵？
+
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

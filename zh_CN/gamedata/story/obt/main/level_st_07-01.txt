@@ -1,0 +1,639 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+
+//黑屏/切尔诺伯格外围
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
+
+//CG1：黑暗中围绕火飞舞的小虫子
+[delay(time=1)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Image(image="avg_7_1",xScale=1, yScale=1, fadetime=0)]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=0.87, yScaleTo=0.87, duration=20, block=false)]
+[Blocker(a=0, fadetime=3, block=true)]
+
+曾经有个老怪物告诉我，杀不死一个人的器物，只会让他的力量得到壮大。
+我一直觉得这个说法很可笑。但碍于那家伙确实是个怪物，所以我又不得不好好考虑这个说法。
+虫子自己跳进火里，难道是在寻求更强健的自我？也太可笑了。
+不，先不说虫子原本有多少智慧，身体又有多脆弱。要知道，一只虫子再怎么强壮，也始终是只虫子。
+如果虫子跳进火里，只能证明火焰搞乱了它的脑子，如果它有的话，它肯定疯了。
+但如果扑向火焰的是我呢？那除了证明我也疯了，还能证明得了什么呢？它除了烧伤我，难道还会让我变得更厉害吗？
+但是，死亡。不死的怪物又怎么会懂呢？
+啊，这可是谁都无法抗拒的苦涩死亡。
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[image]
+[Background(image="bg_cenbri",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+
+//指挥塔
+
+[Character(name="avg_npc_046#2",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=2)]
+[name="W"]  你还愿意见我？真让我意外。
+[name="W"]  我以为你已经完全沉溺进捣毁龙门的大计里去了，塔露拉。
+[Dialog]
+[Character]
+[Character(name="char_011_talula_1",fadetime=1,block=true)]
+[delay(time=1.4)]
+[name="塔露拉"]  W。你没有向任何人报告你的来访。
+[Character(name="char_011_talula_1", name2="avg_npc_046#5", focus=2)]
+[name="W"]  哈，那我得说声抱歉，领袖。做了太长时间雇佣兵，我已经忘记还要向领袖报告自己的生活状态啦。
+[name="W"]  但你也知道我根本上不去指挥塔顶部，只能请你屈尊下几层楼了。
+[Character(name="char_011_talula_1", name2="avg_npc_046#5", focus=1)]
+[name="塔露拉"]  出言讽刺对我们没有益处，W。整合运动需要你们萨卡兹的力量，我们间不应再有更多的私人冲突。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  叫魔族就行。心地柔软又喜欢自称良善的大人物才叫我们萨卡兹，但我们这些佣兵很清楚自己什么德性。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  奇怪。魔族，“被驱逐的劣等种族”，你们佣兵不可能接受这种定义，也不会以此为荣。
+[Character(name="avg_npc_046#2")]
+[name="W"]  当然。但你们这些人最开始把萨卡兹叫作“魔族”，可不是因为鄙夷或者好听才这么叫着玩的。
+[name="W"]  魔族这个称呼出于【恐惧】。是恐惧促使你们这么称呼我们的族群。
+[name="W"]  所以，我们佣兵乐意被叫作“魔族”，完全是因为我们知道它真正的意思。
+[name="W"]  而且，我们也会狠狠地把这个涵义种进所有幸存者的心里。
+[name="W"]  哦，对不起——在你面前讨论这个，简直是在行家面前卖弄本事了吧？
+[name="W"]  我们这个以残暴著称的小佣兵队一旦被拿来和你比较，就像爬虫对上了磐蟹一样可笑。
+[name="W"]  领袖，你才是那个最擅长给别人带去恐惧的人。
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  “威慑你的敌人，温暖你的战友。”
+[name="塔露拉"]  把恐惧带给敌人，把希望带给同胞。这是整合运动一贯的行事方式。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  那把乌萨斯的核心城开进龙门，也很符合某位同胞的殷切希望咯？
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  我们的整合运动战士们还在龙门城奋勇作战，他们需要我们的增援，所以我们要去。
+[name="塔露拉"]  龙门城内的感染者需要希望，据守核心城的感染者战士们也强烈地想把希望带给他们。
+[name="塔露拉"]  所有人的愿望都相互契合，满足愿望的方式也由我们整合运动一手创造。
+[name="塔露拉"]  ——这会为你们萨卡兹带来好处，这个事实同样也毋庸置疑。
+[name="塔露拉"]  你们不需要希望，所以我带给你们利益。
+[name="塔露拉"]  和你一样散布在各城邦的萨卡兹雇佣兵们，以及在背后掌控你们的人。你们会自城邦与国家间的混乱里汲取养分。
+[name="塔露拉"]  龙门之后，没有一座移动城邦会是安全的。魔族活动的空间会得到扩展，你们的族裔将繁荣昌盛。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  嚯，听起来有些道理。看在利益的份上，我可以同意你的战略。
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  那么，W，你还有什么疑议吗？
+[Character(name="char_011_talula_1", name2="avg_npc_046#5", focus=2)]
+[name="W"]  没有。你说的非常好，我可以给你鼓个掌吗？
+[Character(name="char_011_talula_1", name2="avg_npc_046#5", focus=1)]
+[name="塔露拉"]  不用。
+[Character(name="avg_npc_046#2")]
+[name="W"]  然后，来说说我的任务吧。很不幸，我失败了。我没能带回任务目标，她也没肯把东西交给我。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  这不是你的过失。米莎和碎骨之间的亲缘关系可能会导致种种意外。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  那为什么还要派我去抓那个科学家的女儿？
+[name="W"]  似乎没有她和她身上的秘密，你也能顺利地进行下去。攻击龙门，启动核心城，没地方用得上她。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  密钥的真实性尚且需要验证。
+[name="塔露拉"]  核心城机能的启动，我可以亲手验证，但它的停止方式，也必须保证由整合运动完全掌控。密钥的作用恰在于此。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  梅菲斯特和我说了，爱国者那个老头在废城里找到的才是真货。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  不，W，梅菲斯特不会这么对你说。只会是你，把流言说给梅菲斯特听，想着从他那里提取你要的情报。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  那这个消息究竟是真是假？
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  你没有想听我自我辩解的意思，却也没有想为自己辩解的意图。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  我有自己的渠道，而且可能有点心直口快了些。哦，可能也混淆了情报来源？大概。
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  W，如果你需要我表现得更加诚恳，我可以清楚地告诉你所有安排。所有。
+[name="塔露拉"]  碎骨和你的第一次行动成功测试了龙门近卫局的反应速度，让我们调整了战术，完善了进攻龙门的计划。
+[name="塔露拉"]  没有你的行动，我们不会成功。
+[name="塔露拉"]  密钥真实存在，却因为米莎的突然死亡而随之消失。爱国者寻找的密钥仅仅是用以应对这种情形的后备方案。
+[name="塔露拉"]  我不会逼迫你说出你的消息从何而来，但我的解释，也应该能令你信服。
+[Character(name="avg_npc_046#5")]
+[name="W"]  好的，好的，但我，领袖，我想知道到底有几把密钥。我最后一个问题了，不会再问了，嗯。
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  两把。切尔诺伯格皇家科学家谢尔盖持有其中一把，通过特殊的方式，他将这把钥匙交付给了米莎。
+[name="塔露拉"]  另一把由原切尔诺伯格市长鲍里斯侯爵持有，他在我们攻占城市时调用城邦地块逃出了切尔诺伯格，但他没能逃过天灾。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  废城。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  潜藏在城中的要人保有我们需求的物品，适当的距离则能将近卫局诱入埋伏。
+[name="塔露拉"]  我们有相当充分的理由去攻占废城，将它占为据点也是物尽其用。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  你说得很明白了，领袖。已经没什么好问的了。
+[name="W"]  等等，我问的是不是有点多？让你花这么多时间解释，我都有些过意不去了。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  W。 如果我的坦率能够解开我们之间的误会，我不会吝啬时间。
+[name="塔露拉"]  为了保证你我之间长久的互利共赢，我会继续拟定我们未来的计划。这能稍稍增加你我间的信任么，W？
+[name="塔露拉"]  我们需要互相扶持，才有机会面对未来更多的难题。
+[Character(name="char_011_talula_1", name2="avg_npc_046#5", focus=2)]
+[name="W"]  真的吗？那我可是太感动了。
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  这当然是......
+
+//立绘虚化
+
+[image]
+[Dialog]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+
+我一直不喜欢这个女人。
+他们私下里怀念的那个塔露拉只是让人觉得无聊，而我面前的这个塔露拉，则是个被谎言包得严严实实的混蛋。
+哦，说谎是件再正常不过的事情。
+我也常说谎，除了炸弹，没什么比谎言更有威力——真相不过是一杯水，当整栋房子都在燃烧的时候，一杯水又有什么用？
+但我说谎，只是我在说谎，我扭曲了我的想法抛给别人；这个龙女的谎言却像是从不同的人嘴里说出来般自然。
+无论她谈话的对象是谁，她都不会仅仅是甄选一小部分想法去掩盖自己的意图。
+——她简直像是变成了不同的样子，刻意变成他们不那么容易怀疑的样子，把他们想听的说给他们听。
+整合运动最喜欢的当然是领袖塔露拉。在我面前，她是交易伙伴塔露拉。在爱国者面前，她又是斗士塔露拉。
+虽然总有一天她会露出真面目，但这一天不是每个人都有命看到的。
+而且，真面目......她有吗？
+她会不会是个洋葱？一层一层剥掉以后，里面就什么也不剩下？
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  真的。
+
+[stopmusic(fadetime=3)]
+[Dialog]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+上一刻的她就像一个伊比利亚修士那样诚恳。
+//CG 塔露拉抬手  
+[Dialog]
+[image]
+[Character]
+
+
+//塔露拉单人
+
+
+//火焰背景
+[image]
+[Dialog]
+
+
+她只是微微抬起手。啊，我知道这招。
+这一刻的她像最狡诈的萨弗拉那样善于突袭和杀戮。
+有什么东西扯开了面前的空气，下一刻，它应该就要融化我的身躯了。
+
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_046#3")]
+[name="W"]  光是惹你发火，应该不会让你生气到想要杀我吧？
+
+[Character]
+[Dialog]
+
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=1, g=0.4, b=0.1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[Blocker(a=0.1, fadetime=2, block=false)]
+[delay(time=1)]
+
+塔露拉释放的这些无形之物，应该从来没人看清过是什么——但我知道它们有什么样的效果。
+废墟，残渣。事物连它们最基本的形状也没能剩下。
+就像没有光亮的火。
+我是她的猎物。
+我早该想到。
+
+[playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
+[Character(name="avg_npc_046#2")]
+[name="W"]  太明显了，龙女，比起平常的你，现在的你也太善解人意了。
+
+
+[Character]
+[Dialog]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+束手待毙，或是死前留下大段大段的遗言，可是一点也不符合我的风格。
+我没准备去死，至少，不是现在。
+[Dialog]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Character]
+我那在我说话时被我丢出去落地不到几秒的粗糙小装置，在我面前狠狠地炸成了一团花。
+热浪扑面而来。幸运的是，这让人还挺舒服的热度并不来自她。
+我对法术没什么研究，但我可以用自身经历证明，世上百分之九十九的法术，威力都敌不过最纯粹的能量使用形式。
+爆炸。热量，弹片，冲击波。无论是我还是敌人，都会被炸个粉碎。
+只要能和她僵持一小会儿。只要坚持到我种下的种子都开花就好。
+ 
+
+[Character(name="avg_npc_046#2")]
+[name="W"]  你看看，真是辛苦你了啊。肯陪我演那么长时间的情景剧，我没看错，你的确是个好演员。
+
+[Character]
+[Dialog]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+这个龙女，我其实也没那么讨厌她，不是吗？
+没有伪装的人不会说谎也不是骗子，而她，她是个泡在谎言里的怪物。
+她不需要说谎。
+难怪只要看到她，我就稍稍，好吧，有那么点恐慌。我不是讨厌她，我大概是真的有些怕她。
+害怕就会有所保留。有防范的人，总是有准备的。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  你的伎俩，居然能够中和我的源石技艺。是我太低估你了。
+[Character(name="char_011_talula_1", name2="avg_npc_046#3", focus=2)]
+[name="W"]  喂，你说的这个“技俩”可花了我几个小时。稍微尊重点人啊。
+[name="W"]  不过，如果我这么容易就被你烧死，还有哪个魔族人会愿意让我来领导呢？
+[Character(name="char_011_talula_1", name2="avg_npc_046#3", focus=1)]
+[name="塔露拉"]  你早有准备。你一开始就打算袭击我。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  是你动的手。龙女，你是觉得我碍眼所以想烧死我，还是因为你觉得会在我面前露馅，所以才急着灭口呢？
+
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=1, g=0.4, b=0.1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[Blocker(a=0.1, fadetime=2, block=false)]
+[delay(time=1)]
+
+话刚说完，她指尖的高温就再次扑向了我。果然这个龙女不可能让你好过，哪怕只是一会会儿。
+我弯下腰，适当地打了个滚，应该能让我看上去像趁机紧了紧鞋带。
+
+
+[Character(name="avg_npc_046#5")]
+[name="W"]  唔喔。
+[name="W"]  下次瞄准点。
+[Character(name="char_011_talula_1", name2="avg_npc_046#5", focus=1)]
+[name="塔露拉"]  W，你的诡计已经败露，现在的你是整个整合运动的敌人。
+[name="塔露拉"]  为什么要与我对立？这不能给你带来任何利益。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  我的意图？你从哪里能看出我的意图？倒不如说，我才是不想这么快就撕破脸皮的那个人。
+[name="W"]  再怎么样你还是比我先动手。哼，先下手为强是吧？
+[name="W"]  那我也没什么办法，在你杀我之前，我必须先杀了你。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  你的精神错乱令你的自信盲目增长。
+[Character(name="avg_npc_046#2")]
+[name="W"]  骗我是小事。我不在乎谁骗谁，也不在乎你杀多少人，骗多少人......
+[Character(name="avg_npc_046#3")]
+[name="W"]  龙女，你会后悔动了我的人。
+
+[Character]
+[Dialog]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+我是会说出这种话的人吗？
+也许我确实脑子不清醒了。这看起来不怎么疯癫，甚至有点多愁善感。
+原来如此，我好像搞砸了。
+[Character]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[Character(name="char_011_talula_1", name2="avg_npc_046#3", focus=1)]
+[name="塔露拉"]  这样。装疯卖傻确实卓有成效，我居然误会了你的品性。
+[name="塔露拉"]  这么为别人着想，你还真是个有血有肉的可爱恶魔。
+[Character(name="char_011_talula_1", name2="avg_npc_046#3", focus=2)]
+[name="W"]  啊，哈哈，啐。
+[name="W"]  还是你更可爱些。嗯，但得先把你的舌头剐了才行，你会显得更漂亮，还不显得舌头太长。
+[Character(name="char_011_talula_1", name2="avg_npc_046#3", focus=1)]
+[name="塔露拉"]  你觉得只要事先设下陷阱，就能杀我？
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  那当然不。
+
+[Character]
+[Dialog]
+
+我和她提过我做过陷阱了吗？
+
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  真有陷阱的话也得足够多才行。咨询一下，你要多少？
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  你又有多少？
+[name="塔露拉"]  可怜可憎的内敌，我的火焰寻上你的身了。
+[name="塔露拉"]  你会为你的背叛付出代价。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  哇......真恶心。这口气是怎么回事？你这话是说给谁听的？
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  你。
+[name="塔露拉"]  因为你讨厌这种修辞，W。 你也讨厌我指出你的目的。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  呃，首先，我是不是该谢谢你认真了解过我的喜好，还故意换着词儿来刺激我的情绪？
+[name="W"]  其次，我的目的？你想杀多少人和我一点关系也没有，龙女。
+[name="W"]  你了解我的想法？你那沉迷编织小诡计的脑袋，也能想到我在想什么吗？
+
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  ——W，你想阻止我用核心城进攻龙门。
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  ......哦？
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  如果你只是寻求某种报复，你不会挑现在这个时机。W，想要杀人，你大可等到我和龙门两败俱伤再动手。这才是明智之举。
+[name="塔露拉"]  用交流从我这里套出情报，又是另一种掩盖。不在乎整合运动走向的雇佣兵头领，不会向我，“整合运动的领袖”，咨询这些问题。
+[name="塔露拉"]  你知道的，我不会杀你——只要你不那么关心这场大战，我就不会杀你。
+[name="塔露拉"]  我喜欢你，W，你让我很开心。我不会处死一个无害的丑角。
+[name="塔露拉"]  但是......即将用尽手段杀死我的狂人，不必判断我的善恶，更不用说是了解我的计划。
+[name="塔露拉"]  ......你真如你表演的那样是个洋溢着破坏欲的狂人吗，W？
+
+
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=2)]
+[name="W"]  你能不能不要再——
+
+[Character(name="char_011_talula_1", name2="avg_npc_046#2", focus=1)]
+[name="塔露拉"]  你并不是。
+[name="塔露拉"]  你想阻止整合运动，你不想让核心城袭击龙门，这就是你的意图。
+[name="塔露拉"]  W，W......这一切昭然若揭。我没有任何检查你心智的规划，是你自己向我展示了你的小秘密。
+
+
+[Character(name="avg_npc_046#3")]
+[name="W"]  废话真多。
+[name="W"]  我会叫人收集你的肉碎扔进垃圾管道的，如果你真还剩下些什么的话。
+
+//火焰爆发
+
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.5)]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$d_gen_thunders_amb", volume=0.2, Delay=0.7)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, block=false)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.3, r=1, g=0.4, b=0.4, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[Blocker(a=0.1, r=1, g=0.4, b=0.1, afrom=1, rfrom=1, gfrom=0.4, bfrom=0.4, fadetime=0.2, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0.8, rfrom=1, gfrom=1, bfrom=1, fadetime=0.3, block=true)]
+[Blocker(a=0.1, r=0, g=0, b=0, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.3, block=true)]
+[Blocker(a=0.1, fadetime=2, block=false)]
+[delay(time=1)]
+[stopmusic(fadetime=1)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_ballista")]
+[delay(time=0.7)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=1)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_ballista")]
+[delay(time=0.7)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=0.3)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[delay(time=0.3)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+我按下了手中的按钮。简单的源石开关，远程操作，连锁爆炸。
+燃烧的火光，引人疯狂的焦香和混杂着大量碎片的灼热气浪会掀翻我面前的一切事物。一切都安排好了，就算是皮糙肉厚的萨卡兹也......
+等等。
+等一下，等一下。我有施术去引爆炸药吗？
+......
+她为什么把佩剑刺进了地里？
+
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  这就是你的陷阱吗？
+[name="塔露拉"]  试一试吧，萨卡兹的W。 再试一试。
+[Character(name="avg_npc_046#2")]
+[name="W"]  等等，你......
+
+[Dialog]
+[Character]
+
+没有火焰，没有燃烧。
+我布置好的，使劲扭动着源石身躯钻进城邦钢铁地基里的上百个炸弹，全都消失了。
+爆炸呢？热气呢？弹片呢？
+都没了。
+原本埋设好源石的地方，变形，融化，内陷，铁水滴落，点燃了周围老旧的涂料，发出了超级难闻的气味。仅此而已。
+弹片，气浪，火光，什么都没有。
+我在心里模拟过二十多遍的大爆炸并没有如期发生。
+这个狡猾的龙女大概把法术灌进了长剑，热量被她导进了我们脚下的钢铁地面。
+热量辐射向我的每一个陷阱，直白地融化了它们的结构和性质。
+合理的判断。你真棒，W。
+本该从各个方向发出的让她粉身碎骨的无死角爆炸，成了一个长裤里生不逢时的闷屁。
+好，我彻底玩砸了。
+
+...... 
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+//CG 塔露拉掐W 
+ 
+[name="W"]  咳，咳......
+[name="W"]  龙女，你......力气......不小。
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  这结果是不是也在你的计划之内？
+[name="塔露拉"]  我猜猜，你的计划是，“为我表演一场带有即兴爆破的自杀秀”，对不对？
+[name="塔露拉"]  你不应该浪费我们各自的时间。
+[Character]
+[name="W"]  别在那自大......咳，咳......小......小姑娘。不，你真的，是她吗？现在，我连......这个都不敢肯定。
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  我不需要你来界定我。
+[name="塔露拉"]  选个死法吧。你是希望被烧死，还是被从这里丢下核心城摔死，又或者是被我的利剑刺穿而死？
+[Character]
+[name="W"]  你真......杀得死我？
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  历经千锤百炼铸造出来的，才是剑，剑从诞生起就注定要成为武器。
+[name="塔露拉"]  而你，你不过是具没死过的肉体凡躯而已。
+[Character]
+[name="W"]  哦，那可真是......荣幸啊。
+[name="W"]  被这把剑，活活刺死......我是......第一个吗？
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  遗憾，你只能屈尊第二。
+[Character]
+[name="W"]  那......被炸弹炸死的人里......你、你根本......
+[name="W"]  ......排不上号。
+
+[image]
+[Dialog]
+[Blocker(fadetime=1,block=true)]
+[Character(fadetime=1)]
+
+我要死了吗？应该是的。
+不过，死又算什么呢？比死糟糕的事情多了去了。
+所以，当你觉得自己要完蛋的时候......
+只要你准备了比死更糟糕的东西，就连你自己都会吓一跳。
+现在......我想，我该把自己也变成炸弹。
+
+[Dialog]
+[CameraShake(duration=1, xstrength=16, ystrength=12, vibrato=60, randomness=180, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=2)]
+
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  咳。
+[name="塔露拉"]  竟然在我手里炸开了......？本以为你会更怕死一些。
+[name="塔露拉"]  虽然你的倒戈没有出乎我的意料，你本人却的确......让我有些吃惊。
+[name="塔露拉"]  作为滑稽戏的开幕，确实也说得过去。
+[name="塔露拉"]  希望你的死亡足够痛苦，维多利亚的W。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_cenbri",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+//
+//背景：切尔诺伯格核心城舰桥
+战斗过后 距切城撞击31hrs 6:30P.M.
+[Dialog]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_025_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="爱国者"]  ......
+[name="爱国者"]  领袖。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  先生。你的归来让我安心许多。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  客套，不必。这里，刚刚，发生过战斗。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  是我与妄图刺杀我的W。 请放心，我没有大碍。
+[name="塔露拉"]  根据一系列报告，她在占领切尔诺伯格时就已经心生叛意。
+[name="塔露拉"]  她私自放走敌人，策动萨卡兹佣兵的叛乱，谋杀了自己的上司。
+[name="塔露拉"]  她的一系列行为，应该都出自其他政治势力的指使。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  那现在，她在哪？
+[name="爱国者"]  她应该，被审判。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  她引爆了藏在自己身上的爆破物，掉下了核心区。
+[name="塔露拉"]  我会派人去搜查她的尸体，先生不必挂心。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  我不用，关心。
+[name="爱国者"]  那她的，萨卡兹雇佣军？
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  我会处理。现在核心城已经稳定航行，我需要立即稳定这股势力。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  ......领袖。为什么，不通知我，会启动核心城？
+[name="爱国者"]  就连通讯，也断了。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  这是无奈之举。乌萨斯随时可能袭击切尔诺伯格，屠杀我们的同胞，我们必须为他们先行攻下龙门。
+[name="塔露拉"]  现在，能源必须全部用来支持核心城的运转，我们没有多余的动力去支持城内外的频道调谐。
+[name="塔露拉"]  天灾残留的源石对城区的干扰强到让我们无法承受。
+[name="塔露拉"]  召回你的通讯用尽了我们最后的备用能源。现在，只有一个地方能提供给我们足够的精炼源石。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  即使，时间紧迫，你也可以，与我们，商量。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  你说的可能是对的。对不起，先生，我应该再多考虑。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  既然，你已经，启动核心城。
+[name="爱国者"]  我这把密钥，又有什么用？
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  它能够停下这座城市。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  当真，能够停下？
+[name="爱国者"]  很多，事情，一旦启动，就不会停下。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  所以我把这把密钥交给你。由你来决定我们什么时候停下。
+[name="塔露拉"]  我为我的独断指挥向你道歉。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  ......
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  今天的先生似乎比往常更沉闷。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  没有。我，去镇守，核心城。
+[name="爱国者"]  一定有人，会尝试，攻击这里。
+[name="爱国者"]  我拦住他们。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  有劳你了，先生。
+[name="塔露拉"]  弑君者，霜星，以及梅菲斯特和浮士德，还在龙门等着我们去援助。我们不能让任何外来人干扰我们的计划。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  ......塔露拉。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  ......
+[name="塔露拉"]  怎么，我的战士？
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  领袖。
+[name="爱国者"]  无论是，怎样强盛的邪恶，都有它，未至的末日。
+[name="爱国者"]  我，这样坚信。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  没错。我也同样坚信这一点。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  ......别了，领袖。
+[Character(name="char_011_talula_1", name2="avg_npc_025_1", focus=1)]
+[name="塔露拉"]  去吧，爱国者。
+[name="塔露拉"]  结束这场战斗，夺回感染者应有的位置，整合运动必将战胜所有阻挡在它们道路上的敌人。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+ 
+[name="凛冽的声音"]  这是什么？
+[name="沙哑的声音"]  一种，萨卡兹的护符。这里有两块。
+[name="沙哑的声音"]  你拿走，这一块。另一块，我留着。
+[name="凛冽的声音"]  这是拿来做什么的？还有点重。
+[name="沙哑的声音"]  它能，维持你的，生命。
+[name="凛冽的声音"]  你还在信那些萨卡兹的东西......有什么必要？
+[name="沙哑的声音"]  我，说完。
+[name="凛冽的声音"]  行。
+[name="沙哑的声音"]  这护符，能够承受，漫长折磨。
+[name="沙哑的声音"]  致死伤口，器官破坏，不行。但，消耗生命，它能承受。
+[name="沙哑的声音"]  直到它碎掉。
+[name="沙哑的声音"]  当你的护符，碎掉，我的护符就会，颤动。
+[name="沙哑的声音"]  我会，去，救你。
+[name="凛冽的声音"]  如果两块都碎了呢？
+[name="凛冽的声音"]  ......说话呀？
+[name="凛冽的声音"]  唉......我收下就是。
+[name="沙哑的声音"]  好。
+[name="凛冽的声音"]  我的命肯定比你长，你活好自己的。
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cenbri",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[Character(name="avg_npc_025_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="爱国者"]  ......
+[name="爱国者"]  援助，谁？结束，什么战斗？
+[name="爱国者"]  我手中的护符，也已经碎了。
+
+ 
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_cenbri",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+ 
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  ......
+[name="萨卡兹战士"]  你杀了W。
+[name="萨卡兹战士"]  你要做什么？
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  解放你们。让你们不再需要萨卡兹人做头领。
+[name="塔露拉"]  而你们想要的一切，我来带给你们。
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  给我们什么？
+[Character(name="char_011_talula_1")]
+[name="塔露拉"]  战争。
+[name="塔露拉"]  不再是屠杀弱者的寡淡滋味。不再是以卵击石的无谓浪费。
+[name="塔露拉"]  我会给你们真正平等的战争。
+[name="塔露拉"]  萨卡兹们，流浪的魔族们。
+[name="塔露拉"]  即将在你们面前呈现的，不仅有受害者的恐惧，也有你们无数世代的耻辱，更有鲜血、皮肉，以及新造的废墟，钢铁的重塑。
+[name="塔露拉"]  我会给你们杀，以及死。
+[name="塔露拉"]  新的时代已经到来，这个时代战争为王。
+[name="塔露拉"]  那么，愿意品尝这新时代的萨卡兹人，向前一步来。
+
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  ——
+[name="萨卡兹战士"]  你要我们杀谁？
+
+[Dialog]
+[Blocker(fadetime=1,block=true)]
+[Image]

@@ -1,0 +1,350 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+
+
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Character]
+[Blocker(fadetime=1,block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[delay(time=1)]
+流血。刺穿。撕裂。 
+[Dialog]
+[delay(time=1)]
+[Decision(options="这不对。", values="1")]
+[Predicate(references="1")]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[delay(time=0.6)]
+我们。敌人。人。
+哀嚎，惨叫，呻吟。
+[Dialog]
+[Character]
+[Background(image="bg_cherunder",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$plot_intro", key="$plot_loop", volume=0.4)]
+[Decision(options="这不对！;......！;我不能接受。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ......
+[name="凯尔希"]  你想问问题。你可以问。
+[Character(name="avg_npc_012")]
+[name="罗德岛干员"]  博士......是第一次看迷迭香战斗吗？
+[name="罗德岛干员"]  我知道你不好受，但——
+[Character(name="char_003_kalts_1",name2="avg_npc_012",focus=1)]
+[name="凯尔希"]  交给我。去照看失去战斗能力的敌方伤员。以及，他们中有负责发布消息和接收命令的传令兵。
+[name="凯尔希"]  他们的逃脱会对我们的行动造成巨大威胁。
+[Character(name="char_003_kalts_1",name2="avg_npc_012",focus=2)]
+[name="罗德岛干员"]  ......明白。
+[Dialog]
+[Character]
+[Decision(options="她多大年纪？ ", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  14岁。 
+[Decision(options="你允许她......？！", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  诸位干员......请让我过去！
+[name="阿米娅"]  ......这里发生什么事了？我才刚处理完现场......
+[name="阿米娅"]  博士？
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ......怎么了？
+[name="迷迭香"]  博士，你刚才是叫我了吗？
+
+[Decision(options="是谁把你推上战场的？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  ......
+[Dialog]
+[Character]
+[Decision(options="是谁把你推上战场的！", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  博士！
+[Dialog]
+[Character]
+[Character(name="avg_npc_042")]
+[Decision(options="这么残忍的事情！;......可怕......;这绝不是你该承受的。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[Decision(options="......为什么要让你来做？", values="1")]
+[Predicate(references="1")]
+[Decision(options="凯尔希！;......！;不该这样。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character]
+[Dialog]
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  是我自己。
+
+[Decision(options="你在说什么？！;......;你自己是什么意思......？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="迷迭香"]  我选择了战斗。我想要战斗。
+[name="迷迭香"]  有些感觉只有在战场上才能找到。
+[name="迷迭香"]  保护了朋友和家人的时候才会感觉到满足。
+[name="迷迭香"]  ......罗德岛需要我。
+[name="迷迭香"]  为了阻止更多我一样的人生出来，这片大地在叫我的名字。
+ 
+[Decision(options="即使如此，你也不......", values="1")]
+[Predicate(references="1")]
+[Decision(options="你不能——", values="1")]
+[Predicate(references="1")]
+
+[name="迷迭香"]  ......死亡有把谁当作小孩吗？
+[name="迷迭香"]  战争和感染，会因为它们看见的是小孩，就让他们活着吗？
+[name="迷迭香"]  我和阿米娅站在战场上......看到我们，谁的第一印象是“孩子”呢？
+[name="迷迭香"]  博士，我们是“怪物”吧？
+ 
+[Decision(options="不！！;......;这只是你自己的看法。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="迷迭香"]  博士，不。
+[name="迷迭香"]  Dr.{@nickname}，不。
+[name="迷迭香"]  我自己是什么，没什么关系。
+[name="迷迭香"]  我只想和我的家人一起做有意义的事。
+[name="迷迭香"]  你知道Scout吗？
+ 
+[Decision(options="那是......？", values="1")]
+[Predicate(references="1")]
+[name="迷迭香"]  ......你知道Ace吗？
+ 
+[Decision(options="我知道。", values="1")]
+[Predicate(references="1")]
+[name="迷迭香"]  ......我已经有几天没有看他们的事情了。
+[name="迷迭香"]  我已经忘了许多。
+[name="迷迭香"]  但是，我只是忘掉，我和无论什么全都丢掉的博士不一样。
+[Character(name="avg_npc_042",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]  迷迭香。
+[Character(name="avg_npc_042",name2="char_002_amiya_1#4",focus=1)]
+[name="迷迭香"]  ......不，不是这个意思。但你明白的，阿米娅。
+[Character(name="avg_npc_042",name2="char_002_amiya_1#4",focus=2)]
+[name="阿米娅"]  ......我明白。但可以......别这么说。
+[Character(name="avg_npc_042",name2="char_002_amiya_1#4",focus=1)]
+[name="迷迭香"]  嗯嗯......好。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  我丢掉的只有零零散散的，许多看到的，许多句子。
+[name="迷迭香"]  那些感情，那些......我说不出来，只有阿米娅能懂的感情......
+[name="迷迭香"]  却从来没有离开过我。
+
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[name="迷迭香"]  博士......我觉得你很复杂。
+[name="迷迭香"]  比他们说的都要复杂。
+[name="迷迭香"]  有人说我也很复杂。有人看见我就会害怕。有人说我不该这样。
+[name="迷迭香"]  但他们也不知道我为什么会这样，不知道我感受到了什么。
+[name="迷迭香"]  为什么在这时候突然心痛？为什么在这时候会想要哭呢？
+[name="迷迭香"]  明明什么事情都不记得了......为什么眼睛还是很酸，嘴唇也会变干呢？
+[name="迷迭香"]  走廊里那块污渍是谁留下的，为什么没被擦掉？为什么在打碎瓷瓶的时候既担心，却还有点开心？
+[name="迷迭香"]  看到花朵就感觉很讨厌，看到虫子反而很好奇，又是为什么？
+[name="迷迭香"]  在我不记得的那些事情里，到底发生了什么？为什么这一种种感情都涌了上来？
+[name="迷迭香"]  我感觉到的干员们身上有着各种各样的不同。
+[name="迷迭香"]  到了失去大家的时候，那些感觉，当然全都消失了。
+[name="迷迭香"]  可为什么......为什么，会有情感这种东西啊。
+[name="迷迭香"]  为什么已经感受不到了，眼泪却一直在流、一直停不下来呢？
+[name="迷迭香"]  我不是都已经，忘记了吗？
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  ......
+[name="阿米娅"]  但是迷迭香从来不想我拿走这些感情。
+[name="阿米娅"]  这些突然缠上来的情感，无论它是什么样子，它都属于迷迭香。
+[name="阿米娅"]  ......也只属于迷迭香。
+[name="阿米娅"]  我不能干涉它们。只要在迷迭香的脑海里还有美好的希望......我就不会这么做。
+[name="阿米娅"]  因为，要做什么，是迷迭香自己决定的，要忘记，也是迷迭香自己去忘记。
+[name="阿米娅"]  真正地忘记。
+
+[Decision(options="迷迭香身上发生了什么？;......;我还没有那么了解她。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  Dr.{@nickname}......罗德岛会严格甄别每一个干员。
+[name="阿米娅"]  许多干员申请前往战场，都被我们拒绝了。罗德岛会从种种角度判断一个干员是否适合作战任务。
+[name="阿米娅"]  作战能力，战术考虑，纪律和身体素质，都是考察的要素，但这都是浅层次的条件。
+[name="阿米娅"]  在实际的任务中，许多人并不知道如何去信任彼此。
+[name="阿米娅"]  迷迭香在这里，是因为她相信我们的指挥和目标，而我们相信她的能力和她的判断。
+[name="阿米娅"]  请相信我，博士。不，请相信我们......
+[name="阿米娅"]  你会慢慢看见她......感情的颜色。
+
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ......
+[name="迷迭香"]  博士。谢谢你和煌一起战斗。
+
+
+[Decision(options="为什么？;......;没什么好谢的。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="迷迭香"]  煌需要更多人和她一起战斗。我也想看她笑的样子。
+[name="迷迭香"]  我也想看看你的样子。我想看看，Ace和Scout一直在说的你，到底是什么样子。
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_cherunder",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  你在这。
+[Decision(options="轮到你来找我了。", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  ......使用沉重的大型器械迅速而有力地摧毁敌人，同时兼具惊人的自制力和极强的应变能力。
+[name="凯尔希"]  迷迭香是罗德岛最出类拔萃的歼灭战要员之一。
+[name="凯尔希"]  相应的，她的待人方式和说话语气可能会让你感到担忧，她战斗的姿态，相较她的外表，也的确很残酷。
+[name="凯尔希"]  也许手持电锯四处大闹的煌还算能让人接受，迷迭香战斗时飞溅的碎片，则的确会让一些人感到不安。
+[name="凯尔希"]  如果能使你稍微感到平静一些，我可以给你一点保证作慰藉。假使你确实能被说服的话。
+[name="凯尔希"]  ——迷迭香很少击杀敌人。虽然看上去相当直接，但她的战术旨在解除敌人的战斗能力。
+[name="凯尔希"]  譬如说，刚才的战斗中，所有敌人都被成功解除了武装，且并没有人因为迷迭香的攻击而死去。
+[name="凯尔希"]  她对武器的操控能力比起过去，已经进步了许多。
+[name="凯尔希"]  当然，我们擒获的敌人是否能得救，取决于我们能否及时击溃整合运动的指挥核心。直到那时，我们才有可能派遣救援队进入核心城。
+[name="凯尔希"]  以及，当我们必须实施致死性打击以达成战术性目标的时候，伤亡不可避免。
+[name="凯尔希"]  ......你还是皱着眉头。是不是还是觉得这些表面现象依然超过了你的想象？
+[Decision(options="我不能接受。;......;我不能理解。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  事实可能也超乎你的想象。
+[name="凯尔希"]  令人胆寒的源石技艺和令人惊讶的感知能力，并不是迷迭香成为精英干员的理由。
+[name="凯尔希"]  ——迷迭香正是因为成为了精英干员，才表现出了这样的素质。
+[name="凯尔希"]  我们不是判断“我们应该把她送上战场”，而是判断“如果不让她成为这样的战士，后果将不堪设想。”
+[Decision(options="什么样的后果？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  说严重一点吧。她身体里渗透出的源石技艺可能会无意识或有意识地屠杀生命。
+[name="凯尔希"]  人类的互相毁灭已经成为了一种常态，即使现在这种事已经相当频繁地发生在这片大地上，大多数人却依然还是自己握着兵器和法杖的。
+[name="凯尔希"]  失去自我意识的人，是否还算是人这一话题，我并不想讨论。但人类面临的正是这个问题的应用延伸。
+[name="凯尔希"]  “当剥夺了人类个体的自我意识时，剩下的是什么？诞生的又是什么？”
+[name="凯尔希"]  “当它剥夺我们的生命时，有罪的究竟是谁？”
+[name="凯尔希"]  是造出武器的人，是使用武器的人，还是被当作武器的人？
+[Decision(options="又要我猜谜？;......;我会自己查明的。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  随着之后战斗的继续，我也许能为你更多地解释一些事情。 
+[name="凯尔希"]  顺便，年龄的问题。
+[name="凯尔希"]  阿米娅的假装成熟也许让你产生了一种错觉。当然，也许有，也许没有。
+[name="凯尔希"]  被当作武器畏惧的幼小生命，并不会因为表现稚嫩，就可以被看作是普通孩童。
+[name="凯尔希"]  ——何况她们已经经历过太多了。
+[name="凯尔希"]  ......整理一下你的必备物品。我们差不多要向地面进发了。
+ 
+[Decision(options="那阿米娅呢？她也是武器吗？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ......你可以自己去问她。
+[name="凯尔希"]  而且，这也该由她自己告诉你。
+
+
+[stopmusic(fadetime=3)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
+[Character(name="char_171_bldsk_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="华法琳"]  凯尔希！站住！
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  华法琳。我马上就要出发了，无论要说什么，你都可以直奔主题。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  你知道那个预言吧？不对，没有什么是你不知道的，你肯定知道。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  预言？
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  你是不是因为这个原因允许阿米娅去的？
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  ......阿米娅才是这场行动的总指挥和发起人。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  可阿米娅只有一点点大，怎么能做总指挥——
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  华法琳，我们离开卡兹戴尔多长时间了？
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  ......
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  给我个准确的回答，否则我走了。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  ......两个月？
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  华法琳......别开玩笑。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  我知道你的意思。她长大了。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  是的，华法琳。岁月如梭。
+[name="凯尔希"]  卡特斯人的生理变化和血魔生理变化有着难以估量的差别。到现在为止，我们已经离开卡兹戴尔三年了。
+[name="凯尔希"]  也许你的时间只过去了一点点，但阿米娅已经成长了许多。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  你还是先回答我的问题。预言。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  ......“最后的温迪戈将会死在魔王手中？”
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  就是这个。我知道那个游击队，以及领袖。是他没错。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  预言原本的句式是“胡尔提克茨之子，萨卡兹的背叛者和血脉末端的不荣誉者将遭萨卡兹的君主出手处决。”
+[name="凯尔希"]  那甚至算不上个预言。无论他们所谓的“血脉”是否得到了延续，迄今为止，依然有许多温迪戈还在乌萨斯和哥伦比亚生活着。
+[name="凯尔希"]  ......如果你允许我把几十个算作“许多”的话。
+[name="凯尔希"]  而且，结合当时的语境，你应该将它看作是一句威胁。很多人不希望温迪戈们离开卡兹戴尔。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  最开始说出这句话的可不是你我，既然你也记着，就说明你也觉得很重要。对不？
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  你是不是上年纪了，怎么会相信“预言”这种萨卡兹巫术般的说辞？
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  ——年纪？你，你好意思说我？！
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  我感染了矿石病，死亡永远立于我身侧，只等时机成熟。华法琳，我的生命一定比你想象的更短暂。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  欸！
+[name="华法琳"]  我们一定要说得那么严肃吗？我不是那个小丫头可露希尔，有些事情我可没法让你轻描淡写过去的。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  你提出的议题相当的严肃。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  ......不管了。
+[name="华法琳"]  凯尔希，听好了，其他人大概率不会和你说，但我会。
+[name="华法琳"]  他是我们里最后的几个之一了。我不是慈善家，也没那么老好人，但......我们是萨卡兹人。
+[name="华法琳"]  即使我是血魔，那个老头是温迪戈，也一样。
+[name="华法琳"]  ......萨卡兹人在这片大地上已经过得够难了。可能的话，我希望他能回到卡兹戴尔。来我们这里也行。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  ——
+[name="凯尔希"]  我不是。华法琳，我不是萨卡兹人。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  所以你不答应？
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  不......
+[name="凯尔希"]  我尽力。
+[name="凯尔希"]  ......我甚至记得他，华法琳。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  有你的承诺比什么都强。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  别指望事情能有那么顺利。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  但这次是你试着去做。只要是Dr.凯尔希去做了，什么样的结果我都接受。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=2)]
+[name="凯尔希"]  也许你还没得到消息，但是你的建议提出得太晚。有一些事情已经不幸地发生了。
+[name="凯尔希"]  前些时间切尔诺伯格的感染者诊所“阿撒兹勒”已经与我们交换了信息。我得知的不仅仅是他正服务于整合运动这件事。
+[name="凯尔希"]  此外，你该清楚，如果你与他交战，你甚至可以尝出乌萨斯最暴虐时的刀锋是沾着咸味还是锈味。
+[name="凯尔希"]  没有人该有意识地置罗德岛干员于险境。
+[Character(name="char_171_bldsk_1",name2="char_003_kalts_1",focus=1)]
+[name="华法琳"]  有些患者的生命有限，但限度的高低取决于主治的医师。事在人为。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ......事在人为。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+
+[name="凯尔希"]  以及我以前提醒过你......可能你又忘了。
+[name="凯尔希"]  我不会因此惩罚你，却可能做些一劳永逸的事情来永绝后患。
+[name="凯尔希"]  不要说我可怕，华法琳。我们说好的。
+[name="凯尔希"]  “不许在任何场合——哪怕是罗德岛——再提起‘魔王’二字。”
+[name="凯尔希"]  永远不许。
+[Dialog]
+[Character]
+[Background(image="bg_cherunder",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  等等。
+[playMusic(intro="$plot_intro", key="$plot_loop", volume=0.4)]
+[name="阿米娅"]  全员，稍息！
+[name="阿米娅"]  迷迭香......是我的错觉吗？
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  嗯，不。我也感觉到了。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  Dr.{@nickname}，出现了意外状况。
+
+[Decision(options="发生了什么？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  我不是很确定，不过......
+[name="阿米娅"]  核心城好像......放慢了速度？
+
+[Dialog]
+[Blocker(fadetime=3,block=true)]
+[Image]

@@ -7,7 +7,8 @@ local list =
   "HotFixes/MultiHitBehaviourHotfixer",
   "HotFixes/PostEffectHotfixer",
   "HotFixes/GachaItemHotfixer",
-  "HotFixes/HGSDKHotfixer"
+  "HotFixes/HGSDKHotfixer",
+  "HotFixes/LimitPoolHotfixer"
 };
 
 return list;

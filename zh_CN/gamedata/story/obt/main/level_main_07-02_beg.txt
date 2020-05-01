@@ -1,0 +1,373 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_turf",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+
+[playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
+
+
+
+//加一个跑马地背景需求
+
+龙门上城区 7:00 p.m. 天开始黑了
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[Character(name="char_015_lmg")]
+[name="近卫局成员"]  秘密逮捕令？陈sir？！
+[name="近卫局成员"]  搞错了吧？怎么可能......
+[name="近卫局成员"]  喂！回来！我问你是不是搞错了！！
+[name="近卫局成员"]  可恶，陈sir，怎么会......究竟是谁在搞鬼！
+[name="近卫局成员"]  必须得找到陈sir，亲口问她才行！
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_lungmen_d",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+//最早的贫民区
+//灰尾无立绘
+
+[Character(name="avg_npc_034",fadetime=1,block=true)]
+[delay(time=1)]
+[name="鼠王"]  ......好。我晓得了。
+[Character]
+[name="灰尾"]  主人还有什么吩咐？
+[Character(name="avg_npc_034")]
+[name="鼠王"]  没有了。把之前我吩咐过的事情，都处理好。做完以后就赶紧去避避。
+[Character]
+[name="灰尾"]  是。
+[Character(name="avg_npc_034")]
+[name="鼠王"]  去吧。快去。
+[name="鼠王"]  啊。
+[name="鼠王"]  ——唉。居然还有人能算倒魏彦吾。
+[name="鼠王"]  塔露拉，塔露拉......难道说这真是命数？
+[name="鼠王"]  二少爷，你要是泉下有知，也不会想看到这般光景吧？
+[name="鼠王"]  罢了，罢了。龙门终归还是走到这步。
+[name="鼠王"]  但晖洁......晖洁！小心啊，晖洁......千万别把命送了！
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_lungmenbridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+龙门停舰接舷区  7:20 p.m.
+
+[Character(name="avg_npc_015",name2="avg_npc_015")]
+[CameraShake(duration=0.7, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="牧群"]  啊......啊！唔，呃......
+[Character(name="avg_npc_012")]
+[name="罗德岛干员"]  哎，这个数量，真不是说说的......近卫局还没扫荡到这里吗？
+[name="罗德岛干员"]  昨天整合运动来一次，今天特殊感染者又来一次，就算是我们也顶不太住啊，又不能在城市里使用大规格武器......
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_042",fadetime=1,block=true)]
+[delay(time=1)]
+[name="迷迭香"]  你好，干员。他们是这次的敌人吗？
+[Character(name="avg_npc_042", name2="avg_npc_012", focus=2)]
+[name="罗德岛干员"]  迷迭香！哎，有救了有救了。
+[Character(name="avg_npc_042", name2="avg_npc_012", focus=1)]
+[name="迷迭香"]  他们都是被源石技艺转化的感染者......？没办法限制住他们的活动吗？
+[Character(name="avg_npc_012")]
+[name="罗德岛干员"]  是的，我们配备的大多是些防御装备，没想到连钢索和高纤维网都不太顶用，对上这些感染者，恐怕要上战争用军械才行。
+[name="罗德岛干员"]  防线的压力实在太大，没办法，我们只能向本舰请求支援。幸亏来的是你，现在我们有办法了。
+[name="罗德岛干员"]  他们体内的源石结构把他们的身体变得很坚韧，我们得用可控重火力去限制他们的行动。另外......我们检测不到他们的大脑活动的迹象。
+[name="罗德岛干员"]  根据观察对比，他们似乎......实质上，已经死亡了。现在的他们纯粹是被某种支配性法术驱动的。哎，太过分了。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  做出这种事的人......要付出代价。
+[name="迷迭香"]  啊，你们的安全更重要。
+[name="迷迭香"]  帮我制定计划吧，我来......让他们的躁动停下。
+
+[Decision(options="你要参与战斗？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  嗯。
+ 
+[Decision(options="可你看起来......", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="罗德岛干员"]  ......博士......你没见过迷迭香是吗？
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  博士，请让一下。
+[Character(name="avg_npc_012")]
+[name="罗德岛干员"]  那你可得小心，站远一点。这一定是你第一次见这种架势。
+
+[Dialog]
+[Character]
+[CameraShake(duration=2, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=true)]
+[Decision(options="放在舱门里的铁盒飞起来了？！;......？;漂浮在空中的器械，是你的装备？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Dialog]
+[Character]
+//迷迭香使用能力，让武器漂浮在空中，迎向敌人。逆光
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  是我的。
+[name="迷迭香"]  干员，请向我描述一下目标的感觉。
+[Character(name="avg_npc_012")]
+[name="罗德岛干员"]  了解，我查下交流手册......嗯，目标是，呃，表征活跃的大量不安个体？
+[name="罗德岛干员"]  集群活动，缺乏有效目标，趋势明显，既定路径不明。大致就这些！
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ——我知道了。请交给我。
+[name="迷迭香"]  凯尔希医生叮嘱过，在处理结束以后，要让罗德岛本舰立刻离开龙门......！
+[Dialog]
+[Character]
+//老陈找摩托
+//CG 陈远远看到，星熊站在远处，把盾插在地上，挡住了去路
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_turf",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$rungeneral", volume=0.9)]
+[Character(name="char_010_chen_1#4",fadetime=1,block=true)]
+[delay(time=3)]
+[Character]
+[name="星熊"]  晚上好啊，老陈。
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_136_hsguma",fadetime=1,block=true)]
+[delay(time=3)]
+[Character(name="char_010_chen_1#3")]
+[name="陈"]  星熊......？你怎么在这，你的伤怎么样了？
+[Character(name="char_136_hsguma")]
+[name="星熊"]  我可是鬼啊。那点小伤，早就好了。
+[playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1",focus=2)]
+[name="陈"]  那我就——
+[name="陈"]  等下，你是在这等我？
+[Character(name="char_136_hsguma",name2="char_010_chen_1",focus=1)]
+[name="星熊"]  你推着的这架沙地车，是不是雷姆必拓那款最新型？
+[name="星熊"]  “越野，爬坡，防尘，高续航低耗能，最小的环境影响，最大的驾驶享受？”
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=2)]
+[name="陈"]  ......
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=1)]
+[name="星熊"]  啊，不好意思。终端上看多了，一不小心就把广告词记得滚瓜烂熟了。
+[name="星熊"]  真是架好车，就算我对越野不感兴趣，也想过要买一台呢。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=2)]
+[name="陈"]  你是想说什么？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_7_3",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=0.87, yScaleTo=0.87, duration=20, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=false)]
+[name="星熊"]  风尘仆仆的，老陈，你想往哪里去？
+[name="陈"]  为什么你会知道我在这里......？
+[name="星熊"]  你私下出城的时候都会从这里走。哪有缺口，哪有别人不知道的通道，你我都知道。
+[name="星熊"]  ——近卫局已经发了通缉令。
+[name="陈"]  你不会信的。
+[name="星熊"]  那肯定。你是什么样的人，我再清楚不过了。
+[name="陈"]  只有从这条路才能出龙门了。
+[name="陈"]  我躲躲藏藏了一路。如果近卫局的人都像你一样懂道理......
+[name="星熊"]  那你就绝不可能出得了龙门。
+[name="陈"]  ......什么？
+[name="陈"]  你在说什么？
+[name="星熊"]  他们和我一样，不希望你去。
+[name="陈"]  星熊......你要拦我？
+[name="陈"]  怎么你也要拦我，星熊？！
+[name="星熊"]  我当然要拦你，老陈。我是龙门近卫局的督察，更是你的朋友。
+[name="星熊"]  你是不是想来次千里单骑的英雄大冒险？不能放你出城的原因，也就这一个了。
+[name="陈"]  你是龙门人，星熊！
+[name="陈"]  我们已经没有其他机会了，再由魏彦吾用他的手段解决这事，只会牺牲更多人！
+[name="星熊"]  用你的法子就能解决了吗？
+[name="陈"]  ......
+[name="陈"]  他们叫你鬼姐，他们相信你能保护得了他们热爱的龙门。星熊，放我去。
+[name="星熊"]  ......哈。
+[name="星熊"]  老陈，他们真的热爱龙门吗？
+[name="陈"]  你——
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6,block=true)]
+[Image(image="avg_7_3",x=350, y=-400, xScale=2, yScale=2, fadetime=0)]
+[ImageTween(xFrom=350, y=-400, xTo=100, xScale=2, yScale=2, duration=60, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=false)]
+
+[name="星熊"]  我啊，是个老套的人。
+[name="星熊"]  漫画，电影，酒，下着雨的街道，匆匆路过的没带伞的人。除了电单车，我都喜欢老套的。
+[name="星熊"]  有些东西在别人看来是很容易过时的。但老陈，我们真能追得上时间吗？
+[name="星熊"]  我不能。我做不到。它走得太快了，它把我看重的许多东西都踩成了碎片。
+[name="星熊"]  剩下的，只有这么多。一道划痕，一个折角，一片黄斑，每一个我都能说上名字。
+[name="星熊"]  我讨厌它。我讨厌时间带走我身边的人。
+[name="星熊"]  他们都为了自己的一处容身之地粉身碎骨，我呢？
+[name="星熊"]  我看着他们一个个消失，被捶打成齑粉，甚至是我动的手，他们的梦想被我亲手砸得粉碎。
+[name="星熊"]  他们不是爱着龙门。他们是无处容身。最后的最后，也是我让他们无处容身。
+[name="星熊"]  你不能再走了，老陈。
+[name="陈"]  ......
+[name="陈"]  你连阿发的死，连那么多为了龙门城死去的人......都可以装作没看到？
+[name="星熊"]  别觉得自己很懂。
+[name="星熊"]  我和他们处的时间比你久得多，我对他们的理解比你深得多。
+[name="陈"]  但保护龙门是我的职责。不管谁拦在我面前，我的职责，从来没变。
+[name="星熊"]  还当自己是陈警司？你的职责是谁给你的？
+[name="陈"]  我自己。
+[name="星熊"]  ......我都不知道你是不是想把这话说给自己听。
+[name="星熊"]  你看看你，一个人就救得了龙门？一个人杀得了所有整合运动？耍脾气要有个限度。
+[name="星熊"]  挺有意思。之前是你去执行魏先生的命令，因为你能理解他。现在，变了，是我来执行魏先生的命令，只因为现在我更理解魏先生一点。
+[name="星熊"]  我大概猜得到魏先生的办法。既然有人要死，魏先生只会想自己去。你是陈家血脉，这件事过后，你不会受牵连。
+[name="陈"]  你说他——
+[name="星熊"]  魏先生宁愿自己死，也不愿意你死。
+[name="陈"]  你把他想得太好了。
+[name="星熊"]  你可能也把他想得太不是东西了，老陈。
+[name="陈"]  如果他想死，那就去死好了。可他死了又能解决得了什么？能有什么用？难道战争就不会开始了？难道龙门就不会首当其冲了？
+[name="星熊"]  他死，龙门不会被人迁怒。我想所有的责任都会随着他本人的死烟消云散。
+[name="陈"]  怎么可能会这么顺利？
+[name="星熊"]  当然不那么顺利。所以，他要你接班近卫局。
+[name="星熊"]  你会接他的班。近卫局局长的位子迟早是你的，下一步，你会成为这座城市的主人。
+[name="星熊"]  你该去把前前后后的问题，上上下下的遗毒，全都解开。
+[name="星熊"]  我清楚魏先生想做的事。他一直在等一个时候，他的眼神和他的手段，从我认识他那天开始就没变过。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Image(image="avg_7_3",x=-400, y=-250, xScale=1.5, yScale=1.5, fadetime=0)]
+[ImageTween(xFrom=-400, yFrom=-250, xTo=-200, yTo=-250, xScale=2, yScale=2, duration=60, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=false)]
+[name="陈"]  ......
+[name="星熊"]  龙门还需要你，龙门也不希望你冒这个险。
+[name="陈"]  我只感觉到一阵恶心。
+[name="星熊"]  魏先生的死也许打动不了你，但他死后，你可以去改变这座龙门城。
+[name="陈"]  告诉你一个事实吧，星熊。一个我不属于这座城市的原因。
+[name="星熊"]  别骗我，老陈。没人比你更适合这座城。
+[name="陈"]  我是感染者。
+[name="星熊"]  ......什么？
+[name="星熊"]  ......
+[name="星熊"]  ......什么时候......？
+[name="陈"]  三年前。
+[name="星熊"]  你瞒着我？
+[name="陈"]  我不是故意......
+[name="星熊"]  为什么连我都不能知道......？
+[name="陈"]  魏彦吾不希望任何人知道。近卫局不能有感染者，所以我不能是。
+[name="陈"]  星熊，这座城市没有感染者的容身之地。这片大地也没有。
+[name="陈"]  我已经受够了魏彦吾对我们的操控。我不会再由着他去指使我了。
+[name="星熊"]  不。我知道了。
+[name="星熊"]  我总算......总算完完全全地明白，为什么你，老陈，为什么你不能离开龙门了。
+[name="陈"]  ......星熊？
+[name="星熊"]  你要是走了，去了核心城，魏先生就不得不把你划成敌人，你不仅是敌人，而且你必须是一个感染者，一个与龙门敌对的危险感染者......
+[name="星熊"]  整座城就都会知道你是感染者，甚至还会认为你和整合运动同谋。
+[name="星熊"]  覆水难收，你再也回不了这座城市。
+[name="陈"]  我不在乎。
+[name="星熊"]  这句话是我该说的。
+[name="星熊"]  “你是感染者？我不在乎。”
+[name="星熊"]  我不在乎，Missy她不在乎，九也不在乎，近卫局也不在乎。
+[name="星熊"]  甚至魏先生都不在乎。他想让你改变这里，而不是赶走你。
+[name="陈"]  你没看到他对感染者的无情，我看见了。
+[name="陈"]  至于九，她已经走了。之前她离开近卫局，是因为她也被感染了。
+[name="星熊"]  ......九也......
+[name="陈"]  现在想想，我和九也许是因为同个任务患上的矿石病。
+[name="陈"]  她后来是我的线人，表面上加入了整合运动......然后，为了整合运动，她抛弃了龙门。
+[name="陈"]  因为她看清了这座城市的真相。
+[name="星熊"]  但你根本没背叛龙门。我不会让你背上你没犯下的罪。
+[name="陈"]  星熊，你觉得......你觉得我为什么要去核心城？
+[name="星熊"]  猜谜我对付不来，说明白点。
+[name="陈"]  呵.......
+[name="陈"]  你知道整合运动的领袖是谁吗？
+[name="星熊"]  她的名字我记不得。
+[name="陈"]  塔露拉。
+[name="陈"]  Missy没告诉过你？
+[name="星熊"]  告诉我什么？
+[name="陈"]  塔露拉是我的姐姐。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[image]
+[stopmusic(fadetime=3)]
+[Background(image="bg_turf",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+[Character(name="char_136_hsguma",name2="char_010_chen_1",focus=1)]
+[name="星熊"]  啊。啊.......哈。我懂了。
+[name="星熊"]  老陈，你今天不可能过去。
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=2)]
+[name="陈"]  ......为什么说这种话......？难道我的亲人、我的家人......都不够重要？！
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=1)]
+[name="星熊"]  就因为这样......
+[name="星熊"]  就因为这样我才不能让你过去。
+[name="星熊"]  即使今天我要死在这里，我也不会让你去。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=2)]
+[name="陈"]  ......
+[name="陈"]  这事情不是你能决定的，星熊。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=1)]
+[name="星熊"]  般若决定得了。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#2",focus=2)]
+[name="陈"]  ——今天挡在我面前，哪怕是场天灾，我也不会乖乖束手就擒，何况是一面盾，一个鬼！
+[Character(name="char_136_hsguma",name2="char_010_chen_1#2",focus=1)]
+[name="星熊"]  铸造这面盾的工匠被一群流浪的恶鬼杀了满门，他的怨气可比天灾还怨毒得多。
+[name="星熊"]  而这面盾上沾上的鲜血、引起的惨剧......比起天灾都邪恶得多。
+[name="星熊"]  老陈，魏先生不是个好人，我们可以合起来打他一顿。
+[name="星熊"]  你有什么想做的，我陪你去，什么都行。你不是喜欢我那辆哥伦比亚大缸70vv吗？我让给你。
+[name="星熊"]  老陈，不要是现在。不要去。不要逼我。这是我最后一点点想你答应的事。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=2)]
+[name="陈"]  逼你？你怎么说话像魏彦吾一样？......不要这么说话。
+[name="陈"]  在魏彦吾动手的时候......不。
+[name="陈"]  早在他出卖自己兄弟、辜负我的母亲、让这座城市在他灰暗的罪恶里沉睡时，我就已经决定好了。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=1)]
+[name="星熊"]  魏彦吾怎么做，也许你觉得和你有关系，但我觉得和你没有一点关系。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=2)]
+[name="陈"]  你在说什么......
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=1)]
+[name="星熊"]  他所做的、为你做的，和你该做的，一直是两回事。
+[name="星熊"]  魏先生也是这么期望的。他不想做一个坏人，他渴望的不是统治......
+[name="星熊"]  他把剑给了你。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=2)]
+[name="陈"]  ......你根本就不理解。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=1)]
+[name="星熊"]  ——理解什么？
+[name="星熊"]  不止一次，一次，一次又一次......我毁掉自己的家，毁掉自己的家人。
+[name="星熊"]  每次我都沾了一身血，每次我都打到最后，打到只剩我一个人站着。
+[name="星熊"]  就因为我觉得这是对的。就因为我认定那是错的。
+[name="星熊"]  我常常会想，我配活下来吗？
+[name="星熊"]  我不配。但我还是活下来了。我没法再只为自己活着了。
+[name="星熊"]  认定对错，所以一脚踏出去......是人一生中能做的最蠢的事。
+[name="星熊"]  后悔的味道一直就留在我的嘴里。
+[name="星熊"]  你以为只有你背负了很多吗，陈大小姐？
+[Character(name="char_136_hsguma",name2="char_010_chen_1#2",focus=2)]
+[name="陈"]  不要这么说话！
+[Character(name="char_136_hsguma",name2="char_010_chen_1#2",focus=1)]
+[name="星熊"]  ......那为什么不能稍微理解我一点？
+[name="星熊"]  我们同甘共苦这么些年，到底有什么不能敞开说？
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=2)]
+[name="陈"]  我有苦衷，你也有，我们都清楚，可明明知道了......
+[name="陈"]  可你为什么还是不明白？我没有牵连你们任何一个人，我到底哪里没理解你们？！
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=1)]
+[name="星熊"]  因为我见过太多死得毫无价值的人了。
+[name="星熊"]  我不在乎你的身份，但我在乎你去哪里。
+[name="星熊"]  我不会让你去。敌人的头领做到现在这步，你干什么都改变不了现状，你会白死。
+[name="星熊"]  让你白死，没人想看到。整个近卫局，整个龙门，没人想看到。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=2)]
+[name="陈"]  ——谢谢你，星熊。
+[name="陈"]  但我一定要去。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=1)]
+[name="星熊"]  当真？
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=2)]
+[name="陈"]  如果真要出剑，我不会怕你。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=1)]
+[name="星熊"]  一定要过，是吗？你是不是觉得自己现在的心硬得像块铁？
+[name="星熊"]  我之前就和你说过，你会沉浸在自己一个人的想法里，看不到周围的一切，看不到别人为你努力了多少。
+[name="星熊"]  一意孤行只会害了你。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=2)]
+[name="陈"]  哼。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#5",focus=1)]
+[name="星熊"]  罢了。只有被狠狠捶打过一遍，你才会像过去的我一样，知道自己那些可笑的执着都不过是些冲动。
+[name="星熊"]  既然你想打，老陈......就让我看看你比起过去两年成长了多少。
+[Character(name="char_136_hsguma",name2="char_010_chen_1#4",focus=2)]
+[name="陈"]  不 要 这 么 说 话。
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+
+//迷迭香使用能力，让武器漂浮在空中，迎向敌人。逆光
+[name="迷迭香"]  EX-42 源石技艺远程操作型器械，使用者迷迭香，请批准。
+[name="PTRS"]  允许在防卫战中运用，已批准带离。
+[name="PTRS"]  运用人：歼灭战专员，罗德岛精英干员迷迭香，已批准开启。
+[name="迷迭香"]  嗯，那我去了。
+[name="迷迭香"]  罗德岛舰船的启动，麻烦你们转告可露希尔。
+[name="罗德岛干员"]  博士，快快，快退进舱门。别看啦。
+[name="罗德岛干员"]  要是你被迷迭香战斗时迸出来的碎片打到，很可能会死喔。
+
+[Dialog]
+[Blocker(fadetime=1,block=true)]
+[Image]

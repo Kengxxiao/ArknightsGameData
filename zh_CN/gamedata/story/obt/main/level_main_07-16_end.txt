@@ -1,0 +1,801 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+
+[stopmusic]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+
+//切城核心城中部战后拆分
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_025_1",fadetime=1,block=true)]
+[delay(time=3)]
+
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  Mon3tr，撑住！
+[Character]
+[name="Mon3tr"]  （嘶叫）
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  狙击干员，继续轰炸他的躯干部分，他的铠甲已经严重破损。术师，牵制住其他游击队战士，别让他们有机会插手。
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_025_1")]
+[delay(time=2)]
+[Character]
+[name="Mon3tr"]  （哀鸣）
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  后撤，Mon3tr，近身缠斗没有优势！你已经无法阻止他前进了！
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  剑要脱手了！他......我连直接去抓他，都控制不了他，他感受起来，就像是山崩......
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  把能量聚集成束......收束。再收束，收束成线，照准他的心脏部位！
+[Character]
+[name="Mon3tr"]  （尖啸）
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  照射。现在！
+[Dialog]
+[Character(name="avg_npc_025_1")]
+[playsound(key="$p_imp_blunt_h")]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=1, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=2)]
+[name="爱国者"]  ——
+[Character]
+[name="Mon3tr"]  （低吼）
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  这竟然也不足以破坏他的身体机能......
+[Dialog]
+[Decision(options="怎么会这么胶着......！", values="1")]
+[Predicate(references="1")]
+
+
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  “每一次战斗都是死斗，每次战斗都豁出性命，因为生命会回归血脉，生命将在他人体内永生......”
+[name="凯尔希"]  近卫干员，不要怠慢......撤退。他的身躯也会释放“食人”仪式，他自身就是一个巨大的巫术装置......
+[name="凯尔希"]  博卓卡斯替，许多萨卡兹，并不希望你这样的温迪戈无谓地牺牲掉。
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  不。我怎么会，牺牲？
+[name="爱国者"]  我还能动。我还能，杀死你们。
+[name="爱国者"]  我的身体，还能听从，我的指挥。
+[name="爱国者"]  我还没体会尽，痛苦......不甘与遗憾。
+[name="爱国者"]  这就够了？这难道，就够了？
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  博卓卡斯替先生......停下吧，请你......停下吧！更多的战斗只是折磨！
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  战士。
+[name="爱国者"]  战士就是，要背负，所有死者。
+[name="爱国者"]  我背着，他们的痛，他们的恨，他们的沉默。
+[name="爱国者"]  如果，我，驻足......
+[name="爱国者"]  他们就是白死。
+[name="爱国者"]  折磨？你们应该，感到折磨。
+[name="爱国者"]  你们，无法战胜我。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  呜......
+
+[stopmusic(fadetime=3)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_indoor_u",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.4)]
+
+//模糊的家庭环境背景
+//乌萨斯室内模糊
+
+[name="妻子"]  亲爱的......别难过。
+[name="妻子"]  您不会续弦？别这样，亲爱的......
+[name="妻子"]  唉，但您是不会认同我的这些絮叨的。您真是像石头一样顽固，我又有哪一次真说服过您呢？
+[name="妻子"]  您还会继续打仗，对吗？
+[name="妻子"]  答应我，博卓卡斯替，答应我。别死在战场。
+[name="妻子"]  我只希望您不要再受折磨。您想一想，我离去后，这里依然有我们的家人陪伴着您，你看，小格尔......
+[name="妻子"]  他的睡脸，这是多么可爱的脸蛋啊。
+[name="妻子"]  他那两只还没长得很坚硬的，红彤彤的小角......
+[name="妻子"]  这是生命。是我生命的延续。孩子，是大地上所有人生命的延续。
+[name="妻子"]  我知道您不会吃掉我。您非常讨厌温迪戈的传统。
+[name="妻子"]  但我多想永远在您的生命里流淌啊。
+[name="妻子"]  不过，生命......本来就不朽。
+[name="妻子"]  您憔悴了。过度的伤感会摧毁您的，我们的孩子日后还需要您去照料，在这里徘徊，会毁了您的。
+[name="妻子"]  ......不，博卓卡斯替。您不是一个冷血的怪物。
+[name="妻子"]  您对我的爱是真切的。即使是我这样只善于厌恶他人的女人，也对您倾注了同等的感情。
+[name="妻子"]  您很惊讶......请不要惊讶。我是爱您的，就像您如此宽大又如此温热地爱着我一样。
+[name="妻子"]  博卓卡斯替，我的挚爱......您未来的家人，都是我的家人。
+[name="妻子"]  我就是这样爱您。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[name="爱国者"]  海伦。我不配得到你的爱。
+[name="爱国者"]  我没能守住你。我也没能，守住誓言。
+[name="爱国者"]  我的家人，我全都，没能保护。
+[name="爱国者"]  爱......我配不上。
+ 
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  被信赖的人，背弃了诺言。
+[name="爱国者"]  背弃诺言的人，依然活着。即使如此，诺言，依然还在。
+[name="爱国者"]  因为诺言里，还有悔恨。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  不仅是，已死的人。菲林，你的悔恨，在哪里？
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  我......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  你要，背着，走下去。
+[name="爱国者"]  这座城里的人。乌萨斯的感染者。大地上，失去父母的人。大地上，父母做下错事的人。
+[name="爱国者"]  都会被人背负。
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_cherbefore_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+//模糊的切尔诺伯格户外背景
+[name="儿子"]  父亲，我请求你！不要，不要再站在帝国那一边！
+[name="儿子"]  命令？帝国的命令就是笑话！
+[name="儿子"]  不，抱歉，父亲......我不是在嘲讽你。不。我不会。
+[name="儿子"]  但帝国的法令，就是为我们所有人设下的残忍骗局。
+[name="儿子"]  我的朋友叶克多，只因为被查出是矿石病人，就被笞杖活活打死在桥上！
+[name="儿子"]  你不是也很喜欢他的诗吗？你不是也曾在夜晚大声朗诵，喜极而泣吗？
+[name="儿子"]  他死了！他走上了昏暗的死路，永远离我们而去，再也不会回头了！
+[name="儿子"]  作为诗人，除了文学，任何人也没有让他死去的资格！
+[name="儿子"]  帝国的所谓感染者法令，只是一个闯入我们心中的恶徒！
+[name="儿子"]  那种死亡，看啊，感染者的死亡，也只是让夺走生命的人和失去生命的人都舍弃了尊严！
+[name="儿子"]  帝国的士兵们，难道是为了这种没有尊严的事领受皇帝的恩惠吗？太荒谬了！
+[name="儿子"]  出身卡兹戴尔的你，和你一起长大的那些感染的萨卡兹......你也一定能理解我们乌萨斯的感染者的！
+[name="儿子"]  ......你为什么那样无所谓？你的心肠难道也是是铁铸的吗？还是说，因为你作为萨卡兹却没有被感染，所以你心里连一点同情都没有？
+[name="儿子"]  我们萨卡兹......有谁会比萨卡兹更容易感染矿石病呢？
+[name="儿子"]  那么，当我们中有人感染矿石病的时候，你就会知道这种罪名是多么可笑了！
+[name="儿子"]  也许到那时候，你才能离开你现在行走的血路，走上宽敞仁慈的大道！
+[name="儿子"]  父亲......罢了，罢了！你可是博卓卡斯替！矿石病不会纠缠你这样强悍的军人，那就只能让它爬上我的身躯！
+[name="儿子"]  当它盘踞在我的遗体上对你哈哈大笑的时候，你才会意识到自己的错误！
+[name="儿子"]  不要让自己后悔，父亲！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[name="爱国者"]  ......格罗瓦兹尔，你是无辜的。你是无罪的。
+[name="爱国者"]  感染的，是我。隐瞒的，也是我。
+[name="爱国者"]  父亲终归，有眼却盲，父亲没能，走上正途。
+[name="爱国者"]  我......很后悔。
+[name="爱国者"]  我真的，很后悔。
+[name="爱国者"]  我儿......父亲杀了你，父亲还让你，白白死去。
+[name="爱国者"]  父亲......不配，做你的父亲。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  我停止战斗，就是背叛他们。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  越来越多......我看到......越来越多。
+[name="阿米娅"]  爱国者先生......这么多，这么多的悔恨......从来都不说，你从来都不向任何人去倾诉吗？
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  ......
+[name="爱国者"]  我的悔恨，只有我能承受。
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  Mon3tr，别靠近他！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  我会想，为什么，殿下那样的人，也会遭遇不测？
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ——
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  你不会回答我。殿下的死，至今都，扑朔迷离。
+[name="爱国者"]  但我知道。她不曾逃避。她从头至尾，都只微笑面对。
+[name="爱国者"]  我停止战斗，所有的反抗，都失去意义。我停止战斗，就是逃避。
+[name="爱国者"]  我不可能停止。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_snow_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+//模糊的雪地背景
+[name="女儿"]  我们没有血缘关系吧？一直叫你爸爸，还挺奇怪的。
+[name="女儿"]  ......你脸色有点不太好啊？
+[name="女儿"]  才没有！才不是因为......因为兄弟姐妹们害怕我呢！
+[name="女儿"]  哎哎，你有什么办法吗，让他们不因为你躲我躲得远远的办法？
+[name="女儿"]  有的话，叫你爸爸也可以！
+[name="女儿"]  啊？要挟？那个词儿是什么意思啊，你还没有教我呢。
+[name="女儿"]  唉，你说哥哥学什么东西都很快，不像我这样只能按部就班地来......那哥哥现在在哪呢？
+[name="女儿"]  唉，唉？！为什么突然抱住我！你会冻伤的！
+[name="女儿"]  ......你在哭吗？好像有水掉在我肩上了......
+[name="女儿"]  没有？所有人都说爸爸无血无泪，那就是说爸爸不会哭吗？
+[name="女儿"]  可是爸爸明明会哭啊......
+[name="女儿"]  ......我前面只是瞎说的，瞎说的！爸爸哭，是因为冻得太疼了吗？
+[name="女儿"]  爸爸，爸爸！我不会再像刚才那么说了，而且，我长大以后，长大以后......长大以后一定给你做一种让你不会被冻坏的药！
+[name="女儿"]  这样你就不会再被疼哭了，对吗？我一定会快快长大的！
+[name="女儿"]  家人？
+[name="女儿"]  啊，是说，我的兄弟姐妹们，还有你我，都是家人？不在这里的哥哥也是？
+[name="女儿"]  嗯......这样的话，爸爸，就是大家的爸爸了！
+[name="女儿"]  我也一定会学习爸爸，帮外婆报仇，杀掉那些欺负我们的人！
+[name="女儿"]  不准这么说？
+[name="女儿"]  为什么！明明爸爸每天都在杀那些坏人！
+[name="女儿"]  ......什么叫不想我成为爸爸这样的人？爸爸难道不是好人吗？
+[name="女儿"]  为什么爸爸也是坏人？！我不懂，你说明白！爸爸怎么会是坏人！
+[name="女儿"]  我讨厌爸爸。讨厌！
+[name="女儿"]  ......不学爸爸，就能到城里去？
+[name="女儿"]  爸爸......你说，我们真的能到城里去吗？
+[name="女儿"]  你说的什么手指糖.....真的好吃吗？
+[name="女儿"]  如果要不当爸爸这样的人才能吃到的话......唔......！
+[name="女儿"]  我不懂。
+[name="女儿"]  爸爸......
+[name="女儿"]  我想，不管怎么样，好人和坏人，我都可以当的。
+[name="女儿"]  只要永远和爸爸，还有兄弟姐妹们一起......一直在一起就好了。
+[name="女儿"]  爸爸是我的家人。我知道的，爸爸是我最好的家人了。
+[name="女儿"]  当然啦，第二是......第三是......
+ 
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[name="爱国者"]  叶莲娜......叶莲娜......我的女儿。
+[name="爱国者"]  我的女儿......父亲，什么，都没能，为你做到。
+[name="爱国者"]  我什么，都没做到。
+[name="爱国者"]  我亏欠你，太多。
+[name="爱国者"]  太多。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  ......
+[name="阿米娅"]  太多了，太多了......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  卡特斯女孩。你是，罗德岛的领袖。
+[name="爱国者"]  你究竟，哪里出众？
+[name="爱国者"]  你们有个成员，向我描述过你。
+[name="爱国者"]  你们的战士，十分优秀。但仅仅优秀，还是会死。
+[name="爱国者"]  你还有哪里，能让我，看到价值？
+[name="爱国者"]  你想阻止，核心城，却无法，战胜我？
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  别想碰阿米娅！
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=2, block=false)]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=2, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=2, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=1)]
+[name="迷迭香"]  一把，两把，三把......第四把！
+[Character]
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=2, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=0.4)]
+[playsound(key="$p_imp_blunt_h")]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=1, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[stopmusic(fadetime=3)]
+[delay(time=3)]
+
+盾，碎了。
+戟，断了。
+巨大的怪物，没有停下脚步。
+[Character(name="avg_npc_025_1")]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="爱国者"]  呵。
+[name="爱国者"]  竟然能，钉穿铠甲。这副铠甲，终于到了极限。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ......你挣脱不了的......！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  菲林，你很强大。你对我是威胁。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  等等，爱国者先生。
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  我离你，只有十步。不用再等。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  你已经到极限了，我知道。
+[name="阿米娅"]  因为你毕竟不像霜星小姐，你并不是个术师......
+[Dialog]
+[Character]
+[PlaySound(key="$p_skill_spiritexplo", volume=1)]
+[delay(time=0.4)]
+[CameraShake(duration=1, xstrength=10, ystrength=8, vibrato=20, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  那这一下就已经足够了。
+[name="阿米娅"]  这个法术里有......我看到的所有事情。我在你身上看到的所有。
+[name="阿米娅"]  ......已经够了，爱国者先生。
+
+[Dialog]
+[Character]
+[Blocker(a=0.2, r=0, g=0, b=0, fadetime=1, block=true)]
+已经够了。
+[Character]
+[Dialog]
+[playMusic(intro="$patriot_intro", key="$patriot_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_025_1")]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="爱国者"]  居然......这是......什么？
+[name="爱国者"]  这一击，很精准。
+[name="爱国者"]  我已，不再能挪步。
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  ......所有损伤，堆砌到了极限。
+[name="凯尔希"]  博卓卡斯替......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  （我本打算，击溃你们，之后让游击队，假借你们名义，杀死塔露拉。）
+[name="爱国者"]  （现在，已经不必。你们胜了，你们名正言顺。去杀死，塔露拉。）
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  （爱国者......先生？）
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  （我怎么能允许，感染者，被奴役他人者，利用？）
+[name="爱国者"]  （我的命，你们拿去用。这是胜者的，战利品。）
+[name="爱国者"]  你们，胜了。
+[name="爱国者"]  勋爵，这个，请拿好。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ——这是什么？
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  停下切城的秘钥。
+[name="爱国者"]  如果你们，去舰桥区......你们要带上它。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  爱国者先生，你......只为了......
+[name="阿米娅"]  呜......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  不。
+[name="爱国者"]  我的确打算，杀了你们。
+[name="爱国者"]  但现在，你们战胜了我。你们应得。
+
+[Decision(options="为什么要做到这一步？", values="1")]
+[Predicate(references="1")]
+[name="爱国者"]  因为我不信你们。
+[name="爱国者"]  我只相信，战争的结果。
+[name="爱国者"]  我女儿，只是天真，她会网开一面，也会假设结局。
+[name="爱国者"]  我不会。我只等到结果。
+[name="爱国者"]  而且，最好的结果......就是这样。
+[name="爱国者"]  我的士兵，因为惊讶，没能发挥全力。他们活着。
+[name="爱国者"]  只有我一人......为之而死。我死得其所。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[name="罗德岛干员"]  ......怎么回事！
+[name="罗德岛干员"]  可露希尔，生物处理室13号舱，给我图表！
+[name="罗德岛干员"]  舱室的内部温度急剧升高！能量在外放！
+[name="罗德岛干员"]  等等，它的形态在转化！经过十四小时的处理，为什么还会进入到这一阶段？
+[name="罗德岛干员"]  PTRS，刚才是谁使用了这个舱位？
+[name="罗德岛干员"]  Dr.{@nickname}？我们在龙门攻防战里有干员伤亡吗？这处理的是谁？
+[name="罗德岛干员"]  什么？
+[name="罗德岛干员"]  等等，你慢点说，你说Dr.{@nickname}在舱位里安置了谁？
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_chercen_2",screenadapt="coverall", fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  勋爵！
+[Character(name="char_003_kalts_1",name2="avg_npc_025_1", focus=1)]
+[name="凯尔希"]  我在听，博卓卡斯替。
+[Character(name="char_003_kalts_1",name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  我们温迪戈，自我流放，失去一切。
+[name="爱国者"]  但我们身负，萨卡兹的传统。
+[name="爱国者"]  先祖，塑造我，培育我，注视我。所以，请替我见证。
+[Character(name="char_003_kalts_1",name2="avg_npc_025_1", focus=1)]
+[name="凯尔希"]  博卓卡斯替......
+[name="凯尔希"]  ......我不知道自己够不够格。
+[Character(name="char_003_kalts_1",name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  我认为你是，最好人选。
+[Character(name="char_003_kalts_1",name2="avg_npc_025_1", focus=1)]
+[name="凯尔希"]  ......
+[name="凯尔希"]  “......我在此担当一位萨卡兹的见证者。博卓卡斯替，卡兹戴尔的温迪戈，一生从未背叛过血肉，也从未愧对亲族。”
+[name="凯尔希"]  “他将把一生留在光芒下的身体里......”
+[name="凯尔希"]  “......而他的精魂，则将回到温迪戈温热的血脉中去。”
+[name="凯尔希"]  这是个诅咒。
+[Character(name="char_003_kalts_1",name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  对我，并不是。
+[name="爱国者"]  啊——我感到......我感到，我清晰的视野，开始模糊。
+[name="爱国者"]  谢谢你，勋爵。
+[Character(name="char_003_kalts_1",name2="avg_npc_025_1", focus=1)]
+[name="凯尔希"]  我以为你讨厌这些。
+[Character(name="char_003_kalts_1",name2="avg_npc_025_1", focus=2)]
+[name="爱国者"]  可我，已经老了。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_perimeter",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_016")]
+[name="幻影弩手"]  不......
+[name="幻影弩手"]  这里是哪里？
+[Character(name="avg_npc_016", name2="avg_npc_053", focus=2)]
+[name="萨卡兹战士"]  ......
+[Character(name="avg_npc_016", name2="avg_npc_053", focus=1)]
+[name="幻影弩手"]  哈，原来是这样。哈。
+[name="幻影弩手"]  塔露拉真的背叛我们了。
+[name="幻影弩手"]  你以为我们会坐以待毙吗？！
+[Character(name="avg_npc_016", name2="avg_npc_053", focus=2)]
+[name="萨卡兹战士"]  你们不是对手。
+[name="萨卡兹战士"]  有来世的话，向我报仇。
+[Character(name="avg_npc_016", name2="avg_npc_053", focus=1)]
+[name="幻影弩手"]  就因为知道会死，所以就要放弃了吗？
+[name="幻影弩手"]  就这样被你们无故杀了而——
+
+//？？？（梅菲斯特闭眼严肃）
+[Character(name="char_1507_Mephisto_1#2")]
+[name="梅菲斯特"]  别杀他们。
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_053", focus=2)]
+[name="萨卡兹战士"]  ......？
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_053", focus=1)]
+[name="梅菲斯特"]  让他们走。
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_053", focus=2)]
+[name="萨卡兹战士"]  梅菲斯特......？
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_053", focus=1)]
+[name="梅菲斯特"]  魔族人，我会给你们不知疼痛的身躯。让他们走。
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_053", focus=2)]
+[name="萨卡兹战士"]  我们比你的牧群强大得多。
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_053", focus=1)]
+[name="梅菲斯特"]  我可以把我的生命拿出来和你们分享，你们能真正地永远战斗，不知疲倦地战斗。
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_053", focus=2)]
+[name="萨卡兹战士"]  ......可以。
+[name="萨卡兹战士"]  但他们要出去，也必须由我的同伴看着。现在还不能违背塔露拉的命令。
+[name="萨卡兹战士"]  你们，弩手。出去。
+[Character(name="avg_npc_016")]
+[name="幻影弩手"]  梅菲斯特？！
+[name="幻影弩手"]  （为什么他会救我们......？难道塔露拉还有什么阴谋？）
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_053", focus=2)]
+[name="萨卡兹战士"]  不过，你为什么特意要到这里来？
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_053", focus=1)]
+[name="梅菲斯特"]  ......因为我想进去这里。我想知道这里有什么样的秘密。我想知道罗德岛究竟为什么会从这里带走一个人。
+[name="梅菲斯特"]  因为我从录像里看到那个人从这里出来。
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_016", focus=2)]
+[name="幻影弩手"]  梅菲斯特......？为什么？
+
+//？？？（梅菲斯特闭眼微笑）
+[Character(name="char_1507_Mephisto_1#2")]
+[name="梅菲斯特"]  你们，想听歌吗？
+
+
+[Character(name="char_1507_Mephisto_1#2", name2="avg_npc_016", focus=2)]
+[name="幻影弩手"]  可是，浮士德队长他说，他说......
+[Character(name="char_1507_Mephisto_1#2")]
+[name="梅菲斯特"]  是啊，是的。我已经不会唱了。
+[name="梅菲斯特"]  嗯，但我可以试试。
+[name="梅菲斯特"]  应该是首摇篮曲吧？不记得是有谁教过我这首曲子......我不记得了。
+[name="梅菲斯特"]  只是有人在我的梦里，一直地哼。
+ 
+[Dialog]
+[Character]
+[delay(time=1)]
+
+沉睡吧，沉睡吧♪
+刺猬玩偶与小熊们......
+
+[Dialog]
+[Character]
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  乌萨斯的，感染者，又要走去哪里？
+[name="爱国者"]  晦暗的夜晚，还会遮蔽......多少明星？
+[Character(name="avg_npc_058")]
+[name="盾卫"]  ......大尉，大尉！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  最后的命令。
+[Character(name="avg_npc_058")]
+[name="盾卫"]  大尉......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  战斗下去。活下去。
+[name="爱国者"]  你们的路，只有你们......自己去走。
+[name="爱国者"]  走了，才有路。
+[name="爱国者"]  我必定要死。只是不知道，是否该是现在。
+[name="爱国者"]  我们的死，究竟能，改变什么？
+[name="爱国者"]  也许这个问题，你们，才能回答。
+
+[Dialog]
+[Character]
+[delay(time=1)]
+
+沉进静静的黑色......
+哥哥，姐姐，妹妹，弟弟，梦乡啊梦乡，盖住了他们的身体......♪
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_building_3",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_136_hsguma")]
+[name="星熊"]  “小姐”？怎么在这哭唧唧的......
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=2)]
+[name="诗怀雅"]  谁哭了！
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=1)]
+[name="星熊"]  好，好。不过，这可是近卫局大楼门口啊。
+[name="星熊"]  让别人看到你哭，真就好吗？
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=2)]
+[name="诗怀雅"]  反正......反正也没有别人！
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=1)]
+[name="星熊"]  这样好了，我坐你前面的台阶上吧。
+[name="星熊"]  我个子大，挡住你，就没人看得见了。
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=2)]
+[name="诗怀雅"]  你在做什么啊......
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=1)]
+[name="星熊"]  啊。就是因为没做好，才觉得不太爽吧？
+[name="星熊"]  Missy，我们两个算是都失败了吧。
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=2)]
+[name="诗怀雅"]  我才不管......不管她去哪！
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=1)]
+[name="星熊"]  嗯，是。我知道啊。
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=2)]
+[name="诗怀雅"]  ......
+[Character(name="char_136_hsguma", name2="char_308_swire_1", focus=1)]
+[name="星熊"]  唉，不要打我。是不是我无论怎么回答都会被打啊。 
+ 
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background]
+[Background(image="bg_light",x=0, y=0, xScale=0.86, yScale=0.86, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+
+[name="爱国者"]  终于......
+[name="爱国者"]  我......这一生......得以结束。
+[name="爱国者"]  海伦......格罗瓦兹尔......叶莲娜......
+[name="爱国者"]  是你们......
+[name="爱国者"]  我终于......能够回家......
+
+[Dialog]
+[stopmusic(fadetime=2)]
+[delay(time=2)]
+不。
+[Dialog]
+[delay(time=1)]
+——不。
+[Dialog]
+[delay(time=1)]
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  ——
+[name="爱国者"]  不。
+[name="爱国者"]  幻觉。
+[name="爱国者"]  怎么会......我，不要幻觉，不要慰藉！
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="爱国者"]  是谁......
+[name="爱国者"]  是谁引我看到......幻觉！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$bat_patriotextra_intro", key="$bat_patriotextra_loop", volume=0.4)]
+[Character(name="char_002_amiya_1#6")]
+[name="阿米娅"]  啊......为什么......为什么爱国者先生会......挣脱？
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  原来，如此。
+[name="爱国者"]  ——是你。卡特斯。是你。
+[name="爱国者"]  原来，你就是......继承者。
+[name="爱国者"]  特雷西斯，说谎。殿下她......有继承人。
+[name="爱国者"]  你是魔王。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  啊......！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  我死在......魔王的手上。
+[name="爱国者"]  我......怎么会？
+[name="爱国者"]  我终归，没逃过命运。
+[name="爱国者"]  不。不......
+[name="爱国者"]  不。 
+[Character(name="char_003_kalts_1#3")]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="凯尔希"]  阿米娅？！你不可以......？！
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  对，对不起！但，但凯尔希医生......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  我听说，过去，萨卡兹的君主，将愿景与抚慰，作为赏赐。
+[name="爱国者"]  他们的功臣，能见宏伟高墙，或是已逝挚爱——
+[name="爱国者"]  无数战士，为此幻境，奋战不息。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  我只是，我只是......爱国者先生，我不想......不想......
+[name="阿米娅"]  ......你生命的最后......明明不该这样凄惨！
+[name="阿米娅"]  我看到......我看到了，我看到你两百多年......
+[name="阿米娅"]  不断地战斗......不断地战斗，失去，失去......失去了一切......
+[name="阿米娅"]  我不想......我不想这就是你的......结局！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  我的，结局？
+[name="爱国者"]  ......不。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  我本想让你有个......更好的......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  不！
+[name="爱国者"]  我的结局，怎么能由，别人给予！
+[name="爱国者"]  幻觉？不！那不是结局！
+[name="爱国者"]  如果悲惨，那就悲惨。如果愚蠢，那就愚蠢！
+[name="爱国者"]  这是，我的结局。是我......应得结局。
+[name="爱国者"]  我活过，反抗过，失败过。
+[name="爱国者"]  已经，够了。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  为什么，为什么......为什么就够了？
+[name="阿米娅"]  没有人该这样失去一切！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  ......你还是个，小孩子。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  我不是什么孩子！我已经战斗了无数次！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  ......好结局，从不理所应当。孩子，才相信童谣。
+[name="爱国者"]  你和我的女儿，都只是，相信童谣的孩子。
+[name="爱国者"]  我说霜星那些，太重了......太重了。
+[name="爱国者"]  我不同意，她的观点。她只是......年幼的孩子。只是，年幼的孩子。
+[name="爱国者"]  矿石病，奴隶主，这片大地......竟容不得，一个孩子。
+[name="爱国者"]  塔露拉送她，去死。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  那为什么我们不能一同去对抗塔露拉——
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  你能，带给我什么？
+[name="爱国者"]  塔露拉，曾经带给我的，你甚至还，做不到。
+[name="爱国者"]  之后，你又会，变成什么样子？
+[name="爱国者"]  这就是命运。我尝到，太多滋味。
+[name="爱国者"]  我决不向命运，低头。
+[name="爱国者"]  即使命运，每次都赐我，相同结局......
+[name="爱国者"]  我也宁可，每日与它缠斗，直至太阳，再次升起。
+[name="爱国者"]  但是......你也许能改变。
+[name="爱国者"]  我与命运抗争，无数年......终归，还是，没能胜过。
+[name="爱国者"]  但你......你也许，不同......
+[name="爱国者"]  你真有资格，继承那位殿下？
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  啊......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  你真有能力，活着离开这里？
+[Character(name="char_002_amiya_1#4")]
+[name="阿米娅"]  ......
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  你真有胆识，踏进无边荒原？
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  我一个人是不可能的。
+[name="阿米娅"]  但是我不是一个人。
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  也许......
+[name="爱国者"]  这一切......都属于你们。只有你们......去做。
+[name="爱国者"]  那个......整合运动的，暴君，命运......你们自己......去推翻。 
+[Dialog]
+[Character]
+[delay(time=1)]
+等等。
+不对。
+凯尔希抬眼望向阴沉的天空。
+我在哪里见过这些？
+难道说......
+
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  阿米娅......阿米娅......？
+[name="凯尔希"]  萨卡兹的预言来自种群记忆的全面融合。源石多生区域发生的源石能量爆发......核心城恰好遭遇了天灾。
+[name="凯尔希"]  祭坛......阿米娅......温迪戈......魔王？！
+[name="凯尔希"]  等等，如果这能直接影响到......不可能！古老的温迪戈最后的血脉直接贯通了萨卡兹的整支族群吗？！
+[name="凯尔希"]  这个预言......这个预言？！
+[name="凯尔希"]  雪？“食人”的博卓卡斯替和所有祭坛发生了共鸣？！还有我刚才施加的......温迪戈的回魂......！
+[name="凯尔希"]  各位干员！！
+[name="凯尔希"]  无论他说什么......无论博卓卡斯替说了些什么！
+[name="凯尔希"]  【一个字也不要信！】
+[Dialog]
+[Character]
+温迪戈忽然开口，沙哑的声音似乎传遍了整个中央区。
+[Dialog]
+[Character]
+[delay(time=1)]
+
+我见诸城，满目疮痍。
+我见源石，遍布大地。
+我见你，头顶黑冠，将千万生灵，熬成回忆。
+我见魔王，将所有种群，尽数奴役。
+[Character(name="avg_npc_058")]
+[name="盾卫"]  啊......？！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  ......什......么？
+[name="爱国者"]  不可能......不......
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  爱国者！预言是不可信的！那只是源石技艺的生理性残留！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  但......但我知晓......所有预言......全都实现。
+[name="爱国者"]  我也正死在，魔王之手。
+[name="爱国者"]  ......勋爵。不。勋爵。
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  博卓卡斯替！！你不是用一生反抗了命运吗！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  年幼的，魔王......
+[name="爱国者"]  ......你，你......
+[Dialog]
+[Character]
+会是大地上最可怖的灾难。
+[Dialog]
+[delay(time=1)]
+她必须死！
+否则，这片大地就会死去！
+[Character(name="avg_npc_025_1")]
+[name="爱国者"]  不能让你，活在世上。
+[name="爱国者"]  你大可恨我。
+[Dialog]
+[Character]
+铠甲的碰撞声传入你的耳中。
+已经浑身碎裂的怪物，突然向阿米娅伸出了手。
+[Character]
+[stopmusic(fadetime=3)]
+[name="凯尔希"]  ——阿米娅！
+[name="迷迭香"]  小，小心！
+[Dialog]
+[Character]
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Image(image="avg_7_13",x=0, y=0, xScale=0.86, yScale=0.86, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Image(image="avg_7_14",x=0, y=0, xScale=0.86, yScale=0.86, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_7_15",x=0, y=0, xScale=0.86, yScale=0.86, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[name="阿米娅"]  ......
+ 
+卡特斯女孩没有闪躲。死亡的阴影袭上了她被硝烟染黑的面庞，她没有挪步，没有惊叫，仅仅是直视着爱国者的双眼。
+如同想要望进他的灵魂。
+
+于此同时，沉重的黑色利剑与闪烁着不详光芒的能量束，飞速地刺入了巨人那具不死之躯，却也依然没能撼动他分毫。
+就在爱国者即将捏碎黑衣女孩的头颅时......
+[Dialog] 
+//CG爱国者俯下身，伸手去碰阿米娅，阿米娅抬头望着巨大的爱国者
+//爱国者，阿米娅
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_7_16",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=0.87, yScaleTo=0.87, duration=30, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+温迪戈的动作，戛然而止。
+似乎有什么从他头盔中悄然滴落。
+......
+一分钟过去了。
+在这漫长的一分钟里，除了移动城市的隆隆声外，你什么也听不见。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_7_17",x=0, y=0, xScale=0.86, yScale=0.86, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+你意识到，面前的怪物已经死了。
+一步也不曾后退。一秒也没有放弃。即使如此，死亡还是停下了他一生的行军。
+
+
+[Dialog]
+[Blocker(fadetime=3,block=true)]
+[Image]
