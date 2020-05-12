@@ -5524,6 +5524,34 @@
         }
       ]
     },
+    "char_260_durnar": {
+      "charId": "char_260_durnar",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost[002]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_248_mgllan": {
       "charId": "char_248_mgllan",
       "maxManpower": 8640000,
@@ -5634,6 +5662,61 @@
           ]
         }
       ]
+    },
+    "char_275_breeze": {
+      "charId": "char_275_breeze",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd&team[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "meet_spd&team[071]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_355_ethan": {
+      "charId": "char_355_ethan",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_oneself[030]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -5673,6 +5756,17 @@
     "control_mp_cost[001]": {
       "buffId": "control_mp_cost[001]",
       "buffName": "S.W.E.E.P.",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, Morale consumed per hour of all Operators in the Control Center <@cc.vup>-0.05</>"
+    },
+    "control_mp_cost[002]": {
+      "buffId": "control_mp_cost[002]",
+      "buffName": "Snack Network",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost",
       "buffColor": "#005752",
@@ -6704,6 +6798,17 @@
       "roomType": "DORMITORY",
       "description": "When this Operator is assigned to a Dormitory, self Morale recovered per hour <@cc.vup>+1</>"
     },
+    "dorm_rec_oneself[030]": {
+      "buffId": "dorm_rec_oneself[030]",
+      "buffName": "Concealed Gourmet",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_one",
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "When this Operator is assigned to a Dormitory, self Morale recovered per hour <@cc.vup>+0.75</>"
+    },
     "dorm_rec_single[000]": {
       "buffId": "dorm_rec_single[000]",
       "buffName": "Medical Service",
@@ -7001,6 +7106,17 @@
       "roomType": "HIRE",
       "description": "When this Operator is assigned to the HR Office, HR accumulating speed <@cc.vup>+40%</>"
     },
+    "hire_spd[030]": {
+      "buffId": "hire_spd[030]",
+      "buffName": "WRITER",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd",
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "When this Operator is assigned to the HR Office, HR accumulating speed <@cc.vup>+40%</>"
+    },
     "meet_spd[000]": {
       "buffId": "meet_spd[000]",
       "buffName": "Clue Search α",
@@ -7114,6 +7230,17 @@
     "meet_spd&team[070]": {
       "buffId": "meet_spd&team[070]",
       "buffName": "Arraigner",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_glasgow",
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</> and it's easier to obtain the clues of <@cc.kw>Glasgow</>"
+    },
+    "meet_spd&team[071]": {
+      "buffId": "meet_spd&team[071]",
+      "buffName": "Fallen Noble",
       "buffIcon": "meeting",
       "skillIcon": "bskill_meet_glasgow",
       "buffColor": "#dd653f",
