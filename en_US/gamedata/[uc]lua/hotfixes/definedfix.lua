@@ -3,10 +3,10 @@ local list =
 {
   --list all defined fixer path at here
   "HotFixes/ShopHotfixer",
-  "HotFixes/Act4d0Hotfixer",
-  "HotFixes/Act3d0Hotfixer",
-  "HotFixes/InventoryHotfixer",
-  "HotFixes/FurnShopHotfixer"
+  "HotFixes/BattleFinishHotfixer",
+  "HotFixes/CrisisBattleFinishHotfixer",
+  "HotFixes/FurnShopHotfixer",
+  "HotFixes/UICharacterSelectStateHotfixer"
 };
 
 return list;

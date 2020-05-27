@@ -5,7 +5,7 @@
 CollectionMainDlg = Class("CollectionMainDlg", DlgBase);
 
 function CollectionMainDlg:OnInit()
-  self.m_activityId = self.m_context:GetData("actId");
+  self.m_activityId = self.m_parent:GetData("actId");
   self.m_itemList = {};
   self:_RefreshContent();
 
@@ -113,7 +113,7 @@ function CollectionMainDlg:_SynPrg(collections, completeIdx, pointCurCnt, lastCa
   if completeIdx >= collen and pointCurCnt > collections[collen].pointCnt then
     prgValue = prgMax;
   else
-    prgValue = itemWidth * (completeIdx - 0.5);
+    prgValue = itemWidth * math.max(0, (completeIdx - 0.5));
 
     local curPoint = 0;
     if completeIdx >= 1 then
@@ -186,7 +186,6 @@ function CollectionMainDlg:_CheckMissionStatus()
       onProceed = Event.Create(self, self._RefreshContent);
 
       onBlock = Event.CreateStatic(function(error)
-        CS.Torappu.Lua.Util.LogError(error.error);
         return true;
       end);
     });
@@ -194,7 +193,7 @@ function CollectionMainDlg:_CheckMissionStatus()
 end
 
 function CollectionMainDlg:_HandleOpenHelpPage()
-  local dlg = DlgMgr.FetchDlg(CollectionTaskListDlg);
+  local dlg = self:FetchChildDlg(CollectionTaskListDlg);
   dlg:Refresh(self.m_activityId, Event.Create(self, self._HandleHelpViewClose) );
   self._scrollView.gameObject:SetActive(false);
 end

@@ -1,17 +1,19 @@
 ---@class UIBase
----@field m_context LuaUIContext
+---@field m_parent ILuaDialog
 ---@field m_root GameObject
 ---@field m_layout LuaLayout
+---@field m_rootDestroying boolean
 ---@field m_destroyed boolean
 ---@field m_doWhenClose function[]
 ---@field m_allTimer number[]
 UIBase = Class("UIBase");
 
 ---@param gobj GameObject
----@param ctx LuaUIContext
-function UIBase:Initialize(gobj, ctx)
+---@param parent ILuaDialog
+function UIBase:Initialize(gobj, parent)
   self.m_destroyed = false;
-  self.m_context = ctx;
+  self.m_rootDestroying = false;
+  self.m_parent = parent;
   self.m_root = gobj;
   self.m_layout = gobj:GetComponent("Torappu.Lua.LuaLayout");
   local this = self;
@@ -23,12 +25,15 @@ function UIBase:Initialize(gobj, ctx)
   self.m_layout:BindLayoutEventListener(self);
 end
 
-function UIBase:Destroy()
+function UIBase:Dispose()
   if self.m_destroyed then
     return;
   end
-  self.m_layout:BindLayoutEventListener(nil);
-  self:OnDestroy();
+  if not self.m_rootDestroying then
+    self.m_layout:BindLayoutEventListener(nil);
+  end
+
+  self:OnDispose();
 
   if self.m_doWhenClose then
     for _, func in ipairs(self.m_doWhenClose) do
@@ -44,9 +49,12 @@ function UIBase:Destroy()
     self.m_allTimer = nil;
   end
 
-  CS.UnityEngine.GameObject.Destroy(self.m_root);
-
   self.m_destroyed = true;
+
+  if not self.m_rootDestroying then
+    CS.UnityEngine.GameObject.Destroy(self.m_root);
+  end
+
 end
 
 ---@protected
@@ -54,7 +62,7 @@ function UIBase:OnInitialize()
 end
 
 ---@protected
-function UIBase:OnDestroy()
+function UIBase:OnDispose()
 end
 
 ---@protected
@@ -174,4 +182,6 @@ end
 
 ---@private call by lualayout
 function UIBase:OnDestroy()
+    self.m_rootDestroying = true;
+    self:Dispose();
 end
