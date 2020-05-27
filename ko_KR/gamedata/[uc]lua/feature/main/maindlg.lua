@@ -20,7 +20,7 @@ function MainDlg:_HandleClick(label)
   -- self._cn = self._cn + 1;
   -- label.text = "点了".. self._cn .."下";
   -- self:DestroyTimer(self._timer);
-  DlgMgr.FetchDlg(TestDlg);
+  self:FetchChildDlg(TestDlg);
 end
 
 function MainDlg:_HandleClose()
