@@ -138,6 +138,10 @@ function CollectionItem:Flash()
 end
 
 function CollectionItem:_HandleGetReward()
+  if CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() then
+    return;
+  end
+  
   UISender.me:SendRequest(ActivityServiceCode.GET_COLLECTION_REWARD,
   {
     index = self.m_data.id,

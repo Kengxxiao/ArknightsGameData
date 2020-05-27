@@ -67,7 +67,7 @@ function CollectionTaskListDlg:Refresh(activityId, close)
 
   local co = coroutine.create(function()
     for _, item in ipairs(list) do
-      item:CreateRewardIcon();
+      item:CreateRewardIcon(actcfg);
       item:Root().transform:SetParent(self._limitContainer, false);
       coroutine.yield();
     end
@@ -84,7 +84,7 @@ end
 function CollectionTaskListDlg:_SynTime()
   --refresh daily task time
   local time = CS.Torappu.DateTimeUtil.currentTime:AddHours(-1 * CS.Torappu.SharedConsts.GAME_DAY_DIVISION_HOUR);
-  local zero = CS.System.DateTime(time.Year, time.Month, time.Day + 1, 0, 0, 0);
+  local zero = CS.System.DateTime(time.Year, time.Month, time.Day, 0, 0, 0):AddDays(1);
   self._dailyTaskTimeLabel.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.SHOP_REMAIN_COUNT, CS.Torappu.FormatUtil.FormatTimeDelta(zero - time));
   --refresh collection mission time
   local endTime = CS.Torappu.DateTimeUtil.TimeStampToDateTime(CollectionActModel.me:FindBasicInfo(self.m_activityId).endTime);

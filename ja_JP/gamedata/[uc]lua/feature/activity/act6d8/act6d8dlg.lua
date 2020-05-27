@@ -1,0 +1,1 @@
+Act6D8Dlg = DlgMgr.DefineDialog("Act6D8Dlg", "Activity/Act6D8/act_dlg", CollectionMainDlg);

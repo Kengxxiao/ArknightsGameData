@@ -10,3 +10,4 @@ require "Feature/Activity/Collection/CollectionTimedTaskItem"
 
 require "Feature/Activity/Act3D5/Act3D5Dlg"
 require "Feature/Activity/Act4D5/Act4D5Dlg"
+require "Feature/Activity/Act6D8/Act6D8Dlg"
