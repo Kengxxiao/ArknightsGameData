@@ -64,9 +64,12 @@ function Class(classname, super)
 end
 
 function IsSubclassOf(sub, super)
-  while sub.super do
-    if sub.super == super then
+  local basecls = sub.super;
+  while basecls do
+    if basecls == super then
       return true;
+    else
+      basecls = basecls.super;
     end
   end
   return false;
@@ -114,3 +117,12 @@ function Readonly(t, deep)
   setmetatable(ret, meta);
   return ret;
 end
+
+function CreatEnumTable(tbl, index) 
+    local enumtbl = {} 
+    local enumindex = index or 0 
+    for k, v in ipairs(tbl) do 
+        enumtbl[v] = enumindex + k
+    end 
+    return enumtbl 
+end 

@@ -4,7 +4,7 @@ UIPanel = Class("UIPanel", UIWidget);
 
 ---@private
 function UIPanel:OnInitialize()
-  self.m_widgets = UIWidgetContainer.new();
+  self.m_widgets = UIWidgetContainer.new(self);
   self:OnInit();
 end
 

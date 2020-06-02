@@ -1,8 +1,10 @@
 ---@class UIWidgetContainer
+---@field m_parent UIBase
 ---@field m_widgets UIWidget[]
 UIWidgetContainer = Class("UIWidgetContainer")
 
-function UIWidgetContainer:ctor(...)
+function UIWidgetContainer:ctor(parent)
+  self.m_parent = parent;
   self.m_widgets = {}
 end
 

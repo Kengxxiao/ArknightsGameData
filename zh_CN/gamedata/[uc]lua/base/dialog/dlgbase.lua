@@ -17,7 +17,7 @@ function DlgBase:OnInitialize()
   if closeBtn then
     self:AddButtonClickListener(closeBtn, self._HandleSysClose);
   end
-  self.m_widgets = UIWidgetContainer.new()
+  self.m_widgets = UIWidgetContainer.new(self)
 
   self:OnInit();
 end
@@ -151,4 +151,8 @@ end
 ---@return LuaLayout
 function DlgBase:LoadLayout( path)
   return self.m_parent:LoadLayout(path);
+end
+
+function UIBase:GetLuaLayout()
+  return self.m_layout
 end

@@ -6,6 +6,7 @@
 ---@field m_destroyed boolean
 ---@field m_doWhenClose function[]
 ---@field m_allTimer number[]
+---@field m_allCustomComponents {}[]
 UIBase = Class("UIBase");
 
 ---@param gobj GameObject
@@ -34,6 +35,14 @@ function UIBase:Dispose()
   end
 
   self:OnDispose();
+
+  if self.m_allCustomComponents then
+    for _, com in ipairs(self.m_allCustomComponents) do
+        if com.Dispose then
+            com:Dispose();
+        end
+    end
+  end
 
   if self.m_doWhenClose then
     for _, func in ipairs(self.m_doWhenClose) do
@@ -69,8 +78,20 @@ end
 function UIBase:OnVisible(v)
 end
 
-function UIBase:Root()
+function UIBase:RootGameObject()
     return self.m_root;
+end
+
+---@protected
+function UIBase:OnResume()
+end
+
+---@protected
+function UIBase:OnEnter()
+end
+
+---@protected
+function UIBase:OnExit()
 end
 
 function UIBase:IsDestroy()
@@ -222,6 +243,21 @@ self:OpenPage3(CS.Torappu.UI.UIPageNames.GAIN_ITEM, {
 ]]
 function UIBase:OpenPage3(pageName, options)
     CS.Torappu.UI.UIPageController.OpenPage(pageName, options)
+end
+
+--- 由用户类创建一个用户组件，
+--- 参数 comCls 为用户实现的组件类，可实现 Initialize 及 Dispose 接口，分别会在创建及窗口关闭时调用
+---@param comCls 用户组件类
+---@param ... 传入Initialize的参数
+---@return 返回创建好的组件对象
+function UIBase:CreateCustomComponent(comCls, ...)
+    if not self.m_allCustomComponents then
+        self.m_allCustomComponents = {};
+    end
+    local com = comCls.new();
+    com:Initialize(...);
+    table.insert(self.m_allCustomComponents, com);
+    return com;
 end
 
 ---@private call by lualayout
