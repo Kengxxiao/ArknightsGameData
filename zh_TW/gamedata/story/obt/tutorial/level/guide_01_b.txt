@@ -1,0 +1,62 @@
+[HEADER(is_tutorial=true)] 引导关卡1_b
+
+[Battle.Pause]
+
+// 介绍：敌人
+[Tutorial(focusX=390, focusY=-50, focusWidth=100, focusHeight=100, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+這是需要消滅的<@tu.kw>敵人</>。
+[Tutorial(focusX=390, focusY=-50, focusWidth=100, focusHeight=100, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+他是“整合運動”的破壞分子。不擊潰他的話會有大麻煩......
+// 介绍：角色卡片
+[Battle.UnlockFunction(mask="CARD_LIST")]
+[Tutorial(focusX=-120, focusY=70, focusWidth=250, focusHeight=140, anchor="BottomRight", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+而下方展示了待命中的羅德島<@tu.kw>幹員列表</>。
+
+[Tutorial(focusX=-120, focusY=70, focusWidth=250, focusHeight=140, anchor="BottomRight", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+只要將他們部署到場上，就可以參與作戰行動。
+// 介绍：费用
+[Battle.UnlockFunction(mask="COST_PANEL")]
+[Tutorial(target="panel_cost", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+清單上方的數字代表著目前的<@tu.kw>部署費用</>。
+
+[Tutorial(target="panel_cost", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+只有當部署費用足夠的情況下，才可以在戰場中部署幹員。
+
+[Tutorial(focusX=-178, focusY=110, focusWidth=50, focusHeight=50, anchor="BottomRight", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+大家頭頂的數字代表了部署<@tu.kw>需要消耗的費用</>。
+[PopupDialog(dialogHead="$avatar_amiya", black="$f_tut_black", protectTime=0.5)] \
+通常情況下，能力越強的幹員，所花費的費用也越高。
+[PopupDialog(dialogHead="$avatar_amiya", black="$f_tut_black", protectTime=0.5)] \
+不過不用擔心，部署費用會<@tu.kw>隨著遊戲時間逐漸增加</>。
+
+[PopupDialog(dialogHead="$avatar_amiya")] 現在，博士的手指應該已經恢復知覺了。
+[PopupDialog(dialogHead="$avatar_amiya")] 把注意力集中到手指上試試吧，任何一根。
+[InputBlocker(blockInput=false)]
+[Battle.EnsureMinCost(cost=11)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_amiya", animStyle="Drag", \
+          startX=-180, startY=60, startAnchor="BottomRight", endX=-60, endY=-65)] \
+博士看到我標注的位置了嗎？把幹員的標籤<@tu.kw>拖到那裡</>。
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_amiya", animStyle="Drag", \
+          startX=-60, startY=-45, endX=240, endY=-45)] \
+然後將中央的方向指示塊<@tu.kw>拖向這個方向</>。
+[InputBlocker(blockInput=true)]
+
+[Battle.Pause(pause=false)]
+[Delay(time=1)]
+[Battle.Pause(pause=true)]
+
+[PopupDialog(dialogHead="$avatar_amiya")] 好了，德克薩斯幹員已經完成了部署。她能幫助你清除大部分的威脅。

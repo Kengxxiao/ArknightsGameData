@@ -1,0 +1,155 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（前）
+
+// Comments
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Background(screenadapt="coverall", image="bg_cher_5",fadetime=1,screenadapt="coverall")]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Delay(time=1)]
+
+
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  Ace！
+[Character(fadetime=0.5)]
+[Character(name="char_014_riope" ,fadetime=0.6)]
+[delay=0.65]
+[Character(name="char_014_riope" )]
+[name="Ace"]  看來，你們都平安無事。
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  這裡還沒到會合點......怎麼只有你一個人？
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="整合運動成員"]   他們就是那支從核心區出逃的人！別放他們走！
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  呿，窮追不捨！
+[name="杜賓"]  E2小隊，應敵——
+[Character(name="char_014_riope")]
+[name="Ace"]   杜賓，不要戀戰，優先後撤！
+[name="Ace"]   阿米婭，Dr.{@nickname}！快！
+
+[Character]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.6, block=true)]
+
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  這裡也不安全。
+[Character(name="char_014_riope")]
+[name="Ace"]  是的，我們還要繼續向下一個會合點移動。
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  你的小隊呢？
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="整合運動成員"]   藏到哪去了？把他們找出來！
+
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  又來了嗎！
+
+[Character(name="char_014_riope")]
+[name="Ace"]  Dr.{@nickname}，請下命令吧。
+[name="Ace"]  就像以前那樣。
+
+[Decision(options="......？", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#4")]
+[name="阿米婭"]   啊，Ace......
+[name="阿米婭"]   其實有些，小小的變故。
+[name="阿米婭"]   博士......意外失去了記憶。
+[Character(name="char_002_amiya_1#4",name2="char_014_riope",focus=2)]
+[name="Ace"]   ......原來如此。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米婭"]   抱歉，Ace......事情和以前相比，有不小的區別。
+[Character(name="char_002_amiya_1#4",name2="char_014_riope",focus=2)]
+[name="Ace"]   是嗎。你沒必要向我道歉。
+[name="Ace"]   博士的指揮能力，有沒有因為失憶受到影響？
+[Character(name="char_002_amiya_1",name2="char_014_riope",focus=1)]
+[name="阿米婭"]   ......和以前一樣。
+[name="阿米婭"]   博士的決策依舊十分可靠，我保證。
+[Character(name="char_002_amiya_1",name2="char_014_riope",focus=2)]
+[name="Ace"]   那就好。我聽從博士的指揮。
+[name="Ace"]   失去了的東西是可以找回來的。
+[name="Ace"]   眼下有更棘手的問題等著我們去解決。
+
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Dialog]
+[Blocker(a=0, fadetime=0.3, block=true)]
+
+[Character(name="char_1002_nsabr_2")]
+[name="整合運動成員"]   他們在這兒！快，快攻擊！！
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  聊天還沒結束？我已經開始戰鬥了！
+[Character(name="char_014_riope" )]
+[name="Ace"]   Dr.{@nickname}，請下命令吧。
+[Character(name="char_1002_nsabr_2")]
+[name="整合運動成員"]   放，把那些畜生放出來，讓他們嘗嘗被撕咬的滋味！
+
+
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  博士！Ace！敵人近在眼前了！
+[Character(name="char_014_riope" )]
+[name="Ace"]   ——
+
+[Decision(options="立刻出動！;......好的。;趁現在，破壞敵人的計畫吧。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+
+[Character(name="char_014_riope" )]
+[name="Ace"]   明白。
+[name="Ace"]   E3小隊！支援杜賓！
+
+[PlayMusic(intro="$calamity_intro", key="$calamity_loop", volume=1, crossfade=1.5)]
+[character(fadetime=0)]
+[Dialog(fadetime=0)]
+[PlaySound(key="$d_sp_ballista",volume=0.7)]
+[Blocker(a=1, r=100, g=100, b=100, fadetime=0.1,block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=1)]
+
+
+[name="整合運動成員"]   埋伏？！！
+
+
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]   E3小隊......一直隱藏著行蹤，就是等著和我們配合，夾擊敵人嗎。
+[Character(name="char_014_riope" )]
+[name="Ace"]   在通訊受到干擾的情況下，小隊應該在會合點附近行動，這樣，即使是我或者偵查幹員發生了意外......
+[name="Ace"]   整體的撤退計畫，依然能夠正常實施。這是我的判斷。
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  也就是說，Ace你把小隊留在會合點，一個人......
+[Character(name="char_014_riope" )]
+[name="Ace"]   畢竟最重要的，是去除會合點周圍的威脅。
+[name="Ace"]   優先確認你們的狀況是一種冒險。我不能帶上整個小隊一起。
+[name="Ace"]   小隊存在的目的，本來就是為了讓戰術更有效，而不是固步自封，成為拖累。
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  哈。接下來，用實戰去解決了整合運動再說吧！
+[Character(name="char_014_riope" )]
+[name="Ace"]   阿米婭，拜託你。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米婭"]   知道了！我會輔佐博士，透過法術支援你們的！
+[Character(name="char_014_riope" )]
+[name="Ace"]   終於......
+[name="Ace"]   Dr.{@nickname}，請你，指揮羅德島。
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]

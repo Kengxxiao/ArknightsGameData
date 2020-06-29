@@ -1,0 +1,205 @@
+//!torch
+[HEADER(is_tutorial=true, is_skippable=true, is_autoable=true, fit_mode="BLACK_MASK", deny_auto_switch_scene=true)] 引导2到主界面
+
+[stopmusic(fadetime=1)]
+[Background(image="bg_indoor_1", width=1, height=1, fadetime=1)]
+
+[Delay(time=1)]
+
+
+
+
+[Character(name="char_013_riop")]
+[name="近衛幹員"]   最後一個！
+
+[CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_1002_nsabr_2")]
+[Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[name="整合運動成員"]   呃啊！
+
+[Character(name="char_013_riop")]
+
+
+
+[Dialog]
+[Character(fadetime=0)]
+[Delay(time=0.5)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5)]
+[Character(name="char_013_riop")]
+
+[name="近衛幹員"]   剩餘目標已清除。敵方小隊潰退了！
+[name="近衛幹員"]   ......Dr.{@nickname}的指揮確實和阿米婭說的一樣，讓人放心。
+
+[Character(name="char_002_amiya_1#10")]
+
+[name="阿米婭"]   是吧，輕輕鬆鬆吧？
+[name="阿米婭"]   博士曾經經歷的，可不只是這種程度的戰鬥。
+
+[Character(fatetime=0.5, block=true)]
+[delay=1]
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[name="整合運動成員"]   咳......怎麼會出現......烏薩斯人以外的阻礙......
+[name="整合運動成員"]   不會......讓你們阻撓我們的事業！
+[dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$p_imp_whip_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Character(name="char_1002_nsabr_2")]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_130_doberm_ex")]
+[name="？？？"]   別想得逞！
+
+
+
+[Character(name="char_013_riop")]
+[name="近衛幹員"]   杜，杜賓教官！
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=2)]
+[name="杜賓"]   你在發什麼呆！差一點，你就要被打成篩子了！
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=1)]
+[name="近衛幹員"]   對，對不起！
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=2)]
+[name="杜賓"]   快！重整隊形！
+[Character(name="char_013_riop", name2="char_130_doberm_ex", focus=1)]
+[name="近衛幹員"]   是！
+
+
+[Character(name="char_002_amiya_1#2")]
+[name="阿米婭"]   杜賓！你來了！
+[Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=2)]
+[name="杜賓"]   情況緊急。我的小組也遭到了攻擊，敵人同樣是整合運動。
+[name="杜賓"]   所以我才立刻趕過來跟你們會合。
+[Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=1)]
+[name="阿米婭"]   整合運動為什麼會攻擊我們......？
+[Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=2)]
+[name="杜賓"]   一個感染者權益組織......本來我覺得他們只是有點盲目激進————
+[name="杜賓"]   ————現在居然開始使用暴力，還是在烏薩斯的城市？真是自尋死路。
+[name="杜賓"]   接下來，這裡只會變得更加混亂。
+[name="杜賓"]   阿米婭，我們必須立刻撤離切爾諾伯格。
+[Character(name="char_002_amiya_1#1", name2="char_130_doberm_ex", focus=1)]
+[name="阿米婭"]   好的。我們已經成功救出博士，之後按照計畫撤退就可以了。
+[Delay(time=0.5)]
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]    ——這位就是Dr.{@nickname}？
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]   是，是的。
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]    Dr.{@nickname}，你可能不認識我，但你認識阿米婭，為了你的安全著想——
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[name="阿米婭"]   不不......
+[name="阿米婭"]   唔，杜賓，博士目前的狀態並不是很好。
+[name="阿米婭"]   簡單地說，博士......失憶了。
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=2)]
+[name="杜賓"]    失憶？
+[name="杜賓"]    ......這怎麼辦？你還準備將指揮權交給這個......
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[name="阿米婭"]   博士依然有能力指揮小隊。
+[name="阿米婭"]   ......至少，在剛才的戰鬥中，我已經確認了。
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=2)]
+[name="杜賓"]   ......
+[name="杜賓"]   我還是不能這麼簡單就相信一個陌生人。
+[name="杜賓"]   但我相信你，阿米婭。
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[name="阿米婭"]   ......我知道了。
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]   Dr.{@nickname}， 我是行動組E1組長，杜賓。
+[name="杜賓"]   我們將把你從這座烏薩斯的城市——切爾諾伯格，護送到羅德島。
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[image(image="avg_map_1")]
+[ImageTween(image="avg_map_1", tiled=true, xScaleTo=1.3, yScaleTo=1.3, xTo=-200, duration=75, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[name="杜賓"]   身處切爾諾伯格城的核心區廢棄設施，現在的我們理應向西撤退。
+
+[Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
+[ImageTween(image="avg_map_1", tiled=true, xScaleTo=1.8, yScaleTo=1.8, xTo=-200, duration=75, block=false)]
+[name="阿米婭"]   但......和凱爾希醫生通訊中斷時，我和杜賓教官都需要先帶領著各自的小組，去西邊的集結地會合然後確認撤出信號。
+[name="阿米婭"]   按照計畫，原本是這樣的......
+[name="杜賓"]    如果能這麼順利就好了。
+[name="杜賓"]    今天是我們從石館救走你的最後機會，Dr.{@nickname}。
+[name="杜賓"]    只是......我總有種不祥的預感。
+[character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[image]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+
+[Character(name="char_016_medic", name2="char_002_amiya_1", focus=1)]
+[name="醫療幹員"]   阿，阿米婭！
+[Character(name="char_016_medic", name2="char_002_amiya_1#6", focus=2)]
+[name="阿米婭"]   怎麼了?
+[Character(name="char_016_medic", name2="char_002_amiya_1#6", focus=1)]
+[name="醫療幹員"]   是......是來自羅德島的對話請求！
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="阿米婭"]   通訊接上了嗎！難道說，是凱爾希醫......
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_002_amiya_1#6", focus=-1)]
+[name="？？？"]   很抱歉，並不是。
+[image(image="bg_2_call")]
+[PlaySound(key="$d_gen_transmissionget",volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+
+[Character(name="char_002_amiya_1#1", focus=1)]
+[name="阿米婭"]   PRTS......？
+
+
+[Character(name="char_002_amiya_1#1", focus=-1)]
+[name="PRTS"]   應急神經連接請求被意外觸發了。
+[name="PRTS"]   羅德島號方面也受到干擾，只有神經連接可以勉強進行。
+[name="PRTS"]   無法用電波通訊聯繫到尚未回到羅德島的凱爾希。
+[name="PRTS"]   已經確認過阿米婭您的安全，那麼我的任務就已經完成了。
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]   這東西......
+[name="杜賓"]   現在真的是時候嗎？
+[Character(name="char_002_amiya_1#1", focus=-1)]
+[name="PRTS"]   不需要使用您的神經連接操作羅德島的話，我將在稍後中斷連接。
+[name="PRTS"]   如果打擾到了您的派對，萬分抱歉。
+[Character(name="char_002_amiya_1#5", focus=1)]
+[name="阿米婭"]   不不！別掛斷......我需要你幫個忙。
+[name="阿米婭"]   杜賓，博士需要這些幫助。
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]   瞭解了，抓緊時間。
+[Character(name="char_002_amiya_1#5", focus=1)]
+[name="阿米婭"]   博士，PRTS也是我們的......同伴，它會指導你下一步的動作。
+[name="阿米婭"]   雖然時間很緊張，但現在，我要為你重新連接至羅德島的後勤系統。
+[name="阿米婭"]   這樣在我們作戰的時候，你也能利用它為我們取得優勢。
+[name="阿米婭"]   可能會很難習慣，和說話不太一樣，但只要好好使用，就一定能使整個救援作戰更加順利，所以請你......
+[name="阿米婭"]   ......相信我吧。按你想要的那樣，按你熟悉的那樣......
+[name="阿米婭"]   PRTS......開始吧。
+[Character(name="char_002_amiya_1#1", focus=-1)]
+[name="PRTS"]   需要確認管理員身份，請選擇識別方式。
+[Character(name="char_002_amiya_1#2", focus=1)]
+[name="阿米婭"]   啊，博士......請你說句話。
+
+
+[Decision(options="（說話）", values="1")]
+
+[Predicate(references="1")]
+[PlaySound(key="$d_gen_transmissionget",volume=0.4)]
+[Character(name="char_002_amiya_1#3", focus=-1)]
+[name="PRTS"]   雖然不知道為什麼你不說話，反而觸碰了一下螢幕中央——
+[name="PRTS"]   ——不過我已經找到了相匹配的指紋。身份確認，許可權水準：8。
+
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Background]
+[Character(fadetime=0)]
+//修改此处的image来切换cg
+[Image(image="avg_ep00",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]
+[name="PRTS"]   ——歡迎回家，Dr.{@nickname}。
+[Delay(time=0.6)]
+[Background]
+[character]
+[Dialog]
+[Blocker(block=true)]
+[Image]
+[Blocker(afrom=0, a=1, fadetime=1, block=true)]
+[SkipToThis]
+[GotoPage(dest="home")]

@@ -1,0 +1,55 @@
+[HEADER(is_tutorial=true)] 训练关卡2b
+[Battle.Pause]
+
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+
+[Tutorial(focusX=57, focusY=-1, focusWidth=116, focusHeight=105, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+潔西卡，注意到了嗎？<@tu.kw>巡林者</>並不會攻擊身後範圍外的敵人。
+
+[InputBlocker(blockInput=true, validX=56, validY=108, validWidth=108, validHeight=111)]
+[Tutorial(focusX=56, focusY=108, focusWidth=108, focusHeight=111, waitForSignal="char_info", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+點擊<@tu.kw>巡林者</>查看他的訊息。
+[InputBlocker(blockInput=true)]
+
+[Tutorial(focusX=88, focusY=123, focusWidth=356, focusHeight=312, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_doberm", dialogX=-568, dialogY=-217)] \
+橘黃色的區域代表了巡林者的<@tu.kw>攻擊範圍</>，這個攻擊範圍會根據巡林者在部署時的朝向而<@tu.kw>固定</>。
+
+[Tutorial(focusX=88, focusY=123, focusWidth=356, focusHeight=312, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_doberm", dialogX=-568, dialogY=-217)] \
+除非<@tu.kw>撤退</>或<@tu.kw>倒下</>，幹員的朝向和攻擊範圍在幹員部署後就<@tu.kw>無法更改</>，所以在決定幹員的朝向時一定要謹慎。
+
+[Tutorial(focusX=93, focusY=-54, focusWidth=105, focusHeight=96, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+現在的巡林者，無法攻擊到身後穿過的源石蟲。
+
+[PopupDialog(dialogHead="$avatar_doberm")] 不過沒關係，我們還可以部署其他幹員，來對這些區域進行防守。
+
+[InputBlocker(blockInput=true, validX=407, validY=-132, validWidth=105, validHeight=109)]
+[Tutorial(waitForSignal="exit_char_menu", focusX=407, focusY=-132, focusWidth=105, focusHeight=109, \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+點擊將視角調回戰場。
+[InputBlocker(blockInput=true)]
+
+[Battle.LockFunction(mask="SYSTEM_MENU")]
+[InputBlocker(blockInput=false)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_doberm", animStyle="Drag", \
+          startX=-60, startY=60, startAnchor="BottomRight", endX=185, endY=-97)] \
+將狙擊幹員<@tu.kw>安德切爾</>部署至此。
+
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_doberm", animStyle="Drag", \
+          startX=262, startY=-74, endX=237, endY=115)] \
+向上拖動讓他的朝向設置為上。決定好方向以後幹員才會真正被部署至戰場。
+[InputBlocker(blockInput=true)]
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+
