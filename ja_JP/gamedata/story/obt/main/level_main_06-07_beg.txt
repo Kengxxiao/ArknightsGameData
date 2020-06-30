@@ -1,0 +1,264 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（前）
+
+// Comments
+[stopmusic]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+//修改此处的image来切换cg
+[Image(image="avg_6_14",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=2, block=false)]
+[PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character]
+[ImageTween(xFrom=0, yFrom=0, xTo=30, yTo=0, xScale=1.1, yScale=1.1, duration=15, block=false)]
+//对话内容此处填入
+a.m. 9:00 天気/曇天
+近衛局ビル展望デッキ攻防戦の14時間前
+チェルノボーグ移動都市「エリア14」上空三百メートル　「バッドガイ」号
+任務目標：ロドス救援小隊との合流及び偵察小隊の救出
+人員配置：
+「バッドガイ」号及び所属パイロット、エリートオペレーター「ブレイズ」及びその小隊のメンバー
+合計十四名。
+[Dialog ]
+//对话内容此处填入
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+
+///////////////////////////
+
+[Background(screenadapt="coverall", image="bg_aircraft",fadetime=1,block=true)]
+[daley(time=1)]
+[Character(name="avg_npc_012")]
+[name="パイロット"]  到着しました。アーミヤさんたちはこの付近です！
+[name="パイロット"]  小隊を都市の外に待機させておいて本当に良かったんですか？　一人で降りて平気なんですか？
+[Character]
+[name="？？？"]  大丈夫だよ。みんなにはレユニオンの追手の対応と、戦場の後片付けを命じてある。ここで戦わせるよりずっと意味があるから。
+[Character(name="avg_npc_012")]
+[name="パイロット"]  わかりました。地形が険しいので、お送りはここまでになります。
+[Character]
+[name="？？？"]  十分だよ。
+[Character(name="avg_npc_012")]
+[name="パイロット"]  ではワイヤーロープを下ろしますので……。
+[Character]
+[name="？？？"]  いらない。私がそんなの使ってるの見たことある？
+[Character(name="avg_npc_012")]
+[name="パイロット"]  また無茶をするつもりですか！？
+[Character]
+[name="？？？"]  はぁ？　何が？　無茶って？
+[Character(name="avg_npc_012")]
+[name="パイロット"]  貴方との任務ではいつも……無茶をされてきましたので、操縦席から見ているだけで心臓が飛び出しそうになります。
+[name="パイロット"]  いつの間にか慣らされてしまいましたが、貴方が毎回無茶をするという事実は変わりませんから。
+[Character]
+[name="？？？"]  つまり私は私の小隊とも、君とも良いチームワークだってことじゃない！
+[Character(name="avg_npc_012")]
+[name="パイロット"]  そんなチームワークなんて要りませんよ！ この前だって、人様の集落を破壊し、ため池を埋め立てて、おまけに採掘場まで爆破したじゃないですか。
+[name="パイロット"]  頭の中にある危ない考えを実行するのは、降下してからにしてください。私が手塩にかけた相棒まで巻き込まないでくださいよ！
+[Character]
+[name="？？？"]  はいはい、もうわかったよ。それにしても君の相棒だけど、「バッドガイ」号って……もっとまともな名前をつけてあげられなかったの？
+[Character(name="avg_npc_012")]
+[name="パイロット"]  今すぐ叩き落されたいですか？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.7, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.7, block=true)]
+[Character(name="avg_npc_012")]
+[name="パイロット"]  敵に気付かれたかもしれません。ブレイズさん、私たちはここまでです。
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_017_homura_3#4")]
+[name="ブレイズ"]  分かった。
+[Character(name="avg_npc_012")]
+[name="パイロット"]  廃都市の出口で皆さんを待ちます。準備ができ次第すぐに降下を！
+[name="パイロット"]  あっ、通信？
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[Character]
+[name="？？？"]  もしもし！！
+[Character(name="avg_npc_012")]
+[name="パイロット"]  ……聞こえます！　そんな大きな声で喋らないでください！
+[Character]
+[name="？？？"]  あっ、ロドス回線のオペレーターね、ご機嫌いかがかしら！　あたしは近衛局の者なんだけど、廃都市の出口であんたたちの小隊と合流したわ！
+[Character(name="char_017_homura_3#4")]
+[name="ブレイズ"]  近衛局は撤退したんじゃないの？　まだ何か企んでるってわけ？
+[Character]
+[name="？？？"]  あたしはあのチェンとは違うのよ！　あんたたちを助けに来てあげたの。いいから信じなさい。
+[Character(name="avg_npc_012")]
+[name="パイロット"]  お名前をお伺いしても？
+[Character]
+[name="？？？"]  名前はいいからコードネームで、スワイヤー長官って呼んでちょうだい！
+[Character(name="avg_npc_012")]
+[name="パイロット"]  ……。
+[name="パイロット"]  それ、そのまま名前なのでは！？
+[name="パイロット"]  ブレイズさん、ちょっと応対をお願いします。この手のお偉いさんには、どうやって接すれば良いか分からないもので……。
+[name="パイロット"]  ……ブレイズさん？
+[Character(name="avg_npc_012",name2="char_017_homura_3#4",focus=2)]
+[name="ブレイズ"]  私に分かるわけないでしょ。
+[Character(name="avg_npc_012",name2="char_017_homura_3#4",focus=1)]
+[name="パイロット"]  待ってください！　降りるのはこの人の応対が終わってからにしてください！
+[Character(name="avg_npc_012",name2="char_017_homura_3#4",focus=2)]
+[name="ブレイズ"]  さっき降りろって言ったでしょ？　任せたよ！　信じてるからね！　（投げキス）
+[Character(name="avg_npc_012")]
+[name="パイロット"]  こんなときにふざけないでください！
+[stopmusic(time=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0,fadetime=1, block=true)]
+[Background(image="bg_cher_11", width=1, height=1, screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0,fadetime=1, block=true)]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_193_frostl_1#5")]
+[name="フロストリーフ"]  はぁっ、はぁっ……。
+[Character(name="char_002_amiya_1#4", name2="char_219_meteo_1#7", focus=2)]
+[name="メテオリーテ"]  ……その子、大丈夫よね？
+[Character(name="char_002_amiya_1#4", name2="char_219_meteo_1#7", focus=1)]
+[name="アーミヤ"]  はい。もう問題なさそうです。体温がまだ少し低いですが。
+[Character(name="char_193_frostl_1")]
+[name="フロストリーフ"]  元々……体温は低い。大丈夫だから、私を……。
+[Character(name="char_002_amiya_1#4")]
+[name="アーミヤ"]  フロストリーフさん……もう少し休んでください。今のあなたの体温は、普段よりやはり少し低いですから。
+[name="アーミヤ"]  ドクター、包帯を取っていただけますか。
+[Dialog]
+[Decision(options="分かった。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_193_frostl_1")]
+[name="フロストリーフ"]  大丈夫だと……言ったはずだ。メテオリーテの怪我の方がひどい。
+[Character(name="char_219_meteo_1")]
+[name="メテオリーテ"]  大丈夫よ。これでもサルカズだから。やはりあなたの方が心配よ。
+[Character(name="char_002_amiya_1#7", name2="char_259_Jessica_1#1", focus=1)]
+[name="アーミヤ"]  ジェシカさん、スノーデビル小隊の動向はどうですか？
+[Character(name="char_002_amiya_1#7", name2="char_259_Jessica_1#1", focus=2)]
+[name="ジェシカ"]  こ、こちらへ接近中です！　接触まであと五百メートル前後です！
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]  ルート確保作業はまだかかりそうですか？
+[Character]
+[name="オペレーター"]  少なくともあと十五分はかかります！　倒壊した建造物は複雑な構造になっています、直接の爆破は危険ですので。
+[Character(name="char_002_amiya_1#7",name2="char_219_meteo_1",focus=1)]
+[name="アーミヤ"]  ……メテオリーテさん、戦闘準備を。もう少し防衛線を守る必要がありそうです。
+[Character(name="char_002_amiya_1#7",name2="char_219_meteo_1",focus=2)]
+[name="メテオリーテ"]  分かった。予備の矢はある？
+[Character(name="char_002_amiya_1#7",name2="char_219_meteo_1",focus=1)]
+[name="アーミヤ"]  はい。支援オペレーターよりお渡しします……。
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="？？？"]  アーミヤちゃん、いる？
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]  ……。
+[Character(name="char_259_Jessica_1#1")]
+[name="ジェシカ"]  ……。
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[Character]
+[name="オペレーター"]  ……げっ。
+[Character(name="char_002_amiya_1#1")]
+[name="アーミヤ"]  誰か、通信機を切り忘れている方がいませんか。
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="？？？"]  これはエリートオペレーター専用のチャンネルだよ。こっちから繋げたんだから。
+[Character(name="char_259_Jessica_1#2")]
+[name="ジェシカ"]  この声は……？
+[Character(name="char_193_frostl_1#5")]
+[name="フロストリーフ"]  終わった。まさかあいつを寄越すとは。
+[Character(name="char_259_Jessica_1#2",name2="char_193_frostl_1#5",focus=1)]
+[name="ジェシカ"]  すみません……どなたですか？
+[Dialog]
+[Character]
+[Decision(options="この情熱的なオペレーターは一体誰だ？;……。;現状の戦局を覆せるオペレーターか？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_193_frostl_1")]
+[name="フロストリーフ"]  ブレイズという奴だ。周囲を辺り構わず破壊し、皆を全身汗まみれにするオペレーター。
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="ブレイズ"]  そうそう、私だよ！　って最後の汗まみれにするは余計だって！
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]  ブレイズさん……こんなときにふざけないでください。
+[name="アーミヤ"]  それはそうと、どこにいらっしゃるんですか。私たちにはブレイズさんの支援が必要です。
+[Character]
+[name="ブレイズ"]  みんなの頭の上だよ。
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]  えっ？
+[Character]
+[name="ブレイズ"]  あと二百メートルくらいで到着するよ！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_037")]
+[name="スノーデビル隊員"]  射程外だ。あの飛行機械には届かない！
+[name="スノーデビル隊員"]  空中を移動できる機械……奴らはあんなものまで……？
+[Character(name="char_1505_frstar_1")]
+[name="フロストノヴァ"]  降下できなくしてやればいい。
+[name="フロストノヴァ"]  ロドスの援軍が到着する前に、この小隊を片付ければ、合流も何もないだろう。
+[name="フロストノヴァ"]  いや、待て。
+[Character(name="char_1505_frstar_1#9")]
+[name="フロストノヴァ"]  ――後ろに下がれ！
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_219_meteo_1")]
+[name="メテオリーテ"]  また飛び降りてきたっ！？
+[Character(name="char_219_meteo_1",name2="char_193_frostl_1#5",focus=2)]
+[name="フロストリーフ"]  ああ、また飛び降りてきたな。
+[Character(name="char_002_amiya_1#5")]
+[name="アーミヤ"]  ……。
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="ブレイズ"]  アーミヤちゃん、もしスカイダイビングに興味があれば、今度一緒に飛んであげるからね！
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]  できれば遠慮させてください。ブレイズさん、小隊はどうされたんですか？
+[Character]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="ブレイズ"]  都市の外で待機させてる。後で出迎えてくれるよ。
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]  風切り音でよく聞こえません……一旦通信を切りますよ。
+[name="アーミヤ"]  皆さん……ブレイズさんの支援を行います。
+[name="アーミヤ"]  Dr.{@nickname}、この後彼女が何を言っても———
+[name="アーミヤ"]  ……黙ってうなずいていれば大丈夫です。
+[Dialog]
+[Character]
+[Decision(options="……？", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Character]
+[Background(fadetime=1)]
+[CameraShake(duration=3, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[delay(time=1)]
+//////////////插入cg///////////////////
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+
+//修改此处的image来切换cg
+[Image(image="avg_6_11",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+//对话内容此处填入
+[name="スノーデビル隊員"]  あの落ちてきたのは……。
+[name="スノーデビル隊員"]  ……人なのか？
+[Character(name="char_1505_frstar_1")]
+[name="フロストノヴァ"]  一人だけだからといって警戒は解くな。
+[name="フロストノヴァ"]  熱量を感じる。加熱するタイプのアーツの使い手のようだ。
+[Character(name="char_017_homura_3#4")]
+[name="ブレイズ"]  さぁて、レユニオンのみんな、こんにちは。
+[name="ブレイズ"]  感染者を敵に回したくはないんだけど、君たちが私のロドスの同僚を傷つけたって聞いたからさ……。
+//对话内容此处填入
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
+[Image(fadetime=0)]
+[Background(image="bg_cher_6", width=1, height=1, fadetime=1)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Character(name="char_017_homura_3#4",fadetime=1,block=true)]
+[delay(time=1)]
+[name="ブレイズ"]  それに、今でも同僚たちを追ってるって話だから、ちょっと邪魔させてもらうよ。
+[Character(name="char_1505_frstar_1")]
+[name="フロストノヴァ"]  ……よく喋る。
+[Character(name="char_017_homura_3#4")]
+[name="ブレイズ"]  ハーイ、こんにちは。氷使いのお嬢さん。
+[name="ブレイズ"]  君の冷気と私の熱気、どっちが強いか競ってみようか。
+///////////////////////////
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
