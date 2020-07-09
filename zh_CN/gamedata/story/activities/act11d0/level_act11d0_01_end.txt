@@ -1,0 +1,354 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 九尾狐活动 1下
+
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+//（在隔离区的战斗结束后，小巷内）
+//背景：沃伦姆德小巷间
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_ltstreet1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+
+[name="叛乱的镇民"]  那、那些外人为什么要搅和我们的事情！
+[name="叛乱的镇民"]  还有你！塞弗林！你的儿子都死在那场火灾里了，你竟然还帮着那些饭桶！
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  ......把刀放下，告诉我，是谁教唆你们的，是谁给你的武器。
+[name="塞弗林"]  最后一次警告。
+[Character]
+[name="叛乱的镇民"]  呃——！
+[Dialog]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$fightgeneral")]
+
+//（晃动）
+//（塞弗林单独解决了最后几位暴乱的感染者，他抬起头，正逢亚叶走来）
+
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  ......都持刀伤人了，躲回家里又有什么用？没关系，宪兵队会挨个敲门问责。
+
+[Character(name="char_345_folnic_1#4")]
+[name="亚叶"]  只是问责？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#4",focus=1)]
+[name="塞弗林"]  “问责”的具体过程没必要告诉游客。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  那你没有什么要对“游客”说的吗？“长官”？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  ......嗯，你们很强，原来医生还能这么能打，真是长见识。
+[name="塞弗林"]  以及......非常感谢刚才的帮助。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  一般来说，我们被称为“干员”的情况更多。
+[name="亚叶"]  现在可以告诉我安托在哪里了吗？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  ......这里不安全，我们回去再说。
+[Dialog]
+[Character]
+//（塞弗林下）
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[delay(time=2)]
+[stopmusic(fadetime=3)]
+[Character(name="char_345_folnic_1#4")]
+[name="亚叶"]  ......
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#4",focus=1)]
+[name="铃兰"]  辛苦了，亚叶姐姐。
+[name="铃兰"]  对不起，没能在战斗里帮上太多忙......
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#2",focus=2)]
+[name="亚叶"]  没关系，你已经很努力了。不如说如果早知道现在沃伦姆德是这个状态，我就不会把你带来了。
+[name="亚叶"]  就算只是解决一些纠纷，我也不想你太早卷入——
+[Character(name="char_358_lisa_1#2", name2="char_345_folnic_1#2",focus=1)]
+[name="铃兰"]  亚叶姐姐！
+[Character(name="char_358_lisa_1#2", name2="char_345_folnic_1#2",focus=2)]
+[name="亚叶"]  ——唉，好好，小丽萨长大了。没受伤吧？
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#2",focus=1)]
+[name="铃兰"]  嗯，没事的！
+[name="铃兰"]  不过亚叶姐姐刚才一直心不在焉的，怎么了吗？
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  ......这附近是隔离区。闹事的感染者被赶走后，这里就变回了安安静静的样子。
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#4",focus=1)]
+[name="铃兰"]  嗯......好像和其他地方没有太大区别呀？
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  没有太大区别，对，商店，咖啡厅，甚至还有音乐馆和艺术沙龙的广告......
+[name="亚叶"]  他们不用被卫兵追捕，不会被流放到冻土上，不仅有着正常的生活空间......怎么讲呢，好像还过得挺好。
+[name="亚叶"]  感染者的待遇还真是多种多样啊。
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#4",focus=1)]
+[name="铃兰"]  如果大家都能对感染者这么温柔的话......
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  那我们就要失业了。
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#4",focus=1)]
+[name="铃兰"]  欸！？虽然真的因为这种原因失业的话，我也会很高兴的！但、但我才刚当上干员......
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#2",focus=2)]
+[name="亚叶"]  只是个玩笑啦......感染者能上街随便走动这件事只说明沃伦姆德现在处境特殊。
+[name="亚叶"]  ......他们有什么瞒着我们。
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#2",focus=1)]
+[name="铃兰"]  欸？怎么突然就——
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  嘘！小声点！就是等那个宪兵走远了才说的！
+[name="亚叶"]  这些感染者的反抗态度很奇怪。他们说过“火灾”和“医生”之类的话，不是吗？
+[name="亚叶"]  还有那个宪兵明明知道我们的身份，我问了几次安托的事情，只是回答一句她在哪里很难吗？
+[name="亚叶"]  而且这里......这座城镇现在的气氛有点过于诡异了。
+[name="亚叶"]  就算是莱塔尼亚也不至于让感染者满大街乱走，卫兵呢？为什么没有人制止？
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#3",focus=1)]
+[name="铃兰"]  是有点奇怪......
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  我有不好的预感。
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#3",focus=1)]
+[name="铃兰"]  也、也许只是因为城镇的情况不太好，大家情绪比较激动？
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  ......只是这样就好了。
+[Dialog]
+[Character]
+//（在二人说悄悄话的同时，塔佳娜完成了她的任务）
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+[Character(name="avg_npc_069#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="塔佳娜"]  二位辛苦了，真是抱歉，一来就被卷入了这样的事情里，我很惭愧......
+[Character(name="avg_npc_069#2", name2="char_345_folnic_1",focus=2)]
+[name="亚叶"]  啊......没关系。
+[name="亚叶"]  你是这里宪兵队的一员吗？
+[Character(name="avg_npc_069", name2="char_345_folnic_1",focus=1)]
+[name="塔佳娜"]  不算是。不过沃伦姆德的大家都接受过正规军事训练，特殊情况来临的时候，我们都有拿起武器的责任......
+[name="塔佳娜"]  啊，不过伯父......塞弗林长官确实是本镇最高长官。
+[Character(name="avg_npc_069", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  ......一个偷懒抽烟的中年男？不负责任和玩忽职守并不能给人高深莫测的感觉，很遗憾。
+[Character(name="avg_npc_069", name2="char_345_folnic_1#4",focus=1)]
+[name="塔佳娜"]  长官现在这样这是有理由的——
+[name="塔佳娜"]  不......没什么......
+[name="塔佳娜"]  对了，怎么称呼二位？
+[Character(name="avg_npc_069", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  ......干员亚叶，这位是干员铃兰。
+[Character(name="avg_npc_069", name2="char_345_folnic_1#4",focus=1)]
+[name="塔佳娜"]  亚叶，铃兰......这是你们的代号？
+[Character(name="avg_npc_069", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  在我们那儿没有多少人会用真名工作，就和“安托”一样。
+[Character(name="avg_npc_069#2", name2="char_345_folnic_1#4",focus=1)]
+[name="塔佳娜"]  安托医生......
+
+//（塔佳娜的脸上一瞬间抹过一丝阴霾，亚叶并没有放过这个细节）
+
+[Character(name="avg_npc_069#2", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  看你的反应，你们认识。
+[Character(name="avg_npc_069#2", name2="char_345_folnic_1#4",focus=1)]
+[name="塔佳娜"]  嗯......抱歉，我知道您心中疑惑，但塞弗林长官会解答你们的。这不是......不是我擅自做主的范畴。
+[name="塔佳娜"]  总之，请跟我来。
+[Character(name="avg_npc_069#2", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  ......我明白了。
+
+
+//（一行人回到待客厅，早一步回来的塞弗林一言不发）
+//背景：待客厅室内
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_ltroom",screenadapt="coverall")]
+
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+
+[Character(name="avg_npc_068")]
+[name="镇民代表"]  你对他们说了多少？
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  没多少，大家不会不高兴的程度。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  我......我是提了很多不近人情的意见，但你其实可以拒绝我的。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  别搞这种别出心裁的推卸责任，你也别指望能从我这里得到什么安慰。
+[name="塞弗林"]  我现在全部如实告诉他们，你就开心了？所有人就开心了？
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  我们是代表，你是沃伦姆德的头儿，我们自己开不开心有多大意义？
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  ......我不喜欢把事情变麻烦，特别是在感染者们又跳出来的时间点上接待客人。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  唉......等等，停下，别在这里点烟，也别摆弄弩弹了，放下，给罗德岛客人们留下个好印象。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  好印象这方面你已经不用指望了......
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  你——慢着，是窗外那两个小姑娘？
+[Character(name="avg_npc_066#4")]
+[name="塞弗林"]  小姑娘，哈，看过她们战斗的样子，你也会像那群公务员一样质疑莱塔尼亚的学校是不是艺术课程占比过大。
+[Character(name="avg_npc_069")]
+[name="塔佳娜"]  长官，店长，他们到了。
+[Dialog]
+//（塔佳娜带着亚叶和铃兰上）
+[Character]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[Character(name="char_358_lisa_1", name2="char_345_folnic_1#3",fadetime=1,block=true)]
+[delay(time=3)]
+[Character(name="avg_npc_068")]
+[name="镇民代表"]  啊，欢迎！罗德岛的医生！欢迎来到沃伦姆德！很抱歉让你们卷入了本地的事件，为表歉意，晚上请一起——
+[Character(name="char_345_folnic_1#3")]
+[name="亚叶"]  谢谢您的好意，但我们只是来确认安托医生的下落，不会多做停留。
+[name="亚叶"]  那么，她在哪里？
+[Character(name="avg_npc_068")]
+[name="镇民代表"]  呃，事实上——
+[Character(name="char_345_folnic_1#3")]
+[name="亚叶"]  本地的感染者都知道“安托医生”，你们在拖延时间，没有这个必要。
+[Character(name="avg_npc_068")]
+[name="镇民代表"]  ......二位，我很抱歉，但沃伦姆德发生的事情很复杂，我们需要一点时间来给贵公司一个交代，以确保——
+[stopmusic(fadetime=1)]
+[Character(name="avg_npc_066#3")]
+[name="塞弗林"]  她失踪了。
+
+[Character(name="char_358_lisa_1#3")]
+[name="铃兰"]  欸！？
+[Character(name="char_345_folnic_1#3")]
+[name="亚叶"]  ......宪兵，你不该在谈及这种话题的时候还保持那种肤浅的轻浮态度。
+[Character(name="avg_npc_066#3", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  真相就是轻浮的，很简单，没那么沉重。就像你现在很愤怒，但也没有太过惊讶，你早就猜到了不是吗？
+[name="塞弗林"]  我们的确接待过自称为“安托”的感染者医师，在沃伦姆德最艰难的时刻，她帮助我们照料了许多感染者居民，我们深表感谢。
+[Character(name="avg_npc_066#3", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  你们感谢的方法就是告诉我们，安托她失踪了？
+[Character(name="avg_npc_066#3", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  别这么咄咄逼人......咳，咳咳——
+[Character(name="avg_npc_066#3", name2="char_358_lisa_1#3",focus=2)]
+[name="铃兰"]  先生，您的脸色很差，您不该再抽烟了。
+[name="铃兰"]  如果可以的话，您应该接受一次全面检查，可能——
+[Character(name="avg_npc_066", name2="char_358_lisa_1#3",focus=1)]
+[name="塞弗林"]  ......不必，但是谢谢你的关心。
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  回到正题，在沃伦姆德镇躲避天灾抵达当前坐标后，为了帮助我们安置感染者居民，安托医生在城镇边缘建立了一处营地。
+[name="塞弗林"]  但是就在前不久，营地发生了一场火灾。
+[Character(name="avg_npc_069#2")]
+[name="塔佳娜"]  ......
+[Character(name="avg_npc_068")]
+[name="镇民代表"]  呃......
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  ......火灾。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  别摆出那么难看的表情......根据目前的调查，那很可能只是一场意外。
+[name="塞弗林"]  安托医生在那之后就离开了沃伦姆德镇，嗯，不知道去哪儿了。
+
+[Character(name="char_345_folnic_1#5")]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="亚叶"]  这种事情你还能说得这么轻描淡写——！
+[Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#5",focus=1)]
+[name="铃兰"]  亚叶姐姐！冷静，冷静！
+[name="铃兰"]  我们、我们会去自己确认的，但是，火灾之后又下落不明，这种说法也太让人不安了！
+[Character(name="avg_npc_066#2", name2="char_345_folnic_1#5",focus=1)]
+[name="塞弗林"]  ......我很抱歉。
+[name="塞弗林"]  就算不那么轻描淡写，我能说的话也只是——“我很抱歉”。
+[name="塞弗林"]  安托医生是个了不起的家伙，她没有莱塔尼亚血统，更与我们毫无瓜葛，她却比任何一个人都高尚。
+[name="塞弗林"]  但是在沃伦姆德因天灾而蒙受损失的时候，她没有逃走，她向我们伸出了援手。
+[name="塞弗林"]  我很尊敬医生，所以我不希望她遭遇什么不测。
+[name="塞弗林"]  但在那场火灾过后——你也看见了，有些感染者居民并不这么想。
+[name="塞弗林"]  这不怪他们，眼下城镇断绝了与外界的联系，偏离航线，缺乏补给，还有一群武装感染者游荡在周围停留。
+[Character(name="avg_npc_066#2", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  武装感染者？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  外来者，都是感染者，全副武装，除了莱塔尼亚人，还有些魔族。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  是“萨卡兹”，希望你知道这个词的意义。至于武装感染者，有别的信息吗？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  只是一群趁火打劫的匪徒，不是第一次了。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  是吗？那为什么他们没有立刻来洗劫城镇？为什么要“游荡”在这周围？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  听上去你话里有话。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  沃伦姆德缺乏对待感染者问题的敏感性，可以理解。
+[name="亚叶"]  毕竟长久以来，莱塔尼亚的感染者能够与普通人相安无事地生活，这是一个奇迹——
+[name="亚叶"]  ——也是让某些人趁虚而入的契机。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  ......怎么说？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  我说过，罗德岛不光有医生，我们是感染者问题对策专家。
+[name="亚叶"]  有些事情......我更相信我们自己的判断。
+[name="亚叶"]  比如......你知道“整合运动”吗？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  在大裂谷出现之前，在一些报纸上听说这个名字，大多数都是和乌萨斯有关的报道，偶尔会在莱塔尼亚境内听说。
+[name="塞弗林"]  但是对于一个旅游小城镇来说，那些语焉不详。意义不明的官方说辞甚至不如隔壁镇子的夫妻八卦来的吸引人。
+[name="塞弗林"]  所以呢？你觉得这其中有关联？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  ——不，这是得确认之后才能做出的结论，现在我们暂且搁置。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  好吧......咳咳，无论如何，感谢你的情报。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  根据以往的工作经验，我不认为你的一面之词可以决定我们任务的走向。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#4",focus=1)]
+[name="塞弗林"]  那挺遗憾的，不过说实话我也没指望你们会听话。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  我们可能会在城镇上做一些调查，根据“失踪”的具体结果......
+[name="亚叶"]  罗德岛会向必要的人索求必要的代价。
+[Character(name="avg_npc_068")]
+[name="镇民代表"]  呃......
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  ......明白了。
+[name="塞弗林"]  看到你那副表情，我也没有理由拒绝你。
+[name="塞弗林"]  你们可以在镇上自由行动，既然是安托医生的同伴，沃伦姆德理应把你们视作贵客。
+[Character(name="avg_npc_068")]
+[name="镇民代表"]  啊！没错！请自由使用这里的房间，楼上有着沃伦姆德政府最好的待客室。
+[name="镇民代表"]  二位长途劳顿，一定很辛苦了吧？请在楼上等待，我们会为二位准备——
+[Character(name="avg_npc_068", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  不必了，我还有点在意的事情。
+[name="亚叶"]  可以现在就开始调查吗？
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=1)]
+[name="塞弗林"]  ......过会我们会准备手续和通知各个居民，特事特办，你们请便。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#3",focus=2)]
+[name="亚叶"]  谢谢。
+[Character(name="char_345_folnic_1#3")]
+[name="亚叶"]  铃兰，我们走。
+[Character(name="char_358_lisa_1#3")]
+[name="铃兰"]  呃？啊，好的！那么沃伦姆德的各位，一会见！
+[stopmusic(fadetime=2)]
+//（亚叶和铃兰离开）
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[delay(time=2)]
+[Character(name="avg_npc_066#2")]
+[name="塞弗林"]  ......唉。
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Character(name="avg_npc_068",name2="avg_npc_066#2",focus=1)]
+[name="镇民代表"]  ......能瞒多久？
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  你看到她的表情了吗？
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  ......嗯。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  没错，也许罗德岛不会是那种出于利益目的敲诈我们的公司，但他们会因为失去同伴而做出任何出乎预料的事情。
+[name="塞弗林"]  对我们而言，结果一样。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  可是......可是那也不能算是我们的责任，不，说到底，难道不是那些该死的感染者放的火吗！？
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  我们没有证据。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  那我们也不能白白担责啊！
+[name="镇民代表"]  我们尽可能宽容了这些感染者，但他们怎么对待我们的？自从宪兵队离开这里之后，每天都有感染者不服从管理！
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  .......是啊，真相总是轻浮的，看到这根火柴了吗？火柴比真相靠谱。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  你的确不该再抽烟了，听医生的吧，你还能多活几年。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  他们是“干员”，我只听“医生”的。
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  油嘴滑舌......
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  ......塔佳娜，你稍微跟上去看一眼，不要让客人们遇到什么麻烦。
+[Character(name="avg_npc_069#4")]
+[name="塔佳娜"]  啊，好的！明白，长官！
+
+//（塔佳娜下）
+[Dialog]
+[Character]
+[PlaySound(key="$rungeneral", volume=0.6)]
+[delay(time=1)]
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  ......让她去？
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  哈——那个什么......亚叶，对。
+[name="塞弗林"]  你知道我看到亚叶那副悲愤表情的时候，想到了什么吗？
+[Character(name="avg_npc_068",name2="avg_npc_066",focus=1)]
+[name="镇民代表"]  别卖关子。
+[Character(name="avg_npc_066#3")]
+[name="塞弗林"]  ......我在想，为什么塔佳娜没有露出过那副表情？
+[name="塞弗林"]  托尔明明差点成为她的丈夫，她应该感到悲伤的。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Image]

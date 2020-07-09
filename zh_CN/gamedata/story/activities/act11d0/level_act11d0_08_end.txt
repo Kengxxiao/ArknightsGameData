@@ -1,0 +1,639 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 九尾狐活动 8下
+
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_ltroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+
+//背景：待客厅室内
+//（议事厅内）
+[Character(name="avg_npc_068")]
+[name="负伤的镇民"]  啊——长官，你在这里！
+[name="负伤的镇民"]  听说你负伤了，你可以下地了吗？
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  ......咳，这里伤员很多......再这样下去，真的没地方落脚了......
+[name="塞弗林"]  塔佳娜......塔佳娜她怎么了？
+[Character(name="avg_npc_068")]
+[name="负伤的镇民"]  我、我也不清楚，听说有人在她的面前被烧死，她就......
+[Character(name="avg_npc_069#2")]
+[name="塔佳娜"]  呜呜......呜......
+[Character(name="avg_npc_066#2", name2="avg_npc_069#2",focus=1)]
+[name="塞弗林"]  ........哭出来吧，孩子，你没必要强撑着的......
+[Character(name="avg_npc_066#2", name2="avg_npc_069#2",focus=2)]
+[name="塔佳娜"]  对、对不起......但是我......
+[Character(name="avg_npc_066#2", name2="avg_npc_069#2",focus=1)]
+[name="塞弗林"]  去哭一场。
+[Character(name="avg_npc_066#2", name2="avg_npc_069#3",focus=2)]
+[name="塔佳娜"]  可现在外面还是一片混乱！
+[Character(name="avg_npc_066", name2="avg_npc_069#3",focus=1)]
+[name="塞弗林"]  我去......有我在，还有罗德岛的各位。
+[name="塞弗林"]  总有办法的。
+[Character(name="avg_npc_066", name2="avg_npc_069#2",focus=2)]
+[name="塔佳娜"]  不......您难道是想......
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  带她去休息，我来指挥战局。
+[Character(name="avg_npc_068")]
+[name="负伤的镇民"]  没问题......
+[Character(name="avg_npc_066", name2="avg_npc_069#4",focus=2)]
+[name="塔佳娜"]  伯父......！答应我！不要去送死！
+[name="塔佳娜"]  那是没有意义的......
+[Character(name="avg_npc_066", name2="avg_npc_069#4",focus=1)]
+[name="塞弗林"]  ......连你都说出没有意义这种话，那可就真没有意义了。
+[name="塞弗林"]  至少怀着点希望吧......也许事情还有转机。
+
+//（城镇中心，激烈的战斗，晃动，爆炸）
+//背景：沃伦姆德主街道破坏
+[stopmusic(fadetime=3)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_ltstreet2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+
+[CameraShake(duration=0.7, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[playMusic(intro="$batmeeting_intro", key="$batmeeting_loop", volume=0.4)]
+[Character(name="char_345_folnic_1#5")]
+[name="亚叶"]  给我——让开！
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[playsound(key="$smallearthquake", volume=0.2)]
+[CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
+[delay(time=2)]
+//（晃动）
+[Character(name="avg_npc_065")]
+[name="镇民"]  成功了！那些巨像，巨像被粉碎了！
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  这种执着......真是出乎预料。
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  泥岩，不该这么手下留情了，否则我们无法全身而退。
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......你眼中满是仇恨，和茫然。
+[name="泥岩"]  你在为安托医生感到愤怒，可那又如何？
+[name="泥岩"]  这里每个人背负的东西，都不少。
+[Character(name="char_345_folnic_1#5")]
+[name="亚叶"]  住嘴。
+[name="亚叶"]  不许你......提她的名字。
+
+[Dialog]
+[Character]
+[PlaySound(key="$rungeneral", volume=0.6)]
+[delay(time=1)]
+
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[playsound(key="$e_atk_magic_n", volume=1)]
+[playsound(key="$e_atk_magic_m", volume=1)]
+[Blocker(a=0, fadetime=0.5, block=false)]
+[CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=false)]
+[Character(name="char_345_folnic_1#3")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=10, vibrato=10, randomness=30, fadeout=true, block=false)]
+[name="亚叶"]  呃——！
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  等到饥荒和寒冬来临，你们还是会战败，这是一场无人生还的闹剧。
+[name="泥岩"]  沃伦姆德......会灭亡。
+[Character(name="char_345_folnic_1#5")]
+[name="亚叶"]  这不用你说！
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  你在恨谁......？你又想救谁？
+[Character(name="char_345_folnic_1#3")]
+[name="亚叶"]  ......呃！又是那个法术——
+[Character]
+[Dialog]
+[playsound(key="$smallearthquake", volume=0.2)]
+[CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=false)]
+[name="岩石巨像"]  嘎啊啊啊啊——！
+[delay(time=2)]
+[Character(name="char_358_lisa_1#2")]
+[name="铃兰"]  亚叶姐姐——！
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[playsound(key="$e_atk_magic_n", volume=0.4)]
+[CameraShake(duration=0.3, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=2, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  减缓了泥岩的法术生效时间......真是奇异的技巧。
+[name="萨卡兹战士"]  不过，你还有余裕分心？
+[Character]
+//（晃动）
+[Dialog]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+
+[Character(name="char_358_lisa_1#2")]
+[name="铃兰"]  唔！放、放开我！
+[Character(name="char_358_lisa_1#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  你应该庆幸，如果你再大个几岁，我会毫不犹豫地砍下你持杖的惯用手。
+[Character(name="char_345_folnic_1#5")]
+[name="亚叶"]  ——铃兰！？
+[Character(name="avg_npc_011#2", name2="char_345_folnic_1#5",focus=1)]
+[name="泥岩"]  别想跑。
+[Character]
+[Dialog]
+[name="岩石巨像"]  嘎啊啊啊啊——！
+
+[Dialog]
+[playsound(key="$smallearthquake", volume=0.6)]
+[CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$rungeneral", volume=0.9)]
+[delay(time=1)]
+[Character(name="avg_npc_066")]
+[playsound(key="$p_imp_blunt_h")]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=1, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=1)]
+[stopmusic(fadetime=1)]
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  ......你只是个医生，你不该背对敌人。
+[Character(name="char_345_folnic_1#5")]
+[name="亚叶"]  塞弗林——！你还不能！
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  又一个......战士。
+[Character(name="avg_npc_066#3")]
+[name="塞弗林"]  ......
+[name="塞弗林"]  ......真凶，已经被找到了。
+[name="塞弗林"]  造成这一切的元凶！叛徒毕德曼！就在刚才，已经被罗德岛的干员们带回了议事厅！
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  ......
+[Character]
+[name="叛乱的镇民"]  等等，毕德曼......毕德曼没死？那是怎么回事？
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  不要听他胡言乱语！真凶是谁还重要吗！？
+[name="武装的感染者"]  我们要的是感染者不再被非感染者排挤，穷人不必为贵族卖命！冬灵人可以夺回自己的土地！
+[name="武装的感染者"]  我们是整合运动——我们将开启新的时代——！
+
+[Character]
+//（呼声）
+[Character(name="avg_npc_011#2")]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[name="泥岩"]  你看，塞弗林，这毫无用处......
+[Character(name="avg_npc_011#2", name2="avg_npc_066#3",focus=2)]
+[name="塞弗林"]  ......那就杀了我，整合运动，我们痛痛快快打一场。
+[Character(name="avg_npc_011#2", name2="avg_npc_066#3",focus=1)]
+[name="泥岩"]  ......然后呢？寒冬和饥荒依旧可以摧毁这座城市。
+[Character(name="avg_npc_011#2", name2="avg_npc_066#3",focus=2)]
+[name="塞弗林"]  不......
+[name="塞弗林"]  反正横竖都是死路一条......我宁可相信罗德岛可以阻止事情变得更糟。
+[name="塞弗林"]  至少能多活下来一些人......
+[name="塞弗林"]  你看，你遍体鳞伤，面罩都碎了一半，你的巨像分崩离析，你其实很累了，不是吗？
+[name="塞弗林"]  我看得出来......我们同病相怜。
+[name="塞弗林"]  ——呃，借个火？
+[Character(name="avg_npc_011#2", name2="avg_npc_066",focus=1)]
+[name="泥岩"]  ......
+[Character(name="avg_npc_011#2", name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  反正这都是最后一根烟了......算了。
+[name="塞弗林"]  （动手，现在，不要让他们有机会救我。）
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ——塞弗林·霍索恩，你死后，我会撤离这里。
+[name="泥岩"]  这只是一座几近荒废的城镇，留在这里，只是等死。
+[name="泥岩"]  你的死，给他们交代。如若他们还想残害他人，我自会处置。
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  ......这就够了。
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ——永别。
+
+[Dialog]
+[Character]
+[stopmusic(fadetime=3)]
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)] 
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[playsound(key="$e_atk_magic_n", volume=0.4)]
+[CameraShake(duration=0.3, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=2, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=2)]
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......这法术，这是什么力量......
+[Dialog]
+[Character]
+[Character(name="char_358_lisa_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="铃兰"]  ——您、您为什么......一定要送死？
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="char_358_lisa_1#2", name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  让开，小姑娘！
+[Character(name="char_358_lisa_1#2", name2="avg_npc_066",focus=1)]
+[name="铃兰"]  您不该死！
+[Character(name="char_358_lisa_1#2", name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  那就会有更多人死——！
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  喂！泥岩好像遇到麻烦了！赶紧去帮他！不要让他们喘息！
+[name="武装的感染者"]  但、但他们连巨像都能打碎......这也太......
+
+[Dialog]
+[Character]
+//（断崖走出）
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_294_ayer",fadetime=1,block=true)]
+[delay(time=1)]
+[name="断崖"]  ......乖乖放弃吧。
+[name="断崖"]  连萨卡兹都失败了，你们还要靠什么战斗？
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  ——啧。
+[Character(name="char_294_ayer")]
+[name="断崖"]  如果只是乘机发泄不满的话......好啊，我奉陪。
+[name="断崖"]  我们奉陪到底。
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  快，快启动剩下的“留声机”！
+[name="武装的感染者"]  我、我不懂莱塔尼亚的源石技艺，快去找个莱塔尼亚人......慢着，头顶那是什么，无人机！？
+[name="武装的感染者"]  别看头顶！看你背后！有个眼睛通红的——
+[Character(name="char_328_cammou")]
+[name="卡达"]  ......劝你们别乱动哦，灰喉姐可是盯着你们的。
+[name="卡达"]  哎......也别回头去找灰喉姐的位置，我也盯着你们啊。
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......你们愤怒，你们保护。这是第几次了？
+[name="泥岩"]  你们......呵，你们居然真的赢了我。
+[Character(name="char_367_swllow_1#4")]
+[name="灰喉"]  把武器放下，这次不会放水了，泥岩。
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......
+[Character(name="avg_npc_066")]
+[name="塞弗林"]  你们......你们这样会让他们依旧记恨沃伦姆德！
+[Character(name="char_367_swllow_1", name2="avg_npc_066",focus=1)]
+[name="灰喉"]  与任何立场都无关，他们并非真正渴求变革，他们只是把自己的利益凌驾于其他人之上。
+[name="灰喉"]  因为他们没有选择共渡难关，也不愿意知晓真相，他们只想要......在混乱中掠夺。
+[Character(name="char_367_swllow_1#3", name2="avg_npc_066",focus=1)]
+[name="灰喉"]  塔佳娜小姐说的对，即使你牺牲自己，也是徒劳。
+[Character(name="char_367_swllow_1#4", name2="avg_npc_066",focus=1)]
+[name="灰喉"]  不管背后的问题多么复杂，罗德岛的干员绝不会坐视感染者......毁掉一座城镇。
+[Character(name="avg_npc_066", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  ......一座安托想要保护的城镇。
+[name="亚叶"]  罗德岛的行动小队将死守这处广场，这座议事厅大楼。
+[name="亚叶"]  的确，也许这会造成更多的伤亡......
+[name="亚叶"]  但那是在这之后，在“你们”，和“我们”之后。
+[name="亚叶"]  只要我们还在，就必须抗争到最后一刻......为了让安托，瞑目。
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  ......
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......
+[Character(name="avg_npc_067", name2="avg_npc_067")]
+[name="武装的感染者们"]  ......
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......你们，确实战胜了我......也许你们确实可以死守这座塔楼......但意义是什么？
+[Character(name="avg_npc_011#2", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  很多人都会死。
+[name="亚叶"]  会像安托一样......死得毫无意义。
+[Character(name="avg_npc_011#2", name2="char_345_folnic_1#4",focus=1)]
+[name="泥岩"]  感染者有抗争的理由。
+[Character(name="avg_npc_011#2", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  理由永远会被正当化......但至少现在，你们没有在解决问题，你们只是在破坏。
+[name="亚叶"]  在沃伦姆德遭受天灾之后，在补给告急缺乏人手的现在......你们做了什么？
+[name="亚叶"]  告诉我啊，你们做了什么！？
+[Character(name="avg_npc_011#2", name2="char_345_folnic_1#4",focus=1)]
+[name="泥岩"]  ......
+[Character(name="char_367_swllow_1#4",name2="avg_npc_011#2",focus=1)]
+[name="灰喉"]  ——我说过了，别动。
+[name="灰喉"]  你的源石技艺已经漏洞百出，现在这个距离，即使只是我的弩箭也足够让你失去行动能力。
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......罗德岛。
+[name="泥岩"]  是什么导致了那场火灾，那场火灾又导致了什么？
+[Character(name="avg_npc_011#2", name2="char_345_folnic_1#4",focus=2)]
+[name="亚叶"]  ......罪魁祸首，已经死了。
+[Character(name="avg_npc_011#2", name2="char_345_folnic_1#4",focus=1)]
+[name="泥岩"]  ......是吗。
+[stopmusic(fadetime=2)]
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......
+[name="泥岩"]  ——我们撤退。
+[Character(name="avg_npc_067", name2="avg_npc_067")]
+[name="武装的感染者们"]  什么？但我们......
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  我说了，撤退。
+[name="泥岩"]  只是小部分的人话......有办法穿过大裂谷，回到温暖的地带。
+[name="泥岩"]  无论你们是想要夺回土地还是报复富人......最后都只会在冻土上遇难。
+[name="泥岩"]  你们是想靠怒火度过冬天，还是想靠无辜者的尸体生火取暖？
+[name="泥岩"]  既然真凶已死，那么我们理应撤退。
+
+[Character(name="avg_npc_067")]
+[name="叛乱的镇民"]  但、但我们要抢夺的是沃伦姆德！是我们的土地！
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  闭嘴，冬灵人。你想要的只是权利，舒舒服服地躲在强者后面捡破烂的权利。
+[name="萨卡兹战士"]  不要质疑领袖，学聪明点，否则就把你丢在废土上。
+[Character(name="avg_npc_067")]
+[name="叛乱的镇民"]  呃......
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  ......这不是你一句话就能解决的！！
+[name="武装的感染者"]  我们死了这么多人！难道就因为几句话就要夹着尾巴离开吗！？
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......让他安静，朋友们。
+
+[Character]
+[Dialog]
+嘎嗷嗷嗷——
+[delay(time=1)]
+[Dialog]
+[playsound(key="$smallearthquake", volume=0.6)]
+[CameraShake(duration=2, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  唔啊——唔啊啊啊——这——拳头——！？
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  从地底伸出的石拳......你还有余力吗？
+[name="萨卡兹战士"]  不要用这么过激的手段制止他们，至少刚才为止他们和我们还是一边的。
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=1)]
+[name="泥岩"]  我本来只想吓他们一下的......算了......
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  你也别老是把自己的源石技艺造物叫做朋友啊，瘆得慌。
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=1)]
+[name="泥岩"]  ......你可以当没听见。别这么啰嗦。
+[name="泥岩"]  听着，撤退是我的判断。我没有命令你们所有人的能力，但是......
+[name="泥岩"]  我会离开。愿意跟随我的人也会离开。
+[name="泥岩"]  剩下的人......你们自求多福。
+[name="泥岩"]  对了......你有火柴吗？
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  如果没受潮的话，刚才那几个术师可真麻烦。
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=1)]
+[name="泥岩"]  给那边的塞弗林长官，递个火。
+[name="泥岩"]  战败者......能活着退出战场，已是万幸，不要再磨蹭了。
+[Dialog]
+[Character]
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  嘁！那就不要管什么整合运动了！打下议事厅是迟早的事，这座城镇需要我们做主——！
+[name="武装的感染者"]  投降吧，塞弗林！
+[Character(name="avg_npc_066#3")]
+[name="塞弗林"]  ......我就说，他们不会轻易收手的，咳咳——
+[name="塞弗林"]  注意左侧！他们来了！
+[Character(name="char_358_lisa_1#2")]
+[name="铃兰"]  长官，躲在我身后。
+[Character(name="char_345_folnic_1#3")]
+[name="亚叶"]  ......一群疯子，啧。
+[name="亚叶"]  绝对，不允许你们，践踏罗德岛保护的东西。
+[Character(name="char_367_swllow_1#4")]
+[name="灰喉"]  他们在准备施法，准备防御，击破施术者——
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_atk_magic_m")]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)] 
+[delay(time=1)]
+//（晃动）
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  ——
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  什、什么？挡下了我的源石技艺？！
+[name="武装的感染者"]  你们为什么要来碍事——！
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  ——领袖有令。
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  就算要和你们打，我们也不会轻易放弃，魔族！
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  ......嚯。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)] 
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)] 
+[delay(time=1)]
+//（晃动）
+[Character(name="char_345_folnic_1#3")]
+[name="亚叶"]  发生什么了，他们怎么起了内讧......？
+[name="亚叶"]  等等......泥岩他......停下了脚步？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_ltstreet2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+//（转场）
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  领袖？
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......土壤啊。
+[name="泥岩"]  站......起来。
+[Dialog]
+[Character]
+//（晃动）
+[playsound(key="$smallearthquake", volume=0.6)]
+[CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
+
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  停下，泥岩，你在缩短自己的寿命。
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......无所谓。
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  没必要使用那么古老的——
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  我说了......站起来！
+
+[Dialog]
+[Character]
+//（晃动）
+几乎所有的废墟都凝结在一起。
+那是一个巨人，它遥望着远方的山脉。
+他，泥岩，一动不动。
+
+[Character(name="char_358_lisa_1#2")]
+[name="铃兰"]  好、好高！好大！
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  ......强弩之末罢了，它的身躯在崩溃，他在勉强自己。
+[name="灰喉"]  后退，不要贸然进攻。
+[Character(name="char_367_swllow_1")]
+[name="灰喉"]  ......
+[Character(name="char_367_swllow_1#4")]
+[name="灰喉"]  不，不对......泥岩的确已经没有这个力气了，但是这法术......
+[name="灰喉"]  这其中有着萨卡兹的......巫术？
+
+//（切岩石巨像的时候撤立绘，就是泥岩与巨人的交替）
+
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  （我说了——）
+[Character]
+[name="岩石巨像"]  我说了——
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  你在做一件很危险的事情，你把你的生命分享给了自己的造物，如果只是为了威慑，这不值得。
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=1)]
+[name="泥岩"]  ......
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  ......行吧，听你的。
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  （从仇恨和纷争里脱身，活下去，现在是离开这里的最后机会。）
+[Character]
+[name="岩石巨像"]  离开这里。
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  （还想战斗的人......就是想将所有人置于死地。）
+[Character]
+[name="岩石巨像"]  那么......先来摧毁我。
+[Character(name="avg_npc_011#2")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=120, fadeout=true, block=false)]
+[name="泥岩"]  先来打败......我！
+[Character(name="avg_npc_067", name2="avg_npc_067",focus=1)]
+[name="武装的感染者"]  他、他怎么......他不是来帮我们的人吗！他不是整合运动吗！
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  ......我、我才不管！那就让他去死吧！！
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+//（劈砍）
+[delay(time=1)]
+
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  过去......我们帮助你们。因为那场火灾，我们都心怀愤懑。
+[name="萨卡兹战士"]  我们认同你们，引导你们，我们追求的不是他们的死，而是我们的生。
+[name="萨卡兹战士"]  很遗憾，现在，我们似乎不站在同一边了。
+[name="萨卡兹战士"]  ......杀害平民和罗德岛的战士，让我们心有忧虑。
+[name="萨卡兹战士"]  但如果是对付不听命令的暴徒......我们何必手下留情？
+[name="萨卡兹战士"]  对付任何人，我们，萨卡兹，“魔族佬”，都绰绰有余。
+[name="萨卡兹战士"]  绰绰有余。
+
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_ltalley",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+//（转场，小巷）
+
+[Character(name="char_294_ayer", name2="char_328_cammou",focus=1)]
+[name="断崖"]  发生什么了？自从那个巨像出现之后，声音就停下了......
+[Character(name="char_294_ayer", name2="char_328_cammou",focus=2)]
+[name="卡达"]  那个、山一样的巨像也是源石技艺吗？
+[Character(name="char_294_ayer", name2="char_328_cammou",focus=1)]
+[name="断崖"]  ......想办法和亚叶她们汇合。
+
+
+//（转场，议事厅前）
+[Dialog]
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_ltstreet2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_067")]
+[name="武装的感染者"]  ......嘁！该死！
+[name="武装的感染者"]  走，我们走，这座城镇已经死了，在冬天来临前找到翻过大裂谷的路才能活下去！
+[Character(name="avg_npc_067", name2="avg_npc_067",focus=2)]
+[name="武装的感染者"]  放弃这座城镇吧，冬灵的同胞，穷人和感染者们。
+[name="武装的感染者"]  自会有别处迎接我们的怒火，就让沃伦姆德坐以待毙吧！
+[Character(name="avg_npc_067", name2="avg_npc_067",focus=1)]
+[name="武装的感染者"]  ......在这里和萨卡兹冲突也没有任何好处，撤退。
+[name="武装的感染者"]  我们走。
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.4)]
+[delay(time=2)]
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  泥岩，够了！
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ——！
+[name="泥岩"]  呼啊——哈、哈——
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  他们已经停手了......真荒唐，我们怎么变成了劝架的？
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n", volume=0.3)]
+[delay(time=1)]
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  看看这座城镇......我们，带来了混乱。
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  非你我本意，但抗争本就是利己的，没有那么多人心怀什么伟大事业。
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=1)]
+[name="泥岩"]  你说的对......那我们究竟要如何对待我们的斗争......以及死去的同胞？
+[playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
+
+[Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
+[name="萨卡兹战士"]  痛苦和纠葛时刻伴随着我们。
+[name="萨卡兹战士"]  呃，等我一下......我好像摸着火柴了，备用的。
+[Character(name="avg_npc_053")]
+[name="萨卡兹战士"]  喂，宪兵，接着。
+[Character(name="avg_npc_066")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=10, fadeout=true, block=false)]
+[name="塞弗林"]  ......！
+[Character(name="avg_npc_053", name2="avg_npc_066",focus=2)]
+[name="塞弗林"]  嗯......萨卡兹的战士也会抽烟？
+[Character(name="avg_npc_053", name2="avg_npc_066",focus=1)]
+[name="萨卡兹战士"]  不过我已经戒烟了。
+[Character(name="avg_npc_053", name2="avg_npc_066#4",focus=2)]
+[name="塞弗林"]  唔嗯，看来每个戒烟的人都会带着火柴。
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......捡来的命，好好珍惜。
+[name="泥岩"]  至于你们，罗德岛......
+[name="泥岩"]  ......
+[Character(name="char_345_folnic_1#3")]
+[name="亚叶"]  ......
+[Character(name="avg_npc_011#2")]
+[name="泥岩"]  ......那么，就此别过。
+[name="泥岩"]  也许......也许你们能想办法帮助剩下的这些人......
+[name="泥岩"]  但那些事，都和萨卡兹无关了。
+
+[Dialog]
+[Character]
+//（晃动）
+[playsound(key="$smallearthquake", volume=0.6)]
+[CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=false)]
+
+在岩石的崩塌声中，萨卡兹们转过了头。
+街道在燃烧。
+暴徒离去，没有再发生冲突的唯一原因，仅仅是恐惧和威慑。
+最后一块碎石落地。
+
+
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Character]
+[Image]

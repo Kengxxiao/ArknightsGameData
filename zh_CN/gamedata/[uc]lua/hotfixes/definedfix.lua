@@ -2,7 +2,7 @@
 local list = 
 {
   --list all defined fixer path at here
-  "HotFixes/MedalHotfixer",
+  "HotFixes/ShopHotfixer",
 };
 
 return list;

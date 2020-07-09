@@ -44,12 +44,15 @@ function WardrobeSortBySkinGroupState:CheckData(data)
     brand.skinList = {}
     table.insert(self.stateBean.brandList,brand)
   end
+  local currentTime =  CS.Torappu.DateTimeUtil.timeStampNow
   for getTime, skinList in pairs(data) do
     for index, skin in pairs(skinList) do
-      local brandId = brandRef[skin.data.displaySkin.skinGroupId]
-      for i,brandInfo in pairs(self.stateBean.brandList) do
-        if (brandInfo.brandId == brandId) then
-          table.insert(brandInfo.skinList,skin)
+      if (skin.data.displaySkin.getTime< currentTime) then
+        local brandId = brandRef[skin.data.displaySkin.skinGroupId]
+        for i,brandInfo in pairs(self.stateBean.brandList) do
+          if (brandInfo.brandId == brandId) then
+            table.insert(brandInfo.skinList,skin)
+          end
         end
       end
     end

@@ -76,8 +76,9 @@ end
 function WardrobeSortByTimeState:_RefreshViewModel(obj)
 	-- body
 	local skinData = CS.Torappu.SkinDB.data.charSkins
+	local currentTime =  CS.Torappu.DateTimeUtil.timeStampNow
 	for skinId, skinDetail in pairs(skinData) do
-		if (skinDetail:IsBuyAble()) then
+		if (skinDetail:IsBuyAble() and skinDetail.displaySkin.getTime< currentTime) then
 
 			local getTime
 			local flag = false
