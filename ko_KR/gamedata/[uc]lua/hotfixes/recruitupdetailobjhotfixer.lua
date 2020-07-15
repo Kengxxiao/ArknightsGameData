@@ -34,7 +34,28 @@ local function LocalFixFunc(self, showFlag)
   end
 end
 
+local function ItemRepoRepair(self)
+  local image = self._security6:GetComponent("Image")
+  local resList = CS.Torappu.Resource.ResourceManager.LoadAll("Arts/UI/Recruit/GachaPoolDetail/rarity_6.png")
+  if resList ~= nil then
+    for i = 0,resList.Length-1 do
+      if(resList[i]:GetType() == typeof(CS.UnityEngine.Sprite)) then
+        image.sprite = resList[i];
+        break
+      end
+    end
+  end
+  image:SetNativeSize()
+end
+
 function RecruitUpDetailObjHotfixer:OnInit()
+  xutil.hotfix_ex(CS.Torappu.UI.Recruit.RecruitUpDetailObj, "Render",
+  function(self, perObj, isEnd,option)
+    xpcall(ItemRepoRepair, function(e)
+      eutil.LogError(e)
+    end, self)
+    self:Render(perObj, isEnd,option)
+  end)
   xutil.hotfix_ex(CS.Torappu.UI.Recruit.RecruitUpDetailObj, "_Render6StarHint",
   function(self, showFlag)
     xpcall(LocalFixFunc, function(e)
@@ -44,6 +65,7 @@ function RecruitUpDetailObjHotfixer:OnInit()
 end
 
 function RecruitUpDetailObjHotfixer:OnDispose()
+  xlua.hotfix(CS.Torappu.UI.Recruit.RecruitUpDetailObj, "Render", nil)
   xlua.hotfix(CS.Torappu.UI.Recruit.RecruitUpDetailObj, "_Render6StarHint", nil)
 end
 
