@@ -9,7 +9,8 @@ local list =
   "HotFixes/UICharacterSelectStateHotfixer",
   "HotFixes/UIPatches/scene_battle_finish",
   "HotFixes/RecruitUpDetailObjHotfixer",
-  "HotFixes/RecruitUpCharDetailPortraitObjHotfixer"
+  "HotFixes/RecruitUpCharDetailPortraitObjHotfixer",
+  "HotFixes/ItemRepoVoucherGachaStateHotfixer"
 };
 
 return list;
