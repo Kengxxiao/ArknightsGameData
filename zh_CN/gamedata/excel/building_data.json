@@ -6811,6 +6811,89 @@
           ]
         }
       ]
+    },
+    "char_336_folivo": {
+      "charId": "char_336_folivo",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition[041]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_limit[001]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_344_beewax": {
+      "charId": "char_344_beewax",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[050]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession[051]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_349_chiave": {
+      "charId": "char_349_chiave",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost3[110]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_device[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -7234,6 +7317,18 @@
       "roomType": "MANUFACTURE",
       "description": "进驻制造站后，生产力首小时<@cc.vup>+15%</>，此后每小时<@cc.vup>+2%</>，最终达到<@cc.vup>+25%</>"
     },
+    "manu_prod_spd_addition[041]": {
+      "buffId": "manu_prod_spd_addition[041]",
+      "buffName": "延时摄影",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add2",
+      "sortId": 3512,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站后，生产力首小时<@cc.vup>+15%</>，此后每小时<@cc.vup>+2%</>，最终达到<@cc.vup>+25%</>"
+    },
     "manu_prod_spd&limit[000]": {
       "buffId": "manu_prod_spd&limit[000]",
       "buffName": "仓库整备·α",
@@ -7324,6 +7419,18 @@
       "buffIcon": "manufacture",
       "skillIcon": "bskill_man_exp&limit",
       "sortId": 3403,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，生产<@cc.kw>作战记录</>类配方时，仓库容量上限<@cc.vup>+12</>"
+    },
+    "manu_formula_limit[001]": {
+      "buffId": "manu_formula_limit[001]",
+      "buffName": "视频剪辑",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp&limit",
+      "sortId": 3512,
       "buffColor": "#ffd800",
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
@@ -7930,6 +8037,18 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>精英材料</>时，心情消耗为<@cc.kw>2</>的配方全部<@cc.vup>-1</>心情消耗"
     },
+    "workshop_formula_cost3[110]": {
+      "buffId": "workshop_formula_cost3[110]",
+      "buffName": "灵感",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_cost1",
+      "sortId": 7531,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>精英材料</>时，心情消耗为<@cc.kw>4</>的配方全部<@cc.vup>-1</>心情消耗"
+    },
     "workshop_formula_cost3[111]": {
       "buffId": "workshop_formula_cost3[111]",
       "buffName": "极简实用主义",
@@ -8181,6 +8300,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>芯片</>时，副产品的产出概率提升<@cc.vup>80%</>"
+    },
+    "workshop_formula_device[000]": {
+      "buffId": "workshop_formula_device[000]",
+      "buffName": "改造",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_device",
+      "sortId": 7531,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>装置</>类配方时，副产品的产出概率提升<@cc.vup>90%</>"
     },
     "train_spd[000]": {
       "buffId": "train_spd[000]",
@@ -19165,6 +19296,374 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_office_table_01": {
+        "id": "furni_office_table_01",
+        "name": "标配办公桌",
+        "iconId": "furni_office_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 3,
+        "height": 4,
+        "comfort": 510,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "罗德岛标准办公桌，配有双显示屏、机械键盘、文件收纳架。“轻松惬意”的人事办公生活开始了，注意死线，死线，死线！",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_chair_01": {
+        "id": "furni_office_chair_01",
+        "name": "标配办公椅",
+        "iconId": "furni_office_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 115,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "罗德岛标准办公椅。轻轻躺下去，眼睛一睁一闭，一天就这样结束了。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_storageBox_01": {
+        "id": "furni_office_storageBox_01",
+        "name": "可动收纳柜",
+        "iconId": "furni_office_storageBox_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 3,
+        "height": 3,
+        "comfort": 165,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "带滚轮的可移动收纳柜。会放资料或零食，但更多的是零食。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_carpet_01": {
+        "id": "furni_office_carpet_01",
+        "name": "黑色办公地毯",
+        "iconId": "furni_office_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 16,
+        "depth": 10,
+        "height": 1,
+        "comfort": 210,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "量产的黑色地毯，罗德岛到处都是。据统计，80%的地毯清洗原因都与饮料有关（损毁另计）。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_waterDispenser_01": {
+        "id": "furni_office_waterDispenser_01",
+        "name": "桶装饮水机",
+        "iconId": "furni_office_waterDispenser_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 165,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "随处可见的桶装饮水机。为同事更换水桶可以赢得大量好感，但切记量力而行。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_column_01": {
+        "id": "furni_office_column_01",
+        "name": "支撑柱",
+        "iconId": "furni_office_column_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 10,
+        "comfort": 290,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "支撑结构的承重柱，偶尔能当作隔断使用。有些干员会以拳击柱舒缓压力，请选择合适的柱子！",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_directionSign_01": {
+        "id": "furni_office_directionSign_01",
+        "name": "工位指示板",
+        "iconId": "furni_office_directionSign_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 3,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "指示人事办公室工位位置的横版。人事部的设计能手为同事设计了精巧的指路横版，可惜同事们从来不看。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_sign_01": {
+        "id": "furni_office_sign_01",
+        "name": "楼层指示牌",
+        "iconId": "furni_office_sign_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 2,
+        "comfort": 115,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "指示人事办公室所在楼层的牌子。此处左转电梯、扶梯、楼梯，以及一切去往其他楼层的东西。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_spotlight_01": {
+        "id": "furni_office_spotlight_01",
+        "name": "人事办公室光源",
+        "iconId": "furni_office_spotlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 2,
+        "comfort": 290,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "办公室的辅助光源。稳定而丰富的光照能够激起人们的动力，还有睡意。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_downlight_01": {
+        "id": "furni_office_downlight_01",
+        "name": "工位光源",
+        "iconId": "furni_office_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 45,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "天花板上的工位光源。由于发生过引燃干员的事件，请在设置时尽量避免直射任何易燃物，尤其是毛茸茸的尾巴。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_screen_01": {
+        "id": "furni_office_screen_01",
+        "name": "隔断用透明屏风",
+        "iconId": "furni_office_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 7,
+        "comfort": 285,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用于区分区域的屏风。经常与一些大型办公用品相伴，效果拔群。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_printer_01": {
+        "id": "furni_office_printer_01",
+        "name": "过载打印机",
+        "iconId": "furni_office_printer_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "经常被维修的打印机。由于总是满负荷运转，这台打印机早晚要爆炸。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_sofaStool_01": {
+        "id": "furni_office_sofaStool_01",
+        "name": "等位沙发凳",
+        "iconId": "furni_office_sofaStool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "办公室随处可见的矮脚沙发凳。打印大量材料时用来落脚的地方，有时能在这里获得些零碎的八卦。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_houseplant_01": {
+        "id": "furni_office_houseplant_01",
+        "name": "尖锐的观赏植物",
+        "iconId": "furni_office_houseplant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 150,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "观赏性极佳的绿色植物。由于锐齿边缘能够切伤任何触碰它的人，这盆植物得以免遭魔手存活至今。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_wallpaper_01": {
+        "id": "furni_office_wallpaper_01",
+        "name": "人事办公室壁纸",
+        "iconId": "furni_office_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "罗德岛人事办公室专用壁纸。位置、区划、周边情况，标注的一清二楚。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_floor_01": {
+        "id": "furni_office_floor_01",
+        "name": "人事办公室地板",
+        "iconId": "furni_office_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "罗德岛普遍使用的地板。童心未泯的干员会踩着黄线走，然后撞到不远处的东西。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_duanwu_lazysofa_01": {
         "id": "furni_duanwu_lazysofa_01",
         "name": "端午粽子沙发",
@@ -20514,6 +21013,29 @@
         "comfort": 75,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "某支传奇雇佣兵队伍使用的旗帜。这支雇佣兵队伍在一次危机合约任务中全军覆没，他们的旗帜则由天灾信使们复原以纪念。",
+        "obtainApproach": "危机合约赛季奖励",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_contract_s2_01": {
+        "id": "furni_contract_s2_01",
+        "name": "利刃之旗",
+        "iconId": "furni_contract_s2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "印上某个失落武器印记的旗帜。武器本身早已损毁，其样式则被追随者们复原以纪念。",
         "obtainApproach": "危机合约赛季奖励",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -24158,6 +24680,123 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_office": {
+        "id": "furni_set_office",
+        "name": "罗德岛人事办公室",
+        "desc": "罗德岛人事部门使用的办公室之一，每日都在为罗德岛筛选合适干员。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_office_table_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_chair_01",
+            "pos0": 2,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_chair_01",
+            "pos0": 9,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_storageBox_01",
+            "pos0": 13,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_carpet_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_waterDispenser_01",
+            "pos0": 19,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_column_01",
+            "pos0": 20,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_office_directionSign_01",
+            "pos0": 17,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_office_sign_01",
+            "pos0": 20,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_office_spotlight_01",
+            "pos0": 0,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 2,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 7,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 12,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 21,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 26,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 31,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_screen_01",
+            "pos0": 26,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_printer_01",
+            "pos0": 31,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_sofaStool_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_houseplant_01",
+            "pos0": 32,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_office_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -25554,6 +26193,58 @@
           "furni_nightView_floor_01",
           "furni_nightView_ceilingLight1_01",
           "furni_nightView_ceilingLight2_01"
+        ]
+      },
+      "furni_set_office_1": {
+        "id": "furni_set_office_1",
+        "name": "办公吗？",
+        "themeId": "furni_set_office",
+        "comfort": 260,
+        "count": 4,
+        "furniture": [
+          "furni_office_table_01",
+          "furni_office_chair_01",
+          "furni_office_storageBox_01",
+          "furni_office_carpet_01"
+        ]
+      },
+      "furni_set_office_2": {
+        "id": "furni_set_office_2",
+        "name": "搭讪吗？",
+        "themeId": "furni_set_office",
+        "comfort": 165,
+        "count": 4,
+        "furniture": [
+          "furni_office_waterDispenser_01",
+          "furni_office_column_01",
+          "furni_office_directionSign_01",
+          "furni_office_sign_01"
+        ]
+      },
+      "furni_set_office_3": {
+        "id": "furni_set_office_3",
+        "name": "休息吗？",
+        "themeId": "furni_set_office",
+        "comfort": 170,
+        "count": 4,
+        "furniture": [
+          "furni_office_screen_01",
+          "furni_office_printer_01",
+          "furni_office_sofaStool_01",
+          "furni_office_houseplant_01"
+        ]
+      },
+      "furni_set_office_4": {
+        "id": "furni_set_office_4",
+        "name": "装修吗？",
+        "themeId": "furni_set_office",
+        "comfort": 230,
+        "count": 4,
+        "furniture": [
+          "furni_office_wallpaper_01",
+          "furni_office_floor_01",
+          "furni_office_spotlight_01",
+          "furni_office_downlight_01"
         ]
       }
     },
