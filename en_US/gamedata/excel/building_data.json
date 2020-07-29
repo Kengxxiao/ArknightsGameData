@@ -5966,6 +5966,117 @@
           ]
         }
       ]
+    },
+    "char_2014_nian": {
+      "charId": "char_2014_nian",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_probability[140]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_225_haak": {
+      "charId": "char_225_haak",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_clue_cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[170]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_226_hmau": {
+      "charId": "char_226_hmau",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_383_snsant": {
+      "charId": "char_383_snsant",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd_variable2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_spd_variable2[001]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
     }
   },
   "buffs": {
@@ -5992,6 +6103,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, all Trading Posts' order efficiency <@cc.vup>+7%</> (only the most effective one will take effect when assigned Operators have the same skill effect)"
+    },
+    "control_clue_cost[000]": {
+      "buffId": "control_clue_cost[000]",
+      "buffName": "Neuroticism",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt",
+      "sortId": 1503,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, <@cc.kw>increases</> the <@cc.kw>Clue search speed</> of all stationed Operators, but <@cc.vdown>greatly increases</> Morale consumed per hour"
     },
     "control_mp_cost[000]": {
       "buffId": "control_mp_cost[000]",
@@ -6076,6 +6199,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</> for each <@cc.kw>L.G.D.</> Operator assigned to the Control Center."
+    },
+    "control_mp_cost&faction2[000]": {
+      "buffId": "control_mp_cost&faction2[000]",
+      "buffName": "Adamantly Easygoing",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_lda",
+      "sortId": 1201,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>(7)</>, and further decreases the Morale consumed per hour based upon the number of <@cc.kw>Lei's Detective Agency</> Operators assigned to the Control Center."
     },
     "power_rec_spd[000]": {
       "buffId": "power_rec_spd[000]",
@@ -6557,6 +6692,30 @@
       "roomType": "TRADING",
       "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+35%</>"
     },
+    "trade_ord_spd_variable2[000]": {
+      "buffId": "trade_ord_spd_variable2[000]",
+      "buffName": "Heavenly Reward α",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_variable21",
+      "sortId": 4401,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "When this Operator is assigned to a Trading Post, provides an additional <@cc.vup>5%</> order acquisition efficiency for every <@cc.vup>5%</> order acquisition efficiency provided by all other Operators assigned to that Trading Post, up to a maximum of <@cc.vup>25%</> order acquisition efficiency."
+    },
+    "trade_ord_spd_variable2[001]": {
+      "buffId": "trade_ord_spd_variable2[001]",
+      "buffName": "Heavenly Reward β",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_variable22",
+      "sortId": 4701,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "When this Operator is assigned to a Trading Post, provides an additional <@cc.vup>5%</> order acquisition efficiency for every <@cc.vup>5%</> order acquisition efficiency provided by all other Operators assigned to that Trading Post, up to a maximum of <@cc.vup>35%</> order acquisition efficiency."
+    },
     "trade_ord_spd&limit[000]": {
       "buffId": "trade_ord_spd&limit[000]",
       "buffName": "Order Management α",
@@ -6809,6 +6968,18 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, reduces the Morale consumed by all formulas that cost <@cc.kw>4</> Morale or more by <@cc.vup>-2</>"
     },
+    "workshop_formula_cost[010]": {
+      "buffId": "workshop_formula_cost[010]",
+      "buffName": "Reckless",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_nian",
+      "sortId": 7531,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, reduces the Morale consumed by all corresponding formulas by <@cc.vdown>+2</>"
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "Tech Theory",
@@ -6940,6 +7111,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>elite material</>, the production rate of byproduct increases by <@cc.vup>80%</>"
+    },
+    "workshop_formula_probability[140]": {
+      "buffId": "workshop_formula_probability[140]",
+      "buffName": "Rare Metal Identification",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve4",
+      "sortId": 7531,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>elite material</>, the production rate of byproduct increases by <@cc.vup>100%</>"
     },
     "workshop_formula_probability[200]": {
       "buffId": "workshop_formula_probability[200]",
@@ -7204,6 +7387,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+60%</>"
+    },
+    "train_spd&profession[170]": {
+      "buffId": "train_spd&profession[170]",
+      "buffName": "Surgical Precision",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_medic3",
+      "sortId": 9221,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Medic</> Operators' Specialization training speed <@cc.vup>+60%</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -14638,6 +14833,402 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_restaurant_ceiling1_01": {
+        "id": "furni_restaurant_ceiling1_01",
+        "name": "Inscribed Ceiling Plaque (Dumpling House)",
+        "iconId": "furni_restaurant_ceiling1_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 2,
+        "height": 6,
+        "comfort": 215,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A sign commonly found in the food courts of Lungmen. The dough is thin and the stuffing is fragrant, and you'll lose track of how many bowls you've ordered in no time.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_curtain_01": {
+        "id": "furni_restaurant_curtain_01",
+        "name": "Bamboo Screen",
+        "iconId": "furni_restaurant_curtain_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 7,
+        "height": 10,
+        "comfort": 350,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A screen commonly found in the food courts of Lungmen. Don't need to see or hear it. The rich aroma already has me hooked.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 243,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_fryingTable_01": {
+        "id": "furni_restaurant_fryingTable_01",
+        "name": "Electric Frying Table",
+        "iconId": "furni_restaurant_fryingTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 4,
+        "height": 4,
+        "comfort": 195,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An electric frying table commonly found in the food courts of Lungmen. How good is this stuff? I can't explain in just a few words. You're going to be here for a while.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_stockPotTable_01": {
+        "id": "furni_restaurant_stockPotTable_01",
+        "name": "Boiling Station",
+        "iconId": "furni_restaurant_stockPotTable_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 2,
+        "height": 4,
+        "comfort": 290,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A boiling station commonly found in the food courts of Lungmen. And so when that lid was lifted…! If you want to hear more, you'll have to wait until next time.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_barTable_01": {
+        "id": "furni_restaurant_barTable_01",
+        "name": "Wooden Corner Table",
+        "iconId": "furni_restaurant_barTable_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 16,
+        "depth": 3,
+        "height": 4,
+        "comfort": 520,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A large wooden table common found in the food courts of Lungmen. It's not a meal without the guests.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 360,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_chair_01": {
+        "id": "furni_restaurant_chair_01",
+        "name": "Eatery Round Stool",
+        "iconId": "furni_restaurant_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 90,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A round wooden stool commonly found in the food courts of Lungmen. New friends and old friends come together, and perhaps leave with a few more friends.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 63,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_diningTable_01": {
+        "id": "furni_restaurant_diningTable_01",
+        "name": "Eatery Dining Table",
+        "iconId": "furni_restaurant_diningTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 4,
+        "comfort": 215,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A dining table commonly found in the food courts of Lungmen. Your hometown may be thousands of miles away, but a taste of home is right here in your bowl.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_longBench_01": {
+        "id": "furni_restaurant_longBench_01",
+        "name": "Rectangular Bench",
+        "iconId": "furni_restaurant_longBench_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 4,
+        "height": 2,
+        "comfort": 195,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A long bench commonly found in the food courts of Lungmen. If a friend raises their glass, even pure water is intoxicating with the fine flavors of friendship.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 165,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_screen_01": {
+        "id": "furni_restaurant_screen_01",
+        "name": "Half-Shut Screen",
+        "iconId": "furni_restaurant_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 1,
+        "height": 10,
+        "comfort": 230,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "One of the screens commonly found in the food courts of Lungmen. A bowl of soup, a plate of food, and an evening of conversation as the sun dips beneath the western mountains.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 178,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_bonsai_01": {
+        "id": "furni_restaurant_bonsai_01",
+        "name": "Ornamental Bonsai",
+        "iconId": "furni_restaurant_bonsai_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 205,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A bonsai tree planted in a celadon vase. The tree's emerald leaves and thick boughs ward off evil, while the white jade pottery holds in good fortune.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 175,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_pottedPlant_01": {
+        "id": "furni_restaurant_pottedPlant_01",
+        "name": "Ornamental Plant",
+        "iconId": "furni_restaurant_pottedPlant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An ornamental plant commonly seen throughout Lungmen. The plant resembles a pagoda, its canopy spreading out from the middle.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 140,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_priceList1_01": {
+        "id": "furni_restaurant_priceList1_01",
+        "name": "Menu (Dumpling House)",
+        "iconId": "furni_restaurant_priceList1_01",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 4,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A menu commonly found in the food courts of Lungmen. All the prices are clearly listed - no surprises or shenanigans here.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_trottingHorseLamp_01": {
+        "id": "furni_restaurant_trottingHorseLamp_01",
+        "name": "Hexagonal Lantern",
+        "iconId": "furni_restaurant_trottingHorseLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 55,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A hexagonal lantern commonly found in the food courts of Lungmen. Formerly hung up in a temple, it now adorns the area high above the door.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 43,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_spotlight_01": {
+        "id": "furni_restaurant_spotlight_01",
+        "name": "Small Spotlight",
+        "iconId": "furni_restaurant_spotlight_01",
+        "type": "WALLLAMP",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 2,
+        "comfort": 60,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Spotlights with the right amount of luminescence. When the air begins to warm again, merriment grows and families gather.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 53,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_downlight_01": {
+        "id": "furni_restaurant_downlight_01",
+        "name": "Ceiling-Mounted Lights",
+        "iconId": "furni_restaurant_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 1,
+        "comfort": 70,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Ceiling lights commonly found throughout Lungmen neighborhoods. ",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 60,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_carpet_01": {
+        "id": "furni_restaurant_carpet_01",
+        "name": "Eatery Carpet",
+        "iconId": "furni_restaurant_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 9,
+        "depth": 8,
+        "height": 1,
+        "comfort": 145,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A carpet commonly found in the food courts of Lungmen. Even when we say goodbye, we will surely meet again in the future.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_wallpaper_01": {
+        "id": "furni_restaurant_wallpaper_01",
+        "name": "Eatery Wallpaper",
+        "iconId": "furni_restaurant_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Festive wallpaper commonly found in the food courts of Lungmen. Between these lively walls, good fortune swirls and congregates.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_floor_01": {
+        "id": "furni_restaurant_floor_01",
+        "name": "Eatery Floor Tiles",
+        "iconId": "furni_restaurant_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Floor tiles commonly found in the food courts of Lungmen. Thousands of travelers come and go, leaving behind memories of joy and good fortune.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
       "furni_NY2020_wallpaper_01": {
         "id": "furni_NY2020_wallpaper_01",
         "name": "Lungmen New Impressions Wallpaper",
@@ -18129,6 +18720,143 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_restaurant": {
+        "id": "furni_set_restaurant",
+        "name": "Lungmen Eatery",
+        "desc": "This design was inspired by the warmth and hospitality of a traditional Lungmen eatery. Welcome the holidays and regale your guests!",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_restaurant_ceiling1_01",
+            "pos0": 16,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_restaurant_curtain_01",
+            "pos0": 30,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_fryingTable_01",
+            "pos0": 27,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_restaurant_stockPotTable_01",
+            "pos0": 17,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_restaurant_barTable_01",
+            "pos0": 11,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 9,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 14,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 17,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 20,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 23,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_diningTable_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_longBench_01",
+            "pos0": 4,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_screen_01",
+            "pos0": 0,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_restaurant_bonsai_01",
+            "pos0": 6,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_pottedPlant_01",
+            "pos0": 2,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_priceList1_01",
+            "pos0": 2,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 6,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 9,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 15,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 28,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_spotlight_01",
+            "pos0": 3,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_restaurant_spotlight_01",
+            "pos0": 7,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_restaurant_downlight_01",
+            "pos0": 22,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_restaurant_carpet_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_restaurant_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -19143,6 +19871,69 @@
           "furni_elite_wallpaper_01",
           "furni_elite_floor_01",
           "furni_elite_ceiling_01"
+        ]
+      },
+      "furni_set_restaurant_1": {
+        "id": "furni_set_restaurant_1",
+        "name": "Kitchen Set",
+        "themeId": "furni_set_restaurant",
+        "comfort": 325,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_fryingTable_01",
+          "furni_restaurant_stockPotTable_01",
+          "furni_restaurant_barTable_01",
+          "furni_restaurant_chair_01"
+        ]
+      },
+      "furni_set_restaurant_2": {
+        "id": "furni_set_restaurant_2",
+        "name": "Dining Area",
+        "themeId": "furni_set_restaurant",
+        "comfort": 140,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_screen_01",
+          "furni_restaurant_diningTable_01",
+          "furni_restaurant_longBench_01",
+          "furni_restaurant_carpet_01"
+        ]
+      },
+      "furni_set_restaurant_3": {
+        "id": "furni_set_restaurant_3",
+        "name": "Storefront Decoration",
+        "themeId": "furni_set_restaurant",
+        "comfort": 145,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_curtain_01",
+          "furni_restaurant_trottingHorseLamp_01",
+          "furni_restaurant_spotlight_01",
+          "furni_restaurant_downlight_01"
+        ]
+      },
+      "furni_set_restaurant_4": {
+        "id": "furni_set_restaurant_4",
+        "name": "Eatery Mainstays",
+        "themeId": "furni_set_restaurant",
+        "comfort": 125,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_wallpaper_01",
+          "furni_restaurant_floor_01",
+          "furni_restaurant_bonsai_01",
+          "furni_restaurant_pottedPlant_01"
+        ]
+      },
+      "furni_set_restaurant_5": {
+        "id": "furni_set_restaurant_5",
+        "name": "Dumpling House",
+        "themeId": "furni_set_restaurant",
+        "comfort": 0,
+        "count": 2,
+        "furniture": [
+          "furni_restaurant_ceiling1_01",
+          "furni_restaurant_priceList1_01"
         ]
       }
     },

@@ -50,11 +50,11 @@ end
 
 function RecruitUpDetailObjHotfixer:OnInit()
   xutil.hotfix_ex(CS.Torappu.UI.Recruit.RecruitUpDetailObj, "Render",
-  function(self, perObj, isEnd,option)
+  function(self, perObj, isEnd,option,limitList)
     xpcall(ItemRepoRepair, function(e)
       eutil.LogError(e)
     end, self)
-    self:Render(perObj, isEnd,option)
+    self:Render(perObj, isEnd,option,limitList)
   end)
   xutil.hotfix_ex(CS.Torappu.UI.Recruit.RecruitUpDetailObj, "_Render6StarHint",
   function(self, showFlag)

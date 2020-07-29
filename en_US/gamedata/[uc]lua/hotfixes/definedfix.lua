@@ -10,7 +10,8 @@ local list =
   "HotFixes/UIPatches/scene_battle_finish",
   "HotFixes/RecruitUpDetailObjHotfixer",
   "HotFixes/RecruitUpCharDetailPortraitObjHotfixer",
-  "HotFixes/ItemRepoVoucherGachaStateHotfixer"
+  "HotFixes/ItemRepoVoucherGachaStateHotfixer",
+  "HotFixes/RecruitAvailDetailObjHotfixer"
 };
 
 return list;
