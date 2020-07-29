@@ -5966,6 +5966,117 @@
           ]
         }
       ]
+    },
+    "char_2014_nian": {
+      "charId": "char_2014_nian",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_probability[140]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_225_haak": {
+      "charId": "char_225_haak",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_clue_cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[170]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_226_hmau": {
+      "charId": "char_226_hmau",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_383_snsant": {
+      "charId": "char_383_snsant",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd_variable2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_spd_variable2[001]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
     }
   },
   "buffs": {
@@ -5992,6 +6103,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, 모든 무역소의 오더 수주 효율<@cc.vup>+7%</> (동종 효과 중 가장 높은 수치만 적용)"
+    },
+    "control_clue_cost[000]": {
+      "buffId": "control_clue_cost[000]",
+      "buffName": "노이로제",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt",
+      "sortId": 1503,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 응접실 내 오퍼레이터의 <@cc.kw>단서 수집 성향 효과</>가 <@cc.kw>상승</>하지만, 제어 센터 내 모든 오퍼레이터의 <@cc.vdown>컨디션 소모가 대폭 상승</>"
     },
     "control_mp_cost[000]": {
       "buffId": "control_mp_cost[000]",
@@ -6076,6 +6199,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, 제어 센터 내 <@cc.kw>용문근위국</> 오퍼레이터 한 명 마다 제어 센터 내의 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+    },
+    "control_mp_cost&faction2[000]": {
+      "buffId": "control_mp_cost&faction2[000]",
+      "buffName": "굳세지만 유연하게",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_lda",
+      "sortId": 1201,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 제어 센터 내 <@cc.kw>리 탐정사무소</> 오퍼레이터 한 명 마다 해당 소속 오퍼레이터의 <@cc.kw>컨디션 소모량이 추가로 감소</>하고, 제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
     },
     "power_rec_spd[000]": {
       "buffId": "power_rec_spd[000]",
@@ -6557,6 +6692,30 @@
       "roomType": "TRADING",
       "description": "무역소에 배치 시, 오더 수주 효율<@cc.vup>+35%</>"
     },
+    "trade_ord_spd_variable2[000]": {
+      "buffId": "trade_ord_spd_variable2[000]",
+      "buffName": "근면성실 α",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_variable21",
+      "sortId": 4401,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "무역소에 배치 시, 해당 무역소 내의 모든 오퍼레이터가 제공한 오더 수주 효율 <@cc.vup>5%</>당, <@cc.vup>5%</>효율 추가 제공. 최대 <@cc.vup>25%</>효율 제공"
+    },
+    "trade_ord_spd_variable2[001]": {
+      "buffId": "trade_ord_spd_variable2[001]",
+      "buffName": "근면성실 β",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_variable22",
+      "sortId": 4701,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "무역소에 배치 시, 해당 무역소 내의 모든 오퍼레이터가 제공한 오더 수주 효율 <@cc.vup>5%</>당, <@cc.vup>5%</>효율 추가 제공. 최대 <@cc.vup>35%</>효율 제공"
+    },
     "trade_ord_spd&limit[000]": {
       "buffId": "trade_ord_spd&limit[000]",
       "buffName": "오더 관리 α",
@@ -6809,6 +6968,18 @@
       "roomType": "WORKSHOP",
       "description": "가공소에 배치 후 컨디션 <@cc.kw>4</>이상 소모하는 <@cc.kw>임의류 재료</> 가공 시 컨디션 소모<@cc.vup>-2</>"
     },
+    "workshop_formula_cost[010]": {
+      "buffId": "workshop_formula_cost[010]",
+      "buffName": "내 맘대로",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_nian",
+      "sortId": 7531,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 후 <@cc.kw>정예화 재료</> 가공 시, 컨디션 소모 <@cc.vdown>+2</>"
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "스킬 이론",
@@ -6940,6 +7111,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "가공소에 배치 후 <@cc.kw>정예화 재료</> 가공 시, 부산물 산출 확률 <@cc.vup>80%</>"
+    },
+    "workshop_formula_probability[140]": {
+      "buffId": "workshop_formula_probability[140]",
+      "buffName": "희귀 금속 식별",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve4",
+      "sortId": 7531,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 후 <@cc.kw>정예화 재료</> 가공 시, 부산물 산출 확률 <@cc.vup>100%</>"
     },
     "workshop_formula_probability[200]": {
       "buffId": "workshop_formula_probability[200]",
@@ -7204,6 +7387,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, <@cc.kw>스나이퍼</> 오퍼레이터의 스킬 훈련 속도<@cc.vup>+60%</>"
+    },
+    "train_spd&profession[170]": {
+      "buffId": "train_spd&profession[170]",
+      "buffName": "정확한 수술",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_medic3",
+      "sortId": 9221,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>메딕</> 오퍼레이터의 스킬 훈련 속도<@cc.vup>+60%</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -14638,6 +14833,402 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_restaurant_ceiling1_01": {
+        "id": "furni_restaurant_ceiling1_01",
+        "name": "천장 메뉴판 (만두 가게)",
+        "iconId": "furni_restaurant_ceiling1_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 2,
+        "height": 6,
+        "comfort": 215,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 첫 번째 메뉴판. 얇은 피에 속이 꽉 차, 냄새만 맡아도 가슴이 설렌다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_curtain_01": {
+        "id": "furni_restaurant_curtain_01",
+        "name": "대나무 병풍",
+        "iconId": "furni_restaurant_curtain_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 7,
+        "height": 10,
+        "comfort": 350,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 병풍 중 하나. 눈으로 보지 않고, 귀로 듣지 않아도, 그 향기에 넋이 나갔다더라.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 243,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_fryingTable_01": {
+        "id": "furni_restaurant_fryingTable_01",
+        "name": "튀김기",
+        "iconId": "furni_restaurant_fryingTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 4,
+        "height": 4,
+        "comfort": 195,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 튀김 기계. 둘이 먹다 하나가 죽어도 모르니, 천천히 드시기를. ",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_stockPotTable_01": {
+        "id": "furni_restaurant_stockPotTable_01",
+        "name": "냄비 선반",
+        "iconId": "furni_restaurant_stockPotTable_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 2,
+        "height": 4,
+        "comfort": 290,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 냄비 선반. 갑자기 솥뚜껑이 하늘 위로 퍼엉! ……나머지 이야기는 다음에 하도록 하자.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_barTable_01": {
+        "id": "furni_restaurant_barTable_01",
+        "name": "각진 나무 식탁",
+        "iconId": "furni_restaurant_barTable_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 16,
+        "depth": 3,
+        "height": 4,
+        "comfort": 520,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 대형 나무 식탁. 쌀이 없으면 밥을 할 수 없고, 손님이 없으면 식사를 할 수 없는 법.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 360,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_chair_01": {
+        "id": "furni_restaurant_chair_01",
+        "name": "먹자골목 원형 의자",
+        "iconId": "furni_restaurant_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 90,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 나무 원형 의자. 새 벗과 옛 벗이 다 같이 모이니, 좋지 아니한가.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 63,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_diningTable_01": {
+        "id": "furni_restaurant_diningTable_01",
+        "name": "먹자골목 식탁",
+        "iconId": "furni_restaurant_diningTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 4,
+        "comfort": 215,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 식탁. 고국은 천 리 밖에 있지만, 고향의 술과 밥은 이 그릇 안에 있구나.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_longBench_01": {
+        "id": "furni_restaurant_longBench_01",
+        "name": "직사각형 걸상",
+        "iconId": "furni_restaurant_longBench_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 4,
+        "height": 2,
+        "comfort": 195,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 직사각형 걸상. 벗이 함께 잔을 든다면, 물도 술과 같으니.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 165,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_screen_01": {
+        "id": "furni_restaurant_screen_01",
+        "name": "반엄병풍",
+        "iconId": "furni_restaurant_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 1,
+        "height": 10,
+        "comfort": 230,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 병풍 중 하나. 탕 한 그릇, 반찬 한 접시, 오고 가는 술잔에 해지는 줄 모르네.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 178,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_bonsai_01": {
+        "id": "furni_restaurant_bonsai_01",
+        "name": "관상용 분재",
+        "iconId": "furni_restaurant_bonsai_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 205,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "청자 도자기에 담긴 분재. 푸르른 이파리와 백옥같은 청자가 액운을 막아준다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 175,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_pottedPlant_01": {
+        "id": "furni_restaurant_pottedPlant_01",
+        "name": "관상용 식물",
+        "iconId": "furni_restaurant_pottedPlant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문의 특산품인 관상용 식물. 마치 탑 위에 가지런히 자리 잡은 나무같다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 140,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_priceList1_01": {
+        "id": "furni_restaurant_priceList1_01",
+        "name": "가격표 (만두 가게)",
+        "iconId": "furni_restaurant_priceList1_01",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 4,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 첫 번째 가격표. 적힌 대로 받습니다. 덜 받지도 더 받지도 않습니다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_trottingHorseLamp_01": {
+        "id": "furni_restaurant_trottingHorseLamp_01",
+        "name": "육각 등롱",
+        "iconId": "furni_restaurant_trottingHorseLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 55,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문의 특색이 살아있는 육각등. 옛날엔 전당에 걸어 불을 밝히고, 문 앞에 높이 걸어놓기도 했었다고 한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 43,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_spotlight_01": {
+        "id": "furni_restaurant_spotlight_01",
+        "name": "스포트라이트",
+        "iconId": "furni_restaurant_spotlight_01",
+        "type": "WALLLAMP",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 2,
+        "comfort": 60,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "출력이 센 스포트라이트. 위에서 내려오는 따뜻한 빛이 모두를 즐겁게 해준다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 53,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_downlight_01": {
+        "id": "furni_restaurant_downlight_01",
+        "name": "3구 천장등",
+        "iconId": "furni_restaurant_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 1,
+        "comfort": 70,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "가정용 천장등. 명절이 다가오니 진수성찬이 함께 오는구나.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 60,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_carpet_01": {
+        "id": "furni_restaurant_carpet_01",
+        "name": "먹자골목 카펫",
+        "iconId": "furni_restaurant_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 9,
+        "depth": 8,
+        "height": 1,
+        "comfort": 145,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 카펫. 만남엔 늘 끝이 있기에, 다음을 기약할 수 있는 법.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_wallpaper_01": {
+        "id": "furni_restaurant_wallpaper_01",
+        "name": "먹자골목 벽지",
+        "iconId": "furni_restaurant_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 명절용 벽지. 용이 담장을 넘어 복을 물고 오도록 맞이하자.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_floor_01": {
+        "id": "furni_restaurant_floor_01",
+        "name": "먹자골목 바닥 타일",
+        "iconId": "furni_restaurant_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용문 먹자골목의 바닥 타일. 만객이 한데 모이니, 복록수가 한자리에 모이는 것 같구나.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
       "furni_NY2020_wallpaper_01": {
         "id": "furni_NY2020_wallpaper_01",
         "name": "용문 네오임프레션 벽지",
@@ -18129,6 +18720,143 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_restaurant": {
+        "id": "furni_set_restaurant",
+        "name": "용문 먹자골목",
+        "desc": "용문의 먹자골목을 재현한 컨셉 룸. 어서오세요!",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_restaurant_ceiling1_01",
+            "pos0": 16,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_restaurant_curtain_01",
+            "pos0": 30,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_fryingTable_01",
+            "pos0": 27,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_restaurant_stockPotTable_01",
+            "pos0": 17,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_restaurant_barTable_01",
+            "pos0": 11,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 9,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 14,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 17,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 20,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 23,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_diningTable_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_longBench_01",
+            "pos0": 4,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_screen_01",
+            "pos0": 0,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_restaurant_bonsai_01",
+            "pos0": 6,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_pottedPlant_01",
+            "pos0": 2,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_priceList1_01",
+            "pos0": 2,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 6,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 9,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 15,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 28,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_spotlight_01",
+            "pos0": 3,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_restaurant_spotlight_01",
+            "pos0": 7,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_restaurant_downlight_01",
+            "pos0": 22,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_restaurant_carpet_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_restaurant_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -19143,6 +19871,69 @@
           "furni_elite_wallpaper_01",
           "furni_elite_floor_01",
           "furni_elite_ceiling_01"
+        ]
+      },
+      "furni_set_restaurant_1": {
+        "id": "furni_set_restaurant_1",
+        "name": "주방일체 구역",
+        "themeId": "furni_set_restaurant",
+        "comfort": 325,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_fryingTable_01",
+          "furni_restaurant_stockPotTable_01",
+          "furni_restaurant_barTable_01",
+          "furni_restaurant_chair_01"
+        ]
+      },
+      "furni_set_restaurant_2": {
+        "id": "furni_set_restaurant_2",
+        "name": "식사 구역",
+        "themeId": "furni_set_restaurant",
+        "comfort": 140,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_screen_01",
+          "furni_restaurant_diningTable_01",
+          "furni_restaurant_longBench_01",
+          "furni_restaurant_carpet_01"
+        ]
+      },
+      "furni_set_restaurant_3": {
+        "id": "furni_set_restaurant_3",
+        "name": "가게 장식",
+        "themeId": "furni_set_restaurant",
+        "comfort": 145,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_curtain_01",
+          "furni_restaurant_trottingHorseLamp_01",
+          "furni_restaurant_spotlight_01",
+          "furni_restaurant_downlight_01"
+        ]
+      },
+      "furni_set_restaurant_4": {
+        "id": "furni_set_restaurant_4",
+        "name": "먹자골목 기초 인테리어",
+        "themeId": "furni_set_restaurant",
+        "comfort": 125,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_wallpaper_01",
+          "furni_restaurant_floor_01",
+          "furni_restaurant_bonsai_01",
+          "furni_restaurant_pottedPlant_01"
+        ]
+      },
+      "furni_set_restaurant_5": {
+        "id": "furni_set_restaurant_5",
+        "name": "만두 가게",
+        "themeId": "furni_set_restaurant",
+        "comfort": 0,
+        "count": 2,
+        "furniture": [
+          "furni_restaurant_ceiling1_01",
+          "furni_restaurant_priceList1_01"
         ]
       }
     },
