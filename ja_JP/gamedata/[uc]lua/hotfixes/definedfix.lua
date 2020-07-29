@@ -8,7 +8,8 @@ local list =
   "HotFixes/FurnShopHotfixer",
   "HotFixes/RecruitUpDetailObjHotfixer",
   "HotFixes/RecruitUpCharDetailPortraitObjHotfixer",
-  "HotFixes/ItemRepoVoucherGachaStateHotfixer"
+  "HotFixes/ItemRepoVoucherGachaStateHotfixer",
+  "HotFixes/RecruitAvailDetailObjHotfixer"
 };
 
 return list;

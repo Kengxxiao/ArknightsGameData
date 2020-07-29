@@ -5966,6 +5966,117 @@
           ]
         }
       ]
+    },
+    "char_2014_nian": {
+      "charId": "char_2014_nian",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_probability[140]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_225_haak": {
+      "charId": "char_225_haak",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_clue_cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[170]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_226_hmau": {
+      "charId": "char_226_hmau",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_383_snsant": {
+      "charId": "char_383_snsant",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd_variable2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_spd_variable2[001]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
     }
   },
   "buffs": {
@@ -5992,6 +6103,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "制御中枢配置時、全貿易所の受注効率<@cc.vup>+7%</>（同種の効果は高いほうのみ適応）"
+    },
+    "control_clue_cost[000]": {
+      "buffId": "control_clue_cost[000]",
+      "buffName": "神経質",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt",
+      "sortId": 1503,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、応接室配属オペレーターの<@cc.kw>手がかり捜索の傾向</>を<@cc.kw>強める</>。制御中枢内のオペレーターの体力消費が<@cc.vdown>大幅に上昇</>"
     },
     "control_mp_cost[000]": {
       "buffId": "control_mp_cost[000]",
@@ -6076,6 +6199,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "制御中枢配置時、制御中枢内の<@cc.kw>龍門近衛局</>所属オペレーター1人につき、中枢内のオペレーターの体力消費が1時間ごと<@cc.vup>-0.05</>"
+    },
+    "control_mp_cost&faction2[000]": {
+      "buffId": "control_mp_cost&faction2[000]",
+      "buffName": "温厚篤実",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_lda",
+      "sortId": 1201,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、制御中枢内の<@cc.kw>リー探偵事務所</>所属オペレーター1人につき、中枢内のオペレーターの体力消費が1時間ごと<@cc.vup>-0.05</>。所属オペレーターは体力消費が<@cc.kw>更に減軽</>"
     },
     "power_rec_spd[000]": {
       "buffId": "power_rec_spd[000]",
@@ -6557,6 +6692,30 @@
       "roomType": "TRADING",
       "description": "貿易所配置時、受注効率<@cc.vup>+35%</>"
     },
+    "trade_ord_spd_variable2[000]": {
+      "buffId": "trade_ord_spd_variable2[000]",
+      "buffName": "天性の努力家·α",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_variable21",
+      "sortId": 4401,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、配置貿易所の受注効率が<@cc.vup>5%</>上昇につき、受注効率<@cc.vup>+5%</>、最大<@cc.vup>25%</>"
+    },
+    "trade_ord_spd_variable2[001]": {
+      "buffId": "trade_ord_spd_variable2[001]",
+      "buffName": "天性の努力家·β",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_variable22",
+      "sortId": 4701,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、配置貿易所の受注効率が<@cc.vup>5%</>上昇につき、受注効率<@cc.vup>+5%</>、最大<@cc.vup>35%</>"
+    },
     "trade_ord_spd&limit[000]": {
       "buffId": "trade_ord_spd&limit[000]",
       "buffName": "注文管理α",
@@ -6809,6 +6968,18 @@
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>任意の素材</>を加工時、体力消費が<@cc.kw>4</>以上の素材の体力消費<@cc.vup>-2</>"
     },
+    "workshop_formula_cost[010]": {
+      "buffId": "workshop_formula_cost[010]",
+      "buffName": "やりたい放題",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_nian",
+      "sortId": 7531,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>昇進素材</>を加工時、対象素材の体力消費<@cc.vdown>+2</>"
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "アーツ理論",
@@ -6940,6 +7111,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>昇進素材</>を加工時、副産物の入手確率<@cc.vup>+80%</>"
+    },
+    "workshop_formula_probability[140]": {
+      "buffId": "workshop_formula_probability[140]",
+      "buffName": "希有金属鑑定",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve4",
+      "sortId": 7531,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>昇進素材</>を加工時、副産物の入手確率<@cc.vup>+100%</>"
     },
     "workshop_formula_probability[200]": {
       "buffId": "workshop_formula_probability[200]",
@@ -7204,6 +7387,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "訓練室で協力者として配置時、<@cc.kw>狙撃</>の訓練速度<@cc.vup>+60%</>"
+    },
+    "train_spd&profession[170]": {
+      "buffId": "train_spd&profession[170]",
+      "buffName": "高精度手術",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_medic3",
+      "sortId": 9221,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>医療</>の訓練速度<@cc.vup>+60%</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -14638,6 +14833,402 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_restaurant_ceiling1_01": {
+        "id": "furni_restaurant_ceiling1_01",
+        "name": "餃子店看板",
+        "iconId": "furni_restaurant_ceiling1_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 2,
+        "height": 6,
+        "comfort": 215,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の看板のひとつ。皮はパリッと餡はジューシー。食べだしたら止まらない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_curtain_01": {
+        "id": "furni_restaurant_curtain_01",
+        "name": "竹の衝立A",
+        "iconId": "furni_restaurant_curtain_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 7,
+        "height": 10,
+        "comfort": 350,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の衝立のひとつ。姿かたちは見えずとも、香りだけで心をわしづかみ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 243,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_fryingTable_01": {
+        "id": "furni_restaurant_fryingTable_01",
+        "name": "電気グリドル",
+        "iconId": "furni_restaurant_fryingTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 4,
+        "height": 4,
+        "comfort": 195,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の電気グリドル。この調理器具の素晴らしさが二言三言で言い表せようか？",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_stockPotTable_01": {
+        "id": "furni_restaurant_stockPotTable_01",
+        "name": "コンロ",
+        "iconId": "furni_restaurant_stockPotTable_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 2,
+        "height": 4,
+        "comfort": 290,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の業務用コンロ。お鍋の蓋を少し開けて見てみたら、なんと！――続きは次回のお楽しみ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_barTable_01": {
+        "id": "furni_restaurant_barTable_01",
+        "name": "食坊のカウンター",
+        "iconId": "furni_restaurant_barTable_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 16,
+        "depth": 3,
+        "height": 4,
+        "comfort": 520,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の木製カウンター。米がなければ飯は炊けず、客がいなければ食事にならず。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 360,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_chair_01": {
+        "id": "furni_restaurant_chair_01",
+        "name": "食坊の丸椅子",
+        "iconId": "furni_restaurant_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 90,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の木製スツール。旧友も新たな友も共に同じ釜の飯を食う。この時を何度でも。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 63,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_diningTable_01": {
+        "id": "furni_restaurant_diningTable_01",
+        "name": "食坊の机",
+        "iconId": "furni_restaurant_diningTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 4,
+        "comfort": 215,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊のテーブル。故郷は遠い空の向こう、故郷の味は手のひらのお椀の中。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_longBench_01": {
+        "id": "furni_restaurant_longBench_01",
+        "name": "食坊の長椅子",
+        "iconId": "furni_restaurant_longBench_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 4,
+        "height": 2,
+        "comfort": 195,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の長椅子。もし友と杯を交わすのならば、冷たい水も美酒に変わる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 165,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_screen_01": {
+        "id": "furni_restaurant_screen_01",
+        "name": "竹の衝立B",
+        "iconId": "furni_restaurant_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 1,
+        "height": 10,
+        "comfort": 230,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の衝立のひとつ。スープ一杯、おつまみ一皿。斜陽に酒器の露が煌いて。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 178,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_bonsai_01": {
+        "id": "furni_restaurant_bonsai_01",
+        "name": "食坊の盆栽",
+        "iconId": "furni_restaurant_bonsai_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 205,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "青花磁器の甕の上に配された盆栽。常盤樹の緑葉は邪気を払い、つややかな白と青は心を静める。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 175,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_pottedPlant_01": {
+        "id": "furni_restaurant_pottedPlant_01",
+        "name": "食坊の鉢植え",
+        "iconId": "furni_restaurant_pottedPlant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門特産の観賞用植物。宝塔は中心に座し、華蓋は四方に開く。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 140,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_priceList1_01": {
+        "id": "furni_restaurant_priceList1_01",
+        "name": "餃子店メニュー",
+        "iconId": "furni_restaurant_priceList1_01",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 4,
+        "comfort": 200,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の壁貼りメニューのひとつ。大人も子供も明朗会計。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_trottingHorseLamp_01": {
+        "id": "furni_restaurant_trottingHorseLamp_01",
+        "name": "六角宮灯",
+        "iconId": "furni_restaurant_trottingHorseLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 55,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門の伝統的なランタン。かつては宮殿を照らし、今は入り口に高々と吊るされている。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 43,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_spotlight_01": {
+        "id": "furni_restaurant_spotlight_01",
+        "name": "食坊壁照明",
+        "iconId": "furni_restaurant_spotlight_01",
+        "type": "WALLLAMP",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 2,
+        "comfort": 60,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "十分な光量のある壁掛け照明。部屋中にあたたかみを出し、宴の雰囲気を盛り上げる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 53,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_downlight_01": {
+        "id": "furni_restaurant_downlight_01",
+        "name": "食坊天井照明",
+        "iconId": "furni_restaurant_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 1,
+        "comfort": 70,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "食坊でよく使われるシーリングライト。麗らかな良き日には、しばらくごちそうが出てくるぞ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 60,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_carpet_01": {
+        "id": "furni_restaurant_carpet_01",
+        "name": "食坊の絨毯",
+        "iconId": "furni_restaurant_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 9,
+        "depth": 8,
+        "height": 1,
+        "comfort": 145,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊の絨毯。再会の祝宴が終わっても、また一堂に会せる日が来るはずだ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_wallpaper_01": {
+        "id": "furni_restaurant_wallpaper_01",
+        "name": "食坊の壁紙",
+        "iconId": "furni_restaurant_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊のおめでたい壁紙。壁の中を泳ぐ龍が、祝い事を共に出迎える。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_restaurant_floor_01": {
+        "id": "furni_restaurant_floor_01",
+        "name": "食坊のタイル",
+        "iconId": "furni_restaurant_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "龍門食坊のタイル。客足途絶えず千客万来、この世の幸福は全てここにあり。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
       "furni_NY2020_wallpaper_01": {
         "id": "furni_NY2020_wallpaper_01",
         "name": "龍門風記念壁紙",
@@ -18129,6 +18720,143 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_restaurant": {
+        "id": "furni_set_restaurant",
+        "name": "龍門食坊",
+        "desc": "龍門式料理店「食坊」を再現した部屋。なんともめでたいこの良き日、お客様に最高のおもてなしを。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_restaurant_ceiling1_01",
+            "pos0": 16,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_restaurant_curtain_01",
+            "pos0": 30,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_fryingTable_01",
+            "pos0": 27,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_restaurant_stockPotTable_01",
+            "pos0": 17,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_restaurant_barTable_01",
+            "pos0": 11,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 9,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 14,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 17,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 20,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_chair_01",
+            "pos0": 23,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_restaurant_diningTable_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_longBench_01",
+            "pos0": 4,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_screen_01",
+            "pos0": 0,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_restaurant_bonsai_01",
+            "pos0": 6,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_pottedPlant_01",
+            "pos0": 2,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_priceList1_01",
+            "pos0": 2,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 6,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 9,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 15,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_trottingHorseLamp_01",
+            "pos0": 28,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_restaurant_spotlight_01",
+            "pos0": 3,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_restaurant_spotlight_01",
+            "pos0": 7,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_restaurant_downlight_01",
+            "pos0": 22,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_restaurant_carpet_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_restaurant_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_restaurant_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -19143,6 +19871,69 @@
           "furni_elite_wallpaper_01",
           "furni_elite_floor_01",
           "furni_elite_ceiling_01"
+        ]
+      },
+      "furni_set_restaurant_1": {
+        "id": "furni_set_restaurant_1",
+        "name": "厨房/カウンター席",
+        "themeId": "furni_set_restaurant",
+        "comfort": 325,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_fryingTable_01",
+          "furni_restaurant_stockPotTable_01",
+          "furni_restaurant_barTable_01",
+          "furni_restaurant_chair_01"
+        ]
+      },
+      "furni_set_restaurant_2": {
+        "id": "furni_set_restaurant_2",
+        "name": "フロア",
+        "themeId": "furni_set_restaurant",
+        "comfort": 140,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_screen_01",
+          "furni_restaurant_diningTable_01",
+          "furni_restaurant_longBench_01",
+          "furni_restaurant_carpet_01"
+        ]
+      },
+      "furni_set_restaurant_3": {
+        "id": "furni_set_restaurant_3",
+        "name": "店内調度品",
+        "themeId": "furni_set_restaurant",
+        "comfort": 145,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_curtain_01",
+          "furni_restaurant_trottingHorseLamp_01",
+          "furni_restaurant_spotlight_01",
+          "furni_restaurant_downlight_01"
+        ]
+      },
+      "furni_set_restaurant_4": {
+        "id": "furni_set_restaurant_4",
+        "name": "内装",
+        "themeId": "furni_set_restaurant",
+        "comfort": 125,
+        "count": 4,
+        "furniture": [
+          "furni_restaurant_wallpaper_01",
+          "furni_restaurant_floor_01",
+          "furni_restaurant_bonsai_01",
+          "furni_restaurant_pottedPlant_01"
+        ]
+      },
+      "furni_set_restaurant_5": {
+        "id": "furni_set_restaurant_5",
+        "name": "看板/メニュー",
+        "themeId": "furni_set_restaurant",
+        "comfort": 0,
+        "count": 2,
+        "furniture": [
+          "furni_restaurant_ceiling1_01",
+          "furni_restaurant_priceList1_01"
         ]
       }
     },
