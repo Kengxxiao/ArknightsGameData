@@ -6894,6 +6894,89 @@
           ]
         }
       ]
+    },
+    "char_293_thorns": {
+      "charId": "char_293_thorns",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[012]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_recovery[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_218_cuttle": {
+      "charId": "char_218_cuttle",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_oneself[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "dorm_rec_oneself[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_272_strong": {
+      "charId": "char_272_strong",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_limit_diff[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_limit_count[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -7869,6 +7952,30 @@
       "roomType": "TRADING",
       "description": "进驻贸易站时，订单上限<@cc.vup>+5</>，心情每小时消耗<@cc.vup>-0.25</>"
     },
+    "trade_ord_limit_diff[000]": {
+      "buffId": "trade_ord_limit_diff[000]",
+      "buffName": "摊贩经济",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_limit_diff",
+      "sortId": 4004,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，当前订单数与订单上限每差<@cc.vup>1</>笔订单，则订单获取效率<@cc.vup>+4%</>"
+    },
+    "trade_ord_limit_count[000]": {
+      "buffId": "trade_ord_limit_count[000]",
+      "buffName": "市井之道",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_limit_count",
+      "sortId": 4004,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，当前贸易站内其他干员提供的每<@cc.vup>10%</>订单获取效率使订单上限<@cc.vdown>-1</>，同时每有<@cc.vup>1</>笔订单就<@cc.vup>+4%</>订单获取效率"
+    },
     "trade_ord_wt&cost[000]": {
       "buffId": "trade_ord_wt&cost[000]",
       "buffName": "裁缝·α",
@@ -7989,6 +8096,18 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>50%</>"
     },
+    "workshop_proc_probability[012]": {
+      "buffId": "workshop_proc_probability[012]",
+      "buffName": "“炼金术”",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p2",
+      "sortId": 7113,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>50%</>"
+    },
     "workshop_proc_probability[020]": {
       "buffId": "workshop_proc_probability[020]",
       "buffName": "咪波·加工型",
@@ -8084,6 +8203,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>芯片</>时，心情消耗为<@cc.kw>2</>的配方全部<@cc.vup>-1</>心情消耗"
+    },
+    "workshop_formula_recovery[000]": {
+      "buffId": "workshop_formula_recovery[000]",
+      "buffName": "“爆炸艺术”",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_recovery",
+      "sortId": 7113,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，每<@cc.vup>2</>次加工没有产出副产品，则<@cc.kw>恢复自身一次心情</>，恢复量为<@cc.kw>对应配方所需消耗的心情</>（加工结束后统一结算）"
     },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
@@ -8652,6 +8783,18 @@
     "dorm_rec_oneself[010]": {
       "buffId": "dorm_rec_oneself[010]",
       "buffName": "狂热",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_one4",
+      "sortId": 5004,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "进驻宿舍时，自身心情每小时恢复<@cc.vup>+0.85</>"
+    },
+    "dorm_rec_oneself[011]": {
+      "buffId": "dorm_rec_oneself[011]",
+      "buffName": "麻烦回避者",
       "buffIcon": "dormitory",
       "skillIcon": "bskill_dorm_one4",
       "sortId": 5004,
