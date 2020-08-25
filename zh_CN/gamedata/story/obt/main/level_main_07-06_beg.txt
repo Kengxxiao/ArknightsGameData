@@ -1,26 +1,16 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
-
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
 [Character]
 [Blocker(fadetime=1,block=true)]
-
-//暗淡者之火
-
-//切城外围  
-//跟之前飞行器处同一张背景
-
 11:30 a.m.
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_perimeter",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
 [playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
-
 [Character(name="avg_npc_016",name2="avg_npc_016")]
 [name="幻影弩手"]  领袖。
 [Dialog]
@@ -66,7 +56,6 @@
 [name="塔露拉"]  ——
 [name="塔露拉"]  真是无比令人沉痛的消息。
 [name="塔露拉"]  请允许我......独处一小会儿。
- 
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
@@ -74,7 +63,6 @@
 [PlaySound(key="$d_gen_walk_n", volume=1)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [Delay(time=1)]
-
 [Character(name="char_011_talula_1")]
 [name="塔露拉"]  ......
 [name="塔露拉"]  萨卡兹。不要让他们和任何城内的整合运动成员接触。
@@ -87,42 +75,28 @@
 [Character]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
 [Character(name="char_011_talula_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="塔露拉"]  是刻意隐瞒，还是钻研得出了成果？他的小队竟然知道我不了解的信息。
 [name="塔露拉"]  也许......是在战斗中有了成长。这样的法术已经超乎寻常，而他对我守口如瓶。
 [name="塔露拉"]  ......沉默寡言竟然成了伪装的外皮。本以为存活的会是浮士德。
 [name="塔露拉"]  如果是这样，那也就不奇怪了。
-
 [stopmusic(fadetime=2)]
 [Dialog]
-
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Character]
 [Background(image="bg_cherbefore_1",screenadapt="coverall")]
 [cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [playMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.4)]
-
-//CG 塔露拉向梅菲斯特和浮士德伸出手。
-//塔露拉，梅菲斯特，浮士德，昏暗街巷，残破
-
 [name="？？？"]  ......你是谁？
-
 我是谁？
-
 [name="？？？"]  你想做什么？
-
 我想做什么......？
-
 [name="？？？"]  加入......你们？为了自己去斗争？
-
 斗争......？
-
 [name="塔露拉"]  呵，崇高的乌萨斯人啊。
 [name="塔露拉"]  原本你们才是应该走到最后的人。
-
 [Dialog]
 [stopmusic(fadetime=2)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
@@ -131,8 +105,6 @@
 [Background(image="bg_cherunder",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [playMusic(intro="$batmeeting_intro", key="$batmeeting_loop", volume=0.4)]
-
-//切城核心城外围
 [Character(name="char_002_amiya_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="阿米娅"]  核心城似乎恢复速度了，停驻的时间不长。
@@ -150,37 +122,29 @@
 [name="阿米娅"]  进入核心城以来，我们还没有遭遇太多火力冲突。但在踏入中央区之后，我们与整合运动摩擦、甚至交战的次数，应该会急剧增加。
 [Character(name="char_003_kalts_1")]
 [name="凯尔希"]  侦察小队与行动小队已经先我们一步到位。迄今为止都很顺利。
-
 [Decision(options="我们怎么只有三支小队共同行动？", values="1")]
 [Predicate(references="1")]
-
 [Character(name="char_003_kalts_1")]
 [name="凯尔希"]  侦察小队和特别行动小队有他们各自的任务。
 [name="凯尔希"]  作为罗德岛的通讯专家之一，Raidian在这次行动中领导侦察小队。
 [name="凯尔希"]  依靠Raidian，侦察小队在核心城作战中发挥着通讯中继点的作用。
 [name="凯尔希"]  即使在这里，我们也能与其他队伍交流，这全部仰赖这支小队的努力。
-
 [Decision(options="我没看见他们......", values="1")]
 [Predicate(references="1")]
-
 [name="凯尔希"]  侦察小队从来都独来独往。
 [name="凯尔希"]  Outcast，Raidian，以及在切城营救行动中英勇牺牲的Scout——
 [name="凯尔希"]  担任侦察小队队长的精英干员们，担负着独自领导一支小队，发现危机，报告危机，以及尝试独自处理危机的职责。
 [name="凯尔希"]  Raidian不像刚才提到的另两位精英干员那样擅长战斗，但在影响战局的层面上，却可以称作是在罗德岛屈指可数的人才。
 [name="凯尔希"]  这一次的攻击任务由我们这三支队伍承担，Raidian不必再承担繁重的战斗事务。
 [name="凯尔希"]  至于特别小队，他们的任务与正面作战无关。
-
 [Decision(options="和我说说。;......;所以你不准备告诉我？", values="1;2;3")]
 [Predicate(references="1;2;3")]
-
 [name="凯尔希"]  知道有其必要即可。更多细节你之后自然会明白。
 [name="凯尔希"]  不同的小队是战略计划链条上不同的环节，稳固的结构输出稳定的结果。
 [name="凯尔希"]  相应的，强韧的敌手也一样有着错综复杂的根部，它会从各个不同的层面吸取养分，砍掉枝条对他们并无威胁。
 [name="凯尔希"]  我们要做的是在暗处引燃敌人根基。
-
 [Decision(options="啊？你说什么？;......;我似乎明白了。", values="1;2;3")]
 [Predicate(references="1;2;3")]
-
 [name="凯尔希"]  呵。理应不存在你不能理解的事情......
 [name="凯尔希"]  “博士”。
 [Dialog]
@@ -231,7 +195,6 @@
 [name="凯尔希"]  ——这不是现代的法术，更不属于现代战术。
 [Decision(options="萨卡兹的法术很不同？", values="1")]
 [Predicate(references="1")]
-
 [Character(name="char_002_amiya_1#7")]
 [name="阿米娅"]  是的。这很不一般。现在的萨卡兹人没法推动这种法术的运行。
 [name="阿米娅"]  我明白凯尔希医生的意思。我想，这不是在现代成型的源石技艺理论的产物。这是古老的萨卡兹仪式。
@@ -261,7 +224,6 @@
 [name="凯尔希"]  它几乎是要重新挑战这片大地上的其它文明，就像历史上萨卡兹们谋划过的一样。
 [Decision(options="这是个比喻。", values="1")]
 [Predicate(references="1")]
-
 [Character(name="char_003_kalts_1")]
 [name="凯尔希"]  是。但萨卡兹的历史不是比喻。
 [name="凯尔希"]  守卫切尔诺伯格核心城不只是普通的整合运动，这点我已经和你讨论过了。
@@ -286,7 +248,6 @@
 [Character(name="char_003_kalts_1")]
 [name="凯尔希"]  ——好的。
 [name="凯尔希"]  如果你们不需要我的协助，Dr.{@nickname}。
-
 [Decision(options="嗯？;......;有什么我能帮上忙的？", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_003_kalts_1")]
@@ -301,12 +262,10 @@
 [name="阿米娅"]  迷迭香......至少有阳光了。
 [Character(name="avg_npc_042")]
 [name="迷迭香"]  阳光~
-
 [Dialog]
 [Character]
 [PlaySound(key="$rungeneral", volume=0.9)]
 [Delay(time=2)]
-
 [Character(name="char_003_kalts_1")]
 [name="凯尔希"]  （......）
 [name="凯尔希"]  （呵，看她们的样子。）
@@ -329,7 +288,6 @@
 [name="凯尔希"]  （你能证明自己不是流连于过往的Dr.{@nickname}。）
 [name="凯尔希"]  （如果是现在......）
 [name="凯尔希"]  （无论哪个层面，Dr.{@nickname}。你必须能。）
-
 [Dialog]
 [Blocker(fadetime=2,block=true)]
 [Image]

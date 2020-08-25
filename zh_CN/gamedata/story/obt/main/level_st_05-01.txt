@@ -1,12 +1,9 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第六关（后）
-
-// Comments
 [Background(image="bg_rooftop", width=1, height=1,screenadapt="coverall",  fadetime=1)]
 [PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.6, crossfade=3, delay=0.5)]
 [name=""]   04:45 A.M.  天气/晴
 [name=""]   龙门上城区，近卫局大楼天台废墟
 [Delay(time=1)]
-
 [playsound(key="$d_gen_transmissionget", volume=0.4)]
 [CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
 [name="魏彦吾"]  陈警官，你身边的那位阿米娅小姐，能听到我的声音吗？
@@ -15,9 +12,7 @@
 [Character(name="char_empty",name2="char_002_amiya_1#1",focus=1)]
 [name="魏彦吾"]  那就好。
 [name="魏彦吾"]  抱歉，罗德岛的领袖。我可以冒险让近卫局深入腹地，却不能冒险让更多的玩家参与进游戏。
-
 [Decision(options="更多的玩家是指？;......什么意思？;场面已经够混乱了。", values="1;2;3")]
-
 [Predicate(references="1;2;3")]
 [Character(name="char_empty",name2="char_002_amiya_1#1",focus=1)]
 [name="魏彦吾"]  Dr.{@nickname}——
@@ -35,7 +30,6 @@
 [name="煌"]  你让我们吸引整合运动的注意力。
 [Character(name="char_empty",name2="char_017_homura_3#1",focus=1)]
 [name="魏彦吾"]  错了，龙门近卫局本也与你们一起。
-
 [Decision(options="你利用我们所有人做诱饵。", values="1")]
 [Predicate(references="1")]
 [name="魏彦吾"]  哦？
@@ -44,17 +38,14 @@
 [Character]
 [CharacterCutin(widgetID="1",block=true)]
 [Dialog]
-
 [Background]
 [Blocker(a=0, fadetime=0.5, block=true)]
-
 [name="凯尔希"]  这一切他早就勾画好了。
 [name="凯尔希"]  时间越长，渗透越深，他要当机立断。
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Background(image="bg_rooftop", width=1, height=1,screenadapt="coverall")]
 [Blocker(a=0, fadetime=0.5, block=true)]
-
 [Decision(options="在最关键的时刻、在整合运动最躁动的时刻", values="1")]
 [Predicate(references="1")]
 [Decision(options="让罗德岛去吸引他们。", values="1")]
@@ -64,24 +55,19 @@
 [Character]
 [Background]
 [Blocker(a=0, fadetime=0.5, block=true)]
-
 [name="凯尔希"]  顺便让整合运动觉得近卫局孤身在外——
-
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Background(image="bg_rooftop", width=1, height=1,screenadapt="coverall")]
 [Blocker(a=0, fadetime=0.5, block=true)]
-
 [Decision(options="——让他们的领袖觉得龙门内部空虚。", values="1")]
 [Predicate(references="1")]
 [CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
-
 [Character(name="char_empty",name2="char_017_homura_3#1",focus=2)]
 [name="煌"]  哈，说得好，Dr.{@nickname}！长官，你当然需要我们拖住整合运动，越多越好，对吗？
 [name="煌"]  看到龙门是这种情况，潜伏的整合运动肯定觉得自己有机会。
 [name="煌"]  从藏身处倾巢而出的整合运动，等着他们的，啧啧，竟然是龙门不知道从哪里搬出来的精兵良将。
 [name="煌"]  你们龙门是从什么时候开始隐藏实力的？是不是切尔诺伯格事件发生的那一天，你就在准备这些了？
-
 [Character(name="char_empty",name2="char_017_homura_3#1",focus=1)]  
 [name="魏彦吾"]  龙门保证了你们的安全，也促使你们回到了你们足以发挥价值的位置。
 [Character(name="char_empty",name2="char_017_homura_3#1",focus=2)]
@@ -94,30 +80,23 @@
 [name="阿米娅"]  （我们没有证据。）
 [Character(name="char_empty",name2="char_017_homura_3#1",focus=2)]
 [name="煌"]  嘁。
-
 [Character(name="char_empty",name2="char_002_amiya_1#1",focus=1)]
 [name="魏彦吾"]  我们的合约依旧有效。无论中途发生了什么，只有结果才能让我满意。
 [name="魏彦吾"]  无论中途发生了什么。
 [name="魏彦吾"]  罗德岛的Dr.{@nickname}，上次我们见面时，我用同样的方式表达过同样的意思。
 [name="魏彦吾"]  你的选择不多。但至少你可以选择消灭敌人的方式。
-
 [Decision(options="我不信你和你的鬼话。;......;没有人会在被愚弄了之后依然笑脸迎人的。", values="1;2;3")]
-
 [Predicate(references="1")]
-
 [name="魏彦吾"]  那当然好。
 [name="魏彦吾"]  我们都该保持警醒，大敌当前时不该有人松懈。
 [name="魏彦吾"]  你的戒备心能促使你规避陷阱。
 [name="魏彦吾"]  听我一言，Dr.{@nickname}——
 [name="魏彦吾"]  ——我们虽然还不是朋友，却至少还不是敌人。
-
 [Predicate(references="2")]
 [name="魏彦吾"]  沉默以对吗。
 [name="魏彦吾"]  优秀的判断。你在掩藏你的缺点，也在发挥你的优势。
 [name="魏彦吾"]  罗德岛是强大的合作伙伴，我在这次事件中已经认可了这一点。
 [name="魏彦吾"]  前提是，我们确实还是伙伴关系，而不是非法感染者与地方当局。
-
-
 [Predicate(references="3")]
 [name="魏彦吾"]  我无意愚弄任何人。
 [name="魏彦吾"]  啊，客观结果上，我可能确实愚弄了整合运动。
@@ -125,7 +104,6 @@
 [name="魏彦吾"]  我们只能在他们有足够能力认清我们的策略之前，掐灭他们。
 [name="魏彦吾"]  这个目标是否能让你找到一点动力？
 [Predicate]
-
 [name="魏彦吾"]  阿米娅小姐，{@nickname}博士，你们和龙门之间的合作并未结束。
 [name="魏彦吾"]  反攻的号角已经吹响，整合运动将见识龙门的广大、善谋与团结。
 [name="魏彦吾"]  如果可能的话，我也想看到罗德岛的专业、果敢与勇猛。
@@ -138,8 +116,6 @@
 [Dialog]
 [playsound(key="$d_gen_transmissionget", volume=0.4)]
 [CharacterCutin(widgetID="1",fadetime=0.5,block=true)]
-
-
 [Character(name="char_002_amiya_1#1")]
 [name="阿米娅"]  煌，Dr.{@nickname}，我们走。
 [name="阿米娅"]  啊，对了陈长官，星熊警官呢？我为什么没在这看见她，她......没事吧？
@@ -159,7 +135,6 @@
 [name="阿米娅"]  那，陈长官，一会儿见。
 [Character(name="char_010_chen_1#1")]
 [name="陈"]  ......
- 
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
 [Character]
@@ -192,7 +167,6 @@
 [name="魏彦吾"]  那并不重要。龙门的问题，龙门自己理应能一劳永逸地解决，这才是我们的首要宗旨。
 [name="魏彦吾"]  这是我们应该让他们看见的。所以，各位，开始吧。
 [name="魏彦吾"]  去吧，陈警官，该让整合运动厘清龙门的待客之道了。
-
 [playsound(key="$d_gen_transmissionget", volume=0.4)]
 [CharacterCutin(widgetID="1", name="char_010_chen_1#1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
 [Character(name="char_empty",name2="char_2005_weiyw_1",focus=1)]
@@ -202,7 +176,6 @@
 [name="魏彦吾"]  你可以问。
 [Character(name="char_empty",name2="char_2005_weiyw_1",focus=1)]
 [name="陈"]  这明明是整合运动的总攻，那为什么它们的领袖塔露拉没有出现在龙门？
-
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Character]
@@ -248,16 +221,10 @@
 [Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
 [Background]
 [Character(fadetime=0)]
-//修改此处的image来切换cg
 [Image(image="avg_ep05",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
 [Blocker(a=0, fadetime=3, block=false)]
-//对话内容此处填入
 [delay(time=5)]
-//对话内容此处填入
-
 [Image(fadetime=2)]
-
-
 [Dialog]
 [Blocker(fadetime=2,block=true)]
 [Image]

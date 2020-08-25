@@ -6,11 +6,8 @@
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_corridor",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
-
-
 6:30 p.m. 
 [Dialog]
-//罗德岛舰内
 [PlaySound(key="$dooropenquite", volume=0.6)]
 [delay(time=2)]
 [PlaySound(key="$d_gen_walk_n")]
@@ -19,19 +16,16 @@
 [name="PRTS"]  编号00000-00002，接入权限-8。
 [name="PRTS"]  Dr.{@nickname}，欢迎访问罗德岛综合生物处理室，已依据生物数据对您的意图进行判断。
 [name="PRTS"]  另外，系统检测到您的心情不佳。
-
 [Decision(options="少烦我。;......;该怎么样才算是好心情？", values="1;2;3")]
 [Predicate(references="1")]
 [Character]
 [name="PRTS"]  Dr.{@nickname}表现出一定的攻击性。
 [name="PRTS"]  请放心，系统不会因此电击你，不用太过顾忌系统对你的检测。
-
 [Predicate(references="2")]
 [Character]
 [name="PRTS"]  Dr.{@nickname}陷入了沉默。
 [name="PRTS"]  无论是无声抗议还是不愿进行沟通，我认为这都是一种孤独性精神障碍症的表现。
 [name="PRTS"]  当然，请便，系统会平等对待所有人。
-
 [Predicate(references="3")]
 [Character]
 [name="PRTS"]  好与坏是一种主观判断。
@@ -41,21 +35,16 @@
 [name="PRTS"]  所以，想做什么就去做吧。
 [name="PRTS"]  PRTS具备相应的无害安抚机能。
 [name="PRTS"]  当你采取过激行动时你会立刻昏厥并在3.55个工作时后醒来，这可以保证你的行为向正常标准贴近。
-
 [Predicate(references="1;2;3")]
 [Character]
 [name="PRTS"]  Welcome home, Doctor。
-
 [Decision(options="......这里真的能算家吗？", values="1")]
 [Predicate(references="1")]
 [Dialog]
-//？？？是迷迭香
 [PlaySound(key="$d_gen_walk_n")]
 [Character(name="avg_npc_042",fadetime=1,block=true)]
 [delay(time=1)]
-
 [name="？？？"]  你是，Dr.{@nickname}？
- 
 [Decision(options="啊？;......？;你好？", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="avg_npc_042")]
@@ -63,37 +52,30 @@
 [name="？？？"]  我感觉到了......虽然，不太一样。
 [name="？？？"]  不过......你怀里的人，穿的制服......
 [name="？？？"]  我可以问一问，你抱着的是谁吗？
- 
 [Decision(options="一介战士。;一位同胞。;一个朋友。", values="1;2;3")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  战士？
 [name="？？？"]  啊......她在你身上留下了伤口。她是敌人？
 [name="？？？"]  不，不是......这伤口，不是会杀死人的伤口。
-
 [Predicate(references="2")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  她也是感染者......？
 [name="？？？"]  不，你不是这个意思。
 [name="？？？"]  Dr.{@nickname}，你像是失去了什么。
-
 [Predicate(references="3")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  她是你的朋友？
 [name="？？？"]  可是，朋友......她和你相联系的时间，很短很短。
 [name="？？？"]  我不知道......我不知道这会不会很快就消失。
- 
 [Decision(options="你能......感受到什么？", values="1")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  所有人相互交流的痕迹。气味，温度，形状
 [name="？？？"]  我也不太清楚，但她......
-
 [Character]
 [Dialog]
-
 女孩将手伸向霜星。
- 
 [Decision(options="（默许）;（出声阻止）", values="1;2")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
@@ -103,50 +85,40 @@
 [name="？？？"]  不，不是。我是外人。我和她没有联系。
 [name="？？？"]  这不是我能做的事情，对吧？
 [name="？？？"]  不好意思。
-
 [Decision(options="你也和阿米娅一样，能读心？;......;我没法那么快理解你的反应。", values="4;5;6")]
 [Predicate(references="4")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  不，没有，我不能......
 [name="？？？"]  阿米娅是特别的。我知道阿米娅的法术......也觉得她很辛苦。
-
 [Predicate(references="5")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  我......我想，我不能碰她。我也不能感受她。
 [name="？？？"]  她与这片大地的联系和我没有关联。
 [name="？？？"]  我没有......没有理由去触碰她。
-
-
 [Predicate(references="6")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  其他干员，也会这么说。
 [name="？？？"]  罗德岛上，大家都很有个性......但我可能更奇怪一些。
-
 [Predicate(references="2")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  啊......
 [name="？？？"]  对，对，对不起......
 [name="？？？"]  我......
-
 [Decision(options="抱歉。;......;对不起，小姑娘。", values="7;8;9")]
 [Predicate(references="7")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  没关系，没关系的。我已经习惯了。
-
 [Predicate(references="8")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  请，请不要生气......
 [name="？？？"]  你不说话，我有些......有些不知道该做什么。
-
 [Predicate(references="9")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  没事的。
 [name="？？？"]  比起被别人害怕，我更愿意别人认真对我说话。所以，没问题的。
-
 [Predicate(references="4;5;6;7;8;9")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  你是要......用这个机器吧？
-
 [Decision(options="如果这里确实是感染者最后归宿的话。",values="1")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
@@ -154,50 +126,38 @@
 [name="？？？"]  我来帮你吧。先让我看一下记录。
 [name="？？？"]  嗯，没问题，这个舱室已经清理过了。把她放在这个平台上吧。轻一点，嗯。
 [name="？？？"]  之后平台会收进去，然后......等舱门关上，按下这个键就可以了。
-
-
 [Decision(options="你很熟悉操作。",values="1")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  啊，因为我操作过许多遍了。
-
 [Decision(options="为什么.......",values="1")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  罗德岛的感染者，最后都会到这里来。
 [name="？？？"]  如果是我认识，我感受过的人，我的队员，我都会自己操作。
 [name="？？？"]  原本的使用说明书很复杂，系统简单的操作方式，我都记在终端上了。只要稍稍看看，身体就会熟悉那种感觉。
-
-
 [Decision(options="什么感觉？", values="1")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  啊......大概就像链子一样。
-
 [Decision(options="链子......？", values="1")]
 [Predicate(references="1")]
-
 [name="？？？"]  说是两个人之间牵着的线也可以。
 [name="？？？"]  送走和你有联系的人，是解开缠在他们身上的线。线的另一边还是系在我们身上，可哪怕没有再系着谁了，线却也垂不下来。
 [name="？？？"]  那种感觉，是身体里有什么消失了的感觉。已经不知道那里是什么，却又知道，他们曾经在，也不会回来。 
-
 [Decision(options="为什么要去熟悉这种感觉？", values="1")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
 [name="？？？"]  因为只有熟悉了，才不会突然地痛起来吧？
-
 [Decision(options="......你究竟是......？", values="1")]
-
 [Character]
 [PlaySound(key="$d_gen_walk_n", volume=1)]
-
 [Predicate(references="1")]
 [Character]
 [name="PRTS"]  打扰一下。
 [name="PRTS"]  身在罗德岛生物感染综合处理室的精英干员Rosmontis，你的识别码将在15mins后失效。
 [name="PRTS"]  接下来我将为你进行更新，请在原地停留十五秒左右。
 [name="PRTS"]  另外，接舷区发生了小规模的武装冲突，有条件请在识别码更新后进行支援，以期减少我方资源的损耗。
-
 [Character(name="avg_npc_042")]
 [name="Rosmontis"]  啊，嗯。我知道了，马上就去。
 [name="Rosmontis"]  我在终端上记一下。
@@ -208,20 +168,16 @@
 [name="Rosmontis"]  这是只有我......只有我能写的东西。
 [Character]
 [name="PRTS"]  明白。请。
-
 [Decision(options="精英干员......？", values="1")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
 [name="Rosmontis"]  PRTS指的是我。
-
 [Decision(options="我该叫你Rosmontis吗？", values="1")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
 [name="Rosmontis"]  你可以叫我......迷迭香。
 [name="迷迭香"]  ......她，叫什么？
 [name="迷迭香"]  我想......我想至少知道她的名字。
-
-
 [Decision(options="霜星。", values="1")]
 [Predicate(references="1")]
 [Character(name="avg_npc_042")]
@@ -229,9 +185,6 @@
 [name="迷迭香"]  好好听。
 [name="迷迭香"]  你好，霜星。
 [name="迷迭香"]  ......拜拜。
-
-//CG 如果可以有可以搞迷迭香贴近玻璃舱门闭眼的CG，里面是霜星，像睡着了一样  
-//经讨论可以不用
 [Dialog]
 [Blocker(fadetime=3,block=true)]
 [Image]

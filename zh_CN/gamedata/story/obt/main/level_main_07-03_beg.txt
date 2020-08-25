@@ -1,5 +1,4 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
-
 [stopmusic]
 [Dialog]
 [Character]
@@ -7,10 +6,7 @@
 [Background(image="bg_bridge",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
 [playMusic(intro="$batmeeting_intro", key="$batmeeting_loop", volume=0.4)]
-
 罗德岛舰桥 6:00 a.m.
-
-
 [Dialog]
 [Character]
 [Background]
@@ -18,9 +14,6 @@
 [Image(image="avg_7_7",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
 [ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=0.87, yScaleTo=0.87, duration=60, block=false)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-
-//CG7：在列队整装出发的罗德岛干员面前，阿米娅做战前动员。
 [name="阿米娅"]  各位优秀的干员们，现在开始，我会向罗德岛全舰通报一些重要的信息。这里是阿米娅。
 [name="阿米娅"]  罗德岛本舰已经在昨天晚上正式驶离了龙门。
 [name="阿米娅"]  我们和龙门签订的长期贸易协定因为种种原因，已经失效。现在我们已经没理由继续在这座城市停留。
@@ -63,7 +56,6 @@
 [name="阿米娅"]  所以，我们要阻止整合运动，我们要去阻止切尔诺伯格核心城与与龙门城的冲撞。
 [name="阿米娅"]  希望留舰的各位照顾好罗德岛。不管我们能不能回来，罗德岛都会坚持到最后。
 [name="阿米娅"]  嗯。一切照常运行。
-
 [Dialog]
 [Character]
 [stopmusic(fadetime=3)]
@@ -72,37 +64,28 @@
 [Background(image="bg_bridge",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [playMusic(intro="$dignified_intro", key="$dignified_loop", volume=0.4)]
-//指挥部
-//背景：罗德岛舰桥
-
 [Character(name="char_002_amiya_1")]
 [name="阿米娅"]  咻......
- 
 [Decision(options="说得好！;......;你演讲的样子很迷人。", values="1;2;3")]
 [Predicate(references="1")]
 [Character(name="char_002_amiya_1#2")]
 [name="阿米娅"]  啊，嗯，谢谢博士夸奖！
- 
 [Predicate(references="2")]
 [Character(name="char_002_amiya_1#6")]
 [name="阿米娅"]  唔，唔？博士，我脸上，有什么东西吗？不会是......面包屑吧？
- 
 [Predicate(references="3")]
 [Character(name="char_002_amiya_1#10")]
 [name="阿米娅"]  嗯！
 [Character(name="char_002_amiya_1#5")]
 [name="阿米娅"]  ......嗯？！欸？！
-
 [Predicate(references="1;2;3")]
 [Decision(options="会不会悲观了些？", values="1")]
 [Predicate(references="1")]
-
 [Character(name="char_002_amiya_1")]
 [name="阿米娅"]  ......嗯，也有干员以前和我们这么说过。他们说，在这个时候，要鼓励大家，激发他们的志气。
 [name="阿米娅"]  可是，我慢慢发现，我们并不是那种团体。我们没有那么、那么需要昂扬的斗志，我们需要的是，对自己行为的理解。
 [name="阿米娅"]  越是困难的时候，越应该把最真实的情况告诉大家，否则，我们的选择就会是盲目的。
 [name="阿米娅"]  有什么会比遮着眼睛在大地上行走更危险呢......？
-
 [Decision(options="我听说陈长官离开了龙门。", values="1")]
 [Predicate(references="1")]
 [Character(name="char_002_amiya_1")]
@@ -112,7 +95,6 @@
 [name="阿米娅"]  哪怕是这样沉重的负担，她也没有放弃，没有逃走，她带着它们走向了切尔诺伯格核心城。
 [name="阿米娅"]  背叛，离乡，死亡......她都不害怕。
 [name="阿米娅"]  Dr.{@nickname}，陈长官是感染者。
-
 [Decision(options="什么？！;啊......;我就知道是这样。", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_002_amiya_1")]
@@ -121,8 +103,6 @@
 [name="阿米娅"]  不仅是因为她......不仅是因为陈长官已经算是我们的朋友，也并不完全因为这是龙门某位人物的私人委托。
 [name="阿米娅"]  陈长官不会独自面对整合运动。我们会和她一起。
 [name="阿米娅"]  她努力去维护的东西，她苦熬至今的沉默......我们去帮助她，是为了我们愿望里相似的部分。
-
-
 [Decision(options="太好心了点吧？;......;我以为你会有点害怕那个铁娘子。", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_002_amiya_1#2")]
@@ -130,8 +110,6 @@
 [Character(name="char_002_amiya_1")]
 [name="阿米娅"]  我以前怀疑过陈长官她，也想着她是我们无法改变的那种人。
 [name="阿米娅"]  但是，当她向感染者伸出援手的时候，我看到了，我看到了她心灵的颜色。
-
-
 [Decision(options="我头次听这种说法。;......;这样的形容挺有趣的。", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_002_amiya_1#5")]
@@ -143,10 +121,8 @@
 [name="阿米娅"]  也许她铁面无私，但正因为如此，她的正义感会促使她起身与灰暗的大地战斗。
 [name="阿米娅"]  即使她从来都不这么说。 
 [name="阿米娅"]  所以，我们要去。
-
 [Decision(options="没问题，我也和人约好了要去！;好。;也有人希望我去阻止整合运动。", values="1;2;3")]
 [Predicate(references="1;2;3")]
-
 [name="阿米娅"]  ......Dr.{@nickname}，难道是在说......
 [name="阿米娅"]  啊......
 [name="阿米娅"]  ......霜星小姐......
@@ -154,7 +130,6 @@
 [name="阿米娅"]  还有，米莎。
 [name="阿米娅"]  如果我们还能能做些什么，能阻止米莎悲剧的重演，能宽慰霜星小姐和她的战士们，还有什么......
 [name="阿米娅"]  还有什么是能帮助到更多人，阻止这片大地生产更多悲哀的事，我们去做。
-
 [Dialog]
 [Character]
 [PlaySound(key="$dooropenquite")] 
@@ -163,7 +138,6 @@
 [delay(time=1)]
 [name="凯尔希"]  资料已经发给两位了。
 [name="凯尔希"]  接下来，将是我们三个人第一次共同指挥。
- 
 [Decision(options="你会和我配合吗？;......;我该不该表现得更兴奋一些？", values="1;2;3")]
 [Predicate(references="1;2;3")] 
 [Character(name="char_003_kalts_1")]
@@ -187,7 +161,6 @@
 [name="凯尔希"]  哼。
 [Character(name="char_002_amiya_1#7")]
 [name="阿米娅"]  请两位都答应我。
- 
 [Decision(options="我还能怎么样？;......;我似乎没得选。", values="1;2;3")]
 [Predicate(references="1;2;3")] 
 [Character(name="char_003_kalts_1", name2="char_002_amiya_1", focus=1)]
@@ -201,7 +174,6 @@
 [name="凯尔希"]  我会一直保留这种权力。
 [name="凯尔希"]  不过现在，我会搁置我的偏见，我们先去解决核心城这件事。
 [name="凯尔希"]  彻底地解决它。
-
 [Decision(options="阿米娅，我站在你这边。;......;凯尔希，合作愉快。", values="1;2;3")]
 [Predicate(references="1")]
 [Character(name="char_002_amiya_1")]
@@ -226,7 +198,6 @@
 [name="阿米娅"]  我会用成绩回应博士的信任。一定。
 [name="阿米娅"]  欸！肩并肩是形容啊，不可以说我矮！我还在长个子！......唔！！我很快就会长得和博士长得一样高了，肯定！
 [name="阿米娅"]  ......我只是很高兴，博士。嗯。只是......很高兴。
-
 [Predicate(references="2")]
 [Character(name="char_003_kalts_1")]
 [name="凯尔希"]  ......
@@ -249,7 +220,6 @@
 [name="阿米娅"]  凯尔希医生，这么说也太伤人了......！
 [Character(name="char_002_amiya_1#3")]
 [name="阿米娅"]  博士不爱说话，只是博士不愿说多余的话。博士会直接抓住问题的核心，是吧？
-
 [Predicate(references="3")]
 [Character(name="char_003_kalts_1")]
 [name="凯尔希"]  ——
@@ -257,39 +227,25 @@
 [name="凯尔希"]  我没想过你会这么爽快地答应，甚至有理由怀疑你在语句里设下了什么陷阱。
 [name="凯尔希"]  ......但又何妨呢？
 [name="凯尔希"]  Dr.{@nickname}。合作愉快。
-
- 
 [Decision(options="我们有什么计划？", values="1")]
 [Predicate(references="1")]
 [Character(name="char_002_amiya_1")]
 [name="阿米娅"]  啊，嗯......！
 [name="阿米娅"]  唔，博士是想问哪方面的计划呢？
- 
 [Decision(options="首先要有进核心城的办法。;怎么去？;要直接走到塔露拉面前说“你好”，对不对。", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_003_kalts_1")]
 [name="凯尔希"]  罗德岛确实有属于罗德岛的方法。
 [name="凯尔希"]  请对照报告书。我会解释计划的每个部分。
 [name="凯尔希"]  4小时后，我们将在切尔诺伯格核心城的必经之路附近引发一场小规模的沙暴。
-
 [stopmusic(fadetime=3)]
-
-
-
-
 [Character]
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_laccolith",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
 [playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
-
-//背景：野外拆分
-//其实是荒原 第三章矿场前
-
-
 10:00 a.m. 荒野 
-
 [Character(name="char_148_nearl_1#3")]
 [name="临光"]  1号！
 [Character(name="avg_npc_012")]
@@ -346,8 +302,6 @@
 [name="守林人"]  有什么需要我去做的？
 [Character(name="char_158_milu", name2="char_148_nearl_1", focus=2)]
 [name="临光"]  让我们在仪器开始全速运转前，守住这片区域。
-
-
 [Character]
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
@@ -363,8 +317,6 @@
 [name="阿米娅"]  虽然每次的情况都不同，但利用地形地势伪装自己，却一直是必须的。
 [name="阿米娅"]  有时候是在皑皑雪地，有时候在草原，还有时候在沼泽......我们用的方法都不一样。
 [name="阿米娅"]  现在龙门城所在的位置被沙漠和荒地包围，通过沙尘去掩盖踪迹，是最方便高效的办法。
-
- 
 [Decision(options="我不觉得这能行。;还不够。;完全依靠这个战术是不明智的吧？", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_003_kalts_1")]
@@ -372,27 +324,17 @@
 [name="凯尔希"]  阿撒兹勒诊所带给我们的资料，验证了我手上切尔诺伯格工程图纸的真实性，我们对核心城下层结构已经有了相当的把握。
 [name="凯尔希"]  届时，我们将从核心城的排水与基础工业部分进入核心城。但与此同时，我们还需要诱饵。
 [name="凯尔希"]  没有诱饵，猎物不会上钩。
-
 [Decision(options="对猎人也一样。", values="1")]
 [Predicate(references="1")]
 [Character(name="char_003_kalts_1")]
 [name="凯尔希"]  呵......对。是的。
 [name="凯尔希"]  随着时间推移，最拙劣的猎人也能分辨出猎物与诱饵的不同。我们要在他们识破我们之前避开他们的视线。
-
-
-
-
 [Character]
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_aircraft",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-//现在
-//背景：飞行器舱内图
-
 10:00 a.m.
-
 [Character(name="avg_npc_012")]
 [name="驾驶员"]  这次作战不需要我们实地降落，对吗教官？
 [name="驾驶员"]  核心城地势不好，看上去整合运动的装备也不差，术师的数量更是不少，降下去估计要费些事儿。
@@ -420,15 +362,12 @@
 [name="驾驶员"]  大可放宽心啊教官，我带着阿斯卡纶和煌，那么多次低空飞行也从来没被人打下来过！
 [Character(name="avg_npc_012", name2="char_130_doberm_ex", focus=2)]
 [name="杜宾"]  ......一旦被打下来就没有下一次了啊......
- 
-
 [Character]
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_perimeter",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 10:00 am  核心城外围 
-
 [Character(name="char_1002_nsabr_2", name2="char_1002_nsabr_2", focus=1)]
 [name="整合运动成员"]  嗯？
 [Character(name="char_1002_nsabr_2", name2="char_1002_nsabr_2", focus=2)]
@@ -439,13 +378,11 @@
 [name="整合运动成员"]  不知道那东西里面装了什么，千万别让它落地！
 [Character(name="char_1011_wizard_1", name2="char_1002_nsabr_2", focus=1)]
 [name="整合运动术师"]  别惊慌！只要它敢下降，我们就能把它炸开！别让它躲到我们看不见的地方就行！
-
 [Character]
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_aircraft",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
 [Character(name="avg_npc_012", name2="char_130_doberm_ex", focus=2)]
 [name="杜宾"]  这艘飞船有什么安全设施？
 [Character(name="avg_npc_012", name2="char_130_doberm_ex", focus=1)]
@@ -459,23 +396,19 @@
 [Character(name="char_130_doberm_ex")]
 [CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
 [name="杜宾"]  我能不担心吗？！
-
 [Character]
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [playsound(key="$d_gen_transmissionget", volume=0.4)]
 [name="杜宾"]  阿米娅，我们已经成功吸引了敌人的注意力，让他们认为我们准备从空中降落，你们立刻开始行动！
-
 [Dialog]
 [Background(image="bg_laccolith",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-
 [Character(name="char_148_nearl_1#3")]
 [name="临光"]  作战干员，注意！有稀散的敌人正在向我们的方向靠近，很可能是敌城市的先遣侦察部队！
 [name="临光"]  装置正在运转中，不能让他们干扰到我们的计划。守林人小姐，掩护我！
 [Character(name="char_158_milu")]
 [name="守林人"]  知道！
-
 [Dialog]
 [Blocker(fadetime=2,block=true)]
 [Image]
