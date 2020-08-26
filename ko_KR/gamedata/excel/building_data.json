@@ -6077,6 +6077,61 @@
           "buffData": []
         }
       ]
+    },
+    "char_2013_cerber": {
+      "charId": "char_2013_cerber",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[001]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition[031]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_306_leizi": {
+      "charId": "char_306_leizi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_clue_cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "control_clue_cost[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
     }
   },
   "buffs": {
@@ -6115,6 +6170,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, 응접실 내 오퍼레이터의 <@cc.kw>단서 수집 성향 효과</>가 <@cc.kw>상승</>하지만, 제어 센터 내 모든 오퍼레이터의 <@cc.vdown>컨디션 소모가 대폭 상승</>"
+    },
+    "control_clue_cost[010]": {
+      "buffId": "control_clue_cost[010]",
+      "buffName": "규범대로",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt1",
+      "sortId": 1501,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 응접실 내 오퍼레이터의 <@cc.kw>단서 수집 성향 효과</>가 <@cc.kw>소폭 상승</>하지만, 제어 센터 내 모든 오퍼레이터의 <@cc.vdown>컨디션 소모가 소폭 상승</>"
+    },
+    "control_clue_cost[011]": {
+      "buffId": "control_clue_cost[011]",
+      "buffName": "정확한 판단",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt2",
+      "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 응접실 내 오퍼레이터의 <@cc.kw>단서 수집 성향 효과</>가 <@cc.kw>소폭 상승</>"
     },
     "control_mp_cost[000]": {
       "buffId": "control_mp_cost[000]",
@@ -6392,6 +6471,18 @@
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, 첫 시간 생산력<@cc.vup>+20%</>, 그 이후 시간 마다<@cc.vup>+1%</>, 최종 <@cc.vup>+25%</>까지 누적"
     },
+    "manu_prod_spd_addition[031]": {
+      "buffId": "manu_prod_spd_addition[031]",
+      "buffName": "\"못 기다려\"",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add1",
+      "sortId": 3513,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 첫 시간 생산력<@cc.vup>+20%</>, 그 이후 시간 마다<@cc.vup>+1%</>, 최종 <@cc.vup>+25%</>까지 누적"
+    },
     "manu_prod_spd_addition[040]": {
       "buffId": "manu_prod_spd_addition[040]",
       "buffName": "느긋한 성격",
@@ -6434,6 +6525,18 @@
       "buffIcon": "manufacture",
       "skillIcon": "bskill_man_limit&cost",
       "sortId": 3101,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 창고 용량 상한<@cc.vup>+8</>, 시간당 컨디션 소모<@cc.vup>-0.25</>"
+    },
+    "manu_prod_limit&cost[001]": {
+      "buffId": "manu_prod_limit&cost[001]",
+      "buffName": "\"다 갖고 와\"",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost",
+      "sortId": 3102,
       "buffColor": "#ffd800",
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
@@ -15229,6 +15332,138 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_act7d5_bookshelf": {
+        "id": "furni_act7d5_bookshelf",
+        "name": "조립식 책꽂이",
+        "iconId": "furni_act7d5_bookshelf",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 6,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "예비작전팀 A6 숙소에 있는 선반. 위엔 팀원들이 자신의 키에 맞는 위치에 각자 좋아하는 책을 놔뒀는데, 다들 매번 남의 책을 본다.",
+        "obtainApproach": "<오후의 일화> 이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_atomicClock": {
+        "id": "furni_act7d5_atomicClock",
+        "name": "라인 랩 원자 시계",
+        "iconId": "furni_act7d5_atomicClock",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 6,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "프틸롭시스의 방에 있는 절대적으로 정확한 시간 계산 도구. 프틸롭시스는 해야 할 일들을 초 단위로 계산한다.",
+        "obtainApproach": "<오후의 일화> 이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_weaponRack": {
+        "id": "furni_act7d5_weaponRack",
+        "name": "케오베의 무기 선반",
+        "iconId": "furni_act7d5_weaponRack",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 6,
+        "comfort": 65,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "케오베가 쉴 때 무기를 놔두는 거치대. 그녀는 수년간 자신에게 무기는 손에서 멀어지면 안 된다고 말해왔지만, 요 며칠 동안 무기는 원래 거치대에 놔둘 수 있다는 걸 알게 되었다.",
+        "obtainApproach": "<오후의 일화> 이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_wallSticker": {
+        "id": "furni_act7d5_wallSticker",
+        "name": "예비 오퍼레이터 격려 포스터",
+        "iconId": "furni_act7d5_wallSticker",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 35,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "훈련실에 붙어있던 포스터. 진정한 로도스 아일랜드 오퍼레이터가 되기를 앞두고 있는 친구들에게 화이팅하자는 의미로 보내주자!",
+        "obtainApproach": "<오후의 일화> 이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_petHouse": {
+        "id": "furni_act7d5_petHouse",
+        "name": "까망이의 새집",
+        "iconId": "furni_act7d5_petHouse",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 170,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "바닐라가 키우는 원석충 '까망이'를 위해 준비한 집. 이것저것 복잡한 수속을 전부 밟은 후, 바닐라는 드디어 원석충 부양 허가를 받아냈다! \"드디어 까망이한테도 집이 생겼네!\"",
+        "obtainApproach": "<오후의 일화> 이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_apron": {
+        "id": "furni_act7d5_apron",
+        "name": "가정용 앞치마",
+        "iconId": "furni_act7d5_apron",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 40,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "슈퍼마켓에서 사온 가정용 앞치마. 집안일을 하는 사람한테만 쓸모가 있을 것이다. 뿔이 달린 오퍼레이터가 앞치마를 할 땐 아마 시간이 꽤나 걸릴 것이다.",
+        "obtainApproach": "<오후의 일화> 이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
       "furni_tangyuan_ceiling_01": {
         "id": "furni_tangyuan_ceiling_01",
         "name": "천장 메뉴판 (탕위안 가게)",
@@ -15949,6 +16184,28 @@
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "\"이 모든 것들은 그녀들관 무관합니다. 필름마다 그녀들의 색깔이 잘 나타나 있지만, 그녀들은 여전히 전혀 신경 쓰고 있지 않다.\"",
         "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS006_theHolyMountain_01": {
+        "id": "furni_dropS006_theHolyMountain_01",
+        "name": "플레이트《환각》",
+        "iconId": "furni_dropS006_theHolyMountain_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "\"가라, 설마 쟤 잔소리 더 듣고 싶은 거야?\"",
+        "obtainApproach": "SA-6 하드 모드 첫 클리어 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
