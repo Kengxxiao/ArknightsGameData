@@ -6077,6 +6077,61 @@
           "buffData": []
         }
       ]
+    },
+    "char_2013_cerber": {
+      "charId": "char_2013_cerber",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[001]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition[031]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_306_leizi": {
+      "charId": "char_306_leizi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_clue_cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "control_clue_cost[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
     }
   },
   "buffs": {
@@ -6115,6 +6170,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, <@cc.kw>increases</> the likelihood of obtaining Clues <@cc.kw>corresponding to the factions of Operators assigned to the Reception Room</>, but <@cc.vdown>greatly increases</> the Morale consumption of Operators assigned to the Control Center"
+    },
+    "control_clue_cost[010]": {
+      "buffId": "control_clue_cost[010]",
+      "buffName": "Picky",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt1",
+      "sortId": 1501,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, <@cc.kw>slightly increases</> the likelihood of obtaining Clues <@cc.kw>corresponding to the factions of Operators assigned to the Reception Room</>, but <@cc.vdown>slightly increases</> the Morale consumption of Operators assigned to the Control Center"
+    },
+    "control_clue_cost[011]": {
+      "buffId": "control_clue_cost[011]",
+      "buffName": "Discernment",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt2",
+      "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, <@cc.kw>slightly increases</> the likelihood of obtaining Clues <@cc.kw>corresponding to the factions of Operators assigned to the Reception Room</>"
     },
     "control_mp_cost[000]": {
       "buffId": "control_mp_cost[000]",
@@ -6392,6 +6471,18 @@
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+20%</> in the first hour and thereafter <@cc.vup>+1%</> per hour, up to <@cc.vup>+25%</>"
     },
+    "manu_prod_spd_addition[031]": {
+      "buffId": "manu_prod_spd_addition[031]",
+      "buffName": "\"Right Now\"",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add1",
+      "sortId": 3513,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+20%</> in the first hour and thereafter <@cc.vup>+1%</> per hour, up to <@cc.vup>+25%</>"
+    },
     "manu_prod_spd_addition[040]": {
       "buffId": "manu_prod_spd_addition[040]",
       "buffName": "Slowcoach",
@@ -6434,6 +6525,18 @@
       "buffIcon": "manufacture",
       "skillIcon": "bskill_man_limit&cost",
       "sortId": 3101,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+8</> and Morale consumed per hour <@cc.vup>-0.25</>"
+    },
+    "manu_prod_limit&cost[001]": {
+      "buffId": "manu_prod_limit&cost[001]",
+      "buffName": "\"I Want It All\"",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost",
+      "sortId": 3102,
       "buffColor": "#ffd800",
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
@@ -15229,6 +15332,138 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_act7d5_bookshelf": {
+        "id": "furni_act7d5_bookshelf",
+        "name": "Modular Bookshelf",
+        "iconId": "furni_act7d5_bookshelf",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 6,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The shelves in the dormitory of Reserve Team A6 are filled with books that the members liked to read. Each person is assigned a different part of the shelf depending on theier height, but they would often read each other's books.",
+        "obtainApproach": "Afternoon Stories milestone reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_atomicClock": {
+        "id": "furni_act7d5_atomicClock",
+        "name": "Rhine Lab Atomic Clock",
+        "iconId": "furni_act7d5_atomicClock",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 6,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An absolutely accurate clock found in Ptilopsis's room. She has already calculated what needs to be done for each second of the day.",
+        "obtainApproach": "Afternoon Stories milestone reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_weaponRack": {
+        "id": "furni_act7d5_weaponRack",
+        "name": "Ceobe's Weapon Rack",
+        "iconId": "furni_act7d5_weaponRack",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 6,
+        "comfort": 65,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The weapon rack Ceobe uses when she's resting. She spent many years convincing herself that her weapons must never leave her hands, but learnt within days that weapons could also be placed within a rack.",
+        "obtainApproach": "Afternoon Stories milestone reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_wallSticker": {
+        "id": "furni_act7d5_wallSticker",
+        "name": "Motivational Poster",
+        "iconId": "furni_act7d5_wallSticker",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 35,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Motivational posters in the training room. Give it to friends who are still on the fence about joining Rhodes Island, come on!",
+        "obtainApproach": "Afternoon Stories milestone reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_petHouse": {
+        "id": "furni_act7d5_petHouse",
+        "name": "Biggie's New Home",
+        "iconId": "furni_act7d5_petHouse",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 170,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A small pet house that Vanilla prepared for the Originium slug, Biggie. After going through a lot of bureaucratic red tape, Vanilla finally got permission to raise the slug, so now Biggie can have a home!",
+        "obtainApproach": "Afternoon Stories milestone reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_apron": {
+        "id": "furni_act7d5_apron",
+        "name": "Home-Use Apron",
+        "iconId": "furni_act7d5_apron",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 40,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An ordinary apron purchased from the supermarket, suitable for doing various chores around the ship. Operators with horns might have some trouble putting it on.",
+        "obtainApproach": "Afternoon Stories milestone reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
       "furni_tangyuan_ceiling_01": {
         "id": "furni_tangyuan_ceiling_01",
         "name": "Inscribed Ceiling Plaque (Sweet Sesame Dumplings)",
@@ -15949,6 +16184,28 @@
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "\"They have nothing to do with this. Their colors are spread across every film, but they don't care.\"",
         "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS006_theHolyMountain_01": {
+        "id": "furni_dropS006_theHolyMountain_01",
+        "name": "Plaque - Hallucination",
+        "iconId": "furni_dropS006_theHolyMountain_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "\"Hurry up and go, do you really want to stick around to hear his nagging?\"",
+        "obtainApproach": "Dropped from the first clear reward of Challenge Mode SA-6",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
