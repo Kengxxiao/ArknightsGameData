@@ -6077,6 +6077,61 @@
           "buffData": []
         }
       ]
+    },
+    "char_2013_cerber": {
+      "charId": "char_2013_cerber",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[001]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition[031]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_306_leizi": {
+      "charId": "char_306_leizi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_clue_cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "control_clue_cost[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
     }
   },
   "buffs": {
@@ -6115,6 +6170,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "制御中枢配置時、応接室配属オペレーターの<@cc.kw>手がかり捜索の傾向</>を<@cc.kw>強める</>。制御中枢内のオペレーターの体力消費が<@cc.vdown>大幅に上昇</>"
+    },
+    "control_clue_cost[010]": {
+      "buffId": "control_clue_cost[010]",
+      "buffName": "明察",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt1",
+      "sortId": 1501,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、応接室配属オペレーターの<@cc.kw>手がかり捜索の傾向</>を<@cc.kw>わずかに強める</>。制御中枢内のオペレーターの体力消費が<@cc.vdown>わずかに上昇</>"
+    },
+    "control_clue_cost[011]": {
+      "buffId": "control_clue_cost[011]",
+      "buffName": "明察秋毫",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt2",
+      "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、応接室配属オペレーターの<@cc.kw>手がかり捜索の傾向</>を<@cc.kw>わずかに強める</>。"
     },
     "control_mp_cost[000]": {
       "buffId": "control_mp_cost[000]",
@@ -6392,6 +6471,18 @@
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、最初の1時間製造効率<@cc.vup>+20%</>、その後まで1時間ごと更に<@cc.vup>+1%</>、最終的に<@cc.vup>+25%</>になる"
     },
+    "manu_prod_spd_addition[031]": {
+      "buffId": "manu_prod_spd_addition[031]",
+      "buffName": "「まてない」",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add1",
+      "sortId": 3513,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、最初の1時間製造効率<@cc.vup>+20%</>、その後まで1時間ごと更に<@cc.vup>+1%</>、最終的に<@cc.vup>+25%</>になる"
+    },
     "manu_prod_spd_addition[040]": {
       "buffId": "manu_prod_spd_addition[040]",
       "buffName": "のんびり",
@@ -6434,6 +6525,18 @@
       "buffIcon": "manufacture",
       "skillIcon": "bskill_man_limit&cost",
       "sortId": 3101,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、保管上限<@cc.vup>+8</>、体力消費が1時間ごと<@cc.vup>-0.25</>"
+    },
+    "manu_prod_limit&cost[001]": {
+      "buffId": "manu_prod_limit&cost[001]",
+      "buffName": "「みんなほしい」",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost",
+      "sortId": 3102,
       "buffColor": "#ffd800",
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
@@ -15229,6 +15332,138 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_act7d5_bookshelf": {
+        "id": "furni_act7d5_bookshelf",
+        "name": "矢印本棚",
+        "iconId": "furni_act7d5_bookshelf",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 6,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "行動予備隊A6の宿舎にある棚。みんなが好きな本が収まっている。それぞれの身長にあわせて位置が振り分けられているが、みんなよく他の人の本を手にとって読んでいる。",
+        "obtainApproach": "「午後の逸話」イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_atomicClock": {
+        "id": "furni_act7d5_atomicClock",
+        "name": "ライン生命原子時計",
+        "iconId": "furni_act7d5_atomicClock",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 6,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "フィリオプシスの部屋にある超高精度な時計。正確に時間を計測できる。その一秒一秒にすべきことを、フィリオプシスはとっくに計算し終えている。",
+        "obtainApproach": "「午後の逸話」イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_weaponRack": {
+        "id": "furni_act7d5_weaponRack",
+        "name": "ケオベの武器棚",
+        "iconId": "furni_act7d5_weaponRack",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 6,
+        "comfort": 65,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ケオベが休憩中に武器をしまっておく棚。何年も彼女は武器を絶対に手放すなと自分に言い聞かせていたが、何日間かでそもそも武器は棚の上に置いておいてもいいんだと気付いた。",
+        "obtainApproach": "「午後の逸話」イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_wallSticker": {
+        "id": "furni_act7d5_wallSticker",
+        "name": "予備隊激励ポスター",
+        "iconId": "furni_act7d5_wallSticker",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 35,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "特別訓練室に貼ってあるポスター。真のロドスオペレーターまであと数歩の見習いたちよ、頑張れ！",
+        "obtainApproach": "「午後の逸話」イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_petHouse": {
+        "id": "furni_act7d5_petHouse",
+        "name": "どすぐろちゃんハウス",
+        "iconId": "furni_act7d5_petHouse",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 170,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "バニラが飼っているオリジムシ「どすぐろちゃん」の小屋。様々な手続きを経て、ついにバニラはオリジムシを飼う許可を獲得した。どすぐろちゃんにはマイホームがあっていいのだ！",
+        "obtainApproach": "「午後の逸話」イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_apron": {
+        "id": "furni_act7d5_apron",
+        "name": "家庭用エプロン",
+        "iconId": "furni_act7d5_apron",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 40,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "スーパーで買ってきた普通のエプロン。家事をする人ならみんな使える。角のあるオペレーターは、エプロンをつけるときにかなり苦労するだろう。",
+        "obtainApproach": "「午後の逸話」イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
       "furni_tangyuan_ceiling_01": {
         "id": "furni_tangyuan_ceiling_01",
         "name": "湯圓店看板",
@@ -15949,6 +16184,28 @@
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "「彼女たちとこれとは一切無関係だ。彼女たちの色がフィルムに飛び散っても、彼女たちは同じようにちっとも気にしない。」",
         "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS006_theHolyMountain_01": {
+        "id": "furni_dropS006_theHolyMountain_01",
+        "name": "パネル「幻覚」",
+        "iconId": "furni_dropS006_theHolyMountain_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「行こう、まさか彼の小言をまだ聞いていたいのか。」",
+        "obtainApproach": "SA-6強襲作戦初回クリア",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
