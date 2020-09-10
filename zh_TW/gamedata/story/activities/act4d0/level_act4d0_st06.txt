@@ -1,0 +1,488 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（前）
+
+// Comments
+
+[Dialog]
+[Delay(time=1)]
+08:30 A.M 天氣/暴雪
+北地，因非冰原，萊茵生命420號臨時科考觀測站
+
+[name="裝置"]  系統已解鎖。
+[name="裝置"]  確定年份：未知
+[name="裝置"]  時間設置出現問題，現在轉到手工控制。
+[name="裝置"]  要進行下一步操作，請進行身份認證。
+[Dialog]
+[Character(name="char_248_mgllan",fadetime=1,block=true)]
+[Delay(time=1)] 
+[name="麥哲倫"] 唔，我想想......嗯，萊茵生命科學考察員，麥哲倫。
+[Character]
+[name="裝置"]   認證中——
+[name="裝置"]   認證完畢，聲音樣本已確認。
+[name="裝置"]   嗶嗶——
+[name="裝置"]   指紋已確認。
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[name="裝置"]   （活潑的女聲）嗨，你好呀麥麥，歡迎回來！
+[Character(name="char_248_mgllan")]
+[name="麥哲倫"]   ......
+[name="麥哲倫"]   好怪哦！
+[name="麥哲倫"]   唉，早知道就不答應梅爾姐測試這個簽到系統了，好奇怪的功能啊......
+[name="麥哲倫"]   呼，總而言之，開始幹活吧！
+[name="麥哲倫"]   今年最後一個勘察點，確認沒有新的發現。
+[name="麥哲倫"]   至此，本年度預定的勘查目標已經完成，確認其他各項任務完成後，將踏上返程。
+[name="麥哲倫"]   呼，搞定。
+[name="麥哲倫"]   寫報告可真是我最不擅長的東西了，還是來聽聽錄音吧。
+[Character]
+[name="裝置"]   （活潑的女聲）你好，麥麥。今天，是你本次外出勘察的第1，8，7天了哦。
+[Character(name="char_248_mgllan")]
+[name="麥哲倫"]  哇，這一次也已經出來這麼久啦，我都沒有感覺了。
+[Character]
+[name="裝置"]   （活潑的女聲）你已經出去很久了，也該回來了吧？大家都想你了。
+[Character(name="char_248_mgllan")]
+[name="麥哲倫"]  欸？！之前有這一段嗎......難道是梅爾姐偷偷錄的然後設置了觸發條件？
+[name="麥哲倫"]  嗚哇，不管怎麼樣，居然還有這樣的小驚喜，好開心啊！
+[name="麥哲倫"]  不過，說是說可以回去了，但是......
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=2, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[PlaySound(key="$blizzard")]
+[Blocker(a=0.4, r=1, g=1, b=1, fadetime=2, block=true)]
+[Character(name="char_248_mgllan")]
+[name="麥哲倫"]  這場暴風雪，恐怕還要持續至少一周呢，唉，幸好物資儲備還算充裕。
+[name="麥哲倫"]  算啦，還是來確認一遍任務表吧，我記得應該還有幾個沒有填的。
+[name="麥哲倫"]  讓我看看，嗯，周邊的樣本採集，完成。遺跡線索的尋找，沒有~也算完成。
+[name="麥哲倫"]  和去年比沒有什麼新發現呢，要是再來一個和大前年一樣的發現就好了。
+[name="麥哲倫"]  雖然說這才是常態啦，要是科長在肯定要批評我貪心了。
+[name="麥哲倫"]  應該沒有了吧......嗯？還有一項空著，新材料的低溫性質測試......啊。
+[name="麥哲倫"]  我完全忘記了這件事！！！不如說這個新材料被我放哪兒去了來著！！！
+[name="麥哲倫"]  糟了糟了，這個要是丟了，我可要被殺掉了！
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[name="麥哲倫"] 呼，好險好險，居然被塞在外層口袋裡......
+[name="麥哲倫"] 外層口袋是零下43度，持續時間6小時，依然保持彈性。
+[name="麥哲倫"] 接下來測試一下硬度。
+[name="麥哲倫"] 嘿！
+[name="麥哲倫"] 嗯，也沒有問題。好，接下來放進實驗甕就行。
+[name="麥哲倫"] 唔，幸虧還是有放在外套裡......
+[name="麥哲倫"] 好吧，反正現在是暴風雪，乾脆把它放到門外去擺一天看看低溫疲勞性好了。
+[name="麥哲倫"] 現在外面的氣溫應該很合適吧。
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=1)]
+[name="麥哲倫"] 聽著，麥哲倫，你要深呼吸，在打開門的瞬間，把東西丟出去，然後立刻關門。
+[name="麥哲倫"] 要快，狠，準！不然暴風雪灌進來可就糟了。
+[name="麥哲倫"] 1，2，3！
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_dooropen")]
+[PlaySound(key="$blizzard")]
+[Character(name="char_341_amona_2#2",fadetime=1,block=true)]
+[Delay(time=1)] 
+[name="？？？"] ......
+[Character(name="char_248_mgllan")]
+[name="麥哲倫"] ......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 請問......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="麥哲倫"] 啊啊啊啊啊啊啊啊啊啊！！！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_248_mgllan")]
+[name="麥哲倫"]  麥哲倫，你剛才好像看到了一個幽靈。
+[name="麥哲倫"]  麥哲倫，雖然她很漂亮，但一定是個幽靈。
+[name="麥哲倫"]  但是，這裡可是北地，怎麼可能會有別人？
+[name="麥哲倫"]  難、難道說真的是雪中的幽靈？
+[name="麥哲倫"]  不行不行，要再開門看看，要用科學的眼光去看待！！
+[name="麥哲倫"]  沒有幽靈這種東西！我的體溫也沒有下降到出現幻覺！
+[name="麥哲倫"]  萬一是新的族群，那就是大發現！加油啊，麥哲倫！
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_dooropen")]
+[Character(name="char_341_amona_2#2")]
+[name="？？？"] ......
+[Character(name="char_248_mgllan")]
+[name="麥哲倫"] ......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 請問，我能進來嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 呃，呃......你......我......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 不用害怕。我是活人，不信的話，摸摸我的臉吧？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 呃？呃？
+[name="麥哲倫"] 好，好......
+[name="麥哲倫"] 嗚啊，好暖和！怎麼會，這不是在北地嗎，怎麼會......
+[name="麥哲倫"] ......您是薩米人嗎？
+[name="麥哲倫"] 咦......欸。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 雖然不知道是哪裡讓你感到失望，不過我確實是薩米人。你好，小姑娘。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 你，你好。雖然不知道你是怎麼到這裡來的，不過先進來吧，外面可不是普通人能活下來的溫度！
+[name="麥哲倫"] 即使是薩米人，對這樣的暴風雪也沒轍吧？
+[Character(name="char_341_amona_2#2")]
+[name="？？？"] 謝謝你。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=2, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 給，熱茶。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 謝謝。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 姐姐你叫什麼？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 就叫我——
+[name="？？？"] 西蒙娜吧，西蒙娜。你的名字呢，小姑娘？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 代號麥哲倫！萊茵生命科考專員，420號觀測站的負責人......
+[name="麥哲倫"] 說是這麼說，其實現在只有我一個人在用啦。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 是這樣啊。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 西蒙娜，你為什麼會來這裡？還被困在暴風雪裡......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 我是受人所托來找人的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 找人？這裡可是北地哦，別說人了，我一個月連生物都見不到幾隻呢。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 委託我的人說，她應該就在這一帶活動。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 你找她要做什麼呢？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 這場暴風雪將會持續很久很久，她可能會耽擱一些時間。我是來這裡接她的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 咦，是這樣嗎？！你是來接我的嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 我也不太清楚呢。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 這，這樣，不是接我的嗎，欸。可是，現在的天氣真的很惡劣，西蒙娜你不要緊嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 薩米人......不，我瞭解雪。
+[name="西蒙娜"] 但天氣繼續惡劣下去的話，許多事情都會向沒法預測的方向變化。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 唔，雖然我也看得出這場暴風雪可能要持續一段時間，但沒想到這麼嚴峻。
+[name="麥哲倫"] 還想等風勢變弱一些再走呢......這樣的話，反而要加快行程了。
+[name="麥哲倫"] 按照日程表和觀測結果的話，明早可能是最佳時機了！
+[name="麥哲倫"] 嗯，物資儲備也足夠了，我做的不錯！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 這麼多物資，是給你一個人使用的嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 不是不是，這是為了讓生活在這個觀測站的人能堅持到明年科考季的時候！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......哦？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 如果西蒙娜姐要在這裡住很久的話，也可以使用這些物資！
+[name="麥哲倫"] 嗯，但是，實驗儀器，不可以亂碰哦！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 嗯，好。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 好吧，既然這麼決定了，那就開始整理行李吧！
+[name="麥哲倫"] 西蒙娜，不好意思，我要先準備一些東西。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 嗯，沒關係，你去吧，不用管我。
+[Dialog]
+[Character(fadetime=1)]
+[delay(time=1)]
+[name="麥哲倫"] 行李箱，行李箱，行李箱去哪兒了來著？哦，想起來了，上個月被我拿來墊腳，放在廚房裡了！
+[Dialog]
+[delay(time=1)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 測繪儀和無人機的狀況......嗯，沒有問題！
+[name="麥哲倫"] 不過得充一下電才行。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 有沒有我可以幫上忙的地方？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 啊，不用，這些我一個人就能完成的。
+[name="麥哲倫"] 一直以來我都是一個人完成這些工作的，已經很熟練啦。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 所以你是在這裡工作？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 嗯是的，我在這裡從事研究和考察工作。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 考察什麼？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 整片北地冰原！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 這裡，只有你一個人？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 嗯，這就是我的工作啊？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 不會很孤獨嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 會！但是孤獨和快樂沒什麼矛盾。
+[name="麥哲倫"] 我知道我的同事們都在等我回去，也知道這片冰原還有無數秘密等著我去揭開，所以沒那麼可怕啦。
+[name="麥哲倫"] 有時候我會很孤獨，不過很多時候，我也很快樂！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 一個人......這真的相當可怕。這樣的生活，我不知道該說什麼。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 不是每個人都能像我一樣樂在其中啦。
+[name="麥哲倫"] 想要成為探險家，沒有點本事可不行呢！
+[name="麥哲倫"] 啊，咳咳，是科考專員！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 你還......真是相當樂觀呢。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 嘿嘿，借用一位前輩說的話，“探險家最好的朋友，就是孤獨”！
+[name="麥哲倫"] 哦，不過科長說我好像養成了下意識自言自語的習慣。有嗎？應該沒有吧？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 挺好的呀，麥哲倫小姐。你是很好的人。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 唔，嗯，哈哈，是這樣嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 嗯。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 嗯，觀測站的能源儲備應該也沒有問題，只要設定好時間進入休眠狀態就好，接下來......
+[name="麥哲倫"] 嗯，再說一下，除了科研設備，其它的西蒙娜都可以隨便用！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 這樣啊，謝謝你。
+[name="西蒙娜"] 可我是感染者，這樣混用物資和設施，真的沒問題？
+[name="西蒙娜"] 你看到了不是嗎，麥哲倫？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 欸，我看到了呀，西蒙娜你也沒刻意去掩蓋。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 你不害怕嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 第一眼有些嚇人......是真的！畢竟這樣分佈的結晶真的很稀少......
+[name="麥哲倫"] 但是，姐姐實在是太漂亮了，那些結晶看起來都有些神秘！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 不用避諱我的眼睛。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 啊，是眼睛......嗎？西蒙娜姐也要好好注意診療，那可是很危險的部分啊......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 這並不是我想問的。我是想問，你不害怕感染嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 啊，這個不用擔心哦，萊茵生命的研究已經證明過很多次了，礦石病在人之間的傳染條件是有規律可循的，並沒有人們想的那麼可怕。
+[name="麥哲倫"] 雖然很多人根本就不會去聽......唉。
+[name="麥哲倫"] 我有很多朋友和同事，都是感染者哦！沒問題的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......是嗎。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 啊，對了，萊茵生命的醫學研究，雖然大家都很為我們的事業感到自豪！
+[name="麥哲倫"] 但是在感染者這個領域，是比不上一家叫做“羅德島”的醫藥公司的......
+[name="麥哲倫"] 雖然同事也很生氣，但不得不承認，他們在礦石病這個方面，確實很厲害呢
+[name="麥哲倫"] 結果後來，萊茵生命乾脆就和羅德島進行了合作，就連我也要去羅德島了呢！
+[name="麥哲倫"] 好期待啊，不知道會是怎麼樣的地方，我居然可以繼續參與科考工作！還以為就要一直住研究室了呢......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 你是不是很喜歡聊天？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 那當然了！其實能和別人說說話，非常開心！唔，要是我說的太多，西蒙娜可以隨時提醒，我會安靜下來的......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 不會。我喜歡你講些我不知道的事情。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 唔，啊，有些不好意思......
+[name="麥哲倫"] 西蒙娜你要是想的話，也可以去羅德島診治！對了，我帶你一起去吧。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 你不怕我別有用心嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 別有用心？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 就是，壞人。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 那西蒙娜，你是不是壞人呢？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......是啊，我是不是壞人呢。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] ......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 麥哲倫，你有感覺到這裡的溫度降低了嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 溫度？咦，這麼一說，確實比剛才要冷了一些......等等，難道說......
+[Character]
+警報，檢測到溫控設施出現異常，即將切斷外層供暖功能。
+警報......
+[Character(name="char_248_mgllan")]
+[name="麥哲倫"] 糟了，西蒙娜，讓一下！我要看監控系統！
+[Dialog]
+[delay(time=2)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 不好，材料老化導致外部供暖管道洩露了......
+[name="麥哲倫"] 不好意思，我要出門一趟。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 接下來會發生什麼？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 如果允許系統切斷外層供暖，觀測站會在科考季之前就停止運作。至少，沒辦法再提供生活功能了。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 還能支持幾天？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 兩個月左右吧......哪怕西蒙娜很熟悉雪，也沒辦法在這種地方生活的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 不會的，我很快就會離開北地。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 這樣啊。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......你還在收拾什麼？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 準，準備出門呀？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 你剛才不是說能支撐到兩個月之後？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 對啊，那是絕對不行的！必須要支撐到下個科考季才行！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 外面的風雪已經不是常人能承受的地步了。這樣艱難的環境，可能會危及你的生命，別出去。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 不行，觀測站不僅僅是為了我運作的，它本來具備營地的作用，也應該一直維持下去。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 這種天氣不會有別人來的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 西蒙娜不就是在這種天氣裡走到這裡的嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 我不一樣，我不是探險家，麥哲倫。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 嘿唷......加熱設備好重......
+[name="麥哲倫"] 那這座觀測站就更重要了。
+[name="麥哲倫"] 對於探險家來說，觀測站這類營地就是他們生命的節點。一旦觀測站停運，那麼失去資源、走到了這裡的探險家，可能就會失去生命。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 那麼，從它建立開始直到今天，除了我，還有別的訪客嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 沒有。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 這樣的話，你的堅持真的有意義嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 有的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 為什麼這麼肯定？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 因為總有人會走過這裡，可能是明天，可能是下個科考季，也可能就是兩個月以後。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 這只是毫無根據的想法，麥哲倫，外面很危險。
+[name="西蒙娜"] 沒有人會來這裡的，至少在旱季前，探險家們是不會來的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 西蒙娜姐......你不是探險家，對吧？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 沒錯。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 那麼，不同的探險家，有不同的選擇。
+[name="麥哲倫"] 有的人會選擇在最平靜的時候走到這裡，為了能踏遍這個北地，現在還沒有人做到，但很多人一直在努力。
+[name="麥哲倫"] 有的人會選擇在最危險的時候走到這裡，為的是能看到這片大地的所有變化，為的是能把這裡的種種記錄和景象，帶回文明世界。
+[name="麥哲倫"] 玻利維亞的黑流樹海，卡西米爾的環山高地平原，伊比利亞的水下火山......這些地方，過去都沒有人去過。
+[name="麥哲倫"] 但是，現在，已經有人去過了，在那裡，已經插上了探險家們的旗幟。
+[name="麥哲倫"] 這片大地上還有許多我們未曾踏足的地方，但那也只是說，我們還沒來及踏足。
+[name="麥哲倫"] 今天，這片冰原已經有我踏足了，那麼，未來，總會有更多的人來到這裡。
+[name="麥哲倫"] 我們也不會知道，他們是在什麼條件下走來的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 如果終你一生，都沒有後來者呢？
+[name="西蒙娜"] 如果你回去之後，這個科考站就會被廢棄呢？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 我也不能為兩個月後的那一點點可能性，放棄哪怕是一位不存在的探險家。
+[name="麥哲倫"] 西蒙娜姐......麥哲倫我，相信探險這種事業，相信探險家這種人。
+[name="麥哲倫"] 總有一天，我們的足跡會遍佈這一整片大地。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......把希望寄託於可能不會發生的未來，真的不會失望嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 沒關係的，對探險家來說，我們一生都在發現，我們也一生都在失望。
+[name="麥哲倫"] 沒有探險家的發現是僅僅依靠自己完成的，每一個探險家都是站在前人的肩膀上，每一個重大的發現都連接著遙遠的過去。
+[name="麥哲倫"] 就好像我會來到這片冰原，一開始，只是因為在小時候聽了一個故事。
+[name="麥哲倫"] 但是，現在我已經知道，無論我喜歡的那些存在不存在，我所做的，都有意義。
+[name="麥哲倫"] 哪怕只是那個虛無縹緲的，會讓人失望的不存在的意義。
+[name="麥哲倫"] 唉這個加熱器，功率會不會太大......上次把頭髮都烤焦了欸。不管，硬上啦！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......我知道了。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 嗯！那我去了！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 那麼，我替你去吧。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 欸？
+[name="麥哲倫"] 西蒙娜姐，你是來找人的吧？我們觀測站沒有雇傭其他雇員的需求哦！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 我已經找到那個人了。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 欸。
+[name="麥哲倫"] 欸，就是麥哲倫我嗎？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 環境已經變得相當惡劣，預定要來的信使沒法通知你了。
+[name="西蒙娜"] 容我重新自我介紹一下。羅德島幹員，代號“寒檀”。我是來接你的。當然，你可以繼續叫我西蒙娜。
+[name="西蒙娜"] 接下來的工作讓我來做。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 這樣啊......
+[name="麥哲倫"] 不行。外面的環境太危險了！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 剛剛這句話，是我說的吧？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 不行不行不行，我可是科考人員，這是我的責任！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 不要小看我。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 欸。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 告訴我修理的方法，幹員麥哲倫。外面的事情請交給我。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 那，那我知道了！這個，給你！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 這是？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 按下這個按鈕，我就會立刻出來找你！還有這個裝備，這個裝備......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 呵呵，謝謝你......
+[name="西蒙娜"] 我真的找對人了呢。不用了，麥哲倫。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麥哲倫"] 不可以！我可不能讓西蒙娜......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 不。幹員麥哲倫......相信我。
+[name="西蒙娜"] 這片土地也一樣信任著我。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2")]
+[name="西蒙娜"] 我們一生都在發現，也一生都在失望，嗎。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="？？？"] 愚蠢的薩米人，這種抵抗有什麼意義？
+[name="？？？"] 你確實很厲害，我們走不出這場暴風雪了。
+[name="？？？"] 那又怎麼樣？烏薩斯依然會碾壓你們，吞下你們的城市，吃掉你們的土地！
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[name="？？？"] 女巫......我們不會殺掉你。
+[name="？？？"] 我們會死，我們卻要你活！你要活著，你要看整片大地都染血！
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[name="？？？"] 這東西送給你。我們這些死人的禮物，收下！用你的一隻眼睛，收下！
+[name="？？？"] 慘叫啊，哭啊，然後活著！
+[name="？？？"] 我們死得光榮，你活得卑微！而且......你要一直活著！！
+[name="？？？"] 女巫！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2")]
+[name="西蒙娜"]  真是的。我以前怎麼總是覺得這片大地會枯萎呢？
+[name="西蒙娜"]  只要有這樣的孩子在，大地就會一直掙扎著繁茂下去才對。
+[name="西蒙娜"]  放心吧，麥哲倫。有些事情對你來說還太難了，交給我們大人去做，我們也會很開心啊。
+[name="西蒙娜"]  “......聽啊♪......”
+[name="西蒙娜"]  “......白色的生命肆意綻放，漆黑的種子深植土壤......♪”
+[name="西蒙娜"]  “歌唱吧，美麗的女孩。哭泣吧，美麗的女孩♪”
+[name="西蒙娜"]  “風雪會聽見你的歌，也會擁你入懷♪”
+[name="西蒙娜"]  ——北地的風雪，聽見歌聲了嗎？
+[Character]
+[name="西蒙娜"]  麥哲倫......我啊，想看你堅持自己的夢想。
+[name="西蒙娜"]  是啊，雪也該停了。
+
+
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

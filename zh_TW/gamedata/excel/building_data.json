@@ -5315,6 +5315,117 @@
           "buffData": []
         }
       ]
+    },
+    "char_248_mgllan": {
+      "charId": "char_248_mgllan",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[011]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_131_flameb": {
+      "charId": "char_131_flameb",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_probability[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "workshop_formula_probability[020]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_279_excu": {
+      "charId": "char_279_excu",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[040]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost[003]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_190_clour": {
+      "charId": "char_190_clour",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_variable[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -5354,6 +5465,17 @@
     "control_mp_cost[001]": {
       "buffId": "control_mp_cost[001]",
       "buffName": "S.W.E.E.P.",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "進駐控制中樞時，控制中樞內所有幹員的心情每小時消耗<@cc.vup>-0.05</>"
+    },
+    "control_mp_cost[003]": {
+      "buffId": "control_mp_cost[003]",
+      "buffName": "清理協議",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost",
       "buffColor": "#005752",
@@ -5592,6 +5714,17 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "進駐製造站時，生產力<@cc.vup>+25%</>，倉庫容量上限<@cc.vdown>-12</>，心情每小時消耗<@cc.vdown>+0.25</>"
+    },
+    "manu_prod_spd_variable[000]": {
+      "buffId": "manu_prod_spd_variable[000]",
+      "buffName": "回收利用",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_variable",
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "進駐製造站時，當前製造站內幹員提升的每格倉庫容量，提供<@cc.vup>2%</>生產力"
     },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
@@ -5912,6 +6045,17 @@
       "roomType": "WORKSHOP",
       "description": "進駐加工站加工<@cc.kw>任意類材料</>時，副產品的產出機率提升<@cc.vup>50%</>"
     },
+    "workshop_proc_probability[011]": {
+      "buffId": "workshop_proc_probability[011]",
+      "buffName": "多功能測繪儀",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p",
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "進駐加工站加工<@cc.kw>任意類材料</>時，副產品的產出機率提升<@cc.vup>50%</>"
+    },
     "workshop_proc_probability[020]": {
       "buffId": "workshop_proc_probability[020]",
       "buffName": "咪波·加工型",
@@ -5923,6 +6067,17 @@
       "roomType": "WORKSHOP",
       "description": "進駐加工站加工<@cc.kw>任意類材料</>時，副產品的產出機率提升<@cc.vup>65%</>"
     },
+    "workshop_formula_cost[000]": {
+      "buffId": "workshop_formula_cost[000]",
+      "buffName": "龍騰式無人機",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost",
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "進駐加工站加工<@cc.kw>任意類材料</>時，心情消耗為<@cc.kw>4</>及以上的配方全部<@cc.vup>-2</>心情消耗"
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "技巧理論",
@@ -5933,6 +6088,17 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "進駐加工站加工<@cc.kw>技巧概要</>時，副產品的產出機率提升<@cc.vup>70%</>"
+    },
+    "workshop_formula_probability[020]": {
+      "buffId": "workshop_formula_probability[020]",
+      "buffName": "登峰造極",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_skill",
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "進駐加工站加工<@cc.kw>技巧概要</>時，副產品的產出機率提升<@cc.vup>80%</>"
     },
     "workshop_formula_probability[100]": {
       "buffId": "workshop_formula_probability[100]",
@@ -10777,6 +10943,446 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_safetyZone_gate_01": {
+        "id": "furni_safetyZone_gate_01",
+        "name": "安全艙消毒間",
+        "iconId": "furni_safetyZone_gate_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 5,
+        "height": 7,
+        "comfort": 310,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "全封閉式的消毒間。清除身上沾染的粉塵和液體是重中之重。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 210,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_UVLamp_01": {
+        "id": "furni_safetyZone_UVLamp_01",
+        "name": "安全艙消毒燈",
+        "iconId": "furni_safetyZone_UVLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 110,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "紫外線石英消毒燈。對抗病原體的最佳手段。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 93,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_oxygenTank_01": {
+        "id": "furni_safetyZone_oxygenTank_01",
+        "name": "補給資源罐",
+        "iconId": "furni_safetyZone_oxygenTank_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 245,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "包含消毒水、中和試劑等必要資源的罐體。以備不時之需。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 168,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_stretcher_01": {
+        "id": "furni_safetyZone_stretcher_01",
+        "name": "急診推床",
+        "iconId": "furni_safetyZone_stretcher_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 7,
+        "depth": 4,
+        "height": 6,
+        "comfort": 360,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "儲放在安全艙中的急診推床。希望不要有用到它的那一天。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 245,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_hazmatSuit_01": {
+        "id": "furni_safetyZone_hazmatSuit_01",
+        "name": "防化防毒套裝",
+        "iconId": "furni_safetyZone_hazmatSuit_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 85,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "艙室中常備的隔離套裝。保護自己的最好方式就是將自己放在另一套環境中。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 73,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_hazmatCoat_01": {
+        "id": "furni_safetyZone_hazmatCoat_01",
+        "name": "防化防毒服",
+        "iconId": "furni_safetyZone_hazmatCoat_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 85,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "艙室中常備的隔離服。每一個步驟都需要經過嚴格的控制。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 73,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_shovel_01": {
+        "id": "furni_safetyZone_shovel_01",
+        "name": "多功能工程鍬",
+        "iconId": "furni_safetyZone_shovel_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 1,
+        "height": 2,
+        "comfort": 45,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "可以完成各類操作的工程鍬。聽說不少工程幹員將它當做自己的武器使用。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 38,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_box_01": {
+        "id": "furni_safetyZone_box_01",
+        "name": "安全艙物資箱",
+        "iconId": "furni_safetyZone_box_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 175,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "包含有各種物資的物資箱。動用一切資源處理所有問題。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 133,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_partitionWall_01": {
+        "id": "furni_safetyZone_partitionWall_01",
+        "name": "安全艙隔牆",
+        "iconId": "furni_safetyZone_partitionWall_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 7,
+        "height": 8,
+        "comfort": 245,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "安全艙必備的隔牆。咦，是什麼時候放在這兒的？",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_roboticArmVehicle_01": {
+        "id": "furni_safetyZone_roboticArmVehicle_01",
+        "name": "安全艙工程車",
+        "iconId": "furni_safetyZone_roboticArmVehicle_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 4,
+        "comfort": 255,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "能夠進行精密操作的獨臂工程車。只有在事態相當惡化的時候才會動用的器械。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 193,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_virusFilter_01": {
+        "id": "furni_safetyZone_virusFilter_01",
+        "name": "多功能消毒器",
+        "iconId": "furni_safetyZone_virusFilter_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 7,
+        "depth": 4,
+        "height": 5,
+        "comfort": 335,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "多功能的消毒淨化器。內含強酸，請謹遵說明書使用。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 228,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_pipeline1_01": {
+        "id": "furni_safetyZone_pipeline1_01",
+        "name": "安全艙導氣管",
+        "iconId": "furni_safetyZone_pipeline1_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 2,
+        "height": 2,
+        "comfort": 305,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "安全艙內的導氣管。艙內空氣必須經過再處理。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 208,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_pipeline2_01": {
+        "id": "furni_safetyZone_pipeline2_01",
+        "name": "安全艙控氣管",
+        "iconId": "furni_safetyZone_pipeline2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 1,
+        "height": 2,
+        "comfort": 135,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "安全艙內的控氣管。負責控制空氣迴圈的進程。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 103,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_PipelineValve_01": {
+        "id": "furni_safetyZone_PipelineValve_01",
+        "name": "艙室管道閥門",
+        "iconId": "furni_safetyZone_PipelineValve_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 8,
+        "comfort": 135,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "用於控制艙室內氣壓的開關。艙室外另有總控台。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 113,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_ceilingLight_01": {
+        "id": "furni_safetyZone_ceilingLight_01",
+        "name": "安全艙日光燈",
+        "iconId": "furni_safetyZone_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 105,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "歷經緊急事件而略微損壞的日光燈。不要慌，工程幹員馬上就到。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 88,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_ceiling_01": {
+        "id": "furni_safetyZone_ceiling_01",
+        "name": "艙頂隔離布",
+        "iconId": "furni_safetyZone_ceiling_01",
+        "type": "CEILING",
+        "location": "CEILINGDECAL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 315,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "嶄新的艙頂隔離布。它們的使用壽命向來不長。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 215,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_downlight_01": {
+        "id": "furni_safetyZone_downlight_01",
+        "name": "安全艙吸頂燈",
+        "iconId": "furni_safetyZone_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 55,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "絕不停止供電的吸頂燈。光亮，就是安全。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 48,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_carpet_01": {
+        "id": "furni_safetyZone_carpet_01",
+        "name": "粉液吸附毯",
+        "iconId": "furni_safetyZone_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 8,
+        "height": 1,
+        "comfort": 130,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "能夠牢牢抓住粉塵與液體的靜電毯。需要常常清理與更換，才能保證吸附的效力。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 98,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_wallpaper_01": {
+        "id": "furni_safetyZone_wallpaper_01",
+        "name": "防毒防化隔離壁",
+        "iconId": "furni_safetyZone_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "艙室必備的防毒防化隔離用艙壁。能阻止危險蔓延。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 180,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_safetyZone_floor_01": {
+        "id": "furni_safetyZone_floor_01",
+        "name": "防化裝甲板",
+        "iconId": "furni_safetyZone_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "艙室必備的防化裝甲板。能有效杜絕化學產品腐蝕。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 180,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
       "furni_dropS001_theLittleMermaid_01": {
         "id": "furni_dropS001_theLittleMermaid_01",
         "name": "飾牌《泡沫》",
@@ -11189,6 +11795,28 @@
         "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
         "description": "“也許有一種語言會以我們完全不能理解的姿態出現，但那只會驗證我們的淺薄。”",
         "obtainApproach": "H5-4首次通關掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS004_YMO_01": {
+        "id": "furni_dropS004_YMO_01",
+        "name": "飾牌《面具》",
+        "iconId": "furni_dropS003_zero_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "“時光流逝令你放聲大笑，年歲增長讓你心潮澎湃。”",
+        "obtainApproach": "SW-EV-5突襲模式首次通關掉落",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -13209,6 +13837,118 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_safetyZone": {
+        "id": "furni_set_safetyZone",
+        "name": "氣密防化安全艙",
+        "desc": "配有防毒防化設施的消毒安全艙。僅適用於緊急時刻和極危任務。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_safetyZone_gate_01",
+            "pos0": 2,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_UVLamp_01",
+            "pos0": 6,
+            "pos1": 9
+          },
+          {
+            "furnitureId": "furni_safetyZone_oxygenTank_01",
+            "pos0": 4,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_stretcher_01",
+            "pos0": 9,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_safetyZone_hazmatSuit_01",
+            "pos0": 11,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_safetyZone_hazmatCoat_01",
+            "pos0": 13,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_safetyZone_shovel_01",
+            "pos0": 15,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_safetyZone_box_01",
+            "pos0": 16,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_safetyZone_partitionWall_01",
+            "pos0": 20,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_roboticArmVehicle_01",
+            "pos0": 21,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_safetyZone_virusFilter_01",
+            "pos0": 26,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_pipeline1_01",
+            "pos0": 0,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_safetyZone_pipeline2_01",
+            "pos0": 4,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_safetyZone_PipelineValve_01",
+            "pos0": 18,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_ceilingLight_01",
+            "pos0": 11,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_ceiling_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_downlight_01",
+            "pos0": 7,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_downlight_01",
+            "pos0": 20,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_safetyZone_carpet_01",
+            "pos0": 6,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_safetyZone_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -13839,6 +14579,62 @@
           "furni_chen_floor_01",
           "furni_chen_ceilingLight_R_01",
           "furni_chen_ceilingLight_C_01"
+        ]
+      },
+      "furni_set_safetyZone_1": {
+        "id": "furni_set_safetyZone_1",
+        "name": "安全艙消毒過濾套件",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 215,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_gate_01",
+          "furni_safetyZone_UVLamp_01",
+          "furni_safetyZone_pipeline1_01",
+          "furni_safetyZone_pipeline2_01",
+          "furni_safetyZone_PipelineValve_01"
+        ]
+      },
+      "furni_set_safetyZone_2": {
+        "id": "furni_set_safetyZone_2",
+        "name": "安全艙防護套件",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 145,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_stretcher_01",
+          "furni_safetyZone_carpet_01",
+          "furni_safetyZone_hazmatSuit_01",
+          "furni_safetyZone_hazmatCoat_01",
+          "furni_safetyZone_shovel_01"
+        ]
+      },
+      "furni_set_safetyZone_3": {
+        "id": "furni_set_safetyZone_3",
+        "name": "安全艙清潔套件",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 290,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_oxygenTank_01",
+          "furni_safetyZone_box_01",
+          "furni_safetyZone_partitionWall_01",
+          "furni_safetyZone_roboticArmVehicle_01",
+          "furni_safetyZone_virusFilter_01"
+        ]
+      },
+      "furni_set_safetyZone_4": {
+        "id": "furni_set_safetyZone_4",
+        "name": "安全艙基礎設施套件",
+        "themeId": "furni_set_safetyZone",
+        "comfort": 185,
+        "count": 5,
+        "furniture": [
+          "furni_safetyZone_ceiling_01",
+          "furni_safetyZone_ceilingLight_01",
+          "furni_safetyZone_downlight_01",
+          "furni_safetyZone_wallpaper_01",
+          "furni_safetyZone_floor_01"
         ]
       }
     },
