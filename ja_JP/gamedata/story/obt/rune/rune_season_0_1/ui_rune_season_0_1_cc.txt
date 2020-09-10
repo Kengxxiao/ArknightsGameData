@@ -1,0 +1,90 @@
+[HEADER(key="title_test", is_skippable=false, fit_mode="BLACK_MASK")] 危机合约
+
+// Comments
+[Dialog]
+[delay(time=1)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.6, crossfade=1, delay=0.5)]
+[Background(image="bg_rhodescom",screenadapt="coverall",fadetime=1,block=true)]
+[delay(time=2, black=true)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_130_doberm_ex",fadetime=1,block=true)]
+[delay(time=1)]
+[name="ドーベルマン"]   皆揃ったか？
+[Character(name="char_002_amiya_1#1")]
+[name="アーミヤ"]   はい、各部署のメンバーの皆さんも集まりました。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]   では本題に入ってくれ、プロヴァンス。
+[Character]
+[Dialog]
+[Character(name="char_145_prove_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="プロヴァンス"]   分かりました。じゃあ始めるよ。
+[name="プロヴァンス"]   見ての通り、危機契約機構から新しい連絡を受けたんだ。
+[name="プロヴァンス"]   ロドスは前回の危機契約で、予想よりもずっと良い結果を残せたみたい。それで彼らの全面的な肯定を得られたんだ。
+[name="プロヴァンス"]   ドクターが的確に契約内容を選んでくれたおかげだね。どの戦闘でもたくさんの契約を果たせたから、良い結果を出せたんだ。
+[name="プロヴァンス"]   うまくオペレーターを手配できれば、あんなに効率がアップするんだね。僕、初めて知ったよ。
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]   前回の危機契約で、ロドスは大量の物資を得られただけでなく、多くのエリアの暴動を収めることができましたからね。あの時のドクターの活躍、本当にすごかったです。
+[Decision(options="ただ普通に仕事をこなしただけだ。;え、そんなに？;アーミヤが色々助けてくれたからだ。",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]   謙遜しすぎですよ、ドクター。皆さんがドクターの努力をちゃんと見てます！
+[name="アーミヤ"]   ドクターの引率がなければ、私たちは絶対に、あんなに多くの契約を成し遂げることはできませんでした。
+[Predicate(references="2")]
+[Character(name="char_145_prove_1")]
+[name="プロヴァンス"]   ドクター、まさか自分の力に気づいてないの？
+[name="プロヴァンス"]   契約中に見せた決断は、全部無意識でやってたってこと？
+[name="プロヴァンス"]   さっすがドクター！
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]   私はちょっとサポートしただけです。ドクターが一番努力されてたことは、みんなが知っていますよ。
+[Predicate(references="1;2;3")]
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]   ……褒めるのはそれぐらいにしておけ。プロヴァンス、引き続き説明を頼む。
+[Character(name="char_145_prove_1")]
+[name="プロヴァンス"]   はぁい。まぁとにかく、前回の成績のおかげでロドスは危機契約機構と、また安定した協定関係を結べることになったんだ。
+[name="プロヴァンス"]   だからロドスは今後一定期間ごとに、危機契約機構からの依頼を受けることになるよ。
+[showitem(image="item_cc2_1")]
+///////////////////////////
+[Character(name="char_145_prove_1")]
+[name="プロヴァンス"]   今回の危機契約も、前回と同じで複数のエリアが対象だよ。ファイル上に印をつけてあるからチェックしてね。
+[name="プロヴァンス"]   エリアごとに直面してる問題はそれぞれ違うけど、どれも急ぎの救援が必要なことは変わらないよ。
+[Dialog]
+[hideitem(fadetime=0.5,block=true)]
+[showitem(image="item_cc2_2")]
+[Character(name="char_145_prove_1")]
+[name="プロヴァンス"]   各契約の確認と割り振りは、前回と同じようにアーミヤとドクターに任せるね。
+[name="プロヴァンス"]   契約の難易度を判断して、うまくオペレーターを割り当てる仕事はもうお手の物だと思うから。
+[Dialog]
+[hideitem(fadetime=0.5,block=true)]
+[showitem(image="item_cc2_4")]
+[Character(name="char_145_prove_1")]
+[name="プロヴァンス"]   あと、契約内容の危険度が上がった影響で、新しい契約危険度の測定システムが採用されたんだ。
+[name="プロヴァンス"]   専用の契約評価システムを通じて、作戦ごとに結果の記録とデータの収集が行われるよ。
+[name="プロヴァンス"]   万が一のことがないように、危険度が高い依頼は、契約の履行完了数によって解放されていくからね。
+[name="プロヴァンス"]   これまでの経験があれば、順番にうまくこなしていけるはずだよ！
+[Dialog]
+[hideitem(fadetime=0.5,block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]   より良い報酬を得るためには、当然リスクも高くなる。
+[name="ドーベルマン"]   前回の危機契約で良い成績を収めたとはいえ、油断は禁物だぞ。
+[showitem(image="item_cc2_5")]
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]   また、危機契約の様々な契約内容に応じた演習を行うために、ロドス内部に新しい訓練場を設立した。
+[name="ドーベルマン"]   ぜひ有効に活用してくれ。
+[name="ドーベルマン"]   作戦前の周到な準備は、常に勝利への第一歩となる。
+[Dialog]
+[hideitem(fadetime=0.5,block=true)]
+[Character(name="char_145_prove_1")]
+[name="プロヴァンス"]   じゃあ、危機契約————作戦コード「荒廃」に関して、正式にドクターに委任するよ。
+[name="プロヴァンス"]   ここからはPRTSが関連資料の整理をしてくれるよ。もし何か分からないことがあったら管理画面で確認してね。
+[name="プロヴァンス"]   じゃあ始めよう。みんなどうか無事でね。
+[name="プロヴァンス"]   この多事多難な大地に、僕たちが希望をもたらしていこう。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Image(fadetime=0)]
+[delay(time=1)]
+
+
