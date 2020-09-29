@@ -58,7 +58,9 @@ function DlgMgr.ClearDlg(adlg)
 end
 
 function DlgMgr.Clear()
-  for _, dlg in ipairs(DlgMgr.s_dlgCreateByCS) do
+  local temp = DlgMgr.s_dlgCreateByCS;
+  DlgMgr.s_dlgCreateByCS = {};
+  for _, dlg in ipairs(temp) do
     dlg:Dispose();
   end
 end
