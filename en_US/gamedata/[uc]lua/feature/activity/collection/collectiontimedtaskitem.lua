@@ -99,11 +99,11 @@ function CollectionTimedTaskItem:CreateRewardIcon(cfg)
   local rewardData = self.m_rewardData;
   local itemCard = CS.Torappu.UI.UIAssetLoader.instance.activityOutlinks.uiItemCard;
   local itemCell = CS.UnityEngine.GameObject.Instantiate(itemCard, self._rewardIconRoot):GetComponent("Torappu.UI.UIItemCard");
-  itemCell.isCardClickable = true;
+  itemCell.isCardClickable = not self.m_finish;
   itemCell.showBackground = false;
   itemCell:CloseBtnTransition();
   itemCell:Render(0, rewardData);
-  self:AsignDelegate(itemCell, "onItemClick", function(index)
+  self:AsignDelegate(itemCell, "onItemClick", function(this, index)
     CS.Torappu.UI.UIItemDescFloatController.ShowItemDesc(itemCell.gameObject, rewardData);
   end);
   if self.m_finish then

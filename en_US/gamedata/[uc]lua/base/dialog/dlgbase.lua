@@ -4,7 +4,7 @@ local LuaUIUtil = CS.Torappu.Lua.LuaUIUtil;
 ---@class DlgBase :UIBase
 ---@field _layoutPath string
 ---@field m_id number
----@field m_widgets Widget[]
+---@field m_widgets UIWidgetContainer
 ---@field m_childDlgs DlgBase[]
 DlgBase = Class("DlgBase", UIBase);
 DlgBase.s_ids = 1;
@@ -17,7 +17,7 @@ function DlgBase:OnInitialize()
   if closeBtn then
     self:AddButtonClickListener(closeBtn, self._HandleSysClose);
   end
-  self.m_widgets = {};
+  self.m_widgets = UIWidgetContainer.new(self)
 
   self:OnInit();
 end
@@ -31,10 +31,7 @@ function DlgBase:OnDispose()
     end
     self.m_childDlgs = nil;
   end
-  -- destroy all widgets
-  for _, widget in ipairs(self.m_widgets) do
-    widget:Dispose();
-  end
+  self.m_widgets:Clear();
   self:OnClose();
 
   DlgMgr.ClearDlg(self);
@@ -92,12 +89,7 @@ end
 ---@param layout LuaLayout prefab
 ---@param parent Transfrom
 function DlgBase:CreateWidgetByPrefab(widgetCls, layout, parent)
-  local go = CS.UnityEngine.GameObject.Instantiate(layout.gameObject, parent);
-  ---@type Widget
-  local widget = widgetCls.new();
-  widget:Initialize(go, self.m_parent);
-  table.insert(self.m_widgets, widget);
-  return widget;
+  return self.m_widgets:CreateWidgetByPrefab(widgetCls, layout, parent);
 end
 
 ---由场景上对象创建一个窗口组件
@@ -105,11 +97,7 @@ end
 ---@param widgetCls T
 ---@param layout LuaLayout 场景上对象
 function DlgBase:CreateWidgetByGO(widgetCls, layout)
-  ---@type Widget
-  local widget = widgetCls.new();
-  widget:Initialize(layout.gameObject, self.m_parent);
-  table.insert(self.m_widgets, widget);
-  return widget;
+  return self.m_widgets:CreateWidgetByGO(widgetCls, layout);
 end
 
 
@@ -163,4 +151,8 @@ end
 ---@return LuaLayout
 function DlgBase:LoadLayout( path)
   return self.m_parent:LoadLayout(path);
+end
+
+function UIBase:GetLuaLayout()
+  return self.m_layout
 end

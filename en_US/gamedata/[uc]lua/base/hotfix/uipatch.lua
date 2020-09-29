@@ -5,7 +5,6 @@
 ---@param property string 属性名
 ---@param value string 属性值
 ---@return boolean 是否成功执行
-local eutil = CS.Torappu.Lua.Util
 function ApplyUIHotPatch(root, path, comType, property, value)
   local trans = root.transform;
   if path ~= nil and path ~= "" then
@@ -79,8 +78,4 @@ UIHotPatchSetters["m_Color.a"] = function(target, value)
   local cur = target.color;
   cur.a = tonumber(value);
   target.color = cur;
-end
-
-UIHotPatchSetters["m_FontData.m_VerticalOverflow"] = function(target, value)
-  target.verticalOverflow = tonumber(value);
 end

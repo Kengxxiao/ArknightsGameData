@@ -64,7 +64,7 @@ function CollectionItem:Refresh(activityId,  data, reached, geted, cfg)
 
   self.m_itemCell.showBackground = data.showIconBG;
   self.m_itemCell:Render(0, rewardItemData);
-  self:AsignDelegate(self.m_itemCell, "onItemClick", function(index)
+  self:AsignDelegate(self.m_itemCell, "onItemClick", function(this, index)
     CS.Torappu.UI.UIItemDescFloatController.ShowItemDesc(self.m_itemCell.gameObject, rewardItemData);
   end);
 
