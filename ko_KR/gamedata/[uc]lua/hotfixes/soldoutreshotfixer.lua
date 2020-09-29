@@ -3,43 +3,23 @@
 local eutil = CS.Torappu.Lua.Util
 local assetUtil = CS.Torappu.UI.UIAssetLoader
 local class2inject = CS.Torappu.UI.TemplateShop.TemplateShopCommonItemView
-local resMgr = CS.Torappu.Resource.ResourceManager
 local SoldoutResHotfixer = Class("SoldoutResHotfixer",HotfixBase)
 
 
-local function GetLan()
-    local isJp = CS.Torappu.I18N.LocalizationEnv.IsJapan()
-    local isKr = CS.Torappu.I18N.LocalizationEnv.IsKorea()
-    local isEn = CS.Torappu.I18N.LocalizationEnv.IsEnArea()
-  
-    if isJp then
-      return "JP"
-    elseif isKr then
-      return "KR"
-    elseif isEn then
-      return "EN"
-    end
-end
 
 
-local path = "[[{lan}]]/Hotfix/sold_out_st_bar.png"
-path = path:gsub("{lan}",GetLan())
-local imgRes = nil
+local RES_PATH = "Arts/UI/TemplateShop/common/sold_out_st_bar_hub.prefab"
+
 local function SoldoutResReplace(self)
-    if imgRes == nil then
-        local resList = resMgr.LoadAll(path)
-        if resList ~= nil then
-            for i = 0, resList.Length-1 do
-                if(resList[i]:GetType() == typeof(CS.UnityEngine.Sprite)) then
-                    imgRes = resList[i]
-                    break
-                end
-            end
-        end
+    local hub = assetUtil.LoadPrefab(RES_PATH)
+    local behavior = hub:GetComponent("SpriteHub")
+    local ret, spriteRes = behavior:TryGetSprite("sold_out_st_bar")
+    if spriteRes ~= nil then
+        self._soldOutImg:GetComponent("Image").sprite = spriteRes
     end
-    if imgRes ~= nil then
-        self._soldOutImg:GetComponent("Image").sprite = imgRes
-    end
+    
+
+
 end
 
 
