@@ -1,4 +1,20 @@
 {
+  "sluggish[inf]": {
+    "buffKey": "sluggish",
+    "durationKey": null,
+    "lifeTimeType": "INFINITY",
+    "overrideEffectKey": "buff_sluggish",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "MOVE_SPEED",
+          "formulaItem": "FINAL_SCALER",
+          "value": -0.8,
+          "loadFromBlackboard": false
+        }
+      ]
+    }
+  },
   "sluggish": {
     "buffKey": "sluggish",
     "durationKey": "sluggish",
@@ -36,21 +52,44 @@
       ]
     }
   },
-  "weak": {
+  "weak[inf]": {
     "buffKey": "weak",
     "durationKey": null,
-    "templateKey": "scale_damage_on_hp_less",
+    "templateKey": "damage_scale[input]",
     "lifeTimeType": "INFINITY",
     "priorityBBKeys": [
       "damage_scale"
     ],
-    "blackboard": [
-      {
-        "key": "hp_ratio",
-        "value": 0.4,
-        "valueStr": null
-      }
-    ]
+    "overrideKey": "weak[bonus]"
+  },
+  "weak[limit]": {
+    "buffKey": "weak",
+    "durationKey": "weak[limit]",
+    "templateKey": "damage_scale[input]",
+    "priorityBBKeys": [
+      "damage_scale"
+    ],
+    "overrideKey": "weak[bonus]",
+    "overrideEffectKey": "buff_weak[limit]"
+  },
+  "damage_resistance[inf]": {
+    "buffKey": "damage_resistance",
+    "durationKey": null,
+    "templateKey": "damage_resistance",
+    "lifeTimeType": "INFINITY",
+    "priorityBBKeys": [
+      "damage_resistance"
+    ],
+    "overrideKey": "damage_resistance[bonus]"
+  },
+  "damage_resistance[limit]": {
+    "buffKey": "damage_resistance",
+    "durationKey": "damage_resistance[limit]",
+    "templateKey": "damage_resistance",
+    "priorityBBKeys": [
+      "damage_resistance"
+    ],
+    "overrideKey": "damage_resistance[bonus]"
   },
   "spRecover": {
     "buffKey": "spRecover",

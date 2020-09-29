@@ -6,6 +6,7 @@
 ---@field m_destroyed boolean
 ---@field m_doWhenClose function[]
 ---@field m_allTimer number[]
+---@field m_allCustomComponents {}[]
 UIBase = Class("UIBase");
 
 ---@param gobj GameObject
@@ -34,6 +35,14 @@ function UIBase:Dispose()
   end
 
   self:OnDispose();
+
+  if self.m_allCustomComponents then
+    for _, com in ipairs(self.m_allCustomComponents) do
+        if com.Dispose then
+            com:Dispose();
+        end
+    end
+  end
 
   if self.m_doWhenClose then
     for _, func in ipairs(self.m_doWhenClose) do
@@ -69,8 +78,20 @@ end
 function UIBase:OnVisible(v)
 end
 
-function UIBase:Root()
+function UIBase:RootGameObject()
     return self.m_root;
+end
+
+---@protected
+function UIBase:OnResume()
+end
+
+---@protected
+function UIBase:OnEnter()
+end
+
+---@protected
+function UIBase:OnExit()
 end
 
 function UIBase:IsDestroy()
@@ -105,8 +126,24 @@ end
 ---@param obj object
 ---@param delegateName string
 ---@param func function
-function UIBase:AsignDelegate(obj, delegateName, func)
-    obj[delegateName] = func;
+---@param ... any 不定参数, 可以在注册时传递一些数据到func里去，在回调参数之后。
+---                如代理本身有a，b，c三个参数，注册时传递了arg1 arg2 arg3三个参数
+---                则最终在函数func里得到的参数是 function(a, b, c, arg1, arg2, arg3)
+function UIBase:AsignDelegate(obj, delegateName, func, ...)
+    local args = {...}
+    local this = self;
+    obj[delegateName] = function(...)
+        local params = {...}
+        if #params < 1 then
+            params = args;
+        elseif #args > 0 then
+            for _, v in ipairs(args) do
+                table.insert(params, v);
+            end
+        end
+        
+        func(this, table.unpack(params));
+    end
     
     self:_AddToDoWhenClose(function()
         if not CS.Torappu.Lua.Util.IsDestroyed(obj) then
@@ -168,6 +205,59 @@ function UIBase:_RecordTimer(timer)
         self.m_allTimer = {};
     end
     table.insert(self.m_allTimer, timer);
+end
+
+---打开UI页面
+function UIBase:OpenPage(pageName, openType, options)
+    CS.Torappu.UI.UIPageController.OpenPage(pageName, openType, options)
+end
+
+--- 打开UI页面
+---示例：
+---self:OpenPage1("stage")
+---self:OpenPage(CS.Torappu.UI.UIPageNames.STAGE)
+function UIBase:OpenPage1(pageName)
+    CS.Torappu.UI.UIPageController.OpenPage(pageName)
+end
+
+--- 打开UI页面
+---示例：
+---self:OpenPage2(CS.Torappu.UI.UIPageNames.SHOP, CS.Torappu.UI.UIPageOpenType.SINGLE_INST);
+function UIBase:OpenPage2(pageName, openType)
+    CS.Torappu.UI.UIPageController.OpenPage(pageName, openType)
+end
+
+--- 打开UI页面
+---示例：
+--[[
+local params = CS.Torappu.UI.UIGainItemPage.Params();
+
+local pointItemData = CS.Torappu.UI.UIItemViewModel();
+pointItemData:LoadGameData(self.pointId, CS.Torappu.ItemType.NONE);
+params.itemModels = {pointItemData};
+
+self:OpenPage3(CS.Torappu.UI.UIPageNames.GAIN_ITEM, {
+    args = params
+});
+
+]]
+function UIBase:OpenPage3(pageName, options)
+    CS.Torappu.UI.UIPageController.OpenPage(pageName, options)
+end
+
+--- 由用户类创建一个用户组件，
+--- 参数 comCls 为用户实现的组件类，可实现 Initialize 及 Dispose 接口，分别会在创建及窗口关闭时调用
+---@param comCls 用户组件类
+---@param ... 传入Initialize的参数
+---@return 返回创建好的组件对象
+function UIBase:CreateCustomComponent(comCls, ...)
+    if not self.m_allCustomComponents then
+        self.m_allCustomComponents = {};
+    end
+    local com = comCls.new();
+    com:Initialize(...);
+    table.insert(self.m_allCustomComponents, com);
+    return com;
 end
 
 ---@private call by lualayout
