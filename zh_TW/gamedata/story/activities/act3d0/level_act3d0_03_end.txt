@@ -1,0 +1,74 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第五关（后）
+
+// Comments
+[Background(image="bg_beach", fadetime=1)]
+[PlayMusic(intro="$farce_intro", key="$farce_loop", volume=0.8, crossfade=1.5)]
+[playsound(key="$beach",volume=0.8, channel="beach")]
+[Delay(time=1)]
+[Character]
+[name="保鏢A"]   燙燙燙！焦了焦了！
+[name="保鏢B"]   噫！我的頭髮！
+[name="保鏢A"]   嘖，撤退，撤退！
+[Dialog]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=0.8, block=true)]
+[Character]
+[Blocker(a=0, fadetime=0.8, block=true)]
+[Character(name="char_134_ifrit_summer_1")]
+[name="伊芙利特"]   哈哈哈，果然還是打架有意思啊，博士！
+[name="伊芙利特"]   啊，對了，博士，我這是為了救你，而且也聽你的話沒有下重手了，你可不許告訴赫默我打架的事！
+[name="伊芙利特"]   要是被她知道了我的作業肯定又要變多了！
+[Decision(options="沒問題。;作業你要自己努力。",values="1;2")]
+[Predicate(references="1")]
+[name="伊芙利特"]   嘿嘿，我就知道博士是個好人！
+
+[Predicate(references="2")]
+[name="伊芙利特"]   哼，那我可不管！
+
+[Predicate(references="1;2")]
+[Character(name="char_134_ifrit_summer_1",name2="char_348_ceylon_4#8",focus=2)]
+[name="錫蘭"]   源石驅動的火焰噴射器......而且這個功率，好厲害的術師。
+[Character(name="char_134_ifrit_summer_1",name2="char_348_ceylon_4#8",focus=1)]
+[name="伊芙利特"]   大姐，你的眼光不錯欸，我超厲害的！
+[Character(name="char_134_ifrit_summer_1",name2="char_348_ceylon_4#2",focus=2)]
+[name="錫蘭"]   我叫錫蘭。
+[name="錫蘭"]   謝謝你救了我們。
+[Character(name="char_134_ifrit_summer_1",name2="char_348_ceylon_4#2",focus=1)]
+[name="伊芙利特"]   哦、哦......沒關係。這，這是我該做的。
+[name="伊芙利特"]   喂，博士，這個姐姐好懂禮貌啊，這種時候我該怎麼做來著？
+[Decision(options="微笑。;鞠躬。;跳舞。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_134_ifrit_summer_1")]
+[name="伊芙利特"]   噢，好吧，那我試......
+[name="伊芙利特"]   啊？我忘記我的烤肉還在架子上了！我不跟你們多說了！
+[name="伊芙利特"]   博士，錫蘭，你們之後要是想吃燒烤記得來找我啊！
+[playsound(key="$runsand", volume=0.7)]
+[Dialog]
+[Character(fadetime=1,block=true)]
+[Delay(time=1)]
+[Decision(options="竟然直接就跑開了。",values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_348_ceylon_4#2")]
+[name="錫蘭"]   博士，我們也趕緊回去吧。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_hotel")]
+[stopmusic(fadetime=1)]
+[stopsound(key="$beach",channel="beach",fadetime=1)]
+[Blocker(a=0, fadetime=2, block=false)]
+[Character(name="char_188_helage_1")]
+[name="？？？"]   博士，你們平安無事，很好。
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#5",focus=2)]
+[name="錫蘭"]   十分感謝您的相助，請問......
+[Character(name="char_188_helage_1",name2="char_348_ceylon_4#5",focus=1)]
+[name="赫拉格"]   你可以叫我赫拉格。
+[name="赫拉格"]   和博士一樣，我也來自羅德島。
+[Character(name="char_188_helage_1")]
+[name="赫拉格"]   博士，你現在有時間嗎，有些話我要單獨告訴你。
+
+[Delay(time=0.6)]
+[Dialog]
+[Blocker(block=true)]
+[Image]
