@@ -13,17 +13,14 @@ local function CheckInBlockableRange(self, entity, source, weight, volume)
 		return false
 	end
 
-	weight = (entity.mapPosition - source.mapPosition).sqrMagnitude;
-	return true
+	weight = -entity.hatred
+	return true, weight, volume
 end
 
 function MotionCheckHotfixer:OnInit()
 	xlua.private_accessible(CS.Torappu.Battle.BlemshSleepingFirstSelector)
 	self:Fix_ex(CS.Torappu.Battle.BlemshSleepingFirstSelector, "_CheckEnemyHasAbnormalComboAndInBlockableRange", function(self, entity, source, weight, volume)
-   		local ok, errorInfo = xpcall(CheckInBlockableRange,debug.traceback, self, entity, source, weight, volume)
-    	if not ok then
-      		eutil.LogError("[MotionCheckHotfixer] fix" .. errorInfo)
-	    end
+		return CheckInBlockableRange(self, entity, source, weight, volume)
  	end)
 end
 

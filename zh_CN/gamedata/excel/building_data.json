@@ -7228,6 +7228,118 @@
         }
       ]
     },
+    "char_423_blemsh": {
+      "charId": "char_423_blemsh",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_free[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_346_aosta": {
+      "charId": "char_346_aosta",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost3[110]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_device[030]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_381_bubble": {
+      "charId": "char_381_bubble",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_variable3[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_265_sophia": {
+      "charId": "char_265_sophia",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd[0000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -7842,6 +7954,18 @@
       "roomType": "MANUFACTURE",
       "description": "进驻制造站时，仓库容量上限<@cc.vup>+8</>，心情每小时消耗<@cc.vup>-0.25</>"
     },
+    "manu_prod_limit&cost[010]": {
+      "buffId": "manu_prod_limit&cost[010]",
+      "buffName": "囤积者",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost2",
+      "sortId": 3204,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，仓库容量上限<@cc.vup>+10</>，心情每小时消耗<@cc.vup>-0.25</>"
+    },
     "manu_prod_limit&cost[020]": {
       "buffId": "manu_prod_limit&cost[020]",
       "buffName": "探险者",
@@ -7949,6 +8073,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "进驻制造站时，当前制造站内干员提升的每格仓库容量，提供<@cc.vup>2%</>生产力"
+    },
+    "manu_prod_spd_variable3[000]": {
+      "buffId": "manu_prod_spd_variable3[000]",
+      "buffName": "大就是好！",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_variable31",
+      "sortId": 3204,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，当前制造站内干员根据自身提升的仓库容量提供一定的生产力。提升<@cc.vup>18</>格以下的，每格仓库容量提供<@cc.vup>1%</>生产力；提升大于<@cc.vup>18</>格的，每格仓库容量提供<@cc.vup>3%</>生产力（无法与<@cc.rem>回收利用</>叠加，且优先生效）"
     },
     "manu_prod_spd_variable2[000]": {
       "buffId": "manu_prod_spd_variable2[000]",
@@ -8538,6 +8674,18 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>任意类材料</>时，每<@cc.vup>2</>次加工没有产出副产品，则<@cc.kw>恢复自身一次心情</>，恢复量为<@cc.kw>对应配方所需消耗的心情</>（加工结束后统一结算）"
     },
+    "workshop_formula_cost2[000]": {
+      "buffId": "workshop_formula_cost2[000]",
+      "buffName": "热心修补匠",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost_blemishine",
+      "sortId": 7100,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>精英材料</>时，副产品的产出概率提升<@cc.vup>40%</>，同时心情消耗为<@cc.kw>8</>以上的配方全部<@cc.vup>-4</>心情消耗"
+    },
     "workshop_formula_cost[010]": {
       "buffId": "workshop_formula_cost[010]",
       "buffName": "肆无忌惮",
@@ -8790,6 +8938,18 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>精英材料</>时，宿舍内每有<@cc.kw>1</>名心情低于<@cc.vup>20</>以下的干员，副产品的产出概率提升<@cc.vup>5%</>"
     },
+    "workshop_formula_free[000]": {
+      "buffId": "workshop_formula_free[000]",
+      "buffName": "精打细算",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_free",
+      "sortId": 7501,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>精英材料</>时，减免龙门币消耗"
+    },
     "workshop_formula_probability[200]": {
       "buffId": "workshop_formula_probability[200]",
       "buffName": "工程学",
@@ -8862,12 +9022,36 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>装置</>类材料时，副产品的产出概率提升<@cc.vup>90%</>"
     },
+    "workshop_formula_device[030]": {
+      "buffId": "workshop_formula_device[030]",
+      "buffName": "DIY·聚酸酯",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_polyester",
+      "sortId": 7544,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>聚酸酯</>类材料时，副产品的产出概率提升<@cc.vup>90%</>"
+    },
     "train_spd[000]": {
       "buffId": "train_spd[000]",
       "buffName": "教官",
       "buffIcon": "training",
       "skillIcon": "bskill_train_all",
       "sortId": 9001,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，干员的专精技能训练速度<@cc.vup>+25%</>"
+    },
+    "train_spd[0000]": {
+      "buffId": "train_spd[0000]",
+      "buffName": "教官",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_all",
+      "sortId": 9701,
       "buffColor": "#7d0022",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -21046,6 +21230,466 @@
         "canBeDestroy": true,
         "isOnly": -1
       },
+      "furni_fNearl_cabinet_H_01": {
+        "id": "furni_fNearl_cabinet_H_01",
+        "name": "剑甲收藏柜",
+        "iconId": "furni_fNearl_cabinet_H_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 9,
+        "comfort": 410,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "放置临光家战甲的收藏柜。一整套家传剑甲，现在的使用者是玛利亚。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_calendar_01": {
+        "id": "furni_fNearl_calendar_01",
+        "name": "训练日历",
+        "iconId": "furni_fNearl_calendar_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 2,
+        "comfort": 55,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用于记录训练成果与比赛日期的日历。已经撕掉了数页划满红勾的日历纸。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sofaStool_R_01": {
+        "id": "furni_fNearl_sofaStool_R_01",
+        "name": "沙发凳（圆）",
+        "iconId": "furni_fNearl_sofaStool_R_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "圆形黑色沙发凳。不在棋盘上，皇后只是无意义的木雕。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sofa_M_01": {
+        "id": "furni_fNearl_sofa_M_01",
+        "name": "加长沙发（白）",
+        "iconId": "furni_fNearl_sofa_M_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 300,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "柔软的加长奶白沙发。正好能躺下一位精疲力竭的骑士。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sofa_S_01": {
+        "id": "furni_fNearl_sofa_S_01",
+        "name": "单人沙发（白）",
+        "iconId": "furni_fNearl_sofa_S_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "柔软的奶白沙发。正好能坐下一位担心过度的骑士。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sofaStool_S_01": {
+        "id": "furni_fNearl_sofaStool_S_01",
+        "name": "沙发凳（方）",
+        "iconId": "furni_fNearl_sofaStool_S_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 2,
+        "comfort": 180,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "方形大沙发凳，佐菲娅的披肩还留在凳上。一位骑士执拗地将配套枕头放到了其他沙发上。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_coffeeTable_01": {
+        "id": "furni_fNearl_coffeeTable_01",
+        "name": "简约茶几",
+        "iconId": "furni_fNearl_coffeeTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "玻璃桌面的矮脚茶几。没有国王的棋阵，就不存在将军。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_potted_01": {
+        "id": "furni_fNearl_potted_01",
+        "name": "向日葵花盆",
+        "iconId": "furni_fNearl_potted_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "花店里买来的向日葵。没有人照料，已经开始凋谢了。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_carpet_01": {
+        "id": "furni_fNearl_carpet_01",
+        "name": "毛绒地毯（白）",
+        "iconId": "furni_fNearl_carpet_01",
+        "type": "CARPET",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 10,
+        "height": 1,
+        "comfort": 185,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "刚刚清洁好的毛绒地毯。“清洁”可能指进行洗涤，也有可能指换条全新的。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_wallDecor_01": {
+        "id": "furni_fNearl_wallDecor_01",
+        "name": "承翼库兰塔雕像",
+        "iconId": "furni_fNearl_banner_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 10,
+        "comfort": 270,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "老宅中保留下的艺术品，如同从前一般悬挂在了墙贴上。“不畏苦暗。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_banner_01": {
+        "id": "furni_fNearl_banner_01",
+        "name": "装饰旗帜",
+        "iconId": "furni_fNearl_banner2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "装饰雕像的旗帜。黑暗岂可遮蔽光辉——",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_fNearl_shelf_01": {
+        "id": "furni_fNearl_shelf_01",
+        "name": "大理石高台",
+        "iconId": "furni_fNearl_shelf_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 2,
+        "height": 5,
+        "comfort": 355,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "堆放着大量杂物的石台。未送出的，未阅读的，未完成的。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_branchDecor_01": {
+        "id": "furni_fNearl_branchDecor_01",
+        "name": "“苍白枝干”",
+        "iconId": "furni_fNearl_branchDecor_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 7,
+        "comfort": 165,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "作为装饰品的树干。一颗树的精华被用来制作骑枪，余料则会成为骑士家中的装饰。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_cabinet_L_01": {
+        "id": "furni_fNearl_cabinet_L_01",
+        "name": "古典陈列柜",
+        "iconId": "furni_fNearl_cabinet_L_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 2,
+        "height": 5,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用以放置一些仅存荣誉的陈列柜。某位勤于训练的骑士忘记把盾牌放回收藏柜了。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sink_01": {
+        "id": "furni_fNearl_sink_01",
+        "name": "净手盆",
+        "iconId": "furni_fNearl_sink_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 210,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "放置在门口的昂贵净手盆。骑士归来总要净手——顺便也擦把脸。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_wateringCan_01": {
+        "id": "furni_fNearl_wateringCan_01",
+        "name": "浇水壶",
+        "iconId": "furni_fNearl_wateringCan_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用来浇灌室内植物的细嘴浇水壶。很少使用，水壶里都能种植物了。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_ceilingLight_01": {
+        "id": "furni_fNearl_ceilingLight_01",
+        "name": "玉石吊灯（大）",
+        "iconId": "furni_fNearl_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 150,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "大型多管玉石吊灯，价格实惠。照下的地方会产生许多阴影。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_ceilingLight2_01": {
+        "id": "furni_fNearl_ceilingLight2_01",
+        "name": "玉石吊灯（小）",
+        "iconId": "furni_fNearl_ceilingLight2_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 85,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "小型单管玉石吊灯，价格亲民。总有地方照不亮。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_fNearl_wallpaper_01": {
+        "id": "furni_fNearl_wallpaper_01",
+        "name": "骑士贵族壁纸",
+        "iconId": "furni_fNearl_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "骑士贵族们较为常用的壁纸。比起一间“骑士”房间，玛利亚更希望有自己的工坊。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_floor_01": {
+        "id": "furni_fNearl_floor_01",
+        "name": "骑士贵族地砖",
+        "iconId": "furni_fNearl_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "骑士贵族们较为常用的地砖。佐菲娅只让设计师放手设计，并没考虑过多的东西。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "兔兔捣药机",
@@ -22419,6 +23063,29 @@
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "“这世间万般变化，不离朝阳与暮夜。天平已然偏斜，您的砝码将落向何方？”",
         "obtainApproach": "SV-7突袭模式首次通关掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS009_etudeOp10No12_01": {
+        "id": "furni_dropS009_etudeOp10No12_01",
+        "name": "饰牌《抗争》",
+        "iconId": "furni_dropS009_etudeOp10No12_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "“我已与同胞相聚，为众人共名高唱赞歌。可你能从这可悲的侵略中获得些什么？卡西米尔的土地，永不归你。”",
+        "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -26569,6 +27236,123 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_fNearl": {
+        "id": "furni_set_fNearl",
+        "name": "仿临光家客厅",
+        "desc": "佐菲娅资助玛莉娅建造的客厅。和从前的家还是有所区别。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_fNearl_cabinet_H_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_calendar_01",
+            "pos0": 8,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_fNearl_sofaStool_R_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_fNearl_sofa_M_01",
+            "pos0": 9,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_fNearl_sofa_S_01",
+            "pos0": 9,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_fNearl_sofaStool_S_01",
+            "pos0": 18,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_fNearl_coffeeTable_01",
+            "pos0": 13,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_fNearl_potted_01",
+            "pos0": 20,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_fNearl_carpet_01",
+            "pos0": 8,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_wallDecor_01",
+            "pos0": 13,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_banner_01",
+            "pos0": 11,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_fNearl_banner_01",
+            "pos0": 21,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_fNearl_shelf_01",
+            "pos0": 12,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_fNearl_branchDecor_01",
+            "pos0": 25,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_cabinet_L_01",
+            "pos0": 27,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_sink_01",
+            "pos0": 30,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_fNearl_wateringCan_01",
+            "pos0": 28,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_fNearl_ceilingLight_01",
+            "pos0": 13,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_fNearl_ceilingLight2_01",
+            "pos0": 4,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_fNearl_ceilingLight2_01",
+            "pos0": 26,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_fNearl_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -28120,6 +28904,71 @@
           "furni_midAutumn_floor_01",
           "furni_midAutumn_ceilingLight_01",
           "furni_midAutumn_ceilingLamp_01"
+        ]
+      },
+      "furni_set_fNearl_1": {
+        "id": "furni_set_fNearl_1",
+        "name": "客厅美观陈设",
+        "themeId": "furni_set_fNearl",
+        "comfort": 190,
+        "count": 3,
+        "furniture": [
+          "furni_fNearl_wallDecor_01",
+          "furni_fNearl_shelf_01",
+          "furni_fNearl_banner_01"
+        ]
+      },
+      "furni_set_fNearl_2": {
+        "id": "furni_set_fNearl_2",
+        "name": "客厅休息区",
+        "themeId": "furni_set_fNearl",
+        "comfort": 250,
+        "count": 6,
+        "furniture": [
+          "furni_fNearl_sofa_M_01",
+          "furni_fNearl_sofa_S_01",
+          "furni_fNearl_coffeeTable_01",
+          "furni_fNearl_sofaStool_S_01",
+          "furni_fNearl_potted_01",
+          "furni_fNearl_carpet_01"
+        ]
+      },
+      "furni_set_fNearl_3": {
+        "id": "furni_set_fNearl_3",
+        "name": "骑士的标志",
+        "themeId": "furni_set_fNearl",
+        "comfort": 155,
+        "count": 3,
+        "furniture": [
+          "furni_fNearl_cabinet_H_01",
+          "furni_fNearl_sofaStool_R_01",
+          "furni_fNearl_calendar_01"
+        ]
+      },
+      "furni_set_fNearl_4": {
+        "id": "furni_set_fNearl_4",
+        "name": "客厅休闲区",
+        "themeId": "furni_set_fNearl",
+        "comfort": 175,
+        "count": 4,
+        "furniture": [
+          "furni_fNearl_branchDecor_01",
+          "furni_fNearl_cabinet_L_01",
+          "furni_fNearl_sink_01",
+          "furni_fNearl_wateringCan_01"
+        ]
+      },
+      "furni_set_fNearl_5": {
+        "id": "furni_set_fNearl_5",
+        "name": "骑士风装潢",
+        "themeId": "furni_set_fNearl",
+        "comfort": 160,
+        "count": 4,
+        "furniture": [
+          "furni_fNearl_wallpaper_01",
+          "furni_fNearl_floor_01",
+          "furni_fNearl_ceilingLight_01",
+          "furni_fNearl_ceilingLight2_01"
         ]
       }
     },
