@@ -6244,6 +6244,68 @@
         }
       ]
     },
+    "char_250_phatom": {
+      "charId": "char_250_phatom",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[080]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession[180]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_113_cqbw": {
+      "charId": "char_113_cqbw",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[040]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[441]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_cost&profession[040]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_197_poca": {
       "charId": "char_197_poca",
       "maxManpower": 8640000,
@@ -6354,6 +6416,116 @@
           "buffData": [
             {
               "buffId": "dorm_rec_all[012]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_358_lisa": {
+      "charId": "char_358_lisa",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[060]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession[160]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_294_ayer": {
+      "charId": "char_294_ayer",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "meet_spd[001]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_345_folnic": {
+      "charId": "char_345_folnic",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_probability[120]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost3[100]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_328_cammou": {
+      "charId": "char_328_cammou",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_limit[000]",
               "cond": {
                 "phase": 1,
                 "level": 1
@@ -6796,6 +6968,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+8</> and Morale consumed per hour <@cc.vup>-0.25</>"
+    },
+    "manu_formula_cost[000]": {
+      "buffId": "manu_formula_cost[000]",
+      "buffName": "vlog",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp&cost",
+      "sortId": 3101,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, the Morale consumed when producing <@cc.kw>Battle Records</> is reduced by <@cc.vup>-0.25</>"
+    },
+    "manu_formula_limit[000]": {
+      "buffId": "manu_formula_limit[000]",
+      "buffName": "Film Editing",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp&limit",
+      "sortId": 3403,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, capacity limit is increased by <@cc.vup>+12</> when producing <@cc.kw>Battle Records</>"
     },
     "manu_prod_spd&limit&cost[000]": {
       "buffId": "manu_prod_spd&limit&cost[000]",
@@ -7349,6 +7545,18 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the Morale consumed by all corresponding formulas by <@cc.vdown>+2</>"
     },
+    "workshop_formula_cost3[100]": {
+      "buffId": "workshop_formula_cost3[100]",
+      "buffName": "Meticulous",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_cost",
+      "sortId": 7512,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, reduces the Morale consumed by all corresponding formulas that cost <@cc.kw>2</> Morale by <@cc.vup>-1</>"
+    },
     "workshop_formula_cost3[111]": {
       "buffId": "workshop_formula_cost3[111]",
       "buffName": "Pragmatic Minimalism",
@@ -7685,6 +7893,18 @@
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>"
     },
+    "train_spd&profession2[040]": {
+      "buffId": "train_spd&profession2[040]",
+      "buffName": "Sniper Expert α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_sniper1",
+      "sortId": 9501,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>"
+    },
     "train_spd&profession[041]": {
       "buffId": "train_spd&profession[041]",
       "buffName": "Sniper Expert β",
@@ -7817,6 +8037,18 @@
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+60%</>"
     },
+    "train_spd&profession[160]": {
+      "buffId": "train_spd&profession[160]",
+      "buffName": "Resonance",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_supporter3",
+      "sortId": 9321,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Supporter</> Operators' Specialization training speed <@cc.vup>+60%</>"
+    },
     "train_spd&profession[170]": {
       "buffId": "train_spd&profession[170]",
       "buffName": "Surgical Precision",
@@ -7828,6 +8060,42 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Medic</> Operators' Specialization training speed <@cc.vup>+60%</>"
+    },
+    "train_spd&profession[180]": {
+      "buffId": "train_spd&profession[180]",
+      "buffName": "Masked Phantom",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_specialist3",
+      "sortId": 9121,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Specialist</> Operators' Specialization training speed <@cc.vup>+60%</>"
+    },
+    "train_spd&profession2[441]": {
+      "buffId": "train_spd&profession2[441]",
+      "buffName": "Patience",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train3_sniper2",
+      "sortId": 9532,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>; if training this skill to Specialization Level <@cc.vup>3</>, training speed will be further increased to <@cc.vup>+65%</>"
+    },
+    "train_cost&profession[040]": {
+      "buffId": "train_cost&profession[040]",
+      "buffName": "Insipid",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_w",
+      "sortId": 9532,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour is decreased by <@cc.vdown>+1</> when training a <@cc.kw>Sniper</> Operator’s skill to Specialization Level <@cc.vup>3</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -16818,6 +17086,420 @@
         "canBeDestroy": true,
         "isOnly": -1
       },
+      "furni_nightView_recordPlayer_01": {
+        "id": "furni_nightView_recordPlayer_01",
+        "name": "Antique Phonograph",
+        "iconId": "furni_nightView_recordPlayer_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 175,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A record player placed upon a tall, Leithanien-style table. Every soul in Leithania is nourished by this unmatched melody.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_sofa_01": {
+        "id": "furni_nightView_sofa_01",
+        "name": "Extra-Long White Sofa",
+        "iconId": "furni_nightView_sofa_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 3,
+        "height": 3,
+        "comfort": 405,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A comfortable, extra-long sofa. The use of colors that directly clash with that of the instruments inadvertently distinguishes the musicians from the audience.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_carpet_01": {
+        "id": "furni_nightView_carpet_01",
+        "name": "Handmade Leithanien Carpet",
+        "iconId": "furni_nightView_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 10,
+        "height": 1,
+        "comfort": 205,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An expensive handmade carpet, but probably only costs a fraction of what the instruments do.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_cello_01": {
+        "id": "furni_nightView_cello_01",
+        "name": "Monochromatic Cello",
+        "iconId": "furni_nightView_cello_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 210,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A cello hand-crafted by a Leithanien luthier. A truly excellent cello can conquer the musician the instant the bow touches the strings.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_celloChair_01": {
+        "id": "furni_nightView_celloChair_01",
+        "name": "Accompanist's Chair",
+        "iconId": "furni_nightView_celloChair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 4,
+        "height": 4,
+        "comfort": 230,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A chair for cello players. An effective chair can greatly prolong the career of a musician and make them suffer less from chronic pain - or so the advertisement says.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_framed_01": {
+        "id": "furni_nightView_framed_01",
+        "name": "\"Love and Sunflowers\"",
+        "iconId": "furni_nightView_framed_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 3,
+        "comfort": 90,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A famous painting of Leithania, though this particular one is a reproduction. True beauty lies in the imagination.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_bottles_01": {
+        "id": "furni_nightView_bottles_01",
+        "name": "Leithanien Beverage",
+        "iconId": "furni_nightView_bottles_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 140,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A refreshing drink popular among Leithaniens. Though the primary purpose of these drinks is to refresh and reinvigorate, imbibing too much is said to cause certain side effects…",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_books_01": {
+        "id": "furni_nightView_books_01",
+        "name": "Pile of Miscellaneous Books",
+        "iconId": "furni_nightView_books_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 4,
+        "height": 3,
+        "comfort": 225,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A pile of Leithanien books that haven't yet been sorted out. Leithaniens gladly absorb whatever is written within books, even if not all of it is necessarily knowledge.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_studyTable_01": {
+        "id": "furni_nightView_studyTable_01",
+        "name": "All-in-One Bookshelf",
+        "iconId": "furni_nightView_studyTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 2,
+        "height": 8,
+        "comfort": 345,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A desk integrated with a closet. The satisfaction that one gets from gazing up at the pristine collection is almost indescribable.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_globe_01": {
+        "id": "furni_nightView_globe_01",
+        "name": "\"Globe of Balance\"",
+        "iconId": "furni_nightView_globe_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 155,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A medium-sized occult object placed in the home of those who believe in shamanism. Through endless rotation, inner peace is achieved.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_bed_01": {
+        "id": "furni_nightView_bed_01",
+        "name": "Four-Poster Bed",
+        "iconId": "furni_nightView_bed_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 5,
+        "height": 4,
+        "comfort": 520,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A four-poster bed unique to Leithania. Incense burners can be placed upon it during ceremonies, or just for aromatherapy.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_curtain_L_01": {
+        "id": "furni_nightView_curtain_L_01",
+        "name": "Thick Curtains (Left)",
+        "iconId": "furni_nightView_curtain_L_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 10,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Heavy curtains thick enough to have a sound-cancellation effect. When pulled back, the city at night is fully visible beneath you.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_curtain_R_01": {
+        "id": "furni_nightView_curtain_R_01",
+        "name": "Thick Curtains (Right)",
+        "iconId": "furni_nightView_curtain_R_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 10,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Heavy curtains that can block the light. When pulled down, they ensure that your privacy remains undisturbed.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_ceilingLight1_01": {
+        "id": "furni_nightView_ceilingLight1_01",
+        "name": "Grand Six-Candle Chandelier",
+        "iconId": "furni_nightView_ceilingLight1_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 6,
+        "height": 3,
+        "comfort": 245,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Luxurious chandeliers capable of illuminating the entire room. This complex Leithanien furniture requires specific gestures or voice activation.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_ceilingLight2_01": {
+        "id": "furni_nightView_ceilingLight2_01",
+        "name": "Four-Candle Chandelier",
+        "iconId": "furni_nightView_ceilingLight2_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 110,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A simple chandelier inserted with special Originium candles. Easy to control, and can be turned on or off by clapping your hands.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_nightView_wallpaper_01": {
+        "id": "furni_nightView_wallpaper_01",
+        "name": "Panoramic Display (Leithanien Nights)",
+        "iconId": "furni_nightView_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A display showing the night view overlooking Leithania. The window frame portion cannot be removed, and the panoramic projection of the night scenery makes it difficult to tell where you are.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_nightView_floor_01": {
+        "id": "furni_nightView_floor_01",
+        "name": "Leithanien Wood Floorboards",
+        "iconId": "furni_nightView_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Floorboards made from local Leithanien lumber. Fine arts, music, and Originium Arts are the immutable gems of Leithania.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_duanwu_lazysofa_01": {
+        "id": "furni_duanwu_lazysofa_01",
+        "name": "Zongzi Beanie Bag",
+        "iconId": "furni_duanwu_lazysofa_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 180,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A bean bag sofa in the shape of a traditional Yen delicacy. Is often frequented by a certain high-profile visitor from Yen who refuses to separate from it.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_act10d5_sideboard_01": {
         "id": "furni_act10d5_sideboard_01",
         "name": "Ursus Tableware Cabinet",
@@ -17938,6 +18620,29 @@
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "\"Everything in the world changes, like day and night turning on an axis. The balance of the cosmos has been skewed, so where will your weight fall?\"",
         "obtainApproach": "Dropped from the first clear reward of Challenge Mode SV-7",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS009_nocturnesOp9_01": {
+        "id": "furni_dropS009_nocturnesOp9_01",
+        "name": "Plaque - Tranquil",
+        "iconId": "furni_dropS009_nocturnesOp9_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "\"The candle's light burns dimly on a silent night. The cold and hunger have finally left him. How beautiful this dream is… Goodbye, my friend.\"",
+        "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -21099,6 +21804,103 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_nightView": {
+        "id": "furni_set_nightView",
+        "name": "Leithanien Nights",
+        "desc": "A room that reproduces the nightlife of Leithania. After the curtain of night falls, music rises to accompany it.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_nightView_recordPlayer_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_nightView_sofa_01",
+            "pos0": 2,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_nightView_carpet_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_nightView_cello_01",
+            "pos0": 7,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_nightView_celloChair_01",
+            "pos0": 10,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_nightView_framed_01",
+            "pos0": 4,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_nightView_bottles_01",
+            "pos0": 12,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_nightView_books_01",
+            "pos0": 15,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_nightView_studyTable_01",
+            "pos0": 18,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_nightView_globe_01",
+            "pos0": 24,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_nightView_bed_01",
+            "pos0": 26,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_nightView_curtain_L_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_nightView_curtain_R_01",
+            "pos0": 30,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_nightView_ceilingLight1_01",
+            "pos0": 13,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_nightView_ceilingLight2_01",
+            "pos0": 4,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_nightView_ceilingLight2_01",
+            "pos0": 27,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_nightView_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_nightView_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -22281,6 +23083,59 @@
         "furniture": [
           "furni_community_wallpaper_01",
           "furni_community_floor_01"
+        ]
+      },
+      "furni_set_nightView_1": {
+        "id": "furni_set_nightView_1",
+        "name": "The Joy of Music",
+        "themeId": "furni_set_nightView",
+        "comfort": 190,
+        "count": 4,
+        "furniture": [
+          "furni_nightView_recordPlayer_01",
+          "furni_nightView_cello_01",
+          "furni_nightView_celloChair_01",
+          "furni_nightView_carpet_01"
+        ]
+      },
+      "furni_set_nightView_2": {
+        "id": "furni_set_nightView_2",
+        "name": "The Love for Learning",
+        "themeId": "furni_set_nightView",
+        "comfort": 200,
+        "count": 4,
+        "furniture": [
+          "furni_nightView_studyTable_01",
+          "furni_nightView_globe_01",
+          "furni_nightView_books_01",
+          "furni_nightView_bottles_01"
+        ]
+      },
+      "furni_set_nightView_3": {
+        "id": "furni_set_nightView_3",
+        "name": "The Pleasure of Relaxation",
+        "themeId": "furni_set_nightView",
+        "comfort": 350,
+        "count": 5,
+        "furniture": [
+          "furni_nightView_bed_01",
+          "furni_nightView_sofa_01",
+          "furni_nightView_framed_01",
+          "furni_nightView_curtain_L_01",
+          "furni_nightView_curtain_R_01"
+        ]
+      },
+      "furni_set_nightView_4": {
+        "id": "furni_set_nightView_4",
+        "name": "The Beauty of Night",
+        "themeId": "furni_set_nightView",
+        "comfort": 215,
+        "count": 4,
+        "furniture": [
+          "furni_nightView_wallpaper_01",
+          "furni_nightView_floor_01",
+          "furni_nightView_ceilingLight1_01",
+          "furni_nightView_ceilingLight2_01"
         ]
       }
     },
