@@ -5524,6 +5524,34 @@
         }
       ]
     },
+    "char_260_durnar": {
+      "charId": "char_260_durnar",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost[002]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_248_mgllan": {
       "charId": "char_248_mgllan",
       "maxManpower": 8640000,
@@ -5634,6 +5662,61 @@
           ]
         }
       ]
+    },
+    "char_275_breeze": {
+      "charId": "char_275_breeze",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd&team[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "meet_spd&team[071]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_355_ethan": {
+      "charId": "char_355_ethan",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_oneself[030]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -5673,6 +5756,17 @@
     "control_mp_cost[001]": {
       "buffId": "control_mp_cost[001]",
       "buffName": "S.W.E.E.P.",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "進駐控制中樞時，控制中樞內所有幹員的心情每小時消耗<@cc.vup>-0.05</>"
+    },
+    "control_mp_cost[002]": {
+      "buffId": "control_mp_cost[002]",
+      "buffName": "零食網路",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost",
       "buffColor": "#005752",
@@ -6704,6 +6798,17 @@
       "roomType": "DORMITORY",
       "description": "進駐宿舍時，自身心情每小時恢復<@cc.vup>+1</>"
     },
+    "dorm_rec_oneself[030]": {
+      "buffId": "dorm_rec_oneself[030]",
+      "buffName": "隱形的美食家",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_one",
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "進駐宿舍時，自身心情每小時恢復<@cc.vup>+0.75</>"
+    },
     "dorm_rec_single[000]": {
       "buffId": "dorm_rec_single[000]",
       "buffName": "醫療服務",
@@ -7001,6 +7106,17 @@
       "roomType": "HIRE",
       "description": "進駐人力辦公室時，人脈資源的累積速度<@cc.vup>+40%</>"
     },
+    "hire_spd[030]": {
+      "buffId": "hire_spd[030]",
+      "buffName": "WRITER",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd",
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "進駐人力辦公室時，人脈資源的累積速度<@cc.vup>+40%</>"
+    },
     "meet_spd[000]": {
       "buffId": "meet_spd[000]",
       "buffName": "線索蒐集·α",
@@ -7114,6 +7230,17 @@
     "meet_spd&team[070]": {
       "buffId": "meet_spd&team[070]",
       "buffName": "傳訊者",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_glasgow",
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "進駐會客室時，線索蒐集速度提升<@cc.vup>10%</>，且更容易獲得<@cc.kw>格拉斯哥幫</>線索"
+    },
+    "meet_spd&team[071]": {
+      "buffId": "meet_spd&team[071]",
+      "buffName": "沒落貴族",
       "buffIcon": "meeting",
       "skillIcon": "bskill_meet_glasgow",
       "buffColor": "#dd653f",
@@ -12713,6 +12840,292 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_spirit_tree_01": {
+        "id": "furni_spirit_tree_01",
+        "name": "異樣寢床",
+        "iconId": "furni_spirit_tree_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 5,
+        "height": 10,
+        "comfort": 1020,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "伴著異樣裝飾的石棺，生者勿眠。“你睜開雙眼，世間相貌已變。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 548,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_window_01": {
+        "id": "furni_spirit_window_01",
+        "name": "鎖夜石窗",
+        "iconId": "furni_spirit_window_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 6,
+        "comfort": 175,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "胡亂釘上木板的石窗。“封死窗戶，暮色自隙間潛入閉室。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 145,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_pumpkin_01": {
+        "id": "furni_spirit_pumpkin_01",
+        "name": "數個儀瓜",
+        "iconId": "furni_spirit_pumpkin_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 2,
+        "comfort": 230,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "幾個堆放在一起的儀瓜。“儀瓜當能抵禦安寧，而恐懼自當由安寧滋生。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 173,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_pumpkin2_01": {
+        "id": "furni_spirit_pumpkin2_01",
+        "name": "更多儀瓜",
+        "iconId": "furni_spirit_pumpkin2_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "大量堆放在一起的儀瓜。“你將儀瓜點燃，期待以它熄滅心火。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 120,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_fireplace_01": {
+        "id": "furni_spirit_fireplace_01",
+        "name": "起儀壁爐",
+        "iconId": "furni_spirit_fireplace_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 4,
+        "height": 6,
+        "comfort": 475,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "放滿貢品儀瓜的壁爐。“你奉獻奇珍，期待啟明靈識；災厄浮現，恰如你所乞求。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 323,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_book_01": {
+        "id": "furni_spirit_book_01",
+        "name": "塑憶書群",
+        "iconId": "furni_spirit_book_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 3,
+        "height": 2,
+        "comfort": 175,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "成堆的密文書。“你每閱一字，過往都得重塑，未來將浮於腦海，而你當為其中囚徒。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 145,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_crucible_01": {
+        "id": "furni_spirit_crucible_01",
+        "name": "鑄蜜坩堝",
+        "iconId": "furni_spirit_crucible_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 5,
+        "comfort": 310,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "裝滿糖果的坩堝。“你走入密林，摘下紅果，在它深邃的胸膛裡熬煮已遭禁止的甜蜜。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 210,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_table_01": {
+        "id": "furni_spirit_table_01",
+        "name": "碎序書桌",
+        "iconId": "furni_spirit_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 4,
+        "height": 8,
+        "comfort": 450,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "滿是資料與筆記的書桌。“你的學識從筆尖流下，化作未解謎團縈繞心頭。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 305,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_chair_01": {
+        "id": "furni_spirit_chair_01",
+        "name": "典雅木椅",
+        "iconId": "furni_spirit_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 50,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "一把典雅的木椅。“你的思維紛飛如絮，由撲火螢蛾肆意攫取，做繭成蠶。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 43,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_ceilingLight_01": {
+        "id": "furni_spirit_ceilingLight_01",
+        "name": "輔儀吊燈",
+        "iconId": "furni_spirit_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 6,
+        "height": 4,
+        "comfort": 205,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "一盞古舊的鐵質吊燈。“你的心智已去，燭火燃起，陰影徘徊其間。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 155,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_carpet_01": {
+        "id": "furni_spirit_carpet_01",
+        "name": "平凡草席",
+        "iconId": "furni_spirit_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 10,
+        "height": 1,
+        "comfort": 200,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "由獨特雜草編製的地毯。“你，思考，停止，夙願，完成，必須。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 165,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_wallpaper_01": {
+        "id": "furni_spirit_wallpaper_01",
+        "name": "破敗居室",
+        "iconId": "furni_spirit_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "崩毀前夕的居室牆壁，實為不存人世的景象。“你的世界分崩離析，帷幕升起，喚出晚夜空星。換言之就是電子螢幕。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 180,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
+      "furni_spirit_floor_01": {
+        "id": "furni_spirit_floor_01",
+        "name": "積歲磚石",
+        "iconId": "furni_spirit_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "佈滿灰塵的石磚。“你步履蹣跚，背負重壓，一如橫遭踐踏的碌碌頑石。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 180,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true
+      },
       "furni_obsidianFestival_DJBooth_01": {
         "id": "furni_obsidianFestival_DJBooth_01",
         "name": "“極限”混音設備",
@@ -15660,6 +16073,78 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_spirit": {
+        "id": "furni_set_spirit",
+        "name": "魂靈秘會",
+        "desc": "用這些裝飾將艙室裝扮成特別的樣子。連行巫秘會都認可的裝飾風格。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_spirit_tree_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_spirit_window_01",
+            "pos0": 5,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_spirit_pumpkin_01",
+            "pos0": 13,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_spirit_pumpkin2_01",
+            "pos0": 2,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_spirit_fireplace_01",
+            "pos0": 13,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_spirit_book_01",
+            "pos0": 21,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_spirit_crucible_01",
+            "pos0": 23,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_spirit_table_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_spirit_chair_01",
+            "pos0": 29,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_spirit_ceilingLight_01",
+            "pos0": 14,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_spirit_carpet_01",
+            "pos0": 19,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_spirit_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_spirit_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -16472,6 +16957,55 @@
           "furni_safetyZone_downlight_01",
           "furni_safetyZone_wallpaper_01",
           "furni_safetyZone_floor_01"
+        ]
+      },
+      "furni_set_spirit_1": {
+        "id": "furni_set_spirit_1",
+        "name": "安睡之塌",
+        "themeId": "furni_set_spirit",
+        "comfort": 310,
+        "count": 3,
+        "furniture": [
+          "furni_spirit_tree_01",
+          "furni_spirit_pumpkin2_01",
+          "furni_spirit_window_01"
+        ]
+      },
+      "furni_set_spirit_2": {
+        "id": "furni_set_spirit_2",
+        "name": "通密之儀",
+        "themeId": "furni_set_spirit",
+        "comfort": 220,
+        "count": 3,
+        "furniture": [
+          "furni_spirit_fireplace_01",
+          "furni_spirit_pumpkin_01",
+          "furni_spirit_ceilingLight_01"
+        ]
+      },
+      "furni_set_spirit_3": {
+        "id": "furni_set_spirit_3",
+        "name": "尋識之途",
+        "themeId": "furni_set_spirit",
+        "comfort": 225,
+        "count": 4,
+        "furniture": [
+          "furni_spirit_table_01",
+          "furni_spirit_chair_01",
+          "furni_spirit_crucible_01",
+          "furni_spirit_book_01"
+        ]
+      },
+      "furni_set_spirit_4": {
+        "id": "furni_set_spirit_4",
+        "name": "他界之貌",
+        "themeId": "furni_set_spirit",
+        "comfort": 130,
+        "count": 3,
+        "furniture": [
+          "furni_spirit_wallpaper_01",
+          "furni_spirit_floor_01",
+          "furni_spirit_carpet_01"
         ]
       }
     },
