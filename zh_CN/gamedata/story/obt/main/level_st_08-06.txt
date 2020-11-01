@@ -1,0 +1,1277 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_topruins",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+[playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_8_16",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  糟糕，阿米娅！！
+[Character(name="char_010_chen_1")]
+[name="陈"]  啊......！怎么回事，阿米娅？！
+[Decision(options="发生什么了！;怎么会......;凯尔希，想想办法！", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ......过来，Dr.{@nickname}。
+[name="凯尔希"]  接下来我要做的这件事，你不可以告诉任何人。
+[name="凯尔希"]  龙门的陈长官！
+[Character(name="char_010_chen_1")]
+[name="陈"]  不再是了。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  那就请你帮我看住那边那条龙。之后我们会立刻对她进行收监。你有任何问题吗？
+[Character(name="char_010_chen_1")]
+[name="陈"]  先照顾阿米娅吧。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  好。博士，把手伸出来。
+[Decision(options="好！;（伸出手）;我就算退后你也会拽住我对不对？",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凯尔希"]  哎。不会痛，但是，不要问。
+[name="凯尔希"]  我会将这根注射器刺进你的手臂，抽你一点血。其他的不要问。
+[name="凯尔希"]  就当为了你自己好。
+[Decision(options="这是......", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  不要问。
+[Dialog]
+[Character]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+她说的对，的确没有什么感觉。
+凯尔希将你新鲜的血液装进了腰间的仪器，数秒后，她将淡青色的成品输送进了阿米娅的脖颈。
+阿米娅的呼吸渐趋平稳。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Decision(options="怎么回事？！", values="1")]
+[Predicate(references="1")]
+[Character]
+[name="阿米娅"]  ......唔......！
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  起作用了。阿米娅......醒醒。
+[Character]
+[name="阿米娅"]  啊......特蕾西娅小......小姐......？
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ......不，我不是。是我，阿米娅。
+[Dialog]
+[Character]
+[Character(name="char_002_amiya_1",fadetime=1,block=true)]
+[delay(time=1.4)]
+[name="阿米娅"]  凯尔希医生......我......
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  没事的，阿米娅。不要强迫自己说话。我们该准备离开了。已经没事了。
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  嗯。
+[name="阿米娅"]  ......嗯......
+[name="阿米娅"]  呜......
+[name="阿米娅"]  呜......啊......呜呜......
+[Decision(options="你怎么哭了？;阿米娅......;（默默地陪在阿米娅身旁）", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="阿米娅"]  呜......博士......呜......哇......
+[Decision(options="......没事了，阿米娅。", values="1")]
+[Predicate(references="1")]
+[Decision(options="战斗已经结束了。", values="1")]
+[Predicate(references="1")]
+[name="阿米娅"]  嗯......嗯......
+[name="阿米娅"]  嗯。
+[name="阿米娅"]  ......眼泪......博士，我忍到最后了......我......答应好的......我......我也......
+[name="阿米娅"]  ......博士......博士......
+[name="阿米娅"]  ......Dr.{@nickname}......
+[Dialog]
+[Character]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  陈，马上我们的飞行器会在指挥塔降落。我们一起离开，带上塔露拉。
+[Character(name="char_010_chen_1")]
+[name="陈"]  你真的要这么做？我甚至......还没想好要怎么处置她。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  我们需要塔露拉。罗德岛必须先于其他人得到她。
+[Decision(options="那会给我们带来麻烦！;......;你再怎么语出惊人也不会吓到我了。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凯尔希"]  你是不是害怕这会给我们带来杀身之祸？
+[name="凯尔希"]  不必担心，Dr.{@nickname}。在决定参与这件事时，我们就已经濒临毁灭了。
+[name="凯尔希"]  两把利剑悬在我们头顶，这两把剑，一把握在龙门手里，另一把则握在乌萨斯第三集团军手里。
+[name="凯尔希"]  ......停下了切尔诺伯格核心城，参与了龙门攻防战，知晓内幕，光这三条就足够他们暗中毁灭罗德岛十数次。
+[name="凯尔希"]  如果龙门想要攻击我们，第三集团军会怎么做？
+[name="凯尔希"]  他们会袖手旁观。
+[name="凯尔希"]  这些披着制服的刽子手会看着我们这艘舰船在荒野上燃烧殆尽，他们的一块心病随之而去。
+[name="凯尔希"]  反之亦然：一家并未于龙门注册，不受龙门保护的私人企业，因遭到不明势力的武装袭击而在某处土崩瓦解。
+[name="凯尔希"]  这与龙门何干，又与大炎何干呢？
+[name="凯尔希"]  除非我们扣留塔露拉。
+[name="凯尔希"]  无论谁想对罗德岛出手，都要考虑一下，是否要在现在向他们的对手发出一个信号：“我想要夺取关键的证据，塔露拉。”
+[name="凯尔希"]  “我想通过这个证据来建立优势，抹除劣势。”
+[name="凯尔希"]  我们唯一的生机在于他们各自的运作模式。
+[name="凯尔希"]  罗德岛应该庆幸......庆幸龙门的巨贾们和乌萨斯的旧贵族在百年内尚没有任何握手言和的可能性。
+[name="凯尔希"]  他们会因为塔露拉在我们手上而相互钳制，谁也不会轻易出手。
+[name="凯尔希"]  与其冒风险夺走这个于敌于己都十分关键的证据，不如保持距离。保证自己和自己的对手都与这证据保持一定的距离。
+[name="凯尔希"]  对于第三集团军和龙门而言，一着不慎就是穷途末路。他们毕竟不能代表自己的国家。
+[name="凯尔希"]  ......第三集团军尝试这么做了，他们会为自己冒进的错误付出代价。代价已经够高了。这样的赌注对于每个阵营而言都太大了。
+[name="凯尔希"]  所以，我们要试着逼迫他们。我们要让他们自互相的对手的威胁中保护我们。
+[name="凯尔希"]  塔露拉对于罗德岛至关重要。至少现在，她至关重要。
+[name="凯尔希"]  这些还活着的聪明人会找到那个平衡点的。这艘羁押着塔露拉的罗德岛应该主动选择成为这个平衡点......
+[name="凯尔希"]  直到这件事情不再重要。或者说，直到他们被卷进下一场风暴。
+[Decision(options="我说不动你。;......;你早就有这个打算是不是？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凯尔希"]  呵......
+[name="凯尔希"]  飞行器已经来了。走吧，我们先把阿米娅和塔露拉送上去。
+[name="凯尔希"]  我和你坐第二架。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_053")]
+[name="萨卡兹雇佣兵"]  再打下去也没意义了。那些游击队的家伙们会要了我们的命。
+[name="萨卡兹雇佣兵"]  撤退！撤出这座城市。我们输了！我们打了场没意义的仗。
+[Character(name="avg_npc_046#2")]
+[name="W"]  谁说没有？
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=2)]
+[name="萨卡兹雇佣兵"]  你还活着......？
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=1)]
+[name="W"]  那么容易死的话，就不配让你们跟我走了。
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=2)]
+[name="萨卡兹雇佣兵"]  理由。给个我们把你当老大的理由。
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=1)]
+[name="W"]  哈，你没意识到一件事吗？你自由了，傻大个。
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=2)]
+[name="萨卡兹雇佣兵"]  ......什么？自由？什么东西？
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=1)]
+[name="W"]  现在你们已经不再是谁的杀手了。我也不是你的头儿，我只是邀请你们和我一起走。
+[name="W"]  不用再为了谁去杀谁，为自己打仗吧！哦，当然，谁要是为了兴趣屠杀取乐，我第一个把他的肋骨从胸里炸出来。
+[name="W"]  当然，我要说的是，我们用不着再跟着任何只是想着利用我们的刀和弩的人走了。他们不想我们活着，他们只想我们在死前带去更多的死。
+[name="W"]  但我！我不一样。我觉得，钱是个好东西。他们给我们的很多。
+[name="W"]  但我们活着，我们挣得更多，而不是把那些他们许诺好的财富丢在其他人的坟头上面等着风干。
+[name="W"]  看到瞧不起我们的就干掉。看到不顺眼的也干掉。看到那些想害我们的也干掉。我们把他们全部干掉。
+[name="W"]  不为了谁。不为了整合运动，也不为了什么整个魔族。
+[name="W"]  我们自己去挣我们这条命。你就是想去学个炎国的围棋都不要紧，你爱怎么样怎么样。
+[name="W"]  走不走？
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=2)]
+[name="萨卡兹雇佣兵"]  ......反正我们也没地方可去。
+[name="萨卡兹雇佣兵"]  就听你的。但是，别耍花样，W。
+[Character(name="avg_npc_046#5")]
+[name="W"]  那不行，兄弟。我得耍很多很多花样。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=2)]
+[name="极境"] 结束了吗？
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="霍克"] 太好了，这一次也不用扮成别人的朋友去把他们害死，这也就算是好事了。
+[name="霍克"] 没想到，在原本作战计划里本来是要搅乱他们......
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"] 谢谢你，兄弟！打得好！快离开这里吧！
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="霍克"] （乌萨斯语）没事儿！
+[name="霍克"] ......现在我们成了他们的助手。
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=2)]
+[name="极境"] 霍克，回去以后要一起喝杯咖啡吗？我可以和你讲讲上次我们在哥伦比亚的行动......
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="霍克"] 那次我和你在一个小队。
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=2)]
+[name="极境"] 这样来着？
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="霍克"] 你从来不记得小队的队友吗？
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=2)]
+[name="极境"] 因为每次我们都不是在作为罗德岛的小队活动的嘛。
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="霍克"] 那这次......我们可能真的光彩地做了件好事。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_topout",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_058")]
+[name="盾卫"]  等等，小猫，那是你们的飞行器吗？那是做什么的？
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  啊，那应该是......
+[name="迷迭香"]  叔叔，我们要带走塔露拉。啊，它飞走了......我们已经带走她了。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾卫"]  ......什么？你们，你们带走了塔露拉？
+[name="盾卫"]  不。罗德岛没有这么做的权力！！
+[name="盾卫"]  我们要审判她！她不能这么一走了之！！
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  不行......不行。
+[name="迷迭香"]  因为你们想报仇，所以你们没有资格。
+[name="迷迭香"]  我们没资格审判她。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾卫"]  但你们把她夺走了。你夺走了我们处死她的机会！
+[name="盾卫"]  小猫，现学现卖可不对......
+[name="盾卫"]  仇恨在我们的血管里流淌，这整合运动和感染者同胞无数的被她害死的人的仇恨让我们浑身发热，所以我们才有资格审判她。
+[name="盾卫"]  其他人不行。不可能。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  那你们会公正地判决吗？
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾卫"]  我们就是公正。塔露拉逃不出我们的手心。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  这样好了，叔叔。我可以向你们发誓。我们绝对不会把塔露拉交给任何其他人，除了你们和整合运动。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾卫"]  你们要她做什么？
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  我也不知道。但我可以发誓。
+[name="迷迭香"]  因为我也相信我们做的是对的。
+[name="迷迭香"]  如果需要的话，就现在杀了我。我相信罗德岛做的，我可以和她换。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾卫"]  ......说什么！你不可以再这么说。
+[name="盾卫"]  哎，小猫，你对罗德岛的忠诚，和我们有什么区别呢？我信你。你以后会是个光荣的战士。
+[name="盾卫"]  走吧！看在你的份上，就相信你们罗德岛一回。
+[name="盾卫"]  但是，记住，无论是塔露拉，还是那个魔王......哪怕一次，只要有一次让我们知道你们在为非作歹......
+[name="盾卫"]  只要你们给这大地上受到压迫和统治的人带去了更多苦痛，我们就会立刻找到你们，攻击你们，杀死你们。
+[name="盾卫"]  尤其是塔露拉。别让我看见你们用她做了什么坏事。
+[name="盾卫"]  我们会把她们的头挂在城市最高的地方祭奠大尉，祭奠孤独地死在这里的伟大战士。
+[name="盾卫"]  他本不该是这种结局。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  不会发生那种事的。因为罗德岛不会这么做。而且，他们要这么做，我就不让他们这么做。
+[name="迷迭香"]  以后......我会成为你们说的那个，能认出别人是好人还是坏人的人。
+[name="迷迭香"]  没人该再失去亲人了，如果这是好事的话，我会去做。我会审判。
+[name="迷迭香"]  我觉得我快有一把自己的尺子了。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾卫"]  我们相信你。我们相信你的誓言，小猫！你年龄还小，却比那些直不起身子的成年人还要有担当得多。
+[name="盾卫"]  我们同意了，因为你在，所以我们暂时不会去摧毁罗德岛。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  打勾勾吗？
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾卫"]  啊？哈哈，好。打勾，是吗？
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="迷迭香"]  嗯。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾卫"]  ......如果我有女儿，应该也有你这么大。
+[name="盾卫"]  小猫，如果另一个女孩，那个魔王......那个卡特斯。如果她真的能做好，真的能走下去的话......
+[name="盾卫"]  ......你可以信我们，小猫。你们有难的时候，我们也会来。因为大尉......大尉和叶莲娜她......已经选了她。
+[name="盾卫"]  希望以后你们的路能证明你们是对的，我们是错的。
+[name="盾卫"]  但这不可能。因为我们的事业是正当的。
+[name="盾卫"]  你该走了。
+[Character(name="avg_npc_012")]
+[name="罗德岛干员"]  迷迭香！我们......整合运动的战士们，谢谢你们。我们该走了。
+[Character(name="avg_npc_058")]
+[name="盾卫"]  不再是整合运动了。
+[name="盾卫"]  再见了小猫。快走吧。
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  拜拜，叔叔。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Image(image="avg_8_41",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[Character(name="avg_npc_058")]
+[name="盾卫"]  再见！
+[name="盾卫"]  ......
+[name="盾卫"]  他们走了，兄弟们。
+[name="盾卫"]  我们不行。我们还不能走。我们还有事情没做完。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_perimeter",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Character]
+[Character(name="avg_npc_077",fadetime=1,block=true)]
+[delay(time=1.4)]
+[name="“皇帝的利刃”"]  已经收不到整合运动领袖的回信了。
+[name="“皇帝的利刃”"]  切尔诺伯格核心城也已停止运作。通知第六第七和第十二师团，如果他们还想照计划进行，现在就该......
+[Character(name="avg_npc_038")]
+[name="？？？"]  停下吧。
+[name="？？？"]  否则就只能我们来让你们停下。
+[name="？？？"]  ......即使我们这么做了，也不会产生作用。
+[name="？？？"]  只有你们现在还来得及停下你们那几台缺乏理智的战争机器。
+[Character(name="avg_npc_077")]
+[name="“皇帝的利刃”"]  你们无法与乌萨斯的利刃对抗。不再能了。
+[name="“皇帝的利刃”"]  ......而且，你们，哪怕连昏君的命令都能言听计从的走卒有什么资格教训我们？
+[Character(name="avg_npc_038")]
+[name="影卫"]  （高卢语）你又怎么知道自己是不是被科西切蛊惑了？
+[Character(name="avg_npc_077")]
+[name="“皇帝的利刃”"]  别再用那种语言与我说话......高卢的时代已经过去了！
+[name="“皇帝的利刃”"]  用他们的语言进行国度间的交流的时代，也已经过去了！他们连一座城市都不剩下！
+[name="“皇帝的利刃”"]  科西切，他一直坚持，他一直在为乌萨斯奉献！
+[Character(name="avg_npc_038")]
+[name="影卫"]  上一个被乌萨斯人这么称颂的人死在你们的刀下。
+[name="影卫"]  不用再瞻前顾后了，我们可以帮你们一把。有些事只能你们来做。
+[Character(name="avg_npc_077")]
+[name="“皇帝的利刃”"]  你想引诱我们背叛国家？
+[Character(name="avg_npc_038")]
+[name="影卫"]  年轻人......依我之见，你们继续一意孤行才是叛国之举。接下来发生的事你可以自己选，但事情的结果却是乌萨斯去承担。
+[name="影卫"]  既然你们现在这么做了，你们肯定是清楚的：贵族们引发战争只是为了解决一个问题，但战争，战争更糟。
+[name="影卫"]  你们想在哪里一劳永逸地重建乌萨斯的安宁？
+[name="影卫"]  你们自己结束了那个时代。你们比我们更清楚。
+[Character(name="avg_npc_077")]
+[name="“皇帝的利刃”"]  ——
+[name="“皇帝的利刃”"]  魏彦吾的走卒。你们是怎么找到我们的？
+[Character(name="avg_npc_038")]
+[name="影卫"]  凭本事。你们还有很多要学。
+[Character(name="avg_npc_077")]
+[name="“皇帝的利刃”"]  你威逼我？
+[Character(name="avg_npc_038")]
+[name="影卫"]  不，我们只是......到了年龄。
+[name="影卫"]  以及，也许你们自诩忠诚于国家......
+[name="影卫"]  但有些事，不管在你们眼里我们够不够忠义......我们都是不会去做的。
+[Character(name="avg_npc_077")]
+[name="“皇帝的利刃”"]  义是什么？
+[Character(name="avg_npc_038")]
+[name="影卫"]  一些我们做不到的事。
+[name="影卫"]  （高卢语）我们都各自退一步吧，年轻人。
+[name="影卫"]  皇帝内卫有得是新鲜血液。你们会活得比我们长。假如这件事真的不对，你们却还有机会去纠正它。
+[name="影卫"]  倘若真的为它着想，就不要踏进同一个错误里去。
+[Character(name="avg_npc_077")]
+[name="“皇帝的利刃”"]  ......
+[Character(name="avg_npc_038")]
+[name="影卫"]  谁去解决？
+[Character(name="avg_npc_077")]
+[name="“皇帝的利刃”"]  我们自己去。你们去拦住你们的人。
+[name="“皇帝的利刃”"]  还有，老家伙们......你们已经不再是禁军了。少管闲事。
+[Character(name="avg_npc_038")]
+[name="影卫"]  正因为早就不是了，所以现在才能来说些闲话。活久一些，年轻人。
+[name="影卫"]  后会无期。
+[Dialog]
+[Character]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  求求你......求求你！
+[name="整合运动成员"]  要杀我，就给我个痛快！
+[Character(name="avg_npc_016")]
+[name="幻影弩手"]  ......
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  我不想被他们找到！他们一定会折磨我们......他们一直......
+[Character(name="avg_npc_016")]
+[name="幻影弩手"]  别再听信流言了。
+[name="幻影弩手"]  走吧！快点，我想......
+[name="幻影弩手"]  别让盾卫找到你们。
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  ......你......你当真能放我们走？
+[Character(name="avg_npc_016")]
+[name="幻影弩手"]  队长也会希望你们活下来吧。因为队长也是个迷茫的人。
+[name="幻影弩手"]  日后避开这些人吧。无论是塔露拉的亲卫还是盾卫。
+[name="幻影弩手"]  ......迷茫的人。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_016")]
+[name="幻影弩手"]  你是决定要留下？
+[Character(name="avg_npc_059")]
+[name="罗德岛近卫干员？"]  是。
+[Character(name="avg_npc_016")]
+[name="幻影弩手"]  可是整合运动也不在了......
+[Character(name="avg_npc_059")]
+[name="罗德岛近卫干员？"]  我想即使是盾卫，可能也代表不了整合运动。
+[name="罗德岛近卫干员？"]  因为他们已经不这么叫自己了。
+[name="罗德岛近卫干员？"]  除非......除非我们去改变这些事。
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  我们作为整合运动去改变整合运动自己。
+[Character(name="avg_npc_016")]
+[name="幻影弩手"]  你还信这个吗？
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  我相信感染者摔倒了还能爬起来。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+在之后的三十六个小时里，切尔诺伯格核心城中潜伏的所属第三集团军的乌萨斯军人，悄然无声地消失在空气里。
+当然，没人能证明他们是乌萨斯的军人。
+在撤离核心城之前，盾卫们也发现了不少整合运动的尸体。他们没有携带任何能证明他们身份的物件，除了他们身体上的伤口......
+那些伤口都来自同一种投掷武器。
+无形的凶手谋害了只有他们熟识的暴徒，以此向不在场的阴谋家发出了无声的警告。
+当然，盾卫们的警告更直接了当。叛徒必将血流成河。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_cher_5",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+炎与乌萨斯的联合调查团进入切尔诺伯格两周后分别向两方递交了调查报告。
+报告指出，没有任何证据能够证明，两国有任意一方切实参与了这一场灾难的策划与实施。
+最终，切尔诺伯格事件被定性为一场感染者引起的重大人为灾害。
+但是，随着一系列政治冲突接连发生，在各大城市间闹得沸沸扬扬的感染者补充法令也被积压在议会的废弃提案堆里数月之久......
+......并在之后的清扫中和一些其他的重要废纸一同被送进了老书记的手摇式碎纸机。
+切尔诺伯格事件，在无声无息中得到了解决。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Background(image="bg_laccolith",screenadapt="coverall")]
+[playMusic(intro="$chenandwei_intro", key="$chenandwei_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character]
+[name="乌萨斯民众"]  唔......！
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  别怕。
+[name="弑君者"]  ......我不是杀手。走，这里走。别想着留下！乌萨斯人找到你，他们不分你是不是感染者，这座城市会被变成空城。
+[Character]
+[name="乌萨斯民众"]  ......
+[name="乌萨斯民众"]  你的意思是我们只能相信你？
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  你们想活下去......你们会活下去。
+[Character]
+[name="乌萨斯民众"]  ......我们会活下去。往哪走？
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  ......好。好的。这里走。
+[name="弑君者"]  我没法让你不恨我们。但我希望，我们以后对你们这些同样也失去家乡的人......也别再恨了。
+[name="弑君者"]  兄弟！过来。带他们走。他们没感染。小心点。
+[Character(name="char_1002_nsabr_1",name2="char_1502_crowns",focus=1)]
+[name="整合运动成员"]  弑君者？那你呢！
+[name="整合运动成员"]  你去哪......？我们该怎么办？
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  你们为什么还跟着我？
+[Character(name="char_1002_nsabr_1",name2="char_1502_crowns",focus=1)]
+[name="整合运动成员"]  你可是整合运动的......
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  我什么都不是。
+[name="弑君者"]  ......我要回叙拉古。
+[Character(name="char_1002_nsabr_1",name2="char_1502_crowns",focus=1)]
+[name="整合运动成员"]  为什么？你为什么......
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  我很弱。所以我要变强。
+[name="弑君者"]  在我要离开叙拉古去乌萨斯给爸报仇的时候，老师拦住了我，说我很弱，做不到。
+[name="弑君者"]  我以为他是在骗我，只是不想我回去报仇，现在我才明白他是对的。
+[name="弑君者"]  我没有塔露拉那种脑子，我也没有老师那种手法，我太弱了。
+[name="弑君者"]  就连我一直以来相信的事业......都被人利用了。你们知道了吧？塔露拉背叛了我们。不管有没有内情，整合运动已经完蛋了。
+[Dialog]
+[Character]
+[Character(name="avg_npc_043_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="九"]  我不认为整合运动会就此结束。
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  ......你是龙门人？
+[Character(name="avg_npc_043_1#2")]
+[name="九"]  是的。不过我要说的和我是哪里人，没有关系。
+[name="九"]  不管这个塔露拉承不承认，可能你们都要意识到一点......不管整合运动怎么样，塔露拉已经点了一把火。
+[name="九"]  我不觉得这把火会就这样熄灭。
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  那也好。如果你这么说的话，我觉得让他们跟着你会好些。
+[Character(name="avg_npc_043_1#2")]
+[name="九"]  这算委托吗？
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  算信任吧。我不知道你有没有骗我，但是现在大家都失去了家乡，我是不会骗你的。
+[name="弑君者"]  他们跟着我不会有跟着你好。
+[Character(name="avg_npc_043_1#2")]
+[name="九"]  那么，你们愿意跟着我走吗？
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  ......弑君者......
+[Character(name="char_1502_crowns")]
+[name="弑君者"]  乌萨斯人......我们这些......乌萨斯人。
+[name="弑君者"]  乌萨斯只是还没到像待我们一样待这所有乌萨斯人的时候。
+[name="弑君者"]  各位，再见。别像我一样再犯错。
+[Character(name="avg_npc_043_1#2")]
+[name="九"]  年轻人......
+[Character(name="char_1002_nsabr_1")]
+[name="整合运动成员"]  你叫什么名字，准备去哪？
+[Character(name="avg_npc_043_1#2")]
+[name="九"]  就叫我，“九”吧。
+[name="九"]  我准备去火烧得最旺盛的地方。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_desert_3",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_034",fadetime=1,block=true)]
+[delay(time=1.4)]
+[name="鼠王"]  你果然在这。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="魏彦吾"]  我还是瞒不过你。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  你想来这里也就只有这个原因。悼念他们。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="魏彦吾"]  也许是悼念我们自己，还在这里贪生怕死。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  你的剑不是这么说的。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="魏彦吾"]  至少我没下狠手割了你的喉咙。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  话不要说太满，大少爷。真要搏命，还不知兽死谁手。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="魏彦吾"]  别讽刺我了。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  我还是要刺你一两下才行，老友。晖洁她做到了，那些感染者做到了。
+[name="鼠王"]  你该重新考虑一下，以及你的独断差点毁了龙门，只差一点，你就会把多少人拖入战争。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="魏彦吾"]  我不觉得这是一件必然的事情。就算龙门选择了它的一种未来，它也可能因为一些小事就把那个未来掐死。机缘巧合，不过偶然。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  不是这座城市选择了她，老友。你我该庆幸，是她选择了这座城市。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="魏彦吾"]  两者并不矛盾。舸瑞，这座城市也选择了她。
+[name="魏彦吾"]  即使这座城市也还没有准备好去接受她......
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  类似的话你就对她自己说吧。我先行告退了，大少爷。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="魏彦吾"]  ......等等，舸瑞！
+[name="魏彦吾"]  影卫是不是骗了我？
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  啊？
+[name="鼠王"]  ——你的影卫，我又怎么知道？
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="魏彦吾"]  你和林雨霞合起来做些什么也不出奇。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  你的影卫已经不再是过去的禁军了。他们现在是人。
+[name="鼠王"]  他们忍心看你再犯错？
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="魏彦吾"]  所以，我让他们处理的感染者，现在只是被你......
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  嘘。天知地知。还有，你不就是因为知道我们会这么做才——
+[name="鼠王"]  早些回去。老病虎还有事找你。
+[name="鼠王"]  ——晖洁？
+[name="鼠王"]  啊。你已经来了。
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_086",fadetime=1,block=true)]
+[delay(time=1)]
+[name="陈"]  林叔。
+[Character(name="avg_npc_034")]
+[name="鼠王"]  看你穿成这样，看来是准备马上离开了。
+[name="鼠王"]  晖洁，要记得多回来看看。
+[Character(name="avg_npc_086",name2="avg_npc_034",focus=1)]
+[name="陈"]  ......我不清楚。
+[Character(name="avg_npc_086",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  那就多托人向我们报个信，好让我们知道你在外面平安。
+[Character(name="avg_npc_086",name2="avg_npc_034",focus=1)]
+[name="陈"]  我会的，林叔。
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  ......
+[name="魏彦吾"]  这里葬着塔露拉的父亲，以及......你们的母亲。
+[name="魏彦吾"]  他们终归没有葬在他们爱的那个城市里。不，你母亲的话，应该对那个城市既爱又恨。
+[name="魏彦吾"]  这里的景色我永远不会忘记，晖洁。只要看到它，我就会想到他们......我的妹妹，我没有血缘关系却胜过血脉的兄弟。
+[name="魏彦吾"]  他们被葬在这里。
+[name="魏彦吾"]  墓柜太小了，容不下他们的热情；话语又太轻了，说不出他们的悔恨。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  所以这是个无名冢。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="魏彦吾"]  是。无名冢，呵......可能是因为名字只对活着的人有意义。
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  ——在这片大地上，安葬只是个理想化的说辞，因为所有的坟墓最后都会消失。没人能安静地永眠。
+[name="魏彦吾"]  遇着天灾，碰上战争，遭到废弃，等等。只要一座城市消失了，葬在城市上的死者一样会灰飞烟灭。
+[name="魏彦吾"]  至于广大荒原上的无数聚落，我所听说的每个聚落的后代，都没能找到过他们祖先的墓地。
+[name="魏彦吾"]  有种丧葬方式叫做墓道，把移动城市的航线的一部分定为墓地，将死者的遗物抛撒给那条道路，视循环往复的驶过为一种瞻仰。
+[name="魏彦吾"]  我太健忘了。我有太多容易忘记的事情了，或者说，我有太多想要拼死忘记的事情了。
+[name="魏彦吾"]  可我绝不敢忘记他们。
+[name="魏彦吾"]  ......所以我......我为他们选择了这里。
+[name="魏彦吾"]  ......我带着妹妹来到龙门，在这里遇见了文月，又遇见了逃至此处的爱德华。
+[name="魏彦吾"]  我不敢说和他是一拍即合，但他智勇双全，胆气过人。
+[name="魏彦吾"]  在暗处统治龙门的科西切视我们为眼中钉肉中刺。我们也很清楚，只有把他赶出去......我们和这座城市才有未来。
+[name="魏彦吾"]  这里，这座坟墓，是龙门以前曾到过最远的地方。
+[name="魏彦吾"]  那是我们合力战胜了科西切，把他彻底赶出龙门的时候，龙门就停在数十里外，充满了希望的城市亮起了点点灯火，未来在等着我们。
+[name="魏彦吾"]  这儿，我们在这儿，饮酒，畅谈，大笑作乐，把载具没油这事儿彻底地抛在脑后。
+[name="魏彦吾"]  我们差点渴死在这，直到亚当斯那头老病虎咳嗽着把他的私家兵车开到这来，把我和爱德华狠狠地骂了一顿。
+[name="魏彦吾"]  哦......那时他还没有那么老，也没有那么病。甚至没有那么狠。
+[name="魏彦吾"]  但是，谁在意呢？我们每个人都在笑。
+[name="魏彦吾"]  林笑起来......他笑起来就像我们手上从没沾过血......笑得就像是度过了一整串好时光的少年人。
+[name="魏彦吾"]  爱德华是伦蒂尼姆的最高贵的血脉末裔。我们将这个秘密牢牢留在龙门。但科西切已经知道了他的身份，他的计划在那时可能就已成型。
+[name="魏彦吾"]  他让我善妒的胞弟和伦蒂尼姆的阴影，知晓爱德华与我的妹妹......情投意合......
+[name="魏彦吾"]  我被迫在爱德华和我妹妹腹中的孩子里选一个。
+[name="魏彦吾"]  爱德华死后，我密不发丧十年，除了胞弟和科西切，无人知晓事实。而今，爱德华与我妹妹都已经去世。
+[name="魏彦吾"]  假以时日，天灾也会侵袭这里，一切都化为乌有，没人会记住有一对悲哀的恋人葬在此处。因我而死的两人，也会被人遗忘。
+[Character(name="avg_npc_086")]
+[name="陈"]  ......我面会过了“科西切”。他可能比你我想的还要邪恶。
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  我可以想象。
+[Character(name="avg_npc_086")]
+[name="陈"]  墓地......
+[name="陈"]  ......母亲。
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  你母亲对你没有多少感情，这是我造的孽。为了保护她，我不得不让她嫁给炎国贵族。我原本该做得更好。
+[Character(name="avg_npc_086")]
+[name="陈"]  过去的事情就让它过去吧。
+[name="陈"]  答应我，魏彦吾。你不会再让龙门变成墓场。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="魏彦吾"]  我再也不会。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  口说无凭，我信不过你。
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  我从来都不需要你来相信我。哼......不过......这次你也可以再信一回。就如我上次说可以训练你一样。
+[Character(name="avg_npc_086")]
+[name="陈"]  ——
+[name="陈"]  你把我训练得很好。没有你，我救不回她。
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  这样就好。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  你这十年来对我说的话，加起来可能都没这一次你说的多。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="魏彦吾"]  我以前说的还不够多？
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  我说的是，对陈晖洁说的话。不是对陈警司说的。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="魏彦吾"]  哈哈。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  那我走了。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="魏彦吾"]  你姐姐。你打算怎么办？
+[name="魏彦吾"]  ......我对塔露拉已无亲情，徒留愧疚。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  那你最好一直愧疚下去。
+[name="陈"]  我们只是这片大地上无数对被拆散的兄弟姐妹之一，而大部分人这辈子都没机会再团聚。
+[name="陈"]  即使如此，我也不能放过她。我至今都没有弄清楚，现在的她究竟是什么。
+[name="陈"]  罪犯都会有他们的囚牢，只不过现在的龙门还不能关她。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="魏彦吾"]  这种东西我造不出。只有你才能建设一个感染者和普通人都能关的近卫局。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  不必是我。自己的事自己做。
+[name="陈"]  我已经认清事实了，无论这件事有多正确，龙门的市民如果不接受，那就是不接受。我已经在贫民窟看到太多了。
+[name="陈"]  而且，真有这种东西，我想先和罗德岛一起建一个。
+[name="陈"]  塔露拉的话......不管需要多少时间。我会让她被公正地审判。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="魏彦吾"]  ......你的确成长了。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  我也不需要你这么说，长官。总觉得这不是什么好话。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="魏彦吾"]  是不是即使我想替龙门留你，也拦不住你？
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  哈。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="魏彦吾"]  如果你和塔露拉真想回来，龙门会驶到那步，假使它能。
+[name="魏彦吾"]  有许多我们已经做不到的，未来也许他们自己就能。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="陈"]  我只希望你当时构想的那些，你自己没忘。那就足够了。
+[name="陈"]  替我向文月姨问好。
+[name="陈"]  对了......
+[Character(name="avg_npc_086")]
+[name="陈"]  ......唔。
+[name="陈"]  ......舅舅......
+[name="陈"]  保重。
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  ......
+[name="魏彦吾"]  晖洁！
+[Character]
+[Dialog]
+陈犹豫了片刻，没有回头。
+[Character]
+[name="陈"]  什么事？
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  道阻且长。但是，是你的话，应当能。
+[Character]
+[name="陈"]  我记下了。
+[Dialog]
+[Character]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=3, block=true)]
+[Image(fadetime=0)]
+[Background(image="bg_lungmen_o",screenadapt="coverall",block=true)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_2006_weiywfmzuki_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="文月"]  所以啊，你本来准备给罗德岛开的第二个条件是什么？
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  ......
+[name="魏彦吾"]  利用罗德岛排除整合运动的威胁后，要求他们带走龙门足够多的感染者。 
+[name="魏彦吾"]  分给他们地块，交给他们资源，提供他们想要的研究资料和资金。
+[name="魏彦吾"]  他们拒绝不了，即使他们知道我给他们提供的这一切都难以下咽。
+[name="魏彦吾"]  这样的事情我做过，以后的我也会继续这样做。
+[name="魏彦吾"]  不犹豫，不后悔。
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="文月"]   现在呢？
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  ......呵。世道变了。我也不得不变。
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="文月"]   你直接谢谢他们有什么不好？
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  ......
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="文月"]   你现在没那么患得患失了，要我猜原因，也就只有一个。
+[name="文月"]   因为小陈。
+[name="文月"]   现在的条件已经变了吧？
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  龙门的感染者只属于龙门。   
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="文月"]   那么陈晖洁？
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  她有自己的路。
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="文月"]   你会常去看她吗？
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  龙门的长官是不会再和一个感染者组织扯上任何关系的。
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="文月"]   哼，小气。
+[name="文月"]   那我要去。
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  那......就拜托你了。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Image(image="avg_8_17",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Background]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+当时他要我在妹妹和义弟间选，我选了妹妹。我发誓我不会再让他们受苦，但我......
+没能做到。
+现在，不一样了。我不会选。
+科西切说错了，我没得选。魏彦吾，你其实只有一条路。
+哪怕这还是条弑亲之路。
+为了胞妹的两个女儿，为了那个我们梦里的龙门。哪怕仅此一条路。
+[Dialog]
+[image]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  （晖洁......好好活下去。）
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$storyendjp_intro", key="$storyendjp_loop", volume=0.4)]
+数周后
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="凯尔希"]  诸位尊敬的罗德岛干员们，这里是凯尔希。
+[name="凯尔希"]  在我们的努力下，切尔诺伯格事件终于以一种较和平的方式结束了。
+......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_ri_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  疼吗？
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=2)]
+[name="煌"]  哎......别戳！你戳了当然就疼了！
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=1)]
+[name="迷迭香"]  啊。对不起。
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=2)]
+[name="煌"]  没事......你怎么了？
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=1)]
+[name="迷迭香"]  没什么。
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=2)]
+[name="煌"]  哎哎哎？不会吧小猫咪......你以前可不会......你以前可不会把事情藏在心里的！
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=1)]
+[name="迷迭香"]  这是好事吗......？
+[Character(name="char_017_homura_3#11")]
+[name="煌"]  啊。啊！当然是！Scout你看到了吗？我们的小猫咪长大了。她长大了呀......！
+[name="煌"]  她长大了呜呜......
+[Character(name="avg_npc_042",name2="char_017_homura_3#11",focus=1)]
+[name="迷迭香"]  别，别这样......好想忘掉......！
+[name="迷迭香"]  ......你真的哭了？为什么要哭啊？
+[Character(name="avg_npc_042",name2="char_017_homura_3#11",focus=2)]
+[name="煌"]  呜啊啊啊啊啊......
+[Character(name="avg_npc_042",name2="char_017_homura_3#11",focus=1)]
+[name="迷迭香"]  ......别哭，别哭......煌......别哭啦......
+[Character(name="avg_npc_042",name2="char_017_homura_3#11",focus=2)]
+[name="煌"]  碧银她也会知道的......Ace他也会知道的......小猫咪......小猫咪长大啦......
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  ......煌......
+[Character(name="char_017_homura_3#11")]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="煌"]  哇啊啊啊啊啊......！！
+[Character(name="avg_npc_042")]
+[name="迷迭香"]  哎！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[name="凯尔希"]  ......许多真相将被永远地埋藏在切尔诺伯格的废墟之下。
+[name="凯尔希"]  因为这片大地就是这样无情。
+[name="凯尔希"]  但是，罗德岛会记住许多。无论我们会为之承担多少......我们都必须记住。
+[name="凯尔希"]  罗德岛的干员们，从不是为了某个人或者某件事而献出了生命。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_infirmary",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_016_medic")]
+[name="Medic"]  啊，这种外用药，真的有用！
+[name="Medic"]  虽然类似的专利已经有很多了，但我想作为特效药，这个外用霜应该还是有市场的。
+[name="Medic"]  很关键的是，虽然效果没那么好，成本却真的很低廉......分析出来的成分都是些常见的野生植物。
+[name="Medic"]  只不过在搜集上有些麻烦，西北冻原从西到东，竟然散布在那么长的路的两端啊......
+[name="Medic"]  发明这个药的人，比起医药知识，可能是毅力更多些呢。
+[name="Medic"]  要在哪里申请这个专利呢，阿米娅？
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  ......就在乌萨斯吧。而且要让它很便宜才行。
+[Character(name="char_002_amiya_1",name2="char_016_medic",focus=2)]
+[name="Medic"]  可是，乌萨斯应该不缺类似的医疗技术吧？
+[Character(name="char_002_amiya_1",name2="char_016_medic",focus=1)]
+[name="阿米娅"]  但乌萨斯有更需要它的人。
+[Character(name="char_002_amiya_1",name2="char_016_medic",focus=2)]
+[name="Medic"]  给这种药取什么名字呢？
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  就叫......霜星吧。
+[Decision(options="阿米娅？你找我吗？", values="1")]
+[Predicate(references="1")]
+[name="阿米娅"]  啊，Dr.{@nickname}！
+[name="阿米娅"]  Medic，麻烦你和华法琳了。
+[Character(name="char_016_medic")]
+[name="Medic"]  嗯，就，交给我们吧！
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  博士，我马上就来！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[name="凯尔希"]  我们投身于一个事业，不是为了看到结果。
+[name="凯尔希"]  我们做一件事，不是因为我们要将它做成。
+[name="凯尔希"]  也许在商业上，这样的策略是愚蠢的。但我们的生命并不只有物质层面的生命。
+[name="凯尔希"]  勇敢的干员们用他们的所作所为已经证明，生命，生命的价值不仅仅在于确保一个人或是许多人的生存，不仅仅是生物学意义上的活着......
+[name="凯尔希"]  我们还要在文明的道德的意义上，活下去。因为罗德岛坚信，未来的生命需要有所支撑。
+[name="凯尔希"]  我们正为了一个能抚平这大地伤痛的信念而奋斗。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  又出任务？
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1", focus=2)]
+[name="临光"]  对。我和陨星一起。
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1", focus=1)]
+[name="杜宾"]  带不带新人？我这还有几个新兵蛋子需要教育教育。
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1", focus=2)]
+[name="临光"]  啊，不太行吧？这回可不是个轻松的活儿。
+[Character(name="char_219_meteo_1")]
+[name="陨星"]  杰西卡和霜叶有个巡逻任务。也许让她们带队会好些。
+[Character(name="char_219_meteo_1",name2="char_130_doberm_ex",focus=2)]
+[name="杜宾"]  杰西卡？能行吗？
+[Character(name="char_219_meteo_1",name2="char_130_doberm_ex",focus=1)]
+[name="陨星"]  你该看到她的成长。
+[Character(name="char_219_meteo_1",name2="char_130_doberm_ex",focus=2)]
+[name="杜宾"]  我正是因为看到她的成长，才感觉她会给别人带来压力。
+[Character(name="char_219_meteo_1",name2="char_130_doberm_ex",focus=1)]
+[name="陨星"]  那临光可是要把我压扁了。
+[Character(name="char_148_nearl_1")]
+[name="临光"]  ......我......没有那么重吧？
+[Character(name="char_219_meteo_1")]
+[name="陨星"]  不，不是那个意思。哎。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[name="凯尔希"]  即使因为这个信念，我们会为此牺牲。
+[name="凯尔希"]  ——Ace小队，十三人。Ace，坏汤姆，克格，硬砖——
+[name="凯尔希"]  ——木勺，十七，铜鼻子，青豆，阴银，密语，沙洗，紫焰，龋牙。
+[name="凯尔希"]  阿米娅小队，十三人。黑针，大软手，香辣吉米，歪耳。
+[name="凯尔希"]  怒鸣，稚日，马尔科·史密斯，凋。
+[name="凯尔希"]  落差，霜星，安东尼奥·丽萨，野烬，卉，靛玉。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  我不能把霜星列入死亡名单。
+[Decision(options="为什么？！;......;给我个理由。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凯尔希"]  哪怕你同意了，她也不是我们正式的雇员。
+[name="凯尔希"]  你能接受一个整合运动的成员在罗德岛充满愤怒的干员心里引发波澜吗？这不是你该做的事。
+[Decision(options="我们奋斗的目标是一致的。", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]  这样就够了吗？
+[Decision(options="这样就够了。", values="1")]
+[Predicate(references="1")]
+[Decision(options="罗德岛是为了同一个信念而战的。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1#2")]
+[name="凯尔希"]  好......
+[name="凯尔希"]  我答应你。你承担起了自己的责任。
+[name="凯尔希"]  ......希望以后的你，也能像现在这一刻一样。
+[name="凯尔希"] ——之前的事情，我向你道歉，Dr.{@nickname}.
+[name="凯尔希"]  你在石棺区中最后问我的问题，我将无法给出答案。明天也不能。未来也不能。
+[name="凯尔希"]  遗憾，我并不想掩藏任何真相，只是我无力将你想要的答案透露给你。我和PRTS实在是没有办法向你做出解释。请原谅我们这一失职。
+[name="凯尔希"]  但当那一天到来时，它会自己出现在你面前。
+[name="凯尔希"]  博士......
+[name="凯尔希"]  在那一天，真相揭晓时，我能看到你做好准备吗？
+[name="凯尔希"]  另外，Dr.{@nickname}。
+[name="凯尔希"]  阿米娅已经承担了许多。我希望你......不会为她增加更多不好的回忆。
+[name="凯尔希"]  相反，我们应该为她承担起那些即使我们自己也还不能正视的东西。我们可以做到。
+[name="凯尔希"]  只要你还留在这里。只要你能一直如此。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_8_18",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Background]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+[name="凯尔希"]  Scout小队，十三人。Scout，姆拉姆，酒莓软芯......
+[name="凯尔希"]  ......斯琳珂，米米，雷发，索拉娜，小玛丽......
+[name="凯尔希"]  ......图钉，淤兰，结音，普特尔，长蝎。
+[name="凯尔希"]  迷迭香小队，一人，碧银。Raidian小队，一人，水樱。
+[name="凯尔希"]  一共四十一人在切尔诺伯格事件中牺牲。
+[name="凯尔希"]  罗德岛不会忘记。罗德岛会将他们永远铭记。
+[name="凯尔希"]  即使罗德岛不复存在，他们为罗德岛所做的一切，也将在大地上留下轨迹。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(image="bg_8_babel3",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+[name="阿米娅"]  博士......
+[name="阿米娅"]  不想说话吗？
+[name="阿米娅"]  ......我明白的。在这些时间里发生太多事了。
+[name="阿米娅"]  但是，有博士在这里，我很......我很开心。
+[name="阿米娅"]  有些事情我们一个人是做不到的。
+[Decision(options="但我们也不是为了做到什么才去做的。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  嗯！
+[name="阿米娅"]  罗德岛......无论前方是什么样的阴霾等着我们，罗德岛也会继续前行。
+[name="阿米娅"]  并且，无论这片大地上还有多少冰冷的故事......
+[name="阿米娅"]  ......我也相信博士的心是温暖的。
+[Decision(options="那当然。;......;如果我其实是个坏人，那该怎么办？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="阿米娅"]  那样的话，博士，那样就只有我能阻止你了。
+[name="阿米娅"]  欢迎回家，博士。
+[Decision(options="你好，阿米娅。", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Character]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="avg_ep08",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=3, block=false)]
+[stopmusic(fadetime=3)]
+[delay(time=5)]
+[Image(fadetime=2)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_lock_1",screenadapt="coverall")]
+[Image]
+[Blocker(a=0, fadetime=1, block=false)]
+[playMusic(intro="$newhope_intro", key="$newhope_loop", volume=0.4)]
+[Character]
+[name="罗德岛干员"]  她说话了吗？
+[Character(name="char_007_closre_1")]
+[name="可露希尔"]  没有，从你们把她弄回来到现在，她可是真的......一句话都没说。
+[name="可露希尔"]  也太沉得住气了。就算那个......陈，对吧？来找她，她也啥都没说。
+[Character]
+[name="罗德岛干员"]  那你打算怎么办？
+[Character(name="char_007_closre_1")]
+[name="可露希尔"]  我怎么办？我又不是阿斯卡纶......而且现在也没什么要她说的。
+[name="可露希尔"]  进一步提供的信息什么的，也要看用在哪里吧，大概。哎好烦啊我哪会治这种人......
+[Character]
+[name="罗德岛干员"]  那几个龙门近卫局的人呢？
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image]
+[name="诗怀雅"]  怎么？你又不是第一次去罗德岛，害羞什么？
+[name="星熊"]  我只是升了职以后，害怕被人说是和罗德岛勾结。
+[name="星熊"]  Missy你倒是完全没一点顾忌，弄得像是要去郊游一样。
+[name="诗怀雅"]  谁能管我？
+[name="星熊"]  你说得对。有钱人的道理。
+[name="诗怀雅"]  嗯......？魏长官办公室里，那个人......是谁？
+[name="星熊"]  ......蓝色头发的天使？还是萨卡兹？
+[name="诗怀雅"]  哇......哇！她，她受了好重的伤！
+[name="星熊"]  等等！别进去......魏长官也在里面。
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_lungmen_o",screenadapt="coverall")]
+[Image]
+[Blocker(a=0, fadetime=2, block=false)]
+[Character(name="char_213_mostma_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="？？？"]  Chief，您似乎有客人。
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  能进这附近的都是值得信任的人。与其关心这个不如关心你自己的伤势。
+[Character(name="char_213_mostma_1")]
+[name="？？？"]  如果您觉得允许外面那两个人偷听没什么关系，那我这点小伤也只是小意思。
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  这次你来是做什么，拉特兰的信使？
+[Character(name="char_213_mostma_1")]
+[name="？？？"]  我不是拉特兰任一官方的信使......
+[name="？？？"]  （只是，教宗确实是有一条给您的消息。）
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  星熊！带诗怀雅出去。
+[Character(name="char_136_hsguma")]
+[name="星熊"]  啊，明白！
+[Character(name="char_308_swire_1#3")]
+[name="诗怀雅"]  喂！为什么就只有我......
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  好了。
+[name="魏彦吾"]  信使，说。
+[Character(name="char_213_mostma_1")]
+[name="？？？"]  ......他说......（拉特兰语）
+[name="？？？"]  “您今早吃了什么？晚上又准备吃什么？”
+[Character(name="char_2005_weiyw_1#5")]
+[name="魏彦吾"]  ......奇怪。他怎么会想知道我的看法？
+[Character(name="char_213_mostma_1")]
+[name="？？？"]  我想......毕竟您才是Chief，魏先生。
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_lock_1",screenadapt="coverall")]
+[Image]
+[Blocker(a=0, fadetime=1, block=false)]
+[Character(name="char_007_closre_1")]
+[name="可露希尔"]  那个算是非官方的吧。那个黄毛老虎和绿毛鬼......更多可能是来借机看看前同事的吧？
+[name="可露希尔"]  再说，再这样下去，岂不是乌萨斯皇帝内卫都要上罗德岛来转两圈了？
+[Character]
+[name="罗德岛干员"]  他们来了以后，有对这个......病人，产生什么效果吗？
+[Character(name="char_007_closre_1")]
+[name="可露希尔"]  没。
+[name="可露希尔"]  只能想想看凯尔希在想什么了。啊，我跑一遍监控，你站那个摄像头底下去。快点快点~
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Image]
+[Blocker(a=0, fadetime=1, block=false)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Image(image="avg_8_19",x=, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+[name="科西切"]  塔露拉。
+[name="科西切"]  人是一种脆弱，复杂，且自私的生物。
+[name="科西切"]  即使是瘤兽也比人要尊贵，它们在大地上觅食，行走，日复一日，这个族群从未半途而弃。
+[name="科西切"]  人则不。
+[name="科西切"]  人会为了食物刺杀同类。人会为了泄欲侵害同类。
+[name="科西切"]  所以，人类需要其他人帮助他们发现自己的价值，发挥他们的价值。你有这样的资质，也有这样的权力。
+[name="科西切"]  你知道自己该做什么。你的一切都是我教你的......你又要怎么超越这无数年的厚重的历史呢？人类的历史，就是斗争史。
+[name="科西切"]  智慧，理想，以及方式......这些都是我教你的。放弃幻想吧。你终归会回到我这里。
+[name="科西切"]  你的终点只在我。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Image(image="avg_8_19_2",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+科西切......不，科西切，绝不。
+你带给我的这一切，已经根植在我的身上，但即使这会是我永远的疮疤，过去的一切却都已经结束了。
+都......结束了。
+不......你所带来的一切都必须被结束。
+你带给我的这些丑陋与羞愧......都是我的燃料。我未来的燃料。
+直到我找到你，直到这片大地都得解放，我不会停止燃烧。
+我不会再否认你，科西切。我反对你。
+直到所有冤屈都伸张，所有罪恶都死亡。
+我一定会做到。哪怕我们的终点是一样的，我也会让这终点只剩灰烬。烧死自己也无妨。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+逃出来有多久了？
+啊，因为麻烦得很，所以早就没算了。
+但是，再怎么逃下去，也是逃不掉的。
+敲打钉子当然不能让钉子去找锤子。作为锤子，就只能砸下去。
+也许现在是时候了。
+[Dialog]
+[Image(image="avg_8_22",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=3, block=false)]
+[Character]
+[name="凯尔希"]  维娜！请走近一些。我有一些话要同你说。
+[name="推进之王"]  ......好的，凯尔希医生。
+[name="凯尔希"]  等等。我先问一句，你准备好了吗？
+[name="推进之王"]  我不知道。不如说，如果这样可以的话，那我随时都准备好了。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=3, block=false)]
+[stopmusic(fadetime=3)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_hall_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Character(name="avg_npc_076",fadetime=1,block=true)]
+[delay(time=1)]
+[name="伊斯拉姆·维特"]  陛下......
+[name="伊斯拉姆·维特"]  这里是整件事的档案。
+[Character]
+[name="费奥多尔"]  ——为什么会发生这种事？
+[name="费奥多尔"]  ......内卫里是不是有人背叛？
+[name="费奥多尔"]  维特，诚实地回答我。
+[name="费奥多尔"]  我的胸膛，就像冬日里久未点燃的壁炉，只有坦诚的话语才肯教我的心脏重新开始跳动，哪怕那些令人不快的事实确实会伤透我的心也一样。
+[Character(name="avg_npc_076")]
+[name="伊斯拉姆·维特"]  没有。内卫不会背叛您，陛下。内卫们会为您一直服务下去，直到这片大地被火焰吞没为止——只要您依然还是乌萨斯的君主。
+[Character]
+[name="费奥多尔"]  你我都知道这只是说辞。如果内卫没有对那个老怪物的死袖手旁观......
+[name="费奥多尔"]  ......行了！更多的体面话，更多的说辞，我厌烦了！维特，你不是小丑弄臣，对吗？直抒胸臆吧，维特，直白地回答我！
+[name="费奥多尔"]  这一场拙劣阴谋的主谋们，他们现在在哪？
+[Character(name="avg_npc_076")]
+[name="伊斯拉姆·维特"]  ——
+[name="伊斯拉姆·维特"]  贝加尔大公、第三集团军副师团长兼松香总督，还有刻尔克子爵。
+[name="伊斯拉姆·维特"]  当然，我依然没有充足的证据证明他们的确是策划了整个事件的主谋。
+[name="伊斯拉姆·维特"]  而且，在内卫将要惩罚这些罪人，踢开他们的房门把他们吊死在自己家里时，却发现......
+[name="伊斯拉姆·维特"]  却发现，这些叛徒，他们根本不敢面对自己犯下的罪行以及您的震怒。在受刑之前，他们就已经畏罪自杀。
+[Character]
+[name="费奥多尔"]  懦夫......这些懦夫，他们甚至没有面对一场公正审判的勇气。
+[name="费奥多尔"]  看来他们知道！他们知道一旦自己被审判，他们龌龊至极的贪欲，他们污秽无比的心思，这些都会暴露在乌萨斯国民面前！
+[name="费奥多尔"]  但我们......现在的我们依然没法公审他们。
+[Character(name="avg_npc_076")]
+[name="伊斯拉姆·维特"]  是的，陛下。很遗憾，这一切我们还是要将之安排在幕布之后，而不是暴露在台面上。
+[name="伊斯拉姆·维特"]  一旦把蠢笨的驮兽惹急，它们也会吃草以外的东西。
+[name="伊斯拉姆·维特"]  即使如此，他们剩下的那些部分，身体的那部分，内卫们还是妥善地处理掉了。
+[name="伊斯拉姆·维特"]  他们的尸骨将被吊在房梁上直至发臭，没有人敢解下他们腐烂的遗体。
+[name="伊斯拉姆·维特"]  如果他们成功了，他们将把乌萨斯拖进战争，重夺权力，削弱议会的力量......甚至是更多地架空我们的城市。
+[name="伊斯拉姆·维特"]  幸亏他们失败了。
+[Character]
+[name="费奥多尔"]  叛国者！这样的下场太便宜他们了，应该拿他们去喂蓄肉蝎！
+[name="费奥多尔"]  但......那些行为实在是太恐怖了。不。我们不能这么做。
+[name="费奥多尔"]  请原谅我，维特，我不是有意要说出这种话的。
+[name="费奥多尔"]  我们不能再重蹈覆辙，不管现在的我准备撒播多少怒火到我的敌人头上，这种行为，我必须承认，是我无法忍受的。
+[Character(name="avg_npc_076")]
+[name="伊斯拉姆·维特"]  您在大叛乱时期拒绝使用这些手段。直至今日，我却依然认为，除了血淋淋的警告以外，没什么能触动他们。
+[name="伊斯拉姆·维特"]  只有更直白的恐怖才能震慑习惯给别人带去恐怖的人。
+[name="伊斯拉姆·维特"]  即使我坚决反对采取这些手段。
+[Character]
+[name="费奥多尔"]  不可思议。
+[name="费奥多尔"]  难道就只有这些恶毒的传统才能震慑那群无知又目光短浅的呆瓜吗？
+[name="费奥多尔"]  我们帝国的剑与盾就是被这些蛆虫握在手里的吗？就连我们也要被逼着一起无助地步入腐朽吗？
+[Character(name="avg_npc_076")]
+[name="伊斯拉姆·维特"]  陛下，很遗憾，这个问题我回答不了。从法律上来说，我毕竟不是您官方口径中的情报头子。
+[Character]
+[name="费奥多尔"]  更重要的是，维特，那个传说是不是真的？那个“不死者黑蛇”，是不是就像他们说的那样，是一个没法被杀死的恶神？
+[name="费奥多尔"]  假如说是我们这片广袤的国土上，这样的恶神还不止一个呢？我们的国民要怎么样才能从这种奴役中解脱出来？
+[name="费奥多尔"]  维特，我们站在光明之下......却被黑影包围！我们能用一把火去照亮乌萨斯吗？
+[Character(name="avg_npc_076")]
+[name="伊斯拉姆·维特"]  陛下，我只想指出一个事实。即使是近数十年来，有明显卷入这些事件迹象的长生者，自始至终也只有科西切公爵一人。
+[name="伊斯拉姆·维特"]  何况在他死后，我们也没有办法验证她的身份。
+[name="伊斯拉姆·维特"]  这说明，即使乌萨斯依然有长生者在......他们依然畏惧您。
+[name="伊斯拉姆·维特"]  或者说，畏惧您和您的睥睨。
+[name="伊斯拉姆·维特"]  我们推翻骏鹰的统治，此事距今已经近千年。乌萨斯民族的韧性并非一两个垂老的怪物可以比拟。
+[name="伊斯拉姆·维特"]  它们想做的，让它们做。它们会失败。
+[name="伊斯拉姆·维特"]  我们终将找到它们，也将毁掉它们。您不该操心。
+[Character]
+[name="费奥多尔"]  真要如你所说，那也好。
+[name="费奥多尔"]  感染者的事情呢？有什么进展吗？
+[Character(name="avg_npc_076")]
+[name="伊斯拉姆·维特"]  您操之过急了。关闭西北各军所拥有的感染者矿场这事为时尚早。
+[name="伊斯拉姆·维特"]  您也许只是希望削弱军队的资源储备，甚至这体现了您的一点仁慈——
+[name="伊斯拉姆·维特"]  但不止是军队反对您，您的人民也反对这件事。感染者令他们害怕。
+[name="伊斯拉姆·维特"]  您不能与您的人民敌对，现在还不能，您的人民大多憎恶感染者，所以您与军方对抗，就会被有意曲解成与人民对抗。
+[name="伊斯拉姆·维特"]  您的资本还不足以支撑您这么做。
+[Character]
+[name="费奥多尔"]  ......
+[name="费奥多尔"]  即使这样的做法是对的？
+[Character(name="avg_npc_076")]
+[name="伊斯拉姆·维特"]  即使这样的做法是对的。您对感染者宽容，却可能因此将他们推进火坑。
+[name="伊斯拉姆·维特"]  到时间了，陛下。圣愚已经在门口等了十五分钟有余。您也许该立刻处理这事。
+[Character]
+[name="费奥多尔"]  哼，装神弄鬼的狂人！我要好好地羞辱他。
+[name="费奥多尔"]  在这之前，维特，我们能成功吗？我们能让乌萨斯重现辉煌吗？
+[Character(name="avg_npc_076")]
+[name="伊斯拉姆·维特"]  我不知道，陛下。给您一个答案并不合理。
+[name="伊斯拉姆·维特"]  至少您不像您的父亲一样会毁灭这片大地。这已经是件好事。
+[Dialog]
+[Character]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="伊斯拉姆·维特"]  感染者塔露拉......是吗。
+[name="伊斯拉姆·维特"]  如果你能打碎不死黑蛇的诅咒，那你也该能打碎你自己身上其他的那些。
+[name="伊斯拉姆·维特"]  ......希望有一天，我们能有机会真正战胜属于先皇的那个国家。
+[Dialog]
+[Character]
+[stopmusic(fadetime=3)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="avg_ep09intro",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=3, block=false)]
+[delay(time=5)]
+[Image(fadetime=2)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+塔露拉？
+辛苦你了，这种天气你还去站岗。
+我知道是你自己要求的。
+[Character(name="avg_npc_078")]
+[name="塔露拉"]  你知道。在我们走出冬天前我的火是不会熄的。
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_8_21",x=0, y=0, xScale=1.2, yScale=1.2, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScale=1.2, yScale=1.2,xFrom=-50, xTo=50, duration=30, block=false)]
+[name="霜星"]  （嘘。声音轻些......）
+[name="霜星"]  （他们睡着了。）
+[name="塔露拉"]  （哦......对不起。嘘。）
+[name="塔露拉"]  （训练了一天？）
+[name="霜星"]  （这个深色头发的孩子也许很适合弓弩。）
+[name="霜星"]  （不过也要等他再长大一些。）
+[name="塔露拉"]  （那就让他们睡吧。可是......）
+[name="霜星"]  （我正准备走。我的温度还是太冷了，他们会感冒的。）
+[name="塔露拉"]  （麻烦你了。）
+[name="霜星"]  （没有。只是这个白发孩子......睡得很浅。我不唱歌他就不断在梦里挣扎。只能唱到他睡熟为止。不知道他以前遭遇了些什么。）
+[name="塔露拉"]  （时间会修补我们的伤口的。）
+[name="塔露拉"]  （你父亲还在制订明天的战略？他和我谈过附近的乌萨斯感染者输送集散地。）
+[name="霜星"]  （他要深思熟虑，才能减少我们的损耗。他每次都和我这么说，要我注意。）
+[name="塔露拉"]  （......已经很晚了。）
+[name="霜星"]  （我没见过他睡觉。从没见过。）
+[name="塔露拉"]  （再英雄的人物也总是要休息的。其他的战士们大多也歇息了。）
+[name="霜星"]  （想他的事不如想你自己的。你前几天说联系上的人，叫什么名字？是哪里人？）
+[name="塔露拉"]  （柳德米拉和亚历克斯。他们似乎在切尔诺伯格附近活动，对那座城市的事情很熟悉。）
+[name="霜星"]  （那是座大城。）
+[name="塔露拉"]  （是的。但那里也有许多感染者。我们说不定能把他们接出来......战术可靠的话。）
+[name="塔露拉"]  （柳德米拉他们都是坚定的人。我想，他们会成为我们可靠的朋友，就算他们现在稍微激进了些。）
+[name="霜星"]  （有每个月都和乌萨斯军队打起来的我们激进？）
+[name="霜星"]  （切尔诺伯格。我们离那里太远了，太多障碍了。要多少年？花上三四年我们都到不了那里。）
+[name="塔露拉"]  （就算我们不是要对抗它或者停下它......它还是会向我们驶来的。有了城市感染者的工艺，我们可能真的能建立自己的城市。）
+[name="塔露拉"]  （再说，三四年......一觉醒来就是明天。明天是很近的。）
+[name="霜星"]  （我喜欢这句话。）
+[name="霜星"]  （你也早点休息。）
+[name="塔露拉"]  （好，晚安。）
+[name="塔露拉"]  （......晚安，萨沙，伊诺。）
+[name="霜星"]  （快点回去吧。我一会儿把孩子们送回聚落。）
+[name="塔露拉"]  （嗯。）
+[name="塔露拉"]  （各位战友......）
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Image(image="avg_8_42",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+晚安。
+[Dialog]
+[Blocker(fadetime=4,block=true)]
+[Image]
