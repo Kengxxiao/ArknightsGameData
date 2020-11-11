@@ -6306,6 +6306,61 @@
         }
       ]
     },
+    "char_343_tknogi": {
+      "charId": "char_343_tknogi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd&clue[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "hire_spd&clue[100]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_378_asbest": {
+      "charId": "char_378_asbest",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&limit&cost[011]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_197_poca": {
       "charId": "char_197_poca",
       "maxManpower": 8640000,
@@ -6969,6 +7024,18 @@
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、保管上限<@cc.vup>+8</>、体力消費が1時間ごと<@cc.vup>-0.25</>"
     },
+    "manu_prod_limit&cost[010]": {
+      "buffId": "manu_prod_limit&cost[010]",
+      "buffName": "探険者",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost2",
+      "sortId": 3532,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、保管上限<@cc.vup>+16</>、体力消費が1時間ごと<@cc.vup>-0.25</>"
+    },
     "manu_formula_cost[000]": {
       "buffId": "manu_formula_cost[000]",
       "buffName": "vlog",
@@ -7023,6 +7090,18 @@
       "buffIcon": "manufacture",
       "skillIcon": "bskill_man_spd&limit&cost3",
       "sortId": 3531,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、製造効率<@cc.vup>+25%</>、保管上限<@cc.vdown>-12</>、体力消費が1時間ごと<@cc.vdown>+0.25</>"
+    },
+    "manu_prod_spd&limit&cost[011]": {
+      "buffId": "manu_prod_spd&limit&cost[011]",
+      "buffName": "自主独往",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&limit&cost3",
+      "sortId": 3532,
       "buffColor": "#ffd800",
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
@@ -8516,6 +8595,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
       "description": "事務室配置時、事務連絡速度<@cc.vup>+40%</>"
+    },
+    "hire_spd&clue[010]": {
+      "buffId": "hire_spd&clue[010]",
+      "buffName": "天災トランスポーターα",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd2",
+      "sortId": 8011,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "事務室配置時、事務連絡速度<@cc.vup>+30%</>"
+    },
+    "hire_spd&clue[100]": {
+      "buffId": "hire_spd&clue[100]",
+      "buffName": "人心把握",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&clue",
+      "sortId": 8012,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "事務室配置時、事務連絡速度<@cc.vup>+30%</>。公開求人の最大同時求人可能数が2より1多いごとに、応接室の手がかり捜索速度<@cc.vup>+5%</>"
     },
     "hire_spd&clue2[250]": {
       "buffId": "hire_spd&clue2[250]",
@@ -18643,6 +18746,52 @@
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "「音も無い夜、蝋燭の火が小さく揺れる。寒さと飢えは、彼には無縁のもの。嗚呼、誰もが羨む地は、かくも美しさに満ち溢れて……また会おう、我が友よ。」",
         "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_contract_s0_01": {
+        "id": "furni_contract_s0_01",
+        "name": "荒廃の旗",
+        "iconId": "furni_contract_s0_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "とある栄えている移動都市の市旗。不幸にも天災によって壊滅したが、自分たちの街を忘れないようにするため、旗は生存者たちの手で復元された。",
+        "obtainApproach": "危機契約限定報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_contract_s1_01": {
+        "id": "furni_contract_s1_01",
+        "name": "黄鉄の旗",
+        "iconId": "furni_contract_s1_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "とある伝説の傭兵隊が使用していた隊旗。この傭兵隊は危機契約の任務で全滅したが、彼らをわすれないようにするために、天災トランスポーターたちが彼らの旗を復元した。",
+        "obtainApproach": "危機契約限定報酬",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
