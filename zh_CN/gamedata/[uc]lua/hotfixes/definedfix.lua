@@ -7,6 +7,7 @@ local list =
   "HotFixes/CampaignHotfixer",
   "HotFixes/HomeHotfixer",
   "HotFixes/BattleConverterHotFixer",
+  "HotFixes/BattleControllerHotfixer"
 };
 
 return list;
