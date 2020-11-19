@@ -18,7 +18,7 @@ function CollectionDailyTaskItem:Refresh(actId, cfg)
     self.m_itemCell:CloseBtnTransition();
     local scaler = self.m_itemCell:GetComponent("Torappu.UI.UIScaler");
     if scaler then
-      scaler.scale = 0.7
+      scaler.scale = cfg.taskItemScale;
     end
   end
   

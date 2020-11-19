@@ -94,7 +94,8 @@ function CollectionTimedTaskItem:Refresh( missionData, cfg )
   end
 end
 
-function CollectionTimedTaskItem:CreateRewardIcon()
+---@param cfg CollectionActCfg
+function CollectionTimedTaskItem:CreateRewardIcon(cfg)
   local rewardData = self.m_rewardData;
   local itemCard = CS.Torappu.UI.UIAssetLoader.instance.activityOutlinks.uiItemCard;
   local itemCell = CS.UnityEngine.GameObject.Instantiate(itemCard, self._rewardIconRoot):GetComponent("Torappu.UI.UIItemCard");
@@ -112,7 +113,7 @@ function CollectionTimedTaskItem:CreateRewardIcon()
 
   local scaler = itemCell:GetComponent("Torappu.UI.UIScaler");
   if scaler then
-    scaler.scale = 0.7;
+    scaler.scale = cfg.taskItemScale;
   end
 end
 

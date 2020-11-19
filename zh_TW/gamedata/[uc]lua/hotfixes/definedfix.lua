@@ -3,9 +3,9 @@ local list =
 {
   --list all defined fixer path at here
   "HotFixes/ShopHotfixer",
-  "HotFixes/Act4d0Hotfixer",
-  "HotFixes/FurnShopHotfixer",
-  "HotFixes/Act4d0StageEntryHotfixer"
+  "HotFixes/BattleFinishHotfixer",
+  "HotFixes/CrisisBattleFinishHotfixer",
+  "HotFixes/FurnShopHotfixer"
 };
 
 return list;
