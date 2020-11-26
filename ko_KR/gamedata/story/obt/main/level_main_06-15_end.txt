@@ -1,24 +1,15 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（后）
-
-// Comments
-
 [stopmusic]
-//////////////插入cg///////////////////
 [Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
-//修改此处的image来切换cg
 [PlaySound(key="$bottlebroken")]
 [Image(image="avg_6_9",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
 [Blocker(a=0, fadetime=1.5, block=false)]
 [Character]
 [ImageTween(xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
-//对话内容此处填入
 [Delay(time=4)]
-//对话内容此处填入
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [Image(fadetime=0)]
 [Blocker(a=0, fadetime=0.6, block=false)]
-
-///////////////////////////
 [Background(image="bg_undergroud_f",screenadapt="coverall",fadetime=2,block=true)]
 [Delay(time=1)]
 [Character(name="char_1505_frstar_1")]
@@ -53,29 +44,21 @@
 [Character(name="char_002_amiya_1#4")]
 [name="아미야"]  ……
 [name="아미야"]  박사님……
-
 [Decision(options="내가 남겠다.;그만 가 봐.", values="1;2")]
 [Predicate(references="1;2")]
-
 [name="아미야"]  알겠어요.
 [name="아미야"]  박사님, 프로스트노바 씨에게 그 말을 전해주세요.
 [name="아미야"]  ……부탁드려요.
 [Dialog]
-//////////////插入cg///////////////////
-
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [PlayMusic(intro="$frostnovadie_intro", key="$frostnovadie_loop", volume=0.8, crossfade=1.5)]
-//修改此处的image来切换cg
 [Image(image="avg_6_10",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
 [Blocker(a=0, fadetime=2, block=false)]
 [Character]
-//对话内容此处填入
-
 [Character(name="char_1505_frstar_1")]
 [name="프로스트노바"]  정말이지…… 순진한 토끼라니까.
 [name="프로스트노바"]  정말 닮았어. 그때의 탈룰라와…… 똑같아.
 [name="프로스트노바"]  의연하게 이상을 실현하러 가는 아이를 죽기 전에 볼 수 있다니……
-
 [Dialog]
 [Character]
 [Decision(options="약속했었잖아!;……;로도스 아일랜드에 들어오고 싶다 말하지 않았나!", values="1;2;3")]
@@ -98,7 +81,6 @@
 [name="프로스트노바"]  우리가 가야 할 곳은 우르수스뿐이야… 우리의 조국…
 [name="프로스트노바"]  눈과… 조용한 강물… 흔들리는 소나무 숲… 푸르른 이끼…
 [name="프로스트노바"]  그 땅은, 얼마나 아름다운지…
-
 [Dialog]
 [Character]
 [Decision(options="그래서, 탈룰라가 모든 사람들을 조종한다고 생각하는 건가.", values="1")]
@@ -118,7 +100,6 @@
 [Predicate(references="1")]
 [Character(name="char_1505_frstar_1")]
 [name="프로스트노바"]  얘기해……
-
 [Dialog]
 [Character]
 [Decision(options="난 너의 아버지, 불드록카스티가 진심으로 너를 사랑했다 생각한다.", values="1")]
@@ -143,14 +124,11 @@
 [name="프로스트노바"]  로도스 아일랜드의 박사. 이 세상에서 어쩌면, 선택이란 건 아무런 의미 없는 걸지도 몰라.
 [name="프로스트노바"]  하지만 그렇다 하더라도, 결과에 아무런 차이가 없다 하더라도…… 난 스스로 선택하고 싶어. 선택할 거야.
 [name="프로스트노바"]  내 손으로 직접…… 내가 심은 열매의 결실을 따낼 거야.
-
 프로스트노바의 손가락이 당신의 얼굴을 어루만졌다.
-
 [Dialog]
 [Character]
 [Decision(options="……네 손가락, 따뜻하네?", values="1")]
 [Predicate(references="1")]
-
 [Character(name="char_1505_frstar_1")]
 [name="프로스트노바"]  이상해…… 네 얼굴이…… 차가워……
 [name="프로스트노바"]  나의 체온이…… 그렇게 차갑지 않다는 걸까?
@@ -159,48 +137,32 @@
 [Decision(options="그래. 네 병은 사라졌어.;……;정말 따뜻한 손이구나, 프로스트노바.", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_1505_frstar_1")]
-
 [name="프로스트노바"]  죽을 때가 되니까…… 이제야 만나게 되었네.
-
 [Decision(options="프로스트노바, 아미야와 나는 네가 로도스 아일랜드에 들어오길 바란다.", values="1")]
 [Predicate(references="1")]
-
-
 [name="프로스트노바"]  내게 정말 그럴 자격이 있을까?
-
 [Decision(options="평범하게 죽는다면 잘못을 고칠 기회도 없을 테니까.", values="1")]
 [Predicate(references="1")]
-
-
 [name="프로스트노바"]  ……대답을 안 해주는 건 실례겠지.
 [name="프로스트노바"]  아미야에게 말해줘, {@nickname} 박사……
 [name="프로스트노바"]  이 세상에서 혼자서는 아무것도 할 수 없다고.
-//对话内容此处填入
 [Dialog]
-
-//修改此处的image来切换cg
 [Image(image="avg_6_10_2",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=2,block=true)]
 [Blocker(a=0, fadetime=0.6, block=false)]
 [Character]
-//对话内容此处填入
 [name="프로스트노바"]  하지만 그 아이는 절대로 혼자가 아니라고.
 [name="프로스트노바"]  이제부터 난… 네 곁에 있을 거야. 나는 너희 곁에 있을 거야.
 [name="프로스트노바"]  난…… 로도스 아일랜드에 들어가고 싶어.
-
 [Decision(options="고마워.", values="1")]
 [Predicate(references="1")]
-
-
 [name="프로스트노바"]  아니야. 오히려 내가… 고마워해야지.
 [name="프로스트노바"]  너의 눈빛… 오래전에 알던 친구와 정말 닮았어.
 [name="프로스트노바"]  한 남자아이를 만났었지. 그 아이의 형은 적을 용서할 바엔 차라리 목을 매달고 죽겠다고 했었어……
 [name="프로스트노바"]  그래서 그는 설원으로 가야 했고, 우르수스를 돌아다녀야 했지…… 결국 그는 우리와 함께 가지 않았어.
 [name="프로스트노바"]  그는 내가 본 사람 중에서 가장 이상을 따르는 사람이었다.
 [name="프로스트노바"]  너와 아미야는… 내게 이상도 신념이 될 수 있다는 것을 알려주었지.
-
 [Decision(options="로도스 아일랜드는 모두의 신념을 위해 싸우는 거야.", values="1")]
 [Predicate(references="1")]
-
 [name="프로스트노바"]  원래는 리유니온도… 마찬가지였어.
 [name="프로스트노바"]  정말 닮았네.
 [name="프로스트노바"]  너의 눈빛, 그 아이와 정말 닮았어.
@@ -209,12 +171,9 @@
 [name="프로스트노바"]  아버지…… 전 정말 바보였어요.
 [name="프로스트노바"]  용서해주세요.
 [Dialog]
-//对话内容此处填入
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Image(fadetime=0)]
 [Blocker(a=0, fadetime=0.6, block=false)]
-
-///////////////////////////
 [Dialog]
 [Character]
 [Background]
@@ -225,5 +184,3 @@
 [Dialog]
 [Blocker(fadetime=2,block=true)]
 [Image]
-
-

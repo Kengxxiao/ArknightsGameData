@@ -116,6 +116,9 @@ function WardrobeSortByTimeState:_RefreshViewModel(obj)
 			if (a.onSale ~= b.onSale) then
 				return a.onSale
 			end
+			if (a.data.displaySkin.getTime ~= b.data.displaySkin.getTime)then
+				return a.data.displaySkin.getTime < b.data.displaySkin.getTime
+			end
 			return a.data.displaySkin.sortId < b.data.displaySkin.sortId 
 		end);
 	end

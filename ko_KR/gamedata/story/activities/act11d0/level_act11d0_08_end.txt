@@ -1,5 +1,4 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 九尾狐活动 8下
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
@@ -7,9 +6,6 @@
 [Background(image="bg_ltroom",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
-
-//背景：待客厅室内
-//（议事厅内）
 [Character(name="avg_npc_068")]
 [name="다친 주민"]  아…… 장관님, 여기 계셨군요!
 [name="다친 주민"]  다치셨다고 들었습니다. 괜찮으십니까?
@@ -43,26 +39,20 @@
 [Character(name="avg_npc_066", name2="avg_npc_069#4",focus=1)]
 [name="세버린"]  ……너까지 그렇게 말한다면, 그 말이 맞는 거겠지.
 [name="세버린"]  최소한의 희망이라도 가져보자꾸나…… 상황이 바뀔 수도 있으니까.
-
-//（城镇中心，激烈的战斗，晃动，爆炸）
-//背景：沃伦姆德主街道破坏
 [stopmusic(fadetime=3)]
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_ltstreet2",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=0, fadetime=0.5, block=false)]
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=0, fadetime=1, block=false)]
 [CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-
 [CameraShake(duration=0.7, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$d_sp_ballista")]
@@ -80,7 +70,6 @@
 [playsound(key="$smallearthquake", volume=0.2)]
 [CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
 [delay(time=2)]
-//（晃动）
 [Character(name="avg_npc_065")]
 [name="마을 주민"]  성공이다! 거대 석상이, 드디어 부서졌다!
 [Character(name="avg_npc_011#2")]
@@ -94,12 +83,10 @@
 [Character(name="char_345_folnic_1#5")]
 [name="폴리닉"]  닥쳐.
 [name="폴리닉"]  그 입으로…… 아트로의 이름을 부르지 마.
-
 [Dialog]
 [Character]
 [PlaySound(key="$rungeneral", volume=0.6)]
 [delay(time=1)]
-
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [playsound(key="$e_atk_magic_n", volume=1)]
 [playsound(key="$e_atk_magic_m", volume=1)]
@@ -139,11 +126,9 @@
 [name="살카즈 전사"]  머드락의 아츠 발현 시간을 늦추다니…… 정말 신기한 기술이군.
 [name="살카즈 전사"]  근데 너무 여유 부리는 거 아니야?
 [Character]
-//（晃动）
 [Dialog]
 [PlaySound(key="$fightgeneral")] 
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-
 [Character(name="char_358_lisa_1#2")]
 [name="스즈란"]  윽! 이, 이것 놓으세요!
 [Character(name="char_358_lisa_1#2", name2="avg_npc_053",focus=2)]
@@ -155,7 +140,6 @@
 [Character]
 [Dialog]
 [name="거대 석상"]  쿠어어어어어……!
-
 [Dialog]
 [playsound(key="$smallearthquake", volume=0.6)]
 [CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
@@ -188,9 +172,7 @@
 [name="무장 감염자"]  저런 헛소리에 휘둘리지 마라! 이제 와서 진범이 무슨 소용이란 말이야?!
 [name="무장 감염자"]  우리가 원하는 건, 감염자가 비감염자에게 배척당하지 않는 것, 가난한 자들이 귀족에게 모든 것을 바치지 않아도 되는 것이다! 그리고 윈터위습인은 빼앗긴 영토를 탈환할 것이다!
 [name="무장 감염자"]  우리는 리유니온이다! 우리가 새로운 시대를 열겠다!
-
 [Character]
-//（呼声）
 [Character(name="avg_npc_011#2")]
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
 [name="머드락"]  봐라, 세버린. 이제 진실 따윈 쓸모없는 일이 됐지……
@@ -218,7 +200,6 @@
 [name="세버린"]  ……그 정도면 충분하다.
 [Character(name="avg_npc_011#2")]
 [name="머드락"]  ……잘 가라.
-
 [Dialog]
 [Character]
 [stopmusic(fadetime=3)]
@@ -253,10 +234,8 @@
 [Character(name="avg_npc_067")]
 [name="무장 감염자"]  어이! 머드락이 곤란한 상황에 처한 것 같다! 어서 가서 도와줘! 저놈들에게 틈을 내주지 마라!
 [name="무장 감염자"]  하, 하지만 거대 석상도 부서졌는데…… 더는……
-
 [Dialog]
 [Character]
-//（断崖走出）
 [PlaySound(key="$d_gen_walk_n")]
 [Character(name="char_294_ayer",fadetime=1,block=true)]
 [delay(time=1)]
@@ -337,7 +316,6 @@
 [name="머드락"]  이곳에 남아 영토를 되찾거나 귀족에게 복수한다 한들…… 결국 너희에게 남는 것은 얼어붙은 땅에서 조난당할 결말뿐이다.
 [name="머드락"]  분노의 불길에 기대어 겨울을 나겠다는 건가? 아니면 무고한 자의 시체를 땔감 삼아 추위를 이겨내고 싶은 건가?
 [name="머드락"]  어차피 진범은 이미 죽었으니, 우린 이쯤에서 빠지는 게 옳다.
-
 [Character(name="avg_npc_067")]
 [name="반란자 주민"]  하, 하지만 우린 월루몽드를 되찾아야 해! 여긴 원래 우리의 영토다!
 [Character(name="avg_npc_053")]
@@ -350,7 +328,6 @@
 [name="무장 감염자"]  수많은 동료가 죽었다! 겨우 저자들의 몇 마디 말만 듣고 꽁무니를 빼겠다고?!
 [Character(name="avg_npc_011#2")]
 [name="머드락"]  ……저자를 조용히 시켜주게, 친구들.
-
 [Character]
 [Dialog]
 (쿠구구구……)
@@ -398,7 +375,6 @@
 [name="폴리닉"]  절대, 로도스 아일랜드가 소중히 여기는 것을 너희 따위가 짓밟게 두지 않겠어.
 [Character(name="char_367_swllow_1#4")]
 [name="그레이스롯"]  놈들이 아츠를 시전하려 한다, 방어를 준비해! 시전자를 노려야……
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
@@ -410,7 +386,6 @@
 [Blocker(a=0, fadetime=0.5, block=false)]
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)] 
 [delay(time=1)]
-//（晃动）
 [Character(name="avg_npc_053")]
 [name="살카즈 전사"]  ……
 [Character(name="avg_npc_067")]
@@ -422,7 +397,6 @@
 [name="무장 감염자"]  이 마족 놈들이!! 너희와 싸우게 될지라도 우리는 절대 포기 안 해!
 [Character(name="avg_npc_053")]
 [name="살카즈 전사"]  이거 참……
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
@@ -434,7 +408,6 @@
 [Blocker(a=0, fadetime=0.5, block=false)]
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)] 
 [delay(time=1)]
-//（晃动）
 [Character(name="char_345_folnic_1#3")]
 [name="폴리닉"]  무슨 일이지, 갑자기 내분이라도 일어난 건가……?
 [name="폴리닉"]  잠깐…… 머드락이…… 걸음을 멈췄다?
@@ -443,8 +416,6 @@
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_ltstreet2",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-//（转场）
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
 [name="살카즈 전사"]  리더?
 [Character(name="avg_npc_011#2")]
@@ -452,10 +423,8 @@
 [name="머드락"]  일…… 어나라.
 [Dialog]
 [Character]
-//（晃动）
 [playsound(key="$smallearthquake", volume=0.6)]
 [CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
-
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
 [name="살카즈 전사"]  그만둬, 머드락. 지금 네 수명을 갉아먹고 있잖아.
 [Character(name="avg_npc_011#2")]
@@ -464,14 +433,11 @@
 [name="살카즈 전사"]  그렇게 고대의 아츠까지 쓸 필요는……
 [Character(name="avg_npc_011#2")]
 [name="머드락"]  명하노니…… 일어나라!
-
 [Dialog]
 [Character]
-//（晃动）
 폐허의 거의 모든 잔해가 하나로 뭉쳤다.
 그리고 그것들이 뭉쳐진 건, 거인의 형상을 하고 있었다. 거인은 멀리 보이는 산맥을 응시했다.
 머드락은, 미동조차 하지 않고 있었다.
-
 [Character(name="char_358_lisa_1#2")]
 [name="스즈란"]  어, 엄청 높다! 엄청 커!
 [Character(name="char_367_swllow_1")]
@@ -482,9 +448,6 @@
 [Character(name="char_367_swllow_1#4")]
 [name="그레이스롯"]  마, 말도 안 돼…… 머드락에겐 분명 이런 힘이 남아 있지 않아. 하지만 이 아츠는……
 [name="그레이스롯"]  살카즈의…… 술법인가?
-
-//（切岩石巨像的时候撤立绘，就是泥岩与巨人的交替）
-
 [Character(name="avg_npc_011#2")]
 [name="머드락"]  (명하노니……)
 [Character]
@@ -516,9 +479,7 @@
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=0, fadetime=1.5, block=false)]
 [CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-//（劈砍）
 [delay(time=1)]
-
 [Character(name="avg_npc_053")]
 [name="살카즈 전사"]  예전까지는…… 너희를 도왔었지. 그 화재 때문에, 우리도 상당히 분노했으니까.
 [name="살카즈 전사"]  우린 너희의 생각에 동감했고, 너희를 이끌었다. 하지만 우리가 바라는 건 그들의 죽음이 아니야, 우리의 삶이지.
@@ -527,26 +488,19 @@
 [name="살카즈 전사"]  상대가 명령을 거역한 폭도들이라면…… 봐줄 필요는 없겠지?
 [name="살카즈 전사"]  누굴 상대하든, 우리 살카즈, '마족 놈들' 한테는 간단한 일이니까.
 [name="살카즈 전사"]  식은 죽 먹기지.
-
 [Dialog]
 [stopmusic(fadetime=3)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Character]
 [Background(image="bg_ltalley",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-//（转场，小巷）
-
 [Character(name="char_294_ayer", name2="char_328_cammou",focus=1)]
 [name="에이어스카르페"]  무슨 일이지? 저 거대 석상이 나타난 이후, 모든 소리가 멈췄다……
 [Character(name="char_294_ayer", name2="char_328_cammou",focus=2)]
 [name="클릭"]  저거, 저 산처럼 거대한 석상도 아츠인 거야?
 [Character(name="char_294_ayer", name2="char_328_cammou",focus=1)]
 [name="에이어스카르페"]  ……어떻게든 폴리닉 쪽에 합류해야겠어.
-
-
-//（转场，议事厅前）
 [Dialog]
-
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Character]
 [Background(image="bg_ltstreet2",screenadapt="coverall")]
@@ -595,7 +549,6 @@
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=1)]
 [name="머드락"]  네 말이 맞다…… 하지만 그럼 우리의 투쟁과…… 죽어나간 동포들에게 무슨 의미가 있지?
 [playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
-
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
 [name="살카즈 전사"]  원래 고통과 갈등은 우리의 단짝이잖냐.
 [name="살카즈 전사"]  어, 잠깐…… 성냥 있는 것 같은데. 예비용으로 들고 다니던 건데 여기 있었구만.
@@ -620,19 +573,14 @@
 [name="머드락"]  ……그럼, 여기서 작별이다.
 [name="머드락"]  아마도…… 너희는 이곳에 남은 자들을 도우려 하겠지……
 [name="머드락"]  하지만, 그것도 이제 살카즈와는 상관없는 일이다.
-
 [Dialog]
 [Character]
-//（晃动）
 [playsound(key="$smallearthquake", volume=0.6)]
 [CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=false)]
-
 바위가 무너져 내리는 소음 속에서, 살카즈들은 고개를 돌렸다.
 거리는 불타고 있었다.
 폭도들은 떠났고, 분쟁이 다시 발생할 유일한 원인이 사라진 거리에는 공포와 위협만이 남았다.
 마지막 바위 파편이, 땅에 떨어졌다.
-
-
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
 [Character]
