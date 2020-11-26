@@ -1,26 +1,17 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（后）
-
-// Comments
-// 从室内走向室外白光
 [Dialog]
 [Character]
 [Delay(time=1)]
-//////////////插入cg///////////////////
 [Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
 [PlayMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.8, crossfade=1.5, delay=0.5)]
-//修改此处的image来切换cg
 [Image(image="avg_6_13",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
 [Blocker(a=0, fadetime=2, block=true)]
 [Character]
 [ImageTween(xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
-//对话内容此处填入
 [delay(time=4)]
-//对话内容此处填入
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Image(fadetime=0)]
 [Blocker(a=0, fadetime=0.6, block=true)]
-
-///////////////////////////
 [Background(screenadapt="coverall", image="bg_indoor_n", width=1, height=1, fadetime=2,block=true)]
 [delay(time=1)]
 [Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
@@ -58,7 +49,6 @@
 [Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
 [name="Phantom Crossbowman"]  Faust insisted we honor the dead like this.
 [name="Phantom Crossbowman"]  "It's not a waste to show respect."
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
@@ -73,11 +63,8 @@
 [name="Amiya"]  ...You knew him?
 [Character(name="char_002_amiya_1#4",name2="char_367_swllow_1#3",focus=2)]
 [name="GreyThroat"]  I don't know. I'm not sure if you'd say we... knew each other.
-
 [Decision(options="It seems like there's not much Rhodes Island can do.;......;Have we ever actually saved any Infected?", values="1;2;3")]
 [Predicate(references="1;2;3")]
-
-
 [Predicate(references="1")]
 [Character(name="char_002_amiya_1#4")]
 [name="Amiya"]  Yeah.
@@ -216,9 +203,6 @@
 [name="Amiya"]  Yeti Squad? Are they forming up with Reunion in the slums?
 [Character(name="char_017_homura_3#9")]
 [name="Blaze"]  ...The worst is yet to come.
-
-
 [Dialog]
 [Delay(time=0.5)]
 [Blocker(a=1,r=0, g=0, b=0, fadetime=2, block=true)]
-

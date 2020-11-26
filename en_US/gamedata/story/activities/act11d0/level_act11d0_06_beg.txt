@@ -1,27 +1,18 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 九尾狐活动 6上
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-//背景：沃伦姆德小巷间
-
-
-
-//（黑屏）
 [name="Tatjana"]  Nng...
 [name="Tatjana"]  Where am I...?
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_ltalley",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
 [playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
-
-//（醒来，小巷中）
 [Character(name="avg_npc_069#2",fadetime=1,block=true)]
 [delay(time=1)]
 [CameraShake(duration=0.3, xstrength=8, ystrength=6, vibrato=30, randomness=30, fadeout=true, block=false)]
@@ -36,7 +27,6 @@
 [Character(name="avg_npc_069#4")]
 [CameraShake(duration=0.3, xstrength=8, ystrength=6, vibrato=30, randomness=30, fadeout=true, block=false)]
 [name="Tatjana"]  Aaah?!
-//（晃动）
 [Character(name="char_367_swllow_1", name2="avg_npc_069#4",focus=1)]
 [name="GreyThroat"]  Calm down.
 [Character(name="char_367_swllow_1", name2="avg_npc_069#4",focus=2)]
@@ -79,8 +69,6 @@
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [playMusic(intro="$plot_intro", key="$plot_loop", volume=0.4)]
-//（转场）
-//（依旧发生在十二音街道，晃动，武器交错）
 [PlaySound(key="$fightgeneral")] 
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
 [PlaySound(key="$fightgeneral")] 
@@ -136,7 +124,6 @@
 [name="Rebellious Townsfolk"]  Think about it: who’s going to set fire to a medical camp that treats Infected? Would the Infected do that?
 [name="Rebellious Townsfolk"]  It could only be someone who wants to see the Infected suffer. You should be on our side—
 [name="Rebellious Townsfolk"]  —The side of Reunion!
-
 [stopmusic(fadetime=2)]
 [Dialog]
 [Character]
@@ -144,13 +131,10 @@
 [Background(image="bg_ltstreet1",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
-
 [CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$d_sp_ballista")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
-//（回到城镇中心，炮火再一次掀起）
-//背景：沃伦姆德主街道
 [Character(name="avg_npc_068")]
 [name="Townsfolk"]  Schultz! The rebels refuse to surrender!
 [Character(name="avg_npc_066#3")]
@@ -158,14 +142,12 @@
 [Dialog]
 [Character]
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
-//（出灰喉，灰喉归来）
 [Character(name="char_367_swllow_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="GreyThroat"]  The truly horrific thing about this disaster is that both sides are ordinary civilians. There are no warriors here.
 [name="GreyThroat"]  We should do everything we can to avoid the worst case scenario.
 [Character(name="char_358_lisa_1")]
 [name="Suzuran"]  GreyThroat! Miss Tatjana! You’re back!
-//（出亚叶）
 [Dialog]
 [Character]
 [Character(name="char_345_folnic_1#3",fadetime=1,block=true)]
@@ -241,7 +223,7 @@
 [name="Ayerscarpe"]  Allow me to interject. I’d like to discuss that captive, who called himself “Reunion.”
 [Character(name="char_358_lisa_1#3", name2="char_294_ayer",focus=1)]
 [name="Suzuran"]  Huh?
-[Character(name="char_367_swllow_1")]
+[Character(name="char_294_ayer")]
 [name="GreyThroat"]  We have made contact with a certain lone member of the Reunion Movement, and he has very little in common with the outraged citizenry.
 [name="GreyThroat"]  He’s a battle-hardened warrior. And if he came with a squad, he could be a problem.
 [Character(name="avg_npc_066")]
@@ -265,7 +247,6 @@
 [name="Severin"]  We should return to the Rathaus for a formal resolution.
 [Dialog]
 [Character]
-//（晃动）
 [CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$d_sp_ballista")]

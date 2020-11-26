@@ -68,7 +68,7 @@ function LoginOnlyDlg:_CreateItems()
   for idx = 1, #items do
     local item = items[idx];
     local viewModel = CS.Torappu.UI.UIItemViewModel();
-    local prefab = CS.Torappu.UI.UIAssetLoader.instance.activityOutlinks.uiItemCard;
+    local prefab = CS.Torappu.UI.UIAssetLoader.instance.staticOutlinks.uiItemCard;
     local itemContainer = self:_PickItemContainer(idx);
     local itemCard = CS.UnityEngine.GameObject.Instantiate(prefab, itemContainer);
 

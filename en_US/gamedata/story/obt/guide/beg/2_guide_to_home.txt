@@ -1,45 +1,28 @@
-//!torch
 [HEADER(is_tutorial=true, is_skippable=true, is_autoable=true, fit_mode="BLACK_MASK", deny_auto_switch_scene=true)] 引导2到主界面
-
 [stopmusic(fadetime=1)]
 [Background(image="bg_indoor_1", width=1, height=1, fadetime=1)]
-
 [Delay(time=1)]
-
-
-
-
 [Character(name="char_013_riop")]
 [name="Guard"]   This is the last one!
-
 [CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Character(name="char_1002_nsabr_2")]
 [Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [PlaySound(key="$d_sp_ballista")]
 [Blocker(a=0, fadetime=1.5, block=false)]
 [name="Reunion Member"]   Ugh!
-
 [Character(name="char_013_riop")]
-
-
-
 [Dialog]
 [Character(fadetime=0)]
 [Delay(time=0.5)]
 [PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5)]
 [Character(name="char_013_riop")]
-
 [name="Guard"]   Target eliminated. The enemy squad is retreating!
 [name="Guard"]   Dr. {@nickname}'s commands were perfect, just like Amiya said. How reassuring!
-
 [Character(name="char_002_amiya_1#10")]
-
 [name="Amiya"]   See, that wasn't too bad, right?
 [name="Amiya"]   Doctor, compared to everything you've been through, this is a walk in the park.
-
 [Character(fatetime=0.5, block=true)]
 [delay=1]
-
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
 [Character(name="char_1002_nsabr_2")]
@@ -54,9 +37,6 @@
 [PlaySound(key="$d_gen_walk_n")]
 [Character(name="char_130_doberm_ex")]
 [name="???"]   Don't even think about it!
-
-
-
 [Character(name="char_013_riop")]
 [name="Guard"]   Instructor!
 [Character(name="char_013_riop", name2="char_130_doberm_ex", focus=2)]
@@ -67,8 +47,6 @@
 [name="Dobermann"]   Quick! Get back into formation!
 [Character(name="char_013_riop", name2="char_130_doberm_ex", focus=1)]
 [name="Guard"]   Yessir!
-
-
 [Character(name="char_002_amiya_1#2")]
 [name="Amiya"]   Dobermann! You made it!
 [Character(name="char_002_amiya_1#2", name2="char_130_doberm_ex", focus=2)]
@@ -109,13 +87,11 @@
 [Character(name="char_130_doberm_ex")]
 [name="Dobermann"]   Dr. {@nickname}, I am Dobermann, captain of Op Team E1.
 [name="Dobermann"]   We are going to escort you from Chernobog, which is the Ursus city we're currently in, back to Rhodes Island.
-
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
 [image(image="avg_map_1")]
 [ImageTween(image="avg_map_1", tiled=true, xScaleTo=1.3, yScaleTo=1.3, xTo=-200, duration=75, block=false)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
 [name="Dobermann"]   We're in an abandoned facility in Chernobog and should now head west.
-
 [Character(name="char_002_amiya_1", name2="char_130_doberm_ex", focus=1)]
 [ImageTween(image="avg_map_1", tiled=true, xScaleTo=1.8, yScaleTo=1.8, xTo=-200, duration=75, block=false)]
 [name="Amiya"]   But... since we're cut off from Dr. Kal'tsit, Dobermann and I have lead our separate teams westward to a rendezvous point before confirming our signal to retreat.
@@ -128,7 +104,6 @@
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
 [image]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
-
 [Character(name="char_016_medic", name2="char_002_amiya_1", focus=1)]
 [name="Medic"]   A-Amiya!
 [Character(name="char_016_medic", name2="char_002_amiya_1#6", focus=2)]
@@ -137,18 +112,14 @@
 [name="Medic"]   It's... it's a call from Rhodes Island!
 [Character(name="char_002_amiya_1#6", focus=-1)]
 [name="Amiya"]   Are our communications back on? Is it Dr. Kal'tsit...?
-
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
 [Character(name="char_002_amiya_1#6", focus=-1)]
 [name="???"]   Sorry, but not quite.
 [image(image="bg_2_call")]
 [PlaySound(key="$d_gen_transmissionget",volume=0.4)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
-
 [Character(name="char_002_amiya_1#1", focus=1)]
 [name="Amiya"]   PRTS...?
-
-
 [Character(name="char_002_amiya_1#1", focus=-1)]
 [name="PRTS"]   The Emergency Neural Connection Request System was activated.
 [name="PRTS"]   Interference has also been detected from Rhodes Island's end, and only partial Neural Network connection is possible.
@@ -176,20 +147,15 @@
 [name="PRTS"]   Identity verification required. Select verification method.
 [Character(name="char_002_amiya_1#2", focus=1)]
 [name="Amiya"]   Ah, Doctor... Please say something.
-
-
 [Decision(options="(Speak)", values="1")]
-
 [Predicate(references="1")]
 [PlaySound(key="$d_gen_transmissionget",volume=0.4)]
 [Character(name="char_002_amiya_1#3", focus=-1)]
 [name="PRTS"]   I am not sure why you did not speak, but the action of touching the interface is sufficient—
 [name="PRTS"]   —Fingerprint match found. Verification complete. Security clearance: 8
-
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Background]
 [Character(fadetime=0)]
-//修改此处的image来切换cg
 [Image(image="avg_ep00",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
 [Blocker(a=0, fadetime=0.6, block=false)]
 [ImageTween(xFrom=0, yFrom=0, xTo=0, yTo=-20, xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=15, block=false)]

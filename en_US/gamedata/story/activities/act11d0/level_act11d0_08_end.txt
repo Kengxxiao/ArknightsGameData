@@ -1,5 +1,4 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 九尾狐活动 8下
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
@@ -7,9 +6,6 @@
 [Background(image="bg_ltroom",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
-
-//背景：待客厅室内
-//（议事厅内）
 [Character(name="avg_npc_068")]
 [name="Wounded Townsfolk"]  Ah! Schultz! That’s where you were!
 [name="Wounded Townsfolk"]  I heard you were hurt. Are you being discharged?
@@ -43,26 +39,20 @@
 [Character(name="avg_npc_066", name2="avg_npc_069#4",focus=1)]
 [name="Severin"]  It’s pointless to even say it’s pointless.
 [name="Severin"]  Have some hope, at least. There’s always a chance to turn things around.
-
-//（城镇中心，激烈的战斗，晃动，爆炸）
-//背景：沃伦姆德主街道破坏
 [stopmusic(fadetime=3)]
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_ltstreet2",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=0, fadetime=0.5, block=false)]
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=0, fadetime=1, block=false)]
 [CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-
 [CameraShake(duration=0.7, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$d_sp_ballista")]
@@ -80,7 +70,6 @@
 [playsound(key="$smallearthquake", volume=0.2)]
 [CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
 [delay(time=2)]
-//（晃动）
 [Character(name="avg_npc_065")]
 [name="Townsfolk"]  We did it! We shattered the giants!
 [Character(name="avg_npc_011#2")]
@@ -94,12 +83,10 @@
 [Character(name="char_345_folnic_1#5")]
 [name="Folinic"]  Shut up.
 [name="Folinic"]  Don’t you dare... speak her name.
-
 [Dialog]
 [Character]
 [PlaySound(key="$rungeneral", volume=0.6)]
 [delay(time=1)]
-
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [playsound(key="$e_atk_magic_n", volume=1)]
 [playsound(key="$e_atk_magic_m", volume=1)]
@@ -139,11 +126,9 @@
 [name="Sarkaz Warrior"]  Delaying the time it takes for Mudrock’s Arts to activate... what a strange ability.
 [name="Sarkaz Warrior"]  But, do you really have the luxury to be getting distracted?
 [Character]
-//（晃动）
 [Dialog]
 [PlaySound(key="$fightgeneral")] 
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-
 [Character(name="char_358_lisa_1#2")]
 [name="Suzuran"]  Hey! L-let go of me!
 [Character(name="char_358_lisa_1#2", name2="avg_npc_053",focus=2)]
@@ -155,7 +140,6 @@
 [Character]
 [Dialog]
 [name="Mudrock Colossus"]  GRAAAAAAAHHHH—!
-
 [Dialog]
 [playsound(key="$smallearthquake", volume=0.6)]
 [CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
@@ -188,9 +172,7 @@
 [name="Armed Infected"]  Don’t listen to his bullshit! Does it even matter who the real murderer is?!
 [name="Armed Infected"]  What we’re fighting for is the end marginalization of the Infected, and the end to the aristocracy’s exploitation of the working class! Winterwisp will rightfully reclaim its land!
 [name="Armed Infected"]  We are Reunion! A new era begins today!
-
 [Character]
-//（呼声）
 [Character(name="avg_npc_011#2")]
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
 [name="Mudrock"]  Look, Severin, it’s useless...
@@ -218,7 +200,6 @@
 [name="Severin"]  ...Fair enough.
 [Character(name="avg_npc_011#2")]
 [name="Mudrock"]  Farewell.
-
 [Dialog]
 [Character]
 [stopmusic(fadetime=3)]
@@ -253,10 +234,8 @@
 [Character(name="avg_npc_067")]
 [name="Armed Infected"]  Hey! Mudrock’s in trouble! Let’s go help him! Don’t let up!
 [name="Armed Infected"]  B-but they even broke the colossi...
-
 [Dialog]
 [Character]
-//（断崖走出）
 [PlaySound(key="$d_gen_walk_n")]
 [Character(name="char_294_ayer",fadetime=1,block=true)]
 [delay(time=1)]
@@ -337,7 +316,6 @@
 [name="Mudrock"]  It doesn’t matter if you want to take back your land or get revenge on the rich... You will only end up a corpse in the snow.
 [name="Mudrock"]  Do you want to spend the winter burning with rage? Do you want to warm yourselves with a fire fed with the bodies of innocents?
 [name="Mudrock"]  The murderer is dead. It’s time to leave.
-
 [Character(name="avg_npc_067")]
 [name="Rebellious Townsfolk"]  B-but we have to take back Wolumonde! It’s our land!
 [Character(name="avg_npc_053")]
@@ -350,7 +328,6 @@
 [name="Armed Infected"]  We lost so many people! Are we going to leave like that? With our tails between our legs? Just because of a few words?
 [Character(name="avg_npc_011#2")]
 [name="Mudrock"]  Calm him down, friends.
-
 [Character]
 [Dialog]
 Graaaaagh...
@@ -398,7 +375,6 @@ Graaaaagh...
 [name="Folinic"]  Rhodes Island is protecting this place. You have to go through us.
 [Character(name="char_367_swllow_1#4")]
 [name="GreyThroat"]  They’re going to use Arts. Prepare the defenses. Target the casters.
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
@@ -410,7 +386,6 @@ Graaaaagh...
 [Blocker(a=0, fadetime=0.5, block=false)]
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)] 
 [delay(time=1)]
-//（晃动）
 [Character(name="avg_npc_053")]
 [name="Sarkaz Warrior"]  ——
 [Character(name="avg_npc_067")]
@@ -422,7 +397,6 @@ Graaaaagh...
 [name="Armed Infected"]  Even if we have to fight you, devil, we’re not giving up!
 [Character(name="avg_npc_053")]
 [name="Sarkaz Warrior"]  Hah.
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
@@ -434,7 +408,6 @@ Graaaaagh...
 [Blocker(a=0, fadetime=0.5, block=false)]
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)] 
 [delay(time=1)]
-//（晃动）
 [Character(name="char_345_folnic_1#3")]
 [name="Folinic"]  What happened? Are they fighting each other?
 [name="Folinic"]  Wait... Mudrock... stopped moving?
@@ -443,8 +416,6 @@ Graaaaagh...
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_ltstreet2",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-//（转场）
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
 [name="Sarkaz Warrior"]  Leader?
 [Character(name="avg_npc_011#2")]
@@ -452,10 +423,8 @@ Graaaaagh...
 [name="Mudrock"]  Arise...
 [Dialog]
 [Character]
-//（晃动）
 [playsound(key="$smallearthquake", volume=0.6)]
 [CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
-
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
 [name="Sarkaz Warrior"]  Stop, Mudrock. You’re burning through your own life.
 [Character(name="avg_npc_011#2")]
@@ -464,14 +433,11 @@ Graaaaagh...
 [name="Sarkaz Warrior"]  You don’t have to use that ancient power—
 [Character(name="avg_npc_011#2")]
 [name="Mudrock"]  I said... Arise!
-
 [Dialog]
 [Character]
-//（晃动）
 All the rubble begins to condense into a single point.
 A giant, looking out over the distant mountains.
 Mudrock, however, stands motionless.
-
 [Character(name="char_358_lisa_1#2")]
 [name="Suzuran"]  It’s... huge!
 [Character(name="char_367_swllow_1")]
@@ -482,9 +448,6 @@ Mudrock, however, stands motionless.
 [Character(name="char_367_swllow_1#4")]
 [name="GreyThroat"]  N-no... Mudrock already spent all his energy. These Arts...
 [name="GreyThroat"]  That’s Sarkaz... witchcraft?
-
-//（切岩石巨像的时候撤立绘，就是泥岩与巨人的交替）
-
 [Character(name="avg_npc_011#2")]
 [name="Mudrock"]  (I said...)
 [Character]
@@ -516,9 +479,7 @@ Mudrock, however, stands motionless.
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=0, fadetime=1.5, block=false)]
 [CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-//（劈砍）
 [delay(time=1)]
-
 [Character(name="avg_npc_053")]
 [name="Sarkaz Warrior"]  In the past... we helped you. That fire unsettled us all.
 [name="Sarkaz Warrior"]  We joined you, we guided you, but not for the sake of their deaths. Only for the sake of our lives.
@@ -527,26 +488,19 @@ Mudrock, however, stands motionless.
 [name="Sarkaz Warrior"]  And if we’re dealing with a bunch of rioters who don’t follow orders, why show mercy?
 [name="Sarkaz Warrior"]  Us, the Sarkaz, the “devils,” we’re enough to take on anyone.
 [name="Sarkaz Warrior"]  More than enough.
-
 [Dialog]
 [stopmusic(fadetime=3)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Character]
 [Background(image="bg_ltalley",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-//（转场，小巷）
-
 [Character(name="char_294_ayer", name2="char_328_cammou",focus=1)]
 [name="Ayerscarpe"]  What happened? Everything got quiet as soon as that giant appeared.
 [Character(name="char_294_ayer", name2="char_328_cammou",focus=2)]
 [name="Click"]  So uh, that mountain-sized monster is a kind of Originium Art?
 [Character(name="char_294_ayer", name2="char_328_cammou",focus=1)]
 [name="Ayerscarpe"]  Let’s figure out how to get back to Folinic.
-
-
-//（转场，议事厅前）
 [Dialog]
-
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Character]
 [Background(image="bg_ltstreet2",screenadapt="coverall")]
@@ -595,7 +549,6 @@ Mudrock, however, stands motionless.
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=1)]
 [name="Mudrock"]  You’re right... So what do we do with our struggle...? With our deceased?
 [playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
-
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
 [name="Sarkaz Warrior"]  Loss and pain follow us everywhere.
 [name="Sarkaz Warrior"]  Erm, just a second... I found a spare match.
@@ -620,19 +573,14 @@ Mudrock, however, stands motionless.
 [name="Mudrock"]  It’s time... to say goodbye.
 [name="Mudrock"]  Maybe... just maybe, you can find a way to help these people.
 [name="Mudrock"]  But none of that has anything to do with the Sarkaz anymore.
-
 [Dialog]
 [Character]
-//（晃动）
 [playsound(key="$smallearthquake", volume=0.6)]
 [CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=false)]
-
 To the sound of crumbling rock, the Sarkaz turn and leave.
 The entire block is burning.
 The mob is gone, having left only out of fear.
 The last chunk tumbles to the ground.
-
-
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
 [Character]
