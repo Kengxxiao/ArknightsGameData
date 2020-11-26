@@ -1,27 +1,18 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 九尾狐活动 6上
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-//背景：沃伦姆德小巷间
-
-
-
-//（黑屏）
 [name="タチヤナ"]  ううっ……
 [name="タチヤナ"]  ここは……
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_ltalley",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
 [playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
-
-//（醒来，小巷中）
 [Character(name="avg_npc_069#2",fadetime=1,block=true)]
 [delay(time=1)]
 [CameraShake(duration=0.3, xstrength=8, ystrength=6, vibrato=30, randomness=30, fadeout=true, block=false)]
@@ -36,7 +27,6 @@
 [Character(name="avg_npc_069#4")]
 [CameraShake(duration=0.3, xstrength=8, ystrength=6, vibrato=30, randomness=30, fadeout=true, block=false)]
 [name="タチヤナ"]  いやぁーー！？
-//（晃动）
 [Character(name="char_367_swllow_1", name2="avg_npc_069#4",focus=1)]
 [name="グレースロート"]  ……そんなに驚かないで。
 [Character(name="char_367_swllow_1", name2="avg_npc_069#4",focus=2)]
@@ -79,8 +69,6 @@
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [playMusic(intro="$plot_intro", key="$plot_loop", volume=0.4)]
-//（转场）
-//（依旧发生在十二音街道，晃动，武器交错）
 [PlaySound(key="$fightgeneral")] 
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
 [PlaySound(key="$fightgeneral")] 
@@ -136,7 +124,6 @@
 [name="反乱する住民"]  ……感染者を治療する医療拠点を、燃やす感染者がいると思うか？　普通しねえよな。
 [name="反乱する住民"]  そんなことをするのは、感染者を目のかたきにしてる奴らに決まってる。つまり、お前たちが信じるべきは俺たち――
 [name="反乱する住民"]  ――「レユニオン」だ！
-
 [stopmusic(fadetime=2)]
 [Dialog]
 [Character]
@@ -144,13 +131,10 @@
 [Background(image="bg_ltstreet1",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
-
 [CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$d_sp_ballista")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
-//（回到城镇中心，炮火再一次掀起）
-//背景：沃伦姆德主街道
 [Character(name="avg_npc_068")]
 [name="住民"]  憲兵長！　反乱者たちは投降を拒んでいます――！
 [Character(name="avg_npc_066#3")]
@@ -158,14 +142,12 @@
 [Dialog]
 [Character]
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
-//（出灰喉，灰喉归来）
 [Character(name="char_367_swllow_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="グレースロート"]  今回の抗争の本当に恐ろしいところは、みんな戦士じゃなくて、ただの一般住民だってところよ。
 [name="グレースロート"]  最悪の事態を避けるために、全力を尽くしましょう。
 [Character(name="char_358_lisa_1")]
 [name="スズラン"]  グレースロート先輩！　タチヤナさん！　戻られたんですね！
-//（出亚叶）
 [Dialog]
 [Character]
 [Character(name="char_345_folnic_1#3",fadetime=1,block=true)]
@@ -241,7 +223,7 @@
 [name="エアースカーペ"]  一つだけいいか。その噂を俺たちに話した捕虜は、「レユニオン」を自称していた。
 [Character(name="char_358_lisa_1#3", name2="char_294_ayer",focus=1)]
 [name="スズラン"]  えっ？
-[Character(name="char_367_swllow_1")]
+[Character(name="char_294_ayer")]
 [name="グレースロート"]  ……私たちは少し前に、単独で行動していたレユニオンと遭遇している。不平不満から暴れまわっているここの住民たちとは、比べ物にならないわ。
 [name="グレースロート"]  あれは、百戦錬磨の戦士だった。もしあんなのが部隊を従えているとすれば、厄介なことになる。
 [Character(name="avg_npc_066")]
@@ -265,7 +247,6 @@
 [name="セベリン"]  まずは議事堂に戻って、正式な決議をとるべきだ。
 [Dialog]
 [Character]
-//（晃动）
 [CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$d_sp_ballista")]

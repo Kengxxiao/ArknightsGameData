@@ -1,18 +1,4 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 九尾狐活动 纯剧情AVG序章
-
-//中英（德）对照及备注
-
-//Kevin 凯文  路人NPC
-//Eckehard  埃克哈德 死者
-//Hector 赫克托，死者
-//Nikolaus Maibaum  尼古拉斯·梅普乐      备用名，暂时没用到
-//Tatjana Bergler 塔佳娜·伯格勒  女性名
-//Severin Hawthorn塞弗林·霍索恩  士官长
-//Thorwald   托尔瓦尔德   他儿子，死者
-//Biederman 毕德曼，死者，典自《毕德曼与纵火犯》
-
-//地名对照：城镇沃伦姆德 Wolumonde，来自于法语与德语组合，意为第八个水晶球（第八个月亮）。
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
@@ -20,28 +6,18 @@
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
-
-
-//（黑屏）
-
 p.m. 3:23 天気/晴天
 リターニア領内 移動市街ウォルモンド城外 目立たない古いオークの木の下
-
-//（屏幕亮起，背景是烧毁的帐篷，士官长塞弗林·霍索恩出现，他似乎在等什么人）
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_ltruins",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
-
 [Character(name="avg_npc_066#2",fadetime=1,block=true)]
 [delay(time=1)]
 [name="？？？"]  ……
-
 [Dialog]
 [Character]
-
-//（出塔佳娜）
 [playsound(key="$d_gen_walk_n", volume=0.6)]
 [Character(name="avg_npc_069#2",fadetime=1,block=true)]
 [delay(time=1)]
@@ -56,10 +32,8 @@ p.m. 3:23 天気/晴天
 [name="タチヤナ"]  差し出がましいことを言ってすみません。でも、咳がどんどんひどくなってきていますから。
 [Character(name="avg_npc_069#2", name2="avg_npc_066",focus=2)]
 [name="セベリン"]  そんなに畏まらなくていい。今は仕事の時間ではないと言っただろう……ふぅ、まあいい。
-
 [Dialog]
 [Character]
-
 彼は遠方を眺めた。焼け焦げたテントと生い茂る野草を尻目に、紫煙を吐き出す。
 たとえ、呼び方を変えてもらうだけであっても、プライベートと同じ安らぎを味わいたかった。
 [Dialog]
@@ -143,10 +117,6 @@ p.m. 3:23 天気/晴天
 [name="セベリン"]  私が……
 [name="セベリン"]  私が同意したと。ゴホッ、そうだ、私が同意したとな。
 [name="セベリン"]  ゴホッ、ゴホゴホッ――
-
-//（转场）
-//（感染者营地）
-//（在破落的小村庄中，流落至此的泥岩小队靠狩猎为生）
 [stopmusic(fadetime=3)]
 [Dialog]
 [Character]
@@ -154,15 +124,9 @@ p.m. 3:23 天気/晴天
 [Background(image="bg_ltstrongpoint",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
 [playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
-
-//背景：整合运动据点：小猎村
-
-//（泥岩）
 [Character(name="avg_npc_011#2",fadeitme=1,block=true)]
 [delay(time=1)]
 [name="？？？"]  ……
-
-//（武装的感染者用整合运动立绘）
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
 [name="武装した感染者"]  隊長、彼らが戻って来た。
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=1)]
@@ -230,17 +194,12 @@ p.m. 3:23 天気/晴天
 [Character(name="avg_npc_011#2")]
 [name="？？？"]  ……財宝、財宝か。
 [name="？？？"]  そうだな、もし私たちの助けになるような財宝でも見つかれば……良いのだがな。
-
 [stopmusic(fadetime=3)]
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
 [Background(image="bg_bridge",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
-
-//（转场）
-//（罗德岛内）
-//（医疗干员失踪若干日后，罗德岛舰桥，两位干员反复确认着信息。）
 [playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Character(name="char_345_folnic_1#3")]
@@ -250,7 +209,6 @@ p.m. 3:23 天気/晴天
 [name="フォリニック"]  アント……どこにいるの……
 [Character]
 [Dialog]
-//（小小的脚步声，铃兰出现在亚叶的身后）
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
 [Character(name="char_358_lisa_1#3",fadetime=1,block=true)]
 [delay(time=1)]
@@ -295,13 +253,10 @@ p.m. 3:23 天気/晴天
 [Character(name="char_358_lisa_1", name2="char_345_folnic_1#2",focus=2)]
 [name="フォリニック"]  うーん……わかったわ！　現地の拠点には報告を上げてるし、もし何かハプニングがあっても、彼らが助けてくれるでしょう。
 [name="フォリニック"]  アーミヤの許可が下りたら、一緒に行きましょう。でもどんなときも私の側を離れないこと――
-
 [Dialog]
 [Character]
 [stopmusic(fadetime=1)]
-
 [playsound(key="$d_gen_transmissionget", volume=0.6)]
-//（通讯声，紧急的联络改变了好不容易缓和下来的气氛）
 [delay(time=1)]
 [Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#3",focus=1)]
 [name="スズラン"]  通信ですか？　アントお姉さんでしょうか？

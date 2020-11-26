@@ -1,26 +1,17 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（后）
-
-// Comments
-// 从室内走向室外白光
 [Dialog]
 [Character]
 [Delay(time=1)]
-//////////////插入cg///////////////////
 [Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
 [PlayMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.8, crossfade=1.5, delay=0.5)]
-//修改此处的image来切换cg
 [Image(image="avg_6_13",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
 [Blocker(a=0, fadetime=2, block=true)]
 [Character]
 [ImageTween(xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
-//对话内容此处填入
 [delay(time=4)]
-//对话内容此处填入
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Image(fadetime=0)]
 [Blocker(a=0, fadetime=0.6, block=true)]
-
-///////////////////////////
 [Background(screenadapt="coverall", image="bg_indoor_n", width=1, height=1, fadetime=2,block=true)]
 [delay(time=1)]
 [Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
@@ -58,7 +49,6 @@
 [Character(name="char_1002_nsabr_1",name2="avg_npc_016",focus=2)]
 [name="迷彩狙撃兵"]  ファウストは死んでいった仲間を、いつもこうやって弔っていた。
 [name="迷彩狙撃兵"]  「敬意を表すことは、浪費には当たらない。」そう言ってたな。
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
@@ -73,11 +63,8 @@
 [name="アーミヤ"]  ……お知り合いですか？
 [Character(name="char_002_amiya_1#4",name2="char_367_swllow_1#3",focus=2)]
 [name="グレースロート"]  分からない。私とあいつが知り合いと呼べるかは……自分でもわからない。
-
 [Decision(options="ロドスにできることは本当に少ない。;……。;我々は感染者を救えたことはあるのか？", values="1;2;3")]
 [Predicate(references="1;2;3")]
-
-
 [Predicate(references="1")]
 [Character(name="char_002_amiya_1#4")]
 [name="アーミヤ"]  そうですね。
@@ -216,9 +203,6 @@
 [name="アーミヤ"]  スノーデビル小隊？　スラムのレユニオンと合流したんですか？
 [Character(name="char_017_homura_3#9")]
 [name="ブレイズ"]  ……これ一番まずいことが起きちゃったみたいだね。
-
-
 [Dialog]
 [Delay(time=0.5)]
 [Blocker(a=1,r=0, g=0, b=0, fadetime=2, block=true)]
-

@@ -1,24 +1,15 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第三关（后）
-
-// Comments
-
 [stopmusic]
-//////////////插入cg///////////////////
 [Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
-//修改此处的image来切换cg
 [PlaySound(key="$bottlebroken")]
 [Image(image="avg_6_9",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
 [Blocker(a=0, fadetime=1.5, block=false)]
 [Character]
 [ImageTween(xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
-//对话内容此处填入
 [Delay(time=4)]
-//对话内容此处填入
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [Image(fadetime=0)]
 [Blocker(a=0, fadetime=0.6, block=false)]
-
-///////////////////////////
 [Background(image="bg_undergroud_f",screenadapt="coverall",fadetime=2,block=true)]
 [Delay(time=1)]
 [Character(name="char_1505_frstar_1")]
@@ -53,29 +44,21 @@
 [Character(name="char_002_amiya_1#4")]
 [name="アーミヤ"]  ……。
 [name="アーミヤ"]  ドクター……。
-
 [Decision(options="自分は残る。;先に行ってくれ。", values="1;2")]
 [Predicate(references="1;2")]
-
 [name="アーミヤ"]  分かりました。
 [name="アーミヤ"]  ドクター、フロストノヴァさんにあの言葉を伝えてください……。
 [name="アーミヤ"]  ……お願いします。
 [Dialog]
-//////////////插入cg///////////////////
-
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [PlayMusic(intro="$frostnovadie_intro", key="$frostnovadie_loop", volume=0.8, crossfade=1.5)]
-//修改此处的image来切换cg
 [Image(image="avg_6_10",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=0)]
 [Blocker(a=0, fadetime=2, block=false)]
 [Character]
-//对话内容此处填入
-
 [Character(name="char_1505_frstar_1")]
 [name="フロストノヴァ"]  本当に……甘い子ウサギだ。
 [name="フロストノヴァ"]  似ているな。あの頃のタルラにそっくりだ。
 [name="フロストノヴァ"]  死を前にしてそんな奴に会えるとはな。堅い意志で理想を成そうとしている者に……。
-
 [Dialog]
 [Character]
 [Decision(options="君が言っていた責任はどうする！？;……。;ロドスに入ると言ったのは嘘だったのか？", values="1;2;3")]
@@ -98,7 +81,6 @@
 [name="フロストノヴァ"]  我々が帰るべきは、ウルサスだけだ……我らが祖国に……。
 [name="フロストノヴァ"]  雪……静かに流れる河……風に揺れる松林……深緑の苔……。
 [name="フロストノヴァ"]  この大地は、なんと美しいのだろう……。
-
 [Dialog]
 [Character]
 [Decision(options="全てを画策したのはタルラだというのか？", values="1")]
@@ -118,7 +100,6 @@
 [Predicate(references="1")]
 [Character(name="char_1505_frstar_1")]
 [name="フロストノヴァ"]  なん……だ……。
-
 [Dialog]
 [Character]
 [Decision(options="君の父は、君を心から愛していたと思う。", values="1")]
@@ -143,14 +124,11 @@
 [name="フロストノヴァ"]  ドクター……この大地では……我々の選択など……意味を成さないのかもしれない……。
 [name="フロストノヴァ"]  だがそれでも……たとえ結果は変わらなくとも……私は自ら選びたいと願った……。そして……自ら選んだのだ……。
 [name="フロストノヴァ"]  この手で拭ったのだ……己の行いが……実らせた果実を……。
-
 フロストノヴァの指があなたの頬をなぞる。
-
 [Dialog]
 [Character]
 [Decision(options="……君の指が、温かい。", values="1")]
 [Predicate(references="1")]
-
 [Character(name="char_1505_frstar_1")]
 [name="フロストノヴァ"]  変だな……。お前の顔が……冷たく……感じるなんて……。
 [name="フロストノヴァ"]  私の体温は……もうそれほど……低くないというのか……？
@@ -159,48 +137,32 @@
 [Decision(options="そうみたいだ。鉱石病の症状が消えている。;……。;温かい手だ、フロストノヴァ。", values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_1505_frstar_1")]
-
 [name="フロストノヴァ"]  ……死を前にして……ようやく……再び人と触れ合えるようになったか……。
-
 [Decision(options="アーミヤも自分も君がロドスに来ることを望んでいる。", values="1")]
 [Predicate(references="1")]
-
-
 [name="フロストノヴァ"]  ……この私に……本当に……その資格が……あるのか……？
-
 [Decision(options="ただ死んでいけば、過ちを挽回することも叶わない。", values="1")]
 [Predicate(references="1")]
-
-
 [name="フロストノヴァ"]  ……それに……応えないのは……非礼というものか……。
 [name="フロストノヴァ"]  どうか……アーミヤに伝えてくれ、Dr.{@nickname}………。
 [name="フロストノヴァ"]  この大地では……人は一人の力だけでは……何も……成し遂げられない。
-//对话内容此处填入
 [Dialog]
-
-//修改此处的image来切换cg
 [Image(image="avg_6_10_2",x=0, y=0, xScale=1.1, yScale=1.1, fadetime=2,block=true)]
 [Blocker(a=0, fadetime=0.6, block=false)]
 [Character]
-//对话内容此处填入
 [name="フロストノヴァ"]  だが……お前は一人ではない……。
 [name="フロストノヴァ"]  今この瞬間から……私がお前の側にいる……。私が……お前たちと共に歩む……。
 [name="フロストノヴァ"]  私も……ロドスの一員となろう……。
-
 [Decision(options="ありがとう。", values="1")]
 [Predicate(references="1")]
-
-
 [name="フロストノヴァ"]  いいや……。感謝したいのは……私の方だ……。
 [name="フロストノヴァ"]  お前のその目は……私の古い知り合いに……よく似ている……。
 [name="フロストノヴァ"]  遠い昔に出会った男の子だ……。あの子の兄は……敵の許しを請うために……意思を曲げるくらいなら……吊るし上げられられたほうが……マシだと言ったそうだ……。
 [name="フロストノヴァ"]  その意志を継ぎ……あの子は……雪原を越え……ウルサスの地を踏破しようと……目標が異なる我々と別れたが……。
 [name="フロストノヴァ"]  あれは……私が今まで出会った中で……最も理想に生きた者だった……。少なくとも……今までは……そう考えていた……。
 [name="フロストノヴァ"]  だが……お前とアーミヤを見て……理想すらも一つの信念に……なり得ると知った……。
-
 [Decision(options="ロドスは一つの信念の元で戦っている。", values="1")]
 [Predicate(references="1")]
-
 [name="フロストノヴァ"]  レユニオンも……最初は同じだったはずさ……。
 [name="フロストノヴァ"]  本当に……よく似ている………。
 [name="フロストノヴァ"]  お前の目は……あの子に……本当にそっくりだ……。
@@ -209,12 +171,9 @@
 [name="フロストノヴァ"]  ……父さん……私は本当に……馬鹿な娘だったよ……。
 [name="フロストノヴァ"]  ……でも……許して……。
 [Dialog]
-//对话内容此处填入
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Image(fadetime=0)]
 [Blocker(a=0, fadetime=0.6, block=false)]
-
-///////////////////////////
 [Dialog]
 [Character]
 [Background]
@@ -225,5 +184,3 @@
 [Dialog]
 [Blocker(fadetime=2,block=true)]
 [Image]
-
-

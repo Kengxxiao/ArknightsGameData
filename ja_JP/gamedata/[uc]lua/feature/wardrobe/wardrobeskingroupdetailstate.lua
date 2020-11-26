@@ -26,10 +26,16 @@ function WardrobeSkinGroupDetailState:CheckData(data)
   end
 
   table.sort(self.onSaleData, function(a, b)
+      if (a.data.displaySkin.getTime ~= b.data.displaySkin.getTime)then
+        return a.data.displaySkin.getTime < b.data.displaySkin.getTime
+      end
     return a.data.displaySkin.sortId < b.data.displaySkin.sortId 
   end);
 
   table.sort(self.notOnSaleData, function(a, b)
+      if (a.data.displaySkin.getTime ~= b.data.displaySkin.getTime)then
+        return a.data.displaySkin.getTime < b.data.displaySkin.getTime
+      end
     return a.data.displaySkin.sortId < b.data.displaySkin.sortId 
   end);
 
