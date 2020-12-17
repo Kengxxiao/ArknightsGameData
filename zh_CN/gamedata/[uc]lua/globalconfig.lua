@@ -1,6 +1,6 @@
 GlobalConfig = 
 {
-  CUR_FUNC_VER = "V014",
+  CUR_FUNC_VER = "V015",
 }
 
 ------保证GlobalConfig是只读的------
