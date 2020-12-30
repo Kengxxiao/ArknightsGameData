@@ -1,0 +1,190 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[playMusic(intro="$dignified_intro", key="$dignified_loop", volume=0.4)]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+6:30 p.m. 
+[Dialog]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[delay(time=2)]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=2)]
+[Character]
+[name="PRTS"]  코드번호 00000-00002, 액세스 권한-8.
+[name="PRTS"]  {@nickname} 박사님, 로도스 아일랜드의 종합 생체 처리실에 오신 것을 환영합니다. 생체 데이터를 통해 당신의 의도에 대한 판단 작업을 진행합니다.
+[name="PRTS"]  시스템 분석에 따르면, 당신의 기분이 좋지 않은 것으로 판단됩니다.
+[Decision(options="성가시군.;……;대체 어떻게 해야 기분이 좋다고 해주는 걸까?", values="1;2;3")]
+[Predicate(references="1")]
+[Character]
+[name="PRTS"]  {@nickname} 박사님에게서 공격성을 감지했습니다.
+[name="PRTS"]  안심하십시오. 시스템은 이런 이유로 당신을 감전시키지 않습니다. 시스템 진단 결과에 너무 개의치 마시기 바랍니다.
+[Predicate(references="2")]
+[Character]
+[name="PRTS"]  {@nickname} 박사님께선 침묵에 잠기셨군요.
+[name="PRTS"]  무언의 항의나 소통 거부는, 모두 외로움으로 인한 일종의 정신 장애의 표현으로 판단됩니다.
+[name="PRTS"]  물론, 마음대로 생각하십시오. 시스템은 그래도 모두에게 평등합니다.
+[Predicate(references="3")]
+[Character]
+[name="PRTS"]  좋다, 나쁘다는 일종의 주관적 판단입니다.
+[name="PRTS"]  다만 본 시스템에는 거의 모든 정신 활동 상태와 각종 신경 흥분 호르몬의 기준이 집약되어 있습니다.
+[name="PRTS"]  그러므로, 본 시스템의 주관적 판단은 객관적 사실에 무한히 근접하다고 생각하셔도 좋습니다.
+[name="PRTS"]  또한 {@nickname} 박사님께서 어떤 행동을 취하셔도 시스템은 시뮬레이션을 토대로 대처가 가능하므로,
+[name="PRTS"]  원하시는 대로 행동하셔도 좋습니다.
+[name="PRTS"]  PRTS는 상응하는 무해한 안정 기능을 갖추고 있습니다.
+[name="PRTS"]  당신에게 과격한 행동이 포착될 경우, 즉시 기절시켜 3.55 시간 후에 깨어나게 합니다. 이러한 시스템을 통해, 당신이 조금 더 정상적으로 행동할 수 있도록 도와드립니다.
+[Predicate(references="1;2;3")]
+[Character]
+[name="PRTS"]  웰컴 홈, 닥터.
+[Decision(options="……이런 곳도 집이라고 말할 수 있나?", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_042",fadetime=1,block=true)]
+[delay(time=1)]
+[name="???"]  당신은, {@nickname} 박사?
+[Decision(options="어?;……?;안녕?", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_042")]
+[name="???"]  맞구나……
+[name="???"]  느껴졌어…… 사실, 조금 다르지만.
+[name="???"]  그런데…… 박사가 안고 있는 사람, 그 제복은……
+[name="???"]  그 사람은 누구인지 물어봐도 돼?
+[Decision(options="전사다.;동포다.;친구다.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="???"]  전사?
+[name="???"]  아…… 그 여자가 박사한테 상처를 입힌 거구나. 적이야?
+[name="???"]  아니, 아니네…… 이 정도 상처라면 치명상은 아니었겠다.
+[Predicate(references="2")]
+[Character(name="avg_npc_042")]
+[name="???"]  감염자…… 야?
+[name="???"]  아니, 그런 의미로 한 말이 아니었겠구나.
+[name="???"]  {@nickname} 박사, 무언가를…… 잃어버린 것 같아.
+[Predicate(references="3")]
+[Character(name="avg_npc_042")]
+[name="???"]  친구라고?
+[name="???"]  하지만, 친구라니…… 박사와 그 여자는, 알게 된 지 얼마 안 됐는데.
+[name="???"]  잘 모르겠어…… 뭔가 금방이라도 사라져버릴 것 같아.
+[Decision(options="무언가를…… 느낄 수 있는 건가?", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="???"]  사람과 사람이 교류한 흔적. 냄새라던가, 온도라던가, 형태라던가.
+[name="???"]  잘은 모르겠지만, 그 여자는……
+[Character]
+[Dialog]
+여자아이가 프로스트노바에게 손을 뻗었다.
+[Decision(options="(말없이 지켜본다);(소리 내어 제지한다)", values="1;2")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="???"]  으음……
+[name="???"]  아니야.
+[name="???"]  이러길 원하지 않는 거지?
+[name="???"]  아, 아니야. 난 관계없는 사람이고, 그 여자랑도 아무 관계없으니까.
+[name="???"]  내가 상관할 일이 아니네, 그렇지?
+[name="???"]  미안.
+[Decision(options="너도 아미야처럼, 마음을 읽을 수 있는 건가?;……;네 반응을 잘 이해하지 못하겠어.", values="4;5;6")]
+[Predicate(references="4")]
+[Character(name="avg_npc_042")]
+[name="???"]  아니, 난 그런 건……
+[name="???"]  아미야는 특별해. 난 아미야 씨의 아츠를 알고 있어…… 고생이 많았겠지.
+[Predicate(references="5")]
+[Character(name="avg_npc_042")]
+[name="???"]  나…… 나는, 그 여자를 만지면 안 돼. 어차피 느낄 수도 없을 테고.
+[name="???"]  그 여자와 이 땅과의 인연은, 나랑은 아무 상관이 없으니까.
+[name="???"]  난…… 그녀와 접촉할 이유가 없으니까……
+[Predicate(references="6")]
+[Character(name="avg_npc_042")]
+[name="???"]  다른 사람들도 그렇게 생각할 거야.
+[name="???"]  로도스 아일랜드 사람들도 다들 개성적이지만…… 난 조금 더 이상한 거 같아.
+[Predicate(references="2")]
+[Character(name="avg_npc_042")]
+[name="???"]  아……
+[name="???"]  미, 미안……
+[name="???"]  나는……
+[Decision(options="미안.;……;미안해, 꼬마 아가씨.", values="7;8;9")]
+[Predicate(references="7")]
+[Character(name="avg_npc_042")]
+[name="???"]  괘, 괜찮아. 이미 익숙한걸.
+[Predicate(references="8")]
+[Character(name="avg_npc_042")]
+[name="???"]  저기…… 화내지 마……
+[name="???"]  할 말 없으면, 난…… 어떻게 해야 할지 모르겠어.
+[Predicate(references="9")]
+[Character(name="avg_npc_042")]
+[name="???"]  괜찮아.
+[name="???"]  무서워하는 것보단, 제대로 대화해 주는 게 좋아. 그러니까, 괜찮아.
+[Predicate(references="4;5;6;7;8;9")]
+[Character(name="avg_npc_042")]
+[name="???"]  저기…… 이 기계를 쓰려는 거지?
+[Decision(options="여기가 정말 감염자들의 마지막 종착지가 맞다면.",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="???"]  ……알았어.
+[name="???"]  도와줄게. 우선 기록부터 좀 보고.
+[name="???"]  음, 문제없네. 이쪽 선실이 정리되어 있으니까, 이쪽 받침대에 눕혀줘. 조심히, 응.
+[name="???"]  받침대가 들어가면, 그다음에…… 문이 닫히는 걸 기다렸다가, 이 버튼만 누르면 돼.
+[Decision(options="조작이 익숙해 보이네.",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="???"]  아, 수도 없이 해봤으니까.
+[Decision(options="어째서……",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="???"]  로도스 아일랜드의 감염자는, 마지막에는 모두 이곳으로 오게 되잖아.
+[name="???"]  내가 아는 사람, 내가 느꼈던 사람, 내 팀원들. 모두 내가 조작하고 있어.
+[name="???"]  원래의 사용 설명서는 너무 복잡해서, 간단한 조작 방법을 단자 쪽에 기록해놨어. 훑어보면 이 감각에 익숙해질 거야.
+[Decision(options="무슨 감각?", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="???"]  음…… 사슬 같은 느낌이랄까.
+[Decision(options="사슬……?", values="1")]
+[Predicate(references="1")]
+[name="???"]  두 사람을 잇는 선 같은 거라고도 할 수 있으려나.
+[name="???"]  자신과 관계가 있던 사람을 떠나보낸다는 건, 그 사람에게 얽혀 있던 실을 풀어주는 거야. 실의 반대쪽은 우리 몸에 여전히 묶인 채 남아, 다시 누군가에게 그 실을 묶지 않아도 우리에게서 떨어지지 않거든.
+[name="???"]  이런 감각은, 마치 몸에서 무언가가 사라져버리는 것 같은 느낌이야. 그곳이 어디인지는 알 수 없지만, 그들이 그곳에 존재했었고, 다시는 돌아오지 못할 거라는 건 알게 되지.
+[Decision(options="왜 그런 감각에 익숙해져야 하는 거지?", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="???"]  익숙해져야만, 갑자기 아파지는 것을 막을 수 있으니까.
+[Decision(options="……넌 대체……?", values="1")]
+[Character]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[Predicate(references="1")]
+[Character]
+[name="PRTS"]  실례합니다.
+[name="PRTS"]  로도스 생체 감염 종합 처리실에 계신 정예 오퍼레이터 로즈몬티스 님, 귀하의 식별 코드가 15분 뒤에 효력을 잃습니다.
+[name="PRTS"]  코드를 갱신할 테니, 그 자리에서 약 15초간 기다려주시기 바랍니다.
+[name="PRTS"]  그리고, 선현 구역에서 소규모 무장 충돌이 발생했습니다. 아군의 손실을 최소화하기 위해, 식별 코드를 갱신하신 뒤 지원하여 주시기 바랍니다.
+[Character(name="avg_npc_042")]
+[name="로즈몬티스"]  아, 응. 알았어, 바로 갈게.
+[name="로즈몬티스"]  단말기에 표시해놓을 테니까.
+[Character]
+[name="PRTS"]  여섯 번째로 알려 드립니다만, 본 시스템에 권한을 개방해 주신다면 시스템에서 정보를 바로 발송하실 수……
+[Character(name="avg_npc_042")]
+[name="로즈몬티스"]  안 돼.
+[name="로즈몬티스"]  이건 나만…… 나만 쓸 수 있어.
+[Character]
+[name="PRTS"]  알겠습니다. 그럼.
+[Decision(options="정예 오퍼레이터……?", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="로즈몬티스"]  PRTS는 날 그렇게 불러.
+[Decision(options="나도 널 로즈몬티스라고 부르면 될까?", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="로즈몬티스"]  로즈마리…… 라고 불러도 돼.
+[name="로즈마리"]  ……그 사람, 이름은?
+[name="로즈마리"]  최소한…… 이름이라도 알고 싶은데.
+[Decision(options="프로스트노바.", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="로즈마리"]  프로스트노바……
+[name="로즈마리"]  예쁜 이름이네.
+[name="로즈마리"]  안녕, 프로스트노바.
+[name="로즈마리"]  ……잘 가.
+[Dialog]
+[Blocker(fadetime=3,block=true)]
+[Image]

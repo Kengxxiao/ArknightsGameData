@@ -1,0 +1,400 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Character]
+[Blocker(fadetime=1,block=true)]
+[Dialog(fadetime=2,block=true)]
+6:00am 
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_laccolith",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
+[Decision(options="정찰 부대를 처리하고 나면, 시간이 얼마 남지 않겠어.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  네 말대로야. 여유는 없어.
+[Decision(options="오퍼레이터가 모랫바닥에서 성으로 기어오를 수는 없을 텐데.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="아미야"]  윽…… 가끔은 이래야 할 때도 있다고요.
+[name="아미야"]  하지만 코어가 이동 중이니, 확실히 아래쪽의 기반 시설로 진입하기는 쉽지 않겠네요.
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  만약 오퍼레이터가 그저 모래 위에 서서 이동도시가 지나가기만을 기다린다면, 속도 면에서나 높이 면에서나 상대적으로 오퍼레이터의 행동이 제한될 거야.
+[name="켈시"]  이동도시 바닥의 정비구와 폐기구를 열지 못하면, 준비한 미끼와 은폐도 모두 무의미해질 테고.
+[name="켈시"]  그러니 우리 다섯 개 팀은 모래 먼지 속에 숨어 차를 타고 코어까지 접근하고, 장비를 사용해 코어 밑쪽의 공업 구역으로 진입한다.
+[Decision(options="로도스 아일랜드에서 겨우 다섯 개 팀만 파견한다고?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  우르수스의 지방 장교들에게 우리 의도를 빤히 보여주려고 안달이 나 있진 않거든.
+[name="켈시"]  저들이 출격시킨 고속 군함이 황야에 놓여있는 우리 함선을 부수고 우리 직원들을 죽이게 할 수는 더더욱 없고 말이야.
+[name="켈시"]  게다가 만약 이런 일이 벌어지더라도, 신문에는 이와 관련된 글자 하나 나오지 않을 거야. 은행이나 보험사에서도 네 이름에 줄 하나 긋고, 자산도 보험금도 전부 빼돌려 나눠 가질 거다.
+[name="켈시"]  아무도 입을 열지 않을 거야. 우르수스가 그러길 원치 않으니까……
+[name="켈시"]  중립의 입장이라는 건, 어떤 의미에서는 조금은 자유롭다는 거지. 그래서 더더욱, 로도스 아일랜드는 어떠한 정치세력도 등에 업어서도 안 돼.
+[name="켈시"]  모든 일을 은밀히 진행하는 건, 우리의 생존 방법이기도 하다. 파견팀이 널 구할 때도 마찬가지였고.
+[name="켈시"]  다섯 팀. 흔적을 남기든 지우든, 목표를 완수하든 실패하든, 로도스 아일랜드에서는 최대 다섯 팀만 파견한다.
+[Decision(options="하지만 팀 수가 많아지면 전력 강해질 거 아니야?;……;문제를 해결하지 못하더라도 말인가?", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  
+[name="켈시"]  도시 국가에 불가한 용문이라도, 우리를 괴멸시키는 건 식은 죽 먹기야.
+[name="켈시"]  너도 봤잖아? 용문의 근위국은 각국의 최상급 정예 부대와 비교해도 손색이 없는 특수부대를 보유하고 있다. 고작 제약회사 하나에 비할 수준이 아니지.
+[Decision(options="그럼 왜 우리가 나서야 하지?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  이 음모에 감염자가 연루되었으니까.
+[name="켈시"]  현재 로도스 아일랜드는 이미 용문을 떠나, 시속 15킬로미터의 속도로 다음 무역도시를 향해 가고 있다.
+[name="켈시"]  그전까지, 우리는 황야에서 몇 주간 머무를 수도 있어.
+[name="켈시"]  우리 로도스 아일랜드의 통신원과 신뢰할 수 있는 몇몇 선박을 제외하면, 누구도 이쪽 신호를 수신할 수 없어. 우리는 각 도시의 이동 계획을 참고해서, 누구의 눈에도 띄지 않는 루트를 골라 간다.
+[name="켈시"]  용문이 뒤늦게 후회하더라도, 우리를 찾을 순 없을 거야.
+[Decision(options="하지만 그걸론 부족하잖아?", values="1")]
+[Predicate(references="1")]
+[Decision(options="더 본때를 보여줘야 해!;더 날카로워야 해.;우리가 베팅한 판돈은 이 정도가 아닐 텐데.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  맞아. 우린 다른 히든카드가 필요하지.
+[Character(name="char_002_amiya_1", name2="char_003_kalts_1", focus=1)]
+[name="아미야"]  ……
+[name="아미야"]  박사님과 켈시 선생님, 무서운 표정을 짓고 계세요.
+[name="아미야"]  일의 필요성은 알고 있지만, 그래도…… 그런 웃음은 짓지 않으셔도 되지 않을까요?
+[Character(name="char_002_amiya_1", name2="char_003_kalts_1", focus=2)]
+[name="켈시"]  아미야…… 내가 웃었나?
+[Character(name="char_002_amiya_1", name2="char_003_kalts_1", focus=1)]
+[name="아미야"]  켈시 선생님도 분명 웃으셨어요. 입술은 움직이지 않았지만, 웃고 계셨던 거 알아요.
+[Character(name="char_002_amiya_1", name2="char_003_kalts_1", focus=2)]
+[name="켈시"]  그랬나.
+[Character(name="char_002_amiya_1", name2="char_003_kalts_1", focus=1)]
+[name="아미야"]  ……잘 됐네요!
+[Character(name="char_002_amiya_1", name2="char_003_kalts_1", focus=2)]
+[name="켈시"]  아니, 말해두지만 난 이 사람과 관계를 개선해보려는 생각 따윈 전혀 없으니까.
+[Decision(options="하, 나도 그럴 생각은 없다.;……;개선하고 말고는 쌍방이 같이 결정하는 거다.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#6")]
+[name="아미야"]  으으……
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  어쨌든, 다섯 팀은 각각 나, 아미야, 그리고 다른 정예 오퍼레이터 세 명이 지휘한다.
+[name="켈시"]  작전팀 셋, 정찰팀 하나, 특수팀 하나.
+[name="켈시"]  작전팀 팀장 중 하나는, 너도 아는 얼굴일걸.
+[stopmusic(fadetime=3)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_017_homura_3#5")]
+[name="블레이즈"]  로즈몬티스! 잠깐만!
+[playMusic(intro="$dignified_intro", key="$dignified_loop", volume=0.4)]
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  아…… 블레이즈.
+[name="로즈몬티스"]  상처가 이렇게 심한데 왜 나왔어? 어서 돌아가.
+[Character(name="char_017_homura_3#9", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  이번 작전에 참가하는 거야?
+[Character(name="char_017_homura_3#9", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  응.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  대신할 사람을 찾아볼게. 미저리를 보내자. 너보다 침공전에 익숙하잖아.
+[name="블레이즈"]  그 녀석이 손 한번 휘두르면 해결될 일이야. 그냥 걔 보내자.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  내가 안 갔으면 좋겠어?
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  응. 가면 안 돼.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  블레이즈는 참 이상하네.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  이전의 임무와는 완전히 다르니까 그렇지!
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  죽을 수도 있으니까?
+[Character(name="char_017_homura_3#6", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  뭔 소릴 하는 거야!
+[name="블레이즈"]  너…… 그렇게 쉽게 이야기하지 말라고!
+[name="블레이즈"]  넌 너무 어려. 이런 위험한 임무에는 가면 안 된단 말이야!
+[Character(name="char_017_homura_3#6", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  그렇지만 아미야도 가는걸.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  그건…… 걔는……!
+[name="블레이즈"]  걔는……
+[name="블레이즈"]  아미야……
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  아미야도 나와 같아. 똑같은 감염자고, 오퍼레이터야.
+[name="로즈몬티스"]  게다가 기록 봤는데, 에이스랑 스카우트, 체르노보그에서 안 돌아왔더라.
+[name="로즈몬티스"]  둘 다…… 이제 이 세상 사람이 아니라는 뜻이겠지.
+[name="로즈몬티스"]  직접 가서, 어떻게 된 일인지 알고 싶어. 리유니온의 책임자를 찾아가서, 누가 무슨 짓을 했는지 알아낼 거야.
+[name="로즈몬티스"]  에이스와 스카우트에게 무슨 일이 있었는지 알아야겠어.
+[Character(name="char_017_homura_3#10", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  로즈몬티스? 그런 일은…… 기억하지 않아도 돼.
+[Character(name="char_017_homura_3#10", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  ……블레이즈?
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  아 *욕설*! 나 미쳤나? 지금 무슨 말을 하고 있는 거람……
+[name="블레이즈"]  미, 미안… 이렇게 말하면 안 됐는데. 아오 이 **같은 입이 문제야 입이!
+[name="블레이즈"]  하지만, 그 둘의 죽음은……
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  블레이즈.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  내가 틀렸어. 기쁜 일도, 슬픈 일도 모두 소중한 기억인데…… 내가 틀렸어. 기억해야지.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  블레이즈 정말 이상해졌네. 말도 횡설수설하고.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  ……나는 그냥 네가 고통받지 않길 바랄 뿐이야. 왜 굳이 되새기는 거지? 너라면…… 놓아줄 수도 있잖아.
+[name="블레이즈"]  기억을 그냥 거기에 놓아두면 되잖아. 그곳에 두고, 돌아보지 마.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  되돌아보지 않으면…… 기억이 무슨 쓸모가 있어?
+[name="로즈몬티스"]  되돌아보지 않으면…… 잊어버리게 돼.
+[name="로즈몬티스"]  나는 절대 잊지 않을 거야. 그 누구의 죽음도, 절대 잊지 않을래.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  하… 그래. 너도 나와 같은, 로도스 아일랜드의 정예 오퍼레이터니까.
+[name="블레이즈"]  너 대신 갈 수 없다니, 정말, 난……
+[name="블레이즈"]  큭, 으으……
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  또 피 나는 거야?
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  별거 아니야.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  데려다 줄게.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=1)]
+[name="블레이즈"]  정말이지……
+[name="블레이즈"]  로즈몬티스…… 아미야랑 잘 지내야 해.
+[Character(name="char_017_homura_3#5", name2="avg_npc_042", focus=2)]
+[name="로즈몬티스"]  응. 그럴게.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_laccolith",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Decision(options="꼭 그 여자를 만날 필요가……?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="아미야"]  {@nickname} 박사님……
+[name="아미야"]  로도스 아일랜드가 고용한 정예 오퍼레이터들은 모두 저마다의 이유로 자신의 에너지와 능력으로 로도스 아일랜드에 헌신하고 있어요.
+[name="아미야"]  그들이 이끄는 팀원들은 전력으로 그들의 업무를 서포트합니다. 정예 오퍼레이터는 어느 정도는 자신의 판단 아래 전술 방식을 결정할 수 있거든요.
+[name="아미야"]  하지만 그들이…… 꼭 우리가 상상하는 모습 같지는 않아요.
+[name="아미야"]  정예 오퍼레이터 블레이즈 씨는 박사님도 만나보셨죠? 박사님께서 블레이즈 씨에 대한 소문을 들어보셨을지 모르겠지만, 사실 다른 오퍼레이터들에 의해 부풀려진 점이 많아요.
+[name="아미야"]  다만 이제 만나게 될 이 정예 오퍼레이터에 대한 인상은, 모두가 완전히 제각각이랍니다.
+[name="아미야"]  박사님이라면, 아마…… 그녀와 그녀의 선택을 차츰 이해할 수 있을 거예요.
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  ……
+[name="켈시"]  반응을 보아하니, 이미 만난 적이 있나 보군.
+[Character(name="char_002_amiya_1")]
+[name="아미야"]  네? 그런가요……
+[name="아미야"]  어…… 그럼 괜찮겠네요?
+[Decision(options="또 주의해야 할 점이 있어?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="아미야"]  대충은 이 정도예요. 사실, 음…… 어쨌든 계획은 계획이고, 실전은 실전이니까요.
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  어차피 중요한 건 실전이야. 계획은 그저 실전을 위한 준비일 뿐, 실전에서 예상 밖의 일이 생기면 계획 따윈 모두 물거품이 되지.
+[Decision(options="우리끼리 그런 큰일 날 예언은 안 했으면 하는데.", values="1")]
+[Predicate(references="1")]
+[stopmusic(fadetime=3)]
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_laccolith",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+[Character(name="avg_npc_012")]
+[name="엔지니어 오퍼레이터"]  큰일……. 큰일이다! 뭔가 잘못됐어!
+[name="엔지니어 오퍼레이터"]  모래 먼지의 밀도도 낮고…… 빛의 각도도 좋지 않습니다!
+[name="엔지니어 오퍼레이터"]  숨을 그늘이 없어요! 현 상황으로 보았을 때, 작동시키기도 전에 발각되고 말 겁니다!
+[Character(name="avg_npc_012", name2="char_016_medic", focus=2)]
+[name="로도스 아일랜드 오퍼레이터"]  하지만 그렇다고 기계 위에 더 이상 은폐물을 올리면 방진기의 통기성에도 영향을 미쳐, 상승 기류가 모래 먼지를 띄울 수 없게 될지도 모릅니다!
+[Character(name="avg_npc_012", name2="char_016_medic", focus=1)]
+[name="엔지니어 오퍼레이터"]  어쩌면 좋을까요? 위치를 뒤쪽으로 옮기는 것도 시간상 불가능할 것 같은데요!
+[Character]
+[Dialog]
+[Character(name="char_148_nearl_1#3",fadetime=1,block=true)]
+[delay(time=1)]
+[name="니어"]  …….내게 맡겨.
+[name="니어"]  파이어워치, 실제 효과를 측정해서 어떤 방향으로 조정해야 하는지 알려줘.
+[Character(name="char_158_milu")]
+[name="파이어워치"]  니어? 너 뭘…… 어쩌려고?
+[Character(name="char_148_nearl_1#3")]
+[name="니어"]  빛의 각도를 바꾼다.
+[name="니어"]  이 세상의 고난을 줄이기 위해서라면…… 태양의 빛도 잠시 내 뜻을 따라주리라 믿어.
+[Dialog]
+[PlaySound(key="$b_char_defboost", volume=0.5, Delay=0.4)]
+[PlaySound(key="$flashback", volume=0.2, Delay=0.7)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_401_elysm",fadetime=1,block=true)]
+[delay(time=1)]
+[name="엘리시움"]  응? 저기 모래 언덕 쪽에 누구지? 니어 씨? 차에도 안 타고, 아직 철수 안 했나?
+[name="엘리시움"]  뭐 하는 거야? 명상? 대체…… 뭔 포즈를 잡고 있는 거야 저런 곳에서?
+[name="엘리시움"]  잠깐…… 왜 이렇게 밝아…… 니어 씨한테서 빛이 나고 있잖아…… 아니, 잠깐, 젠장! 눈부셔!
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.4, block=true)]
+[Character(name="char_401_elysm")]
+[name="엘리시움"]  아, 고마워 팀장……
+[name="엘리시움"]  팀장의 손가락이 내 뇌까지 쥐어뜯을 것처럼 세게 움켜쥐지만 않았으면, 눈을 가려준 일에 훨씬 더 감사했을 테지만.
+[name="엘리시움"]  니어 씨는 대체 뭘 하는 거지?
+[name="엘리시움"]  니어 씨는 괜찮다고? 아니… 팀장이 괜찮다면 괜찮겠지만… 지금 저거 태양빛보다도 밝은 거 같은데, 대체 뭘 하려는 거지?
+[Dialog]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_401_elysm")]
+[name="엘리시움"]  어? 뭐야 저거…… 주변의 빛이 니어 씨한테 점점 동화되는데?
+[name="엘리시움"]  우와……
+[name="엘리시움"]  팀장, 온 구역의 빛이 점점 비슷한 느낌으로 어우러지고 있어.
+[name="엘리시움"]  아~ 이제 알겠네. 역시, 빛의 기사가 아니면 누가 이런 일을 할 수 있겠어?
+[name="엘리시움"]  팀장, 저기 모래언덕 쪽에 그림자 방향 좀 봐봐. 지금이 오전이게 오후게?
+[name="엘리시움"]  으윽… 그냥… 분위기나 좀 띄워보려 한 거지. 좀 이따 모래 먼지가 일어나면, 그림자를 볼 수도 없을 거 아냐?
+[name="엘리시움"]  네넵 그냥 가만히 닥치고 있겠습니다 죄송합니다……
+[Character]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_aircraft",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="도베르만"]  더 높이! 이상한 색의 구체가 기체를 지나갔다!
+[Character(name="avg_npc_012", name2="char_130_doberm_ex", focus=1)]
+[name="조종사"]  교관님, 너무 겁내지 마세요, 리유니온의 캐스터에게 우릴 격추시킬 만한 능력은 없으니까요.
+[Character(name="avg_npc_012", name2="char_130_doberm_ex", focus=2)]
+[name="도베르만"]  우리는 미끼일 뿐이다, 리유니온에게 비행 쇼나 보여주려는 게 아니라고!
+[Character(name="avg_npc_012", name2="char_130_doberm_ex", focus=1)]
+[name="조종사"]  혹시 또 기가 막힌 쇼를 보여주면…… 리유니온도 전의를 상실하고 투항하지 않을까요?
+[name="조종사"]  그거 뭐라 그러지…… 그…… 무력 과시?
+[Character(name="avg_npc_012", name2="char_130_doberm_ex", focus=2)]
+[name="도베르만"]  ……무력 과시랑 잡기술 뽐내기는 엄연히 다르다고!
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[Character(name="avg_npc_012", name2="char_130_doberm_ex", focus=1)]
+[name="조종사"]  교관님, 꽉 잡으십쇼!
+[Character(name="avg_npc_012", name2="char_130_doberm_ex", focus=2)]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="도베르만"]  우읍…… 내 멀미봉투 어딨어?!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_laccolith",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="니어"]  장치가 완전히 작동하기 시작했어! 아미야, 차량 부대 행동 개시다!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_002_amiya_1#7")]
+[name="아미야"]  네!
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  각 차량 운전자는 속도를 일정히 유지하도록! 모래 먼지의 엄폐를 이용하여 등성 도구를 사용할 수 있는 거리까지 코어로 접근한다! 행동 개시!
+[Dialog]
+[Image(image="avg_7_9",x=-100, y=0, xScale=1, yScale=1, fadetime=0)]
+[ImageTween(xFrom=-100,xTo=0,xScale=1, yScale=1, duration=60, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playsound(key="$sportscarstart", volume=1)]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[playsound(key="$sportscarstart", volume=1)]
+[CameraShake(duration=1, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[playsound(key="$drift", volume=1)]
+[CameraShake(duration=0.2, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[playsound(key="$drift", volume=1)]
+[CameraShake(duration=0.8, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[Character(name="char_002_amiya_1")]
+[name="아미야"]  모래 먼지가 우리 차량의 흔적을 덮어줄 겁니다. 보호구 착용을 잊지 말고, 정밀 기기에 모래 먼지가 들어가지 않도록 조심하세요!
+[name="아미야"]  그나저나…… 태양빛이 정말 강렬하네요. 모래 먼지를 뚫을 정도의 빛이라니……
+[name="아미야"]  코어 바닥의 가시도가 더 높아진 것 같아요. 마치…… 아츠 같이요.
+[name="아미야"]  저희…… 이런 상황은 계획에 없었죠? 이거 자연광 맞죠?
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[Character(name="char_002_amiya_1", name2="char_148_nearl_1", focus=2)]
+[name="니어"]  일단 그런 건…… 신경 쓰지 말자고!
+[Character(name="char_002_amiya_1#7")]
+[name="아미야"]  네! 견인 장치, 발사 준비! 각 오퍼레이터는 와이어가 코어 바닥면에 제대로 고정되었는지 확인해 주세요!
+[name="아미야"]  모든 오퍼레이터가 이동을 완료하면 차량은 즉시 철수합니다! 원래 이런 말은 잘 안 하지만, 오퍼레이터 여러분, 지금 우릴 비추는 이 태양빛은 분명 행운의 징조일 겁니다!
+[Character(name="char_148_nearl_1")]
+[name="니어"]  어…… 응! 그렇고말고!
+[name="니어"]  (실수로 빛을 더 강하게 만들어 버려서, 지면으로 쏟아붓는 게 최선이었다는 말은 차마 못 해……)
+[name="니어"]  잠깐, 코어가 가속하고 있는 것 같은데?
+[name="니어"]  바람이 아무리 잘 따라줘도, 모래 먼지가 커버할 수 있는 범위는 고작 1킬로미터 정도다! 이 범위에서 벗어나는 순간, 저들에게 발각되고 말 거야!
+[Character(name="char_002_amiya_1")]
+[name="아미야"]  여러분, 서두르세요!
+[Character]
+[Dialog]
+[playsound(key="$drift", volume=1)]
+[CameraShake(duration=0.2, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[playsound(key="$drift", volume=1)]
+[CameraShake(duration=0.8, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[image]
+[Background(image="bg_laccolith",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playsound(key="$drift", volume=1)]
+[CameraShake(duration=0.2, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[playsound(key="$drift", volume=1)]
+[CameraShake(duration=0.8, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[Character(name="avg_npc_012")]
+[name="운전자"]  늦었습니다! 바로 감속해야 해요!
+[name="운전자"]  모래 먼지 범위 밖으로 나가면, 체르노보그 코어의 광학 관측 장치가 즉시 우리를 포착해, 침입 작전은 수포로 돌아갈 겁니다!
+[name="운전자"]  몇 명이 남았는지는 몰라도, 빨리……
+[Decision(options="남은 대원은 없어.", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="운전자"]  네?
+[Decision(options="내가 간다!;(말없이 방진 마스크를 쓴다);갈고리 넘겨. 나 혼자 간다.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_012")]
+[name="운전자"]  ……너무 위험합니다, 박사님!
+[name="운전자"]  오퍼레이터 훈련도 받지 않은 사람이 혼자 성을 오르겠다니, 말도 안 됩니다!
+[name="운전자"]  켈시 선생님께서 전투 보조 인력도 배치해 주지 않으신 겁니까?
+[Decision(options="없으면 없는 거지, 뭐 어때?;……;이 기회에 몸이나 조금 더 단련하라고 그랬나 보지.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  아니, 있어.
+[Decision(options="?!", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  나다.
+[Dialog]
+[Character]
+켈시가 박사의 허리에 손을 둘러 와이어로 끌어당겼다.
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  {@nickname} 박사, 다음에는 네가 직접 운명을 잡아보라고.
+[Dialog]
+[Character]
+[Background]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_7_9",x=0, y=0, xScale=0.9, yScale=0.9, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+모래바람이 거세, 그 딱딱한 '손'이 정말 켈시의 손이 맞는지는 확신할 수 없었다.
+[Background]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_7_8",x=0, y=0, xScale=0.9, yScale=0.9, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playsound(key="$d_gen_transmissionget", volume=0.4)]
+[name="아미야"]  각 팀, 위치로!
+[name="아미야"]  지금부턴 조금의 실수도 용납되지 않습니다!
+[stopmusic(fadetime=3)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[image]
+[Background(image="bg_cherunder",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+10:30 a.m. 
+코어의 지하 기반시설
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=2)]
+[Character(name="avg_npc_012")]
+[name="로도스 아일랜드 오퍼레이터"]  맞습니다. 확실히 침입의 흔적이에요.
+[name="로도스 아일랜드 오퍼레이터"]  침입자는 한 명인 듯합니다.
+[Character(name="char_002_amiya_1#7")]
+[name="아미야"]  리유니온인지 다른 누구인지는 모르겠지만, 앞의 혈흔이 아직 채 굳지 않았어요.
+[name="아미야"]  ……첸 팀장님일지도 몰라요! 서둘러야겠어요.
+[Character(name="char_002_amiya_1#6")]
+[name="아미야"]  아, 박사님!
+[name="아미야"]  무사히 도착하셔서 다행이에요.
+[Decision(options="무사는 무슨……!;……위험했어.;누구 덕분에, 하마터면 두 번 다시 널 못 만날 뻔했어.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1")]
+[name="아미야"]  ……응? 네?!
+[name="아미야"]  위, 위험했나요?! {@nickname} 박사님, 다친 곳은 없으세요?!
+[Decision(options="괜찮아, 가자. 트라우마가 조금 생겼을 뿐이야.", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]

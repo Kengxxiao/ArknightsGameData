@@ -6389,6 +6389,89 @@
         }
       ]
     },
+    "char_400_weedy": {
+      "charId": "char_400_weedy",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&power[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_prod_spd&power[020]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_401_elysm": {
+      "charId": "char_401_elysm",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_team[060]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_flag[060]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_376_therex": {
+      "charId": "char_376_therex",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 30
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_343_tknogi": {
       "charId": "char_343_tknogi",
       "maxManpower": 8640000,
@@ -6898,6 +6981,18 @@
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, 제어 센터 내 <@cc.kw>리 탐정사무소</> 오퍼레이터 한 명 마다 해당 소속 오퍼레이터의 <@cc.kw>컨디션 소모량이 추가로 감소</>하고, 한 명 마다 제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
     },
+    "power_rec_spd&cost[000]": {
+      "buffId": "power_rec_spd&cost[000]",
+      "buffName": "넘치는 열정",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd&cost",
+      "sortId": 2002,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "발전소에 배치 시, 시간당 컨디션 소모 <@cc.vup>-0.52</>"
+    },
     "power_rec_spd[000]": {
       "buffId": "power_rec_spd[000]",
       "buffName": "예비 에너지",
@@ -7005,6 +7100,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "발전소에 배치 시, 시간당 드론 회복 속도<@cc.vup>+15%</>"
+    },
+    "manu_prod_spd&power[010]": {
+      "buffId": "manu_prod_spd&power[010]",
+      "buffName": "자동화 β",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&power2",
+      "sortId": 3521,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 생산력이 <@cc.vdown>전부 0이 되고</>, <@cc.kw>발전소</> 하나당 해당 제조소의 생산력 <@cc.vup>+10%</>"
+    },
+    "manu_prod_spd&power[020]": {
+      "buffId": "manu_prod_spd&power[020]",
+      "buffName": "해마 리프",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&power3",
+      "sortId": 3533,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 제공하는 생산력이 <@cc.vdown>전부 0이 되고</>, <@cc.kw>발전소</> 하나당 해당 제조소의 생산력 <@cc.vup>+15%</>"
     },
     "manu_prod_spd[000]": {
       "buffId": "manu_prod_spd[000]",
@@ -8926,6 +9045,18 @@
       "roomType": "MEETING",
       "description": "응접실에 배치 시, <@cc.kw>우르수스 학생자치단</> 단서를 더 쉽게 획득한다 (업무 시간이 확률에 영향을 줌)"
     },
+    "meet_team[060]": {
+      "buffId": "meet_team[060]",
+      "buffName": "통신원",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_rhodes1",
+      "sortId": 6711,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "응접실에 배치 시, <@cc.kw>로도스 아일랜드 제약회사</> 단서를 더 쉽게 획득한다 (업무 시간이 확률에 영향을 줌)"
+    },
     "meet_flag[050]": {
       "buffId": "meet_flag[050]",
       "buffName": "선별",
@@ -8937,6 +9068,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "응접실에 배치 시, 획득한 단서가 <@cc.kw>우르수스 학생자치단</> 단서가 아닐 때 마다, <@cc.kw>우르수스 학생자치단</> 단서 출현 확률이 추가로 상승 (업무 시간이 확률에 영향을 줌)"
+    },
+    "meet_flag[060]": {
+      "buffId": "meet_flag[060]",
+      "buffName": "깃발 꽂기",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_flag_rhodes",
+      "sortId": 6711,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "응접실에 배치 시, 획득한 단서가 <@cc.kw>로도스 아일랜드 제약회사</> 단서가 아닐 때 마다, <@cc.kw>로도스 아일랜드 제약회사</> 단서 출현 확률이 추가로 상승 (업무 시간이 확률에 영향을 줌)"
     },
     "meet_spd&team[000]": {
       "buffId": "meet_spd&team[000]",
@@ -17422,6 +17565,466 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_dormW_weaponRack_01": {
+        "id": "furni_dormW_weaponRack_01",
+        "name": "전리품 진열대",
+        "iconId": "furni_dormW_weaponRack_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 5,
+        "height": 7,
+        "comfort": 365,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "산크타 총기가 가득 놓인 진열대. 일부 살카즈 용병들에겐 동족에게 전리품을 자랑하며 무력을 뽐내는 습관이 있다고 한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 278,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_wallDecor_01": {
+        "id": "furni_dormW_wallDecor_01",
+        "name": "석판 벽장식",
+        "iconId": "furni_dormW_wallDecor_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 10,
+        "comfort": 180,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용병 휴게실에 놓인 석제 벽장식. 석판 뒤에는 개인 물품이 숨겨져 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 168,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_partition_01": {
+        "id": "furni_dormW_partition_01",
+        "name": "석판 유리 칸막이",
+        "iconId": "furni_dormW_partition_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 5,
+        "height": 8,
+        "comfort": 210,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "군용 규격의 방탄 유리 칸막이. 옆에는 공용 기타가 놓여있다. 서로 마음을 터놓고 지내되 어느 정도 거리를 유지하는 건 예전부터 반드시 필요한 마음가짐이었다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 160,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_barrel_01": {
+        "id": "furni_dormW_barrel_01",
+        "name": "대용량 폭약 원료",
+        "iconId": "furni_dormW_barrel_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 140,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "W가 폭약 원료를 저장하는 통. \"거기 놔둬, 적어도 어디가 터질진 알 수 있을 테니.\"",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 120,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_toolbox_01": {
+        "id": "furni_dormW_toolbox_01",
+        "name": "기폭장치 제작툴",
+        "iconId": "furni_dormW_toolbox_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 160,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "W가 기폭장치를 제작하는 도구함. \"제작부터 기폭까지, 모든 과정엔 그녀가 참여한다.\"",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 135,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_table_01": {
+        "id": "furni_dormW_table_01",
+        "name": "높은 테이블",
+        "iconId": "furni_dormW_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 4,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "과일과 음료가 잔뜩 놓인 테이블. 특별히 흰 식탁보를 깔아놓았다. W의 미소를 빼앗을 수 있도록.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_mirror_01": {
+        "id": "furni_dormW_mirror_01",
+        "name": "빨강 전신거울",
+        "iconId": "furni_dormW_mirror_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 115,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "장비를 찬 모습을 확인할 수 있는 거울. 이 거울은 용병의 습관에 전혀 부합하지 않지만, W는 그럼에도 불구하고 여기에 놓고자 했다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 108,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_snookerTable_01": {
+        "id": "furni_dormW_snookerTable_01",
+        "name": "살카즈 당구대",
+        "iconId": "furni_dormW_snookerTable_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 11,
+        "depth": 5,
+        "height": 6,
+        "comfort": 540,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "평범한 당구대. 살카즈들이 좋아하는 색깔로 꾸며졌다. \"업무 같은 휴식, 휴식 같은 업무\"",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 410,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_triangle_01": {
+        "id": "furni_dormW_triangle_01",
+        "name": "살카즈식 삼각대",
+        "iconId": "furni_dormW_triangle_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 2,
+        "comfort": 55,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "독특한 디자인으로 맞춤 제작된 삼각대. 규율을 지키는 걸 싫어하는 살카즈들이라면, 이렇게 독특한 공 배치 규칙을 고안하는 것도 놀라운 일은 아니다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 53,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_dartboard_01": {
+        "id": "furni_dormW_dartboard_01",
+        "name": "걸이식 다트판",
+        "iconId": "furni_dormW_dartboard_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 5,
+        "comfort": 130,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "임무 목표를 붙여놓은 다트판. '목표'를 명중시키고 우스꽝스러운 짓을 하다 보면 영감이 떠오른다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_shelf_01": {
+        "id": "furni_dormW_shelf_01",
+        "name": "걸이식 선반",
+        "iconId": "furni_dormW_shelf_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 2,
+        "comfort": 135,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "분해가 가능한 간이 선반. 무게 제한이 얼마나 되나 테스트하다 '별수 없이' 새것을 사게 만드는 사람은 어딜 가나 꼭 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 125,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_bulletinboard_01": {
+        "id": "furni_dormW_bulletinboard_01",
+        "name": "휴게실 게시판",
+        "iconId": "furni_dormW_bulletinboard_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 7,
+        "comfort": 140,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "선명한 색상의 게시판. 모든 용병은 임기응변에 능하지만, 그래도 계획이 있다는 건 좋은 일이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 120,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_carpet_01": {
+        "id": "furni_dormW_carpet_01",
+        "name": "짐승털 카펫",
+        "iconId": "furni_dormW_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 15,
+        "depth": 10,
+        "height": 1,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "무슨 동물의 털로 만든 건지 알 수 없는 카펫. 어떤 용병들은 가장 평범한 장소에도 함정을 파는데 능하다. 극히 위험하니 조심하도록 하자.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 128,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_wallSticker_01": {
+        "id": "furni_dormW_wallSticker_01",
+        "name": "목책 벽장식",
+        "iconId": "furni_dormW_wallSticker_01",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 1,
+        "height": 10,
+        "comfort": 300,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용병 휴게실의 목제 벽장식. 울타리 뒤에는 공용 물품이 숨겨져 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 228,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_walllamp_01": {
+        "id": "furni_dormW_walllamp_01",
+        "name": "휴게실 소형 벽등",
+        "iconId": "furni_dormW_walllamp_01",
+        "type": "WALLLAMP",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 60,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용병 휴게실의 소형 벽등. ",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 58,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_ceiling_01": {
+        "id": "furni_dormW_ceiling_01",
+        "name": "휴게실 광원 천장등",
+        "iconId": "furni_dormW_ceiling_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 28,
+        "depth": 6,
+        "height": 2,
+        "comfort": 440,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용병 휴게실의 천장등. 거의 모든 용병 휴게실의 천장등에는 공개된 비밀이 숨겨져 있다. 살카즈 용병들은 특히 이런 쪽에 능하다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 335,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_fluorescentLamp_01": {
+        "id": "furni_dormW_fluorescentLamp_01",
+        "name": "휴게실 형광등",
+        "iconId": "furni_dormW_fluorescentLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 1,
+        "comfort": 195,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용병 휴게실의 형광등. 사냥감이든 사냥꾼이든, 결국엔 선혈에 빨갛게 물들으리니.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 148,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_ceilingLight_01": {
+        "id": "furni_dormW_ceilingLight_01",
+        "name": "휴게실 천장등",
+        "iconId": "furni_dormW_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 60,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "용병 휴게실의 천장등. 모든 디테일은 계약을 완수하는 데 쓰이거나…… 소식을 공유하는 데 쓰일 수 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 58,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_wallpaper_01": {
+        "id": "furni_dormW_wallpaper_01",
+        "name": "휴게실 벽지",
+        "iconId": "furni_dormW_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "벽의 일면이 여러 차례 손상되어 이미 수리를 포기한 상태다. 상처는 나을 수 있지만, 흉터는 지울 수 없는 법.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_floor_01": {
+        "id": "furni_dormW_floor_01",
+        "name": "휴게실 바닥 타일",
+        "iconId": "furni_dormW_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "깔끔한 바닥재. 딱히 특별한 건 없다. 바닥 중 어느 한 블록에는 휴게실을 날려버릴 만한 폭발물이 숨겨져 있다는 것 말고.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_community_bookshelf_01": {
         "id": "furni_community_bookshelf_01",
         "name": "플로어 서재",
@@ -19347,6 +19950,52 @@
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "\"우린 정의와 언어를 통해 이견을 통일해야 한다.\" ",
         "obtainApproach": "H6-4 첫 클리어 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS007_repulsion_01": {
+        "id": "furni_dropS007_repulsion_01",
+        "name": "플레이트《인지》",
+        "iconId": "furni_dropS007_repulsion_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "\"나인가, 내가 아닌가, 누가 나인가?\"",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS007_easyRider_01": {
+        "id": "furni_dropS007_easyRider_01",
+        "name": "플레이트《라이딩》",
+        "iconId": "furni_dropS007_easyRider_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "멀리 난 한 줄기 진흙 길.",
+        "obtainApproach": "H7-4 첫 클리어 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -22634,6 +23283,128 @@
           }
         ]
       },
+      "furni_set_dormW": {
+        "id": "furni_set_dormW",
+        "name": "살카즈 용병 휴게실",
+        "desc": "살카즈 스타일로 지은 휴게실. 위험과 편안함이 공존한다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_dormW_weaponRack_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_wallDecor_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_partition_01",
+            "pos0": 6,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_barrel_01",
+            "pos0": 8,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_toolbox_01",
+            "pos0": 12,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_table_01",
+            "pos0": 16,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_mirror_01",
+            "pos0": 15,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_snookerTable_01",
+            "pos0": 21,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_triangle_01",
+            "pos0": 24,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_dartboard_01",
+            "pos0": 26,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_shelf_01",
+            "pos0": 21,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_bulletinboard_01",
+            "pos0": 30,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_carpet_01",
+            "pos0": 19,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_wallSticker_01",
+            "pos0": 21,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_walllamp_01",
+            "pos0": 21,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_dormW_walllamp_01",
+            "pos0": 21,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_dormW_walllamp_01",
+            "pos0": 21,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_ceiling_01",
+            "pos0": 3,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_fluorescentLamp_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_ceilingLight_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_dormW_ceilingLight_01",
+            "pos0": 32,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_dormW_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
+      },
       "furni_set_community": {
         "id": "furni_set_community",
         "name": "우르수스 학생 동아리실",
@@ -24010,6 +24781,62 @@
           "furni_beerhouse_floor_01",
           "furni_beerhouse_slopedCeiling1_01",
           "furni_beerhouse_slopedCeiling2_01"
+        ]
+      },
+      "furni_set_dormW_1": {
+        "id": "furni_set_dormW_1",
+        "name": "업무 세트",
+        "themeId": "furni_set_dormW",
+        "comfort": 205,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_weaponRack_01",
+          "furni_dormW_barrel_01",
+          "furni_dormW_toolbox_01",
+          "furni_dormW_table_01",
+          "furni_dormW_bulletinboard_01"
+        ]
+      },
+      "furni_set_dormW_2": {
+        "id": "furni_set_dormW_2",
+        "name": "데코 세트",
+        "themeId": "furni_set_dormW",
+        "comfort": 185,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_snookerTable_01",
+          "furni_dormW_triangle_01",
+          "furni_dormW_shelf_01",
+          "furni_dormW_dartboard_01",
+          "furni_dormW_carpet_01"
+        ]
+      },
+      "furni_set_dormW_3": {
+        "id": "furni_set_dormW_3",
+        "name": "장식 세트",
+        "themeId": "furni_set_dormW",
+        "comfort": 210,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_ceiling_01",
+          "furni_dormW_partition_01",
+          "furni_dormW_fluorescentLamp_01",
+          "furni_dormW_ceilingLight_01",
+          "furni_dormW_mirror_01"
+        ]
+      },
+      "furni_set_dormW_4": {
+        "id": "furni_set_dormW_4",
+        "name": "휴식 세트",
+        "themeId": "furni_set_dormW",
+        "comfort": 165,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_wallpaper_01",
+          "furni_dormW_floor_01",
+          "furni_dormW_wallDecor_01",
+          "furni_dormW_wallSticker_01",
+          "furni_dormW_walllamp_01"
         ]
       },
       "furni_set_community_1": {
