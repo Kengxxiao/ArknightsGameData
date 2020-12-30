@@ -6389,6 +6389,89 @@
         }
       ]
     },
+    "char_400_weedy": {
+      "charId": "char_400_weedy",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&power[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_prod_spd&power[020]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_401_elysm": {
+      "charId": "char_401_elysm",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_team[060]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_flag[060]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_376_therex": {
+      "charId": "char_376_therex",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 30
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_343_tknogi": {
       "charId": "char_343_tknogi",
       "maxManpower": 8640000,
@@ -6898,6 +6981,18 @@
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>(7)</>, and further decreases the Morale consumed per hour based upon the number of <@cc.kw>Lei's Detective Agency</> Operators assigned to the Control Center."
     },
+    "power_rec_spd&cost[000]": {
+      "buffId": "power_rec_spd&cost[000]",
+      "buffName": "Enthusiasm",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd&cost",
+      "sortId": 2002,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "When this Operator is assigned to a Power Plant, reduces the Morale consumed each hour by <@cc.vup>-0.52</>"
+    },
     "power_rec_spd[000]": {
       "buffId": "power_rec_spd[000]",
       "buffName": "Backup Energy",
@@ -7005,6 +7100,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+15%</>"
+    },
+    "manu_prod_spd&power[010]": {
+      "buffId": "manu_prod_spd&power[010]",
+      "buffName": "Automation β",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&power2",
+      "sortId": 3521,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</>, but each <@cc.kw>Power Plant</> increases that Factory’s productivity by <@cc.vup>+10%</>"
+    },
+    "manu_prod_spd&power[020]": {
+      "buffId": "manu_prod_spd&power[020]",
+      "buffName": "Bionic Seadragon",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&power3",
+      "sortId": 3533,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</>, but each <@cc.kw>Power Plant</> increases that Factory’s productivity by <@cc.vup>+15%</>"
     },
     "manu_prod_spd[000]": {
       "buffId": "manu_prod_spd[000]",
@@ -8926,6 +9045,18 @@
       "roomType": "MEETING",
       "description": "When this Operator is assigned to the Reception Room, the likelihood of obtaining <@cc.kw>Ursus Student Self-government Group</> clues is increased (working time improves the likelihood)."
     },
+    "meet_team[060]": {
+      "buffId": "meet_team[060]",
+      "buffName": "Correspondent",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_rhodes1",
+      "sortId": 6711,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining <@cc.kw>Rhodes Island</> clues (Rate is influenced by length of work time)"
+    },
     "meet_flag[050]": {
       "buffId": "meet_flag[050]",
       "buffName": "Screening",
@@ -8937,6 +9068,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining <@cc.kw>Ursus Student Self-government Group</> clues for every newly-obtained Clue that is not from <@cc.kw>Ursus Student Self-government Group</> (working time improves this likelihood)."
+    },
+    "meet_flag[060]": {
+      "buffId": "meet_flag[060]",
+      "buffName": "Pioneer",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_flag_rhodes",
+      "sortId": 6711,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, every time that a non-<@cc.kw>Rhodes Island</> clue is collected, increases the likelihood of obtaining <@cc.kw>Rhodes Island</> clues (Rate is influenced by length of work time)"
     },
     "meet_spd&team[000]": {
       "buffId": "meet_spd&team[000]",
@@ -17422,6 +17565,466 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_dormW_weaponRack_01": {
+        "id": "furni_dormW_weaponRack_01",
+        "name": "Bounty Display Rack",
+        "iconId": "furni_dormW_weaponRack_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 5,
+        "height": 7,
+        "comfort": 365,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A display rack full of Sankta guns. Some Sarkazians have a habit of showing off their spoils of war to their clansmen.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 278,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_wallDecor_01": {
+        "id": "furni_dormW_wallDecor_01",
+        "name": "Slate Wall Decoration",
+        "iconId": "furni_dormW_wallDecor_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 10,
+        "comfort": 180,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A decorative wall slate in the mercenary lounge. Personal belongings are hidden behind it.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 168,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_partition_01": {
+        "id": "furni_dormW_partition_01",
+        "name": "Bulletproof Glass Door",
+        "iconId": "furni_dormW_partition_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 5,
+        "height": 8,
+        "comfort": 210,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A door sealed with military-grade bulletproof glass, with a communal guitar between the partition. Even if you plan to have a heart-to-heart, keeping your distance is still a necessary safety measure.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 160,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_barrel_01": {
+        "id": "furni_dormW_barrel_01",
+        "name": "High-Output Explosives Material",
+        "iconId": "furni_dormW_barrel_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 140,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A barrel W uses to store raw explosive material. \"It's good there. At least we know what'll blow up.\"",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 120,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_toolbox_01": {
+        "id": "furni_dormW_toolbox_01",
+        "name": "Ignition Tool",
+        "iconId": "furni_dormW_toolbox_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 160,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A toolbox W uses to make detonators. \"From production to detonation, she has a hand in the entire process.\"",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 135,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_table_01": {
+        "id": "furni_dormW_table_01",
+        "name": "Upscale Dining Table",
+        "iconId": "furni_dormW_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 4,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Upon this high table specially covered with a white tablecloth sits a cornucopia of fresh fruits and drinks. One of the few things capable of taking away W's smile.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_mirror_01": {
+        "id": "furni_dormW_mirror_01",
+        "name": "Red-Framed Floor Mirror",
+        "iconId": "furni_dormW_mirror_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 115,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A mirror used to check worn equipment. While completely incompatible with the habits of mercenaries, W still insisted on having it here.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 108,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_snookerTable_01": {
+        "id": "furni_dormW_snookerTable_01",
+        "name": "Sarkaz Pool Table",
+        "iconId": "furni_dormW_snookerTable_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 11,
+        "depth": 5,
+        "height": 6,
+        "comfort": 540,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An ordinary billiards table, but the tabletop has been replaced with colors preferred by Sarkazians. Work leisurely, and play dutifully.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 410,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_triangle_01": {
+        "id": "furni_dormW_triangle_01",
+        "name": "Sarkaz Ball Rack",
+        "iconId": "furni_dormW_triangle_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 2,
+        "comfort": 55,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A customized ball rack with a unique shape. The Sarkaz rarely like to follow the rules, so it is no surprise that they'd make their own rules for billiards.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 53,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_dartboard_01": {
+        "id": "furni_dormW_dartboard_01",
+        "name": "Hanging Dartboard",
+        "iconId": "furni_dormW_dartboard_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 5,
+        "comfort": 130,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A dartboard with mission targets attached. Between scoring hits and leisurely chatting, inspiration flashes.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_shelf_01": {
+        "id": "furni_dormW_shelf_01",
+        "name": "Hanging Shelves",
+        "iconId": "furni_dormW_shelf_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 2,
+        "comfort": 135,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A simple, easily assembled and disassembled rack. There are always people who like to test the load-bearing limits of these things, \"forcing\" them to be replaced regularly.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 125,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_bulletinboard_01": {
+        "id": "furni_dormW_bulletinboard_01",
+        "name": "Lounge Bulletin Board",
+        "iconId": "furni_dormW_bulletinboard_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 7,
+        "comfort": 140,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A brightly colored noticeboard. Every mercenary knows how to adapt to changes, but it's always good to have a general game plan.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 120,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_carpet_01": {
+        "id": "furni_dormW_carpet_01",
+        "name": "Fur Carpet",
+        "iconId": "furni_dormW_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 15,
+        "depth": 10,
+        "height": 1,
+        "comfort": 150,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Nobody knows what kind of animal fur was used to make this carpet. Some mercenaries are adept at setting traps in the most common places to extremely deadly effect.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 128,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_wallSticker_01": {
+        "id": "furni_dormW_wallSticker_01",
+        "name": "Wood Plank Walls",
+        "iconId": "furni_dormW_wallSticker_01",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 1,
+        "height": 10,
+        "comfort": 300,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A wooden wall decorating the mercenary lounge. Communal goods are hidden behind it.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 228,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_walllamp_01": {
+        "id": "furni_dormW_walllamp_01",
+        "name": "Small Lounge Wall Light",
+        "iconId": "furni_dormW_walllamp_01",
+        "type": "WALLLAMP",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 60,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A small wall lamp in the mercenary lounge. Remove the lamp and rotate the bulb three times to the right to use it as a makeshift grenade.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 58,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_ceiling_01": {
+        "id": "furni_dormW_ceiling_01",
+        "name": "Lounge Ceiling Light Fixture",
+        "iconId": "furni_dormW_ceiling_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 28,
+        "depth": 6,
+        "height": 2,
+        "comfort": 440,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The ceiling of the mercenary lounge. In almost every mercenary lounge, there will be some not-so-discreet secrets to be found on the ceiling. Sarkaz mercenaries are particularly good at this.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 335,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_fluorescentLamp_01": {
+        "id": "furni_dormW_fluorescentLamp_01",
+        "name": "Lounge Tube Light",
+        "iconId": "furni_dormW_fluorescentLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 1,
+        "comfort": 195,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A tube light in the mercenary lounge. No matter hunter or prey, both will eventually be stained with blood.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 148,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_ceilingLight_01": {
+        "id": "furni_dormW_ceilingLight_01",
+        "name": "Lounge Chandelier",
+        "iconId": "furni_dormW_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 60,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A chandelier in the mercenary lounge. All details can be used to either complete the contract - or be shared.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 58,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_wallpaper_01": {
+        "id": "furni_dormW_wallpaper_01",
+        "name": "Lounge Wallpaper",
+        "iconId": "furni_dormW_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "One side of the wall has been damaged extensively, and efforts to repair it have been abandoned. Wounds may heal, but scars last forever.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_floor_01": {
+        "id": "furni_dormW_floor_01",
+        "name": "Lounge Floor Tiles",
+        "iconId": "furni_dormW_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Tidy and unassuming floor tiles. However, one of these floor tiles contains explosives that could detonate the entire lounge.",
+        "obtainApproach": "Available for limited-time in Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_community_bookshelf_01": {
         "id": "furni_community_bookshelf_01",
         "name": "Low Bookshelves",
@@ -19347,6 +19950,52 @@
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "\"We must voice our dissent through justice and a unified voice.\"",
         "obtainApproach": "Dropped from the first clear reward of H6-4",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS007_repulsion_01": {
+        "id": "furni_dropS007_repulsion_01",
+        "name": "Plaque - Recognition",
+        "iconId": "furni_dropS007_repulsion_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "\"It is me. It is not me. Who am I?\"",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS007_easyRider_01": {
+        "id": "furni_dropS007_easyRider_01",
+        "name": "Plaque - The Ride",
+        "iconId": "furni_dropS007_easyRider_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A dirt road leads into the distance.",
+        "obtainApproach": "Dropped from the first clear reward of H7-4",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -22634,6 +23283,128 @@
           }
         ]
       },
+      "furni_set_dormW": {
+        "id": "furni_set_dormW",
+        "name": "Sarkaz Mercenary Lounge",
+        "desc": "A lounge built in the style of Sarkaz. Here, danger and comfort coexist.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_dormW_weaponRack_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_wallDecor_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_partition_01",
+            "pos0": 6,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_barrel_01",
+            "pos0": 8,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_toolbox_01",
+            "pos0": 12,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_table_01",
+            "pos0": 16,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_mirror_01",
+            "pos0": 15,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_snookerTable_01",
+            "pos0": 21,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_triangle_01",
+            "pos0": 24,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_dartboard_01",
+            "pos0": 26,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_shelf_01",
+            "pos0": 21,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_bulletinboard_01",
+            "pos0": 30,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_carpet_01",
+            "pos0": 19,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_wallSticker_01",
+            "pos0": 21,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_walllamp_01",
+            "pos0": 21,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_dormW_walllamp_01",
+            "pos0": 21,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_dormW_walllamp_01",
+            "pos0": 21,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_ceiling_01",
+            "pos0": 3,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_fluorescentLamp_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_ceilingLight_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_dormW_ceilingLight_01",
+            "pos0": 32,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_dormW_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
+      },
       "furni_set_community": {
         "id": "furni_set_community",
         "name": "Ursus Student Clubroom",
@@ -24010,6 +24781,62 @@
           "furni_beerhouse_floor_01",
           "furni_beerhouse_slopedCeiling1_01",
           "furni_beerhouse_slopedCeiling2_01"
+        ]
+      },
+      "furni_set_dormW_1": {
+        "id": "furni_set_dormW_1",
+        "name": "\"At Work\" Set",
+        "themeId": "furni_set_dormW",
+        "comfort": 205,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_weaponRack_01",
+          "furni_dormW_barrel_01",
+          "furni_dormW_toolbox_01",
+          "furni_dormW_table_01",
+          "furni_dormW_bulletinboard_01"
+        ]
+      },
+      "furni_set_dormW_2": {
+        "id": "furni_set_dormW_2",
+        "name": "\"Casual\" Set",
+        "themeId": "furni_set_dormW",
+        "comfort": 185,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_snookerTable_01",
+          "furni_dormW_triangle_01",
+          "furni_dormW_shelf_01",
+          "furni_dormW_dartboard_01",
+          "furni_dormW_carpet_01"
+        ]
+      },
+      "furni_set_dormW_3": {
+        "id": "furni_set_dormW_3",
+        "name": "\"Decorative\" Set",
+        "themeId": "furni_set_dormW",
+        "comfort": 210,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_ceiling_01",
+          "furni_dormW_partition_01",
+          "furni_dormW_fluorescentLamp_01",
+          "furni_dormW_ceilingLight_01",
+          "furni_dormW_mirror_01"
+        ]
+      },
+      "furni_set_dormW_4": {
+        "id": "furni_set_dormW_4",
+        "name": "\"Ornamental\" Set",
+        "themeId": "furni_set_dormW",
+        "comfort": 165,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_wallpaper_01",
+          "furni_dormW_floor_01",
+          "furni_dormW_wallDecor_01",
+          "furni_dormW_wallSticker_01",
+          "furni_dormW_walllamp_01"
         ]
       },
       "furni_set_community_1": {
