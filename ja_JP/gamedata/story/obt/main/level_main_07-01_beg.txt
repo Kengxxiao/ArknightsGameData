@@ -1,0 +1,190 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[playMusic(intro="$dignified_intro", key="$dignified_loop", volume=0.4)]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+6:30 p.m. 
+[Dialog]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[delay(time=2)]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=2)]
+[Character]
+[name="PRTS"]  識別コード00000-00002、接続権限レベル-8。
+[name="PRTS"]  Dr.{@nickname}、ロドス総合感染生物処理室へようこそ。生体データに基づき、あなたの指示についての予測が行われました。
+[name="PRTS"]  また、あなたが不愉快な心情にあることが検出されております。
+[Decision(options="黙れ。;……;愉快な心情とはどんなものか教えてくれ。", values="1;2;3")]
+[Predicate(references="1")]
+[Character]
+[name="PRTS"]  Dr.{@nickname}より、一定の攻撃性が検知されました。
+[name="PRTS"]  ご安心ください。セキュリティシステムによる拘束通電処置は実行されません。また、システムの計測結果について過剰に心配する必要もありません。
+[Predicate(references="2")]
+[Character]
+[name="PRTS"]  Dr.{@nickname}は沈黙を選択したと判断します。
+[name="PRTS"]  無言による抗議行為、あるいはコミュニケーション拒否、いずれも一種のAPD、回避性パーソナリティ障害と思われます。
+[name="PRTS"]  ですが、どのような方にもシステムは平等に対応しますので、どうぞご自由に行動してください。
+[Predicate(references="3")]
+[Character]
+[name="PRTS"]  愉快、不愉快とは主観的判断です。
+[name="PRTS"]  ですが、本システムには記録されているほぼ全ての精神活動状態、及び各種の分泌ホルモン数値をベースとした、統計による判断基準が集約されています。
+[name="PRTS"]  よって、本システムによる主観的判断を比喩する表現については、限りなく客観的事実に近いものと見なして問題ありません。
+[name="PRTS"]  本システムは、Dr.{@nickname}がどのような行動を選択しても、高レベルのシミュレーションとそれに基づく対処が可能です。
+[name="PRTS"]  ですから、自由に行動していただいて構いません。
+[name="PRTS"]  PRTSは、非殺傷性の対象無力化システムを完備しています。
+[name="PRTS"]  過激な行動と判断された場合、システムが速やかにあなたを気絶させ3.55時間後に覚醒させます。その結果あなたの行動が通常の水準に戻ることが保証されます。
+[Predicate(references="1;2;3")]
+[Character]
+[name="PRTS"]  Welcome home, Doctor。
+[Decision(options="……ここは本当に帰るべき家なのか？", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_042",fadetime=1,block=true)]
+[delay(time=1)]
+[name="？？？"]  あなたが、Dr.{@nickname}？
+[Decision(options="え？;……？;そうだけど？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  ……あなたで間違いなさそう。
+[name="？？？"]  感じる……ちょっと変わってるけど。
+[name="？？？"]  それと……あなたの抱えてる人、その服は……
+[name="？？？"]  その人が誰なのか、聞いてもいい？
+[Decision(options="一人の……戦士だ。;一人の……同胞だ。;一人の……友人だ。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  戦士？
+[name="？？？"]  でも、彼女はあなたの身体に傷を残した……敵なの？
+[name="？？？"]  いや、違う……これは致命傷じゃないし、そもそも傷のつき方に殺意が感じられない……
+[Predicate(references="2")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  その人も感染者……？
+[name="？？？"]  そんな単純な意味じゃ……ないよね。
+[name="？？？"]  Dr.{@nickname}、何か大切なものを喪ったみたいな顔をしてる。
+[Predicate(references="3")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  その人はあなたの友達？
+[name="？？？"]  でも、友達にしては……あなたとの繋がりが、すごく薄いよ？
+[name="？？？"]  なんだか……なんだかすぐにでも消えてしまいそう。
+[Decision(options="君には何が……見えてるんだ？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  人と人の交流の跡。それが、匂いとか、温度とか、イメージとして感じるの。
+[name="？？？"]  よくわからないけど、彼女は……
+[Character]
+[Dialog]
+少女が、フロストノヴァの身体に触れようと手を伸ばす。
+[Decision(options="（黙って見る）;（止める）", values="1;2")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  えっと……
+[name="？？？"]  うーん……
+[name="？？？"]  あなたはそうして欲しくないんだよね？
+[name="？？？"]  いや、違うよ。私は部外者。彼女とは何の繋がりもないの。
+[name="？？？"]  これは私がするべきことじゃない。そういうことでしょ？
+[name="？？？"]  ……わかった。ごめんなさい。
+[Decision(options="君もアーミヤのように他人の心が読めるの？;……;君の反応にはついていけないよ。", values="4;5;6")]
+[Predicate(references="4")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  違う、私にはできない……
+[name="？？？"]  アーミヤは特別だよ。あのアーツは知ってる……大変だと思うよ。
+[Predicate(references="5")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  たぶん……私は彼女に触れてはいけないの。感じ取ることさえも。
+[name="？？？"]  彼女と、この大地の繋がりは、私とは縁がないから。
+[name="？？？"]  そんな彼女に触れる資格は、私にはないから……
+[Predicate(references="6")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  他のみんなも、そう言うよ。
+[name="？？？"]  ロドスのみんなも、それぞれ個性的だけど……私は特別に変なのかもしれないって思う。
+[Predicate(references="2")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  あっ……
+[name="？？？"]  ご、ごめんなさい……
+[name="？？？"]  私……
+[Decision(options="ごめん。;……;すまない、お嬢さん。", values="7;8;9")]
+[Predicate(references="7")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  ううん、大丈夫だよ。慣れっこだから。
+[Predicate(references="8")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  お、怒らないで……
+[name="？？？"]  あなたが黙ったままだと、私……どうしたらいいかわからない。
+[Predicate(references="9")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  大丈夫だよ。
+[name="？？？"]  怖がられるよりも、普通に話してくれる方が嬉しいの……だから、大丈夫。
+[Predicate(references="4;5;6;7;8;9")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  この機械を……使いたいんだよね？
+[Decision(options="ここが本当に感染者の還る場所なのであれば。",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  ……わかった。
+[name="？？？"]  手伝ってあげるね。記録を見せて。
+[name="？？？"]  うん、大丈夫そう。このポッドは掃除してある。彼女をこのデッキに乗せて。ゆっくり、うんいいよ。
+[name="？？？"]  そしたら自動でデッキがポッドの中に入るから、それで……ドアが閉まったら、このボタンを押して終わりだよ。
+[Decision(options="詳しいね。",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  うん、何度もやったから。
+[Decision(options="……どうして？",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  ロドスの感染者たちは、最後はみんなここに来るんだよ。
+[name="？？？"]  私の知ってる人や感じたことのある人、あと同じチームのメンバーなんかは、みんな私が送り出すの。
+[name="？？？"]  説明書は難しいから、簡単な操作方法を全部自分の端末に書いてあるの。それを読み返せば、たぶん身体が覚えてて、すぐに慣れてくるんだ。操作にも、送り出す感覚にも……
+[Decision(options="送り出す感覚って？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  えっと……たぶん鎖みたいなものかな。
+[Decision(options="鎖……？", values="1")]
+[Predicate(references="1")]
+[name="？？？"]  二人の間を繋いだ糸、と言ってもいいけど。
+[name="？？？"]  自分と繋がってる人を送り出すのは、その人と結びついた糸を解くことになるの。糸の片方は自分に繋がったままで、その向こうに誰もいなくなったとしても、糸が落ちて消えることはない。
+[name="？？？"]  でもそれは、身体から何かが消えたような感覚なんだ。そこにまだ何かが残ってるかどうかは判らないけど、かつてその人が存在してたこと、もう戻ってこないことはなんとなく解る……そんな感覚。
+[Decision(options="そんな感覚に……どうして慣れようとするんだ？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="？？？"]  だって慣れていれば、突然失う痛みにも耐えられるでしょ？
+[Decision(options="……君は一体？", values="1")]
+[Character]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[Predicate(references="1")]
+[Character]
+[name="PRTS"]  お取り込み中、失礼します。
+[name="PRTS"]  ロドス総合感染生物処理室に滞在中のエリートオペレーター、Rosmontis様、現在使用中の識別コードは15分後に無効となります。
+[name="PRTS"]  ただ今よりリモートアップデートを行いますので、そのまま現在地にて15秒ほどお待ちください。
+[name="PRTS"]  また、接舷エリアにて小規模な戦闘が発生しております。当施設の被害を最小限に抑えるため、識別コードのアップデート完了後は、可及的速やかに支援に直行されることをおすすめします。
+[Character(name="avg_npc_042")]
+[name="Rosmontis"]  あっ、うんわかった。すぐ行くね。
+[name="Rosmontis"]  待って、今の処理データを端末に書き込んでから……
+[Character]
+[name="PRTS"]  6度目の提言をいたします。本システムに権限を開放していただければ、すぐに端末へ情報をお送り——
+[Character(name="avg_npc_042")]
+[name="Rosmontis"]  ダメ。
+[name="Rosmontis"]  これは私が……私が自分で書き込まなきゃいけないの。
+[Character]
+[name="PRTS"]  承知しました。どうぞ。
+[Decision(options="エリートオペレーターって……？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="Rosmontis"]  え？　私のことだよ。
+[Decision(options="えっと……君をなんて呼べばいいかな？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="Rosmontis"]  ロスモンティス、でいいよ。
+[name="ロスモンティス"]  あ、そうだ……その人、名前は？
+[name="ロスモンティス"]  せめて……せめて何て呼ばれてたのか知りたいの。
+[Decision(options="フロストノヴァ。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_042")]
+[name="ロスモンティス"]  フロストノヴァ……
+[name="ロスモンティス"]  綺麗な名前。
+[name="ロスモンティス"]  はじめまして、フロストノヴァ。
+[name="ロスモンティス"]  ……さようなら。
+[Dialog]
+[Blocker(fadetime=3,block=true)]
+[Image]
