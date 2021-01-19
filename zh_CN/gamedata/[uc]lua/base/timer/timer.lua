@@ -1,9 +1,9 @@
----@class Timer
----@field private m_id number
----@field private m_loop number
----@field private m_interval number
----@field private m_call Event
----@field private m_waitTime number
+
+
+
+
+
+
 Timer = Class("Timer");
 Timer.s_ID = 0;
 

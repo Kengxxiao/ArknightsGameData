@@ -1,13 +1,8 @@
---[[
-  Global model to access PlayerData.
-  About PlayerData see http://dev.int.hypergryph.com/doc/display/TOR/PlayerData.
-  Note that the inner data of PlayerData is readonly and its content shouldn't be modified.
-  Use PlayerData.me.data to access the player data schema
-]]--
 
----@class PlayerData
----@field me PlayerData
----@field data table the player data schema in LuaTable form
+
+
+
+
 PlayerData = ModelMgr.DefineModel("PlayerData")
 
 local DEPRECATE_META = 
@@ -33,8 +28,8 @@ function PlayerData:OnDispose()
   self.data = DEPRECATE_DATA
 end
 
----Sync player data from C# with a newly generated table instance
----@param data table 
+
+
 function PlayerData:ExportSetData(playerDataModel)
   self.data = DEPRECATE_DATA
 end

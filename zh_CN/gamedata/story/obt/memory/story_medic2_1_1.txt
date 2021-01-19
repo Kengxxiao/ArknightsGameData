@@ -1,0 +1,354 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 个人剧情 Lancet-2
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+05:30 A.M. 天气/阴
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Character(name="char_285_medic2_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Lancet-2"]  晚上好啊，博士。
+[name="Lancet-2"]  当然更严格地说，现在已经不是晚上了。
+[name="Lancet-2"]  你看起来真的很累，检测结果显示你至少有二十多个小时没有进入过深度睡眠——偶尔的打盹可不能算数哦。
+[Decision(options="没办法，要处理的文件太多了。;......困。;谁让我是罗德岛的博士啊！", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="Lancet-2"]  博士的工作非常重要，不过还是那句话，必要的休息也是持续工作的保障呢。
+[name="Lancet-2"]  医疗部门的各位也有同样的观点，所以才会经常让我跟着博士。
+[name="Lancet-2"]  唔......毕竟除了日常监测博士的生理状态，我也做不了更多了。
+[Decision(options="我身体挺好的。;......;......麻烦你了。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="Lancet-2"]  博士，我看到了哦......你左手边的杯子。
+[name="Lancet-2"]  试图用更多文件遮掩是无意义的行为。可露希尔小姐没有为我添加嗅觉模块，可我的图像解析极少出错。
+[name="Lancet-2"]  还是热气腾腾的......博士，你在刚才又偷偷给自己倒了一杯。
+[name="Lancet-2"]  十五分钟前，就已经是第四杯了吧？
+[name="Lancet-2"]  偶尔摄入中枢神经兴奋剂是有益处的，但考虑到现在已是凌晨，我建议你......喝咖啡。
+[Decision(options="嗯？", values="1")]
+[Predicate(references="1")]
+[name="Lancet-2"]  刚刚的扫描结果显示，你的心跳速率比正常值偏高，肾上腺素水平也是。
+[PlaySound(key="$transmission", volume=0.6)]
+[name="Lancet-2"]  所以......再喝咖啡啦。
+[name="Lancet-2"]  咦？我刚刚是怎么了......这就是大家平常说的口误吗？原来机器人也会有口误啊......
+[PlaySound(key="$transmission", volume=0.6)]
+[name="Lancet-2"]  总之，博士请多注意休息，要不然又会被医疗部干员说教的。咖啡就......喝了。
+[name="Lancet-2"]  ......
+[Character(name="char_285_medic2_1")]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Lancet-2"]  ......！啊啊！............！！......喝咖啡！
+[name="Lancet-2"]  呜......
+[PlaySound(key="$transmission", volume=0.6)]
+[name="Lancet-2"]  完了，怎么会变成这样，博士你......喝咖啡。
+[Decision(options="好的，我正打算喝呢。;......;听起来好像逻辑不太对？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="Lancet-2"]  到底是哪里出了问题......我本来打算劝阻博士的啊......
+[name="Lancet-2"]  是逻辑模块？还是语言......
+[name="Lancet-2"]  呜......我不正常了......连这点小事都做不好......
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[Character(name="avg_npc_012",fadetime=1,block=true)]
+[delay(time=1)]
+[name="工程干员"]  嗨，是博士啊，你起得可真早。
+[name="工程干员"]  我本来还在哀叹这周第三个早班......看到博士你这么精神，自己也没那么困了呢。
+[name="工程干员"]  有什么我帮得上忙的吗？
+[Decision(options="Lancet-2好像出问题了。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="工程干员"]  嗯？
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=1)]
+[name="Lancet-2"]  呜......我的语言模块坏了。
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=2)]
+[name="工程干员"]  诶，这样吗？这可不太常见。
+[name="工程干员"]  Lancet-2每周都会来工程部门进行一次系统检测，上一次不就是在昨天？还是前天？
+[name="工程干员"]  当时还好好的啊。这还都是可露希尔老大亲自负责的。
+[name="工程干员"]  为什么会突然出问题呢？
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=1)]
+[name="Lancet-2"]  我也不知道啊......听说我这个型号的机器人通常使用年限可以达到十年以上。
+[name="Lancet-2"]  现在明明才两年三个月零五天而已啊。
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=2)]
+[name="工程干员"]  呃......也不必太紧张？
+[name="工程干员"]  实话说，哪怕我们都因为过劳而早早退休了，你应该还能保有青春活力。
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=1)]
+[name="Lancet-2"]  多谢安慰，虽然我知道你只是出于好心。
+[Decision(options="......还是尽快检查看看吧？", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=2)]
+[name="工程干员"]  我的水平肯定比老大差远了......
+[name="工程干员"]  不过这问题也太简单了吧？！只是一块临时消音组件而已。而且就这么草草地贴在背后，甚至角度都是歪着的。
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=1)]
+[name="Lancet-2"]  消音组件？我没有听说过类似的东西。
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=2)]
+[name="工程干员"]  哦，这事只有工程部的老干员才知道。最早可露希尔老大在改制你们这批作业平台的时候，那个，语言库出了一些问题。
+[Decision(options="什么问题？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="工程干员"]  咳咳，有人不小心把一批泰拉各地粗口集锦录入给了Castle-3。
+[Decision(options="这场面有点难以想象。;......;真的是不小心吗？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_012")]
+[name="工程干员"]  内容有点多，又经过了语言处理模块的重新组合，彻底删除需要花时间。
+[name="工程干员"]  所以我们才临时做了这样一个小模块，使用起来非常简便，只要像这样，打开，靠近，电流产生作用——
+[name="工程干员"]  不想让人听见的词语就会被干扰成无法被听到的频率。
+[name="工程干员"]  这样的话，虽然可能暂时影响表达效果，但起码可以避免某些其他部门的干员对Castle-3产生不必要的意见。
+[name="工程干员"]  毕竟怎么说，打从那会儿起，罗德岛的小孩子就不少了哈哈。
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=1)]
+[name="Lancet-2"]  啊......可是......为什么这个组件会到我身上呢？
+[name="Lancet-2"]  我可以保证自己的语言库里并没有不该存在的词句，三十秒前我刚自我检测了一遍。
+[Character(name="char_285_medic2_1",name2="avg_npc_012",focus=2)]
+[name="工程干员"]  因为现在设置的消音对象也不是什么粗口。
+[name="工程干员"]  嗯......好像有人把“不要”两个字改成了最新的消音词。这和博士刚才描述的情况是一致的吧？
+[Decision(options="Lancet-2肯定是想对我说“不要喝咖啡”。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="工程干员"]  咦等等，在组件背后我发现了什么......一块口香糖？
+[name="工程干员"]  有人把组件从我们这里偷偷拿了出去，重新设置了目标词语，然后用口香糖黏在Lancet-2身上？
+[name="工程干员"]  非常聪明、非常便利的改装，也确实会生效。问题是，谁会这么做呢？
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_285_medic2_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Lancet-2"]  博士，有一句话我一直没说。
+[name="Lancet-2"]  刚才在工程部我就有感觉到第三个人的存在。
+[Decision(options="我们不就是三个人？", values="1")]
+[Predicate(references="1")]
+[name="Lancet-2"]  博士，很高兴你把我也计算在内，可惜我说的是第三位人类。
+[Dialog]
+[Character(name="char_366_acdrop",fadetime=1,block=true)]
+[delay(time=1)]
+[name="酸糖"]  ......
+[name="酸糖"]  嗨呀，被发现了啊。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  你好啊，酸糖干员。
+[name="Lancet-2"]  但是，刚刚我检测到的似乎不是......唔，算啦，没关系。
+[name="Lancet-2"]  对了，今天份的检查还没有做。请稍等一下，等我再确认一次博士的数据，我就帮你扫描。
+[name="Lancet-2"]  还有哦，请不要在生活区使用滑板。时间还早，容易打扰到别的干员。
+[name="Lancet-2"]  万一发生碰撞，还会造成不必要的身体伤害。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  ......看来你已经恢复了。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  嗯？
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  博士，我不确定是不是我的理解出了问题，酸糖干员的意思好像是......
+[Decision(options="她应该就是那个人。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  酸糖干员，是你给我贴上了消音组件么？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  ......
+[name="酸糖"]  唔，算是吧。
+[name="酸糖"]  就是我干的。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  从你设置的消音对象来看，你不希望我对你说出“不要”这个词语吗？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  怎么说呢......
+[name="酸糖"]  我这人平常自由惯了，也没什么人会管着我，Lancet-2你这样......嗯，会有点麻烦。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  啊？是嫌麻烦吗？抱歉，我并不希望给你带来这种负面情绪。
+[name="Lancet-2"]  酸糖干员来到罗德岛以后，病情正在逐渐稳定。
+[name="Lancet-2"]  我会向凯尔希医生报备一下，尽量减少检查次数。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  ......不是这个意思。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  好的，我明白了。
+[name="Lancet-2"]  酸糖干员并不是觉得检查很麻烦，而是认为我很麻烦吧？
+[name="Lancet-2"]  这也不是什么很难解决的问题。
+[name="Lancet-2"]  虽然医疗部门的大家都很忙，但大家都很关心干员尤其是刚来罗德岛的年轻干员们的身体健康。我拜托他们换人来检查就可以啦。
+[Decision(options="Lancet-2听起来有点伤心。", values="1")]
+[Predicate(references="1")]
+[name="Lancet-2"]  没有啊博士，请不要误导新干员哦，我毕竟只是个机器，并不会有什么伤心的情绪。
+[name="Lancet-2"]  呜，这么看的话，我确实挺喜欢说不要的......
+[Character(name="char_366_acdrop")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=70, fadeout=true, block=false)]
+[name="酸糖"]  请不要这么说。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  啊？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  我没有希望换人。
+[name="酸糖"]  你挺好的。机器人有什么不好，很酷啊不是嘛。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  ......谢谢。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  唉，那个，怎么说......
+[name="酸糖"]  倒不是说嫌你麻烦，虽然总有个人在耳边念确实，呃，有那么一点受不了，但你那不是关心我么？这我还是分得清的。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  那，酸糖干员说的麻烦是指......？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  非要说的话，是我心里变得很乱......我会有一点，呃，想家？也不是说真想那个地方......反正很麻烦，真的很麻烦啊！
+[name="酸糖"]  我招了！这一点都不酷吧，我也知道这不酷，你随便说没关系！
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  ......
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  唉，现在你怎么又不说话了。
+[name="酸糖"]  每次你说，不要这样，不要那样，就总让我想起一个人......也不知道那个老家伙现在过得咋样。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  博士，我听起来有很老吗？
+[name="Lancet-2"]  我的实际年龄只有两岁，而从某些年轻干员的反馈来看，可露希尔为我选择的声音听起来也该处在一个和他们年龄接近的范围内？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  哈哈，我不是说你老啦。
+[name="酸糖"]  是有时候说话的语气。
+[name="酸糖"]  那个老头子过去也喜欢念叨我，什么不要去危险的地方滑滑板啦，不要时间太晚还在街上晃来晃去，不要离某些地方太近......
+[name="酸糖"]  ......听得耳朵都快掉毛了。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  哦，我大概明白了。
+[name="Lancet-2"]  酸糖干员是觉得我总是在唠叨。
+[name="Lancet-2"]  呜......这确实并不是一个很讨人喜欢的行为......可是当我看到酸糖干员在走廊里使用滑板的时候，总是会无法控制地分析起受伤的可能性。
+[name="Lancet-2"]  还有在病情还未得到较好控制的阶段，过度运动也会有导致部分指标上升的风险......
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  我知道啊，我知道。都是为了我们好嘛。
+[name="酸糖"]  说实话，这种感觉还挺奇妙的。现在想想，那时候我也会觉得烦，现在倒是听不到了。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  酸糖干员是在怀念过去吗？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  怀念吗......也不好说是怀念吧，总是想着过去什么的未免太不酷了。
+[name="酸糖"]  嗨，罗德岛是个不错的地方，还有你这样酷酷的机器人，哈哈。
+[name="酸糖"]  唉。
+[name="酸糖"]  ......对不起啦。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  咦，酸糖干员对我道歉？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  我会尽量不在某些区域玩滑板。这是你希望的吧？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  昨天是我先随口抱怨了下，伊......唔，说有个很好玩的东西可以试试。
+[name="酸糖"]  开始的时候完全没想过真的会生效，后来听到你用平时的语气让我晚点睡觉的时候，心里......有点别扭，非常别扭。
+[name="酸糖"]  挺奇怪的，自由是自由了......并没有觉得轻松。心里反而变得更乱了。
+[name="酸糖"]  总之，这事做得不对。
+[name="酸糖"]  现在被你们逮到了。说吧，怎么罚我？关禁闭吗？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  啊，罗德岛并没有动不动关干员禁闭的习惯，何况这也不是什么大事吧？
+[name="Lancet-2"]  在酸糖干员的家乡，随手改造使用得并不顺手的机械，还挺常见的对不对？
+[name="Lancet-2"]  我从档案里看到过哦，酸糖干员对自己的手弩和滑板都有过一定程度的改造呢。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  不，这不对。
+[name="酸糖"]  你不是那种机械。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  咦？
+[Decision(options="是说Lancet-2不止是普通机械吧。;大概是把Lancet-2看作朋友了？", values="1;2")]
+[Predicate(references="1;2")]
+[name="Lancet-2"]  那就更没什么大不了的了，我想，这只是一个小小的玩笑。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  ......算玩笑嘛？
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=1)]
+[name="Lancet-2"]  朋友与朋友之间，一次有默契的恶作剧。这是我依据玩笑的定义做出的判断。当然，机器人并不能真正理解什么好笑。
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  博士你觉得呢？
+[Decision(options="哈哈。", values="1")]
+[Predicate(references="1")]
+[name="Lancet-2"]  你看，博士都笑了，这就说明确实是个玩笑吧？
+[name="Lancet-2"]  既然是玩笑，我想凯尔希医生和阿米娅都不需要知道这件事。我现在已经恢复了正常，工程部也不会为这点小事留下存档。
+[Character(name="char_285_medic2_1",name2="char_366_acdrop",focus=2)]
+[name="酸糖"]  嗯，谢谢。
+[Character(name="char_366_acdrop")]
+[name="酸糖"]  你确实是个——非常酷的——朋友。
+[name="酸糖"]  那，再会啦。
+[Dialog]
+[PlaySound(key="$drift", volume=0.5)]
+[Character(fadetime=1,block=true)]
+[Delay(time=2)]
+[Character(name="char_285_medic2_1")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=70, fadeout=true, block=false)]
+[name="Lancet-2"]  唉，请不要在走廊使用滑板啊——
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  博士，我有一个问题。
+[name="Lancet-2"]  你也嫌我唠叨吗？
+[Decision(options="没有，你说的都是对的。;是有那么一点。", values="1;2")]
+[Predicate(references="1;2")]
+[name="Lancet-2"]  当你特别想喝咖啡的时候，我总是劝阻你不要继续喝咖啡，这确实听多了会烦吧？
+[name="Lancet-2"]  比起总是听“不要”，你肯定也希望自己想喝咖啡的时候，身边的机器人主动为你端上咖啡——这才是听话的机器啊。
+[name="Lancet-2"]  那么，我是不是应该去找可露希尔降低下说“不要”的频率呢？
+[name="Lancet-2"]  ......但这和我被设计出来的目的是相悖的啊。
+[name="Lancet-2"]  我是一个医疗机器人，我存在的意义就是尽一切努力让罗德岛的大家都健健康康。
+[name="Lancet-2"]  确实我说出来的话，你们并不总能听得进去。包括可露希尔也是，和博士你一样，总是超时工作，不健康饮食。
+[name="Lancet-2"]  如果不希望我总在唠叨的话，为什么还要设计这部分功能呢？
+[name="Lancet-2"]  呜呜......我不明白......这里面有逻辑矛盾。
+[Decision(options="不矛盾。;......;因为这就是Lancet-2啊。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="Lancet-2"]  不矛盾吗？这就是我吗？唠叨的我？
+[name="Lancet-2"]  如果你们不喜欢的话，随时都可以改掉我的这些行为习惯。
+[Decision(options="我不想改。;可露希尔不想改。;酸糖都不想改。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="Lancet-2"]  好吧，或许我并没有很好地理解博士你的意思。不过你应该是在安慰我，谢谢啦。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_trainingcom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_285_medic2_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Lancet-2"]  嗨，博士，又见面了。
+[Decision(options="早上好，Lancet-2。", values="1")]
+[Predicate(references="1")]
+[name="Lancet-2"]  早上好。
+[name="Lancet-2"]  看来你昨天晚上按时休息了，这真是可喜可贺。
+[name="Lancet-2"]  博士也是来看酸糖干员训练的吗？这是她第一次参加晨训。哦，一块受训的还有伊桑干员和红豆干员。
+[name="Lancet-2"]  不知道为什么，我感觉今天的教官们格外严厉。我的消毒水消耗速度都变快了好多。
+[Dialog]
+[Character(name="char_355_ethan_1",fadetime=1,block=true)]
+[delay(time=0.6)]
+[name="伊桑"]  呼......呼......
+[name="伊桑"]  是魔鬼吗！居然看得到我在这里！
+[Dialog]
+[Character(fadetime=0.6,block=true)]
+[Character(name="char_366_acdrop",fadetime=1,block=true)]
+[delay(time=0.6)]
+[name="酸糖"]  这就是罗德岛的训练强度吗......
+[Dialog]
+[Character(fadetime=0.6,block=true)]
+[Character(name="char_290_vigna",fadetime=1,block=true)]
+[delay(time=0.6)]
+[name="红豆"]  连我也......
+[CameraShake(duration=0.6, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="红豆"]  我说，是不是你俩干了什么坏事被发现了啊！
+[Dialog]
+[PlaySound(key="$rungeneral", volume=0.6)]
+[Character(fadetime=1,block=true)]
+[Delay(time=2)]
+[Character(name="char_285_medic2_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Lancet-2"]  真有活力啊。
+[name="Lancet-2"]  看来平时的过度活跃对他们来说也是好事......或许我真的可以降低说“不要”的频率了。
+[Dialog]
+[Character(name="char_208_melan_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="玫兰莎"]  Lancet-2，你背后有东西。
+[Character(name="char_208_melan_1#2",name2="char_285_medic2_1",focus=2)]
+[name="Lancet-2"]  咦......咦？！
+[CameraShake(duration=0.6, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="char_208_melan_1",name2="char_285_medic2_1",focus=1)]
+[name="玫兰莎"]  绿绿的，很漂亮的颜色。唔，好像是个涂鸦呢。
+[Character(name="char_208_melan_1",name2="char_285_medic2_1",focus=2)]
+[name="Lancet-2"]  是涂鸦啊......幸亏不是什么别的东西。真担心我又出什么问题。
+[name="Lancet-2"]  说起来这是什么意思......扫描看看吧。
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  嗯？是哥伦比亚俚语？语言库里并没有完全能对得上的字样。
+[Decision(options="是赞美的话吧。;......;是个朋友之间的玩笑吧。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  真的是好话吗？我不太确定......
+[name="Lancet-2"]  不管怎么说，挺漂亮的吧？玫兰莎小姐都这么说。
+[name="Lancet-2"]  那我就暂时收下啦。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image]

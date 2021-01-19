@@ -7410,7 +7410,7 @@
         {
           "buffData": [
             {
-              "buffId": "hire_spd_bd_n1_n1[000]",
+              "buffId": "hire_spd_bd_n1_n1[100]",
               "cond": {
                 "phase": 0,
                 "level": 1
@@ -7649,6 +7649,33 @@
               }
             }
           ]
+        }
+      ]
+    },
+    "char_402_tuye": {
+      "charId": "char_402_tuye",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&gold[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_spd&gold[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
         }
       ]
     },
@@ -7894,12 +7921,24 @@
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
     },
+    "control_mp_cost&faction2[000]": {
+      "buffId": "control_mp_cost&faction2[000]",
+      "buffName": "坚毅随和",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_lda",
+      "sortId": 1251,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>鲤氏侦探所</>干员可使该派系干员<@cc.kw>额外降低心情消耗</>，同时每人可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+    },
     "control_mp_cost&faction[000]": {
       "buffId": "control_mp_cost&faction[000]",
       "buffName": "德才兼备",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_lungmen",
-      "sortId": 1203,
+      "sortId": 1205,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -7911,24 +7950,12 @@
       "buffName": "学生会会长",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_ussg",
-      "sortId": 1202,
+      "sortId": 1204,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>乌萨斯学生自治团</>干员可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
-    },
-    "control_mp_cost&faction2[000]": {
-      "buffId": "control_mp_cost&faction2[000]",
-      "buffName": "坚毅随和",
-      "buffIcon": "control",
-      "skillIcon": "bskill_ctrl_lda",
-      "sortId": 1301,
-      "buffColor": "#005752",
-      "textColor": "#ffffff",
-      "buffCategory": "FUNCTION",
-      "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>鲤氏侦探所</>干员可使该派系干员<@cc.kw>额外降低心情消耗</>，同时每人可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
     },
     "power_rec_spd&cost[000]": {
       "buffId": "power_rec_spd&cost[000]",
@@ -8031,7 +8058,7 @@
       "buffName": "脉冲电弧·β",
       "buffIcon": "power",
       "skillIcon": "bskill_pow_spd3",
-      "sortId": 2302,
+      "sortId": 2303,
       "buffColor": "#8fc31f",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -8758,6 +8785,30 @@
       "roomType": "TRADING",
       "description": "进驻贸易站时，订单获取效率<@cc.vup>+10%</>，且订单上限<@cc.vup>+4</>"
     },
+    "trade_ord_spd&gold[000]": {
+      "buffId": "trade_ord_spd&gold[000]",
+      "buffName": "物流规划·α",
+      "buffIcon": "trading",
+      "skillIcon": "trade_ord_spd&gold1",
+      "sortId": 4311,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，订单获取效率<@cc.vup>+5%</>，每有<@cc.kw>4</>间<@cc.kw>制造站</>生产<@cc.kw>赤金</>，则当前贸易站订单获取效率额外<@cc.vup>+15%</>"
+    },
+    "trade_ord_spd&gold[010]": {
+      "buffId": "trade_ord_spd&gold[010]",
+      "buffName": "物流规划·β",
+      "buffIcon": "trading",
+      "skillIcon": "trade_ord_spd&gold2",
+      "sortId": 4312,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，订单获取效率<@cc.vup>+5%</>，每有<@cc.kw>2</>间<@cc.kw>制造站</>生产<@cc.kw>赤金</>，则当前贸易站订单获取效率额外<@cc.vup>+15%</>"
+    },
     "trade_ord_spd&limit[010]": {
       "buffId": "trade_ord_spd&limit[010]",
       "buffName": "供应管理",
@@ -8871,7 +8922,7 @@
       "buffName": "谈判",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_limit&cost",
-      "sortId": 4001,
+      "sortId": 4002,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -10474,8 +10525,8 @@
       "roomType": "HIRE",
       "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，每产生<@cc.vup>1</>次联络次数，增加<@cc.kw>乌萨斯学生自治团</>线索的概率（工作时长和招募位影响概率）"
     },
-    "hire_spd_bd_n1_n1[000]": {
-      "buffId": "hire_spd_bd_n1_n1[000]",
+    "hire_spd_bd_n1_n1[100]": {
+      "buffId": "hire_spd_bd_n1_n1[100]",
       "buffName": "巡游",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd_bd_n1_n1",
@@ -10496,7 +10547,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "进驻人力办公室时，每<@cc.vup>1</>点<@cc.rem>记忆碎片</>转化为<@cc.vup>1</>点<@cc.rem>感知信息</>，心情耗尽时清空所有<@cc.rem>记忆碎片</>和<@cc.rem>感知信息</>"
+      "description": "进驻人力办公室时，每<@cc.vup>1</>点<@cc.rem>记忆碎片</>转化为<@cc.vup>1</>点<@cc.rem>感知信息</>，心情耗尽时清空所有<@cc.rem>记忆碎片</>和自身累积的<@cc.rem>感知信息</>"
     },
     "meet_spd[000]": {
       "buffId": "meet_spd[000]",
@@ -17807,8 +17858,8 @@
         "id": "furni_penguin_screen_01",
         "name": "企鹅物流幕帘",
         "iconId": "furni_penguin_screen_01",
-        "type": "WALLDECO",
-        "location": "WALL",
+        "type": "CEILING",
+        "location": "CEILING",
         "category": "FURNITURE",
         "rarity": 2,
         "themeId": "",
@@ -25646,6 +25697,29 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_contract_s4_01": {
+        "id": "furni_contract_s4_01",
+        "name": "铅封之旗",
+        "iconId": "furni_contract_s4_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "描摹了某个铅封印记的旗帜。隐藏在一个废弃受灾独立城市核心的机密印记，本不应该为人所知。",
+        "obtainApproach": "危机合约赛季奖励",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_taptap_arcadegame_01": {
         "id": "furni_taptap_arcadegame_01",
         "name": "taptap街机",
@@ -28592,7 +28666,7 @@
           {
             "furnitureId": "furni_penguin_screen_01",
             "pos0": 18,
-            "pos1": 3
+            "pos1": 0
           },
           {
             "furnitureId": "furni_penguin_oilDrumSink_01",

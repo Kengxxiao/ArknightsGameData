@@ -1,12 +1,12 @@
 local eutil = CS.Torappu.Lua.Util
 
----@class HotfixProcesser  @a static class to dirve many Hotfix
----@field private m_fixes HotfixBase[]
+
+
 HotfixProcesser = Class("HotfixProcesser")
 HotfixProcesser.m_fixes = {}
 
----@public
----@param fixes string[] 
+
+
 function HotfixProcesser.Do(fixes)
   for _, v in pairs(fixes) do
     local cls = require(v)

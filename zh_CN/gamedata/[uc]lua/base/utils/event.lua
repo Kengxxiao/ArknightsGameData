@@ -1,5 +1,5 @@
----@class Event
----
+
+
 Event = Class("Event");
 
 function Event.Create(callee, func, ...)
@@ -26,7 +26,7 @@ function Event:Call(...)
     end
   end
 
-  -- print("out:", table.unpack(params));
+  
   if self.m_self then
     self.m_func(self.m_self, table.unpack(params));
   else

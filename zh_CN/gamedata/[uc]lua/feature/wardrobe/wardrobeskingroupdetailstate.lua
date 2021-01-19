@@ -1,8 +1,8 @@
----@class WardrobeSkinGroupDetailState
+
 WardrobeSkinGroupDetailState = Class("WardrobeSkinGroupDetailState", FadeInDlgBase);
 
----@field onSaleObj Onsale Obj
----@field notOnSaleObj not Onsale Obj
+
+
 
 
 function WardrobeSkinGroupDetailState:OnInit()
@@ -11,7 +11,7 @@ function WardrobeSkinGroupDetailState:OnInit()
 end
 
 function WardrobeSkinGroupDetailState:OnResume()
-  -- body
+  
   self:Render()
 end
 

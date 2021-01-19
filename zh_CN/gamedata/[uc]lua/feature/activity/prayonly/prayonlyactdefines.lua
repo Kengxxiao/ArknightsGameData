@@ -1,0 +1,1 @@
+Act16D5D2Dlg = DlgMgr.DefineDialog("Act16D5D2Dlg", "Activity/Act16D5D2/act_dlg", PrayOnlyMainDlg)
