@@ -97,7 +97,7 @@ end
 ---@param cfg CollectionActCfg
 function CollectionTimedTaskItem:CreateRewardIcon(cfg)
   local rewardData = self.m_rewardData;
-  local itemCard = CS.Torappu.UI.UIAssetLoader.instance.staticOutlinks.uiItemCard;
+  local itemCard = CS.Torappu.UI.UIAssetLoader.instance.activityOutlinks.uiItemCard;
   local itemCell = CS.UnityEngine.GameObject.Instantiate(itemCard, self._rewardIconRoot):GetComponent("Torappu.UI.UIItemCard");
   itemCell.isCardClickable = not self.m_finish;
   itemCell.showBackground = false;
