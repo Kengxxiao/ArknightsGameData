@@ -6810,6 +6810,89 @@
           ]
         }
       ]
+    },
+    "char_293_thorns": {
+      "charId": "char_293_thorns",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[012]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_recovery[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_218_cuttle": {
+      "charId": "char_218_cuttle",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_oneself[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "dorm_rec_oneself[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_272_strong": {
+      "charId": "char_272_strong",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_limit_diff[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_limit_count[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -7315,7 +7398,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "製造所で<@cc.kw>作戦記録</>を製造時、保管上限<@cc.vup>+15</>、"
+      "description": "製造所で<@cc.kw>作戦記録</>を製造時、保管上限<@cc.vup>+15</>"
     },
     "manu_prod_spd&limit&cost[000]": {
       "buffId": "manu_prod_spd&limit&cost[000]",
@@ -7737,6 +7820,30 @@
       "roomType": "TRADING",
       "description": "貿易所配置時、注文上限<@cc.vup>+5</>、体力消費が1時間ごと<@cc.vup>-0.25</>"
     },
+    "trade_ord_limit_diff[000]": {
+      "buffId": "trade_ord_limit_diff[000]",
+      "buffName": "露店の魚売り",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_limit_diff",
+      "sortId": 4004,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、オーダー数と注文上限数の差が<@cc.vup>1</>につき、受注効率<@cc.vup>+4%</>"
+    },
+    "trade_ord_limit_count[000]": {
+      "buffId": "trade_ord_limit_count[000]",
+      "buffName": "下町の商売人",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_limit_count",
+      "sortId": 4004,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、自身以外の配属オペレーターの受注効率が<@cc.vup>10%</>につき、注文上限<@cc.vdown>-1</>。オーダー数が<@cc.vup>1</>につき、受注効率<@cc.vup>+10%</>"
+    },
     "trade_ord_wt&cost[000]": {
       "buffId": "trade_ord_wt&cost[000]",
       "buffName": "裁縫·α",
@@ -7857,6 +7964,18 @@
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>任意の素材</>を加工時、副産物の入手確率<@cc.vup>+50%</>"
     },
+    "workshop_proc_probability[012]": {
+      "buffId": "workshop_proc_probability[012]",
+      "buffName": "「錬金術」",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p2",
+      "sortId": 7113,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>任意の素材</>を加工時、副産物の入手確率<@cc.vup>+50%</>"
+    },
     "workshop_proc_probability[020]": {
       "buffId": "workshop_proc_probability[020]",
       "buffName": "ミーボ加工型",
@@ -7880,6 +7999,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>任意の素材</>を加工時、体力消費が<@cc.kw>4</>以上の素材の体力消費<@cc.vup>-2</>"
+    },
+    "workshop_formula_recovery[000]": {
+      "buffId": "workshop_formula_recovery[000]",
+      "buffName": "「爆発アート」",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_recovery",
+      "sortId": 7113,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>任意の素材</>を加工時、<@cc.vup>2</>回連続で副産物が産出されなかった場合、自身の体力を<@cc.kw>対象素材の必要体力消費分回復</>（加工完成後一括計算）"
     },
     "workshop_formula_cost[010]": {
       "buffId": "workshop_formula_cost[010]",
@@ -8529,6 +8660,18 @@
       "roomType": "DORMITORY",
       "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.85</>"
     },
+    "dorm_rec_oneself[011]": {
+      "buffId": "dorm_rec_oneself[011]",
+      "buffName": "逃げるが勝ち",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_one4",
+      "sortId": 5004,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.85</>"
+    },
     "dorm_rec_oneself[020]": {
       "buffId": "dorm_rec_oneself[020]",
       "buffName": "悲歌",
@@ -8827,7 +8970,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.55</>（同種の効果は高いほうのみ適応）"
+      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.55</>"
     },
     "dorm_rec_all&oneself[011]": {
       "buffId": "dorm_rec_all&oneself[011]",
