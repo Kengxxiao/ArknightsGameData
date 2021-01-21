@@ -5966,6 +5966,61 @@
           ]
         }
       ]
+    },
+    "char_2013_cerber": {
+      "charId": "char_2013_cerber",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[001]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition[031]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_306_leizi": {
+      "charId": "char_306_leizi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_clue_cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "control_clue_cost[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
     }
   },
   "buffs": {
@@ -5992,6 +6047,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "進駐控制中樞時，所有貿易站訂單效率<@cc.vup>+7%</>（同種效果取最高）"
+    },
+    "control_clue_cost[010]": {
+      "buffId": "control_clue_cost[010]",
+      "buffName": "至察",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt1",
+      "sortId": 1501,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "進駐控制中樞時，<@cc.kw>小幅提升</>會客室內幹員<@cc.kw>所屬派系的線索傾向效果</>，但控制中樞內所有幹員<@cc.vdown>小幅提升心情消耗</>"
+    },
+    "control_clue_cost[011]": {
+      "buffId": "control_clue_cost[011]",
+      "buffName": "斷事如神",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_wt2",
+      "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "進駐控制中樞時，<@cc.kw>小幅提升</>會客室內幹員<@cc.kw>所屬派系的線索傾向效果</>"
     },
     "control_mp_cost[000]": {
       "buffId": "control_mp_cost[000]",
@@ -6257,6 +6336,18 @@
       "roomType": "MANUFACTURE",
       "description": "進駐製造站後，生產力首小時<@cc.vup>+20%</>，此後每小時<@cc.vup>+1%</>，最終達到<@cc.vup>+25%</>"
     },
+    "manu_prod_spd_addition[031]": {
+      "buffId": "manu_prod_spd_addition[031]",
+      "buffName": "“等不及”",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add1",
+      "sortId": 3513,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "進駐製造站後，生產力首小時<@cc.vup>+20%</>，此後每小時<@cc.vup>+1%</>，最終達到<@cc.vup>+25%</>"
+    },
     "manu_prod_spd_addition[040]": {
       "buffId": "manu_prod_spd_addition[040]",
       "buffName": "慢性子",
@@ -6299,6 +6390,18 @@
       "buffIcon": "manufacture",
       "skillIcon": "bskill_man_limit&cost",
       "sortId": 3101,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "進駐製造站時，倉庫容量上限<@cc.vup>+8</>，心情每小時消耗<@cc.vup>-0.25</>"
+    },
+    "manu_prod_limit&cost[001]": {
+      "buffId": "manu_prod_limit&cost[001]",
+      "buffName": "“都想要”",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost",
+      "sortId": 3102,
       "buffColor": "#ffd800",
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
@@ -14638,6 +14741,138 @@
         "processedByProductGroup": [],
         "canBeDestroy": true
       },
+      "furni_act7d5_bookshelf": {
+        "id": "furni_act7d5_bookshelf",
+        "name": "組合式書架",
+        "iconId": "furni_act7d5_bookshelf",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 6,
+        "comfort": 75,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "行動預備組A6宿舍裡的架子，上面放了大家喜歡看的書。每個人按照身高分配了位置，但大家經常拿其他人的書看。",
+        "obtainApproach": "午間逸話里程碑獎勵",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_atomicClock": {
+        "id": "furni_act7d5_atomicClock",
+        "name": "萊茵生命原子鐘",
+        "iconId": "furni_act7d5_atomicClock",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 6,
+        "comfort": 75,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "白面鴞房間裡絕對精準的計時工具。每一秒內需要做的事，白面鴞早已計算完畢。",
+        "obtainApproach": "午間逸話里程碑獎勵",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_weaponRack": {
+        "id": "furni_act7d5_weaponRack",
+        "name": "刻俄柏的武器架",
+        "iconId": "furni_act7d5_weaponRack",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 6,
+        "comfort": 65,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "刻俄柏休息時放武器的架子。她花了許多年告訴自己武器絕不能離手，在幾天之內明白了原來武器也可以放在架子上。",
+        "obtainApproach": "午間逸話里程碑獎勵",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_wallSticker": {
+        "id": "furni_act7d5_wallSticker",
+        "name": "預備幹員激勵海報",
+        "iconId": "furni_act7d5_wallSticker",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 35,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "貼在集訓室內的海報。送給離真正成為羅德島幹員還有幾步路的朋友，加油！",
+        "obtainApproach": "午間逸話里程碑獎勵",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_petHouse": {
+        "id": "furni_act7d5_petHouse",
+        "name": "“大黑”的新家",
+        "iconId": "furni_act7d5_petHouse",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 170,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "香草為撫養的源石蟲“大黑”準備的小屋子。在辦理了各式各樣的手續後，香草終於獲得了源石蟲撫養許可，“大黑”可以有個家了！",
+        "obtainApproach": "午間逸話里程碑獎勵",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_act7d5_apron": {
+        "id": "furni_act7d5_apron",
+        "name": "家用圍裙",
+        "iconId": "furni_act7d5_apron",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 40,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "從超市里買來的普通圍裙，只要做家務的人都能用。有角的幹員在戴圍裙的時候可能要頗費一番功夫。",
+        "obtainApproach": "午間逸話里程碑獎勵",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
       "furni_NY2020_wallpaper_01": {
         "id": "furni_NY2020_wallpaper_01",
         "name": "龍門新印象壁紙",
@@ -15292,6 +15527,28 @@
         "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
         "description": "“她們和這一切無關，她們的顏色四散在每張膠片，她們同樣毫不在乎。”",
         "obtainApproach": "活動獲得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false
+      },
+      "furni_dropS006_theHolyMountain_01": {
+        "id": "furni_dropS006_theHolyMountain_01",
+        "name": "飾牌《致幻》",
+        "iconId": "furni_dropS006_theHolyMountain_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "“走吧，難道你還想聽他嘮叨嗎。”",
+        "obtainApproach": "SA-6突襲模式首次通關掉落",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
