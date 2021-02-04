@@ -6756,6 +6756,34 @@
         }
       ]
     },
+    "char_336_folivo": {
+      "charId": "char_336_folivo",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition[041]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_limit[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_344_beewax": {
       "charId": "char_344_beewax",
       "maxManpower": 8640000,
@@ -7304,6 +7332,18 @@
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, 첫 시간 생산력<@cc.vup>+15%</>, 그 이후 시간 마다<@cc.vup>+2%</>, 최종 <@cc.vup>+25%</>까지 누적"
     },
+    "manu_prod_spd_addition[041]": {
+      "buffId": "manu_prod_spd_addition[041]",
+      "buffName": "저속 촬영",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add2",
+      "sortId": 3535,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 첫 시간 생산력<@cc.vup>+15%</>, 그 이후 시간 마다<@cc.vup>+2%</>, 최종 <@cc.vup>+25%</>까지 누적"
+    },
     "manu_prod_spd&limit[000]": {
       "buffId": "manu_prod_spd&limit[000]",
       "buffName": "창고 정비 α",
@@ -7387,6 +7427,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치하여 <@cc.kw>작전기록</> 생산 시 시간당 컨디션 소모 <@cc.vup>-0.25</>"
+    },
+    "manu_formula_limit[000]": {
+      "buffId": "manu_formula_limit[000]",
+      "buffName": "편집 α",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp&limit",
+      "sortId": 3403,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치하여 <@cc.kw>작전기록</> 생산 시 창고 용량 상한 <@cc.vup>+12</>"
     },
     "manu_formula_limit[010]": {
       "buffId": "manu_formula_limit[010]",
@@ -18904,6 +18956,420 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_office_table_01": {
+        "id": "furni_office_table_01",
+        "name": "표준 보급 사무용 책상",
+        "iconId": "furni_office_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 3,
+        "height": 4,
+        "comfort": 510,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "'쉽고 보람찬' 인사부 사무실 라이프의 시작을 알리는 로도스 아일랜드의 표준형 사무용 책상. 더블 모니터에 기계식 키보드, 문서 보관함이 함께 제공된다. \"마감 날짜 지키라고 했어 안 했어?!!\"",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_chair_01": {
+        "id": "furni_office_chair_01",
+        "name": "표준 보급 사무용 의자",
+        "iconId": "furni_office_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 115,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드의 표준형 사무용 의자. 잠깐 누워 눈을 감을 때, 오늘 하루 업무가 끝났음을 느낀다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_storageBox_01": {
+        "id": "furni_office_storageBox_01",
+        "name": "이동 가능 캐비닛",
+        "iconId": "furni_office_storageBox_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 3,
+        "height": 3,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "바퀴가 달린 이동식 캐비닛. 캐비닛 위에는 자료나 간식을 놔둘 수 있지만, 간식이 놓일 때가 더 많다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_carpet_01": {
+        "id": "furni_office_carpet_01",
+        "name": "사무실용 카펫 (검정)",
+        "iconId": "furni_office_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 16,
+        "depth": 10,
+        "height": 1,
+        "comfort": 210,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드 내부 어디에서든 볼 수 있는 양산형 검정 카펫. 통계에 따르면, 카펫을 청소하는 원인 중 80%는 전부 음료수와 관련되어 있다고 한다. (카펫 파손은 포함하지 않음)",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_waterDispenser_01": {
+        "id": "furni_office_waterDispenser_01",
+        "name": "생수통 정수기",
+        "iconId": "furni_office_waterDispenser_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "어디서든 볼 수 있는 정수기. 직장 동료를 위해 생수통을 교체하여 줌으로써 호감도를 높일 수 있겠지만, 너무 무리하진 않도록 조심하자.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_column_01": {
+        "id": "furni_office_column_01",
+        "name": "지지대",
+        "iconId": "furni_office_column_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 10,
+        "comfort": 290,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "건물 무게를 받쳐주는 지지대. 파티션으로 쓰일 수도 있다. 어떤 오퍼레이터들은 스트레스 해소를 위해 샌드백으로 쓰기도 하니 선택 시 참고하도록.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_directionSign_01": {
+        "id": "furni_office_directionSign_01",
+        "name": "자리 표시판",
+        "iconId": "furni_office_directionSign_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 3,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "인사부 사무실의 자리 배치 안내판. 디자인에 능한 직원이 동료들을 위해 공을 들여 길 안내 표지판으로 쓰고자 만들었지만, 안타깝게도 동료들은 아무도 이 표시판을 보지 않는다고 한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_sign_01": {
+        "id": "furni_office_sign_01",
+        "name": "층계 표시판",
+        "iconId": "furni_office_sign_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 2,
+        "comfort": 115,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "인사부 사무실이 위치한 층계를 표시한 안내판. 여기서 왼쪽으로 꺾으면 엘리베이터, 에스컬레이터, 계단 등 다른 층으로 갈 수 있는 모든 수단들을 볼 수 있다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_spotlight_01": {
+        "id": "furni_office_spotlight_01",
+        "name": "인사부 사무실 조명",
+        "iconId": "furni_office_spotlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 2,
+        "comfort": 290,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "사무실의 보조 조명. 충분한 양의 불빛이 안정적으로 비추며 사람들의 업무 욕구(와 수면 욕구)를 자극한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_downlight_01": {
+        "id": "furni_office_downlight_01",
+        "name": "자리 조명",
+        "iconId": "furni_office_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 45,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "천장에 붙어 있는 자리 조명. 과거 어느 오퍼레이터가 일으킨 화재 사건의 여파로, 조명 설치 시엔 불이 붙기 쉬운 물건을 절대 근처에 두지 말 것을 권고하고 있다. 예를 들면, 털이 복슬복슬한 꼬리 같은 것 말이다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_screen_01": {
+        "id": "furni_office_screen_01",
+        "name": "파티션용 투명 병풍",
+        "iconId": "furni_office_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 7,
+        "comfort": 285,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "구역을 나누는 용도로 쓰이는 병풍. 대형 사무용품과 매치될 때 좋은 효과를 보인다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_printer_01": {
+        "id": "furni_office_printer_01",
+        "name": "과적재 프린터",
+        "iconId": "furni_office_printer_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "늘 과도한 적재량과 사용량으로 인해 자주 수리를 받는 프린터. 이러다 언제 한번 폭발하는 거 아니야?",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_sofaStool_01": {
+        "id": "furni_office_sofaStool_01",
+        "name": "대기자용 소파 스툴",
+        "iconId": "furni_office_sofaStool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "사무실 곳곳에 놓인 소파 스툴. 문서를 대량 인쇄할 땐 발을 걸치는 용도로 사용되기도 한다. 여기 앉아 있다 보면 가끔 잡다한 가십거리를 주워듣게 될 때도 있다고 한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_houseplant_01": {
+        "id": "furni_office_houseplant_01",
+        "name": "뾰족한 관상용 식물",
+        "iconId": "furni_office_houseplant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "관상용으로 딱인 녹색 식물. 톱니같이 날카로운 이파리 때문에 쉽게 만지기 어렵다. 이 식물이 지금까지 살아있는 건 아마 이런 이유가 아닐까?",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_wallpaper_01": {
+        "id": "furni_office_wallpaper_01",
+        "name": "인사부 사무실 벽지",
+        "iconId": "furni_office_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드 인사부 사무실 전용 벽지. 위치, 구역 구분, 주변 상황 등이 일목요연하게 표시되어 있다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_floor_01": {
+        "id": "furni_office_floor_01",
+        "name": "인사부 사무실 바닥",
+        "iconId": "furni_office_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드에서 보편적으로 쓰이고 있는 바닥재. 아직 동심이 살아있는 일부 오퍼레이터들은 노란 선을 밟으며 다니다 종종 중간에 놓인 다른 물건에 부딪히곤 한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_MA2020_rabbit_01": {
+        "id": "furni_MA2020_rabbit_01",
+        "name": "토끼 기계 절구",
+        "iconId": "furni_MA2020_rabbit_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 130,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "전자동 기계 절구. 아무도 지켜보지 않을 때, 이 귀여운 로봇은 무음 모드로 빠르게 절구 안에 있는 약재를 빻는다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_oct1st_seating_01": {
+        "id": "furni_oct1st_seating_01",
+        "name": "라탄 흔들의자",
+        "iconId": "furni_oct1st_seating_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 6,
+        "comfort": 180,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "나도 모르게 앉아 있고 싶어지는 편안한 원형 그네의자. 빈백소파, 방음 수면 선실과 더불어 로도스 아일랜드 오퍼레이터들의 휴식 시간을 책임지고 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_duanwu_lazysofa_01": {
         "id": "furni_duanwu_lazysofa_01",
         "name": "쫑즈 빈백소파",
@@ -20253,6 +20719,29 @@
         "comfort": 75,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "어느 전설의 용병들이 사용하는 깃발. 이 용병들은 어느 위기 협약 임무에서 전멸했지만, 재앙정보전달자들이 이들의 깃발을 복원하였다.",
+        "obtainApproach": "위기 협약 시즌 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_contract_s2_01": {
+        "id": "furni_contract_s2_01",
+        "name": "칼날의 깃발",
+        "iconId": "furni_contract_s2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "어느 소실된 무기의 마크가 그려진 깃발. 무기 자체는 이미 파손되었으나, 그 양식은 사람들에게 복원되어, 지금까지도 기념되고 있다.",
         "obtainApproach": "위기 협약 시즌 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -23741,6 +24230,123 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_office": {
+        "id": "furni_set_office",
+        "name": "로도스 아일랜드 인사부 사무실",
+        "desc": "매일 로도스 아일랜드에 적합한 인재를 찾기 위해 고군분투하는, 로도스 아일랜드 인사부가 사용하는 사무실 중 하나.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_office_table_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_chair_01",
+            "pos0": 2,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_chair_01",
+            "pos0": 9,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_storageBox_01",
+            "pos0": 13,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_carpet_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_waterDispenser_01",
+            "pos0": 19,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_column_01",
+            "pos0": 20,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_office_directionSign_01",
+            "pos0": 17,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_office_sign_01",
+            "pos0": 20,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_office_spotlight_01",
+            "pos0": 0,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 2,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 7,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 12,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 21,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 26,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 31,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_screen_01",
+            "pos0": 26,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_printer_01",
+            "pos0": 31,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_sofaStool_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_houseplant_01",
+            "pos0": 32,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_office_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -25084,6 +25690,58 @@
           "furni_nightView_floor_01",
           "furni_nightView_ceilingLight1_01",
           "furni_nightView_ceilingLight2_01"
+        ]
+      },
+      "furni_set_office_1": {
+        "id": "furni_set_office_1",
+        "name": "일 안 하세요?",
+        "themeId": "furni_set_office",
+        "comfort": 260,
+        "count": 4,
+        "furniture": [
+          "furni_office_table_01",
+          "furni_office_chair_01",
+          "furni_office_storageBox_01",
+          "furni_office_carpet_01"
+        ]
+      },
+      "furni_set_office_2": {
+        "id": "furni_set_office_2",
+        "name": "농땡이 부리시죠?",
+        "themeId": "furni_set_office",
+        "comfort": 165,
+        "count": 4,
+        "furniture": [
+          "furni_office_waterDispenser_01",
+          "furni_office_column_01",
+          "furni_office_directionSign_01",
+          "furni_office_sign_01"
+        ]
+      },
+      "furni_set_office_3": {
+        "id": "furni_set_office_3",
+        "name": "쉬시게요?",
+        "themeId": "furni_set_office",
+        "comfort": 170,
+        "count": 4,
+        "furniture": [
+          "furni_office_screen_01",
+          "furni_office_printer_01",
+          "furni_office_sofaStool_01",
+          "furni_office_houseplant_01"
+        ]
+      },
+      "furni_set_office_4": {
+        "id": "furni_set_office_4",
+        "name": "인테리어는요?",
+        "themeId": "furni_set_office",
+        "comfort": 230,
+        "count": 4,
+        "furniture": [
+          "furni_office_wallpaper_01",
+          "furni_office_floor_01",
+          "furni_office_spotlight_01",
+          "furni_office_downlight_01"
         ]
       }
     },
