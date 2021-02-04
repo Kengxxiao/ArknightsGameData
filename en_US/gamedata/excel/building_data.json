@@ -6756,6 +6756,34 @@
         }
       ]
     },
+    "char_336_folivo": {
+      "charId": "char_336_folivo",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition[041]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_limit[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_344_beewax": {
       "charId": "char_344_beewax",
       "maxManpower": 8640000,
@@ -7304,6 +7332,18 @@
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+15%</> in the first hour and thereafter <@cc.vup>+2%</> per hour, up to <@cc.vup>+25%</>"
     },
+    "manu_prod_spd_addition[041]": {
+      "buffId": "manu_prod_spd_addition[041]",
+      "buffName": "Time-Lapse Photography",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add2",
+      "sortId": 3535,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+15%</> in the first hour and thereafter <@cc.vup>+2%</> per hour, up to <@cc.vup>+25%</>"
+    },
     "manu_prod_spd&limit[000]": {
       "buffId": "manu_prod_spd&limit[000]",
       "buffName": "Warehouse Organization α",
@@ -7387,6 +7427,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, the Morale consumed when producing <@cc.kw>Battle Records</> is reduced by <@cc.vup>-0.25</>"
+    },
+    "manu_formula_limit[000]": {
+      "buffId": "manu_formula_limit[000]",
+      "buffName": "Editing α",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp&limit",
+      "sortId": 3403,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, capacity limit is increased by <@cc.vup>+12</> when producing <@cc.kw>Battle Records</>"
     },
     "manu_formula_limit[010]": {
       "buffId": "manu_formula_limit[010]",
@@ -18904,6 +18956,420 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_office_table_01": {
+        "id": "furni_office_table_01",
+        "name": "Standard-Issue Workdesk",
+        "iconId": "furni_office_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 3,
+        "height": 4,
+        "comfort": 510,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Standard-issue Rhodes Island desks with dual displays, mechanical keyboards, and a file storage rack. We encourage a \"relaxed and comfortable\" environment at the office, but be mindful of the deadlines!",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_chair_01": {
+        "id": "furni_office_chair_01",
+        "name": "Standard-Issue Office Chair",
+        "iconId": "furni_office_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 115,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A standard-issue Rhodes Island office chair. Put your head down gently as you fade in and out of consciousness, and the day will soon be over.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_storageBox_01": {
+        "id": "furni_office_storageBox_01",
+        "name": "Movable Storage Cabinet",
+        "iconId": "furni_office_storageBox_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 3,
+        "height": 3,
+        "comfort": 165,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A movable storage cabinet with wheels. Can be used to store documents or snacks, but the latter is vastly preferred.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_carpet_01": {
+        "id": "furni_office_carpet_01",
+        "name": "Black Office Carpet",
+        "iconId": "furni_office_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 16,
+        "depth": 10,
+        "height": 1,
+        "comfort": 210,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Mass-produced black carpets found just about everywhere in Rhodes Island. According to our data, 80% of carpet cleaning causes are related to beverage spills (not including damage).",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_waterDispenser_01": {
+        "id": "furni_office_waterDispenser_01",
+        "name": "Water Dispenser",
+        "iconId": "furni_office_waterDispenser_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 165,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A water dispenser found in just about every office. Resupplying and changing these heavy water containers for your colleagues can garner a lot of favor, but be mindful of your limits.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_column_01": {
+        "id": "furni_office_column_01",
+        "name": "Support Column",
+        "iconId": "furni_office_column_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 10,
+        "comfort": 290,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A load-bearing supporting structure that can sometimes be used as a partition. Some operators like to use these pillars for stress release, so please make sure you choose the right ones for your usage!",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_directionSign_01": {
+        "id": "furni_office_directionSign_01",
+        "name": "Workstation Assignment Indicator",
+        "iconId": "furni_office_directionSign_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 3,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Horizontal panel representing the offices of the personnel in the office. The design expert in the HR Department came up with an ingenious solution, but it's a pity that nobody ever reads it.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_sign_01": {
+        "id": "furni_office_sign_01",
+        "name": "Floor Signage",
+        "iconId": "furni_office_sign_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 2,
+        "comfort": 115,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A sign indicating which floor you're on. It says turn left here for elevators, escalators, and stairs, but this may not be accurate relative to your room.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_spotlight_01": {
+        "id": "furni_office_spotlight_01",
+        "name": "HR Office Lighting",
+        "iconId": "furni_office_spotlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 2,
+        "comfort": 290,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An auxiliary light source for the office. A consistently well-lit office can benefit motivation and stave off sleepiness.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_downlight_01": {
+        "id": "furni_office_downlight_01",
+        "name": "Workstation Lighting",
+        "iconId": "furni_office_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 45,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Overhead office ceiling lights. Since there have been incidents of certain operators making things catch on fire, please avoid direct exposure to flammable objects, especially fluffy tails.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_screen_01": {
+        "id": "furni_office_screen_01",
+        "name": "Transparent Glass Door",
+        "iconId": "furni_office_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 7,
+        "comfort": 285,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A partition used to split off two areas. Often accompanied by heavy-duty office supplies, to spectacular effect. ",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_printer_01": {
+        "id": "furni_office_printer_01",
+        "name": "Overloaded Printer",
+        "iconId": "furni_office_printer_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A printer that frequently requires repair. Because it's always running at full capacity, it's bound to explode sooner or later.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_sofaStool_01": {
+        "id": "furni_office_sofaStool_01",
+        "name": "Waiting Room Sofa",
+        "iconId": "furni_office_sofaStool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A low sofa stool that is almost ubiquitous across the offices. Offers a nice place to stay when waiting for massive documents to finish printing, and sometimes even lets you catch some pieces of gossip.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_houseplant_01": {
+        "id": "furni_office_houseplant_01",
+        "name": "Prickly Ornamental Plant",
+        "iconId": "furni_office_houseplant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 150,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A green plant that makes for excellent ornamentation. Due to the sharp leaves that can prick anyone who touches it, this potted plant has survived both sticky and slippery fingers alike.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_wallpaper_01": {
+        "id": "furni_office_wallpaper_01",
+        "name": "HR Office Wallpaper",
+        "iconId": "furni_office_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Special wallpaper for the Rhodes Island HR Office. Pieces of relevant information, including location, division, and surroundings, have been clearly marked.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_floor_01": {
+        "id": "furni_office_floor_01",
+        "name": "HR Office Floorboards",
+        "iconId": "furni_office_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Flooring commonly used throughout Rhodes Island. A naïve operator might follow the yellow road and bump into something not too far away.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_MA2020_rabbit_01": {
+        "id": "furni_MA2020_rabbit_01",
+        "name": "Bunny Pestle and Mortar",
+        "iconId": "furni_MA2020_rabbit_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 130,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An automatic bunny pestle and mortar. When nobody is watching, this cute machine will quickly and silently mash up medicinal materials with the stone pestle.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_oct1st_seating_01": {
+        "id": "furni_oct1st_seating_01",
+        "name": "Relaxing Rocking Chair",
+        "iconId": "furni_oct1st_seating_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 6,
+        "comfort": 180,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "This oval-shaped, comfortable-looking chair is simply irresistible. Dominate your downtime with this lazy sofa and soundproof sleeping cabin.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_duanwu_lazysofa_01": {
         "id": "furni_duanwu_lazysofa_01",
         "name": "Zongzi Beanie Bag",
@@ -20253,6 +20719,29 @@
         "comfort": 75,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "The banner of a legendary mercenary team, wiped out during a Contingency Contract mission. The banner was restored by Catastrophe Messengers to commemorate them.",
+        "obtainApproach": "Contingency Contract season reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_contract_s2_01": {
+        "id": "furni_contract_s2_01",
+        "name": "Blade Pennant",
+        "iconId": "furni_contract_s2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A pennant with the mark of a long-lost weapon. Though the weapon itself has long been sundered, its likeness was restored by adherents to commemorate it.",
         "obtainApproach": "Contingency Contract season reward",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -23741,6 +24230,123 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_office": {
+        "id": "furni_set_office",
+        "name": "Rhodes Island HR Office",
+        "desc": "One of the offices used by the Rhodes Island HR Department, responsible for screening potential suitable Operators every day.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_office_table_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_chair_01",
+            "pos0": 2,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_chair_01",
+            "pos0": 9,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_storageBox_01",
+            "pos0": 13,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_carpet_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_waterDispenser_01",
+            "pos0": 19,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_column_01",
+            "pos0": 20,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_office_directionSign_01",
+            "pos0": 17,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_office_sign_01",
+            "pos0": 20,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_office_spotlight_01",
+            "pos0": 0,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 2,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 7,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 12,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 21,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 26,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 31,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_screen_01",
+            "pos0": 26,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_printer_01",
+            "pos0": 31,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_sofaStool_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_houseplant_01",
+            "pos0": 32,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_office_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -25084,6 +25690,58 @@
           "furni_nightView_floor_01",
           "furni_nightView_ceilingLight1_01",
           "furni_nightView_ceilingLight2_01"
+        ]
+      },
+      "furni_set_office_1": {
+        "id": "furni_set_office_1",
+        "name": "Working?",
+        "themeId": "furni_set_office",
+        "comfort": 260,
+        "count": 4,
+        "furniture": [
+          "furni_office_table_01",
+          "furni_office_chair_01",
+          "furni_office_storageBox_01",
+          "furni_office_carpet_01"
+        ]
+      },
+      "furni_set_office_2": {
+        "id": "furni_set_office_2",
+        "name": "Chatting?",
+        "themeId": "furni_set_office",
+        "comfort": 165,
+        "count": 4,
+        "furniture": [
+          "furni_office_waterDispenser_01",
+          "furni_office_column_01",
+          "furni_office_directionSign_01",
+          "furni_office_sign_01"
+        ]
+      },
+      "furni_set_office_3": {
+        "id": "furni_set_office_3",
+        "name": "Resting?",
+        "themeId": "furni_set_office",
+        "comfort": 170,
+        "count": 4,
+        "furniture": [
+          "furni_office_screen_01",
+          "furni_office_printer_01",
+          "furni_office_sofaStool_01",
+          "furni_office_houseplant_01"
+        ]
+      },
+      "furni_set_office_4": {
+        "id": "furni_set_office_4",
+        "name": "Decorating?",
+        "themeId": "furni_set_office",
+        "comfort": 230,
+        "count": 4,
+        "furniture": [
+          "furni_office_wallpaper_01",
+          "furni_office_floor_01",
+          "furni_office_spotlight_01",
+          "furni_office_downlight_01"
         ]
       }
     },
