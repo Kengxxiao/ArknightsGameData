@@ -1,0 +1,445 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_village_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="char_187_ccheal_1#4", name2="char_411_tomimi_1#2", focus=1)]
+[name="가비알"]  끝났어, 토미미.
+[Character(name="char_187_ccheal_1#4", name2="char_411_tomimi_1#2", focus=2)]
+[name="토미미"]  ……아, 아직이에요!
+[Character(name="char_411_tomimi_1#2")]
+[name="토미미"]  누룰, 페타!
+[Character(name="avg_npc_012")]
+[name="딜런"]  박사!
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  박사님!
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1#2", focus=2)]
+[name="토미미"]  당신 동료가 다치는 걸 원치 않는다면……
+[Character(name="char_187_ccheal_1#4", name2="char_411_tomimi_1#2", focus=1)]
+[name="가비알"]  나를 화나게 하지 마, 토미미!
+[Character(name="char_187_ccheal_1#4", name2="char_411_tomimi_1#2", focus=2)]
+[name="토미미"]  가비알 씨가 남지 않는다면…… 저는 멈추지 않을 거예요!
+[Character(name="avg_npc_012")]
+[name="딜런"]  살려줘!
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  박사님, 무서워요. 흐흑……
+[Decision(options="내가 준 임무는 완수했나?;……;무서워하지 마! 지금 구하러 갈게!",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="딜런"]  박사, 너무 그러지 마, 어린 아가씨가 이렇게 간절하게 애원하는데 좀 협조해도 안 죽는다고.
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  여기 사람들은 정말 순박하군요. 솔직히 이분들을 속이는 게 양심에 찔리네요. 비록 저한테는 마음이 없기는 하지만요.
+[Predicate(references="2")]
+[Character(name="avg_npc_012")]
+[name="딜런"]  잠깐… 박사, 그런 눈빛으로 날 보지 말라고.
+[name="딜런"]  걱정 마. 어쨌든 나도 로도스 아일랜드의 오퍼레이터잖아. 이깟 일도 못 해서야 되겠어?
+[Predicate(references="3")]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  박사니이이이임!!!!
+[Decision(options="Lancet-2!", values="4")]
+[Predicate(references="4")]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  박사니이임!!!!
+[Character(name="avg_npc_012")]
+[name="딜런"]  우와… 저 둘이 나보다 더 열정적으로 연기하네.
+[Predicate(references="1;2;4")]
+[stopmusic(fadetime=1)]
+[Character(name="char_411_tomimi_1")]
+[name="토미미"]  으엣?!
+[Character(name="avg_npc_073")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="아다크리스"]  언제 벗어났지!
+[Character(name="avg_npc_012")]
+[name="딜런"]  하하, 미안. 사실 처음부터 안 묶여있었어.
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  박사, 설마 토미미가 이렇게 할 거라는 걸 진작부터 알고 있었던 거야?
+[playMusic(intro="$farce_intro", key="$farce_loop", volume=0.4)]
+[Decision(options="물론.;……;모르는 게 더 어려울 것 같은데.",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_411_tomimi_1#4")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="토미미"]  어, 어떻게 안 거죠?!
+[Decision(options="우선, 넌 처음에 주마마를 언급할 때 망설였어.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_187_ccheal_1#2")]
+[name="가비알"]  어? 망설였었나?
+[Decision(options="그리고, 제전에서 가비알이 돌발 행동을 하자 너는 당황했지.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_411_tomimi_1#4")]
+[name="토미미"]  ……
+[Decision(options="마지막으로 딜런, 물건은?", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="딜런"]  아, Lancet-2에게 넣어 뒀지.
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  흑흑…… 박사님을 위한 게 아니었으면, 함부로 다른 사람이 제 몸속에 물건을 보관하도록 허락하지 않았을 거예요.
+[Character(name="char_416_zumama_1")]
+[name="유넥티스"]  ……
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  이건…… 바주카포야?
+[Character(name="avg_npc_012", name2="char_187_ccheal_1", focus=1)]
+[name="딜런"]  맞아. 토미미의 마을에서 찾은 거야.
+[Character(name="avg_npc_012", name2="char_187_ccheal_1", focus=2)]
+[name="가비알"]  설마……
+[Character(name="avg_npc_012", name2="char_187_ccheal_1", focus=1)]
+[name="딜런"]  그래, 우리를 추락시킨 게 바로 이 녀석이야.
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1", focus=1)]
+[name="가비알"]  토미미.
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=2)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="토미미"]  흑흑흑, 제가 잘못했어요, 가비알 씨.
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=1)]
+[name="가비알"]  이리 와.
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=2)]
+[name="토미미"]  흐흑…… 우으으으……
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=1)]
+[name="가비알"]  내 허벅지 위에 엎드려.
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=2)]
+[name="토미미"]  가비알 씨, 제가 잘못한 거 아니까 때리지 마세요……
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=1)]
+[name="가비알"]  안 돼.
+[name="가비알"]  말 안 듣는 말썽꾸러기는 당연히 꼬리 맴매 맞아야지!
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=2)]
+[name="토미미"]  흐에에에……
+[Dialog]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=1)]
+[Character(name="char_2013_cerber_1")]
+[name="케오베"]  꼬리 때리면 엄청 아플 것 같은데……
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#6", focus=1)]
+[name="가비알"]  잘못한 거 알겠어?
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#6", focus=2)]
+[name="토미미"]  네, 흑흑흑……
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#6", focus=1)]
+[name="가비알"]  그럼 됐어.
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  아무튼 이제 괜찮아졌네, 박사.
+[Decision(options="피곤해.;……;방금은 왜 그 풍차돌리기인가 뭔가 하는 걸 안 쓴 거야.",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  하하하, 하긴 많은 일이 연달아 벌어지긴 했지.
+[Predicate(references="2")]
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  어이, 박사. 설마 지금 서서 자는 건 아니지?
+[Predicate(references="3")]
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  난 토미미를 다치게 하지는 않아. 하아…… 좀 지치네.
+[Predicate(references="1;2;3")]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  이 큰 로봇…… 겉보기엔 못 생겼지만, 그래도 이 모서리와 투박한 디자인, 난잡하지만 효과적인 선은… 자세히 보면 특유의 아름다움이 있는 것 같아요.
+[name="Lancet-2"]  음, 결혼하기에 적당한 타입이군요.
+[Character(name="char_285_medic2_1", name2="char_187_ccheal_1", focus=2)]
+[name="가비알"]  아, Lancet-2, 엔진은 괜찮은지 한 번 봐봐.
+[Character(name="char_285_medic2_1", name2="char_187_ccheal_1", focus=1)]
+[name="Lancet-2"]  네? 설마 엔진이 아직 이 큰 로봇의 몸에 있는 건가요?
+[Character(name="char_285_medic2_1", name2="char_187_ccheal_1", focus=2)]
+[name="가비알"]  응, 우리가 부쉈어.
+[Character(name="char_285_medic2_1", name2="char_187_ccheal_1", focus=1)]
+[name="Lancet-2"]  아… 불쌍한 엔진, 불쌍한 로봇……
+[Character(name="char_285_medic2_1", name2="avg_npc_012", focus=1)]
+[name="Lancet-2"]  딜런 씨, 절 좀 도와주실 수 있을까요?
+[Character(name="char_285_medic2_1", name2="avg_npc_012", focus=2)]
+[name="딜런"]  그래.
+[Character(name="char_416_zumama_1#6")]
+[name="유넥티스"]  ……
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  어이, 주마마. 왜 거기 멍하니 서 있어?
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=2)]
+[name="유넥티스"]  가비알, 가비알!
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=1)]
+[name="가비알"]  응? 왜?
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=2)]
+[name="유넥티스"]  저거, 저거!
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=1)]
+[name="가비알"]  뭐가?
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=2)]
+[name="유넥티스"]  저, 저 움직이면서 말하는 기계는 뭐야!
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=1)]
+[name="가비알"]  아, Lancet-2 말이구나. 우리 동료야.
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=2)]
+[name="유넥티스"]  나, 나도 말해봐도 돼?
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=1)]
+[name="가비알"]  안 될 게 뭐 있어?
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_village_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_416_zumama_1#4")]
+[name="유넥티스"]  저기… 안녕.
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#4", focus=1)]
+[name="Lancet-2"]  안녕하세요.
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1", focus=2)]
+[name="유넥티스"]  넌 기계니?
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1", focus=1)]
+[name="Lancet-2"]  제 모델명은 레이시언 익시스터 S Typer 62 6륜 작업 플랫폼입니다. 로도스 아일랜드 소속이고, 코드네임은 Lancet-2라고 해요.
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#5", focus=2)]
+[name="유넥티스"]  오오! 지, 질문해도 돼?
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#5", focus=1)]
+[name="Lancet-2"]  네, 저는 어느 정도 지능을 갖고 있어요. 그리 어렵지 않은 문제라면 제가 대신 풀어 드릴 수도 있습니다.
+[name="Lancet-2"]  한 가지 더 말씀드리자면, 저는 의료 지향적인 작업 플랫폼이라 제 지식은 의료 분야에 치중되어 있사오니, 참고하여 주시기 바랍니다.
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#5", focus=2)]
+[name="유넥티스"]  ^%&$*#(#……!!!!!
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#5", focus=1)]
+[name="Lancet-2"]  무슨 일 있으신가요?
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#6", focus=2)]
+[name="유넥티스"]  하, 하, 한 번 안아봐도 돼?
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#6", focus=1)]
+[name="Lancet-2"]  네?
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_village_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  저 녀석 뭐 하는 거지, 머리가 어떻게 된 건가?
+[Character(name="avg_npc_074")]
+[name="대제사장"]  뻔하지 않나, 저 기계를 보고 충격을 받은 게지.
+[Character(name="char_187_ccheal_1#2")]
+[name="가비알"]  네?
+[Character(name="avg_npc_074")]
+[name="대제사장"]  이동도시를 처음 봤을 때 놀랐던 것처럼 스스로 움직이면서 말까지 하는 기계를 봤으니, 그때보다 더 충격적이겠지.
+[name="대제사장"]  쟤뿐만 아니라 나도 흥분되는군그래!
+[name="대제사장"]  오오… 아름다운 아가씨, 데이트 신청을 해도 될까?
+[name="대제사장"]  여기 정글에서 가장 예쁜 곳을 알거든. 거기서 아름다운 오후를 보내는 게 어떻겠나!
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  어머? 저, 지금 저 데이트 신청을 받은 건가요?
+[name="Lancet-2"]  어떡하죠. 좀 기쁘네요…… 박사님, 저 수락해야 할까요?
+[Decision(options="받아줘.;……;내 Lancet-2는 못 데려간다!",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_416_zumama_1#2")]
+[name="유넥티스"]  대제사장은 빠져 있어. 우리가 알고 지낸 지 오래라고 해도, 안 그랬다간 나도 안 봐줄 거야.
+[Predicate(references="2")]
+[Character(name="char_017_homura_summer")]
+[name="블레이즈"]  솔직히 나는 박사랑 같은 마음이야.
+[name="블레이즈"]  좀 웃기네.
+[Predicate(references="3")]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  어멋, 박사님, 갑자기 그런 말씀을 하시면, 전 아직 마음의 준비가……
+[Predicate(references="1;2;3")]
+[Character(name="char_416_zumama_1")]
+[name="유넥티스"]  ……
+[name="유넥티스"]  가비알, 너넨 이런 기계를 만들 수 있는 거야?
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1", focus=1)]
+[name="가비알"]  어? 아… 클로저는 아마 만들 수 있을 걸.
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1", focus=2)]
+[name="유넥티스"]  좋아. 결정했어, 가비알.
+[name="유넥티스"]  그 로도스 아일랜드라는 곳에 아직 사람 필요한가? 나도 거기 들어가고 싶어.
+[Character(name="char_187_ccheal_1#2", name2="char_416_zumama_1", focus=1)]
+[name="가비알"]  뭐?
+[Character(name="char_187_ccheal_1#2", name2="char_416_zumama_1", focus=2)]
+[name="유넥티스"]  거기서 기계 기술을 배우고 싶어.
+[Character(name="char_187_ccheal_1#2", name2="char_416_zumama_1", focus=1)]
+[name="가비알"]  하아아아?
+[Character(name="char_187_ccheal_1#2", name2="char_416_zumama_1", focus=2)]
+[name="유넥티스"]  밖에 나가서 공부할 생각도 했지만, 부족 때문에 줄곧 여기 있을 수밖에 없었거든. 지금이 좋은 기회인 것 같아.
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1#2", focus=2)]
+[name="토미미"]  그, 그럼 저도 갈래요!
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1#2", focus=1)]
+[name="가비알"]  뭐?!
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1#2", focus=2)]
+[name="토미미"]  이왕 이렇게 된 거 플랜 B를 쓸 수밖에요…… 저는 가비알 씨와 함께이기만 하면 돼요!
+[name="토미미"]  가비알 씨, 저도 전투 능력이 있으니 가비알 씨를 도울 수 있을 거예요!
+[Character(name="char_187_ccheal_1#2")]
+[name="가비알"]  으어어어…… 박사, 어떡하면 좋지?
+[Decision(options="와도 되지만, 결과는 보장 못 해.;……;네가 자초한 거잖아. 난 상관없어.",values="1;2;3")]
+[Predicate(references="1")]
+[name="가비알"]  하긴, 어차피 오퍼레이터 시험은 누구나 볼 수 있으니까.
+[Predicate(references="2")]
+[name="가비알"]  앗, 박사, 그렇다고 괴롭히면 안 돼.
+[Predicate(references="3")]
+[name="가비알"]  박~~사~~~!
+[Predicate(references="1;2;3")]
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1", focus=1)]
+[name="가비알"]  됐어, 아무튼 너도 우선 박사 따라다니면서 좀 배워.
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1", focus=2)]
+[name="토미미"]  네!
+[Character(name="char_017_homura_summer")]
+[name="블레이즈"]  어이, 가비알, 이 자식이 무슨 말을 하는지 와서 통역 좀 해 봐.
+[Character(name="char_415_flint_1#3")]
+[name="플린트"]  ……
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  어? 크마르?
+[Character(name="char_187_ccheal_1",name2="char_415_flint_1#3",focus=2)]
+[name="플린트"]  따라가고 싶어.
+[Character(name="char_017_homura_summer",name2="char_187_ccheal_1",focus=2)]
+[name="가비알"]  따라가고 싶대.
+[Character(name="char_017_homura_summer",name2="char_187_ccheal_1",focus=1)]
+[name="블레이즈"]  흐음… 그래. 싸움 잘하니까 오퍼레이터가 되는 건 문제 없겠다.
+[Character(name="char_187_ccheal_1",name2="char_415_flint_1#3",focus=1)]
+[name="가비알"]  그러래.
+[Character(name="char_187_ccheal_1",name2="char_415_flint_1#5",focus=2)]
+[name="플린트"]  좋아.
+[Character(name="char_187_ccheal_1#2")]
+[name="가비알"]  음? 잠깐, 그 주마마도 가고, 토미미도 가고, 크마르도 가면, 부족 사람들은 어떻게 해?
+[Decision(options="네가 전에 떠날 땐 왜 그런 생각을 안 했는데?",values="1")]
+[Predicate(references="1")]
+[name="가비알"]  아하하, 그때 난 화나서 폭발할 지경이었잖아!
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#4", focus=2)]
+[name="유넥티스"]  확실히…… 난 우리 부족을 이렇게 버려두고 갈 순 없어.
+[Character(name="avg_npc_074")]
+[name="대제사장"]  엣헴, 그건 걱정 안 해도 된다!
+[Character]
+[name="아다크리스A"]  가비알 만큼은 아니지만, 거대하고 못생긴 것도 꽤 세잖아.
+[name="아다크리스B"]  맞아, 맞아. 나도 하나 만들어서 놀고 싶어.
+[name="아다크리스C"]  신전도 무너졌으니, 아예 기계 만들기 시합을 할까? 제일 멋진 걸 만드는 사람이 대족장 하는 건 어때?
+[name="아다크리스D"]  그래도 싸우는 게 더 낫지!
+[name="아다크리스C"]  싸우는 건 포기 못 하는데……
+[name="아다크리스A"]  야 이 바보들아! 싸우면서 기계를 만들면 되잖아!
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="아다크리스들"]  그러네!
+[Character(name="avg_npc_074")]
+[name="대제사장"]  봐봐, 걱정하지 않아도 된다니까.
+[name="대제사장"]  내 경험상, 리더가 미래를 위해 골머리를 앓을 때, 사람들은 대부분 도리어 금방 적응을 하더군.
+[name="대제사장"]  하나 말해주자면, 1대 대족장은 사실 2백 년 전에 한 티아카우 용사가 스스로를 대족장이라 칭한 거였어. 그 전에는 대족장을 뽑는 습관 자체가 없었지. 어떻게 생각하나?
+[Character(name="avg_npc_074",name2="char_416_zumama_1",focus=2)]
+[name="유넥티스"]  ……대제사장, 왜 그동안은 그런 얘길 안 해준 거지?!
+[Character(name="avg_npc_074",name2="char_416_zumama_1",focus=1)]
+[name="대제사장"]  그다지 중요하지 않다고 생각했으니까, 안 그런가? 내가 하고 싶은 말은, 사람들은 강하다는 거야. 전통 하나가 갑자기 사라진다고 해서 사람들의 삶이 무너지거나 하진 않는다네.
+[name="대제사장"]  오히려 난 늘 이상하다고 생각해왔지. 전통은 그저 사람들을 한데 모으는 의식일 뿐이니까.
+[name="대제사장"]  그런데 한 전통이 수십 년간 지속되면서, 너희들은 왠지 모르게 그건 침해당하거나, 깨어져서는 안 된다고 생각하게 되더군.
+[name="대제사장"]  사실 전혀 그렇지 않은데 말이야!
+[name="대제사장"]  자네가 신전을 날려버리자고 했을 때, 내가 두 손 두 발에 꼬리까지 들어서 찬성한 건 바로 그래서였네!
+[name="대제사장"]  아, 아니지. 두 손 두 발을 들면 꼬리를 들 수 없구나…… 응? 엎드리면 되려나? 잠깐 직접 해봐야겠어!
+[Character(name="avg_npc_074",name2="char_416_zumama_1",focus=2)]
+[name="유넥티스"]  그런가…… 알겠어.
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  이백 년 전이라면 대체 몇 살인 거야?
+[Character(name="avg_npc_074")]
+[name="대제사장"]  나이? 몰라.
+[name="대제사장"]  그리고 이건 자네들이 시간을 기록하는 방법이라, 나와는 상관이 없네! 내가 언제 태어났는지 잊어버리긴 했지만!
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  그렇구나…… 그래도 어찌 되었든, 누군가는 대족장을 맡아야 해.
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="이남"]  어이, 가비알이 주마마와 또 싸운다며? 설마 벌써 끝난 거야?
+[Character(name="char_187_ccheal_1#2", name2="avg_npc_075", focus=1)]
+[name="가비알"]  음?
+[Character(name="char_187_ccheal_1#2", name2="avg_npc_075", focus=2)]
+[name="이남"]  가비알, 뭘 그렇게 봐?
+[Character(name="char_187_ccheal_1#5", name2="avg_npc_075", focus=1)]
+[name="가비알"]  이남, 혹시 대족장 자리에 관심 있어?
+[Character(name="char_187_ccheal_1#5", name2="avg_npc_075", focus=2)]
+[name="이남"]  뭐?
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[PlayMusic(intro="$tech_intro", key="$tech_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_003_kalts_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="켈시"]  그러니까 정리하자면, 우여곡절을 겪은 다음 너희는 결국 엔진을 찾았고, 긴급 수리를 한 후에 겨우 돌아왔다 이거로군.
+[Character(name="char_017_homura_3#1")]
+[name="블레이즈"]  어… 어어어, 그렇지!
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  박사, 내가 말했던 것 같은데. 비행체는 굉장히 귀한 교통수단이다.
+[Decision(options="특수 상황이었어.;……;이걸 내 탓을 한다고?",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  그나마 비행체가 수리 가능한 상태였으니 나도 너를 더 탓하지는 않겠지만, 수리 비용은 너와 블레이즈의 월급에서 깔 거다.
+[Character(name="char_017_homura_3#10", name2="char_003_kalts_1", focus=1)]
+[name="블레이즈"]  으엑, 나도……?
+[Character(name="char_017_homura_3#10", name2="char_003_kalts_1", focus=2)]
+[name="켈시"]  정예 오퍼레이터라면 더 큰 책임을 져야지.
+[Character(name="char_017_homura_3#10", name2="char_003_kalts_1", focus=1)]
+[name="블레이즈"]  하아… 알았어.
+[Character(name="char_003_kalts_1")]
+[name="켈시"]  너희가 데려온 세 명은, 너희가 오퍼레이터가 될 자격이 있다고 여겼으니, 박사가 알아서 배치해줘.
+[name="켈시"]  가비알, 이번에 고향에 가니 만족스러웠나?
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="가비알"]  그럼, 좋았지. 나도 이런 일이 생길 줄은 몰랐지만, 재밌었어.
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="켈시"]  사실 박사가 너를 데리고 오지 않는 상황에 대한 대책도 세웠었다.
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="가비알"]  왜?
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="켈시"]  네가 고향에 남을 가능성이 있다고 생각했으니까.
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="가비알"]  뭐? 무슨 말을 그렇게 하고 그래.
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="켈시"]  그런데 넌 아직 바깥 생활에 익숙하지 않잖아. 넌 지금도 네 방법대로, 이 세상에서 매일 일어나는 일을 과격하게 처리하고 있지.
+[name="켈시"]  뭐랄까, 언젠가 네가 갑자기 휴가를 내거나 여길 떠나도 전혀 놀랍지 않을 것 같다 생각했어.
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  어이, 박사, 이해가 잘 안 가는데. 켈시가 나한테 관심을 가져주고 있단 거겠지?
+[Decision(options="그렇지.;……;아마도.",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")] 
+[name="켈시"]  {@nickname} 박사, 다른 일 없으면 먼저 가도 돼.
+[Predicate(references="2")]
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  쳇, 박사는 이럴 때 꼭 죽은 척한다니까.
+[name="가비알"]  그럼 나는 켈시가 날 신경 쓰고 있는 거라고 생각할게.
+[Predicate(references="3")]
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  역시 켈시야. 박사까지 혼란스럽게 만들다니.
+[Predicate(references="1;2;3")]
+[Character(name="char_187_ccheal_1")]
+[name="가비알"]  난 여기 안 떠나.
+[name="가비알"]  그때 내가 떠나겠다 결심한 건, 의사가 되고 싶다는, 이 한 가지 이유 때문이었어.
+[name="가비알"]  물론 그때의 난 내가 정말 의사가 될 수 있을 거라고는 생각하지 못했지만… 지금의 난 그때 그런 결정을 내렸던 걸 다행스럽게 생각해.
+[name="가비알"]  현대 의학의 관점에서 보면 거긴 의사가 없는 것이나 다름없지. 병에 걸리면 그냥 내버려 뒀고, 기껏해야 치료하기 쉬운 병에 민간요법을 쓰는 정도니까.
+[name="가비알"]  만약 그때 내가 거기서 나오지 않았다면, 지금 이 세상이 이런 모습인 줄도 아마 몰랐겠지.
+[name="가비알"]  원래는 죽음에 이르지 않아도 되는 병들이 그렇게 많은지도 몰랐을 거고, 광석병이 그렇게 배척당하고 있었단 사실도 몰랐을 거야. 사람을 치료하는 게 사람을 때리는 것만큼 즐거운 일이라는 것도 몰랐겠지.
+[name="가비알"]  바깥세상은 정말 복잡해서 종종 목적을 이해할 수 없는 사람도 있고, 왜 싸워야 하는 건지 모를 때도 많아.
+[name="가비알"]  하지만 난 이제 의사야. 그리고 지금의 내 꿈은 광석병을 치료하는 거고.
+[name="가비알"]  이 땅 위에서 의학 공부를 하기에 여기보다 더 좋은 데가 어디 있겠어?
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="켈시"]  아마 없겠지.
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1#3", focus=2)]
+[name="가비알"]  그러니까 말이야. 게다가 다들 매일 나보다 더 피곤할 텐데, 내 신경까지 쓸 필요 없잖아.
+[name="가비알"]  오히려 내가 더 신경을 써줘야지.
+[name="가비알"]  나 없을 때 내 업무를 혼자 도맡아서 처리한 건 아니겠지?
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1#3", focus=1)]
+[name="켈시"]  응.
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="가비알"]  그럼 됐고. 난 광석병 검사하러 주마마한테 가야겠어.
+[Character(name="char_017_homura_3#1")]
+[name="블레이즈"]  아, 그럼 나도 크마르한테 가볼게. 아, 이제는 플린트라고 해야 하나. 말이 안 통해서 다른 사람들이랑 싸우고 있지는 않은지 가봐야겠어……
+[Character(name="char_187_ccheal_1#3")]
+[name="가비알"]  박사, 토미미는 일반 상식 교육을 받고 있을 거야. 끝나면 한번 가 봐.
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1#3", focus=1)]
+[name="켈시"]  가비알.
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="가비알"]  응?
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="켈시"]  돌아온 걸 환영해.
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1#5", focus=1)]
+[name="가비알"]  하하.
+[Character(name="char_017_homura_3#1")]
+[name="블레이즈"]  어? 나는!?
+[Character(name="char_017_homura_3#1", name2="char_003_kalts_1", focus=2)]
+[name="켈시"]  네 다음 임무는 지난주에 이미 준비해 뒀어. 이미 놀만큼 놀았잖아?
+[Character(name="char_017_homura_3#10", name2="char_003_kalts_1", focus=1)]
+[name="블레이즈"]  아아……
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_003_kalts_1")] 
+[name="켈시"]  ……
+[name="켈시"]  네겐 아마 상식을 벗어나는 여행이었겠지.
+[name="켈시"]  하지만 가비알의 성격처럼, 이것도 이 땅에 생기가 넘친다는 증거일 거다.
+[name="켈시"]  기나긴 시간 동안 원래의 색채를 잃어버린 것들이 많아. 예전에는 당연했던 것들이 지금은 몹시 귀해졌지.
+[name="켈시"]  우린 사람들 사이에서 새어 나오는 희망의 빛을 찾아야 한다. 이걸 습관처럼 늘 의식해야 해.
+[name="켈시"]  이번 여행으로 너와 네 동료 오퍼레이터들이 알았으면 한다. 어떤 것들은 그리 멀리 있지 않다는 걸 말이야.
+[character]
+[name="클로저"]  켈시, 회의할 시간이야!
+[Character(name="char_003_kalts_1")] 
+[name="켈시"]  금방 갈게.
+[name="켈시"]  그럼… {@nickname} 박사, 처리해야 할 업무들이 아직 산더미다.
+[name="켈시"]  이번 휴가에서 충분한 휴식을 취했기를 바라지.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Character]
+[Image]
