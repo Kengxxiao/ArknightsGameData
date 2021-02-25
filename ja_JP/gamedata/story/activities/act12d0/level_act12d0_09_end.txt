@@ -1,0 +1,445 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_village_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="char_187_ccheal_1#4", name2="char_411_tomimi_1#2", focus=1)]
+[name="ガヴィル"]  片付いたぜ、トミミ。
+[Character(name="char_187_ccheal_1#4", name2="char_411_tomimi_1#2", focus=2)]
+[name="トミミ"]  ……ま、まだです！
+[Character(name="char_411_tomimi_1#2")]
+[name="トミミ"]  ヌール、ペータ！
+[Character(name="avg_npc_012")]
+[name="ディラン"]  ドクター！
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  ドクター様！
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1#2", focus=2)]
+[name="トミミ"]  な、仲間を傷つけられたくなければ……
+[Character(name="char_187_ccheal_1#4", name2="char_411_tomimi_1#2", focus=1)]
+[name="ガヴィル"]  アタシを怒らせるんじゃねぇぞ、トミミ！
+[Character(name="char_187_ccheal_1#4", name2="char_411_tomimi_1#2", focus=2)]
+[name="トミミ"]  ……ガヴィルさんが残ってくれると言うまで、絶対にやめません！
+[Character(name="avg_npc_012")]
+[name="ディラン"]  助けてくれ、ドクター！
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  ドクター様、怖いですううぅ……
+[Decision(options="任務は終わったのか？;……;安心しろ、今助ける！",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="ディラン"]  ちょっとドクター、空気を読んでくれよ。こんな健気なお嬢ちゃんなんだから、少しくらい乗ってやっても死にゃしねぇだろうよ。
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  はぁ、ここの人たちは本当に純粋ですから、正直彼らを騙すのは良心が痛みます。私に心はありませんが。
+[Predicate(references="2")]
+[Character(name="avg_npc_012")]
+[name="ディラン"]  おいおい、そんな目で見るなよ、ドクター。
+[name="ディラン"]  安心してくれ、こんなんでもロドスのオペレーターだからな。このくらい自分でどうにかできるぜ。
+[Predicate(references="3")]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  ドクター様あああ！
+[Decision(options="Lancet-2！", values="4")]
+[Predicate(references="4")]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  ドクター様あああ！
+[Character(name="avg_npc_012")]
+[name="ディラン"]  うわっ、二人とも俺よりノリノリで演技してんな。
+[Predicate(references="1;2;4")]
+[stopmusic(fadetime=1)]
+[Character(name="char_411_tomimi_1")]
+[name="トミミ"]  えっ？
+[Character(name="avg_npc_073")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="アダクリス人"]  いつの間に縄を！
+[Character(name="avg_npc_012")]
+[name="ディラン"]  ははっ、わりぃな、最初から縛られてねぇんだ。
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  ドクター、まさか最初からトミミの企みを見抜いてたのか？
+[playMusic(intro="$farce_intro", key="$farce_loop", volume=0.4)]
+[Decision(options="当たり前だ。;……;見抜けない方がおかしい。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_411_tomimi_1#4")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="トミミ"]  な、なんでわかったんですか！？
+[Decision(options="まず、君は最初にズゥママの名を出すときにためらった。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_187_ccheal_1#2")]
+[name="ガヴィル"]  えっ？　そうだったっけ？
+[Decision(options="そして、祭典では、ガヴィルの突然の行動に焦りを見せた。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_411_tomimi_1#4")]
+[name="トミミ"]  ……
+[Decision(options="そして最後に、ディラン、例の物は？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="ディラン"]  おう、Lancet-2に積んであるぜ。
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  うう……私の身体に物を入れさせるなんて、ドクター様の為でなければ絶対にしませんからね。本当ですよ。
+[Character(name="char_416_zumama_1")]
+[name="ユーネクテス"]  ……
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  これは……ロケットランチャーか？
+[Character(name="avg_npc_012", name2="char_187_ccheal_1", focus=1)]
+[name="ディラン"]  そうだ、トミミの部族で見つけたんだ。
+[Character(name="avg_npc_012", name2="char_187_ccheal_1", focus=2)]
+[name="ガヴィル"]  まさか……
+[Character(name="avg_npc_012", name2="char_187_ccheal_1", focus=1)]
+[name="ディラン"]  そのまさかだ。俺たちを撃ち墜としたのは、このお嬢ちゃんってわけさ。
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1", focus=1)]
+[name="ガヴィル"]  トミミ。
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=2)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="トミミ"]  ううう、ごめんなさい、ガヴィルさん。
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=1)]
+[name="ガヴィル"]  こっち来い。
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=2)]
+[name="トミミ"]  うううぅ……
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=1)]
+[name="ガヴィル"]  アタシの脚の上に伏せろ。
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=2)]
+[name="トミミ"]  ガヴィルさん、ぶたないでください。反省しますから……
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=1)]
+[name="ガヴィル"]  ダメだ。
+[name="ガヴィル"]  言うこと聞かない悪ガキは、お尻尾ペンペンだ！
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#4", focus=2)]
+[name="トミミ"]  ううう……
+[Dialog]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=1)]
+[Character(name="char_2013_cerber_1")]
+[name="ケオベ"]  お尻尾ペンペン、なんか痛そう……
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#6", focus=1)]
+[name="ガヴィル"]  これで懲りたか？
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#6", focus=2)]
+[name="トミミ"]  懲りました、ううう……
+[Character(name="char_187_ccheal_1", name2="char_411_tomimi_1#6", focus=1)]
+[name="ガヴィル"]  それならよろしい。
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  とりあえずこれで一件落着だ、ドクター。
+[Decision(options="疲れた。;……;あの大風車を使うと思った。",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  ははは、確かに災難の連続だったな。
+[Predicate(references="2")]
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  おい、ドクター、立ったまま寝てんじゃねぇだろうな。
+[Predicate(references="3")]
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  トミミをケガさせるわけにもいかねぇからな。しっかし、さすがのアタシも疲れたぜ。
+[Predicate(references="1;2;3")]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  この大きなロボット……一見不格好に見えますが、この角々しさや粗削りな造形、雑然としながらも理に適った配線など、よく見れば独特の美が感じ取れます。
+[name="Lancet-2"]  これは結婚向きのタイプですね。
+[Character(name="char_285_medic2_1", name2="char_187_ccheal_1", focus=2)]
+[name="ガヴィル"]  おい、Lancet-2、エンジンが使えるか見てやってくれ。
+[Character(name="char_285_medic2_1", name2="char_187_ccheal_1", focus=1)]
+[name="Lancet-2"]  え？　まさかエンジンはこの巨人さんの中に！？
+[Character(name="char_285_medic2_1", name2="char_187_ccheal_1", focus=2)]
+[name="ガヴィル"]  ああそうさ。アタシらがボコボコにしてやったけどな。
+[Character(name="char_285_medic2_1", name2="char_187_ccheal_1", focus=1)]
+[name="Lancet-2"]  ああ、可哀想なエンジンちゃん、可哀想な巨人さん。
+[Character(name="char_285_medic2_1", name2="avg_npc_012", focus=1)]
+[name="Lancet-2"]  ディランさん、手伝っていただけませんか？
+[Character(name="char_285_medic2_1", name2="avg_npc_012", focus=2)]
+[name="ディラン"]  おうよ。
+[Character(name="char_416_zumama_1#6")]
+[name="ユーネクテス"]  ……
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  おい、ズゥママ、どうしたんだ、ボケーっとして。
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=2)]
+[name="ユーネクテス"]  ガッ、ガヴィル！
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=1)]
+[name="ガヴィル"]  あぁ？　なんだよ？
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=2)]
+[name="ユーネクテス"]  あれ、あれ！
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=1)]
+[name="ガヴィル"]  どれだよ？
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=2)]
+[name="ユーネクテス"]  あれ、あの自分で動いたり話したりする機械はなんだ！？
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=1)]
+[name="ガヴィル"]  ああ、Lancet-2のことだな。あいつもアタシらの仲間さ。
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=2)]
+[name="ユーネクテス"]  は、話しかけてもいいか？
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#6", focus=1)]
+[name="ガヴィル"]  好きにしたらいいじゃねぇか。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_village_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_416_zumama_1#4")]
+[name="ユーネクテス"]  や、やあ。
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#4", focus=1)]
+[name="Lancet-2"]  はい、こんにちは。
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1", focus=2)]
+[name="ユーネクテス"]  お前は機械なのか？
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1", focus=1)]
+[name="Lancet-2"]  私の製品名は「レイジアンイグジスターシリーズS-Typer62六輪作業プラットフォーム」です。ロドス所属で、コードネームはLancet-2です。
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#5", focus=2)]
+[name="ユーネクテス"]  おお！　し、質問してもいいか？
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#5", focus=1)]
+[name="Lancet-2"]  私には一定の知能が備わっておりますので、そこまで難しくないご質問であれば、回答可能かと。
+[name="Lancet-2"]  ちなみに、私は医療用の作業プラットフォームのため、提供可能な知識は医療方面に偏ったものとなります。ご了承ください。
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#5", focus=2)]
+[name="ユーネクテス"]  ^%&$*#(#……！！！！！
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#5", focus=1)]
+[name="Lancet-2"]  何でしょうか？
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#6", focus=2)]
+[name="ユーネクテス"]  だ、抱っこしてもいいか？
+[Character(name="char_285_medic2_1", name2="char_416_zumama_1#6", focus=1)]
+[name="Lancet-2"]  はい？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_village_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  何やってんだあいつ、おかしくなったのか？
+[Character(name="avg_npc_074")]
+[name="大祭司"]  見ればわかるじゃろ。あの機械に衝撃を受けたんじゃよ。
+[Character(name="char_187_ccheal_1#2")]
+[name="ガヴィル"]  あぁ？
+[Character(name="avg_npc_074")]
+[name="大祭司"]  自らの意思で動き、喋る機械から受けた衝撃は、初めて移動都市を目にしたとき以上のものじゃった。つまりそういうことじゃ！
+[name="大祭司"]  わしも同じくらい、興奮しておるがな！
+[name="大祭司"]  のう、美しいお嬢様、わしとのデートに付き合ってもらうことはできんかの？
+[name="大祭司"]  このジャングル一番の景色を知っとるんじゃ。そこで素晴らしい午後のひとときを共に過ごすのはどうじゃ！？
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  ええ？　わ、私、誘われました！？
+[name="Lancet-2"]  どうしましょう、ちょっと嬉しいような……ドクター様、これは受けるべきでしょうか？
+[Decision(options="受けてやれ。;……;Lancet-2は誰にもやらん！",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_416_zumama_1#2")]
+[name="ユーネクテス"]  じいやは引っ込んでいろ。でないと長年のよしみを捨てることになるぞ。
+[Predicate(references="2")]
+[Character(name="char_017_homura_summer")]
+[name="ブレイズ"]  ……多分私もドクターと同じ気持ち。
+[name="ブレイズ"]  吹き出しそう。
+[Predicate(references="3")]
+[Character(name="char_285_medic2_1")]
+[name="Lancet-2"]  えっ、そんなドクター様、急にそう言われましても、心の準備が……
+[Predicate(references="1;2;3")]
+[Character(name="char_416_zumama_1")]
+[name="ユーネクテス"]  ……
+[name="ユーネクテス"]  ガヴィル、お前たちが住んでいるところは、こういう機械も造れるのか？
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1", focus=1)]
+[name="ガヴィル"]  ん？　あー、まぁクロージャなら造れるかもな。
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1", focus=2)]
+[name="ユーネクテス"]  そうか……よし、決めたぞ、ガヴィル。
+[name="ユーネクテス"]  そのロドスというところだが、人手は足りているか？　私も加入したい。
+[Character(name="char_187_ccheal_1#2", name2="char_416_zumama_1", focus=1)]
+[name="ガヴィル"]  あぁ？
+[Character(name="char_187_ccheal_1#2", name2="char_416_zumama_1", focus=2)]
+[name="ユーネクテス"]  そこで機械の技術を学びたいんだ。
+[Character(name="char_187_ccheal_1#2", name2="char_416_zumama_1", focus=1)]
+[name="ガヴィル"]  ハァ？
+[Character(name="char_187_ccheal_1#2", name2="char_416_zumama_1", focus=2)]
+[name="ユーネクテス"]  実はこれまでも外に出て勉強したい気持ちはあったが、部族のこともあって真剣に考えていなかった。だが今はいい機会だと思っている。
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1#2", focus=2)]
+[name="トミミ"]  じゃ、じゃあ私も行きます！
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1#2", focus=1)]
+[name="ガヴィル"]  なんだって！？
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1#2", focus=2)]
+[name="トミミ"]  こうなったら予備プランを実行して……私がガヴィルさんについていけばいいんです！
+[name="トミミ"]  ガヴィルさん、私だって戦えます。きっとガヴィルさんの役に立ってみせます！
+[Character(name="char_187_ccheal_1#2")]
+[name="ガヴィル"]  えーっと、ドクター、どうすりゃいいんだこれ？
+[Decision(options="来てもいいが、どうなるかは保証できない。;……;ガヴィルの責任だ。自分で考えろ。",values="1;2;3")]
+[Predicate(references="1")]
+[name="ガヴィル"]  そうだな。オペレーター適性試験自体は誰でも受けれるしな。
+[Predicate(references="2")]
+[name="ガヴィル"]  おい、ドクター。あんまりいじめてやるなよ。
+[Predicate(references="3")]
+[name="ガヴィル"]  ドーークーーターー！
+[Predicate(references="1;2;3")]
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1", focus=1)]
+[name="ガヴィル"]  まあいいや。とりあえずドクターから色々勉強すりゃいい。
+[Character(name="char_187_ccheal_1#2", name2="char_411_tomimi_1", focus=2)]
+[name="トミミ"]  はい！
+[Character(name="char_017_homura_summer")]
+[name="ブレイズ"]  それよりガヴィル、この子が言ってることも通訳してくれない？
+[Character(name="char_415_flint_1#3")]
+[name="フリント"]  ……
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  あぁ？　クマールか。
+[Character(name="char_187_ccheal_1",name2="char_415_flint_1#3",focus=2)]
+[name="フリント"]  この人についていきたい。
+[Character(name="char_017_homura_summer",name2="char_187_ccheal_1",focus=2)]
+[name="ガヴィル"]  お前についていきたいってさ。
+[Character(name="char_017_homura_summer",name2="char_187_ccheal_1",focus=1)]
+[name="ブレイズ"]  ふーん、いいよ。腕も立つし、きっとオペレーターとして認められるはず。
+[Character(name="char_187_ccheal_1",name2="char_415_flint_1#3",focus=1)]
+[name="ガヴィル"]  いいってよ。
+[Character(name="char_187_ccheal_1",name2="char_415_flint_1#5",focus=2)]
+[name="フリント"]  よし。
+[Character(name="char_187_ccheal_1#2")]
+[name="ガヴィル"]  ……いやちょっと待て。ズゥママがいなくなって、トミミもクマールもいなくなっちまったら、ここの部族のヤツらはどうすんだよ？
+[Decision(options="ガヴィルは出て行くときにそんなことを考えていたのか？",values="1")]
+[Predicate(references="1")]
+[name="ガヴィル"]  アハハ、あのときはカッとなってたからノーカウントだ！
+[Character(name="char_187_ccheal_1", name2="char_416_zumama_1#4", focus=2)]
+[name="ユーネクテス"]  確かに……部族を放っておくわけにはいかないか。
+[Character(name="avg_npc_074")]
+[name="大祭司"]  うむ、それに関しては心配無用じゃろう。
+[Character]
+[name="アダクリス人A"]  ガヴィルにゃ負けるが、やっぱビッグ・アグリーもつえーな。
+[name="アダクリス人B"]  そうだそうだ、オレもああいうのを造ってみてぇな。
+[name="アダクリス人C"]  どうせ霊殿は壊されちまったんだし、いっそ機械造りで勝負して、すげぇモンを造ったヤツが大族長になるってのはどうだ？
+[name="アダクリス人D"]  いやいや、やっぱり喧嘩の方が気持ちいいぜ！
+[name="アダクリス人C"]  うーん、一理ある、喧嘩も捨てがたいな。どうすりゃいいんだ……
+[name="アダクリス人A"]  ったく、アホかお前らは。喧嘩しながら機械造りの勝負もやる。それでいいだろ！
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="アダクリス人たち"]  それだ！
+[Character(name="avg_npc_074")]
+[name="大祭司"]  ほれ、心配するだけ時間の無駄じゃて。
+[name="大祭司"]  わしの経験則じゃが、人々は想像を超える早さで環境に適応していくものじゃ。統率者が未来のことで頭を悩ませていようがお構いなしでの。
+[name="大祭司"]  例えばじゃ、二百年前にとあるティアカウが勝手に初代大族長を名乗り始めて、それから自然と大族長選挙の習慣が生まれた……とわしが言ったら、お前さんたちはどう思う？
+[Character(name="avg_npc_074",name2="char_416_zumama_1",focus=2)]
+[name="ユーネクテス"]  そうなのか！？　じいや、なぜ今まで教えてくれなかったんだ？
+[Character(name="avg_npc_074",name2="char_416_zumama_1",focus=1)]
+[name="大祭司"]  そんなこと、今のお前さんたちにとっては重要じゃないからじゃ。人は想像以上に逞しい。急に伝統が一つ途絶えたからといって、死ぬことはない。
+[name="大祭司"]  伝統など、元々は人々の団結力を高めるための決めごとに過ぎん。
+[name="大祭司"]  じゃがその決めごとが数十年も続けば、なぜかそれは「伝統」に変わり、不可侵なもの、破ってはいかんものになる。全くもって理解に苦しむわい。
+[name="大祭司"]  実際そんなことは毛頭ないんじゃよ！
+[name="大祭司"]  じゃからこそ、お前さんが霊殿をぶっ壊すと言ったとき、わしは両手を挙げて……いや、両手両足と尻尾を挙げて賛成したのじゃ！
+[name="大祭司"]  むむ、両手両足を挙げたら尻尾を挙げられんか……うーむ？　うつ伏せになればできるかの？　試してみるぞい！
+[Character(name="avg_npc_074",name2="char_416_zumama_1",focus=2)]
+[name="ユーネクテス"]  ……そうか、わかった。
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  二百年前がどうとかって、お前は一体何歳なんだ？
+[Character(name="avg_npc_074")]
+[name="大祭司"]  ハハッ、さあのぅ。
+[name="大祭司"]  歳なんて、お前さんたちが時間を記録するために作った概念じゃ。わしには関係ない！　まぁいつ生まれたか忘れただけなんじゃが！
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  そうかよ……でもいずれにしても、やっぱ誰かに大族長になってもらわねぇとな。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  ねぇ、ガヴィルとズゥママがもうひと試合やるって話を聞いたんだけど、それはどうなったの？
+[Character(name="char_187_ccheal_1#2", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  おっ？
+[Character(name="char_187_ccheal_1#2", name2="avg_npc_075", focus=2)]
+[name="イナム"]  何見つめてんのよ、気持ち悪い。
+[Character(name="char_187_ccheal_1#5", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  イナム、お前大族長になる気はねぇか？
+[Character(name="char_187_ccheal_1#5", name2="avg_npc_075", focus=2)]
+[name="イナム"]  はい？
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[PlayMusic(intro="$tech_intro", key="$tech_loop", volume=0.8, crossfade=1.5, delay=0.5)]
+[Character(name="char_003_kalts_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="ケルシー"]  つまり、一連の事件を経て、エンジンを取り戻した後に、緊急処置を施してなんとか帰途についたと。
+[Character(name="char_017_homura_3#1")]
+[name="ブレイズ"]  そ、そういうこと！
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  ドクター、確か私は君に、飛行装置は貴重な乗り物だと言ったはずだが。
+[Decision(options="状況が状況だった。;……;仕方がなかったんだ。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  飛行装置の被害が修理可能な範疇に収まってる以上、私もとやかく言うつもりはない。ただし修理の費用は君とブレイズの給料から差し引かせてもらう。
+[Character(name="char_017_homura_3#10", name2="char_003_kalts_1", focus=1)]
+[name="ブレイズ"]  えっ、私も？
+[Character(name="char_017_homura_3#10", name2="char_003_kalts_1", focus=2)]
+[name="ケルシー"]  エリートオペレーターは多くの責任を担うものだ。
+[Character(name="char_017_homura_3#10", name2="char_003_kalts_1", focus=1)]
+[name="ブレイズ"]  はぁ、わかったよ。
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  連れてきたあの三人については、オペレーターになる素質があると君たちが判断したのであれば、ドクターに任せておけばいい。
+[name="ケルシー"]  ガヴィル、今回の里帰りは満足のいくものだったか？
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="ガヴィル"]  そりゃあ満足さ。アタシの予想を上回る出来事の連続で、楽しかったよ。
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="ケルシー"]  ドクターが君を置いてきた場合のことも考えていたのだがな。
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="ガヴィル"]  どういうことだ？
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="ケルシー"]  君が故郷に残る可能性も考えていたということだ。
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="ガヴィル"]  あぁ？　水くせぇこと言わないでくれよケルシー先生。
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="ケルシー"]  君がまだ外の生活に馴染んでいないことは明白だ。君は相変わらず自分のやり方で、毎日この大地に起きる出来事と激しい衝突を繰り返しているからな。
+[name="ケルシー"]  言い方を変えれば、君がある日突然、休職や脱退の申請を出しても私は驚かないということだ。
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  なあドクター、よくわかんねぇけど、ケルシー先生はアタシのことを気にかけてくれてんのか？
+[Decision(options="そうだな。;……;かもな。",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")] 
+[name="ケルシー"]  Dr.{@nickname}、ほかに用がなければ、もう退出して構わない。
+[Predicate(references="2")]
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  チッ。お前はこういうとき黙ってばっかだな。
+[name="ガヴィル"]  まぁ、ケルシー先生の言葉は良心的に解釈しとくぜ。
+[Predicate(references="3")]
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  ドクターでもよくわからないのか。さすがケルシー先生。
+[Predicate(references="1;2;3")]
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  ケルシー先生、アタシはここを出ていくつもりはないぜ。
+[name="ガヴィル"]  あのとき故郷を離れたのは、医者になりたいって思ったからだ。
+[name="ガヴィル"]  まぁ当時のアタシは、本当に医者になれるとまでは思ってなかったがな。だけど今となっては、あのときの自分の決定に感謝してる。
+[name="ガヴィル"]  現代医学の見地に立ってみれば、アタシの故郷は医者がいないのと同じだ。何かを治療するにしても、簡単な民間療法くらいしか打つ手はない。病気になったら命を天に任せるしかねぇんだ。
+[name="ガヴィル"]  あそこを出なかったら、アタシは、この大地がどんなもんかだって知ることはできなかった。
+[name="ガヴィル"]  多くの病人は救えるってことも、鉱石病がこれほど忌み嫌われる病気だってことも知り得なかった。……人を救うのは、殴るのと同じくらい楽しいってこともな。
+[name="ガヴィル"]  外は確かに複雑なところだ。目的のわかんねぇヤツらも多いし、なんで戦ってんのかわかんねぇこともある。
+[name="ガヴィル"]  だが今のアタシは医者だ。どんなヤツが現れようが、理解できないことがあろうが、全員の鉱石病を治してやるってのがアタシの理想さ。
+[name="ガヴィル"]  アタシが医学に励むなら、ロドス以上にふさわしい場所はあると思うか？
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="ケルシー"]  おそらくないだろう。
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1#3", focus=2)]
+[name="ガヴィル"]  だからアタシはここにいる。つーかケルシー先生たちの方が、毎日アタシの何倍も疲れてんだろ。アタシのことなんか気にかけなくていいよ。
+[name="ガヴィル"]  むしろこっちがケルシー先生のことを気にかけといてやりたいくらいさ。
+[name="ガヴィル"]  アタシがいない間、無理してアタシの仕事まで引き受けたりしてないよな？
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1#3", focus=1)]
+[name="ケルシー"]  していないさ。
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="ガヴィル"]  それならよし。じゃあアタシはズゥママたちの鉱石病検査に行ってくるぜ。
+[Character(name="char_017_homura_3#1")]
+[name="ブレイズ"]  じゃあ私もクマールの様子を見に行こうっと。あ、今はフリントって名前だっけ。あの子言葉が通じないから、また誰かと喧嘩になってるかも……
+[Character(name="char_187_ccheal_1#3")]
+[name="ガヴィル"]  ドクター、トミミは一般常識の授業を受けてるはずだ。もうすぐ終わると思うから、様子を見に行ってやってくれ。
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1#3", focus=1)]
+[name="ケルシー"]  ガヴィル。
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=2)]
+[name="ガヴィル"]  ん、なんだ？
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1", focus=1)]
+[name="ケルシー"]  おかえり。
+[Character(name="char_003_kalts_1", name2="char_187_ccheal_1#5", focus=1)]
+[name="ガヴィル"]  ハハッ。
+[Character(name="char_017_homura_3#1")]
+[name="ブレイズ"]  あれ、私には！？
+[Character(name="char_017_homura_3#1", name2="char_003_kalts_1", focus=2)]
+[name="ケルシー"]  君の次の任務は先週から決まっている。本当は、もうかなり遅延しているんだ。
+[Character(name="char_017_homura_3#10", name2="char_003_kalts_1", focus=1)]
+[name="ブレイズ"]  ええ……
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_003_kalts_1")] 
+[name="ケルシー"]  ……
+[name="ケルシー"]  君にとって、今回はいささか常識外れな旅だっただろう。
+[name="ケルシー"]  だが今回の出来事は、この大地が活力に満ちている証明でもある。ガヴィルの性格と同じようにな。
+[name="ケルシー"]  長い年月の中で、多くの物事は摩耗し本来の色を失っていく。かつての当たり前は、今となっては得難いものになっている。
+[name="ケルシー"]  我々は、人混みの隙間から漏れ出す光を探りながら、それを常日頃から意識しておかねばならない。
+[name="ケルシー"]  手が届かないと思っているものも、目を凝らせば、案外近くにあるものだ。そのことに、君や、今回の旅に同行したオペレーターたちが気付いてくれれば、と思う。
+[character]
+[name="クロージャ"]  ケルシー、会議の時間だよー！
+[Character(name="char_003_kalts_1")] 
+[name="ケルシー"]  ああ。
+[name="ケルシー"]  Dr.{@nickname}、君にはまだ多くの仕事が残っている。
+[name="ケルシー"]  今回の休暇で十分癒されただろう君が、今まで以上に尽力してくれることを期待している。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Character]
+[Image]

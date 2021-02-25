@@ -1,0 +1,227 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_jungleentrance",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$farce_intro", key="$farce_loop", volume=0.4)]
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  ドクター、もうかなりジャングルの奥に来てるぜ。
+[name="ガヴィル"]  転ばないように気をつけろよ。
+[name="ガヴィル"]  ここいらは足元がぬかるんでるし、木が覆い茂ってて根っこだらけだからな。
+[name="ガヴィル"]  お、ありゃどこの部族だ？　行ってみようぜ。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_jungle_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_075",fadetime=1,block=true)]
+[delay(time=1)]
+[name="イナム"]  ふあ～暇ねぇ、ちょっと昼寝しよっと……
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  イナム！
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  ガヴィル？　どうして私のところに？　祭典じゃズゥママに負けたらしいわね。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  耳が早いじゃねぇか、イナム。
+[name="ガヴィル"]  しっかし、トミミから話を聞いたときは正直信じられなかったが……まさかお前が本当に、部族の族長になっちまうとはな。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  好きでやってるわけじゃないわよ。でもこの人たちが勝手についてくるんだもの、仕方ないでしょ。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  それより、なんで祭典に来なかったんだ？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  あ、ドクター。こいつがトミミが言ってたイナムだ。
+[Decision(options="はじめまして。;……;やあ！",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="avg_npc_075")]
+[name="イナム"]  わあ、外の生きた人じゃない。
+[Predicate(references="2")]
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  外のお友達？　シャイな人ね。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  ドクターは無口なだけだ。
+[Predicate(references="3")]
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  はあい！　ガヴィル、この人あんたみたいに明るいのね。
+[Predicate(references="1;2;3")]
+[Character(name="char_187_ccheal_1#2", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  あれ？　イナム、なんでお前までサルゴン語がわかんだよ？
+[Character(name="char_187_ccheal_1#2", name2="avg_npc_075", focus=2)]
+[name="イナム"]  これでも正式にはこの辺り一帯のトランスポーターだもの。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  トランスポーター？　お前が？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  なによその反応……。でもトランスポーターが何なのかは知ってるのね。
+[name="イナム"]  他の人たちに言ってみても、なにそれって顔をされるだけなのに。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  ちょっと待て、お前いつトランスポーターになったんだ？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  いつって、最初からずっとトランスポーターだけど……
+[name="イナム"]  ここだって一応サルゴン領内よ。……まさかあんた、サルゴン政府はここのことを何にも知らないなんて思ってないでしょうね？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  え、違うのか？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  もちろん違うわよ。私の知る限り、ここは数百年前まで、サルゴンのとある集落の採掘場だったのよ。
+[name="イナム"]  でも天災で移動都市が離れてから、採掘場は廃れてしまったの。
+[name="イナム"]  今ここにいる人たちは、その時に残った人と、その後戻ってきた人たちの末裔ってわけ。
+[name="イナム"]  サルゴン政府は元々、天災が落ち着いたら一番近くにいる移動都市を呼んで、採掘場を再利用するつもりだったみたいけどね。
+[name="イナム"]  ほら、十何年前に来たあれよ。あんたも覚えてるでしょ。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  ああ、あれか。ズゥママも知ってるはずだ、あいつはあの日からおかしくなっちまったんだ。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  そうなの？　でも、あの都市は結局行ってしまった。きっと調査してみたら、この鉱脈には大した価値がないってわかったんでしょうね。
+[name="イナム"]  ま、ここに都市を泊めたら、他の都市から離れすぎちゃうしね。
+[name="イナム"]  昔はこの無人地帯も結構栄えてたらしいけど……どれほど昔のことなんだか。
+[name="イナム"]  まあそれはともかく、私がまだ、えーっと、何歳だったかしら？　とにかく小さい頃にトランスポーターになって、それからここに派遣されたの。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  へぇ。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  はぁ、やっとこの話ができる人に会えたと思ったのに……せめて興味があるふりくらいしてよ。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  めんどくせぇヤツだな。つーかトランスポーターだったら、頻繁に外と行き来するんじゃねぇのか？　アタシはお前がここから出ていくのを見たことないんだが。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  そりゃそうよ。外に出たって、街で買い物するくらいしかすることないわ。こんな閉鎖的なところから、外に手紙を出そうとする人なんていないもの。
+[name="イナム"]  どういうことかわかる？　ここを出て行った後も連絡がつく人は、私がトランスポーターになってから今までで、あんた一人だけなのよ！
+[name="イナム"]  はぁ……まぁそれで、あまりにもやることがないから、一番近い街から商品を仕入れて商売をするようになったの。
+[name="イナム"]  そしていつの間にか、「商売人イナム」って呼ばれるようになってたわ。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  なるほどな、まったく気づかなかった。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  昔のあんたじゃそうでしょうね……
+[name="イナム"]  私は都会育ちだけど、今はこっちの生活の方が気に入ってるわ。
+[name="イナム"]  何もかもシンプルで純粋で、悪いところなんて一つもないもの。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  アタシはお前のことも他のリーベリと同じように純粋なヤツだとしか思ってなかったぜ。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  誉め言葉として受け取るわ。それで、私に何の用かしら？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  じゃあまず一個質問だけど、前にAUSが来たってのはどういう経緯だ？　お前が呼んだのか？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  AUS？　まさか！　世間に疎い私でも知ってる有名バンドよ。私が呼んだところで来てくれる相手じゃないでしょ。
+[name="イナム"]  むしろ、彼女たちがやって来て一番驚いたのが私なんだから。
+[name="イナム"]  ここに来たのは、ただあの人たちの通り道だっただけよ。通訳を務めた私が言うんだから間違いないわ。
+[name="イナム"]  ああ、この話になると興奮しちゃうわ。あんたが来てよかった。他の人に自慢してもすごさが伝わらないんだもの。
+[name="イナム"]  直筆サイン入りのアルバムも持ってるわよ、見る？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  いやいい。アタシも別にファンじゃねぇし。ただ不思議に思っただけだ。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  はぁ。長く外にいたくせに、センスは全く磨かれないのね。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  ぶん殴るぞ？　それより、ここで物資を分けてもらえねぇか？　これからズゥママのとこに行くんだ。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  いいわよ。物々交換がルールだけど、あんたなら通貨とトレードでもいいわ。
+[name="イナム"]  ……あ、ちょっと待って、質問攻めされて忘れてたけど、私もあんたに用があるんだった。
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  あ？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  「クロワッサン」って人は知り合い？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=1)]
+[name="ガヴィル"]  クロワッサン？　ああ、アタシの連れだ。アタシらも探してるとこなんだが、どっかで会ったか？
+[Character(name="char_187_ccheal_1", name2="avg_npc_075", focus=2)]
+[name="イナム"]  ええ。たぶん市場の方にいるわ。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_village",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_071", name2="avg_npc_070", focus=1)]
+[name="アダクリス人A"]  さぁ、寄ってらっしゃい見てらっしゃい！　彫りたてホヤホヤの木彫刻だよ！
+[Character(name="avg_npc_071", name2="avg_npc_070", focus=2)]
+[name="アダクリス人B"]  さあさあ、お立ち会い、爺ちゃんの代から伝わる鉱石だぜ！　こいつで武器を作りゃ、何でもバッサバッサと切り倒せること間違いなし！
+[Decision(options="こんなにちゃんとした市場があるなんて。;……;賑やかだな。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_075")]
+[name="イナム"]  驚いた？　あの客寄せ文句だって私が教えたの。様になってると思わない？
+[name="イナム"]  ほら、クロワッサンはあそこよ。
+[Dialog]
+[Character]
+[Character(name="char_201_moeshd",fadetime=1,block=true)]
+[delay(time=2)]
+市場の一角で、クロワッサンがアダクリス人と交渉している。
+彼女が、相手の手にある鉱石と自身が持っている貝殻を交互に指さすと、相手は首を横に振った。
+クロワッサンは、残念そうに眉をひそめて、サッと手を振った。
+彼女はポケットから石を一つ取り出し、貝殻、そして相手の鉱石を順番に指さした。相手は少し考えたあと、ようやく頷いた。
+交渉では厳しい表情を見せていたクロワッサンだったが、相手が身を翻した瞬間、満面の笑みを浮かべた。
+[delay(time=1)]
+[Character(name="char_201_moeshd")]
+[name="クロワッサン"]  良さげな鉱石やなぁ、うんうん、今回は儲けもんや。
+[delay(time=1)]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[Character(name="char_187_ccheal_1#3")]
+[name="ガヴィル"]  クロワッサン、なんでこんなところで商売してんだ？
+[Character(name="char_201_moeshd")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="クロワッサン"]  ガヴィルはん、旦那さん！　いやぁ、やっと会えたわ！
+[Decision(options="大丈夫だったか？;……;ここの人たちと話せるのか？",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_201_moeshd")]
+[name="クロワッサン"]  平気平気、ピンピンしとるわ。
+[Predicate(references="2")]
+[Character(name="char_201_moeshd")]
+[name="クロワッサン"]  アハハ、旦那さん、そないな表情せんといてぇな。
+[Character(name="char_201_moeshd")]
+[name="クロワッサン"]  ウチもちょうどイナムはんに霊殿まで連れてってもろて、旦那さんたちを探そうとしてたところやねん。
+[Predicate(references="3")]
+[Character(name="char_201_moeshd")]
+[name="クロワッサン"]  でけへんよ。でも商売っちゅーもんは、言葉が通じんでも問題あらへんで！
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_075")]
+[name="イナム"]  おととい、偶然道端で彼女を拾ってね。外の人みたいだったからここに連れてきてあげたの。
+[name="イナム"]  それにしてもこの子、すごい商売上手ね。言葉は通じないけど、私の子分となんとか交渉するやり方を考え出して、あっという間にここに溶け込んだわ。
+[Character(name="char_187_ccheal_1")]
+[name="ガヴィル"]  確かにそうらしいな。クロワッサン、他の仲間には会ったか？
+[Character(name="char_187_ccheal_1", name2="char_201_moeshd", focus=2)]
+[name="クロワッサン"]  会ってへんなあ。イナムはんにも聞いたんやけど、それらしい情報はないって。
+[Character(name="char_187_ccheal_1", name2="char_201_moeshd", focus=1)]
+[name="ガヴィル"]  そうか。少なくともお前が無事で良かった。あとはウタゲとブレイズだな。ブレイズのヤツは真っ先に飛び降りたからあんまり心配していないが、問題はウタゲだな……
+[PlaySound(key="$rungeneral", volume=0.6)]
+[Character(name="avg_npc_073")]
+[stopmusic(fadetime=2)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="アダクリス人"]  イナム、大変よ！　アダクリスの集団が攻めてきたわ！
+[Character(name="avg_npc_073", name2="avg_npc_075", focus=2)]
+[name="イナム"]  なんですって？　どこの部族の馬鹿共よ？
+[Character(name="avg_npc_073", name2="avg_npc_075", focus=1)]
+[name="アダクリス人"]  ジャイアントウッド族みたい！　でも率いてるのは刀を持った変なヤツなのよ！
+[Character(name="avg_npc_073", name2="avg_npc_075", focus=2)]
+[name="イナム"]  変なヤツ？
+[Decision(options="何があった？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_075")]
+[name="イナム"]  刀を持った変なヤツがアダクリスたちを率いて攻めてきたって、子分が言っているの。でも刀を使う変なヤツなんてここには……
+[Character(name="avg_npc_075", name2="char_201_moeshd#4", focus=2)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="クロワッサン"]  待った、刀を持った変なヤツって……それウタゲはんちゃう！？
+[Character(name="avg_npc_075", name2="char_201_moeshd#4", focus=1)]
+[name="イナム"]  あんたたちの仲間なの？　いや、それより攻め込んで来てるのならまずは止めないと！　ガヴィル、それとフードのあんた、手伝ってちょうだい！
+[Character(name="avg_npc_075", name2="char_201_moeshd#2", focus=2)]
+[name="クロワッサン"]  あ、ウチも行く！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_jungle_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_337_utage_1")]
+[name="ウタゲ"]  野郎ども、行け！　なーんてね。
+[name="ウタゲ"]  あたしの言葉なんてわかんないと思うけど、まぁ頑張ってね～
+[name="ウタゲ"]  アハッ、最初はアホくさかったけど、こいつらを連れて片っ端から喧嘩をふっかけるのも、なかなか楽しいじゃん。
+[Character(name="char_187_ccheal_1#2")]
+[name="ガヴィル"]  おい、ウタゲこの野郎！　なにやってんだ！
+[Character(name="char_337_utage_1")]
+[name="ウタゲ"]  あれぇ、ガヴィルとクロワッサン、それにドクターも。やっほ～！
+[Character(name="char_187_ccheal_1#4")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="ガヴィル"]  やっほ～じゃねぇ！　なんであいつらを連れて村を襲ってんだ！
+[Character(name="char_337_utage_1")]
+[name="ウタゲ"]  あれぇ、ここってガヴィルの家だったの？　じゃああたしは手を出さないようにするね。
+[Character(name="char_201_moeshd#4")]
+[name="クロワッサン"]  他の人らも止めぇや！
+[Character(name="char_337_utage_1")]
+[name="ウタゲ"]  えーっと、あのー、悪いんだけどさ、あいつらにあたしの言葉は通じないんだよね。
+[Character(name="char_187_ccheal_1#4")]
+[name="ガヴィル"]  チッ、しょうがねぇ。片っ端からぶん殴って止めるぞ。
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Image]
