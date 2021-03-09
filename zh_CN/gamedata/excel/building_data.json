@@ -2900,7 +2900,7 @@
         {
           "buffData": [
             {
-              "buffId": "workshop_proc_probability[010]",
+              "buffId": "workshop_proc_probability[021]",
               "cond": {
                 "phase": 0,
                 "level": 30
@@ -3432,7 +3432,7 @@
         {
           "buffData": [
             {
-              "buffId": "workshop_proc_probability[001]",
+              "buffId": "workshop_proc_probability[020]",
               "cond": {
                 "phase": 1,
                 "level": 1
@@ -3533,7 +3533,7 @@
         {
           "buffData": [
             {
-              "buffId": "workshop_proc_probability[001]",
+              "buffId": "workshop_proc_probability[020]",
               "cond": {
                 "phase": 0,
                 "level": 1
@@ -4221,7 +4221,22 @@
           ]
         },
         {
-          "buffData": []
+          "buffData": [
+            {
+              "buffId": "meet_spd&team[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "meet_spd&team[031]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
         }
       ]
     },
@@ -4941,7 +4956,7 @@
         {
           "buffData": [
             {
-              "buffId": "workshop_proc_probability[020]",
+              "buffId": "workshop_proc_probability[030]",
               "cond": {
                 "phase": 0,
                 "level": 1
@@ -7790,6 +7805,118 @@
         }
       ]
     },
+    "char_456_ash": {
+      "charId": "char_456_ash",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[990]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_457_blitz": {
+      "charId": "char_457_blitz",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[990]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd_blitz[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_458_rfrost": {
+      "charId": "char_458_rfrost",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[990]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_frost[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_459_tachak": {
+      "charId": "char_459_tachak",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[990]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -8080,29 +8207,65 @@
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>异格</>干员可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
     },
-    "control_mp_cost&bd1[000]": {
-      "buffId": "control_mp_cost&bd1[000]",
-      "buffName": "\"不以物喜\"",
+    "control_mp_cost&faction[990]": {
+      "buffId": "control_mp_cost&faction[990]",
+      "buffName": "彩虹小队",
       "buffIcon": "control",
-      "skillIcon": "bskill_ctrl_cost_bd1",
+      "skillIcon": "bskill_ctrl_r6",
       "sortId": 1004,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>；当自身心情处于<@cc.kw>12</>以下时，<@cc.rem>人间烟火</><@cc.vup>+15</>"
+      "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>彩虹小队</>干员可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+    },
+    "control_mp_cost&bd1[000]": {
+      "buffId": "control_mp_cost&bd1[000]",
+      "buffName": "\"不以物喜\"",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd1",
+      "sortId": 1006,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>；当自身心情处于<@cc.kw>12</>以下时，<@cc.rem>人间烟火</><@cc.vup>15</>"
     },
     "control_mp_cost&bd2[000]": {
       "buffId": "control_mp_cost&bd2[000]",
       "buffName": "\"不以己悲\"",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost_bd2",
+      "sortId": 1006,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，自身心情每小时消耗<@cc.vdown>+0.5</>；当自身心情大于<@cc.kw>12</>时，<@cc.rem>感知信息</><@cc.vup>10</>"
+    },
+    "control_mp_bd[000]": {
+      "buffId": "control_mp_bd[000]",
+      "buffName": "情报储备",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_ash",
+      "sortId": 1005,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内每有1名<@cc.kw>彩虹小队</>干员，则<@cc.rem>情报储备</><@cc.vup>+1</>"
+    },
+    "control_mp_bd[010]": {
+      "buffId": "control_mp_bd[010]",
+      "buffName": "乌萨斯特饮",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_tachanka",
       "sortId": 1004,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，自身心情每小时消耗<@cc.vdown>+0.5</>；当自身心情大于<@cc.kw>12</>时，<@cc.rem>感知信息</><@cc.vup>+10</>"
+      "description": "进驻控制中枢时，控制中枢内每有1名<@cc.kw>乌萨斯学生自治团</>干员，则<@cc.rem>乌萨斯特饮</><@cc.vup>+1</>"
     },
     "power_rec_spd&cost[000]": {
       "buffId": "power_rec_spd&cost[000]",
@@ -9232,12 +9395,12 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>40%</>"
     },
-    "workshop_proc_probability[001]": {
-      "buffId": "workshop_proc_probability[001]",
+    "workshop_proc_probability[020]": {
+      "buffId": "workshop_proc_probability[020]",
       "buffName": "专注·β",
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_p3",
-      "sortId": 7121,
+      "sortId": 7122,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
@@ -9280,8 +9443,20 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>50%</>"
     },
-    "workshop_proc_probability[020]": {
-      "buffId": "workshop_proc_probability[020]",
+    "workshop_proc_probability[021]": {
+      "buffId": "workshop_proc_probability[021]",
+      "buffName": "老当益壮",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p3",
+      "sortId": 7121,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>60%</>"
+    },
+    "workshop_proc_probability[030]": {
+      "buffId": "workshop_proc_probability[030]",
       "buffName": "咪波·加工型",
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_p4",
@@ -9315,6 +9490,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>任意类材料</>时，每<@cc.vup>2</>次加工没有产出副产品，则<@cc.kw>恢复自身一次心情</>，恢复量为<@cc.kw>对应配方所需消耗的心情</>（加工结束后统一结算）"
+    },
+    "workshop_formula_frost[000]": {
+      "buffId": "workshop_formula_frost[000]",
+      "buffName": "机械工程",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_frost",
+      "sortId": 7102,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>50%</>，每<@cc.vup>1</>点<@cc.rem>情报储备</>额外提升<@cc.vup>5%</>；如果<@cc.rem>乌萨斯特饮</>达到<@cc.vup>4</>瓶，则额外提升<@cc.vup>15%</>"
     },
     "workshop_formula_cost4[000]": {
       "buffId": "workshop_formula_cost4[000]",
@@ -10605,7 +10792,7 @@
       "buffName": "天灾信使·α",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd2",
-      "sortId": 8011,
+      "sortId": 8401,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10617,7 +10804,7 @@
       "buffName": "天灾信使·β",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd5",
-      "sortId": 8041,
+      "sortId": 8701,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10629,7 +10816,7 @@
       "buffName": "心理学",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd4",
-      "sortId": 8031,
+      "sortId": 8601,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10641,7 +10828,7 @@
       "buffName": "WRITER",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd4",
-      "sortId": 8033,
+      "sortId": 8603,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10653,7 +10840,7 @@
       "buffName": "B-girl",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd4",
-      "sortId": 8032,
+      "sortId": 8602,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10665,7 +10852,7 @@
       "buffName": "天灾信使·α",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd2",
-      "sortId": 8011,
+      "sortId": 8402,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10677,7 +10864,7 @@
       "buffName": "洞悉人心",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd&clue",
-      "sortId": 8012,
+      "sortId": 8412,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10689,7 +10876,7 @@
       "buffName": "好事之徒",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd&clue",
-      "sortId": 8012,
+      "sortId": 8411,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10701,7 +10888,7 @@
       "buffName": "内幕",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd&blacksteel2",
-      "sortId": 8301,
+      "sortId": 8131,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10713,7 +10900,7 @@
       "buffName": "人望",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd&ursus2",
-      "sortId": 8401,
+      "sortId": 8141,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10725,7 +10912,7 @@
       "buffName": "巡游",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd_bd_n1_n1",
-      "sortId": 8051,
+      "sortId": 8201,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10737,12 +10924,24 @@
       "buffName": "追忆",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd_memento",
-      "sortId": 8051,
+      "sortId": 8201,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
       "description": "进驻人力办公室时，每<@cc.vup>1</>点<@cc.rem>记忆碎片</>转化为<@cc.vup>1</>点<@cc.rem>感知信息</>，心情耗尽时清空所有<@cc.rem>记忆碎片</>和自身累积的<@cc.rem>感知信息</>"
+    },
+    "hire_spd_blitz[000]": {
+      "buffId": "hire_spd_blitz[000]",
+      "buffName": "语言学",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_blitz",
+      "sortId": 8211,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，每<@cc.vup>1</>点<@cc.rem>情报储备</>额外<@cc.vup>+5%</>联络速度，每<@cc.vup>1</>瓶<@cc.rem>乌萨斯特饮</>额外<@cc.vup>+5%</>联络速度"
     },
     "meet_spd[000]": {
       "buffId": "meet_spd[000]",
@@ -10918,6 +11117,18 @@
       "buffIcon": "meeting",
       "skillIcon": "bskill_meet_blacksteel2",
       "sortId": 6321,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "进驻会客室时，线索搜集速度提升<@cc.vup>10%</>，且更容易获得<@cc.kw>黑钢国际</>线索（工作时长影响概率）"
+    },
+    "meet_spd&team[031]": {
+      "buffId": "meet_spd&team[031]",
+      "buffName": "B.P.R.S",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_blacksteel2",
+      "sortId": 6322,
       "buffColor": "#dd653f",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -11302,7 +11513,7 @@
         "comfort": 230,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "双人床，瓷色，简约。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 125,
         "processedByProductPercentage": 0,
@@ -11325,7 +11536,7 @@
         "comfort": 70,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "床头柜，瓷色，几何。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 48,
         "processedByProductPercentage": 0,
@@ -11348,7 +11559,7 @@
         "comfort": 135,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "办公桌，黑色，曲线。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 83,
         "processedByProductPercentage": 0,
@@ -11371,7 +11582,7 @@
         "comfort": 80,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "带有滚轮的黑色靠背椅，移动很方便。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 55,
         "processedByProductPercentage": 0,
@@ -11394,7 +11605,7 @@
         "comfort": 70,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "桌柜，黑色，几何。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 48,
         "processedByProductPercentage": 0,
@@ -11417,7 +11628,7 @@
         "comfort": 185,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "书柜，双色，几何。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 100,
         "processedByProductPercentage": 0,
@@ -11440,7 +11651,7 @@
         "comfort": 135,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "十分清晰的黑色电视。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 75,
         "processedByProductPercentage": 0,
@@ -11463,7 +11674,7 @@
         "comfort": 150,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "沙发，纯色，可拆卸。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 83,
         "processedByProductPercentage": 0,
@@ -11486,7 +11697,7 @@
         "comfort": 115,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "茶几，纯色，一体式。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 70,
         "processedByProductPercentage": 0,
@@ -11509,7 +11720,7 @@
         "comfort": 120,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "没有花纹的地板。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 73,
         "processedByProductPercentage": 0,
@@ -11532,7 +11743,7 @@
         "comfort": 65,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "很难弄脏的灰色地毯。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 40,
         "processedByProductPercentage": 0,
@@ -11555,7 +11766,7 @@
         "comfort": 70,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "偶尔也有些用处的公告板。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 43,
         "processedByProductPercentage": 0,
@@ -11578,7 +11789,7 @@
         "comfort": 30,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "黑色的指针不断走动。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 20,
         "processedByProductPercentage": 0,
@@ -11601,7 +11812,7 @@
         "comfort": 30,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "光芒让房间简约的设计变得柔和。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 20,
         "processedByProductPercentage": 0,
@@ -11624,7 +11835,7 @@
         "comfort": 120,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "充斥着设计师个人想法的壁纸。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 73,
         "processedByProductPercentage": 0,
@@ -11647,7 +11858,7 @@
         "comfort": 230,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "无需装饰的橘色简约大床。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 125,
         "processedByProductPercentage": 0,
@@ -11670,7 +11881,7 @@
         "comfort": 70,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "方方正正的橘色床头柜。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 48,
         "processedByProductPercentage": 0,
@@ -11693,7 +11904,7 @@
         "comfort": 135,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "橘色的无柜办公桌。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 83,
         "processedByProductPercentage": 0,
@@ -11716,7 +11927,7 @@
         "comfort": 80,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "带有滚轮的橘色靠背椅，椅背可以调整。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 55,
         "processedByProductPercentage": 0,
@@ -11739,7 +11950,7 @@
         "comfort": 70,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "低矮的橘色柜子。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 48,
         "processedByProductPercentage": 0,
@@ -11762,7 +11973,7 @@
         "comfort": 185,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "如同橘色棋盘一样的书柜。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 100,
         "processedByProductPercentage": 0,
@@ -11785,7 +11996,7 @@
         "comfort": 135,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "十分清晰的橘色电视。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 75,
         "processedByProductPercentage": 0,
@@ -11808,7 +12019,7 @@
         "comfort": 150,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "低矮的沙发，椅背与把手是一体的。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 83,
         "processedByProductPercentage": 0,
@@ -11831,7 +12042,7 @@
         "comfort": 115,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "橘色的光滑茶几。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 70,
         "processedByProductPercentage": 0,
@@ -11854,7 +12065,7 @@
         "comfort": 120,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "只将颜色作为装饰的地板。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 73,
         "processedByProductPercentage": 0,
@@ -11877,7 +12088,7 @@
         "comfort": 65,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "难以保持清洁的地毯。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 40,
         "processedByProductPercentage": 0,
@@ -11900,7 +12111,7 @@
         "comfort": 70,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "贴满了贴示的公告板。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 43,
         "processedByProductPercentage": 0,
@@ -11923,7 +12134,7 @@
         "comfort": 30,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "橘色的指针不会停转。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 20,
         "processedByProductPercentage": 0,
@@ -11946,7 +12157,7 @@
         "comfort": 30,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "光芒让房间简约的设计变得柔软。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 20,
         "processedByProductPercentage": 0,
@@ -11969,7 +12180,7 @@
         "comfort": 120,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "充满了设计师实验思维的壁纸。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 73,
         "processedByProductPercentage": 0,
@@ -11992,7 +12203,7 @@
         "comfort": 290,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "已配备多种办公用具的舱室特用工作台，全心全意为干员提供多方面工作支援。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 158,
         "processedByProductPercentage": 0,
@@ -12015,7 +12226,7 @@
         "comfort": 100,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "常见的四轮座椅，坐上它能够迅速移动到舱室中的任何角落。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 68,
         "processedByProductPercentage": 0,
@@ -12038,7 +12249,7 @@
         "comfort": 85,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "看上去平淡无奇的垃圾桶。可以有效防止实验失误造成的事故。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 58,
         "processedByProductPercentage": 0,
@@ -12061,7 +12272,7 @@
         "comfort": 635,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "能够为两人提供睡眠保障的设施。睡在高层的干员请务必靠墙入眠。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 345,
         "processedByProductPercentage": 0,
@@ -12084,7 +12295,7 @@
         "comfort": 145,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "全舱室所有设备的控制终端。从调节灯光到远程实验，只要想到，就能做到。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 80,
         "processedByProductPercentage": 0,
@@ -12107,7 +12318,7 @@
         "comfort": 90,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "连接着实验设备，配上控制台可以进行远距离实验。能够一键切换到公共区域的摄像头。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 55,
         "processedByProductPercentage": 0,
@@ -12130,7 +12341,7 @@
         "comfort": 70,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "便利的记事板。拿起油性笔，开始写吧，只要持续写下去，灵感终会出现的。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 48,
         "processedByProductPercentage": 0,
@@ -12153,7 +12364,7 @@
         "comfort": 115,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "内嵌式设计安全又可靠，最适合船舱这种需要最大化空间利用率的地方。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 78,
         "processedByProductPercentage": 0,
@@ -12176,7 +12387,7 @@
         "comfort": 55,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "实验中难免会出现无法控制的火情，这时候灭火套组会助您解决一切问题。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 38,
         "processedByProductPercentage": 0,
@@ -12199,7 +12410,7 @@
         "comfort": 540,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "为全舱维持基础运作的管道系统。默默无闻，不可或缺，无处不在。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 293,
         "processedByProductPercentage": 0,
@@ -12222,7 +12433,7 @@
         "comfort": 80,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "本不该出现在舱室内的家具，但在干员的强烈要求下，还是被放入了船舱。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 50,
         "processedByProductPercentage": 0,
@@ -12245,7 +12456,7 @@
         "comfort": 120,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "经过测试，该壁纸颜色对居住者的视力有一定保护效果。只是……大家不太喜欢。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 73,
         "processedByProductPercentage": 0,
@@ -12268,7 +12479,7 @@
         "comfort": 120,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "采用最新材料铺设的地砖。生产商宣称其有着超越人体的自净效果。",
-        "obtainApproach": "家具商店购买，部分关卡幸运掉落",
+        "obtainApproach": "家具商店购买",
         "processedProductId": "3401",
         "processedProductCount": 73,
         "processedByProductPercentage": 0,
@@ -24627,6 +24838,903 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_R6_dirtyBomb_01": {
+        "id": "furni_R6_dirtyBomb_01",
+        "name": "防卫目标",
+        "iconId": "furni_R6_dirtyBomb_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 7,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队训练时使用的防卫目标。在完成训练胜负判定后会释放刺激性气体。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_ADS_01": {
+        "id": "furni_R6_ADS_01",
+        "name": "投射物拦截系统",
+        "iconId": "furni_R6_ADS_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 3,
+        "comfort": 95,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队一位干员的部署装备，能够击落周边的移动爆炸物。罗德岛干员也在其中。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_rtilaElectroclaw_01": {
+        "id": "furni_R6_rtilaElectroclaw_01",
+        "name": "抛投式放电装置",
+        "iconId": "furni_R6_rtilaElectroclaw_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 65,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队一位干员的部署装备，投掷后可以附着并持续放电。一些源石技艺也可以达到相近的效果。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_CCEShield_01": {
+        "id": "furni_R6_CCEShield_01",
+        "name": "轻型放电护盾",
+        "iconId": "furni_R6_CCEShield_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 160,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队一位干员的部署装备，抵挡子弹，也可以释放阻碍行动的电流。测试时，雷蛇小姐完全没有被阻碍，直接撞在了盾上。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_desk_01": {
+        "id": "furni_R6_desk_01",
+        "name": "会议长桌",
+        "iconId": "furni_R6_desk_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 4,
+        "height": 5,
+        "comfort": 550,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队训练场景中的长桌，会被防守方用来开展战前会议。实战训练时经常被打成筛子。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_seat_L_01": {
+        "id": "furni_R6_seat_L_01",
+        "name": "舒适座椅（左）",
+        "iconId": "furni_R6_seat_L_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 160,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "舒适的沙发座椅，经常有防守方潜伏其后。被火力压制时可以借此喘息。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_seat_R_01": {
+        "id": "furni_R6_seat_R_01",
+        "name": "舒适座椅（右）",
+        "iconId": "furni_R6_seat_R_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 160,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "舒适的沙发座椅，经常有进攻方用其阻挡视线。可以借此对疲于防守的干员发起进攻。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_carpet_01": {
+        "id": "furni_R6_carpet_01",
+        "name": "礼宾地毯",
+        "iconId": "furni_R6_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 16,
+        "depth": 8,
+        "height": 1,
+        "comfort": 180,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "标准的红色礼宾地毯。铺设地毯的意思是，你无法破坏它所覆盖的地面。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_blackMirrors_01": {
+        "id": "furni_R6_blackMirrors_01",
+        "name": "可拆卸单向镜",
+        "iconId": "furni_R6_blackMirrors_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 10,
+        "comfort": 230,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队一位干员的部署装备，已部署在安装完毕的加固装置上。要是能在另一面掩盖部署痕迹就更好了。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_reinforceWall_01": {
+        "id": "furni_R6_reinforceWall_01",
+        "name": "便携式加固装置",
+        "iconId": "furni_R6_reinforceWall_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 10,
+        "comfort": 230,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队常用的加固装置，用以封闭脆弱的墙面。听说加固装置的破损几率比普通墙面更高。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_shockWire_01": {
+        "id": "furni_R6_shockWire_01",
+        "name": "便携式发电机",
+        "iconId": "furni_R6_shockWire_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 150,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队一位干员的部署装备，能够为加固装置通电，防止其被破坏。克星是电磁冲击波。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_wood_01": {
+        "id": "furni_R6_wood_01",
+        "name": "部署残骸",
+        "iconId": "furni_R6_wood_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 3,
+        "height": 1,
+        "comfort": 100,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "对墙面进行加固时留下的残骸。只是些普通的碎屑，但数量多了也能起到一定的战术效果。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_deployableShield_01": {
+        "id": "furni_R6_deployableShield_01",
+        "name": "便携式护盾",
+        "iconId": "furni_R6_deployableShield_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 3,
+        "height": 4,
+        "comfort": 250,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "能够快速部署，提供防御和阻碍功能的战术护盾。只能抵挡子弹，对爆炸物毫无办法。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_shumikhaLauncher_01": {
+        "id": "furni_R6_shumikhaLauncher_01",
+        "name": "便携式火力平台",
+        "iconId": "furni_R6_shumikhaLauncher_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 5,
+        "comfort": 205,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "放置在展览室的火力平台，安全起见移除了弹匣。能够提供一定防御和持续性火力，是定点防御的最佳选择。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_grzmotMine_01": {
+        "id": "furni_R6_grzmotMine_01",
+        "name": "黏着式震撼弹",
+        "iconId": "furni_R6_grzmotMine_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 1,
+        "comfort": 50,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队一位干员的部署装备，能附着墙面，在附近出现敌人时引爆。大多数人都不明白它到底如何区别敌我。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_signalDisruptor_01": {
+        "id": "furni_R6_signalDisruptor_01",
+        "name": "信号阻碍装置",
+        "iconId": "furni_R6_signalDisruptor_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 4,
+        "height": 1,
+        "comfort": 130,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队一位干员的部署装备，可以遮蔽一切信号，十分泛用。让手机打不通只是它诸多功能中最为人知的一条。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_downlight_R_01": {
+        "id": "furni_R6_downlight_R_01",
+        "name": "展览室主吸顶灯",
+        "iconId": "furni_R6_downlight_R_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 4,
+        "height": 1,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "训练场景中普通的灯光。光线对彩虹小队干员的影响微乎其微。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_downlight_C_01": {
+        "id": "furni_R6_downlight_C_01",
+        "name": "展览室吸顶灯（亮）",
+        "iconId": "furni_R6_downlight_C_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 65,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "训练场景中已开启的灯光。它们是训练场地中最少被更换的器具。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_R6_downlight2_C_01": {
+        "id": "furni_R6_downlight2_C_01",
+        "name": "展览室吸顶灯（暗）",
+        "iconId": "furni_R6_downlight2_C_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 65,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "训练场景中已关闭的灯光。为了节省能源，有些灯光在训练时不会启用。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_R6_newspaperRack_01": {
+        "id": "furni_R6_newspaperRack_01",
+        "name": "嵌入式报纸架",
+        "iconId": "furni_R6_newspaperRack_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 90,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "镶嵌在墙壁上的报纸架。由于展览馆的模板是演习场地，所以上面的报纸大多是用来凑数的过期日报。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_emergencyLight_01": {
+        "id": "furni_R6_emergencyLight_01",
+        "name": "紧急照明灯",
+        "iconId": "furni_R6_emergencyLight_01",
+        "type": "WALLLAMP",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 2,
+        "comfort": 65,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "只有在断电时才会亮起的应急光源。在这件电器上，我们感受到了跨越种族的安全与应急意识。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_camera_01": {
+        "id": "furni_R6_camera_01",
+        "name": "监控摄像头",
+        "iconId": "furni_R6_camera_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 65,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用来监视训练区域的摄像头，非常容易被骇入。彩虹小队干员们解释说这是为了训练双方的公平公正。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_wallpaper_01": {
+        "id": "furni_R6_wallpaper_01",
+        "name": "可破坏墙面",
+        "iconId": "furni_R6_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 225,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "特种装备展览馆的壁纸。所有破坏位置都仅为展示效果，请干员们不要自行动手。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_R6_floor_01": {
+        "id": "furni_R6_floor_01",
+        "name": "不可破坏地砖",
+        "iconId": "furni_R6_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 225,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "特种装备展览馆的地砖。理论上来说，他们的爆破装备足以炸穿地砖，但灰烬干员却表示做不到，这是为什么呢？",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_bauhaus_sofa_01": {
+        "id": "furni_bauhaus_sofa_01",
+        "name": "简约组合沙发",
+        "iconId": "furni_bauhaus_sofa_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 4,
+        "height": 3,
+        "comfort": 470,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "强调实用性的组合沙发，可以按照需求自由拼装配件。舍弃不必要的装饰可将更多成本花费在产品本身上。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_coffeeTable_01": {
+        "id": "furni_bauhaus_coffeeTable_01",
+        "name": "长方拼接式茶几",
+        "iconId": "furni_bauhaus_coffeeTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 3,
+        "comfort": 325,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用两种材料拼接而成的茶几。有时候，不同材料共存本身就能提供美感。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_cabinet_01": {
+        "id": "furni_bauhaus_cabinet_01",
+        "name": "木制矮柜",
+        "iconId": "furni_bauhaus_cabinet_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "以常用木料拼接而成的矮柜，容量巨大。重视实用性是沃尔特风潮受人追捧的原因之一。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_framedWallArt_01": {
+        "id": "furni_bauhaus_framedWallArt_01",
+        "name": "现代风相框",
+        "iconId": "furni_bauhaus_framedWallArt_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 2,
+        "comfort": 90,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "一些被装裱起来的新潮流复制画。变革无法一蹴而就。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_floorLamp_01": {
+        "id": "furni_bauhaus_floorLamp_01",
+        "name": "收束落地灯",
+        "iconId": "furni_bauhaus_floorLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 225,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "模仿一种工业器械外形制作的落地灯，光源十分集中。最少的便是最多的。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_window_01": {
+        "id": "furni_bauhaus_window_01",
+        "name": "闭帘窗户",
+        "iconId": "furni_bauhaus_window_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 6,
+        "comfort": 210,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "紧闭的双开窗户，配上了用新材料制作的窗帘。正是恰到好处的透光率引发了人们购买的欲望。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_decoration_01": {
+        "id": "furni_bauhaus_decoration_01",
+        "name": "月影装饰",
+        "iconId": "furni_bauhaus_decoration_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 8,
+        "comfort": 510,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "提取月亮与月影要素创造的前卫装饰。莱塔尼亚人对于双月的关注体现在许多艺术品上，这就是一例。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_branchDecor_01": {
+        "id": "furni_bauhaus_branchDecor_01",
+        "name": "陈列用灯树",
+        "iconId": "furni_bauhaus_branchDecor_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 9,
+        "comfort": 345,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "放在陈列柜中，用灯管拼接而成的树枝。材料铺设架构，让想象在其上开花。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_tableLamp_01": {
+        "id": "furni_bauhaus_tableLamp_01",
+        "name": "红漆储物柜",
+        "iconId": "furni_bauhaus_tableLamp_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 210,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "结构紧凑的矮柜，柜顶空间正好能容纳一个台灯。识用准确的颜色能令人耳目一新。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_ceilingLight_01": {
+        "id": "furni_bauhaus_ceilingLight_01",
+        "name": "成对静滞吊灯",
+        "iconId": "furni_bauhaus_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 115,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "一种以特殊工艺加工过的方框吊灯，能够形成完美的对称。莱塔尼亚人的固执惟在这一刻能够如此鲜明。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_geometryLight_01": {
+        "id": "furni_bauhaus_geometryLight_01",
+        "name": "立方延展吊灯",
+        "iconId": "furni_bauhaus_geometryLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 140,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "被立方体结构包裹的吊灯。艺术与技术统一性的体现。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_carpet_01": {
+        "id": "furni_bauhaus_carpet_01",
+        "name": "轻薄地毯",
+        "iconId": "furni_bauhaus_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 11,
+        "depth": 6,
+        "height": 1,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "使用新材料制作的地毯，颜色、重量、质量都很出众。设计思路的根本差异最终带来了见所未见的创新。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_downlight_01": {
+        "id": "furni_bauhaus_downlight_01",
+        "name": "成对吸顶光源",
+        "iconId": "furni_bauhaus_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "总是成对布设的吸顶光源。光也可以是一种设计。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_wallpaper_01": {
+        "id": "furni_bauhaus_wallpaper_01",
+        "name": "沃尔特风潮壁纸",
+        "iconId": "furni_bauhaus_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 225,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "反映了沃尔特风潮的三色壁纸。这种潮流在追求工业感的同时，失去了莱塔尼亚家装的特色。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_bauhaus_floor_01": {
+        "id": "furni_bauhaus_floor_01",
+        "name": "沃尔特风潮地砖",
+        "iconId": "furni_bauhaus_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 225,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "反映了沃尔特风潮的简洁地砖。简约是一种风格，有人喜欢，就有人厌恶。",
+        "obtainApproach": "部分关卡幸运掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "兔兔捣药机",
@@ -25217,6 +26325,52 @@
         "comfort": 55,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "作为摆件展示的扇子。有些扇子从来不会合上，自然也有更多空间来描摹意境。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_act17d0_box_01": {
+        "id": "furni_act17d0_box_01",
+        "name": "争夺目标",
+        "iconId": "furni_act17d0_box_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 95,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "彩虹小队训练时使用的争夺目标。把敌人从这个物件旁踢开，就能获得胜利。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_act17d0_acog_01": {
+        "id": "furni_act17d0_acog_01",
+        "name": "瞄具型望远镜",
+        "iconId": "furni_act17d0_acog_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 120,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "刚刚从礼物盒中开出的望远镜，特意制作成了瞄具的样式。部分干员在使用其望远时手会下意识做出一些奇异动作。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -26482,7 +27636,7 @@
         "comfort": 105,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "完成乌萨斯废弃矿区剿灭并提交报告后获得的纪念品。废弃矿区的余音似乎还在耳边回响。",
-        "obtainApproach": "剿灭轮换奖励",
+        "obtainApproach": "剿灭委托奖励",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -31221,6 +32375,230 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_R6": {
+        "id": "furni_set_R6",
+        "name": "特种装备展览室",
+        "desc": "基于彩虹六号干员们回忆建造的装备展示厅，大部分装备只是个模型。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_R6_dirtyBomb_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_R6_ADS_01",
+            "pos0": 4,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_R6_rtilaElectroclaw_01",
+            "pos0": 8,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_R6_CCEShield_01",
+            "pos0": 10,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_R6_desk_01",
+            "pos0": 5,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_R6_seat_L_01",
+            "pos0": 2,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_R6_seat_R_01",
+            "pos0": 15,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_R6_carpet_01",
+            "pos0": 2,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_R6_blackMirrors_01",
+            "pos0": 17,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_R6_reinforceWall_01",
+            "pos0": 23,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_R6_shockWire_01",
+            "pos0": 22,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_R6_wood_01",
+            "pos0": 18,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_R6_deployableShield_01",
+            "pos0": 24,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_R6_shumikhaLauncher_01",
+            "pos0": 28,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_R6_grzmotMine_01",
+            "pos0": 29,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_R6_signalDisruptor_01",
+            "pos0": 32,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_R6_downlight_R_01",
+            "pos0": 11,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_R6_downlight_C_01",
+            "pos0": 2,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_R6_downlight_C_01",
+            "pos0": 30,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_R6_downlight2_C_01",
+            "pos0": 0,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_R6_downlight2_C_01",
+            "pos0": 32,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_R6_newspaperRack_01",
+            "pos0": 31,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_R6_emergencyLight_01",
+            "pos0": 1,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_R6_camera_01",
+            "pos0": 30,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_R6_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_R6_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
+      },
+      "furni_set_bauhaus": {
+        "id": "furni_set_bauhaus",
+        "name": "沃尔特风潮居室",
+        "desc": "一种源自莱塔尼亚的前卫建筑风格样板房。风格鲜明，饱受好评。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_bauhaus_sofa_01",
+            "pos0": 1,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_bauhaus_coffeeTable_01",
+            "pos0": 5,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_bauhaus_cabinet_01",
+            "pos0": 10,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_bauhaus_framedWallArt_01",
+            "pos0": 8,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_bauhaus_floorLamp_01",
+            "pos0": 14,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_bauhaus_window_01",
+            "pos0": 1,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_bauhaus_decoration_01",
+            "pos0": 22,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_bauhaus_branchDecor_01",
+            "pos0": 31,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_bauhaus_tableLamp_01",
+            "pos0": 28,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_bauhaus_ceilingLight_01",
+            "pos0": 4,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_bauhaus_geometryLight_01",
+            "pos0": 15,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_bauhaus_carpet_01",
+            "pos0": 23,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_bauhaus_downlight_01",
+            "pos0": 2,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_bauhaus_downlight_01",
+            "pos0": 7,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_bauhaus_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_bauhaus_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -33119,6 +34497,117 @@
           "furni_inkArt_floor_01",
           "furni_inkArt_fluorescentLamp_01",
           "furni_inkArt_ceilingLight_01"
+        ]
+      },
+      "furni_set_R6_1": {
+        "id": "furni_set_R6_1",
+        "name": "展览场地陈设",
+        "themeId": "furni_set_R6",
+        "comfort": 325,
+        "count": 6,
+        "furniture": [
+          "furni_R6_desk_01",
+          "furni_R6_seat_L_01",
+          "furni_R6_seat_R_01",
+          "furni_R6_carpet_01",
+          "furni_R6_emergencyLight_01",
+          "furni_R6_dirtyBomb_01"
+        ]
+      },
+      "furni_set_R6_2": {
+        "id": "furni_set_R6_2",
+        "name": "防守方主动装置",
+        "themeId": "furni_set_R6",
+        "comfort": 155,
+        "count": 6,
+        "furniture": [
+          "furni_R6_ADS_01",
+          "furni_R6_rtilaElectroclaw_01",
+          "furni_R6_CCEShield_01",
+          "furni_R6_grzmotMine_01",
+          "furni_R6_shumikhaLauncher_01",
+          "furni_R6_signalDisruptor_01"
+        ]
+      },
+      "furni_set_R6_3": {
+        "id": "furni_set_R6_3",
+        "name": "防守方被动装置",
+        "themeId": "furni_set_R6",
+        "comfort": 240,
+        "count": 6,
+        "furniture": [
+          "furni_R6_blackMirrors_01",
+          "furni_R6_reinforceWall_01",
+          "furni_R6_deployableShield_01",
+          "furni_R6_shockWire_01",
+          "furni_R6_camera_01",
+          "furni_R6_wood_01"
+        ]
+      },
+      "furni_set_R6_4": {
+        "id": "furni_set_R6_4",
+        "name": "展览场地布局",
+        "themeId": "furni_set_R6",
+        "comfort": 195,
+        "count": 6,
+        "furniture": [
+          "furni_R6_wallpaper_01",
+          "furni_R6_floor_01",
+          "furni_R6_newspaperRack_01",
+          "furni_R6_downlight_R_01",
+          "furni_R6_downlight_C_01",
+          "furni_R6_downlight2_C_01"
+        ]
+      },
+      "furni_set_bauhaus_1": {
+        "id": "furni_set_bauhaus_1",
+        "name": "生活化套组",
+        "themeId": "furni_set_bauhaus",
+        "comfort": 270,
+        "count": 4,
+        "furniture": [
+          "furni_bauhaus_sofa_01",
+          "furni_bauhaus_coffeeTable_01",
+          "furni_bauhaus_window_01",
+          "furni_bauhaus_ceilingLight_01"
+        ]
+      },
+      "furni_set_bauhaus_2": {
+        "id": "furni_set_bauhaus_2",
+        "name": "生活辅助套组",
+        "themeId": "furni_set_bauhaus",
+        "comfort": 125,
+        "count": 3,
+        "furniture": [
+          "furni_bauhaus_cabinet_01",
+          "furni_bauhaus_framedWallArt_01",
+          "furni_bauhaus_floorLamp_01"
+        ]
+      },
+      "furni_set_bauhaus_3": {
+        "id": "furni_set_bauhaus_3",
+        "name": "装饰套组",
+        "themeId": "furni_set_bauhaus",
+        "comfort": 285,
+        "count": 4,
+        "furniture": [
+          "furni_bauhaus_decoration_01",
+          "furni_bauhaus_branchDecor_01",
+          "furni_bauhaus_tableLamp_01",
+          "furni_bauhaus_carpet_01"
+        ]
+      },
+      "furni_set_bauhaus_4": {
+        "id": "furni_set_bauhaus_4",
+        "name": "新风尚装潢",
+        "themeId": "furni_set_bauhaus",
+        "comfort": 170,
+        "count": 4,
+        "furniture": [
+          "furni_bauhaus_wallpaper_01",
+          "furni_bauhaus_floor_01",
+          "furni_bauhaus_geometryLight_01",
+          "furni_bauhaus_downlight_01"
         ]
       }
     },

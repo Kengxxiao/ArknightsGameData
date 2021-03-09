@@ -75,3 +75,8 @@ function DlgMgr.DefineDialog(name, layoutPath, basetype)
   DlgMgr.s_dialogCls[name] = dlgcls;
   return dlgcls;
 end
+
+
+function DlgMgr.GetDialogCls(clsName)
+  return DlgMgr.s_dialogCls[clsName]
+end
