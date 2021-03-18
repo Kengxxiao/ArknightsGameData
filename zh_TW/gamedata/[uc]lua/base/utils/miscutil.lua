@@ -81,3 +81,14 @@ function ToLuaArray(list)
   end
   return array;
 end
+
+function CheckTimeAvailWithTimeStamp(startTime, endTime)
+  local currentTime = CS.Torappu.DateTimeUtil.timeStampNow
+  if (startTime ~= -1) and (currentTime < startTime) then
+    return false
+  end
+  if (endTime ~= -1) and (currentTime > endTime) then
+    return false
+  end
+  return true
+end

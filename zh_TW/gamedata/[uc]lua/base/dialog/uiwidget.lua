@@ -1,3 +1,3 @@
----@class Widget : UIBase
+---@class UIWidget : UIBase
 ---
 UIWidget = Class("UIWidget", UIBase);

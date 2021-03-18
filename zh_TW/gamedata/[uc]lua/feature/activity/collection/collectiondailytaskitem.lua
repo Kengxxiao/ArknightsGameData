@@ -23,7 +23,7 @@ function CollectionDailyTaskItem:Refresh(actId, cfg)
   end
   
   self.m_itemCell:Render(0, rewardData);
-  self:AsignDelegate(self.m_itemCell, "onItemClick", function(index)
+  self:AsignDelegate(self.m_itemCell, "onItemClick", function(this, index)
     CS.Torappu.UI.UIItemDescFloatController.ShowItemDesc(self.m_itemCell.gameObject, rewardData);
   end);
 

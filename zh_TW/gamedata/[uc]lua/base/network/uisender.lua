@@ -72,8 +72,8 @@ function UISender:SendRequest(serviceCode, body, config)
   ---Set configs
   options.serviceCode = serviceCode
   options.body = rapidjson.encode(body)
-  if options.hideMask ~= nil then
-    options.useInvisibleMask = options.hideMask
+  if config ~= nil and config.hideMask ~= nil then
+    options.useInvisibleMask = config.hideMask
   end
   if config ~= nil then
     options.headers = config.headers

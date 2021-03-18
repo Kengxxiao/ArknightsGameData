@@ -1,0 +1,638 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 总集篇 太阳照常升起
+
+//烈夏 Розалинд  / Rosalind  /罗莎琳
+//猎蜂 Шура  /Shura   / 舒拉
+
+//凛冬 Соня Sonia  索尼娅
+//真理 Анна Anna 安娜
+//古米 Рада Rada 拉达 
+//早露 Наталия Nataliya 娜塔莉娅 
+
+
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+
+//（背景：办公室）
+
+[Decision(options="......米婭", values="1")]
+[Predicate(references="1")]
+
+[Decision(options="阿米婭。", values="1")]
+[Predicate(references="1")]
+
+[Character(name="char_002_amiya_1#6")]
+[name="阿米婭"]  誒？啊，抱歉，博士，我不小心發呆了。
+
+[Decision(options="你的臉色不太好。", values="1")]
+[Predicate(references="1")]
+
+
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  啊，嗯，有些稍微在意的事呢。
+[name="阿米婭"]  博士，你看，這裡有一份內部的調職申請。
+[name="阿米婭"]  申請人是，娜塔莉婭·羅斯托娃。
+[name="阿米婭"]  意向是從後勤部門調往前線。
+
+
+[Decision(options="是烏薩斯自治團的......;......;呃，是誰來著？", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  是的，她是唯一一個在後勤部門工作的自治團成員。
+[name="阿米婭"]  她似乎因為工作能力出眾，在後勤部門風評非常好呢。
+
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  博士果然也會在意吧。老實說，這一次，我也不是很想通過呢。
+
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  烏薩斯人的名字都有些難記，博士不記得也很正常呢。
+[name="阿米婭"]  她是我們從切爾諾伯格營救出來的難民之一，也是凜冬的烏薩斯自治團中的成員。
+[name="阿米婭"]  其實也是我們救出來的難民中，唯一的貴族。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  博士你還記得吧，凜冬她們之所以能夠成為幹員，是因為她們本人的要求。
+[name="阿米婭"]  我一開始其實是很反對的。
+
+[Decision(options="畢竟她們才剛被救出來沒多久......;......;我相信你的判斷。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  是的。原本，即使是她們本人的意向，我也會說服凱爾希醫生否決掉的。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米婭"]  只是......
+
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  她們有定期接受心理方面的輔導，從報告來看，她們雖然有一定的陰影，但總體是健康的。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米婭"]  只是......
+
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  謝謝博士。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米婭"]  但是......
+
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#4")]
+[name="阿米婭"]  我不知道該怎麼說比較好。
+[name="阿米婭"]  ......博士，你可以去看一看娜塔莉婭小姐嗎？
+
+[Decision(options="好。;......;好麻煩。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  那就拜託博士你了。
+
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  博士，雖然這件事會有些麻煩，但也只能拜託博士你了。
+
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  博士，這可是非常重要的事，不要偷懶啦。
+[name="阿米婭"]  而且，也不用非常嚴肅地去觀察，就當做是工作之餘的轉換心情去看一看就好了。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#3")]
+[name="阿米婭"]  啊，午休時間也到了，博士也不用太急，吃完午飯後去找她吧。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+//（黑屏转场：过道）
+
+[Character(name="char_115_headbr_9",fadetime=1,block=true)]
+[delay(time=1)]
+[name="凜冬"]  喂，博士。
+
+[Decision(options="有什麼事嗎？;......;嘿，凜冬。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_115_headbr_9")]
+[name="凜冬"]  沒事，我只是看到你叫你一聲。
+
+[Predicate(references="2")]
+[Character(name="char_115_headbr_9")]
+[name="凜冬"]  喂，別裝作沒聽到，你明明停下來了吧。
+[name="凜冬"]  你這傢伙不是工作很多嗎，怎麼在這裡閒逛。
+
+[Predicate(references="3")]
+[Character(name="char_115_headbr_9")]
+[name="凜冬"]  你看起來很閑的樣子。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_115_headbr_9")]
+[name="凜冬"]  我接下來要出任務，可沒你這樣的閒工夫亂逛。
+[Dialog]
+[Character]
+[Character(name="char_148_nearl_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="臨光"]  凜冬，我說過，出發前不要隨便走動。
+[Character(name="char_115_headbr_9", name2="char_148_nearl_1",focus=1)]
+[name="凜冬"]  ......
+[Character(name="char_148_nearl_1")]
+[name="臨光"]  午安，博士。
+[name="臨光"]  好了，凜冬，快回休息室去，該出發了。
+[Character(name="char_115_headbr_9", name2="char_148_nearl_1",focus=1)]
+[name="凜冬"]  哼，總有一天我也要當隊長對你發號施令。
+[name="凜冬"]  還有你，博士，我總有一天會超過你的。
+[Character(name="char_115_headbr_9", name2="char_148_nearl_1",focus=2)]
+[name="臨光"]  志氣不錯，不過等你贏得過我一隻手之後再說吧。
+[name="臨光"]  至於博士，嗯，贏過全力的我再說吧。
+[Character(name="char_115_headbr_9", name2="char_148_nearl_1",focus=1)]
+[name="凜冬"]  嘖。
+
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=1)]
+//（凛冬离开）
+[Character(name="char_148_nearl_1")]
+[name="臨光"]  哦，博士，你應該知道，最近輪到我帶新人小隊。
+[name="臨光"]  那麼要是沒有什麼事的話，我也先離開了。
+
+[Decision(options="你覺得凜冬怎麼樣？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_148_nearl_1")]
+[name="臨光"]  嗯？
+[name="臨光"]  嗯......首先正如你剛才看到的，不服管教，目無尊長。
+[name="臨光"]  而且，作為戰士，在這個年紀，往往不知道自己在和什麼戰鬥，也不知道自己該為什麼戰鬥，這很正常。
+[name="臨光"]  但在她身上這一點尤為明顯。
+[name="臨光"]  她有著很重的迷茫，我不知道那是什麼，但這是一個很不好的現象，是我接下來要重點糾正她的地方。
+
+[Decision(options="你是說，她只是看上去很兇狠？;......;唉，我還挺想跟她搞好關係的。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_148_nearl_1")]
+[name="臨光"]  沒錯。外露的暴力是一種保護殼。
+[name="臨光"]  我不敢說她外殼下的內心就是脆弱的，但我至少敢說，她的兇狠在我面前不堪一擊。
+
+[Predicate(references="2")]
+[Character(name="char_148_nearl_1")]
+[name="臨光"]  別擔心，博士，她還是個孩子。
+[name="臨光"]  我聽說她來自切爾諾伯格，在那裡她恐怕有一些不好的回憶，但她還有未來。
+
+[Predicate(references="3")]
+[Character(name="char_148_nearl_1")]
+[name="臨光"]  哈哈，博士，不要急。
+[name="臨光"]  你也知道，她並不是討厭你或怎麼樣。
+[name="臨光"]  倒不如說，她對於親近自己的人才會下意識地去攻擊。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_148_nearl_1")]
+[name="臨光"]  不過，我必須要說，我並不討厭這孩子，博士。
+[name="臨光"]  其實我挺喜歡她的，她身上有一種純粹的正直，即使迷茫，這股正直也會帶領她不至於走偏。
+[name="臨光"]  這是一件很難得的事。
+[name="臨光"]  啊，要到出發時間了，那麼，我先失陪了。
+
+//（转场）
+//（背景：食堂）
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+
+[Character(name="char_196_sunbr_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="古米"]  咦，是博士！
+
+[Decision(options="中午好，古米。;......;咦，是古米！", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_196_sunbr_1#2")]
+[name="古米"]  博士中午好！
+
+[Predicate(references="2")]
+[Character(name="char_196_sunbr_1#3")]
+[name="古米"]  難道是古米太矮了嗎？！
+[name="古米"]  博士，喂，看得到古米嗎？
+
+[Predicate(references="3")]
+[Character(name="char_196_sunbr_1#5")]
+[name="古米"]  博士今天心情看起來不錯呢！
+
+[Predicate(references="1;2;3")]
+[Character(name="char_196_sunbr_1#2")]
+[name="古米"]  博士來食堂吃飯嗎？
+[name="古米"]  古米我這幾天沒有什麼任務，正在給廚房幫忙呢。
+[Character(name="char_181_flower_1")]
+[name="調香師"]  古米，我送香料來囉。
+[Character(name="char_196_sunbr_1#2", name2="char_181_flower_1",focus=1)]
+[name="古米"]  啊，謝謝調香師姐姐！放在那邊就好了！
+[name="古米"]  調香師姐姐要在食堂吃飯嗎？
+[Character(name="char_196_sunbr_1#2", name2="char_181_flower_1",focus=2)]
+[name="調香師"]  我就不用了，我更習慣在自己的工作室裡自炊。
+[Character(name="char_196_sunbr_1#2", name2="char_181_flower_1",focus=1)]
+[name="古米"]  誒誒，我可以來吃嗎，我也想向調香師姐姐學習香料的運用！
+[Character(name="char_196_sunbr_1#2", name2="char_181_flower_1",focus=2)]
+[name="調香師"]  呵呵，當然可以。
+[Character(name="char_199_yak_1")]
+[name="角峰"]  古米，有空的話來幫把手。
+[Character(name="char_196_sunbr_1#5")]
+[name="古米"]  來了！
+[Character(name="char_199_yak_1")]
+[name="角峰"]  吽出任務去了，人手有點不夠，這面鍋就交給你了，我有點顧不過來。
+[Character(name="char_196_sunbr_1#2")]
+[name="古米"]  交給我吧，角峰大叔！啊，調香師姐姐，我下次再來，博士也吃好哦！
+[Character(name="char_181_flower_1")]
+[name="調香師"]  好的，隨時歡迎。
+
+[Character]
+[name="近衛幹員"]  今天能吃到古米做的飯？！
+[name="後勤幹員"]  哈哈，今天真走運！
+[name="後勤幹員"]  我靠，我剛吃完！
+[name="近衛幹員"]  哈哈，那我再來一碗！
+[Character(name="char_196_sunbr_1#5")]
+[name="古米"]  各位不要急，都有份的！
+[Character(name="char_181_flower_1")]
+[name="調香師"]  古米真是個有活力的孩子，對吧，博士？
+
+[Decision(options="確實。;......;確實！", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_181_flower_1")]
+[name="調香師"]  有一次她在我的工作室裡睡著了，說了一些夢話，讓我稍微有些擔心。
+[name="調香師"]  不過現在看到她已經開始融入羅德島了，這樣我就稍微放心了。
+[name="調香師"]  雖然或許沒有辦法馬上變好，但是慢慢地，一定會好起來吧。
+
+[Decision(options="她說了什麼夢話？;......;如果是這樣就好了。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_181_flower_1")]
+[name="調香師"]  哎呀，博士，有時候直接並不是好事哦？
+[name="調香師"]  這是個需要我為她保守的秘密，不過請放心，她需要的不是安慰，她需要的只是時間。
+
+[Predicate(references="2")]
+[Character(name="char_181_flower_1")]
+[name="調香師"]  博士很在意嗎？呵呵，博士果然很擔心幹員們呢。
+[name="調香師"]  不過請放心吧，如果真的是很重要的事，我不會不說的。
+[name="調香師"]  每個人都有自己的小秘密，不是嗎？
+
+[Predicate(references="3")]
+[Character(name="char_181_flower_1")]
+[name="調香師"]  博士，不要太自大哦，覺得自己需要照顧所有人這種想法是不好的。
+[name="調香師"]  幹員之間也是會互相照拂的。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_181_flower_1")]
+[name="調香師"]  那麼，我先回辦公室了。
+[name="調香師"]  博士要是累了隨時歡迎來我這裡坐坐。
+
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+//（调香师离开，真理出现）
+
+[Delay(time=1)]
+[Character(name="char_195_glassb_2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="真理"]  博士，您好。
+
+[Decision(options="中午好，真理。;......;今天的菜怎麼樣，真理？", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_195_glassb_2")]
+[name="真理"]  在食堂遇到博士這還是第一次呢。
+
+[Predicate(references="2")]
+[Character(name="char_195_glassb_2")]
+[name="真理"]  博士，你好像在思考什麼事情，我建議你不要站在食堂門口思考。
+
+[Predicate(references="3")]
+[Character(name="char_195_glassb_2#2")]
+[name="真理"]  嗯......飯稍微有些硬，湯的話我覺得甜味有些太過了，不過菜色我相當喜歡。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_195_glassb_2")]
+[name="真理"]  那麼，博士，如果沒有什麼事的話，我先離開了。
+[name="真理"]  下午我還有課要上。
+
+[Decision(options="課？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_195_glassb_2")]
+[name="真理"]  是的，海帕提婭老師的歷史課。
+[name="真理"]  在經過一段時間的嘗試後，我發現海帕提婭老師講授的歷史對我是最有幫助的。
+
+[Decision(options="我可以幫你嗎？;......;我也很懂歷史！", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_195_glassb_2")]
+[name="真理"]  唔，不。
+[name="真理"]  啊，我並不是在拒絕，我很難向您解釋，因為我也不是很明確。
+
+[Predicate(references="2")]
+[Character(name="char_195_glassb_2")]
+[name="真理"]  老師的授課很有意思，博士有空的話我也推薦您來聽一聽。
+
+[Predicate(references="3")]
+[Character(name="char_195_glassb_2")]
+[name="真理"]  唔，博士，如果我沒記錯的話，您失去了記憶對吧？
+[name="真理"]  不過還是感謝您的好意。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_195_glassb_2")]
+[name="真理"]  只能說，我需要一些引導。
+[name="真理"]  事實上我也不知道學習歷史是否真的能對我有所幫助。
+[name="真理"]  不過，前人的經驗和思維或許能夠為我提供一些靈感。
+[name="真理"]  那麼，我先去上課了。
+
+[Decision(options="你知道娜塔莉婭在哪裡嗎？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_195_glassb_2")]
+[name="真理"]  娜塔莉婭......您在找她嗎？
+[name="真理"]  古米告訴我，她也想要成為前線幹員，雖然我不知道申請有沒有通過，不過以我對她的瞭解，她應該已經在為此做準備了。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_trainingcom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+//（黑屏转场）
+//（场景：训练场）
+
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="烈夏"]  娜塔莉婭，你的準度好差哦。
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="娜塔莉婭"]  羅莎琳，別得意，我一定會打中你的。
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="烈夏"]  嘻嘻，不可能不可能~
+[name="烈夏"]  還有，你現在應該叫我烈夏！早露幹員~
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="娜塔莉婭"]  好吧，烈夏幹員，讓我們等著瞧吧。
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="烈夏"]  誰叫你非要用這麼大的傢伙的。
+[name="烈夏"]  這是你在切爾諾伯格裡找到的東西吧，扔掉換把更順手的怎麼樣？
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="娜塔莉婭"]  呼，呼......這叫紀念。
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="烈夏"]  好吧，那你可要努力啦。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="烈夏"]  娜塔莉婭，我感覺你腳步都邁不開啦，還是休息一會兒比較好哦。
+[Character(name="char_194_rosali_1",name2="char_197_poca_1#2",focus=2)]
+[name="娜塔莉婭"]  我還能堅持......
+
+[Character(name="char_197_poca_1#2")]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="娜塔莉婭"]  呀啊！
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  你的耐力還不行，娜塔莉婭。
+[name="杜賓"]  雖然作為烏薩斯人你有不錯的底子，不過離能戰鬥還差遠了。
+[Character]
+[Dialog]
+[Character(name="char_197_poca_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="娜塔莉婭"]  嘶......呼......對不起，我會加油的。
+[Character(name="char_130_doberm_ex",name2="char_197_poca_1#2",focus=1)]
+[name="杜賓"]  但你的意志力比我想的要強很多，不錯。
+[name="杜賓"]  你如果能堅持過這一輪訓練，即使不成為幹員，也會對你有好處。
+[Character(name="char_130_doberm_ex",name2="char_197_poca_1",focus=2)]
+[name="娜塔莉婭"]  謝謝您的誇獎。
+[Character(name="char_130_doberm_ex",name2="char_197_poca_1",focus=1)]
+[name="杜賓"]  嗯......嗯？
+[name="杜賓"]  你先休息一下吧。
+[Character(name="char_130_doberm_ex",name2="char_197_poca_1",focus=2)]
+[name="娜塔莉婭"]  是！
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  烈夏，你也先自己去做些訓練。
+[Character(name="char_130_doberm_ex",name2="char_194_rosali_1",focus=2)]
+[name="烈夏"]  是~
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  格瑞斯，你看著點。
+[Character]
+[name="格瑞斯教官"]  我知道了。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  博士，午休時間你該好好休息，這裡不是你需要來的地方。
+
+[Decision(options="午安，杜賓教官。;......;我不能來嗎？", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  午安，博士。
+[name="杜賓"]  如果你只是想和我打招呼，那麼我就回去了。
+
+[Predicate(references="2")]
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  你逐漸有了一些領導者的姿態，不得不說，這不是壞事。
+
+[Predicate(references="3")]
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  你可以來，只不過我會需要抽出時間來應付你，我希望這樣的時間不會很多。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  不過，我猜你應該是從阿米婭那裡聽說，凜冬那個小團體裡的另一個人也要申請成為幹員，才想著過來看看吧。
+[name="杜賓"]  別露出那副驚訝的表情。
+[name="杜賓"]  阿米婭對從烏薩斯救出來的那批難民十分上心不是秘密。
+[name="杜賓"]  你還記得吧，凜冬、古米、真理、烈夏——
+[name="杜賓"]  好吧，烈夏這丫頭比較例外，在戰鬥這方面，她確實不需要太擔心。
+[name="杜賓"]  總之，這四個小姑娘申請的時候，阿米婭甚至想要強行不讓她們通過的，只不過不知道為什麼中途她改了主意。
+[name="杜賓"]  結果現在又來一個，她不在意我才覺得奇怪......
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="娜塔莉婭"]  呼，休息得差不多了，羅莎琳，再陪我練習一會兒。
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="烈夏"]  誒，你還真是頑強誒。
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=2)]
+[name="娜塔莉婭"]  別小看我成為幹員的決心。
+[Character(name="char_194_rosali_1",name2="char_197_poca_1",focus=1)]
+[name="烈夏"]  好吧好吧。
+[Character]
+[name="格瑞斯教官"]  娜塔莉婭，你應該再休息一會兒，鍛煉最重要的是恢復，一昧的練習只會讓你的身體垮掉。
+[Character(name="char_197_poca_1")]
+[name="娜塔莉婭"]  謝謝你，格瑞斯教官，不過我覺得我還能再堅持一下......
+[Character]
+[name="格瑞斯教官"]  哎，你別怕杜賓，她雖然看起來很凶......
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  格瑞斯，我聽得到。
+[Character]
+[name="格瑞斯教官"]  誒，呃，總之你懂的。
+[Character(name="char_197_poca_1")]
+[name="娜塔莉婭"]  嗯，總之請放心吧，撐不住的時候我會休息的。
+[Character]
+[name="格瑞斯教官"]  好吧......
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  你覺得她怎麼樣？
+
+[Decision(options="她看起來很堅定。;......;她好拼命啊。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  在你看來她很堅定嗎？我不這麼認為。
+[name="杜賓"]  我見過很多這樣的人，他們咬牙切齒，只是想讓自己可以放棄思考。
+//两个只是要删掉一个吗？
+
+[Predicate(references="2")]
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  是不是讓你想起了那三個小丫頭？
+[name="杜賓"]  不知道哪裡來的勇氣，就敢在這個年紀咬著牙關向成年人的社會發起挑戰。
+[name="杜賓"]  偏偏她們好像真的做好了準備。
+
+[Predicate(references="3")]
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  她確實很拼命，老實說，她出乎了我的意料。
+[name="杜賓"]  一個能夠拼命鍛煉自己的貴族大小姐......呵。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_130_doberm_ex")]
+[name="杜賓"]  我其實能夠理解阿米婭不想讓她們上戰場的心情。
+[name="杜賓"]  博士，沒有人會樂於看到這樣的年輕人踏上戰場，倒不如說，我這樣的軍人存在的意義，不正是為了保護她們的生活嗎？
+[name="杜賓"]  我總是會想，讓她們上戰場是我的失職。
+[name="杜賓"]  但我也早就已經接受自己無法幫到每一個人的現實。
+[name="杜賓"]  我能做的，只有讓她們學會戰鬥，學會保護自己，讓她們在未來受更少的傷。
+[name="杜賓"]  好好想想，博士，你能為她們做到什麼？
+
+[Dialog]
+[Character]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+//（场景切换：办公室）
+
+[Character(name="char_002_amiya_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="阿米婭"]  博士，歡迎回來。
+[name="阿米婭"]  那麼，博士的看法呢？
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[Decision(options="阿米婭是不是從凜冬她們身上看到了什麼？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  ......是的，這也是我對她們比較關注的一個原因。
+[Character(name="char_002_amiya_1#4")]
+[name="阿米婭"]  抱歉，博士，我之前......不太確定我是不是該把這個告訴別人。
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  博士，你知道我的能力，當一個人擁有非常強烈的情感，並且指向我的時候，我是能夠感受到對方的情感的。
+[name="阿米婭"]  如果不是指向我卻足夠強烈的話，我不會有很明顯的感覺，但我還是能感受到一些。
+[name="阿米婭"]  而凜冬她們，我......很難說。
+[name="阿米婭"]  她們的狀況不太一樣。
+[name="阿米婭"]  某一些瞬間，一些對我們來說很普通、平常的瞬間，我卻會在其中感覺到她們龐大的情感。
+[name="阿米婭"]  當然，她們之間的情感都不一樣，但也有一些共通的地方。
+[name="阿米婭"]  如果一定要我給我感受到的情感取個名字，我想，可能應該是無助吧。
+[name="阿米婭"]  她們沒有那麼悲傷，沒有那麼痛苦，沒有那麼憤怒，沒有那麼絕望......
+[name="阿米婭"]  我不知道這樣形容對不對，就好像，好像有一堵無形的牆。
+[name="阿米婭"]  平時的時候，這堵牆看不見、摸不著，但當她們想要前進時就會擋住她們，讓她們原地踏步。
+
+[Decision(options="我們可以為她們做些什麼嗎？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#6")]
+[name="阿米婭"]  不行的，博士。
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  現在的我們沒有立場去幫助她們，博士。
+[name="阿米婭"]  每個幹員在登記檔案時，她們願意告訴我們的東西，就是我們“可以”瞭解的她們的一切了。
+[name="阿米婭"]  她們也許對我們隱瞞了什麼，但如果是這樣，我們就更沒有理由一定要弄清。
+[name="阿米婭"]  當然，對羅德島不利的事肯定不算在內啦，但我覺得至少凜冬她們肯定和這類事情無關。
+[name="阿米婭"]  而且......
+[name="阿米婭"]  我不覺得我們突然的幫助能夠真的幫到她們。
+
+[Decision(options="擅自提供幫助是自我滿足。;......;可以試試直接去問她們。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#3")]
+[name="阿米婭"]  嗯，我也是這麼想的。
+
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  也許這只是我單純有些恐懼這麼去做吧。
+
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#2")]
+[name="阿米婭"]  噗，博士，你又在開玩笑了。
+[name="阿米婭"]  要是真的能夠這麼簡單就好了呢。
+
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  博士，我現在真的覺得，“我理解你”不是一句好話。
+[name="阿米婭"]  可許多人都愛這麼說，就好像說了這句話之後，自己就盡到了安慰的義務，或者對方就會對自己敞開心扉一樣。
+[name="阿米婭"]  理解別人的感情真的是一件很困難的事，更不要說幫助別人。
+[name="阿米婭"]  艦內的許多其他幹員其實也是一樣的。
+[name="阿米婭"]  我們沒有與他們共用某一段經歷，我們的話就傳達不到他們，我們做的事哪怕正確，也不會是他們期望的。
+
+
+
+[Decision(options="所以你當時沒有阻止凜冬她們成為幹員。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  是的。
+[name="阿米婭"]  在察覺到她們的情緒後，我改變了自己的想法。
+[name="阿米婭"]  強制把她們保護起來也許在我們看來是對她們好，從結果來說可能也確實保護了她們。
+[name="阿米婭"]  但我想這樣是沒有辦法治癒她們的。
+[name="阿米婭"]  博士，我不想，我真的不想說時間能夠治癒一切。
+[name="阿米婭"]  但我沒有辦法，我不知道別的辦法。
+[name="阿米婭"]  我能做的，只有尊重她們的選擇，並且以我的，羅德島的方法去保護她們。
+
+[Character(name="char_002_amiya_1#4")]
+[name="阿米婭"]  其實就連這麼去思考，我都覺得自己有些傲慢呢......
+
+[Decision(options="羅德島不是溫室，你能這麼想已足夠了。;......;那就和每個人都成為朋友吧。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  嗯，但我總是希望能多做一些。
+
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  博士，怎麼樣才能治療一個人，或者該不該去治療她......從物理的角度來說，是很少需要考慮的事。
+[name="阿米婭"]  但是，精神層面的治療，這就會變成一個困難的問題。
+[name="阿米婭"]  現在的我，只能給出這樣模糊的答案。
+
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#3")]
+[name="阿米婭"]  嗯，博士說得對呢。
+[name="阿米婭"]  這也是我的想法，如果沒有立場去幫助別人，那就創造立場。
+[name="阿米婭"]  我只是稍微有些喪氣而已。
+
+
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1")]
+[name="阿米婭"]  藥是止痛的，是用來治療傷口的，有的藥也能夠讓人痊癒，但無論如何，在那之前受過的痛楚和折磨是不會消失的。
+[name="阿米婭"]  我總是在想，要是羅德島能夠讓一些人，哪怕只是很少的人，能夠忘記，或者至少願意不去在意過去受過的傷就好了。
+[name="阿米婭"]  這一路走來，我發現，這果然還是很難的。
+[name="阿米婭"]  為了真正做到這一點，研製藥物只是最基本的，我們還要做很多很多的事。
+
+[Decision(options="至少，我們已經在做了。", values="1")]
+[Predicate(references="1")]
+
+
+[Character(name="char_002_amiya_1#3")]
+[name="阿米婭"]  嗯，至少，我們已經在做了。
+[Character(name="char_002_amiya_1#2")]
+[name="阿米婭"]  謝謝你，博士。
+[name="阿米婭"]  明明是別人的事，感覺我卻被博士安慰和鼓勵了，感覺有些不好意思呢......
+[name="阿米婭"]  那麼，這一次，我也同意娜塔莉婭小姐的申請吧。
+[Character(name="char_002_amiya_1#3")]
+[name="阿米婭"]  希望有一天，她們願意對我們敞開心扉。希望有一天，我們能夠幫到她們。
+[name="阿米婭"]  希望有一天......羅德島能成為她們的新家。
+
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Image]

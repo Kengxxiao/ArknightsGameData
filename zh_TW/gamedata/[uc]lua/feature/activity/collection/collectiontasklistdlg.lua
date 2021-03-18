@@ -68,7 +68,7 @@ function CollectionTaskListDlg:Refresh(activityId, close)
   local co = coroutine.create(function()
     for _, item in ipairs(list) do
       item:CreateRewardIcon(actcfg);
-      item:Root().transform:SetParent(self._limitContainer, false);
+      item:RootGameObject().transform:SetParent(self._limitContainer, false);
       coroutine.yield();
     end
   end);
