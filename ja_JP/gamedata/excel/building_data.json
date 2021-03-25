@@ -6244,6 +6244,34 @@
         }
       ]
     },
+    "char_159_peacok": {
+      "charId": "char_159_peacok",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_single[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_spd[001]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_250_phatom": {
       "charId": "char_250_phatom",
       "maxManpower": 8640000,
@@ -7031,6 +7059,138 @@
           "buffData": [
             {
               "buffId": "dorm_rec_single&oneself[012]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_350_surtr": {
+      "charId": "char_350_surtr",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession[120]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_365_aprl": {
+      "charId": "char_365_aprl",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&limit[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_spd&limit[001]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_all[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_271_spikes": {
+      "charId": "char_271_spikes",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_dorm[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "workshop_formula_dorm[001]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_oneself2[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_388_mint": {
+      "charId": "char_388_mint",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[050]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[350]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_spd[201]",
               "cond": {
                 "phase": 1,
                 "level": 1
@@ -7834,6 +7994,18 @@
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、<@cc.kw>源石</>製造の製造効率<@cc.vup>+35%</>"
     },
+    "manu_formula_spd[201]": {
+      "buffId": "manu_formula_spd[201]",
+      "buffName": "地質学α",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_originium1",
+      "sortId": 3012,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、<@cc.kw>源石</>製造の製造効率<@cc.vup>+30%</>"
+    },
     "manu_formula_spd[211]": {
       "buffId": "manu_formula_spd[211]",
       "buffName": "地質学β",
@@ -7990,6 +8162,18 @@
       "roomType": "TRADING",
       "description": "貿易所配置時、受注効率<@cc.vup>+10%</>、注文上限<@cc.vup>+2</>"
     },
+    "trade_ord_spd&limit[001]": {
+      "buffId": "trade_ord_spd&limit[001]",
+      "buffName": "注文管理β",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd&limit2",
+      "sortId": 4201,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、受注効率<@cc.vup>+10%</>、注文上限<@cc.vup>+4</>"
+    },
     "trade_ord_spd&limit[010]": {
       "buffId": "trade_ord_spd&limit[010]",
       "buffName": "供給管理",
@@ -8132,7 +8316,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "貿易所配置時、自身以外の配属オペレーターの受注効率が<@cc.vup>10%</>につき、注文上限<@cc.vdown>-1</>。オーダー数が<@cc.vup>1</>につき、受注効率<@cc.vup>+10%</>"
+      "description": "貿易所配置時、自身以外の配属オペレーターの受注効率が<@cc.vup>10%</>につき、注文上限<@cc.vdown>-1</>。オーダー数が<@cc.vup>1</>につき、受注効率<@cc.vup>+4%</>"
     },
     "trade_ord_wt&cost[000]": {
       "buffId": "trade_ord_wt&cost[000]",
@@ -8168,7 +8352,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "<@cc.kw>ラップランド</>と同じ貿易所に配置時、体力消費が1時間ごと<@cc.vup>+0.3</>、受注効率<@cc.vup>+65%</>"
+      "description": "<@cc.kw>ラップランド</>と同じ貿易所に配置時、体力消費が1時間ごと<@cc.vdown>+0.3</>、受注効率<@cc.vup>+65%</>"
     },
     "trade_ord_limit&cost_P[010]": {
       "buffId": "trade_ord_limit&cost_P[010]",
@@ -8530,6 +8714,30 @@
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>昇進素材</>を加工時、副産物の入手確率<@cc.vup>+100%</>"
     },
+    "workshop_formula_dorm[000]": {
+      "buffId": "workshop_formula_dorm[000]",
+      "buffName": "「無用の用」",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_dorm1",
+      "sortId": 7551,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>昇進素材</>を加工時、宿舎で休養中の体力が<@cc.vup>4</>以下のオペレーターが<@cc.kw>1</>人につき、副産物の入手確率<@cc.vup>+5%</>"
+    },
+    "workshop_formula_dorm[001]": {
+      "buffId": "workshop_formula_dorm[001]",
+      "buffName": "「適材適所」",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_dorm2",
+      "sortId": 7552,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>昇進素材</>を加工時、宿舎で休養中の体力が<@cc.vup>20</>以下のオペレーターが<@cc.kw>1</>人につき、副産物の入手確率<@cc.vup>+5%</>"
+    },
     "workshop_formula_probability[200]": {
       "buffId": "workshop_formula_probability[200]",
       "buffName": "工学",
@@ -8600,7 +8808,7 @@
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
-      "description": "加工所で<@cc.kw>装置</>類素材を加工時、副産物の入手確率<@cc.vup>+90%</>"
+      "description": "加工所で<@cc.kw>装置</>系素材を加工時、副産物の入手確率<@cc.vup>+90%</>"
     },
     "train_spd[000]": {
       "buffId": "train_spd[000]",
@@ -8746,6 +8954,18 @@
       "roomType": "TRAINING",
       "description": "訓練室で協力者として配置時、<@cc.kw>術師</>の訓練速度<@cc.vup>+30%</>"
     },
+    "train_spd&profession2[050]": {
+      "buffId": "train_spd&profession2[050]",
+      "buffName": "術師エキスパートα",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_caster1",
+      "sortId": 9401,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>術師</>の訓練速度<@cc.vup>+30%</>"
+    },
     "train_spd&profession[051]": {
       "buffId": "train_spd&profession[051]",
       "buffName": "術師エキスパートβ",
@@ -8830,6 +9050,18 @@
       "roomType": "TRAINING",
       "description": "訓練室で協力者として配置時、<@cc.kw>特殊</>の訓練速度<@cc.vup>+50%</>"
     },
+    "train_spd&profession[120]": {
+      "buffId": "train_spd&profession[120]",
+      "buffName": "剣術経験",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_guard3",
+      "sortId": 9721,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>前衛</>の訓練速度<@cc.vup>+60%</>"
+    },
     "train_spd&profession[130]": {
       "buffId": "train_spd&profession[130]",
       "buffName": "般若",
@@ -8902,6 +9134,18 @@
       "roomType": "TRAINING",
       "description": "訓練室で協力者として配置時、<@cc.kw>術師</>の訓練速度<@cc.vup>+30%</>。特化ランク<@cc.vup>1</>への訓練をサポートする場合、訓練速度がさらに<@cc.vup>+45%</>"
     },
+    "train_spd&profession2[350]": {
+      "buffId": "train_spd&profession2[350]",
+      "buffName": "博覧強記",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train2_caster1",
+      "sortId": 9431,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>術師</>の訓練速度<@cc.vup>+30%</>。特化ランク<@cc.vup>2</>への訓練をサポートする場合、訓練速度がさらに<@cc.vup>+45%</>"
+    },
     "train_spd&profession2[320]": {
       "buffId": "train_spd&profession2[320]",
       "buffName": "難行苦行",
@@ -8960,7 +9204,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.7</>"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.7</>"
     },
     "dorm_rec_oneself[010]": {
       "buffId": "dorm_rec_oneself[010]",
@@ -8972,7 +9216,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.85</>"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.85</>"
     },
     "dorm_rec_oneself[011]": {
       "buffId": "dorm_rec_oneself[011]",
@@ -8984,7 +9228,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.85</>"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.85</>"
     },
     "dorm_rec_oneself[020]": {
       "buffId": "dorm_rec_oneself[020]",
@@ -8996,7 +9240,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+1</>"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+1</>"
     },
     "dorm_rec_oneself[030]": {
       "buffId": "dorm_rec_oneself[030]",
@@ -9008,7 +9252,19 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.75</>"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.75</>"
+    },
+    "dorm_rec_oneself2[000]": {
+      "buffId": "dorm_rec_oneself2[000]",
+      "buffName": "「一人きり」",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_one",
+      "sortId": 5002,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.7</>。配置宿舎内、他のオペレーターが1人につき、自身の1時間ごとの体力回復量が追加で<@cc.vup>+0.05</>"
     },
     "dorm_rec_single[000]": {
       "buffId": "dorm_rec_single[000]",
@@ -9020,7 +9276,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.65</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.65</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_single[001]": {
       "buffId": "dorm_rec_single[001]",
@@ -9032,7 +9288,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.65</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.65</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_single[010]": {
       "buffId": "dorm_rec_single[010]",
@@ -9044,7 +9300,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.55</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.55</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_single[020]": {
       "buffId": "dorm_rec_single[020]",
@@ -9056,7 +9312,19 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.75</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.75</>（同種の効果は高いほうのみ適応）"
+    },
+    "dorm_rec_single[030]": {
+      "buffId": "dorm_rec_single[030]",
+      "buffName": "天啓",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_single3",
+      "sortId": 5205,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.7</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_single_P[000]": {
       "buffId": "dorm_rec_single_P[000]",
@@ -9068,7 +9336,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.55</>（同種の効果は高いほうのみ適応）。対象が<@cc.kw>セイロン</>の場合、更に<@cc.vup>+0.45</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.55</>（同種の効果は高いほうのみ適応）。対象が<@cc.kw>セイロン</>の場合、更に<@cc.vup>+0.45</>"
     },
     "dorm_rec_single_P[001]": {
       "buffId": "dorm_rec_single_P[001]",
@@ -9080,7 +9348,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.55</>（同種の効果は高いほうのみ適応）。対象が<@cc.kw>ガヴィル</>の場合、更に<@cc.vup>+0.45</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.55</>（同種の効果は高いほうのみ適応）。対象が<@cc.kw>ガヴィル</>の場合、更に<@cc.vup>+0.45</>"
     },
     "dorm_rec_all[000]": {
       "buffId": "dorm_rec_all[000]",
@@ -9092,7 +9360,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.1</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.1</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all[010]": {
       "buffId": "dorm_rec_all[010]",
@@ -9104,7 +9372,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.15</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.15</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all[011]": {
       "buffId": "dorm_rec_all[011]",
@@ -9116,7 +9384,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.15</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.15</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all[012]": {
       "buffId": "dorm_rec_all[012]",
@@ -9128,7 +9396,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.15</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.15</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all[013]": {
       "buffId": "dorm_rec_all[013]",
@@ -9140,7 +9408,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.15</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.15</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all[020]": {
       "buffId": "dorm_rec_all[020]",
@@ -9152,7 +9420,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all[021]": {
       "buffId": "dorm_rec_all[021]",
@@ -9164,7 +9432,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all[022]": {
       "buffId": "dorm_rec_all[022]",
@@ -9176,7 +9444,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_single&oneself[000]": {
       "buffId": "dorm_rec_single&oneself[000]",
@@ -9188,7 +9456,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）。自身の体力回復速度が1時間ごと<@cc.vup>+0.4</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）。自身の1時間ごとの体力回復量<@cc.vup>+0.4</>"
     },
     "dorm_rec_single&oneself[001]": {
       "buffId": "dorm_rec_single&oneself[001]",
@@ -9200,7 +9468,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.25</>（同種の効果は高いほうのみ適応）。自身の体力回復速度が1時間ごと<@cc.vup>+0.5</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.25</>（同種の効果は高いほうのみ適応）。自身の1時間ごとの体力回復量<@cc.vup>+0.5</>"
     },
     "dorm_rec_single&oneself[010]": {
       "buffId": "dorm_rec_single&oneself[010]",
@@ -9212,7 +9480,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.3</>（同種の効果は高いほうのみ適応）。自身の体力回復速度が1時間ごと<@cc.vup>+0.3</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.3</>（同種の効果は高いほうのみ適応）。自身の1時間ごとの体力回復量<@cc.vup>+0.3</>"
     },
     "dorm_rec_single&oneself[011]": {
       "buffId": "dorm_rec_single&oneself[011]",
@@ -9224,7 +9492,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.35</>（同種の効果は高いほうのみ適応）。自身の体力回復速度が1時間ごと<@cc.vup>+0.35</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.35</>（同種の効果は高いほうのみ適応）。自身の1時間ごとの体力回復量<@cc.vup>+0.35</>"
     },
     "dorm_rec_single&oneself[012]": {
       "buffId": "dorm_rec_single&oneself[012]",
@@ -9236,7 +9504,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.35</>（同種の効果は高いほうのみ適応）。自身の体力回復速度が1時間ごと<@cc.vup>+0.35</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.35</>（同種の効果は高いほうのみ適応）。自身の1時間ごとの体力回復量<@cc.vup>+0.35</>"
     },
     "dorm_rec_single&oneself[020]": {
       "buffId": "dorm_rec_single&oneself[020]",
@@ -9248,7 +9516,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.4</>（同種の効果は高いほうのみ適応）。自身の体力回復速度が1時間ごと<@cc.vup>+0.2</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.4</>（同種の効果は高いほうのみ適応）。自身の1時間ごとの体力回復量<@cc.vup>+0.2</>"
     },
     "dorm_rec_single&oneself[021]": {
       "buffId": "dorm_rec_single&oneself[021]",
@@ -9260,7 +9528,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.5</>（同種の効果は高いほうのみ適応）。自身の体力回復速度が1時間ごと<@cc.vup>+0.25</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.5</>（同種の効果は高いほうのみ適応）。自身の1時間ごとの体力回復量<@cc.vup>+0.25</>"
     },
     "dorm_rec_single&oneself[030]": {
       "buffId": "dorm_rec_single&oneself[030]",
@@ -9272,7 +9540,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の体力回復速度が1時間ごと<@cc.vup>+0.5</>（同種の効果は高いほうのみ適応）。自身の体力回復速度が1時間ごと<@cc.vup>+0.25</>"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.5</>（同種の効果は高いほうのみ適応）。自身の1時間ごとの体力回復量<@cc.vup>+0.25</>"
     },
     "dorm_rec_all&oneself[000]": {
       "buffId": "dorm_rec_all&oneself[000]",
@@ -9284,7 +9552,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vdown>-0.1</>。配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vdown>-0.1</>。配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.2</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all&oneself[001]": {
       "buffId": "dorm_rec_all&oneself[001]",
@@ -9296,7 +9564,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vdown>-0.1</>。配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.25</>（同種の効果は高いほうのみ適応）"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vdown>-0.1</>。配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.25</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all&oneself[010]": {
       "buffId": "dorm_rec_all&oneself[010]",
@@ -9308,7 +9576,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.55</>"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.55</>"
     },
     "dorm_rec_all&oneself[011]": {
       "buffId": "dorm_rec_all&oneself[011]",
@@ -9320,7 +9588,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.1</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.1</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all&oneself[012]": {
       "buffId": "dorm_rec_all&oneself[012]",
@@ -9332,7 +9600,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.55</>。配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.1</>（同種の効果は高いほうのみ適応）"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.55</>。配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.1</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_all&oneself[021]": {
       "buffId": "dorm_rec_all&oneself[021]",
@@ -9344,7 +9612,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "宿舎休養時、自身の体力回復速度が1時間ごと<@cc.vup>+0.55</>。配置宿舎内、全員の体力回復速度が1時間ごと<@cc.vup>+0.1</>（同種の効果は高いほうのみ適応）"
+      "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.55</>。配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.1</>（同種の効果は高いほうのみ適応）"
     },
     "hire_spd[000]": {
       "buffId": "hire_spd[000]",
@@ -19944,6 +20212,397 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_midAutumn_screen_01": {
+        "id": "furni_midAutumn_screen_01",
+        "name": "木彫りの衝立",
+        "iconId": "furni_midAutumn_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 8,
+        "comfort": 375,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎国直輸入の木製衝立。秋風去り行けど、賓客は訪れる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 278,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_cabinet_01": {
+        "id": "furni_midAutumn_cabinet_01",
+        "name": "豪華な飾り箪笥",
+        "iconId": "furni_midAutumn_cabinet_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 2,
+        "height": 6,
+        "comfort": 260,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎国の伝統的な多機能たんす。探せど探せど、宝の隠し場所はわからぬまま。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 193,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_pottedplant_01": {
+        "id": "furni_midAutumn_pottedplant_01",
+        "name": "観葉植物の鉢植え",
+        "iconId": "furni_midAutumn_pottedplant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 5,
+        "comfort": 205,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "他の場所から運ばれてきたと思われる植物。まだ栽培管理中のため、室外に置いてはならない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 168,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_floorLamp_01": {
+        "id": "furni_midAutumn_floorLamp_01",
+        "name": "高脚燭台",
+        "iconId": "furni_midAutumn_floorLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 6,
+        "comfort": 180,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎国の家庭でよく使われる燭台。蝋燭の長き灯りは、部屋を穏やかさで包み込む。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 163,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_table_01": {
+        "id": "furni_midAutumn_table_01",
+        "name": "低脚長机",
+        "iconId": "furni_midAutumn_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 4,
+        "height": 5,
+        "comfort": 510,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "特別な日のごちそうを並べるための長机。親戚も友達も隣人も、花見や月見を楽しもう。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 375,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_stool_01": {
+        "id": "furni_midAutumn_stool_01",
+        "name": "木彫りの丸椅子",
+        "iconId": "furni_midAutumn_stool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 95,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎国の家庭では常備されている木製の椅子。金木犀の酒に蒸し餅、水八仙。並べば子らの笑顔咲く。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 80,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_stove_01": {
+        "id": "furni_midAutumn_stove_01",
+        "name": "源石給湯器",
+        "iconId": "furni_midAutumn_stove_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "源石を燃料とした給湯器。壺底に逆巻くは澎湃たる波、茶杯に渦巻くは濛々たる茶の香り。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_sofa_01": {
+        "id": "furni_midAutumn_sofa_01",
+        "name": "斬新な貴妃ソファ",
+        "iconId": "furni_midAutumn_sofa_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 4,
+        "height": 3,
+        "comfort": 415,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "伝統的なカウチに西方のデザインを織り交ぜて改良したもの。祭りを楽しむのは、まどろみの後で。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 305,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_stool2_01": {
+        "id": "furni_midAutumn_stool2_01",
+        "name": "長いフットスツール",
+        "iconId": "furni_midAutumn_stool2_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 170,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "足を置くためのスツール。詩吟の趣は、耳に届くにぎやかさにも勝る。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 155,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_carpet_01": {
+        "id": "furni_midAutumn_carpet_01",
+        "name": "毛織絨毯赤",
+        "iconId": "furni_midAutumn_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 10,
+        "height": 1,
+        "comfort": 180,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎国の家庭でよく見られる絨毯。都暮らしは良いものだが、祭日はやはり故郷が一番だ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 148,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_handLamp_01": {
+        "id": "furni_midAutumn_handLamp_01",
+        "name": "かご提灯",
+        "iconId": "furni_midAutumn_handLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "蝋燭が灯った竹編みの提灯。柵に揺れる竹の影、また今年も手元に光の花が咲く。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 110,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_ornaments_01": {
+        "id": "furni_midAutumn_ornaments_01",
+        "name": "表装された書画",
+        "iconId": "furni_midAutumn_ornaments_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 5,
+        "comfort": 90,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "表装された書画作品。一瞬の閃きで筆が揮われ、万人の手により受け継がれる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 83,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_ceilingLight_01": {
+        "id": "furni_midAutumn_ceilingLight_01",
+        "name": "紅絹の装飾灯",
+        "iconId": "furni_midAutumn_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 3,
+        "height": 5,
+        "comfort": 210,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "紅絹が付いた、部屋をお洒落に見せる照明。広間に垂らせば厳かに、腰に掛ければ風に乗る。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 190,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_ceilingLamp_01": {
+        "id": "furni_midAutumn_ceilingLamp_01",
+        "name": "宝塔ランプ",
+        "iconId": "furni_midAutumn_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 55,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "宝塔の形をした天井照明。蝋燭に火を灯し、宝塔を吊るせば、誰もが心を躍らせる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 45,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_window_01": {
+        "id": "furni_midAutumn_window_01",
+        "name": "明月懸かる夜空",
+        "iconId": "furni_midAutumn_window_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 1,
+        "height": 10,
+        "comfort": 310,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "お月見の夜空を映したスクリーン。明日訪れる望月に、今宵思いを馳せる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 230,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_wallpaper_01": {
+        "id": "furni_midAutumn_wallpaper_01",
+        "name": "炎式広間の壁紙",
+        "iconId": "furni_midAutumn_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎国で祭日に使われる壁紙。朱漆が生壁を染め、ランタンが玉盤に映る。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_floor_01": {
+        "id": "furni_midAutumn_floor_01",
+        "name": "炎式フローリング",
+        "iconId": "furni_midAutumn_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎国の伝統的な木の床。それを踏みしめれば心は空にかかる虹の如く浮かび上がり、天の高みで雲を抱きしめることすらできるだろう。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "おくすりうさちゃん",
@@ -21270,6 +21929,29 @@
         "comfort": 75,
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "「炎熱きサルカズの踊り子は吹き荒ぶ嵐を鎮めることができた。ならば彼女が憎悪に満ちた時、何が彼女に安寧をもたらしうるのだろうか？」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS009_laBoheme_01": {
+        "id": "furni_dropS009_laBoheme_01",
+        "name": "パネル「寵愛」",
+        "iconId": "furni_dropS009_laBoheme_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「君たちは何回か会っただけなのに、どこに永遠の愛があるというんだ？」「私が彼女を愛する歳月が十分ありすぎると歴史は知るだろうね。」",
         "obtainApproach": "イベント報酬",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -25120,6 +25802,118 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_midAutumn": {
+        "id": "furni_set_midAutumn",
+        "name": "炎式広間",
+        "desc": "炎国の祭日の雰囲気を再現したコンセプトルーム。満月が昇り、祭日が訪れた。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_midAutumn_screen_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_midAutumn_cabinet_01",
+            "pos0": 5,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_pottedplant_01",
+            "pos0": 2,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_floorLamp_01",
+            "pos0": 0,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_table_01",
+            "pos0": 12,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_midAutumn_stool_01",
+            "pos0": 13,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_midAutumn_stool_01",
+            "pos0": 15,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_midAutumn_stove_01",
+            "pos0": 20,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_midAutumn_sofa_01",
+            "pos0": 24,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_stool2_01",
+            "pos0": 24,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_midAutumn_carpet_01",
+            "pos0": 20,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_handLamp_01",
+            "pos0": 32,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ornaments_01",
+            "pos0": 31,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLight_01",
+            "pos0": 13,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLamp_01",
+            "pos0": 4,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLamp_01",
+            "pos0": 8,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLamp_01",
+            "pos0": 28,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_window_01",
+            "pos0": 12,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -26565,6 +27359,59 @@
           "furni_bolivar_floor_01",
           "furni_bolivar_column_01",
           "furni_bolivar_wall_01"
+        ]
+      },
+      "furni_set_midAutumn_1": {
+        "id": "furni_set_midAutumn_1",
+        "name": "月見セット",
+        "themeId": "furni_set_midAutumn",
+        "comfort": 285,
+        "count": 4,
+        "furniture": [
+          "furni_midAutumn_window_01",
+          "furni_midAutumn_table_01",
+          "furni_midAutumn_stool_01",
+          "furni_midAutumn_stove_01"
+        ]
+      },
+      "furni_set_midAutumn_2": {
+        "id": "furni_set_midAutumn_2",
+        "name": "団欒セット",
+        "themeId": "furni_set_midAutumn",
+        "comfort": 225,
+        "count": 5,
+        "furniture": [
+          "furni_midAutumn_sofa_01",
+          "furni_midAutumn_stool2_01",
+          "furni_midAutumn_handLamp_01",
+          "furni_midAutumn_ornaments_01",
+          "furni_midAutumn_carpet_01"
+        ]
+      },
+      "furni_set_midAutumn_3": {
+        "id": "furni_set_midAutumn_3",
+        "name": "調度品",
+        "themeId": "furni_set_midAutumn",
+        "comfort": 250,
+        "count": 4,
+        "furniture": [
+          "furni_midAutumn_screen_01",
+          "furni_midAutumn_floorLamp_01",
+          "furni_midAutumn_cabinet_01",
+          "furni_midAutumn_pottedplant_01"
+        ]
+      },
+      "furni_set_midAutumn_4": {
+        "id": "furni_set_midAutumn_4",
+        "name": "内装",
+        "themeId": "furni_set_midAutumn",
+        "comfort": 190,
+        "count": 4,
+        "furniture": [
+          "furni_midAutumn_wallpaper_01",
+          "furni_midAutumn_floor_01",
+          "furni_midAutumn_ceilingLight_01",
+          "furni_midAutumn_ceilingLamp_01"
         ]
       }
     },
