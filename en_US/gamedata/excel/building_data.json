@@ -6244,6 +6244,34 @@
         }
       ]
     },
+    "char_159_peacok": {
+      "charId": "char_159_peacok",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_single[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_spd[001]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_250_phatom": {
       "charId": "char_250_phatom",
       "maxManpower": 8640000,
@@ -7031,6 +7059,138 @@
           "buffData": [
             {
               "buffId": "dorm_rec_single&oneself[012]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_350_surtr": {
+      "charId": "char_350_surtr",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession[120]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_365_aprl": {
+      "charId": "char_365_aprl",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&limit[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_spd&limit[001]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_all[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_271_spikes": {
+      "charId": "char_271_spikes",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_dorm[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "workshop_formula_dorm[001]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_oneself2[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_388_mint": {
+      "charId": "char_388_mint",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[050]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[350]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_spd[201]",
               "cond": {
                 "phase": 1,
                 "level": 1
@@ -7834,6 +7994,18 @@
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, <@cc.kw>Originium</> formula related productivity <@cc.vup>+35%</>"
     },
+    "manu_formula_spd[201]": {
+      "buffId": "manu_formula_spd[201]",
+      "buffName": "Geology α",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_originium1",
+      "sortId": 3012,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, <@cc.kw>Originium</> formula related productivity <@cc.vup>+30%</>"
+    },
     "manu_formula_spd[211]": {
       "buffId": "manu_formula_spd[211]",
       "buffName": "Geology β",
@@ -7990,6 +8162,18 @@
       "roomType": "TRADING",
       "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+10%</> and the order limit <@cc.vup>+2</>"
     },
+    "trade_ord_spd&limit[001]": {
+      "buffId": "trade_ord_spd&limit[001]",
+      "buffName": "Order Management β",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd&limit2",
+      "sortId": 4201,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+10%</> and the order limit <@cc.vup>+4</>"
+    },
     "trade_ord_spd&limit[010]": {
       "buffId": "trade_ord_spd&limit[010]",
       "buffName": "Supply Management",
@@ -8120,7 +8304,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "When this Operator is assigned to a Trading Post, increases order acquisition efficiency by <@cc.vup>+4%</> for every difference of <@cc.vup>1</> orders between the current number of orders and the maximum number of orders"
+      "description": "When this Operator is assigned to a Trading Post, increases order acquisition efficiency by <@cc.vup>+4%</> for every difference of <@cc.vup>1</> order(s) between the current number of orders and the maximum number of orders"
     },
     "trade_ord_limit_count[000]": {
       "buffId": "trade_ord_limit_count[000]",
@@ -8132,7 +8316,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "When this Operator is assigned to a Trading Post, reduces the order limit by <@cc.vdown>-1</> for every <@cc.vup>10%</> order acquisition efficiency provided by all other Operators stationed at that Trading Post; furthermore, increases order acquisition efficiency by <@cc.vup>+4%</> per every <@cc.vup>1</> orders"
+      "description": "When this Operator is assigned to a Trading Post, reduces the order limit by <@cc.vdown>-1</> for every <@cc.vup>10%</> order acquisition efficiency provided by all other Operators stationed at that Trading Post; furthermore, increases order acquisition efficiency by <@cc.vup>+4%</> per every <@cc.vup>1</> order(s)"
     },
     "trade_ord_wt&cost[000]": {
       "buffId": "trade_ord_wt&cost[000]",
@@ -8530,6 +8714,30 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>elite material</>, the production rate of byproduct increases by <@cc.vup>100%</>"
     },
+    "workshop_formula_dorm[000]": {
+      "buffId": "workshop_formula_dorm[000]",
+      "buffName": "Waste Not, Want Not",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_dorm1",
+      "sortId": 7551,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the byproduct production rate by <@cc.vup>5%</> for every <@cc.kw>1</> Operator with <@cc.vup>4</> or less Morale assigned to the Dorms"
+    },
+    "workshop_formula_dorm[001]": {
+      "buffId": "workshop_formula_dorm[001]",
+      "buffName": "Everyone Does Their Part",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_dorm2",
+      "sortId": 7552,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the byproduct production rate by <@cc.vup>5%</> for every <@cc.kw>1</> Operator with <@cc.vup>20</> or less Morale assigned to the Dorms"
+    },
     "workshop_formula_probability[200]": {
       "buffId": "workshop_formula_probability[200]",
       "buffName": "Engineering",
@@ -8746,6 +8954,18 @@
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> Operators' Specialization training speed <@cc.vup>+30%</>"
     },
+    "train_spd&profession2[050]": {
+      "buffId": "train_spd&profession2[050]",
+      "buffName": "Caster Expert α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_caster1",
+      "sortId": 9401,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> Operators' Specialization training speed <@cc.vup>+30%</>"
+    },
     "train_spd&profession[051]": {
       "buffId": "train_spd&profession[051]",
       "buffName": "Caster Expert β",
@@ -8830,6 +9050,18 @@
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Specialist</> Operators' Specialization training speed <@cc.vup>+50%</>"
     },
+    "train_spd&profession[120]": {
+      "buffId": "train_spd&profession[120]",
+      "buffName": "Bladework Memory",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_guard3",
+      "sortId": 9721,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+60%</>"
+    },
     "train_spd&profession[130]": {
       "buffId": "train_spd&profession[130]",
       "buffName": "Hannya",
@@ -8900,7 +9132,19 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
-      "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Caster</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+45%</> if training the skill to Specialization Rank <@cc.vup>1</>"
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Caster</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+45%</> if training the skill to Specialization Level <@cc.vup>1</>"
+    },
+    "train_spd&profession2[350]": {
+      "buffId": "train_spd&profession2[350]",
+      "buffName": "Widely-Read",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train2_caster1",
+      "sortId": 9431,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Caster</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+45%</> if training the skill to Specialization Level <@cc.vup>2</>"
     },
     "train_spd&profession2[320]": {
       "buffId": "train_spd&profession2[320]",
@@ -8948,7 +9192,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
-      "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour is decreased by <@cc.vdown>+1</> when training a <@cc.kw>Sniper</> Operator’s skill to Specialization Level <@cc.vup>3</>"
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour is increased by <@cc.vdown>+1</> when training a <@cc.kw>Sniper</> Operator’s skill to Specialization Level <@cc.vup>3</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -9010,6 +9254,18 @@
       "roomType": "DORMITORY",
       "description": "When this Operator is assigned to a Dormitory, self Morale recovered <@cc.vup>+0.75</> per hour"
     },
+    "dorm_rec_oneself2[000]": {
+      "buffId": "dorm_rec_oneself2[000]",
+      "buffName": "Searching for Solitude",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_one",
+      "sortId": 5002,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "When this Operator is assigned to a Dormitory, increases own Morale restored per hour by <@cc.vup>+0.7</>; If there are other Operators in that Dormitory, further increases own Morale restored per hour by <@cc.vup>+0.05</> for each additional Operator."
+    },
     "dorm_rec_single[000]": {
       "buffId": "dorm_rec_single[000]",
       "buffName": "Medical Service",
@@ -9057,6 +9313,18 @@
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
       "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.75</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)"
+    },
+    "dorm_rec_single[030]": {
+      "buffId": "dorm_rec_single[030]",
+      "buffName": "Apocalypse",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_single3",
+      "sortId": 5205,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.7</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)"
     },
     "dorm_rec_single_P[000]": {
       "buffId": "dorm_rec_single_P[000]",
@@ -18532,7 +18800,7 @@
         "height": 9,
         "comfort": 700,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A large bookshelf filled with various notices and posters. To correct peoples' misconceptions, some popular books were placed behind the signs.",
+        "description": "A large bookshelf filled with various notices and posters. To correct people's misconceptions, some popular books were placed behind the signs.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 458,
@@ -18647,7 +18915,7 @@
         "height": 4,
         "comfort": 275,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A wooden table with the lamp left on. The diary entry isn't finished yet, and the table was wiped down again and again.",
+        "description": "A wooden table with the lamp left on. A diary entry is left unfinished, erase mark after erase mark visible on its page.'",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 180,
@@ -18808,7 +19076,7 @@
         "height": 3,
         "comfort": 90,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "An imitation of an expensive pendant lamp. To this day, Leto still hasn't figured out how to operate it.",
+        "description": "An imitation of an expensive pendant lamp. To this day, Leto still hasn't figured out why it will shake around.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 73,
@@ -19107,7 +19375,7 @@
         "height": 4,
         "comfort": 520,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A four-poster bed unique to Leithania. Special incense can be placed on the corners during ceremonies, or just for aromatherapy.",
+        "description": "A four-poster bed unique to Leithania. Incense burners can be placed upon it during ceremonies, or just for aromatherapy.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -19682,7 +19950,7 @@
         "height": 4,
         "comfort": 135,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A rainforest tribe-style clay pot. I have no clue how to work clay, and it makes me a bit ashamed of calling myself a local.",
+        "description": "A rainforest tribe-style clay pot. Those who can't work with clay have no right to call themselves a local.",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -19728,7 +19996,7 @@
         "height": 10,
         "comfort": 540,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A rainforest tribe-style speaker heater. It’s actually an oven for grilling food.",
+        "description": "A rainforest tribe-style heater. It’s actually an oven for grilling food.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -19944,9 +20212,400 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_midAutumn_screen_01": {
+        "id": "furni_midAutumn_screen_01",
+        "name": "Carved Wooden Partition",
+        "iconId": "furni_midAutumn_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 8,
+        "comfort": 375,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Wooden partitions imported from Yen. Blocks out the autumn wind, but receives all your guests with a warm welcome.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 278,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_cabinet_01": {
+        "id": "furni_midAutumn_cabinet_01",
+        "name": "Cubic Storage Chest",
+        "iconId": "furni_midAutumn_cabinet_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 2,
+        "height": 6,
+        "comfort": 260,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A traditional chest imported from Yen with endless uses. Where could all the treasures be?",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 193,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_pottedplant_01": {
+        "id": "furni_midAutumn_pottedplant_01",
+        "name": "Potted Tree",
+        "iconId": "furni_midAutumn_pottedplant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 5,
+        "comfort": 205,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A potted plant seemingly brought in from elsewhere. The plant is still budding and not suitable for outdoors.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 168,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_floorLamp_01": {
+        "id": "furni_midAutumn_floorLamp_01",
+        "name": "Tall Candlestand",
+        "iconId": "furni_midAutumn_floorLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 6,
+        "comfort": 180,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A candlelight commonly found in Yen households. Bright and luminous, symbolizing a family's harmony.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 163,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_table_01": {
+        "id": "furni_midAutumn_table_01",
+        "name": "Low Height Table",
+        "iconId": "furni_midAutumn_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 4,
+        "height": 5,
+        "comfort": 510,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A long table with all kinds of festive delights laid out on top. Invite all your friends and family, and gather around the table as you enjoy the beauties of the seasons.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 375,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_stool_01": {
+        "id": "furni_midAutumn_stool_01",
+        "name": "Round Wooden Stool",
+        "iconId": "furni_midAutumn_stool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 95,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A wooden stool found in all Yen households. With all the fine treats on the table, who wouldn't want to get seated and chow in right away?",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 80,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_stove_01": {
+        "id": "furni_midAutumn_stove_01",
+        "name": "Originium Water Boiler",
+        "iconId": "furni_midAutumn_stove_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A water boiler that uses Originium as its heat source. Brings your water to a turbulent boil, and brews up a storm in your teacups.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_sofa_01": {
+        "id": "furni_midAutumn_sofa_01",
+        "name": "Modern Yen Chaise Lounge",
+        "iconId": "furni_midAutumn_sofa_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 4,
+        "height": 3,
+        "comfort": 415,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A traditional chaise lounge improved with western sensibilities. Why not take a quick nap before participating in the festivities again?",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 305,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_stool2_01": {
+        "id": "furni_midAutumn_stool2_01",
+        "name": "Extended Footstool",
+        "iconId": "furni_midAutumn_stool2_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 170,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A footstool for resting your feet. Raises your poems and songs to a whole new level along with your feet.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 155,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_carpet_01": {
+        "id": "furni_midAutumn_carpet_01",
+        "name": "Vermillion Carpet",
+        "iconId": "furni_midAutumn_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 10,
+        "height": 1,
+        "comfort": 180,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A carpet commonly found in Yen househounds. Travel broadens yours horizons, but there is no better place to be than home when it comes time to celebrate.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 148,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_handLamp_01": {
+        "id": "furni_midAutumn_handLamp_01",
+        "name": "Basket Lantern",
+        "iconId": "furni_midAutumn_handLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A candle-lit lantern. Its shadow twitches to the candlelight's flicker, as another year has come and pass.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 110,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_ornaments_01": {
+        "id": "furni_midAutumn_ornaments_01",
+        "name": "Framed Calligraphy",
+        "iconId": "furni_midAutumn_ornaments_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 5,
+        "comfort": 90,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A framed calligraphy artwork. Even a few strokes scrawled on the spur of the moment can be a display for the ages.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 83,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_ceilingLight_01": {
+        "id": "furni_midAutumn_ceilingLight_01",
+        "name": "Red Silken Decorative Lamp",
+        "iconId": "furni_midAutumn_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 3,
+        "height": 5,
+        "comfort": 210,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A red silken decorative hanging lamp. Its frabic hangs solemnly above the hall, swaying serenely as the breeze blows past.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 190,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_ceilingLamp_01": {
+        "id": "furni_midAutumn_ceilingLamp_01",
+        "name": "Pagoda Light",
+        "iconId": "furni_midAutumn_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 55,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A hanging light shaped like a pagoda. The view of these lamps alit can jubilate masses from far and wide.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 45,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_window_01": {
+        "id": "furni_midAutumn_window_01",
+        "name": "Panorama Display Panel (Moonlight)",
+        "iconId": "furni_midAutumn_window_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 1,
+        "height": 10,
+        "comfort": 310,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A display panel showcasing the full moon. Stay after moonrise tonight, for the heavenly body is a sight to be marveled at.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 230,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_wallpaper_01": {
+        "id": "furni_midAutumn_wallpaper_01",
+        "name": "Yen Hall Wallpaper",
+        "iconId": "furni_midAutumn_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A style of wallpaper used during Yen festivities. Its vermillion patterns rejuvenates drab walls, as lanterns light up the moon up above.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_midAutumn_floor_01": {
+        "id": "furni_midAutumn_floor_01",
+        "name": "Yen Wooden Flooring",
+        "iconId": "furni_midAutumn_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Traditional wooden flooring used in Yen. Set foot on stable ground, and the confidence can carry you to new heights.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
-        "name": "Bunny Pestle and Mortar",
+        "name": "Futuristic Kitty Bank",
         "iconId": "furni_MA2020_rabbit_01",
         "type": "DECORATION",
         "location": "FLOOR",
@@ -20004,7 +20663,7 @@
         "height": 3,
         "comfort": 180,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A bean bag sofa in the shape of a traditional Yan delicacy. Has been used on multiple occasions by high-profile visitors from Yan.",
+        "description": "A bean bag sofa in the shape of a traditional Yen delicacy. Is often frequented by a certain high-profile visitor from Yen who refuses to separate from it.",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -20119,7 +20778,7 @@
         "height": 4,
         "comfort": 65,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A miscellaneous assortment of things hanging on the wall, ranging from cocks to portraits to porcelain plates. Can stagnation, conflagration, shattering, and destruction become the best of memories?",
+        "description": "A miscellaneous assortment of things hanging on the wall, ranging from clocks to portraits to porcelain plates. Can stagnation, conflagration, shattering, and destruction become the best of memories?",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -21278,6 +21937,29 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_dropS009_laBoheme_01": {
+        "id": "furni_dropS009_laBoheme_01",
+        "name": "Plaque - True Love",
+        "iconId": "furni_dropS009_laBoheme_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "\"You've only met each other a few times. How can there be any eternal love?\" \"History will know that my love for her was long enough.\"",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_dropS009_magicFlute_01": {
         "id": "furni_dropS009_magicFlute_01",
         "name": "Plaque - Day and Night",
@@ -21545,8 +22227,8 @@
         "height": 4,
         "comfort": 140,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A bat rack of the Ursus Student Self-Governing Group. Occasionally they will get together to play baseball.",
-        "obtainApproach": "Ursus Student Self-Governing Group Trust collection",
+        "description": "A bat rack of the Ursus Student Self-Government Group. Occasionally they will get together to play baseball.",
+        "obtainApproach": "Ursus Student Self-Government Group Trust collection",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -25120,6 +25802,118 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_midAutumn": {
+        "id": "furni_set_midAutumn",
+        "name": "Yen Reception Hall",
+        "desc": "A room that imitates the atmosphere of traditional Yen holidays. The moon rises; let the festivities begin.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_midAutumn_screen_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_midAutumn_cabinet_01",
+            "pos0": 5,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_pottedplant_01",
+            "pos0": 2,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_floorLamp_01",
+            "pos0": 0,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_table_01",
+            "pos0": 12,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_midAutumn_stool_01",
+            "pos0": 13,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_midAutumn_stool_01",
+            "pos0": 15,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_midAutumn_stove_01",
+            "pos0": 20,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_midAutumn_sofa_01",
+            "pos0": 24,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_stool2_01",
+            "pos0": 24,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_midAutumn_carpet_01",
+            "pos0": 20,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_handLamp_01",
+            "pos0": 32,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ornaments_01",
+            "pos0": 31,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLight_01",
+            "pos0": 13,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLamp_01",
+            "pos0": 4,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLamp_01",
+            "pos0": 8,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_ceilingLamp_01",
+            "pos0": 28,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_midAutumn_window_01",
+            "pos0": 12,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_midAutumn_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -26427,7 +27221,7 @@
       },
       "furni_set_nightView_2": {
         "id": "furni_set_nightView_2",
-        "name": "The Pleasure of Relaxation",
+        "name": "The Love for Learning",
         "themeId": "furni_set_nightView",
         "comfort": 200,
         "count": 4,
@@ -26440,7 +27234,7 @@
       },
       "furni_set_nightView_3": {
         "id": "furni_set_nightView_3",
-        "name": "The Love for Learning",
+        "name": "The Pleasure of Relaxation",
         "themeId": "furni_set_nightView",
         "comfort": 350,
         "count": 5,
@@ -26565,6 +27359,59 @@
           "furni_bolivar_floor_01",
           "furni_bolivar_column_01",
           "furni_bolivar_wall_01"
+        ]
+      },
+      "furni_set_midAutumn_1": {
+        "id": "furni_set_midAutumn_1",
+        "name": "Dining Under the Moonlight",
+        "themeId": "furni_set_midAutumn",
+        "comfort": 285,
+        "count": 4,
+        "furniture": [
+          "furni_midAutumn_window_01",
+          "furni_midAutumn_table_01",
+          "furni_midAutumn_stool_01",
+          "furni_midAutumn_stove_01"
+        ]
+      },
+      "furni_set_midAutumn_2": {
+        "id": "furni_set_midAutumn_2",
+        "name": "Seated Conversations",
+        "themeId": "furni_set_midAutumn",
+        "comfort": 225,
+        "count": 5,
+        "furniture": [
+          "furni_midAutumn_sofa_01",
+          "furni_midAutumn_stool2_01",
+          "furni_midAutumn_handLamp_01",
+          "furni_midAutumn_ornaments_01",
+          "furni_midAutumn_carpet_01"
+        ]
+      },
+      "furni_set_midAutumn_3": {
+        "id": "furni_set_midAutumn_3",
+        "name": "Contemporary Furnishings",
+        "themeId": "furni_set_midAutumn",
+        "comfort": 250,
+        "count": 4,
+        "furniture": [
+          "furni_midAutumn_screen_01",
+          "furni_midAutumn_floorLamp_01",
+          "furni_midAutumn_cabinet_01",
+          "furni_midAutumn_pottedplant_01"
+        ]
+      },
+      "furni_set_midAutumn_4": {
+        "id": "furni_set_midAutumn_4",
+        "name": "Festive Fixtures",
+        "themeId": "furni_set_midAutumn",
+        "comfort": 190,
+        "count": 4,
+        "furniture": [
+          "furni_midAutumn_wallpaper_01",
+          "furni_midAutumn_floor_01",
+          "furni_midAutumn_ceilingLight_01",
+          "furni_midAutumn_ceilingLamp_01"
         ]
       }
     },
