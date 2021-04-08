@@ -7200,6 +7200,118 @@
         }
       ]
     },
+    "char_423_blemsh": {
+      "charId": "char_423_blemsh",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_free[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_346_aosta": {
+      "charId": "char_346_aosta",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost3[110]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_device[030]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_381_bubble": {
+      "charId": "char_381_bubble",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_variable3[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_265_sophia": {
+      "charId": "char_265_sophia",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd[0000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -7802,6 +7914,18 @@
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+8</> and Morale consumed per hour <@cc.vup>-0.25</>"
     },
+    "manu_prod_limit&cost[010]": {
+      "buffId": "manu_prod_limit&cost[010]",
+      "buffName": "Hoarder",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost2",
+      "sortId": 3204,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+10</> and Morale consumed per hour <@cc.vup>-0.25</>"
+    },
     "manu_prod_limit&cost[020]": {
       "buffId": "manu_prod_limit&cost[020]",
       "buffName": "Explorer",
@@ -7909,6 +8033,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, Operators assigned to the Factory increase all capacity limits, add <@cc.vup>2%</> productivity."
+    },
+    "manu_prod_spd_variable3[000]": {
+      "buffId": "manu_prod_spd_variable3[000]",
+      "buffName": "Bigger is Better!",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_variable31",
+      "sortId": 3204,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, increases the productivity of Operators in that Factory based upon their increased capacity limit. Operators with <@cc.vup>18</> or less increased capacity limit gain <@cc.vup>1%</> productivity; Operators with greater than <@cc.vup>18</> increased capacity limit gain <@cc.vup>3%</> productivity (This effect does not stack with <@cc.rem>Recycling</> and takes priority over it)"
     },
     "manu_prod_spd_variable2[000]": {
       "buffId": "manu_prod_spd_variable2[000]",
@@ -8486,6 +8622,18 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, this Operator’s Morale will be <@cc.kw>restored once</> for every <@cc.vup>2</> times no byproducts are produced during processing, equal to the Morale consumed <@cc.kw>for processing that corresponding formula one time</> (the final Morale total is calculated after processing is completed)"
     },
+    "workshop_formula_cost2[000]": {
+      "buffId": "workshop_formula_cost2[000]",
+      "buffName": "Passionate Tinker",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost_blemishine",
+      "sortId": 7100,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the byproduct production rate by <@cc.vup>40%</>, and decreases the Morale consumption of recipes that cost <@cc.kw>8</> Morale or more by <@cc.vup>-4</>"
+    },
     "workshop_formula_cost[010]": {
       "buffId": "workshop_formula_cost[010]",
       "buffName": "Reckless",
@@ -8738,6 +8886,18 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the byproduct production rate by <@cc.vup>5%</> for every <@cc.kw>1</> Operator with <@cc.vup>20</> or less Morale assigned to the Dorms"
     },
+    "workshop_formula_free[000]": {
+      "buffId": "workshop_formula_free[000]",
+      "buffName": "Careful Planning",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_free",
+      "sortId": 7501,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, reduces the LMD cost."
+    },
     "workshop_formula_probability[200]": {
       "buffId": "workshop_formula_probability[200]",
       "buffName": "Engineering",
@@ -8810,12 +8970,36 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Device</>-type materials, increases the byproduct production rate by <@cc.vup>90%</>"
     },
+    "workshop_formula_device[030]": {
+      "buffId": "workshop_formula_device[030]",
+      "buffName": "DIY Polyester",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_polyester",
+      "sortId": 7544,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Ester</>-type materials, increases the byproduct production rate by <@cc.vup>90%</>"
+    },
     "train_spd[000]": {
       "buffId": "train_spd[000]",
       "buffName": "Drillmaster",
       "buffIcon": "training",
       "skillIcon": "bskill_train_all",
       "sortId": 9001,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed <@cc.vup>+25%</>"
+    },
+    "train_spd[0000]": {
+      "buffId": "train_spd[0000]",
+      "buffName": "Drillmaster",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_all",
+      "sortId": 9701,
       "buffColor": "#7d0022",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -20603,6 +20787,466 @@
         "canBeDestroy": true,
         "isOnly": -1
       },
+      "furni_fNearl_cabinet_H_01": {
+        "id": "furni_fNearl_cabinet_H_01",
+        "name": "Weapon Armoire",
+        "iconId": "furni_fNearl_cabinet_H_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 9,
+        "comfort": 410,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An armoire containing the Nearls' battle armor, the family heirloom. The armor's current user is Maria.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_calendar_01": {
+        "id": "furni_fNearl_calendar_01",
+        "name": "Training Calendar",
+        "iconId": "furni_fNearl_calendar_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 2,
+        "comfort": 55,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A calendar for recording training results and competition dates. Several pages full of red checkmarks have been torn away.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sofaStool_R_01": {
+        "id": "furni_fNearl_sofaStool_R_01",
+        "name": "Sofa Stool (Round)",
+        "iconId": "furni_fNearl_sofaStool_R_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A round, black sofa stool. When she's not standing atop the chessboard, the queen is but a meaningless carving.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sofa_M_01": {
+        "id": "furni_fNearl_sofa_M_01",
+        "name": "Extended Sofa (White)",
+        "iconId": "furni_fNearl_sofa_M_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 300,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A soft, milk-white sofa of extended length. Just the perfect size for an exhausted knight to lie down and get some rest.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sofa_S_01": {
+        "id": "furni_fNearl_sofa_S_01",
+        "name": "Sofa for One (White)",
+        "iconId": "furni_fNearl_sofa_S_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A sofa, milk-white sofa. Just the perfect size for a worrywart knight to sit down and relax their mind.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sofaStool_S_01": {
+        "id": "furni_fNearl_sofaStool_S_01",
+        "name": "Sofa Stool (Square)",
+        "iconId": "furni_fNearl_sofaStool_S_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 2,
+        "comfort": 180,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A large, rectangular sofa with Zofia's cape flung on top. Though it came with a cushion, a certain knight has stubbornly been placing it on other sofas.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_coffeeTable_01": {
+        "id": "furni_fNearl_coffeeTable_01",
+        "name": "Simple Coffee Table",
+        "iconId": "furni_fNearl_coffeeTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 170,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A low coffee table with a glass top. You can't get checkmated if there isn't a king in the chess set. *Taps forehead*",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_potted_01": {
+        "id": "furni_fNearl_potted_01",
+        "name": "Sunflower Pot",
+        "iconId": "furni_fNearl_potted_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A pot of sunflowers purchased at the florist. Judging by how it's started to wither, that was also the last time anyone has taken care of the flowers.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_carpet_01": {
+        "id": "furni_fNearl_carpet_01",
+        "name": "Plush Carpet (White)",
+        "iconId": "furni_fNearl_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 10,
+        "height": 1,
+        "comfort": 185,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A plush carpet that looks brand new, which either means it was recently given a deep clean, or it's actually brand new.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_wallDecor_01": {
+        "id": "furni_fNearl_wallDecor_01",
+        "name": "Sanctified Kuranta Statue",
+        "iconId": "furni_fNearl_banner_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 10,
+        "comfort": 270,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An art piece from the old mansion. Mounted on the wall, just like before. \"Fear neither hardship nor darkness\".",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_banner_01": {
+        "id": "furni_fNearl_banner_01",
+        "name": "Decorative Banner",
+        "iconId": "furni_fNearl_banner2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A banner for decorating the statue. \"Darkness shan't overshadow light\".",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_fNearl_shelf_01": {
+        "id": "furni_fNearl_shelf_01",
+        "name": "Marble Table",
+        "iconId": "furni_fNearl_shelf_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 2,
+        "height": 5,
+        "comfort": 355,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A table with an assortment of odds and ends on top: things that haven't been mailed, haven't been read, or haven't been completed.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_branchDecor_01": {
+        "id": "furni_fNearl_branchDecor_01",
+        "name": "\"Ashen White Twig Tree\"",
+        "iconId": "furni_fNearl_branchDecor_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 7,
+        "comfort": 165,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A twig tree used as decoration. The best parts of the tree were used to make carbines, and the knights took home the leftovers to decorate the place.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_cabinet_L_01": {
+        "id": "furni_fNearl_cabinet_L_01",
+        "name": "Classic Showcase",
+        "iconId": "furni_fNearl_cabinet_L_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 2,
+        "height": 5,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A showcase displaying all sorts of honors and trophies. A certain training maniac seems to have forgotten to put their shield back.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_sink_01": {
+        "id": "furni_fNearl_sink_01",
+        "name": "Wash Basin",
+        "iconId": "furni_fNearl_sink_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 210,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An expensive wash basin placed next to the door. Knights are to wash their hands after returning from duty, and it's often used to wash up, both hands and faces.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_wateringCan_01": {
+        "id": "furni_fNearl_wateringCan_01",
+        "name": "Watering Can",
+        "iconId": "furni_fNearl_wateringCan_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A watering can with a narrow spout used to water indoor plants. It's so seldom used that you could probably plant something inside.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_ceilingLight_01": {
+        "id": "furni_fNearl_ceilingLight_01",
+        "name": "Jade Ceiling Light (Large)",
+        "iconId": "furni_fNearl_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 150,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A large jade ceiling light with multiple lamps. Cheap and affordable. Casts lots of shadows on wherever it illuminates.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_ceilingLight2_01": {
+        "id": "furni_fNearl_ceilingLight2_01",
+        "name": "Jade Ceiling Lamp (Small)",
+        "iconId": "furni_fNearl_ceilingLight2_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 85,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A small jade ceiling light. Cheap and affordable. Never lights up a place enough.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_fNearl_wallpaper_01": {
+        "id": "furni_fNearl_wallpaper_01",
+        "name": "Knightly Noble Wallpaper",
+        "iconId": "furni_fNearl_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Wallpaper commonly used by knights and nobility. Instead of a room that could be described as knightly, Maria would rather have her own workshop.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_fNearl_floor_01": {
+        "id": "furni_fNearl_floor_01",
+        "name": "Knightly Noble Floor Tiles",
+        "iconId": "furni_fNearl_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Floor tiles commonly used by knights and nobility. Zofia doesn't mull over the details, and just lets her designers do their job unattended.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "Futuristic Kitty Bank",
@@ -21976,6 +22620,29 @@
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "\"Everything in the world changes, like day and night turning on an axis. The balance of the cosmos has been skewed, so where will your weight fall?\"",
         "obtainApproach": "Dropped from the first clear reward of Challenge Mode SV-7",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS009_etudeOp10No12_01": {
+        "id": "furni_dropS009_etudeOp10No12_01",
+        "name": "Plaque - Resistance",
+        "iconId": "furni_dropS009_etudeOp10No12_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "\"I have gathered my comrades to sing songs of praise for everyone. But what can you gain from this sad act of aggression? The land of Kazimierz shall never belong to you.\"",
+        "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -25914,6 +26581,123 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_fNearl": {
+        "id": "furni_set_fNearl",
+        "name": "Nearls' Living Room Replica",
+        "desc": "A living room reproduction financed by Zofia and constructed by Maria. It's quite different compared to the one before.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_fNearl_cabinet_H_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_calendar_01",
+            "pos0": 8,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_fNearl_sofaStool_R_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_fNearl_sofa_M_01",
+            "pos0": 9,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_fNearl_sofa_S_01",
+            "pos0": 9,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_fNearl_sofaStool_S_01",
+            "pos0": 18,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_fNearl_coffeeTable_01",
+            "pos0": 13,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_fNearl_potted_01",
+            "pos0": 20,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_fNearl_carpet_01",
+            "pos0": 8,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_wallDecor_01",
+            "pos0": 13,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_banner_01",
+            "pos0": 11,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_fNearl_banner_01",
+            "pos0": 21,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_fNearl_shelf_01",
+            "pos0": 12,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_fNearl_branchDecor_01",
+            "pos0": 25,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_cabinet_L_01",
+            "pos0": 27,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_sink_01",
+            "pos0": 30,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_fNearl_wateringCan_01",
+            "pos0": 28,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_fNearl_ceilingLight_01",
+            "pos0": 13,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_fNearl_ceilingLight2_01",
+            "pos0": 4,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_fNearl_ceilingLight2_01",
+            "pos0": 26,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_fNearl_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_fNearl_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -27412,6 +28196,71 @@
           "furni_midAutumn_floor_01",
           "furni_midAutumn_ceilingLight_01",
           "furni_midAutumn_ceilingLamp_01"
+        ]
+      },
+      "furni_set_fNearl_1": {
+        "id": "furni_set_fNearl_1",
+        "name": "Living Room Aesthetics",
+        "themeId": "furni_set_fNearl",
+        "comfort": 190,
+        "count": 3,
+        "furniture": [
+          "furni_fNearl_wallDecor_01",
+          "furni_fNearl_shelf_01",
+          "furni_fNearl_banner_01"
+        ]
+      },
+      "furni_set_fNearl_2": {
+        "id": "furni_set_fNearl_2",
+        "name": "Living Room Resting Area",
+        "themeId": "furni_set_fNearl",
+        "comfort": 250,
+        "count": 6,
+        "furniture": [
+          "furni_fNearl_sofa_M_01",
+          "furni_fNearl_sofa_S_01",
+          "furni_fNearl_coffeeTable_01",
+          "furni_fNearl_sofaStool_S_01",
+          "furni_fNearl_potted_01",
+          "furni_fNearl_carpet_01"
+        ]
+      },
+      "furni_set_fNearl_3": {
+        "id": "furni_set_fNearl_3",
+        "name": "Embodiments of Knighthood",
+        "themeId": "furni_set_fNearl",
+        "comfort": 155,
+        "count": 3,
+        "furniture": [
+          "furni_fNearl_cabinet_H_01",
+          "furni_fNearl_sofaStool_R_01",
+          "furni_fNearl_calendar_01"
+        ]
+      },
+      "furni_set_fNearl_4": {
+        "id": "furni_set_fNearl_4",
+        "name": "Living Room Leisure Zone",
+        "themeId": "furni_set_fNearl",
+        "comfort": 175,
+        "count": 4,
+        "furniture": [
+          "furni_fNearl_branchDecor_01",
+          "furni_fNearl_cabinet_L_01",
+          "furni_fNearl_sink_01",
+          "furni_fNearl_wateringCan_01"
+        ]
+      },
+      "furni_set_fNearl_5": {
+        "id": "furni_set_fNearl_5",
+        "name": "Knightly Interiors",
+        "themeId": "furni_set_fNearl",
+        "comfort": 160,
+        "count": 4,
+        "furniture": [
+          "furni_fNearl_wallpaper_01",
+          "furni_fNearl_floor_01",
+          "furni_fNearl_ceilingLight_01",
+          "furni_fNearl_ceilingLight2_01"
         ]
       }
     },
