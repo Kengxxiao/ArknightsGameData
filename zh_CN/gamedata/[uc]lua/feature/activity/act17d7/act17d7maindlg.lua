@@ -85,8 +85,8 @@ function Act17D7MainDlg:_InitFromDynActs(actId)
 end
 
 function Act17D7MainDlg:_InitFromStageData()
-  local suc, stageData = CS.Torappu.StageDB.instance:TryGetStage(self._stageId)
-  if not suc then
+  local stageData = CS.Torappu.StageDataUtil.GetStageOrNull(self._stageId)
+  if stageData == nil then
     return;
   end
   local displayDetailRewards = stageData.stageDropInfo.displayDetailRewards;

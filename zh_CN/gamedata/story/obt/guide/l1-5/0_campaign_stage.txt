@@ -3,17 +3,22 @@
 [PopupDialog(dialogHead="$avatar_amiya")] 嗯，是的。如果能够在这些战场上取得优势，就可以大幅度削减敌人的实力。
 [PopupDialog(dialogHead="$avatar_sys")] 现在，需要你亲自指挥这些重要的战斗。
 [GotoPage(dest="home", waitForSignal="home_routed")]
-[Tutorial(target="btn_battle",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 点击进入作战室界面
+[Tutorial(target="btn_battle",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 点击进入终端界面
 [GotoPage(dest="stage", waitForSignal="stage_routed")]
-[Tutorial(target="pool_btn_zonetab_campaign", waitForSignal="campaign_world_home_state_ready",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 点击进入剿灭作战的泰拉地图
+[Tutorial(target="campaign_layout", waitForSignal="stage_campaign_zonetype_selected",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 选中每周部署标签，进入剿灭作战页面
+[Tutorial(target="button_enter", waitForSignal="campaign_world_home_state_ready",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 点击进入剿灭作战的泰拉地图
 [Campaign.RegisterZoneBtn(zoneId="camp_zone_3")]
 [Campaign.FocusZone(zoneId="camp_zone_3", waitForSignal="campaign_world_zone_focused")]
 [Tutorial(target="pool_btn_campaign_zone", waitForSignal="campaign_zone_map_state_resumed",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 选择乌萨斯地区，进入委托目标选择页面
 [Tutorial(target="pool_btn_campaign_first_zone_stage", searchBtnInChildren=true, waitForSignal="campaign_stage_preview_resumed",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 选择其中一个委托目标查看其详细情报
-[Tutorial(focusX=-173, focusY=98, focusWidth=310, focusHeight=193, anchor="Right",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 剿灭作战的规则会与通常的作战稍有不同，请确保在进入前仔细阅读。
+[Tutorial(focusX=-173, focusY=98, focusWidth=310, focusHeight=193, anchor="Right",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 剿灭作战的规则在通常作战基础上进行了一定变更，请确保在进入战场前仔细阅读，了解具体变更事宜。
 [Tutorial(target="btn_enemy_handbook",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 博士，接下来的是重点。在剿灭作战行动中你会遭遇大量敌人，即使无法一次全部击败也不用灰心。
-[Tutorial(focusX=-97, focusY=-331, focusWidth=103, focusHeight=37, anchor="Right",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 即使没有击败全部敌人，也可以使用PRTS的代理作战。另外理智也会根据未击败的敌人数进行相应的返还，请务必大胆地进行尝试。
-[PopupDialog(dialogHead="$avatar_sys")] 完成剿灭作战后，会根据这次作战击败的人数得到相应的奖励。
+[Tutorial(focusX=-97, focusY=-331, focusWidth=103, focusHeight=37, anchor="Right",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 即使没有击败全部敌人，您已完成的剿灭也可以使用PRTS进行代理作战。此外，请不用担心理智的消耗问题，每次剿灭结束，都会根据您未击败的敌人数量对理智进行相应的返还，大胆地尝试一下吧。
+[PopupDialog(dialogHead="$avatar_sys")] 完成剿灭作战后，会根据本次作战击败的敌人数量得到相对应的奖励。
 [Tutorial(target="panel_campaign_info",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 单次击败的敌人数越多，就可以获得更高的阶段奖励。不过注意每个阶段奖励只能获取一次。
-[Tutorial(focusX=218, focusY=70, focusWidth=415, focusHeight=94, anchor="BottomLeft",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 此外根据击败敌人数还会有每周<@tu.kw>合成玉</>奖励。这些奖励是各个剿灭作战之间共通的，并且会以周为单位进行刷新。
+[Tutorial(focusX=218, focusY=70, focusWidth=415, focusHeight=94, anchor="BottomLeft",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 此外，根据击败的敌人数量，还会提供<@tu.kw>合成玉</>奖励，该奖励进度在各个剿灭作战间共通，且每周刷新一次。
 [Tutorial(target="panel_campaign_info", waitForSignal="campaign_stage_break_detail_shown",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 点击这里就可以查看阶段奖励的详情了。
+[Tutorial(focusX=-20, focusY=-36, focusWidth=1047, focusHeight=131,           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 单次剿灭任务也会依照击杀敌人数量，提供相应的奖励。
+[Tutorial(focusX=-20, focusY=-36, focusWidth=1047, focusHeight=131,           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 以上就是剿灭作战的规则了，这里的战斗强度很高，以博士现在的队伍还很难应付，让我们先回到切尔诺伯格，尝试应对整合运动吧。
+[GotoPage(dest="STAGE", waitForSignal="stage_routed", zoneId="main_2", stageId="tr_08")]
+[Delay(time="$f_delay_scroll_stage_on_map")]

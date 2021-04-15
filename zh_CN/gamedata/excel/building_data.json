@@ -3729,9 +3729,16 @@
         {
           "buffData": [
             {
-              "buffId": "hire_spd[010]",
+              "buffId": "hire_spd_cost[010]",
               "cond": {
                 "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "hire_spd_cost[200]",
+              "cond": {
+                "phase": 1,
                 "level": 1
               }
             }
@@ -7917,6 +7924,104 @@
         }
       ]
     },
+    "char_472_pasngr": {
+      "charId": "char_472_pasngr",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[003]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "power_rec_spd[016]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&power[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_363_toddi": {
+      "charId": "char_363_toddi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost3[111]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_device[020]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_304_zebra": {
+      "charId": "char_304_zebra",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost[006]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[330]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -8097,7 +8202,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost[001]": {
       "buffId": "control_mp_cost[001]",
@@ -8109,7 +8214,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost[002]": {
       "buffId": "control_mp_cost[002]",
@@ -8121,7 +8226,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost[003]": {
       "buffId": "control_mp_cost[003]",
@@ -8133,23 +8238,11 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost[004]": {
       "buffId": "control_mp_cost[004]",
       "buffName": "替身",
-      "buffIcon": "control",
-      "skillIcon": "bskill_ctrl_cost",
-      "sortId": 1105,
-      "buffColor": "#005752",
-      "textColor": "#ffffff",
-      "buffCategory": "FUNCTION",
-      "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
-    },
-    "control_mp_cost[005]": {
-      "buffId": "control_mp_cost[005]",
-      "buffName": "必要责任",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost",
       "sortId": 1106,
@@ -8157,7 +8250,31 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
+    },
+    "control_mp_cost[005]": {
+      "buffId": "control_mp_cost[005]",
+      "buffName": "必要责任",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "sortId": 1107,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
+    },
+    "control_mp_cost[006]": {
+      "buffId": "control_mp_cost[006]",
+      "buffName": "护卫",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "sortId": 1105,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction2[000]": {
       "buffId": "control_mp_cost&faction2[000]",
@@ -8169,7 +8286,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>鲤氏侦探所</>干员可使该派系干员<@cc.kw>额外降低心情消耗</>，同时每人可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内每个<$cc.t.lda><@cc.kw>鲤氏侦探所</></>干员可使该派系干员<@cc.kw>额外恢复心情</>，同时每人可使控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction[000]": {
       "buffId": "control_mp_cost&faction[000]",
@@ -8181,7 +8298,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>龙门近卫局</>干员可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内每个<$cc.t.lgd><@cc.kw>龙门近卫局</></>干员可使控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction[020]": {
       "buffId": "control_mp_cost&faction[020]",
@@ -8193,7 +8310,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>乌萨斯学生自治团</>干员可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内每个<$cc.t.ussg><@cc.kw>乌萨斯学生自治团</></>干员可使控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction[900]": {
       "buffId": "control_mp_cost&faction[900]",
@@ -8205,7 +8322,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>异格</>干员可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内每个<$cc.t.sp><@cc.kw>异格</></>干员可使控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction[990]": {
       "buffId": "control_mp_cost&faction[990]",
@@ -8217,7 +8334,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内每个<@cc.kw>彩虹小队</>干员可使控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>"
+      "description": "进驻控制中枢时，控制中枢内每个<$cc.t.R6><@cc.kw>彩虹小队</></>干员可使控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
     "control_mp_cost&bd1[000]": {
       "buffId": "control_mp_cost&bd1[000]",
@@ -8229,7 +8346,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时消耗<@cc.vup>-0.05</>；当自身心情处于<@cc.kw>12</>以下时，<@cc.rem>人间烟火</><@cc.vup>15</>"
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>；当自身心情处于<@cc.kw>12</>以下时，<$cc.bd_b1><@cc.rem>人间烟火</></><@cc.vup>+15</>"
     },
     "control_mp_cost&bd2[000]": {
       "buffId": "control_mp_cost&bd2[000]",
@@ -8241,7 +8358,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，自身心情每小时消耗<@cc.vdown>+0.5</>；当自身心情大于<@cc.kw>12</>时，<@cc.rem>感知信息</><@cc.vup>10</>"
+      "description": "进驻控制中枢时，自身心情每小时消耗<@cc.vdown>+0.5</>；当自身心情大于<@cc.kw>12</>时，<$cc.bd_a1><@cc.rem>感知信息</></><@cc.vup>+10</>"
     },
     "control_mp_bd[000]": {
       "buffId": "control_mp_bd[000]",
@@ -8253,7 +8370,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内每有1名<@cc.kw>彩虹小队</>干员，则<@cc.rem>情报储备</><@cc.vup>+1</>"
+      "description": "进驻控制中枢时，控制中枢内每有1名<$cc.t.R6><@cc.kw>彩虹小队</></>干员，则<$cc.bd_ash><@cc.rem>情报储备</></><@cc.vup>+1</>"
     },
     "control_mp_bd[010]": {
       "buffId": "control_mp_bd[010]",
@@ -8265,7 +8382,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，控制中枢内每有1名<@cc.kw>乌萨斯学生自治团</>干员，则<@cc.rem>乌萨斯特饮</><@cc.vup>+1</>"
+      "description": "进驻控制中枢时，控制中枢内每有1名<$cc.t.ussg><@cc.kw>乌萨斯学生自治团</></>干员，则<$cc.bd_tachanka><@cc.rem>乌萨斯特饮</></><@cc.vup>+1</>"
     },
     "power_rec_spd&cost[000]": {
       "buffId": "power_rec_spd&cost[000]",
@@ -8356,7 +8473,7 @@
       "buffName": "高热充能",
       "buffIcon": "power",
       "skillIcon": "bskill_pow_spd2",
-      "sortId": 2106,
+      "sortId": 2107,
       "buffColor": "#8fc31f",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -8405,6 +8522,18 @@
       "buffIcon": "power",
       "skillIcon": "bskill_pow_spd2",
       "sortId": 2105,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "进驻发电站时，无人机每小时充能速度<@cc.vup>+15%</>"
+    },
+    "power_rec_spd[016]": {
+      "buffId": "power_rec_spd[016]",
+      "buffName": "聚能",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd2",
+      "sortId": 2106,
       "buffColor": "#8fc31f",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -8769,7 +8898,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "进驻制造站时，当前制造站内干员根据自身提升的仓库容量提供一定的生产力。提升<@cc.vup>18</>格以下的，每格仓库容量提供<@cc.vup>1%</>生产力；提升大于<@cc.vup>18</>格的，每格仓库容量提供<@cc.vup>3%</>生产力（无法与<@cc.rem>回收利用</>叠加，且优先生效）"
+      "description": "进驻制造站时，当前制造站内干员根据自身提升的仓库容量提供一定的生产力。提升<@cc.vup>18</>格以下的，每格仓库容量提供<@cc.vup>1%</>生产力；提升大于<@cc.vup>18</>格的，每格仓库容量提供<@cc.vup>3%</>生产力（无法与<$cc.m.var1><@cc.rem>回收利用</></>叠加，且优先生效）"
     },
     "manu_prod_spd_variable2[000]": {
       "buffId": "manu_prod_spd_variable2[000]",
@@ -8793,7 +8922,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "进驻制造站时，宿舍内每有<@cc.kw>1</>名干员则<@cc.rem>感知信息</><@cc.vup>+1</>，同时每<@cc.vup>1</>点<@cc.rem>感知信息</>转化为<@cc.vup>1</>点<@cc.rem>思维链环</>"
+      "description": "进驻制造站时，宿舍内每有<@cc.kw>1</>名干员则<$cc.bd_a1><@cc.rem>感知信息</></><@cc.vup>+1</>，同时每<@cc.vup>1</>点<$cc.bd_a1><@cc.rem>感知信息</></>转化为<@cc.vup>1</>点<$cc.bd_A><@cc.rem>思维链环</></>"
     },
     "manu_prod_spd_bd[000]": {
       "buffId": "manu_prod_spd_bd[000]",
@@ -8805,7 +8934,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "进驻制造站时，每<@cc.vup>2</>点<@cc.rem>思维链环</><@cc.vup>+1%</>生产力"
+      "description": "进驻制造站时，每<@cc.vup>2</>点<$cc.bd_A><@cc.rem>思维链环</></><@cc.vup>+1%</>生产力"
     },
     "manu_prod_spd_bd[010]": {
       "buffId": "manu_prod_spd_bd[010]",
@@ -8817,7 +8946,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "进驻制造站时，每<@cc.vup>1</>点<@cc.rem>思维链环</><@cc.vup>+1%</>生产力"
+      "description": "进驻制造站时，每<@cc.vup>1</>点<$cc.bd_A><@cc.rem>思维链环</></><@cc.vup>+1%</>生产力"
     },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
@@ -9249,7 +9378,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "进驻贸易站时，宿舍内每有<@cc.kw>1</>名干员则<@cc.rem>人间烟火</><@cc.vup>+1</>，同时每有<@cc.vup>1</>点<@cc.rem>人间烟火</>，则订单获取效率<@cc.vup>+1%</>"
+      "description": "进驻贸易站时，宿舍内每有<@cc.kw>1</>名干员则<$cc.bd_b1><@cc.rem>人间烟火</></><@cc.vup>+1</>，同时每有<@cc.vup>1</>点<$cc.bd_b1><@cc.rem>人间烟火</></>，则订单获取效率<@cc.vup>+1%</>"
     },
     "trade_ord_limit&cost[000]": {
       "buffId": "trade_ord_limit&cost[000]",
@@ -9501,7 +9630,7 @@
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
-      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>50%</>，每<@cc.vup>1</>点<@cc.rem>情报储备</>额外提升<@cc.vup>5%</>；如果<@cc.rem>乌萨斯特饮</>达到<@cc.vup>4</>瓶，则额外提升<@cc.vup>15%</>"
+      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>50%</>，每<@cc.vup>1</>点<$cc.bd_ash><@cc.rem>情报储备</></>额外提升<@cc.vup>5%</>；如果<$cc.bd_tachanka><@cc.rem>乌萨斯特饮</></>达到<@cc.vup>4</>瓶，则额外提升<@cc.vup>15%</>"
     },
     "workshop_formula_cost4[000]": {
       "buffId": "workshop_formula_cost4[000]",
@@ -9563,12 +9692,24 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>精英材料</>时，心情消耗为<@cc.kw>4</>的配方全部<@cc.vup>-1</>心情消耗"
     },
+    "workshop_formula_cost3[111]": {
+      "buffId": "workshop_formula_cost3[111]",
+      "buffName": "熔铸",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_cost1",
+      "sortId": 7053,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>精英材料</>时，心情消耗为<@cc.kw>4</>的配方全部<@cc.vup>-1</>心情消耗"
+    },
     "workshop_formula_cost3[120]": {
       "buffId": "workshop_formula_cost3[120]",
       "buffName": "极简实用主义",
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_evolve_cost2",
-      "sortId": 7053,
+      "sortId": 7054,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
@@ -9875,6 +10016,18 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>装置</>类材料时，副产品的产出概率提升<@cc.vup>90%</>"
     },
+    "workshop_formula_device[020]": {
+      "buffId": "workshop_formula_device[020]",
+      "buffName": "DIY·异铁",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_oriron",
+      "sortId": 7542,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>异铁</>类材料时，副产品的产出概率提升<@cc.vup>90%</>"
+    },
     "workshop_formula_device[030]": {
       "buffId": "workshop_formula_device[030]",
       "buffName": "DIY·聚酸酯",
@@ -9985,6 +10138,18 @@
     },
     "train_spd&profession[030]": {
       "buffId": "train_spd&profession[030]",
+      "buffName": "重装专精·α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_defender1",
+      "sortId": 9601,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，<@cc.kw>重装</>干员的专精技能训练速度<@cc.vup>+30%</>"
+    },
+    "train_spd&profession2[030]": {
+      "buffId": "train_spd&profession2[030]",
       "buffName": "重装专精·α",
       "buffIcon": "training",
       "skillIcon": "bskill_train_defender1",
@@ -10271,6 +10436,18 @@
       "roomType": "TRAINING",
       "description": "进驻训练室协助位时，<@cc.kw>术师</>干员的专精技能训练速度<@cc.vup>+30%</>，如果本次训练专精技能至<@cc.vup>2</>级，则训练速度额外<@cc.vup>+45%</>"
     },
+    "train_spd&profession2[330]": {
+      "buffId": "train_spd&profession2[330]",
+      "buffName": "阵地经验",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train2_defender1",
+      "sortId": 9621,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，<@cc.kw>重装</>干员的专精技能训练速度<@cc.vup>+30%</>，如果本次训练专精技能至<@cc.vup>2</>级，则训练速度额外<@cc.vup>+45%</>"
+    },
     "train_spd&profession2[320]": {
       "buffId": "train_spd&profession2[320]",
       "buffName": "苦行",
@@ -10509,7 +10686,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.1</>（同种效果取最高），同时当前宿舍每级提供<@cc.vup>1</>层<@cc.rem>梦境</>"
+      "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.1</>（同种效果取最高），同时当前宿舍每级提供<@cc.vup>1</>层<$cc.bd_a1_a2><@cc.rem>梦境</></>"
     },
     "dorm_rec_bd_n1[000]": {
       "buffId": "dorm_rec_bd_n1[000]",
@@ -10521,7 +10698,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "进驻宿舍时，每<@cc.vup>1</>层<@cc.rem>梦境</>转化为<@cc.vup>1</>点<@cc.rem>感知信息</>"
+      "description": "进驻宿舍时，每<@cc.vup>1</>层<$cc.bd_a1_a2><@cc.rem>梦境</></>转化为<@cc.vup>1</>点<$cc.bd_a1><@cc.rem>感知信息</></>"
     },
     "dorm_rec_all[010]": {
       "buffId": "dorm_rec_all[010]",
@@ -10804,7 +10981,7 @@
       "buffName": "天灾信使·β",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd5",
-      "sortId": 8701,
+      "sortId": 8801,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10846,6 +11023,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
       "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+40%</>"
+    },
+    "hire_spd_cost[010]": {
+      "buffId": "hire_spd_cost[010]",
+      "buffName": "天灾信使·α",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd1",
+      "sortId": 8403,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+30%</>"
+    },
+    "hire_spd_cost[200]": {
+      "buffId": "hire_spd_cost[200]",
+      "buffName": "准时下班",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_skgoat",
+      "sortId": 8701,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+45%</>，心情每小时消耗<@cc.vdown>+2</>"
     },
     "hire_spd&clue[010]": {
       "buffId": "hire_spd&clue[010]",
@@ -10905,7 +11106,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，每产生<@cc.vup>1</>次联络次数，增加<@cc.kw>乌萨斯学生自治团</>线索的概率（工作时长和招募位影响概率）"
+      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，每产生<@cc.vup>1</>次联络次数，增加<$cc.t.ussg><@cc.kw>乌萨斯学生自治团</></>线索的概率（工作时长和招募位影响概率）"
     },
     "hire_spd_bd_n1_n1[100]": {
       "buffId": "hire_spd_bd_n1_n1[100]",
@@ -10917,7 +11118,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，同时每个招募位（不包含初始招募位）<@cc.vup>+10</>点<@cc.rem>记忆碎片</>"
+      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，同时每个招募位（不包含初始招募位）<@cc.vup>+10</>点<$cc.bd_a1_a1><@cc.rem>记忆碎片</></>"
     },
     "hire_spd_bd_n1[000]": {
       "buffId": "hire_spd_bd_n1[000]",
@@ -10929,7 +11130,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "进驻人力办公室时，每<@cc.vup>1</>点<@cc.rem>记忆碎片</>转化为<@cc.vup>1</>点<@cc.rem>感知信息</>，心情耗尽时清空所有<@cc.rem>记忆碎片</>和自身累积的<@cc.rem>感知信息</>"
+      "description": "进驻人力办公室时，每<@cc.vup>1</>点<$cc.bd_a1_a1><@cc.rem>记忆碎片</></>转化为<@cc.vup>1</>点<$cc.bd_a1><@cc.rem>感知信息</></>，心情耗尽时清空所有<$cc.bd_a1_a1><@cc.rem>记忆碎片</></>和自身累积的<$cc.bd_a1><@cc.rem>感知信息</></>"
     },
     "hire_spd_blitz[000]": {
       "buffId": "hire_spd_blitz[000]",
@@ -10941,7 +11142,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，每<@cc.vup>1</>点<@cc.rem>情报储备</>额外<@cc.vup>+5%</>联络速度，每<@cc.vup>1</>瓶<@cc.rem>乌萨斯特饮</>额外<@cc.vup>+5%</>联络速度"
+      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，每<@cc.vup>1</>点<$cc.bd_ash><@cc.rem>情报储备</></>额外<@cc.vup>+5%</>联络速度，每<@cc.vup>1</>瓶<$cc.bd_tachanka><@cc.rem>乌萨斯特饮</></>额外<@cc.vup>+5%</>联络速度"
     },
     "meet_spd[000]": {
       "buffId": "meet_spd[000]",
@@ -11025,7 +11226,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
-      "description": "进驻会客室时，更容易获得<@cc.kw>乌萨斯学生自治团</>线索（工作时长影响概率）"
+      "description": "进驻会客室时，更容易获得<$cc.t.ussg><@cc.kw>乌萨斯学生自治团</></>线索（工作时长影响概率）"
     },
     "meet_team[060]": {
       "buffId": "meet_team[060]",
@@ -11061,7 +11262,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
-      "description": "进驻会客室后，每当新搜集到的线索不是<@cc.kw>乌萨斯学生自治团</>时，则额外增加<@cc.kw>乌萨斯学生自治团</>线索的出现概率（工作时长影响概率）"
+      "description": "进驻会客室后，每当新搜集到的线索不是<$cc.t.ussg><@cc.kw>乌萨斯学生自治团</></>时，则额外增加<$cc.t.ussg><@cc.kw>乌萨斯学生自治团</></>线索的出现概率（工作时长影响概率）"
     },
     "meet_flag[060]": {
       "buffId": "meet_flag[060]",
@@ -11157,7 +11358,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
-      "description": "进驻会客室时，线索搜集速度提升<@cc.vup>10%</>，且更容易获得<@cc.kw>乌萨斯学生自治团</>线索（工作时长影响概率）"
+      "description": "进驻会客室时，线索搜集速度提升<@cc.vup>10%</>，且更容易获得<$cc.t.ussg><@cc.kw>乌萨斯学生自治团</></>线索（工作时长影响概率）"
     },
     "meet_spd&team[060]": {
       "buffId": "meet_spd&team[060]",
@@ -22253,7 +22454,7 @@
         "height": 9,
         "comfort": 410,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
-        "description": "放置临光家战甲的收藏柜。一整套家传剑甲，现在的使用者是玛利亚。",
+        "description": "放置临光家战甲的收藏柜。一整套家传剑甲，现在的使用者是玛莉娅。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -22667,7 +22868,7 @@
         "height": 10,
         "comfort": 240,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
-        "description": "骑士贵族们较为常用的壁纸。比起一间“骑士”房间，玛利亚更希望有自己的工坊。",
+        "description": "骑士贵族们较为常用的壁纸。比起一间“骑士”房间，玛莉娅更希望有自己的工坊。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -25735,6 +25936,374 @@
         "canBeDestroy": true,
         "isOnly": -1
       },
+      "furni_icu_shadowlessLamp_01": {
+        "id": "furni_icu_shadowlessLamp_01",
+        "name": "多功能照射系统",
+        "iconId": "furni_icu_shadowlessLamp_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 4,
+        "height": 6,
+        "comfort": 270,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "已整合基础人体扫描与无影照明功能。在阵列无影扫描终端照射下只有一种身份——患者。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_bed_01": {
+        "id": "furni_icu_bed_01",
+        "name": "电动液压手术台",
+        "iconId": "furni_icu_bed_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 4,
+        "height": 4,
+        "comfort": 405,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "通过控制器协调各活动段平稳升降。电动液压传动装置辅以各种操控系统并不会显著缓解病患病痛。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_ventilator_01": {
+        "id": "furni_icu_ventilator_01",
+        "name": "呼吸维持装置",
+        "iconId": "furni_icu_ventilator_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "重大医疗手术中患者的生命线。发生单点故障甚至断电都可持续运行的生命攸关设备对于病患康复没有决定性意义。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_trolley_01": {
+        "id": "furni_icu_trolley_01",
+        "name": "医用器材架",
+        "iconId": "furni_icu_trolley_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "随时为主刀医师提供医疗器材。从骨片发展到不锈钢，医疗器材的实际效用从未发生过变化。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_projector_01": {
+        "id": "furni_icu_projector_01",
+        "name": "医疗投影仪",
+        "iconId": "furni_icu_projector_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 80,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "根据需要投影各种图像。传递信息的介质被不断研发问世。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_screen_01": {
+        "id": "furni_icu_screen_01",
+        "name": "卷轴式幕布",
+        "iconId": "furni_icu_screen_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 1,
+        "height": 6,
+        "comfort": 260,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "图像的受体，非必要时可收起。对信息的筛选与限制自古有之。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_curtain_01": {
+        "id": "furni_icu_curtain_01",
+        "name": "手术区隔离帘",
+        "iconId": "furni_icu_curtain_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 6,
+        "height": 6,
+        "comfort": 275,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "划分区域，规避污染。物理隔绝易除，内心畏怖难消。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_desk_01": {
+        "id": "furni_icu_desk_01",
+        "name": "加长独立工作台",
+        "iconId": "furni_icu_desk_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 4,
+        "height": 5,
+        "comfort": 665,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "管理、实验、保密。公司的树状管理架构明显过于依赖顶层决策者，即使如此，它也比封建统治好上太多。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_chair_01": {
+        "id": "furni_icu_chair_01",
+        "name": "主医师工作椅",
+        "iconId": "furni_icu_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "急救专家医疗组负责人的座位。聚酯纤维和不锈钢替换了木料，坐在上面的人却从未变更。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_stool_01": {
+        "id": "furni_icu_stool_01",
+        "name": "工作圆凳",
+        "iconId": "furni_icu_stool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 125,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "招待来客的座位。工业流水线产出的圆凳保证高低相等，而非平等。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_blackboard_01": {
+        "id": "furni_icu_blackboard_01",
+        "name": "信息整合版",
+        "iconId": "furni_icu_blackboard_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 1,
+        "height": 4,
+        "comfort": 225,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "多个信息整合载体中最原始的一种。决策者乐于将最重要的讯息摆在眼前。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_sampleStorage_01": {
+        "id": "furni_icu_sampleStorage_01",
+        "name": "真空恒温储存箱",
+        "iconId": "furni_icu_sampleStorage_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 6,
+        "comfort": 350,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "仅用于保存高危医疗用源石制品。现代储存方案能将物质的保质期延伸至未来，但其使用者仍需遵循自然规则。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_downlight1_01": {
+        "id": "furni_icu_downlight1_01",
+        "name": "集成光源",
+        "iconId": "furni_icu_downlight1_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 4,
+        "height": 1,
+        "comfort": 80,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "罗德岛照明方案中微不足道的一角。稳定而持续的大范围照明曾是贵族特权，现在平民也可享受。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_icu_downlight2_01": {
+        "id": "furni_icu_downlight2_01",
+        "name": "小型集成光源",
+        "iconId": "furni_icu_downlight2_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 4,
+        "height": 1,
+        "comfort": 100,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "罗德岛发电计划中不值一提的消耗。灯光照耀之下，每个阶层的生活毫无改变。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_icu_wallpaper_01": {
+        "id": "furni_icu_wallpaper_01",
+        "name": "医疗部通用壁纸",
+        "iconId": "furni_icu_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "经过统筹安排在医疗部门中实现的壁纸样式。整体环境会在潜移默化间提供集体认同感。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_floor_01": {
+        "id": "furni_icu_floor_01",
+        "name": "医疗部通用地砖",
+        "iconId": "furni_icu_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "经过统筹安排在医疗部门中实现的地砖样式。共识将逐渐固化思维，继而引发偏见。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "兔兔捣药机",
@@ -27529,6 +28098,29 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_dropS018_needlePhobia_01": {
+        "id": "furni_dropS018_needlePhobia_01",
+        "name": "饰牌《针刺》",
+        "iconId": "furni_dropS018_needlePhobia_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "“所见即所受，疼痛即刻生效。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_contract_s0_01": {
         "id": "furni_contract_s0_01",
         "name": "荒芜之旗",
@@ -27659,7 +28251,7 @@
         "comfort": 105,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "完成乌萨斯废弃矿区剿灭并提交报告后获得的纪念品。废弃矿区的余音似乎还在耳边回响。",
-        "obtainApproach": "剿灭委托奖励",
+        "obtainApproach": "剿灭轮换奖励",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -32622,6 +33214,103 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_icu": {
+        "id": "furni_set_icu",
+        "name": "急救专家组办公室",
+        "desc": "罗德岛急救专家医疗组的办公场所，总负责人是凯尔希。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_icu_shadowlessLamp_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_bed_01",
+            "pos0": 2,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_icu_ventilator_01",
+            "pos0": 7,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_icu_trolley_01",
+            "pos0": 2,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_icu_projector_01",
+            "pos0": 9,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_icu_screen_01",
+            "pos0": 3,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_icu_curtain_01",
+            "pos0": 11,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_desk_01",
+            "pos0": 15,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_chair_01",
+            "pos0": 21,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_stool_01",
+            "pos0": 25,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_blackboard_01",
+            "pos0": 19,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_icu_sampleStorage_01",
+            "pos0": 28,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_downlight1_01",
+            "pos0": 7,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_downlight1_01",
+            "pos0": 25,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_downlight2_01",
+            "pos0": 12,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_downlight2_01",
+            "pos0": 19,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_icu_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -34631,6 +35320,58 @@
           "furni_bauhaus_floor_01",
           "furni_bauhaus_geometryLight_01",
           "furni_bauhaus_downlight_01"
+        ]
+      },
+      "furni_set_icu_1": {
+        "id": "furni_set_icu_1",
+        "name": "手术区",
+        "themeId": "furni_set_icu",
+        "comfort": 250,
+        "count": 4,
+        "furniture": [
+          "furni_icu_shadowlessLamp_01",
+          "furni_icu_bed_01",
+          "furni_icu_ventilator_01",
+          "furni_icu_trolley_01"
+        ]
+      },
+      "furni_set_icu_2": {
+        "id": "furni_set_icu_2",
+        "name": "辅助设备",
+        "themeId": "furni_set_icu",
+        "comfort": 245,
+        "count": 4,
+        "furniture": [
+          "furni_icu_screen_01",
+          "furni_icu_projector_01",
+          "furni_icu_curtain_01",
+          "furni_icu_sampleStorage_01"
+        ]
+      },
+      "furni_set_icu_3": {
+        "id": "furni_set_icu_3",
+        "name": "医师工位",
+        "themeId": "furni_set_icu",
+        "comfort": 290,
+        "count": 4,
+        "furniture": [
+          "furni_icu_desk_01",
+          "furni_icu_blackboard_01",
+          "furni_icu_chair_01",
+          "furni_icu_stool_01"
+        ]
+      },
+      "furni_set_icu_4": {
+        "id": "furni_set_icu_4",
+        "name": "医疗部装潢",
+        "themeId": "furni_set_icu",
+        "comfort": 160,
+        "count": 4,
+        "furniture": [
+          "furni_icu_wallpaper_01",
+          "furni_icu_floor_01",
+          "furni_icu_downlight1_01",
+          "furni_icu_downlight2_01"
         ]
       }
     },

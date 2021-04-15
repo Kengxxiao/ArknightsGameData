@@ -876,6 +876,7 @@
   "hpMax": 4225.0,
   "reMax": 100.0,
   "diamondToShdRate": 180,
+  "requestSameFriendCD": 14400,
   "baseMaxFriendNum": 15,
   "hardDiamondDrop": 1,
   "instFinDmdShdCost": 80,
@@ -892,10 +893,6 @@
   "richTextStyles": {
     "mission.levelname": "<color=#FFDE00>{0}</color>",
     "mission.number": "<color=#FFDE00>{0}</color>",
-    "lv.item": "<color=#FFFFFF>{0}</color>",
-    "lv.rem": "<color=#FFFFFF>{0}</color>",
-    "lv.fs": "<color=#FF0000>{0}</color>",
-    "lv.sp": "<color=#fd4600>{0}</color>",
     "tu.kw": "<color=#0098DC>{0}</color>",
     "tu.imp": "<color=#FF0000>{0}</color>",
     "cc.vup": "<color=#0098DC>{0}</color>",
@@ -922,6 +919,10 @@
     "ro.get": "<color=#0098DC>{0}</color>",
     "ro.lose": "<color=#C82A36>{0}</color>",
     "rolv.rem": "<color=#FF4C22>{0}</color>",
+    "lv.item": "<color=#FFFFFF>{0}</color>",
+    "lv.rem": "<color=#FFFFFF>{0}</color>",
+    "lv.fs": "<color=#FF0000>{0}</color>",
+    "lv.sp": "<color=#fd4600>{0}</color>",
     "rc.title": "<color=#FFFFFF>{0}</color>",
     "rc.subtitle": "<color=#FFC90E>{0}</color>",
     "rc.em": "<color=#FF7F27>{0}</color>",
@@ -971,7 +972,7 @@
   "commonPotentialLvlUpCount": 4,
   "weeklyOverrideDesc": "",
   "voucherDiv": 5,
-  "recruitPoolVersion": 3,
+  "recruitPoolVersion": 4,
   "v006RecruitTimeStep1Refresh": 1577172600,
   "v006RecruitTimeStep2Check": 1577154600,
   "v006RecruitTimeStep2Flush": 1577649600,
@@ -1040,5 +1041,165 @@
   "monthlySubWarningTime": 345600,
   "UnlimitSkinOutOfTime": 1209600,
   "replicateShopStartTime": 1597132800,
-  "TSO": 1608192000
+  "TSO": 1608192000,
+  "isDynIllustEnabled": false,
+  "voucherSkinRedeem": 1,
+  "voucherSkinDesc": "当某位干员的<color=#ffa633>首个</color>异格上线时，若曾使用<color=#ffa633>源石</color>购买过该干员的时装，则在该干员的<color=#ffa633>首个</color>异格干员上线后返还道具<color=#33b5ff>【时装自选凭证】</color>*1作为补偿。\n\n若有以下情况，则在异格干员上线后<color=#ffa633>不进行补偿</color>：\n1.在某位干员的首个异格干员上线前，使用【时装自选凭证】兑换了原干员的时装。\n例：在<color=#adaeae>界旅者安洁莉娜</color>上线前使用【时装自选凭证】兑换了<color=#adaeae>安洁莉娜</color>时装<color=#adaeae>质素访客</color>，不会补偿【时装自选凭证】。\n2.在某位干员的首个异格干员上线后，使用源石购买了原干员的时装。\n例：在<color=#adaeae>界旅者安洁莉娜</color>上线后使用源石购买了<color=#adaeae>安洁莉娜</color>时装<color=#adaeae>质素访客</color>，不会补偿【时装自选凭证】。\n3.在某位干员的首个异格干员上线后，使用【时装自选凭证】兑换了原干员的时装。\n例：在<color=#adaeae>界旅者安洁莉娜</color>上线后使用【时装自选凭证】兑换了<color=#adaeae>安洁莉娜</color>时装<color=#adaeae>质素访客</color>，不会补偿【时装自选凭证】。\n\n【时装自选凭证】仅可以兑换当期时装商店中售卖的时装，若已购买了时装商店中所有的服装或时装商店中无时装售卖时，则【时装自选凭证】<color=#ffa633>无法使用</color>。\n\n此外，若今后有<color=#ffa633>不可使用</color>【时装自选凭证】兑换的时装出现时，届时会告知博士，敬请注意。\n/**\n * @textblock.type=STUB_MOCK\n * @textblock.comment=\"维多利亚-说明文字-其他\"\n */",
+  "termDescriptionDict": {
+    "ba.sluggish": {
+      "termId": "ba.sluggish",
+      "termName": "停顿",
+      "description": "移动速度降低80%"
+    },
+    "ba.root": {
+      "termId": "ba.root",
+      "termName": "束缚",
+      "description": "无法移动"
+    },
+    "ba.stun": {
+      "termId": "ba.stun",
+      "termName": "晕眩",
+      "description": "无法移动、阻挡、攻击及使用技能"
+    },
+    "ba.buffres": {
+      "termId": "ba.buffres",
+      "termName": "抵抗",
+      "description": "<$ba.stun>晕眩</>、<$ba.cold>寒冷</>、<$ba.frozen>冻结</>等负面状态的持续时间减半（同名效果不叠加）"
+    },
+    "ba.invisible": {
+      "termId": "ba.invisible",
+      "termName": "隐匿",
+      "description": "不阻挡时不成为敌方攻击的目标"
+    },
+    "ba.camou": {
+      "termId": "ba.camou",
+      "termName": "迷彩",
+      "description": "不阻挡时不成为敌方普通攻击的目标（无法躲避溅射类攻击）"
+    },
+    "ba.fragile": {
+      "termId": "ba.fragile",
+      "termName": "脆弱",
+      "description": "受到的所有伤害提升相应比例（同名效果取最高）"
+    },
+    "ba.shield": {
+      "termId": "ba.shield",
+      "termName": "护盾",
+      "description": "每层护盾可以抵挡一次伤害"
+    },
+    "ba.protect": {
+      "termId": "ba.protect",
+      "termName": "庇护",
+      "description": "受到的物理和法术伤害降低相应比例（同名效果取最高）"
+    },
+    "ba.cold": {
+      "termId": "ba.cold",
+      "termName": "寒冷",
+      "description": "攻击速度下降30，如果在持续时间内再次受到寒冷效果则会变为<$ba.frozen>冻结</>"
+    },
+    "ba.frozen": {
+      "termId": "ba.frozen",
+      "termName": "冻结",
+      "description": "无法移动、攻击及使用技能（通过<$ba.cold>寒冷</>触发）"
+    },
+    "ba.sleep": {
+      "termId": "ba.sleep",
+      "termName": "沉睡",
+      "description": "无敌且无法行动"
+    },
+    "ba.inspire": {
+      "termId": "ba.inspire",
+      "termName": "鼓舞",
+      "description": "获得额外附加的基础属性加成（同类属性取最高）"
+    },
+    "ba.binding": {
+      "termId": "ba.binding",
+      "termName": "XX",
+      "description": "XX"
+    },
+    "ba.dt.neural": {
+      "termId": "ba.dt.neural",
+      "termName": "XX",
+      "description": "XX"
+    },
+    "cc.bd_A_1": {
+      "termId": "cc.bd_A_1",
+      "termName": "念力",
+      "description": "由以下干员提供\n迷迭香"
+    },
+    "cc.bd_A_2": {
+      "termId": "cc.bd_A_2",
+      "termName": "意识实体",
+      "description": "由以下干员提供\n迷迭香"
+    },
+    "cc.bd_A": {
+      "termId": "cc.bd_A",
+      "termName": "思维链环",
+      "description": "可影响<$cc.bd_A_1><@cc.rem>念力</></>、<$cc.bd_A_2><@cc.rem>意识实体</></>相关技能\n由以下干员提供\n迷迭香"
+    },
+    "cc.bd_a1": {
+      "termId": "cc.bd_a1",
+      "termName": "感知信息",
+      "description": "可影响<$cc.bd_A><@cc.rem>思维链环</></>相关技能\n由以下干员提供\n迷迭香、夕、絮雨、爱丽丝"
+    },
+    "cc.bd_b1": {
+      "termId": "cc.bd_b1",
+      "termName": "人间烟火",
+      "description": "由以下干员提供\n夕、乌有"
+    },
+    "cc.bd_ash": {
+      "termId": "cc.bd_ash",
+      "termName": "情报储备",
+      "description": "由以下干员提供\n灰烬"
+    },
+    "cc.bd_tachanka": {
+      "termId": "cc.bd_tachanka",
+      "termName": "乌萨斯特饮",
+      "description": "由以下干员提供\n战车"
+    },
+    "cc.bd_a1_a1": {
+      "termId": "cc.bd_a1_a1",
+      "termName": "记忆碎片",
+      "description": "可影响<$cc.bd_a1><@cc.rem>感知信息</></>相关技能\n由以下干员提供\n絮雨"
+    },
+    "cc.bd_a1_a2": {
+      "termId": "cc.bd_a1_a2",
+      "termName": "梦境",
+      "description": "可影响<$cc.bd_a1><@cc.rem>感知信息</></>相关技能\n由以下干员提供\n爱丽丝"
+    },
+    "cc.m.var1": {
+      "termId": "cc.m.var1",
+      "termName": "回收利用",
+      "description": "由以下干员提供\n红云"
+    },
+    "cc.m.var2": {
+      "termId": "cc.m.var2",
+      "termName": "配合意识",
+      "description": "由以下干员提供\n槐琥"
+    },
+    "cc.t.lgd": {
+      "termId": "cc.t.lgd",
+      "termName": "龙门近卫局",
+      "description": "包含以下干员\n陈、星熊、诗怀雅"
+    },
+    "cc.t.lda": {
+      "termId": "cc.t.lda",
+      "termName": "鲤氏侦探所",
+      "description": "包含以下干员\n阿、吽、槐琥"
+    },
+    "cc.t.ussg": {
+      "termId": "cc.t.ussg",
+      "termName": "乌萨斯学生自治团",
+      "description": "包含以下干员\n早露、凛冬、真理、古米"
+    },
+    "cc.t.R6": {
+      "termId": "cc.t.R6",
+      "termName": "彩虹小队",
+      "description": "包含以下干员\n灰烬、战车、闪击、霜华"
+    },
+    "cc.t.sp": {
+      "termId": "cc.t.sp",
+      "termName": "异格",
+      "description": "包含以下干员\n炎狱炎熔"
+    }
+  }
 }
