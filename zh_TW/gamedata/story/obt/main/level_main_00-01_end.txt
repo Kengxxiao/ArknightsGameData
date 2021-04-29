@@ -1,13 +1,7 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（后）
-
-// Comments
-// 从室内走向室外白光
-
 [Background(image="bg_cher_1",fadetime=1,screenadapt="coverall")]
 [PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.8, crossfade=1.5, delay=0.5)]
 [Delay(time=1)]
-
-
 [CameraShake(duration=1.5, xstrength=7, ystrength=5, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Character(name="char_1002_nsabr_2")]
 [Blocker(a=1, r=255, g=255, b=255, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
@@ -15,7 +9,6 @@
 [Blocker(a=0, fadetime=1.5, block=true)]
 [name="整合運動成員"]  呃 ......
 [name="整合運動成員"]  你們不是......烏薩斯......人......
-
 [Character(fadetime=0.7)]
 [Dialog]
 [Delay(time=0.7)]
@@ -27,12 +20,10 @@
 [name="杜賓"]  是該客觀評價你的能力了。
 [Character(name="char_016_medic")]
 [name="醫療幹員"]  咦，阿米婭......她去......
-
 [Character]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Dialog]
 [Blocker(a=0, fadetime=0.6, block=true)]
-
 [Character(name="char_002_amiya_1#2")]
 [name="阿米婭"]   沒事吧？
 [Character(name="char_002_amiya_1#2",focus=-1)]
@@ -48,27 +39,22 @@
 [name="阿米婭"]   去找個安全的地方藏身。
 [Character(name="char_002_amiya_1",focus=-1)]
 [name="女性"]   嗚，嗚......寬恕我們......饒了我......
-
 [Character]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Dialog]
 [Blocker(a=0, fadetime=0.6, block=true)]
-
 [Character(name="char_016_medic")]
 [name="醫療幹員"]  ......
 [Character(name="char_002_amiya_1#2")]
 [name="阿米婭"]   各位休息好了嗎？
 [Character(name="char_016_medic")]
 [name="醫療幹員"]  啊，沒事......
-
 [Decision(options="她為什麼害怕你？", values="1")]
 [Predicate(references="1")]
-
 [Character(name="char_002_amiya_1#4")]
 [name="阿米婭"]   ......
 [name="阿米婭"]   Dr.{@nickname}......
 [name="阿米婭"]   類似的問題，你以前也問過呢。
-
 [Decision(options="......", values="1")]
 [Predicate(references="1")]
 [Character(name="char_002_amiya_1#4")]
@@ -92,12 +78,8 @@
 [name="杜賓"]  這一次，他們開始大規模地使用暴力。
 [name="杜賓"]  等到烏薩斯政府平息了事件，切爾諾伯格的感染者，只會遭到更殘酷的對待。
 [name="杜賓"]  ......與之相反，有了Dr.{@nickname}你，羅德島的處境，也許能有所改善。
-
-
 [Decision(options="......這和我也有關係？;......;那我還挺重要的。", values="1;2;3")]
 [Predicate(references="1;2;3")]
-
-
 [Character(name="char_130_doberm_ex")]
 [name="杜賓"]  凱爾希和阿米婭都和我說過，你是最頂尖的礦石病研究學者。
 [name="杜賓"]  ......現在，你陷入了記憶喪失的困境，我很懷疑，你還能不能再派上用場。
@@ -109,12 +91,10 @@
 [name="杜賓"]  其實之前，我怎麼也沒法把神經學博士和戰術家聯繫在一起......
 [name="杜賓"]  看到你本人後，似乎好理解了一些。
 [name="杜賓"]  畢竟羅德島本身就很像你的專業。
-
 [Character]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Dialog]
 [Blocker(a=0, fadetime=0.6, block=true)]
-
 [Character(name="char_016_medic")]
 [name="醫療幹員"]   喂！你！別跑！該注射藥劑了！
 [Character(name="char_016_medic",name2="char_013_riop",focus=2)]
@@ -133,7 +113,6 @@
 [name="醫療幹員"]   別動！我要扎了！
 [Character(name="char_016_medic",name2="char_013_riop",focus=2)]
 [name="近衛幹員"]   啊！！
-
 [Character]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Dialog]
@@ -150,30 +129,25 @@
 [name="杜賓"]  無論是普通人還是感染者，無論是和平還是紛爭，羅德島想要解決問題，而不是任由仇恨和疾病蔓延肆虐。
 [name="杜賓"]  Dr.{@nickname}，這可能也會是你職責的一部分。
 [name="杜賓"]  ......至少，這是我粗淺的請求。
-
 [Decision(options="你在說什麼？？;......;我需要更慎重地思索一下。", values="1;2;3")]
 [Predicate(references="1;2;3")]
-
 [Character(name="char_130_doberm_ex")]
 [name="杜賓"]  我們會留給你很多時間的，你可以慢慢理解。
 [name="杜賓"]  只不過，給我們的時間卻不多了。
 [name="杜賓"]  整頓隊伍，出發！
 [name="杜賓"]  前往會合點的路上，還不知道有什麼等著我們！
-
 [Character]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Dialog]
 [Background]
 [Blocker(a=0, fadetime=0.6, block=true)]
 [delay(time=1)]
-
 [name="杜賓"]  （阿米婭......）
 [name="杜賓"]  （切爾諾伯格現在的情況非常複雜，我們不能給整支救援隊伍帶去心理壓力。但是......）
 [name="阿米婭"]  （我們......還有多長時間？）
 [name="杜賓"]  （......三小時。）
 [name="杜賓"]  （三小時之後，天災將會吞沒這個城市。）
 [name="杜賓"]  （等到天災降臨，一切就都完了。）
-
 [Character]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Background(image="bg_cher_1",x=0, y=20, xScale=1.1, yScale=1.1, fadetime=1)]
@@ -184,9 +158,7 @@
 [name="？？？"]  不確定因素。
 [name="？？？"]  去，通知其他人。
 [name="？？？"]  我們追。
-
 [Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
 [Character]
 [Dialog]
 [Image]
-

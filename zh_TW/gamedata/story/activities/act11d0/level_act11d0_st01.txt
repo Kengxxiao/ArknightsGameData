@@ -1,18 +1,4 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 九尾狐活动 纯剧情AVG序章
-
-//中英（德）对照及备注
-
-//Kevin 凯文  路人NPC
-//Eckehard  埃克哈德 死者
-//Hector 赫克托，死者
-//Nikolaus Maibaum  尼古拉斯·梅普乐      备用名，暂时没用到
-//Tatjana Bergler 塔佳娜·伯格勒  女性名
-//Severin Hawthorn塞弗林·霍索恩  士官长
-//Thorwald   托尔瓦尔德   他儿子，死者
-//Biederman 毕德曼，死者，典自《毕德曼与纵火犯》
-
-//地名对照：城镇沃伦姆德 Wolumonde，来自于法语与德语组合，意为第八个水晶球（第八个月亮）。
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
@@ -20,28 +6,18 @@
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
-
-
-//（黑屏）
-
 3:23 P.M.    天氣/晴
 萊塔尼亞境內，移動城鎮沃倫姆德外，一棵微不足道的老櫟樹下
-
-//（屏幕亮起，背景是烧毁的帐篷，士官长塞弗林·霍索恩出现，他似乎在等什么人）
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_ltruins",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
-
 [Character(name="avg_npc_066#2",fadetime=1,block=true)]
 [delay(time=1)]
 [name="？？？"]  ......
-
 [Dialog]
 [Character]
-
-//（出塔佳娜）
 [playsound(key="$d_gen_walk_n", volume=0.6)]
 [Character(name="avg_npc_069#2",fadetime=1,block=true)]
 [delay(time=1)]
@@ -56,10 +32,8 @@
 [name="塔佳娜"]  但您的咳嗽越來越嚴重了。
 [Character(name="avg_npc_069#2", name2="avg_npc_066",focus=2)]
 [name="塞弗林"]  沒必要這麼畢恭畢敬，現在不是工作時間，我和你說過......算了。
-
 [Dialog]
 [Character]
-
 他望向遠處，燒毀的帳篷，肆意生長的野草，他抖了抖煙灰。
 他本想在獨處的時候獲得一些安寧，即使只是透過一個稱謂的變化。
 [Dialog]
@@ -143,10 +117,6 @@
 [name="塞弗林"]  就說......
 [name="塞弗林"]  就說我同意了、咳、我同意了。
 [name="塞弗林"]  咳咳，咳咳咳——
-
-//（转场）
-//（感染者营地）
-//（在破落的小村庄中，流落至此的泥岩小队靠狩猎为生）
 [stopmusic(fadetime=3)]
 [Dialog]
 [Character]
@@ -154,15 +124,9 @@
 [Background(image="bg_ltstrongpoint",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
 [playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
-
-//背景：整合运动据点：小猎村
-
-//（泥岩）
 [Character(name="avg_npc_011#2",fadeitme=1,block=true)]
 [delay(time=1)]
 [name="？？？"]  ......
-
-//（武装的感染者用整合运动立绘）
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=2)]
 [name="武裝的感染者"]  隊長，他們回來了。
 [Character(name="avg_npc_011#2", name2="avg_npc_053",focus=1)]
@@ -230,17 +194,12 @@
 [Character(name="avg_npc_011#2")]
 [name="？？？"]  ......寶藏，寶藏啊。
 [name="？？？"]  是啊，如果也有寶藏可以幫幫我們......就好了。
-
 [stopmusic(fadetime=3)]
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
 [Background(image="bg_bridge",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
-
-//（转场）
-//（罗德岛内）
-//（医疗干员失踪若干日后，罗德岛舰桥，两位干员反复确认着信息。）
 [playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
 [Character(name="char_345_folnic_1#3")]
@@ -250,7 +209,6 @@
 [name="亞葉"]  安托......你在哪裡......
 [Character]
 [Dialog]
-//（小小的脚步声，铃兰出现在亚叶的身后）
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
 [Character(name="char_358_lisa_1#3",fadetime=1,block=true)]
 [delay(time=1)]
@@ -295,13 +253,10 @@
 [Character(name="char_358_lisa_1", name2="char_345_folnic_1#2",focus=2)]
 [name="亞葉"]  誒，好吧！反正我也向本地的分部打了報告，真有什麼意外，他們也會幫我們的。
 [name="亞葉"]  等阿米婭同意之後，我們一起去，但是你要時刻和我——
-
 [Dialog]
 [Character]
 [stopmusic(fadetime=1)]
-
 [playsound(key="$d_gen_transmissionget", volume=0.6)]
-//（通讯声，紧急的联络改变了好不容易缓和下来的气氛）
 [delay(time=1)]
 [Character(name="char_358_lisa_1#3", name2="char_345_folnic_1#3",focus=1)]
 [name="鈴蘭"]  即時通訊？是安托姐姐回來了？

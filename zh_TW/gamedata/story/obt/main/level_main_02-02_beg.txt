@@ -1,129 +1,81 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第十四关（前）
-
-// Comments
-
 [name="陳"]   進來吧。
 [Delay(time=0.3)]
 [PlaySound(key="$d_gen_dooropen", volume=0.7)]
 [character]
 [Dialog]
-
 [Background(image="bg_lungmen_o", width=1, height=1, fadetime=2)]
-
 [PlayMusic(intro="$mist_loop", key="$mist_loop", volume=0.8, crossfade=1.5, delay=0.5)]
-
 [Character(name="char_003_kalts_1",name2="char_2005_weiyw_1")]
-
 [Character(name="char_002_amiya_1")]
-
 [name="阿米婭"]   ......凱爾希醫生！
-
 [Character(name="char_003_kalts_1")]
 [Delay(time=0.6)]
 [name="凱爾希"]   ——阿米婭......
-
 [Character(name="char_003_kalts_1#3")]
 [name="凱爾希"]   ......{@nickname}。
 [name="凱爾希"]   你來了。
 [PlaySound(key="$d_gen_doorclose", volume=0.5)]
-
 [Delay(time=1)]
 [Character(name="char_003_kalts_1#3", focus=-1)]
-
 [Decision(options="......", values="1")]
-
 [Predicate(references="1")]
-
 [Character(name="char_010_chen_1")]
-
 [name="陳"]   咳咳。
 [name="陳"]   魏長官，羅德島的另外兩位代表也到了。
 [Character]
 [Dialog]
 [Character(name="char_2005_weiyw_1")]
 [Delay(time=1)]
-
 [name="魏彥吾"]   哦，正好。
 [name="魏彥吾"]   請坐。凱爾希小姐正向我說明現在的局勢呢。
-
 [Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
-
 [name="凱爾希"]   那我就繼續吧。關於現在的局勢，我想魏先生也已經很清楚了。
-
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Image(image="bg_0_tv",x=0, y=-20, xScale=1.1, yScale=1.1, fadetime=0)]
 [ImageTween(xFrom=0, yFrom=-20, xTo=0, yTo=0, xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1, yScaleTo=1, duration=7, block=false)]
 [Blocker(a=0, fadetime=0.6, block=true)]
-
 [PlaySound(key="$slideshow", volume=0.2,channel="2", loop=true)]
 [Blocker(a=0, fadetime=1.5, block=false)]
-
 [name="凱爾希"]   龍門的情報網每天都在蒐集大量針對整合運動的資訊，想必也對這件事情極為重視。
 [name="凱爾希"]   不過僅憑這樣，龍門仍然還缺乏一些關鍵資訊。
-
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [image]
 [Blocker(a=0, fadetime=0.6, block=true)]
-
-
 [Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=2)]
-
 [name="陳"]   ......
-
 [Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=1)]
-
 [name="凱爾希"]   簡單的感染者檢疫是不能對抗整合運動的，想必龍門近衛局再清楚不過。
 [name="凱爾希"]   整合運動不會乖乖過檢，更不會等到當局反應過來才行動。所以————
 [name="凱爾希"]   如果沒有羅德島的協助，龍門依靠目前對待感染者的策略，抵擋接下來整合運動的攻擊會面臨巨大損失。
-
 [Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=2)]
-
 [name="陳"]   抱歉，我需要插一句。
 [name="陳"]   關於龍門的防衛情報，龍門近衛局方面比羅德島更瞭解。對於整合運動的滲透，也已經做了相應準備。
 [name="陳"]   只是龍門目前沒有將相關機密行動的方針通知羅德島的義務。
-
-
-
 [Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
-
 [name="魏彥吾"]    ......
 [name="魏彥吾"]    凱爾希小姐，請繼續說。
-
 [Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
-
 [name="凱爾希"]   龍門的確有對付手無寸鐵的感染者的經驗，但恐怕龍門目前沒有面對集團化感染者暴徒的經驗，這可能會對龍門造成不必要的損失。
 [name="凱爾希"]   以羅德島目前的經驗來說————只有感染者，才能更好對抗感染者。
-
 [Character(name="char_2005_weiyw_1")]
-
 [name="魏彥吾"]   那麼，羅德島是否已經從針對整合運動的行動中獲得了有效的經驗？
-
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
-
 [Image(image="bg_0_rhodes2",x=0, y=0, xScale=1.2, yScale=1.2, fadetime=0)]
 [ImageTween(xFrom=0, yFrom=-0, xTo=0, yTo=0, xScaleFrom=1.2, yScaleFrom=1.2, xScaleTo=1, yScaleTo=1, duration=27, block=false)]
-
 [Blocker(a=0, fadetime=0.6, block=true)]
-
 [Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
-
 [name="凱爾希"]   僅僅是有而已，大概是不敢自稱專家的。
-
 [Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
 [CharacterCutin(widgetID="1", name="char_2005_weiyw_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=300, width=200, block=true)]
 [name="魏彥吾"]   哦——？
 [name="魏彥吾"]   我聽說，羅德島曾捲入過切爾諾伯格事件，並且從中也獲得了不少其他整合運動的情報。
 [CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
-
-
-
 [Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
 [CharacterCutin(widgetID="1", name="char_003_kalts_1", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
 [name="凱爾希"]   無論魏先生是從哪裡得到這條消息的——
 [name="凱爾希"]   這都不是現階段能與龍門交換的資訊。這只是履歷，只是站在這裡與魏先生交談的資格。
 [CharacterCutin(widgetID="1", fadetime=0.5, block=true)]
-
-
 [name="魏彥吾"]   決定是否要和你們進行利益交換的是龍門。如果這種程度的資訊羅德島都無法提供的話——
 [name="魏彥吾"]   呵。
 [name="魏彥吾"]   龍門將無法信任你們的真實實力。
@@ -131,81 +83,43 @@
 [character]
 [image]
 [Blocker(a=0, fadetime=0.6, block=true)]
-
 [Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=1)]
 [name="凱爾希"]   魏先生，我的言辭可能不夠清晰。
 [name="凱爾希"]   不過需要強調的是——羅德島提供的資訊，本身就是用實力換來的。
-//[name="凯尔希"]   目前没有什么人有过在天灾的环境之中与整合运动作战的经验。
-
-//[Character(name="char_003_kalts_1", name2="char_2005_weiyw_1", focus=2)]
-
-//[name="魏彦吾"]   嗯——我认可这个说法。
-
 [Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=2)]
-
 [name="陳"]   但，無論怎樣，龍門都無法信任同樣是一群感染者的羅德島。
-
 [Character(name="char_003_kalts_1", name2="char_010_chen_1", focus=1)]
-
-///[name="凯尔希"]   魏先生既不强求罗德岛摆明立场，也不怀疑罗德岛对任务的忠诚。
 [name="凱爾希"]   如果陳小姐認為龍門的安危，尚不如對感染者進行盲目的懲罰來的重要————
 [name="凱爾希"]   那我會立刻服從當地法令，任由陳小姐逮捕我。然後在監牢裡看著龍門被整合運動焚燒殆盡，默默惋惜。
 [name="凱爾希"]   這次，龍門別無選擇。
-
 [Character(name="char_003_kalts_1", name2="char_010_chen_1#5", focus=2)]
-
 [Blocker(a=0.6, r=1, g=1, b=1, fadetime=0.1, block=true)]
 [Blocker(a=0, fadetime=0.1, block=true)]
 [CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=15, randomness=90, fadeout=true, block=false)]
 [name="陳"]   ——龍門既不是因為有人出言不遜就拒絕善意的城市——
 [name="陳"]   卻也不是收留無用說客的慈善機構。
-
 [Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=1)]
-
 [name="魏彥吾"]   陳警官。
-
 [Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=2)]
-
 [name="陳"]   魏長官，讓外來的感染者參與龍門的機密事務，我認為並不妥當。
-
 [Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=1)]
-
 [name="魏彥吾"]   冷靜些，陳警官，他們是客人。
 [name="魏彥吾"]   ——我的客人。
-
 [Character(name="char_2005_weiyw_1", name2="char_010_chen_1#5", focus=2)]
-
 [name="陳"]   .....
 [name="陳"]   是。
-
 [Character(name="char_2005_weiyw_1", name2="char_010_chen_1", focus=2)]
-
 [name="陳"]   在他們違反龍門法律之前，我會容忍，長官。
-
-//[Character(name="char_2005_weiyw_1", name2="char_003_kalts_1", focus=1)]
-
-//[name="魏彦吾"]   请放心，罗德岛的诸位，我尊重任何潜在的合作伙伴。
-//[name="魏彦吾"]   但凯尔希小姐，我上了年纪，容易忘记谈话中那些零碎的内容......
-//[name="魏彦吾"]   你还想再说说吗？
-
-//[Character(name="char_2005_weiyw_1", name2="char_003_kalts_1", focus=2)]
-
-//[name="凯尔希"]   ——魏先生的意思是，我所阐述的事实，都不重要？
-
 [Character(name="char_2005_weiyw_1", name2="char_003_kalts_1", focus=1)]
-
 [name="魏彥吾"]   啊，不好意思。我想起來了，有這麼一句——
 [name="魏彥吾"]   ——沒錯，呣......
 [name="魏彥吾"]   我所看重的就只有一點。
 [name="魏彥吾"]   實力。
 [name="魏彥吾"]   據我所知，羅德島也參與清剿了附近的感染者吧？
 [name="魏彥吾"]   陳警官，以目前確切瞭解的情報，羅德島在軍事力量的實力如何？
-
 [Character(name="char_010_chen_1")]
-
 [name="陳"]   ......請容我簡要描述一下我所見的羅德島的行動情況。
 [name="陳"]   ——詳情如下——
-
 [stopSound(channel="2", fadetime=1)]
 [Delay(time=0.6)]
 [Dialog]
