@@ -52,7 +52,7 @@ function CollectionItem:Refresh(activityId,  data, reached, geted, cfg)
 
 
   if self.m_itemCell == nil then
-    local itemCard = CS.Torappu.UI.UIAssetLoader.instance.staticOutlinks.uiItemCard;
+    local itemCard = CS.Torappu.UI.UIAssetLoader.instance.activityOutlinks.uiItemCard;
     self.m_itemCell = CS.UnityEngine.GameObject.Instantiate(itemCard, self._rewardIconRoot):GetComponent("Torappu.UI.UIItemCard");
     self.m_itemCell.isCardClickable = true;
     self.m_itemCell:CloseBtnTransition();
