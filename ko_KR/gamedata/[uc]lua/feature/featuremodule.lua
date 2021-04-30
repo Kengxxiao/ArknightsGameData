@@ -15,5 +15,6 @@ require "Feature/Activity/Act4D5/Act4D5Dlg"
 require "Feature/Activity/Act6D8/Act6D8Dlg"
 require "Feature/Activity/Act9D1D2/Act9D1D2Dlg"
 require "Feature/Activity/Act9D4/Act9D4Dlg"
+require "Feature/Activity/Act14D0D2/Act14D0D2Dlg"
 
 require "Feature/Wardrobe/WardrobeModule"
