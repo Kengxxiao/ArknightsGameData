@@ -1,5 +1,5 @@
 [HEADER(is_skippable=false, is_tutorial=true)] 剿灭作战引导
-[PopupDialog(dialogHead="$avatar_sys")] 一部エリアでは、レユニオン部隊と大規模な交戦が行われることもあり、ロドスではそれを<@tu.kw>殲滅作戦</>と呼んでいます。
+[PopupDialog(dialogHead="$avatar_sys")] 一部エリアでは、敵部隊と大規模な交戦が行われることもあり、ロドスではそれを<@tu.kw>殲滅作戦</>と呼んでいます。
 [PopupDialog(dialogHead="$avatar_amiya")] はい。これらのエリアで優位を取れれば、敵の戦力を大幅に削ぐことができます。
 [PopupDialog(dialogHead="$avatar_sys")] ぜひドクターにこの重要な作戦の指揮をとってもらえればと思います。
 [GotoPage(dest="home", waitForSignal="home_routed")]
@@ -8,14 +8,20 @@
           protectTime=0.5, dialogHead="$avatar_sys")] \
 タップして作戦室に入ってください。
 [GotoPage(dest="stage", waitForSignal="stage_routed")]
-[Tutorial(target="pool_btn_zonetab_campaign", waitForSignal="zone_switched_or_resumed", \
+[Tutorial(target="pool_btn_zonetab_campaign", waitForSignal="campaign_world_home_state_ready", \
           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
           protectTime=0.5, dialogHead="$avatar_sys")] \
-殲滅作戦のエリア選択画面を開いてください。
-[Tutorial(target="pool_btn_first_zonestage", waitForSignal="stagepreview_resumed", \
+殲滅作戦のテラ全域作戦地図を開いてください。
+[Campaign.RegisterZoneBtn(zoneId="camp_zone_3")]
+[Campaign.FocusZone(zoneId="camp_zone_3", waitForSignal="campaign_world_zone_focused")]
+[Tutorial(target="pool_btn_campaign_zone", waitForSignal="campaign_zone_map_state_resumed", \
           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
           protectTime=0.5, dialogHead="$avatar_sys")] \
-作戦エリアを一つ選択してください。
+ウルサスを選択し、依頼目標選択画面に移動してください。
+[Tutorial(target="pool_btn_campaign_first_zone_stage", searchBtnInChildren=true, waitForSignal="campaign_stage_preview_resumed", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_sys")] \
+依頼目標地域を一つ選択してください。
 [Tutorial(focusX=-173, focusY=98, focusWidth=310, focusHeight=193, anchor="Right", \
           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
           protectTime=0.5, dialogHead="$avatar_sys")] \
@@ -34,11 +40,11 @@
           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
           protectTime=0.5, dialogHead="$avatar_sys")] \
 一度の戦闘で倒した敵が多ければ多いほどハイグレードなステップ報酬が獲得できます。撃破数に応じた報酬はステップ毎に一度しか獲得できません。
-[Tutorial(focusX=207, focusY=62, focusWidth=390, focusHeight=77, anchor="BottomLeft", \
+[Tutorial(focusX=218, focusY=70, focusWidth=415, focusHeight=94, anchor="BottomLeft", \
           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
           protectTime=0.5, dialogHead="$avatar_sys")] \
 それ以外に、撃破数に応じて<@tu.kw>合成玉</>も獲得できます。全エリア共通の獲得上限数が設定されていますが、上限数は毎週リセットされます。
-[Tutorial(target="panel_campaign_info", waitForSignal="stage_campaign_break_detail_shown", \
+[Tutorial(target="panel_campaign_info", waitForSignal="campaign_stage_break_detail_shown", \
           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
           protectTime=0.5, dialogHead="$avatar_amiya")] \
 こちらをタップして、ステップ報酬の詳細情報を確認しましょう。

@@ -1,0 +1,1279 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_topruins",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+[playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_8_16",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  マズい、アーミヤ！！
+[Character(name="char_010_chen_1")]
+[name="チェン"]  なっ…！　どうした、アーミヤ！？
+[Decision(options="何が起きた！;バカな……;ケルシー、なんとかしてくれ！", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  ……こっちへ連れて来てくれ、Dr.{@nickname}。
+[name="ケルシー"]  これから私が行うことは、決して口外しないでほしい。
+[name="ケルシー"]  チェン隊長！
+[Character(name="char_010_chen_1")]
+[name="チェン"]  今はもう隊長ではない。
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  ひとまず、あの龍の監視を頼みたい。この後、すぐに収監の用意をする。何か質問はあるか？
+[Character(name="char_010_chen_1")]
+[name="チェン"]  いや、とにかくまずはアーミヤを診てやってくれ。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  よし……ドクター、手を伸ばしてくれ。
+[Decision(options="わかった！;（手を伸ばす）;嫌がっても無理に引っ張るつもりだろう？",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="ケルシー"]  痛みはない、だが、余計なことは訊くな。
+[name="ケルシー"]  この注射器を君の腕に刺して、少しばかり血をいただくだけだ。それ以上は答えられない。
+[name="ケルシー"]  自分のためだと思え。
+[Decision(options="これは――", values="1")]
+[Predicate(references="1")]
+[name="ケルシー"]  訊くな。
+[Dialog]
+[Character]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+彼女の言う通り、確かに何の痛みもなかった。
+ケルシーは、抜き取ったばかりのあなたの血を腰の器具に入れ、数秒後、青い液体となったそれをアーミヤの首筋に注射した。
+荒かったアーミヤの呼吸が穏やかになっていく。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Decision(options="一体どういうことだ！？", values="1")]
+[Predicate(references="1")]
+[Character]
+[name="アーミヤ"]  ……うぅっ……！
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  効いてきたな。アーミヤ……目を覚ませ。
+[Character]
+[name="アーミヤ"]  あっ……テレジア……さん……？
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  ……いや、違う。私だ、アーミヤ。
+[Dialog]
+[Character]
+[Character(name="char_002_amiya_1",fadetime=1,block=true)]
+[delay(time=1.4)]
+[name="アーミヤ"]  ケルシー先生……私……
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  大丈夫だ、アーミヤ。無理にしゃべる必要はない。そろそろ行くとしよう、もう大丈夫だ。
+[Character(name="char_002_amiya_1")]
+[name="アーミヤ"]  はい。
+[name="アーミヤ"]  ……はい……
+[name="アーミヤ"]  うっ……
+[name="アーミヤ"]  うぅ……あぁ……うぅぅっ……
+[Decision(options="どうして泣いている？;アーミヤ……;（何も言わずにアーミヤのそばにいる）", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="アーミヤ"]  うぅ……ドクター……うぅっ……ううっ……
+[Decision(options="……大丈夫だ、アーミヤ。", values="1")]
+[Predicate(references="1")]
+[Decision(options="戦いはもう終わった。", values="1")]
+[Predicate(references="1")]
+[name="アーミヤ"]  はい……はい……
+[name="アーミヤ"]  はい。
+[name="アーミヤ"]  ……ドクター、私は最後まで涙を……我慢しました……私……約束しましたから……わ……私……
+[name="アーミヤ"]  ……ドクター……ドクター……
+[name="アーミヤ"]  ……Dr.{@nickname}……
+[Dialog]
+[Character]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  チェン、間もなく迎えの飛行装置が司令塔に着陸する。急いでタルラを連れて、ここを離れるぞ。
+[Character(name="char_010_chen_1")]
+[name="チェン"]  本気でロドスに連れ帰るつもりか？　私もまだ……彼女をどうするべきか決められずにいるんだ。
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  私たちにはタルラが必要なんだ。ロドスは誰よりも先に彼女を手に入れなければならない。
+[Decision(options="きっと面倒なことになる！;……;今さら何を言われても驚かない。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="ケルシー"]  破滅的な災いを招くのではないかと、懸念しているのだろう？
+[name="ケルシー"]  心配する必要はない、Dr.{@nickname}。どのみちこの件に介入すると決めた時から、私たちは破滅に瀕しているんだ。
+[name="ケルシー"]  二本の鋭い刃が我々の首元に突きつけられている。二本のうち一つは龍門、そしてもう一つはウルサスの第三師兵団が握っている。
+[name="ケルシー"]  龍門の攻防戦に加担し、チェルノボーグの中枢区画を停止させて、その内幕までをも知った……これだけの理由があれば、奴らは何度ロドスを滅ぼそうと足りないだろう。
+[name="ケルシー"]  龍門が我々を攻撃してきたら、第三師兵団はどうすると思う？
+[name="ケルシー"]  答えは簡単だ、間違いなく傍観を貫くだろう。
+[name="ケルシー"]  制服を着た処刑人共は、私たちの船が荒野で燃え尽きるのを黙って見届けるだろうさ。そうすれば、奴らの頭を煩わせるものが消えて無くなるのだから。
+[name="ケルシー"]  逆もまた然りだ。龍門に登録されておらず、その庇護下にないただの個人企業が、不明な勢力の襲撃に遭って朽ち果てようと……
+[name="ケルシー"]  龍門にも炎国にも、何の関わりもないことだろう？
+[name="ケルシー"]  だがそれらは全て、こちらの手にタルラがない前提だ。
+[name="ケルシー"]  こちらにタルラがいれば、ロドスに手を出した場合、「重要参考人タルラの身柄を奪取する意向である」と、相手に表明することと同義になる。
+[name="ケルシー"]  「タルラを確保して優位に立ち、劣勢を覆したい」とな。
+[name="ケルシー"]  私たちの生きる道は、奴らがそれぞれどう動くかにかかっている。
+[name="ケルシー"]  ロドスは……龍門の豪商とウルサスの旧貴族が、向こう百年は手を取り合う可能性がほぼ皆無であるという現実を喜ぶべきだ。
+[name="ケルシー"]  タルラが、ロドスの手の内にある限り、奴らは互いに牽制し合い、どちらも容易に手出しはできないだろう。
+[name="ケルシー"]  自分にとっても、相手にとっても、重要な生き証人となる存在を、リスクを冒してまで手に入れるよりは、互いにそれと一定の距離を保つ方を選ぶはずだからな。
+[name="ケルシー"]  第三師兵団と龍門にしてみれば、ちょっとした手違いが破滅に直結する状況だ。結局奴らは自分たちの国を代表することができないというわけだ。
+[name="ケルシー"]  第三師兵団は密かにそれを試みたようだが……己の過ちにより対価を支払うことになるだろう。十分過ぎる対価をな。どちらの陣営にとってもこの賭けは危険すぎるんだ。
+[name="ケルシー"]  だから、我々は奴らを敢えて追い込む。互いに敵を牽制させつつ、その脅威の傘の下で、陰ながら我々が守られるようにな。
+[name="ケルシー"]  タルラはロドスにとって非常に重要な存在だ。少なくとも今は。
+[name="ケルシー"]  まだ命のある賢い連中ならば、妥協点を見つけるだろう。そして、タルラを手にしているロドスはその妥協点となるべきだ……
+[name="ケルシー"]  この件が重要視されなくなるまでは。もしくは、連中が次なる嵐に巻き込まれるまではな。
+[Decision(options="ケルシーを説得するのは無理みたいだ。;……;とっくに決めていたんだな？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="ケルシー"]  ふっ……
+[name="ケルシー"]  迎えが来たようだ。行こう、まずはアーミヤとタルラを乗せる。
+[name="ケルシー"]  私と君は次の機体に乗る。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_053")]
+[name="サルカズ傭兵"]  このまま続けても無意味だ。遊撃隊の奴らに殺されちまう。
+[name="サルカズ傭兵"]  撤退だ！　この街から出るぞ。今回は俺たちの負けだ！　無意味な戦いだったんだ。
+[Character(name="avg_npc_046#2")]
+[name="W"]  無意味ですって？
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=2)]
+[name="サルカズ傭兵"]  Ｗ！　お前、生きてたのか……？
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=1)]
+[name="W"]  そんな簡単に死んでたら、あたしについてきてなんて言えないじゃない。
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=2)]
+[name="サルカズ傭兵"]  ついていくにしても、理由が必要だ。お前をボスだと納得できる理由をくれ。
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=1)]
+[name="W"]  あはっ！　なんだ気づいてないの？　あんた、自由になったのよ、デクの坊さん。
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=2)]
+[name="サルカズ傭兵"]  ……なに？　自由？　どういうことだ？
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=1)]
+[name="W"]  あんたたちはもう殺し屋じゃないってこと。そんであたしも、もうあんたたちのボスじゃない。あたしは、ただ一緒に行かないかって誘ってあげてるだけよ。
+[name="W"]  これ以上誰かのために手を汚す必要はないわ。これからは、自分のために戦うのよ。あっ、でも快楽のために人を殺すっていうなら、あたしが真っ先にそいつの肋骨を内側から吹き飛ばしてやるから。
+[name="W"]  これ以上、あたしたちを利用しようとする奴らに従う必要はないって言ってんのよ。奴らはあたしたちを生かそうとしてるんじゃなくて、死ぬ前により多くの命を奪わせようとしてるだけ。
+[name="W"]  でも！　あたしは違う。あたしはね、お金はいいものだと思うわ。奴らはお金だけはいっぱいくれたしね。
+[name="W"]  だけど生きてさえいれば、もっと稼げるわ。奴らが約束した報酬が自分の墓穴に撒かれたって嬉しくないでしょ？
+[name="W"]  あたしたちを見下すような奴はぶっ殺してやる。目障りな奴らや、ゲスいちょっかいを出してくる奴らも、一人残らず始末するのよ。
+[name="W"]  誰かのためじゃなく、レユニオンや魔族なんかのためでもない。
+[name="W"]  自分の手で生きていくの。炎国の碁を学びたいなら行けばいいわ。好きなことを好きなようにすればいい。
+[name="W"]  どう、ついてくる？
+[Character(name="avg_npc_046#2",name2="avg_npc_053",focus=2)]
+[name="サルカズ傭兵"]  ……どうせ行くところもないしな。
+[name="サルカズ傭兵"]  ついていこう。でもな、妙な真似はするなよ、Ｗ。
+[Character(name="avg_npc_046#5")]
+[name="W"]  それは無理よ、兄弟。あたし、これからもやりたいことがたーくさんあるんだから。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=2)]
+[name="エリジウム"] もう終わったのかな？
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="ホーク"] あーよかった。これで連中の仲間を装って混乱させるなんてつまらない仕事をしなくて済むな。
+[name="ホーク"] まったく。連中を騙すための偽装だったはずなのに――
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"] 助かったぞ兄弟！　よくやってくれた！　でも今すぐここを離れた方がいい！
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="ホーク"] （ウルサス語）大丈夫だ！
+[name="ホーク"] ……今はガチであいつらの手助けをしてるんだからな。
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=2)]
+[name="エリジウム"] ホーク、戻ったら一緒にコーヒーでもどうだい？　この前クルビアで就いた面白い任務の話を教えてあげてもいいよ。
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="ホーク"] あの時は、俺もお前と同じ小隊だったけどな。
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=2)]
+[name="エリジウム"] あれ、そうだったっけ？
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="ホーク"] お前さ、毎回小隊のメンバーのこと覚える気ないよな？
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=2)]
+[name="エリジウム"] まぁね。だって、常にロドスの小隊として活動してるわけじゃないからさ。
+[Character(name="avg_npc_012",name2="char_401_elysm",focus=1)]
+[name="ホーク"] しかし……今度こそ、胸を張れる良い仕事をしたのかもな。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_topout",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_058")]
+[name="盾兵"]  待て。あれはお前たちの飛行装置か？　あれは何をしている？
+[Character(name="avg_npc_042")]
+[name="ロスモンティス"]  えっと、たぶん……
+[name="ロスモンティス"]  タルラを連れに来たんだよ。あっ、もう連れてっちゃったみたい。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾兵"]  ……なに？　タ、タルラを連れて行っただと？
+[name="盾兵"]  バカな！　ロドスにそんな権利はないはずだ！！
+[name="盾兵"]  あいつは俺たちが裁く！　連れて行かせるわけにはいかん！
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="ロスモンティス"]  ダメ……それはダメだよ。
+[name="ロスモンティス"]  おじさんたちは復讐がしたいだけでしょ。だからその資格はない。
+[name="ロスモンティス"]  私たちに、彼女を裁く資格はないの。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾兵"]  だが、お前たちに彼女を連れ去る資格はあるのか？　俺たちがあいつを殺す機会を、お前たちが奪ったんだ！
+[name="盾兵"]  誰にも裁く資格がないなどと、誰かの受け売りか……？
+[name="盾兵"]  俺たちの身体には恨みが流れている。あいつに殺されたレユニオンと感染者の同胞たちの恨みが俺たちの血を煮えたぎらせる。俺たちにしか、あいつを裁く資格はないんだ。
+[name="盾兵"]  他の者たちじゃダメだ。それは許されない。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="ロスモンティス"]  それなら、あなたたちはちゃんと公正に裁ける？
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾兵"]  我らこそが公正だ。タルラは我らの手から逃げられはしない。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="ロスモンティス"]  ……こうしよう、おじさん。タルラは誰にも渡さないって誓うよ。おじさんたちとレユニオン以外にはね。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾兵"]  ならばその時が来るまで、あいつに何をさせるつもりだ？
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="ロスモンティス"]  私にもわからない。でも、さっき言ったことは誓える。
+[name="ロスモンティス"]  私たちがしてることは正しいって信じてるから。
+[name="ロスモンティス"]  どうしてもって言うなら、私を殺していいよ。私はロドスのやり方を信じてる。私がタルラの代わりになる。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾兵"]  ……何を言っている！　ふざけたことを言うな。
+[name="盾兵"]  はぁ……お前のロドスに対するその忠誠は、俺たちの忠誠と何も変わらないようだな……わかった、お前を信じよう。お前はきっと栄誉ある戦士になる。
+[name="盾兵"]  行け！　お前に免じて、今回だけはロドスを信じてやる。
+[name="盾兵"]  だが、覚えておけ。タルラだろうがあの魔王だろうが、たとえ一度でも、一度でもお前たちが悪事を働いたと知れば――
+[name="盾兵"]  お前たちがこの大地で、抑圧と統治を受けている者に、更なる苦痛をもたらしたとわかったら、すぐに探し出し、攻撃し、殺す。
+[name="盾兵"]  特にタルラ。あいつを使って何かをやらかそうなんて思わないことだな。
+[name="盾兵"]  そんなことをすれば、お前たち全員の首を街の最高位に吊るし、大尉への、この地で孤独に死を迎えた偉大な戦士への弔いとする。
+[name="盾兵"]  あの人は、こんな結末を迎えるべきではなかった。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="ロスモンティス"]  そんなことにはならないよ。ロドスはそんなことしないから。それにもし、しようとしても私が絶対に止めてみせる。
+[name="ロスモンティス"]  これからは……私も、あなたたちが言うように、良い人と悪い人を見分けられるようになる。
+[name="ロスモンティス"]  これ以上家族を失っていい人なんていない。これが良いことなら、私はやる、私が裁くよ。
+[name="ロスモンティス"]  もう少しで自分の「物差し」ができそうな気がするから。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾兵"]  お前と、その誓いを信じよう！　お前はまだ子供だが、行動を起こすこともできないような大人より、よっぽど責任感がある。
+[name="盾兵"]  約束しよう。少なくともお前がいる間は、ロドスを叩き潰すようなことはしない。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="ロスモンティス"]  指切りしてくれる？
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾兵"]  ん？　……ははっ！　ああ、指切りだな？
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=2)]
+[name="ロスモンティス"]  うん。
+[Character(name="avg_npc_058",name2="avg_npc_042",focus=1)]
+[name="盾兵"]  ……俺にも娘がいたら、きっとお前くらいだったはずだ。
+[name="盾兵"]  小猫よ……もしもう一人の少女が、あの魔王――あのコータスが、これから本当にうまく歩んでいけるのなら……
+[name="盾兵"]  ……俺たちのことも信じてくれて構わないぞ。お前たちに困難が降りかかった時は、いつでも助けに行く。大尉も、エレーナも……あの娘のことを選んだからな。
+[name="盾兵"]  今後、お前たちの選んだ道が正しく、俺たちが間違っていたと証明されることを願う。
+[name="盾兵"]  だが、それは不可能だろう。俺たちのやっていることは至極真っ当だからな！
+[name="盾兵"]  さぁ、もう行くがいい。
+[Character(name="avg_npc_012")]
+[name="ロドスオペレーター"]  行きましょう、ロスモンティスさん！　レユニオンの戦士たち……感謝する。我々はロドスに戻る。
+[Character(name="avg_npc_058")]
+[name="盾兵"]  もうレユニオンじゃない。
+[name="盾兵"]  じゃあな、小猫。早く行け。
+[Character(name="avg_npc_042")]
+[name="ロスモンティス"]  バイバイ、おじさん。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Image(image="avg_8_41",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[Character(name="avg_npc_058")]
+[name="盾兵"]  またな！
+[name="盾兵"]  ……
+[name="盾兵"]  行ってしまったな……兄弟たち。
+[name="盾兵"]  だが、俺たちが去るにはまだ早い。やり残したことがあるからな。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_perimeter",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Character]
+[Character(name="avg_npc_077",fadetime=1,block=true)]
+[delay(time=1.4)]
+[name="「皇帝の利刃」"]  レユニオンのリーダーからの通信が途絶えた。
+[name="「皇帝の利刃」"]  チェルノボーグの中枢区画も停止した。第六、第七、第十二師兵団に連絡せねば。彼らが引き続き計画を実行するつもりなら、今すぐにでも行動に……
+[Character(name="avg_npc_038")]
+[name="？？？"]  止まれ。
+[name="？？？"]  さもなくば力尽くで制圧することになる。
+[name="？？？"]  ……だがお前たちを抑えたとて、意味がないことはわかっている。
+[name="？？？"]  あの理性なき戦闘兵器の進攻を未然に止められるのは、お前たちだけなのだから。
+[Character(name="avg_npc_077")]
+[name="「皇帝の利刃」"]  お前たちにウルサスの利刃に抗う力はない。今となってはな。
+[name="「皇帝の利刃」"]  ……それに、愚かな君主の手先ごときに、我々に指図する資格などあると思うか？
+[Character(name="avg_npc_038")]
+[name="影衛"]  （ガリア語）なぜお前自身、コシチェイに惑わされていないと断言できる？
+[Character(name="avg_npc_077")]
+[name="「皇帝の利刃」"]  その言葉で話しかけるな……ガリアの時代はすでに過去のものだ！
+[name="「皇帝の利刃」"]  国を跨いでの交流にガリア語が用いられていた時代は、とうの昔に終わったのだ！　今では街一つすら残ってはいない！
+[name="「皇帝の利刃」"]  コシチェイはただひたすらに、ウルサスに貢献し続けて来たのだ！
+[Character(name="avg_npc_038")]
+[name="影衛"]  以前、ウルサス人にそう称えられていた人間は、お前たちの剣の錆になった。
+[name="影衛"]  あまり考えすぎるな。我々なら助けてやることもできる。そして、お前たちにしかできないこともある。
+[Character(name="avg_npc_077")]
+[name="「皇帝の利刃」"]  国を裏切るようそそのかすつもりか？
+[Character(name="avg_npc_038")]
+[name="影衛"]  若者よ……このまま頑なに進み続けることこそ、国家への反逆だ。これから起こることはお前自身で選択できるが、それによる結果の責任を負うのはウルサスだ。
+[name="影衛"]  こんなことをしたからには、分かっているはずだ。貴族たちは一つの問題を解決するためだけに戦争を起こす。そして戦争は……戦争というものは何よりも厄介だ。
+[name="影衛"]  お前たちはどこでウルサスの平和を再建するつもりだ？
+[name="影衛"]  お前たちは、自らの手であの時代に終止符を打ったのだ。我々よりもはっきりとわかっているはずだろう。
+[Character(name="avg_npc_077")]
+[name="「皇帝の利刃」"]  ……
+[name="「皇帝の利刃」"]  ウェイの手先よ、どうやって我々の居場所を突き止めた？
+[Character(name="avg_npc_038")]
+[name="影衛"]  実力だ。お前たちはまだまだ学ぶべきことが多い。
+[Character(name="avg_npc_077")]
+[name="「皇帝の利刃」"]  俺を脅そうというのか？
+[Character(name="avg_npc_038")]
+[name="影衛"]  違う、ただ我々は……老いただけだ。
+[name="影衛"]  お前たちは国への忠義を誇らしく思っているのだろう……
+[name="影衛"]  しかし、国の意志であろうと、我々には断固としてやらないこともある。お前たちの目には義のない行為に映ろうともな。
+[Character(name="avg_npc_077")]
+[name="「皇帝の利刃」"]  義とは何だ？
+[Character(name="avg_npc_038")]
+[name="影衛"]  我々には成し得ないことだ。
+[name="影衛"]  （ガリア語）ここは、互いに一歩引こうではないか、若者よ。
+[name="影衛"]  皇帝の近衛兵団は日々新たな血液を取り込んでいる。お前たちは我らより長く存続することだろう。もし仮に、この行動が間違っていたとしても、お前たちにはそれを正すチャンスがあるのだ。
+[name="影衛"]  もし本当にウルサスのために尽くすつもりならば、同じ過ちに足を踏み入れるな。
+[Character(name="avg_npc_077")]
+[name="「皇帝の利刃」"]  ……
+[Character(name="avg_npc_038")]
+[name="影衛"]  さて、どうする？
+[Character(name="avg_npc_077")]
+[name="「皇帝の利刃」"]  ……こちらの問題はこちらで解決する。お前たちは自分の仲間を大人しくさせておけ。
+[name="「皇帝の利刃」"]  それと、老いぼれ……お前たちはもう禁軍じゃないんだ。余計なことに首を突っ込むな。
+[Character(name="avg_npc_038")]
+[name="影衛"]  だからこそ、今こうやって無駄話ができるというものだ。長生きはするものだぞ、若者よ。
+[name="影衛"]  もう会うこともないだろうがな。
+[Dialog]
+[Character]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]  頼む……お願いだ！
+[name="レユニオン構成員"]  殺すなら、楽に死なせてくれ！
+[Character(name="avg_npc_016")]
+[name="迷彩狙撃兵"]  ……
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]  あいつらには捕まりたくないんだ！　きっとひどく痛めつけられるに違いない……あいつらはずっと……
+[Character(name="avg_npc_016")]
+[name="迷彩狙撃兵"]  噂なんて信じるな。
+[name="迷彩狙撃兵"]  早く行け！　後のことは知らん。
+[name="迷彩狙撃兵"]  盾兵には見つかるなよ。
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]  ……ほ……本当に見逃してくれるのか？
+[Character(name="avg_npc_016")]
+[name="迷彩狙撃兵"]  隊長もきっとお前たちには生き延びてほしいと思っているはずだ。あの人も迷いの多い人だったからな。
+[name="迷彩狙撃兵"]  今後は奴らとは関わるなよ。タルラの衛兵だろうと盾兵だろうと。
+[name="迷彩狙撃兵"]  迷いの多い人……か。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_016")]
+[name="迷彩狙撃兵"]  残ると決めたのか？
+[Character(name="avg_npc_059")]
+[name="ロドス前衛オペレーター？"]  ああ。
+[Character(name="avg_npc_016")]
+[name="迷彩狙撃兵"]  だがレユニオンはもう……
+[Character(name="avg_npc_059")]
+[name="ロドス前衛オペレーター？"]  きっと盾兵でも、レユニオンを代表することはできないだろうな。
+[name="ロドス前衛オペレーター？"]  もはや彼ら自身、自分たちをレユニオンと呼んでいない。
+[name="ロドス前衛オペレーター？"]  そう……俺たちが変えるしかないんだ。
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]  レユニオンとして、レユニオンを変える。
+[Character(name="avg_npc_016")]
+[name="迷彩狙撃兵"]  まだそんな幻想を抱いているのか？
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]  感染者は、倒れてもまた立ち上がれると信じているんだ。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_chercen_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+その後の三十六時間で、チェルノボーグの中枢区画に潜んでいた第三師兵団所属のウルサス兵は、忽然と姿を消した。
+もちろん、彼らがウルサスの軍人だと証明できる者はいない。
+中枢区画から撤退する直前、盾兵たちは多くのレユニオンの遺体を見つけた。それらの遺体は、身元を証明できるような物は、何一つ携えていなかった。彼らの体の傷を除いて……
+それらの傷は、どれも同じ投擲武器によるものだった。
+おそらく姿を隠した犯人が潜入者のみを手にかけ、陰に潜んでいる謀略家に向けて無言の警告を発したのだ。
+当然、盾兵たちの警告は更に直接的なものだった。反逆者は血の海に沈む運命だ。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_cher_5",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+炎国とウルサスの連合調査団は、チェルノボーグに足を踏み入れてから二週間後に、それぞれの機関に報告書を提出した。
+報告書によると、両国のどちらにも、この災害の計画と実施に関与したという確固たる証拠はないというものだった。
+そして最終的には、チェルノボーグ事件は感染者が引き起こした、重大な人災だと結論付けられた。
+しかしその後、政治的な衝突が立て続けに起こったことによって、各大都市で大々的に噂されていた感染者に対する追加法令案も、議会の廃案候補の山に数か月も埋もれることとなった……
+……そして、その後の期末大清掃の際、他の重要書類と共に書記によりシュレッダーにかけられてしまったのだった。
+こうしてチェルノボーグ事件に、音もなくピリオドが打たれた。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Background(image="bg_laccolith",screenadapt="coverall")]
+[playMusic(intro="$chenandwei_intro", key="$chenandwei_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character]
+[name="ウルサス民衆"]  ひいっ……！
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  怖がらなくていい。
+[name="クラウンスレイヤー"]  ……私は殺し屋じゃない。行くぞ、ついてこい。ここに留まろうとは考えるな！　ウルサス人に見つかれば、感染者であろうとなかろうとお構いなしに殺されるぞ。この街も廃墟となり果てる運命だ。
+[Character]
+[name="ウルサス民衆"]  ……
+[name="ウルサス民衆"]  あんたを信じるしかないってのか？
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  お前たちが生き延びたいのならな……
+[Character]
+[name="ウルサス民衆"]  ……生き延びたい。どこに向かえばいい？
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  よし……こっちだ。
+[name="クラウンスレイヤー"]  お前たちに私たちを恨むなと言うことはできない。だがこれからは私たちも、お前たちのように故郷を追われた者を……恨まずにいたい。そう思っている。
+[name="クラウンスレイヤー"]  おい！　こっちだ。彼らも連れて行ってやってくれ。感染していないから、くれぐれも気をつけろ。
+[Character(name="char_1002_nsabr_1",name2="char_1502_crowns",focus=1)]
+[name="レユニオン構成員"]  クラウンスレイヤー！　お前はどうするんだ？
+[name="レユニオン構成員"]  どこに行くつもりだ……？　俺たちはどうすればいい？
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  どうしてまだついてくる？
+[Character(name="char_1002_nsabr_1",name2="char_1502_crowns",focus=1)]
+[name="レユニオン構成員"]  どうしてって、お前はレユニオンの――
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  私はもう何者でもない。
+[name="クラウンスレイヤー"]  ……シラクーザに帰る。
+[Character(name="char_1002_nsabr_1",name2="char_1502_crowns",focus=1)]
+[name="レユニオン構成員"]  どうしてだ？　どうして……
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  私は弱い。だからもっと強くなる。
+[name="クラウンスレイヤー"]  シラクーザを離れ、父の復讐を果たすためにウルサスへ旅立とうとしていた時、先生に止められた。弱すぎる私には無理だと。
+[name="クラウンスレイヤー"]  その言葉は、私に復讐をしてほしくないがために、先生がついた嘘なのだと思っていた。しかし、先生は正しかった。
+[name="クラウンスレイヤー"]  私にはタルラのような頭脳も、先生のような技能もない。私はあまりにも弱い。
+[name="クラウンスレイヤー"]  ずっと信じてやってきたことさえ……利用されていたにすぎない。聞いているだろう？　タルラが裏切ったんだ。どんな事情があったかはわからない。だが、レユニオンはもう終わったんだ。
+[Dialog]
+[Character]
+[Character(name="avg_npc_043_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="ナイン"]  レユニオンがここで終わりだとは、私は思わないがな。
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  ……お前は龍門人か？
+[Character(name="avg_npc_043_1#2")]
+[name="ナイン"]  そうだ。だが、私が何者であろうと関係ない。
+[name="ナイン"]  レユニオンがどうなろうと、タルラがすでに火を灯したことには変わりない。タルラがその行いを認めるか否かを問わずな。
+[name="ナイン"]  この火が簡単に消えるとは思えない。
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  それもまたいいだろう。お前がそう言うなら、彼らはお前について行く方がいいのかもしれない。
+[Character(name="avg_npc_043_1#2")]
+[name="ナイン"]  私に託すという意味か？
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  信用するという意味だ。お前が嘘をついているかどうかは、私にはわからない。だがここにいる人たちが故郷を失ったのは事実だ。
+[name="クラウンスレイヤー"]  私についてくるよりも、お前について行った方がいい。
+[Character(name="avg_npc_043_1#2")]
+[name="ナイン"]  ならば、お前たち……私についてくる気はあるか？
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]  クラウンスレイヤー……
+[Character(name="char_1502_crowns")]
+[name="クラウンスレイヤー"]  みんな……私たち……ウルサス人は……
+[name="クラウンスレイヤー"]  ウルサスはまだ、私たちのように全てのウルサスの民を平等なものとして扱うまでに至っていないだけだ。いずれきっと……
+[name="クラウンスレイヤー"]  じゃあな、みんな……私みたいに過ちを犯すなよ。
+[Character(name="avg_npc_043_1#2")]
+[name="ナイン"]  では行くか、若者たちよ……
+[Character(name="char_1002_nsabr_1")]
+[name="レユニオン構成員"]  あんたの名は？　これからどこへ行くんだ？
+[Character(name="avg_npc_043_1#2")]
+[name="ナイン"]  私のことは、「ナイン」と呼ぶがいい。
+[name="ナイン"]  火が燃えたぎるところに向かうつもりだ。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_desert_3",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_034",fadetime=1,block=true)]
+[delay(time=1.4)]
+[name="鼠王"]  やはり此処におったか。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="ウェイ"]  お前の目は欺けないな。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  お主が此処へ来る理由はただ一つ、あ奴らを悼むためであろう。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="ウェイ"]  いや、私たち自身を悼んでいるのかもしれない。未だに死を恐れているこの身を。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  お主の剣はそうは言っておらんかったぞ。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="ウェイ"]  少なくとも、本気でお前の喉を掻き切る真似はしなかったからな。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  出過ぎた口はきかぬほうが良いぞ、お坊ちゃま。本気を出せばどちらに軍配が上がるかはわからぬからのう。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="ウェイ"]  皮肉るのはやめろ。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  ふんっ、多少の皮肉くらい甘んじて受け入れい、我が友よ。フェイゼがやりおった！　感染者たちがついにやったんじゃから！
+[name="鼠王"]  もう一度よく考えるんじゃな……お主の独断で危うく龍門が破滅を迎えるところだったんじゃぞ？　一歩間違えておったら、どれだけの者が戦いに身を投じていたことか。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="ウェイ"]  必ずしもそうとは限らんさ。龍門が一つの未来を選んだとしても、ほんの些細なことでその未来は滅ぶかもしれない……全ては、縁に導かれた、ただの偶然にすぎない。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  この街が彼女を選んだのではないぞ、我が友よ。彼女がこの都市を選んでくれたのじゃ。ワシらはありがたく思うべきじゃろう。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="ウェイ"]  どちらだろうと矛盾はしないと思うがな。グレイ、この街も彼女を選んだんだ。
+[name="ウェイ"]  この都市が、まだ彼女を受け入れる準備ができていなかったとしてもな……
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  その言葉は彼女自身に言うんじゃな。ワシは失礼させてもらうぞ、お坊ちゃま。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="ウェイ"]  ……待て、グレイ！
+[name="ウェイ"]  影衛は私を騙したのか？
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  急に何の話じゃ？
+[name="鼠王"]  ――お主の手下のことをワシが知るわけなかろう？
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="ウェイ"]  お前がユーシャと手を組んで、何か企んでいても不思議ではない。
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  ではこれだけ言っておくかのう。影衛はかつての禁軍の頃と同じではない、今では人間じゃ。
+[name="鼠王"]  お主がまた罪を犯すのを、彼らが黙って見過ごすとでも思うたか？
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=1)]
+[name="ウェイ"]  つまり、私が彼らに処理を命じた感染者は、ただお前に――
+[Character(name="char_2005_weiyw_1#5",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  シーッ……それは神のみぞ知る、じゃ。それに、ワシらがこうすることをわかっておったからこそお主は……
+[name="鼠王"]  早う帰るんじゃな。老いたトラがお主を待っておるぞ。
+[name="鼠王"]  ――フェイゼ？
+[name="鼠王"]  おぉ、もう戻っておったのか。
+[Character]
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_086",fadetime=1,block=true)]
+[delay(time=1)]
+[name="チェン"]  リンおじさん。
+[Character(name="avg_npc_034")]
+[name="鼠王"]  その身なりから見るに、すぐにでもここを立つつもりなんじゃな。
+[name="鼠王"]  フェイゼ、たまには戻ってくるんじゃぞ。
+[Character(name="avg_npc_086",name2="avg_npc_034",focus=1)]
+[name="チェン"]  ……どうかな。
+[Character(name="avg_npc_086",name2="avg_npc_034",focus=2)]
+[name="鼠王"]  なら便りだけでもいい。無事だということだけでも知らせてくれ。
+[Character(name="avg_npc_086",name2="avg_npc_034",focus=1)]
+[name="チェン"]  あぁ、わかったよ、リンおじさん。
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ……
+[name="ウェイ"]  ここには、タルラの父親と……お前たちの母親が埋葬されている。
+[name="ウェイ"]  結局二人とも、愛した街で眠ることは叶わなかった。いや、お前の母にしてみれば、愛しいがゆえに恨みも深いというものか。
+[name="ウェイ"]  フェイゼ、ここの景色を私は永遠に忘れることはない。この景色を一目見れば、全てが昨日のことのように甦る……私の妹、そして血は繋がっていないが、血縁にも勝る関係である私の兄弟。
+[name="ウェイ"]  彼らはここで眠っている。
+[name="ウェイ"]  二人の熱意を閉じ込めておくには、こんな棺では小さすぎる。二人の恨みを言い表すには、どんな言葉も軽すぎる。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  だからここは名もなき墓なのか。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="ウェイ"]  名もなき墓……そうだ。フッ、名前など生きている者にしか意味のない代物だからな。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ――この大地では、埋葬などというのはただ、遺された者の理想を押しつけた儀式にすぎない。どんな墓も最終的には消えてしまうのだからな。安らかなる永眠などないのさ。
+[name="ウェイ"]  天災や戦争に見舞われるか、ただ単に打ち捨て去られるだけか……街が消えてしまえば、そこに埋葬されていた死者も塵となる。
+[name="ウェイ"]  広大な荒野に点在する無数の集落でも、その末裔が祖先の墓を探し出せたなどという話は、聞いたこともない。
+[name="ウェイ"]  墓道などという葬送の方法もある。移動都市の航路上の一部を墓地とみなし、死者の遺品をその道に撒く。そして、幾度もその航路を通ることで参拝とみなす。
+[name="ウェイ"]  私はどうも忘れっぽいらしい……忘れてしまったことが多すぎる。いや、忘れたいことが多すぎるというべきか。
+[name="ウェイ"]  だが、二人のことは決して忘れたりはしない。
+[name="ウェイ"]  だから……ここに埋葬することにしたんだ。
+[name="ウェイ"]  ……妹を連れて龍門に入り、ここでフミヅキに出会った。そして、ここまで逃れてきたエドワードにもだ。
+[name="ウェイ"]  すぐ意気投合したとは言わんが、彼は知恵も勇気もある奴だった。
+[name="ウェイ"]  陰で龍門を統治していたコシチェイは、私たちを目の上のたんこぶだと思っていたのだろうが、私たちにもはっきりとわかっていた。奴を追い出して初めて……この都市の未来が開けるとな。
+[name="ウェイ"]  この場所、この墓はかつて龍門が訪れたことのある最果ての地だ。
+[name="ウェイ"]  私たちが力を合わせてコシチェイを打ち負かし、奴を徹底的に龍門から追い出した時、龍門は数十キロ離れたところにあった。希望に満ちた都市は明かりを灯し、未来が我々を待っていた。
+[name="ウェイ"]  ここで……この地で私たちは、酒を酌み交わし、大いに語り合い、笑い合った。あの時は、移動するための燃料が足りないことなんてすっかり忘れていたさ。
+[name="ウェイ"]  危うくここで干からびるところだったが、幸いにも老いぼれトラのアダムスが、咳き込みながら車でここまで迎えに来てくれたんだ。私もエドワードも相当叱られたがな。
+[name="ウェイ"]  いや……アダムスもあの時はそんなに歳を取ってはいなかったか。病もそこまでではなかったし、今ほど容赦ない奴でもなかったな。
+[name="ウェイ"]  だが、そんなことはどうでもいい。あの場では、誰もが皆笑顔だったのだから。
+[name="ウェイ"]  グレイは……まるでその手を血に染めたことなんかないような顔で笑うんだ……輝かしい時を過ごしてきた少年のような笑顔さ。
+[name="ウェイ"]  エドワードは、ロンディニウムの最も高貴な血筋の末裔だったが、それは龍門では秘密だった。だが、コシチェイに勘付かれたんだ。恐らく、その時にはすでに奴の計画も形になっていたのだろう……
+[name="ウェイ"]  奴は……嫉妬の塊のような私の弟と、ロンディニウムの諜報員に、エドワードと妹の関係をバラしたんだ……
+[name="ウェイ"]  私は、エドワードか、妹のお腹にいた子のどちらか一人を選ぶよう迫られた。
+[name="ウェイ"]  そして、エドワードが死んで十年、私はその死を公表しなかった。私の弟とコシチェイ以外、事実を知る者はいなかった。だが、今やエドワードも妹も、すでにこの世にはいない。
+[name="ウェイ"]  時が経てば、この地にも天災が襲い掛かり全てが無に帰すだろう。悲劇の恋人たちがこの地に眠っていることも、その二人が私のせいで死んでいったことも、忘れ去られてしまう。
+[Character(name="avg_npc_086")]
+[name="チェン"]  ……「コシチェイ」に会った。奴は私たちが思っているよりもっと邪悪な存在かもしれない。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  そうだろうな。
+[Character(name="avg_npc_086")]
+[name="チェン"]  墓地か……
+[name="チェン"]  ……母さん。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  お前の母親がお前に対して愛情が薄かったのは私のせいだ。彼女を守るために、どうしても炎国の貴族に嫁がせる必要があった。だがもっと上手くやれたはずだった……
+[Character(name="avg_npc_086")]
+[name="チェン"]  全て過ぎたことだ。
+[name="チェン"]  約束してくれ、ウェイ。これ以上、龍門を墓場にしないと。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="ウェイ"]  そんなことには二度とならないさ。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  口先だけでは信じられないな。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  お前に信じてほしいと思ったことはないが、だが、今回だけは信じてくれ。昔に、お前を特訓してやると言った時と同じだ。
+[Character(name="avg_npc_086")]
+[name="チェン"]  ……
+[name="チェン"]  あの特訓はとても役に立った。あの教えがなければ、おそらく彼女を救うことはできなかっただろう。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  それは何よりだ。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  ここ十年のあなたとの会話を足したよりも、今日一日分の方が多いような気がするよ。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="ウェイ"]  これまでの言葉では足りなかったか？
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  チェン・フェイゼに対しての言葉だ。チェン隊長にじゃない。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="ウェイ"]  ははっ。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  では、そろそろ行くよ。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="ウェイ"]  姉のことはどうするつもりなんだ？
+[name="ウェイ"]  ……私は、タルラに親族としての情はない。ただ申し訳ないと思うだけだ。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  ならば、申し訳ないと思い続けてくれ。
+[name="チェン"]  私たちは所詮、この大地に無数に存在する、生き別れた兄弟姉妹の一組にすぎない。その多くは、生きて再会することも叶わない。
+[name="チェン"]  それでもタルラは、無罪放免とはいかない。わからないんだ、今の彼女が一体何者なのか……
+[name="チェン"]  罪を犯した者は捕らえられなければならない。ただ、今の龍門ではまだタルラを収容することができない。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="ウェイ"]  私にその場所を作ることはできない。感染者と普通の罪人が、共に収容される近衛局を作ることができるのはお前だけだ。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  私である必要はない。自分のことは自分でやってくれ。
+[name="チェン"]  私は悟ったんだ……どれほど正しいことだとしても、龍門の市民が受け入れなければ何も実現しない。スラム街で嫌というほど思い知らされた。
+[name="チェン"]  それに……本当にそういう場所ができるのなら、まずはロドスと共に作り上げたいと思っている。
+[name="チェン"]  タルラにはどれほど時間がかかろうと、公正な裁きを受けてもらうつもりだ。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="ウェイ"]  ……本当に成長したな。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  そんな言葉はいらない、長官。いい言葉だとも思えないのでな。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="ウェイ"]  龍門に代わって私がお前を引き留めたとしても、無駄なのか？
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  はぁ……
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=2)]
+[name="ウェイ"]  もしも、お前とタルラが戻ってきたのならば、龍門も共にその道を歩むことだろう。
+[name="ウェイ"]  私たちにはできないことも多いが、未来の龍門人が成し遂げてくれるはずだ。
+[Character(name="avg_npc_086",name2="char_2005_weiyw_1#5",focus=1)]
+[name="チェン"]  私はただ、あの時あなたが思い描いていたことを、忘れないでいてくれればそれでいい。
+[name="チェン"]  フミヅキおばさんによろしく伝えてくれ。
+[name="チェン"]  後は……そうだ。
+[Character(name="avg_npc_086")]
+[name="チェン"]  ええと……
+[name="チェン"]  ……伯父さん。
+[name="チェン"]  身体には気をつけて。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ……
+[name="ウェイ"]  フェイゼ！
+[Character]
+[Dialog]
+チェンは一瞬躊躇したが、振り返りはしなかった。
+[Character]
+[name="チェン"]  なんだ？
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  道は険しく長い。だが、お前ならできるはずだ。
+[Character]
+[name="チェン"]  その言葉、覚えておこう。
+[Dialog]
+[Character]
+[Dialog]
+[Blocker(a=1, initr=2, r=0, g=0, b=0, fadetime=3, block=true)]
+[Image(fadetime=0)]
+[Background(image="bg_lungmen_o",screenadapt="coverall",block=true)]
+[Character(fadetime=0)]
+[cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_2006_weiywfmzuki_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="フミヅキ"]  ――それで、ロドスに提示しようとしていた、二つ目の条件というのは何でしたの？
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ……
+[name="ウェイ"]  レユニオンの脅威を排除した後、龍門の感染者たちを連れて行ってもらうことだ。 
+[name="ウェイ"]  土地と資源――そして研究に必要な資料と、十分な資金を提供するつもりだった。
+[name="ウェイ"]  彼らは断れないはずだ。その全てを受け入れる代償が、如何に大きかろうとな。
+[name="ウェイ"]  こうした取引は、これまでに何度となくやってきた。そして今後も続けていくつもりだった。
+[name="ウェイ"]  躊躇も後悔もせずにな。
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="フミヅキ"]   今はどうです？
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ……ふっ、世が変わったのなら私も変わらねばなるまい。
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="フミヅキ"]   直接お礼を言うのがそんなに難しいですか？
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ……
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="フミヅキ"]   あなたはもうそんなに損得ばかり考えてはいません。恐らく、その理由は一つしかないでしょう。
+[name="フミヅキ"]   チェンちゃんですね。
+[name="フミヅキ"]   今はもう条件を変えたのでしょう？
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  龍門の感染者は龍門のものだ。   
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="フミヅキ"]   ならチェンちゃんは？
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  彼女は己の道を行くさ。
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="フミヅキ"]   時々会いに行きますか？
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  龍門の長官たる者、感染者組織と関係を持つようなことはしない。
+[Character(name="char_2006_weiywfmzuki_1")]
+[name="フミヅキ"]   もう、器が小さいんですから。
+[name="フミヅキ"]   それなら私が行きます。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  なら……頼む。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Image(image="avg_8_17",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Background]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+妹と義理の弟の間で選択を迫られた時、私は妹を選んだ……二度と彼らを苦しませないと誓ったのに、私は――
+誓いを守ることができなかった。
+だが今はもう違う。何かを選ぶような真似はしない。
+コシチェイは間違っている。私には選ぶ余地すらない。私が進む道はただ一つ。
+たとえその道が肉親殺しから連なっているものであっても。
+妹が残した二人の娘のため、そして私が思い描いた理想の龍門のために。たった一つしか道がなくとも……
+[Dialog]
+[image]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  （フェイゼ……生き抜いてくれ。）
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$storyendjp_intro", key="$storyendjp_loop", volume=0.4)]
+――数週間後
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[name="ケルシー"]  尊敬するロドスのオペレーターの諸君、ケルシーだ。
+[name="ケルシー"]  皆の努力の末、チェルノボーグ事件も、ようやく平和的と言える収束を迎えた。
+......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_ri_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_042")]
+[name="ロスモンティス"]  痛い？
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=2)]
+[name="ブレイズ"]  あたっ……突っつかないでよ！　そんなことされたら痛いに決まってるでしょ！
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=1)]
+[name="ロスモンティス"]  あっ、ごめん。
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=2)]
+[name="ブレイズ"]  まぁいいけど……どうかした？
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=1)]
+[name="ロスモンティス"]  ……ううん、なんでもない。
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=2)]
+[name="ブレイズ"]  ええぇっ？　うそでしょ、小猫ちゃん……今までは……今までなら言いたいことは全部口に出してたのに！
+[Character(name="avg_npc_042",name2="char_017_homura_3#5",focus=1)]
+[name="ロスモンティス"]  え？　これって……いいこと？　悪いこと？
+[Character(name="char_017_homura_3#11")]
+[name="ブレイズ"]  あっ！　うん、もちろんいいことだよ！　Scout、ねぇ、今の見てくれた？　私たちの小猫ちゃん、こんなに成長したよ。この子こんなに成長したんだよ……！
+[name="ブレイズ"]  成長したんだよ、うぅ……
+[Character(name="avg_npc_042",name2="char_017_homura_3#11",focus=1)]
+[name="ロスモンティス"]  や、やめてよ……恥ずかしくて忘れたくなっちゃう……
+[name="ロスモンティス"]  ……ブレイズ、本当に泣いてるの？　どうして？
+[Character(name="avg_npc_042",name2="char_017_homura_3#11",focus=2)]
+[name="ブレイズ"]  うわあぁぁぁぁん……！！
+[Character(name="avg_npc_042",name2="char_017_homura_3#11",focus=1)]
+[name="ロスモンティス"]  ……泣かないで、泣かないで……ブレイズ……もう泣かないでよ。
+[Character(name="avg_npc_042",name2="char_017_homura_3#11",focus=2)]
+[name="ブレイズ"]  ブリッシュシルバーもAceも、きっと見ててくれたよね？　私たちの小猫ちゃんが……小猫ちゃんが成長したよぉ……
+[Character(name="avg_npc_042")]
+[name="ロスモンティス"]  ……ブレイズ……
+[Character(name="char_017_homura_3#11")]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="ブレイズ"]  うわあぁぁぁん……！！
+[Character(name="avg_npc_042")]
+[name="ロスモンティス"]  もう！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[name="ケルシー"]  ――多くの真実は、永遠にチェルノボーグの瓦礫の下に、埋もれてしまうだろう。
+[name="ケルシー"]  この大地はこんなにも無情だからだ。
+[name="ケルシー"]  だが、ロドスは忘れたりはしない。そのためにどれだけ多くのものを背負おうと……忘れてはならない。
+[name="ケルシー"]  ロドスのオペレーターは、決して誰か一人の人間や、何か一つのことのために命を犠牲にしたのではない。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_infirmary",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_016_medic")]
+[name="Medic"]  わぁ、この塗り薬、本当に効果があるんですね！
+[name="Medic"]  似たような特許薬はたくさんありますが、特効薬としてなら、きっとこの外用クリームにも需要はあると思いますよ。
+[name="Medic"]  効果が非常に大きいというわけではありませんが、一番の長所はコストが限りなく低いことです……成分の分析結果を見ても、どれもよく見かける自然界の植物由来という点が素晴らしいです。
+[name="Medic"]  ただ採集するのが少し面倒なんですよね。西北凍原の西と東、広大な地域の両端に分布しているので……
+[name="Medic"]  この薬の開発者はおそらく、医学知識よりも根気の方が強かったんでしょうね。
+[name="Medic"]  特許はどこで申請しましょうか、アーミヤさん？
+[Character(name="char_002_amiya_1")]
+[name="アーミヤ"]  ……ウルサスですかね。それと、すごく安価にしないと。
+[Character(name="char_002_amiya_1",name2="char_016_medic",focus=2)]
+[name="Medic"]  でも、ウルサスなら似たような医療技術には事欠かないのでは？
+[Character(name="char_002_amiya_1",name2="char_016_medic",focus=1)]
+[name="アーミヤ"]  ですが、その薬を必要としている人はウルサスにたくさんいます。
+[Character(name="char_002_amiya_1",name2="char_016_medic",focus=2)]
+[name="Medic"]  薬の名前はどうしましょう？
+[Character(name="char_002_amiya_1")]
+[name="アーミヤ"]  そうですね……「フロストノヴァ」にしましょう。
+[Decision(options="アーミヤ？　なにか用か？", values="1")]
+[Predicate(references="1")]
+[name="アーミヤ"]  あっ、Dr.{@nickname}！
+[name="アーミヤ"]  Medicさん、あとはワルファリンさんと一緒にお願いします。
+[Character(name="char_016_medic")]
+[name="Medic"]  はい、お任せください！
+[Character(name="char_002_amiya_1")]
+[name="アーミヤ"]  ドクター、今行きます！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[name="ケルシー"]  私たちが事業に邁進するのは、結果を得るためではない。
+[name="ケルシー"]  何かを行うにしても、決して成果を求めてはいない。
+[name="ケルシー"]  ビジネスの観点から見れば、このような戦略は愚かだろう。しかし私たちの命は、物質的側面しか持たないモノではない。
+[name="ケルシー"]  勇敢なオペレーターたちが、その行動で示してくれたように、命の価値というのは、誰か一人――もしくは多くの者の生存を保証するだけではない、生物学的な意味だけでもない……
+[name="ケルシー"]  我々は文明的な道徳観の上に立ち、生きて行かねばならない。ロドスは確信している、未来の命には支えが必要だということを。
+[name="ケルシー"]  我々はこの大地の傷を癒やすという信念のために戦っているのだ。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  また任務に出るのか？
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1", focus=2)]
+[name="ニアール"]  あぁ、メテオリーテと一緒にな。
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1", focus=1)]
+[name="ドーベルマン"]  新人を連れて行く余裕はないか？　まだまだ教育が必要な兵士の卵が何人かいるんだ。
+[Character(name="char_130_doberm_ex", name2="char_148_nearl_1", focus=2)]
+[name="ニアール"]  いや、厳しいだろう。今回の任務は楽なものではないのでな。
+[Character(name="char_219_meteo_1")]
+[name="メテオリーテ"]  ジェシカとフロストリーフが巡回任務に出るらしいわ。そっちの方がいいかもしれないわね。
+[Character(name="char_219_meteo_1",name2="char_130_doberm_ex",focus=2)]
+[name="ドーベルマン"]  ジェシカが？　大丈夫なのか？
+[Character(name="char_219_meteo_1",name2="char_130_doberm_ex",focus=1)]
+[name="メテオリーテ"]  ちゃんと成長してるんだから。
+[Character(name="char_219_meteo_1",name2="char_130_doberm_ex",focus=2)]
+[name="ドーベルマン"]  それはわかっている。だからこそ、彼女の成長がほかの者に対するプレッシャーになってしまわないか心配なんだ。
+[Character(name="char_219_meteo_1",name2="char_130_doberm_ex",focus=1)]
+[name="メテオリーテ"]  そんなこと言ったら私はニアールにぺしゃんこにされちゃうわよ。
+[Character(name="char_148_nearl_1")]
+[name="ニアール"]  私は……そんなに重くはないと思うが？
+[Character(name="char_219_meteo_1")]
+[name="メテオリーテ"]  そ、そういう意味じゃないわよ、もう。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[name="ケルシー"]  その信念のために、我らは犠牲を払ったのだ。
+[name="ケルシー"]  ――Ace小隊、十三名。Ace、バッドトム、ハードブリック、ケルグ――
+[name="ケルシー"]  ――ウッドスプーン、セブンティーン、ブロンズノーズ、ビーン、ルナシルバー、コンフィデンティ、サンドウォッシュ、バイオレットフレイム、カリエス。
+[name="ケルシー"]  アーミヤ小隊、十三名。ディムニードル、B-ソフトハンド、チリジミー、キーンイヤー――
+[name="ケルシー"]  ――アンガーネイジング、サンティ、マルコ・スミス、フェード――
+[name="ケルシー"]  ――ディバイド、リーシャ、ワイルドアッシュ、フォイ・インディゴジェイド、フロストノヴァ。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  フロストノヴァを死亡者リストに入れることはできない。
+[Decision(options="どうしてだ！？;……;理由を教えてくれ。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="ケルシー"]  君が認めても、我々の正式なオペレーターではないからだ。
+[name="ケルシー"]  レユニオンのメンバーを受け入れ、未だ潰えぬ怒りを宿したロドスのオペレーターたちの心を乱すというのか？　そんなことを君がするべきではない。
+[Decision(options="戦う理由はみんな同じなんだ。", values="1")]
+[Predicate(references="1")]
+[name="ケルシー"]  それで十分だと思っているのか？
+[Decision(options="十分だ。", values="1")]
+[Predicate(references="1")]
+[Decision(options="ロドスは一つの信念のために戦っているのだから。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1#2")]
+[name="ケルシー"]  ……わかった。
+[name="ケルシー"]  了承しよう。君は自分の責任を背負った。
+[name="ケルシー"]  ……これからの君も、今の君のようにいてくれることを願う。
+[name="ケルシー"] ――この前のことは謝ろう、Dr.{@nickname}。
+[name="ケルシー"]  石棺エリアで最後に君が問いかけてきた質問だが、それに答えることはできない。今後、永遠にだ。
+[name="ケルシー"]  残念だが、真実を隠そうとしているわけではないんだ。ただ、君の求めている答えを教えることはできない。私もPRTSも君に説明することは難しい。責務を果たせなくて申し訳ない。
+[name="ケルシー"]  だが、その時が来れば、答えは自ずと君の前に現れるはずだ。
+[name="ケルシー"]  ドクター……
+[name="ケルシー"]  真実が明らかになるその日、君がきちんと準備できていると期待してもいいだろうか？
+[name="ケルシー"]  それと、Dr.{@nickname}。
+[name="ケルシー"]  アーミヤはすでに色々なものを背負ってきた。これ以上……彼女には好ましくない思い出を残してほしくないんだ。
+[name="ケルシー"]  逆に、私たち自身でもまだ直視できていないようなものは、私たちが彼女のために背負うべきだ。私たちにならできる。
+[name="ケルシー"]  君がここに留まり、今と変わらずにいてくれればな。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_8_18",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Background]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+[name="ケルシー"]  Scout小隊、十三名。Scout、ムラム、カクテル――
+[name="ケルシー"]  ――スリンカー、ミミ、レイファ、ソラナ、マリー――
+[name="ケルシー"]  ――サムタック、ユラン、ユン、プータル、スコーピオン。
+[name="ケルシー"]  ロスモンティス小隊、一名。ブリッシュシルバー。Raidian小隊、一名。リクサ。
+[name="ケルシー"]  この度のチェルノボーグ事件での犠牲者は計四十一名。
+[name="ケルシー"]  我々ロドスは決して彼らを忘れない……彼らの名は永遠にロドスに刻まれる。
+[name="ケルシー"]  ロドスが消滅してしまったとしても、彼らがロドスのために行ったことはこの大地にその足跡を残す。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(image="bg_8_babel3",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+[name="アーミヤ"]  ドクター……
+[name="アーミヤ"]  今はお話をする気分ではありませんか？
+[name="アーミヤ"]  ……わかります。今日までにあまりにも多くのことが起こりましたから。
+[name="アーミヤ"]  でも、ドクターがここにいてくれて、私は……私は嬉しいです。
+[name="アーミヤ"]  一人では、成し得ないこともたくさんあります。
+[Decision(options="だが我々は何かを成し遂げるためにあるわけではない。", values="1")]
+[Predicate(references="1")]
+[name="アーミヤ"]  はい！
+[name="アーミヤ"]  ……行く先にどれほどの暗雲が立ち込めていようと、ロドスは進み続けます。
+[name="アーミヤ"]  それに、この大地にどれだけ残酷な物語があるとしても――
+[name="アーミヤ"]  ――ドクターの心は温もりにあふれていると信じています。
+[Decision(options="もちろん。;……;本当は悪い人だったらどうする？", values="1;2;3")]
+[Predicate(references="1;2")]
+[name="アーミヤ"]  おかえりなさい、ドクター。
+[Predicate(references="3")]
+[name="アーミヤ"]  それなら、私がドクターを止めるしかありませんね。
+[name="アーミヤ"]  おかえりなさい、ドクター。
+[Predicate(references="1;2;3")]
+[Decision(options="ただいま、アーミヤ。", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=0.6, block=false)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="avg_ep08",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=3, block=false)]
+[stopmusic(fadetime=3)]
+[delay(time=5)]
+[Image(fadetime=2)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_lock_1",screenadapt="coverall")]
+[Image]
+[Blocker(a=0, fadetime=1, block=false)]
+[playMusic(intro="$newhope_intro", key="$newhope_loop", volume=0.4)]
+[Character]
+[name="ロドスオペレーター"]  彼女、何か話しましたか？
+[Character(name="char_007_closre_1")]
+[name="クロージャ"]  ううん、君たちが連れてきてから今の今まで……だんまりだよ。
+[name="クロージャ"]  根気強いよね。ほらあの……チェン、だったっけ？　彼女が来ても何も話さなかったんだよ。
+[Character]
+[name="ロドスオペレーター"]  じゃあ、どうするつもりなんです？
+[Character(name="char_007_closre_1")]
+[name="クロージャ"]  どうするつもりって言われてもなぁ、あたしはアスカロンでもないし……それに、今は彼女に話してほしいことも別にないし。
+[name="クロージャ"]  さらに踏み込んだ情報なんて、使いどころによるでしょ、多分ね。はあ〜頭が痛いよー。あんな子の相手、あたしには無理だよ……
+[Character]
+[name="ロドスオペレーター"]  ところで、あの龍門近衛局の人たちは、何をしに来てたんです？
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image]
+[name="スワイヤー"]  なぁに？　初めてロドスに行ったってわけじゃないでしょうに……何をソワソワしてんのよ？
+[name="ホシグマ"]  昇進してから、立場上、ロドスと結託しているのではないかと噂されるのを懸念しているだけです。
+[name="ホシグマ"]  お嬢様は全然気にしていないようですね。まるで遊びにでも行ったみたいじゃないですか。
+[name="スワイヤー"]  アタシに文句つけられる人なんているわけないでしょ？
+[name="ホシグマ"]  ああ、そうですね。金持ちの理屈だと。
+[name="スワイヤー"]  あら……？　ウェイ長官のオフィスにいるあの人……誰かしら？
+[name="ホシグマ"]  ……青い髪の天使？　それともサルカズですかね？
+[name="スワイヤー"]  きゃっ！　……あ、あの人、すごい怪我じゃない！
+[name="ホシグマ"]  お、お待ちを！　入ってはダメです……ウェイ長官がいらっしゃるんですよ。
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_lungmen_o",screenadapt="coverall")]
+[Image]
+[Blocker(a=0, fadetime=2, block=false)]
+[Character(name="char_213_mostma_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="？？？"]  Chief、お客様みたいですよ。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ここまで入って来られるのは信頼できる者だ。それよりも、自分の怪我の具合を心配した方がいい。
+[Character(name="char_213_mostma_1")]
+[name="？？？"]  これくらいの怪我はどうってことありませんよ。外にいる二人に、盗み聞きされても良いのであればお気遣いなく。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ラテラーノのトランスポーターが、今回は何をしに来たのかな？
+[Character(name="char_213_mostma_1")]
+[name="？？？"]  私はラテラーノの正式なトランスポーターではありませんよ……
+[name="？？？"]  （まあ、確かに教皇からの言伝はあるのですが。）
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ホシグマ！　スワイヤーを部屋の外へ連れ出せ。
+[Character(name="char_136_hsguma")]
+[name="ホシグマ"]  は、はい！
+[Character(name="char_308_swire_1#3")]
+[name="スワイヤー"]  ちょっと！　どうしてアタシだけそういう扱いなのよ……
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  これでいい。
+[name="ウェイ"]  さぁ、聞かせてくれ、トランスポーター。
+[Character(name="char_213_mostma_1")]
+[name="？？？"]  彼は……
+[name="？？？"]  「（ラテラーノ語）今朝は何を召し上がりましたか？　夕飯は何を食べるおつもりですか？」と仰っていました。
+[Character(name="char_2005_weiyw_1#5")]
+[name="ウェイ"]  ……妙だな。彼がなぜ私の考えを知ろうとする？
+[Character(name="char_213_mostma_1")]
+[name="？？？"]  そうですね……おそらく、あなたこそがChiefだからではないですか、ウェイさん。
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_lock_1",screenadapt="coverall")]
+[Image]
+[Blocker(a=0, fadetime=1, block=false)]
+[Character(name="char_007_closre_1")]
+[name="クロージャ"]  あれって、非公式だよね。あの黄色いトラと緑の鬼……単に視察も兼ねて元同僚を見舞いに来ただけかな？
+[name="クロージャ"]  でもさぁ……こんな調子じゃ、ウルサスの皇帝近衛兵まで、ロドスに来ちゃうんじゃないの？
+[Character]
+[name="ロドスオペレーター"]  彼女たちが来てから……あの病人に、何か変化はありましたか？
+[Character(name="char_007_closre_1")]
+[name="クロージャ"]  ないんだよねー。
+[name="クロージャ"]  ケルシーの出方を窺うしかないかな……あっ、今から監視カメラのテストするよ。そこのカメラの下に立って。ほらほら早く～！
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Image]
+[Blocker(a=0, fadetime=1, block=false)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Image(image="avg_8_19",x=, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=true)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+[name="コシチェイ"]  タルラ。
+[name="コシチェイ"]  人とは弱く、複雑で、利己的な生き物だ。
+[name="コシチェイ"]  瘤獣ですら人より尊いと言えよう。奴らはこの大地でエサを求め、渡り歩く日々をひたすらに送る。途中で諦めることもない。
+[name="コシチェイ"]  だが、人は違う。
+[name="コシチェイ"]  人は食べるために同類を殺し、欲望のために同類に害を為す。
+[name="コシチェイ"]  つまり、人は他者の力を借りて己の価値を見いだし、それを発揮するのだ。お前にはその資質も権力もある。
+[name="コシチェイ"]  そして、お前は何をすべきかを理解している。お前に全てを教えたのはこの私だ……お前はどうやって、この連綿と積み重なった歴史を超えていくつもりだ？　人の歴史とは、戦いの歴史だ。
+[name="コシチェイ"]  知恵、理想、そして方法……その全てを教えたのは私だ。下らない幻想は捨てろ。お前が戻る場所は結局、私のところだ。
+[name="コシチェイ"]  お前の終着点は私でしかない。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Image(image="avg_8_19_2",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=2, block=true)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+コシチェイ……違う、コシチェイ、絶対に違う。
+お前が与えたものはすでにこの身体に根づいている。これが永遠に傷跡として残ったとしても、全ての過去はもう過ぎたこと……
+もう……終わったことなんだ。
+いや……全てを終わらせなければならない。お前がもたらしたものは全て――
+お前が私にもたらした醜さと恥辱は……全て私の燃料となる。私の未来の燃料となる。
+お前を見つけるまで、この大地が解放されるまで、私は燃やすことを止めない。
+コシチェイ……これ以上、お前を否定はしない。だが私は、お前に反抗する。
+全ての過ちが正され、全ての罪悪が絶えるまで。
+絶対にやり遂げてみせる。たとえ私たちのたどり着く先が同じ場所だろうと、そこを灰にしてやる。自身が燃え尽きようが構わない。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+逃げ出してから、どれくらい経っただろうか？
+面倒だからとうの昔に数えるのをやめてしまった。
+だが、これ以上逃げ続けても無駄だろう。
+釘を打つのに、ハンマーの方へ釘を呼び寄せることなどできない。ハンマーの身ならば、それを釘目掛けて打ちつけるだけだ。
+もしかしたら、今がその時なのかもしれない。
+[Dialog]
+[Image(image="avg_8_22",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=3, block=false)]
+[Character]
+[name="ケルシー"]  ヴィーナ！　こちらへ来てくれ、話がある。
+[name="シージ"]  ……了解だ、ケルシー先生。
+[name="ケルシー"]  待て。先に聞いておく、準備はできているのか？
+[name="シージ"]  わからない……と言うよりも、今のままで良いのなら、いつでも準備はできている。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Blocker(a=0, fadetime=3, block=false)]
+[stopmusic(fadetime=3)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Background(image="bg_hall_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Character(name="avg_npc_076",fadetime=1,block=true)]
+[delay(time=1)]
+[name="イスラーム・ヴィッテ"]  陛下……
+[name="イスラーム・ヴィッテ"]  こちらが事件の全容が記された資料でございます。
+[Character]
+[name="フョードル"]  ――なぜこのようなことが起きたのだ？
+[name="フョードル"]  ……近衛兵の中に裏切り者がいるのか？
+[name="フョードル"]  ヴィッテ、正直に答えよ。
+[name="フョードル"]  余の心は、まるで冬の日に長らく灯されていない暖炉。誠実な言葉のみが、この心臓を再び動かすのだ。たとえ不愉快でしかない事実がこの心を傷つけるとしてもな。
+[Character(name="avg_npc_076")]
+[name="イスラーム・ヴィッテ"]  いいえ……近衛兵が陛下を裏切るはずはございません。この大地が炎に呑まれるその日まで、彼らは陛下のために尽くし続けるでしょう――あなた様がウルサスの君主でいる限り。
+[Character]
+[name="フョードル"]  そのような言葉がただの建前でしかないことはお前もわかっているだろう。もし近衛兵が、あの老いぼれた怪物の死を傍観していただけではなかったとすれば……
+[name="フョードル"]  ……もうよい！　これ以上、社交辞令も言い訳も聞きたくない！　お前は下らぬ愚臣などではないだろう、ヴィッテ？　正直に話せ、ありのままに！
+[name="フョードル"]  この陰謀の首謀者らは、今どこにいるのだ？
+[Character(name="avg_npc_076")]
+[name="イスラーム・ヴィッテ"]  ……
+[name="イスラーム・ヴィッテ"]  バイカル公爵、第三師兵団副師団長兼ロジン地区総督、そしてケルク子爵でございます。
+[name="イスラーム・ヴィッテ"]  もちろん、今の段階で彼らが首謀者だという確固たる証拠は掴めておりません。
+[name="イスラーム・ヴィッテ"]  しかし、これらの罪人に裁きを下し、その首を吊るし上げるため、近衛兵が彼らの屋敷に足を踏み入れた時にはすでに――
+[name="イスラーム・ヴィッテ"]  自身の罪に向き合うこと、そして陛下の逆鱗に触れることを恐れ、反逆者全員が自害をした後でございました。
+[Character]
+[name="フョードル"]  臆病者……この臆病者どもが！　連中には公正な裁判を受ける勇気もないのか。
+[name="フョードル"]  奴らは分かっていたのだ！　裁判にかけられれば、卑劣極まりない己の欲深さと汚れきった心が全て、ウルサス民の前に曝け出されるということを！
+[name="フョードル"]  だが我らは……もはや奴らを公開裁判にかけることもできない。
+[Character(name="avg_npc_076")]
+[name="イスラーム・ヴィッテ"]  その通りです、陛下。遺憾ではございますが、全て裏で起きたこととして闇に葬るしかないのです。
+[name="イスラーム・ヴィッテ"]  愚かな駄獣を追い詰めすぎては、草以外のものまで貪り始めます。
+[name="イスラーム・ヴィッテ"]  とはいえ、奴らの残されたあの部分……体のあの部分だけは、近衛兵が適切に処理をさせていただきました。
+[name="イスラーム・ヴィッテ"]  奴らの遺体は、屋敷の支柱に異臭を放つまで吊るされるでしょう。奴らの腐った遺体を下ろす勇気のある者がいるはずもありません。
+[name="イスラーム・ヴィッテ"]  もし奴らの目論みが果たされていれば、ウルサスは戦火に包まれ、権力の強奪や、議会の弱体化などが起こり、そして……さらに多くの都市が食いつぶされていたでしょう。
+[name="イスラーム・ヴィッテ"]  失敗に終わり、僥倖でございました。
+[Character]
+[name="フョードル"]  国を裏切った反逆者め！　このような結末で終わらせるなどあまりに手ぬるい！　肉サソリの餌にしてやるべきだ！
+[name="フョードル"]  だが……それではあまりにも恐ろしい光景になってしまう。うむ、それは良くない。
+[name="フョードル"]  許せ、ヴィッテ……今のは意図した発言ではない。
+[name="フョードル"]  同じ過ちを繰り返してはならない。今この時、どれだけ怒りの炎を浴びせてやりたくとも、そのように残虐な行為は私自身許すことができないものだ。
+[Character(name="avg_npc_076")]
+[name="イスラーム・ヴィッテ"]  たしか、大反乱の時もそのような刑罰を拒んでおられましたね……しかし、私はやはり鮮血による警告以外に、奴らを大人しくさせる方法はないと思います。
+[name="イスラーム・ヴィッテ"]  他者を恐怖に陥れようとする者は、更なる恐怖で押さえつけるしかありません。
+[name="イスラーム・ヴィッテ"]  たとえ私が、こうした手段に強く反対する立場であろうとも。
+[Character]
+[name="フョードル"]  しかし、解せぬ。
+[name="フョードル"]  無知なうえに目先のことしか考えておらぬ愚か者を黙らせるには、本当にこのような古典的で暴力的な方法しかないのか？
+[name="フョードル"]  我が帝国の剣と盾は、このようなウジ虫どもが握っておるのか？　我らは、連中の腐敗に巻き込まれてしまうほど無力なのか？
+[Character(name="avg_npc_076")]
+[name="イスラーム・ヴィッテ"]  陛下、残念ながら私にはその問いにお答えすることはできません。法的に見れば、私は帝国の公式諜報官ではありませんので。
+[Character]
+[name="フョードル"]  ヴィッテ……それよりも問題はあの伝説だ。「不死の黒蛇」とは、真に奴らの言う通り、殺すことのできぬ邪神なのか？
+[name="フョードル"]  広大なこの国土にそのような邪神が他にもいたらどうするのだ？　どうすれば我が民をこのような悪夢から解放できる？
+[name="フョードル"]  ヴィッテ、我らは光の下にいながら、闇に覆われている気分だ……炎でこのウルサスを照らせると思うか？
+[Character(name="avg_npc_076")]
+[name="イスラーム・ヴィッテ"]  陛下、一つだけ真実をお伝えしましょう。ここ数十年を振り返って見ても、このような事件に関与した明白な証のある長命者は、コシチェイ公爵ただ一人でございました。
+[name="イスラーム・ヴィッテ"]  彼が亡くなった今、その正体は突き止めようがありませんが……
+[name="イスラーム・ヴィッテ"]  つまり、もしウルサスの何処かに今もなお邪神がいたとしても……彼らは陛下に畏怖しているということです。
+[name="イスラーム・ヴィッテ"]  言い換えるなら、陛下と陛下の睨みを恐れているのです。
+[name="イスラーム・ヴィッテ"]  我々がヒッポグリフの支配を覆してから、すでに千年近くが経とうとしています。ウルサスの民の強靭さは、老いぼれた怪物の一匹や二匹ではどうすることもできませんよ。
+[name="イスラーム・ヴィッテ"]  やりたいようにやらせておけば良いのです。奴らが目的を果たせることはないのですから。
+[name="イスラーム・ヴィッテ"]  必ずや奴らをあぶり出し、そしてこの手で滅ぼして見せましょう。ご心配には及びません。
+[Character]
+[name="フョードル"]  本当にお前の言う通りになるとよいのだがな。
+[name="フョードル"]  感染者の件はどうなっている？　何か進展はあったか？
+[Character(name="avg_npc_076")]
+[name="イスラーム・ヴィッテ"]  そう焦る心配はございません。西北の各軍が有する感染者の採掘場を閉じるには、今は時期尚早でございます。
+[name="イスラーム・ヴィッテ"]  軍部の財源を削りたいとのお考えだとは思いますが、これは陛下の慈悲なるお心の顕れとも言えるでしょう――
+[name="イスラーム・ヴィッテ"]  しかし軍部だけでなく、民もこの件には反発しております。彼らにしてみれば、感染者というのは恐ろしい存在なのです。
+[name="イスラーム・ヴィッテ"]  今はまだ、民を敵に回してはいけません。大多数の者が、感染者に憎悪を抱いております。軍部との対立は、民との対立を意味すると曲解されてしまうでしょう。
+[name="イスラーム・ヴィッテ"]  今はまだ、その一歩を踏み出す準備が整っていないのです。
+[Character]
+[name="フョードル"]  ……
+[name="フョードル"]  それが正しい選択だとしてもか？
+[Character(name="avg_npc_076")]
+[name="イスラーム・ヴィッテ"]  左様でございます。感染者に対する陛下の寛大なお心が、逆に彼らを業火に突き落とす行為になりかねません。
+[name="イスラーム・ヴィッテ"]  ――陛下、そろそろお時間でございます。すでに、扉の向こうでは佯狂者が十五分は待ち続けておりますゆえ、早急にご対処をなされた方がよろしいかと。
+[Character]
+[name="フョードル"]  ふっ、戯言ばかりの狂人が！　恥辱を味わわせてやろう。
+[name="フョードル"]  その前に訊こう……ヴィッテ、我らはやり遂げられると思うか？　再びウルサスを輝かせることは叶うのか？
+[Character(name="avg_npc_076")]
+[name="イスラーム・ヴィッテ"]  わかりません、陛下。あなた様にその答えを差し上げるのは合理的ではありません。
+[name="イスラーム・ヴィッテ"]  少なくとも陛下は御父上様とは違い、この大地を滅ぼすようなことはありません。それだけで良いではありませんか。
+[Dialog]
+[Character]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="イスラーム・ヴィッテ"]  感染者タルラ……でしたか。
+[name="イスラーム・ヴィッテ"]  もし、あなたが「不死の黒蛇」の呪いを打ち砕けるのなら、ご自身の抱える他のどんな難局も乗り越えられるでしょう。
+[name="イスラーム・ヴィッテ"]  ……いつの日か、我々が本当の意味で先帝のあの国に勝利することを願います。
+[Dialog]
+[Character]
+[stopmusic(fadetime=3)]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Background]
+[Character(fadetime=0)]
+[Image(image="avg_ep09intro",x=0, y=0, xScale=1, yScale=1, fadetime=0, screenadapt="coverall")]
+[Blocker(a=0, fadetime=3, block=false)]
+[delay(time=5)]
+[Image(fadetime=2)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+タルラ？
+こんな天気の日に見張り番とは、ご苦労なことだな。
+まあ、お前が自ら望んでやっているのはわかっている。
+[Character(name="avg_npc_078")]
+[name="タルラ"]  いいか、この冬を抜けるまで私の炎が消えることはない。
+[Character]
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image(image="avg_8_21",x=0, y=0, xScale=1.2, yScale=1.2, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScale=1.2, yScale=1.2,xFrom=-50, xTo=50, duration=30, block=false)]
+[name="フロストノヴァ"]  （シーッ、声を抑えろ……）
+[name="フロストノヴァ"]  （この子たちが寝ているんだ。）
+[name="タルラ"]  （あぁ……悪い。）
+[name="タルラ"]  （一日中、訓練をしていたのか？）
+[name="フロストノヴァ"]  （ああ。髪色が濃いこの子にはクロスボウが合うかもしれない。）
+[name="フロストノヴァ"]  （まぁ、それももう少し成長してからだがな。）
+[name="タルラ"]  （ゆっくり寝かせてやろう。しかし――）
+[name="フロストノヴァ"]  （私はもう行く。これ以上いたら気温が下がりすぎて、この子たちが風邪をひいてしまう。）
+[name="タルラ"]  （すまないな。）
+[name="フロストノヴァ"]  （問題ない。この白髪の子は眠りが浅い。歌を歌ってやらないと、夢でうなされてしまうんだ。熟睡するまで歌ってやらないと……一体どんな過去を背負っているのだろうか。）
+[name="タルラ"]  （私たちの傷口は時間が癒やしてくれるさ。）
+[name="タルラ"]  （お前の父さんはまだ明日の戦略を練っているのか？　近くにあるウルサス感染者の輸送集積所については話してくれたが……）
+[name="フロストノヴァ"]  （如何にして消耗を減らすか、十分に考える必要があるのだろう。私にも気をつけるようにと、いつも口うるさく言ってくる。）
+[name="タルラ"]  （……だが、もうこんな時間だぞ？）
+[name="フロストノヴァ"]  （父さんの寝ている姿は見たことがない、一度もな。）
+[name="タルラ"]  （どれほどの英雄だろうと休息は必要だ。他の兵士たちも大方もう休んでいるだろう。）
+[name="フロストノヴァ"]  （父さんのことよりも、自分たちのやることについて考えよう……この前聞いた、連絡が取れた者の名は？　どこの人間なんだ？）
+[name="タルラ"]  （リュドミラとアレックスだ。チェルノボーグの近くで活動をしていて、あの都市に相当詳しい。）
+[name="フロストノヴァ"]  （あの大都市か。）
+[name="タルラ"]  （あぁ。だがあそこにも感染者が多いと聞く。もしかしたら、彼らを引き入れることができるかもしれない……しっかりとした戦術が練られればな。）
+[name="タルラ"]  （リュドミラたちは固い意志を持っている。きっと、頼れる仲間になるだろうさ。今は少しばかり過激だったとしてもな。）
+[name="フロストノヴァ"]  （毎月ウルサスの軍隊と戦っている私たち以上に、過激な者などいると思うか？）
+[name="フロストノヴァ"]  （それにしてもチェルノボーグか、遠いな。障害も多い。たどり着くまでに何年かかるだろう。三、四年かけても無理だろうな。）
+[name="タルラ"]  （こちらから干渉し、無理に停めようとしなくとも……向こうから近づいてくるのは目に見えている。都市の感染者の協力があれば、本当に自分たちの都市を築き上げることができるかもしれない。）
+[name="タルラ"]  （それに、三、四年など……何度か寝て目を覚ませばすぐさ。明日は目の前だ。）
+[name="フロストノヴァ"]  （その言葉、気に入った。）
+[name="フロストノヴァ"]  （お前も早く休むといい。）
+[name="タルラ"]  （あぁ、おやすみ。）
+[name="タルラ"]  （……おやすみ、サーシャ、イーノ。）
+[name="フロストノヴァ"]  （さあ、戻るといい。子供たちは私が集落に送っておこう。）
+[name="タルラ"]  （ああ。）
+[name="タルラ"]  （我らが戦友たち……）
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Image(fadetime=0)]
+[Image(image="avg_8_42",x=0, y=0, xScale=1, yScale=1, fadetime=0)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[Character]
+[ImageTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1, yScaleTo=1, duration=15, block=false)]
+おやすみ。
+[Dialog]
+[Blocker(fadetime=4,block=true)]
+[Image]

@@ -22,17 +22,6 @@ require "Feature/FeatureModule"
 local eutil = CS.Torappu.Lua.Util
 
 local function CleanLuaPreVersions()
-  -- clean V001 hotfix func by xlua.hotfix a nil func
-  xlua.hotfix(CS.Torappu.UI.CharacterInfo.CharacterInfoPotentialLvlUpState, 'OnUpgradeConfirmClick',nil)
-  xlua.hotfix(CS.Torappu.Activity.Act0D5.Act0D5Entry, 'OnEnter',nil)
-  xlua.hotfix(CS.Torappu.UI.Shop.ShopRecommendStateBean, 'RefreshData',nil)
-  xlua.hotfix(CS.Torappu.UI.Recruit.RecruitSlideState, '_EventOnGacha',nil)
-  xlua.hotfix(CS.Torappu.Activity.Act1.ActivityFirstShopView, 'RenderData',nil)
-  xlua.hotfix(CS.Torappu.Activity.Act1.ActivityFirstShopObject, 'InitData',nil)
-  -- clean V002 hotfix funcs
-  xlua.hotfix(CS.Torappu.Building.UI.Workshop.BuildingWorkshopHomeState, "OnEnter", nil)
-  xlua.hotfix(CS.Torappu.Building.UI.Float.BuildingFloatVisitState, "_UpdateSocialPoint", nil)
-  xlua.hotfix(CS.Torappu.DataConvertUtil, "_LoadStagePredefinedSquad", nil)
 end
 
 local function Preprocess()

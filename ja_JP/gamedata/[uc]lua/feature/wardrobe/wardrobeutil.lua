@@ -16,7 +16,7 @@ function WardrobeUtil.CheckSkinOnSale(v)
     return false
   end
   if (v.shopData.startDateTime < 0 and v.shopData.endDateTime<0) then
-    return CS.Torappu.UI.CharacterUtil.CheckUnlimitSkinBuyInLimitTime(v.data.skinId)
+    return CS.Torappu.CharacterUtil.CheckUnlimitSkinBuyInLimitTime(v.data.skinId)
   end
 
 
