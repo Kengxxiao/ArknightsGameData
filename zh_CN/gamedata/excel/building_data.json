@@ -8022,6 +8022,131 @@
         }
       ]
     },
+    "char_1012_skadi2": {
+      "charId": "char_1012_skadi2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[060]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[641]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_cost&profession[060]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_003_kalts": {
+      "charId": "char_003_kalts",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[040]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_prod_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_474_glady": {
+      "charId": "char_474_glady",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_aegir1[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_aegir2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "control_mp_aegir2[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_475_akafyu": {
+      "charId": "char_475_akafyu",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[220]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -8120,6 +8245,18 @@
     }
   },
   "buffs": {
+    "control_prod_spd[000]": {
+      "buffId": "control_prod_spd[000]",
+      "buffName": "最高权限",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_p_spd",
+      "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，所有制造站生产力<@cc.vup>+2%</>（同种效果取最高）"
+    },
     "control_tra_spd[000]": {
       "buffId": "control_tra_spd[000]",
       "buffName": "合作协议",
@@ -8383,6 +8520,42 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，控制中枢内每有1名<$cc.t.ussg><@cc.kw>乌萨斯学生自治团</></>干员，则<$cc.bd_tachanka><@cc.rem>乌萨斯特饮</></><@cc.vup>+1</>"
+    },
+    "control_mp_aegir1[000]": {
+      "buffId": "control_mp_aegir1[000]",
+      "buffName": "潮汐守望",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_aegir",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，每有1个<$cc.t.egir><@cc.kw>深海猎人</></>干员进驻在宿舍以外的设施，则自身心情每小时消耗<@cc.vdown>+0.5</>；反之则自身心情每小时恢复<@cc.vup>+0.5</>，如果进驻在宿舍内的<$cc.t.egir><@cc.kw>深海猎人</></>干员为满心情，则额外<@cc.vup>+0.5</>"
+    },
+    "control_mp_aegir2[000]": {
+      "buffId": "control_mp_aegir2[000]",
+      "buffName": "集群狩猎·α",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_aegir",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>；基建内<$cc.t.egir><@cc.kw>深海猎人</></>干员获得<$cc.c.egir2_1><@cc.rem>特殊加成</></>（与部分技能有<$cc.c.egir2_3><@cc.rem>特殊叠加规则</></>）"
+    },
+    "control_mp_aegir2[010]": {
+      "buffId": "control_mp_aegir2[010]",
+      "buffName": "集群狩猎·β",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_aegir2",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>；基建内<$cc.t.egir><@cc.kw>深海猎人</></>干员获得<$cc.c.egir2_2><@cc.rem>特殊加成</></>（与部分技能有<$cc.c.egir2_3><@cc.rem>特殊叠加规则</></>）"
     },
     "power_rec_spd&cost[000]": {
       "buffId": "power_rec_spd&cost[000]",
@@ -9596,6 +9769,18 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>65%</>"
     },
+    "workshop_proc_probability[040]": {
+      "buffId": "workshop_proc_probability[040]",
+      "buffName": "未知技术",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p5",
+      "sortId": 7141,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>70%</>"
+    },
     "workshop_formula_cost[000]": {
       "buffId": "workshop_formula_cost[000]",
       "buffName": "龙腾式无人机",
@@ -10256,6 +10441,18 @@
       "roomType": "TRAINING",
       "description": "进驻训练室协助位时，<@cc.kw>辅助</>干员的专精技能训练速度<@cc.vup>+30%</>"
     },
+    "train_spd&profession2[060]": {
+      "buffId": "train_spd&profession2[060]",
+      "buffName": "辅助专精·α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_guard1",
+      "sortId": 9301,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，<@cc.kw>辅助</>干员的专精技能训练速度<@cc.vup>+30%</>"
+    },
     "train_spd&profession[061]": {
       "buffId": "train_spd&profession[061]",
       "buffName": "辅助专精·β",
@@ -10412,6 +10609,18 @@
       "roomType": "TRAINING",
       "description": "进驻训练室协助位时，<@cc.kw>特种</>干员的专精技能训练速度<@cc.vup>+60%</>"
     },
+    "train_spd&profession2[220]": {
+      "buffId": "train_spd&profession2[220]",
+      "buffName": "信影流",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train1_guard1",
+      "sortId": 9721,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，<@cc.kw>近卫</>干员的专精技能训练速度<@cc.vup>+30%</>，如果本次训练专精技能至<@cc.vup>1</>级，则训练速度额外<@cc.vup>+45%</>"
+    },
     "train_spd&profession2[250]": {
       "buffId": "train_spd&profession2[250]",
       "buffName": "一知半解",
@@ -10472,6 +10681,18 @@
       "roomType": "TRAINING",
       "description": "进驻训练室协助位时，<@cc.kw>近卫</>干员的专精技能训练速度<@cc.vup>+30%</>，如果本次训练专精技能至<@cc.vup>3</>级，则训练速度额外<@cc.vup>+45%</>"
     },
+    "train_spd&profession2[641]": {
+      "buffId": "train_spd&profession2[641]",
+      "buffName": "同化",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train3_supporter2",
+      "sortId": 9332,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，<@cc.kw>辅助</>干员的专精技能训练速度<@cc.vup>+30%</>，如果本次训练专精技能至<@cc.vup>3</>级，则训练速度额外<@cc.vup>+65%</>"
+    },
     "train_spd&profession2[441]": {
       "buffId": "train_spd&profession2[441]",
       "buffName": "伺机而动",
@@ -10507,6 +10728,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "进驻训练室协助<@cc.kw>狙击</>干员训练专精技能至<@cc.vup>3</>级时，心情每小时消耗<@cc.vdown>+1</>"
+    },
+    "train_cost&profession[060]": {
+      "buffId": "train_cost&profession[060]",
+      "buffName": "变异",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_skadi",
+      "sortId": 9332,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助<@cc.kw>辅助</>干员训练专精技能至<@cc.vup>3</>级时，心情每小时消耗<@cc.vdown>+1</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -26304,6 +26537,351 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_abyssal_showcase_01": {
+        "id": "furni_abyssal_showcase_01",
+        "name": "游客储藏柜",
+        "iconId": "furni_abyssal_showcase_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 3,
+        "height": 7,
+        "comfort": 250,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "游客们的防水储藏柜。伊比利亚人的便民畅想对于阿戈尔人而言可有可无。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_drum_01": {
+        "id": "furni_abyssal_drum_01",
+        "name": "轻松乐鼓",
+        "iconId": "furni_abyssal_drum_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 165,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "为游客而准备的乐鼓，敲打几下能让人身心愉悦。三位客人一致认为这应当是件脆弱的陈设而非乐器。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_coffeeTable_01": {
+        "id": "furni_abyssal_coffeeTable_01",
+        "name": "悠闲茶几",
+        "iconId": "furni_abyssal_coffeeTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 260,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "一个实木茶几，上面零散地放了些东西。某位客人似乎把她重要的挂坠留在了房里。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_sofa_01": {
+        "id": "furni_abyssal_sofa_01",
+        "name": "松软沙发",
+        "iconId": "furni_abyssal_sofa_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 4,
+        "height": 4,
+        "comfort": 380,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "舒适的沙发，特意为那些想在屋里待一下午的人准备。可惜的是，没人想待在屋里。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_carpet_01": {
+        "id": "furni_abyssal_carpet_01",
+        "name": "主题地毯",
+        "iconId": "furni_abyssal_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 24,
+        "depth": 8,
+        "height": 1,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "为三位游客特别订做的地毯，希望她们能感受到度假村的诚意。没有人注意，没有人在意。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_table_01": {
+        "id": "furni_abyssal_table_01",
+        "name": "便携折叠桌",
+        "iconId": "furni_abyssal_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 3,
+        "height": 4,
+        "comfort": 235,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "铺设好的折叠桌，上面放置着餐食。不知道这些食物是否和客人们口味呢？",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_chair_01": {
+        "id": "furni_abyssal_chair_01",
+        "name": "软垫木椅",
+        "iconId": "furni_abyssal_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 180,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "与折叠桌相配的木椅。不知为何，一位客人留下披风就匆匆离开了。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_handLamp_01": {
+        "id": "furni_abyssal_handLamp_01",
+        "name": "复古提灯",
+        "iconId": "furni_abyssal_handLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 100,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "提灯中的蜡烛能够烧一整天，每天都有专人替换蜡烛。客人们的夜视能力都非常好，不需要这个。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_screen_01": {
+        "id": "furni_abyssal_screen_01",
+        "name": "折叠屏风",
+        "iconId": "furni_abyssal_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 8,
+        "comfort": 305,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "随时为客人创造隐秘空间的折叠屏风。我们认为，相互信任和保有私密空间不应混为一谈。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_equipment_01": {
+        "id": "furni_abyssal_equipment_01",
+        "name": "游客的私人物品",
+        "iconId": "furni_abyssal_equipment_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 6,
+        "comfort": 175,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "三位游客的私人物品。有乐器、有武器、还有不知哪儿搬来的私人藏品。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_ceiling_01": {
+        "id": "furni_abyssal_ceiling_01",
+        "name": "木架挂灯",
+        "iconId": "furni_abyssal_ceiling_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 7,
+        "height": 6,
+        "comfort": 395,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "以船梁为灵感制作的大吊顶，还附有挂灯，相信客人们一定会觉得很亲切。哎呀，服务员错把熟悉当成了亲切，怎么办？",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_ceilingLamp_01": {
+        "id": "furni_abyssal_ceilingLamp_01",
+        "name": "海潮吊灯",
+        "iconId": "furni_abyssal_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 55,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "以海潮为印象制作的吊灯。当然，是以伊比利亚人对海洋的浅薄认知制作的，希望客人们不会生气。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_abyssal_decal_01": {
+        "id": "furni_abyssal_decal_01",
+        "name": "天顶木架",
+        "iconId": "furni_abyssal_decal_01",
+        "type": "CEILING",
+        "location": "CEILINGDECAL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 745,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "度假村统一制作的天花板装饰木架。警示？或限制？抑或......只是装饰？",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_wallpaper_01": {
+        "id": "furni_abyssal_wallpaper_01",
+        "name": "度假村壁纸",
+        "iconId": "furni_abyssal_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "度假村标准套间的壁纸。壁画上有着阳光明媚的伊比利亚海滩与跃向空中的未知生物——任谁都知道这些只是臆想。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_floor_01": {
+        "id": "furni_abyssal_floor_01",
+        "name": "度假村地砖",
+        "iconId": "furni_abyssal_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "度假村标准套间的地砖。旅馆从未开张，游客从未入住，只愿每个人心中，都有一处温暖的地方。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "兔兔捣药机",
@@ -26595,6 +27173,52 @@
         "comfort": 70,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "为了纪念明日方舟开服一周年特别订做的壁灯。以非常规方式安装在墙上的壁灯，是罗德岛战斗干员献给博士的礼物。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_act18d0_cabinet_01": {
+        "id": "furni_act18d0_cabinet_01",
+        "name": "周年庆典茶柜",
+        "iconId": "furni_act18d0_cabinet_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 3,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 95,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "为了纪念明日方舟开服二周年特别订做的茶柜。特意做成了双层，以方便在轮廓上突出设计。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_act18d0_cakeTower_01": {
+        "id": "furni_act18d0_cakeTower_01",
+        "name": "周年庆典蛋糕",
+        "iconId": "furni_act18d0_cakeTower_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 3,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 8,
+        "comfort": 210,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "为了纪念明日方舟开服二周年特别订做的蛋糕。罗德岛众人联袂献艺后的结晶，平时可见不到。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -28121,6 +28745,29 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_dropS018_thalassophobia_01": {
+        "id": "furni_dropS018_thalassophobia_01",
+        "name": "饰牌《沉没》",
+        "iconId": "furni_dropS018_thalassophobia_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "“广阔黑暗+海水包裹+自由想象=？”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_contract_s0_01": {
         "id": "furni_contract_s0_01",
         "name": "荒芜之旗",
@@ -28252,6 +28899,29 @@
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "完成乌萨斯废弃矿区剿灭并提交报告后获得的纪念品。废弃矿区的余音似乎还在耳边回响。",
         "obtainApproach": "剿灭轮换奖励",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_annihilation_s4_01": {
+        "id": "furni_annihilation_s4_01",
+        "name": "汐斯塔的回声（海滨）",
+        "iconId": "furni_annihilation_s4_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 105,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "完成汐斯塔潮没海滨剿灭并提交报告后获得的纪念品。海滨的余音似乎还在耳边回响。",
+        "obtainApproach": "剿灭委托奖励",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -33311,6 +33981,93 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_abyssal": {
+        "id": "furni_set_abyssal",
+        "name": "伊比利亚度假村",
+        "desc": "再现了伊比利亚海边度假村的概念房间。吹吹海风，尽享假日时光——我们如此想象着。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_abyssal_showcase_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_drum_01",
+            "pos0": 1,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_abyssal_coffeeTable_01",
+            "pos0": 6,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_abyssal_sofa_01",
+            "pos0": 5,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_carpet_01",
+            "pos0": 5,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_abyssal_table_01",
+            "pos0": 20,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_chair_01",
+            "pos0": 22,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_abyssal_handLamp_01",
+            "pos0": 18,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_screen_01",
+            "pos0": 26,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_equipment_01",
+            "pos0": 30,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_abyssal_ceiling_01",
+            "pos0": 11,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_abyssal_ceilingLamp_01",
+            "pos0": 5,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_abyssal_ceilingLamp_01",
+            "pos0": 27,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_abyssal_decal_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -35372,6 +36129,57 @@
           "furni_icu_floor_01",
           "furni_icu_downlight1_01",
           "furni_icu_downlight2_01"
+        ]
+      },
+      "furni_set_abyssal_1": {
+        "id": "furni_set_abyssal_1",
+        "name": "私人与娱乐物品",
+        "themeId": "furni_set_abyssal",
+        "comfort": 165,
+        "count": 3,
+        "furniture": [
+          "furni_abyssal_showcase_01",
+          "furni_abyssal_equipment_01",
+          "furni_abyssal_drum_01"
+        ]
+      },
+      "furni_set_abyssal_2": {
+        "id": "furni_set_abyssal_2",
+        "name": "基本家具",
+        "themeId": "furni_set_abyssal",
+        "comfort": 250,
+        "count": 3,
+        "furniture": [
+          "furni_abyssal_coffeeTable_01",
+          "furni_abyssal_sofa_01",
+          "furni_abyssal_carpet_01"
+        ]
+      },
+      "furni_set_abyssal_3": {
+        "id": "furni_set_abyssal_3",
+        "name": "便携家具",
+        "themeId": "furni_set_abyssal",
+        "comfort": 225,
+        "count": 4,
+        "furniture": [
+          "furni_abyssal_table_01",
+          "furni_abyssal_chair_01",
+          "furni_abyssal_handLamp_01",
+          "furni_abyssal_screen_01"
+        ]
+      },
+      "furni_set_abyssal_4": {
+        "id": "furni_set_abyssal_4",
+        "name": "度假村装潢",
+        "themeId": "furni_set_abyssal",
+        "comfort": 460,
+        "count": 5,
+        "furniture": [
+          "furni_abyssal_wallpaper_01",
+          "furni_abyssal_floor_01",
+          "furni_abyssal_decal_01",
+          "furni_abyssal_ceiling_01",
+          "furni_abyssal_ceilingLamp_01"
         ]
       }
     },
