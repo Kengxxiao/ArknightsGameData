@@ -80,10 +80,51 @@ local function Awake(self)
   self:Awake()
 end
 
+local function _CheckIfMemberChanged(self, prevMember)
+  local ret = self:CheckIfMemberChanged(prevMember)
+  if ret then
+    return true
+  end
+  if prevMember == nil or prevMember.charInstId ~= 1 then
+    return ret
+  end
+  if self.m_editModel == nil or self.m_editModel.charInstId ~= 1 then
+    return ret
+  end
+  local curCount = 0
+  local prevCount = 0
+  local curTmpls = self.m_editModel.m_tmpls
+  if curTmpls ~= nil then
+    curCount = curTmpls.Count
+  end
+  if prevMember.tmpl ~= nil then
+    prevCount = prevMember.tmpl.Count
+  end
+  if curCount ~= prevCount then
+    return true
+  end
+
+  return ret
+end
+
+local function _InitMedalBtn(self)
+  self:_InitIfNot()
+  if self._countPart ~= nil then
+    self._countPart.horizontalOverflow = CS.UnityEngine.HorizontalWrapMode.Overflow
+  end
+end
+
 function CharacterTransHotfixer:OnInit()
     xlua.private_accessible(CS.Torappu.UI.CharacterInfo.CharacterTransView)
     xlua.private_accessible(CS.Torappu.UI.CharacterInfo.CharacterTransView.EffectLayer)
     self:Fix_ex(CS.Torappu.UI.CharacterInfo.CharacterTransView, "Awake", Awake)
+
+    xlua.private_accessible(CS.Torappu.UI.Squad.SquadItemStruct)
+    xlua.private_accessible(CS.Torappu.UI.UISquadEditCharModel)
+    self:Fix_ex(CS.Torappu.UI.Squad.SquadItemStruct, "CheckIfMemberChanged", _CheckIfMemberChanged)
+
+    xlua.private_accessible(CS.Torappu.UI.Medal.MedalEntryListBtn)
+    self:Fix_ex(CS.Torappu.UI.Medal.MedalEntryListBtn, "_InitIfNot", _InitMedalBtn)
 end
 
 function CharacterTransHotfixer:OnDispose()
