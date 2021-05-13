@@ -1,0 +1,253 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cher_3",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
+[Character(name="avg_npc_054",fadetime=1,block=true)]
+[delay(time=1)]
+[name="薩卡茲傭兵領袖"]  你......我對你有印象......同胞。我們在戰場上見過面。
+[name="薩卡茲傭兵領袖"]  ......唉，唉。你不該來切爾諾伯格，羅德島的資訊已經分發給了全隊。你和你的部下都會死。
+[name="薩卡茲傭兵領袖"]  不過，即使你們如此優秀，還是不應該如此輕易地穿過W負責的防線，除非......
+[name="薩卡茲傭兵領袖"]  這麼說來，她還是做出了這個選擇。其實我們都有預料到。
+[Decision(options="你們中有人曾和我們並肩作戰。;這是我們還在戰場上談話的唯一理由。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_054")]
+[name="薩卡茲傭兵領袖"]  ......特蕾西婭是個卓越的領袖，她改變了很多人對這片大地的看法。
+[name="薩卡茲傭兵領袖"]  理想化的看法。
+[name="薩卡茲傭兵領袖"]  不用急著反駁，我比你更清楚卡茲戴爾所面臨的殘酷，我並不想否定她，但比起一個偉大的過程，我只想要一個微不足道的結果。
+[name="薩卡茲傭兵領袖"]  只有如今攝政王的手腕能為薩卡茲帶來新的未來，絕不是氾濫的善意。
+[Decision(options="我們本可以試著攜手共進，至少不用同歸於盡。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_054")]
+[name="薩卡茲傭兵領袖"]  愚蠢的想法，薩卡茲綿長的憤懣如何安放？長久以來的傾斜如何扶正？
+[name="薩卡茲傭兵領袖"]  未感染者，烏薩斯。感染者，整合運動。薩卡茲，卡茲戴爾。
+[name="薩卡茲傭兵領袖"]  都是一回事，與整合運動合作的日子裡我更加確信了這件事。
+[name="薩卡茲傭兵領袖"]  攝政王殿下能為我們開拓一個新的家園，我只是選擇追隨這個可能性。
+[name="薩卡茲傭兵領袖"]  一如當年，你們天真地追隨特蕾西婭。
+[name="薩卡茲傭兵領袖"]  ......好了。
+[name="薩卡茲傭兵領袖"]  既然W把你放了進來，你一定也付出了代價。
+[name="薩卡茲傭兵領袖"]  你付出了什麼呢？為了拖延時間掩護你而喪命的部下？甚至是......你自己？
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_054")]
+[name="薩卡茲傭兵領袖"]  告訴我你現在的名字吧。
+[Decision(options="——Scout。;雇傭兵不也都是用假名的嗎，加爾森。", values="1;2")]
+[Predicate(references="1")]
+[Character(name="avg_npc_054")]
+[name="薩卡茲傭兵領袖"]  很耳熟的代號，為表尊重，我本來是想把你的本名刻在這把刀上。
+[Predicate(references="2")]
+[Character(name="avg_npc_054")]
+[name="薩卡茲傭兵領袖"]  ......你說得也對。
+[Predicate(references="1;2")]
+[Dialog]
+[Blocker(fadetime=1,block=true)]
+[Character]
+[stopmusic(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cher_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[PlaySound(key="$rungeneral")]
+[playMusic(intro="$nervous_intro",key="$nervous_loop", volume=0.4)]
+[delay(time=2)]
+[Character(name="avg_npc_052",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=1)]
+[name="伊內絲"]  放棄抵抗吧。
+[name="伊內絲"]  ......還有你的十二位隊員，已經被確認全滅了。
+[name="伊內絲"]  雷髮，米米，圖釘，死於整合運動術師的包圍網正中，有一個是站著死的。
+[name="伊內絲"]  小瑪麗，長音，斯琳珂，長蠍佔據了一處陣線，W親自帶隊過去了。
+[name="伊內絲"]  姆拉姆，酒莓軟芯，淤蘭，和我們的一支小隊同歸於盡，有人殺出了重圍，然後被赫德雷的刀兵斬首。
+[name="伊內絲"]  普特爾剛才死在那棟樓下，很意外，好像是為了救一個沒來得及撤出的平民。
+[name="伊內絲"]  索拉娜還留著一口氣，被帶回去了，想必她會想方設法自盡的吧。
+[name="伊內絲"]  ......還不吭聲嗎。
+[name="伊內絲"]  別躲了，你聽得見，影子一清二楚，你的氣息混亂不堪，傷得不輕。
+[Dialog]
+[Character]
+[Character(name="avg_npc_026",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Scout"]  ......你為什麼知道他們的名字？
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  W特意囑咐過，你們會把兵牌一類的東西掛在身上。
+[name="伊內絲"]  “至少殺了誰還是要弄明白的，這裡畢竟不是卡茲戴爾，不留神殺錯人可就不好辦了”。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  那不是兵牌，犧牲的那些幹員們......也不全是士兵。
+[name="Scout"]  我以為會是W來親自動手。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  她......哼，我要是說她不忍心親手解決你，你會信嗎？
+[name="伊內絲"]  攝政王派來的領袖已經被你殺了，想要接管的可不止她一個，她現在比較忙。
+[name="伊內絲"]  就像當時你和W說好的一樣。
+[name="伊內絲"]  一旦你完成任務，我們就會“後知後覺”地全力殲滅你們。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  ......
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  ......你在巷戰的過程中還抽空救了個人。但現在，那不是我們的管轄範圍。
+[name="伊內絲"]  但是愛國者在那裡，你不需要過問。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  ......這樣，就好。
+[name="Scout"]  你們......變了，過去的W不是個會刻意記住死者名諱的人。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  她確實變了，但更多時候是變得更像個瘋子。
+[name="伊內絲"]  你純粹的戰地經驗就堪比浮士德的源石技藝，說不定只是為了讓你動搖，好讓我用法術捕捉你才故意記下名字的呢？
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  ......老樣子，總不放過任何取樂的機會。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  彼此，你不是也接受了這種W才能想出來的瘋狂交易。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  用我的命換取一個機會，再讓該把握住這個機會的人把握住它，這並不瘋狂。
+[name="Scout"]  還有我犧牲的隊員們，也一樣。他們為了自己的理念而死，沒有他們，我無法成功。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  ......看來時過境遷，大家都有一些變化。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  你也是，過去的你絕不會像現在這樣，給敵人喘息的空間。
+[name="Scout"]  赫德雷應該提醒過你。
+[Dialog]
+[Character(name="avg_npc_026")]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$pistol")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[delay(time=0.5)]
+[Character]
+[Character(name="avg_npc_052")]
+[name="伊內絲"]  ——
+[name="伊內絲"]  為什麼還要抵抗？
+[Dialog]
+[Character]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_052")]
+[name="伊內絲"]  ......嘖，不見了......
+[name="伊內絲"]  ......
+[name="伊內絲"]  但願你能就這麼逃掉......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cher_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_052")]
+[name="伊內絲"]  （這個方向嗎？）
+[name="伊內絲"]  （......）
+[name="伊內絲"]  （沒錯，這裡。動作真快。）
+[name="伊內絲"]  （麻煩的傢伙，如果他沒有受傷，恐怕我連他人都見不著......）
+[name="伊內絲"]  （等等。）
+[name="伊內絲"]  （他......他在向核心城轉移？）
+[name="伊內絲"]  （那裡——嘖！）
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_cher_5",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$rungeneral")]
+[Character(name="avg_npc_052")]
+[name="伊內絲"]  ......該死！
+[name="伊內絲"]  已經這麼靠近核心城了，你到底想幹什麼？
+[name="伊內絲"]  老老實實離開切爾諾伯格不行嗎！？
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  ......你有時候真不像是個薩卡茲，伊內絲。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  我本來就不是。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  ——你該繼續裝下去的，你是個薩卡茲雇傭兵，而這裡是戰場。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  現在你跑不動了，失血過多，頭暈，四肢發冷，除了你的影子像是要燒起來一樣，你不應該還能站著。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  我的傷，我自己有數，何況這裡還有那麼多的整合運動。
+[name="Scout"]  而對你們......你，赫德雷，還有W......我有一個建議。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  ......念在殿下的份上。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=2)]
+[name="Scout"]  用你的眼睛看清真相，在那之前不要白白死去。
+[name="Scout"]  我們......薩卡茲不該這樣繼續被人利用了。
+[Character(name="avg_npc_052",name2="avg_npc_026",focus=1)]
+[name="伊內絲"]  你在說法術？這裡能看到什——
+[Character(name="avg_npc_052")]
+[name="伊內絲"]  ——
+[name="伊內絲"]  ————
+[name="伊內絲"]  ——這是......這......這是誰......這種......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_indoor_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_cher_5",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_cher_3",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background(image="bg_cher_0",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_011_talula_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="塔露拉？"]  ......
+[name="塔露拉？"]  ......薩卡茲？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cher_5",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_052")]
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="伊內絲"]  ——！
+[name="伊內絲"]  不可能，被察覺到了——！？
+[Character(name="avg_npc_026")]
+[name="Scout"]  （機會——！）
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[PlaySound(key="$knifegore", volume=0.9)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_047",fadetime=1,block=true)]
+[delay(time=1)]
+[name="赫德雷"]  很久不見了。
+[Character(name="avg_npc_047",name2="avg_npc_026",focus=2)]
+[name="Scout"]  唔......你？你原來......還活著。
+[Character(name="avg_npc_047",name2="avg_npc_026",focus=1)]
+[name="赫德雷"]  嗯。
+[name="赫德雷"]  我一直在跟著你，只靠伊內絲，很難對付你這樣的高手。
+[name="赫德雷"]  雖然交易內容就是要付出性命，我們也沒打算手下留情，但我還是希望你能......
+[name="赫德雷"]  可現在我們已經不能給你更多機會了，這裡太過靠近核心城了，W不希望任何人的注意力轉移到這裡。
+[Character(name="avg_npc_047",name2="avg_npc_026",focus=2)]
+[name="Scout"]  呵......聽上去......現在她才是隊長了......
+[name="Scout"]  你......原來......
+[Character(name="avg_npc_047",name2="avg_npc_026",focus=1)]
+[name="赫德雷"]  ......抱歉。睡吧，老朋友。
+[Character(name="avg_npc_047",name2="avg_npc_026",focus=2)]
+[name="Scout"]  你們......不該繼續待在這裡......
+[Character(name="avg_npc_047")]
+[name="赫德雷"]  ......我知道的，老朋友。
+[name="赫德雷"]  我一直都知道的。
+[Character(name="avg_npc_052")]
+[name="伊內絲"]  赫德雷！
+[Character(name="avg_npc_047")]
+[name="赫德雷"]  你剛才動搖了，為什麼？
+[Character(name="avg_npc_052")]
+[name="伊內絲"]  ——快走！
+[name="伊內絲"]  我們必須馬上通知W，必須——
+[name="伊內絲"]  嘖！她靠近了！
+[Dialog]
+[Blocker(fadetime=1,block=true)]
+[Image]
+[name="塔露拉"]  ......
+[Dialog]
+[Blocker(fadetime=1,block=true)]
+[Image]
