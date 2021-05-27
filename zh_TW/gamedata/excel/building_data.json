@@ -6417,6 +6417,89 @@
         }
       ]
     },
+    "char_400_weedy": {
+      "charId": "char_400_weedy",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&power[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_prod_spd&power[020]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_401_elysm": {
+      "charId": "char_401_elysm",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_team[060]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_flag[060]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_376_therex": {
+      "charId": "char_376_therex",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 30
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_343_tknogi": {
       "charId": "char_343_tknogi",
       "maxManpower": 8640000,
@@ -6926,6 +7009,18 @@
       "roomType": "CONTROL",
       "description": "進駐控制中樞時，控制中樞內每個<@cc.kw>鯉氏偵探所</>幹員可使該派系幹員<@cc.kw>額外降低心情消耗</>，同時每人可使控制中樞內所有幹員的心情每小時消耗<@cc.vup>-0.05</>"
     },
+    "power_rec_spd&cost[000]": {
+      "buffId": "power_rec_spd&cost[000]",
+      "buffName": "熱情澎湃",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd&cost",
+      "sortId": 2002,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "進駐發電站時，心情每小時消耗<@cc.vup>-0.52</>"
+    },
     "power_rec_spd[000]": {
       "buffId": "power_rec_spd[000]",
       "buffName": "備用能源",
@@ -7033,6 +7128,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "進駐發電站時，無人機每小時充能速度<@cc.vup>+15%</>"
+    },
+    "manu_prod_spd&power[010]": {
+      "buffId": "manu_prod_spd&power[010]",
+      "buffName": "自動化·β",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&power2",
+      "sortId": 3521,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "進駐製造站時，當前製造站內其他幹員提供的生產力<@cc.vdown>全部歸零</>，每個<@cc.kw>發電站</>為當前製造站的生產力<@cc.vup>+10%</>"
+    },
+    "manu_prod_spd&power[020]": {
+      "buffId": "manu_prod_spd&power[020]",
+      "buffName": "仿生海龍",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&power3",
+      "sortId": 3533,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "進駐製造站時，當前製造站內其他幹員提供的生產力<@cc.vdown>全部歸零</>，每個<@cc.kw>發電站</>為當前製造站的生產力<@cc.vup>+15%</>"
     },
     "manu_prod_spd[000]": {
       "buffId": "manu_prod_spd[000]",
@@ -8966,6 +9085,18 @@
       "roomType": "MEETING",
       "description": "進駐會客室時，更容易獲得<@cc.kw>烏薩斯學生自治團</>線索（工作時長影響機率）"
     },
+    "meet_team[060]": {
+      "buffId": "meet_team[060]",
+      "buffName": "通訊員",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_rhodes1",
+      "sortId": 6711,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "進駐會客室時，更容易獲得<@cc.kw>羅德島製藥</>線索（工作時長影響機率）"
+    },
     "meet_flag[050]": {
       "buffId": "meet_flag[050]",
       "buffName": "甄別",
@@ -8977,6 +9108,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "進駐會客室後，每當新蒐集到的線索不是<@cc.kw>烏薩斯學生自治團</>時，則額外增加<@cc.kw>烏薩斯學生自治團</>線索的出現機率（工作時長影響機率）"
+    },
+    "meet_flag[060]": {
+      "buffId": "meet_flag[060]",
+      "buffName": "插旗",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_flag_rhodes",
+      "sortId": 6711,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "進駐會客室後，每當新蒐集到的線索不是<@cc.kw>羅德島製藥</>時，則額外增加<@cc.kw>羅德島製藥</>線索的出現機率（工作時長影響機率）"
     },
     "meet_spd&team[000]": {
       "buffId": "meet_spd&team[000]",
@@ -17462,6 +17605,466 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_dormW_weaponRack_01": {
+        "id": "furni_dormW_weaponRack_01",
+        "name": "戰利品陳列架",
+        "iconId": "furni_dormW_weaponRack_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 5,
+        "height": 7,
+        "comfort": 365,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "放滿了薩科塔槍械的陳列架。部分薩卡茲擁有向同族展示戰利品以炫耀武力的習慣。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 278,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_wallDecor_01": {
+        "id": "furni_dormW_wallDecor_01",
+        "name": "石板牆飾",
+        "iconId": "furni_dormW_wallDecor_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 10,
+        "comfort": 180,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "傭兵休息室的石製牆飾。石板後藏著私人物品。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 168,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_partition_01": {
+        "id": "furni_dormW_partition_01",
+        "name": "防彈玻璃隔板",
+        "iconId": "furni_dormW_partition_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 5,
+        "height": 8,
+        "comfort": 210,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "軍用規格的防彈玻璃隔板，一把共用吉他就靠在那裡。即使推心置腹，保持距離依舊是項必要舉措。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 160,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_barrel_01": {
+        "id": "furni_dormW_barrel_01",
+        "name": "大當量炸藥原料",
+        "iconId": "furni_dormW_barrel_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 140,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "W儲存炸藥原料的桶。“放那就好，至少還能知道哪裡會炸。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 120,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_toolbox_01": {
+        "id": "furni_dormW_toolbox_01",
+        "name": "起爆器製作工具",
+        "iconId": "furni_dormW_toolbox_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 160,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "W製作起爆器的工具箱。“從製作到起爆，整個過程她都會參與。”",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 135,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_table_01": {
+        "id": "furni_dormW_table_01",
+        "name": "高腳餐台",
+        "iconId": "furni_dormW_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 4,
+        "comfort": 200,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "盛放鮮果和飲品的高腳台，特地鋪上了白桌布。這張桌子能奪走W的微笑。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_mirror_01": {
+        "id": "furni_dormW_mirror_01",
+        "name": "紅框落地鏡",
+        "iconId": "furni_dormW_mirror_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 115,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "用於檢查裝備佩戴情況的鏡子。這面鏡子完全不符合傭兵的習慣，但W還是執意要把它放在這裡。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 108,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_snookerTable_01": {
+        "id": "furni_dormW_snookerTable_01",
+        "name": "薩卡茲台球桌",
+        "iconId": "furni_dormW_snookerTable_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 11,
+        "depth": 5,
+        "height": 6,
+        "comfort": 540,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "普通的檯球桌，檯面已被換成薩卡茲們喜愛的顏色。工作般休閒，休閒般工作。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 410,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_triangle_01": {
+        "id": "furni_dormW_triangle_01",
+        "name": "薩卡茲式擺球器",
+        "iconId": "furni_dormW_triangle_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 2,
+        "comfort": 55,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "定制的擺球器，造型獨特。薩卡茲們不喜歡循規蹈矩，發明出獨特的擺球規則也算意料之中。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 53,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_dartboard_01": {
+        "id": "furni_dormW_dartboard_01",
+        "name": "掛式飛鏢盤",
+        "iconId": "furni_dormW_dartboard_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 5,
+        "comfort": 130,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "貼著任務目標的飛鏢盤。在命中“目標”和插科打諢間，靈感閃現。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_shelf_01": {
+        "id": "furni_dormW_shelf_01",
+        "name": "掛式置物架",
+        "iconId": "furni_dormW_shelf_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 2,
+        "comfort": 135,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "便於拆裝的簡易置物架。總有人喜歡測試這些東西的承重上限，然後“被迫”買個新的。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 125,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_bulletinboard_01": {
+        "id": "furni_dormW_bulletinboard_01",
+        "name": "休息室佈告板",
+        "iconId": "furni_dormW_bulletinboard_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 7,
+        "comfort": 140,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "色調鮮豔的佈告板。每位傭兵都知道隨機應變，但有計劃總歸是件好事。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 120,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_carpet_01": {
+        "id": "furni_dormW_carpet_01",
+        "name": "獸毛絨毯",
+        "iconId": "furni_dormW_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 15,
+        "depth": 10,
+        "height": 1,
+        "comfort": 150,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "不知用什麼動物毛皮製作的地毯。有些傭兵擅長在最平常的地方排布陷阱，極為致命。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 128,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_wallSticker_01": {
+        "id": "furni_dormW_wallSticker_01",
+        "name": "木柵牆飾",
+        "iconId": "furni_dormW_wallSticker_01",
+        "type": "WALLDECO",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 1,
+        "height": 10,
+        "comfort": 300,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "傭兵休息室的木製牆飾。柵欄後藏著公共用品。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 228,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_walllamp_01": {
+        "id": "furni_dormW_walllamp_01",
+        "name": "休息室小壁燈",
+        "iconId": "furni_dormW_walllamp_01",
+        "type": "WALLLAMP",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 60,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "傭兵休息室的小壁燈。將壁燈取下，燈泡向右旋轉三圈，即可作為簡易手榴彈使用。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 58,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_ceiling_01": {
+        "id": "furni_dormW_ceiling_01",
+        "name": "休息室光源吊頂",
+        "iconId": "furni_dormW_ceiling_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 28,
+        "depth": 6,
+        "height": 2,
+        "comfort": 440,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "傭兵休息室的吊頂。幾乎所有傭兵休息室的吊頂上都藏有公開的秘密，薩卡茲傭兵尤擅此道。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 335,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_fluorescentLamp_01": {
+        "id": "furni_dormW_fluorescentLamp_01",
+        "name": "休息室燈管",
+        "iconId": "furni_dormW_fluorescentLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 1,
+        "comfort": 195,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "傭兵休息室的燈管。無論獵物或獵人，終將被鮮血染紅。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 148,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_ceilingLight_01": {
+        "id": "furni_dormW_ceilingLight_01",
+        "name": "休息室吊燈",
+        "iconId": "furni_dormW_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 60,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "傭兵休息室的吊燈。所有細節都可以用來完成契約——或是分享訊息。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 58,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_wallpaper_01": {
+        "id": "furni_dormW_wallpaper_01",
+        "name": "休息室牆紙",
+        "iconId": "furni_dormW_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "有一面牆損毀多次，已放棄修復。傷口可以癒合，疤痕卻無法消退。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_dormW_floor_01": {
+        "id": "furni_dormW_floor_01",
+        "name": "休息室地磚",
+        "iconId": "furni_dormW_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "整潔的地磚，沒什麼特別之處。其中一塊地磚下藏有能炸毀整間休息室的爆炸物。",
+        "obtainApproach": "傢俱商店限時購買",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_community_bookshelf_01": {
         "id": "furni_community_bookshelf_01",
         "name": "落地書架",
@@ -19364,6 +19967,52 @@
         "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
         "description": "“我們需要運用正義和言語統一異見。”",
         "obtainApproach": "H6-4首次通關掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS007_repulsion_01": {
+        "id": "furni_dropS007_repulsion_01",
+        "name": "飾牌《認知》",
+        "iconId": "furni_dropS007_repulsion_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "“是我，非我，誰我？”",
+        "obtainApproach": "活動獲得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS007_easyRider_01": {
+        "id": "furni_dropS007_easyRider_01",
+        "name": "飾牌《騎行》",
+        "iconId": "furni_dropS007_easyRider_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "一條泥路向遠方。",
+        "obtainApproach": "H7-4首次通關掉落",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -22651,6 +23300,128 @@
           }
         ]
       },
+      "furni_set_dormW": {
+        "id": "furni_set_dormW",
+        "name": "薩卡茲傭兵休息室",
+        "desc": "以薩卡茲風格建造的休息室。危險與舒適並存。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_dormW_weaponRack_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_wallDecor_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_partition_01",
+            "pos0": 6,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_barrel_01",
+            "pos0": 8,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_toolbox_01",
+            "pos0": 12,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_table_01",
+            "pos0": 16,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_mirror_01",
+            "pos0": 15,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_snookerTable_01",
+            "pos0": 21,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_triangle_01",
+            "pos0": 24,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_dartboard_01",
+            "pos0": 26,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_shelf_01",
+            "pos0": 21,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_bulletinboard_01",
+            "pos0": 30,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_carpet_01",
+            "pos0": 19,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_wallSticker_01",
+            "pos0": 21,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_walllamp_01",
+            "pos0": 21,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_dormW_walllamp_01",
+            "pos0": 21,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_dormW_walllamp_01",
+            "pos0": 21,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_ceiling_01",
+            "pos0": 3,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_dormW_fluorescentLamp_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_dormW_ceilingLight_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_dormW_ceilingLight_01",
+            "pos0": 32,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_dormW_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_dormW_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
+      },
       "furni_set_community": {
         "id": "furni_set_community",
         "name": "烏薩斯學生活動室",
@@ -24027,6 +24798,62 @@
           "furni_beerhouse_floor_01",
           "furni_beerhouse_slopedCeiling1_01",
           "furni_beerhouse_slopedCeiling2_01"
+        ]
+      },
+      "furni_set_dormW_1": {
+        "id": "furni_set_dormW_1",
+        "name": "“工作”套組",
+        "themeId": "furni_set_dormW",
+        "comfort": 205,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_weaponRack_01",
+          "furni_dormW_barrel_01",
+          "furni_dormW_toolbox_01",
+          "furni_dormW_table_01",
+          "furni_dormW_bulletinboard_01"
+        ]
+      },
+      "furni_set_dormW_2": {
+        "id": "furni_set_dormW_2",
+        "name": "“休閒”套組",
+        "themeId": "furni_set_dormW",
+        "comfort": 185,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_snookerTable_01",
+          "furni_dormW_triangle_01",
+          "furni_dormW_shelf_01",
+          "furni_dormW_dartboard_01",
+          "furni_dormW_carpet_01"
+        ]
+      },
+      "furni_set_dormW_3": {
+        "id": "furni_set_dormW_3",
+        "name": "“裝飾”套組",
+        "themeId": "furni_set_dormW",
+        "comfort": 210,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_ceiling_01",
+          "furni_dormW_partition_01",
+          "furni_dormW_fluorescentLamp_01",
+          "furni_dormW_ceilingLight_01",
+          "furni_dormW_mirror_01"
+        ]
+      },
+      "furni_set_dormW_4": {
+        "id": "furni_set_dormW_4",
+        "name": "“裝潢”套組",
+        "themeId": "furni_set_dormW",
+        "comfort": 165,
+        "count": 5,
+        "furniture": [
+          "furni_dormW_wallpaper_01",
+          "furni_dormW_floor_01",
+          "furni_dormW_wallDecor_01",
+          "furni_dormW_wallSticker_01",
+          "furni_dormW_walllamp_01"
         ]
       },
       "furni_set_community_1": {

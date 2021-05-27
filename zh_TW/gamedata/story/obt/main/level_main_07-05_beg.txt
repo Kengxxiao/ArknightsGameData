@@ -1,0 +1,185 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Delay(time=1)]
+[Character]
+[Blocker(fadetime=1,block=true)]
+切爾諾伯格地下基建
+10:30 a.m.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cherunder",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
+[Character(name="char_003_kalts_1",fadetime=1,block=true)]
+[delay(time=1)]
+[Decision(options="你在這，是在等我？", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  是。
+[Decision(options="找你花了我很長時間。", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  我們會在環境資訊匯總完畢後開始行動。在這之前，更多地向你描述一些核心城內的現狀會對你有幫助。
+[name="凱爾希"]  阿米婭還要處理現場，這次討論，她就不參加了。
+[name="凱爾希"]  任務簡報你都已經看過。但那些資料對於你的頭腦來說，並不夠多。
+[Decision(options="你終於意識到需要我了？;......;我還以為你當我只會戰地指揮。", values="1;2;3")]
+[Predicate(references="1")]
+[name="凱爾希"]  如果最壞的情況發生，我不希望你犧牲的不明不白。
+[Predicate(references="2")]
+[name="凱爾希"]  如果你對我五官中的某個部分很在意，可以直接指出來。不用一直盯著我看。
+[Predicate(references="3")]
+[name="凱爾希"]  雖然你可能忘了，但我記得。我記得你相當擅長在凌晨四點時，用沸騰的飲用水直接在口腔中加熱速食食品。
+[name="凱爾希"]  至於是不是真的，你也許可以試試。
+[Predicate(references="1;2;3")]
+[name="凱爾希"]  不說閒話。我們的時間沒有多充裕。
+[name="凱爾希"]  羅德島與近衛局在龍門合作擊敗了整合運動，擊潰了“梅菲斯特”和“弑君者”帶領的武裝力量。
+[name="凱爾希"]  這之後，整合運動在龍門的部署已經全部失效。
+[name="凱爾希"]  阿米婭向我報告過，你們與整合運動的特殊小隊指揮官，別稱“霜星”的感染者，在龍門城邦的底部展開了殊死搏鬥。
+[name="凱爾希"]  戰鬥以你們的勝利告終。
+[Decision(options="沒人贏。;不。;那不算是勝利。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凱爾希"]  可以理解。根據PRTS申報的資料，在幹員的協力下，你正是在羅德島處理了敵對感染者的遺體。
+[Decision(options="我不認為她是敵人。", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  Dr.{@nickname}，“分清敵我”。
+[name="凱爾希"]  ......不。也許這會讓你會錯意，請聽我說完。
+[Decision(options="......？", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  我沒有指責你，Dr.{@nickname}。
+[name="凱爾希"]  我從阿米婭的講述中瞭解了敵指揮官的情況。現場的判斷屬於你們，如何看待他們，只能由身在現場的你們決定。
+[name="凱爾希"]  我沒有跳出職責來判斷立場的權力。
+[name="凱爾希"]  你曾經嘗試去理解感染者的行為動機，你願意承擔她——霜星——所作所為導致的所有後果。
+[name="凱爾希"]  你也這麼做了。
+[name="凱爾希"]  如果你打算誠實地去瞭解這片大地，博士，我沒有指責你的理由。
+[name="凱爾希"]  我甚至可以向羅德島幹員擔保你的行為。堅持下去，Dr.{@nickname}，做自己的決定，我會儘量不做干涉。
+[name="凱爾希"]  之後的後果，我會解決羅德島應承擔的那部分。
+[name="凱爾希"]  你的責任與權力相輔相成。“分清敵我”，是你自己的判斷，不是我的。
+[name="凱爾希"]  ......
+[name="凱爾希"]  （輕聲）如果你真的與他們共同呼吸。
+[Decision(options="我這麼做......你其實完全認可？", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  我沒有這麼說過。
+[name="凱爾希"]  言歸正傳。霜星及其率領的小隊，也就是“雪怪小隊”，從屬於一支感染者遊擊隊。
+[name="凱爾希"]  現在，整合運動能夠驅策的精銳武裝力量只剩下兩支。感染者遊擊隊是其中一支。
+[name="凱爾希"]  另一支，是由薩卡茲雇傭兵“W”帶領的薩卡茲雇傭軍。
+[name="凱爾希"]  據我所知，W依賴一系列手段，竊取了整合運動這支薩卡茲雇傭軍的領頭人地位。
+[name="凱爾希"]  因為我們沒時間複習歷史常識，所以我直截了當地告訴你——薩卡茲雇傭軍並不可靠，對W，對整合運動，都一樣。
+[name="凱爾希"]  薩卡茲雇傭軍並不是普通的雇傭兵組織。他們是卡茲戴爾無處容放的軍事力量在大地各處的流露。
+[name="凱爾希"]  妄圖控制它，只會引來他們背後的牽線人。
+[Decision(options="你似乎對薩卡茲有很深的瞭解。", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  這不是重點。
+[name="凱爾希"]  重點在於，雪怪小隊所屬的感染者遊擊隊和雇傭兵全然不同。
+[name="凱爾希"]  形式，編制，行事方式以及準則，遊擊隊和雇傭兵之間沒有一點相似之處。
+[name="凱爾希"]  在成為整合運動的武裝前，它是獨立的感染者遊擊隊，他們的威名在特定區域的感染者中比它的後起之秀整合運動更加響亮。
+[name="凱爾希"]  ......在成為遊擊隊之前，他們曾是烏薩斯強大軍事力量的一部分。
+[Decision(options="是西北凍原的遊擊隊？", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  ——
+[name="凱爾希"]  無論你從哪裡得到了這條資訊，博士，我都該為此誇讚你。
+[name="凱爾希"]  儘管這樣的情報很基礎，但你能主動去獲取情報這一行為，讓我感到欣慰。
+[Decision(options="誇我不用拐彎抹角。;......;我有點懷疑你在諷刺我？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凱爾希"]  點到為止。
+[name="凱爾希"]  我們身處切爾諾伯格核心城的基礎工業結構處。
+[name="凱爾希"]  接下來，我們帶領的這三支小隊將穿過錯綜複雜的地下通道、下水管道與工業層，前往核心城的中央區域。
+[name="凱爾希"]  注意，哪怕是恰巧在這裡巡邏的敵人，也不會是普通的整合運動暴徒。
+[name="凱爾希"]  我們會遇見經過嚴苛訓練的......“士兵”。遊擊隊以烏薩斯現役軍的訓練方式訓練過的整合運動“士兵”。
+[name="凱爾希"]  偵查幹員發現核心城內的通訊遭到了人為切斷，或者說，整合運動並沒有嘗試維持城內的通訊。
+[name="凱爾希"]  這對於利用常規通訊手法進行交流的現代小隊有著很強的制約力。
+[name="凱爾希"]  卻也意味著，整合運動也有特殊的通訊手段，或者是他們完全沒有準備好應戰。
+[name="凱爾希"]  參照一個月前在切爾諾伯格發生的事件，後者的情況幾乎不會發生。但是，切斷通訊，底層的整合運動將不會收到任何直接命令。
+[name="凱爾希"]  大多數時間裡，他們會自由行事。
+[name="凱爾希"]  恐怕他們還不知道，他們頻道收不到的那個信號——那個只有國家與城邦才能辨別的信號，正在劃定烏薩斯的疆域。
+[name="凱爾希"]  這是一座醞釀著風暴的城區。混亂，無論是無意還是故意，都會像沉重的煙霧一樣四處彌漫。
+[name="凱爾希"]  先我一步，崩潰的種子已經被人播撒出去了。
+[Decision(options="結論呢？", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  某種衝突正在整合運動內部孕育。
+[Decision(options="你很確定？", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  類似的事情在這片大地上發生過無數遍。
+[Decision(options="你是不是還有什麼沒和我說？", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  能說的差不多就這些，剩下的，等要討論的時候再討論。
+[name="凱爾希"]  即使我們只是在做戰前準備工作，我們也要兼顧效率。
+[name="凱爾希"]  請你幫我通知R-4小隊的成員，博士。請他們來取這批裝置。
+[Decision(options="......等一等......？", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  還有什麼問題？
+[Decision(options="這些裝置似乎是迷迭香的。", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  是的。
+[name="凱爾希"]  那麼，你與迷迭香幹員的交流似乎並不局限於生物處理室裡的談話。
+[Decision(options="我看到她準備戰鬥的樣子。", values="1")]
+[Predicate(references="1")]
+[Decision(options="很難想像她居然有使用這種裝置的力量。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="凱爾希"]  事實上，每一個精英幹員都具備相當的力量。他們必須獨當一面。
+[name="凱爾希"]  ......所以你還沒來的及瞭解迷迭香的戰鬥方式。
+[name="凱爾希"]  事先聲明，有些事情不只該他們自己承擔。羅德島的戰地指揮官身負多種職能，幫忙分擔幹員身上的壓力，也是其中必要的一環。
+[name="凱爾希"]  在這之後的戰鬥中，你可能會被某些事實衝擊。
+[Decision(options="啊......？", values="1")]
+[Predicate(references="1")]
+[name="凱爾希"]  很少有不會被迷迭香的戰鬥震懾住的人。
+[name="凱爾希"]  做好心理準備。
+[Dialog]
+[Character]
+[stopmusic(fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_cherunder",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$batmeeting_intro", key="$batmeeting_loop", volume=0.4)]
+[Character(name="avg_npc_012")]
+[name="羅德島幹員"]  Dr.{@nickname}，你來了！
+[name="羅德島幹員"]  我們截住了敵人的巡邏小隊，正在穩步處理中。
+[Decision(options="戰鬥已經開始了？", values="1")]
+[Predicate(references="1")]
+[name="羅德島幹員"]  博士，你的位置有點危險......
+[name="羅德島幹員"]  我建議你不要站在那個位置。
+[Decision(options="我才剛剛到位。", values="1")]
+[Predicate(references="1")]
+[name="羅德島幹員"]  你那裡，那裡是......
+[name="羅德島幹員"]  博士，她身邊真的很危險！
+[Character]
+[name="？？？"]  ......敵人。
+[Decision(options="難道說......", values="1")]
+[Predicate(references="1")]
+[Decision(options="......迷迭香？", values="1")]
+[Predicate(references="1")]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_042",fadetime=1,block=true)]
+[delay(time=1)]
+[name="迷迭香"]  敵人。
+[name="迷迭香"]  博士，那些是殺害我家人的......敵人！
+[Decision(options="你怎麼這麼凶？;......？;迷迭香？發生什麼事......", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="迷迭香"]  ......
+[name="迷迭香"]  博士，讓一讓。不要待在這條走道。
+[name="迷迭香"]  我和阿米婭不一樣。阿米婭的法術能繞過家人，準確地懲罰別人......
+[name="迷迭香"]  我不能。我做不到。
+[name="迷迭香"]  所以，不要站在迷迭香和戰場之間。
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[name="整合運動成員"]  噫！！
+[CameraShake(duration=0.4, xstrength=0, ystrength=8, vibrato=30, randomness=30, fadeout=true, block=false)]
+[name="整合運動成員"]  那個背著大盒子的女孩，怎，怎，怎麼......
+[name="整合運動成員"]  我的眼睛要看不到了，我的眼睛，我的頭！！好痛！好痛！！
+[name="整合運動成員"]  有什麼東西要把我捏碎了！
+[name="迷迭香"]  ......
+[name="迷迭香"]  不會的。
+[name="迷迭香"]  我已經很久沒捏死過人了。
+[name="整合運動成員"]  那些劍，那些劍——
+[Dialog]
+[Character]
+[Decision(options="迷迭香？！", values="1")]
+[Predicate(references="1")]
+[name="迷迭香"]  整合運動......
+[name="迷迭香"]  我不要你們留在我的記憶裡。
+[name="迷迭香"]  我不要。
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]
