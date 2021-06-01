@@ -22,7 +22,7 @@ function WardrobeSkinItem:Render(skin)
   self._skinImg.sprite = CS.Torappu.CharacterUtil.LoadCharPortrait(skin.data:GetPortraitId())
   CS.Torappu.Lua.Util.SetActiveIfNecessary(self._onSaleObj,WardrobeUtil.CheckSkinOnSale(skin))
   self._skinName.text = skin.data.displaySkin.skinName
-  self._charName.text = CS.Torappu.CharacterUtil.GetCharAppellation(skin.data.charId)
+  self._brandName.text = CS.Torappu.DataConvertUtil.GetSkinBrandCapitalName(skin.data.displaySkin.skinGroupId)
   if (skin.data.displaySkin.displayTagId ~= nil) then
     CS.Torappu.Lua.Util.SetActiveIfNecessary(self._tagItem,true)
     self._tagText.text = skin.data.displaySkin.displayTagId
