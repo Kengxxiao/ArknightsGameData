@@ -6838,6 +6838,89 @@
           ]
         }
       ]
+    },
+    "char_293_thorns": {
+      "charId": "char_293_thorns",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[012]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_recovery[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_218_cuttle": {
+      "charId": "char_218_cuttle",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_oneself[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "dorm_rec_oneself[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_272_strong": {
+      "charId": "char_272_strong",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_limit_diff[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_limit_count[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -7765,6 +7848,30 @@
       "roomType": "TRADING",
       "description": "進駐貿易站時，訂單上限<@cc.vup>+5</>，心情每小時消耗<@cc.vup>-0.25</>"
     },
+    "trade_ord_limit_diff[000]": {
+      "buffId": "trade_ord_limit_diff[000]",
+      "buffName": "攤販經濟",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_limit_diff",
+      "sortId": 4004,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "進駐貿易站時，當前訂單數與訂單上限每差<@cc.vup>1</>筆訂單，則訂單獲取效率<@cc.vup>+4%</>"
+    },
+    "trade_ord_limit_count[000]": {
+      "buffId": "trade_ord_limit_count[000]",
+      "buffName": "市井之道",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_limit_count",
+      "sortId": 4004,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "進駐貿易站時，當前貿易站內其他幹員提供的每<@cc.vup>10%</>訂單獲取效率使訂單上限<@cc.vdown>-1</>，同時每有<@cc.vup>1</>筆訂單就<@cc.vup>+4%</>訂單獲取效率"
+    },
     "trade_ord_wt&cost[000]": {
       "buffId": "trade_ord_wt&cost[000]",
       "buffName": "裁縫·α",
@@ -7885,6 +7992,18 @@
       "roomType": "WORKSHOP",
       "description": "進駐加工站加工<@cc.kw>任意類材料</>時，副產品的產出機率提升<@cc.vup>50%</>"
     },
+    "workshop_proc_probability[012]": {
+      "buffId": "workshop_proc_probability[012]",
+      "buffName": "“煉金術”",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p2",
+      "sortId": 7113,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "進駐加工站加工<@cc.kw>任意類材料</>時，副產品的產出機率提升<@cc.vup>50%</>"
+    },
     "workshop_proc_probability[020]": {
       "buffId": "workshop_proc_probability[020]",
       "buffName": "咪波·加工型",
@@ -7908,6 +8027,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "進駐加工站加工<@cc.kw>任意類材料</>時，心情消耗為<@cc.kw>4</>以上的配方全部<@cc.vup>-2</>心情消耗"
+    },
+    "workshop_formula_recovery[000]": {
+      "buffId": "workshop_formula_recovery[000]",
+      "buffName": "“爆炸藝術”",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_recovery",
+      "sortId": 7113,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "進駐加工站加工<@cc.kw>任意類材料</>時，每<@cc.vup>2</>次加工沒有產出副產品，則<@cc.kw>恢復自身一次心情</>，恢復量為<@cc.kw>對應配方所需消耗的心情</>（加工結束後統一結算）"
     },
     "workshop_formula_cost[010]": {
       "buffId": "workshop_formula_cost[010]",
@@ -8548,6 +8679,18 @@
     "dorm_rec_oneself[010]": {
       "buffId": "dorm_rec_oneself[010]",
       "buffName": "狂熱",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_one4",
+      "sortId": 5004,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "進駐宿舍時，自身心情每小時恢復<@cc.vup>+0.85</>"
+    },
+    "dorm_rec_oneself[011]": {
+      "buffId": "dorm_rec_oneself[011]",
+      "buffName": "麻煩回避者",
       "buffIcon": "dormitory",
       "skillIcon": "bskill_dorm_one4",
       "sortId": 5004,
@@ -12122,7 +12265,7 @@
         "height": 3,
         "comfort": 95,
         "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
-        "description": "由知名琴匠手工製作的小提琴。音色悠遠綿長，仿佛林間風吟。",
+        "description": "由知名琴匠手工製作的小提琴。音色悠遠綿長，彷彿林間風吟。",
         "obtainApproach": "傢俱商店購買，部分關卡幸運掉落",
         "processedProductId": "3401",
         "processedProductCount": 5,
@@ -12352,7 +12495,7 @@
         "height": 1,
         "comfort": 120,
         "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
-        "description": "光滑的原木地板。赤腳站在地板上時，仿佛能聽見群山的低喚。",
+        "description": "光滑的原木地板。赤腳站在地板上時，彷彿能聽見群山的低喚。",
         "obtainApproach": "傢俱商店購買，部分關卡幸運掉落",
         "processedProductId": "3401",
         "processedProductCount": 5,
