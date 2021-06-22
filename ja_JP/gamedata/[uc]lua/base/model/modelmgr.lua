@@ -1,5 +1,5 @@
----@class ModelMgr
----@field private s_models ModelBase[]
+
+
 ModelMgr = Class("ModelMgr");
 ModelMgr.s_definedModel = {};
 ModelMgr.s_models = {};

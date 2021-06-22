@@ -1,14 +1,12 @@
---[[
-Base class for all hotfixers, a hotfixer contains a group of fine-grained hotfixes.
-]]
 
----@class HotfixBase
----@field private m_fixes {class:string|object, method:stirng}[]
+
+
+
 HotfixBase = Class("HotfixBase")
 
 HotfixBase.m_fixes = nil;
 
----@protected 使用此接口做修复操作，无需要手动释放，会自动处理
+
 function HotfixBase:Fix(cls, method_name, fixFunc)
   xlua.hotfix(cls, method_name, fixFunc);
   self:_Record(cls, method_name);
@@ -41,13 +39,13 @@ function HotfixBase:Dispose()
   end
 end
 
----@protected to override by child class
+
 function HotfixBase:OnInit()
   
 end
 
 
----@protected to override by child class
+
 function HotfixBase:OnDispose()
   
 end

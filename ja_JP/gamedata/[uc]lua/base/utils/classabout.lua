@@ -1,8 +1,4 @@
---[[
-  base class
-  e.q.: local classExample = class("classExample")
-      local classExample2 = class("classExample2",classExample)
-]]
+
 function Class(classname, super)
   local superType = type(super)
   local cls
@@ -13,11 +9,11 @@ function Class(classname, super)
   end
 
   if superType == "function" or(super and super.__ctype == 1) then
-    -- inherited from native C++ Object
+    
     cls = { }
 
     if superType == "table" then
-      -- copy fields from super
+      
       for k, v in pairs(super) do cls[k] = v end
       cls.__create = super.__create
       cls.super = super
@@ -31,7 +27,7 @@ function Class(classname, super)
 
     function cls.new(...)
       local instance = cls.__create(...)
-      -- copy fields from class to native object
+      
       for k, v in pairs(cls) do instance[k] = v end
       instance.class = cls
       instance:ctor(...)
@@ -39,7 +35,7 @@ function Class(classname, super)
     end
 
   else
-    -- inherited from Lua Object
+    
     if super then
       cls = { }
       setmetatable(cls, { __index = super })
@@ -50,7 +46,7 @@ function Class(classname, super)
 
     cls.__cname = classname
     cls.__ctype = 2
-    -- lua
+    
     cls.__index = cls
 
     function cls.new(...)
@@ -75,9 +71,7 @@ function IsSubclassOf(sub, super)
   return false;
 end
   
---[[
-  e.q.  ： clean all meta info in lua
-]]
+
 function CleanClass(cs, classPath)
   if cs == nil then return end
   if type(cs) ~= "table" then
@@ -94,9 +88,9 @@ function CleanClass(cs, classPath)
 end
 
 
----set the table as readonly
----@param t {} @any table
----@param deep boolean @if recursion set
+
+
+
 function Readonly(t, deep)
   if deep then
     for k, v in pairs(t) do

@@ -1,5 +1,5 @@
----@class UIRecycleAdapterBase
----@field m_widgets UIWidgetContainer
+
+
 UIRecycleAdapterBase = Class("UIRecycleAdapterBase")
 
 
@@ -22,11 +22,11 @@ function UIRecycleAdapterBase:Dispose()
   end
 end
 
----由prefab创建一个窗口组件
----@generic T:Widget
----@param widgetCls T
----@param layout LuaLayout prefab
----@param parent Transfrom
+
+
+
+
+
 function UIRecycleAdapterBase:CreateWidgetByPrefab(widgetCls, layout, parent)
   if not self.m_widgets then
     self.m_widgets = UIWidgetContainer.new(self);
@@ -44,7 +44,7 @@ end
 function UIRecycleAdapterBase:GetWidget(obj)
 
   for i,v in pairs (self.m_objDict)do
-    -- body
+    
     if (v.obj == obj) then
       return v.widget
     end
