@@ -1,10 +1,12 @@
----@class TimerModel:ModelBase
----@field me TimerModel
----@field private _switcher Event
----@field private _timers Timer[]
----@field private _newborn Timer[]
----@field private _dead Timer[]
----@field private _alives table<number, Timer>
+
+
+
+
+
+
+
+
+
 TimerModel = ModelMgr.DefineModel("TimerModel");
 
 function TimerModel:OnInit()
@@ -26,42 +28,42 @@ function TimerModel:OnDispose()
   self._alives = nil;
 end
 
----绑定驱动开关
----@param switcher Event 在需要开关帧驱动时触发 function(open:boolean) end
+
+
 function TimerModel:BindSwitcher(switcher)
   self._switcher = switcher;
 end
 
----延时执行
----@param delay number 延时时长s
----@param cb Event 执行内容
+
+
+
 function TimerModel:Delay(delay, cb)
   return self:_SetTimer(delay, 1, cb);
 end
 
----定时执行
----@param interval number 执行间隔s
----@param loop number 执行次数 <0 表示无限
----@param cb Event 执行内容
+
+
+
+
 function TimerModel:Interval(interval, loop, cb)
   return self:_SetTimer(interval, loop, cb);
 end
 
----每帧执行
----@param loop 执行次数
----@param cb Event 执行内容
+
+
+
 function TimerModel:Frame(loop, cb)
   return self:_SetTimer(0, loop, cb);
 end
 
----下帧执行一次
----@param cb Event 执行内容
+
+
 function TimerModel:NextFrame(cb)
   return self:_SetTimer(0, 1, cb);
 end
 
----销毁定时器
----@param timer number 定时器ID
+
+
 function TimerModel:Destroy(timer)
   local timer = self._alives[timer];
   if timer then
@@ -69,9 +71,9 @@ function TimerModel:Destroy(timer)
   end
 end
 
----@private
+
 function TimerModel:_SetTimer(interval, loop, evt)
-  ---@type Timer
+  
   local newTimer = nil;
   if #self._dead > 0 then
     newTimer = table.remove(self._dead);
@@ -87,9 +89,9 @@ function TimerModel:_SetTimer(interval, loop, evt)
   return newTimer:ID();
 end
 
----@param deltaTime number
+
 function TimerModel:Update(deltaTime)
-  -- check
+  
   local pos = 1;
   for idx = 1, #self._timers do
     local timer = self._timers[idx];
@@ -107,7 +109,7 @@ function TimerModel:Update(deltaTime)
     table.remove(self._timers);
   end
 
-  -- move all new born to timers
+  
   if #self._newborn > 0 then
     for _, new in ipairs(self._newborn) do
       table.insert(self._timers, new);

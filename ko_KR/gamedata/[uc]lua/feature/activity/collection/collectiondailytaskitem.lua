@@ -1,8 +1,8 @@
----@class CollectionDailyTaskItem : Widget
----@field m_itemCell UIItemCard
+
+
 CollectionDailyTaskItem = Class("CollectionDailyTaskItem", UIWidget);
 
----@param cfg CollectionActCfg
+
 function CollectionDailyTaskItem:Refresh(actId, cfg)
   self._itemDescBg.color = cfg.baseColor;
   self._pointIcon.color = cfg.baseColor;
@@ -11,7 +11,7 @@ function CollectionDailyTaskItem:Refresh(actId, cfg)
   self._descLabel.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.ACTIVITY_3D5_HELP_DAILY_DESC, cfg.pointItemName);
   self._itemDescLabel.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.ACTIVITY_3D5_HELP_DAILY_ITEM_DESC, cfg.pointItemName);
   if not self.m_itemCell then
-    local itemCard = CS.Torappu.UI.UIAssetLoader.instance.activityOutlinks.uiItemCard;
+    local itemCard = CS.Torappu.UI.UIAssetLoader.instance.staticOutlinks.uiItemCard;
     self.m_itemCell = CS.UnityEngine.GameObject.Instantiate(itemCard, self._itemIconRoot):GetComponent("Torappu.UI.UIItemCard");
     self.m_itemCell.isCardClickable = true;
     self.m_itemCell.showBackground = false;
@@ -27,7 +27,7 @@ function CollectionDailyTaskItem:Refresh(actId, cfg)
     CS.Torappu.UI.UIItemDescFloatController.ShowItemDesc(self.m_itemCell.gameObject, rewardData);
   end);
 
-  --calculte the misstion status
+  
   local suc, dailyRewardStatus = CS.Torappu.PlayerData.instance.data.mission.missionRewards.rewards:TryGetValue(CS.Torappu.MissionPlayerDataGroup.MissionTypeString.DAILY);
   if suc then
     local total = 0;

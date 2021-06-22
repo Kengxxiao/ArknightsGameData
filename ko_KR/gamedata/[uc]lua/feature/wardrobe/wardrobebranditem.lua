@@ -1,4 +1,4 @@
----@class WardrobeBrandItem grid Item In Sort By Skin Group State
+
 WardrobeBrandItem = Class("WardrobeBrandItem", UIWidget);
 
 function WardrobeBrandItem:Render(data)

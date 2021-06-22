@@ -1,189 +1,146 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
-
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-
-10:30 A.M.  天气/晴
-罗德岛本舰，四号舱室，疗养庭院
-
+10:30 A.M. 날씨/맑음
+로도스 아일랜드 본함, 4호 선실, 요양 정원
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Character]
 [Background(image="bg_forest",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
-
-
 [playsound(key="$dooropenquite", volume=0.4)]
-
-
-
-//（开门声）
 [Character(name="char_236_rope#4",fadetime=1,block=true)]
 [delay(time=1)]
-[name="暗索"]  打扰了~
+[name="로프"]  실례합니다~
 [Dialog]
 [delay(time=1)]
-
-//（张望）
 [Character(name="char_236_rope")]
-[name="暗索"]  ......？
-[name="暗索"]  打扰了，有人在吗——
- 
+[name="로프"]  ……?
+[name="로프"]  저기요~ 누구 없어요~?
 [Character(name="char_236_rope#7")]
-[name="暗索"]  嗯嗯？
+[name="로프"]  응?
 [Character(name="char_236_rope")]
-[name="暗索"]  啊呀。
+[name="로프"]  아.
 [Character(name="char_236_rope")]
-[name="暗索"]  没人在呀？你好——你好——请问——有人在吗——！哈——喽——？
-
+[name="로프"]  누구 없어요? 안녕하세요~ 저기요~ 헬~로우?
 [Character(name="char_236_rope#2")]
-[name="暗索"]  ......
-[name="暗索"]  欸，真没人啊。
-[name="暗索"]  这可头疼了。
-
-//（坏笑）
+[name="로프"]  ……
+[name="로프"]  진짜 아무도 없네.
+[name="로프"]  골치 아프게 됐네.
 [Character(name="char_236_rope#4")]
-[name="暗索"]  空手白来一趟可不是我的作风，哼哼，来都来了，就让我龙门小飞侠暗索来看看，这里都有些什么好东西......
-
-//（惊）
+[name="로프"]  모처럼 왔는데 빈손으로 가는 건 내 스타일이 아니지. 흠, 어쨌든 왔으니깐 좋은 물건이 있나 둘러봐야겠다……
 [Character(name="char_236_rope#7")]
-[name="暗索"]  ......呃，不对！
+[name="로프"]  윽…… 안 돼!
 [CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=70, fadeout=true, block=false)]
-[name="暗索"]  （拍脸）
+[name="로프"]  (얼굴을 때린다)
 [Character(name="char_236_rope#2")]
-[name="暗索"]  打住，打住，暗索，收着点，不能这么干。
+[name="로프"]  그만, 그만해. 로프, 이러면 안 돼.
 [CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=70, fadeout=true, block=false)]
-[name="暗索"]  （拍脸）（拍脸）
-[name="暗索"]  哎，习惯这东西真可怕。
- 
+[name="로프"]  (얼굴을 몇 번 더 때린다)
+[name="로프"]  에휴, 이래서 습관이 무섭다니까.
 [Character(name="char_236_rope#4")]
-[name="暗索"]  不过，没人在还不锁门，也太不小心了，就算丢了什么也不能怪别人吧？
-[name="暗索"]  我保证什么都不拿，就看看，看看......
+[name="로프"]  하지만 문도 안 잠그고 조심성도 없는 사람이 뭘 잃어버렸다고 누굴 탓할 수 있겠어?
+[name="로프"]  아무것도 안 가져갈 거야. 그냥 보기만 하는 거야. 보기만……
 [Character(name="char_236_rope")]
-[name="暗索"]  来让我瞧瞧，都有些什么好东西~
+[name="로프"]  어디 보자~ 좋은 물건이~ 어디에 있나~
 [Character(name="char_236_rope")]
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
-[name="暗索"]  嗯？地上这是什么......不懂，算了，我跳！
+[name="로프"]  어? 바닥에 이건 뭐지…… 모르겠다, 이건 넘어가고!
 [Dialog]
 [characteraction(name="middle", type="jump", xpos=20, power=60, times=1, fadetime=0.6, block=false)]
 [delay(time=1)]
 [characteraction(name="middle", type="jump", xpos=-20, power=20, times=1, fadetime=0.6, block=false)]
 [delay(time=0.5)]
 [Character(name="char_236_rope")]
-[name="暗索"]  嚯嚯，这种花，颜色真好看，不知道值不值钱......
-[name="暗索"]  哦，这个设备，很少见耶，应该也挺贵吧？
-[name="暗索"]  还有这边的这片是......药草？
+[name="로프"]  어머, 이 꽃 색깔 너무 예쁘다. 이게 돈이 될지 모르겠네……
+[name="로프"]  오, 이런 설비는 보기 드문데. 아주 비싸겠지?
+[name="로프"]  그리고 이건…… 약초?
 [Character(name="char_236_rope#7")]
 [CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=70, fadeout=true, block=false)]
-[name="暗索"]  嗯？嗯嗯？？呜啊这是什么味道，好浓郁！
+[name="로프"]  응? 이건 무슨 냄새지? 냄새가 너무 강한데.
 [Dialog]
 [Character(name="char_236_rope#7")]
 [delay(time=0.5)]
-//（蚊香眼）
 [Character(name="char_236_rope#5")]
 [CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=70, fadeout=true, block=false)]
-[name="暗索"]  有、有点头昏......
- 
-//（黑屏）
+[name="로프"]  어, 어지러워……
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_forest",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
 [Character(name="char_236_rope#7")]
 [CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
-[name="暗索"]  噗——哈，好险！
-[name="暗索"]  不得了，差点以为要晕过去了，这也太危险了......！
+[name="로프"]  앗…… 위험했어!
+[name="로프"]  하마터면 기절할 뻔했잖아. 이것도 너무 위험해……!
 [Character(name="char_236_rope#2")]
-[name="暗索"]  怪不得曾经有前辈说过，宁可去撬龙门金库的锁，也别闯直接敞开的门，不是没有道理啊。
- 
-
-//（思索）
-[name="暗索"]  ......
+[name="로프"]  그래서 선배가 그런 말을 했었구나. 용문 금고문을 딸지언정 바로 열려있는 문으로는 들어가지 마라. 일리 없는 말은 아니네.
+[name="로프"]  ……
 [Character(name="char_236_rope")]
-[name="暗索"]  唔，玩笑就开到这里。
-[name="暗索"]  没人在的话，那就没办法了，难得我还想做点好事，算啦。
-[name="暗索"]  看来只有下次再来——
+[name="로프"]  앗, 농담은 여기까지.
+[name="로프"]  아무도 없으면 어쩔 수 없지. 오랜만에 착한 일 좀 하려고 했는데 됐어.
+[name="로프"]  그냥 다음에 다시 와야겠다……
 [Dialog]
-//（细微声响）
 [PlaySound(key="$leaveshake", volume=0.6)]
 [Character(name="char_236_rope",focus=-1)]
-
 [Character(name="char_236_rope#2")]
-[name="暗索"]  嗯？
+[name="로프"]  응?
 [Character(name="char_236_rope#7")]
-[name="暗索"]  什么，难道偷偷摸摸的还不止我一个呀？
+[name="로프"]  뭐야, 몰래 슬쩍하려는 게 나 혼자가 아니었어?
 [Character(name="char_236_rope")]
-[name="暗索"]  嘿嘿，有点意思，哪里来的小贼，让我们对决一下吧~
+[name="로프"]  헤헤, 재미있네. 어디서 온 도둑이지? 한 판 붙어볼까~
 [Character(name="char_236_rope#4")]
-[name="暗索"]  悄悄摸摸悄摸悄摸......探查敌情，钩索准备——
- 
-//（转场）
+[name="로프"]  살금살금…… 적의 상황을 살피고 갈고리 준비……
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Character]
 [Background(image="bg_forest",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-
-
 [Character(name="char_181_flower_1",fadetime=1,block=true)]
 [delay(time=1)]
-[name="调香师"]  晨露，薄荷，碎冰沙♪
-[name="调香师"]  夕阳，茉莉，蜜糖花~♪
- 
+[name="퍼퓨머"]  아침이슬, 민트, 스무디♪
+[name="퍼퓨머"]  석양, 재스민, 허니 플라워~♪
 [Character(name="char_236_rope")]
-[name="暗索"]  那个......
- 
+[name="로프"]  저기……
 [Character(name="char_181_flower_1")]
-[name="调香师"]  哼哼~哼~哼哼哼哼~~
+[name="퍼퓨머"]  흐흠~ 흠~ 흠흐흐흠~
 [Character(name="char_236_rope")]
-[name="暗索"]  那个，打扰一下......
-
+[name="로프"]  저기요~
 [Character(name="char_181_flower_1")]
-[name="调香师"]  再加一点培养素，嗯，这个量的话应该没问题！
-
-//（无奈）
+[name="퍼퓨머"]  배양소를 조금 더 추가하고, 음, 이 정도 양이면 문제없어!
 [Character(name="char_236_rope#3")]
-[name="暗索"]  啊呀，太专注了吧。
-
+[name="로프"]  너무 집중하고 있네.
 [Character(name="char_181_flower_1")]
-[name="调香师"]  然后再和这边的深层土混合，唔，要不然再多加一点草木灰吧？
-[name="调香师"]  嗯嗯，好像会很不错！
+[name="퍼퓨머"]  그 다음 이쪽의 심층토와 섞어야지. 오, 아니면 초목회를 좀 더 추가할까?
+[name="퍼퓨머"]  음, 너무 괜찮을 것 같아!
 [Character(name="char_236_rope#7")]
-[name="暗索"]  （真的完全没注意到我？安全意识有点差劲哦？）
+[name="로프"]  (날 전혀 신경 쓰지 않네? 안전의식이 좀 떨어지는 것 같은데?)
 [Character(name="char_236_rope#2")]
-[name="暗索"]  （亏我刚刚还真以为有小偷混进来了，唉。）
- 
+[name="로프"]  (진짜 도둑이 들어온 줄 알았잖아. 에휴.)
 [Character(name="char_181_flower_1#3")]
-[name="调香师"]  嗯......平衡性好像还有点不太够，上次培育也是平衡不稳定出的问题，呼，让我想想，该怎么做......
+[name="퍼퓨머"]  음…… 밸런스가 좀 안 맞는 것 같은데. 저번 재배도 밸런스 불안정으로 인한 문제였잖아. 후, 보자 보자. 어떻게 해야 하지……
 [Character(name="char_181_flower_1#6")]
-[name="调香师"]  泥炭、赤玉......保持弱酸性......
+[name="퍼퓨머"]  토탄, 적옥…… 약산성을 유지하고……
 [Character(name="char_236_rope#7")]
-[name="暗索"]  （还在自言自语，这样真的没问题吗？）
+[name="로프"]  (아직도 혼잣말하네. 정말 괜찮을까?)
 [Character(name="char_236_rope#4")]
-[name="暗索"]  （啊，不过，旁边看着倒是还挺有意思的~）
+[name="로프"]  (아, 그런데 옆에서 보니깐 꽤 재미있네~)
 [Character(name="char_181_flower_1#2")]
-[name="调香师"]  ！
-[name="调香师"]  对了，我怎么给忘记了！还可以加入源生地带回来的砂土试试看！
+[name="퍼퓨머"]  !
+[name="퍼퓨머"]  맞다! 깜빡했네! 원생 지대에서 가져온 사토도 넣어봐야지!
 [Character(name="char_181_flower_1")]
-[name="调香师"]  嗯嗯，不管是植物还是人，都是自家才是最好的吧！
+[name="퍼퓨머"]  그래. 식물이든 인간이든 자기 집이 최고니까!
 [Character(name="char_236_rope")]
-[name="暗索"]  （这话听起来似乎有点道理。）
-[name="暗索"]  （不过啊，那种好不容易飞出去，完全不想回老家的人、嗯？人？植物？算了没差别，应该也不少吧？）
+[name="로프"]  (듣다 보니 일리가 있네.)
+[name="로프"]  (그런데 어렵게 나왔는데 고향으로 돌아가고 싶지 않은 사람도, 어? 사람? 식물? 뭐, 별 차이 없으니깐 꽤 되겠지?)
 [Dialog]
 [Character]
 [Character(name="char_181_flower_1#3")]
-//（调香师寻找土壤，在画面上立绘消失or产生位置变化）
-//（画面震动，表现出在寻找东西的感觉）
 [characteraction(name="middle", type="move", xpos=70, ypos=0,fadetime=1, block=true)]
 [delay(time=2)]
 [CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=45, fadeout=true, block=false)]
@@ -196,46 +153,29 @@
 [delay(time=2)]
 [CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=45, fadeout=true, block=false)]
 [delay(time=0.5)]
-
-
 [Character(name="char_181_flower_1#4")]
-[name="调香师"]  咦，我把那些土壤放到哪儿去了。
-[name="调香师"]  这里没有，也不在这里，嗯......奇怪了......
+[name="퍼퓨머"]  아, 그 토양을 어디에 뒀더라.
+[name="퍼퓨머"]  여기도 없고, 저기도 없네. 음…… 이상하네……
 [Character(name="char_181_flower_1#5")]
-[name="调香师"]  嗯？
-
-//（疑惑）
+[name="퍼퓨머"]  응?
 [Character(name="char_236_rope")]
-[name="暗索"]  嗯？
-
-
-
-
-//name="char_181_flower_1",name2="char_236_rope#4",focus=2
-
-//（惊）
+[name="로프"]  응?
 [Character(name="char_181_flower_1#2",name2="char_236_rope",focus=1)]
 [CameraShake(duration=0.6, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
-[name="调香师"]  ！！
-[name="调香师"]  呜哇哇！
-
-//（惊）
+[name="퍼퓨머"]  !!
+[name="퍼퓨머"]  으아앗!
 [Character(name="char_181_flower_1#2",name2="char_236_rope#7",focus=2)]
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
-[name="暗索"]  ？！
-[name="暗索"]  欸？欸？？
-[name="暗索"]  怎、怎么了？什么事？
+[name="로프"]  ?!
+[name="로프"]  에? 어어??
+[name="로프"]  왜? 왜? 무슨 일인데?
 [Character(name="char_181_flower_1#2",name2="char_236_rope#7",focus=1)]
-[name="调香师"]  欸？啊......
-
+[name="퍼퓨머"]  어? 아……
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
-
-[name="调香师"]  暗索......小姐？
-
+[name="퍼퓨머"]  로프…… 씨?
 [Dialog]
 [Delay(time=2)]
-
 [Dialog]
 [Character]
 [Image]

@@ -1,6 +1,6 @@
----@class TestDlg:DlgBase
----@field _timeLabel Text
----@field _btn Button
+
+
+
 TestDlg = DlgMgr.DefineDialog("TestDlg", "Main/TestDlg");
 TestDlg._timeLabel = nil;
 TestDlg._timer = nil;

@@ -1,5 +1,5 @@
----@class UIPatchBase:HotfixBase
----@field m_list {path:string, com:string, property:string, value:string}
+
+
 UIPatchBase = Class("UIPatchBase", HotfixBase)
 
 function UIPatchBase:_DoPatch(rootGO)
