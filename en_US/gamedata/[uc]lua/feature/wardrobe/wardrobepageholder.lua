@@ -1,6 +1,6 @@
----@class hold state
----control states' trans
----
+
+
+
 WardrobePageHolder = Class("WardrobePageHolder", DlgBase);
 
 WardrobePageHolder.stateList = {
@@ -36,7 +36,7 @@ function WardrobePageHolder.ApplyTopMenu(inst)
 	WardrobePageHolder.cacheTopMenu = topMenu;
 end
 
---Hold Return Logic
+
 function WardrobePageHolder:ReturnPage()
 	if (WardrobePageHolder.singelton.currentState == WardrobePageHolder.StateEnum.SortByTimeStateIndex
 		or WardrobePageHolder.singelton.currentState == WardrobePageHolder.StateEnum.SortBySkinGroupStateIndex) then
@@ -49,7 +49,7 @@ function WardrobePageHolder:ReturnPage()
 end
 
 function WardrobePageHolder:ToState(index)
-	-- body
+	
 	local transData
 	if (self.currentState~= nil) then
 		local lastState = self:GetState(self.currentState)
@@ -129,7 +129,7 @@ function WardrobePageHolder:_ChangeState()
 end
 
 function WardrobePageHolder:GetState(index)
-	-- body
+	
 	if (index == WardrobePageHolder.StateEnum.SortByTimeStateIndex) then
 		return self.sortByTimeState
 	end

@@ -46,8 +46,8 @@ local function InitFeature()
   end));
 end
 
----This method must be invoked after DlgMgr.Init()
----since BattleModule depends on BattleMgr which is a Model.
+
+
 local function InitBattle()
   if BattleMgr.me == nil then
     error('InitBattle() must be invoked after DlgMgr.Init()')
@@ -65,18 +65,18 @@ end
 EntryTable.Init = function ()
   print("Init");
 
-  -- do hotfix
+  
   Preprocess();
   local fixes = require ("Hotfixes/DefinedFix");
   HotfixProcesser.Do(fixes);
 
-  -- feature
+  
   local ok, error = xpcall(InitFeature, debug.traceback);
   if not ok then
     eutil.LogError("[InitFeature]" .. error);
   end
 
-  -- battle
+  
   local ok, error = xpcall(InitBattle, debug.traceback);
   if not ok then
     eutil.LogError("[InitBattle]" .. error);
@@ -84,10 +84,10 @@ EntryTable.Init = function ()
 end
 
 EntryTable.Dispose = function ()
-  -- hotfix
+  
   HotfixProcesser.Dispose();
 
-  -- feature
+  
   local ok, error = xpcall(DisposeFeature, debug.traceback);
   if not ok then
     eutil.LogError("[DisposeFeature]" .. error);

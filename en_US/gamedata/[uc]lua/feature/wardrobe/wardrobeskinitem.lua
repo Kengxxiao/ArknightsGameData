@@ -1,12 +1,12 @@
----@class WardrobeSkinItem:UIWidget
+
 WardrobeSkinItem = Class("WardrobeSkinItem", UIWidget);
 
 WardrobeSkinItem.ANIM_PARAM = "alpha_add"
 
 function WardrobeSkinItem:OnInitialize()
   
-  -- True LastTime No Effect
-  -- False LastTime Have Effect
+  
+  
   self.cacheHaveFlag = true
 
   self:AddButtonClickListener(self._button, self._OnClick);

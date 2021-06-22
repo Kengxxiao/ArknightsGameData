@@ -1,4 +1,4 @@
----@class WardrobeTimeItem:UIPanel
+
 WardrobeTimeItem = Class("WardrobeTimeItem", UIPanel);
 
 WardrobeTimeItem.ANIM_PARAM = "sortByTimeEntry"

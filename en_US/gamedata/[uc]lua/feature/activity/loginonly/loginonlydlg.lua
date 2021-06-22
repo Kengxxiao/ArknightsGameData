@@ -1,7 +1,7 @@
----@class LoginOnlyDlg:DlgBase
----@field m_activityId string
----@field m_itemList Torappu.UI.UIItemCard[]
----@field m_itemContainerList CS.UnityEngine.RectTransform[]
+
+
+
+
 LoginOnlyDlg = Class("LoginOnlyDlg", DlgBase);
 
 function LoginOnlyDlg:OnInit()
@@ -52,7 +52,7 @@ function LoginOnlyDlg:_RefreshUI()
 end
 
 function LoginOnlyDlg:_CreateItems()
-  ---already created.
+  
   if (self.m_itemList ~= nil) then
     return;
   end
@@ -87,14 +87,14 @@ function LoginOnlyDlg:_CreateItems()
   end
 end
 
----@param index int item index that starts with 1
----@return CS.UnityEngine.RectTransform
+
+
 function LoginOnlyDlg:_PickItemContainer(index)
   if (self.m_itemContainerList == nil) then
     local rectTransList = self._panelItemContainers:GetComponentsInChildren(typeof(CS.UnityEngine.RectTransform));
     self.m_itemContainerList = {};
 
-    ---discard rectTransList[0], which means self._panelItemContainers itself 
+    
     for i = 1, rectTransList.Length - 1 do
       table.insert(self.m_itemContainerList, rectTransList[i]);
     end
@@ -104,7 +104,7 @@ function LoginOnlyDlg:_PickItemContainer(index)
     return nil
   end
 
-  ---lua array starts with index 1
+  
   local containerIndex = (index - 1) % #self.m_itemContainerList + 1;
   return self.m_itemContainerList[containerIndex];
 end

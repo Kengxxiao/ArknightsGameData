@@ -1,10 +1,10 @@
----@public 应用UI热补丁
----@param root GameObject 根节点
----@param path string 相对根的路径
----@param comType string 组件类型名
----@param property string 属性名
----@param value string 属性值
----@return boolean 是否成功执行
+
+
+
+
+
+
+
 function ApplyUIHotPatch(root, path, comType, property, value)
   local trans = root.transform;
   if path ~= nil and path ~= "" then
