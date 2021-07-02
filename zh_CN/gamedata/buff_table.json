@@ -37,7 +37,7 @@
     "attributes": {
       "attributeModifiers": null,
       "abnormalFlags": [
-          "STUNNED"
+        "STUNNED"
       ]
     }
   },
@@ -48,7 +48,7 @@
     "attributes": {
       "attributeModifiers": null,
       "abnormalFlags": [
-          "SILENCED"
+        "SILENCED"
       ]
     }
   },
@@ -193,7 +193,7 @@
     "attributes": {
       "attributeModifiers": null,
       "abnormalFlags": [
-          "FROZEN"
+        "FROZEN"
       ]
     }
   },
@@ -254,7 +254,7 @@
     "attributes": {
       "attributeModifiers": null,
       "abnormalFlags": [
-          "STUNNED"
+        "STUNNED"
       ]
     }
   },
@@ -308,6 +308,32 @@
         "key": "ep_sanity_damage",
         "value": 1000.0
       }
-    ],
+    ]
+  },
+  "peak_performance[inf]": {
+    "buffKey": "peak_performance",
+    "templateKey": "peak_performance",
+    "lifeTimeType": "INFINITY",
+    "triggerLifeType": "INFINITY",
+    "triggerInterval": 0.3,
+    "waitFirstTriggerInterval": false,
+    "stripBlackboardParamsWithBuffKey": true,
+    "disableOverride": true
+  },
+  "peak_performance[atk]": {
+    "buffKey": "peak_performance[atk]",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "ATK",
+          "formulaItem": "MULTIPLIER",
+          "loadFromBlackboard": true
+        }
+      ]
+    },
+    "lifeTimeType": "INFINITY",
+    "priorityBBKeys": [
+      "atk"
+    ]
   }
 }

@@ -1,0 +1,146 @@
+[HEADER(key="title_test", is_skippable=false, fit_mode="BLACK_MASK")] 固定开头avg
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="？？？"]  ......这样的提案......是出于对我们的信任，亦或是另有所图？
+[name="？？？"]  ......我不能够确定，但是，这无疑是一次......机会。
+[name="？？？"]  ......那么，就确定这次由“这个人”来......
+[dialog]
+[Decision(options="（谁的声音？）",values="1")]
+[Predicate(references="1")]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[delay(time=1)]
+[Character(name="char_002_amiya_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#10")]
+[name="阿米娅"]  啊，博士，你来了。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  博士。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  来得正好，Dr.{@nickname}。
+[dialog]
+[Decision(options="我迟到了？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  看来你对自己的散漫多少有些自知之明。
+[dialog]
+[Decision(options="......;明明是你没有通知我有事要商量......",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]  放心吧，博士，今天十分准时。
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  实际上，我和凯尔希、杜宾教官正在商量的是有关“联锁竞赛”的事情。
+[dialog]
+[Decision(options="联锁......竞赛？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  没错，更详细地说，是“联锁安保竞赛”。
+[Character(name="char_130_doberm_ex#3")]
+[name="杜宾"]  它起源于古时米诺斯。热爱举办各类竞赛进行活动的米诺斯人，为各城邦之间进行和谐的安保演练、切磋而创办了官方安保竞赛。
+[name="杜宾"]  放在现代来说，更加类似于“军事演练”。不过，现在的联锁竞赛已经没有官方成分了。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  自从重新举办以后，它已经成为了非官方组织的商业竞赛。
+[name="杜宾"]  参与竞赛的商业安保组织成立了联合赛事委员会，负责与各地区官方组织接洽，以保证联锁安保竞赛能够在各地区定期举办。
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]  大概是因为合作组织的推荐，这一次，罗德岛也收到了参加联锁竞赛的邀请。
+[dialog]
+[Decision(options="那就参加吧！;参加竞赛......会有什么好处吗？",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]  嗯。至关重要的一点是，赛事方提供的奖金和物资十分丰厚！
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]  对罗德岛来说，这也是最重要的一点。
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  另外，官方地区和组织认为举办竞赛能够提升当地影响力，以及为当地创造更多的合作机会和商业往来，所以十分乐意提供最先进、完备的训练设施和比赛场所。
+[name="杜宾"]  联锁竞赛的比赛机制，将要求参赛队伍有分散小队或合击作战的意识，为获得更高的积分和排名需要在战术上进行细致的规划。
+[Character(name="char_130_doberm_ex#3")]
+[name="杜宾"]  为了进一步增强罗德岛的干员们的整体实力，参与竞赛的确是不可多得的训练机会。
+[dialog]
+[Decision(options="那一定要参与啊。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#3", name2="char_003_kalts_1", focus=1)]
+[name="阿米娅"]  哼哼，凯尔希，你看，我就说博士一定会答应的。
+[Character(name="char_002_amiya_1#3", name2="char_003_kalts_1", focus=2)]
+[name="凯尔希"]  好啊，Dr.{@nickname}，这可是你自己揽下的活计，可不能后悔。
+[dialog]
+[Decision(options="嗯？;......",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1")]
+[name="阿米娅"]  实际上，博士，联锁竞赛想要取得好的名次和更多报酬，一名强大的指挥官是必不可少的。
+[name="阿米娅"]  想要参加竞赛，就必须要由博士您来牵头。
+[dialog]
+[Decision(options="由我来指挥？;......",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  是的，博士，在联锁竞赛的比赛过程中，您的指挥和判断是不可缺少的环节。
+[dialog]
+[Decision(options="好吧，又增加工作量了......;我需要注意些什么？",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  在联锁安保竞赛中，我们将面对“假想敌”队伍，从假想敌的手中获取赛事奖章和物资。
+[name="杜宾"]  想要更高效地在限定时间中获得更多奖章，换取更多的物资和奖金的话，将需要配置不同的小队去往不同的“据点”进行驻守。
+[name="杜宾"]  只有经赛事裁判确认驻守成功，才会在最终的挑战中增加更强大的假想敌，击败这些特殊的假想敌将获得更多的赛事奖章。
+[name="杜宾"]  不过，对付更加强大的假想敌会耗费博士您更多的精力，如果感到力不从心，可以选择更加稳妥的方式获得奖章。
+[Character(name="char_130_doberm_ex#2")]
+[name="杜宾"]  具体情况，就需要博士您在现场明智的判断了。
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  不能专注进行指挥导致失误反倒得不偿失。不过，我相信博士一定能布置最合适的战术！
+[dialog]
+[Decision(options="我会努力的。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  除此以外，为了配合联锁竞赛的主题和可能出现的假想敌的状况，罗德岛每次将派遣特别甄选代表，陪伴博士您一同前往参赛。
+[Character(name="char_002_amiya_1#3")]
+[name="阿米娅"]  请放心，博士，特别甄选代表是我、凯尔希和杜宾教官一起考核并选任的干员，一定会在作战中拥有大展身手的机会！
+[dialog]
+[Decision(options="你们不一起去吗？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#5")]
+[name="阿米娅"]  ......
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  ......
+[Character(name="char_130_doberm_ex#4")]
+[name="杜宾"]  ......
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  这种事不要来麻烦我。
+[Character(name="char_002_amiya_1#5")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="阿米娅"]  实、实际上，我还有好多工作没来得及做完......
+[Character(name="char_130_doberm_ex")]
+[name="杜宾"]  训练干员是我的任务，但我不能永远盯着它们。干员们如何和指挥互相配合，在作战中怎样才能大显身手，这些是你应当考虑的，博士。
+[dialog]
+[Decision(options="......好吧。;怎么有种把麻烦事丢给我来做的感觉。",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1#7")]
+[name="阿米娅"]  参加联锁竞赛需要储备多支小队的战力，博士，不如趁现在好好想想该如何指挥干员们的行动，制定一份完备的参赛成员名单......
+[PlaySound(key="$doorknockquite", volume=0.6)]
+[dialog]
+[Character(name="char_002_amiya_1#6")]
+[name="阿米娅"]  啊，来得正好！
+[Character(name="char_002_amiya_1#2")]
+[name="阿米娅"]  博士，本次特别甄选代表已经到了。
+[dialog]
+[Decision(options="这也太快了吧！;你们是不是早就商量好了？;......",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#10")]
+[name="阿米娅"]  嘿嘿，接下来，就麻烦您和特别甄选代表一起商量一下竞赛相关事宜吧。
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  Dr.{@nickname}，记住。
+[dialog]
+[Decision(options="记......记住什么？;好。;......",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="凯尔希"]  既然参加了竞赛，就要做到最好。
+[name="凯尔希"]  每一任主办方的承办竞赛的需求各不相同，假想敌们的行动方式也千差万别。
+[Character(name="char_003_kalts_1#3")]
+[name="凯尔希"]  找出他们的弱点。看清他们的目的。不要掉入他们的诡计。
+[Character(name="char_003_kalts_1#4")]
+[name="凯尔希"]  ——然后，取胜。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image]
