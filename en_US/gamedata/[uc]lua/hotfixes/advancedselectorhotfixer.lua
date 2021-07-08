@@ -91,6 +91,36 @@ local function CompareHpDes(selector, a, b)
     return CompareHatred(a, b)
 end
 
+local function CompareMaxHpDes(selector, a, b)
+    local hpA = a.maxHp
+    local hpB = b.maxHp
+
+    if CS.Torappu.MathUtil.GT(hpB, hpA) then
+        return 1
+    end
+
+    if CS.Torappu.MathUtil.GT(hpA, hpB) then
+        return -1
+    end
+
+    return CompareHatred(a, b)
+end
+
+local function CompareMaxHpAsc(selector, a, b)
+    local hpA = a.maxHp
+    local hpB = b.maxHp
+
+    if CS.Torappu.MathUtil.GT(hpB, hpA) then
+        return -1
+    end
+    
+    if CS.Torappu.MathUtil.GT(hpA, hpB) then
+        return 1
+    end
+
+    return CompareHatred(a, b)
+end
+
 local function CompareForwardFirstManhattanAsc(selector, a, b)
     local sourceDir = CS.Torappu.GridPosition.FromVectorPosition(CS.Torappu.SharedConsts.FOUR_WAYS[selector.owner.direction:GetHashCode()])
     local offsetA = selector.owner.gridPosition - a.gridPosition
@@ -203,6 +233,32 @@ function OnPostFilterFix(self, candidates)
             candidates:Remove(self.owner)
         end
         BubbleSort(self, candidates, CompareHpDes)
+        if self._sortByTauntAtLast == true then
+            BubbleSort(self, candidates, CompareTaunt)
+        end
+        ShrinkEntity (candidates, self.maxTargetNum)
+        return
+    end
+    
+    
+    if self._postFilter == CS.Torappu.Battle.FilterUtil.FilterType.MAX_HP_DES then
+        if self.isAlly == true and self._excludeOwner == true and self.owner ~= nil then
+            candidates:Remove(self.owner)
+        end
+        BubbleSort(self, candidates, CompareMaxHpDes)
+        if self._sortByTauntAtLast == true then
+            BubbleSort(self, candidates, CompareTaunt)
+        end
+        ShrinkEntity (candidates, self.maxTargetNum)
+        return
+    end
+
+    
+    if self._postFilter == CS.Torappu.Battle.FilterUtil.FilterType.MAX_HP_ASC then
+        if self.isAlly == true and self._excludeOwner == true and self.owner ~= nil then
+            candidates:Remove(self.owner)
+        end
+        BubbleSort(self, candidates, CompareMaxHpAsc)
         if self._sortByTauntAtLast == true then
             BubbleSort(self, candidates, CompareTaunt)
         end
