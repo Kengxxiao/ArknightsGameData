@@ -6784,6 +6784,34 @@
         }
       ]
     },
+    "char_336_folivo": {
+      "charId": "char_336_folivo",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition[041]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_limit[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_344_beewax": {
       "charId": "char_344_beewax",
       "maxManpower": 8640000,
@@ -7570,6 +7598,18 @@
       "roomType": "MANUFACTURE",
       "description": "進駐製造站後，生產力首小時<@cc.vup>+15%</>，此後每小時<@cc.vup>+2%</>，最終達到<@cc.vup>+25%</>"
     },
+    "manu_prod_spd_addition[041]": {
+      "buffId": "manu_prod_spd_addition[041]",
+      "buffName": "延時攝影",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add2",
+      "sortId": 3535,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "進駐製造站後，生產力首小時<@cc.vup>+15%</>，此後每小時<@cc.vup>+2%</>，最終達到<@cc.vup>+25%</>"
+    },
     "manu_prod_spd&limit[000]": {
       "buffId": "manu_prod_spd&limit[000]",
       "buffName": "倉庫整備·α",
@@ -7653,6 +7693,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "進駐製造站時，生產<@cc.kw>作戰記錄</>類配方時，心情每小時消耗<@cc.vup>-0.25</>"
+    },
+    "manu_formula_limit[000]": {
+      "buffId": "manu_formula_limit[000]",
+      "buffName": "剪輯·α",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp&limit",
+      "sortId": 3403,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "進駐製造站時，生產<@cc.kw>作戰記錄</>類配方時，倉庫容量上限<@cc.vup>+12</>"
     },
     "manu_formula_limit[010]": {
       "buffId": "manu_formula_limit[010]",
@@ -19242,6 +19294,374 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_office_table_01": {
+        "id": "furni_office_table_01",
+        "name": "標配辦公桌",
+        "iconId": "furni_office_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 3,
+        "height": 4,
+        "comfort": 510,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "羅德島標準辦公桌，配有雙顯示幕、機械鍵盤、文件收納架。“輕鬆愜意”的人事辦公生活開始了，注意死線，死線，死線！",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_chair_01": {
+        "id": "furni_office_chair_01",
+        "name": "標配辦公椅",
+        "iconId": "furni_office_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 115,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "羅德島標準辦公椅。輕輕躺下去，眼睛一睜一閉，一天就這樣結束了。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_storageBox_01": {
+        "id": "furni_office_storageBox_01",
+        "name": "可動收納櫃",
+        "iconId": "furni_office_storageBox_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 3,
+        "height": 3,
+        "comfort": 165,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "帶滾輪的可移動收納櫃。會放資料或零食，但更多的是零食。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_carpet_01": {
+        "id": "furni_office_carpet_01",
+        "name": "黑色辦公地毯",
+        "iconId": "furni_office_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 16,
+        "depth": 10,
+        "height": 1,
+        "comfort": 210,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "量產的黑色地毯，羅德島到處都是。據統計，80%的地毯清洗原因都與飲料有關（損毀另計）。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_waterDispenser_01": {
+        "id": "furni_office_waterDispenser_01",
+        "name": "桶裝飲水機",
+        "iconId": "furni_office_waterDispenser_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 165,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "隨處可見的桶裝飲水機。為同事更換水桶可以贏得大量好感，但切記量力而行。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_column_01": {
+        "id": "furni_office_column_01",
+        "name": "支撐柱",
+        "iconId": "furni_office_column_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 10,
+        "comfort": 290,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "支撐結構的承重柱，偶爾能當作隔斷使用。有些幹員會以拳擊柱舒緩壓力，請選擇合適的柱子！",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_directionSign_01": {
+        "id": "furni_office_directionSign_01",
+        "name": "工位指示板",
+        "iconId": "furni_office_directionSign_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 3,
+        "comfort": 200,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "指示人事辦公室工位位置的橫版。人事部的設計能手為同事設計了精巧的指路橫版，可惜同事們從來不看。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_sign_01": {
+        "id": "furni_office_sign_01",
+        "name": "樓層指示牌",
+        "iconId": "furni_office_sign_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 2,
+        "comfort": 115,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "指示人事辦公室所在樓層的牌子。此處左轉電梯、扶梯、樓梯，以及一切去往其他樓層的東西。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_spotlight_01": {
+        "id": "furni_office_spotlight_01",
+        "name": "人事辦公室光源",
+        "iconId": "furni_office_spotlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 2,
+        "comfort": 290,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "辦公室的輔助光源。穩定而豐富的光照能夠激起人們的動力，還有睡意。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_downlight_01": {
+        "id": "furni_office_downlight_01",
+        "name": "工位光源",
+        "iconId": "furni_office_downlight_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 1,
+        "comfort": 45,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "天花板上的工位光源。由於發生過引燃幹員的事件，請在設置時儘量避免直射任何易燃物，尤其是毛茸茸的尾巴。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_screen_01": {
+        "id": "furni_office_screen_01",
+        "name": "隔斷用透明屏風",
+        "iconId": "furni_office_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 7,
+        "comfort": 285,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "用於區分區域的屏風。經常與一些大型辦公用品相伴，效果拔群。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_printer_01": {
+        "id": "furni_office_printer_01",
+        "name": "超載印表機",
+        "iconId": "furni_office_printer_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "經常被維修的印表機。由於總是滿負荷運轉，這台印表機早晚要爆炸。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_sofaStool_01": {
+        "id": "furni_office_sofaStool_01",
+        "name": "等位沙發凳",
+        "iconId": "furni_office_sofaStool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 120,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "辦公室隨處可見的矮腳沙發凳。列印大量材料時用來落腳的地方，有時能在這裡獲得些零碎的八卦。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_houseplant_01": {
+        "id": "furni_office_houseplant_01",
+        "name": "尖銳的觀賞植物",
+        "iconId": "furni_office_houseplant_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 150,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "觀賞性極佳的綠色植物。由於銳齒邊緣能夠切傷任何觸碰它的人，這盆植物得以免遭魔手存活至今。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_wallpaper_01": {
+        "id": "furni_office_wallpaper_01",
+        "name": "人事辦公室壁紙",
+        "iconId": "furni_office_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "羅德島人事辦公室專用壁紙。位置、區劃、周邊情況，標注的一清二楚。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_office_floor_01": {
+        "id": "furni_office_floor_01",
+        "name": "人事辦公室地板",
+        "iconId": "furni_office_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "羅德島普遍使用的地板。童心未泯的幹員會踩著黃線走，然後撞到不遠處的東西。",
+        "obtainApproach": "部分關卡幸運掉落",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_bolivar_sofa_01": {
         "id": "furni_bolivar_sofa_01",
         "name": "部落風沙發",
@@ -19556,6 +19976,52 @@
         "comfort": 225,
         "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
         "description": "使用部落技術製作的地磚，堅固耐用。客人坐泥地，朋友躺地磚。",
+        "obtainApproach": "活動獲得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_MA2020_rabbit_01": {
+        "id": "furni_MA2020_rabbit_01",
+        "name": "兔兔搗藥機",
+        "iconId": "furni_MA2020_rabbit_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 130,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "一座全自動兔兔搗藥機。在沒有人注視的時候，這款可愛人造機器會以靜音模式快速搗碎石磨中的藥材。",
+        "obtainApproach": "活動獲得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_oct1st_seating_01": {
+        "id": "furni_oct1st_seating_01",
+        "name": "假日搖椅",
+        "iconId": "furni_oct1st_seating_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 6,
+        "comfort": 180,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "舒適的卵形搖椅，完全無法拒絕的誘惑。和懶人沙發、隔音睡眠艙一起主宰羅德島幹員們的假日時光。",
         "obtainApproach": "活動獲得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -20936,6 +21402,29 @@
         "comfort": 75,
         "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
         "description": "某支傳奇雇傭兵隊伍使用的旗幟。這支雇傭兵隊伍在一次危機合約任務中全軍覆沒，他們的旗幟則由天災信使們復原以紀念。",
+        "obtainApproach": "危機合約賽季獎勵",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_contract_s2_01": {
+        "id": "furni_contract_s2_01",
+        "name": "利刃之旗",
+        "iconId": "furni_contract_s2_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 75,
+        "usage": "能夠用來裝扮宿舍，提高宿舍的氛圍",
+        "description": "印上某個失落武器印記的旗幟。武器本身早已損毀，其樣式則被追隨者們復原以紀念。",
         "obtainApproach": "危機合約賽季獎勵",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -24425,6 +24914,123 @@
           }
         ]
       },
+      "furni_set_office": {
+        "id": "furni_set_office",
+        "name": "羅德島人事辦公室",
+        "desc": "羅德島人事部門使用的辦公室之一，每日都在為羅德島篩選合適幹員。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_office_table_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_chair_01",
+            "pos0": 2,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_chair_01",
+            "pos0": 9,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_storageBox_01",
+            "pos0": 13,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_carpet_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_waterDispenser_01",
+            "pos0": 19,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_column_01",
+            "pos0": 20,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_office_directionSign_01",
+            "pos0": 17,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_office_sign_01",
+            "pos0": 20,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_office_spotlight_01",
+            "pos0": 0,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 2,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 7,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 12,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 21,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 26,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_downlight_01",
+            "pos0": 31,
+            "pos1": 8
+          },
+          {
+            "furnitureId": "furni_office_screen_01",
+            "pos0": 26,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_office_printer_01",
+            "pos0": 31,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_sofaStool_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_houseplant_01",
+            "pos0": 32,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_office_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_office_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
+      },
       "furni_set_bolivar": {
         "id": "furni_set_bolivar",
         "name": "部落風情旅舍",
@@ -25874,6 +26480,58 @@
           "furni_nightView_floor_01",
           "furni_nightView_ceilingLight1_01",
           "furni_nightView_ceilingLight2_01"
+        ]
+      },
+      "furni_set_office_1": {
+        "id": "furni_set_office_1",
+        "name": "辦公嗎？",
+        "themeId": "furni_set_office",
+        "comfort": 260,
+        "count": 4,
+        "furniture": [
+          "furni_office_table_01",
+          "furni_office_chair_01",
+          "furni_office_storageBox_01",
+          "furni_office_carpet_01"
+        ]
+      },
+      "furni_set_office_2": {
+        "id": "furni_set_office_2",
+        "name": "搭訕嗎？",
+        "themeId": "furni_set_office",
+        "comfort": 165,
+        "count": 4,
+        "furniture": [
+          "furni_office_waterDispenser_01",
+          "furni_office_column_01",
+          "furni_office_directionSign_01",
+          "furni_office_sign_01"
+        ]
+      },
+      "furni_set_office_3": {
+        "id": "furni_set_office_3",
+        "name": "休息嗎？",
+        "themeId": "furni_set_office",
+        "comfort": 170,
+        "count": 4,
+        "furniture": [
+          "furni_office_screen_01",
+          "furni_office_printer_01",
+          "furni_office_sofaStool_01",
+          "furni_office_houseplant_01"
+        ]
+      },
+      "furni_set_office_4": {
+        "id": "furni_set_office_4",
+        "name": "裝修嗎？",
+        "themeId": "furni_set_office",
+        "comfort": 230,
+        "count": 4,
+        "furniture": [
+          "furni_office_wallpaper_01",
+          "furni_office_floor_01",
+          "furni_office_spotlight_01",
+          "furni_office_downlight_01"
         ]
       },
       "furni_set_bolivar_1": {
