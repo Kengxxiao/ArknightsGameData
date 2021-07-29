@@ -1,0 +1,690 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 异域同族
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Delay(time=1)]
+[name="芳汀"]  武器可靠性證明？
+[name="芳汀"]  那是什麼？
+[name="芳汀"]  需要我本人帶著武器，去工坊接受檢查，然後拿工匠的簽名回來？
+[name="芳汀"]  使用自帶武器，竟然還要走這種流程啊......嘖，聽起來就好麻煩。
+[name="芳汀"]  老師就不能通融一下，直接幫我簽掉不就好了。
+[name="芳汀"]  不可以？這是羅德島的規矩？
+[name="芳汀"]  真沒意思。好吧，好吧，如果您堅持的話，我就自己去一趟吧。
+[name="芳汀"]  初來乍到，我也不想這麼快就惹那位凱爾希醫生生氣。
+[Dialog]
+[Delay(time=0.7)]
+[name="芳汀"]  那就一會見了，老師。
+[Dialog]
+[PlaySound(key="$d_gen_walk_n",volume=0.9)]//脚步声
+[Delay(time=2)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$farce_intro", key="$farce_loop", volume=0.4)]
+[Delay(time=1)]
+羅德島艦船，第三維修工坊，早晨
+[PlaySound(key="$doorknockquite")]//敲门
+[Delay(time=1)]
+[Dialog]
+[PlaySound(key="$d_gen_dooropen",volume=0.6)]//开门
+[Delay(time=0.5)]
+[Character(name="char_271_arene_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="芳汀"]  有沒有人在？
+[Character]
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_211_adnach_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="？？？"]  您好，現在工坊不營業，五位工匠都去參加維修競技比賽了。
+[name="？？？"]  有需要的話請下午三點再來。
+[Character(name="char_271_arene_1#6")]
+[name="芳汀"]  維修競技？那是什麼怪比賽。
+[name="芳汀"]  要先把武器弄壞再比怎麼維修嗎，還是看看誰把刀柄擦得更亮？
+[Character(name="char_211_adnach_1")]
+[name="？？？"]  很遺憾，只是普通的針對戰場上半損毀武器的修繕和改良比賽。
+[Character(name="char_211_adnach_1#3")]
+[name="？？？"]  但如果真的能將武器擦到足夠亮，讓這變成一種攻擊手段，或許也不是不能取得優勝。
+[Character(name="char_211_adnach_1#2")]
+[name="？？？"]  ......嗯？好像是個不錯的主意。下次我試試。
+[Character(name="char_271_arene_1#4")]
+[name="芳汀"]  哈，怪人。隨便吧。
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  我可不想為了這麼點事還要再跑一趟，沒有工匠在，但這裡不是還有你嗎。
+[name="芳汀"]  反正也只是例行公事的檢查，別那麼較真。怎麼樣，這位朋友，幫我簡單看一下，然後填個證明就行。
+[Dialog]
+[Delay(time=0.7)]
+[PlaySound(key="$g_card_10cardsrelease")]//拿出纸
+[Delay(time=0.7)]
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#3",focus=2)]
+[name="？？？"]  武器可靠性證明？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  沒錯。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#6",focus=2)]
+[name="？？？"]  武器可靠性證明需要兩位工匠同時進行檢查後簽字確認。
+[name="？？？"]  我算是還在實習的助手，就算簽上自己的名字也不管用，幫不了你這個忙。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  需要兩個人簽字，這裡有你我兩個人，這不是正好嗎。
+[name="芳汀"]  我自己的法杖，自己最清楚，不會有什麼問題的。只要不出事，就沒人會知道，沒人知道，就是沒有問題，不是嗎。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#3",focus=2)]
+[name="？？？"]  啊這個想法有意思。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="？？？"]  但還是別小看這裡的其他人會比較好哦，特別是比較嚴肅的那幾位。
+[name="？？？"]  萬一出了事，就是重大事故了，別說我們，連不在場的工匠都要一起受罰。
+[Character(name="char_271_arene_1#7",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  嘖，死板，麻煩。
+[Character(name="char_271_arene_1#7",name2="char_211_adnach_1#2",focus=2)]
+[name="？？？"]  但是有效。有些人就是想不起來維護武器。
+[name="？？？"]  總比在戰場上換弦要來得輕鬆。
+[Character(name="char_271_arene_1#7",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  哪會有那種傻子？
+[Dialog]
+[Character]
+[Delay(time=0.5)]
+[Character(name="char_271_arene_1#4")]
+[name="芳汀"]  算了。既然如此，那就——
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  只請你幫忙看下武器。
+[name="芳汀"]  這還是可以的吧。總不能真的白跑一趟，那也有點讓人不爽。
+[Character(name="char_211_adnach_1")]
+[name="？？？"]  啊......也好。稍等。
+[name="？？？"]  等我擰好這最後一顆螺絲——好了。
+[Dialog]
+[Character]
+[Delay(time=1)]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=1)]
+[Character(name="char_271_arene_1#4",name2="char_211_adnach_1",focus=2)]
+[name="？？？"]  久等了。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="？？？"]  ......嗯，看你的表情，看來你還是在盤算什麼，並沒有打算徹底放棄呢。
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  這是說什麼，我可聽不明白。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  來，給你。我的法杖。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#6",focus=2)]
+[name="？？？"]  哎.....算了。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="？？？"]  好吧，那我來檢查一下。
+[name="？？？"]  （小聲）只要小心一些，別出事故，應該就沒關係了吧......
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  就拜託你啦。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="？？？"]  武器的檢查會需要一些時間，要麻煩你在這裡稍微等一下。
+[name="？？？"]  參觀的話可以隨意，但工坊裡的東西最好還是不要隨便碰，總有些工匠師傅喜歡做些比較危險的東西......
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="？？？"]  你明白吧？那種做到一半的半成品只會更危險。
+[name="？？？"]  而且，這裡還有不少混雜著源石成分的礦石......就算你是感染者，也最好小心一些。
+[Character(name="char_271_arene_1#4",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  不勞擔心。我還沒有那麼莽撞。
+[Character(name="char_271_arene_1#6")]
+[name="芳汀"]  ......等等。
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  怪了，我有提過自己是感染者這件事嗎？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="？？？"]  沒有。但要看出來不難。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  說說，怎麼看出來的？很明顯嗎？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#6",focus=2)]
+[name="？？？"]  嗯......解釋起來有點難，我也說不清。
+[name="？？？"]  就靠多多觀察吧，從大家的神情、動作，還有行為邏輯上，都可以看出很多東西。
+[Character(name="char_271_arene_1#4",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  聽起來像是在糊弄人。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="？？？"]  是真的啦。
+[Dialog]
+[Character]
+[Delay(time=1)]
+[Character(name="char_211_adnach_1")]
+[name="？？？"]  只有這根法杖要檢查嗎？如果還有其他的，我也可以幫你看一下。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  沒有了。
+[name="芳汀"]  很遺憾，我沒有守護銃需要檢查。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="？？？"]  真巧，我也沒有。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  ......
+[Character(name="char_271_arene_1#6",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  你這人真奇怪，有點意思。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="？？？"]  嗯......謝謝誇獎？
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  沒誇你。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  這根法杖沒有使用上的問題。隨便看看就行了。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="？？？"]  還是要仔細點的。
+[dialog]
+[Character(name="char_211_adnach_1")]
+[PlaySound(key="$dooropenquite")]//拿法杖的声音
+[Delay(time=1)]
+[Character(name="char_211_adnach_1#3")]
+[name="？？？"]  嗯......材質很高端呢。
+[name="？？？"]  法杖上懸掛著的東西也是施法源嗎？
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  是。不過更多是個人興趣，能打人。
+[Character(name="char_211_adnach_1")]
+[name="？？？"]  那也挺好的，近身戰會很有利。
+[Character]
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  工匠，怎麼稱呼？
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  我可還算不上工匠啊。
+[name="安德切爾"]  預備行動組A4小隊的成員，安德切爾，順帶在這裡兼職當學徒。
+[name="安德切爾"] 你怎麼稱呼？
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  芳汀。
+[Character(name="char_211_adnach_1#2")]
+[name="安德切爾"]  聽上去很適合你呢。
+[Character]
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_211_adnach_1")]
+[PlaySound(key="$dooropenquite")]//拿法杖的声音
+[Delay(time=1)]
+[name="安德切爾"]  嗯......主要施術單元沒有損傷，下面懸掛的施術源表面也沒有明顯的裂痕或破碎痕跡。
+[name="安德切爾"]  看起來狀態不錯。
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  嗯哼，我說過了，不會有什麼問題。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  那接下來，能請你用法杖驅動一下自己的源石技藝嗎？這樣我可以從運行反饋裡確認法杖的運行狀態。
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  就這麼施術？我的源石技藝不怎麼平和哦。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#3",focus=2)]
+[name="安德切爾"]  哦，能簡單描述下類型嗎？
+[Character(name="char_271_arene_1#7")]
+[name="芳汀"]  分解、毒素。
+[Delay(time=0.8)]
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#3",focus=2)]
+[name="安德切爾"]  嗚哇，聽起來確實挺危險的。
+[name="安德切爾"]  那就把法杖放在旁邊的透明櫃子裡，然後把手從櫃子旁的入口伸進去，使用一下能力就好。
+[name="安德切爾"]  這樣就算你的能力有強揮發性，也完全不用擔心。
+[name="安德切爾"]  是不是很方便？
+[Character(name="char_271_arene_1#4",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  好煩......
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  行，好，就這樣吧。
+[Dialog]
+[PlaySound(key="$doorclosequite")]//放物品
+[Delay(time=1)]
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  可以了？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  可以了，我操作下機器。
+[name="安德切爾"]  如果感到腕部受到壓迫，請不要在意，那是正常現象。
+[PlaySound(key="$sheildimpact",volume=0.7)]//机械音
+[Delay(time=1)]
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  好了！
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="安德切爾"]  現在可以使用你的源石技藝啦，不用擔心會傷到我。
+[Character]
+[Dialog]
+[Character(name="char_271_arene_1#7",block=true)]
+[name="芳汀"]  誰擔心了？
+[Character(name="char_271_arene_1",block=true)]
+[name="芳汀"]  （使用源石技藝）
+[PlaySound(key="$e_atk_magic_m",volume=0.8)]//法术音
+[delay(time=2)]
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="安德切爾"]  好了，完成了！
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  接下來就全是我的工作了，請把法杖交給我，然後到旁邊去休息一下。
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  哦。
+[PlaySound(key="$d_gen_walk_n")]//走路
+[Character]
+[Dialog]
+[Delay(time=2)]
+[Character(name="char_271_arene_1#6")]
+[name="芳汀"]  我還以為薩科塔人都只對銃和弩感興趣呢，看你好像對法杖也很熟悉，域外的薩科塔都是這樣嗎？
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  只是帶我的鐵錘師傅擅長維護鍛造法杖，小隊裡也有朋友的武器需要保養。
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  擅長做法杖，代號卻叫鐵錘？
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  是這樣的。
+[name="安德切爾"]  師傅們起名隨意的很，我第一次來實習的時候也愣了半天。
+[name="安德切爾"]  喏，師傅們的工位牌都掛那裡。
+[name="安德切爾"]  你要是感興趣可以隨便看。
+[Character(name="char_271_arene_1#4")]
+[name="芳汀"]  ......
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  那我就不客氣了。
+[Character]
+[Dialog]
+[Delay(time=0.5)]
+[Character(name="char_271_arene_1")]
+[Dialog]
+[Delay(time=1)]
+[name="芳汀"] （第三維修工坊工匠名單）
+[name="芳汀"] （鐵錘、錫罐、石頭、毀盾、棄械）
+[name="芳汀"] （這也太隨意了......）
+[Character(name="char_271_arene_1#4")]
+[name="芳汀"] （不過，這或許會是一個好機會......）
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  工匠們都要把自己的簽名鑄在工牌上嗎？
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  怎麼會。
+[name="安德切爾"]  那只是師傅們一時賭氣的產物。
+[name="安德切爾"]  有一天他們在工藝上出了點爭執，然後所有人都用自己熟悉的工藝給打了塊工牌和別人比試。
+[name="安德切爾"]  消了氣之後，大家都覺得這還挺好玩，所以就約定在工坊裡用自己做的工牌，外出的時候用公司配發的統一工牌。
+[Character(name="char_211_adnach_1#2")]
+[name="安德切爾"]  有意思吧。
+[Character(name="char_271_arene_1#4")]
+[name="芳汀"] 很有......意思。
+[Dialog]
+[Character(name="char_271_arene_1")]
+[Delay(time=1)]
+[name="芳汀"] （每個人的簽名都在上面。）
+[name="芳汀"] （全是手寫。）
+[name="芳汀"]（不錯。能省我不少事情，只要隨便挑兩個弄到手......）
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]（偷瞄）
+[Delay(time=1)]
+[name="芳汀"]（哈，時機正好。）
+[Dialog]
+[Character(name="char_271_arene_1#7")]
+[PlaySound(key="$tactfulboost",volume=0.6)]
+[name="芳汀"]（拓印......)
+[Delay(time=1)]
+[Character(name="char_271_arene_1")]
+[name="芳汀"](行了。源石技藝還真便利。）
+[Character(name="char_271_arene_1#6")]
+[name="芳汀"]（嗯？這個簽名，還是拉特蘭語的。）
+[Dialog]
+[Character]
+[Delay(time=1)]
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  安德切爾，這個工匠是？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  嗯？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="安德切爾"]  哦，那是棄械師傅。
+[name="安德切爾"]  從拉特蘭來，和我們一樣。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  但師傅從不做銃械相關的東西，只喜歡打劍。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  怎麼，難道他也沒有守護銃？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  守護銃師傅還是有的啦，師傅只是不喜歡銃。
+[name="安德切爾"]  聽說他把銃留在了拉特蘭的家中，再也沒有回去過。
+[CameraShake(duration=1, xstrength=4, ystrength=4, vibrato=20, randomness=20, fadeout=true)]
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#5",focus=2)]
+[name="安德切爾"]  “那個到處都是彈殼的地方，我見了就頭疼。”
+[Delay(time=1)]
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  師傅是這麼說的。
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  說的不錯。
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  我有預感，我會和這個人合得來。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#6",focus=2)]
+[name="安德切爾"]  唉，可惜師傅因為這事和家裡人鬧翻了，拉特蘭都不方便回去。
+[Character(name="char_271_arene_1#4",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  如果那位師傅真的像你說的那樣討厭銃，在拉特蘭生活，估計不會有太多美好回憶吧。
+[name="芳汀"]  即便如此，也還是會想回去嗎？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  拉特蘭真的有這麼值得懷念？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#3",focus=2)]
+[name="安德切爾"]  這麼一說，這個問題我好像沒想過。
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  那麼。
+[name="芳汀"]  你呢，你懷念拉特蘭嗎？
+[Delay(time=1)]
+[Character]
+[Dialog]
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  嗯......很難說。
+[name="安德切爾"]  ......
+[name="安德切爾"]  我很久以前就不在拉特蘭生活了。
+[name="安德切爾"]  因為光環的原因。
+[name="安德切爾"]  而在之後又得了礦石病，就更加沒法回去了。
+[Character(name="char_271_arene_1#6",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  所以，你的光環位置......不是因為礦石病？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  是啊，我天生就和別人不一樣。
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  那可......真慘。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  因為小時候爸媽總是笑著這樣說，總是誇獎我，所以我到現在都覺得這確實是件幸運的事。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="安德切爾"]  天生就與眾不同，聽起來就很帥氣吧？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#6",focus=2)]
+[name="安德切爾"]  啊當然，這只是玩笑話。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  不必謙虛。你確實是個與眾不同的怪人。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#3",focus=2)]
+[name="安德切爾"]  是嗎？其實我覺得自己還蠻普通的啊......
+[name="安德切爾"]  和其他薩科塔人都差不多，共通點很多。
+[Character(name="char_271_arene_1#6",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  比如說？什麼共通點？
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  比如......嗯，比如我也戴不上套頭帽。
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  ......
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_271_arene_1#2")]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="芳汀"]  哈哈哈哈哈哈哈！
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  咳咳 ，嗯，是，確實。
+[name="芳汀"]  那東西戴上就像是把人裹在沒縫的蛋裡一樣，噁心。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  除了那些專業訓練過的傢伙，比如公證所還有教宗騎士那群人，還有一些戰鬥狂之外，沒多少薩科塔人能忍受那個吧。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  是這樣沒錯。
+[name="安德切爾"]  總之，大概是因為光環的原因吧，我沒能通過持銃的資格審查，在那之後沒多久我們一家就離開拉特蘭了。
+[name="安德切爾"]  礦石病也是在之後才染上的。
+[name="安德切爾"]  拉特蘭的土地不接納感染者，你在感染後，也沒再回去過吧？
+[Character(name="char_271_arene_1#5",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  ......是。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  所以，我對拉特蘭......並不是很懷念。
+[name="安德切爾"]  小時候發生的許多事情我都不太記得了。
+[name="安德切爾"]  ......
+[Character]
+[Dialog]
+[Delay(time=0.8)]
+[Character(name="char_211_adnach_1#2")]
+[name="安德切爾"]  啊，不過我還記得街角的若望師傅！
+[name="安德切爾"]  他教會了我做甜點，在我走的時候還把店裡所有甜點的製作方式印成圖冊送給我了！
+[Character(name="char_271_arene_1#4")]
+[name="芳汀"]  （嘖......來了，薩科塔們逃不過的甜食。）
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#6",focus=2)]
+[name="安德切爾"]  如果我沒在搬家的時候丟失那本圖冊的話，唉。
+[Character(name="char_271_arene_1#5")]
+[name="芳汀"]  （每年父母都會給我準備一個大蛋糕，他們知道我吃不下，卻還是把我一個人留在家裡，對付那個，甜到發膩的糖塊。）
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="安德切爾"]  但至少，我可以把彈頭瑪芬做得和若望師傅的瑪芬一絲不差。
+[name="安德切爾"]  我到現在還記得甜點店裡的麥香味。
+[Character(name="char_271_arene_1#7")]
+[name="芳汀"]  （我也記得很清楚，香味，每次聞到就覺得喉嚨不舒服。）
+[Dialog]
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  ......
+[Delay(time=1)]
+[Character(name="char_271_arene_1#7",name2="char_211_adnach_1#3",focus=2)]
+[name="安德切爾"]  咦，原來你不喜歡甜點啊。
+[name="安德切爾"]  這還是挺少見的，我頭一次見到不喜歡甜點的拉特蘭人。
+[Character(name="char_271_arene_1#6",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  ......又是你看出來的？
+[Character(name="char_271_arene_1#6",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  嗯。
+[Character(name="char_271_arene_1#6",name2="char_211_adnach_1#6",focus=2)]
+[name="安德切爾"]  一般我不太會這樣直接說出來，因為有很多人會不太開心，有時我就乾脆不說話了。
+[name="安德切爾"]  不過，我覺得你看起來不像是很在意這些。
+[Character(name="char_271_arene_1#4",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  行吧，確實。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  我不在意哦。怪人總比普通人有意思。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  不喜歡甜點的話，那你可比我要怪多了。
+[name="安德切爾"]  下次我可以嘗試做點不太甜的點心，到時候再喊你來嘗嘗。
+[name="安德切爾"]  也不知道老師傅現在還好嗎......
+[name="安德切爾"]  一會或許可以請後勤的信使們幫個忙。
+[Character]
+[Dialog]
+[Delay(time=1)]
+[Character(name="char_271_arene_1#4")]
+[name="芳汀"]  ......
+[Dialog]
+[Delay(time=1)]
+[name="芳汀"]  我明白了一件事。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#3",focus=2)]
+[name="安德切爾"]  啊？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  你是個道道地地的拉特蘭薩科塔。
+[name="芳汀"]  雖然持不了銃，光環也不正。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  嗯......
+[name="安德切爾"]  你說得沒錯。
+[name="安德切爾"]  我在那裡存有回憶，不能回去的只是城市，不是家。故鄉是不論何時都可以觸碰的東西。
+[name="安德切爾"]  城際間的來回、書信、傳訊、照片。
+[name="安德切爾"]  如果真的想懷念，不是很方便嗎。
+[Dialog]
+[Character]
+[name="？？？"]  這話說得還有點道理。
+[name="？？？"]  但有人就是喜歡聞聞氣味，摸摸土牆，來個故地重遊，不然就要得上思鄉症了。
+[name="？？？"]  雖然我都無所謂就是了。
+[Character]
+[PlaySound(key="$d_gen_walk_n",volume=0.9)]//脚步声
+[Character(name="char_302_glaze_1",fadetime=1,block=true)]
+[Delay(time=2)]
+[name="？？？"]  只要你們分享甜點的時候帶上我就行，不太甜的我也吃。
+[Delay(time=1)]
+[Dialog]
+[Character(name="char_302_glaze_1",name2="char_211_adnach_1#2",focus=2)]
+[name="安德切爾"]  你好，安比爾。
+[Character(name="char_302_glaze_1#2",name2="char_211_adnach_1",focus=1)]
+[name="安比爾"]  好啊。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1#2",focus=2)]
+[name="安比爾"]  喔，你也好，新來的。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=2)]
+[name="安比爾"]  我該叫你什麼，小帥哥？
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=1)]
+[name="芳汀"]  芳汀。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1#2",focus=2)]
+[name="安比爾"]  你好芳汀。
+[Delay(time=0.5)]
+[Character(name="char_302_glaze_1",name2="char_211_adnach_1",focus=1)]
+[name="安比爾"]  安德切爾，還是老樣子，槍就拜託你啦。
+[Character(name="char_302_glaze_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  你放那兒就好，我還在處理芳汀的武器。
+[Character(name="char_302_glaze_1",name2="char_211_adnach_1",focus=1)]
+[name="安比爾"]  好——
+[dialog]
+[Delay(time=0.5)]
+[Character(name="char_302_glaze_1#3")]
+[name="安比爾"]  唔，什麼味道，香香的，好像不是市面上有得賣的種類......
+[Character(name="char_302_glaze_1#2")]
+[name="安比爾"]  有人塗香水了嗎？
+[Character(name="char_271_arene_1#2",name2="char_302_glaze_1",focus=1)]
+[name="芳汀"]  如果你喜歡，可以來我這裡多吸幾口。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=2)]
+[name="安比爾"]  嗯......那還是算了。
+[name="安比爾"]  總覺得沒什麼好事。
+[Delay(time=0.5)]
+[name="安比爾"]  不過啊，如果你的香氣能讓我昏睡一天的話，我倒是可以考慮一下。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1#4",focus=2)]
+[name="安比爾"]  那個成天板著臉的傢伙又要來找我“履行義務”了。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=2)]
+[name="安比爾"]  與其想辦法逃跑，還是昏迷一天比較實際。
+[name="安比爾"]  不過就他們的死腦筋程度，昏迷一天可能還不夠。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1#4",focus=2)]
+[name="安比爾"]  好煩。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=1)]
+[name="芳汀"]  板著臉的傢伙，你是說公證所的人？
+[Character(name="char_271_arene_1",name2="char_302_glaze_1#4",focus=2)]
+[name="安比爾"]  還能有誰啊。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=2)]
+[name="安比爾"]  你就不會被他們找嗎？說是要監督履行公民責任與義務什麼的。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=1)]
+[name="芳汀"]  也會。
+[Character(name="char_271_arene_1#2",name2="char_302_glaze_1",focus=1)]
+[name="芳汀"]  不過上一個在我午睡的時候突然砸我的門的傢伙，現在還在為了替我解決一些事情而四處奔走呢。
+[name="芳汀"]  雖然他們很麻煩，但他們也很擅長處理麻煩。
+[name="芳汀"]  只要用人用得好，那點麻煩不算什麼。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1#2",focus=2)]
+[name="安比爾"]  哇哦，你說話像個反派。挺不錯的嘛。
+[Character(name="char_271_arene_1#2",name2="char_302_glaze_1",focus=1)]
+[name="芳汀"]  我該說謝謝誇獎嗎？
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=2)]
+[name="安比爾"]  倒也不用。
+[Dialog]
+[PlaySound(key="$d_gen_walk_n",volume=0.9)]//脚步声
+[Delay(time=1)]
+[Character(name="char_211_adnach_1#2")]
+[name="安德切爾"]  芳汀，你的法杖已經檢查完畢了！
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  除了施術回路有些腐蝕，其他的地方都沒問題。
+[name="安德切爾"]  輕微的腐蝕不會影響到施術，但如果你要做養護，我現在也可以幫你處理一下。
+[name="安德切爾"]  下午等工匠們回來，你就可以找他們簽可靠性證明了。
+[name="安德切爾"]  （小聲）雖然你可能已經不需要了吧。
+[name="安德切爾"]  來，拿好。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  謝謝。
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  接下來是安比爾的長銃——嘿。
+[PlaySound(key="$d_gen_walk_n",volume=0.9)]//脚步声
+[Character(name="char_211_adnach_1",fadetime=0.7,block=true)]
+[dialog]
+[Delay(time=1)]
+[Character(name="char_302_glaze_1#2")]
+[name="安比爾"]  拜託啦。
+[Delay(time=0.5)]
+[Dialog]
+[Character(name="char_302_glaze_1",name2="char_271_arene_1#6",focus=2)]
+[name="芳汀"]  你......不自己調試銃嗎？
+[Character(name="char_302_glaze_1",name2="char_271_arene_1",focus=1)]
+[name="安比爾"]  調呀。
+[name="安比爾"]  但有時候就是懶得調，怎麼辦呢。
+[Character(name="char_302_glaze_1",name2="char_271_arene_1",focus=2)]
+[name="芳汀"]  那就等著它壞掉。
+[Character(name="char_302_glaze_1#4",name2="char_271_arene_1",focus=1)]
+[name="安比爾"]  這個嘛......還是不行的。
+[Character(name="char_302_glaze_1",name2="char_271_arene_1",focus=1)]
+[name="安比爾"]  沒了它就領不了薪資。
+[name="安比爾"]  沒了薪資就連偷懶的機會都不會有。
+[name="安比爾"]  我才不會做這種傻事。
+[Character(name="char_302_glaze_1",name2="char_271_arene_1#4",focus=2)]
+[name="芳汀"]  哼......你還挺正經的。
+[Character(name="char_302_glaze_1",name2="char_271_arene_1",focus=1)]
+[name="安比爾"]  如果生活裡真的可以用不上銃槍，把它放在角落裡堆灰也不是不能接受啦。
+[name="安比爾"]  哦，在拉特蘭可能是有機會的，但要是真積灰，第二天就會被不知哪裡冒出來的親戚朋友怒目瞪視，很煩。
+[Character(name="char_302_glaze_1#4",name2="char_271_arene_1",focus=1)]
+[name="安比爾"]  所以，我放棄了。
+[Dialog]
+[PlaySound(key="$d_gen_walk_n",volume=0.9)]//脚步声
+[Delay(time=1)]
+[Character]
+[Character(name="char_211_adnach_1#2",fadetime=0.5,block=true)]
+[name="安德切爾"]  安比爾，銃沒有問題。
+[Character(name="char_302_glaze_1")]
+[name="安比爾"]  本來就沒問題，上周剛校過。
+[name="安比爾"]  幫我擦一下上油就可以啦。
+[Character(name="char_211_adnach_1")]
+[name="安德切爾"]  好吧......
+[Dialog]
+[PlaySound(key="$d_gen_walk_n", volume=0.9)]
+[Character(fadetime=1,block=true)]
+[Delay(time=1)]
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=1)]
+[name="芳汀"]  這時候你是不是覺得銃帶在身邊很累贅？
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=2)]
+[name="安比爾"]  還好。
+[name="安比爾"]  辦法總會有的。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=1)]
+[name="芳汀"]  就像你離開拉特蘭，跑來這裡那樣？
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=2)]
+[name="安比爾"]  嗯？
+[dialog]
+[Delay(time=1)]
+[Character(name="char_271_arene_1",name2="char_302_glaze_1#5",focus=2)]
+[name="安比爾"]  你真的很不客氣，對剛見面的女孩子說話這麼直白，會不受歡迎的哦？
+[Character(name="char_271_arene_1#4",name2="char_302_glaze_1#5",focus=1)]
+[name="芳汀"]  那真是不好意思，你感到被冒犯了嗎？
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=2)]
+[name="安比爾"]  倒是還好。
+[Character]
+[Dialog]
+[Delay(time=0.5)]
+[Character(name="char_302_glaze_1#4")]
+[name="安比爾"]  差不多，就算是那樣吧。我的確不太適合那裡。
+[Character(name="char_302_glaze_1")]
+[name="安比爾"]  比起當個守城小工，天天被人嘮叨榮耀榮耀的，我還是更願意讓自己的錢包鼓一點。
+[name="安比爾"]  過得自在一點，舒服一點。
+[name="安比爾"]  挺好。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=1)]
+[name="芳汀"]  看來你對拉特蘭沒什麼留念。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1",focus=2)]
+[name="安比爾"]  只要過得好，哪裡都行吧。
+[name="安比爾"]  再說，也沒人規定薩科塔要一輩子待在拉特蘭啦。
+[Character(name="char_271_arene_1",name2="char_302_glaze_1#2",focus=2)]
+[name="安比爾"]  大地那麼廣，多看看嘛。
+[PlaySound(key="$d_gen_walk_n", volume=0.9)]
+[Delay(time=1)]
+[Dialog]
+[Character(name="char_211_adnach_1#2")]
+[name="安德切爾"]  槍好了安比爾！
+[Character(name="char_302_glaze_1#2",name2="char_211_adnach_1",focus=1)]
+[name="安比爾"]  謝啦。
+[name="安比爾"]  唔，比我擦得亮多了。
+[Character(name="char_302_glaze_1",name2="char_211_adnach_1",focus=1)]
+[name="安比爾"]  那你們慢慢聊，我先回去休息了，再見。
+[Character(name="char_302_glaze_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  再見！
+[Dialog]
+[Character(name="char_302_glaze_1")]
+[Delay(time=0.8)]
+[PlaySound(key="$d_gen_walk_n", volume=0.9)]
+[Character(fadetime=1,block=true)]
+[Delay(time=2)]
+[Character(name="char_271_arene_1#4",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  ......
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#2",focus=2)]
+[name="安德切爾"]  快到吃飯時間了，芳汀你還有什麼需要我幫忙的嗎？
+[name="安德切爾"]  沒有的話我要鎖工坊的門去吃飯了。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  ？
+[Delay(time=0.5)]
+[name="芳汀"]  好。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=2)]
+[name="安德切爾"]  要不要一起來？
+[Character(name="char_271_arene_1#4",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  不了，我和那位叫送葬人的公證所幹員有約，他好像有點事要通知我。
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  你說順帶把安比爾出沒的情報帶給他，他會不會賣我個人情？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#3",focus=2)]
+[name="安德切爾"]  呃？說笑？
+[Character(name="char_271_arene_1#2",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  是哦。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#6",focus=2)]
+[name="安德切爾"]  你太愛開玩笑啦......
+[name="安德切爾"]  雖然我可以看得出，但是其他人或許會產生誤會，還是稍微注意一點比較好哦。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  不勞擔心。
+[name="芳汀"]  對了，下午你還在這裡嗎？
+[Character(name="char_271_arene_1",name2="char_211_adnach_1#3",focus=2)]
+[name="安德切爾"]  嗯？我會在啊。吃完午飯我就會回來。
+[Character(name="char_271_arene_1",name2="char_211_adnach_1",focus=1)]
+[name="芳汀"]  好。
+[Dialog]
+[Delay(time=0.7)]
+[Character(name="char_271_arene_1")]
+[name="芳汀"]  你知道嗎，雖然你的觀察力確實不一般，但你還是看錯了一件事。
+[name="芳汀"]  下午我還會來的。
+[name="芳汀"]  那位棄械師傅的故事聽起來很有意思，如果是為了見他一面，再跑一趟也不是不行。
+[name="芳汀"]  那就下午再見了。
+[Dialog]
+[PlaySound(key="$d_gen_dooropen",   volume=0.9)]
+[Character(name="char_271_arene_1",fadetime=1,block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=2)]
+[PlaySound(key="$d_gen_walk_n",volume=0.9)]//脚步声
+[Delay(time=1)]
+[name="芳汀"]  我回來了，老師。
+[name="芳汀"]  當然，我當然已經去過工坊了。
+[name="芳汀"]  啊......但是這個不可以交給您。
+[name="芳汀"]  您看出來了？工坊不巧沒有人在，這上面的簽名是拓印的，不是工匠本人的簽名。
+[name="芳汀"]  唉，看來就算原本想拿這個交差，也還是會被識破啊。羅德島的博士果然很敏銳，安德切爾那傢伙倒是沒說錯。
+[name="芳汀"]  放心，下午我還會再去一趟的。再給我一份證明書吧，等工匠們參加完比賽，我就可以問他們要真正的簽名了。
+[name="芳汀"]  嗯？我突然變老實了？
+[name="芳汀"]  哈哈，別這麼說嘛，我一直都很聽老師的話，不是嗎。
+[name="芳汀"]  哎，老師，您那是什麼表情啊。
+[name="芳汀"]  轉變心意的理由？
+[name="芳汀"]  嗯......
+[Dialog]
+[Delay(time=1)]
+[name="芳汀"]  發現了不少有意思的人，為此花費一些時間也不錯。
+[name="芳汀"]  怎麼樣。
+[name="芳汀"]  這聽起來算不算是一個好理由？
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Image]
