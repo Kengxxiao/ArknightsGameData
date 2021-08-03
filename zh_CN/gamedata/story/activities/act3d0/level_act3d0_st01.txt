@@ -38,8 +38,8 @@
 [name=""]   汐斯塔
 [Blocker(a=0, fadetime=2, block=false)]
 [Image(image="ac3_title2", fadetime=2)]
-[Background(image="bg_beach",screenadapt="coverall",x=-200, y=0,block=true)]
-[BackgroundTween(image="bg_beach" ,screenadapt="coverall",xFrom=-200, yFrom=0, xTo=200, yTo=0,duration=25)]
+[largebg(imagegroup="bg_beach_1/bg_beach_2", solidwidth="920/920", solidheight=720,x=-180)]
+[largebgtween(xFrom=-180,xTo=-720,  duration=25, ease="1", block=false)]
 [playsound(key="$d_gen_transmissionget", volume=0.4)]
 [name="广播"]   亲爱的旅客，您好，欢迎在一年一度的黑曜石节期间来到汐斯塔市。
 [name="广播"]   既然选择了来我们汐斯塔度假消暑，那么这座城市就一定不会让您失望！
@@ -52,7 +52,7 @@
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Image]
 [Character]
-[Background]
+[largebg]
 [Blocker(a=0, fadetime=0.6, block=false)]
 [Background(image="bg_sunnytown_2",x=-80, y=0, xScale=1.1, yScale=1.1,block=true)]
 [BackgroundTween(image="bg_sunnytown_2", xFrom=-80, yFrom=0, xTo=20, yTo=0,duration=15)]
@@ -260,7 +260,7 @@
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [Character]
-[Background(image="bg_beach",screenadapt="coverall",x=-200, y=0,block=true)]
+[largebg(imagegroup="bg_beach_1/bg_beach_2", solidwidth="920/920", solidheight=720,x=-180)]
 [Blocker(a=0, fadetime=2, block=true)]
 [Character(name="avg_npc_021")]
 [name="男游客"]   一杯芒果马丁尼冰沙。
@@ -326,7 +326,7 @@
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [stopmusic(fadetime=1)]
 [Character]
-[Background(image="bg_beach",screenadapt="coverall",x=-200, y=0,block=true)]
+[largebg(imagegroup="bg_beach_1/bg_beach_2", solidwidth="920/920", solidheight=720,x=-180)]
 [Blocker(a=0, fadetime=2, block=true)]
 [PlayMusic(intro="$path_intro", key="$path_loop", volume=0.8, crossfade=1.5)]
 [Character(name="avg_npc_021")]
@@ -382,6 +382,7 @@
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_340_shwaz_2#1")]
 [name="？？？"]   怎么样，喜欢这个新兴的城市吗？
 [name="？？？"]   我最喜欢的就是她这样，稚气未脱但是蓬勃成长的样子。
 [Decision(options="你是本地人吗？ ",values="1")]
@@ -389,6 +390,8 @@
 [name="？？？"]   我并不是在这里土生土长，但是这里现在就是我的家。
 [name="？？？"]   为了守护这里，我可以付出很多东西。
 [name="？？？"]   不管是哪里的人，对于家人的感情都是一样的不是吗？
+[dialog]
+[character]
 [Character(name="avg_npc_020")]
 [name="保镖"]   头儿，克洛宁先生找你。
 [Character(name="char_340_shwaz_2#2",name2="avg_npc_020",focus=1)]
