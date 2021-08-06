@@ -3,7 +3,9 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/CharacterShowViewHotfixer"
+  "HotFixes/CharacterShowViewHotfixer",
+  "HotFixes/AbilityParallelGroupHotfixer",
+  "HotFixes/AudioOptionsHotfixer"
 };
 
 return list;
