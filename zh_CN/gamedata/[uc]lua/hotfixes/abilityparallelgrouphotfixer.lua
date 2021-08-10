@@ -27,6 +27,20 @@ local function _DoAttach (self, owner)
     end
 end	
 
+local function _get_isAffecting(self)
+    if (string.find(self.owner.name, "char_1013_chen2")) then
+        for i = 0, self._abilities.Length - 1 do
+            local ab = self._abilities[i]
+            if ab.isAffecting then
+                return true
+            end
+        end
+        return false
+    end
+
+    return self.isAffecting
+end
+
 function AbilityParallelGroupHotfixer:OnInit()
     xlua.private_accessible(CS.Torappu.Battle.Character)
     xlua.private_accessible(CS.Torappu.Battle.Ability)
@@ -45,6 +59,8 @@ function AbilityParallelGroupHotfixer:OnInit()
             eutil.LogError("[AbilityParallelGroupHotfixer] DoAttach fix" .. errorInfo)
         end
     end)
+
+    self:Fix_ex(CS.Torappu.Battle.Abilities.AbilityParallelGroup, "get_isAffecting", _get_isAffecting)
 end
 
 function AbilityParallelGroupHotfixer:OnDispose()
