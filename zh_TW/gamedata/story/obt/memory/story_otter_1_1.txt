@@ -1,0 +1,728 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 个人剧情 梅尔
+
+
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+//char_242_mayer#2
+罗德岛本舰
+“鲁特拉工作室”
+
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+
+
+[Character(name="char_242_mayer#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="梅尔"]  哦，时间差不多了嘛，该开始干活了。
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  让我看看今天的日程表。
+[characteraction(name="middle", type="move", xpos=70, ypos=0,fadetime=1.5, block=true)]
+[delay(time=1.5)]
+[characteraction(name="middle", type="move", xpos=-10, ypos=0,fadetime=0.5, block=true)]
+[delay(time=0.5)]
+[characteraction(name="middle", type="move", xpos=10, ypos=0,fadetime=0.5, block=true)]
+[delay(time=0.5)]
+[characteraction(name="middle", type="move", xpos=-70, ypos=0,fadetime=1.5, block=true)]
+[delay(time=1.5)]
+
+[name="梅尔"]  嗯......
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  嗯，还行。
+[name="梅尔"]  答应麦麦的“龙腾无人机操作改进方案”今天截稿，一会收个尾，然后等她来就行。
+[name="梅尔"]  塞雷娅的防护服检修委托？主要是刷新涂料吧......糟了，我是不是没订涂料？！
+[name="梅尔"]  啊——还好还好，上次的没用完。
+[name="梅尔"]  今天主要就做这个。
+[name="梅尔"]  如果还有空闲，就发几份新零件的订单出去，然后给服役的咪波们好好维护一下。
+[Character(name="char_242_mayer#4")]
+[name="梅尔"]  嗯，今天就做这些。
+[Character(name="char_242_mayer#2")]
+[CameraShake(duration=0.3, xstrength=8, ystrength=15, vibrato=20, randomness=60, fadeout=true, block=false)]
+[name="梅尔"]  开工啦！
+
+//（过了一会
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+
+
+//（可露希尔）
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="？？？"]  梅尔！
+[name="？？？"]  梅尔快开门啊！
+[name="？？？"]  有急事！
+[Character(name="char_242_mayer#3", focus=1)]
+[name="梅尔"]  塞雷娅这件衣服不太对劲啊......
+[name="梅尔"]  充能率怎么都上不去。
+[name="梅尔"]  奇怪，到底是哪里出问题了？
+[Character(name="char_242_mayer#3", focus=-1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="？？？"]  梅尔，我知道你在里面！
+[name="？？？"]  我都听见你声音了！ 
+[Character(name="char_242_mayer#2", focus=1)]
+[name="梅尔"]  是这里吗？
+[characteraction(name="middle", type="move", xpos=50, ypos=0,fadetime=1, block=true)]
+[delay(time=1.2)]
+[CameraShake(duration=0.3, xstrength=8, ystrength=15, vibrato=20, randomness=60, fadeout=true, block=false)]
+[name="梅尔"]  啊哈~果然。
+[characteraction(name="middle", type="move", xpos=-50, ypos=0,fadetime=1, block=true)]
+[delay(time=1)]
+[Character(name="char_242_mayer#4", focus=1)]
+[name="梅尔"]  找到症结问题就好处理了。
+[Character(name="char_242_mayer#4", focus=-1)]
+[name="？？？"]  是你逼我的啊！
+[Character(name="char_242_mayer#2", focus=1)]
+[name="梅尔"]  只要修复失效节点，整件衣服应该就能重新工作了。
+[name="梅尔"]  嗯哼，先优化充能路线，然后上涂料，马上就能恢复到正常运作状态。
+[name="梅尔"]  要不要再顺带加点额外功能呢？
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[delay(time=0.3)]//（开门的音效）
+[Character(name="char_007_closre_1#6",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="？？？"]  唉，不知道乱用权限会不会被凯尔希骂......
+[Character(name="char_007_closre_1")]
+[name="？？？"]  不管了，要怪就怪梅尔装聋。
+[Character(name="char_007_closre_1#2")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="？？？"]  梅尔！
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  搞定。
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  节点位置再检查一遍吧，一会上涂料渗进去就麻烦了。
+[characteraction(name="middle", type="move", xpos=200, ypos=0,fadetime=1.5, block=true)]
+[delay(time=1.5)]
+[Dialog]
+[Character(name="char_empty", name2="char_242_mayer#3",focus=2)]
+[delay(time=0.6)]
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", enter="left", fadetime=2, focus=1, block=true)]
+[delay(time=2)]
+[name="？？？"]  干活戴耳机，就不怕被人吓到吗？
+[characteraction(name="left", type="move", xpos=30, fadetime=1.5, block=false)]
+[delay(time=1.5)]
+[name="？？？"]  嗯......
+[characteraction(name="left", type="move", xpos=70, fadetime=1, block=false)]
+[delay(time=1.2)]
+[name="？？？"]  哼哼——
+[characteraction(name="left", type="move", xpos=100, fadetime=1.5, block=false)]
+[delay(time=1.5)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="？？？"]  （拍梅尔肩膀）
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  （张嘴咬人）
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="？？？"]  呜啊啊啊啊！！！
+[name="？？？"]  好疼好疼！
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="？？？"]  松口，快松口啊！！
+[name="？？？"]  我不好吃啊！
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+//（切一下，闹剧结束）
+
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="？？？"]  好过分喔梅尔，难得有好事情找你，不帮我开门就算了，还咬我......
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  抱歉啦可露希尔，你又不是不知道我工作的时候被打扰会咬人。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  呜呜呜呜。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  那我也给你咬一下，好不好？
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  你现在是不是在给衣服上抗源石涂料？
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  是啊。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  那还是算了，现在咬你一口，下一秒就得进医疗部，不划算。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  啊，好像是这样。
+[name="梅尔"]  嗯......
+[name="梅尔"]  可露希尔？
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  怎么了？
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  门怎么关不上了。
+[name="梅尔"]  我记得特意设置过自动开关，刚刚还调成请勿打扰来着。
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  是不是你把门禁给骇了？
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  啊——
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  怎么会~~我就这样走进来的。
+[name="可露希尔"]  是你门没锁啦。
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  我没锁吗？
+[name="梅尔"]  ......奇怪。
+[name="梅尔"]  你等一下，我看看监控录像。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  ！
+[name="可露希尔"]  梅尔你装监控的吗？！
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  我这里很多东西都是莱茵内部资料啊，万一丢了什么东西对大家都不好。
+[name="梅尔"]  基本保险措施还是需要的。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  现在还是先工作吧......
+[name="可露希尔"]  注意，注意安全操作规程啊。这个涂料，挺危险的吧，你这样三心二意，会出事的！
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  没事，我用机械臂呢。
+[name="梅尔"]  嗯，是哪个程序来着？
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  额，梅尔，涂料的性质是不是要变化了？
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  ？
+[name="梅尔"]  你是说这个？还好啦，这是惰性涂料。
+[name="梅尔"]  就算浸水烧开电离三小时再冻住，只要一解冻，马上就能用。
+[name="梅尔"]  是这个文件夹吗？
+[name="梅尔"]  ok，监控程序打开。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  ！
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  把时间拖到——
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  梅尔！
+[name="可露希尔"]  不和我一起做智能机器人吗！
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  ——
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#3", focus=1)]
+[name="可露希尔"]  梅尔？
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  ——！
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[name="可露希尔"]  梅，梅尔？
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  你刚刚说什么？
+[name="梅尔"]  再，再说一遍？
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  和我一起做智能机器人好不好？
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#4", focus=2)]
+[name="梅尔"]  好啊！
+[Character(name="char_007_closre_1#5", name2="char_242_mayer#4", focus=1)]
+[name="可露希尔"]  那详情我们——
+[Character(name="char_007_closre_1#5", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  （摁下开关播放监控视频）
+[Dialog]
+[Character(name="char_007_closre_1#5", name2="char_242_mayer#2", focus=-1)]
+滋——
+[delay(time=0.6)]
+[Dialog]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[name="监控视频"]  （开门的音效）
+[name="监控视频"]  唉，不知道乱用权限会不会被凯尔希骂......
+[name="监控视频"]  不管了，要怪就怪梅尔装聋。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  ......
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[name="可露希尔"]  ......
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  咪波。
+[name="梅尔"]  咬她。
+[Dialog]
+[Character]
+[PlaySound(key="$bodyfalldown1", volume=0.6)]
+[name="咪波"]  ——
+[Character(name="char_007_closre_1#6")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="可露希尔"]  啊啊啊我错了别用咪波啊好疼好疼哇啊啊！！！
+
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+//（搞事完毕，切一下场景）
+
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  说吧，大概需要我做什么。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[name="可露希尔"]  呜呜呜呜......
+[name="可露希尔"]  我想要你帮我搞一下爆炸方面的东西......
+[name="可露希尔"]  基座机器是雷神挑衅者熔岩猫魔鬼高性能版作业平台......
+[name="可露希尔"]  上面已经有一个定制的全量热力法术冲击发生器了......
+[name="可露希尔"]  但那个效果不太理想，所以需要你帮帮忙......
+[name="可露希尔"]  呜呜呜呜......
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  哦好吧。
+[name="梅尔"]  你先闻一下这个。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  好的呜呜呜......
+[name="可露希尔"]  （吸气）
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  ！
+[name="可露希尔"]  这是！
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=1)]
+[CameraShake(duration=0.3, xstrength=8, ystrength=15, vibrato=20, randomness=60, fadeout=true, block=false)]
+[name="可露希尔"]  （深吸一口气）
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  好了没有？
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  哈啊~~~~
+[name="可露希尔"]  好了！
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  欸嘿嘿嘿，谢谢梅尔。
+[Character(name="char_007_closre_1#2", name2="char_242_mayer", focus=2)]
+[name="梅尔"]  你再这样哭下去没法谈生意啊。
+[Character(name="char_007_closre_1#2", name2="char_242_mayer", focus=1)]
+[name="可露希尔"]  也是也是，嘿嘿。
+[Character(name="char_007_closre_1#2", name2="char_242_mayer", focus=2)]
+[name="梅尔"]  也不知道你为什么那么喜欢闻我这儿的精炼润滑油......
+[Character(name="char_007_closre_1#2", name2="char_242_mayer", focus=1)]
+[name="可露希尔"]  那当然是因为好闻啦。
+[Character(name="char_007_closre_1#2", name2="char_242_mayer", focus=2)]
+[name="梅尔"]  看来华法琳说的没错，你血管里没有血，只有机油。
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  不说了，谈正事。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  好叻。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  是需要我给雷神挑衅者做改装，提高攻击能力对吧。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  还有自我防卫、受击抗性和战场脱离方案的设计，毕竟是要植入智能的好小伙，可不能用一次就坏了。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  那你是找对人了。
+[name="梅尔"]  那么，报酬呢。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  你记不记得机库那里有一间小储物间啊，只要你——
+[Character(name="char_007_closre_1", name2="char_242_mayer#4", focus=2)]
+[name="梅尔"]  这活我接了！
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#4", focus=1)]
+[name="可露希尔"]  嘿嘿，合作愉快。
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#4", focus=2)]
+[name="梅尔"]  愉快愉快~
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  但是呢。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  啊？
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  你看到那边的黑板了么。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  贴满纸的那块？
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  是。
+[name="梅尔"]  那是我的排期表。
+[name="梅尔"]  就算加急，你的需求也在最后一张纸的右下角。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  啊——
+[name="可露希尔"]  能再插个队吗？
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  不行。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  也就是说，两个月之后。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  快的话五十天。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=1)]
+[name="可露希尔"]  嗯？
+[name="可露希尔"]  你工作速度那么快的吗？！
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  还好吧，有时候灵感一来活就做完了。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[characteraction(name="left", type="move", xpos=-40, fadetime=0.8, block=false)]
+[delay(time=1)]
+[name="可露希尔"]  呃......那我不打扰你了......
+[characteraction(name="left", type="move", xpos=-60, fadetime=1, block=false)]
+[delay(time=1.5)]
+[characteraction(name="left", type="move", xpos=-100, fadetime=1.5, block=false)]
+[delay(time=1.5)]
+[name="可露希尔"]  加油工作哦！
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  等等！
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[name="可露希尔"]  嗯？
+[characteraction(name="left", type="move", xpos=200, fadetime=1.5, block=false)]
+[delay(time=1.5)]
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  你先帮我把门格式化，我要重新调整。
+[name="梅尔"]  还有，把你的最高权限去掉。
+[name="梅尔"]  现在、立刻、马上。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[CameraShake(duration=0.3, xstrength=8, ystrength=15, vibrato=20, randomness=60, fadeout=true, block=false)]
+[name="可露希尔"]  啊——
+[name="可露希尔"]  好......
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+两小时后
+[Dialog]
+
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  还有最后一小块——
+[Dialog]
+[Character(name="char_242_mayer#3", focus=-1)]
+[PlaySound(key="$doorknockquite", volume=0.6)]
+叮咚
+
+[Character(name="char_242_mayer#3", focus=-1)]
+[name="麦哲伦"]  梅尔，是我。
+[name="麦哲伦"]  唔......
+[name="麦哲伦"]  你换密码了吗，门怎么开不了？
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  这下应该差不多了。
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  啊？门口有谁在吗？
+[Character(name="char_242_mayer#3", focus=-1)]
+[name="麦哲伦"]  是我！
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  麦麦！门坏了！摁门旁按钮进来吧！
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[delay(time=1)]
+//（停顿一下，开门）
+
+[Character(name="char_248_mgllan",fadetime=1,block=true)]
+[delay(time=1)]
+[name="麦哲伦"]  你好呀。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  好啊。
+[name="梅尔"]  我这边还在忙塞雷娅的东西，就不招待你了。
+[name="梅尔"]  那么，找我有事？
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  我可是有预约的。
+[name="麦哲伦"]  无人机方案，做得怎么样啦。
+[Character(name="char_248_mgllan", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  啊......哦！
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  那个，已经做完了。
+[name="梅尔"]  列举了一点技术要点、改进方案和材料需求，全都在桌上的那个文件袋里了，你先看看，没有问题就可以约新时间帮你做些配件了。
+[name="梅尔"]  要是有问题的话我们找个时间聊聊细节。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  好呀，谢谢梅尔。
+[name="麦哲伦"]  那是哪张桌子的哪个文件袋呢？
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  那个那个。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  你机械臂指的位置至少有四张桌子，我怎么知道是哪个嘛。
+[name="麦哲伦"]  梅尔——
+[Character(name="char_248_mgllan", name2="char_242_mayer#3", focus=2)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="梅尔"]  啊别拉，我还在弄涂料！
+[Character(name="char_248_mgllan", name2="char_242_mayer#3", focus=1)]
+[name="麦哲伦"]  涂料过一会也可以涂的，先帮我找找文件袋好不好？
+[name="麦哲伦"]  梅尔~~
+[Character(name="char_248_mgllan", name2="char_242_mayer", focus=2)]
+[name="梅尔"]  我知道啦。
+[Character(name="char_248_mgllan", name2="char_242_mayer", focus=1)]
+[name="麦哲伦"]  嗯，谢谢~
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  嗯——是这个。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  哦......
+[name="麦哲伦"]  这个是你上个月的报销清单哦。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  啊抱歉，其实是这个。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  嗯......
+[name="麦哲伦"]  对了！
+[name="麦哲伦"]  谢谢你梅尔！
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  没什么啦，应该的。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  那我先走了，拜拜。
+[delay(time=0.6)]
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[CameraShake(duration=0.3, xstrength=8, ystrength=15, vibrato=20, randomness=60, fadeout=true, block=false)]
+[name="麦哲伦"]  啊。
+[name="麦哲伦"]  最重要的事差点忘记了！
+[name="麦哲伦"]  我问你，现在几点了？
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  中午吧。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  是下午！
+[name="麦哲伦"]  梅尔，你吃饭了吗？
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  啊？我嘛？我吃根能量棒就好。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  那怎么行！
+[characteraction(name="left", type="move", xpos=50, fadetime=0.8, block=false)]
+[delay(time=1)]
+[name="麦哲伦"]  给，拿着！
+[characteraction(name="left", type="move", xpos=-50, fadetime=0.8, block=false)]
+[delay(time=1)]
+[Character(name="char_248_mgllan", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  这是？
+[Character(name="char_248_mgllan", name2="char_242_mayer#3", focus=1)]
+[name="麦哲伦"]  食堂买的，今天有你喜欢吃的河鲜。
+[name="麦哲伦"]  本来想请你一起吃的，结果我自己也把时间忙忘了......
+[name="麦哲伦"]  所以吃完以后打包了一份过来。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  唔唔，谢谢。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  一定要吃啊。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  嗯，我会的。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  ......
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  还有什么事吗？
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  这是塞雷娅的充能护服？
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  是啊。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  你大概还要做多久？
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  一两个小时吧。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  那可不行，我帮你一起弄。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  没事，我可以的。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  要么让我帮你一起弄，要么我喂你吃饭，选吧。
+[Character(name="char_248_mgllan", name2="char_242_mayer", focus=2)]
+[name="梅尔"]  呃......
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  好了我知道了拜托你了！
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  嘻嘻~
+[name="麦哲伦"]  那我们就开工吧~
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+//（顿一顿）
+
+[Character(name="char_248_mgllan", name2="char_242_mayer#4", focus=2)]
+[name="梅尔"]  呼，完工。
+[Character(name="char_248_mgllan", name2="char_242_mayer#4", focus=1)]
+[name="麦哲伦"]  辛苦啦。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  过来洗手。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  好——
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  哈......也就只有这个时候，才会怀念莱茵的全自动清洁设备。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  那为什么不回去呢？
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  回去了就要被安排一大堆麻烦的工作，都没时间改进咪波。
+[name="梅尔"]  而且，在那边还要处理人际关系。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  这里也需要啊。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  你出外勤比较多，对部门间的争斗不熟悉。
+[name="梅尔"]  在那里啊，今天认识个新朋友，回头就会有人和你说：“这个人是某某部门的关系，你离他远点比较好。”
+[name="梅尔"]  更可怕的是，就算同一个部门，有时候也要因为上司间的竞争关系尔虞我诈。
+[name="梅尔"]  我是真的不擅长应付这些事。
+[name="梅尔"]  所以就溜到这里来了。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  是这样啊......
+[name="麦哲伦"]  对不起，我不该问这些的......
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  没事......
+[name="梅尔"]  好，吃饭。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  那我也该离开了。
+[name="麦哲伦"]  咪波，麻烦你监督她一下，不然我一走她又要直接开始干活了。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  咪波没装语音模块，不会回应你的。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=1)]
+[name="麦哲伦"]  那也得叮嘱一下。
+[name="麦哲伦"]  那么，这次是真的要走了，拜拜。
+[Character(name="char_248_mgllan", name2="char_242_mayer#2", focus=2)]
+[name="梅尔"]  拜拜。
+[Dialog]
+[Character(name="char_248_mgllan", name2="char_242_mayer#2")]
+[delay(time=0.7)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[characteraction(name="left", type="move", xpos=-300, fadetime=2,block=false)]
+[Character(name="char_empty", name2="char_242_mayer#2", fadetime=0.5)]
+[delay(time=2)]
+[Dialog]
+//（关门，麦哲伦走了）
+[PlaySound(key="$doorclosequite", volume=0.6)]
+[delay(time=1)]
+
+
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  嗯，要不先订好零件再吃——
+[characteraction(name="middle", type="jump", xpos=20, power=60, times=1, fadetime=0.6, block=false)]
+[delay(time=0.6)]
+[CameraShake(duration=0.5, xstrength=8, ystrength=15, vibrato=20, randomness=60, fadeout=true, block=false)]
+[delay(time=0.6)]
+[characteraction(name="middle", type="jump", xpos=-20, power=20, times=1, fadetime=0.6, block=false)]
+[delay(time=0.5)]
+//（被咪波绊了一下）
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  呜哇，咪波你要干什么！
+[Character(name="char_242_mayer#3", focus=-1)]
+[name="咪波"]  ——
+[Character(name="char_242_mayer")]
+[name="梅尔"]  只是先干一会活，不会忘记吃饭的。
+[Character(name="char_242_mayer", focus=-1)]
+[name="咪波"]  ——
+[Character(name="char_242_mayer")]
+[name="梅尔"]  呃......
+[Character(name="char_242_mayer#3")]
+[CameraShake(duration=0.3, xstrength=8, ystrength=15, vibrato=20, randomness=60, fadeout=true, block=false)]
+[name="梅尔"]  好我知道了，我吃，现在就吃！
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
+//（切一下场景，吃饭）
+
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  呼，饱了。好，干活！
+[name="梅尔"]  嗯，先订材料还是先修咪波？
+[Character(name="char_242_mayer#2", focus=-1)]
+[name="咪波"]  ——
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  还是先咪波好了，咪波比较重要。
+[name="梅尔"]  过来。
+[Character(name="char_242_mayer#2", focus=-1)]
+[name="咪波"]  ——
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  我看看——
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  补漆、检查布线、数据更新、补充能源。
+[name="梅尔"]  维护一只大概需要做这些......
+[name="梅尔"]  ......
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  好了！
+[name="梅尔"]  出任务的还有4只，备用的5只也要维护。
+[name="梅尔"]  现在几点来着？
+[name="梅尔"]  看来今天能搞定。
+[name="梅尔"]  嗯......
+[name="梅尔"]  应该能搞定。
+[name="梅尔"]  只要别再有人——
+[PlaySound(key="$doorknockquite", volume=0.9)]
+[Dialog]
+//（普通干员立绘）
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="？？？"]  梅尔！开门！！有活找你！
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  ——————
+[Character(name="char_242_mayer")]
+[name="梅尔"]  怎么又~！@~#！@
+[name="梅尔"]  呼，呼。
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  冷静。
+[name="梅尔"]  吸气——呼气，吸气——呼气。
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  微笑~
+[Character(name="char_242_mayer#4")]
+[name="梅尔"]  好了。
+[Dialog]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+//（开门）
+[Character(name="avg_npc_012",fadetime=1,block=true)]
+[delay(time=1)]
+[name="？？？"]  呦，你在啊梅尔。
+[name="？？？"]  遇上什么好事了笑那么开心？
+[Character(name="avg_npc_012", name2="char_242_mayer#4", focus=2)]
+[name="梅尔"]  你过来，我告诉你。
+[Character(name="avg_npc_012", name2="char_242_mayer#4", focus=1)]
+[name="？？？"]  好啊——
+[Character(name="avg_npc_012", name2="char_242_mayer#4", focus=2)]
+[name="梅尔"]  你看，这是咪波。
+[Character(name="avg_npc_012", name2="char_242_mayer#4", focus=1)]
+[name="？？？"]  我知道。
+[Character(name="avg_npc_012", name2="char_242_mayer#4", focus=2)]
+[name="梅尔"]  把手伸过来，有好东西给你。
+[Character(name="avg_npc_012", name2="char_242_mayer#4", focus=1)]
+[name="？？？"]  唉，真是稀奇，是什么好东西？
+[Character(name="avg_npc_012", name2="char_242_mayer#3", focus=2)]
+[name="梅尔"]  咪波，咬他。
+[Character(name="avg_npc_012", name2="char_242_mayer#3", focus=-1)]
+[name="咪波"]  ——！
+[Character(name="avg_npc_012")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=0.1)]
+[characteraction(name="middle", type="jump", xpos=20, power=80, times=0.8, fadetime=0.5, block=false)]
+[delay(time=0.5)]
+[characteraction(name="middle", type="jump", xpos=-20, power=20, times=0.8, fadetime=0.5, block=false)]
+[delay(time=0.5)]
+[name="？？？"]  啊啊啊别咬我疼疼疼疼疼！！！
+
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+深夜
+[Dialog]
+
+[Character(name="char_242_mayer#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="梅尔"]  啊——终于。
+[Character(name="char_242_mayer#4")]
+[name="梅尔"]  完成了！
+[name="梅尔"]  今天早上的计划全部完成！
+[Character(name="char_242_mayer#4", focus=-1)]
+[name="咪波"]  ——
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  啊——那个不算，我刚刚决定把订零件的工作移到明天了。
+[Character(name="char_242_mayer#2", focus=-1)]
+[name="咪波"]  ——
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  让我来看看明天要做些什么。
+[name="梅尔"]  去采购部订些零件。
+[name="梅尔"]  要给医疗部安装实验装置。
+[Character(name="char_242_mayer#3")]
+[name="梅尔"]  哦，工作台也要重新调试一下。
+[Character(name="char_242_mayer#2")]
+[name="梅尔"]  明天就做这些吧。
+[name="梅尔"]  现在是......11点36分。
+[name="梅尔"]  嗯，是该休息了。
+[Character(name="char_242_mayer#4")]
+[name="梅尔"]  吃碗泡面就睡觉。
+[name="梅尔"]  明天见，咪波。
+[Character(name="char_242_mayer#4", focus=-1)]
+[name="咪波"]  ——
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+
+//（出梅尔，留咪波，然后来个撞击声
+[Dialog]
+[Character]
+
+
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$bodyfalldown2", volume=0.6)]
+
+
+[name="梅尔"]  啊好疼！
+
+
+
+
+
+
+
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image]

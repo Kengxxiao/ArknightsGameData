@@ -1,8 +1,8 @@
----@class CollectionDailyTaskItem : Widget
----@field m_itemCell UIItemCard
+
+
 CollectionDailyTaskItem = Class("CollectionDailyTaskItem", UIWidget);
 
----@param cfg CollectionActCfg
+
 function CollectionDailyTaskItem:Refresh(actId, cfg)
   self._itemDescBg.color = cfg.baseColor;
   self._pointIcon.color = cfg.baseColor;
@@ -27,7 +27,7 @@ function CollectionDailyTaskItem:Refresh(actId, cfg)
     CS.Torappu.UI.UIItemDescFloatController.ShowItemDesc(self.m_itemCell.gameObject, rewardData);
   end);
 
-  --calculte the misstion status
+  
   local suc, dailyRewardStatus = CS.Torappu.PlayerData.instance.data.mission.missionRewards.rewards:TryGetValue(CS.Torappu.MissionPlayerDataGroup.MissionTypeString.DAILY);
   if suc then
     local total = 0;

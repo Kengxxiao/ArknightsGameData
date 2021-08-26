@@ -1,44 +1,19 @@
 [HEADER(is_skippable=false, is_tutorial=true)] 剿灭作战引导
-[PopupDialog(dialogHead="$avatar_sys")] 在一些地區，我們與整合運動部隊發生了大規模的交戰，稱之為<@tu.kw>剿滅作戰</>。
+[PopupDialog(dialogHead="$avatar_sys")] 在一些地區，我們與敵對勢力發生了大規模的交戰，稱之為<@tu.kw>剿滅作戰</>。
 [PopupDialog(dialogHead="$avatar_amiya")] 嗯，是的。如果能夠在這些戰場上取得優勢，就可以大幅度削減敵人的實力。
 [PopupDialog(dialogHead="$avatar_sys")] 現在，需要你親自指揮這些重要的戰鬥。
 [GotoPage(dest="home", waitForSignal="home_routed")]
-[Tutorial(target="btn_battle", \
-          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_sys")] \
-點擊進入作戰室介面
+[Tutorial(target="btn_battle",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 點擊進入作戰室介面
 [GotoPage(dest="stage", waitForSignal="stage_routed")]
-[Tutorial(target="pool_btn_zonetab_campaign", waitForSignal="zone_switched_or_resumed", \
-          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_sys")] \
-進入剿滅作戰戰場選擇頁面
-[Tutorial(target="pool_btn_first_zonestage", waitForSignal="stagepreview_resumed", \
-          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_sys")] \
-選擇其中一個剿滅作戰戰場
-[Tutorial(focusX=-173, focusY=98, focusWidth=310, focusHeight=193, anchor="Right", \
-          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_sys")] \
-剿滅作戰的規則會與通常的作戰稍有不同，請確保在進入前仔細閱讀。
-[Tutorial(target="btn_enemy_handbook", \
-          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_amiya")] \
-博士，接下來的是重點。在剿滅作戰行動中你會遭遇大量敵人，即使無法一次全部擊敗也不用灰心。
-[Tutorial(focusX=-97, focusY=-331, focusWidth=103, focusHeight=37, anchor="Right", \
-          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_amiya")] \
-即使沒有擊敗全部敵人，也可以使用PRTS的代理作戰。另外理智也會根據未擊敗的敵人數進行相應的返還，請務必大膽地進行嘗試。
-[PopupDialog(dialogHead="$avatar_sys")] \
-完成剿滅作戰後，會根據這次作戰擊敗的人數得到相應的獎勵。
-[Tutorial(target="panel_campaign_info", \
-          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_sys")] \
-單次擊敗的敵人數越多，就可以獲得更高的階段獎勵。不過注意每個階段獎勵只能獲取一次。
-[Tutorial(focusX=207, focusY=62, focusWidth=390, focusHeight=77, anchor="BottomLeft", \
-          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_sys")] \
-此外根據擊敗敵人數還會有每週<@tu.kw>合成玉</>獎勵。這些獎勵是各個剿滅作戰之間共通的，並且會以周為單位進行刷新。
-[Tutorial(target="panel_campaign_info", waitForSignal="stage_campaign_break_detail_shown", \
-          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_amiya")] \
-點擊這裡就可以查看階段獎勵的詳情了。
+[Tutorial(target="pool_btn_zonetab_campaign", waitForSignal="campaign_world_home_state_ready",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 點擊進入剿滅作戰的泰拉地圖
+[Campaign.RegisterZoneBtn(zoneId="camp_zone_3")]
+[Campaign.FocusZone(zoneId="camp_zone_3", waitForSignal="campaign_world_zone_focused")]
+[Tutorial(target="pool_btn_campaign_zone", waitForSignal="campaign_zone_map_state_resumed",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 選擇烏薩斯地區，進入委託目標選擇頁面
+[Tutorial(target="pool_btn_campaign_first_zone_stage", searchBtnInChildren=true, waitForSignal="campaign_stage_preview_resumed",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 選擇其中一個委託目標查看其詳細情報
+[Tutorial(focusX=-173, focusY=98, focusWidth=310, focusHeight=193, anchor="Right",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 剿滅作戰的規則會與通常的作戰稍有不同，請確保在進入前仔細閱讀。
+[Tutorial(target="btn_enemy_handbook",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 博士，接下來的是重點。在剿滅作戰行動中你會遭遇大量敵人，即使無法一次全部擊敗也不用灰心。
+[Tutorial(focusX=-97, focusY=-331, focusWidth=103, focusHeight=37, anchor="Right",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 即使沒有擊敗全部敵人，也可以使用PRTS的代理作戰。另外理智也會根據未擊敗的敵人數進行相應的返還，請務必大膽地進行嘗試。
+[PopupDialog(dialogHead="$avatar_sys")] 完成剿滅作戰後，會根據這次作戰擊敗的人數得到相應的獎勵。
+[Tutorial(target="panel_campaign_info",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 單次擊敗的敵人數越多，就可以獲得更高的階段獎勵。不過注意每個階段獎勵只能獲取一次。
+[Tutorial(focusX=218, focusY=70, focusWidth=415, focusHeight=94, anchor="BottomLeft",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 此外根據擊敗敵人數還會有每週<@tu.kw>合成玉</>獎勵。這些獎勵是各個剿滅作戰之間共通的，並且會以周為單位進行刷新。
+[Tutorial(target="panel_campaign_info", waitForSignal="campaign_stage_break_detail_shown",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 點擊這裡就可以查看階段獎勵的詳情了。

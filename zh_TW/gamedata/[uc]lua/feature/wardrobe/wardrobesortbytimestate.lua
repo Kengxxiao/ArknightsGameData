@@ -1,4 +1,4 @@
----@class WardrobeSortByTimeState:UIPanel
+
 WardrobeSortByTimeState = Class("WardrobeSortByTimeState", UIPanel);
 
 function WardrobeSortByTimeState:OnInit()
@@ -74,7 +74,7 @@ end
 
 
 function WardrobeSortByTimeState:_RefreshViewModel(obj)
-	-- body
+	
 	local skinData = CS.Torappu.SkinDB.data.charSkins
 	local currentTime =  CS.Torappu.DateTimeUtil.timeStampNow
 	for skinId, skinDetail in pairs(skinData) do

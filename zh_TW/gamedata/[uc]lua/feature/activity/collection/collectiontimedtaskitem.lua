@@ -1,27 +1,27 @@
 local ColorRes = CS.Torappu.ColorRes;
 
----@class CollectionTimedTaskItem : Widget
----@field _flagIcon Image
----@field _itemBG Image
----@field _desc Text
----@field _prgBG Image
----@field _prgCntLabel Text
----@field _prg Slider
----@field _statusLabel Text
----@field _rewardCntLabel Text
----@field _rewardIconRoot Transform
----@field _gotMark GameObject
----@field _prgFill Image
----@field _titleBg Image
----@field _pointIcon Image
----@field _flagText Text
----@field m_finish bool
----@field m_sortId int
----@field m_rewardData CS.Torappu.UI.UIItemViewModel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CollectionTimedTaskItem = Class("CollectionTimedTaskItem", UIWidget);
 
----@param missionData MissionData
----@param cfg CollectionActCfg
+
+
 function CollectionTimedTaskItem:Refresh( missionData, cfg )
   if missionData == nil then
     return ;
@@ -94,7 +94,7 @@ function CollectionTimedTaskItem:Refresh( missionData, cfg )
   end
 end
 
----@param cfg CollectionActCfg
+
 function CollectionTimedTaskItem:CreateRewardIcon(cfg)
   local rewardData = self.m_rewardData;
   local itemCard = CS.Torappu.UI.UIAssetLoader.instance.staticOutlinks.uiItemCard;

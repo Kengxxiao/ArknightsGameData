@@ -1,13 +1,13 @@
----@class CollectionTaskListDlg : DlgBase
----@field _dailyTaskTimeLabel Text
----@field _limitTaskTimeLabel Text
----@field _dailyItem LuaLayout
----@field _limitContainer Transform
----@field _limitItemPrefab LuaLayout
----@field m_limitItems CollectionTimedTaskItem[]
----@field m_activityId string
----@field m_close Event
----@field m_dailyItem CollectionDailyTaskItem
+
+
+
+
+
+
+
+
+
+
 CollectionTaskListDlg = DlgMgr.DefineDialog("CollectionTaskListDlg", "Activity/Collection/task_list_dlg");
 
 function CollectionTaskListDlg:OnInit()
@@ -21,8 +21,8 @@ function CollectionTaskListDlg:OnClose()
   end
 end
 
----@param activityId string
----@param close Event
+
+
 function CollectionTaskListDlg:Refresh(activityId, close)
   self.m_activityId = activityId;
   self.m_close = close;
@@ -31,13 +31,13 @@ function CollectionTaskListDlg:Refresh(activityId, close)
 
   self.m_dailyItem:Refresh(activityId, actcfg);
 
-  --refresh missions
+  
   local missionGrp = CollectionActModel.me:GetMissionGroup(activityId);
   if missionGrp == nil then
     return;
   end
 
-  ---@type CollectionTimedTaskItem[]
+  
   local list = {};
   for idx = 0, missionGrp.missionIds.Length -1 do
     local missionId = missionGrp.missionIds[idx];
@@ -82,11 +82,11 @@ function CollectionTaskListDlg:_RunCoroutine(co)
 end
 
 function CollectionTaskListDlg:_SynTime()
-  --refresh daily task time
+  
   local time = CS.Torappu.DateTimeUtil.currentTime:AddHours(-1 * CS.Torappu.SharedConsts.GAME_DAY_DIVISION_HOUR);
   local zero = CS.System.DateTime(time.Year, time.Month, time.Day, 0, 0, 0):AddDays(1);
   self._dailyTaskTimeLabel.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.SHOP_REMAIN_COUNT, CS.Torappu.FormatUtil.FormatTimeDelta(zero - time));
-  --refresh collection mission time
+  
   local endTime = CS.Torappu.DateTimeUtil.TimeStampToDateTime(CollectionActModel.me:FindBasicInfo(self.m_activityId).endTime);
   local timeRemain = endTime - CS.Torappu.DateTimeUtil.currentTime;
   self._limitTaskTimeLabel.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.SHOP_REMAIN_COUNT, CS.Torappu.FormatUtil.FormatTimeDelta(timeRemain));

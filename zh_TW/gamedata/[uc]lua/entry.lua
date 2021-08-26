@@ -22,17 +22,6 @@ require "Feature/FeatureModule"
 local eutil = CS.Torappu.Lua.Util
 
 local function CleanLuaPreVersions()
-  -- clean V001 hotfix func by xlua.hotfix a nil func
-  xlua.hotfix(CS.Torappu.UI.CharacterInfo.CharacterInfoPotentialLvlUpState, 'OnUpgradeConfirmClick',nil)
-  xlua.hotfix(CS.Torappu.Activity.Act0D5.Act0D5Entry, 'OnEnter',nil)
-  xlua.hotfix(CS.Torappu.UI.Shop.ShopRecommendStateBean, 'RefreshData',nil)
-  xlua.hotfix(CS.Torappu.UI.Recruit.RecruitSlideState, '_EventOnGacha',nil)
-  xlua.hotfix(CS.Torappu.Activity.Act1.ActivityFirstShopView, 'RenderData',nil)
-  xlua.hotfix(CS.Torappu.Activity.Act1.ActivityFirstShopObject, 'InitData',nil)
-  -- clean V002 hotfix funcs
-  xlua.hotfix(CS.Torappu.Building.UI.Workshop.BuildingWorkshopHomeState, "OnEnter", nil)
-  xlua.hotfix(CS.Torappu.Building.UI.Float.BuildingFloatVisitState, "_UpdateSocialPoint", nil)
-  xlua.hotfix(CS.Torappu.DataConvertUtil, "_LoadStagePredefinedSquad", nil)
 end
 
 local function Preprocess()
@@ -57,8 +46,8 @@ local function InitFeature()
   end));
 end
 
----This method must be invoked after DlgMgr.Init()
----since BattleModule depends on BattleMgr which is a Model.
+
+
 local function InitBattle()
   if BattleMgr.me == nil then
     error('InitBattle() must be invoked after DlgMgr.Init()')
@@ -76,18 +65,18 @@ end
 EntryTable.Init = function ()
   print("Init");
 
-  -- do hotfix
+  
   Preprocess();
   local fixes = require ("Hotfixes/DefinedFix");
   HotfixProcesser.Do(fixes);
 
-  -- feature
+  
   local ok, error = xpcall(InitFeature, debug.traceback);
   if not ok then
     eutil.LogError("[InitFeature]" .. error);
   end
 
-  -- battle
+  
   local ok, error = xpcall(InitBattle, debug.traceback);
   if not ok then
     eutil.LogError("[InitBattle]" .. error);
@@ -95,10 +84,10 @@ EntryTable.Init = function ()
 end
 
 EntryTable.Dispose = function ()
-  -- hotfix
+  
   HotfixProcesser.Dispose();
 
-  -- feature
+  
   local ok, error = xpcall(DisposeFeature, debug.traceback);
   if not ok then
     eutil.LogError("[DisposeFeature]" .. error);

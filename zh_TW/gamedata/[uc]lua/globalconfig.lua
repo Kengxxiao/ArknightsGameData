@@ -1,9 +1,9 @@
 GlobalConfig = 
 {
-  CUR_FUNC_VER = "V013",
+  CUR_FUNC_VER = "V017",
 }
 
-------保证GlobalConfig是只读的------
+
 local meta = 
 {
   __index = GlobalConfig,

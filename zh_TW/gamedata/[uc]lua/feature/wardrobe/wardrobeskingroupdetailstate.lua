@@ -1,8 +1,8 @@
----@class WardrobeSkinGroupDetailState
+
 WardrobeSkinGroupDetailState = Class("WardrobeSkinGroupDetailState", FadeInDlgBase);
 
----@field onSaleObj Onsale Obj
----@field notOnSaleObj not Onsale Obj
+
+
 
 
 function WardrobeSkinGroupDetailState:OnInit()
@@ -10,13 +10,12 @@ function WardrobeSkinGroupDetailState:OnInit()
   self.notOnSaleObj = {}
 end
 
-function WardrobeSkinGroupDetailState:CheckData(data)
-  self._brandIcon.sprite = CS.Torappu.DataConvertUtil.LoadBrandIcon(data.data.brandId, false)
-  self._brandName.text = data.data.brandName
-  self._brandDesc.text = CS.Torappu.FormatUtil.FormatRichTextFromData(data.data.description)
-  self.onSaleData = {}
-  self.notOnSaleData = {}
-  self.cacheData = data
+function WardrobeSkinGroupDetailState:OnResume()
+  
+  self:Render()
+end
+
+function WardrobeSkinGroupDetailState:_RenderCheck(data)
   for k,v in pairs(data.skinList) do
     if (WardrobeUtil.CheckSkinOnSale(v)) then
       table.insert(self.onSaleData, v)
@@ -41,6 +40,25 @@ function WardrobeSkinGroupDetailState:CheckData(data)
 
 
   self:Render()
+  
+  if (#self.onSaleData > 5) then
+    local pos = self._onSaleCont.anchoredPosition
+    pos.x = (#self.onSaleData - 6) * 99 + 69.5
+    self._onSaleCont.anchoredPosition = pos
+  end
+
+end
+
+function WardrobeSkinGroupDetailState:CheckData(data)
+  self._brandIcon.sprite = CS.Torappu.DataConvertUtil.LoadBrandIcon(data.data.brandId, false)
+  self._brandName.text = data.data.brandName
+  self._brandDesc.text = CS.Torappu.FormatUtil.FormatRichTextFromData(data.data.description)
+  self.onSaleData = {}
+  self.notOnSaleData = {}
+  self.cacheData = data
+
+  self:_RenderCheck(data)
+
   local spriteList = {}
   for k,v in pairs(data.data.kvImgIdList) do
     local sprite = CS.Torappu.UI.Wardrobe.WardrobeKVSpriteLoader.LoadSpriteFromHubStatic(v,CS.Torappu.ResourceUrls.GetSkinKvHubPath())
@@ -112,12 +130,6 @@ function WardrobeSkinGroupDetailState:Render()
     else
       CS.Torappu.Lua.Util.SetActiveIfNecessary(v:RootGameObject(),false)
     end
-  end
-
-  if (#self.onSaleData > 5) then
-    local pos = self._onSaleCont.anchoredPosition
-    pos.x = (#self.onSaleData - 6) * 99 + 69.5
-    self._onSaleCont.anchoredPosition = pos
   end
 
   CS.Torappu.Lua.Util.SetActiveIfNecessary(self._onSaleObj,#self.onSaleData~=0)

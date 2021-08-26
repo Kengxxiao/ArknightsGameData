@@ -1,22 +1,22 @@
----@class CollectionItem:Widget
----@field _normalBG Sprite
----@field _normalCompleteBG Sprite
----@field  _bigCompleteBG Sprite
----@field  _bg Image
----@field  _bigMark GameObject
----@field  _bright UITweenFade
----@field  _rewardCnt Text
----@field  _rewardName Text
----@field  _rewardIconRoot Transform
----@field  _getMarkBtn Button
----@field  _getBtn Button
----@field  _needDesc Text
----@field  _needCount Text
----@field UIChildrenColorGraphic _colorAlter
 
----@field m_activityId string
----@field m_data ActivityCollectionData.CollectionInfo
----@field m_hasGot boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CollectionItem = Class("CollectionItem", UIWidget);
 
 local ColorRes = CS.Torappu.ColorRes;
@@ -25,11 +25,11 @@ function CollectionItem:OnInitialize()
   self:AddButtonClickListener(self._getBtn, self._HandleGetReward);
 end
 
----refresh the activity item content
----@param data ActivityCollectionData.CollectionInfo activity item table data
----@param reached boolean if player reached this item
----@param geted boolean
----@param cfg CollectionActCfg
+
+
+
+
+
 function CollectionItem:Refresh(activityId,  data, reached, geted, cfg)
   self.m_activityId = activityId;
   self.m_data = data;
@@ -52,7 +52,7 @@ function CollectionItem:Refresh(activityId,  data, reached, geted, cfg)
 
 
   if self.m_itemCell == nil then
-    local itemCard = CS.Torappu.UI.UIAssetLoader.instance.itemCardPrefab;
+    local itemCard = CS.Torappu.UI.UIAssetLoader.instance.staticOutlinks.uiItemCard;
     self.m_itemCell = CS.UnityEngine.GameObject.Instantiate(itemCard, self._rewardIconRoot):GetComponent("Torappu.UI.UIItemCard");
     self.m_itemCell.isCardClickable = true;
     self.m_itemCell:CloseBtnTransition();
@@ -70,7 +70,7 @@ function CollectionItem:Refresh(activityId,  data, reached, geted, cfg)
 
   local multipleLabel = self._rewardCnt.transform:Find("Text"):GetComponent("UnityEngine.UI.Text");
 
-  --complete status
+  
   if reached then
     if data.isBonus then
       self._bg.sprite = self._bigCompleteBG;

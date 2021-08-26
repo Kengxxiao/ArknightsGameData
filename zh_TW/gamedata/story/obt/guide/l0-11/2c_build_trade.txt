@@ -5,19 +5,10 @@
 [Delay(time="$f_delay_focus_building_broom")]
 [PopupDialog(dialogHead="$avatar_closure")] 最後我們需要建造<@tu.kw>貿易站</>。
 [PopupDialog(dialogHead="$avatar_closure")] 貿易站可以透過交付訂單，獲得穩定的<@tu.kw>龍門幣</>收益！在之後，還可以解鎖切換訂單類型的功能，來獲得<@tu.kw>合成玉</>。
-[Tutorial(target="broom_tutorial_btn", waitForSignal="building_architecture_view_setup", \
-          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
-點擊最後一個清理好的空房間。
+[Tutorial(target="broom_tutorial_btn", waitForSignal="building_architecture_view_setup",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 點擊最後一個清理好的空房間。
 [Delay(time="$f_delay_single_frame")]
-[Tutorial(target="btn_build_confirm", waitForSignal="building_room_build_confirmed", searchBtnInChildren=true, \
-          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", importantClick=true, \
-          protectTime=0.5, dialogHead="$avatar_closure")] \
-點擊建造貿易站。
+[Tutorial(target="btn_build_confirm", waitForSignal="building_room_build_confirmed", searchBtnInChildren=true,           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", importantClick=true,           protectTime=0.5, dialogHead="$avatar_closure")] 點擊建造貿易站。
 [PopupDialog(dialogHead="$avatar_closure")] 好了，基礎設施已經全部建造完畢。
 [PopupDialog(dialogHead="$avatar_closure")] 現在，博士只需要學習如何使用它們就可以了。
-[Tutorial(target="archi_switch_hotspot", waitForSignal="building_opmode_changed", \
-          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
-點擊切換普通模式
+[Tutorial(target="archi_switch_hotspot", waitForSignal="building_opmode_changed",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 點擊切換普通模式
 [Building.EnsureOperationMode(mode="NORMAL")]

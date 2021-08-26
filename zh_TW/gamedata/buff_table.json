@@ -213,5 +213,86 @@
         }
       ]
     }
+  },
+  "dragon_fire": {
+    "buffKey": "dragon_fire",
+    "durationKey": "duration",
+    "templateKey": "dragon_fire[timer]",
+    "statusResistable": "YES",
+    "overrideType": "EXTEND",
+    "stripBlackboardParamsWithBuffKey": true
+  },
+  "dragon_fire[damage]": {
+    "buffKey": "dragon_fire[damage]",
+    "templateKey": "dragon_fire[damage]",
+    "overrideEffectKey": "enemy_bsnake_skill_01_buff",
+    "lifeTimeType": "INFINITY",
+    "triggerLifeType": "INFINITY",
+    "triggerInterval": 1.0
+  },
+  "c2e_cold": {
+    "buffKey": "c2e_cold",
+    "durationKey": "freeze",
+    "templateKey": "c2e_cold",
+    "overrideEffectKey": "buff_cold",
+    "statusResistable": "YES",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "ATTACK_SPEED",
+          "formulaItem": "ADDITION",
+          "value": -30,
+          "loadFromBlackboard": false
+        }
+      ]
+    }
+  },
+  "c2e_freeze": {
+    "buffKey": "c2e_freeze",
+    "durationKey": "freeze",
+    "overrideEffectKey": "buff_frozen",
+    "attributes": {
+      "attributeModifiers": null,
+      "abnormalFlags": [
+          "STUNNED"
+      ]
+    }
+  },
+  "enemy_confinement": {
+    "buffKey": "enemy_confinement",
+    "templateKey": "enemy_confinement",
+    "lifeTimeType": "INFINITY",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "ATTACK_SPEED",
+          "formulaItem": "ADDITION",
+          "loadFromBlackboard": true
+        }
+      ]
+    }
+  },
+  "enemy_confinement_final": {
+    "buffKey": "enemy_confinement_final",
+    "lifeTimeType": "INFINITY",
+    "attributes": {
+      "attributeModifiers": [
+        {
+          "attributeType": "ATTACK_SPEED",
+          "formulaItem": "ADDITION",
+          "loadFromBlackboard": true
+        }
+      ]
+    }
+  },
+  "buff_yin": {
+    "buffKey": "buff_yin",
+    "templateKey": "buff_yin",
+    "lifeTimeType": "INFINITY"
+  },
+  "buff_yang": {
+    "buffKey": "buff_yang",
+    "templateKey": "buff_yang",
+    "lifeTimeType": "INFINITY"
   }
 }

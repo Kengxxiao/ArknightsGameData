@@ -1,6 +1,6 @@
 local eutil = CS.Torappu.Lua.Util
 
----@class CrisisBattleFinishHotfixer:HotfixBase
+
 local CrisisBattleFinishHotfixer = Class("CrisisBattleFinishHotfixer", HotfixBase)
 
 local function _LoadSquadData(self)

@@ -1,12 +1,12 @@
----@class WardrobeSkinItem:UIWidget
+
 WardrobeSkinItem = Class("WardrobeSkinItem", UIWidget);
 
 WardrobeSkinItem.ANIM_PARAM = "alpha_add"
 
 function WardrobeSkinItem:OnInitialize()
   
-  -- True LastTime No Effect
-  -- False LastTime Have Effect
+  
+  
   self.cacheHaveFlag = true
 
   self:AddButtonClickListener(self._button, self._OnClick);
@@ -19,12 +19,10 @@ function WardrobeSkinItem:Render(skin)
   end 
   self.cacheData = skin
   
-  local portraitHub = CS.Torappu.UI.CharacterUtil.LoadPortraitHub();
-  local succ, portraitImg = portraitHub:TryGetSprite(skin.data:GetPortraitId())
-  self._skinImg.sprite = portraitImg
+  self._skinImg.sprite = CS.Torappu.CharacterUtil.LoadCharPortrait(skin.data:GetPortraitId())
   CS.Torappu.Lua.Util.SetActiveIfNecessary(self._onSaleObj,WardrobeUtil.CheckSkinOnSale(skin))
   self._skinName.text = skin.data.displaySkin.skinName
-  self._charName.text = CS.Torappu.UI.CharacterUtil.GetCharAppellation(skin.data.charId)
+  self._charName.text = CS.Torappu.CharacterUtil.GetCharAppellation(skin.data.charId)
   if (skin.data.displaySkin.displayTagId ~= nil) then
     CS.Torappu.Lua.Util.SetActiveIfNecessary(self._tagItem,true)
     self._tagText.text = skin.data.displaySkin.displayTagId
@@ -39,7 +37,7 @@ function WardrobeSkinItem:SetUnGetFlag(flag)
     return
   end
   if (flag) then
-    local haveFlag = CS.Torappu.UI.CharacterUtil.CheckSkinAvailable(self.cacheData.data.skinId)
+    local haveFlag = CS.Torappu.CharacterUtil.CheckSkinAvailable(self.cacheData.data.skinId)
     CS.Torappu.Lua.Util.SetActiveIfNecessary(self._dontHaveItem, not haveFlag)
     if (not haveFlag and haveFlag ~= self.cacheHaveFlag) then
       self._animWrapper:PlayWithTween(WardrobeSkinItem.ANIM_PARAM)
