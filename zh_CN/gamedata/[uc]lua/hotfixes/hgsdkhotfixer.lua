@@ -1,21 +1,35 @@
-local eutil = CS.Torappu.Lua.Util
 
----@class HGSDKHotfixer:HotfixBase
+
+
+
+
 local HGSDKHotfixer = Class("HGSDKHotfixer", HotfixBase)
 
-local function _FixDoQuit(self)
-  CS.UnityEngine.Application.Quit()
+local function _CheckIfGuest(loginPage)
+  local availToken, isGuest = loginPage:GetAvailableToken()
+  return isGuest
+end
+
+local function _LoginPageDoAuth(self, token, onSuc, onFail)
+  if _CheckIfGuest(self) then
+    CS.Torappu.UI.UINotification.TextToast(StringRes.ERROR_GUEST_FUNC_DISABLE)
+    return
+  end
+  self:DoAuth(token, onSuc, onFail)
+end
+
+local function _SetPageState(self, target)
+  if target:GetHashCode() == 8 then
+    if _CheckIfGuest(self) then
+      return
+    end
+  end
+  self.state = target
 end
 
 function HGSDKHotfixer:OnInit()
-  xlua.private_accessible(CS.HGSDK.HGSDK)
-  xlua.private_accessible(CS.HGSDK.HGSDK.PingManager)
-  self:Fix_ex(CS.HGSDK.HGSDK.PingManager, "_DoQuit", function(self)
-    local ok, error = xpcall(_FixDoQuit, debug.traceback, self)
-    if not ok then
-      eutil.LogError("[HGSDKFix] " .. error)
-    end
-  end)
+  self:Fix_ex(CS.HGSDK.UI.SDKLoginPage, "set_state", _SetPageState)
+  self:Fix_ex(CS.HGSDK.UI.SDKLoginPage, "DoAuth", _LoginPageDoAuth)
 end
 
 function HGSDKHotfixer:OnDispose()
