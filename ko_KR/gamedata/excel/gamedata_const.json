@@ -876,6 +876,7 @@
   "hpMax": 4225.0,
   "reMax": 100.0,
   "diamondToShdRate": 180,
+  "requestSameFriendCD": 14400,
   "baseMaxFriendNum": 15,
   "hardDiamondDrop": 1,
   "instFinDmdShdCost": 80,
@@ -892,10 +893,6 @@
   "richTextStyles": {
     "mission.levelname": "<color=#FFDE00>{0}</color>",
     "mission.number": "<color=#FFDE00>{0}</color>",
-    "lv.item": "<color=#FFFFFF>{0}</color>",
-    "lv.rem": "<color=#FFFFFF>{0}</color>",
-    "lv.fs": "<color=#FF0000>{0}</color>",
-    "lv.sp": "<color=#fd4600>{0}</color>",
     "tu.kw": "<color=#0098DC>{0}</color>",
     "tu.imp": "<color=#FF0000>{0}</color>",
     "cc.vup": "<color=#0098DC>{0}</color>",
@@ -922,6 +919,10 @@
     "ro.get": "<color=#0098DC>{0}</color>",
     "ro.lose": "<color=#C82A36>{0}</color>",
     "rolv.rem": "<color=#FF4C22>{0}</color>",
+    "lv.item": "<color=#FFFFFF>{0}</color>",
+    "lv.rem": "<color=#FFFFFF>{0}</color>",
+    "lv.fs": "<color=#FF0000>{0}</color>",
+    "lv.sp": "<color=#fd4600>{0}</color>",
     "rc.title": "<color=#FFFFFF>{0}</color>",
     "rc.subtitle": "<color=#FFC90E>{0}</color>",
     "rc.em": "<color=#FF7F27>{0}</color>",
@@ -1040,5 +1041,200 @@
   "monthlySubWarningTime": 345600,
   "UnlimitSkinOutOfTime": 1209600,
   "replicateShopStartTime": 1606366800,
-  "TSO": 1624327200
+  "TSO": 1624327200,
+  "isDynIllustEnabled": false,
+  "voucherSkinRedeem": 1,
+  "voucherSkinDesc": "오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시되기 전에 이미 <color=#ffa633>오리지늄</color>을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우, 해당 오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시된 후에 <color=#33b5ff>[컬렉션 자유 선택권]</color>*1매를 반환해드립니다.\n\n다음의 경우 얼터네이트가 출시되어도 <color=#ffa633>반환하지 않습니다</color>: \n1. 오퍼레이터의 첫 번째 얼터네이트가 출시되기 전에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 교환한 경우.\n2. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 오리지늄을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n3. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n\n[컬렉션 자유 선택권]으로 컬렉션 상점에서 판매 중인 컬렉션만 교환할 수 있습니다. 만약 컬렉션 상점에서 이미 모든 컬렉션을 구매했거나 또는 판매 중인 컬렉션이 없으면, [컬렉션 자유 선택권]을 <color=#ffa633>사용할 수 없습니다</color>.\n\n이밖에, [컬렉션 자유 선택권]으로 <color=#ffa633>교환할 수 없는</color> 컬렉션이 출시될 경우, 별도 공지가 진행될 예정이오니 참고하여 주시기 바랍니다.",
+  "termDescriptionDict": {
+    "ba.sluggish": {
+      "termId": "ba.sluggish",
+      "termName": "정지",
+      "description": "이동 속도 80% 감소"
+    },
+    "ba.root": {
+      "termId": "ba.root",
+      "termName": "속박",
+      "description": "이동 불가"
+    },
+    "ba.stun": {
+      "termId": "ba.stun",
+      "termName": "기절",
+      "description": "이동, 저지, 공격 및 스킬 사용 불가"
+    },
+    "ba.buffres": {
+      "termId": "ba.buffres",
+      "termName": "저항",
+      "description": "<$ba.stun>기절</>, <$ba.cold>냉기</>, <$ba.frozen>빙결</> 등 상태 이상의 지속 시간 50% 단축 (동일 효과 중첩 불가)"
+    },
+    "ba.invisible": {
+      "termId": "ba.invisible",
+      "termName": "은신",
+      "description": "미저지 시 적의 공격 목표가 되지 않음"
+    },
+    "ba.camou": {
+      "termId": "ba.camou",
+      "termName": "위장",
+      "description": "미저지 시 적의 일반 공격의 목표가 되지 않음 (스플래시 공격 회피 불가)"
+    },
+    "ba.fragile": {
+      "termId": "ba.fragile",
+      "termName": "취약",
+      "description": "받은 대미지가 해당 비례만큼 증가 (동종 효과 중 최대 수치만 적용)"
+    },
+    "ba.shield": {
+      "termId": "ba.shield",
+      "termName": "실드",
+      "description": "실드 1스택당 대미지 1회 막기 가능"
+    },
+    "ba.protect": {
+      "termId": "ba.protect",
+      "termName": "가호",
+      "description": "받은 대미지가 해당 비례만큼 감소 (동종 효과 중 최대 수치만 적용)"
+    },
+    "ba.cold": {
+      "termId": "ba.cold",
+      "termName": "냉기",
+      "description": "공격 속도 30 감소, 지속 시간 동안 냉기 효과를 추가로 받을 경우 <$ba.frozen>빙결</> 상태로 변경"
+    },
+    "ba.frozen": {
+      "termId": "ba.frozen",
+      "termName": "빙결",
+      "description": "이동, 공격 및 스킬 사용 불가(<$ba.cold>냉기</>를 통해 발동)"
+    },
+    "ba.sleep": {
+      "termId": "ba.sleep",
+      "termName": "수면",
+      "description": "무적, 단 행동 불가"
+    },
+    "ba.inspire": {
+      "termId": "ba.inspire",
+      "termName": "격려",
+      "description": "기본 스탯 버프 추가 획득 (동종 효과 중 최대 수치만 적용)"
+    },
+    "ba.binding": {
+      "termId": "ba.binding",
+      "termName": "연동",
+      "description": "연동된 상대가 전장에 없을 경우 스킬 강제 종료, 동시에 모든 SP 제거 및 SP 회복 불가"
+    },
+    "ba.dt.neural": {
+      "termId": "ba.dt.neural",
+      "termName": "신경 손상",
+      "description": "신경 손상이 1000까지 누적될 경우 1000 트루 대미지를 받고 10초간 <$ba.stun>기절</>"
+    },
+    "cc.bd_A_1": {
+      "termId": "cc.bd_A_1",
+      "termName": "염력",
+      "description": "다음 오퍼레이터가 제공\n로즈몬티스"
+    },
+    "cc.bd_A_2": {
+      "termId": "cc.bd_A_2",
+      "termName": "의식의 실체",
+      "description": "다음 오퍼레이터가 제공\n로즈몬티스"
+    },
+    "cc.bd_A": {
+      "termId": "cc.bd_A",
+      "termName": "생각의 사슬",
+      "description": "<$cc.bd_A_1><@cc.rem>염력</></>, <$cc.bd_A_2><@cc.rem>의식의 실체</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n로즈몬티스"
+    },
+    "cc.bd_a1": {
+      "termId": "cc.bd_a1",
+      "termName": "감지 정보",
+      "description": "<$cc.bd_A><@cc.rem>생각의 사슬</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n로즈몬티스, 시, 위스퍼레인, 아이리스"
+    },
+    "cc.bd_b1": {
+      "termId": "cc.bd_b1",
+      "termName": "속세의 불꽃",
+      "description": "다음 오퍼레이터가 제공\n시, 우요우"
+    },
+    "cc.bd_ash": {
+      "termId": "cc.bd_ash",
+      "termName": "정보 저장",
+      "description": "다음 오퍼레이터가 제공\nAsh"
+    },
+    "cc.bd_tachanka": {
+      "termId": "cc.bd_tachanka",
+      "termName": "우르수스 특제 음료",
+      "description": "다음 오퍼레이터가 제공\nTachanka"
+    },
+    "cc.bd_a1_a1": {
+      "termId": "cc.bd_a1_a1",
+      "termName": "기억 조각",
+      "description": "<$cc.bd_a1><@cc.rem>감지 정보</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n위스퍼레인"
+    },
+    "cc.bd_a1_a2": {
+      "termId": "cc.bd_a1_a2",
+      "termName": "꿈나라",
+      "description": "<$cc.bd_a1><@cc.rem>감지 정보</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n아이리스"
+    },
+    "cc.m.var1": {
+      "termId": "cc.m.var1",
+      "termName": "재활용",
+      "description": "다음 오퍼레이터가 제공\n버메일"
+    },
+    "cc.m.var2": {
+      "termId": "cc.m.var2",
+      "termName": "협동의식",
+      "description": "다음 오퍼레이터가 제공\n와이후"
+    },
+    "cc.t.lgd": {
+      "termId": "cc.t.lgd",
+      "termName": "용문근위국",
+      "description": "다음 오퍼레이터 포함\n첸, 호시구마, 스와이어"
+    },
+    "cc.t.lda": {
+      "termId": "cc.t.lda",
+      "termName": "리 탐정사무소",
+      "description": "다음 오퍼레이터 포함\n아, 훔, 와이후"
+    },
+    "cc.t.ussg": {
+      "termId": "cc.t.ussg",
+      "termName": "우르수스 학생자치단",
+      "description": "다음 오퍼레이터 포함\n로사, 지마, 이스티나, 굼"
+    },
+    "cc.t.R6": {
+      "termId": "cc.t.R6",
+      "termName": "레인보우 팀",
+      "description": "다음 오퍼레이터 포함\nAsh, Tachanka, Blitz, Frost"
+    },
+    "cc.t.sp": {
+      "termId": "cc.t.sp",
+      "termName": "얼터네이트",
+      "description": "다음 오퍼레이터 포함\\라바 더 퍼거토리, 스카디 더 커립팅 하트"
+    },
+    "cc.t.egir": {
+      "termId": "cc.t.egir",
+      "termName": "어비설 헌터스",
+      "description": "다음 오퍼레이터 포함\\글래디아, 스카디, 스펙터, 안드레아나"
+    },
+    "cc.c.egir2_1": {
+      "termId": "cc.c.egir2_1",
+      "termName": "특수 버프",
+      "description": "제조소에 <$cc.t.egir><@cc.kw>어비설 헌터스</></> 오퍼레이터가 1명 배치될 때마다 제어 센터가 <$cc.t.egir><@cc.kw>어비설 헌터스</></> 오퍼레이터 1명당 제조소에 <@cc.vup>5%</>의 생산력 제공, 제조소 1개에 최대 <@cc.vup>45%</>의 생산력 제공"
+    },
+    "cc.c.egir2_2": {
+      "termId": "cc.c.egir2_2",
+      "termName": "특수 버프",
+      "description": "제조소에 <$cc.t.egir><@cc.kw>어비설 헌터스</></> 오퍼레이터가 1명 배치될 때마다 제어 센터가 <$cc.t.egir><@cc.kw>어비설 헌터스</></> 오퍼레이터 1명당 제조소에 <@cc.vup>10%</>의 생산력 제공, 제조소 1개에 최대 <@cc.vup>90%</>의 생산력 제공"
+    },
+    "cc.c.egir2_3": {
+      "termId": "cc.c.egir2_3",
+      "termName": "특수 중첩 규칙",
+      "description": "<$cc.m.var2><@cc.rem>협동의식</></> 스킬과 중첩되지 않으며, 우선적으로 발동됨\n<$cc.m.pow1><@cc.rem>자동화 α</></>, <$cc.m.pow2><@cc.rem>자동화 β</></>, <$cc.m.pow3><@cc.rem>해마 리프</></> 스킬과 중첩되지 않으며, 초기화 효과가 우선적으로 발동됨"
+    },
+    "cc.m.pow1": {
+      "termId": "cc.m.pow1",
+      "termName": "자동화 α",
+      "description": "다음 오퍼레이터가 제공\n위디, 유넥티스, 패신저"
+    },
+    "cc.m.pow2": {
+      "termId": "cc.m.pow2",
+      "termName": "자동화 β",
+      "description": "다음 오퍼레이터가 제공\n유넥티스"
+    },
+    "cc.m.pow3": {
+      "termId": "cc.m.pow3",
+      "termName": "해마 리프",
+      "description": "다음 오퍼레이터가 제공\n위디"
+    }
+  }
 }

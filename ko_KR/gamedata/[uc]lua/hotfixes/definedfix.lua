@@ -3,7 +3,10 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/AdvancedSelectorHotfixer",
+  "HotFixes/BuildingMoodHotfixer",
+  "HotFixes/DoubleBufferedListHotfixer",
+  "HotFixes/RecruitHotfixer",
+  "HotFixes/CharacterTransHotfixer"
 };
 
 return list;

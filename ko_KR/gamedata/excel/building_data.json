@@ -3729,9 +3729,16 @@
         {
           "buffData": [
             {
-              "buffId": "hire_spd[010]",
+              "buffId": "hire_spd_cost[010]",
               "cond": {
                 "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "hire_spd_cost[200]",
+              "cond": {
+                "phase": 1,
                 "level": 1
               }
             }
@@ -7917,6 +7924,104 @@
         }
       ]
     },
+    "char_472_pasngr": {
+      "charId": "char_472_pasngr",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[003]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "power_rec_spd[016]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&power[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_363_toddi": {
+      "charId": "char_363_toddi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost3[111]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_device[020]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_304_zebra": {
+      "charId": "char_304_zebra",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost[006]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[330]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -8097,7 +8202,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시,  제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost[001]": {
       "buffId": "control_mp_cost[001]",
@@ -8109,7 +8214,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시,  제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost[002]": {
       "buffId": "control_mp_cost[002]",
@@ -8121,7 +8226,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시,  제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost[003]": {
       "buffId": "control_mp_cost[003]",
@@ -8133,23 +8238,11 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시,  제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost[004]": {
       "buffId": "control_mp_cost[004]",
       "buffName": "대리인",
-      "buffIcon": "control",
-      "skillIcon": "bskill_ctrl_cost",
-      "sortId": 1105,
-      "buffColor": "#005752",
-      "textColor": "#ffffff",
-      "buffCategory": "FUNCTION",
-      "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시,  제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
-    },
-    "control_mp_cost[005]": {
-      "buffId": "control_mp_cost[005]",
-      "buffName": "필요책임",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost",
       "sortId": 1106,
@@ -8157,7 +8250,31 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시,  제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
+    },
+    "control_mp_cost[005]": {
+      "buffId": "control_mp_cost[005]",
+      "buffName": "필요책임",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "sortId": 1107,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
+    },
+    "control_mp_cost[006]": {
+      "buffId": "control_mp_cost[006]",
+      "buffName": "호위",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "sortId": 1105,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction2[000]": {
       "buffId": "control_mp_cost&faction2[000]",
@@ -8169,7 +8286,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시,  제어 센터 내 <@cc.kw>리 탐정사무소</> 오퍼레이터 한 명 마다 해당 소속 오퍼레이터의 <@cc.kw>컨디션 소모량이 추가로 감소</>하고,  한 명 마다 제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.t.lda><@cc.kw>리 탐정사무소</></> 오퍼레이터 한 명마다 해당 소속 오퍼레이터의 <@cc.kw>컨디션 회복량이 추가로 증가</>하고, 한 명마다 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction[000]": {
       "buffId": "control_mp_cost&faction[000]",
@@ -8181,7 +8298,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시,  제어 센터 내 <@cc.kw>용문근위국</> 오퍼레이터 한 명 마다 제어 센터 내의 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.t.lgd><@cc.kw>용문근위국</></> 오퍼레이터 한 명마다 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction[020]": {
       "buffId": "control_mp_cost&faction[020]",
@@ -8193,7 +8310,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시,  제어 센터 내 <@cc.kw>우르수스 학생자치단</> 오퍼레이터 한 명 마다 제어 센터 내의 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.t.ussg><@cc.kw>우르수스 학생자치단</></> 오퍼레이터 한 명마다 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction[900]": {
       "buffId": "control_mp_cost&faction[900]",
@@ -8205,7 +8322,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시, 제어 센터 내 <@cc.kw>얼터네이트</> 오퍼레이터 한 명마다 제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.t.sp><@cc.kw>얼터네이트</></> 오퍼레이터 한 명마다 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost&faction[990]": {
       "buffId": "control_mp_cost&faction[990]",
@@ -8217,7 +8334,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시, 제어 센터 내 <@cc.kw>레인보우 팀</> 오퍼레이터 한 명마다 제어 센터 내 모든 오퍼레이터들의 시간당 컨디션 소모<@cc.vup>-0.05</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.t.R6><@cc.kw>레인보우 팀</></> 오퍼레이터 한 명마다 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>"
     },
     "control_mp_cost&bd1[000]": {
       "buffId": "control_mp_cost&bd1[000]",
@@ -8229,7 +8346,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시, 제어 센터 내의 모든 오퍼레이터의 시간당 컨디션 소모<@cc.vup>-0.05</>. 컨디션이 <@cc.kw>12</>미만일 경우, <@cc.rem>속세의 불꽃</> <@cc.vup>15</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>. 자신의 컨디션이 <@cc.kw>12</> 미만일 경우, <$cc.bd_b1><@cc.rem>속세의 불꽃</></> <@cc.vup>+15</>"
     },
     "control_mp_cost&bd2[000]": {
       "buffId": "control_mp_cost&bd2[000]",
@@ -8241,7 +8358,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 <@cc.vdown>+0.5</>. 자신의 컨디션이 <@cc.kw>12</>이상일 경우, <@cc.rem>감지 정보</> <@cc.vup>10</>"
+      "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 <@cc.vdown>+0.5</>. 자신의 컨디션이 <@cc.kw>12</> 이상일 경우, <$cc.bd_a1><@cc.rem>감지 정보</></> <@cc.vup>+10</>"
     },
     "control_mp_bd[000]": {
       "buffId": "control_mp_bd[000]",
@@ -8253,7 +8370,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시, 제어 센터 내 <@cc.kw>레인보우 팀</></> 오퍼레이터가 1명 늘어날 때마다 <@cc.rem>정보 저장</><@cc.vup>+1</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.t.R6><@cc.kw>레인보우 팀</></> 오퍼레이터가 1명 늘어날 때마다 <$cc.bd_ash><@cc.rem>정보 저장</></> <@cc.vup>+1</>"
     },
     "control_mp_bd[010]": {
       "buffId": "control_mp_bd[010]",
@@ -8265,7 +8382,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시, 제어 센터 내 <@cc.kw>우르수스 학생자치단</> 오퍼레이터가 1명 늘어날 때마다 <@cc.rem>우르수스 특제 음료</><@cc.vup>+1</>"
+      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.t.ussg><@cc.kw>우르수스 학생자치단</> 오퍼레이터가 1명 늘어날 때마다 <$cc.bd_tachanka><@cc.rem>우르수스 특제 음료</></> <@cc.vup>+1</>"
     },
     "power_rec_spd&cost[000]": {
       "buffId": "power_rec_spd&cost[000]",
@@ -8356,7 +8473,7 @@
       "buffName": "고열충전",
       "buffIcon": "power",
       "skillIcon": "bskill_pow_spd2",
-      "sortId": 2106,
+      "sortId": 2107,
       "buffColor": "#8fc31f",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -8405,6 +8522,18 @@
       "buffIcon": "power",
       "skillIcon": "bskill_pow_spd2",
       "sortId": 2105,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "발전소에 배치 시,  시간당 드론 회복 속도<@cc.vup>+15%</>"
+    },
+    "power_rec_spd[016]": {
+      "buffId": "power_rec_spd[016]",
+      "buffName": "에너지 집중",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd2",
+      "sortId": 2106,
       "buffColor": "#8fc31f",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -8769,7 +8898,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 자신이 상승시킨 창고 용량 상한에 따라 일정 생산력을 제공한다. <@cc.vup>18</> 칸 이하일 경우, 창고 용량 1칸당 <@cc.vup>1%</>의 생산력을 제공하고, <@cc.vup>18</>칸 보다 클 경우 창고 용량 1칸당 <@cc.vup>3%</> 생산력을 제공한다. (<@cc.rem>재활용</> 스킬과 중첩되지 않음. 우선적으로 발동됨)"
+      "description": "제조소에 배치 시, 해당 제조소 내의 오퍼레이터가 자신이 상승시킨 창고 용량 상한에 따라 일정 생산력을 제공한다. <@cc.vup>18</> 칸 이하일 경우, 창고 용량 1칸당 <@cc.vup>1%</>의 생산력을 제공하고, <@cc.vup>18</>칸 보다 클 경우 창고 용량 1칸당 <@cc.vup>3%</> 생산력을 제공한다. (<$cc.m.var1><@cc.rem>재활용</></> 스킬과 중첩되지 않음. 우선으로 발동됨)"
     },
     "manu_prod_spd_variable2[000]": {
       "buffId": "manu_prod_spd_variable2[000]",
@@ -8793,7 +8922,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "제조소에 배치 시, 숙소 내 오퍼레이터 <@cc.kw>1</>명당 <@cc.rem>감지 정보</> <@cc.vup>+1</>. 이와 동시에, <@cc.vup>1</>점의 <@cc.rem>감지 정보</>마다 <@cc.rem>생각의 사슬</> <@cc.vup>1</>점으로 전환"
+      "description": "제조소에 배치 시, 숙소 내 오퍼레이터 <@cc.kw>1</>명당 <$cc.bd_a1><@cc.rem>감지 정보</></> <@cc.vup>+1</>, 이와 동시에, <@cc.vup>1</>점의 <$cc.bd_a1><@cc.rem>감지 정보</></>마다 <$cc.bd_A><@cc.rem>생각의 사슬</></> <@cc.vup>1</>점으로 전환"
     },
     "manu_prod_spd_bd[000]": {
       "buffId": "manu_prod_spd_bd[000]",
@@ -8805,7 +8934,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "제조소에 배치 시, <@cc.rem>생각의 사슬</> <@cc.vup>2</>점마다 생산력 <@cc.vup>+1%</> "
+      "description": "제조소에 배치 시, <@cc.vup>2</>점의 <$cc.bd_A><@cc.rem>생각의 사슬</></>마다 생산력 <@cc.vup>+1%</>"
     },
     "manu_prod_spd_bd[010]": {
       "buffId": "manu_prod_spd_bd[010]",
@@ -8817,7 +8946,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "제조소에 배치 시, <@cc.rem>생각의 사슬</> <@cc.vup>1</>점마다 생산력 <@cc.vup>+1%</> "
+      "description": "제조소에 배치 시, <@cc.vup>1</>점의 <$cc.bd_A><@cc.rem>생각의 사슬</></>마다 생산력 <@cc.vup>+1%</>"
     },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
@@ -9249,7 +9378,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "무역소에 배치 시, 숙소 내 오퍼레이터가 <@cc.kw>1</>명 늘어날 때마다 <@cc.rem>속세의 불꽃</><@cc.vup>+1</>, <@cc.rem>속세의 불꽃</>이 <@cc.vup>1</>점 늘어날 때마다 오더 수주 효율<@cc.vup>+1%</>"
+      "description": "무역소에 배치 시, 숙소 내 오퍼레이터가 <@cc.kw>1</>명 늘어날 때마다 <$cc.bd_b1><@cc.rem>속세의 불꽃</></> <@cc.vup>+1</>, <@cc.rem>속세의 불꽃</></>이 <@cc.vup>1</>점<$cc.bd_b1> 늘어날 때마다 오더 수주 효율 <@cc.vup>+1%</>"
     },
     "trade_ord_limit&cost[000]": {
       "buffId": "trade_ord_limit&cost[000]",
@@ -9501,7 +9630,7 @@
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
-      "description": "가공소에 배치 후 <@cc.kw>임의류 재료</> 가공 시, 부산물 산출 확률 <@cc.vup>50%</>, <@cc.vup>1</>점마다 <@cc.rem>정보 저장</> 추가 상승 <@cc.vup>5%</>, <@cc.rem>우르수스 특제 음료</>가 <@cc.vup>4</>병에 도달 시 <@cc.vup>15%</> 추가 상승"
+      "description": "가공소에 배치 후 <@cc.kw>임의류 재료</> 가공 시, 부산물 산출 확률 <@cc.vup>50%</>, <@cc.vup>1</>점마다 <$cc.bd_ash><@cc.rem>정보 저장</></> 추가 상승 <@cc.vup>5%</>, <$cc.bd_tachanka><@cc.rem>우르수스 특제 음료</></> 수량이 <@cc.vup>4</>병에 도달 시 <@cc.vup>15%</> 추가 상승"
     },
     "workshop_formula_cost4[000]": {
       "buffId": "workshop_formula_cost4[000]",
@@ -9563,12 +9692,24 @@
       "roomType": "WORKSHOP",
       "description": "가공소에 배치 후 컨디션 <@cc.kw>4</> 소모하는 <@cc.kw>정예화 재료</> 가공 시 컨디션 소모<@cc.vup>-1</>"
     },
+    "workshop_formula_cost3[111]": {
+      "buffId": "workshop_formula_cost3[111]",
+      "buffName": "주조",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_cost1",
+      "sortId": 7053,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 후 컨디션 <@cc.kw>4</> 소모하는 <@cc.kw>정예화 재료</> 가공 시 컨디션 소모<@cc.vup>-1</>"
+    },
     "workshop_formula_cost3[120]": {
       "buffId": "workshop_formula_cost3[120]",
       "buffName": "미니멀 실용주의",
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_evolve_cost2",
-      "sortId": 7053,
+      "sortId": 7054,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
@@ -9875,6 +10016,18 @@
       "roomType": "WORKSHOP",
       "description": "가공소에 배치 후 <@cc.kw>장치</>류 가공 시, 부산물 산출 확률 <@cc.vup>90%</> 상승"
     },
+    "workshop_formula_device[020]": {
+      "buffId": "workshop_formula_device[020]",
+      "buffName": "DIY(이철)",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_oriron",
+      "sortId": 7542,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 후 <@cc.kw>이철</> 재료 가공 시, 부산물 산출 확률 <@cc.vup>90%</>"
+    },
     "workshop_formula_device[030]": {
       "buffId": "workshop_formula_device[030]",
       "buffName": "DIY 폴리에스테르",
@@ -9985,6 +10138,18 @@
     },
     "train_spd&profession[030]": {
       "buffId": "train_spd&profession[030]",
+      "buffName": "디펜더 마스터리 α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_defender1",
+      "sortId": 9601,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>디펜더</> 오퍼레이터의 스킬 훈련 속도<@cc.vup>+30%</>"
+    },
+    "train_spd&profession2[030]": {
+      "buffId": "train_spd&profession2[030]",
       "buffName": "디펜더 마스터리 α",
       "buffIcon": "training",
       "skillIcon": "bskill_train_defender1",
@@ -10271,6 +10436,18 @@
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시 <@cc.kw>캐스터</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 만약 훈련을 통해 스킬 마스터리가 <@cc.vup>2</>레벨까지 오른 경우, 훈련 속도가 <@cc.vup>+45%</> 추가"
     },
+    "train_spd&profession2[330]": {
+      "buffId": "train_spd&profession2[330]",
+      "buffName": "진지 경험",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train2_defender1",
+      "sortId": 9621,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>디펜더</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 이번 훈련을 통해 스킬 마스터리가 <@cc.vup>2</>레벨까지 도달한 경우, 훈련 속도가 <@cc.vup>+45%</> 추가"
+    },
     "train_spd&profession2[320]": {
       "buffId": "train_spd&profession2[320]",
       "buffName": "고행",
@@ -10509,7 +10686,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "숙소에 배치 시, 해당 숙소 안에 배치된 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.1</>(동종 효과 중 가장 높은 수치만 적용), 현재 숙소 레벨당 <@cc.rem>꿈나라</> <@cc.vup>1</>스택 제공"
+      "description": "숙소에 배치 시, 해당 숙소 안에 배치된 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.1</>(동종 효과 중 가장 높은 수치만 적용), 현재 숙소 레벨당 <$cc.bd_a1_a2><@cc.rem>꿈나라</></> <@cc.vup>1</>스택 제공"
     },
     "dorm_rec_bd_n1[000]": {
       "buffId": "dorm_rec_bd_n1[000]",
@@ -10521,7 +10698,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "숙소에 배치 시, <@cc.rem>꿈나라</> <@cc.vup>1</>스택 마다 <@cc.rem>감지 정보</> <@cc.vup>1</>점으로 전환"
+      "description": "숙소에 배치 시, <$cc.bd_a1_a2><@cc.rem>꿈나라</></> <@cc.vup>1</>스택마다 <$cc.bd_a1><@cc.rem>감지 정보</></> <@cc.vup>1</>점으로 전환"
     },
     "dorm_rec_all[010]": {
       "buffId": "dorm_rec_all[010]",
@@ -10804,7 +10981,7 @@
       "buffName": "재앙정보전달자 β",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd5",
-      "sortId": 8701,
+      "sortId": 8801,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10846,6 +11023,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
       "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도<@cc.vup>+40%</>"
+    },
+    "hire_spd_cost[010]": {
+      "buffId": "hire_spd_cost[010]",
+      "buffName": "재앙정보전달자 α",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd1",
+      "sortId": 8403,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도<@cc.vup>+30%</>"
+    },
+    "hire_spd_cost[200]": {
+      "buffId": "hire_spd_cost[200]",
+      "buffName": "정시 퇴근",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_skgoat",
+      "sortId": 8701,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 <@cc.vup>+45%</>, 시간당 컨디션 소모 <@cc.vdown>+2</>"
     },
     "hire_spd&clue[010]": {
       "buffId": "hire_spd&clue[010]",
@@ -10905,7 +11106,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도<@cc.vup>+20%</>, 레퍼런스 서칭 <@cc.vup>1</>회 완료 시 마다 <@cc.kw>우르수스 학생자치단</> 단서 획득 확률 증가 (확률은 작업 시간과 모집 인원의 영향을 받음)"
+      "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 <@cc.vup>+20%</>, 레퍼런스 서칭 <@cc.vup>1</>회 완료 시마다 <$cc.t.ussg><@cc.kw>우르수스 학생자치단</></> 단서 획득 확률 증가 (확률은 작업 시간과 모집 인원의 영향을 받음)"
     },
     "hire_spd_bd_n1_n1[100]": {
       "buffId": "hire_spd_bd_n1_n1[100]",
@@ -10917,7 +11118,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 <@cc.vup>+20%</>, 모집 인원수만큼 <@cc.rem>기억 조각</> <@cc.vup>+10</>개 획득 (초기 모집 인원은 포함하지 않음)"
+      "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 <@cc.vup>+20%</>, 모집 인원마다 <$cc.bd_a1_a1><@cc.rem>기억 조각</></> <@cc.vup>+10</>개 획득 (초기 모집 인원은 포함하지 않음)"
     },
     "hire_spd_bd_n1[000]": {
       "buffId": "hire_spd_bd_n1[000]",
@@ -10929,7 +11130,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "인사부 사무실에 배치 시, <@cc.rem>기억 조각</> <@cc.vup>1</>개마다 <@cc.rem>감지 정보</> <@cc.vup>1</>점으로 전환, 컨디션 소진 시 모든 <@cc.rem>기억 조각</>과 <@cc.rem>감지 정보</> 초기화"
+      "description": "인사부 사무실에 배치 시, <$cc.bd_a1_a1><@cc.rem>기억 조각</> <@cc.vup>1</>개마다 <$cc.bd_a1><@cc.rem>감지 정보</></> <@cc.vup>1</>점으로 전환, 컨디션 소진 시 모든 <$cc.bd_a1_a1><@cc.rem>기억 조각</></>과 자신이 누적한 <$cc.bd_a1><@cc.rem>감지 정보</></> 초기화"
     },
     "hire_spd_blitz[000]": {
       "buffId": "hire_spd_blitz[000]",
@@ -10941,7 +11142,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 <@cc.vup>+20%</>, <@cc.rem>정보 저장</> <@cc.vup>1</>점마다 추가로 <@cc.vup>+5%</>누적 속도, <@cc.rem>우르수스 특제 음료</> <@cc.vup>1</>병마다 <@cc.vup>+5%</>누적 속도가 추가"
+      "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 <@cc.vup>+20%</>, <$cc.bd_ash><@cc.rem>정보 저장</></> <@cc.vup>1</>점마다 누적 속도 추가로 <@cc.vup>+5%</>, <$cc.bd_tachanka><@cc.rem>우르수스 특제 음료</></> <@cc.vup>1</>병마다 누적 속도가 추가로 <@cc.vup>+5%</>"
     },
     "meet_spd[000]": {
       "buffId": "meet_spd[000]",
@@ -11025,7 +11226,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
-      "description": "응접실에 배치 시, <@cc.kw>우르수스 학생자치단</> 단서를 더 쉽게 획득한다 (업무 시간이 확률에 영향을 줌)"
+      "description": "응접실에 배치 시, <$cc.t.ussg><@cc.kw>우르수스 학생자치단</></> 단서를 더 쉽게 획득 (업무 시간이 확률에 영향을 줌)"
     },
     "meet_team[060]": {
       "buffId": "meet_team[060]",
@@ -11061,7 +11262,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
-      "description": "응접실에 배치 시, 획득한 단서가 <@cc.kw>우르수스 학생자치단</> 단서가 아닐 때 마다, <@cc.kw>우르수스 학생자치단</> 단서 출현 확률이 추가로 상승 (업무 시간이 확률에 영향을 줌)"
+      "description": "응접실에 배치 시, 획득한 단서가 <$cc.t.ussg><@cc.kw>우르수스 학생자치단</></> 단서가 아닐 때 마다, <$cc.t.ussg><@cc.kw>우르수스 학생자치단</></> 단서 출현 확률이 추가로 상승 (업무 시간이 확률에 영향을 줌)"
     },
     "meet_flag[060]": {
       "buffId": "meet_flag[060]",
@@ -11157,7 +11358,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
-      "description": "응접실에 배치 시, 단서 수집 속도 <@cc.vup>10%</> 상승, <@cc.kw>우르수스 학생자치단</> 단서를 더 쉽게 획득한다 (업무시간이 확률에 영향을 줌)"
+      "description": "응접실에 배치 시, 단서 수집 속도 <@cc.vup>10%</> 상승, <$cc.t.ussg><@cc.kw>우르수스 학생자치단</></> 단서를 더 쉽게 획득 (업무 시간이 확률에 영향을 줌)"
     },
     "meet_spd&team[060]": {
       "buffId": "meet_spd&team[060]",
@@ -14237,7 +14438,7 @@
       },
       "furni_wooden_ceilingLight_01": {
         "id": "furni_wooden_ceilingLight_01",
-        "name": "빈티지 팬던트 조명",
+        "name": "빈티지 펜던트 조명",
         "iconId": "furni_wooden_ceilingLight_01",
         "type": "CEILINGLAMP",
         "location": "CEILING",
@@ -14467,7 +14668,7 @@
       },
       "furni_pizza_ceilingLights_01": {
         "id": "furni_pizza_ceilingLights_01",
-        "name": "피자 가게 은은한 팬던트 조명",
+        "name": "피자 가게 은은한 펜던트 조명",
         "iconId": "furni_pizza_ceilingLights_01",
         "type": "CEILINGLAMP",
         "location": "CEILING",
@@ -21862,7 +22063,7 @@
         "height": 9,
         "comfort": 410,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "니어 가문의 검과 갑옷을 보관하는 거치대. 가문 대대로 전해지는 검과 갑옷 세트는, 현재 마리아가 쓰고 있다.",
+        "description": "니어 가문의 갑옷을 넣어두는 수납장. 가보로 전해 내려온 검과 갑옷 세트가 보관되어 있으며 지금은 마리아가 사용하고 있다.",
         "obtainApproach": "이벤트 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -22276,7 +22477,7 @@
         "height": 10,
         "comfort": 240,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "기사 귀족들이 자주 쓰는 벽지. '기사'의 방 한 칸보다, 마리아는 자신의 공방을 갖고 싶어 한다.",
+        "description": "기사 가문 귀족들이 흔히 사용하는 벽지. '기사'의 방보다 마리아는 자신만의 공방을 더 원한다.",
         "obtainApproach": "이벤트 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -25208,7 +25409,7 @@
       },
       "furni_bauhaus_ceilingLight_01": {
         "id": "furni_bauhaus_ceilingLight_01",
-        "name": "대칭형 고정 팬던트 조명",
+        "name": "대칭형 고정 펜던트 조명",
         "iconId": "furni_bauhaus_ceilingLight_01",
         "type": "CEILINGLAMP",
         "location": "CEILING",
@@ -25254,7 +25455,7 @@
       },
       "furni_bauhaus_carpet_01": {
         "id": "furni_bauhaus_carpet_01",
-        "name": "가볍고 얇은 카펫",
+        "name": "기계로 짠 화학섬유 카펫",
         "iconId": "furni_bauhaus_carpet_01",
         "type": "CARPET",
         "location": "CARPET",
@@ -25343,6 +25544,374 @@
         "processedByProductGroup": [],
         "canBeDestroy": true,
         "isOnly": -1
+      },
+      "furni_icu_shadowlessLamp_01": {
+        "id": "furni_icu_shadowlessLamp_01",
+        "name": "다용도 엑스레이 시스템",
+        "iconId": "furni_icu_shadowlessLamp_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 4,
+        "height": 6,
+        "comfort": 270,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "기본적인 인체 엑스레이와 무영 조명 기능을 통합시켰다. 혹시 무영 엑스레이 단말기의 조명을 받게 된다면 그는 분명 환자일 것이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_bed_01": {
+        "id": "furni_icu_bed_01",
+        "name": "유압식 전동 수술대",
+        "iconId": "furni_icu_bed_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 4,
+        "height": 4,
+        "comfort": 405,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "컨트롤러를 이용해 각 부문의 안정적인 승강을 조절할 수 있다. 유압식 전동 장치는 여러 제어 장치를 보조할 뿐이지, 환자의 통증을 현저하게 완화할 수 있는 것은 아니다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_ventilator_01": {
+        "id": "furni_icu_ventilator_01",
+        "name": "호흡 유지 장치",
+        "iconId": "furni_icu_ventilator_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "중대 수술을 할 때 쓰이는 환자의 생명선. 일부가 고장이 나거나, 심지어 정전이 발생해도 계속 운행할 수 있는 생명과 직결된 설비지만, 환자의 건강 회복에 결정적인 작용을 하지는 않는다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_trolley_01": {
+        "id": "furni_icu_trolley_01",
+        "name": "의료용 기자재 선반",
+        "iconId": "furni_icu_trolley_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 170,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "수시로 주치의에게 의료 기자재를 공급한다. 뼛조각에서부터 스테인리스까지 발전했지만, 의료 기자재의 실용적인 효능은 그냥 그대로다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_projector_01": {
+        "id": "furni_icu_projector_01",
+        "name": "의료용 프로젝터",
+        "iconId": "furni_icu_projector_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 80,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "수요에 따라 각종 영상을 투영한다. 데이터 전송 매개체는 끊임없는 연구를 거쳐 출시되고 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_screen_01": {
+        "id": "furni_icu_screen_01",
+        "name": "두루마리 커튼",
+        "iconId": "furni_icu_screen_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 1,
+        "height": 6,
+        "comfort": 260,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "영상의 수용체, 필요 없을 땐 거둘 수 있다. 정보에 대한 필터링과 제한은 이전부터 있었다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_curtain_01": {
+        "id": "furni_icu_curtain_01",
+        "name": "수술 구역 격리 커튼",
+        "iconId": "furni_icu_curtain_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 6,
+        "height": 6,
+        "comfort": 275,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "오염을 방지하기 위해 구역을 분리할 때 사용된다. 물리적 차단은 쉬울 수 있어도 마음속 두려움은 피하기 어렵다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_desk_01": {
+        "id": "furni_icu_desk_01",
+        "name": "길게 늘인 작업대",
+        "iconId": "furni_icu_desk_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 4,
+        "height": 5,
+        "comfort": 665,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "관리, 실험, 비밀, 회사의 수직 관리 구조로 최상위 결정권자에게 대한 의존도가 높을 수밖에 없는 것이 뻔하다. 그런데도, 이런 구조는 봉건 통치보다는 훨씬 더 좋다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_chair_01": {
+        "id": "furni_icu_chair_01",
+        "name": "주치의 의자",
+        "iconId": "furni_icu_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "응급 전문의의 책임자 전용 의자. 폴리에스테르 섬유와 스테인리스로 나무를 대체한 이 의자는 한 번도 주인이 바뀐 적이 없다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_stool_01": {
+        "id": "furni_icu_stool_01",
+        "name": "작업용 둥근 의자",
+        "iconId": "furni_icu_stool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 125,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "손님 접대용 의자. 공업 생산 라인에서 생산한 원형 의자의 높낮이는 똑같으나, 평형감은 보장할 수 없다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_blackboard_01": {
+        "id": "furni_icu_blackboard_01",
+        "name": "정보 통합 보드",
+        "iconId": "furni_icu_blackboard_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 1,
+        "height": 4,
+        "comfort": 225,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "가장 원시적인 정보 통합 매체 중 하나. 결정권자는 가장 중요한 정보를 눈앞에 펼쳐놓길 좋아한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_sampleStorage_01": {
+        "id": "furni_icu_sampleStorage_01",
+        "name": "진공 항온 저장탱크",
+        "iconId": "furni_icu_sampleStorage_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 6,
+        "comfort": 350,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "고위험성 의학용 오리지늄 제품을 저장하는 데만 사용된다. 현대적인 저장 방법으로 물질의 유효 기한을 미래까지 연장할 수 있으나, 이 저장 탱크를 사용하는 자는 여전히 자연 규칙을 따르고 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_downlight1_01": {
+        "id": "furni_icu_downlight1_01",
+        "name": "집성 천장등",
+        "iconId": "furni_icu_downlight1_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 4,
+        "height": 1,
+        "comfort": 80,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드의 조명 계획의 대단하다 할 순 없는 결과물 중 하나. 안정적이고 지속적인 큰 범위의 조명은 귀족의 특권이었으나, 지금은 일반 시민들도 누릴 수 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_icu_downlight2_01": {
+        "id": "furni_icu_downlight2_01",
+        "name": "소형 집성 천장등",
+        "iconId": "furni_icu_downlight2_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 4,
+        "height": 1,
+        "comfort": 100,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드의 발전 계획에서 언급할 가치도 없는 소모품. 불빛이 비쳤지만, 각 계층의 삶은 전혀 변화가 없었다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_icu_wallpaper_01": {
+        "id": "furni_icu_wallpaper_01",
+        "name": "의료부 범용 벽지",
+        "iconId": "furni_icu_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "전면적인 계획을 통해 의료부에서 사용하는 벽지. 전반적인 환경은 은연중에 집단의 인정을 받는다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_floor_01": {
+        "id": "furni_icu_floor_01",
+        "name": "의료부 범용 바닥 타일",
+        "iconId": "furni_icu_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "전면적인 계획을 통해 의료부에서 사용하는 타일. 공동 인식은 점차 사고를 고착화하여 편견을 일으킨다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
       },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
@@ -27046,6 +27615,29 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_dropS018_needlePhobia_01": {
+        "id": "furni_dropS018_needlePhobia_01",
+        "name": "플레이트 《침》",
+        "iconId": "furni_dropS018_needlePhobia_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "\"보기만 해도 찔리고, 즉시 통증을 느낀다.\"",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_contract_s0_01": {
         "id": "furni_contract_s0_01",
         "name": "황무지의 깃발",
@@ -27176,7 +27768,7 @@
         "comfort": 105,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "우르수스 버려진 광산 구역 섬멸을 완료하고 보고를 제출하면 획득 가능한 기념품. 버려진 광산 구역의 소리가 아직도 귓가에 남아 울리는 듯하다.",
-        "obtainApproach": "섬멸 의뢰 보상",
+        "obtainApproach": "섬멸 로테이션 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -31881,6 +32473,103 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_icu": {
+        "id": "furni_set_icu",
+        "name": "응급 전문의 사무실",
+        "desc": "로도스 아일랜드 응급 전문의의 사무실. 켈시가 총책임자를 맡고 있다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_icu_shadowlessLamp_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_bed_01",
+            "pos0": 2,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_icu_ventilator_01",
+            "pos0": 7,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_icu_trolley_01",
+            "pos0": 2,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_icu_projector_01",
+            "pos0": 9,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_icu_screen_01",
+            "pos0": 3,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_icu_curtain_01",
+            "pos0": 11,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_desk_01",
+            "pos0": 15,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_chair_01",
+            "pos0": 21,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_stool_01",
+            "pos0": 25,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_blackboard_01",
+            "pos0": 19,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_icu_sampleStorage_01",
+            "pos0": 28,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_downlight1_01",
+            "pos0": 7,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_downlight1_01",
+            "pos0": 25,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_downlight2_01",
+            "pos0": 12,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_downlight2_01",
+            "pos0": 19,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_icu_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -33837,6 +34526,58 @@
           "furni_bauhaus_floor_01",
           "furni_bauhaus_geometryLight_01",
           "furni_bauhaus_downlight_01"
+        ]
+      },
+      "furni_set_icu_1": {
+        "id": "furni_set_icu_1",
+        "name": "수술 구역",
+        "themeId": "furni_set_icu",
+        "comfort": 250,
+        "count": 4,
+        "furniture": [
+          "furni_icu_shadowlessLamp_01",
+          "furni_icu_bed_01",
+          "furni_icu_ventilator_01",
+          "furni_icu_trolley_01"
+        ]
+      },
+      "furni_set_icu_2": {
+        "id": "furni_set_icu_2",
+        "name": "보조 설비",
+        "themeId": "furni_set_icu",
+        "comfort": 245,
+        "count": 4,
+        "furniture": [
+          "furni_icu_screen_01",
+          "furni_icu_projector_01",
+          "furni_icu_curtain_01",
+          "furni_icu_sampleStorage_01"
+        ]
+      },
+      "furni_set_icu_3": {
+        "id": "furni_set_icu_3",
+        "name": "의사 업무 구역",
+        "themeId": "furni_set_icu",
+        "comfort": 290,
+        "count": 4,
+        "furniture": [
+          "furni_icu_desk_01",
+          "furni_icu_blackboard_01",
+          "furni_icu_chair_01",
+          "furni_icu_stool_01"
+        ]
+      },
+      "furni_set_icu_4": {
+        "id": "furni_set_icu_4",
+        "name": "의료부 장식",
+        "themeId": "furni_set_icu",
+        "comfort": 160,
+        "count": 4,
+        "furniture": [
+          "furni_icu_wallpaper_01",
+          "furni_icu_floor_01",
+          "furni_icu_downlight1_01",
+          "furni_icu_downlight2_01"
         ]
       }
     },
