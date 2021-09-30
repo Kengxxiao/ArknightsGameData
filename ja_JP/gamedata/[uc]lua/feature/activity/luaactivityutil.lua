@@ -12,6 +12,7 @@ function LuaActivityUtil:OnDispose()
 end
 
 local HOME_WEIGHT_DAILY_PRAY = 500
+local HOME_WEIGHT_GRID_GACHA = 510
 
 
 
@@ -32,10 +33,28 @@ end
 
 
 
+local function _FindValidGridGachaActs(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidGridGachaActs()
+  if actList == nil then
+    return
+  end
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i]
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_GRID_GACHA)
+    validActs:Add(validAct)
+    if CS.Torappu.UI.ActivityUtil.CheckIfGridGachaActUncomplete(actId) then
+      uncompleteActs:Add(validAct)
+    end
+  end
+end
+
+
+
 
 function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   
   _FindValidPrayOnlyActs(validActs, uncompleteActs)
+  _FindValidGridGachaActs(validActs, uncompleteActs)
 end
 
 
@@ -52,6 +71,9 @@ local DEFINE_CLS_FUNCS = {
   TYPE_ACT17D7 = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, Act17D7MainDlg)
   end,
+  GRID_GACHA = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, GridGachaMainDlg)
+  end
 }
 
 

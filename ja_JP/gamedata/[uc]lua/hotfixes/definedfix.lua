@@ -3,8 +3,10 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/AdvancedSelectorHotfixer",
-  "HotFixes/UITextNotifyViewHotfixer"
+  "HotFixes/BuildingMoodHotfixer",
+  "HotFixes/DoubleBufferedListHotfixer",
+  "HotFixes/RecruitHotfixer",
+  "HotFixes/CharacterTransHotfixer"
 };
 
 return list;
