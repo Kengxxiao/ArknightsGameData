@@ -926,7 +926,7 @@
     "DORMITORY": {
       "id": "DORMITORY",
       "name": "Dormitory",
-      "description": "A facility that provides standard accommodation for Rhodes Island’s Operators. It has everything needed for relaxation and entertainment.",
+      "description": "A facility that provides standard accommodation for Rhodes Island's Operators. It has everything needed for relaxation and entertainment.",
       "defaultPrefabId": "room_dormitory_6x2",
       "canLevelDown": true,
       "maxCount": 4,
@@ -1108,7 +1108,7 @@
     "HIRE": {
       "id": "HIRE",
       "name": "Office",
-      "description": "A facility that deals with all of Rhodes Island’s official matters.",
+      "description": "A facility that deals with all of Rhodes Island's official matters.",
       "defaultPrefabId": "room_hire_4x2",
       "canLevelDown": false,
       "maxCount": 1,
@@ -3729,9 +3729,16 @@
         {
           "buffData": [
             {
-              "buffId": "hire_spd[010]",
+              "buffId": "hire_spd_cost[010]",
               "cond": {
                 "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "hire_spd_cost[200]",
+              "cond": {
+                "phase": 1,
                 "level": 1
               }
             }
@@ -7917,6 +7924,104 @@
         }
       ]
     },
+    "char_472_pasngr": {
+      "charId": "char_472_pasngr",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[003]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "power_rec_spd[016]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&power[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_363_toddi": {
+      "charId": "char_363_toddi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost3[111]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_device[020]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_304_zebra": {
+      "charId": "char_304_zebra",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost[006]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[330]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -8097,7 +8202,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</>"
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost[001]": {
       "buffId": "control_mp_cost[001]",
@@ -8109,7 +8214,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</>"
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost[002]": {
       "buffId": "control_mp_cost[002]",
@@ -8121,7 +8226,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</>"
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost[003]": {
       "buffId": "control_mp_cost[003]",
@@ -8133,23 +8238,11 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</>"
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost[004]": {
       "buffId": "control_mp_cost[004]",
       "buffName": "Substitute",
-      "buffIcon": "control",
-      "skillIcon": "bskill_ctrl_cost",
-      "sortId": 1105,
-      "buffColor": "#005752",
-      "textColor": "#ffffff",
-      "buffCategory": "FUNCTION",
-      "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</>"
-    },
-    "control_mp_cost[005]": {
-      "buffId": "control_mp_cost[005]",
-      "buffName": "Necessary Responsibility",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost",
       "sortId": 1106,
@@ -8157,7 +8250,31 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</>"
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
+    },
+    "control_mp_cost[005]": {
+      "buffId": "control_mp_cost[005]",
+      "buffName": "Necessary Responsibility",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "sortId": 1107,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
+    },
+    "control_mp_cost[006]": {
+      "buffId": "control_mp_cost[006]",
+      "buffName": "Guarding",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "sortId": 1105,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost&faction2[000]": {
       "buffId": "control_mp_cost&faction2[000]",
@@ -8169,7 +8286,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>(7)</>, and further decreases the Morale consumed per hour based upon the number of <@cc.kw>Lei's Detective Agency</> Operators assigned to the Control Center."
+      "description": "When this Operator is assigned to the Control Center, each Operator from <$cc.t.lda><@cc.kw>Lee's Detective Agency</></> restores <@cc.kw>extra Morale</> and increases the Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost&faction[000]": {
       "buffId": "control_mp_cost&faction[000]",
@@ -8181,7 +8298,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</> for each <@cc.kw>L.G.D.</> Operator assigned to the Control Center."
+      "description": "When this Operator is assigned to the Control Center, each Operator from <$cc.t.lgd><@cc.kw>Lungmen Guard Department</></> increases the Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost&faction[020]": {
       "buffId": "control_mp_cost&faction[020]",
@@ -8193,7 +8310,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</> for each <@cc.kw>Ursus Student Self-Government Group</> Operator assigned to the Control Center. "
+      "description": "When this Operator is assigned to the Control Center, each Operator from <$cc.t.ussg><@cc.kw>Ursus Student Self-Governing Group</></> increases the Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost&faction[900]": {
       "buffId": "control_mp_cost&faction[900]",
@@ -8205,7 +8322,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</> for each <@cc.kw>Alternate</> Operator assigned to the Control Center."
+      "description": "When this Operator is assigned to the Control Center, each <$cc.t.sp><@cc.kw>Alternate Operator</></> increases the Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost&faction[990]": {
       "buffId": "control_mp_cost&faction[990]",
@@ -8217,7 +8334,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</> for each <@cc.kw>Team Rainbow</> Operator assigned to the Control Center."
+      "description": "When this Operator is assigned to the Control Center, each Operator from <$cc.t.R6><@cc.kw>Team Rainbow</></> increases the Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
     "control_mp_cost&bd1[000]": {
       "buffId": "control_mp_cost&bd1[000]",
@@ -8229,7 +8346,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases the Morale consumed per hour of all Operators in the Control Center by <@cc.vup>-0.05</>; and when own morale is below <@cc.kw>12</>, <@cc.rem>Worldly Plight</><@cc.vup>15</>"
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour; and when self Morale is below <@cc.kw>12</>, <$cc.bd_b1><@cc.rem>Worldly Plight</></><@cc.vup>+15</>"
     },
     "control_mp_cost&bd2[000]": {
       "buffId": "control_mp_cost&bd2[000]",
@@ -8241,7 +8358,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, decreases own morale consumption by<@cc.vdown>+0.5</>; when own morale is above<@cc.kw>12</>, <@cc.rem>Perception Information</><@cc.vup>10</>"
+      "description": "When this Operator is assigned to the Control Center, decreases own morale consumption by<@cc.vdown>+0.5</>; and when self morale is above<@cc.kw>12</>, <$cc.bd_a1><@cc.rem>Perception Information</></><@cc.vup>+10</>"
     },
     "control_mp_bd[000]": {
       "buffId": "control_mp_bd[000]",
@@ -8253,7 +8370,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, for each <@cc.kw>Team Rainbow</> Operator, <@cc.rem>Intelligence Reserve</><@cc.vup>+1</>"
+      "description": "When this Operator is assigned to the Control Center, for each <$cc.t.R6><@cc.kw>Team Rainbow</></> Operator, <$cc.bd_ash><@cc.rem>Intelligence Reserve</></><@cc.vup>+1</>"
     },
     "control_mp_bd[010]": {
       "buffId": "control_mp_bd[010]",
@@ -8265,7 +8382,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "When this Operator is assigned to the Control Center, for each <@cc.kw>Ursus Student Self-Government Group</> Operator, <@cc.rem>Ursus Specialty Beverage</><@cc.vup>+1</>"
+      "description": "When this Operator is assigned to the Control Center, for each <$cc.t.ussg><@cc.kw>Ursus Student Self-Governing Group</></> Operator, <$cc.bd_tachanka><@cc.rem>Ursus Specialty Beverage</></><@cc.vup>+1</>"
     },
     "power_rec_spd&cost[000]": {
       "buffId": "power_rec_spd&cost[000]",
@@ -8356,7 +8473,7 @@
       "buffName": "Superheat Charge",
       "buffIcon": "power",
       "skillIcon": "bskill_pow_spd2",
-      "sortId": 2106,
+      "sortId": 2107,
       "buffColor": "#8fc31f",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -8411,6 +8528,18 @@
       "roomType": "POWER",
       "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+15%</>"
     },
+    "power_rec_spd[016]": {
+      "buffId": "power_rec_spd[016]",
+      "buffName": "Energy Gathering",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd2",
+      "sortId": 2106,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+15%</>"
+    },
     "manu_prod_spd&power[000]": {
       "buffId": "manu_prod_spd&power[000]",
       "buffName": "Automation α",
@@ -8421,7 +8550,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</> (excluding the additional productivity affected by facility count), but each <@cc.kw>Power Plant</> increases that Factory’s productivity by <@cc.vup>+5%</>"
+      "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</> (excluding the additional productivity affected by facility count), but each <@cc.kw>Power Plant</> increases that Factory's productivity by <@cc.vup>+5%</>"
     },
     "manu_prod_spd&power[010]": {
       "buffId": "manu_prod_spd&power[010]",
@@ -8433,7 +8562,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</> (excluding the additional productivity affected by facility count), but each <@cc.kw>Power Plant</> increases that Factory’s productivity by <@cc.vup>+10%</>"
+      "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</> (excluding the additional productivity affected by facility count), but each <@cc.kw>Power Plant</> increases that Factory's productivity by <@cc.vup>+10%</>"
     },
     "manu_prod_spd&power[020]": {
       "buffId": "manu_prod_spd&power[020]",
@@ -8445,7 +8574,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</> (excluding the additional productivity affected by facility count), but each <@cc.kw>Power Plant</> increases that Factory’s productivity by <@cc.vup>+15%</>"
+      "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</> (excluding the additional productivity affected by facility count), but each <@cc.kw>Power Plant</> increases that Factory's productivity by <@cc.vup>+15%</>"
     },
     "manu_prod_spd[000]": {
       "buffId": "manu_prod_spd[000]",
@@ -8769,7 +8898,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "When this Operator is assigned to a Factory, increases the productivity of Operators in that Factory based upon their increased capacity limit. Operators with <@cc.vup>18</> or less increased capacity limit gain <@cc.vup>1%</> productivity; Operators with greater than <@cc.vup>18</> increased capacity limit gain <@cc.vup>3%</> productivity (This effect does not stack with <@cc.rem>Recycling</> and takes priority over it)"
+      "description": "When this Operator is assigned to a Factory, increases the productivity of Operators in that Factory based upon their increased capacity limit. Operators with <@cc.vup>18</> or less increased capacity limit gain <@cc.vup>1%</> productivity; Operators with greater than <@cc.vup>18</> increased capacity limit gain <@cc.vup>3%</> productivity (This effect does not stack with <$cc.m.var1><@cc.rem>Recycling</></> and takes priority over it)."
     },
     "manu_prod_spd_variable2[000]": {
       "buffId": "manu_prod_spd_variable2[000]",
@@ -8793,7 +8922,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "When this Operator is assigned to a Factory, for every <@cc.kw>1</> operator in the Dormitories, <@cc.rem>Perception Information</> <@cc.vup>+1</>. Additionally, every <@cc.vup>1</> point(s) of <@cc.rem>Perception Information</> is converted into <@cc.vup>1</> point(s) of <@cc.rem>Chain of Thought</>"
+      "description": "When this Operator is assigned to a Factory, for every <@cc.kw>1</> operator in the Dormitory, <$cc.bd_a1><@cc.rem>Perception Information</> </><@cc.vup>+1</>. Additionally, every <@cc.vup>1</> points of <$cc.bd_a1><@cc.rem>Perception Information</></> is converted into <@cc.vup>1</> points of <$cc.bd_A><@cc.rem>Chain of Thought</></>"
     },
     "manu_prod_spd_bd[000]": {
       "buffId": "manu_prod_spd_bd[000]",
@@ -8805,7 +8934,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "When this Operator is assigned to Factory, for every <@cc.vup>2</> point(s) of <@cc.rem>Chain of Thought</>, productivity <@cc.vup>+1%</>"
+      "description": "When this Operator is assigned to Factory, for every <@cc.vup>2</> points of <$cc.bd_A><@cc.rem>Chain of Thought</>, productivity </><@cc.vup>+1%</>"
     },
     "manu_prod_spd_bd[010]": {
       "buffId": "manu_prod_spd_bd[010]",
@@ -8817,7 +8946,7 @@
       "textColor": "#333333",
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
-      "description": "When this Operator is assigned to Factory, for every <@cc.vup>1</> point(s) of <@cc.rem>Chain of Thought</>, productivity <@cc.vup>+1%</>"
+      "description": "When this Operator is assigned to Factory, for every <@cc.vup>1</> points of <$cc.bd_A><@cc.rem>Chain of Thought</>, productivity </><@cc.vup>+1%</>"
     },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
@@ -9249,7 +9378,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "When this Operator is assigned to the Trading Post, <@cc.kw>each</> Operator in the Dormitory grants<@cc.rem>Worldly Plight</><@cc.vup>+1</>, and for <@cc.vup>1</>point<@cc.rem>Worldly Plight</>, grant <@cc.vup>+1%</> order acquisition efficiency"
+      "description": "When this Operator is assigned to a Trading Post, <@cc.kw>each</> Operator in the Dormitory grants<$cc.bd_b1><@cc.rem>Worldly Plight</></><@cc.vup>+1</>, and for <@cc.vup>1</>point<$cc.bd_b1><@cc.rem>Worldly Plight</></>, grant <@cc.vup>+1%</> order acquisition efficiency"
     },
     "trade_ord_limit&cost[000]": {
       "buffId": "trade_ord_limit&cost[000]",
@@ -9489,7 +9618,7 @@
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
-      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, this Operator’s Morale will be <@cc.kw>restored once</> for every <@cc.vup>2</> times no byproducts are produced during processing, equal to the Morale consumed <@cc.kw>for processing that corresponding formula one time</> (the final Morale total is calculated after processing is completed)"
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, this Operator's Morale will be <@cc.kw>restored once</> for every <@cc.vup>2</> times no byproducts are produced during processing, equal to the Morale consumed <@cc.kw>for processing that corresponding formula one time</> (the final Morale total is calculated after processing is completed)"
     },
     "workshop_formula_frost[000]": {
       "buffId": "workshop_formula_frost[000]",
@@ -9501,7 +9630,7 @@
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
-      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, the production rate of byproduct increases by<@cc.vup>50%</>, and <@cc.vup>1</><@cc.rem>Intelligence Reserve</>increases by<@cc.vup>5%</>; if the number of <@cc.rem>Ursus Specialty Beverages</>reaches<@cc.vup>4</> bottles, increase extra<@cc.vup>15%</>"
+      "description": "When this Operator is assigned to a Workshop to process <@cc.kw>any material</>, the production rate of byproduct increases by <@cc.vup>50%</>, and for every<@cc.vup>1</> <$cc.bd_ash><@cc.rem>Intelligence Reserve</></>, increases extra <@cc.vup>5%</>; if the number of <$cc.bd_tachanka><@cc.rem>Ursus Specialty Beverages</></> reaches <@cc.vup>4</> bottles, increases extra <@cc.vup>15%</>"
     },
     "workshop_formula_cost4[000]": {
       "buffId": "workshop_formula_cost4[000]",
@@ -9563,12 +9692,24 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, reduces the Morale consumed by all corresponding formulas that cost <@cc.kw>4</> Morale by <@cc.vup>-1</>"
     },
+    "workshop_formula_cost3[111]": {
+      "buffId": "workshop_formula_cost3[111]",
+      "buffName": "Fusion Casting",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_cost1",
+      "sortId": 7053,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, reduces the Morale consumed by all corresponding formulas that cost <@cc.kw>4</> Morale by <@cc.vup>-1</>"
+    },
     "workshop_formula_cost3[120]": {
       "buffId": "workshop_formula_cost3[120]",
       "buffName": "Pragmatic Minimalism",
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_evolve_cost2",
-      "sortId": 7053,
+      "sortId": 7054,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
@@ -9875,6 +10016,18 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Device</>-type materials, increases the byproduct production rate by <@cc.vup>90%</>"
     },
+    "workshop_formula_device[020]": {
+      "buffId": "workshop_formula_device[020]",
+      "buffName": "DIY Oriron",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_oriron",
+      "sortId": 7542,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to a Workshop to process <@cc.kw>Oriron</>-type materials, the production rate of byproduct increases by <@cc.vup>90%</>"
+    },
     "workshop_formula_device[030]": {
       "buffId": "workshop_formula_device[030]",
       "buffName": "DIY Polyester",
@@ -9985,6 +10138,18 @@
     },
     "train_spd&profession[030]": {
       "buffId": "train_spd&profession[030]",
+      "buffName": "Defender Expert α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_defender1",
+      "sortId": 9601,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Defender</> Operators' Specialization training speed <@cc.vup>+30%</>"
+    },
+    "train_spd&profession2[030]": {
+      "buffId": "train_spd&profession2[030]",
       "buffName": "Defender Expert α",
       "buffIcon": "training",
       "skillIcon": "bskill_train_defender1",
@@ -10271,6 +10436,18 @@
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Caster</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+45%</> if training the skill to Specialization Level <@cc.vup>2</>"
     },
+    "train_spd&profession2[330]": {
+      "buffId": "train_spd&profession2[330]",
+      "buffName": "Field Experience",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train2_defender1",
+      "sortId": 9621,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Defender</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+45%</> if training the skill to Specialization Level <@cc.vup>2</>"
+    },
     "train_spd&profession2[320]": {
       "buffId": "train_spd&profession2[320]",
       "buffName": "Austerity",
@@ -10329,7 +10506,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
-      "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour is increased by <@cc.vdown>+1</> when training a <@cc.kw>Sniper</> Operator’s skill to Specialization Level <@cc.vup>3</>"
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour is increased by <@cc.vdown>+1</> when training a <@cc.kw>Sniper</> Operator's skill to Specialization Level <@cc.vup>3</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -10509,7 +10686,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>\\{8\\}</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place). Additionally, for every level of the current Dormitory, <@cc.vup>1 level</> <@cc.rem>of Dreamland.</>"
+      "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.1</> Morale per hour to all Operators in that Dormitory (Only the strongest effect of this type triggered). Additionally, for every level of the current Dormitory, <@cc.vup>1 level</> <$cc.bd_a1_a2><@cc.rem>of Dreamland</></>"
     },
     "dorm_rec_bd_n1[000]": {
       "buffId": "dorm_rec_bd_n1[000]",
@@ -10521,7 +10698,7 @@
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "When this Operator is assigned to a Dormitory, every <@cc.vup>1</> level(s) of <@cc.rem>Dreamland</> is converted into <@cc.vup>1</> point(s) of <@cc.rem>Perception Information</>"
+      "description": "When this Operator is assigned to a Dormitory, every <@cc.vup>1</> levels of <$cc.bd_a1_a2><@cc.rem>Dreamland</></> is converted into <@cc.vup>1</> points of <$cc.bd_a1><@cc.rem>Perception Information</></>"
     },
     "dorm_rec_all[010]": {
       "buffId": "dorm_rec_all[010]",
@@ -10804,7 +10981,7 @@
       "buffName": "Catastrophe Messenger β",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd5",
-      "sortId": 8701,
+      "sortId": 8801,
       "buffColor": "#565656",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10847,6 +11024,30 @@
       "roomType": "HIRE",
       "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+40%</>"
     },
+    "hire_spd_cost[010]": {
+      "buffId": "hire_spd_cost[010]",
+      "buffName": "Catastrophe Messenger α",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd1",
+      "sortId": 8403,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+30%</>"
+    },
+    "hire_spd_cost[200]": {
+      "buffId": "hire_spd_cost[200]",
+      "buffName": "Clocking Out On Time",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_skgoat",
+      "sortId": 8701,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+45%</> and Morale consumed per hour <@cc.vdown>+2</>"
+    },
     "hire_spd&clue[010]": {
       "buffId": "hire_spd&clue[010]",
       "buffName": "Catastrophe Messenger α",
@@ -10861,7 +11062,7 @@
     },
     "hire_spd&clue[100]": {
       "buffId": "hire_spd&clue[100]",
-      "buffName": "Empath’s Insight",
+      "buffName": "Empath's Insight",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd&clue",
       "sortId": 8412,
@@ -10905,7 +11106,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "When this Operator is assigned to the HR Office, increases HR contacting speed by <@cc.vup>+20%</>, and for every <@cc.vup>1</> contacts made, increases the likelihood of obtaining <@cc.kw>Ursus Student Self-Government Group</> clues (working time and recruitment slots improves the likelihood)"
+      "description": "When this Operator is assigned to the HR Office, increases HR contacting speed by <@cc.vup>+20%</>, and for every <@cc.vup>1</> contacts made, increases the likelihood of obtaining <$cc.t.ussg><@cc.kw>Ursus Student Self-Governing Group</></> clues (Working time and recruitment slots affect the likelihood)."
     },
     "hire_spd_bd_n1_n1[100]": {
       "buffId": "hire_spd_bd_n1_n1[100]",
@@ -10917,7 +11118,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>. Additionally, for every Recruit slot (does not count default slots), <@cc.rem>Memory Fragment</> <@cc.vup>+10</>"
+      "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>. Additionally, for every Recruit slot (Default slots do not count), <$cc.bd_a1_a1><@cc.rem>Memory Fragments</></> <@cc.vup>+10</>"
     },
     "hire_spd_bd_n1[000]": {
       "buffId": "hire_spd_bd_n1[000]",
@@ -10929,7 +11130,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "When this Operator is assigned to the HR Office, every <@cc.vup>1</> point(s) of <@cc.rem>Memory Fragment</> is converted into <@cc.vup>1</> point(s) of <@cc.rem>Perception Information</>. When Morale is fully consumed, remove all points of <@cc.rem>Memory Fragment</> and <@cc.rem>Perception Information</>"
+      "description": "When this Operator is assigned to the HR Office, every <@cc.vup>1</> <$cc.bd_a1_a1><@cc.rem>Memory Fragment</></> is converted into <@cc.vup>1</> <$cc.bd_a1><@cc.rem>Perception Information</></>. When Morale is fully consumed, remove all <$cc.bd_a1_a1><@cc.rem>Memory Fragments</></> and accumulated <$cc.bd_a1><@cc.rem>Perception Information</></>"
     },
     "hire_spd_blitz[000]": {
       "buffId": "hire_spd_blitz[000]",
@@ -10941,7 +11142,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
-      "description": "When this Operator is assigned to the HR Office, HR contacting speed<@cc.vup>+20%</>, each<@cc.vup>1</>point of<@cc.rem>Intelligence Reserve</><@cc.vup>adds extra+5%</>contacting speed, each<@cc.vup>1</>bottle of<@cc.rem>Ursus Specialty Beverage</>adds extra<@cc.vup>+5%</>contacting speed"
+      "description": "When this Operator is assigned to the HR Office, HR contacting speed<@cc.vup>+20%</>; every <@cc.vup>1</> points of <$cc.bd_ash><@cc.rem>Intelligence Reserve</></> adds extra contacting speed <@cc.vup>+5%</>; every <@cc.vup>1</> bottles of <$cc.bd_tachanka><@cc.rem>Ursus Specialty Beverage</></>, adds extra contacting speed <@cc.vup>+5%</>"
     },
     "meet_spd[000]": {
       "buffId": "meet_spd[000]",
@@ -11025,7 +11226,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
-      "description": "When this Operator is assigned to the Reception Room, the likelihood of obtaining <@cc.kw>Ursus Student Self-government Group</> clues is increased (working time improves the likelihood)."
+      "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining <$cc.t.ussg><@cc.kw>Ursus Student Self-Governing Group</></> clues (Working time affects the likelihood)."
     },
     "meet_team[060]": {
       "buffId": "meet_team[060]",
@@ -11061,7 +11262,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
-      "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining <@cc.kw>Ursus Student Self-government Group</> clues for every newly-obtained Clue that is not from <@cc.kw>Ursus Student Self-government Group</> (working time improves this likelihood)."
+      "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining <$cc.t.ussg><@cc.kw>Ursus Student Self-Governing Group</></> clues for every newly-obtained clue that is not from <$cc.t.ussg><@cc.kw>Ursus Student Self-Governing Group</></> (Working time affects the likelihood)."
     },
     "meet_flag[060]": {
       "buffId": "meet_flag[060]",
@@ -11157,7 +11358,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
-      "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</> and it's easier to obtain the clues of <@cc.kw>Ursus Student Self-Governing Group</>"
+      "description": "When this Operator is assigned to the Reception Room, increases clue search speed by <@cc.vup>10%</>; increases the likelihood of obtaining <$cc.t.ussg><@cc.kw>Ursus Student Self-Governing Group</></> clues(Working time affects the likelihood)."
     },
     "meet_spd&team[060]": {
       "buffId": "meet_spd&team[060]",
@@ -11351,7 +11552,7 @@
         "height": 1,
         "comfort": 90,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "An air mattress suitable for the weary, but probably pretty harsh on one’s back.",
+        "description": "An air mattress suitable for the weary, but probably pretty harsh on one's back.",
         "obtainApproach": "Original set",
         "processedProductId": "3401",
         "processedProductCount": 5,
@@ -11788,7 +11989,7 @@
         "height": 2,
         "comfort": 30,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "The black hand keeps moving ‘round.",
+        "description": "The black hand keeps moving 'round.",
         "obtainApproach": "Purchased from Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 20,
@@ -12133,7 +12334,7 @@
         "height": 2,
         "comfort": 30,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "The orange hand keeps moving ‘round.",
+        "description": "The orange hand keeps moving 'round.",
         "obtainApproach": "Purchased from Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 20,
@@ -12547,7 +12748,7 @@
         "height": 3,
         "comfort": 150,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A coffee table that looks like a reverse bamboo basket. It can be used for storage if turned over… assuming you’re strong enough to turn it over.",
+        "description": "A coffee table that looks like a reverse bamboo basket. It can be used for storage if turned over... assuming you're strong enough to turn it over.",
         "obtainApproach": "Purchased from Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 98,
@@ -13053,7 +13254,7 @@
         "height": 3,
         "comfort": 215,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A pedestal table commonly used in a Colombian cafe. Just a quick wipe-down, and it’s ready for the next guests.",
+        "description": "A pedestal table commonly used in a Colombian cafe. Just a quick wipe-down, and it's ready for the next guests.",
         "obtainApproach": "Purchased from Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 135,
@@ -13651,7 +13852,7 @@
         "height": 2,
         "comfort": 150,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A nightstand influenced by Lungmen designs. There are some things that ought to be kept within arm’s reach. It might be a good idea to put them on the nightstand.",
+        "description": "A nightstand influenced by Lungmen designs. There are some things that ought to be kept within arm's reach. It might be a good idea to put them on the nightstand.",
         "obtainApproach": "Purchased from Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 138,
@@ -14134,7 +14335,7 @@
         "height": 8,
         "comfort": 205,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A cabinet with great storage space, unless you’re a vertically challenged Operator.",
+        "description": "A cabinet with great storage space, unless you're a vertically challenged Operator.",
         "obtainApproach": "Purchased from Furniture Store or dropped from some stages",
         "processedProductId": "3401",
         "processedProductCount": 5,
@@ -14364,7 +14565,7 @@
         "height": 3,
         "comfort": 280,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A checkout counter commonly used by the pizzeria. It’s not good to dine and dash.",
+        "description": "A checkout counter commonly used by the pizzeria. It's not good to dine and dash.",
         "obtainApproach": "Purchased from Furniture Store during The Knight & The Hunter event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -14548,7 +14749,7 @@
         "height": 7,
         "comfort": 300,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A poster stand commonly used by the pizzeria. There’s a lot of information about deals.",
+        "description": "A poster stand commonly used by the pizzeria. There's a lot of information about deals.",
         "obtainApproach": "Purchased from Furniture Store during The Knight & The Hunter event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -14916,7 +15117,7 @@
         "height": 6,
         "comfort": 580,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A piano tailor-made by William for Rhodes Island. The audience will be mesmerized by rich melodies as the pianist’s fingers dance across the keys.",
+        "description": "A piano tailor-made by William for Rhodes Island. The audience will be mesmerized by rich melodies as the pianist's fingers dance across the keys.",
         "obtainApproach": "Purchased from Furniture Store or dropped from some stages",
         "processedProductId": "3401",
         "processedProductCount": 5,
@@ -15307,7 +15508,7 @@
         "height": 4,
         "comfort": 155,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "Ch’en's preferred plant. Actually, the reason why Ch'en likes cacti is because she often forgets to water her plants.",
+        "description": "Ch'en's preferred plant. Actually, the reason why Ch'en likes cacti is because she often forgets to water her plants.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 113,
@@ -15330,7 +15531,7 @@
         "height": 5,
         "comfort": 425,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "An office table distributed by the L.G.D. It's covered with work materials and lozenges used by Ch'en after she scolds the subordinates. There’s also a tattered stuffed bear that Ch’en won’t throw away for whatever reason.",
+        "description": "An office table distributed by the L.G.D. It's covered with work materials and lozenges used by Ch'en after she scolds the subordinates. There's also a tattered stuffed bear that Ch'en won't throw away for whatever reason.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 250,
@@ -15514,7 +15715,7 @@
         "height": 10,
         "comfort": 240,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A wallpaper commonly used in the L.G.D. It’s clear that Ch'en doesn’t give too much thought to the decoration.",
+        "description": "A wallpaper commonly used in the L.G.D. It's clear that Ch'en doesn't give too much thought to the decoration.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 158,
@@ -15675,7 +15876,7 @@
         "height": 3,
         "comfort": 105,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A painting made by a small Operator after returning from Siesta. The immature painting skills perfectly express the city’s boundless dreams.",
+        "description": "A painting made by a small Operator after returning from Siesta. The immature painting skills perfectly express the city's boundless dreams.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 88,
@@ -15859,7 +16060,7 @@
         "height": 1,
         "comfort": 165,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A common carpet used in Siestan home design. The ship’s helm has become the favorite motif among Siesta’s citizens out of their respect for helmsmen.",
+        "description": "A common carpet used in Siestan home design. The ship's helm has become the favorite motif among Siesta's citizens out of their respect for helmsmen.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 125,
@@ -15928,7 +16129,7 @@
         "height": 10,
         "comfort": 225,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "An expensive customized 4K panoramic display that covers the entire wall. Live streams of Siesta’s famous beaches give a glimpse into the local life.",
+        "description": "An expensive customized 4K panoramic display that covers the entire wall. Live streams of Siesta's famous beaches give a glimpse into the local life.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 153,
@@ -16112,7 +16313,7 @@
         "height": 4,
         "comfort": 55,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "Exclusive guitar for Operator Swire. What is life but the pursuit of one’s interests?",
+        "description": "Exclusive guitar for Operator Swire. What is life but the pursuit of one's interests?",
         "obtainApproach": "Heart of Surging Flame Milestone Rewards",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -16181,7 +16382,7 @@
         "height": 4,
         "comfort": 55,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "Exclusive guitar for Operator Liskarm. Say goodbye to all formalities. That's how Rock ‘n' Roll should be.",
+        "description": "Exclusive guitar for Operator Liskarm. Say goodbye to all formalities. That's how Rock 'n' Roll should be.",
         "obtainApproach": "Heart of Surging Flame Milestone Rewards",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -16434,7 +16635,7 @@
         "height": 4,
         "comfort": 75,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A poster of a rock ‘n' roll band. It's kind of approval that the poster is allowed in the rehearsal room, but who cares, anyway?",
+        "description": "A poster of a rock 'n' roll band. It's kind of approval that the poster is allowed in the rehearsal room, but who cares, anyway?",
         "obtainApproach": "Dropped from the first clear reward of Heart of Surging Flame OF-2",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -17975,7 +18176,7 @@
         "height": 7,
         "comfort": 290,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "Shared shelves holding signed CDs, old documents, stereos, piggy banks… Basically all of everyone's miscellaneous stuff that is just a tier above junk can be found here.",
+        "description": "Shared shelves holding signed CDs, old documents, stereos, piggy banks... Basically all of everyone's miscellaneous stuff that is just a tier above junk can be found here.",
         "obtainApproach": "Code of Brawl event reward",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -18021,7 +18222,7 @@
         "height": 2,
         "comfort": 610,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A flourescent ceiling light fixture purchased by Exusiai. It can be freely connected with other light fixtures, until one day…",
+        "description": "A flourescent ceiling light fixture purchased by Exusiai. It can be freely connected with other light fixtures, until one day...",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -18458,7 +18659,7 @@
         "height": 4,
         "comfort": 290,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A boiling station commonly found in the food courts of Lungmen. And so when that lid was lifted…! If you want to hear more, you'll have to wait until next time.",
+        "description": "A boiling station commonly found in the food courts of Lungmen. And so when that lid was lifted...! If you want to hear more, you'll have to wait until next time.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 203,
@@ -18826,7 +19027,7 @@
         "height": 3,
         "comfort": 205,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A decorated panel found in a Healthy Diner. 'I'm supposed to entertain myself by watching the colors cycle? I'm tired of waiting already…'",
+        "description": "A decorated panel found in a Healthy Diner. 'I'm supposed to entertain myself by watching the colors cycle? I'm tired of waiting already...'",
         "obtainApproach": "Dropped from some stages",
         "processedProductId": "3401",
         "processedProductCount": 5,
@@ -18941,7 +19142,7 @@
         "height": 10,
         "comfort": 175,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "An ordering kiosk used in a Healthy Diner. 'Even idiots know how to use one of these, right… I might just be an idiot then…'",
+        "description": "An ordering kiosk used in a Healthy Diner. 'Even idiots know how to use one of these, right... I might just be an idiot then...'",
         "obtainApproach": "Dropped from some stages",
         "processedProductId": "3401",
         "processedProductCount": 5,
@@ -18964,7 +19165,7 @@
         "height": 6,
         "comfort": 155,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A to-go machine used in a Healthy Diner. 'Stop looking at me like that… I know how to use it!'",
+        "description": "A to-go machine used in a Healthy Diner. 'Stop looking at me like that... I know how to use it!'",
         "obtainApproach": "Dropped from some stages",
         "processedProductId": "3401",
         "processedProductCount": 5,
@@ -19033,7 +19234,7 @@
         "height": 10,
         "comfort": 260,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A poster that promotes good health. 'Don Lemon? Petey Green? What the heck is our mascot supposed to be…?'",
+        "description": "A poster that promotes good health. 'Don Lemon? Petey Green? What the heck is our mascot supposed to be...?'",
         "obtainApproach": "Dropped from some stages",
         "processedProductId": "3401",
         "processedProductCount": 5,
@@ -19217,7 +19418,7 @@
         "height": 9,
         "comfort": 385,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A detachable hanging price list. A Seven Cities-style restaurant opened by Victorians, in Columbia? How strange…",
+        "description": "A detachable hanging price list. A Seven Cities-style restaurant opened by Victorians, in Columbia? How strange...",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -20528,7 +20729,7 @@
         "height": 2,
         "comfort": 140,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A refreshing drink popular among Leithaniens. Though the primary purpose of these drinks is to refresh and reinvigorate, imbibing too much is said to cause certain side effects…",
+        "description": "A refreshing drink popular among Leithaniens. Though the primary purpose of these drinks is to refresh and reinvigorate, imbibing too much is said to cause certain side effects...",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -21149,7 +21350,7 @@
         "height": 3,
         "comfort": 210,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A rainforest tribe-style sofa. Quite uncomfortable because it’s just a piece of wood.",
+        "description": "A rainforest tribe-style sofa. Quite uncomfortable because it's just a piece of wood.",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -21241,7 +21442,7 @@
         "height": 10,
         "comfort": 540,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A rainforest tribe-style heater. It’s actually an oven for grilling food.",
+        "description": "A rainforest tribe-style heater. It's actually an oven for grilling food.",
         "obtainApproach": "Purchased from the Limited Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -21356,7 +21557,7 @@
         "height": 2,
         "comfort": 75,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "Rainforest tribe-style curtains. You’ll get chewed out for pulling them off. Children who boldly take this risk will be dubbed 'Small Chieftains'— and then be scolded half to death.",
+        "description": "Rainforest tribe-style curtains. You'll get chewed out for pulling them off. Children who boldly take this risk will be dubbed 'Small Chieftains'— and then be scolded half to death.",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -25254,7 +25455,7 @@
       },
       "furni_bauhaus_carpet_01": {
         "id": "furni_bauhaus_carpet_01",
-        "name": "Thin Rug",
+        "name": "Synthetic Fiber Woven Rug",
         "iconId": "furni_bauhaus_carpet_01",
         "type": "CARPET",
         "location": "CARPET",
@@ -25344,6 +25545,374 @@
         "canBeDestroy": true,
         "isOnly": -1
       },
+      "furni_icu_shadowlessLamp_01": {
+        "id": "furni_icu_shadowlessLamp_01",
+        "name": "Multifunctional Imaging System",
+        "iconId": "furni_icu_shadowlessLamp_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 4,
+        "height": 6,
+        "comfort": 270,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Basic body scanning and shadowless imaging functions have been integrated. Any and all beneath the illumination of the shadowless array scanning terminal have but a single identity - patient.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_bed_01": {
+        "id": "furni_icu_bed_01",
+        "name": "Electro-hydraulic Operating Table",
+        "iconId": "furni_icu_bed_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 4,
+        "height": 4,
+        "comfort": 405,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The controller facilitates the smooth rise and fall of each moving part. The electro-hydraulic transmission system, supplemented by various control systems, actually does little to alleviate the patient's pain.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_ventilator_01": {
+        "id": "furni_icu_ventilator_01",
+        "name": "Mechanical Ventilator",
+        "iconId": "furni_icu_ventilator_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A patient's lifeline during major medical operations. Having critical life-saving equipment that can continuously operate even during a single point of failure or electrical outage is decisive for the recovery of patients.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_trolley_01": {
+        "id": "furni_icu_trolley_01",
+        "name": "Medical Equipment Rack",
+        "iconId": "furni_icu_trolley_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 170,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Provides medical tools to surgeons on-demand. From bone fragments to stainless steel, the actual utility of medical equipment has never changed.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_projector_01": {
+        "id": "furni_icu_projector_01",
+        "name": "Medical Projector",
+        "iconId": "furni_icu_projector_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 80,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Projects various images as needed. The medium for transmitting information is constantly evolving.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_screen_01": {
+        "id": "furni_icu_screen_01",
+        "name": "Roll-Up Projection Screen",
+        "iconId": "furni_icu_screen_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 1,
+        "height": 6,
+        "comfort": 260,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "This image receptor can be stowed away when necessary. Both the screening and restriction of information have been in place since ancient times.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_curtain_01": {
+        "id": "furni_icu_curtain_01",
+        "name": "Surgical Cubicle Curtain",
+        "iconId": "furni_icu_curtain_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 6,
+        "height": 6,
+        "comfort": 275,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Partitions the area to avoid contamination. Physical isolation is easily lifted, but internal fear is harder to get rid of.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_desk_01": {
+        "id": "furni_icu_desk_01",
+        "name": "Extended Independent Workbench",
+        "iconId": "furni_icu_desk_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 13,
+        "depth": 4,
+        "height": 5,
+        "comfort": 665,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Management, experimentation, confidentiality. The company's multi-tiered management structure is obviously far too dependent on decision-makers at the top, but at least it beats feudalism.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_chair_01": {
+        "id": "furni_icu_chair_01",
+        "name": "Head Physician's Work Chair",
+        "iconId": "furni_icu_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 195,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The seat belonging to the head of the critical response medic team. Wood has been replaced by polyester fiber and stainless steel, but the person sitting upon it has never been replaced.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_stool_01": {
+        "id": "furni_icu_stool_01",
+        "name": "Round Work Stool",
+        "iconId": "furni_icu_stool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 125,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A seat for visitors. These round stools produced by industrial assembly lines are guaranteed to be equal in height, but not in quality.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_blackboard_01": {
+        "id": "furni_icu_blackboard_01",
+        "name": "Info Organization Board",
+        "iconId": "furni_icu_blackboard_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 1,
+        "height": 4,
+        "comfort": 225,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Of the many forms of information synthesis devices, this is the most primitive. Decision-makers are keen to place the most important information before their eyes.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_sampleStorage_01": {
+        "id": "furni_icu_sampleStorage_01",
+        "name": "Thermostatic Vacuum Storage Box",
+        "iconId": "furni_icu_sampleStorage_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 6,
+        "comfort": 350,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Only used to preserve high-risk Originium medical equipment. Modern storage solutions can extend the shelf life of substances well into the future, but users will still have to follow some natural rules.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_downlight1_01": {
+        "id": "furni_icu_downlight1_01",
+        "name": "Integrated Lighting",
+        "iconId": "furni_icu_downlight1_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 4,
+        "height": 1,
+        "comfort": 80,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A fairly negligible part of Rhodes Island's lighting solutions. Reliable and continuous wide-area lighting was once the privilege of nobles, but now even civilians can enjoy it.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_icu_downlight2_01": {
+        "id": "furni_icu_downlight2_01",
+        "name": "Small Integrated Lighting",
+        "iconId": "furni_icu_downlight2_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 4,
+        "height": 1,
+        "comfort": 100,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A negligible consumption in Rhodes Island's power generation plan. Regardless of class, life has not changed for any beneath the glow of these lights.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_icu_wallpaper_01": {
+        "id": "furni_icu_wallpaper_01",
+        "name": "Standard-Issue Medical Department Wallpaper",
+        "iconId": "furni_icu_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The style of wallpaper adopted across the Medical Department after all factors were taken into consideration. The standardized environment subtly contributes to a sense of collective comfort.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_icu_floor_01": {
+        "id": "furni_icu_floor_01",
+        "name": "Standard-Issue Medical Department Flooring",
+        "iconId": "furni_icu_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The style of flooring adopted across the Medical Department after all factors were taken into consideration. Consensus gradually solidifies thought, which in turn leads to prejudice.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "Futuristic Kitty Bank",
@@ -25415,7 +25984,7 @@
       },
       "furni_act12d0_throne_01": {
         "id": "furni_act12d0_throne_01",
-        "name": "Warchief’s Throne",
+        "name": "Warchief's Throne",
         "iconId": "furni_act12d0_throne_01",
         "type": "SEATING",
         "location": "FLOOR",
@@ -25427,7 +25996,7 @@
         "height": 8,
         "comfort": 350,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "All the strongest warriors are qualified to sit upon this throne. This so-called 'qualification' is to beat down any who aren’t so convinced.",
+        "description": "All the strongest warriors are qualified to sit upon this throne. This so-called 'qualification' is to beat down any who aren't so convinced.",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -25576,7 +26145,7 @@
       },
       "furni_act9d0_carpet_01": {
         "id": "furni_act9d0_carpet_01",
-        "name": "Commemorative Anniversary Carpet",
+        "name": "Commemorative Carpet",
         "iconId": "furni_act9d0_carpet_01",
         "type": "CARPET",
         "location": "CARPET",
@@ -25588,7 +26157,7 @@
         "height": 1,
         "comfort": 70,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A special carpet made to commemorate the First Anniversary of Arknights. Printed with a familiar rabbit motif, it was gifted to the Doctor by the residents of Rhodes Island.",
+        "description": "A special carpet printed with a familiar rabbit motif. It was gifted to the Doctor by the residents of Rhodes Island.",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -25599,7 +26168,7 @@
       },
       "furni_act9d0_bed_01": {
         "id": "furni_act9d0_bed_01",
-        "name": "Commemorative Anniversary Bed",
+        "name": "Commemorative Bed",
         "iconId": "furni_act9d0_bed_01",
         "type": "BEDDING",
         "location": "FLOOR",
@@ -25611,7 +26180,7 @@
         "height": 6,
         "comfort": 230,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A luxurious bed made to commemorate the First Anniversary of Arknights. The non-combat Operators of Rhodes Island prepared this gift to the Doctor, an opulent bed filled with an air of festivity.",
+        "description": "A luxurious bed that the non-combat Operators of Rhodes Island prepared for the Doctor.",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -25622,7 +26191,7 @@
       },
       "furni_act9d0_walllamp_01": {
         "id": "furni_act9d0_walllamp_01",
-        "name": "Commemorative Anniversary Wall Lamp",
+        "name": "Commemorative Wall Lamp",
         "iconId": "furni_act9d0_walllamp_01",
         "type": "WALLLAMP",
         "location": "WALL",
@@ -25634,7 +26203,7 @@
         "height": 3,
         "comfort": 70,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A special wall lamp made to commemorate the First Anniversary of Arknights. This peculiarly-installed wall lamp was a way for the Rhodes Island combat operators to express their thanks towards the Doctor.",
+        "description": "This peculiarly-installed wall lamp was a way for the Rhodes Island combat operators to express their thanks towards the Doctor.",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -26255,7 +26824,7 @@
         "height": 2,
         "comfort": 75,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "Nobody knows where this plaque came from. 'What’s gone is gone.'",
+        "description": "Nobody knows where this plaque came from. 'What's gone is gone.'",
         "obtainApproach": "Dropped from the first clear reward of Challenge Mode 2-10",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -26462,7 +27031,7 @@
         "height": 2,
         "comfort": 75,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "'Once you fly far enough, you’ll stop thinking about the journey.'",
+        "description": "'Once you fly far enough, you'll stop thinking about the journey.'",
         "obtainApproach": "Dropped from the first clear reward of Challenge Mode 5-10",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -27037,7 +27606,30 @@
         "height": 2,
         "comfort": 75,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "'The candle's light burns dimly on a silent night. The cold and hunger have finally left him. How beautiful this dream is… Goodbye, my friend.'",
+        "description": "'The candle's light burns dimly on a silent night. The cold and hunger have finally left him. How beautiful this dream is... Goodbye, my friend.'",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS018_needlePhobia_01": {
+        "id": "furni_dropS018_needlePhobia_01",
+        "name": "Plaque - Needles",
+        "iconId": "furni_dropS018_needlePhobia_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "'What you see is what you feel, and the pain sets in immediately.'",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -27176,7 +27768,7 @@
         "comfort": 105,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "A souvenir awarded for completing the Ursus Abandoned Mine Annihilation mission and submitting the mission report. The echoes of the abandoned mine yet reverberates in your ears.",
-        "obtainApproach": "Annihilation Mission Award",
+        "obtainApproach": "Rotating Annihilation reward",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -27313,8 +27905,8 @@
         "height": 4,
         "comfort": 140,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A bat rack of the Ursus Student Self-Government Group. Occasionally they will get together to play baseball.",
-        "obtainApproach": "Ursus Student Self-Government Group Trust collection",
+        "description": "A bat rack of the Ursus Student Self-Governing Group. Occasionally they will get together to play baseball.",
+        "obtainApproach": "Ursus Student Self-Governing Group Trust collection",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -27405,7 +27997,7 @@
         "height": 3,
         "comfort": 65,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A portrait of the Emperor. How’s it goin’, brutha?",
+        "description": "A portrait of the Emperor. How's it goin', brutha?",
         "obtainApproach": "Penguin Logistics Trust collection",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -27428,7 +28020,7 @@
         "height": 10,
         "comfort": 620,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "An eco-tank with unknown creatures in it. They do look a bit similar to things we’re more familiar with though.",
+        "description": "An eco-tank with unknown creatures in it. They do look a bit similar to things we're more familiar with though.",
         "obtainApproach": "Rhine Lab Trust collection",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -27727,7 +28319,7 @@
         "height": 8,
         "comfort": 400,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "Even Operators can have fun here! It’s become quite popular.",
+        "description": "Even Operators can have fun here! It's become quite popular.",
         "obtainApproach": "Purchased from Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 220,
@@ -27750,7 +28342,7 @@
         "height": 4,
         "comfort": 265,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
-        "description": "A source of entertainment for many Operators, particularly in the moment when everything falls apart spectacularly. This game is said to have helped reveal parts of many an Operator’s past.",
+        "description": "A source of entertainment for many Operators, particularly in the moment when everything falls apart spectacularly. This game is said to have helped reveal parts of many an Operator's past.",
         "obtainApproach": "Purchased from Furniture Store",
         "processedProductId": "3401",
         "processedProductCount": 148,
@@ -31881,6 +32473,103 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_icu": {
+        "id": "furni_set_icu",
+        "name": "Critical Response Team Office",
+        "desc": "The office of Rhodes Island's critical response medic team. Kal'tsit is the officer-in-charge.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_icu_shadowlessLamp_01",
+            "pos0": 0,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_bed_01",
+            "pos0": 2,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_icu_ventilator_01",
+            "pos0": 7,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_icu_trolley_01",
+            "pos0": 2,
+            "pos1": 7
+          },
+          {
+            "furnitureId": "furni_icu_projector_01",
+            "pos0": 9,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_icu_screen_01",
+            "pos0": 3,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_icu_curtain_01",
+            "pos0": 11,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_desk_01",
+            "pos0": 15,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_chair_01",
+            "pos0": 21,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_stool_01",
+            "pos0": 25,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_blackboard_01",
+            "pos0": 19,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_icu_sampleStorage_01",
+            "pos0": 28,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_icu_downlight1_01",
+            "pos0": 7,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_downlight1_01",
+            "pos0": 25,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_downlight2_01",
+            "pos0": 12,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_downlight2_01",
+            "pos0": 19,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_icu_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_icu_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -33837,6 +34526,58 @@
           "furni_bauhaus_floor_01",
           "furni_bauhaus_geometryLight_01",
           "furni_bauhaus_downlight_01"
+        ]
+      },
+      "furni_set_icu_1": {
+        "id": "furni_set_icu_1",
+        "name": "Operating Area",
+        "themeId": "furni_set_icu",
+        "comfort": 250,
+        "count": 4,
+        "furniture": [
+          "furni_icu_shadowlessLamp_01",
+          "furni_icu_bed_01",
+          "furni_icu_ventilator_01",
+          "furni_icu_trolley_01"
+        ]
+      },
+      "furni_set_icu_2": {
+        "id": "furni_set_icu_2",
+        "name": "Auxiliary Equipment",
+        "themeId": "furni_set_icu",
+        "comfort": 245,
+        "count": 4,
+        "furniture": [
+          "furni_icu_screen_01",
+          "furni_icu_projector_01",
+          "furni_icu_curtain_01",
+          "furni_icu_sampleStorage_01"
+        ]
+      },
+      "furni_set_icu_3": {
+        "id": "furni_set_icu_3",
+        "name": "Physician's Workplace",
+        "themeId": "furni_set_icu",
+        "comfort": 290,
+        "count": 4,
+        "furniture": [
+          "furni_icu_desk_01",
+          "furni_icu_blackboard_01",
+          "furni_icu_chair_01",
+          "furni_icu_stool_01"
+        ]
+      },
+      "furni_set_icu_4": {
+        "id": "furni_set_icu_4",
+        "name": "Medical Department Decor",
+        "themeId": "furni_set_icu",
+        "comfort": 160,
+        "count": 4,
+        "furniture": [
+          "furni_icu_wallpaper_01",
+          "furni_icu_floor_01",
+          "furni_icu_downlight1_01",
+          "furni_icu_downlight2_01"
         ]
       }
     },

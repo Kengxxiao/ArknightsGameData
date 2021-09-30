@@ -876,6 +876,7 @@
   "hpMax": 4225.0,
   "reMax": 100.0,
   "diamondToShdRate": 180,
+  "requestSameFriendCD": 14400,
   "baseMaxFriendNum": 15,
   "hardDiamondDrop": 1,
   "instFinDmdShdCost": 80,
@@ -892,10 +893,6 @@
   "richTextStyles": {
     "mission.levelname": "<color=#FFDE00>{0}</color>",
     "mission.number": "<color=#FFDE00>{0}</color>",
-    "lv.item": "<color=#FFFFFF>{0}</color>",
-    "lv.rem": "<color=#FFFFFF>{0}</color>",
-    "lv.fs": "<color=#FF0000>{0}</color>",
-    "lv.sp": "<color=#fd4600>{0}</color>",
     "tu.kw": "<color=#0098DC>{0}</color>",
     "tu.imp": "<color=#FF0000>{0}</color>",
     "cc.vup": "<color=#0098DC>{0}</color>",
@@ -922,6 +919,10 @@
     "ro.get": "<color=#0098DC>{0}</color>",
     "ro.lose": "<color=#C82A36>{0}</color>",
     "rolv.rem": "<color=#FF4C22>{0}</color>",
+    "lv.item": "<color=#FFFFFF>{0}</color>",
+    "lv.rem": "<color=#FFFFFF>{0}</color>",
+    "lv.fs": "<color=#FF0000>{0}</color>",
+    "lv.sp": "<color=#fd4600>{0}</color>",
     "rc.title": "<color=#FFFFFF>{0}</color>",
     "rc.subtitle": "<color=#FFC90E>{0}</color>",
     "rc.em": "<color=#FF7F27>{0}</color>",
@@ -1040,6 +1041,201 @@
   ],
   "monthlySubWarningTime": 345600,
   "UnlimitSkinOutOfTime": 1209600,
-  "replicateShopStartTime": 1606402800,
-  "TSO": 1624363200
+  "replicateShopStartTime": 1606424400,
+  "TSO": 1624384800,
+  "isDynIllustEnabled": false,
+  "voucherSkinRedeem": 1,
+  "voucherSkinDesc": "When the <color=#ffa633>first</color> Alternate form of an Operator is released, if <color=#ffa633>Originiums</color> have been used to purchase outfits for that Operator before, <color=#33b5ff>[Outfit Voucher]</color>*1 will be granted after that Operator's <color=#ffa633>first</color> Alternate form is released.\n\nIn the following situations, the voucher <color=#ffa633>will not be granted</color>:\n1. Before an Operator's first Alternate form is released, an [Outfit Voucher] has been used to redeem an outfit for that Operator's original form.\n2. After an Operator's first Alternate form is released, Originiums are used to purchase an outfit for that Operator's original form.\n3. After an Operator's first Alternate form is released, an [Outfit Voucher] is used to redeem an outfit for that Operator's original form.\n\n[Outfit Voucher] can only be used to redeem outfits that are currently being sold in the Outfit Store. If all outfits currently on sale in the Outfit Store have already been bought or if there are no outfits on sale, the [Outfit Voucher] will be <color=#ffa633>unusable</color>.\n\nNotice will be given for any outfits that <color=#ffa633>cannot be redeemed</color> using an [Outfit Voucher] in the future.",
+  "termDescriptionDict": {
+    "ba.sluggish": {
+      "termId": "ba.sluggish",
+      "termName": "Slow",
+      "description": "-80% Movement Speed"
+    },
+    "ba.root": {
+      "termId": "ba.root",
+      "termName": "Bind",
+      "description": "Unable to move"
+    },
+    "ba.stun": {
+      "termId": "ba.stun",
+      "termName": "Stun",
+      "description": "Unable to move, block, attack, or use skills"
+    },
+    "ba.buffres": {
+      "termId": "ba.buffres",
+      "termName": "Status Resistance",
+      "description": "Reduces the duration of <$ba.stun>Stun</>, <$ba.cold>Cold</>, and <$ba.frozen>Frozen</> by 50% (does not stack with the same effect)"
+    },
+    "ba.invisible": {
+      "termId": "ba.invisible",
+      "termName": "Invisible",
+      "description": "Prevents being targeted by enemy attacks if the unit is not blocking"
+    },
+    "ba.camou": {
+      "termId": "ba.camou",
+      "termName": "Camouflage",
+      "description": "Prevents being targeted by normal enemy attacks if the unit is not blocking (but will still take Splash damage)"
+    },
+    "ba.fragile": {
+      "termId": "ba.fragile",
+      "termName": "Fragile",
+      "description": "Amplifies all damage taken by the corresponding amount (only the strongest effect of this type applies)"
+    },
+    "ba.shield": {
+      "termId": "ba.shield",
+      "termName": "Shield",
+      "description": "Blocks 1 instance of damage per layer of Shield"
+    },
+    "ba.protect": {
+      "termId": "ba.protect",
+      "termName": "Sanctuary",
+      "description": "Reduces incoming Physical and Arts damage by the corresponding amount (only the strongest effect of this type applies)"
+    },
+    "ba.cold": {
+      "termId": "ba.cold",
+      "termName": "Cold",
+      "description": "Reduces ASPD by 30 and causes subsequent applications of the Cold status during the debuff duration to inflict <$ba.frozen>Frozen</>"
+    },
+    "ba.frozen": {
+      "termId": "ba.frozen",
+      "termName": "Frozen",
+      "description": "Unable to move, attack, or use skills (inflicted through the <$ba.cold>Cold</> status)"
+    },
+    "ba.sleep": {
+      "termId": "ba.sleep",
+      "termName": "Sleep",
+      "description": "Invulnerable and unable to take any actions"
+    },
+    "ba.inspire": {
+      "termId": "ba.inspire",
+      "termName": "Inspiration",
+      "description": "Increases base stats (only the strongest effect of this type applies for each stat)"
+    },
+    "ba.binding": {
+      "termId": "ba.binding",
+      "termName": "Tied",
+      "description": "When the corresponding Tied unit is no longer on the battlefield, this unit's skill immediately ends, SP is set to 0, and SP can no longer be gained"
+    },
+    "ba.dt.neural": {
+      "termId": "ba.dt.neural",
+      "termName": "Nervous Impairment",
+      "description": "After Nervous Impairment reaches 1000, the affected unit takes 1000 True damage and is <$ba.stun>Stunned</> for 10s"
+    },
+    "cc.bd_A_1": {
+      "termId": "cc.bd_A_1",
+      "termName": "Psychokinesis",
+      "description": "Provided by the following Operator(s):\nRosmontis"
+    },
+    "cc.bd_A_2": {
+      "termId": "cc.bd_A_2",
+      "termName": "Manifestation of Consciousness",
+      "description": "Provided by the following Operator(s):\nRosmontis"
+    },
+    "cc.bd_A": {
+      "termId": "cc.bd_A",
+      "termName": "Chain of Thought",
+      "description": "Affects <$cc.bd_A_1><@cc.rem>Psychokinesis</></> and <$cc.bd_A_2><@cc.rem>Manifestation of Consciousness</></>\nProvided by the following Operator(s):\nRosmontis"
+    },
+    "cc.bd_a1": {
+      "termId": "cc.bd_a1",
+      "termName": "Perception Information",
+      "description": "Affects <$cc.bd_A><@cc.rem>Chain of Thought</></>\nProvided by the following Operator(s):\nRosmontis, Dusk, Whisperain, Iris"
+    },
+    "cc.bd_b1": {
+      "termId": "cc.bd_b1",
+      "termName": "Worldly Plight",
+      "description": "Provided by the following Operator(s):\nDusk, Mr. Nothing"
+    },
+    "cc.bd_ash": {
+      "termId": "cc.bd_ash",
+      "termName": "Intelligence Reserve",
+      "description": "Provided by the following Operator(s):\nAsh"
+    },
+    "cc.bd_tachanka": {
+      "termId": "cc.bd_tachanka",
+      "termName": "Ursus Specialty Beverage",
+      "description": "Provided by the following Operator(s):\nTachanka"
+    },
+    "cc.bd_a1_a1": {
+      "termId": "cc.bd_a1_a1",
+      "termName": "Memory Fragments",
+      "description": "Affects <$cc.bd_a1><@cc.rem>Perception Information</></>\nProvided by the following Operator(s):\nWhisperain"
+    },
+    "cc.bd_a1_a2": {
+      "termId": "cc.bd_a1_a2",
+      "termName": "Dreamland",
+      "description": "Affects <$cc.bd_a1><@cc.rem>Perception Information</></>\nProvided by the following Operator(s):\nIris"
+    },
+    "cc.m.var1": {
+      "termId": "cc.m.var1",
+      "termName": "Recycling",
+      "description": "Provided by the following Operator(s):\nVermeil"
+    },
+    "cc.m.var2": {
+      "termId": "cc.m.var2",
+      "termName": "Cooperative Will",
+      "description": "Provided by the following Operator(s):\nWaai Fu"
+    },
+    "cc.t.lgd": {
+      "termId": "cc.t.lgd",
+      "termName": "Lungmen Guard Department",
+      "description": "Includes the following Operators:\nCh'en, Hoshiguma, Swire"
+    },
+    "cc.t.lda": {
+      "termId": "cc.t.lda",
+      "termName": "Lee's Detective Agency",
+      "description": "Includes the following Operators:\nAak, Hung, Waai Fu"
+    },
+    "cc.t.ussg": {
+      "termId": "cc.t.ussg",
+      "termName": "Ursus Student Self-Governing Group",
+      "description": "Includes the following Operators:\nRosa, Zima, Istina, Gummy"
+    },
+    "cc.t.R6": {
+      "termId": "cc.t.R6",
+      "termName": "Team Rainbow",
+      "description": "Includes the following Operators:\nAsh, Tachanka, Blitz, Frost"
+    },
+    "cc.t.sp": {
+      "termId": "cc.t.sp",
+      "termName": "Alternate",
+      "description": "Includes the following Operators:\nLava the Purgatory, Skadi the Corrupting Heart"
+    },
+    "cc.t.egir": {
+      "termId": "cc.t.egir",
+      "termName": "Abyssal Hunter",
+      "description": "Includes the following Operators:\nGladiia, Skadi, Specter, Andreana"
+    },
+    "cc.c.egir2_1": {
+      "termId": "cc.c.egir2_1",
+      "termName": "Special Bonus",
+      "description": "For every <$cc.t.egir><@cc.kw>Abyssal Hunter</></> operator stationed in a Factory, the Control Center provides <@cc.vup>5%</> Productivity for every Factory with an <$cc.t.egir><@cc.kw>Abyssal Hunter</></> operator stationed within it, up to a maximum of <@cc.vup>45%</> Productivity for a single Factory"
+    },
+    "cc.c.egir2_2": {
+      "termId": "cc.c.egir2_2",
+      "termName": "Special Bonus",
+      "description": "For every <$cc.t.egir><@cc.kw>Abyssal Hunter</></> operator stationed in a Factory, the Control Center provides <@cc.vup>10%</> Productivity for every Factory with an <$cc.t.egir><@cc.kw>Abyssal Hunter</></> operator stationed within it, up to a maximum of <@cc.vup>90%</> Productivity for a single Factory"
+    },
+    "cc.c.egir2_3": {
+      "termId": "cc.c.egir2_3",
+      "termName": "Special Interaction Rules",
+      "description": "Takes priority over <$cc.m.var2><@cc.rem>Cooperative Will</></>, and does not stack\nDoes not stack with <$cc.m.pow1><@cc.rem>Automation α</></>, <$cc.m.pow2><@cc.rem>Automation β</></>, or <$cc.m.pow3><@cc.rem>Bionic Seadragon</></>, and the 'set to 0' effect will take priority"
+    },
+    "cc.m.pow1": {
+      "termId": "cc.m.pow1",
+      "termName": "Automation α",
+      "description": "Provided by the following Operator(s):\nWeedy, Eunectes, Passenger"
+    },
+    "cc.m.pow2": {
+      "termId": "cc.m.pow2",
+      "termName": "Automation β",
+      "description": "Provided by the following Operator(s):\nEunectes"
+    },
+    "cc.m.pow3": {
+      "termId": "cc.m.pow3",
+      "termName": "Bionic Seadragon",
+      "description": "Provided by the following Operator(s):\nWeedy"
+    }
+  }
 }

@@ -1,17 +1,11 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 个人剧情 铸铁
-
-
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-//（黑屏）（有通讯开始的声音可以来一个）
 [playsound(key="$d_gen_transmissionget", volume=0.6)]
-
 [Character(name="char_333_sidero_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="Sideroca"]  Hello? Can you hear me?
@@ -34,17 +28,12 @@
 [name="Sideroca"]  Thank you very much, Madame President.
 [name="Sideroca"]  Bye.
 [playsound(key="$transmission", volume=0.6)]
-//（通讯结束的声音）
-
-
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Character]
 [Background(image="bg_bridge",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]\
-//（出场景，通道应该就行）
-
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
 [Character(name="char_333_sidero_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="Sideroca"]  Phew.
@@ -56,13 +45,10 @@
 [PlaySound(key="$rungeneral", volume=0.6)]
 [Character(fadetime=1,block=true)]
 [Delay(time=2)]
-
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.7, block=true)]
 [Background(image="bg_corridor",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.7, block=true)]
-//（切一下场景）
-
 [Character(name="char_333_sidero_1")]
 [name="Sideroca"]  Dur-nar?!
 [dialog]
@@ -141,7 +127,7 @@
 [name="Dur-nar"]  And since you can handle yourself pretty well, why don't you two train together a little, maybe teach her a few techniques too?
 [name="Dur-nar"]  How about it?
 [Character(name="char_381_bubble_1", name2="char_260_durnar_1", focus=1)]
-[name="Bubble"]  Teach? I don’t wanna.
+[name="Bubble"]  Teach? I don't wanna.
 [Character(name="char_333_sidero_1", name2="char_260_durnar_1", focus=1)]
 [name="Sideroca"]  Of course. Could you make the arrangements for the training room?
 [Character(name="char_333_sidero_1", name2="char_260_durnar_1", focus=2)]
@@ -170,7 +156,6 @@
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=1)]
 [CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
 [name="Sideroca"]  Waagh!
-//（泡泡挣脱了！）
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=2)]
 [name="Bubble"]  Wahhhh—!
 [PlaySound(key="$rungeneral", volume=0.6)]
@@ -178,7 +163,6 @@
 [Character(name="char_333_sidero_1", name2="char_empty", focus=1)]
 [dialog]
 [delay(time=2)]
-//（出泡泡）
 [Character(name="char_333_sidero_1")]
 [CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
 [name="Sideroca"]  Stop! The training room's the other way!
@@ -189,29 +173,22 @@
 [characteraction(name="middle", type="move", xpos=300, fadetime=0.7,block=false)]
 [Character(fadetime=0.5)]
 [delay(time=2)]
-//（出铸铁）
 [Character(name="char_260_durnar_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="Dur-nar"]  Have fun!
 [name="Dur-nar"]  ......
 [name="Dur-nar"]  Phew, that's two huge pains in my ass taken care of.
 [name="Dur-nar"]  Sideroca looking after Bubble... I wonder how this will turn out.
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
 [Background(image="bg_trainingcom",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
 [PlaySound(key="$rungeneral", volume=0.6)]
-
-//（切场景，训练场地）
 45 minutes later...
 Training Room No. 6.
 [dialog]
 [PlaySound(key="$rungeneral", volume=0.6)]
-
-
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=2)]
 [name="Bubble"]  You're a good runner, Forte lady.
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=1)]
@@ -255,7 +232,6 @@ Training Room No. 6.
 [name="Sideroca"]  I should've expected that from a Cerato.
 [characteraction(name="left", type="move", xpos=50, times=1, fadetime=1, block=false)]
 [name="Sideroca"]  Heheh.
-//（泡泡被逼退了）
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=2)]
 [characteraction(name="right", type="move", xpos=50, times=1, fadetime=0.8, block=false)]
 [name="Bubble"]  Hm?
@@ -278,7 +254,6 @@ Training Room No. 6.
 [delay(time=1.1)]
 [characteraction(name="right", type="move", xpos=25, ypos=0,fadetime=1, block=true)]
 [delay(time=1.1)]
-//（泡泡开始调整位置）
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=2)]
 [name="Bubble"]  Maybe this far will do?
 [name="Bubble"]  Hmm...
@@ -311,7 +286,6 @@ Training Room No. 6.
 [Delay(time=1)]
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=1)]
 [name="Sideroca"]  Hah!
-//（铸铁被逼退了！）
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=1)]
 [characteraction(name="left", type="move", xpos=150, times=1, fadetime=0.5, block=false)]
 [delay(time=0.5)]
@@ -359,8 +333,6 @@ Training Room No. 6.
 [characteraction(name="left", type="jump", xpos=-100, power=5, times=0.6, fadetime=0.6,block=true)]
 [dialog]
 [Delay(time=0.6)]
-
-//（听说可以位移了，来点喜闻乐见的纸片人撞来撞去？）
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=2)]
 [name="Bubble"]  No way!
 [name="Bubble"]  You can't beat me!
@@ -390,7 +362,6 @@ Training Room No. 6.
 [characteraction(name="left", type="jump", xpos=-150, power=5, times=1, fadetime=1,block=true)]
 [dialog]
 [delay(time=1)]
-
 [Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
 [Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
 [CameraShake(duration=2, xstrength=40, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
@@ -424,7 +395,6 @@ Bam!
 [PlaySound(key="$bodyfalldown2", volume=0.6)]
 [Character(fadetime=1,block=true)]
 [Delay(time=2)]
-//（泡泡被打倒了）
 [Character(name="char_333_sidero_1",fadetime=1,block=true)]
 [delay(time=1)]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
@@ -474,13 +444,11 @@ Bam!
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=1)]
 [CameraShake(duration=0.65, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="Sideroca"]  Training!!
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_trainingcom",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-
 [PlaySound(key="$fightgeneral")] 
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
 [PlaySound(key="$fightgeneral")] 
@@ -489,8 +457,6 @@ Two hours later...
 [dialog]
 [PlaySound(key="$fightgeneral")] 
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-
-
 [Character(name="char_381_bubble_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="Bubble"]  Forte lady, I... I'm so exhausted...
@@ -505,7 +471,6 @@ Two hours later...
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=2)]
 [name="Bubble"]  Okay... Here I come...
 [name="Bubble"]  Hmm...
-//（软绵绵的撞击）
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1")]
 [delay(time=0.1)]
 [characteraction(name="right", type="jump", xpos=-100, power=0, times=1, fadetime=0.1, block=true)]
@@ -517,11 +482,9 @@ Two hours later...
 [characteraction(name="right", type="jump", xpos=100, power=5, times=1, fadetime=1,block=true)]
 [dialog]
 [Delay(time=1)]
-
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 *Thump*
 [PlaySound(key="$bodyfalldown1",volume=0.6)] 
-
 [Character(name="char_333_sidero_1", name2="char_381_bubble_1", focus=2)]
 [name="Bubble"]  I really... really can't move anymore...
 [name="Bubble"]  Ugh...
@@ -551,7 +514,6 @@ Two hours later...
 [delay(time=1.1)]
 [characteraction(name="right", type="move", xpos=20, ypos=0,fadetime=1, block=true)]
 [delay(time=1.1)]
-//（泡泡的立绘跑走了）
 [CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
 [PlaySound(key="$rungeneral", volume=0.6)]
 [name="Bubble"]  I wanna go home and go to bed!
@@ -560,11 +522,9 @@ Two hours later...
 [delay(time=0.5)]
 [Character(name="char_333_sidero_1", name2="char_empty", focus=1)]
 [delay(time=2)]
-
 [Character(name="char_333_sidero_1")]
 [CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
 [name="Sideroca"]  Hey, you still got some strength left in you!
-//（出铸铁立绘）
 [name="Sideroca"]  Now stop running. Use the strength you have left where it actually matters!
 [delay(time=0.7)]
 [PlaySound(key="$rungeneral", volume=0.7)]
@@ -572,23 +532,15 @@ Two hours later...
 [characteraction(name="middle", type="move", xpos=300, fadetime=0.7,block=false)]
 [Character(fadetime=0.5)]
 [delay(time=2)]
-
 ......
 [dialog]
 [name="Surveillance Camera"]  ......
-
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_corridor",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-//（切场景）
 [PlaySound(key="$rungeneral", volume=0.6)]
-
-
-
 [Character(name="char_333_sidero_1",fadetime=1,block=true)]
 [delay(time=1)]
 [characteraction(name="middle", type="move", xpos=20, ypos=0,fadetime=1, block=true)]
@@ -612,8 +564,6 @@ Two hours later...
 [characteraction(name="middle", type="move", xpos=300, fadetime=2,block=false)]
 [Character(fadetime=0.5)]
 [delay(time=2)]
-
-//（出个铃兰的立绘，如果可以的话能不能想办法表现出铸铁是走过来而铃兰是坐着的）
 [Character(name="char_empty", name2="char_358_lisa_1", fadetime=1,block=true)]
 [delay(time=1)]
 [Dialog]
@@ -702,7 +652,6 @@ Achoo!
 [Character(name="char_333_sidero_1", name2="char_358_lisa_1#3", focus=1)]
 [characteraction(name="left", type="move", xpos=180, times=1, fadetime=0.5, block=false)]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
-//（铃兰被铸铁抱起来了）
 [delay(time=0.5)]
 [Character(name="char_333_sidero_1", name2="char_358_lisa_1#3", focus=-1)]
 [CameraShake(duration=0.3, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
@@ -712,7 +661,6 @@ Achoo!
 [name="Sideroca"]  It's all okay. I understand. I'll take you to Medical now.
 [Character(name="char_333_sidero_1", name2="char_358_lisa_1#3", focus=2)]
 [name="Suzuran"]  Eh? Eh?
-//（出两个人立绘）
 [Character(name="char_333_sidero_1", name2="char_358_lisa_1#3", focus=2)]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="Suzuran"]  You got it wrong, Sideroca! My mom and dad send me money every month for my living expenses. They also send me pictures—
@@ -726,24 +674,19 @@ Achoo!
 [characteraction(name="left", type="move", xpos=1000, fadetime=2,block=false)]
 [Character(fadetime=0.5)]
 [delay(time=2)]
-
-//（顿一会，出泡泡）
 [Character(name="char_381_bubble_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="Bubble"]  P-Phew.
 [name="Bubble"]  That was close. I've got Suzuran's big tails to thank.
 [name="Bubble"]  Good job, Suzuran! I'll repay the favor!
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2.5, block=true)]
 [Background(image="bg_trainingcom",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
-
 That night.
 Training Center Entrance.
 [dialog]
-
 [Character(name="char_260_durnar_1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="Dur-nar"]  So Bubble just disappeared after that?
@@ -799,7 +742,6 @@ Training Center Entrance.
 [Character(name="char_empty", name2="char_260_durnar_1", focus=1)]
 [dialog]
 [delay(time=2)]
-//（下铸铁）
 [Character(name="char_260_durnar_1")]
 [name="Dur-nar"]  ......
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
@@ -847,7 +789,6 @@ Training Center Entrance.
 [dialog]
 [delay(time=2)]
 [Character(fadetime=0.6)]
-//（最好有个两个人移动到一边的位移）
 [Dialog]
 [Character(name="char_empty", name2="char_130_doberm_ex")]
 [PlaySound(key="$d_gen_walk_n", volume=1)]
@@ -930,14 +871,11 @@ Training Center Entrance.
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
 [Character(fadetime=1,block=true)]
 [Delay(time=2)]
-//（下两位教官）
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Background(image="bg_trainingcom",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
-
 [Character(name="char_333_sidero_1")]
 [name="Sideroca"]  ......
 [name="Sideroca"]  She's right.
@@ -957,8 +895,6 @@ Training Center Entrance.
 [name="Sideroca"]  ......
 [name="Sideroca"]  I've made up my mind.
 [name="Sideroca"]  I will save the Doctor.
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
