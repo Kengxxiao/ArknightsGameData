@@ -456,6 +456,63 @@
       ],
       "type": "ADVANCED"
     },
+    "uniequip_001_fartth": {
+      "uniEquipId": "uniequip_001_fartth",
+      "uniEquipName": "远牙证章",
+      "uniEquipIcon": "original",
+      "uniEquipDesc": "干员远牙擅长在远距离击溃敌人\n根据外勤部门决议\n在外勤任务中划分为狙击干员，行使神射手职责\n特别颁发此证章\n以兹证明",
+      "typeIcon": "original",
+      "typeName": "ORIGINAL",
+      "equipShiningColor": "grey",
+      "showEvolvePhase": 2,
+      "unlockEvolvePhase": 0,
+      "charId": "char_430_fartth",
+      "tmplId": null,
+      "showLevel": 1,
+      "unlockLevel": 0,
+      "unlockFavorPoint": 0,
+      "missionList": [],
+      "itemCost": null,
+      "type": "INITIAL"
+    },
+    "uniequip_002_fartth": {
+      "uniEquipId": "uniequip_002_fartth",
+      "uniEquipName": "首战支援套组",
+      "uniEquipIcon": "uniequip_002_fartth",
+      "uniEquipDesc": "......风声。\n我能听到风的声音变了。\n刚刚还很安静，但是现在却变得吵闹。\n......\n有很多人......来看这一场比赛。\n我的第一场骑士竞技赛。\n和之前地下竞技场不同......这是一场正式的比赛。\n......不同？\n成为正式的感染者骑士，真的就和之前有什么不同了吗？\n......\n......快了。\n时间不多了，比赛就快要开始了。\n我......\n我知道，我会赢。\n我会赢......\n......\n\n打扰了，请问查丝汀娜·瓦伦泰小姐在吗？为您特制的新装备到了！\n咦，瓦伦泰小姐人不在吗？\n这......人从中午开始就不见了？没人知道她去了哪，现在马上就要准备上场了，人却还没有回来？\n这就难办了，第一场比赛就迟到，会给观众留下坏印象的，这对瓦伦泰小姐今后的发展可没有半点好处啊！\n而且，这里的定制品都需要她本人确认，如果她不在的话......\n咦，等一等，这是什么声音？\n嗯......这好像是，笛声？\n\n轻缓的笛声被风温柔地裹挟，被带到很远的地方。\n向着高处，向着远处。\n向着约定好要回去的那个地方，风不停地吹。\n拜托了，就将这支曲子带回去吧。\n告诉大家。\n查丝汀娜终于成为骑士了。\n不用告诉大家。\n查丝汀娜其实很想家。\n\n......\n......哎呀，这都什么时候了！\n我怎么发起呆来了，真不应该！到底是谁还这么有闲心，在这里吹这么土气的乡村小调？\n哎，不管了。\n快快，时间不多了，得赶快把瓦伦泰小姐找回来！",
+      "typeIcon": "dea-x",
+      "typeName": "DEA-X",
+      "equipShiningColor": "red",
+      "showEvolvePhase": 2,
+      "unlockEvolvePhase": 2,
+      "charId": "char_430_fartth",
+      "tmplId": null,
+      "showLevel": 1,
+      "unlockLevel": 60,
+      "unlockFavorPoint": 10070,
+      "missionList": [
+        "uniequip_001_fartth_1",
+        "uniequip_002_fartth_2"
+      ],
+      "itemCost": [
+        {
+          "id": "mod_unlock_token",
+          "count": 4,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "30135",
+          "count": 2,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "4001",
+          "count": 80000,
+          "type": "GOLD"
+        }
+      ],
+      "type": "ADVANCED"
+    },
     "uniequip_001_milu": {
       "uniEquipId": "uniequip_001_milu",
       "uniEquipName": "守林人证章",
@@ -1060,6 +1117,32 @@
       "uniEquipMissionSort": 2,
       "uniEquipId": "uniequip_002_doberm"
     },
+    "uniequip_001_fartth_1": {
+      "template": "EquipmentCharKilled",
+      "desc": "由非助战远牙累计造成80歼灭数",
+      "paramList": [
+        "char_430_fartth",
+        "80",
+        "char_430_fartth"
+      ],
+      "uniEquipMissionId": "uniequip_001_fartth_1",
+      "uniEquipMissionSort": 1,
+      "uniEquipId": "uniequip_002_fartth"
+    },
+    "uniequip_002_fartth_2": {
+      "template": "EquipmentEventStageMore",
+      "desc": "3星通关主题曲s2-2；必须编入非助战远牙并上场，且远牙使用光羽箭至少歼灭8名敌人",
+      "paramList": [
+        "3",
+        "sub_02-02",
+        "char_430_fartth",
+        "DEATHDETAIL,char_430_fartth,3",
+        "8"
+      ],
+      "uniEquipMissionId": "uniequip_002_fartth_2",
+      "uniEquipMissionSort": 2,
+      "uniEquipId": "uniequip_002_fartth"
+    },
     "uniequip_001_milu_3": {
       "template": "EquipmentEventTotal",
       "desc": "由非助战守林人累计歼灭25名使用远程武器的敌人",
@@ -1357,6 +1440,11 @@
       "subProfessionName": "决战者",
       "subProfessionCatagory": 23
     },
+    "fortress": {
+      "subProfessionId": "fortress",
+      "subProfessionName": "要塞",
+      "subProfessionCatagory": 24
+    },
     "fastshot": {
       "subProfessionId": "fastshot",
       "subProfessionName": "速射手",
@@ -1550,6 +1638,10 @@
     "char_130_doberm": [
       "uniequip_001_doberm",
       "uniequip_002_doberm"
+    ],
+    "char_430_fartth": [
+      "uniequip_001_fartth",
+      "uniequip_002_fartth"
     ],
     "char_158_milu": [
       "uniequip_001_milu",
