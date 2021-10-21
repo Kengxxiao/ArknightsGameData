@@ -8022,6 +8022,131 @@
         }
       ]
     },
+    "char_1012_skadi2": {
+      "charId": "char_1012_skadi2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[060]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[641]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_cost&profession[060]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_003_kalts": {
+      "charId": "char_003_kalts",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[040]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_prod_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_474_glady": {
+      "charId": "char_474_glady",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_aegir1[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_aegir2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "control_mp_aegir2[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_475_akafyu": {
+      "charId": "char_475_akafyu",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[220]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -8120,6 +8245,18 @@
     }
   },
   "buffs": {
+    "control_prod_spd[000]": {
+      "buffId": "control_prod_spd[000]",
+      "buffName": "최고 권한",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_p_spd",
+      "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 모든 제조소의 생산력<@cc.vup>+2%</> (동종 효과 중 가장 높은 수치만 적용)"
+    },
     "control_tra_spd[000]": {
       "buffId": "control_tra_spd[000]",
       "buffName": "협력 협의",
@@ -8383,6 +8520,42 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.t.ussg><@cc.kw>우르수스 학생자치단</> 오퍼레이터가 1명 늘어날 때마다 <$cc.bd_tachanka><@cc.rem>우르수스 특제 음료</></> <@cc.vup>+1</>"
+    },
+    "control_mp_aegir1[000]": {
+      "buffId": "control_mp_aegir1[000]",
+      "buffName": "조석의 파수꾼",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_aegir",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 숙소를 제외한 기타 시설에 배치한 <$cc.t.egir><@cc.kw>어비설 헌터스</></> 오퍼레이터 한 명마다 자신의 시간당 컨디션 소모 <@cc.vdown>+0.5</>, 반대의 경우 자신의 시간당 컨디션 회복 속도 <@cc.vup>+0.5</>, 숙소 내에 배치한 <$cc.t.egir><@cc.kw>어비설 헌터스</></> 오퍼레이터의 컨디션이 최대인 경우 추가로 <@cc.vup>+0.5</>"
+    },
+    "control_mp_aegir2[000]": {
+      "buffId": "control_mp_aegir2[000]",
+      "buffName": "무리 사냥 α",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_aegir",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>, 기반시설 내 <$cc.t.egir><@cc.kw>어비설 헌터스</></> 오퍼레이터는 <$cc.c.egir2_1><@cc.rem>특수 버프</></> 획득 (일부 스킬은 <$cc.c.egir2_3><@cc.rem>특수 중첩 규칙</></> 적용)"
+    },
+    "control_mp_aegir2[010]": {
+      "buffId": "control_mp_aegir2[010]",
+      "buffName": "무리 사냥 β",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_aegir2",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 속도 <@cc.vup>+0.05</>, 기반시설 내 <$cc.t.egir><@cc.kw>어비설 헌터스</></> 오퍼레이터는 <$cc.c.egir2_2><@cc.rem>특수 버프</></> 획득 (일부 스킬은 <$cc.c.egir2_3><@cc.rem>특수 중첩 규칙</></> 적용)"
     },
     "power_rec_spd&cost[000]": {
       "buffId": "power_rec_spd&cost[000]",
@@ -9596,6 +9769,18 @@
       "roomType": "WORKSHOP",
       "description": "가공소에 배치 후 <@cc.kw>임의류 재료</> 가공 시, 부산물 산출 확률 <@cc.vup>65%</>"
     },
+    "workshop_proc_probability[040]": {
+      "buffId": "workshop_proc_probability[040]",
+      "buffName": "미지의 기술",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p5",
+      "sortId": 7141,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 후 <@cc.kw>임의류 재료</> 가공 시, 부산물 산출 확률 <@cc.vup>70%</>"
+    },
     "workshop_formula_cost[000]": {
       "buffId": "workshop_formula_cost[000]",
       "buffName": "드래곤플라이 드론",
@@ -10256,6 +10441,18 @@
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, <@cc.kw>서포터</> 오퍼레이터의 스킬 훈련 속도<@cc.vup>+30%</>"
     },
+    "train_spd&profession2[060]": {
+      "buffId": "train_spd&profession2[060]",
+      "buffName": "서포터 마스터리 α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_supporter1",
+      "sortId": 9301,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>서포터</> 오퍼레이터의 스킬 훈련 속도<@cc.vup>+30%</>"
+    },
     "train_spd&profession[061]": {
       "buffId": "train_spd&profession[061]",
       "buffName": "서포터 마스터리 β",
@@ -10412,6 +10609,18 @@
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, <@cc.kw>스페셜리스트</> 오퍼레이터의 스킬 훈련 속도<@cc.vup>+60%</>"
     },
+    "train_spd&profession2[220]": {
+      "buffId": "train_spd&profession2[220]",
+      "buffName": "노부카게 유파",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train1_guard1",
+      "sortId": 9721,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>가드</> 오퍼레이터의 스킬 훈련 속도<@cc.vup>+30%</>, 만약 훈련 마스터리 스킬이 <@cc.vup>1</>레벨까지 도달한 경우 훈련 속도가 추가로 <@cc.vup>+45%</>"
+    },
     "train_spd&profession2[250]": {
       "buffId": "train_spd&profession2[250]",
       "buffName": "수박 겉핥기",
@@ -10472,6 +10681,18 @@
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, <@cc.kw>가드</> 오퍼레이터의 스킬 훈련 속도<@cc.vup>+30%</>, 만약 훈련 마스터리 스킬이 <@cc.vup>3</>레벨까지 도달한 경우 훈련 속도가 추가로 <@cc.vup>+45%</>"
     },
+    "train_spd&profession2[641]": {
+      "buffId": "train_spd&profession2[641]",
+      "buffName": "동화",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train3_supporter2",
+      "sortId": 9332,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>서포터</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 이번 훈련을 통해 스킬 마스터리가 <@cc.vup>3</>레벨까지 도달한 경우, 훈련 속도가 <@cc.vup>+65%</> 추가"
+    },
     "train_spd&profession2[441]": {
       "buffId": "train_spd&profession2[441]",
       "buffName": "기회주의",
@@ -10507,6 +10728,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "훈련실에 배치하여 <@cc.kw>스나이퍼</> 훈련 마스터리 스킬이 <@cc.vup>3</>레벨까지 도달한 경우, 시간당 컨디션 소모 <@cc.vdown>+1</>"
+    },
+    "train_cost&profession[060]": {
+      "buffId": "train_cost&profession[060]",
+      "buffName": "변이",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_skadi",
+      "sortId": 9332,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>서포터</> 오퍼레이터의 훈련 마스터리 스킬이 <@cc.vup>3</>레벨까지 도달한 경우, 시간당 컨디션 소모 <@cc.vdown>+1</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -25913,6 +26146,351 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_abyssal_showcase_01": {
+        "id": "furni_abyssal_showcase_01",
+        "name": "관광객용 수납장",
+        "iconId": "furni_abyssal_showcase_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 3,
+        "height": 7,
+        "comfort": 250,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "관광객들이 사용하는 방수용 수납장. 이베리아인들이 추구하는 편의 시설은 에기르에겐 필수적인 것은 아니었다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_drum_01": {
+        "id": "furni_abyssal_drum_01",
+        "name": "간편한 젬베",
+        "iconId": "furni_abyssal_drum_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "관광객들을 위해 준비한 젬베. 몇 번 두드리면 기분이 좋아진다. 세 관광객은 모두 이 젬베가 초라한 진열품일 뿐이지 악기는 아닌 것 같다고 했다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_coffeeTable_01": {
+        "id": "furni_abyssal_coffeeTable_01",
+        "name": "원목 티테이블",
+        "iconId": "furni_abyssal_coffeeTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 260,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "위에 여러 가지 물건들이 널브러져 있는 원목 티테이블. 아마도 손님이 귀중한 물건을 방에 두고 간 것 같다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_sofa_01": {
+        "id": "furni_abyssal_sofa_01",
+        "name": "푹신한 소파",
+        "iconId": "furni_abyssal_sofa_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 4,
+        "height": 4,
+        "comfort": 380,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "편안한 소파. 오후 내내 방에서 휴식하고 싶은 사람들을 위해 준비했다. 아쉽게도 방안에만 있고 싶어 하는 사람은 아무도 없었다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_carpet_01": {
+        "id": "furni_abyssal_carpet_01",
+        "name": "테마 카펫",
+        "iconId": "furni_abyssal_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 24,
+        "depth": 8,
+        "height": 1,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "세 관광객을 위해 특별 제작한 카펫. 그녀들이 리조트의 성의를 느낄 수 있길 바랐지만, 아무도 눈치채지 못했다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_table_01": {
+        "id": "furni_abyssal_table_01",
+        "name": "휴대용 접이식 테이블",
+        "iconId": "furni_abyssal_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 3,
+        "height": 4,
+        "comfort": 235,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "펼쳐져 있는 접이식 테이블. 위엔 음식들이 놓여 있다. 이 음식들이 손님들의 입맛에 잘 맞을지 모르겠다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_chair_01": {
+        "id": "furni_abyssal_chair_01",
+        "name": "쿠션 나무의자",
+        "iconId": "furni_abyssal_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 180,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "접이식 테이블과 세트인 나무 의자. 무슨 영문인지 한 손님이 외투를 두고 급히 가버렸다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_handLamp_01": {
+        "id": "furni_abyssal_handLamp_01",
+        "name": "빈티지 램프",
+        "iconId": "furni_abyssal_handLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 100,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "매일 전문 인원이 촛불을 갈아주기에 램프 안의 촛불은 종일 꺼지지 않는다. 하지만, 손님들은 밤에도 시력이 아주 좋아 램프가 필요 없다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_screen_01": {
+        "id": "furni_abyssal_screen_01",
+        "name": "접이식 병풍",
+        "iconId": "furni_abyssal_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 8,
+        "comfort": 305,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "손님에게 언제든지 은밀한 공간을 만들어줄 수 있는 접이식 병풍. 서로 간의 믿음과 사적인 공간은 별개라고 생각한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_equipment_01": {
+        "id": "furni_abyssal_equipment_01",
+        "name": "관광객의 개인 용품",
+        "iconId": "furni_abyssal_equipment_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 6,
+        "comfort": 175,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "세 관광객의 개인 용품. 악기, 무기, 그리고 어디서 가져왔는지 모른 개인 소장품이 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_ceiling_01": {
+        "id": "furni_abyssal_ceiling_01",
+        "name": "나무 천장등",
+        "iconId": "furni_abyssal_ceiling_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 7,
+        "height": 6,
+        "comfort": 395,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "배의 갑판에서 영감을 얻어 만든 천장등으로, 벽등도 달려 있다. 손님들은 분명 친절감을 느끼겠지? 참, 종업원들이 익숙함을 친절로 착각이라도 하면 어떡하지?",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_ceilingLamp_01": {
+        "id": "furni_abyssal_ceilingLamp_01",
+        "name": "물결 펜던트 조명",
+        "iconId": "furni_abyssal_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 55,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "밀물과 썰물에 큰 감명을 받고 만든 펜던트 조명. 물론 이것은 이베리아인들이 바다에 대한 부족한 인식하에 만들어졌다. 손님들이 기분 나빠하진 않았으면 좋겠다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_abyssal_decal_01": {
+        "id": "furni_abyssal_decal_01",
+        "name": "천장의 나무 프레임",
+        "iconId": "furni_abyssal_decal_01",
+        "type": "CEILING",
+        "location": "CEILINGDECAL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 745,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "리조트에서 통일로 제작한 천장 장식용 프레임. 저건 경고일까? 제약일까? 아니면…… 그냥 장식일까?",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_wallpaper_01": {
+        "id": "furni_abyssal_wallpaper_01",
+        "name": "리조트 벽지",
+        "iconId": "furni_abyssal_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "리조트 내 스탠더드룸의 벽지. 벽에는 햇볕이 내리쬐는 이베리아의 해변과 공중으로 치솟는 미지의 생물이 그려져 있다…… 하지만, 모두가 이 모든 건 상상에 불과하단 걸 알고 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_floor_01": {
+        "id": "furni_abyssal_floor_01",
+        "name": "리조트 바닥 타일",
+        "iconId": "furni_abyssal_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "리조트 내 스탠더드룸의 바닥 타일. 아직 개업하지 않아 아직 이 방을 찾은 손님은 한 명도 없지만, 누구나 마음속에 따뜻한 공간이 하나쯤은 있기를 바랄 뿐이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "토끼 기계 절구",
@@ -27630,6 +28208,29 @@
         "comfort": 75,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "\"보기만 해도 찔리고, 즉시 통증을 느낀다.\"",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS018_thalassophobia_01": {
+        "id": "furni_dropS018_thalassophobia_01",
+        "name": "플레이트 《침몰》",
+        "iconId": "furni_dropS018_thalassophobia_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "\"끝없는 암흑+해수에 둘러싸임+자유로운 상상=?\"",
         "obtainApproach": "이벤트 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -32570,6 +33171,93 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_abyssal": {
+        "id": "furni_set_abyssal",
+        "name": "이베리아 리조트",
+        "desc": "이베리아 해변 리조트를 재현한 컨셉룸. 바닷바람을 맞으며 여유로운 휴일을 만끽하자…… 상상 속에서 말이다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_abyssal_showcase_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_drum_01",
+            "pos0": 1,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_abyssal_coffeeTable_01",
+            "pos0": 6,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_abyssal_sofa_01",
+            "pos0": 5,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_carpet_01",
+            "pos0": 5,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_abyssal_table_01",
+            "pos0": 20,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_chair_01",
+            "pos0": 22,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_abyssal_handLamp_01",
+            "pos0": 18,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_screen_01",
+            "pos0": 26,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_equipment_01",
+            "pos0": 30,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_abyssal_ceiling_01",
+            "pos0": 11,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_abyssal_ceilingLamp_01",
+            "pos0": 5,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_abyssal_ceilingLamp_01",
+            "pos0": 27,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_abyssal_decal_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -34578,6 +35266,57 @@
           "furni_icu_floor_01",
           "furni_icu_downlight1_01",
           "furni_icu_downlight2_01"
+        ]
+      },
+      "furni_set_abyssal_1": {
+        "id": "furni_set_abyssal_1",
+        "name": "개인 및 오락 용품",
+        "themeId": "furni_set_abyssal",
+        "comfort": 165,
+        "count": 3,
+        "furniture": [
+          "furni_abyssal_showcase_01",
+          "furni_abyssal_equipment_01",
+          "furni_abyssal_drum_01"
+        ]
+      },
+      "furni_set_abyssal_2": {
+        "id": "furni_set_abyssal_2",
+        "name": "기본 가구",
+        "themeId": "furni_set_abyssal",
+        "comfort": 250,
+        "count": 3,
+        "furniture": [
+          "furni_abyssal_coffeeTable_01",
+          "furni_abyssal_sofa_01",
+          "furni_abyssal_carpet_01"
+        ]
+      },
+      "furni_set_abyssal_3": {
+        "id": "furni_set_abyssal_3",
+        "name": "이동식 가구",
+        "themeId": "furni_set_abyssal",
+        "comfort": 225,
+        "count": 4,
+        "furniture": [
+          "furni_abyssal_table_01",
+          "furni_abyssal_chair_01",
+          "furni_abyssal_handLamp_01",
+          "furni_abyssal_screen_01"
+        ]
+      },
+      "furni_set_abyssal_4": {
+        "id": "furni_set_abyssal_4",
+        "name": "리조트 장식",
+        "themeId": "furni_set_abyssal",
+        "comfort": 460,
+        "count": 5,
+        "furniture": [
+          "furni_abyssal_wallpaper_01",
+          "furni_abyssal_floor_01",
+          "furni_abyssal_decal_01",
+          "furni_abyssal_ceiling_01",
+          "furni_abyssal_ceilingLamp_01"
         ]
       }
     },
