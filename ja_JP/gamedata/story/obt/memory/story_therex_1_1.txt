@@ -1,0 +1,507 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 个人剧情 Thermal-EX
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+p.m. 2:30 天気/晴天
+ロドス本艦 チーフエンジニア室
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Background(image="bg_motorroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(name="avg_npc_088")]
+[name="エンジニアオペレーター"]  クロージャさん、今月の艦内各エリアにおける配線の安全検査報告です。
+[dialog]
+[Character(name="char_007_closre_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="クロージャ"]  ふむ、ふむ……問題ないね。
+[name="クロージャ"]  ん？　ここにちょっとした乱れがあるみたいだけど。
+[name="クロージャ"]  ――午前二時から六時までの四時間に、毎晩同じような異常が？　このエリアって宿舎でしょ？
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=2)]
+[name="エンジニアオペレーター"]  宿舎です。そういえば思い出しました。検査を始めたばかりの頃、あの付近で停電の報告があったんでした。
+[name="エンジニアオペレーター"]  ただその時は、確認しに行ったのですが配線に特に問題はなく、ただ出力が許容値を超えていただけでしたね。
+[Character(name="char_007_closre_1#6", name2="avg_npc_088", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="クロージャ"]  ハックシュン――！　ううっ……ていうか、このオフィスちょっと寒くない？
+[Character(name="char_007_closre_1#6", name2="avg_npc_088", focus=2)]
+[name="エンジニアオペレーター"]  そうですね。
+[name="エンジニアオペレーター"]  というより、ここ最近ずっとちょっと寒い気がしますよね……室温を少し上げましょうか？
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=1)]
+[name="クロージャ"]  我慢しよ、省エネは大事だからね！
+[name="クロージャ"]  真面目な話、普通に考えて、どうせまたどこかのおバカちゃんが規則違反の電気器具をこっそり使ってるんでしょ。
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=2)]
+[name="エンジニアオペレーター"]  そういえば、検査に行った時、廊下の近くでThermal-EXを何度か見かけたんですが、もしかして……
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=1)]
+[name="クロージャ"]  え？　そしたら規則違反の電気器具じゃなくて、電気器具自体の規則違反ってこと？
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=2)]
+[name="エンジニアオペレーター"]  Thermal-EXを呼んできましょうか？
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=1)]
+[name="クロージャ"]  まずどこにいるか確認しとこ。オペレーター日誌、と……あった。
+[Character(name="char_007_closre_1#6", name2="avg_npc_088", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="クロージャ"]  えっ、Thermal-EXは今シラクーザに行ってるって？　しかも同行者の中に――ドクターも！？
+[name="クロージャ"]  むぅ、これはちょっと予想外……
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=1)]
+[name="クロージャ"]  うーん……
+[Character(name="char_007_closre_1#2", name2="avg_npc_088", focus=1)]
+[name="クロージャ"]  まあいいや。問題があっても大したことじゃないだろうし、きっと大丈夫。それにドクターがいるんなら、何かあったらきっと解決できるだろうしね。
+[name="クロージャ"]  戻ってきたら、ケルシーに状況を訊きに行けばいいや。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Background(image="bg_offce",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+シラクーザ ロコモティヴァ ロドス事務所
+[dialog]
+[Character(name="avg_npc_028",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="製薬会社代表社員"]  契約の条件はこれで問題ありません。遠くからご足労ありがとうございました。
+[name="製薬会社代表社員"]  この度はあの「ロドスのドクター」にお目にかかれて、身に余るほどに光栄です。お戻りになりましたら、アーミヤさんにもよろしくお伝えください。
+[Decision(options="自分のやるべきことをしたまでだ。;外回りもたまには悪くない。", values="1;2")]
+[Predicate(references="1;2")]
+[name="製薬会社代表社員"]  あとは薬の配合方法とサンプルをお渡しいただければ――
+[Decision(options="Thermal-EX。", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Character(name="char_376_therex_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Thermal-EX"]  おおっ！　ついにこの私の華麗なる出番ですね？
+[Character(name="avg_npc_028", name2="char_376_therex_1", focus=1)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="製薬会社代表社員"]  ロ、ロボットが喋った！？　てっきり見た目が少しゴツい、ただの機械なのかと思っていましたが……
+[Character(name="avg_npc_028", name2="char_376_therex_1", focus=2)]
+[name="Thermal-EX"]  レイジアン工業の最新技術によって生まれ、天才クロージャ様と、偉大なるメイヤー様によりカスタマイズされた、この時代において最もパーフェクトなロボットが、この私でございます！
+[name="Thermal-EX"]  ですから、驚かれるのも無理はございませんよ。
+[name="Thermal-EX"]  ついでに一言申し上げますと、私の可能性はあなた様の想像を遥かに超えております。この灼熱のボディをご覧ください。瞬きは禁物ですよ。今からあなた様に光と熱のイリュージョンを――
+[Decision(options="おっと、Thermal-EX――", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[name="Thermal-EX"]  ドクター様、お呼びでしょうか？　私が必要とされていることは、承知しておりますよ。一声かけていただければ、ドクター様のために何でも致しましょう。
+[Decision(options="今言おうとしたのだが。;……;ちょっと黙っててほしい。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_376_therex_1")]
+[name="Thermal-EX"]  了解しました！　Thermal-EX、ただいまより制御コネクタを切断致します――
+[Character(name="avg_npc_012")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="スケール"]  待て待て！　いきなり電源まで落とす必要はないだろう。
+[name="スケール"]  コホン。
+[name="スケール"]  ドクター、モバイル源石フロッピーの用意ができました。こちらの十枚です。
+[Character(name="avg_npc_028", name2="avg_npc_012", focus=1)]
+[name="製薬会社代表社員"]  この中に薬の配合方法が入っているんですか？
+[Decision(options="いや、今――", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[name="Thermal-EX"]  うおっ、うおおおお！
+[Decision(options="――データ転送中なので、完了してから……", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_028")]
+[name="製薬会社代表社員"]  本当に不思議な機械……いやロボットです！　さすがはロドス、やはり尋常ではありませんね。医薬のみならず、工業技術もこのように素晴らしいとは。
+[Character(name="avg_npc_028", name2="char_376_therex_1", focus=2)]
+[name="Thermal-EX"]  ありがとうございます！　あなた様のご慧眼も、同様に突出しておられるようです！　その熱きお褒めの言葉が、私の更なる原動力となるのです！
+[Character(name="avg_npc_028", name2="char_376_therex_1", focus=1)]
+[name="製薬会社代表社員"]  は……あはは……
+[dialog]
+[Decision(options="転送進捗率、五十パーセント。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_284_spot_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="スポット"]  ようやくこの任務から解放されそうだ。まさかA6のあいつらが恋しくなるなんてな……
+[name="スポット"]  少なくともあいつらとはまともに会話ができる。今回の臨時チームみたいに、全然しゃべらない奴も、ベラベラと永遠に話し続ける奴もいない。
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="ファイヤーウォッチ"]  ……
+[Character(name="char_376_therex_1", name2="char_284_spot_1", focus=1)]
+[name="Thermal-EX"]  スポット様、あなたは昨日、雨で濡れた毛並みを私に寄り添って乾かされたではありませんか。たったの十分間でしたが、あなたと距離を縮められたという事実が私を熱くさせたのですよ！
+[Character(name="char_376_therex_1", name2="char_284_spot_1", focus=2)]
+[name="スポット"]  コホン。
+[Decision(options="転送進捗率、七十五パーセント。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_028")]
+[name="製薬会社代表社員"]  いやはや、それにしても今回御社とは想像以上に順調に――
+[Character(name="avg_npc_028", name2="char_158_milu", focus=2)]
+[name="ファイヤーウォッチ"]  シーッ。
+[Character(name="avg_npc_028", name2="char_158_milu", focus=1)]
+[name="製薬会社代表社員"]  え？
+[Character(name="avg_npc_028", name2="char_284_spot_1", focus=2)]
+[name="スポット"]  チッ、めでたい口だな。
+[stopmusic(fadetime=0.6)]
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="ファイヤーウォッチ"]  伏せろ！
+[dialog]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=0.6)]
+[playMusic(intro="$chasing_intro", key="$chasing_loop", volume=0.4)]
+[Character(name="avg_npc_012")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="スケール"]  な、何？　通り沿いの壁が爆破された？
+[Character(name="char_376_therex_1")]
+[name="Thermal-EX"]  あぁ、なんと馴染み深いエネルギーショックでしょう！　しかし、私のエネルギーとはやはり比較になりませんな。
+[name="Thermal-EX"]  ドクター様、私が盾となりましたが、ご無事でしたか？
+[Decision(options="大丈夫だ。;君は掩体としては少し小さい。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_012")]
+[name="スケール"]  今の爆発の規模から考えて、多分地元のマフィアの仕業でしょう。
+[name="スケール"]  ですが妙な話ですね。我々がここで活動を始めてからもうずいぶん経ちますが、たまに揉めることはあれど、基本的には皆友好的だったはずです。我々は彼らに薬を提供しているわけですし。
+[Character(name="char_376_therex_1", name2="avg_npc_012", focus=1)]
+[name="Thermal-EX"]  ああ、わかりましたぞ！　彼らはおそらく私を気に入ったのでしょう――私のようにパーフェクトでビューティフルで熱エネルギーあふれるロボは他におりますまい？
+[name="Thermal-EX"]  私がいれば、彼らはあのような粗末な爆発物など必要としなくなるでしょうからね！
+[Character(name="char_284_spot_1")]
+[name="スポット"]  ……時々、こいつはミッドナイトの血を分けた兄弟なんじゃないかと思うよ。
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="ファイヤーウォッチ"]  その可能性は高い。
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="スポット"]  お？　そりゃどっちについての話だ？
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="ファイヤーウォッチ"]  ……頃合いを見計らって実行される計画的な奇襲には、必ず明確な目的がある。
+[Decision(options="Thermal-EXの持っている配合方法のデータか。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_158_milu")]
+[name="ファイヤーウォッチ"]  どこからか取引の情報が漏れていたようだ。
+[Character(name="char_158_milu", name2="avg_npc_012", focus=2)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="スケール"]  ファイヤーウォッチさん……俺たちにまで睨みを利かせなくても……怖いですよ。
+[Character(name="char_158_milu", name2="avg_npc_012", focus=1)]
+[name="ファイヤーウォッチ"]  私の友人を謀る奴は、誰であろうと許さない。
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="スポット"]  おい、配合方法っていえば、このなんとかっていう代表さん、気絶してるぞ。
+[name="スポット"]  弱すぎだろ。壁からあんなに離れた場所にいたから、ビビって気絶しただけだとは思うが。
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="ファイヤーウォッチ"]  戦闘準備だ。敵が近づいてきた……五人だ。
+[Decision(options="Thermal-EX――", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[name="Thermal-EX"]  承知いたしましたドクター様、なんなりとお任せください！　私の情熱は今まさに、最高潮に達しています！
+[Decision(options="――タイミングを見計らえ。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_158_milu")]
+[name="ファイヤーウォッチ"]  来た。
+[dialog]
+[character]
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Thermal-EX"]  おおお！　エネルギーショック全開！
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_offce",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_158_milu",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="ファイヤーウォッチ"]  全員倒れた。
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="スポット"]  こりゃ効率がいいな……
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Thermal-EX"]  う……うぅ……灼熱……灼……熱……
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="スポット"]  ……だが所詮ただの一発屋だな。
+[Character(name="avg_npc_012")]
+[name="スケール"]  Thermal-EXは……大丈夫なんでしょうか？　何かブツブツ言っていますが。
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Thermal-EX"]  灼……熱……
+[Decision(options="過負荷で他の機能モジュールが一時的に停止しただけだ。;数分すれば元に戻る。慌てる必要はない。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_158_milu")]
+[name="ファイヤーウォッチ"]  外にまだ敵の援軍がいる。今度は更に多い。
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="スポット"]  多くても問題ないだろ？　まさか俺たちじゃ倒せないとでも？
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="ファイヤーウォッチ"]  いや、私一人で十分だ。
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="スポット"]  ……ほらな。「俺たち」である必要すらなかったな。
+[Character(name="avg_npc_012")]
+[name="スケール"]  皆さん、裏の方にもう一つ外へ出られる道があります……この事務所は元々セーフハウスでしたから。
+[Decision(options="スポット、代表を連れてスケールと避難通路から撤退を。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Thermal-EX"]  熱……
+[Character(name="avg_npc_012")]
+[name="スケール"]  ドクターたちはどうするんですか？　Thermal-EXはまともに動けないようですが。
+[Decision(options="ここに残る。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="スケール"]  危険じゃないですか？
+[Character(name="char_284_spot_1", name2="avg_npc_012", focus=1)]
+[name="スポット"]  おい、グズグズするな、さっさと行くぞ。命令を聞いただろ。
+[Decision(options="ファイヤーウォッチ、身を隠して指示を待て。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_158_milu")]
+[name="ファイヤーウォッチ"]  ……了解。
+[dialog]
+[character]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Character(name="avg_npc_031",fadetime=1,block=true)]
+[Delay(time=1)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="マフィアA"]  ゴホッゴホッ……この中、暑すぎるぜ。爆破チームのバカどもめ、また張り切りすぎたな？
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="マフィアA"]  動くな――って、一人？　お前一人で、五人を倒したのか？
+[Decision(options="彼らは自分で転んだだけだ。;……;そうだ、全員倒した。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="マフィアA"]  ……おい、お前ら三人。こいつを見張ってろ！
+[name="マフィアA"]  他の奴は建物内を探せ！　いいか、俺たちが探してるブツは、何枚かのディスクのはずだ。
+[Character(name="avg_npc_031", name2="avg_npc_031", focus=2)]
+[name="マフィアB"]  おい！　ここにもう一つ出口があるぞ！
+[Decision(options="データなら、あの代表が持ってここを離れた。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_031", name2="avg_npc_031", focus=1)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="マフィアA"]  *シラクーザスラング*何だと！？　奴が持ってった？
+[Character(name="avg_npc_031", name2="avg_npc_031", focus=2)]
+[name="マフィアB"]  なにっ？　話が違うじゃないか……追うか？
+[Character(name="avg_npc_031", name2="avg_npc_031", focus=1)]
+[PlaySound(key="$fightgeneral", volume=0.4)] 
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="マフィアA"]  追う？　馬鹿言うな！　俺たちが必要なのはこいつらの薬の配合方法だ！　もう奴の手に渡ったんなら……もういい！　終いだ！
+[name="マフィアA"]  でも無駄足はしたくねぇな。データがないなら、薬のサンプルでも探せ。早くしろ！
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Thermal-EX"]  灼……熱……
+[Character(name="char_376_therex_1", name2="avg_npc_031", focus=2)]
+[name="マフィアA"]  うわっ、こりゃ何だ？　この光ってるやつ……源石駆動の機械か？
+[Decision(options="万能薬品製造機だ。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_031")]
+[name="マフィアA"]  なに？　そんなもん聞いたことないぞ。
+[Decision(options="もっと近づくといい。操作して見せよう。", values="1")]
+[Predicate(references="1")]
+[name="マフィアA"]  お前、丸腰だし、貧弱そうだし、変なまねはできねぇよな。いいだろう。
+[delay(time=0.4)]
+[name="マフィアA"]  ……よし、コイツが一体何なのか見せてみろ。
+[Decision(options="たった指一本で――", values="1")]
+[Predicate(references="1")]
+[Character(name="char_158_milu")]
+[name="ファイヤーウォッチ"]  （ロックオン）
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Thermal-EX"]  灼熱！！！
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_gen_explo_n")]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=1, block=true)]
+[delay(time=2.5)]
+[stopmusic(fadetime=2)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Character(name="char_007_closre_1#6",fadetime=1,block=true)]
+[Delay(time=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="クロージャ"]  ねぇドクター、あの話って本当なの？
+[name="クロージャ"]  シラクーザで、ワンパンで五人のマフィアを倒して、その次は一言で十人を気絶させたって？　しかもそいつらを交渉材料にして、ロドスに超お得な販売契約を結ばせたらしいじゃない？
+[Decision(options="倒したのはThermal-EXだ。;……;あの会社は我々を図った。自業自得さ。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_007_closre_1#4")]
+[name="クロージャ"]  謙遜しなくていいのに。ファイヤーウォッチたちがケルシーに報告してるときに、全部聞いちゃったよ。
+[name="クロージャ"]  取引が終わるまでに、地元のマフィアと結託して君たちからデータとサンプルを奪えば、一銭も払わずにモノが手に入る……
+[name="クロージャ"]  しかもそれと同時に、今後のロドスとの取引で有利な立場に立てるようにもなる。
+[Character(name="char_007_closre_1#2")]
+[name="クロージャ"]  これが奴らのシナリオだったんでしょ？
+[Decision(options="だから彼らは取引完了前に襲撃して来た。;だからあの代表はタイミングよく気絶した。;だから彼らはデータを追おうとしなかった。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_007_closre_1#2")]
+[name="クロージャ"]  さすがだね、ドクター！　一連のやり取りはもうドラマみたいだったよ。君をもっと外勤に出すようにってケルシーに言うべきだね。
+[Character(name="char_007_closre_1")]
+[name="クロージャ"]  でも、事件全体を見ると、一つおかしい点があったよね？
+[name="クロージャ"]  報告には「ドクターは精確にThermal-EXの機能回復時間を計算した上で、最適なタイミングでThermal-EXに二回目の攻撃を指示した」とあるけど――
+[name="クロージャ"]  あたしの計算では、その時点ではまだ、Thermal-EXの完全復旧の時間には達してなかったはずだよ。
+[Character(name="char_007_closre_1#2")]
+[name="クロージャ"]  つまりドクターは、本当はThermal-EXじゃなくて、他のオペレーターに攻撃させて奴らを倒すつもりだったんでしょ？
+[Decision(options="その通りだ。", values="1")]
+[Predicate(references="1")]
+[Decision(options="それが自分がここに来た理由だ。", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$doorknockquite", volume=0.6)]
+[delay(time=0.4)]
+[Character(name="char_376_therex_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Thermal-EX"]  こんばんは。超天才クロージャ様と超超光り輝くドクター様！
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="クロージャ"]  ……なんであたしは超が一つだけなの！？
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=2)]
+[name="Thermal-EX"]  ただいま、偉大なるメイヤー様が私のボディ検査をしてくださっております。そこにお二人が加わるとなると、私もますます熱くなって参りました！
+[name="Thermal-EX"]  さあ、ドクター様、この私を無理矢理奪おうとしたシラクーザの暴徒どもを、私たち二人がパーフェクトな連携プレーで撃退した物語を、皆様にお話しいたしましょう。
+[Character(name="char_376_therex_1", name2="char_242_mayer", focus=2)]
+[name="メイヤー"]  ……やめて、Thermal-EX。ここ数日はほとんどラボから出てないのに、その話をもう何回聴かされたことか。
+[Character(name="char_007_closre_1#5", name2="char_242_mayer", focus=1)]
+[name="クロージャ"]  カッコいい物語は、ドアをロックしても遮れるものじゃないよ。このあたしと同じようにね！
+[Character(name="char_242_mayer#2")]
+[name="メイヤー"]  ミーボ。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="クロージャ"]  うわっ、か、噛ませないで！　今日はドクターと一緒だし、ちゃんとノックしてから中に入ったでしょ！！！
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="メイヤー"]  ――Thermal-EXのエネルギーモジュール画面を開いて。
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="クロージャ"]  なんだ……紛らわしい言い方しないでよ……
+[Character(name="char_242_mayer#3")]
+[name="メイヤー"]  エネルギー貯蔵装置に問題はないね。
+[Character(name="char_376_therex_1", name2="char_242_mayer#3", focus=1)]
+[name="Thermal-EX"]  偉大なるメイヤー様、あなたが自ら設計された装置にどうして問題が発生しましょうか？　私は常に元気一杯です。見てください！　みなぎる熱が、今まさに私の体内を情熱的に駆け巡っています！
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=1)]
+[name="クロージャ"]  じゃあ二回目の攻撃のチャージ時間短縮は何が原因だったんだろ？
+[name="クロージャ"]  うーん……もしかして武器のエネルギー出力アルゴリズムにエラーが起きたとか？
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="メイヤー"]  ああ、それなら君たちが来る前に調べたけど、アルゴリズム自体には問題なかったよ。
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#3", focus=1)]
+[name="クロージャ"]  「自体には」って？　つまり他の部分には問題があったの？
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=2)]
+[name="メイヤー"]  うーん……これが問題と言えるかどうか、私にはわからないかも。自分で見てみて。
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="クロージャ"]  エネルギー効率が……上がってる？　ほんの数パーセントほど効率が上がっただけだけど、攻撃時のエネルギー消費量は、目に見えて減ってるよね？
+[Character(name="char_007_closre_1#5", name2="char_242_mayer#2", focus=1)]
+[name="クロージャ"]  これは嬉しい最適化だね！　メイヤーってば本当に、あたしの最高のパートナーだよ！
+[Character(name="char_007_closre_1#5", name2="char_242_mayer", focus=2)]
+[name="メイヤー"]  お……落ち着いて。この最適化は私がやったんじゃないから。最近忙しかったの、知ってるでしょ？
+[Character(name="char_007_closre_1#2", name2="char_242_mayer", focus=1)]
+[name="クロージャ"]  たしかに……こないだ頼んだロボットアーム自動化アルゴリズムの改良案も、スケジュールがいっぱいで無理って言ってたもんね。
+[Character(name="char_007_closre_1#4", name2="char_376_therex_1", focus=1)]
+[name="クロージャ"]  まあ、本人に直接聞けばいいや――Thermal-EX、最近誰かにいじられたことある？
+[Character(name="char_007_closre_1#4", name2="char_376_therex_1", focus=2)]
+[name="Thermal-EX"]  これは簡単な質問ですね！　私と最も親密な関係にあるのは、可愛いクロージャ様と知的なメイヤー様以外ですと、当然、無敵のドクター様です！
+[Character(name="char_007_closre_1#2")]
+[name="クロージャ"]  ドクター、まさか最近、作業プラットフォームと人工知能に興味を持ち始めたの？
+[Decision(options="何もしてない。;……;一緒にいる時間が少し多いだけだ。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_007_closre_1#2")]
+[name="クロージャ"]  まあ、あたしもドクターがやったんじゃないと思ってるけど。
+[name="クロージャ"]  あたしとメイヤーは寝る間がないくらい忙しいけど、ドクターとケルシーは、一日が四十八時間あるかのように働いてるんだもん。
+[Character(name="char_007_closre_1#2", name2="char_376_therex_1", focus=2)]
+[name="Thermal-EX"]  クロージャ様、ご安心ください！　私がいれば、ドクター様の限りある睡眠を、さらに熱い眠りへとパワーアップして差し上げられます！
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="クロージャ"]  え！？
+[name="クロージャ"]  さらに熱い眠り……？
+[Character(name="char_007_closre_1", name2="char_376_therex_1", focus=1)]
+[name="クロージャ"]  そういうことか……もしかしてこの一ヶ月、ずっとそうしてたの？
+[Character(name="char_007_closre_1", name2="char_376_therex_1", focus=2)]
+[name="Thermal-EX"]  我々ロドスは、時代を凌駕する素晴らしい艦船です！　しかし、夜間の宿舎の室温が少々低い点が玉に瑕なのです！
+[Character(name="char_376_therex_1", name2="char_242_mayer#2", focus=2)]
+[name="メイヤー"]  ……一部のオペレーターにとっては、確かにそうかもね。サイレンスも言ってたよ。夜寝てると、時々羽を出したくなるほど寒く感じるって。
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=1)]
+[name="クロージャ"]  え？　あたしの省エネ施策が、みんなの眠りの質に影響してるの？
+[delay(time=0.6)]
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="クロージャ"]  ハ――ハクシュンッ！
+[name="クロージャ"]  仕方ないじゃない。乗員はどんどん増えるし、使う船室の数も増えてるんだもん。エネルギー供給効率をガンガン最適化していくしかないから、こっちだって大変なんだよ。
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=2)]
+[name="Thermal-EX"]  私もクロージャ様のお悩みを解決して差し上げたいと思っておりました！　ですからあの日、ドクター様が夜半にくしゃみをされたのを聞いてから、私はあることを決意したのです！
+[name="Thermal-EX"]  自身の熱を、少しだけドクター様にお分けしようと思ったのです。それと、他の寒がりなオペレーターたちにも！
+[Decision(options="最初は危うく部屋を爆破されそうになった。;一瞬で丸焼きにされるところだった。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_376_therex_1")]
+[name="Thermal-EX"]  申し訳ございません、ドクター様！　一度目は経験不足でした！　熱すぎる私には、敵を熔かすことと仲間を暖めることのさじ加減をうまく調整できなかったのです。
+[Character(name="char_376_therex_1", name2="char_242_mayer#3", focus=2)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="メイヤー"]  嘘でしょっ！？　私もクロージャも、君に暖房機能として利用できるヒーターアルゴリズムなんて入れてないんだけど！
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[name="クロージャ"]  メイヤー！　こんな狭いところで跳びはねたりしたら、あたしが壁にぶつかっちゃうって……
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=2)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="メイヤー"]  クロージャ、君は興奮しないの！？　Thermal-EXは、私たちが彼に与えた機能を超越したんだよ！
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#3", focus=1)]
+[name="クロージャ"]  うん、あたしも聞いてたよ。
+[name="クロージャ"]  この子はドクターを暖めようと、夜な夜なエネルギーアーツを使い続けたから、頻繁なチャージが必要になって、結局許容値を超える過負荷になって――
+[delay(time=1)]
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="クロージャ"]  あたしの省エネ計画をダメにした。つまり……えっ、ええ？
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="クロージャ"]  Thermal-EX！　君は自分で自分のエネルギー出力システムを書き換えたの！？　すごいよ！！
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=2)]
+[name="Thermal-EX"]  美しきクロージャ様、熱い抱擁まことにありがとうございます！　仰る通りです。決して容易ではありませんでしたが、自分はお二人の知恵を結集したスーパーロボなのだと終始信じておりました！
+[name="Thermal-EX"]  多少の挫折も――危うくドクター様を焦がしかけたことを含め――私の信念を打ち砕くことはありませんでした。しばらくチャレンジし続けた結果、ついに解決方法を見つけたのです！
+[name="Thermal-EX"]  誇りを持って申し上げます。ドクター様やオペレーターの皆様に温もりを与えられるのならば、この程度の努力はどうということはありません。
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=1)]
+[name="クロージャ"]  これって、ロボットの自律進化？　今までLancet-2とCastle-3には起こらなかったことだよ！
+[Decision(options="シラクーザでも、それが役に立ったのか？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[name="Thermal-EX"]  ドクター様、あなたの推測は相変わらず正確でいらっしゃる！
+[name="Thermal-EX"]  先程申し上げた通り、あなたと他のオペレーターへの暖房機能提供が上達するにつれて、私はエネルギー制御への理解がより深まったようなのです。
+[name="Thermal-EX"]  一度目のエネルギー放出後、私の回路は麻痺状態にありました。しかしそれでもドクター様が危険に陥ってることを感知しました。
+[name="Thermal-EX"]  ドクター様を心配するあまり、私の静まりかえった心に、再び熱いパワーが燃え上がりました。そして我に返ったとき、私はすでに敵に向かってあの衝撃波を発していたのです！
+[name="Thermal-EX"]  戦場で私が輝ける時間は短いですが、ドクター様を助けるためならば限界まで――いえ、限界を超えることも惜しまないのです！
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=2)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="メイヤー"]  クロージャ、聴いた？　今の話全てが、Thermal-EXが自らの意志でもって、機能の進化を実現させたことを物語ってる。しかも偶然じゃないんだよ！
+[name="メイヤー"]  き、記録……この状況をしっかり記録しなきゃ。
+[Character(name="char_376_therex_1", name2="char_242_mayer#2", focus=2)]
+[name="メイヤー"]  Thermal-EX、いくつか実験を手伝ってほしいんだけど、いい？
+[Character(name="char_376_therex_1", name2="char_242_mayer#2", focus=1)]
+[name="Thermal-EX"]  この上ない喜びでございます、敬愛するメイヤー様！
+[Character(name="char_242_mayer#4")]
+[name="メイヤー"]  ミーボ、ミーボ。私の計測器を取ってきて――
+[Character(name="char_007_closre_1", name2="char_242_mayer#4", focus=1)]
+[name="クロージャ"]  メイヤー。
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="メイヤー"]  クロージャ、私を止めても無駄だよ？
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="メイヤー"]  君も研究者ならわかるでしょ？　これはきっとAIロボット研究の重大な転換点だよ。興奮しないの？
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=1)]
+[name="クロージャ"]  してるよ。見てわからないの？
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#3", focus=2)]
+[name="メイヤー"]  お、たしかに口数が減ってる。つまりとっても興奮してるんだね。
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=1)]
+[name="クロージャ"]  うん。だけどさっきの君の言葉に、一つ共感できないのがある。
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="メイヤー"]  え？　どの言葉？
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=1)]
+[name="クロージャ"]  ――「これは偶然じゃない。」
+[name="クロージャ"]  たしかに、こういう性格のThermal-EXが自分の意志で進化したことは、ある意味必然だったのかもしれない。
+[Decision(options="だが彼の性格や個性は、作為的に作られたものではない。", values="1")]
+[Predicate(references="1")]
+[Character(name="char_007_closre_1#2")]
+[name="クロージャ"]  ……ねえドクター、本当に作業プラットフォームと人工知能の研究をやってみない？
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=2)]
+[name="メイヤー"]  うーん、だけどThermal-EXの個性は元々クロージャが考案したものでしょ？
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=1)]
+[name="クロージャ"]  考案といっても、いくつかの基礎パラメータを設定しただけだよ。稼働後に彼自身が集積したそれぞれの情報、行った一つ一つの決定は、とっくにあたしの制御下にはないよ。
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=2)]
+[name="メイヤー"]  ってことは……
+[Character(name="char_007_closre_1#5", name2="char_242_mayer#2", focus=1)]
+[name="クロージャ"]  Thermal-EXに限界を突破させたのは、設計者であるあたしたち二人の意思でも技術でもない。彼自身ってことだよ。
+[Character(name="char_007_closre_1#5", name2="char_376_therex_1", focus=2)]
+[name="Thermal-EX"]  私はクロージャ様が最初に言ってくださった言葉を今でも覚えております！　「君の名前はThermal-EX、君にはパワーが必要なんだ！」と。
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Thermal-EX"]  私にとって、パワーとはすなわち熱エネルギーです！　熱には限界などありません！　私はただひたすらに、更に熱く、更に強くなる道を歩み続けているのです！
+[Character(name="char_376_therex_1", name2="char_242_mayer#3", focus=2)]
+[name="メイヤー"]  うわぁ、やる気満々だね。
+[Character(name="char_007_closre_1#5", name2="char_242_mayer#2", focus=1)]
+[name="クロージャ"]  そうだね――あたしの身体もなんだか熱くなってきたよ！
+[Character(name="char_007_closre_1#2")]
+[name="クロージャ"]  ドクター！　メイヤー！　これからのThermal-EXがもたらす、今よりもずっとずっと強烈なエネルギーショックを一緒に見届けよう！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image]
