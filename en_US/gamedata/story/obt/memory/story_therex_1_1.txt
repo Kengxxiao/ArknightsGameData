@@ -1,0 +1,507 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 个人剧情 Thermal-EX
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+2:30 P.M. \ Clear
+Rhodes Island Landship, Chief Engineer's Office
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Background(image="bg_motorroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(name="avg_npc_088")]
+[name="Engineering Operator"]  Boss, here's this month's wiring inspection report.
+[dialog]
+[Character(name="char_007_closre_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Closure"]  Hmm, hmm... Looks good to me.
+[name="Closure"]  Eh? This part here is somewhat strange.
+[name="Closure"]  —There's been similar irregularities from two to six in the morning every day? This is the dorm, right?
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=2)]
+[name="Engineering Operator"]  That's the dorm. Oh, that reminds me. On the first few days, we got reports of a power outage there.
+[name="Engineering Operator"]  We checked it out, and the wiring was all fine. The only thing was that the per unit time output was way over the threshold.
+[Character(name="char_007_closre_1#6", name2="avg_npc_088", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Closure"]  Achoo—Uh, by the way, doesn't it feel kinda cold in here?
+[Character(name="char_007_closre_1#6", name2="avg_npc_088", focus=2)]
+[name="Engineering Operator"]  A little.
+[name="Engineering Operator"]  More accurately, it's been kinda cold in here lately... Maybe we should change the AC temperature?
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=1)]
+[name="Closure"]  Nah, let's just bear with it. Gotta conserve energy.
+[name="Closure"]  Now back on topic, I'm guessing someone's been up to no good and decided to use their unauthorized electronics here.
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=2)]
+[name="Engineering Operator"]  Oh, right, Boss. You know THRM-EX? I saw him in the hallway each and every time I did my inspections.
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=1)]
+[name="Closure"]  Huh? So it's actually the electronics that's up to no good?
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=2)]
+[name="Engineering Operator"]  Should I bring THRM-EX here?
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=1)]
+[name="Closure"]  Let's see where he's at now. Operator logs... There we go.
+[Character(name="char_007_closre_1#6", name2="avg_npc_088", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Closure"]  Oh, THRM-EX is out on a mission in Siracusa? Who else is there... The Doctor?!
+[name="Closure"]  Uh, well, that's unexpected...
+[Character(name="char_007_closre_1", name2="avg_npc_088", focus=1)]
+[name="Closure"]  Hm...
+[Character(name="char_007_closre_1#2", name2="avg_npc_088", focus=1)]
+[name="Closure"]  Oh well, if there's a problem, I'm sure it's just a tiny problem that we don't have to worry about, and if the Doctor's there, I'm sure everything will get sorted out no problem.
+[name="Closure"]  And once they're back, I'll talk to Kal'tsit and figure out what's up.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Background(image="bg_offce",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+Rhodes Island Office, Locomotiva, Siracusa
+[dialog]
+[Character(name="avg_npc_028",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Pharmaceutical Company Representative"]  Thank you very much for coming all the way here. We have no issues with the terms of the contract.
+[name="Pharmaceutical Company Representative"]  It has been both an honor and a pleasure to meet you, Doctor of Rhodes Island. Certainly, it was an unexpected surprise. Please send Miss Amiya our gratitude as well.
+[Decision(options="The pleasure is mine.;It ain't so bad coming out here once in a while.", values="1;2")]
+[Predicate(references="1;2")]
+[name="Pharmaceutical Company Representative"]  Now if you would give me the medicine's formula and sample—
+[Decision(options="THRM-EX.", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Character(name="char_376_therex_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="THRM-EX"]  Hmph! Is it finally my time to shine?
+[Character(name="avg_npc_028", name2="char_376_therex_1", focus=1)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Pharmaceutical Company Representative"]  D-Did that thing just speak?! Here I thought it was just a menacing-looking machine...
+[Character(name="avg_npc_028", name2="char_376_therex_1", focus=2)]
+[name="THRM-EX"]  Born from Raythean Industries's latest and greatest technologies and jointly customized by the genius Closure and the great Mayer, it is I, THRM-EX, the most perfect robot you'll find in this day and age!
+[name="THRM-EX"]  Dear sir, it is no wonder that my capabilities have left you in awe.
+[name="THRM-EX"]  And may I add that my capabilities far exceed your imagination. Feast your eyes on my burning hotness. Don't blink as I give you the performance of a lifetime with my light and heat—
+[Decision(options="Ahem, THRM-EX.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[name="THRM-EX"]  Ah, Doctor, summoned me again, did you? You need my assistance. How may I help you, then? Your wish is my command.
+[Decision(options="I'm getting there.;......;I want you to shut the hell up.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_376_therex_1")]
+[name="THRM-EX"]  Very well! THRM-EX, now severing control link—
+[Character(name="avg_npc_012")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Operator Straightedge"]  Hey, wait, you didn't have to turn yourself off!!
+[name="Operator Straightedge"]  Ahem.
+[name="Operator Straightedge"]  Doctor, the portable Originium floppies are ready.
+[Character(name="avg_npc_028", name2="avg_npc_012", focus=1)]
+[name="Pharmaceutical Company Representative"]  I take it this is the formula for the medicine?
+[Decision(options="One moment.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[name="THRM-EX"]  Mmph! Ohhhh!
+[Decision(options="Once THRM-EX is done with the transfer, I can hand the data over to you, Mr. Representative.", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_028")]
+[name="Pharmaceutical Company Representative"]  What a marvelous machine... uh, robot! Rhodes Island really is on another level. Not just its pharmaceuticals, but also its engineering and technological prowess!
+[Character(name="avg_npc_028", name2="char_376_therex_1", focus=2)]
+[name="THRM-EX"]  Much appreciated! Your sharp eyes are on another level as well! Your warm compliments will keep me going for the day!
+[Character(name="avg_npc_028", name2="char_376_therex_1", focus=1)]
+[name="Pharmaceutical Company Representative"]  Ha... haha...
+[dialog]
+[Decision(options="Transfer progress... Fifty percent.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_284_spot_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Spot"]  Is it finally over? I'm starting to miss my A6 clowns.
+[name="Spot"]  At least the clowns know how to talk normal, not like these temporary teammates I'm stuck with. They're either quiet as a mouse or don't know when to shut up.
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="Firewatch"]  ......
+[Character(name="char_376_therex_1", name2="char_284_spot_1", focus=1)]
+[name="THRM-EX"]  Mr. Spot, you leaned next to me yesterday to dry your rain-soaked hair. It may only have been ten minutes, but the fact that the distance between us has shortened has ignited my burning passion!
+[Character(name="char_376_therex_1", name2="char_284_spot_1", focus=2)]
+[name="Spot"]  Ahem.
+[Decision(options="Transfer progress... Seventy-five percent.", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_028")]
+[name="Pharmaceutical Company Representative"]  Phew, I didn't expect our meeting to go without a hitch—
+[Character(name="avg_npc_028", name2="char_158_milu", focus=2)]
+[name="Firewatch"]  Shut up.
+[Character(name="avg_npc_028", name2="char_158_milu", focus=1)]
+[name="Pharmaceutical Company Representative"]  Huh?
+[Character(name="avg_npc_028", name2="char_284_spot_1", focus=2)]
+[name="Spot"]  Tsk, my friend, you have one real lucky mouth.
+[stopmusic(fadetime=0.6)]
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Firewatch"]  Get down!
+[dialog]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=0.6)]
+[playMusic(intro="$chasing_intro", key="$chasing_loop", volume=0.4)]
+[Character(name="avg_npc_012")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Operator Straightedge"]  W-What's going on? The wall just blew up!
+[Character(name="char_376_therex_1")]
+[name="THRM-EX"]  Ah, a thermal shock! How familiar! But it is no match for my energy output!
+[name="THRM-EX"]  Doctor, since I shielded you, I take it you are safe and sound?
+[Decision(options="I'm fine.;You're a little short for a shield.", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_012")]
+[name="Operator Straightedge"]  Judging by the scale of the Originium bomb's explosion, it must've been the local gangsters.
+[name="Operator Straightedge"]  Well, that's strange. We've been operating here for a while. We have some run-ins with them once in a while, but most of the time, we get along fine. We share some of our medicine with them, after all.
+[Character(name="char_376_therex_1", name2="avg_npc_012", focus=1)]
+[name="THRM-EX"]  Heh, I know! They must be after me! Understandable, of course! With my burning passion, there is not a more perfect robot in this world!
+[name="THRM-EX"]  If they got their hands on me, they would never again need to rely on such crude explosives!
+[Character(name="char_284_spot_1")]
+[name="Spot"]  Sometimes I wonder if this guy came out of the same womb as Midnight.
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="Firewatch"]  He's probably right.
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="Spot"]  Oh?
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="Firewatch"]  It's a well-organized and planned-out attack. They must have a clear objective, and they came specifically right at this moment.
+[Decision(options="THRM-EX's formula.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_158_milu")]
+[name="Firewatch"]  Looks like news of this transaction leaked out.
+[Character(name="char_158_milu", name2="avg_npc_012", focus=2)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Operator Straightedge"]  Firewatch's staring at each and every one of us... kind of creeps me out...
+[Character(name="char_158_milu", name2="avg_npc_012", focus=1)]
+[name="Firewatch"]  I won't let anyone hurt my friends.
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="Spot"]  Hey, speaking of the formula, this representative guy? He passed out.
+[name="Spot"]  What a wimp. He was standing pretty far from the wall. He probably just fainted because he was spooked.
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="Firewatch"]  Get yourselves ready. We've got company. Five of them.
+[Decision(options="THRM-EX—", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[name="THRM-EX"]  Very well, Doctor! Just leave this to me and my burning passion!
+[Decision(options="——Watch your timing.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_158_milu")]
+[name="Firewatch"]  Here they come.
+[dialog]
+[character]
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="THRM-EX"]  Harrrrgh! Full throttle!
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_offce",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_158_milu",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Firewatch"]  That took care of them.
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="Spot"]  Well, if that isn't efficient...
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="THRM-EX"]  Ugh... Uhhh... Burn... Burning...
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="Spot"]  So that was an eleventh-hour last resort, huh?
+[Character(name="avg_npc_012")]
+[name="Operator Straightedge"]  Is THRM-EX okay? I'm not sure I get what he's saying.
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="THRM-EX"]  Burning... Hot...
+[Decision(options="He used up too much energy in one go. That causes his other functions to stall for a while.;Give him a few minutes. Don't worry.", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_158_milu")]
+[name="Firewatch"]  We still have more enemies outside.
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="Spot"]  Why does that matter? We can handle them.
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=1)]
+[name="Firewatch"]  I can handle them myself.
+[Character(name="char_158_milu", name2="char_284_spot_1", focus=2)]
+[name="Spot"]  Well, look at you... So confident.
+[Character(name="avg_npc_012")]
+[name="Operator Straightedge"]  Everyone, there's an exit in the back... This used to be a safehouse before it was an office anyway.
+[Decision(options="Spot, you and Straightedge take the representative and get out through the secret exit.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="THRM-EX"]  Hot...
+[Character(name="avg_npc_012")]
+[name="Operator Straightedge"]  What about you, Doctor? Looks like THRM-EX is still freezing up.
+[Decision(options="We'll stay here.", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_012")]
+[name="Operator Straightedge"]  Are you sure you'll be fine?
+[Character(name="char_284_spot_1", name2="avg_npc_012", focus=1)]
+[name="Spot"]  Come on, get a move on. You heard your order.
+[Decision(options="Firewatch, stay hidden, and look out for my commands.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_158_milu")]
+[name="Firewatch"]  Understood.
+[dialog]
+[character]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Character(name="avg_npc_031",fadetime=1,block=true)]
+[Delay(time=1)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Mafioso A"]  *cough*... Why is it so hot in here? Those demolition morons sure like to overdo it...
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Mafioso A"]  Don't move—Huh? Just one of you in here? You took down five of us by yourself?
+[Decision(options="They tripped and fainted.;......;That's right. I took them all down.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="Mafioso A"]  You, you, and you. You three, keep an eye on that one!
+[name="Mafioso A"]  The rest of you, search the house. Remember, we're looking for a few floppies.
+[Character(name="avg_npc_031", name2="avg_npc_031", focus=2)]
+[name="Mafioso B"]  Yo, boss, there's another exit here!
+[Decision(options="If you're looking for the formula, the representative took it with him.", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_031", name2="avg_npc_031", focus=1)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Mafioso A"]  Cazzo! He took it away?!
+[Character(name="avg_npc_031", name2="avg_npc_031", focus=2)]
+[name="Mafioso B"]  Uh, this isn't how we planned for this to go... Should we go after them?
+[Character(name="avg_npc_031", name2="avg_npc_031", focus=1)]
+[PlaySound(key="$fightgeneral", volume=0.4)] 
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="Mafioso A"]  Go after what?! We're after their formula! If they already have it...! Screw it!
+[name="Mafioso A"]  The formula's gone, but we're bringing something back with us. Look for some medicine or whatever! Now get on it!
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="THRM-EX"]  Burning... Hot...
+[Character(name="char_376_therex_1", name2="avg_npc_031", focus=2)]
+[name="Mafioso A"]  Huh, what's this fancy thing? It's glittering. Is it made of Originium?
+[Decision(options="It's a medicine maker. Makes everything you could possibly want.", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_npc_031")]
+[name="Mafioso A"]  Huh? Now how come I ain't never heard of a gizmo like that?
+[Decision(options="Come over here. I'll demonstrate.", values="1")]
+[Predicate(references="1")]
+[name="Mafioso A"]  Well, you got no weapons on you, and you look like you ain't gonna last two seconds in a fight.
+[delay(time=0.4)]
+[name="Mafioso A"]  Alright... Show me what this thing's all about.
+[Decision(options="You just need to point your finger—", values="1")]
+[Predicate(references="1")]
+[Character(name="char_158_milu")]
+[name="Firewatch"]  (Aim)
+[Character(name="char_376_therex_1")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="THRM-EX"]  Burning hot!!!
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_gen_explo_n")]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=1, block=true)]
+[delay(time=2.5)]
+[stopmusic(fadetime=2)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Character(name="char_007_closre_1#6",fadetime=1,block=true)]
+[Delay(time=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Closure"]  Whoa, Doctor, did all this actually happen?
+[name="Closure"]  When you were in Siracusa, you beat up five mafia guys with just one punch, and then scared ten others shitless with just a few words? Then you used them as a bargaining chip and got us a huge order that's super in our favor?
+[Decision(options="It was THRM-EX who beat them up.;......;That company was trying to set us up. They deserve it.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_007_closre_1#4")]
+[name="Closure"]  Oh, don't be so humble, I heard the whole story when Firewatch and the squad reported to Kal'tsit.
+[name="Closure"]  They were working with a local gang to ambush you guys and steal the formula and samples. They really thought they could make off with all that without spending a penny.
+[name="Closure"]  And that would apparently put them in a better negotiating position when they deal with Rhodes Island in the future.
+[Character(name="char_007_closre_1#2")]
+[name="Closure"]  That's more or less what they were planning, right?
+[Decision(options="That's why they ambushed us right before the deal was done.;That's why the guy from the other company passed out when he did.;That's why they didn't go after the floppies that they had already got their hands on.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_007_closre_1#2")]
+[name="Closure"]  Well, I should've expected no less, Doctor! Your whole mission turned out like some TV drama. You should talk to Kal'tsit, see if she'll let you go on missions outside some more.
+[Character(name="char_007_closre_1")]
+[name="Closure"]  There's one thing about all this that's kinda strange, though.
+[name="Closure"]  According to the report, 'The Doctor accurately calculated the amount of time it would take for THRM-EX's functions to be fully restored and gave THRM-EX the order to conduct a second round of heat energy Arts attacks at the perfect moment'—
+[name="Closure"]  I crunched the numbers in my head, and THRM-EX shouldn't have completely recovered yet.
+[Character(name="char_007_closre_1#2")]
+[name="Closure"]  You were going to have another operator attack, am I right?
+[Decision(options="That's right.", values="1")]
+[Predicate(references="1")]
+[Decision(options="This is why I'm here.", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$doorknockquite", volume=0.6)]
+[delay(time=0.4)]
+[Character(name="char_376_therex_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="THRM-EX"]  Good evening, the most ingenious Master Closure and the most, most radiant Doctor!
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Closure"]  Where's my other 'most?!'
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=2)]
+[name="THRM-EX"]  The great Mayer is attending to my body as we speak. With your participation, I can feel that burning hotness in me surging!
+[name="THRM-EX"]  Why, hello, Doctor! Would you like me to go over that story of how, through our flawless cooperation at the most treacherous moment, we together defeated the Siracusan hooligans who tried to defile me?
+[Character(name="char_376_therex_1", name2="char_242_mayer", focus=2)]
+[name="Mayer"]  Stop, THRM-EX... I've already listened to your story hundreds of times. Granted, I've barely left the workshop for the past few days.
+[Character(name="char_007_closre_1#5", name2="char_242_mayer", focus=1)]
+[name="Closure"]  You can't keep badass rumors under wraps just because you keep your door shut, Mayer. Just like how everyone knows how badass I am.
+[Character(name="char_242_mayer#2")]
+[name="Mayer"]  Meeboos.
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Closure"]  H-Hey, no biting! I came here with the Doctor this time, and I sure as hell knocked!
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=2)]
+[name="Mayer"]  —Open THRM-EX's Energy Module Panel.
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[name="Closure"]  Could've told me sooner they weren't here for me...
+[Character(name="char_242_mayer#3")]
+[name="Mayer"]  His energy storage looks fine to me.
+[Character(name="char_376_therex_1", name2="char_242_mayer#3", focus=1)]
+[name="THRM-EX"]  Please, my most respected Miss Mayer, a device personally designed by you can't possibly be defective! Look, my overflowing hotness is emanating in all directions from my body!
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=1)]
+[name="Closure"]  So what was the reason you launched the second wave earlier?
+[name="Closure"]  Let me guess... Maybe the weapon energy output logic is faulty?
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="Mayer"]  I've already checked before you guys got there. The logic itself is fine.
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#3", focus=1)]
+[name="Closure"]  Huh, 'itself?' So you mean there are still issues?
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=2)]
+[name="Mayer"]  Mm, I'm not sure if we can really call this a problem. Take a look yourself.
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="Closure"]  Efficiency... improvement? It's only by a few percentage points, but the energy that THRM-EX uses when he attacks has clearly been decreasing.
+[Character(name="char_007_closre_1#5", name2="char_242_mayer#2", focus=1)]
+[name="Closure"]  What a surprise! That's a great improvement—Mayer, you're so awesome!
+[Character(name="char_007_closre_1#5", name2="char_242_mayer", focus=2)]
+[name="Mayer"]  Stop... not so fast. I didn't implement this change. You know how busy I've been lately, don't you?
+[Character(name="char_007_closre_1#2", name2="char_242_mayer", focus=1)]
+[name="Closure"]  Right, when I asked you to look into refactoring the robot arm automation logic, you even told me you couldn't work it into your schedule.
+[Character(name="char_007_closre_1#4", name2="char_376_therex_1", focus=1)]
+[name="Closure"]  Guess I'll just come out and ask, then. THRM-EX, has someone tinkered with you lately?
+[Character(name="char_007_closre_1#4", name2="char_376_therex_1", focus=2)]
+[name="THRM-EX"]  A most simple question to answer! Aside from you, the cutest ever Master Closure, and the most intelligent Miss Mayer, I'm of course most intimate with our unbeatable Doctor!
+[Character(name="char_007_closre_1#2")]
+[name="Closure"]  Doctor, showing an interest in operating platforms and AI, are we?
+[Decision(options="I haven't done anything.;......;We've only spent a little too much time with each other.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_007_closre_1#2")]
+[name="Closure"]  Yeah, I figured it couldn't be you.
+[name="Closure"]  I mean, Mayer and I don't get much sleep because we're busy, but you and Kal'tsit seem to have 48 hours to spend in a day.
+[Character(name="char_007_closre_1#2", name2="char_376_therex_1", focus=2)]
+[name="THRM-EX"]  Don't worry, Master Closure! You can count on me to ensure the Doctor gets to enjoy a hot bedtime.
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Closure"]  Huh?!
+[name="Closure"]  A hot bedtime...
+[Character(name="char_007_closre_1", name2="char_376_therex_1", focus=1)]
+[name="Closure"]  I see, so that's what you've been up to this month.
+[Character(name="char_007_closre_1", name2="char_376_therex_1", focus=2)]
+[name="THRM-EX"]  Rhodes Island is an epoch-making vessel, yet there is one flaw. The temperature inside the dormitories is not warm enough at night!
+[Character(name="char_376_therex_1", name2="char_242_mayer#2", focus=2)]
+[name="Mayer"]  Yeah, apparently that's the case for some operators. Silence talked to me about it too. Said she sometimes wants to grow some feathers while she's sleeping.
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=1)]
+[name="Closure"]  Oh? Is my energy conservation plan affecting everyone's sleep?
+[delay(time=0.6)]
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#2", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Closure"]  A—Achoo!
+[name="Closure"]  Well, we don't really have a choice. There's more and more people on this ship each day, and there are so many cabins being used at the same time. We need to keep iterating on our energy efficiency, and that ain't an easy job at all.
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=2)]
+[name="THRM-EX"]  I, too, wish to help take that weight off your shoulders, Master Closure. That is why, ever since that night I heard the Doctor sneeze, I made a decision.
+[name="THRM-EX"]  I thought I would share the warmth, the hotness in my body with the Doctor and any other operators who struggle with the coldness!
+[Decision(options="Almost blew up my room at first.;Almost roasted me alive.", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_376_therex_1")]
+[name="THRM-EX"]  Forgive me, Doctor! I was lacking in experience at the time! I wasn't yet able to manage the difference between the temperature to melt my foes and that to warm my friends!
+[Character(name="char_376_therex_1", name2="char_242_mayer#3", focus=2)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Mayer"]  Whoa, Closure and I never implemented space heater logic into you!
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[name="Closure"]  You know, when you jumped like that, you almost sent me flying to the wall...
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=2)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Mayer"]  Aren't you excited, Closure? THRM-EX's far exceeded the capabilities we designed for him!
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#3", focus=1)]
+[name="Closure"]  Yeah, I've been listening.
+[name="Closure"]  He wants to warm the Doctor up, so he keeps using energy Arts every night, and so he needs to recharge often. Energy usage goes through the roof, overloading the wiring, and my conservation plan goes to waste—
+[delay(time=1)]
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Closure"]  Wait, huh?
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Closure"]  THRM-EX, you changed your energy output logic on your own?!
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=2)]
+[name="THRM-EX"]  My beautiful Master Closure, thank you very much for your passionate embrace! You are right. It wasn't easy, but I remembered that I am an excellent robot forged with your intelligence!
+[name="THRM-EX"]  A little setback—including almost roasting the Doctor alive—is not enough to dampen my spirits. After a period of trial and error, I finally found a way!
+[name="THRM-EX"]  And if I may brag for a moment, if I could give the Doctor and the other operators the warmth that they desired, the hard work would most certainly have paid off.
+[Character(name="char_007_closre_1#6", name2="char_376_therex_1", focus=1)]
+[name="Closure"]  Is this... a robot evolving on its own? Even Lancet-2 and Castle-3 haven't come this far!
+[Decision(options="Maybe this is what happened in Siracusa?", values="1")]
+[Predicate(references="1")]
+[Character(name="char_376_therex_1")]
+[name="THRM-EX"]  Doctor, your guess is exactly on point as always!
+[name="THRM-EX"]  Just as I mentioned, as my provision of heat for you and our operators continued to improve, my understanding of how to control my power has also grown.
+[name="THRM-EX"]  While I was still paralyzed, I could feel that you were in danger.
+[name="THRM-EX"]  My worry for your wellbeing managed to reignite that burning power within my heart, and by the time I regained consciousness, I was already blasting that strike at our enemies!
+[name="THRM-EX"]  Although my moment to shine on the battlefield is still brief, I still wish to serve you to the best of my ability—no, beyond my abilities!
+[Character(name="char_007_closre_1#6", name2="char_242_mayer#3", focus=2)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Mayer"]  Closure, you hear that? This means it was THRM-EX's own will that drove this breakthrough! That was not even a coincidence!
+[name="Mayer"]  I gotta—I gotta get this all recorded!
+[Character(name="char_376_therex_1", name2="char_242_mayer#2", focus=2)]
+[name="Mayer"]  THRM-EX, I want you to help me run some experiments. Is that okay?
+[Character(name="char_376_therex_1", name2="char_242_mayer#2", focus=1)]
+[name="THRM-EX"]  Gladly, my dear Miss Mayer!
+[Character(name="char_242_mayer#4")]
+[name="Mayer"]  Meeboos, Meeboos! Bring all my equipment here—
+[Character(name="char_007_closre_1", name2="char_242_mayer#4", focus=1)]
+[name="Closure"]  Mayer.
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="Mayer"]  Closure, what are you blocking me for?
+[Character(name="char_007_closre_1", name2="char_242_mayer#2", focus=2)]
+[name="Mayer"]  You're a researcher yourself. This might be a huge breakthrough to your research in smart robots! Aren't you excited?
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=1)]
+[name="Closure"]  Of course I am! Can't you tell?
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#3", focus=2)]
+[name="Mayer"]  Oh, you're being much quieter. Yeah, I can see that you're super excited.
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=1)]
+[name="Closure"]  Right, but there's one thing you said that I don't really agree with.
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=2)]
+[name="Mayer"]  Hm? What is it?
+[Character(name="char_007_closre_1", name2="char_242_mayer#3", focus=1)]
+[name="Closure"]  ——That wasn't a coincidence.
+[name="Closure"]  I think that probably wasn't a coincidence to THRM-EX.
+[Decision(options="But THRM-EX having such a unique personality is itself a coincidence.", values="1")]
+[Predicate(references="1")]
+[Character(name="char_007_closre_1#2")]
+[name="Closure"]  Doctor, are you sure you don't want to give operation platform robotics and AI research a try?
+[Character(name="char_007_closre_1#2", name2="char_242_mayer#2", focus=2)]
+[name="Mayer"]  Hmm, but didn't you design his personality?
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=1)]
+[name="Closure"]  Well, I did design it, but all I did was define a few basic parameters. I have nothing to do with the information he processes and the decisions he makes after that.
+[Character(name="char_007_closre_1#4", name2="char_242_mayer#2", focus=2)]
+[name="Mayer"]  So in that case...
+[Character(name="char_007_closre_1#5", name2="char_242_mayer#2", focus=1)]
+[name="Closure"]  THRM-EX's breakthrough was not because of us, the designers, or any kind of tech. It's what he wanted himself.
+[Character(name="char_007_closre_1#5", name2="char_376_therex_1", focus=2)]
+[name="THRM-EX"]  I still remember the very first thing you said to me, Master Closure! 'Your name is THRM-EX, and you must be strong!'
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="THRM-EX"]  And to me, heat is strength! There's no such thing as a maximum temperature. You can always get hotter! I will forever follow this path that leads me to greater hotness!
+[Character(name="char_376_therex_1", name2="char_242_mayer#3", focus=2)]
+[name="Mayer"]  Whoa, that's some burning enthusiasm.
+[Character(name="char_007_closre_1#5", name2="char_242_mayer#2", focus=1)]
+[name="Closure"]  Just like that! That's getting myself all fired up too!
+[Character(name="char_007_closre_1#2")]
+[name="Closure"]  Doctor, Mayer, we'll bear witness to THRM-EX bringing about an even stronger thermal shock!
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image]

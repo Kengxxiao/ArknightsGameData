@@ -8022,6 +8022,131 @@
         }
       ]
     },
+    "char_1012_skadi2": {
+      "charId": "char_1012_skadi2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[060]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[641]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_cost&profession[060]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_003_kalts": {
+      "charId": "char_003_kalts",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability[040]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_prod_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_474_glady": {
+      "charId": "char_474_glady",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_aegir1[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_aegir2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "control_mp_aegir2[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_475_akafyu": {
+      "charId": "char_475_akafyu",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[220]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -8120,6 +8245,18 @@
     }
   },
   "buffs": {
+    "control_prod_spd[000]": {
+      "buffId": "control_prod_spd[000]",
+      "buffName": "Highest Authority",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_p_spd",
+      "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, all Factories' productivity <@cc.vup>+2%</> (only the most effective one will take effect when assigned Operators have the same skill effect)"
+    },
     "control_tra_spd[000]": {
       "buffId": "control_tra_spd[000]",
       "buffName": "Agreement",
@@ -8383,6 +8520,42 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, for each <$cc.t.ussg><@cc.kw>Ursus Student Self-Governing Group</></> Operator, <$cc.bd_tachanka><@cc.rem>Ursus Specialty Beverage</></><@cc.vup>+1</>"
+    },
+    "control_mp_aegir1[000]": {
+      "buffId": "control_mp_aegir1[000]",
+      "buffName": "Tide Observation",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_aegir",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, for each <$cc.t.egir><@cc.kw>Abyssal Hunter</></> Operator currently assigned to a non-Dormitory facility, self Morale consumed per hour <@cc.vdown>+0.5</>; Otherwise, self Morale restored per hour <@cc.vup>+0.5</>, with an additional <@cc.vup>+0.5</> if the <$cc.t.egir><@cc.kw>Abyssal Hunter</></> Operator assigned to the Dormitory has full Morale."
+    },
+    "control_mp_aegir2[000]": {
+      "buffId": "control_mp_aegir2[000]",
+      "buffName": "Group Hunting ·α",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_aegir",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour; <$cc.t.egir><@cc.kw>Abyssal Hunters</></> in the Base gain <$cc.c.egir2_1><@cc.rem>Special Bonus</></> (Has <$cc.c.egir2_3><@cc.rem>Special Interaction Rules</></> with certain skills)."
+    },
+    "control_mp_aegir2[010]": {
+      "buffId": "control_mp_aegir2[010]",
+      "buffName": "Group Hunting ·β",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_aegir2",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour; <$cc.t.egir><@cc.kw>Abyssal Hunters</></> in the Base gain <$cc.c.egir2_2><@cc.rem>Special Bonus</></> (Has <$cc.c.egir2_3><@cc.rem>Special Interaction Rules</></> with certain skills)."
     },
     "power_rec_spd&cost[000]": {
       "buffId": "power_rec_spd&cost[000]",
@@ -9596,6 +9769,18 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, the production rate of byproduct increases by <@cc.vup>65%</>"
     },
+    "workshop_proc_probability[040]": {
+      "buffId": "workshop_proc_probability[040]",
+      "buffName": "Unknown Technology",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p5",
+      "sortId": 7141,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, the production rate of byproduct increases by <@cc.vup>70%</>"
+    },
     "workshop_formula_cost[000]": {
       "buffId": "workshop_formula_cost[000]",
       "buffName": "Drone - Soaring Dragon",
@@ -10256,6 +10441,18 @@
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Supporter</> Operators' Specialization training speed <@cc.vup>+30%</>"
     },
+    "train_spd&profession2[060]": {
+      "buffId": "train_spd&profession2[060]",
+      "buffName": "Supporter Expert α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_supporter1",
+      "sortId": 9301,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Supporter</> Operators' Specialization training speed <@cc.vup>+30%</>"
+    },
     "train_spd&profession[061]": {
       "buffId": "train_spd&profession[061]",
       "buffName": "Supporter Expert β",
@@ -10412,6 +10609,18 @@
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Specialist</> Operators' Specialization training speed <@cc.vup>+60%</>"
     },
+    "train_spd&profession2[220]": {
+      "buffId": "train_spd&profession2[220]",
+      "buffName": "Nobukage-ryu",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train1_guard1",
+      "sortId": 9721,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>; if training this skill to Specialization Level <@cc.vup>1</>, training speed will be further increased by <@cc.vup>+45%</>"
+    },
     "train_spd&profession2[250]": {
       "buffId": "train_spd&profession2[250]",
       "buffName": "Sciolism",
@@ -10472,6 +10681,18 @@
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>; if training this skill to Specialization Level <@cc.vup>3</>, training speed will be further increased by <@cc.vup>+45%</>"
     },
+    "train_spd&profession2[641]": {
+      "buffId": "train_spd&profession2[641]",
+      "buffName": "Assimilation",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train3_supporter2",
+      "sortId": 9332,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Supporter</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+65%</> if training the skill to Specialization Level <@cc.vup>3</>"
+    },
     "train_spd&profession2[441]": {
       "buffId": "train_spd&profession2[441]",
       "buffName": "Patience",
@@ -10507,6 +10728,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour is increased by <@cc.vdown>+1</> when training a <@cc.kw>Sniper</> Operator's skill to Specialization Level <@cc.vup>3</>"
+    },
+    "train_cost&profession[060]": {
+      "buffId": "train_cost&profession[060]",
+      "buffName": "Mutation",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_skadi",
+      "sortId": 9332,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour <@cc.vdown>+1</> when training a <@cc.kw>Supporter</> Operator's skill to Specialization Level <@cc.vup>3</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -25913,6 +26146,351 @@
         "canBeDestroy": false,
         "isOnly": 1
       },
+      "furni_abyssal_showcase_01": {
+        "id": "furni_abyssal_showcase_01",
+        "name": "Tourist Storage Cabinet",
+        "iconId": "furni_abyssal_showcase_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 3,
+        "height": 7,
+        "comfort": 250,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Waterproof storage cabinets for use by tourists. For the Ægir, the Iberians' considerations are dispensable.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_drum_01": {
+        "id": "furni_abyssal_drum_01",
+        "name": "Relaxation Drum",
+        "iconId": "furni_abyssal_drum_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 165,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A few beats from these drums prepared especially for tourists can provide both tactile and emotional satisfaction. The three guests all agreed that this should be treated as a piece of fragile furnishing rather than as a musical instrument.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_coffeeTable_01": {
+        "id": "furni_abyssal_coffeeTable_01",
+        "name": "Leisure Tea Table",
+        "iconId": "furni_abyssal_coffeeTable_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 260,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A solid wooden tea table with some random things scattered across its surface. A certain guest seems to have left her important pendant in the room.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_sofa_01": {
+        "id": "furni_abyssal_sofa_01",
+        "name": "Comfortable Sofa",
+        "iconId": "furni_abyssal_sofa_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 4,
+        "height": 4,
+        "comfort": 380,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A comfortable sofa prepared for any who might want to spend an afternoon in this room. Unfortunately, nobody fits that bill.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_carpet_01": {
+        "id": "furni_abyssal_carpet_01",
+        "name": "Themed Rug",
+        "iconId": "furni_abyssal_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 24,
+        "depth": 8,
+        "height": 1,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A rug especially made for the three tourists. Hopefully they will be able to appreciate the resort's sincerity. Nobody notices, nobody cares.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_table_01": {
+        "id": "furni_abyssal_table_01",
+        "name": "Portable Folding Table",
+        "iconId": "furni_abyssal_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 3,
+        "height": 4,
+        "comfort": 235,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A laid-out folding table with meals placed on top. Will the food suit the tastes of the guests?",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_chair_01": {
+        "id": "furni_abyssal_chair_01",
+        "name": "Upholstered Wooden Chair",
+        "iconId": "furni_abyssal_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 180,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A wooden chair that matches the folding table. For some reason, one guest left in a hurry, forgetting a coat behind.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_handLamp_01": {
+        "id": "furni_abyssal_handLamp_01",
+        "name": "Retro Lantern",
+        "iconId": "furni_abyssal_handLamp_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 100,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The candles in the lantern can burn all day, and there is special personnel who will come replace the candles daily. All the guests have fairly good night vision though, and don't need this.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_screen_01": {
+        "id": "furni_abyssal_screen_01",
+        "name": "Folding Screen",
+        "iconId": "furni_abyssal_screen_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 2,
+        "height": 8,
+        "comfort": 305,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A folding screen that can quickly establish a private space for guests at any time. We believe that mutual trust and the preservation of privacy should not be confused.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_equipment_01": {
+        "id": "furni_abyssal_equipment_01",
+        "name": "Tourists' Personal Effects",
+        "iconId": "furni_abyssal_equipment_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 2,
+        "height": 6,
+        "comfort": 175,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Personal effects of the three tourists. There's a musical instrument, a weapon, and a private collection that was moved in from who-knows-where.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_ceiling_01": {
+        "id": "furni_abyssal_ceiling_01",
+        "name": "Wooden-Framed Hanging Light",
+        "iconId": "furni_abyssal_ceiling_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 7,
+        "height": 6,
+        "comfort": 395,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A large suspended ceiling inspired by a ship's beams, accompanied by hanging lights. Guests will surely feel a sense of cordiality. Oh, the attendant mistook familiarity for cordiality. What are we going to do?",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_ceilingLamp_01": {
+        "id": "furni_abyssal_ceilingLamp_01",
+        "name": "Ocean Tide Chandelier",
+        "iconId": "furni_abyssal_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 55,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A chandelier made to capture an impression of the ocean's tides. Of course, it was based on the Iberians' superficial understanding of the ocean, and we hope that our guests will not be offended.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2
+      },
+      "furni_abyssal_decal_01": {
+        "id": "furni_abyssal_decal_01",
+        "name": "Wooden Ceiling Frames",
+        "iconId": "furni_abyssal_decal_01",
+        "type": "CEILING",
+        "location": "CEILINGDECAL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 745,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The ceiling is decorated with uniform wooden frames made by the resort. A warning? A restriction...? Or simply decoration?",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_wallpaper_01": {
+        "id": "furni_abyssal_wallpaper_01",
+        "name": "Resort Wallpaper",
+        "iconId": "furni_abyssal_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The wallpaper of the resort's standard suites. The murals depict sunny Iberian shores and unknown creatures leaping into the air — of course, we know that these are mere conjecture.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_abyssal_floor_01": {
+        "id": "furni_abyssal_floor_01",
+        "name": "Resort Flooring",
+        "iconId": "furni_abyssal_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The floor tiles of the resort's standard suites. The hotel was never opened, and the tourists were never checked in. The only thing that remains is the hope that there is a warm place within each person's heart.",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "Futuristic Kitty Bank",
@@ -27630,6 +28208,29 @@
         "comfort": 75,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "'What you see is what you feel, and the pain sets in immediately.'",
+        "obtainApproach": "Event",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS018_thalassophobia_01": {
+        "id": "furni_dropS018_thalassophobia_01",
+        "name": "Plaque - Sink",
+        "iconId": "furni_dropS018_thalassophobia_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "'Spreading Darkness + Enveloping Seawater + Freed Imagination = ?'",
         "obtainApproach": "Event",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -32570,6 +33171,93 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_abyssal": {
+        "id": "furni_set_abyssal",
+        "name": "Iberian Resort Town",
+        "desc": "This room is a reconstruction of a seaside Iberian resort town. The refreshing sea breeze invites you to enjoy your vacation... That's what we imagined.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_abyssal_showcase_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_drum_01",
+            "pos0": 1,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_abyssal_coffeeTable_01",
+            "pos0": 6,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_abyssal_sofa_01",
+            "pos0": 5,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_carpet_01",
+            "pos0": 5,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_abyssal_table_01",
+            "pos0": 20,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_chair_01",
+            "pos0": 22,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_abyssal_handLamp_01",
+            "pos0": 18,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_screen_01",
+            "pos0": 26,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_equipment_01",
+            "pos0": 30,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_abyssal_ceiling_01",
+            "pos0": 11,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_abyssal_ceilingLamp_01",
+            "pos0": 5,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_abyssal_ceilingLamp_01",
+            "pos0": 27,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_abyssal_decal_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_abyssal_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -34578,6 +35266,57 @@
           "furni_icu_floor_01",
           "furni_icu_downlight1_01",
           "furni_icu_downlight2_01"
+        ]
+      },
+      "furni_set_abyssal_1": {
+        "id": "furni_set_abyssal_1",
+        "name": "Leisure and Personal Use",
+        "themeId": "furni_set_abyssal",
+        "comfort": 165,
+        "count": 3,
+        "furniture": [
+          "furni_abyssal_showcase_01",
+          "furni_abyssal_equipment_01",
+          "furni_abyssal_drum_01"
+        ]
+      },
+      "furni_set_abyssal_2": {
+        "id": "furni_set_abyssal_2",
+        "name": "Basic Furniture",
+        "themeId": "furni_set_abyssal",
+        "comfort": 250,
+        "count": 3,
+        "furniture": [
+          "furni_abyssal_coffeeTable_01",
+          "furni_abyssal_sofa_01",
+          "furni_abyssal_carpet_01"
+        ]
+      },
+      "furni_set_abyssal_3": {
+        "id": "furni_set_abyssal_3",
+        "name": "Portable Furniture",
+        "themeId": "furni_set_abyssal",
+        "comfort": 225,
+        "count": 4,
+        "furniture": [
+          "furni_abyssal_table_01",
+          "furni_abyssal_chair_01",
+          "furni_abyssal_handLamp_01",
+          "furni_abyssal_screen_01"
+        ]
+      },
+      "furni_set_abyssal_4": {
+        "id": "furni_set_abyssal_4",
+        "name": "Resort Decorations",
+        "themeId": "furni_set_abyssal",
+        "comfort": 460,
+        "count": 5,
+        "furniture": [
+          "furni_abyssal_wallpaper_01",
+          "furni_abyssal_floor_01",
+          "furni_abyssal_decal_01",
+          "furni_abyssal_ceiling_01",
+          "furni_abyssal_ceilingLamp_01"
         ]
       }
     },
