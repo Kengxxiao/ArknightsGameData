@@ -1,7 +1,4 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 个人剧情 黑
-
-
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
@@ -9,10 +6,6 @@
 [Background(image="bg_sunnytown_1",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
-
-
-
-//背景：汐斯塔街道
 [playsound(key="$d_gen_transmissionget", volume=0.4)]
 [delay(time=0.6)]
 [name="廣播"]  親愛的旅客，親愛的市民，請不必驚慌，前天聯合LIVE上發生的地震是一次偶發情況。
@@ -20,7 +13,6 @@
 [name="廣播"]  因此，經過慎重考慮，並且徵求各大樂隊的意見後，市政府決定，在三日後的晚上，重新舉辦聯合LIVE。
 [name="廣播"]  同時，市政府也會繼續密切關注火山的情況，請各位安心遊玩。
 [PlaySound(key="$livecrowd", volume=0.4)]
-//（可以插入个嘈杂的人声）
 [Character(name="avg_npc_021", name2="avg_npc_022", focus=1)]
 [name="遊客A"]  哎，前天晚上真是嚇死我了。
 [Character(name="avg_npc_021", name2="avg_npc_022", focus=2)]
@@ -100,14 +92,9 @@
 [dialog]
 [delay(time=2)]
 [Character(fadetime=0.6)]
-//（黑离开）
 [Character(name="avg_npc_020")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="查理"]  喂，頭兒，等等我！
-
-
-//转场
-//背景：另一张街道
 [stopmusic(fadetime=1)]
 [Dialog]
 [Character]
@@ -115,12 +102,7 @@
 [Background(image="bg_sunnytown_2",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
-
-
-
 [name="廣播"]  赫爾曼市長，我們聽說您的秘書，我們親愛的克洛寧先生在前天的火山勘測中受了重傷，這是真的嗎？
-
-//（无立绘，参考夏活st1中广播和克洛宁的对话方式）
 [name="赫爾曼"]  是的，我很遺憾，他恐怕要在病床上度過很長一段時間。
 [name="廣播"]  啊，為了汐斯塔的安危，克洛寧先生竟然做出了這麼大的犧牲，我們感到十分歎惋。
 [name="赫爾曼"]  沒錯，我十分感謝他這些年對汐斯塔的付出，也請各位關心他的市民們不用擔心，我們一定會用最好的技術去治療他。
@@ -220,18 +202,12 @@
 [name="查理"]  哈，沒錯。是不關我事，我可沒資格說對錯，就隨便聊聊，您就說我感覺的對不對吧。
 [Character(name="avg_npc_020", name2="char_340_shwaz_2#2", focus=2)]
 [name="黑"]  或許吧。
-
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Background(image="bg_offce",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
-
 [PlaySound(key="$doorknockquite", volume=0.6)]
-
-//（无立绘）
 [name="秘書"]  市長，我們接下來的行程要去豪斯先生的晚宴......
 [Character(name="avg_npc_024")]
 [name="赫爾曼"]  推掉。剛才艾娃女士的邀請你忘了嗎？分清優先級。
@@ -273,17 +249,13 @@
 [name="黑"]  汐斯塔就交給你了。
 [Character(name="avg_npc_020", name2="char_340_shwaz_2#2", focus=1)]
 [name="查理"]  ......好。
-
 [stopmusic(fadetime=2)]
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_beach",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-//转场
-//背景：沙滩
 [playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
-
 [Character(name="char_340_shwaz_2#2",name2="avg_npc_024",focus=2)]
 [name="赫爾曼"]  克洛寧這小子雖然有反骨，不過還是派得上用場，這個頂替他的小子還是差了不少。
 [name="赫爾曼"]  好的人才真是難找啊，黑。
@@ -308,8 +280,6 @@
 [delay(time=0.1)]
 [name="黑"]  他沒有接受過鍛煉，而且他應該只是在看周圍的女性。
 [delay(time=0.5)]
-
-
 [playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
 [Character(name="char_340_shwaz_2#2",name2="avg_npc_024",focus=0)]
 [delay(time=1)]
@@ -445,25 +415,15 @@
 [name="赫爾曼"]  ......
 [Character(fadetime=1,block=true)]
 [dialog]
-
-//回忆
 [stopmusic(fadetime=1)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_offce",screenadapt="coverall")]
 [cameraEffect(effect="Grayscale", keep=true, amount=1, fadetime=0)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-
-
-
-//（幼年，无立绘）
 [name="黑"]  老爺，我殺死那些仇人後，還能回來嗎？
 [Character(name="avg_npc_024")]
 [name="赫爾曼"]  ......
 [name="赫爾曼"]  當然可以。
-
-
-
-
 [stopmusic(fadetime=1)]
 [Dialog]
 [Character]
@@ -472,18 +432,13 @@
 [cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
-//回忆结束
-
 [Character(name="char_340_shwaz_2",name2="avg_npc_024",focus=2)]
 [name="赫爾曼"]  哈哈哈哈哈！過來，黑。
 [dialog]
-
 [characteraction(name="right", type="move", xpos=-100, ypos=0,fadetime=1, block=true)]
 [delay(time=1.1)]
-
 黑緩緩走近赫爾曼，而赫爾曼將手放在她的頭上重重地揉了幾下。
 [dialog]
-
 [characteraction(name="right", type="move", xpos=100, ypos=0,fadetime=1, block=true)]
 [delay(time=1.5)]
 [Character(name="char_340_shwaz_2",name2="avg_npc_024",focus=2)]
@@ -504,13 +459,11 @@
 [Character(name="char_340_shwaz_2",name2="avg_npc_024",focus=-1)]
 [PlaySound(key="$phonevibration",volume=0.6)]
 [CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
-//（震动声）
 [delay(time=0.2)]
 [Character(name="char_340_shwaz_2#2")]
 [name="黑"]  稍等。
 [dialog]
 [Character]
-//（电话）
 [playsound(key="$d_gen_transmissionget", volume=0.4)]
 [CharacterCutin(widgetID="1", name="char_348_ceylon_4#2", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
 [name="錫蘭"]  喂，黑，你在哪兒啊。
@@ -521,12 +474,10 @@
 [name="錫蘭"]  行李好多！
 [Character(name="char_empty",name2="char_340_shwaz_2#2",focus=2)]
 [name="黑"]  好的，我稍後就到。
-//（通话结束）
 [CharacterCutin(widgetID="1",block=true)]
 [playsound(key="$transmission", volume=0.4)]
 [Dialog]
 [delay(time=0.3)]
-
 [Character(name="char_340_shwaz_2#2",name2="avg_npc_024",focus=2)]
 [name="赫爾曼"]  好了，去陪錫蘭那丫頭吧。
 [name="赫爾曼"]  你們跟著羅德島離開的時候，我應該已經去新城區了，就不來送你們了。
@@ -540,13 +491,6 @@
 [name="赫爾曼"]  好好活著。
 [Character(name="char_340_shwaz_2#5",name2="avg_npc_024",focus=1)]
 [name="黑"]  ......好。
-
-
-
-
-
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
