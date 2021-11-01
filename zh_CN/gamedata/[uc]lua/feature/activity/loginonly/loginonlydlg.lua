@@ -7,7 +7,9 @@ LoginOnlyDlg = Class("LoginOnlyDlg", DlgBase);
 function LoginOnlyDlg:OnInit()
   self.m_activityId = self.m_parent:GetData("actId");
   
-  self:AddButtonClickListener(self._buttonBackScreen, self._HandleSysClose);
+  if self._buttonBackScreen ~= nil then
+    self:AddButtonClickListener(self._buttonBackScreen, self._HandleSysClose);
+  end
   self:AddButtonClickListener(self._buttonGetReward, self._HandleGetReward);
 
   self:_RefreshUI();

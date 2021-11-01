@@ -1,0 +1,857 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 卡西米尔2-9-1
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G09",screenadapt="coverall")]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[character(name="avg_237_gravel_1",fadetime=1)]
+[delay(time=1)]
+[name="砾"]  ......好消息，博士。
+[name="砾"]  监正会同意罗德岛各位的外出申请了，“让重要的合作伙伴游览城市也是必要的”。
+[name="砾"]  本来，如果没有这一系列事件发生的话，您可以在大骑士领更自由一些的。
+[dialog]
+[character]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[delay(time=1)]
+[playsound(key="$d_gen_walk_n")]
+[character(name="char_002_amiya_1",name2="char_120_hibisc_1", fadetime=1.5)]
+[delay(time=2)]
+[character(name="char_002_amiya_1#6",name2="char_120_hibisc_1", focus=1)]
+[name="阿米娅"]  博士？您找我们吗？
+[character(name="char_002_amiya_1#6",name2="char_120_hibisc_1", focus=2)]
+[name="芙蓉"]  啊！骑士姐姐！正好我还有剩下的健康餐，你打包带回家吗？
+[character(name="avg_237_gravel_1#5")]
+[name="砾"]  ......
+[Character(name="char_179_cgbird_1")]
+[name="夜莺"]  ......您好，砾小姐，博士。
+[Dialog]
+[Decision(options="难得有机会去卡西米尔的其他地方参观。;想不想出去逛逛？;休——假——时——间——", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="bg_23_G01",screenadapt="coverall")]
+[playMusic(intro="$m_bat_game02_intro", key="$m_bat_game02_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(name="avg_npc_121",fadetime=1.5)]
+[delay(time=1.5)]
+[name="大嘴莫布"]  激烈的战斗！让人不敢相信自己的眼睛！
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[CameraShake(duration=0.5, xstrength=20, ystrength=20, vibrato=30, randomness=80, fadeout=true, block=false)]
+[name="大嘴莫布"]  不对！应该说，一位名不见经传的梦魇！首次闯入特锦赛，竟然就能与冠军分庭抗礼！
+[name="大嘴莫布"]  鲜红的铠甲在赛场上碰撞，让今夜的月光也黯然失色！
+[character(name="avg_npc_121#3")]
+[name="大嘴莫布"]  不用说，我想观众也感受到了，拓拉！“草原之恐”逐魇骑士！他那疯狂的意志令人为之着迷沉醉！
+[name="大嘴莫布"]  经历了与耀骑士的那场决斗之后，人气居高不下的逐魇骑士！究竟能不能为他成为大骑士的故事中，再添一笔！？
+[name="大嘴莫布"]  顺带一提，古代人娱乐公司正在举行“骑士封号有奖竞猜”！凡是能猜中骑士封号的观众，都能获得精美礼品一份！
+[dialog]
+[character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.1, block=false)]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$sheildimpact",volume=1)] 
+[Blocker(a=0, fadetime=0.1, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.1, block=false)]
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=1)]
+[character(name="avg_npc_214_1#2$1",fadetime=1)]
+[delay(time=1)]
+[name="血骑士"]  你的气势哪里去了？梦魇？
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  ......唔。
+[name="逐魇骑士"]  米诺斯人......在我的同胞鞭笞往日的时代，你们的英雄已经沦为了诗人口中的典故......
+[Dialog]
+[Character(name="avg_npc_225", name2="char_empty")]
+[characteraction(name="right", type="move", xpos=200, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="right", type="move", xpos=-300, power=5, fadetime=0.3, block=false)]
+[characteraction(name="left", type="jump", xpos=100, power=5, fadetime=0.3, block=false)]
+[Character(name="avg_npc_225", name2="avg_npc_214_1#2$1",fadetime=0.51)]
+[delay(time=0.51)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.1, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$sheildimpact",volume=1)] 
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.1, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[CameraShake(xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=2)]
+[Dialog]
+[Character(name="avg_npc_225", name2="avg_npc_214_1#2$1",focus=2)]
+[name="血骑士"]  废话啰嗦。
+[name="血骑士"]  那你的可汗如今在哪儿？你那些引以为豪的同胞活在大地何处？
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[PlaySound(key="$sheildimpact",volume=1)] 
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.05, block=true)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[characteraction(name="right", type="jump", xpos=100, power=5, fadetime=0.5,block=true)]
+[characteraction(name="left", type="jump", xpos=-100, power=5, fadetime=0.5,block=true)]
+[dialog]
+[delay(time=1)]
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  ......
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  一个活在过去的梦魇，一个可怜人罢了。
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  ......米诺斯人，感染者，你为什么而战？
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  生存。
+[name="血骑士"]  他们把我奉为感染者的英雄......把我当做历史的标杆，但我的初衷，仅仅是活着。
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  ......感染者的英雄？
+[name="逐魇骑士"]  原来如此......你也在为你的同胞而战吗？
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  同胞......？不，我们并无血缘，也没有相同的故乡，我们只是不幸患上了同一种疾病而已。
+[name="血骑士"]  他们的遭遇令我感到悲悯，所以我去拯救他们，为所有人寻觅出路。
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  不是同胞......你却还要，拯救他们。
+[name="逐魇骑士"]  ......可笑。
+[name="逐魇骑士"]  你的确强大......但是，卡西米尔的草原难道已经被感染者和异国人瓜分了吗？
+[name="逐魇骑士"]  卡西米尔人，库兰塔，他们在哪儿！？
+[name="逐魇骑士"]  难道我千里迢迢来到骑士之国，是为了和感染者、米诺斯人和自己的同族决斗的吗！？
+[name="逐魇骑士"]  ——奇耻大辱！
+[dialog]
+[Character]
+[Character(name="avg_npc_225", name2="avg_npc_214_1#2$1",fadetime=0.51)]
+[delay(time=0.51)]
+[characteraction(name="right", type="move", xpos=-100, power=5, fadetime=0.51,block=true)]
+[characteraction(name="left", type="move", xpos=100, power=5, fadetime=0.51,block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[PlaySound(key="$sheildimpact", volume=1)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.1, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[CameraShake(duration=0.4, xstrength=10, ystrength=10, vibrato=30, randomness=90, fadeout=true, block=false)]
+[characteraction(name="left", type="move", xpos=-100, power=5, fadetime=0.8,block=true)]
+[characteraction(name="right", type="move", xpos=100, power=5, fadetime=0.8,block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[delay(time=1)]
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="bg_23_G07",screenadapt="coverall")]
+[playMusic(intro="$relax_intro", key="$relax_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(name="char_120_hibisc_1", fadetime=1)]
+[delay(time=1)]
+[name="芙蓉"]  哇哇哇......这、这里就是卡西米尔的商业中心吗？
+[character(name="avg_237_gravel_1",name2="char_120_hibisc_1", focus=1)]
+[name="砾"]  严格来说，这里只是大骑士领大小数百个商业中心中的一个。
+[name="砾"]  因为距离比较近，所以我推荐来这里罢了。
+[character(name="avg_237_gravel_1",name2="char_120_hibisc_1", focus=2)]
+[name="芙蓉"]  但是垃圾食品是不是太多了！我一眼看过去，视野里就有三家爆米花店、两家披萨店和四家汉堡店哦！
+[name="芙蓉"]  这是不行的！
+[character(name="char_002_amiya_1#10")]
+[name="阿米娅"]  啊哈哈......因为这附近有一座骑士竞技场吗？
+[character(name="avg_237_gravel_1")]
+[name="砾"]  当然。竞技场算是每一个商业圈的核心。
+[name="砾"]  围绕着骑士们的厮杀拓展商业，就是这么一回事。
+[Character(name="char_179_cgbird_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="夜莺"]  ......！
+[name="夜莺"]  ......这是......临光的玩偶？
+[character(name="char_120_hibisc_1")]
+[name="芙蓉"]  啊！好可爱！
+[character(name="char_002_amiya_1#6")]
+[name="阿米娅"]  ......等等，这家店，难道全是......
+[dialog]
+[character]
+[character(name="avg_npc_001", fadetime=1)]
+[delay(time=1)]
+[name="店主"]  哟，几位客人，是耀骑士的粉丝？
+[name="店主"]  那你可来对地方啦，这里是耀骑士周边专卖！黏土小人、毛绒玩偶、临光家族徽章应有尽有！
+[name="店主"]  顺便一提，如果耀骑士能打败风骑士再度进入决赛，供货商还考虑制作精炼源石雕刻纪念品！现在可以先付定金哦？
+[name="店主"]  反正耀骑士一定会赢嘛！哈哈哈！
+[Dialog]
+[Decision(options="(替夜莺买一个玩偶。);(询问定金是多少。);(反问对方耀骑士用过的盾牌能不能当做镇店之宝。)", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Predicate(references="1")]
+[name="店主"]  谢谢惠顾！
+[Predicate(references="2")]
+[name="店主"]  是——啊，您是用外币结算的吗？龙门币？那您可能还得先去一趟银行。
+[name="店主"]  我帮你换算一下，大概一百三十万龙门币左右吧？
+[Predicate(references="3")]
+[name="店主"]  盾牌？耀骑士什么时候用过盾牌？
+[name="店主"]  不过，我们这里有战锤、双刃剑和最新的剑枪模型。您要不看看？
+[Predicate(references="1;2;3")]
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="bg_23_G08",screenadapt="coverall")]
+[character(name="avg_npc_121#3")]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[name="大嘴莫布"]  难舍难分！逐魇骑士的一击凌厉攻击再度被血骑士挡下，而冠军就像是切开豆腐般，将人工地形夷为平地！
+[name="大嘴莫布"]  时间已经过去了十分钟！风暴般的交锋仍在继续！究竟是谁，会在这仿佛永不停歇的攻击中展露疲态！？
+[character(name="avg_npc_121#2")]
+[name="大嘴莫布"]  ——说话间！冠军再次使用了法术！躲过了对手的一记扫击！
+[name="大嘴莫布"]  难道双方还在小心翼翼地试探对方吗！？冠军与梦魇，至今还没人主动施放自己的源石技艺——
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G01",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.1, block=false)]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$sheildimpact", volume=1)]
+[Blocker(a=0, fadetime=0.1, block=false)]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$swordtsing3", volume=0.9)]
+[Blocker(a=0, fadetime=0.1, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=1)]
+[character(name="avg_npc_225", fadetime=1)]
+[delay(time=1.5)]
+[name="逐魇骑士"]  ......米诺斯人，你受过怎样的训练？
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  很遗憾，在成为骑士之前，我并没有经历过像样的战斗训练。
+[name="血骑士"]  成为骑士之后，也只是边打边学。
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  ......天生的战士。
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  年轻人。
+[name="血骑士"]  我不是你的导师，但是，如果你渴望一个对手，我可以教你一件事情。
+[name="血骑士"]  虚张声势的恐惧，对任何一个努力活在当下的人来说，都毫无意义。
+[playsound(key="$d_gen_walk_n")]
+血骑士后退了半步。
+鲜血渗出他的铠甲，在空中凝聚成流。
+红光包裹在他的武器上，就像审判的利刃。
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  回答我，梦魇，在你梦里的历史中，在那上千年前至今的历史之中——
+[name="血骑士"]  可曾有感染者的丁点生机？
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  ......你......
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  别感到怯懦，梦魇！自称怯薛的梦魇！
+[name="血骑士"]  你的可汗在哪！让他上前来！
+[musicvolume(volume=0,fadetime=0.5)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G01",screenadapt="coverall")]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[Character(name="avg_1014_nearl2_1#1$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="耀骑士"]  你的可汗在哪里？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Character(name="avg_npc_120")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[name="老骑士"]  你的可汗在哪里？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_county_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+可汗的历史已经过去上千年了。
+你只能在历史书上找到他，孩子。
+怯薛？那些人是可汗的侍从，他们是这片大地上最勇武的战士。
+可汗征服过很多地方，但是，也干过许多伤害他人的事情。
+散播恐惧是梦魇的天性，征服欲几乎是可汗的食粮。
+但是呢，拓拉。
+你生在这片大地之上，你会找到你自己的——
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[CameraEffect(effect="Grayscale", fadetime=0, amount=0, block=true)]
+[Background(image="bg_23_G01",screenadapt="coverall")]
+[delay(time=1)]
+[musicvolume(volume=0.4,fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  ......父亲，劲敌，导师，理想。
+[name="逐魇骑士"]  我竟然......试图在这座城市寻找这些？
+[name="逐魇骑士"]  不！梦该醒了。
+[name="逐魇骑士"]  这只是留念，我为自己画下的天途的道路，早有注定。
+[Dialog]
+[character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Subtitle(text="年轻的猎人踏上天途♪", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="从梦里出发，去往黄金的彼岸♪", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="梦魇。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="一匹梦魇伫立在赛场上。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="四肢放松，破绽百出，头盔下的视线不知扫视着何处。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="他哼着一首古老的歌谣。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="直到黑夜将他的视野涂抹♪直到骨塔矗立在心头♪", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="直到毒参扼住朦胧的故土♪", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[delay(time=0.6)]
+[name="血骑士"]  ......
+[name="逐魇骑士"]  ......
+[name="血骑士"]  祷告结束了？
+[name="逐魇骑士"]  我的家人都死了。我的同族都迷失了。
+[playsound(key="$d_avg_originiumcastshort")]
+[name="逐魇骑士"]  ——可汗就在我的刀尖之上。
+[dialog]
+[Background]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="23_I08",x=0,y=0,xScale=0.83, yScale=0.83)]
+[Blocker(a=0, fadetime=3, block=false)]
+[delay(time=1)]
+[name="逐魇骑士"]  我——
+[delay(time=1)]
+[name="逐魇骑士"]  ——就是我自己的可汗！
+[delay(time=2)]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="逐魇骑士"]  来！
+[Dialog]
+[Dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[image]
+[Character]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[delay(time=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Character(name="avg_npc_208_1#2",fadetime=1)]
+[delay(time=1)]
+[name="莫妮克"]  ......天气，晴。无风日，适合射箭的日子。
+[name="莫妮克"]  目标，罗德岛领袖两人，种族不明的头罩人，还有一个卡特斯。
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  心情......很糟糕。因为每一次都有人妨碍工作。
+[dialog]
+[character]
+[playsound(key="$d_gen_walk_n")]
+[character(name="char_147_shining_1",fadetime=1.5)]
+[delay(time=2)]
+[name="闪灵"]  ......
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  ......补充，心情非常糟糕。
+[character(name="char_147_shining_1")]
+[name="闪灵"]  你有写日记的习惯吗？
+[Character(name="avg_npc_208_1")]
+[name="莫妮克"]  谁会故意留下这些东西，送给监正会帮忙定罪吗？
+[character(name="char_147_shining_1")]
+[name="闪灵"]  那看来，你是个会把个人情绪带入工作的人。
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......赦罪师，耀骑士，还有那个给人感觉很古怪的卡特斯。
+[name="莫妮克"]  罗德岛到底是什么？
+[character(name="char_147_shining_1")]
+[name="闪灵"]  之前一直没有机会问问你们......你们......
+[name="闪灵"]  从哪里听到“赦罪师”这个名字的？
+[Character(name="avg_npc_208_1#2")]
+莫妮克不是没有见过面前的萨卡兹出手。
+出色的剑术，夹杂着一些无法理解的源石技艺，也许是巫术，和耀骑士一起挡住了玄铁一箭。
+她心底里其实想过，也许那时候的“出手阻拦”还不是这个萨卡兹的全部面貌。
+但是现在，她确信了一件事。
+[name="莫妮克"]  ......我没可能告诉你的。
+[character(name="char_147_shining_1")]
+[name="闪灵"]  我也没有心慈手软到，目睹一个杀手对博士和阿米娅张弓搭箭，还能放她走的。
+[PlaySound(key="$b_char_defboost", volume=0.4)]
+[delay(time=1)]
+[name="闪灵"]  加上，之前的招呼，我们似乎没有还礼，有失礼仪。
+[Character(name="avg_npc_208_1#3")]
+[name="莫妮克"]  ......辉光......？
+[name="莫妮克"]  耀骑士的同伴，都喜欢这么闪亮亮的吗？我都审美疲劳了。
+[name="莫妮克"]  （很温和......甚至感觉不到攻击性......萨卡兹的巫术？）
+[name="莫妮克"]  （不......）
+[name="莫妮克"]  （她的神色......她对自己的剑感到悲哀吗？）
+[character(name="char_147_shining_1")]
+[name="闪灵"]  ......
+[Character(name="avg_npc_208_1#6")]
+[name="莫妮克"]  ......不回话吗。
+[name="莫妮克"]  好吧，让我来试试，你究竟有几斤几两。
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="bg_23_G08",screenadapt="coverall")]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+[Blocker(a=0.4, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[character(name="avg_npc_121#2")]
+[name="大嘴莫布"]  ——发、发生了什么？
+[name="大嘴莫布"]  是我眼花了吗？赛场上突然弥漫起了黑雾——这并不罕见，但是，黑雾里出现的，是什么——？
+[name="大嘴莫布"]  那是——旗、旗帜吗？不，那是军队！？
+[Character(name="avg_1014_nearl2_1#4$1")]
+[name="耀骑士"]  ......
+[name="耀骑士"]  这就是......你的执念吗？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G01",screenadapt="coverall")]
+[Blocker(a=0.4, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  ——
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  ......可惜。
+[name="血骑士"]  那些在观众席上远观的骑士们，是体会不到我现在的感觉的吧。
+[name="血骑士"]  长旗飘扬，号角声响，一支军队......一个民族，一段历史。
+[name="血骑士"]  可是——
+[name="血骑士"]  ——这就是你放弃当下，像个疯子一样寻死的理由吗？
+[character(name="avg_npc_225")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="逐魇骑士"]  ——呵！
+[dialog]
+[character]
+[name="大嘴莫布"]  梦魇骑士发动了袭击！但、但是黑雾笼罩着赛场，我们看不清究竟发生了什么！？
+[name="大嘴莫布"]  是不是有什么在黑雾里前进！？难道逐魇骑士真正的法术，是召唤自己的先祖吗！？
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  可笑。
+[name="血骑士"]  你只是缺乏直面命运的勇气罢了。
+血骑士挥舞巨斧，他知道，他并非真的面对一支古老的怯薛军队。
+一个想要自我毁灭的年轻人。
+一个试图召回前世的年轻人。
+漆黑的雾气淹没了血骑士如血的铠甲。
+震动，疼痛，都让人明白，这些召唤物并非虚体或幻觉。
+血骑士仍旧伫立不动，他在等待，在等待梦魇本人的袭击。
+[name="逐魇骑士"]  （古老的语言）倒下吧，英雄！
+[dialog]
+[Character(name="avg_npc_225", name2="avg_npc_214_1#2$1")]
+[characteraction(name="right", type="move", xpos=-100, power=5, fadetime=0.2, times=0.3, block=true)]
+[characteraction(name="left", type="move", xpos=100, power=5, fadetime=0.2, times=0.3, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=0.8, r=255, g=255, b=255, fadetime=0.03, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=1)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[Blocker(a=0.4, r=0, g=0, b=0, fadetime=0, block=true)]
+[CameraShake(duration=0.2, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=1)]
+[characteraction(name="right", type="jump", xpos=100, power=5, fadetime=0.2, times=0.3, block=true)]
+[characteraction(name="left", type="jump", xpos=-100, power=5, fadetime=0.2, times=0.3, block=true)]
+[delay(time=1)]
+[character(name="avg_npc_214_1#2$1")]
+血骑士闷哼一声。
+即使是卡西米尔最顶级的铠甲，也在顷刻间发出哀嚎。
+刀刃劈开了铠甲，强壮如血骑士也险些单膝跪地。
+[name="血骑士"]  ......
+[character(name="avg_npc_225")]
+[name="逐魇骑士"]  ——！伤口不够深，唔！
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  你，伤了我。
+[name="血骑士"]  但我的血，也抚上了你的武器。
+[character(name="avg_npc_225")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="逐魇骑士"]  （陷阱——！？）
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  不必羞耻，缺乏实战经验本来就是你的弱点。
+[name="血骑士"]  你离所谓的“怯薛”，似乎还差得很远。
+[dialog]
+[Character(name="avg_npc_225", name2="avg_npc_214_1#2$1")]
+[characteraction(name="right", type="move", xpos=-100, power=5, fadetime=0.2, times=0.3, block=true)]
+[characteraction(name="left", type="move", xpos=100, power=5, fadetime=0.2, times=0.3, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=0.8, r=255, g=255, b=255, fadetime=0.03, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=1)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[Blocker(a=0.4, r=0, g=0, b=0, fadetime=0, block=true)]
+[CameraShake(duration=0.4, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=1)]
+[characteraction(name="right", type="jump", xpos=100, power=5, fadetime=0.5,block=true)]
+[characteraction(name="left", type="jump", xpos=-100, power=5, fadetime=0.5,block=true)]
+[delay(time=1)]
+[stopmusic(fadetime=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Character(name="avg_npc_208_1")]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.1, block=false)]
+[CameraShake(duration=0.3, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="莫妮克"]  ......你和耀骑士挡下玄铁一箭的画面，确实让人印象深刻，哪怕是银枪的天马也不可能轻易挡下玄铁的惩罚。
+[name="莫妮克"]  情报人员和我说，你们和耀骑士自称“使徒”，是一个治疗感染者的组织。
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  “医师”，呵，看来，我该把这个情报人员丢进钳兽笼。
+[character(name="char_147_shining_1")]
+[name="闪灵"]  ......很遗憾，我并不喜欢战斗。
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......是吗。
+[name="莫妮克"]  我以前是个维多利亚的军人。
+[name="莫妮克"]  因为没有贵族身份，当不上军官，最后在联合军演上被商业联合会挖来了。
+[name="莫妮克"]  大概那会儿，我的上司们还在窃喜少了一个刺头吧。
+[character(name="char_147_shining_1")]
+[name="闪灵"]  ......
+[Character(name="avg_npc_208_1#6")]
+[name="莫妮克"]  所以，我对自己的射术还是很自信的。
+[name="莫妮克"]  这个距离，正面接下我三箭，我就放弃对罗德岛的计划，怎么样？
+[character(name="char_147_shining_1")]
+[name="闪灵"]  我如何相信你？
+[Character(name="avg_npc_208_1")]
+[name="莫妮克"]  ......信不信由你，无胄盟有无数种办法对付罗德岛。
+[name="莫妮克"]  比如在他们现在毫无戒心拿在手上的玩偶，涂抹上一些有挥发性的药物......
+[character(name="char_147_shining_1")]
+[name="闪灵"]  ......
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  别拿这种眼神看我，安排这种事并不困难。
+[character(name="char_147_shining_1")]
+[name="闪灵"]  三箭。
+[Character(name="avg_npc_208_1#3")]
+[name="莫妮克"]  ......三箭。
+[name="莫妮克"]  呼......
+[Character(name="avg_npc_208_1#5")]
+[name="莫妮克"]  第一箭。
+莫妮克张弓搭箭，维多利亚最标准的姿势。
+那些在军队里的日子，年轻的莫妮克即是如此百步穿杨，深得赏识。
+[dialog]
+[PlaySound(key="$d_avg_arrowshot")]
+[delay(time=2)]
+[CameraShake(duration=0.3, xstrength=15, ystrength=15, vibrato=30, randomness=90, fadeout=true)]
+[name="莫妮克"]  ......！
+[dialog]
+[character(name="char_147_shining_1")]
+[delay(time=1)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=0.1, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="闪灵"]  这一箭，太浅。
+眼前的萨卡兹甚至没有拔剑。
+[Character(name="avg_npc_208_1#4")]
+出乎预料的结果使莫妮克顿时感到胸中一阵闷热，不甘涌上心头。
+[name="莫妮克"]  ......第二箭。
+再一次拉弓。
+曾在某个雨夜，莫妮克袭击了一位一阶征战骑士。
+对方不是什么名声大噪的英雄，却也是个实打实的乌卡战争老兵。
+灵敏的反应令他察觉到了暗箭，双方扭打起来，跌落山崖。
+早春的卡西米尔树林，春寒料峭，一场密林中的追逐战，持续了七天七夜。
+在四肢的疼痛和耳旁的嗡鸣声几乎到达极限的时刻，她张弓搭箭，结果了正在水源旁饮水的目标。
+[character(name="char_147_shining_1")]
+[name="闪灵"]  ......姿势变了，眼神也变了。
+[name="闪灵"]  你就像一个伺机待发的猎人。
+[dialog]
+[PlaySound(key="$d_avg_arrowshot")]
+[delay(time=2)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=1)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[CameraShake(duration=0.3, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=1)]
+[Character(name="avg_npc_208_1#5")]
+[name="莫妮克"]  ——！
+被弹开的箭矢在半空中折成两节。
+一节插在地上，一节没入草坪，惊起几只闲聊的羽兽。
+[character(name="char_147_shining_1")]
+[name="闪灵"]  但我并不想成为猎物。
+[Character(name="avg_npc_208_1#3")]
+[name="莫妮克"]  ......赦罪师都是你这样的剑客？
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  或者该问，罗德岛像你这样的人有很多吗？
+[character(name="char_147_shining_1")]
+[name="闪灵"]  ......
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  （......罗德岛的风险评估是不是要重做一下......）
+[name="莫妮克"]  ......实话说吧，解决罗德岛是董事会的任务。
+[name="莫妮克"]  但很快，我就不再听命行动了。
+[character(name="char_147_shining_1")]
+[name="闪灵"]  ......
+[Character(name="avg_npc_208_1")]
+[name="莫妮克"]  不信？
+[character(name="char_147_shining_1")]
+[name="闪灵"]  不......实际上，我并不感到意外。
+[name="闪灵"]  我们的领导人，已经预见到了这一可能性。
+[name="闪灵"]  所以你想说什么？你想说这场决斗，是建立在你的自尊心上？
+[Character(name="avg_npc_208_1#6")]
+[name="莫妮克"]  我想说......你该试着使出全力，萨卡兹。
+[Character(name="avg_npc_208_1#5")]
+[name="莫妮克"]  最后一箭。
+[dialog]
+[PlaySound(key="$d_avg_arrowshot")]
+[CameraShake(duration=0.3, xstrength=15, ystrength=15, vibrato=30, randomness=90, fadeout=true)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G01",screenadapt="coverall")]
+[character(name="avg_npc_225")]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+[Blocker(a=0.4, r=0, g=0, b=0, fadetime=1, block=true)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="逐魇骑士"]  ......呃！
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  结束了。
+[Dialog]
+[Character(name="avg_npc_225",name2="avg_npc_214_1#2$1")]
+[characteraction(name="right", type="jump",xpos=-100, power=5, block=true, fadetime=0.2, times=0.2)]
+[characteraction(name="left", type="jump",xpos=100,  power=5, block=true, fadetime=0.2, times=0.2)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$sheildimpact")] 
+[Blocker(a=0.4, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$sheildimpact")] 
+[Blocker(a=0.4, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[CameraShake(duration=0.2, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=true)]
+[delay(time=0.51)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[CameraShake(duration=0.5, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=0.51)]
+[characteraction(name="left", type="jump",xpos=-100, power=5, block=true, fadetime=0.2, times=0.3)]
+[characteraction(name="right", type="jump",xpos=100,  power=5, block=true, fadetime=0.2, times=0.3)]
+[delay(time=0.51)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G08",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[character(name="avg_npc_121")]
+[name="大嘴莫布"]  绝地反击！势大力沉的一击，将萦绕赛场的黑雾彻底打散！
+[name="大嘴莫布"]  如同浪涛般的声势，将逐魇骑士制造的幻觉在顷刻间摧毁！
+[name="大嘴莫布"]  失策啊梦魇！棋差一着！面对掌握鲜血法术的血骑士，轻敌近身正是他最惨痛的失误！！
+[Character(name="avg_1014_nearl2_1#1$1")]
+[name="玛嘉烈"]  ......那会是幻觉吗？那几乎就是......一场战争。
+[musicvolume(volume=0,fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G01",screenadapt="coverall")]
+[character(name="avg_npc_225")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[name="逐魇骑士"]  ......嘎啊......啊啊，啊啊......
+[character(name="avg_npc_121")]
+[name="大嘴莫布"]  什么！？如此近距离的冲击，逐魇骑士竟然还站在赛场上！？
+[name="大嘴莫布"]  不可思议！难道他还有反击的——
+[character(name="avg_npc_214_1#2$1")]
+[name="血骑士"]  ——我是血骑士，向裁判团申请沟通。
+[name="血骑士"]  ......是的，他已经昏过去了，再慢会有生命危险，宣布结果吧。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G08",screenadapt="coverall")]
+[musicvolume(volume=0.4,fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[character(name="avg_npc_121")]
+[name="大嘴莫布"]  ——裁判团作出了判决！毫无疑问，卡西米尔特别锦标赛首位进军决赛的骑士已经诞生！
+[name="大嘴莫布"]  梦魇与冠军的决斗！恐惧与恐惧的较量！已经得出了结果——！
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="大嘴莫布"]  请允许我荣幸地宣布，获胜者是——
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[Dialog]
+[character]
+在莫布宣布获胜者的姓名之前，赛场的角落，那扎眼的隔栏之后。
+有一位感染者骑士率先站了起来。
+[dialog]
+[Character(name="char_empty", name2="avg_npc_221", fadetime=1)]
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[CameraShake(duration=0.2, xstrength=30, ystrength=30, vibrato=20, randomness=80, fadeout=true, block=false)]
+[delay(time=1)]
+[name="感染者骑士A"]  血骑士！
+[Dialog]
+[PlaySound(key="$livecrowd", volume=0.4, loop=false, channel="people")]
+[delay(time=0.51)]
+[Character(name="avg_npc_220", name2="avg_npc_221",fadetime=0.7)]
+[delay(time=1)]
+[Character(name="avg_npc_220", name2="avg_npc_221",focus=1)]
+[CameraShake(duration=0.2, xstrength=30, ystrength=30, vibrato=20, randomness=80, fadeout=true, block=false)]
+[name="感染者骑士B"]  血骑士！血骑士！血骑士！
+[Character(name="avg_1014_nearl2_1#1$1")]
+[name="玛嘉烈"]  都是......感染者？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Character(name="avg_npc_220",fadetime=1.5)]
+[delay(time=2)]
+[name="感染者骑士"]  血骑士赢了！血骑士万岁！
+[Character(name="avg_npc_006")]
+[name="观赛的感染者"]  血骑士！血骑士！
+[name="观赛的感染者"]  血骑士！血骑士！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Subtitle(text="血骑士！血骑士！血骑士！", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="血骑士！血骑士！血骑士！", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[delay(time=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G01",screenadapt="coverall")]
+[character(name="avg_npc_214_1#2$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="血骑士"]  ......
+血骑士！血骑士！血骑士！
+血骑士！血骑士！血骑士！
+血骑士缓缓举起了手，向观众示意。
+随后他回过头，看着仍旧没有倒下的梦魇。
+视线上抬，在梦魇的背后，极远方的观众席上，有着另一位骑士与血骑士视线相交。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G08",screenadapt="coverall")]
+[Character(name="avg_1014_nearl2_1#1$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[name="耀骑士"]  ......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G01",screenadapt="coverall")]
+[character(name="avg_npc_214_1#2$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[name="血骑士"]  ......
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_23_G08",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+血骑士！血骑士！血骑士！
+[character(name="avg_npc_121")]
+[name="大嘴莫布"]  呃......
+[name="大嘴莫布"]  （职业素养告诉我，在观众呐喊的时候我不该用麦克风插嘴，但是，好像大都是感染者......没问题吗？）
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="bg_23_G09",screenadapt="coverall")]
+[PlayMusic(intro="$distressed_intro", key="$distressed_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[name="电视里的声音"]  血骑士！血骑士！血骑士！
+[dialog]
+[character(name="avg_npc_215_1#1",fadetime=1.5)]
+[delay(time=2)]
+[name="烛骑士"]  ......这就是卡西米尔感染者的英雄，玛嘉烈。
+[name="烛骑士"]  你打算，怎么对付那个与你重叠的形象？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G02",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="电视里的声音"]  血骑士！血骑士！血骑士！
+[dialog]
+[character(name="avg_npc_210_1#5",fadetime=1.5)]
+[delay(time=1.5)]
+[name="伊奥莱塔·罗素"]  这就是感染者......狄开俄波利斯。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G03",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="电视里的声音"]  血骑士！血骑士！血骑士！
+[dialog]
+[Character(name="avg_npc_211_1#5", name2="avg_npc_212_1", fadetime=1.5)]
+[delay(time=2)]
+[Character(name="avg_npc_211_1#5", name2="avg_npc_212_1", focus=1,)]
+[name="发言人马克维茨"]  ......英雄，血骑士。真是夸张的号召力。
+[name="发言人马克维茨"]  耀骑士虽然是一个抗争的典范，但说到底，真正为感染者谋取了生存空间的，是血骑士狄开俄波利斯。
+[name="发言人马克维茨"]  ......但是，他向我们俯首称臣已经很久了。
+[Character(name="avg_npc_211_1#5", name2="avg_npc_212_1", focus=2)]
+[name="发言人麦基"]  ......我以一介媒体从业者的身份，对你的提案深感佩服，马克维茨先生。
+[name="发言人麦基"]  但你也知道，这些......舆论只是一层软保险。想确保事情万无一失，我们得准备一些硬性措施。
+[Character(name="avg_npc_211_1#7", name2="avg_npc_212_1", focus=1)]
+[name="发言人马克维茨"]  当然。
+[name="发言人马克维茨"]  我只是不希望所有人都......无路可退罢了。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G07",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_032")]
+[delay(time=0.51)]
+[name="兴奋的观众"]  血骑士！血骑士赢了！！
+[name="兴奋的观众"]  啊哈哈，我就知道血骑士是不可战胜的！血骑士是不可战胜的！
+[dialog]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="兴奋的观众"]  唔哦，怎么了？
+[name="兴奋的观众"]  那边的屋顶......升起太阳了吗？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_208_1#5")]
+[name="莫妮克"]  ——
+[name="莫妮克"]  你——
+[character(name="char_147_shining_1")]
+萨卡兹就像是忌讳自己的法术被看见一般，默默垂下了眼睑。
+短暂的光辉，如落日，依旧萦绕在萨卡兹的剑尖。
+像是想起了什么似的，萨卡兹立刻改变了持剑的姿势——将其抱入怀中。
+就好像那把剑不该出鞘。
+[Character(name="avg_npc_208_1#5")]
+[name="莫妮克"]  ......
+[name="莫妮克"]  ......刚才......你是怎么......
+[name="莫妮克"]  是萨卡兹的巫术吗？不，但是方才我分明感到了......
+生命的呼吸？不。灵魂的力量？不。
+某种更本质的，只在梦境与醉酒后的幻觉中能碰触到的无形幻象。
+[character(name="char_147_shining_1")]
+但毫无疑问，这个萨卡兹方才......在挥舞晨昏。
+[Character(name="avg_npc_208_1")]
+[name="莫妮克"]  ......
+[name="莫妮克"]  ......嘁。
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  刚才那一剑......你这家伙......
+[name="莫妮克"]  你本可以杀了我！
+[character(name="char_147_shining_1")]
+[name="闪灵"]  只是接下你三箭而已，无胄盟。
+[name="闪灵"]  当然，如果你食言的话，我会的。
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  你——
+被抓住的感觉。
+不能随意后退，会被追上......被什么追上？这个萨卡兹？还是她的剑？
+还是她所抓住的......生命的本质？
+[name="莫妮克"]  ......
+[character(name="char_147_shining_1")]
+[name="闪灵"]  ......还要继续吗？
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......不。
+[name="莫妮克"]  工作，也是要讲究契约精神的。
+[dialog]
+[PlaySound(key="$d_gen_transmissionget", volume=0.6)]
+[name="莫妮克"]  收队，停止对罗德岛一行人的跟踪。
+[PlaySound(key="$transmission", volume=0.6)]
+[delay(time=0.8)]
+[character(name="char_147_shining_1")]
+[name="闪灵"]  谢谢。
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......问你一个无关紧要的问题。
+[character(name="char_147_shining_1")]
+[name="闪灵"]  出于对你信守承诺的尊重，我会考虑回答你。
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  对你们萨卡兹而言，削去双角有什么......含义吗？
+[character(name="char_147_shining_1")]
+[name="闪灵"]  ......因人而异。也许有些人认为，萨卡兹的身份本身就是诅咒，也许会通过这种方式隐藏身份。
+[name="闪灵"]  或者，是某些巫术的媒介，某种法术的依托。
+[name="闪灵"]  又或者......是某些异类部族的传统。可能性有很多，但绝无定论。
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......
+[character(name="char_147_shining_1")]
+[name="闪灵"]  怎么了吗？
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......不，没什么。
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Image]

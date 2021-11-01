@@ -1,0 +1,551 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="bg_23_G09",screenadapt="coverall")]
+[Delay(time=1)]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_237_gravel_1#4",fadetime=1,block=true)]
+[delay(time=1)]
+[name="砾"]......博士？
+[name="砾"]您从餐厅回来之后，就一直紧锁着眉头哦？
+[Character(name="avg_237_gravel_1#3")]
+[name="砾"]如果感到疲惫的话，我可以——
+[dialog]
+[Decision(options="你怎么看待今天这场晚宴？;你觉得，马克维茨是个怎样的人？", values="1;2")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1")]
+[name="砾"]很得体，博士。看来您已经习惯这类交际了？
+[name="砾"]看得出，虽然常务董事没有亲自露面，但那些企业高管都对您青睐有加......
+[dialog]
+[Predicate(references="2")]
+[name="砾"]......如我之前对您说的，因为耀骑士的事件，有一位发言人引咎辞职。
+[name="砾"]马克维茨是临时顶上这个位置的，在此之前，他只是一个默默无闻的小角色......
+[name="砾"]虽然他的身上还保留有一些未经洗礼的人情味......不过在现在这个环境，能持续多久可说不太好。
+[Predicate(references="1;2")]
+[Dialog]
+[Decision(options="你认为罗德岛的计划，有可行性吗？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1#2")]
+[name="砾"]......
+[Character(name="avg_237_gravel_1#6")]
+[name="砾"]先不提这个......您真的信任我吗？
+[name="砾"]联合会的渗透并非某种组织形式上的渗透......在金钱和确实发生改变的社会面前，即使联合会什么也不做，骑士也会倒向资本。
+[Character(name="avg_237_gravel_1#3")]
+[name="砾"]监正会对罗德岛礼遇的原因几乎和耀骑士密不可分。即使如此，您这样缜密的人......如果不小心对待监正会，是会吃亏的。
+[Dialog]
+[Decision(options="感谢你的提醒。;这我当然知道。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="那么，能告诉我你的意见吗？;所以你的意见是？", values="1;2")]
+[Predicate(references="1;2")]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_211_1#3",fadetime=1,block=true)]
+[delay(time=1)]
+[name="发言人马克维茨"]......锈铜骑士......又，复赛了？
+[Character(name="avg_npc_211_1#3",name2="avg_npc_222",focus=2)]
+[name="企业员工"]是的......毕竟骑士协会根据录像和其他骑士的证词，向国民院证明那位感染者不过是自己过度施法导致的疾病恶化。
+[name="企业员工"]死因也是“矿石病”，锈铜骑士并没有直接责任，所以......
+[Character(name="avg_npc_211_1#5",name2="avg_npc_222",focus=1)]
+[name="发言人马克维茨"]......就算这是真的......那难道我们就该......
+[Character(name="avg_npc_211_1",name2="avg_npc_222",focus=1)]
+[name="发言人马克维茨"]你先出去吧。
+[Character(name="avg_npc_211_1",name2="avg_npc_222",focus=2)]
+[name="企业员工"]好的。
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[characteraction(name="right", type="move", xpos=300, fadetime=2,block=false)]
+[character(name="avg_npc_211_1#4",name2="char_empty",fadetime=0.5)]
+[delay(time=2)]
+[Character(name="avg_npc_211_1#4")]
+[name="发言人马克维茨"]......
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[CameraEffect(effect="Grayscale",keep=true, initamount=0, amount=1, block=true)]
+[Background(image="bg_23_G10",screenadapt="coverall")]
+[Character(name="avg_npc_221")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="感染者骑士"]......
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[CameraEffect(effect="Grayscale", amount=0, block=true)]
+[Background(image="bg_23_G09",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_211_1#5")]
+[name="发言人马克维茨"]......拨通国民院副审官的......私人电话。
+[Dialog]
+[PlaySound(key="$d_avg_telephonebusy",channel="bgs", volume=0.6, loop=true, block=false, volume=0.6)]
+[delay(time=0.6)]
+[soundvolume(channel="bgs",volume=0,fadetime=5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Subtitle(text="电话忙音响了两声。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="马克维茨突然回想起了自己童年的时候，父亲的书房桌上，摆着一台黄铜色的电话。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[PlaySound(key="$d_gen_transmissionget", volume=0.6)]
+[Character(name="avg_npc_211_1#5",focus=-1)]
+[name="电话那头的声音"]......发言人阁下，您想出结果了？
+[Character(name="avg_npc_211_1#4")]
+[name="发言人马克维茨"]只要恰尔内先生不再掌握证据，就可以了，对吧？
+[Character(name="avg_npc_211_1#4",focus=-1)]
+[name="电话那头的声音"]当然......可是我得提醒您，如果事后暴露了，你我都难辞其咎。
+[name="电话那头的声音"]所以，杀死他，是最安全的。
+[Character(name="avg_npc_211_1#5")]
+[name="发言人马克维茨"]我向您保证。
+[name="发言人马克维茨"]保证我确实......可以堵住恰尔内先生的嘴。
+[Character(name="avg_npc_211_1#2")]
+[name="发言人马克维茨"]具体手段，您就不要过问了。
+[Character(name="avg_npc_211_1#2",focus=-1)]
+[name="电话那头的声音"]好吧......如果您能拿出诚意的话。
+[name="电话那头的声音"]明天我就会着手重审奥尔默·英格拉的案件，在七天之内，只要您能给我一个足够有诚意的答案......
+[name="电话那头的声音"]奥尔默·英格拉就会从此消失在骑士竞技之中。
+[Character(name="avg_npc_211_1#5")]
+[name="发言人马克维茨"]......诚意。
+[Character(name="avg_npc_211_1#5",focus=-1)]
+[name="电话那头的声音"]是的。至少，您得向我证明恰尔内先生“确实永远不会背叛”。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Subtitle(text="马克维茨记得，记得那台黄铜色的电话。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="那时的电话还没有如今普及，电缆绕过了酒吧、旅社与轰鸣的工地。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="铃声响起后，悲欢喜怒也会悄然降临。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="这就是卡西米尔的生活......现代生活。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="avg_npc_211_1#8")]
+[name="发言人马克维茨"]......我想您应该明白一件事情......
+[name="发言人马克维茨"]您是在挑衅一位发言人。
+[Character(name="avg_npc_211_1#8",focus=-1)]
+[name="电话那头的声音"]......
+[Character(name="avg_npc_211_1#5")]
+[name="发言人马克维茨"]您和我心里都明白，我只是临危受命，我在董事会里并没有靠山。
+[name="发言人马克维茨"]但这不代表，我会任您宰割。
+[Character(name="avg_npc_211_1#2")]
+[name="发言人马克维茨"]无胄盟的指挥权......曾在恰尔内先生手里。那么现在......
+[Character(name="avg_npc_211_1#2",focus=-1)]
+[name="电话那头的声音"]......
+[name="电话那头的声音"]......请您不要误会，我并不是在挑战您的权力。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Subtitle(text="权力。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="avg_npc_211_1#2",focus=-1)]
+[name="电话那头的声音"]我只是提醒您，确保我们日后的合作顺畅。
+[name="电话那头的声音"]既然您这么说了，那么我也不好咄咄相逼。这确实不太礼貌。
+[name="电话那头的声音"]只要您做担保就行。奥尔默·英格拉说到底只是一个腐朽贵族，他不值得我们伤了感情，您说是吧？
+[Character(name="avg_npc_211_1#5")]
+[name="发言人马克维茨"]......没错。
+[Character(name="avg_npc_211_1#2")]
+[name="发言人马克维茨"]那么，我们似乎没什么好聊的了。
+[Character(name="avg_npc_211_1#2",focus=-1)]
+[name="电话那头的声音"]——！马克维茨先生，请等——
+[Dialog]
+[PlaySound(key="$transmission", volume=0.6)]
+[delay(time=1)]
+[Character(name="avg_npc_211_1#5")]
+[name="发言人马克维茨"]......
+[Character(name="avg_npc_211_1")]
+[name="发言人马克维茨"]............
+[Character(name="avg_npc_212_1")]
+[name="发言人麦基"]......你笑了。
+[Character(name="avg_npc_211_1#3",name2="avg_npc_212_1",focus=1)]
+[name="发言人马克维茨"]......！麦基先生，您什么时候......
+[Character(name="avg_npc_211_1#3",name2="avg_npc_212_1",focus=2)]
+[name="发言人麦基"]我从没见过你露出那样的笑容，马克维茨兄。
+[Character(name="avg_npc_211_1#4",name2="avg_npc_212_1",focus=1)]
+[name="发言人马克维茨"]您有什么事？
+[Character(name="avg_npc_211_1#4",name2="avg_npc_212_1",focus=2)]
+[name="发言人麦基"]当然，无胄盟的命令已经正式下达，你我还是和这件事有一些关系的。不过......
+[name="发言人麦基"]......算了，没什么。继续工作吧。
+[Character(name="avg_npc_211_1#4",name2="avg_npc_212_1",focus=1)]
+[name="发言人马克维茨"]......好，麦基先生。
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[characteraction(name="left", type="move", xpos=-300, fadetime=2,block=false)]
+[character(name="char_empty",name2="avg_npc_212_1",fadetime=0.5)]
+[delay(time=2)]
+[Character(name="avg_npc_212_1#2")]
+[name="发言人麦基"]......
+[name="发言人麦基"]权力永远令人甘之如饴，是吧，马克维茨。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[Character]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[Character(name="avg_npc_209_1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="罗伊"]......晚上的街道还真是适合散步。
+[name="罗伊"]如果不用工作的话。
+[Character(name="avg_npc_209_1",name2="avg_npc_216", focus=2)]
+[name="无胄盟成员"]报告，莫妮克阁下已经带队到达指定地点。
+[name="无胄盟成员"]本次行动目标已经明确，现在藏身于这块地区的感染者，约莫在百人左右。
+[Character(name="avg_npc_209_1#2",name2="avg_npc_216", focus=1)]
+[PlayMusic(intro="$escape_intro", key="$escape_loop", volume=0.4)]
+[name="罗伊"]啊，能杀就杀吧，上头说了，按数量算钱。
+[name="罗伊"]老规矩，不许对自己人动手。
+[Character(name="avg_npc_209_1#2",name2="avg_npc_216", focus=2)]
+[name="无胄盟成员"]是。
+[Dialog]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Background(image="bg_23_G07",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_221")]
+[name="感染者骑士A"]喂、喂！我听说有人看见无胄盟了！
+[Character(name="avg_npc_221",name2="avg_npc_221",focus=2)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="感染者骑士B"]什、什么......不会吧，这里可是卡瓦莱利亚基的中心！他们敢大开杀戒吗！？
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Background(image="bg_23_G07",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_430_fartth_1")]
+[name="查丝汀娜"]......太少了。
+[Character(name="avg_npc_103nc_1",name2="avg_430_fartth_1",focus=1)]
+[name="瑟奇亚克"]什么，野鬃不是如你们所愿吸引了无胄盟的注意吗？
+[Character(name="avg_npc_103nc_1",name2="avg_430_fartth_1",focus=2)]
+[name="查丝汀娜"]但是，数量太少了。
+[name="查丝汀娜"]是我们看漏了吗......
+[Character(name="avg_npc_103nc_1#2",name2="avg_430_fartth_1",focus=1)]
+[name="瑟奇亚克"]......
+[Character(name="avg_npc_103nc_1",name2="avg_430_fartth_1",focus=1)]
+[name="瑟奇亚克"]做好最坏的准备，远牙。
+[name="瑟奇亚克"]不要低估无胄盟。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Background(image="bg_23_G10",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_221",name2="avg_npc_221",focus=1)]
+[name="感染者骑士A"]快，快走！
+[Character(name="avg_npc_221",name2="avg_npc_221",focus=2)]
+[name="感染者骑士B"]冷静点，你看到了什么？
+[Character(name="avg_npc_221",name2="avg_npc_221",focus=1)]
+[name="感染者骑士A"]青、青、青色的长弓......
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="感染者骑士A"]啊、啊！？开他娘什么玩笑！？
+[name="感染者骑士A"]快，快告诉其他人，分头跑，躲回垃圾场里都没事！
+[name="感染者骑士A"]让那些普通感染者不要反抗，千万不要反抗——
+[Character(name="avg_npc_221",name2="avg_npc_221",focus=2)]
+[name="感染者骑士B"]现、现、现在谁能联系到红松骑士团......快......
+[Dialog]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_209_1#6",fadetime=1,block=true)]
+[delay(time=1)]
+[name="罗伊"]......哼哼哼......哼哼......
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Dialog]
+[Character]
+[Background(image="bg_23_G07",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(name="avg_npc_216")]
+[name="无胄盟成员"]报告，发现三名感染者。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Dialog]
+[Character]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(name="avg_npc_209_1#6",name2="avg_npc_216", focus=1)]
+[name="罗伊"]哼哼哼......哼哼......
+[Character(name="avg_npc_209_1",name2="avg_npc_216", focus=1)]
+[name="罗伊"]对了，我有提过董事会的报价吗？
+[name="罗伊"]一个非法感染者三百枚金币，感染者骑士翻倍。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character]
+[Background(image="bg_23_G07",screenadapt="coverall")]
+[Delay(time=1)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_216")]
+[name="无胄盟成员"]别跑！
+[Character(name="avg_npc_221")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="感染者骑士"]......该死！被发现了！
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[PlaySound(key="$d_gen_soldiersrun",volume=0.5)]
+[Dialog]
+[Character]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="avg_npc_209_1")]
+[name="罗伊"]......一个感染者值一张特锦赛门票。一个感染者骑士值半辆好车。
+[name="罗伊"]那么。
+[name="罗伊"]一个报价单之外的特殊人物，我们该怎么处理呢。
+[Character(name="avg_npc_209_1",name2="avg_npc_216", focus=2)]
+[name="无胄盟成员"]呃？
+[Character(name="avg_npc_209_1#6",name2="avg_npc_216", focus=1)]
+[name="罗伊"]你们接受了几种手势暗语的训练？
+[Character(name="avg_npc_209_1#6",name2="avg_npc_216", focus=2)]
+[name="无胄盟成员"]啊，我记得好像是三套暗语......
+[Character(name="avg_npc_209_1#2",name2="avg_npc_216", focus=1)]
+[name="罗伊"]嗯，算了，都忘了吧，如果你们看见我......嗯......打响指的动作。
+[Character(name="avg_npc_209_1",name2="avg_npc_216", focus=1)]
+[name="罗伊"]看见我打响指的话，就立刻行动，别犹豫。
+[Character(name="avg_npc_209_1",name2="avg_npc_216", focus=2)]
+[name="无胄盟成员"]是。
+[Character(name="avg_npc_209_1#6",name2="avg_npc_216", focus=1)]
+[name="罗伊"]好啦，我上去打声招呼。
+[stopmusic(fadetime=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlayMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[PlaySound(key="$d_gen_walk_n")]
+[Subtitle(text="青金罗伊向前走去，路灯几番闪烁。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="青砖一路延伸，街道上空无一人。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="冷清的街边有一张路边椅。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="椅子上又坐着一个冷清的人。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Character]
+[Background]
+[Image(image="23_I02_1",screenadapt="coverall")]
+[Blocker(a=0, fadetime=2, block=true)]
+[name="玛恩纳"]......
+[name="玛恩纳"]......
+[dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=3)]
+[Image(image="23_I02_2",screenadapt="coverall",fadetime=1)]
+[PlaySound(key="$bodyfalldown3", volume=0.5)]
+[delay(time=2)]
+[name="罗伊"]晚上好，一个美好的夜晚，对吧？
+[name="玛恩纳"]......
+[name="罗伊"]打扰您看报了吗？今天的晚报可全是耀骑士的新闻。
+[name="罗伊"]这附近一个人都没有，真冷清，听说这里最近可不太平......
+[name="玛恩纳"]......
+[name="罗伊"]咳。
+[name="罗伊"]您一个人在这里做什么?
+[name="玛恩纳"]......
+[name="罗伊"]......
+[name="玛恩纳"]罗伊......我刚结束工作，只是在这里小憩片刻。
+[name="罗伊"]哎呀，原来您才下班啊，这个时间？您还怪辛苦的。
+[name="罗伊"]不过......您在这里有什么工作？
+[name="罗伊"]这附近应该只有感染者、非法移民和黑市贩子才对吧。
+[name="玛恩纳"]只是在等人。
+[name="玛恩纳"]怎么，你连我等的是谁都要问吗？
+[name="罗伊"]不，不，不，怎么会呢。
+[name="罗伊"]等人......嗯，等人。难道是在等一位美丽的女性吗？哈哈，开个玩笑......
+[name="罗伊"]但我们是有公务在身的。
+[name="玛恩纳"]......
+[name="罗伊"]得麻烦您和您的朋友，回避一下。
+[name="玛恩纳"]......你办你的事，我办我的事。
+[name="罗伊"]你明白自己在说什么吧，玛恩纳。
+[name="玛恩纳"]难道我刚才是在用高卢语说话吗。
+[name="罗伊"]......别这么说话嘛，您在这里，我手下那些人可会因为紧张而失误的。
+[name="玛恩纳"]......
+[name="罗伊"]唉。
+[name="罗伊"]......玛恩纳，你知道......如果现在我要杀你......得费多少功夫吗？
+[dialog]
+[stopmusic(fadetime=2)]
+罗伊缓缓抬起了手。
+暗处，无胄盟的刺客已经蓄势待发。
+也许只是错觉罢，这些深藏不露的隐秘大师，总感觉自己被一览无余。
+玛恩纳·临光。
+他们开始祈祷，祈祷罗伊不要发出任何的信号——
+[dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[name="罗伊"]——！
+[name="玛恩纳"]......
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.4)]
+[Image(image="23_I10",screenadapt="coverall")]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+白角持剑的萨卡兹。
+[name="罗伊"]......
+[name="罗伊"]............哈。
+[name="罗伊"]还真是一位......美丽的女性呢。
+[name="闪灵"]我来晚了吗？
+[name="玛恩纳"]不。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[delay(time=1)]
+[Image(image="23_I02_3",screenadapt="coverall")]
+[PlaySound(key="$bodyfalldown3", volume=0.5)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="罗伊"]......
+[name="玛恩纳"]......
+[name="闪灵"]......
+[name="罗伊"]......
+[name="玛恩纳"]......
+[name="闪灵"]......
+[name="罗伊"]......
+[dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Image(image="23_I02_4",xScale=0.85, yScale=0.85, fadetime=0)]
+[ImageTween(xFrom=-30, xTo=0, duration=20, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="玛恩纳"]......看我做什么？
+[name="玛恩纳"]你该去工作了，罗伊。
+[name="闪灵"]......
+[name="罗伊"].........嗯......
+罗伊的视线与萨卡兹相交片刻。
+他在思考一件事情。
+一会儿该怎么开溜，才不至于太过丢脸。
+[name="罗伊"]哈哈，刚才我突然改变了想法。你看，好像后半夜要下雨，我可没带伞。
+[name="罗伊"]不过......
+[name="罗伊"]临光家族试图袒护感染者，我可以这么认为吗？
+[name="玛恩纳"]请便。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[image]
+[Dialog]
+[Character]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="char_147_shining_1", fadetime=1,block=true)]
+[delay(time=1)]
+[name="闪灵"]......您......
+[Character(name="avg_npc_108")]
+[name="玛恩纳"]玛嘉烈又获胜了。
+[name="玛恩纳"]你应该阻止她。
+[Character(name="char_147_shining_1",name2="avg_npc_108",focus=1)]
+[name="闪灵"]......很抱歉。
+[name="闪灵"]如果这是她想要做的，那么我会支持她......我会成为她的支柱。
+[Character(name="char_147_shining_1",name2="avg_npc_108",focus=2)]
+[name="玛恩纳"]......你？一个萨卡兹......
+[name="玛恩纳"]......
+[name="玛恩纳"]感染者的事情，我就当已经通知过罗德岛了。
+[Character(name="char_147_shining_1",name2="avg_npc_108",focus=1)]
+[name="闪灵"]感谢您出手相助......无胄盟，是个强敌。
+[name="闪灵"]如果他执意要杀死躲藏在这附近的所有感染者，我想我们没有办法阻止。
+[Character(name="char_147_shining_1",name2="avg_npc_108",focus=2)]
+[name="玛恩纳"]......我只是坐在这罢了。
+[name="玛恩纳"]仅此而已。
+[Character(name="char_147_shining_1",name2="avg_npc_108",focus=1)]
+[name="闪灵"]......如果您想知道玛嘉烈这几年所遭遇的，我愿意把我知道的都告诉您。
+[name="闪灵"]当然，如果您愿意亲口问她的话......
+[Character(name="char_147_shining_1#2",name2="avg_npc_108",focus=2)]
+[name="玛恩纳"]......我不关心。
+[name="玛恩纳"]看到她的眼神，我就已经明白了。
+[name="玛恩纳"]她的父亲母亲，甚至是过去的我，谁都拥抱过那样流光溢彩的时代。
+[Character(name="char_147_shining_1#2",name2="avg_npc_108",focus=1)]
+[name="闪灵"]......您......确实是她真正的家人。
+[Character(name="char_147_shining_1",name2="avg_npc_108",focus=2)]
+[name="玛恩纳"]......你已经知道了该知道的，这之后，我不会再干预半分。
+[name="玛恩纳"]你可以告诉玛嘉烈，告诉那个......“罗德岛”。告诉他们，大骑士领光鲜的外表下，腐烂到了什么地步。
+[name="玛恩纳"]但更切实际的建议是，早日离开大骑士领，离开卡西米尔。
+[name="玛恩纳"]尽力逃离这个时代吧，这才是每个人为数不多的正确选择。
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[characteraction(name="right", type="move", xpos=300, fadetime=3,block=false)]
+[character(name="char_147_shining_1",name2="char_empty",fadetime=0.5)]
+[delay(time=2)]
+[Character(name="char_147_shining_1")]
+[name="闪灵"]......真是个复杂的人。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic]
+[Dialog]
+[Character]
+[Background(image="bg_23_G10",screenadapt="coverall")]
+[Delay(time=1)]
+[PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Character(name="char_147_shining_1")]
+[name="闪灵"]......
+[Character(name="avg_npc_221")]
+[name="感染者骑士"]你......别过来！
+[name="感染者骑士"]该死的，你是无胄盟吗？你——
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="感染者骑士"]不、不对，你是萨卡兹！？你是谁？
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=1)]
+[name="闪灵"]我没有敌意，无胄盟已经离开了这里。
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=2)]
+[name="感染者骑士"]你、你在说什么......
+[Character(name="char_147_shining_1",name2="avg_npc_094",focus=2)]
+[name="感染者难民"]......刚才，刚才这个萨卡兹拦在了那些无胄盟面前......
+[name="感染者难民"]你是什么人？你怎么敢和无胄盟作对......？
+[Character(name="char_147_shining_1",name2="avg_npc_094",focus=1)]
+[name="闪灵"]......我是感染者医师。
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=2)]
+[name="感染者骑士"]一个萨卡兹，自称感染者医师？这......
+[Character(name="avg_npc_221",name2="avg_npc_094",focus=2)]
+[name="感染者难民"]......这也太假了......我反而觉得她没有在骗我......
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=2)]
+[name="感染者骑士"]好吧......那你打算做什么？
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=1)]
+[name="闪灵"]卡西米尔有提供感染者医疗的手段......既然如此，为什么你们还会躲藏在这里？在这座城市的夹缝中......
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=2)]
+[name="感染者骑士"]......你不是卡西米尔人？
+[name="感染者骑士"]不，说不定大部分卡西米尔人都不知道......慢着，你说你是感染者医师......
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="感染者骑士"]你、你是零号地块的......！？
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=1)]
+[name="闪灵"]我来自一家医疗企业，你们说的零号地块......是指感染者收容地区吗？
+[name="闪灵"]监正会出资建立了检查并治疗感染者骑士的收容治疗中心......
+[dialog]
+[character]
+闪灵没有急着继续说下去。
+她从面前的感染者眼里看到了疑惑、对自己的不信任、恐惧，以及丝毫的期许。
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=2)]
+[name="感染者骑士"]......你真的......不是卡西米尔人，也对，他们是很讨厌萨卡兹的，呃，抱歉，但事实如此。
+[name="感染者骑士"]......你在那里治疗过感染者吗？
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=1)]
+[name="闪灵"]是的。
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=2)]
+[name="感染者骑士"]你难道不感到奇怪吗......
+[name="感染者骑士"]那么大一个移动平台，几乎成了感染者骑士的牢笼......你知道吧，感染者骑士在那里接受检查、治疗，同时也在那里“生活”。
+[name="感染者骑士"]如果那种状态能被称为“生活”的话。
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=1)]
+[name="闪灵"]......
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=2)]
+[name="感染者骑士"]好，看来你们这些外来者连这件事都不清楚。
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=1)]
+[name="闪灵"]但如果把所有的感染者都集中在那里生活......
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=2)]
+[name="感染者骑士"]地方不够，对吧？
+[name="感染者骑士"]还能赚钱的感染者，会重新走上赛场，或是继续进行一些......劳务工作，什么样的都有。
+[name="感染者骑士"]还有些当不上骑士的，会像奴隶一样被派去做一些黑工......矿工，搬运工，而且都是危险的环境。
+[name="感染者骑士"]而如果受了伤，连这些基本的工作都做不了......
+[name="感染者骑士"]......你猜猜看，外乡人，你猜猜看那些感染者都从零号地块去哪儿了？
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=1)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=10, vibrato=15, randomness=50, fadeout=true, block=false)]
+[name="闪灵"]......！
+[Character(name="char_147_shining_1",name2="avg_npc_221",focus=2)]
+[name="感染者骑士"]你们以为那里是医院，骑士们觉得那里是一座监狱。但我告诉你，都不是。
+[name="感染者骑士"]感染者被送去那里，洗干净尊严，剥下价值，最后送上砧板，任人宰割。
+[name="感染者骑士"]那是一座漂亮的屠宰场，萨卡兹。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Dialog]
+[Character]
+[Image]

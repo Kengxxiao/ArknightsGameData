@@ -1,0 +1,1019 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 隐藏AVG1 逃离
+
+
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+
+
+// （黑屏）
+// （缓出莫妮克）
+[Character(name="avg_npc_208_1",fadetime=1.5,block=true)]
+[delay(time=1)]
+[name="莫妮克"]  ......
+[dialog]
+// （出无胄盟杂兵）
+[PlaySound(key="$d_gen_soldiersrun", volume=0.6)]
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=1)]
+[delay(time=1)]
+[name="第三小队队员"]  莫妮克阁下。
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=2)]
+[name="莫妮克"]  第三小队所有人跟我一起行动。
+[name="莫妮克"]  欣特莱雅想去哪里，她说了不算。
+[name="莫妮克"]  ......留住她，无论生死。
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=1)]
+[name="第三小队队员"]  是！
+[Character(name="avg_npc_216", name2="avg_npc_208_1#3", focus=2)]
+[name="莫妮克"]  绝对不要让......无关人员察觉到这件事。
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=2)]
+[name="莫妮克"]  行动开始。
+[dialog]
+[PlaySound(key="$d_gen_soldiersrun", volume=0.6)]
+[characteraction(name="left", type="move", xpos=-300, fadetime=2,block=false)]
+[character(name="char_empty",name2="avg_npc_208_1",fadetime=0.5)]
+[delay(time=2)]
+// （下杂兵）
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......
+[name="莫妮克"]  这是你自己的选择。
+[name="莫妮克"]  欣特莱雅。
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_23_G10",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
+
+// （切场景，感染者街道）
+// （先出白金从左到右跑过，然后出白金）
+[Character(name="char_empty")]
+[PlaySound(key="$rungeneral", volume=0.5)]
+[characteraction(name="middle", type="move", xpos=200, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="middle", type="move", xpos=-200, fadetime=1, block=false)]
+[Character(name="char_204_platnm_1#2",fadetime=0.7)]
+[delay(time=2)]
+[name="白金"]  呼......
+[Character(name="char_204_platnm_1")]
+[name="白金"]  如果罗伊阁下在的话，我怕是半点机会都没吧......
+[name="白金"]  两位青金少一位，只是逃走的话，还算是......有些把握......
+[Character(name="char_204_platnm_1#3")]
+[name="白金"]  呵......
+[name="白金"]  谁能想到无胄盟的白金大位，有一天会躲在监正会控制下的零号地块里呢......
+[dialog]
+[Character(name="char_204_platnm_1#4", focus=-1)]
+// （一些响声）
+[PlaySound(key="$leaveshake", volume=0.5)]
+[delay(time=0.6)]
+[Character(name="char_204_platnm_1")]
+[name="白金"]  ......
+[name="白金"]  休息时间到了......
+[Dialog]
+[delay(time=0.7)]
+[PlaySound(key="$rungeneral", volume=0.6)]
+[characteraction(name="middle", type="move", xpos=-300, fadetime=2,block=false)]
+[Character(fadetime=0.5)]
+[delay(time=2)]
+
+// （下白金，然后出两个无胄盟成员）
+[Character(name="avg_npc_216", name2="avg_npc_216", fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[delay(time=2)]
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=1)]
+[name="第三小队队员A"]  她真的会逃到这里来吗？
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=2)]
+[name="第三小队队员B"]  其它地方都搜查过了。
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=1)]
+[name="第三小队队员A"]  也是......
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=2)]
+[name="第三小队队员B"]  你脚步轻一点，别惊动那些巡逻的征战骑士。这个地方现在太敏感了......
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=1)]
+[name="第三小队队员A"]  好、好！
+[Character(name="char_204_platnm_1")]
+[name="白金"]  （这里离最近港口还有一段距离......）
+[name="白金"]  （从零号地块穿过工业区，然后可以选择从居住区或者商业区到达港口区......）
+[name="白金"]  （太远了......）
+[name="白金"]  （但只要能逃出工业区，就还能挣扎一下......）
+[Character(name="avg_npc_216")]
+[name="第三小队队员A"]  那边是不是有人？
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="第三小队队员A"]  别躲躲藏藏的，快出来！
+[Character(name="char_204_platnm_1")]
+[name="白金"]  ......
+[Character(name="avg_npc_216")]
+[name="第三小队队员A"]  （举起短弩）
+[name="第三小队队员A"]  ......
+[Character(name="char_204_platnm_1")]
+[name="白金"]  ......
+[Character(name="avg_npc_216")]
+[name="第三小队队员A"]  是感染者吗，还是其他什么东西？
+[Character(name="char_204_platnm_1#6")]
+[name="白金"]  （再过来一点......）
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=2)]
+[name="第三小队队员B"]  （小声）怎么样，有发现吗。
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=1)]
+[name="第三小队队员A"]  （小声）那边转角好像有什么东西。
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=2)]
+[name="第三小队队员B"]  （小声）我掩护你。
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=1)]
+[name="第三小队队员A"]  （小声）好。
+[dialog]
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=0)]
+[PlaySound(key="$d_gen_soldiersrun", volume=0.5)]
+[characteraction(name="right", type="move", xpos=800, fadetime=2.5,block=false)]
+[character(name="avg_npc_216",name2="char_empty",fadetime=0.5)]
+[characteraction(name="left", type="move", xpos=600, fadetime=2.5,block=false)]
+[character(name="char_empty",name2="avg_npc_216",fadetime=0.5)]
+[delay(time=1.55)]
+[character]
+[Character(name="char_empty")]
+[PlaySound(key="$d_gen_walk_n", volume=0.5)]
+[characteraction(name="middle", type="move", xpos=-200, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="middle", type="move", xpos=200, fadetime=1, block=false)]
+[Character(name="char_204_platnm_1",fadetime=0.7)]
+[delay(time=2)]
+// （两个人向左平移出屏幕，然后白金从右出）
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Background(image="bg_23_G10",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
+// （切一下场景）
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=2)]
+[name="第三小队队员B"]  这是......
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=1)]
+[name="第三小队队员A"]  白金的箭筒，她肯定就在附近。
+[dialog]
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=-1)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+// （飞箭声，队员B倒下，白金出场贴近A）
+[characteraction(name="right", type="move", ypos=-800, fadetime=1.5, block=true)]
+[delay(time=1.5)]
+[Character(name="char_204_platnm_1#6")]
+[name="白金"]  别动！
+[Character(name="avg_npc_216")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="第三小队队员A"]  呜，唔呃......
+[Character(name="char_204_platnm_1")]
+[name="白金"]  告诉我，莫妮克的部署方向在哪里？应用的行动备案是什么？
+[name="白金"]  说吧，这样你还能活命。
+[Character(name="avg_npc_216")]
+[name="第三小队队员A"]  我，我不知道......
+[Character(name="char_204_platnm_1#3")]
+[name="白金"]  唉......你也是无胄盟，你知道这种话意味着什么。
+[Character(name="char_204_platnm_1")]
+[name="白金"]  也许你会想起来的。
+
+[Dialog]
+[Character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+
+// （黑屏）
+// （出青金和无胄盟成员）
+[Character(name="avg_npc_216")]
+[name="第三小队队员"]  报告！
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=2)]
+[name="莫妮克"]  说。
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=1)]
+[name="第三小队队员"]  有队员在搜查零号地块时被监正会的人扣押了。
+[Character(name="avg_npc_216", name2="avg_npc_208_1#4", focus=2)]
+[name="莫妮克"]  ......扣押？
+[Character(name="avg_npc_216", name2="avg_npc_208_1#4", focus=1)]
+[name="第三小队队员"]  他们好像在执行任务的时候正好撞上了征战骑士，都受了伤。
+[name="第三小队队员"]  我们是不是......
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=2)]
+[name="莫妮克"]  ......他们只会认为我们是在替联合会处理零号地块的证据......就让他们这么认为吧。
+[name="莫妮克"]  这件事没那么简单。
+[Character(name="avg_npc_216", name2="avg_npc_208_1#2", focus=2)]
+[name="莫妮克"]  ......
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=2)]
+[name="莫妮克"]  之前通知零号地块先遣队方向的人往哪里集合的？
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=1)]
+[name="第三小队队员"]  报告，是住宅区。
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=2)]
+[name="莫妮克"]  ......好。
+[name="莫妮克"]  通知住宅区的围猎队向商业区靠拢。
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=0.5)]
+[characteraction(name="left", type="move", xpos=-300, fadetime=1,block=false)]
+[character(name="char_empty",name2="avg_npc_208_1",fadetime=0.5)]
+[delay(time=1)]
+[character]
+[Character(name="char_empty")]
+[PlaySound(key="$d_gen_soldiersrun", volume=0.5)]
+[characteraction(name="middle", type="move", xpos=250, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="middle", type="move", xpos=-50, fadetime=0.6, block=false)]
+[Character(name="avg_npc_216",fadetime=0.7)]
+[delay(time=1.5)]
+[name="第三小队队员"]  报告！
+[Character(name="avg_npc_208_1", name2="avg_npc_216", focus=1)]
+[name="莫妮克"]  说。
+[Character(name="avg_npc_208_1", name2="avg_npc_216", focus=2)]
+[name="第三小队队员"]  白金大位出现在特定位置！
+[Character(name="avg_npc_208_1", name2="avg_npc_216", focus=1)]
+[name="莫妮克"]  ......哼。
+[name="莫妮克"]  准备围捕。
+[Character(name="avg_npc_208_1", name2="avg_npc_216", focus=2)]
+[name="第三小队队员"]  是！
+[dialog]
+[PlaySound(key="$d_gen_soldiersrun", volume=0.6)]
+[characteraction(name="right", type="move", xpos=300, fadetime=2,block=false)]
+[character(name="avg_npc_208_1",name2="char_empty",fadetime=0.5)]
+[delay(time=2)]
+// （下无胄盟）
+[Character(name="avg_npc_208_1")]
+[name="莫妮克"]  （第三小队应该足够抓住她。可她......对我们的搜捕手段又熟悉到什么地步？）
+[name="莫妮克"]  （如果逃到街道上的话......）
+// （通讯声）
+[PlaySound(key="$d_gen_transmissionget", volume=0.6)]
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......是我。你如果这么闲，为什么不来帮把手？
+// （以下都无立绘）
+[Character(name="avg_npc_208_1#2", focus=-1)]
+[name="罗伊"]  啊哈哈......各有各的任务不是，我也是很忙的啊。
+[name="罗伊"]  所以，现在什么情况？
+[Character(name="avg_npc_208_1")]
+[name="莫妮克"]  我的小队会逼出她。之后，我亲自动手，很快就能解决。
+[name="莫妮克"]  今天是个适合打猎的天气。
+[Character(name="avg_npc_208_1", focus=-1)]
+[name="罗伊"]  那就好。不过以防万一，我还是得提醒你一句。
+[name="罗伊"]  ——联合会已经意识到玄铁的失控，但我们还没有准备好，不要让他们察觉到我们是哪一边的。
+[Character(name="avg_npc_208_1")]
+[name="莫妮克"]  ......我明白。
+[Character(name="avg_npc_208_1", focus=-1)]
+[name="罗伊"]  欣特莱雅在董事会那儿依然是无胄盟白金大位。记得找个好借口。
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......罗伊。
+[Character(name="avg_npc_208_1#2", focus=-1)]
+[name="罗伊"]  啊啊。别担心，真有什么万一......我们那三位好心的老板，会出手相助的。
+
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_indoor_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[playMusic(intro="$chasing_intro", key="$chasing_loop", volume=0.4)]
+
+// （切场景，indoor2）
+[Character(name="char_204_platnm_1#2",fadetime=1.5,block=true)]
+[PlaySound(key="$rungeneral", volume=0.6)]
+[delay(time=1)]
+[name="白金"]  呼......呼......
+[Character(name="char_204_platnm_1")]
+[name="白金"]  还差一点点。
+[name="白金"]  只要穿过商业区，就能离开卡西米尔了......
+[dialog]
+[Character(name="char_204_platnm_1", focus=-1)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+// （飞箭声）
+[Character(name="char_204_platnm_1#5")]
+[name="白金"]  呜......！
+[Character(name="avg_npc_216")]
+[name="第三小队队员"]  放下武器，白金大位。
+[name="第三小队队员"]  莫妮克阁下许诺过，只要您听从我们的建议回到住处，无胄盟可以对您的叛变行为睁一只眼闭一只眼。
+[Character(name="char_204_platnm_1#6")]
+[name="白金"]  咳......咱们都是无胄盟......这套说辞还是算了吧。
+[Character(name="avg_npc_216")]
+[name="第三小队队员"]  别做抵抗了，这栋烂尾楼所有出路都已经被我们的人封死，你没有退路的，不如——
+[dialog]
+[Character(name="avg_npc_216", focus=-1)]
+// （飞箭声）
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_avg_arrowshot")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+// （无胄盟成员倒下）
+[Character(name="avg_npc_216")]
+[name="第三小队成员"]  呃——！
+[Dialog]
+[PlaySound(key="$bodyfalldown2", volume=0.6)]
+[Character(fadetime=1,block=true)]
+[Delay(time=2)]
+[Character(name="char_204_platnm_1#2",fadetime=1.5,block=true)]
+[delay(time=1)]
+[name="白金"]  哈......哈......交涉还是交给专门的人吧，你们应该......先练练箭术。
+[Character(name="char_204_platnm_1#5")]
+[name="白金"]  （只要能从这里混进商业区的人流里去......）
+[name="白金"]  （就还有机会......）
+[name="白金"]  （就差一点点了......）
+[dialog]
+// （再上个无胄盟成员）
+[Character(name="char_204_platnm_1")]
+[characteraction(name="middle", type="jump", xpos=35, fadetime=0.6,block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+// （飞箭声，白金做个位移，然后平移出屏幕）
+[delay(time=0.7)]
+[PlaySound(key="$rungeneral", volume=0.6)]
+[characteraction(name="middle", type="move", xpos=300, fadetime=1,block=false)]
+[Character(fadetime=0.5)]
+[delay(time=2)]
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=1)]
+[name="第三小队队员"]  已经有一部分人去出口把守了。
+[name="第三小队队员"]  再怎么说她也是白金大位，没这么好对付。
+[Character(name="avg_npc_216", name2="avg_npc_216", focus=2)]
+[name="第三小队队员"]  赶紧追，别给莫妮克阁下丢脸。
+[dialog]
+[PlaySound(key="$d_gen_soldiersrun", volume=0.5)]
+[characteraction(name="right", type="move", xpos=800, fadetime=2.5,block=false)]
+[character(name="avg_npc_216",name2="char_empty",fadetime=0.5)]
+[characteraction(name="left", type="move", xpos=600, fadetime=2.5,block=false)]
+[character(name="char_empty",name2="avg_npc_216",fadetime=0.5)]
+[delay(time=1.55)]
+[character]
+
+// （无胄盟成员也追上去）
+
+[Dialog]
+[Character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_indoor_2",screenadapt="coverall")]
+[Blocker(a=0.2, r=0, g=0, b=0, fadetime=1.5, block=true)]
+
+// （切场景，仓库（warehouse）可以的话把背景压暗点）
+// （出白金，从右面出无胄盟成员）
+// （白金向左平移出屏幕，右面无胄盟成员追上去）
+// （白金从右进场景，从左面出无胄盟成员）
+[Character(name="avg_npc_216",fadetime=1.5,block=true)]
+[delay(time=1)]
+[name="第三小队队员"]  您还想去哪里？
+[Character(name="char_204_platnm_1#5")]
+[name="白金"]  ......
+[Character(name="avg_npc_216")]
+[name="第三小队队员"]  投降吧，白金大位。
+[Character(name="char_204_platnm_1#5")]
+[name="白金"]  还是，再试试看吧......
+[name="白金"]  我可不想和师傅那样，死在这种地方......唔，起码死在一个能看见天空的地方吧......
+[Character(name="avg_npc_216")]
+[name="第三小队队员"]  动手。
+[Character(name="char_204_platnm_1#6")]
+[name="白金"]  喝啊！
+[dialog]
+[character]
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_gen_explo_n")]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=1, block=true)]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+// （晃动，爆炸，如果有烟雾的话上烟雾）
+[Blocker(a=0.4, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Character(name="avg_npc_216")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="第三小队队员"]  呜啊！
+[Dialog]
+[PlaySound(key="$bodyfalldown2", volume=0.6)]
+[Character(fadetime=1,block=true)]
+[Delay(time=2)]
+// （无胄盟成员倒下）
+[Character(name="char_204_platnm_1#2")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="白金"]  唔，咳咳......
+[name="白金"]  最后一支箭......
+[Character(name="char_204_platnm_1#5")]
+[name="白金"]  ......啧。
+
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_kxstreet",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
+// （大骑士领街道）
+[Character(name="avg_237_gravel_1#2",fadetime=1,block=true)]
+[delay(time=1)]
+[name="砾"]  年轻的骑士需要历练，而不是在和平年代受缚于竞技骑士带来的腐毒！
+[name="砾"]  罗德岛是一家值得信任的企业，他们已经赢得了砾的忠诚，就有理由让砾出去见见世面。
+[Character(name="avg_237_gravel_1#6")]
+[name="砾"]  ——大骑士长阁下是这么和老爷说的。
+[Character(name="avg_237_gravel_1#6", name2="char_120_hibisc_1", focus=2)]
+[name="芙蓉"]  ......哇，砾小姐转述别人话的时候总是能学得惟妙惟肖呢......明明语调其实都没变化来着。
+[dialog]
+
+[Decision(options="我同意，很神奇。;......;先前怎么没发现砾小姐还有这样的特长？",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_237_gravel_1")]
+[name="砾"]  诀窍是抓住重点。也谈不上特长，老爷那个脾气，被迫传话的情况比较多而已。
+[Character(name="avg_237_gravel_1", name2="char_120_hibisc_1", focus=2)]
+[name="芙蓉"]  老爷是指，那个收养了砾的骑士家族长骑吗？
+[Character(name="avg_237_gravel_1", name2="char_120_hibisc_1", focus=1)]
+[name="砾"]  ......是的。
+[Character(name="avg_237_gravel_1", name2="char_120_hibisc_1", focus=2)]
+[name="芙蓉"]  他最后同意了吗？
+[Character(name="avg_237_gravel_1#2", name2="char_120_hibisc_1", focus=1)]
+[name="砾"]  我......还没去说服老爷子。但我会去的。
+[Character(name="avg_237_gravel_1", name2="char_120_hibisc_1", focus=1)]
+[name="砾"]  上一次偶然提起，他生气地把我赶了出去......
+[Character(name="avg_237_gravel_1", name2="char_120_hibisc_1", focus=2)]
+[name="芙蓉"]  是这样啊......
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_kxstreet",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+// （切场景，仓库）
+[PlaySound(key="$rungeneral", volume=0.6)]
+// （跑动声）
+[Character(name="char_204_platnm_1#5",fadetime=0.7)]
+[delay(time=2)]
+[name="白金"]  咳咳，哈.....呼......
+[name="白金"]  还有一点......还有一点就......
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_kxstreet",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+// （大骑士领街道）
+
+[Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5")]
+[characteraction(name="right", type="move", xpos=2000, fadetime=0.1,block=true)]
+[Delay(time=1)]
+
+[characteraction(name="right", type="move", xpos=-2200, fadetime=1.5,block=false)]
+[delay(time=1.5)]
+[CameraShake(duration=0.3, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[characteraction(name="left", type="move", xpos=-50, fadetime=0.7,block=false)]
+[characteraction(name="right", type="move", xpos=50, fadetime=0.7,block=false)]
+[delay(time=1)]
+// （从左快出白金，然后撞在芙蓉的立绘上）
+[name="白金&芙蓉"]  啊——
+[dialog]
+[character]
+[Character(name="avg_237_gravel_1#7")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="砾"]  ——！
+[Character(name="avg_237_gravel_1#7",name2="char_204_platnm_1#5", focus=1)]
+[characteraction(name="right", type="move", xpos=-100, fadetime=0.05,block=true)]
+[characteraction(name="left", type="move", xpos=100, fadetime=0.05,block=true)]
+[Delay(time=1)]
+一瞬间，砾的刀剑已经架在了白金的脖颈上。
+她唯一没有立刻下手的理由，是因为面前的这个强敌已经精疲力尽，杀死她前所未有地简单。
+[dialog]
+[character]
+[Character(name="avg_237_gravel_1#4", name2="char_120_hibisc_1", focus=1)]
+[name="砾"]  没事吧？
+[Character(name="avg_237_gravel_1#4", name2="char_120_hibisc_1", focus=2)]
+[name="芙蓉"]  疼，疼疼疼......我没事啦......啊，好重的伤！
+[Character(name="char_204_platnm_1#6")]
+[name="白金"]  ......
+[Character(name="avg_237_gravel_1#4")]
+[name="砾"]  ......你似乎遇到了什么事情，白金大位。
+[Character(name="char_204_platnm_1#6")]
+[name="白金"]  ......没你们的事......唔。
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[dialog]
+[Dialog]
+[PlaySound(key="$bodyfalldown2", volume=0.6)]
+[Character(fadetime=1,block=true)]
+[Delay(time=2)]
+// （晃动，白金倒下）
+[Character(name="char_120_hibisc_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="芙蓉"]  路、路都走不稳了，但是没有明显的伤口......是单纯的疲劳吗？还是......
+[Character(name="avg_237_gravel_1#4", name2="char_120_hibisc_1", focus=1)]
+[name="砾"]  ......是无胄盟。他们已经追上来了。
+[Character(name="avg_237_gravel_1#7",name2="char_204_platnm_1", focus=1)]
+[name="砾"]  叛乱吗，还是说，你才是那个叛徒？
+[Character(name="char_120_hibisc_1")]
+[name="芙蓉"]  博、博士！
+[dialog]
+[character]
+你看着那个倒在地上的无胄盟，她和你印象里那一身潇洒的刺客截然不同。
+
+
+[Decision(options="......;......;......",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_204_platnm_1#4")]
+[name="白金"]  ......罗德岛的博士......
+[name="白金"]  外面的大地上，都是......你们这样的人吗？
+[dialog]
+
+[Decision(options="砾。",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1")]
+[name="砾"]  我在。
+[dialog]
+
+[Decision(options="我想无胄盟不会轻易地放过我们。;离开监正会的直接庇护后，我们可能会遭遇危险。;商业联合会只是一块挡箭牌，有时效的挡箭牌。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_237_gravel_1#6")]
+[name="砾"]  不瞒您说，我正打算与您商议这些事情。
+[Character(name="avg_237_gravel_1#2")]
+[name="砾"]  毕竟敌暗我明，在卡西米尔，无胄盟有太多办法对一家企业下黑手。
+[dialog]
+
+[Decision(options="好。",values="1")]
+[Predicate(references="1")]
+
+[Decision(options="芙蓉，先救走她！;砾，拖住无胄盟！",values="1;2;3")]
+[Predicate(references="1;2")]
+[Character(name="char_204_platnm_1#5")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="白金"]  ......！
+[Character(name="avg_237_gravel_1")]
+[name="砾"]  嘻，如您所愿。
+[Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5", focus=1)]
+[name="芙蓉"]  抓紧了啊，呃，无胄盟小姐——！
+[Character(name="char_204_platnm_1#2")]
+[name="白金"]  ......为什么......
+[dialog]
+
+[Decision(options="回头再解释吧，到时候再谈报酬。;......;我心善，帮人就是帮己。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Background(image="bg_kxstreet",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
+// （白金跑出屏幕）
+// （出第三小队成员）
+[Character(name="avg_npc_216", name2="avg_npc_216", fadetime=1,block=true)]
+[PlaySound(key="$d_gen_soldiersrun", volume=0.6)]
+[delay(time=2)]
+[Character(name="avg_npc_216")]
+[name="第三小队队员"]  快追，一定要堵住她！联系莫妮克阁下！
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="第三小队队员"]  该死！你们为什么要来碍事！？
+[Character(name="avg_237_gravel_1#3")]
+[name="砾"]  ......不知道呢。
+[Character(name="avg_237_gravel_1#6")]
+[name="砾"]  也许这就是耀骑士愿意相信罗德岛的理由吧。
+[Character(name="avg_npc_216")]
+[name="第三小队成员"]  啧，我们可不能陪你耗着——
+[Character(name="avg_npc_216", focus=-1)]
+[name="莫妮克"]  说得对。
+[dialog]
+[character]
+// （无立绘）
+// （缓出莫妮克）
+[Character(name="avg_npc_208_1",fadetime=1.5,block=true)]
+[delay(time=2)]
+[name="莫妮克"]  我们时间紧迫。而这件事，竟然还直接暴露给了一位征战骑士。
+[Character(name="avg_237_gravel_1")]
+[name="砾"]  ......听你的口气，是要杀我灭口？
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  唉。
+[name="莫妮克"]  ......似乎从某个时期开始，每当我打算工作的时候，面前都会出现一些不速之客。
+[Character(name="avg_237_gravel_1#3")]
+[name="砾"]  嘻，那真是抱歉，青金大位。
+[Character(name="avg_237_gravel_1")]
+[name="砾"]  我接受了博士的嘱托，从性质上来说，做的可是比工作更重要的事。
+[Character(name="avg_237_gravel_1#6")]
+[name="砾"]  当不了你的对手，阻挠你狙击还是够格的。
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  罗德岛吗。
+[name="莫妮克"]  没有耀骑士和那个古怪萨卡兹的他们，是否有些过于高看自己了？
+[name="莫妮克"]  即使从这个距离，我也能轻易贯穿那个医生和白金大位——这不是什么难事。
+[Character(name="avg_237_gravel_1#2")]
+[name="砾"]  ......
+[Character(name="avg_npc_208_1#3")]
+[name="莫妮克"]  看来你们的恣意妄为要让牺牲扩大了，骑士。
+[name="莫妮克"]  阻止我？试试看吧。
+[Character(name="avg_237_gravel_1#7")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="砾"]  ——喝！
+[Character(name="avg_npc_216")]
+[name="第三小队成员"]  休想！
+[dialog]
+[character]
+// （拼刀特效）
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.3, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$swordtsing2", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.6, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="avg_npc_216")]
+[name="第三小队成员"]  莫妮克阁下！
+[Character(name="avg_npc_208_1#5")]
+[name="莫妮克"]  我知道！你们何时能给我下命令了！？
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  ......白金。我们不再需要白金了。
+[Character(name="avg_npc_208_1#3")]
+[name="莫妮克"]  连着那个碍事的萨卡兹医生一起去死吧。
+[Character(name="avg_237_gravel_1#7")]
+[name="砾"]  啧！
+[dialog]
+[character]
+骄傲已经不容许她再次失手。
+莫妮克拉满了长弓。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+// （黑屏）
+// （屏中字）
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Subtitle(text="是谁说，要伤害罗德岛医疗组的成员？", x=300, y=370, alignment="center", size=24, delay=0.04, width=800)]
+[subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[delay(time=1)]
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_kxstreet",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+
+// （亮起）
+[Character(name="avg_npc_208_1#3")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="莫妮克"]  ——什么？
+[dialog]
+[character]
+箭尖钢铁腐蚀退化，箭杆则缩成了一截带着嫩芽的树枝，轻轻落在她手中。
+远处出现的人影只是遥遥一点，不适感立刻传遍了莫妮克的全身。
+是某种警觉。
+小个子的卡里普尼步幅极小，施法的姿态悠哉又缓慢，与这处战场格格不入。
+[dialog]
+[character]
+// （缓出Touch）
+[Character(name="avg_npc_249_1$1",fadetime=1.5,block=true)]
+[delay(time=1.5)]
+[name="Touch"]  ......本来只是想着，难得路线靠近本舰，回来探望一下，没想到能撞上这么奇妙的画面。
+[Character(name="avg_npc_208_1#3")]
+[name="莫妮克"]  你是谁？
+[Character(name="avg_npc_249_1$1")]
+[name="Touch"]  没有必要告诉你，无胄盟。
+[name="Touch"]  过度干预任务外的事项有违我的原则，不过方才，你似乎对逃走的罗德岛干员表露出了明确的敌意。
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  ......
+[Character(name="avg_npc_249_1$1")]
+[name="Touch"]  这可不行，无胄盟。
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G07",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+// （转场，商业街）
+[Character(name="char_204_platnm_1#5")]
+[name="白金"]  唔......
+[Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5", focus=1)]
+[name="芙蓉"]  你伤得很重，小姐。
+[Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5", focus=2)]
+[name="白金"]  唔，我......
+[Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5", focus=1)]
+[name="芙蓉"]  不用担心，穿过这片商业区，就能看到罗德岛啦。
+[Character(name="char_120_hibisc_1",name2="char_204_platnm_1#7", focus=2)]
+[name="白金"]  ......
+[dialog]
+[Character(name="char_204_platnm_1#5")]
+从自己的住所外逃开始，白金已经三天三夜没有合眼了。
+她不敢喝水，不敢进食，生怕自己买下的饮食，会是无胄盟的陷阱。
+罗德岛......
+[dialog]
+[Character(name="char_204_platnm_1#5")]
+[name="白金"]  ......
+[dialog]
+她回头看了一眼，那是罗德岛的博士。
+一个坏她好事的境外组织首领。
+也是她的救星。
+[dialog]
+[Character(name="char_204_platnm_1#7")]
+[name="白金"]  ......真讽刺啊。
+[dialog]
+她还在想是不是要在博士面前保持一下自己的形象，她还想问问博士能不能带她出大骑士领，她还......
+没有从这片恍惚的天空下回过神来。
+[dialog]
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_kxstreet",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+// （转场，大骑士领街道）
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$b_char_defboost", volume=0.6)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=2)]
+// （打斗）
+[Character(name="avg_npc_249_1$1")]
+[name="Touch"]  ......唔。
+[name="Touch"]  只凭两个人想要拦住青金大位，果然还是有些勉强......
+[Character(name="avg_237_gravel_1#5")]
+[name="砾"]  是吗？我倒觉得我们已经做得够好了，他们那么多人呢。
+[Character(name="avg_npc_208_1#3")]
+[name="莫妮克"]  ......嘁。那个征战骑士负了伤还能做出这样的反抗，也是因为你的法术吗？
+[name="莫妮克"]  你为什么知道我的身份？你是卡西米尔人？
+[Character(name="avg_npc_249_1$1")]
+[name="Touch"]  ......问题太多了，无胄盟，我们应该慢慢解决问题。
+[Character(name="avg_npc_208_1#2")]
+[name="莫妮克"]  随便吧，你似乎比那个萨卡兹更像个正常的医生——但这也就意味着，你拖不了我太久。
+[Character(name="avg_npc_208_1#3")]
+[name="莫妮克"]  既然你对无胄盟这么了解，那你应该知道，无胄盟有着更可怕的——
+[dialog]
+[Character(name="avg_npc_208_1#3", focus=-1)]
+// （电话响声）
+[PlaySound(key="$phone",volume=0.6)]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  ......
+[Character(name="avg_npc_249_1$1")]
+[name="Touch"]  ......请。
+[name="Touch"]  我与这位骑士绝不是乘人之危的人。
+[Character(name="avg_npc_208_1")]
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[delay(time=0.5)]
+[name="莫妮克"]  ......是。
+[delay(time=0.5)]
+[Character(name="avg_npc_208_1#4")]
+[name="莫妮克"]  啧......好吧。
+[Character(name="avg_npc_208_1")]
+[name="莫妮克"]  ......都听您的。
+[PlaySound(key="$transmission",volume=0.6)]
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=1)]
+[name="第三小队成员"]  莫妮克阁下？
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=2)]
+[name="莫妮克"]  ......撤退。
+[name="莫妮克"]  征战骑士注意到骚乱了，不要引起不必要的动乱。
+[Character(name="avg_npc_216", name2="avg_npc_208_1", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="第三小队成员"]  诶？可是侦察队并没有发现这附近有任何骑士的——
+[Character(name="avg_npc_216", name2="avg_npc_208_1#5", focus=2)]
+[name="莫妮克"]  不要让我重复第二遍。
+[Character(name="avg_npc_216", name2="avg_npc_208_1#5", focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="第三小队成员"]  是、是！全员，收队！！
+[Character(name="avg_npc_208_1#3")]
+[name="莫妮克"]  ......运气不错啊。
+[Character(name="avg_npc_249_1$1")]
+[name="Touch"]  运气？
+[name="Touch"]  事在人为，无胄盟。
+
+// （电话挂断声，黑屏，然后切场景，野外）
+[stopmusic(fadetime=2)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2.5, block=true)]
+[Background(image="bg_coldforest",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+
+[name="？？？"]  我只是好奇，玛恩纳。
+[dialog]
+// （玄铁，不出立绘）
+// （缓出玛恩纳）
+[Character(name="avg_npc_108#3",fadetime=1,block=true)]
+[delay(time=2)]
+[name="玛恩纳"]  ......
+[Character(name="avg_npc_108#3", focus=-1)]
+[name="？？？"]  多少年了？
+[name="？？？"]  多少年了，你都像拉犁的驮兽一样待在卡西米尔，西里尔死去也没见你改变什么。
+[name="？？？"]  你曾让多少对手和敌人感到如鲠在喉，你让他们寝食难安。
+[name="？？？"]  哪怕你什么也没做，他们也花了很多时间才敢相信，相信那个玛恩纳·临光已经不再锋芒毕露。
+[name="？？？"]  那时，你还年轻。那还是你最黄金的岁月......但你为了西里尔，为了两个年幼的后辈，你选择留在了卡西米尔。
+[name="？？？"]  这么多年了，连我都以为你早已放弃。
+[name="？？？"]  可为什么这个时候，你还要选择离开大骑士领？
+[Character(name="avg_npc_108#2")]
+[name="玛恩纳"]  ......你没必要知道。
+[Character(name="avg_npc_108#2", focus=-1)]
+[name="？？？"]  你知道监正会最机密的卷宗，仍旧储藏在那个滑稽的景点，大骑士领的冠军墙展厅之下，对吧？
+[name="？？？"]  卷宗管理员告诉了你什么？不，那个老顽固绝不会透露风声......那么就是，大骑士长的意思了？
+[Character(name="avg_npc_108")]
+[name="玛恩纳"]  只是，享受我应得的假期。
+[Character(name="avg_npc_108", focus=-1)]
+[name="？？？"]  那期待能在假期结束后看到你重回岗位，玛恩纳......
+[Character(name="avg_npc_108#2")]
+[name="玛恩纳"]  不劳您费心了。
+[Character(name="avg_npc_108#2", focus=-1)]
+[name="？？？"]  ......我活了很久了，玛恩纳。
+[name="？？？"]  当我仍旧记得，你点燃了莱塔尼亚人阴谋，白炽的浪潮将敌人的阵地瓦解殆尽......
+[name="？？？"]  背叛的骑士们被你一一斩杀，他们倒下，而你像是个收割麦穗的农夫。
+[name="？？？"]  耀骑士的光芒闪耀却虚无，我更欣赏你的光潮，你的愤怒。
+[name="？？？"]  并且，从那时起我就相信，当我再一次见到你的光芒时，我就必须......
+[name="？？？"]  取你性命。
+[Character(name="avg_npc_108#3")]
+[name="玛恩纳"]  ......
+[Character(name="avg_npc_108")]
+[name="玛恩纳"]  那你呢？
+[Character(name="avg_npc_108", focus=-1)]
+[name="？？？"]  嗯？
+[Character(name="avg_npc_108")]
+[name="玛恩纳"]  这就是经过了大半个世纪之后，你为你一手建立的无胄盟，最后选择的归宿吗？
+[Character(name="avg_npc_108", focus=-1)]
+[name="？？？"]  ......只是做了一个最聪明的选择。你应该很明白这个道理。
+[name="？？？"]  哦，或者说耀骑士让你相信，临光家有了新的未来吗？你认可她那样理想到无法实现的道路？
+[Character(name="avg_npc_108")]
+[name="玛恩纳"]  ......道路，未来。
+[name="玛恩纳"]  临光的骑士从来不需要他人来判断自己道路的方向，我只是不相信她们有着在这条道路上坚持下去的力量。
+[name="玛恩纳"]  也不相信......她们有同行的伙伴。
+[Character(name="avg_npc_108#2")]
+[name="玛恩纳"]  但现在不同了。
+[Character(name="avg_npc_108#2", focus=-1)]
+[name="？？？"]  嚯......
+[name="？？？"]  ......不过，也是。你和耀骑士本就是一类人。
+[Character(name="avg_npc_108")]
+[name="玛恩纳"]  ......
+[Character(name="avg_npc_108", focus=-1)]
+[name="？？？"]  你比她更失望，比她更不相信这个国度，仅此而已。
+[name="？？？"]  遗憾，我本以为，我们的失望和愤怒，是如出一辙的......
+[Character(name="avg_npc_108")]
+[name="玛恩纳"]  ......想尽办法融入商业联合会的你，又有什么脸面同我说“如出一辙”？
+[name="玛恩纳"]  叙旧的时间已经够多了。
+[Character(name="avg_npc_108", focus=-1)]
+[name="？？？"]  ......怎么，无胄盟已经停止了对罗德岛与临光家族的伤害，这难道还不足以表现我的诚意？
+[Character(name="avg_npc_108")]
+[name="玛恩纳"]  足够了。
+[name="玛恩纳"]  否则你已经是沐浴在光雨下的一具尸骨。
+[Character(name="avg_npc_108", focus=-1)]
+[name="？？？"]  ......
+[Character(name="avg_npc_108#2")]
+[name="玛恩纳"]  无胄盟做了多少事情，你比我更清楚。
+[name="玛恩纳"]  我们从来是敌非友......“玄铁”。
+[Character(name="avg_npc_108#2", focus=-1)]
+[name="？？？"]  ......呵，刻薄，就和以前一样。
+[name="？？？"]  再会了，玛恩纳。期待你的旅途......能有所收获。
+
+
+[stopmusic(fadetime=1.5)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_23_G05",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+// （切场景，二期大骑士领街道）
+[Character(name="char_204_platnm_1",fadetime=0.7)]
+[delay(time=2)]
+
+// （出白金）
+[Decision(options="身体好点了吗？;......;伤口不痛了吧。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_204_platnm_1")]
+[name="白金"]  ......遭到青金的追击，不代表我就失去了无胄盟的立场......也许我还会受命于董事会......
+[name="白金"]  你不会不明白，为什么......
+[dialog]
+
+[Decision(options="我相信这会是双赢的结果。;......;只是巧合罢了。",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_204_platnm_1#5")]
+[name="白金"]  ......
+[Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5", focus=1)]
+[name="芙蓉"]  哎呀！大家都帮你到这一步了，坦率地道个谢不就好了吗！
+[Character(name="char_120_hibisc_1",name2="char_204_platnm_1#7", focus=2)]
+[name="白金"]  ......
+[Character(name="char_204_platnm_1#7")]
+[name="白金"]  谢、谢谢，博士......
+[dialog]
+[character]
+// （缓出砾）
+[Character(name="avg_237_gravel_1#5",fadetime=1,block=true)]
+[delay(time=1)]
+[name="砾"]  呼......
+[name="砾"]  您可真是给我出了个难题呀，博士。
+[Character(name="avg_npc_249_1$1",name2="avg_237_gravel_1#5", focus=1)]
+[name="Touch"]  放轻松，札拉克，这样治疗会更有效。
+[Character(name="avg_npc_249_1$1",name2="avg_237_gravel_1#3", focus=2)]
+[name="砾"]  谢谢......
+[delay(time=0.5)]
+[dialog]
+// （顿一下，砾重新站起来）
+[Character(name="char_120_hibisc_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="芙蓉"]  砾小姐！你怎么会和Touch老师在一起呀！？
+[Character(name="avg_237_gravel_1")]
+[name="砾"]  ......凑巧吧。
+[name="砾"]  不好意思，能让我坐下聊吗？
+[Character(name="char_120_hibisc_1")]
+[name="芙蓉"]  请便！啊，Touch老师也......
+[Character(name="avg_npc_249_1$1")]
+[name="Touch"]  ......不必，只是找阿米娅汇报一下工作。
+[dialog]
+[character]
+
+[Decision(options="辛苦了，二位。",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1")]
+[name="砾"]  对付青金本人，真的很辛苦呢。
+[Character(name="avg_237_gravel_1#3",name2="char_204_platnm_1", focus=1)]
+[name="砾"]  不过，还算是有些成果，对吧。
+[Character(name="avg_237_gravel_1#3",name2="char_204_platnm_1#7", focus=2)]
+[name="白金"]  ......
+[Character(name="avg_237_gravel_1")]
+[name="砾"]  您可欠了我一个大大的人情哦，呵呵。
+[dialog]
+
+[Decision(options="该回罗德岛了。",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1")]
+[name="砾"]  看来您和白金已经达成共识了呢。
+[Character(name="avg_237_gravel_1#6")]
+[name="砾"]  明明前一刻还是敌人，后一秒就能握手言谈。
+[name="砾"]  真是神奇。
+[Character(name="avg_237_gravel_1#2")]
+[name="砾"]  嗯，我也该休息一会了......
+[dialog]
+
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
+
+// （切场景，罗德岛走廊）
+// （缓出白金）
+[Character(name="char_204_platnm_1#3",fadetime=1.5,block=true)]
+[delay(time=1)]
+[name="白金"]  ......
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[Character(name="avg_237_gravel_1",name2="char_204_platnm_1#3", focus=1)]
+[name="砾"]  在盘算着什么？无胄盟。
+[Character(name="avg_237_gravel_1",name2="char_204_platnm_1", focus=2)]
+[name="白金"]  ......你还盯着我啊。
+[Character(name="avg_237_gravel_1",name2="char_204_platnm_1", focus=1)]
+[name="砾"]  离开卡西米尔之前......不，在你从博士身边离开之前，我都会盯着你的。
+[Character(name="avg_237_gravel_1#6",name2="char_204_platnm_1", focus=1)]
+[name="砾"]  嘻......毕竟是你自己说的嘛。无胄盟出现了叛乱，那么商业联合会说不定更会私下委你重任......
+[Character(name="avg_237_gravel_1#2",name2="char_204_platnm_1", focus=1)]
+[name="砾"]  别以为博士救了你，你就能摆脱过去的身份，杀手，沾着鲜血的无胄盟不值得信任。
+[Character(name="avg_237_gravel_1#2",name2="char_204_platnm_1", focus=2)]
+[name="白金"]  说的倒是没错。
+[name="白金"]  别担心，起码现在，我还是要努力争取博士信任的。这点圆滑的处事方式都想不明白，在大骑士领可是混不下去的。
+[Character(name="avg_237_gravel_1#5",name2="char_204_platnm_1", focus=1)]
+[name="砾"]  ......你在讽刺我？
+[Character(name="avg_237_gravel_1#5",name2="char_204_platnm_1#3", focus=2)]
+[name="白金"]  ......讽刺别人太麻烦了。别多心。
+[name="白金"]  你会和罗德岛一起离开卡西米尔？
+[Character(name="avg_237_gravel_1",name2="char_204_platnm_1#3", focus=1)]
+[name="砾"]  与你无关呢。
+[Character(name="avg_237_gravel_1",name2="char_204_platnm_1#5", focus=2)]
+[name="白金"]  苦日子要开始了......
+[Character(name="avg_237_gravel_1",name2="char_204_platnm_1#7", focus=2)]
+[name="白金"]  ......我还是第一次......登上这样的陆行舰。
+[name="白金"]  哈......那个博士......也真是个奇怪的人。
+[Character(name="avg_237_gravel_1#6",name2="char_204_platnm_1#7", focus=1)]
+[name="砾"]  奇怪可不应该用来形容救命恩人。
+[Character(name="avg_237_gravel_1#6",name2="char_204_platnm_1#3", focus=2)]
+[name="白金"]  ......也是啦。
+[Character(name="avg_237_gravel_1#6",name2="char_204_platnm_1", focus=2)]
+[name="白金"]  我们还会回来吗？
+[Character(name="avg_237_gravel_1#4",name2="char_204_platnm_1", focus=1)]
+[name="砾"]  你想回来吗？
+[Character(name="avg_237_gravel_1#4",name2="char_204_platnm_1#3", focus=2)]
+[name="白金"]  ......嗯......
+[name="白金"]  不知道，没想过。
+[Character(name="avg_237_gravel_1#4",name2="char_204_platnm_1#7", focus=2)]
+[name="白金"]  但至少现在，只想要离开的吧。
+
+
+
+
+
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Dialog]
+[Character]
+[Image]
