@@ -1,0 +1,724 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 小车个人剧情
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_wild_a",screenadapt="coverall")]
+6:29 A.M. 天气/阴
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[Character(name="avg_286_cast3_1$1",fadetime=0.7)]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 确认环境——距离第1439号塌方位置3.79公里。
+[name="Castle-3"] 扫描周围生命体——八人，隶属罗德岛工程部应急响应施工队。
+[name="Castle-3"] 安全等级评定为中低风险。
+[name="Castle-3"] 博士，这是个可靠的休息地点。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="麻烦你了，Castle-3。;......;我已经坐下五分钟了。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character]
+[delay(time=0.51)]
+[Character(name="avg_npc_012",fadetime=0.7)]
+[Delay(time=0.7)]
+[name="工程干员A"] 博士，这地方收拾得差不多了，等最前面的勘测小组发回地质报告，我们就准备继续前进了。
+[dialog]
+[Character(name="avg_npc_012",focus=-1)]
+[Decision(options="大家辛苦了。;一夜没睡，真是不容易啊。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_012",fadetime=1)]
+[name="工程干员A"] 我们是习惯了，只要罗德岛行驶在荒原上，就什么突发情况都可能会有。
+[name="工程干员A"] 为了确保航线通畅，一个月总有那么几天得半夜离舰紧急施工。
+[name="工程干员A"] 再说了，这回有博士在场，提前排查了好几处不稳定结构，这效率提升了不少，我估摸着再有个两三小时，大家就能回舰休息了。
+[name="工程干员A"] 博士，你是不是也很累了？
+[dialog]
+[Character(name="avg_npc_012",focus=-1)]
+[Decision(options="这是我应该做的。;难得出来，就当散散心。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_012",fadetime=1)]
+[name="工程干员A"] 对了，还有Castle-3，你也是大功臣！
+[name="工程干员A"] 这一带沙地兽真是多，你不在的话，光是要把它们都赶走，就得多费很多力气啊。
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 我会遵守指令，保障博士和大家的安全。
+[Character(name="avg_npc_012")]
+[name="工程干员A"] Castle-3，你加入工程部门也有三年多了吧？
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 是的，距离可露希尔主人第一次启动我升级后的系统，已经过去三年十个月零九天。
+[Character(name="avg_npc_012")]
+[name="工程干员A"] 这么长时间......真是比我们中的很多人都要久了啊。
+[Dialog]
+[Character]
+[Delay(time=0.51)]
+[Character(name="char_013_riop",fadetime=1)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[delay(time=1)]
+[name="工程干员B"] 博士，我们准备热点早饭吃，你要不要一起？
+[dialog]
+[Character(name="char_013_riop",focus=-1)]
+[Decision(options="请给我来一碗汤。;我不饿，喝点水就好。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_013_riop",fadetime=1)]
+[name="工程干员B"] Castle-3，你——
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 谢谢，我暂时不需要充电。
+[name="Castle-3"] 从剩余电量来看，本设备还能正常运作八小时十七分钟。
+[Character(name="char_013_riop")]
+[name="工程干员B"] 哈......哈哈，本来是想问下你能不能帮忙加热一下冷冻熏肉，毕竟我们平时和Thermal-EX一起行动惯啦。
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 很遗憾，我的型号不支持上述功能。
+[Character(name="char_013_riop")]
+[name="工程干员B"] 唉......没事，我想到了个别的法子。
+[Dialog]
+[Character(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[PlaySound(key="$transmission",volume=1)]
+[Delay(time=1.5)]
+[CameraShake(duration=1, xstrength=10, ystrength=10, vibrato=20, randomness=70, fadeout=true, block=false)]
+[Delay(time=1.5)]
+[Character(name="avg_npc_012")]
+[name="工程干员A"] 喂，你们谁把剃须刀那家伙的录音机打开了？
+[Character(name="char_013_riop")]
+[name="工程干员B"] 别着急啊，我就是想要点热量......
+[Character(name="avg_npc_012")]
+[name="工程干员A"] 那玩意儿年纪可比我们年纪都要大，小心它把我们营地给炸了！
+[dialog]
+[Character]
+[delay(time=1)]
+[CameraShake(duration=1, xstrength=10, ystrength=10, vibrato=20, randomness=70, fadeout=true, block=false)]
+[Delay(time=1.3)]
+[CameraShake(duration=1, xstrength=10, ystrength=10, vibrato=20, randomness=70, fadeout=true, block=false)]
+[Delay(time=1.3)]
+[CameraShake(duration=1, xstrength=10, ystrength=10, vibrato=20, randomness=70, fadeout=true, block=false)]
+[Delay(time=1.3)]
+[dialog]
+[Character(name="char_empty")]
+[Decision(options="这真是录音机？;不是源石爆破物吧？！", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] ......从外壳震动频率来看，该设备的内部电路老化严重，有小概率发生自燃。
+[name="Castle-3"] 博士，需不需要我把目标对象抹除？
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="不着急。;我们离远一点坐吧。", values="1;2")]
+[Predicate(references="1;2")]
+[Character]
+[Delay(time=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=10, vibrato=20, randomness=70, fadeout=true, block=false)]
+“♪不朽......不朽......我将成为不朽的怒风......”
+[Character(name="char_013_riop")]
+[name="工程干员B"] 快、快摁住它，它是不是要散架啦？
+[Dialog]
+[Character]
+[Delay(time=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=10, vibrato=20, randomness=70, fadeout=true, block=false)]
+“♪不朽......不朽......我将成为不朽的野火......”
+[Character(name="avg_npc_012")]
+[name="工程干员A"] 谁来救救我，我的耳朵快给震聋了！
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 收到。
+[Dialog]
+[Delay(time=0.51)]
+[PlaySound(key="$p_atk_elecball_n", volume=1)]
+[Delay(time=0.51)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=10, vibrato=20, randomness=70, fadeout=true, block=false)]
+[Delay(time=1)]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 威胁解除。
+[Character(name="avg_npc_012",name2="char_013_riop",focus=1)]
+[name="工程干员A"] ......唉。
+[Character(name="avg_npc_012",name2="char_013_riop",focus=2)]
+[name="工程干员B"] 可怜的剃须刀。
+[Character(name="avg_npc_012",name2="char_013_riop",focus=1)]
+[name="工程干员A"] Castle-3，这录音机是彻底坏了吗？
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 我拆除了它的电源。
+[name="Castle-3"] 在得到彻底维修之前，我不建议你们继续使用这台设备。
+[Character(name="avg_npc_012",name2="char_013_riop",focus=1)]
+[name="工程干员A"] 维修......要是真能修好的话，我们早就动手了吧？
+[name="工程干员A"] 更不用说剃须刀自己......
+[name="工程干员A"] 有的东西坏了就是坏了，再怎么想让它继续陪着我们，也留不住。
+[dialog]
+[Character(name="avg_npc_012",name2="char_013_riop",focus=-1)]
+[Decision(options="录音机......;剃须刀......", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_012",name2="char_013_riop",focus=1)]
+[name="工程干员A"] 是的，博士，录音机是干员剃须刀的遗物。
+[name="工程干员A"] 你还记得剃须刀吗？上次在哥伦比亚，他帮迪伦抢修过“坏家伙”号。
+[name="工程干员A"] 那时候他还好好的，回来之后不久，病情就急转直下，没几天就走了。
+[name="工程干员A"] 他才四十多岁......算了，不说这话。只要得了矿石病，谁都想过会有这一天。
+[name="工程干员A"] 博士，我们吃饭。
+[Character(name="avg_npc_012",name2="char_013_riop",focus=2)]
+[name="工程干员B"] 嗯，吃饭......肉还是凉的，不过也没关系，有的吃就不错啦。
+[dialog]
+[Character]
+[Decision(options="干了这碗汤吧。;......;敬剃须刀。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_012",name2="char_013_riop",focus=2)]
+[name="工程干员B"] 不朽......不朽......
+[Character(name="avg_npc_012",name2="char_013_riop",focus=1)]
+[name="工程干员A"] 你这边吃饭边敲碗还唱歌，跟剃须刀学的啊？
+[Character(name="avg_npc_012",name2="char_013_riop",focus=2)]
+[name="工程干员B"] 他活得就像他的录音机一样有劲，对不对？
+[Character(name="avg_npc_012",name2="char_013_riop",focus=1)]
+[name="工程干员A"] ......成为一团不朽的野火。
+[Character]
+[Dialog]
+[Delay(time=0.7)]
+“♪不朽......不朽......我将成为不朽的野火......”
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，大家在干什么？
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="大家在唱歌。;大家在思念一位老朋友。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 类似行为，我在陪同干员贾维工作时，也在他身上见过好几次。
+[name="Castle-3"] 然而，博士，我无法掌握这项技能。
+[name="Castle-3"] 可露希尔主人为我添加的语言模块，让我能理解这些词语的意思。
+[name="Castle-3"] 但我并不能体会把这些词语以上述节奏和高低频率表达出来，会和直接说出来有什么差别。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="大家在唱歌。;......;重要的是情感的抒发。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 不朽。
+[name="Castle-3"] 我同样不理解这个词语。
+[name="Castle-3"] 没有什么事物是永不损坏的，哪怕是最坚硬的机器也一样。
+[Dialog]
+[Character]
+[PlaySound(key="$transmission", volume=1)]
+[delay(time=0.51)]
+[CharacterCutin(name="char_349_chiave#1",widgetID="Chiave",offsetx=-350,fadestyle:"horiz_expand_center",fadetime=0.51,width=200,block=true)]
+[name="贾维"] Castle-3！你是不是在附近了？
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=2,fadetime=0.51)]
+[name="Castle-3"] 是的，贾维兄弟，我和博士和施工队在一起。你们勘测小组是否顺利？
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=1)]
+[name="贾维"] 顺利顺利，我都准备好了......呃，我是说，工作干差不多了。
+[name="贾维"] 那个，小爷我啊，忘带扳手了，你过来给我送一下如何？
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=2)]
+[name="Castle-3"] 贾维兄弟，如果你没有随身携带重要用具，是如何完成工作的呢？
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=1)]
+[name="贾维"] ......这你就不用管了。
+[name="贾维"] Castle-3，咳，就昨天我们约好的那个事——
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=2)]
+[name="Castle-3"] 你是指昨天说的，你想申请一次长期外勤，并让我陪......
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=1)]
+[name="贾维"] 对对，不过先别说了，博士还在边上呢——
+[name="贾维"] 博士，我让Castle-3过来一趟，你没意见吧？
+[dialog]
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=1)]
+[Decision(options="没意见。;......;你这表现有点奇怪啊。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="贾维"] 好了好了，我就知道你一定会批准的！
+[name="贾维"] Castle-3，你赶紧过来吧，我在前面等你——
+[Dialog]
+[CharacterCutin(widgetID="Chiave")]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[Delay(time=1)]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，我去给贾维兄弟送工具，您更希望留在这里，还是和我一起行动？
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="一起去吧。;正好我也想多走几步。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 好的，博士。
+[Dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_corridor",screenadapt="showall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]	
+[Character(name="char_007_closre_1#1")]
+[name="可露希尔"] Castle-3还没回来吗？
+[name="可露希尔"] 算算日子时限差不多快到了，说好了他今天要来找我处理一下的啊。
+[name="可露希尔"] 对了，刚才我问贾维Castle-3在哪里，他怎么表现得奇奇怪怪的？
+[Character(name="char_007_closre_1#6")]
+[name="可露希尔"] 坏了坏了，他该不会是想偷偷带Castle-3私奔吧？！
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Background(image="bg_desert_3",screenadapt="showall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]	
+[playMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.4)]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，能在这一天和您一起行动，Castle-3感到很愉快。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="这一天？;......;Castle-3，你的表现也有点奇怪。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，今天对我来说确实是特别的。
+[name="Castle-3"] 就像刚才干员们说的那样，我已经在罗德岛上工作很久了。
+[name="Castle-3"] 和我同型号的作业平台很少能保持运作更长时间。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="我能看到你身上有很多磨损的痕迹。;......;那些标记......", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，我注意到您在看我身上的刻痕。
+[name="Castle-3"] 您是否想知道它们的由来？
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="我想知道。;早就想问了。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 这些刻痕伴随我走过了这三年。
+[name="Castle-3"] 在我身上刻下它们的人各不相同，最初那道来自一位年轻的狙击干员。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[stopmusic(fadetime=1)]
+[Delay(time=2)]
+[Background(image="bg_labentrance",screenadapt="showall")]
+[PlaySound(key="$blizzard",volume=0.6,channel="1",loop=true,fadetime=2)]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[Character(name="avg_npc_089")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[Character(name="avg_npc_089")]
+[name="狙击干员"] ......这些该死的强盗，怎么这么多？
+[Dialog]
+[Delay(time=0.51)]
+[PlaySound(key="$e_atk_arrow_h", volume=1)]
+[Delay(time=1)]
+[name="狙击干员"] 哈......又一个！
+[name="狙击干员"] 想要拿走我身上的资料......没门！咳......咳咳......该死，刚才那一刀一定是伤到了肺......
+[name="狙击干员"] Castle-3......
+[Character(name="avg_npc_089",name2="avg_286_cast3_1$1",focus=2)]
+[name="Castle-3"] 我在。
+[Character(name="avg_npc_089",name2="avg_286_cast3_1$1",focus=1)]
+[name="狙击干员"] 过......过来......搭把手......
+[Character(name="avg_npc_089",name2="avg_286_cast3_1$1",focus=2)]
+[name="Castle-3"] 我建议您躺下休息。虽然我只是一具作战平台，但我也能看出来，您的身体状态已经不适合继续战斗下去了。
+[Character(name="avg_npc_089",name2="avg_286_cast3_1$1",focus=1)]
+[name="狙击干员"] 躺下......吗？不，还不到躺下的时候。
+[Dialog]
+[Delay(time=0.51)]
+[Character(name="avg_npc_089",name2="avg_286_cast3_1$1",focus=1)]
+[name="狙击干员"] Castle-3，你不介意我在你身上留个标记吧？
+[Dialog]
+[Delay(time=0.51)]
+[Characteraction(name="left",type="move",xpos=70,fadetime=0.51)]
+[Delay(time=1.5)]
+[Characteraction(name="left",type="move",xpos=-70,fadetime=0.51)]
+[Delay(time=0.51)]
+[Character(name="avg_npc_089",name2="avg_286_cast3_1$1",focus=2)]
+[name="Castle-3"] 这种程度的外壳磨损完全不会影响我的功能。
+[name="Castle-3"] 但我不明白您的行为有何意义。
+[Character(name="avg_npc_089",name2="avg_286_cast3_1$1",focus=1)]
+[name="狙击干员"] 没关系......咳咳......Castle-3，其实你也知道，我快死了吧？
+[Character(name="avg_npc_089",name2="avg_286_cast3_1$1",focus=2)]
+[name="Castle-3"] 如果无法立刻得到治疗，您的身体功能将会在三至五个小时内终止运作。
+[Character(name="avg_npc_089",name2="avg_286_cast3_1$1",focus=1)]
+[name="狙击干员"] 终止运作吗......嗯，没错，对我们人类来说，这就是死亡。
+[name="狙击干员"] 你想让我躺下来，就这样等着最后一刻到来......我做不到。
+[name="狙击干员"] 这最后的几个小时，我必须坚持下去，做点什么。
+[name="狙击干员"] ——你看这些敌人，他们不光抢罗德岛的东西，还一直在骚扰附近的感染者村庄。
+[name="狙击干员"] 所以，在我死前，我要干掉他们。
+[dialog]
+[Character(name="avg_npc_089")]
+[delay(time=0.51)]
+[PlaySound(key="$e_atk_arrow_h", volume=1)]
+[Delay(time=1)]
+[Character(name="avg_npc_089")]
+[name="狙击干员"] ......第三个。
+[name="狙击干员"] 一道刻痕，一次死亡。 
+[name="狙击干员"] ——这是我用我的命换来的。
+[name="狙击干员"] 哪怕到了最后关头，这也提醒着我，我的生命和我的死亡，都有意义......
+[Dialog]
+[Delay(time=0.51)]
+[Characteraction(name="middle",type="move",ypos=-50,fadetime=0.6)]
+[Delay(time=0.6)]
+[character(fadetime=0.51)]
+[PlaySound(key="$bodyfalldown1", volume=1)]
+[Delay(time=1)]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] ......
+[name="Castle-3"] 猎弓先生！
+[stopsound(channel="1",fadetime=2)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[CameraEffect(effect="Grayscale", fadetime=0, amount=0, block=true)]
+[Background(image="bg_desert_3",screenadapt="showall")]
+[Character(name="avg_286_cast3_1$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[musicvolume(volume=0.4, fadetime=1)]
+[Delay(time=1)]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 最后我背着那位干员冲了出去。很遗憾，在回到罗德岛的时候，他的身体功能还是终止了。
+[name="Castle-3"] 或者使用更确切的词语，他迎来了“死亡”。
+[playMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.4)]
+[name="Castle-3"] 可露希尔主人注意到了我身上的刻痕，她本来想帮我去掉，但我更希望留下。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="因为你想纪念那位干员？;因为你想纪念那次事件？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 抱歉，博士，我同样不能理解“纪念”这个词语。
+[name="Castle-3"] 对机器人来说，只要我的核心一天没有损坏，我的记忆库里就会一直记录着那次事件，同样也保存着猎弓先生的所有资料。
+[name="Castle-3"] 如果您想知道我为何决定保留这些刻痕，我很难给出一个精确的回答。
+[name="Castle-3"] 可露希尔主人提出过一个可能性——
+[name="Castle-3"] 她说，我是在“模仿”。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="你在模仿那位干员？;你在模仿刻痕行为？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 可露希尔主人给我们这些机器都设计了这部分模块，她希望我们的行为举止能更接近人类。
+[name="Castle-3"] 虽然我并不能完全理解猎弓先生留下的刻痕的具体意义，但我的程序功能让我决定延续他的行为。
+[name="Castle-3"] 在那次事件之后，我每次外出执行作战任务，都会计数自己击退了多少敌人——
+[name="Castle-3"] 并在结束后拜托同行干员，请他们在我的外壳上刻下相应数量的痕迹。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="你是在学习。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，我不像Thermal-EX，我不会发热，我的程序也并不支持我进行“学习”。
+[name="Castle-3"] 直到今天，我得出了一个并不确切的结论：猎弓先生留下来的刻痕，可能和剃须刀先生的录音机是类似的东西。
+[name="Castle-3"] 就像在本设备不得不停止工作后，我布满刻痕的外壳也许仍然能存在一段时间，无论是在垃圾场，还是在可露希尔主人的私人仓库里。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="我更希望它留在特殊储物间里。;我会怀念与你一起经历的每一场战斗。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 谢谢您，博士。
+[name="Castle-3"] 等我的核心停止了运作，我记忆库里的数据也会被清除。
+[name="Castle-3"] 但您今天告诉我的这些话，对我来说有很大意义。
+[Character]
+[Dialog]
+[PlaySound(key="$transmission", volume=1)]
+[Delay(time=1.5)]
+[CharacterCutin(name="char_349_chiave#3",widgetID="Chiave",offsetx=-300,fadestyle:"horiz_expand_center",fadetime=0.51,width=200,block=true)]
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=1,fadetime=0.51)]
+[name="贾维"] Castle-3！你到哪里了？
+[name="贾维"] 施工队的人越来越近，等他们都到了，事情就麻烦了啊！
+[name="贾维"] 还有，刚才可露希尔发来消息，她问我你是不是跟我在一起......
+[name="贾维"] Castle-3，我们再不跑就来不及了！
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=2)]
+[name="Castle-3"] 贾维兄弟，我没有明白——什么来不及了？
+[name="Castle-3"] 此外，我听到扳手的声音了。这是否可以说明，其实你并不需要我给你送工具？
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=1)]
+[name="贾维"] 那就是个借口......别管那么多了！
+[name="贾维"] 我早就听可露希尔说了，你的核心马上就要坏了吧？她是不是打算把你报废了，就跟以前我们厂里报废那些发动机坏了的车一样！
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=2)]
+[name="Castle-3"] 如果你的意思是，主人是否会在今天停止我的功能的话，确实有这个可能性。
+[dialog]
+[CharacterCutin(widgetID="Chiave")]
+[Delay(time=0.51)]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="什么？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，我本应早点向你说明，可我判断，任务是第一优先。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="所以你主动提出和我一起出来？;......;所以你今天的表现也不太对劲。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 直到最后一刻，Castle-3都会是您最坚实的伙伴。
+[Character]
+[Dialog]
+[Delay(time=0.51)]
+[CharacterCutin(name="char_349_chiave#3",widgetID="Chiave",offsetx=-300,fadestyle:"fade",fadetime=0.51,width=200)]
+[Delay(time=0.51)]
+[name="贾维"] ......那是不是博士的声音？博士为什么也在？
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=1)]
+[name="贾维"] Castle-3，我让你一个人，不是，一个机器自己过来的啊！
+[name="贾维"] 博士在的话，我怎么带你跑？！
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=2)]
+[name="Castle-3"] 贾维兄弟，我昨天就已经对你说过了，让我陪你出长期外勤这个提议，几乎不可能实行。
+[name="Castle-3"] 作为一台机器，可露希尔主人以及博士的指令是最优先的。
+[name="Castle-3"] 而且，我的核心坚持不了多久，你所描绘的我们一起跑好几个国家的情形，是无法实现的。
+[Character(name="char_empty",name2="avg_286_cast3_1$1",focus=1)]
+[name="贾维"] 跑不了多远，我们也可以跑啊！
+[name="贾维"] 越是命不久矣，就越要及时行乐——在自由奔跑的途中倒下，总比今天就回去，在车间里变成一堆废铁要快乐吧？！
+[name="贾维"] 大不了回来之后被奥斯塔唠叨一会，再被可露希尔暴揍一顿......都先不管了！
+[name="贾维"] 喂，博士，你也说句话啊？
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[CharacterCutin(widgetID="Chiave")]
+[Decision(options="我觉得贾维说的对。;......;Castle-3，你怎么想？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] ......通讯完毕。
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[name="贾维"] 喂，Castle-3——
+[Dialog]
+[Character(name="avg_286_cast3_1$1")]
+[stopmusic]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[Delay(time=0.51)]
+[dialog]
+[Delay(time=0.51)]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="Castle-3，你怎么突然......", values="1")]
+[Predicate(references="1")]
+[playMusic(intro="$normal01_intro",key="$normal01_loop",volume=0.4)]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，我的传感器侦测到了危险单位。
+[name="Castle-3"] ——沙地兽，一共四头。
+[name="Castle-3"] Castle-3，等您下令。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="Castle-3，左边！", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 了解！
+[dialog]
+[PlaySound(key="$p_atk_elecball_n", volume=1)]
+[Delay(time=0.51)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Delay(time=1)]
+[name="Castle-3"] 距离最近的目标已倒下！
+[name="Castle-3"] 博士，后方岩石背面还有五头沙地兽，正在朝我们靠近！
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="Castle-3，攻击左前方三十度的石壁！", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 遵命！
+[dialog]
+[delay(time=0.51)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[PlaySound(key="$p_atk_elecball_n", volume=1)]
+[delay(time=0.7)]
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_gen_explo_n")]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 岩壁碎裂，博士小心！
+[dialog]
+[Delay(time=0.51)]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="灾害带来的也不全是麻烦。", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="Castle-3，从这裂口出去！", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 好的，博士，请坐到我身上来！
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，您一定要坐稳了。
+[Dialog]
+[Delay(time=1)]
+[PlaySound(key="$sportscarstart",volume=1)]
+[name="Castle-3"] Castle-3，最高速度，前进！
+[CameraShake(duration=3, xstrength=0, ystrength=8, vibrato=17, randomness=0, fadeout=true)]
+[stopmusic]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[CameraShake(duration=-1, xstrength=0, ystrength=8, vibrato=17, randomness=0, fadeout=false)]
+[Background(image="bg_desert_1",screenadapt="showall")]
+[PlaySound(key="$blizzard",volume=0.6,channel="1",loop=true)]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，我们甩脱那群沙地兽了。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="Castle-3，你干得很好。;......;Castle-3，你没有减速。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，您先不要下来，只要Castle-3保持当前速度，我们就能在十分钟后抵达本舰。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="你不去找贾维吗？;这是自由的反方向。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，我听懂了贾维兄弟的意思。
+[name="Castle-3"] 他是希望我能在最后的时间里，自由地奔跑。
+[name="Castle-3"] 博士，我们此刻不正在奔跑吗？
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="确实是在奔跑。;......;风好大。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 博士，能和您一起奔跑，Castle-3真的非常愉快。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="不朽......;这时候好像很适合唱歌。;我将成为不朽的怒风。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 我将成为不朽的野火。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="Castle-3，这又是模仿？;......;Castle-3，你学会唱歌了。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 我感觉到了我的轮子碾过荒地，风拍打着我的外壳......
+[name="Castle-3"] 还有电流通过我的核心。
+[name="Castle-3"] 博士，您让我感受到了节奏！
+[name="Castle-3"] 我可以为您用电流声伴奏了——
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="继续奔跑吧，Castle-3。", values="1")]
+[Predicate(references="1")]
+[Character]
+“♪我将成为不朽的野火”
+“♪我将成为不朽的怒风”
+“♪从我的肋骨间跑出一群驮兽”
+“♪威风凛凛地冲向荒原”
+[CameraShake(duration=1, xstrength=0, ystrength=8, vibrato=17, randomness=1, fadeout=false, block=false)]
+[Dialog]
+[stopsound(channel="1",fadetime=3)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[CameraShake(duration=0.51, xstrength=0, ystrength=8, vibrato=17, randomness=1, fadeout=false, block=false)]
+[Character]
+[Background(image="bg_corridor",screenadapt="showall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[playMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.4)]
+[Character(name="char_007_closre_1#1")]
+[name="可露希尔"] Castle-3......咦，博士？
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 可露希尔主人，我没有迟到吧？
+[Character(name="char_007_closre_1#1")]
+[name="可露希尔"] 没有啊，Castle-3，你一直是最守时的！
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 好的主人，从始至终，Castle-3都不会让您失望。
+[name="Castle-3"] 在我跟您去工作间之前，我想再跟博士说几句话。
+[Character(name="char_007_closre_1#1")]
+[name="可露希尔"] 没问题啊，我又不赶时间。
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] ——博士。
+[name="Castle-3"] 感谢您选择Castle-3。
+[name="Castle-3"] 与您并肩经历的每一场战斗，都是我的荣幸。
+[name="Castle-3"] Castle-3，进入休眠模式。
+[Dialog]
+[delay(time=0.51)]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[delay(time=0.51)]
+[Character(fadetime=1)]
+[Delay(time=2)]
+[Character(name="char_007_closre_1#6")]
+[name="可露希尔"] Castle-3......？
+[name="可露希尔"] 居然自己关机了......博士，今天你们一起做了什么啊？
+[dialog]
+[Character(name="char_007_closre_1#6",focus=-1)]
+[Decision(options="我们一起完成了一个任务。;我们一起经历了一场冒险。;我们一起合唱了一首歌。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_007_closre_1#6")]
+[name="可露希尔"] 我也说不上来哪里有些奇怪......
+[Character(name="char_007_closre_1#1")]
+[name="可露希尔"] Castle-3还是Castle-3，不像Lancet-2那样偶尔会说一些伤感的话，也不像Thermal-EX，动不动吓我一跳。
+[Character(name="char_007_closre_1#2")]
+[name="可露希尔"] 非要说的话......好像变得更帅气了？
+[dialog]
+[Character(name="char_007_closre_1#2",focus=-1)]
+[Decision(options="或许他学会了“死亡”的概念。;或许他感到了“生命”的不朽。;或许他为自己身为机器人的一生感到满意。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_007_closre_1#6")]
+[name="可露希尔"] 欸欸？！
+[name="可露希尔"] 博士，我很惊讶，但我说不好是因为你在Castle-3身上看到了这些，还是因为Castle-3竟然让你看到了这些。
+[dialog]
+[Character(name="char_007_closre_1#6",focus=-1)]
+[Decision(options="有什么区别？", values="1")]
+[Predicate(references="1")]
+[Character(name="char_007_closre_1#1")]
+[name="可露希尔"] 因为偶尔我会有一种感觉......
+[name="可露希尔"] 当智能机器人们使用着我们的语言，尝试理解着我们的行为与思想时，我们是不是也在透过他们看自己？
+[Character(name="char_007_closre_1#2")]
+[name="可露希尔"] 哇，突然说这种深沉的话，也太不像我了吧！{@nickname}博士，你真的不考虑和我一起研究智能生命对吧？
+[dialog]
+[Character(name="char_007_closre_1#2",focus=-1)]
+[Decision(options="不考虑。;......;有机会再说吧。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_007_closre_1#1")]
+[name="可露希尔"] 唔......跟你说完这些，我又有了一些新思路......博士，我带Castle-3回去了啊，今天的工作还挺麻烦的呢！
+[Dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="bg_rhodescom",screenadapt="showall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[playMusic(intro="$path_intro", key="$path_loop",volume=0.4)]
+[Character(name="char_349_chiave#4")]
+[name="贾维"] 喂，博士！
+[name="贾维"] 快看看谁来了——
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] Castle-3，等候您的命令。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="Castle-3，你没事？;你的记忆库还在吗？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 我已经运行了三次自我检测程序，没有发现任何记忆文件丢失。
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="那真是太好了。;......;我早就知道可露希尔不会轻易让你报废的。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_349_chiave#4")]
+[name="贾维"] 不枉小爷我急急忙忙赶回来......可累坏我了！
+[Character(name="char_349_chiave#1")]
+[name="贾维"] 本来想着能不能多留Castle-3一会，没想到一回来就见他被大卸八块，当时我就......
+[dialog]
+[Character(name="char_349_chiave#1",focus=-1)]
+[Decision(options="就急了？;......;就哭了？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_349_chiave#1")]
+[name="贾维"] ......就差点朝可露希尔大喊大叫了。
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 贾维兄弟，根据工程部门同事的描述来看，你的行为并不能用“差点”来形容。我记忆库里储存的粗口集锦都不及你的语言丰富......
+[Character(name="char_349_chiave#3")]
+[name="贾维"] 够了够了，快别说了，那还不是因为我担心你嘛！
+[Character(name="char_349_chiave#1")]
+[name="贾维"] 虽说脑门上给可露希尔揍出来的包还在痛......可小爷我一点都不后悔。
+[name="贾维"] 你们几个可是我在岛上认识的最亲的小弟，也就比奥斯塔和布洛卡他们差一点，当然一个都不能少！
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 谢谢你，贾维兄弟，你也是我的好小弟。
+[Character(name="char_349_chiave#1")]
+[name="贾维"] 这还差不多。
+[Character(name="char_349_chiave#2")]
+[name="贾维"] 不对啊，谁是谁小弟？Castle-3，你学坏了啊！
+[name="贾维"] 我怎么不记得我和可露希尔有改你性格......
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 贾维兄弟，本设备并不具备“学坏”的功能。
+[Character(name="char_349_chiave#1")]
+[name="贾维"] 行吧行吧，总之，博士，你看到了啊，这家伙刚醒过来就想来找你，让你知道下他没事。
+[name="贾维"] 结果就是，我们都没闹明白。可露希尔已经准备好了一整套升级系统，可以让Castle-3的核心继续跑个——
+[name="贾维"] 我也不知道能跑多久，说不定比小爷我剩下的时间还要久吧。
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 贾维兄弟，我相信，你也还能自由奔跑很久。
+[name="Castle-3"] 因为我们会一起陪着博士，而博士也会陪着我们——
+[dialog]
+[Character(name="avg_286_cast3_1$1",focus=-1)]
+[Decision(options="是的。;我们一起。;我不会放手。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_286_cast3_1$1")]
+[name="Castle-3"] 对了，博士，可露希尔主人为我添加了歌曲播放功能，贾维兄弟给我更新了一下曲库，我现在会唱的歌变多了。
+[name="Castle-3"] ——您想听《火山大喷发之后最伟大的奇观》，还是《你尝起来是这么美味》？
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[stopmusic(fadetime=3)]
+[Character]
+[Image]
