@@ -211,6 +211,9 @@
           "value": -30,
           "loadFromBlackboard": false
         }
+      ],
+      "abnormalFlags": [
+        "COLD"
       ]
     }
   },
@@ -232,10 +235,34 @@
   },
   "c2e_cold": {
     "buffKey": "c2e_cold",
-    "durationKey": "freeze",
+    "durationKey": "cold",
     "templateKey": "c2e_cold",
-    "overrideEffectKey": "buff_cold",
     "statusResistable": "YES",
+    "triggerLifeType": "LIMITED",
+    "triggerCnt": 1,
+    "attributes": {
+      "abnormalFlags": [
+        "COLD"
+      ]
+    },
+    "disableOverride": true
+  },
+  "c2e_freeze[double_cold]": {
+    "buffKey": "c2e_freeze[double_cold]",
+    "durationKey": "cold",
+    "templateKey": "c2e_freeze[double_cold]",
+    "statusResistable": "YES",
+    "attributes": {
+      "abnormalFlags": [
+        "FROZEN"
+      ]
+    },
+    "disableOverride": true
+  },
+  "c2e_cold[debuff]": {
+    "buffKey": "c2e_cold[debuff]",
+    "lifeTimeType": "INFINITY",
+    "overrideEffectKey": "buff_cold",
     "attributes": {
       "attributeModifiers": [
         {
@@ -247,14 +274,36 @@
       ]
     }
   },
+  "c2e_freeze[holder]": {
+    "buffKey": "c2e_freeze[holder]",
+    "templateKey": "c2e_freeze[holder]",
+    "lifeTimeType": "INFINITY",
+    "attributes": {
+      "abnormalFlags": [
+        "FROZEN"
+      ]
+    },
+    "disableOverride": true
+  },
   "c2e_freeze": {
     "buffKey": "c2e_freeze",
-    "durationKey": "freeze",
-    "overrideEffectKey": "buff_frozen",
+    "audiosignal": "c2e_freeze",
+    "overrideEffectKey": "buff_frozen_to_enemy",
+    "lifeTimeType": "INFINITY",
     "attributes": {
-      "attributeModifiers": null,
-      "abnormalFlags": [
-        "STUNNED"
+      "attributeModifiers": [
+        {
+          "attributeType": "DEF",
+          "formulaItem": "FINAL_ADDITION",
+          "value": 0,
+          "loadFromBlackboard": false
+        },
+        {
+          "attributeType": "MAGIC_RESISTANCE",
+          "formulaItem": "ADDITION",
+          "value": -15,
+          "loadFromBlackboard": false
+        }
       ]
     }
   },
@@ -351,14 +400,14 @@
       }
     ]
   },
-"ep_break_water": {
+  "ep_break_water": {
     "buffKey": "ep_break_water",
     "durationKey": "ep_break_duration",
     "templateKey": "ep_break_water",
     "attributes": {
       "attributeModifiers": null,
       "abnormalFlags": [
-          "ELEMENT_FREE_ALL"
+        "ELEMENT_FREE_ALL"
       ]
     },
     "blackboard": [
@@ -375,8 +424,8 @@
   "buff_swim": {
     "buffKey": "buff_swim",
     "lifeTimeType": "INFINITY",
-    "priority" : 1,
-    "overrideKey" : "under_sea"
+    "priority": 1,
+    "overrideKey": "under_sea"
   },
   "ep_break_fire": {
     "buffKey": "ep_break_fire",
@@ -385,7 +434,7 @@
     "attributes": {
       "attributeModifiers": null,
       "abnormalFlags": [
-          "ELEMENT_FREE_ALL"
+        "ELEMENT_FREE_ALL"
       ]
     },
     "blackboard": [

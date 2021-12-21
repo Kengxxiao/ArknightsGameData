@@ -8770,6 +8770,96 @@
           ]
         }
       ]
+    },
+    "char_206_gnosis": {
+      "charId": "char_206_gnosis",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_tra_limit&spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_422_aurora": {
+      "charId": "char_422_aurora",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[130]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_4013_kjera": {
+      "charId": "char_4013_kjera",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd&team[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "meet_spd&team[041]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_flag[040]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -8821,6 +8911,18 @@
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，所有贸易站订单效率<@cc.vup>+7%</>（同种效果取最高）"
     },
+    "control_tra_limit&spd[000]": {
+      "buffId": "control_tra_limit&spd[000]",
+      "buffName": "精密计算",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_t_limit&spd",
+      "sortId": 1301,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，每个进驻在贸易站的<$cc.g.karlan><@cc.kw>喀兰贸易</></>干员，订单获取效率<@cc.vdown>-15%</>，订单上限<@cc.vup>+6</>"
+    },
     "control_hire_spd[000]": {
       "buffId": "control_hire_spd[000]",
       "buffName": "感染力",
@@ -8831,7 +8933,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "进驻控制中枢时，人力办公室联络速度小于<@cc.vup>+30%</>时（其中包含基础联络速度5%），则联络速度额外<@cc.vup>+20%</>（该加成全局效果唯一，不受其它加成影响）"
+      "description": "进驻控制中枢时，人力办公室联络速度小于<@cc.vup>30%</>时（其中包含基础联络速度5%），则联络速度额外<@cc.vup>+20%</>（该加成全局效果唯一，不受其它加成影响）"
     },
     "control_pow_bot[000]": {
       "buffId": "control_pow_bot[000]",
@@ -9013,6 +9115,18 @@
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，控制中枢内每个<$cc.g.ussg><@cc.kw>乌萨斯学生自治团</></>干员可使控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
     },
+    "control_mp_cost&faction[030]": {
+      "buffId": "control_mp_cost&faction[030]",
+      "buffName": "幕后指挥",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_karlan",
+      "sortId": 1206,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内每个<$cc.g.karlan><@cc.kw>喀兰贸易</></>干员可使控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
+    },
     "control_mp_cost&faction[900]": {
       "buffId": "control_mp_cost&faction[900]",
       "buffName": "异格者",
@@ -9090,7 +9204,7 @@
       "buffName": "潮汐守望",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost_aegir",
-      "sortId": 1301,
+      "sortId": 1303,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -9102,7 +9216,7 @@
       "buffName": "集群狩猎·α",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_aegir",
-      "sortId": 1301,
+      "sortId": 1303,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -9114,7 +9228,7 @@
       "buffName": "集群狩猎·β",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_aegir2",
-      "sortId": 1301,
+      "sortId": 1303,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -9126,7 +9240,7 @@
       "buffName": "红松的骑士",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_psk",
-      "sortId": 1300,
+      "sortId": 1302,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10578,7 +10692,7 @@
       "buffName": "肆无忌惮",
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_nian",
-      "sortId": 7601,
+      "sortId": 7621,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
@@ -10890,7 +11004,7 @@
       "buffName": "稀有金属辨识",
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_evolve4",
-      "sortId": 7601,
+      "sortId": 7621,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
@@ -10902,7 +11016,7 @@
       "buffName": "“物尽其用”",
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_evolve_dorm1",
-      "sortId": 7551,
+      "sortId": 7611,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
@@ -10914,7 +11028,7 @@
       "buffName": "“人善其事”",
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_evolve_dorm2",
-      "sortId": 7552,
+      "sortId": 7612,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
@@ -11472,6 +11586,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "进驻训练室协助位时，<@cc.kw>近卫</>干员的专精技能训练速度<@cc.vup>+30%</>，如果本次训练专精技能至<@cc.vup>1</>级，则训练速度额外<@cc.vup>+45%</>"
+    },
+    "train_spd&profession2[130]": {
+      "buffId": "train_spd&profession2[130]",
+      "buffName": "极地生存",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train1_defender1",
+      "sortId": 9631,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，<@cc.kw>重装</>干员的专精技能训练速度<@cc.vup>+30%</>，如果本次训练专精技能至<@cc.vup>1</>级，则训练速度额外<@cc.vup>+45%</>"
     },
     "train_spd&profession2[440]": {
       "buffId": "train_spd&profession2[440]",
@@ -12445,6 +12571,18 @@
       "roomType": "MEETING",
       "description": "进驻会客室后，每当新搜集到的线索不是<@cc.kw>莱茵生命</>时，则额外增加<@cc.kw>莱茵生命</>线索的出现概率（工作时长影响概率）"
     },
+    "meet_flag[040]": {
+      "buffId": "meet_flag[040]",
+      "buffName": "耶拉冈德",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_flag_kjerag",
+      "sortId": 6611,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "进驻会客室后，每当新搜集到的线索不是<@cc.kw>喀兰贸易</>时，则额外增加<@cc.kw>喀兰贸易</>线索的出现概率（工作时长影响概率）"
+    },
     "meet_flag[050]": {
       "buffId": "meet_flag[050]",
       "buffName": "甄别",
@@ -12541,6 +12679,18 @@
       "roomType": "MEETING",
       "description": "进驻会客室时，线索搜集速度提升<@cc.vup>10%</>，且更容易获得<@cc.kw>喀兰贸易</>线索（工作时长影响概率）"
     },
+    "meet_spd&team[041]": {
+      "buffId": "meet_spd&team[041]",
+      "buffName": "雪境守望",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_kjerag2",
+      "sortId": 6622,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "进驻会客室时，线索搜集速度提升<@cc.vup>10%</>，且更容易获得<@cc.kw>喀兰贸易</>线索（工作时长影响概率）"
+    },
     "meet_spd&team[050]": {
       "buffId": "meet_spd&team[050]",
       "buffName": "军师",
@@ -12614,6 +12764,7 @@
       "description": "进驻会客室时，线索搜集速度提升<@cc.vup>25%</>"
     }
   },
+  "workshopBonus": {},
   "customData": {
     "furnitures": {
       "furni_warehouse_storageshelf_01": {
@@ -30602,6 +30753,374 @@
         "canBeDestroy": true,
         "isOnly": -1
       },
+      "furni_stage_nestHouse_01": {
+        "id": "furni_stage_nestHouse_01",
+        "name": "“奉食台”",
+        "iconId": "furni_stage_nestHouse_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 6,
+        "comfort": 250,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "谢拉格人摆在家门前，用以喂食羽兽的木制小屋。不过游客好像都习惯在这里放钥匙。\n在谢拉格人的认知中，野生羽兽只要吃了食物，便会在飞过圣山时于耶拉冈德耳边为自己美言几句。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_boots_01": {
+        "id": "furni_stage_boots_01",
+        "name": "谢拉格皮制雪地靴",
+        "iconId": "furni_stage_boots_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "谢拉格家家户户必备的雪地靴，保暖防滑。\n天晴时，偶尔可见雪地里两排足迹延伸至天边。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_stool_01": {
+        "id": "furni_stage_stool_01",
+        "name": "异域圆凳",
+        "iconId": "furni_stage_stool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "谢拉格打开对外贸易通道后，从维多利亚进口的家具。因为内置了加热系统而广受谢拉格人民喜爱。\n这件现代产物放在谢拉格毫无违和感，或许能成为银灰改变故乡的有力佐证。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_cabinet_01": {
+        "id": "furni_stage_cabinet_01",
+        "name": "尖顶立柜",
+        "iconId": "furni_stage_cabinet_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 3,
+        "height": 7,
+        "comfort": 390,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "经典的谢拉格设计，容量巨大，防风防尘。\n不过这副滑雪板搁置在这太浪费了，一起去滑雪吧。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_table_01": {
+        "id": "furni_stage_table_01",
+        "name": "传统火坑桌",
+        "iconId": "furni_stage_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 5,
+        "height": 4,
+        "comfort": 505,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "谢拉格人民对抗寒冷与风雪的智慧结晶，由雪山山岩与桦木制成。结构简单，功能多样。\n即使信奉着巍峨圣山，炽热之火仍然是谢拉格家家户户安康和合的象征。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_barrel_01": {
+        "id": "furni_stage_barrel_01",
+        "name": "谢拉格佳酿",
+        "iconId": "furni_stage_barrel_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "谢拉格许多人家在口粮有富余时会酿造的一种粮酒。一口入喉，寒意全消。\n在谢拉格以外的地方偶尔能买到经过稀释的版本。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_textileMachine_01": {
+        "id": "furni_stage_textileMachine_01",
+        "name": "手工纺织机",
+        "iconId": "furni_stage_textileMachine_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 4,
+        "height": 4,
+        "comfort": 350,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "经典的谢拉格纺织机器，有些驿站也会放置一台供游客试用体验。成品可以带走，但是需要支付材料费用。\n这种纺织机的历史太过悠久，究竟是何人发明已不可考，谢拉格人将其视作耶拉冈德的赐物。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_bed_01": {
+        "id": "furni_stage_bed_01",
+        "name": "一体式实木床",
+        "iconId": "furni_stage_bed_01",
+        "type": "BEDDING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 4,
+        "height": 8,
+        "comfort": 615,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "经典的谢拉格风格家具，最结实的木材搭配最柔软的织物，是每个夜晚都让人迫不及待回到的地方。\n阳光掠过积雪洒在床头，老者敲响床头的铜铃，新的一天又开始了。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_bedsideTable_01": {
+        "id": "furni_stage_bedsideTable_01",
+        "name": "整木床头柜",
+        "iconId": "furni_stage_bedsideTable_01",
+        "type": "CABINET",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 180,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "一整块木材雕成的床头柜，放着一盏油灯，方便客人随时使用。\n在现代照明还未完全普及整个谢拉格前，一盏小小的提灯时常能解决诸多需求。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_ceilingLamp_01": {
+        "id": "furni_stage_ceilingLamp_01",
+        "name": "防风吊灯",
+        "iconId": "furni_stage_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 90,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "专门加固过，被做成吊灯样式的现代灯具。\n将谢拉格发展成维多利亚可能需要很久，但总会有人做这件事。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_Irori_01": {
+        "id": "furni_stage_Irori_01",
+        "name": "火坑吊炉",
+        "iconId": "furni_stage_Irori_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 6,
+        "comfort": 110,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "与火坑桌同用的吊炉，终日能听到热汤滚滚的声音。\n谢拉格人围着吊炉来一顿饱餐，屋外天气再寒冷，肠胃里永远是幸福的温度。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_walldeco_01": {
+        "id": "furni_stage_walldeco_01",
+        "name": "家用草药架",
+        "iconId": "furni_stage_walldeco_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 8,
+        "depth": 1,
+        "height": 3,
+        "comfort": 140,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "谢拉格居民家中随处可见的木制草药架，许多人家都会晒制一些常用草药，以备不时之需。\n窗边总是萦绕着淡淡的香味，在现代医疗覆盖这片地区前，这些草药便是最为有效的药物。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_ceiling_01": {
+        "id": "furni_stage_ceiling_01",
+        "name": "储藏用吊顶",
+        "iconId": "furni_stage_ceiling_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 14,
+        "depth": 6,
+        "height": 2,
+        "comfort": 345,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "木架挂上厚实的毛毯用以隔绝屋顶渗下的寒气。若是温度继续下降便可将毛毯拿下取暖。\n文明不断向前推进，但有些智慧能够沿用许久。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_carpet_01": {
+        "id": "furni_stage_carpet_01",
+        "name": "长毛毡毯",
+        "iconId": "furni_stage_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 12,
+        "depth": 10,
+        "height": 1,
+        "comfort": 175,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "谢拉格传统工艺制作的毡毯，厚实且柔软。\n如何用几个字词概括谢拉格的生活？毛毯、炉火、飘雪、热茶。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_wallpaper_01": {
+        "id": "furni_stage_wallpaper_01",
+        "name": "全景显示屏（雪山）",
+        "iconId": "furni_stage_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "展现谢拉格雪山风景的显示屏，画面是喀兰圣山脚下的一处风景。\n山风拂雪，一湖如镜，喀兰之威，水天皆立。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_stage_floor_01": {
+        "id": "furni_stage_floor_01",
+        "name": "谢拉格驿站地板",
+        "iconId": "furni_stage_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "驿站风格的地板，参考了大众较为熟悉的谢拉格图案。\n由此，人们知晓了这片被称为谢拉格的地区。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "兔兔捣药机",
@@ -31606,6 +32125,52 @@
         "comfort": 90,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "以卡西米尔库兰塔为核心意向制作的吊灯。骑士的时代早已一去不复返。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_act24d0_house_01": {
+        "id": "furni_act24d0_house_01",
+        "name": "大黑的节日新居",
+        "iconId": "furni_act24d0_house_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 2,
+        "comfort": 100,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用庆贺节日时剩下的装饰物搭建的小窝。\n大黑看着陌生的房子有些不知所措。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_act24d0_table_01": {
+        "id": "furni_act24d0_table_01",
+        "name": "炎式梳妆案",
+        "iconId": "furni_act24d0_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 3,
+        "height": 4,
+        "comfort": 160,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "炎国传统样式的梳妆案，炉里已焚起了熏香。\n宝奁珠玑，镜中鸿影。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -32940,6 +33505,29 @@
         "comfort": 75,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "“坚持坚持到绝望绝望。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1
+      },
+      "furni_dropS024_twinPeaks_01": {
+        "id": "furni_dropS024_twinPeaks_01",
+        "name": "饰牌《双峰》",
+        "iconId": "furni_dropS024_twinPeaks_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "“山的对面有什么？另一座山？另一个你？”",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -39131,6 +39719,94 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_stage": {
+        "id": "furni_set_stage",
+        "name": "谢拉格风情旅店",
+        "themeType": "EVENT",
+        "desc": "开设在希瓦艾什领铁道车站附近的旅店，罗德岛复制了其中一间房间。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_stage_nestHouse_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_stage_boots_01",
+            "pos0": 0,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_stage_stool_01",
+            "pos0": 3,
+            "pos1": 3
+          },
+          {
+            "furnitureId": "furni_stage_cabinet_01",
+            "pos0": 5,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_stage_table_01",
+            "pos0": 7,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_stage_barrel_01",
+            "pos0": 5,
+            "pos1": 6
+          },
+          {
+            "furnitureId": "furni_stage_textileMachine_01",
+            "pos0": 20,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_stage_bed_01",
+            "pos0": 26,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_stage_bedsideTable_01",
+            "pos0": 32,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_stage_ceilingLamp_01",
+            "pos0": 5,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_stage_Irori_01",
+            "pos0": 10,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_stage_walldeco_01",
+            "pos0": 17,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_stage_ceiling_01",
+            "pos0": 18,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_stage_carpet_01",
+            "pos0": 3,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_stage_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_stage_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -41615,6 +42291,58 @@
           "furni_arcadeHall_floor_01",
           "furni_arcadeHall_ceiling_01",
           "furni_arcadeHall_carpet_01"
+        ]
+      },
+      "furni_set_stage_1": {
+        "id": "furni_set_stage_1",
+        "name": "驿站保暖套组",
+        "themeId": "furni_set_stage",
+        "comfort": 200,
+        "count": 4,
+        "furniture": [
+          "furni_stage_Irori_01",
+          "furni_stage_table_01",
+          "furni_stage_stool_01",
+          "furni_stage_barrel_01"
+        ]
+      },
+      "furni_set_stage_2": {
+        "id": "furni_set_stage_2",
+        "name": "驿站寝具套组",
+        "themeId": "furni_set_stage",
+        "comfort": 310,
+        "count": 4,
+        "furniture": [
+          "furni_stage_bed_01",
+          "furni_stage_bedsideTable_01",
+          "furni_stage_ceiling_01",
+          "furni_stage_walldeco_01"
+        ]
+      },
+      "furni_set_stage_3": {
+        "id": "furni_set_stage_3",
+        "name": "驿站风情套组",
+        "themeId": "furni_set_stage",
+        "comfort": 275,
+        "count": 4,
+        "furniture": [
+          "furni_stage_textileMachine_01",
+          "furni_stage_cabinet_01",
+          "furni_stage_nestHouse_01",
+          "furni_stage_boots_01"
+        ]
+      },
+      "furni_set_stage_4": {
+        "id": "furni_set_stage_4",
+        "name": "驿站装潢套组",
+        "themeId": "furni_set_stage",
+        "comfort": 150,
+        "count": 4,
+        "furniture": [
+          "furni_stage_wallpaper_01",
+          "furni_stage_floor_01",
+          "furni_stage_ceilingLamp_01",
+          "furni_stage_carpet_01"
         ]
       }
     },
