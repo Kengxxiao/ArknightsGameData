@@ -8264,6 +8264,34 @@
         }
       ]
     },
+    "char_485_pallas": {
+      "charId": "char_485_pallas",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[003]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -9082,6 +9110,18 @@
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、保管上限<@cc.vup>+8</>、1時間ごとの体力消費量<@cc.vup>-0.25</>"
     },
+    "manu_prod_limit&cost[003]": {
+      "buffId": "manu_prod_limit&cost[003]",
+      "buffName": "叡智の境界",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost1",
+      "sortId": 3205,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、保管上限<@cc.vup>+8</>、1時間ごとの体力消費量<@cc.vup>-0.25</>"
+    },
     "manu_prod_limit&cost[010]": {
       "buffId": "manu_prod_limit&cost[010]",
       "buffName": "収集癖",
@@ -9273,6 +9313,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、<$cc.bd_A><@cc.rem>思念連鎖</></><@cc.vup>1</>につき、製造効率<@cc.vup>+1%</>"
+    },
+    "manu_formula_spd[000]": {
+      "buffId": "manu_formula_spd[000]",
+      "buffName": "制勝の秘策",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp1",
+      "sortId": 3801,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、<@cc.kw>作戦記録</>製造の製造効率<@cc.vup>+25%</>"
     },
     "manu_formula_spd[010]": {
       "buffId": "manu_formula_spd[010]",
@@ -27037,6 +27089,443 @@
         "canBeDestroy": true,
         "isOnly": -1
       },
+      "furni_photoStudio_changingRoom_01": {
+        "id": "furni_photoStudio_changingRoom_01",
+        "name": "簡易試着室",
+        "iconId": "furni_photoStudio_changingRoom_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 10,
+        "comfort": 405,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "モデルのために準備された試着室。芸術写真を撮影する場合はこの中で着替える。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_mirror_01": {
+        "id": "furni_photoStudio_mirror_01",
+        "name": "フィッティングミラー",
+        "iconId": "furni_photoStudio_mirror_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 150,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "モデルのために準備されたフィッティングミラー。着替えが終わったら確認もできる。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_abstractArt_01": {
+        "id": "furni_photoStudio_abstractArt_01",
+        "name": "大きな油絵",
+        "iconId": "furni_photoStudio_abstractArt_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 9,
+        "comfort": 190,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "某オペレーターが即興で描いた油絵。プロの画家の作品ではないため、映像作品ほど絵画に対する目は厳しくない。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_table_01": {
+        "id": "furni_photoStudio_table_01",
+        "name": "スタジオの化粧台",
+        "iconId": "furni_photoStudio_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 5,
+        "comfort": 200,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "モデルのために用意された化粧台。化粧をする必要があればここでできる。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_stool_01": {
+        "id": "furni_photoStudio_stool_01",
+        "name": "バイカラーミニスツール",
+        "iconId": "furni_photoStudio_stool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 110,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "モデルのために用意された椅子。化粧するなら座る場所は必要だよね、待って、メイクさんはどこ行ったの？",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_curtain_01": {
+        "id": "furni_photoStudio_curtain_01",
+        "name": "ロールカーテン",
+        "iconId": "furni_photoStudio_curtain_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 4,
+        "height": 10,
+        "comfort": 125,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "半透明で向こう側が見えない仕切り用のロールカーテン。シーンは撮影愛好家たちに、待つことも大事だと伝えようとしている。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_desk_01": {
+        "id": "furni_photoStudio_desk_01",
+        "name": "スタジオの作業台",
+        "iconId": "furni_photoStudio_desk_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 3,
+        "height": 5,
+        "comfort": 390,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "スタジオの仕事机。愛好家たちはここで撮影の素材を整理したり、自他の作品を批評したりする。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_chair_01": {
+        "id": "furni_photoStudio_chair_01",
+        "name": "クリエイターズチェア",
+        "iconId": "furni_photoStudio_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ロドスの仕事場で使用されているオフィスチェアのカラーリングを変更したもの。くるっと回転するとインスピレーションがわくらしい。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_rack_01": {
+        "id": "furni_photoStudio_rack_01",
+        "name": "多機能ラック",
+        "iconId": "furni_photoStudio_rack_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 2,
+        "height": 8,
+        "comfort": 405,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "自由に伸縮し、機材をかけることもできるスタンド。オペレーターをひっかけてもびくともしない。カシャは試したことがあるから確かな情報だ。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_bananaLeaf_01": {
+        "id": "furni_photoStudio_bananaLeaf_01",
+        "name": "オーガニックな送風道具",
+        "iconId": "furni_photoStudio_bananaLeaf_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 8,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "芭蕉の木の葉。木の葉の送風能力を疑う者はみな強風に吹き倒される。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_lighting_01": {
+        "id": "furni_photoStudio_lighting_01",
+        "name": "ストロボ",
+        "iconId": "furni_photoStudio_lighting_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 160,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "固定されたストロボ。なに？　カシャのドローンもフラッシュをたけるだと！？",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_whiteDecor_01": {
+        "id": "furni_photoStudio_whiteDecor_01",
+        "name": "静物撮影用教材",
+        "iconId": "furni_photoStudio_whiteDecor_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "人工の花を組み合わせた芸術品。静物撮影の教材として使用されている。同じカメラを手にしていても、撮られた写真は全く異なる。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_posingStool_01": {
+        "id": "furni_photoStudio_posingStool_01",
+        "name": "撮影用スツール",
+        "iconId": "furni_photoStudio_posingStool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 110,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "撮影者用のスツール。プロフェッショナルでも趣味として撮影している者でも使用することができる。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_lightModifier_01": {
+        "id": "furni_photoStudio_lightModifier_01",
+        "name": "撮影補助機材",
+        "iconId": "furni_photoStudio_lightModifier_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 5,
+        "height": 7,
+        "comfort": 325,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "撮影スタジオに必須の機材三点セット。シーンはロボット小隊を丸ごと照明として使っている、贅沢すぎる！",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_carpet_01": {
+        "id": "furni_photoStudio_carpet_01",
+        "name": "スタジオの絨毯",
+        "iconId": "furni_photoStudio_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 10,
+        "height": 1,
+        "comfort": 150,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "撮影エリアとその他を区切るための絨毯。「レンズの外はみなシーン」レンズがシーンの代わりに発言するとき、こう話していた。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_background_01": {
+        "id": "furni_photoStudio_background_01",
+        "name": "壁掛け式背景布",
+        "iconId": "furni_photoStudio_background_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 8,
+        "comfort": 90,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "装飾のための背景布。ロドスの撮影愛好家たちによく使用されている。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_ceilingLight_01": {
+        "id": "furni_photoStudio_ceilingLight_01",
+        "name": "可動式シーリングライト",
+        "iconId": "furni_photoStudio_ceilingLight_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 18,
+        "depth": 5,
+        "height": 1,
+        "comfort": 275,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "広い範囲で光源として利用できる可動式のライト。レールに不具合が出ているため、一時的に動かせない。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_wallpaper_01": {
+        "id": "furni_photoStudio_wallpaper_01",
+        "name": "スタジオの壁紙",
+        "iconId": "furni_photoStudio_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "スタジオのために設計された壁紙。発色が自然と近く、購入者はとても気に入っている。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_floor_01": {
+        "id": "furni_photoStudio_floor_01",
+        "name": "スタジオの床",
+        "iconId": "furni_photoStudio_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "スタジオの床。模様は一般的な菱形と反対色の組み合わせで、デザイナーは脳をだいぶ休ませることができた。",
+        "obtainApproach": "ラッキードロップ",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "おくすりうさちゃん",
@@ -34137,6 +34626,109 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_photoStudio": {
+        "id": "furni_set_photoStudio",
+        "name": "ロドス撮影スタジオ",
+        "themeType": "LUCKY",
+        "desc": "ロドスの撮影愛好家たちが組んだスタジオ。機材は万全、技術は一流、ただ良い作品を撮影するためだけに。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_photoStudio_changingRoom_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_photoStudio_mirror_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_abstractArt_01",
+            "pos0": 2,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_table_01",
+            "pos0": 5,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_stool_01",
+            "pos0": 5,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_photoStudio_curtain_01",
+            "pos0": 9,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_desk_01",
+            "pos0": 12,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_photoStudio_chair_01",
+            "pos0": 14,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_photoStudio_rack_01",
+            "pos0": 15,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_bananaLeaf_01",
+            "pos0": 9,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_lighting_01",
+            "pos0": 25,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_whiteDecor_01",
+            "pos0": 27,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_photoStudio_posingStool_01",
+            "pos0": 26,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_photoStudio_lightModifier_01",
+            "pos0": 30,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_carpet_01",
+            "pos0": 24,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_background_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_ceilingLight_01",
+            "pos0": 13,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -36247,6 +36839,61 @@
           "furni_perfumer_wallpaper_01",
           "furni_perfumer_floor_01",
           "furni_perfumer_shelf_01"
+        ]
+      },
+      "furni_set_photoStudio_1": {
+        "id": "furni_set_photoStudio_1",
+        "name": "モデル用支度エリア",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 210,
+        "count": 4,
+        "furniture": [
+          "furni_photoStudio_changingRoom_01",
+          "furni_photoStudio_mirror_01",
+          "furni_photoStudio_table_01",
+          "furni_photoStudio_stool_01"
+        ]
+      },
+      "furni_set_photoStudio_2": {
+        "id": "furni_set_photoStudio_2",
+        "name": "撮影準備エリア",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 345,
+        "count": 5,
+        "furniture": [
+          "furni_photoStudio_desk_01",
+          "furni_photoStudio_chair_01",
+          "furni_photoStudio_rack_01",
+          "furni_photoStudio_ceilingLight_01",
+          "furni_photoStudio_curtain_01"
+        ]
+      },
+      "furni_set_photoStudio_3": {
+        "id": "furni_set_photoStudio_3",
+        "name": "撮影機材",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 235,
+        "count": 6,
+        "furniture": [
+          "furni_photoStudio_lightModifier_01",
+          "furni_photoStudio_lighting_01",
+          "furni_photoStudio_whiteDecor_01",
+          "furni_photoStudio_background_01",
+          "furni_photoStudio_posingStool_01",
+          "furni_photoStudio_carpet_01"
+        ]
+      },
+      "furni_set_photoStudio_4": {
+        "id": "furni_set_photoStudio_4",
+        "name": "スタジオの内装",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 150,
+        "count": 4,
+        "furniture": [
+          "furni_photoStudio_wallpaper_01",
+          "furni_photoStudio_floor_01",
+          "furni_photoStudio_bananaLeaf_01",
+          "furni_photoStudio_abstractArt_01"
         ]
       }
     },

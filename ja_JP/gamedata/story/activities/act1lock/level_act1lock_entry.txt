@@ -1,0 +1,146 @@
+[HEADER(key="title_test", is_skippable=false, fit_mode="BLACK_MASK")] 固定开头avg
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="？？？"]  ……この提案は……我々への信用からくるものだろうか。それとも他に意図があってのことなのだろうか？
+[name="？？？"]  それを確かめる方法はありませんが……でも、これがチャンスであることは疑いようのない事実だと思います。
+[name="？？？"]  ……では、今回は「この人物」に頼むとしよう……
+[dialog]
+[Decision(options="（話しているのは誰だ？）",values="1")]
+[Predicate(references="1")]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[delay(time=1)]
+[Character(name="char_002_amiya_1",fadetime=1,block=true)]
+[Delay(time=1)]
+[Character(name="char_002_amiya_1#10")]
+[name="アーミヤ"]  あっ、ドクター、来てくださったんですね。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  ドクター。
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  いいところに来たな、Dr.{@nickname}。
+[dialog]
+[Decision(options="遅刻だったか？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  どうやら君も、己のルーズさを多少は自覚しているらしい。
+[dialog]
+[Decision(options="……;話し合いがあるとは聞かされていないが……",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1#3")]
+[name="アーミヤ"]  安心してください、ドクター。今日は時間通りですから。
+[Character(name="char_002_amiya_1")]
+[name="アーミヤ"]  実は今、ケルシー先生やドーベルマン教官と一緒に「連鎖競技」について話し合っていたんです。
+[dialog]
+[Decision(options="連鎖……競技？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  ああ。より正確な名称は、「連鎖安全保障競技」だ。
+[Character(name="char_130_doberm_ex#3")]
+[name="ドーベルマン"]  この催しは古代ミノスを起源としている。様々な競技やイベントを愛するミノス人が、各都市間での調和のとれた安全保障演習及び、切磋琢磨する交流を目的に公式的な安全保障競技を作ったのだ。
+[name="ドーベルマン"]  現代的な言い方をすれば「軍事演習」によく似ている。だが、今の連鎖競技には、すでに公式的な要素はない。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  競技の再編以来、それは非公式組織による商業的な催しと化したのでな。
+[name="ドーベルマン"]  競技参加組織である警備会社が、大会連合委員会を設立したのだ。委員会は様々な地域の公的機関と交渉し、その各地で連鎖安全保障競技を定期的に開催できるように動いている。
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]  今回は、協力組織の推薦があってロドスも連鎖競技に招待されたんです。
+[dialog]
+[Decision(options="それなら、参加しよう！;競技への参加に何かメリットはあるのか？",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]  はい。重要なものとして、主催者側が提供する賞金と物資が非常に豊富である、という点が挙げられるかと！
+[Character(name="char_002_amiya_1#3")]
+[name="アーミヤ"]  ロドスにとっては、これが最も重要なメリットですね。
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  一方で各地域や公的組織からすれば、競技開催は現地での影響力を高め、更なる協力関係やビジネスを創出する機会となる。そのため彼らは最先端のトレーニング施設や競技場を喜んで提供するのだ。
+[name="ドーベルマン"]  連鎖競技の大会システムにおいて、参加チームには小隊の分散や共同作戦などへの意識を持つことが要求される。より高い点数と順位を獲得するには、綿密な戦術が必要になるということだ。
+[Character(name="char_130_doberm_ex#3")]
+[name="ドーベルマン"]  ロドスのオペレーターたちを全体的に強化するためにも、競技参加はまたとない機会となる。
+[dialog]
+[Decision(options="そういう話なら、ぜひ参加しなくては。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#3", name2="char_003_kalts_1", focus=1)]
+[name="アーミヤ"]  ふふっ。ケルシー先生、聞きましたか？　私が言った通り、やっぱりドクターは賛成してくださいました。
+[Character(name="char_002_amiya_1#3", name2="char_003_kalts_1", focus=2)]
+[name="ケルシー"]  いいだろう、Dr.{@nickname}。だが忘れるな……これは君が自分から受けた仕事だ。後悔するなよ。
+[dialog]
+[Decision(options="どういうことだ？;……",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1")]
+[name="アーミヤ"]  ドクター、実は……連鎖競技で好成績を収め、多くの報酬を得るためには強力な指揮官が不可欠なんです。
+[name="アーミヤ"]  ですから、競技に参加するのであれば、ドクターに指揮を執っていただくことになります。
+[dialog]
+[Decision(options="自分が、試合で指揮をするのか？;……",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  そうだ。ドクターの指揮と判断は、連鎖競技の試合において必要不可欠なものとなる。
+[dialog]
+[Decision(options="また一つ、新しい仕事が増えたわけだ……;競技について、注意点はあるか？",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  連鎖安全保障競技においては、「仮想敵」の部隊に立ち向かうこととなる。その仮想敵から競技メダルと物資を手に入れるんだ。
+[name="ドーベルマン"]  そして限られた時間の中で、より効率的に多くのメダルを獲得し物資や賞金に交換するためには、別の小隊をそれぞれの「拠点」に駐屯させ、防衛させる必要がある。
+[name="ドーベルマン"]  大会審判が拠点防衛を確認した場合のみ、「最終試練」の際、より強力な仮想敵が追加されるというシステムだ。この特殊な仮想敵を倒すことで、更に多くの競技メダルを獲得することができる。
+[name="ドーベルマン"]  だが、強力な仮想敵に立ち向かう際には、ドクター自身も心身共に消耗が増大することだろう。まだ実力が伴わないと感じた場合は、より堅実な方法でメダルを獲得しても構わない。
+[Character(name="char_130_doberm_ex#2")]
+[name="ドーベルマン"]  つまりドクターは、状況に合わせて臨機応変に判断を下す必要があるということだ。
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]  しっかりと指揮に集中しなければ、少しのミスが損失に繋がってしまいます。ですが私は、ドクターならきっと最適な戦術で導いてくれると信じてますから！
+[dialog]
+[Decision(options="努力するよ。",values="1")]
+[Predicate(references="1")]
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  それから……連鎖競技のテーマと、出現が予測される仮想敵に合わせて、ロドスは毎回特別推薦選手を派遣し、ドクターに同行させる予定だ。
+[Character(name="char_002_amiya_1#3")]
+[name="アーミヤ"]  心配ありませんよ、ドクター。特別推薦選手の方は、私とケルシー先生、それにドーベルマン教官の三人で審査して選抜したオペレーターなんです。作戦中は、きっと存分に力を発揮してくれますよ！
+[dialog]
+[Decision(options="三人は、一緒に来ないのか？",values="1")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#5")]
+[name="アーミヤ"]  ……
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  ……
+[Character(name="char_130_doberm_ex#4")]
+[name="ドーベルマン"]  ……
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  この程度のことで、私を煩わせないでくれ。
+[Character(name="char_002_amiya_1#5")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="アーミヤ"]  じ、実は、終わってない仕事がたくさん残ってまして……
+[Character(name="char_130_doberm_ex")]
+[name="ドーベルマン"]  オペレーターの訓練は私の仕事だが、いつまでも彼らを見てやれるわけでもない。彼らがどのようにして指揮に従い、戦闘において力を発揮するかを考えるのはドクターの仕事だ。
+[dialog]
+[Decision(options="……仕方ない。;面倒事を押しつけられてる気もするが……",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="char_002_amiya_1#7")]
+[name="アーミヤ"]  連鎖競技に参加するには、複数小隊の戦力確保が必要になります。ドクター、今のうちにオペレーターへの指示や用いる作戦を検討して参加メンバーリストを作成するのはどうでしょう……
+[PlaySound(key="$doorknockquite", volume=0.6)]
+[dialog]
+[Character(name="char_002_amiya_1#6")]
+[name="アーミヤ"]  あっ、ちょうどいいところに！
+[Character(name="char_002_amiya_1#2")]
+[name="アーミヤ"]  ドクター、今回の特別推薦選手が到着しました。
+[dialog]
+[Decision(options="いくらなんでも早すぎないか！;とっくに話はまとまっていたということか？;……",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_002_amiya_1#10")]
+[name="アーミヤ"]  えへへ……では、あとのことはぜひ、特別推薦の方と話し合ってくださいね。
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  Dr.{@nickname}、覚えておけ。
+[dialog]
+[Decision(options="な……何をだ？;ああ。;……",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_003_kalts_1")]
+[name="ケルシー"]  競技に参加するからには、自らのベストを尽くせ。
+[name="ケルシー"]  主催者ごとに競技に求めるものはそれぞれ異なり、仮想敵の行動も千差万別だ。
+[Character(name="char_003_kalts_1#3")]
+[name="ケルシー"]  敵の弱点を見つけ出せ。術中にはまることなく、目的を見抜け。
+[Character(name="char_003_kalts_1#4")]
+[name="ケルシー"]  ――そして、勝利を掴み取るんだ。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image]
