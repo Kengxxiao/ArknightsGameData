@@ -8264,6 +8264,34 @@
         }
       ]
     },
+    "char_485_pallas": {
+      "charId": "char_485_pallas",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[003]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -9082,6 +9110,18 @@
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, 창고 용량 상한 <@cc.vup>+8</>, 시간당 컨디션 소모 <@cc.vup>-0.25</>"
     },
+    "manu_prod_limit&cost[003]": {
+      "buffId": "manu_prod_limit&cost[003]",
+      "buffName": "지혜의 경지",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost1",
+      "sortId": 3205,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 창고 용량 상한 <@cc.vup>+8</>, 시간당 컨디션 소모 <@cc.vup>-0.25</>"
+    },
     "manu_prod_limit&cost[010]": {
       "buffId": "manu_prod_limit&cost[010]",
       "buffName": "수집벽",
@@ -9273,6 +9313,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, <$cc.bd_A><@cc.rem>생각의 사슬</></> <@cc.vup>1</>점당 생산력 <@cc.vup>+1%</>"
+    },
+    "manu_formula_spd[000]": {
+      "buffId": "manu_formula_spd[000]",
+      "buffName": "승리의 계책",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp1",
+      "sortId": 3801,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, <@cc.kw>작전기록</>류에 대한 생산력 <@cc.vup>+25%</>"
     },
     "manu_formula_spd[010]": {
       "buffId": "manu_formula_spd[010]",
@@ -27037,6 +27089,443 @@
         "canBeDestroy": true,
         "isOnly": -1
       },
+      "furni_photoStudio_changingRoom_01": {
+        "id": "furni_photoStudio_changingRoom_01",
+        "name": "간이 탈의실",
+        "iconId": "furni_photoStudio_changingRoom_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 10,
+        "comfort": 405,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모델을 위해 준비한 탈의실. 예술 사진을 찍는다면 이곳에서 옷을 갈아입어야 한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_mirror_01": {
+        "id": "furni_photoStudio_mirror_01",
+        "name": "플로어 전신거울",
+        "iconId": "furni_photoStudio_mirror_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모델을 위해 준비한 전신거울. 옷을 갈아입고 나면 거울 앞에서 확인할 수 있다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_abstractArt_01": {
+        "id": "furni_photoStudio_abstractArt_01",
+        "name": "대형 유화 작품",
+        "iconId": "furni_photoStudio_abstractArt_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 9,
+        "comfort": 190,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "한 오퍼레이터가 즉흥적으로 그린 유화 작품. 비전문가의 작품이라, 다들 촬영 작품만큼의 엄격한 평가는 하지 않는다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_table_01": {
+        "id": "furni_photoStudio_table_01",
+        "name": "조명 화장대",
+        "iconId": "furni_photoStudio_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 5,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모델을 위해 준비한 화장대. 메이크업이 필요하면 이곳에서 할 수 있다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_stool_01": {
+        "id": "furni_photoStudio_stool_01",
+        "name": "사각 미니 스툴",
+        "iconId": "furni_photoStudio_stool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 110,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "모델을 위해 준비한 스툴. 화장을 하려면 앉아야 하지 않겠나? 잠깐, 메이크업 아티스트는 어디 갔지?",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_curtain_01": {
+        "id": "furni_photoStudio_curtain_01",
+        "name": "투명 가림막 커튼",
+        "iconId": "furni_photoStudio_curtain_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 4,
+        "height": 10,
+        "comfort": 125,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "투명하지만 흐릿한 공간 분리용 커튼. 씬이 다른 애호가에게 알려주려고 한다. 기다림도 아주 중요하다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_desk_01": {
+        "id": "furni_photoStudio_desk_01",
+        "name": "촬영 작업대",
+        "iconId": "furni_photoStudio_desk_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 3,
+        "height": 5,
+        "comfort": 390,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "스튜디오의 작업대. 촬영 애호가들은 테이블에서 촬영 자료를 정리하며, 자신과 다른 사람의 작품을 심사하기도 한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_chair_01": {
+        "id": "furni_photoStudio_chair_01",
+        "name": "작업용 회전의자",
+        "iconId": "furni_photoStudio_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드 사무실에서 일반적으로 사용하는 의자로, 색을 바꿨다. 회전 후에 어지러운 느낌이 들면 엄청난 영감이 떠오른다고 한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_rack_01": {
+        "id": "furni_photoStudio_rack_01",
+        "name": "멀티 스탠드",
+        "iconId": "furni_photoStudio_rack_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 2,
+        "height": 8,
+        "comfort": 405,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "자유롭게 접었다가 펼칠 수 있고, 장치를 걸 수도 있는 스탠드. 오퍼레이터 한 명을 걸어도 거뜬하다. 클릭이 직접 시도해 봤다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_bananaLeaf_01": {
+        "id": "furni_photoStudio_bananaLeaf_01",
+        "name": "내추럴 부채",
+        "iconId": "furni_photoStudio_bananaLeaf_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 8,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "그냥 바나나 나무의 이파리다. 잎의 바람 세기를 의심했던 사람들은 모두 엄청난 바람에 날아갔다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_lighting_01": {
+        "id": "furni_photoStudio_lighting_01",
+        "name": "촬영 조명",
+        "iconId": "furni_photoStudio_lighting_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 160,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "관 형태로 된 촬영 조명, 고정되어 있다. 뭐? 클릭의 부유 유닛도 조명으로 쓸 수 있다고?!",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_whiteDecor_01": {
+        "id": "furni_photoStudio_whiteDecor_01",
+        "name": "정물 촬영 수업 도구",
+        "iconId": "furni_photoStudio_whiteDecor_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "조화 예술품, 수업 도구로 사용된다. 같은 카메라를 들고 있어도, 촬영 효과는 늘 다르다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_posingStool_01": {
+        "id": "furni_photoStudio_posingStool_01",
+        "name": "촬영 하이 스툴",
+        "iconId": "furni_photoStudio_posingStool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 110,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "포토그래퍼 전용 하이스툴. 프로이건 취미로 하는 애호가이건 다 쓸 수 있다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_lightModifier_01": {
+        "id": "furni_photoStudio_lightModifier_01",
+        "name": "촬영 보조 장비",
+        "iconId": "furni_photoStudio_lightModifier_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 5,
+        "height": 7,
+        "comfort": 325,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "스튜디오에 필수 3종 세트. 씬은 로봇 소대 전체를 불러 조명으로 쓴다, 너무 사치다!",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_carpet_01": {
+        "id": "furni_photoStudio_carpet_01",
+        "name": "촬영 구역 카펫",
+        "iconId": "furni_photoStudio_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 10,
+        "height": 1,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "촬영 구역 구분에 사용되는 때가 잘 타지 않는 카펫, “렌즈 밖은 모두 풍경이다.” 렌즈가 씬 대신 얘기할 때 이렇게 말했다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_background_01": {
+        "id": "furni_photoStudio_background_01",
+        "name": "벽걸이 커튼",
+        "iconId": "furni_photoStudio_background_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 8,
+        "comfort": 90,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "장식 역할을 하는 커튼, 주로 로도스 아일랜드의 촬영 애호가들에게 배경으로 사용된다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_ceilingLight_01": {
+        "id": "furni_photoStudio_ceilingLight_01",
+        "name": "천장 레일 조명",
+        "iconId": "furni_photoStudio_ceilingLight_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 18,
+        "depth": 5,
+        "height": 1,
+        "comfort": 275,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "넓은 범위에 빛을 제공하는 이동식 조명, 바퀴가 망가져서 지금은 움직이지 않는다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_wallpaper_01": {
+        "id": "furni_photoStudio_wallpaper_01",
+        "name": "스튜디오 벽지",
+        "iconId": "furni_photoStudio_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "스튜디오를 위해 특별히 디자인한 벽지, 자연과 가까운 색으로 골라 투자자가 아주 좋아한다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_floor_01": {
+        "id": "furni_photoStudio_floor_01",
+        "name": "스튜디오 바닥 타일",
+        "iconId": "furni_photoStudio_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "스튜디오에 깐 바닥 타일, 전형적인 마름모형 보색 배치로 디자이너의 뇌세포를 대폭 아꼈다.",
+        "obtainApproach": "일부 스테이지 럭키 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "토끼 기계 절구",
@@ -34137,6 +34626,109 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_photoStudio": {
+        "id": "furni_set_photoStudio",
+        "name": "촬영 마니아 스튜디오",
+        "themeType": "LUCKY",
+        "desc": "로도스 아일랜드의 촬영 마니아들이 지은 스튜디오, 완벽한 설비와 프로패셔널한 솜씨는 오로지 좋은 작품을 촬영하기 위함이다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_photoStudio_changingRoom_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_photoStudio_mirror_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_abstractArt_01",
+            "pos0": 2,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_table_01",
+            "pos0": 5,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_stool_01",
+            "pos0": 5,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_photoStudio_curtain_01",
+            "pos0": 9,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_desk_01",
+            "pos0": 12,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_photoStudio_chair_01",
+            "pos0": 14,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_photoStudio_rack_01",
+            "pos0": 15,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_bananaLeaf_01",
+            "pos0": 9,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_lighting_01",
+            "pos0": 25,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_whiteDecor_01",
+            "pos0": 27,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_photoStudio_posingStool_01",
+            "pos0": 26,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_photoStudio_lightModifier_01",
+            "pos0": 30,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_carpet_01",
+            "pos0": 24,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_background_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_ceilingLight_01",
+            "pos0": 13,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -36247,6 +36839,61 @@
           "furni_perfumer_wallpaper_01",
           "furni_perfumer_floor_01",
           "furni_perfumer_shelf_01"
+        ]
+      },
+      "furni_set_photoStudio_1": {
+        "id": "furni_set_photoStudio_1",
+        "name": "분장 구역",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 210,
+        "count": 4,
+        "furniture": [
+          "furni_photoStudio_changingRoom_01",
+          "furni_photoStudio_mirror_01",
+          "furni_photoStudio_table_01",
+          "furni_photoStudio_stool_01"
+        ]
+      },
+      "furni_set_photoStudio_2": {
+        "id": "furni_set_photoStudio_2",
+        "name": "준비 구역",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 345,
+        "count": 5,
+        "furniture": [
+          "furni_photoStudio_desk_01",
+          "furni_photoStudio_chair_01",
+          "furni_photoStudio_rack_01",
+          "furni_photoStudio_ceilingLight_01",
+          "furni_photoStudio_curtain_01"
+        ]
+      },
+      "furni_set_photoStudio_3": {
+        "id": "furni_set_photoStudio_3",
+        "name": "촬영 구역",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 235,
+        "count": 6,
+        "furniture": [
+          "furni_photoStudio_lightModifier_01",
+          "furni_photoStudio_lighting_01",
+          "furni_photoStudio_whiteDecor_01",
+          "furni_photoStudio_background_01",
+          "furni_photoStudio_posingStool_01",
+          "furni_photoStudio_carpet_01"
+        ]
+      },
+      "furni_set_photoStudio_4": {
+        "id": "furni_set_photoStudio_4",
+        "name": "스튜디오 인테리어",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 150,
+        "count": 4,
+        "furniture": [
+          "furni_photoStudio_wallpaper_01",
+          "furni_photoStudio_floor_01",
+          "furni_photoStudio_bananaLeaf_01",
+          "furni_photoStudio_abstractArt_01"
         ]
       }
     },
