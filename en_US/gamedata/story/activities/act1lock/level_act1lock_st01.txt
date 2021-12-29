@@ -1,0 +1,128 @@
+[HEADER(key="title_test", is_skippable=false, fit_mode="BLACK_MASK")] 开头avg
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_003_kalts_1",fadetime=1,block=true)]
+[delay(time=1)]
+[PlaySound(key="$doorknockquite", volume=0.6)]
+[delay(time=0.5)]
+[name="Kal'tsit"]  Come in.
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[dialog]
+[Character(name="avg_482_pallas_1",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[Delay(time=1)]
+[name="Pallas"]  Oh, Dame Kal'tsit. You're here too, Doctor.
+[name="Pallas"]  We said hello to each other several times in the hallway, though we didn't know each other well yet at the time. Since I have been summoned here, I suppose news of our invitation to the celebration has made it to your ears.
+[dialog]
+[Decision(options="'Invitation to the celebration...?'",values="1")]
+[Predicate(references="1")]
+[Character(name="char_003_kalts_1")]
+[name="Kal'tsit"]  This Interlocking Security Competition is the first one to be held in Minos.
+[name="Kal'tsit"]  Actually, it was Priestess Pallas who helped with the invitation and liaised with the competition committee and the Minos officials.
+[Character(name="char_003_kalts_1",name2="avg_482_pallas_1#5",focus=2)]
+[name="Pallas"]  Rhodes Island has embraced me with open arms and given me treatment. It has already bestowed on me far too many acts of kindness.
+[name="Pallas"]  To participate in the different ceremonies, to enjoy the festivities, and to compete against one another with their raw might. All of this is the joy that all warriors strive for. They are the manifestation of their thirst for glory.
+[name="Pallas"]  I have been blessed with such generosity by my friends here. Naturally, I will return the favor by sharing news of a celebration equally excitable and beneficial.
+[Character(name="char_003_kalts_1",name2="avg_482_pallas_1#5",focus=1)]
+[name="Kal'tsit"]  That's the size of it, Dr. {@nickname}. I will leave it to our special deputy for this competition, Pallas, to explain to you the details. I have more important things to attend to.
+[Character(name="char_003_kalts_1",name2="avg_482_pallas_1",focus=2)]
+[name="Pallas"]  I wish you a pleasant day too, Dame Kal'tsit.
+[dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.4, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.4, block=true)]
+[Character(name="avg_482_pallas_1#13",fadetime=1,block=true)]
+[Delay(time=1)]
+[name="Pallas"]  ......
+[dialog]
+[Decision(options="......",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_482_pallas_1")]
+[name="Pallas"]  Eh... I've talked to Dame Kal'tsit many a time, but the pressure never ceases to wear me out.
+[name="Pallas"]  I only hope that you are a more proactive and approachable person than her.
+[name="Pallas"]  Let us take to the festivities and amaze the world with Rhodes Island's excellent talents and prowess! Come, Doctor, let us now...
+[PlaySound(key="$rungeneral", volume=0.6)]
+[dialog]
+[character]
+[Character(name="char_empty",fadetime=0.7)]
+[characteraction(name="middle", type="move", xpos=-200, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="middle", type="move", xpos=200, fadetime=0.6, block=false)]
+[Character(name="char_333_sidero_1",fadetime=0.7)]
+[delay(time=0.6)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Sideroca"]  *Pant*... Before that... Stop... right there!
+[delay(time=0.6)]
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#9",focus=2)]
+[name="Pallas"]  Hmm?
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#6",focus=2)]
+[name="Pallas"]  Ah, the warrior from Corinia. You come before me yet again.
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#5",focus=2)]
+[name="Pallas"]  I have looked for you several times ever since we left contact with each other when we left the bridge for this office. Why did you leave me?
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#5",focus=1)]
+[name="Sideroca"]  Stop stretching the truth when the Doctor's here! You were looking everywhere the whole time you were walking, trying to make small talk, and then you even disappeared from the bridge while I wasn't paying attention.
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#6",focus=2)]
+[name="Pallas"]  Of course. We mustn't miss any opportunity to meet another warrior.
+[name="Pallas"]  Humans are always going on with our lives at a breakneck pace. If language could help us connect with one another's souls, then even if the connection we make is brief and momentary, I find it much better than to regret not taking the initiative to form the relationships we could have had.
+[dialog]
+[Decision(options="(What is Pallas even saying?);I don't think you two are quite on the same page.;......",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#6",focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Sideroca"]  Anyway... I have no idea what kind of scenic route you took, but since you've found the Doctor, please finish your mission.
+[name="Sideroca"]  Ahem, the things you gotta do. First, you need to explain to the Doctor all the relevant information about the main theme of this Interlocking Competition, 'Hymnoi Wisdom.'
+[name="Sideroca"]  Secondly, turn in a list of recommended personnel for the competition and to look up whether they will have the time to train and participate in the competition...
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#13",focus=2)]
+[name="Pallas"]  My poor, powerless Priestess Pallas. Before, you were shackled by a life of formalities, destined to ever follow the rules as you spend your days away at the temple. Is fate so cruel that you must live your life this way once more?
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#7",focus=2)]
+[name="Pallas"]  No, my brave Pallas. Resist! You must be fearless and defy those most tedious rules!
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#7",focus=1)]
+[name="Sideroca"]  Priestess Pallas... This is serious. Please try to say something that makes sense to the Doctor and me.
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1#7",focus=2)]
+[name="Pallas"]  *Sobs*... In that case, I must bear with this life, no matter how unwilling I am.
+[Character(name="avg_482_pallas_1")]
+[name="Pallas"]  Doctor, if you have any questions about this competition, please ask away without reserve. My words will turn into fowlbeasts of the soul and reach your ears so that your wisdom will be shrouded no more.
+[dialog]
+[Decision(options="Maybe tell me more about the Interlocking Competition.;Thanks.",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_482_pallas_1")]
+[name="Pallas"]  Yes. Where should we start...? This Interlocking Security Competition takes place in Minos's Hymnoi region.
+[name="Pallas"]  After all, the concept of the Interlocking Competitions originated in Minos. Since the military training bases in Hymnoi have just received new renovations and refurbishments, the region fulfilled all the requirements to host the competition.
+[name="Pallas"]  Not only does the competition have a generous prize pool, we can also boost our power. Most importantly...
+[name="Pallas"]  This competition is limited to private, commercial organizations only, so we needn't worry about the governmental organizations interfering.
+[dialog]
+[Decision(options="Really?",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_482_pallas_1")]
+[name="Pallas"]  Relax, my wise and cautious Doctor. You will never find any conspiracies in the land of Minos. Those lands are blessed only by noble heroes.
+[name="Pallas"]  Once you pay it a visit, you will experience how the people of Minos hold such competitive spirit in high regard, as opposed to the cruel wars of profit fought elsewhere.
+[name="Pallas"]  With Minos returning to its greatest, there is no greatest spirit that for us to spread across the leads, no peace to further stabilize amidst such turmoil.
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1",focus=1)]
+[name="Sideroca"]  All... except Corinia.
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1",focus=2)]
+[name="Pallas"]  Of course, there are those who make compromises for commercial trade.
+[name="Pallas"]  That being said, warrior from Corinia. Haven't you already put your innocent heart to good use here in Rhodes Island?
+[Character(name="char_333_sidero_1",name2="avg_482_pallas_1",focus=1)]
+[name="Sideroca"]  Yeah.
+[Character(name="avg_482_pallas_1")]
+[name="Pallas"]  Let us waste no more time, Doctor. We have much to prepare.
+[name="Pallas"]  Whether it is the planning and preparations of our personnel and our tactics or the maintenance and allocations of our equipment, they must all be completed before we leave.
+[dialog]
+[Decision(options="Pallas, how good do you think the odds are for Rhodes Island?",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_482_pallas_1#14")]
+[name="Pallas"]  You needn't worry, Doctor.
+[name="Pallas"]  The Priestess Pallas stands before you. I came here to Rhodes Island because of the guidance of heroes, and I am representing Rhodes Island in this competition—
+[name="Pallas"]  I understand Rhodes Island's strength. We, the warriors of Rhodes Island, will obtain all that we desire.
+[name="Pallas"]  Odds... Doctor, those numbers and statistics are illusory and meaningless.
+[name="Pallas"]  After all, we determine the odds. We are the key to our success and victory.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Image]

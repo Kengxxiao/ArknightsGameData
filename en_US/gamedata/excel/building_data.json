@@ -8264,6 +8264,34 @@
         }
       ]
     },
+    "char_485_pallas": {
+      "charId": "char_485_pallas",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_limit&cost[003]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
     "char_504_rguard": {
       "charId": "char_504_rguard",
       "maxManpower": 8640000,
@@ -9082,6 +9110,18 @@
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+8</> and Morale consumed per hour <@cc.vup>-0.25</>"
     },
+    "manu_prod_limit&cost[003]": {
+      "buffId": "manu_prod_limit&cost[003]",
+      "buffName": "Domain of Wisdom",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_limit&cost1",
+      "sortId": 3205,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+8</> and Morale consumed per hour <@cc.vup>-0.25</>"
+    },
     "manu_prod_limit&cost[010]": {
       "buffId": "manu_prod_limit&cost[010]",
       "buffName": "Hoarder",
@@ -9273,6 +9313,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to Factory, for every <@cc.vup>1</> points of <$cc.bd_A><@cc.rem>Chain of Thought</>, productivity </><@cc.vup>+1%</>"
+    },
+    "manu_formula_spd[000]": {
+      "buffId": "manu_formula_spd[000]",
+      "buffName": "Plan to Victory",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp1",
+      "sortId": 3801,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula related productivity <@cc.vup>+25%</>"
     },
     "manu_formula_spd[010]": {
       "buffId": "manu_formula_spd[010]",
@@ -27037,6 +27089,443 @@
         "canBeDestroy": true,
         "isOnly": -1
       },
+      "furni_photoStudio_changingRoom_01": {
+        "id": "furni_photoStudio_changingRoom_01",
+        "name": "Simple Fitting Room",
+        "iconId": "furni_photoStudio_changingRoom_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 10,
+        "comfort": 405,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A fitting room for models. If the pictures you are taking are artistic enough, this is where you can get changed.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_mirror_01": {
+        "id": "furni_photoStudio_mirror_01",
+        "name": "Standing Dressing Mirror",
+        "iconId": "furni_photoStudio_mirror_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 150,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A dressing mirror for models. This is how you look at yourself after you finish changing.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_abstractArt_01": {
+        "id": "furni_photoStudio_abstractArt_01",
+        "name": "Large Oil Painting",
+        "iconId": "furni_photoStudio_abstractArt_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 6,
+        "depth": 1,
+        "height": 9,
+        "comfort": 190,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An oil painting painted by a certain operator. Since the said operator is not a professional, most spectators aren't as harsh on it as the photos that are taken here.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_table_01": {
+        "id": "furni_photoStudio_table_01",
+        "name": "Studio Vanity Table",
+        "iconId": "furni_photoStudio_table_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 3,
+        "height": 5,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A vanity table for models. If you need any makeup done, this is where you do it.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_stool_01": {
+        "id": "furni_photoStudio_stool_01",
+        "name": "Cubic Stool",
+        "iconId": "furni_photoStudio_stool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 110,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A short stool for models. You gotta sit down to get your makeup done. Wait up, where'd the makeup artist go?",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_curtain_01": {
+        "id": "furni_photoStudio_curtain_01",
+        "name": "Translucent Curtain",
+        "iconId": "furni_photoStudio_curtain_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 1,
+        "depth": 4,
+        "height": 10,
+        "comfort": 125,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A translucent scroll that acts as a partition. This is Scene trying to tell the other photography hobbyists: Patience is virtue.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_desk_01": {
+        "id": "furni_photoStudio_desk_01",
+        "name": "Studio Worktable",
+        "iconId": "furni_photoStudio_desk_01",
+        "type": "TABLE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 3,
+        "height": 5,
+        "comfort": 390,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A worktable at the studio. This is where the photographers put all their documents and photos for organization and where they criticize everyone else's work.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_chair_01": {
+        "id": "furni_photoStudio_chair_01",
+        "name": "Spinny Office Chair",
+        "iconId": "furni_photoStudio_chair_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 165,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An office chair common to all Rhodes Island offices, just with a different color. Supposedly, if you spin around on it for a while, it'll give you a whole new perspective on things.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_rack_01": {
+        "id": "furni_photoStudio_rack_01",
+        "name": "Multipurpose Rack",
+        "iconId": "furni_photoStudio_rack_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 2,
+        "height": 8,
+        "comfort": 405,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A rack that can be extended and retracted as necessary, used for hanging equipment. You could even hang a whole operator on it. Click's tried it before.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_bananaLeaf_01": {
+        "id": "furni_photoStudio_bananaLeaf_01",
+        "name": "Natural Fanning Leaf",
+        "iconId": "furni_photoStudio_bananaLeaf_01",
+        "type": "WALLDECO",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 8,
+        "comfort": 165,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A banana tree's leaf. Anyone who's ever questioned the winds you can fan with it has all been really blown away.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_lighting_01": {
+        "id": "furni_photoStudio_lighting_01",
+        "name": "Photoflood Lamp",
+        "iconId": "furni_photoStudio_lighting_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 160,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A photoflood lamp that has already been set up. What's that? Click's Drones can light things up too?!",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_whiteDecor_01": {
+        "id": "furni_photoStudio_whiteDecor_01",
+        "name": "Still Photography Teaching Material",
+        "iconId": "furni_photoStudio_whiteDecor_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 165,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A flower-like art piece used as a teaching material. Though everyone uses the same cameras to take pictures, the results are always wildly different.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_posingStool_01": {
+        "id": "furni_photoStudio_posingStool_01",
+        "name": "Photographer's Chair",
+        "iconId": "furni_photoStudio_posingStool_01",
+        "type": "SEATING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 110,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A high chair for the photographers. Good for professionals and hobbyists alike.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_lightModifier_01": {
+        "id": "furni_photoStudio_lightModifier_01",
+        "name": "Photoshoot Auxiliary Equipment",
+        "iconId": "furni_photoStudio_lightModifier_01",
+        "type": "DECORATION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 4,
+        "depth": 5,
+        "height": 7,
+        "comfort": 325,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A set of equipment that no self-respecting photography studio would omit. Supposedly, when Scene needs lighting, she has her whole team of robots roll right up with their lights on. What a high roller!",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_carpet_01": {
+        "id": "furni_photoStudio_carpet_01",
+        "name": "Photo Zone Rug",
+        "iconId": "furni_photoStudio_carpet_01",
+        "type": "CARPET",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 10,
+        "depth": 10,
+        "height": 1,
+        "comfort": 150,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A stain-resistant rug used to show which part of the room is for photography use. As Lens would sometimes say for Scene, 'Everything beyond the lens is still picturesque.'",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_background_01": {
+        "id": "furni_photoStudio_background_01",
+        "name": "Hanging Screen",
+        "iconId": "furni_photoStudio_background_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 3,
+        "depth": 1,
+        "height": 8,
+        "comfort": 90,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A hanging screen used for decoration. Its primary purpose is to serve as a backdrop for Rhodes Island's photography hobbyists.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_ceilingLight_01": {
+        "id": "furni_photoStudio_ceilingLight_01",
+        "name": "Sliding Rail Lighting",
+        "iconId": "furni_photoStudio_ceilingLight_01",
+        "type": "CEILING",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "rarity": 2,
+        "themeId": "",
+        "width": 18,
+        "depth": 5,
+        "height": 1,
+        "comfort": 275,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A movable light source that illuminates a wide area. Sadly, the wheels got stuck in the rails, so it's not moving anywhere for a while.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_wallpaper_01": {
+        "id": "furni_photoStudio_wallpaper_01",
+        "name": "Photo Studio Wallpaper",
+        "iconId": "furni_photoStudio_wallpaper_01",
+        "type": "WALLPAPER",
+        "location": "WALL",
+        "category": "WALL",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A wallpaper designed specifically for the photography studio with colors handpicked to resemble nature. All the investors really like it.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
+      "furni_photoStudio_floor_01": {
+        "id": "furni_photoStudio_floor_01",
+        "name": "Photo Studio Tiles",
+        "iconId": "furni_photoStudio_floor_01",
+        "type": "FLOOR",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "rarity": 2,
+        "themeId": "",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Flooring specifically designed for the photography studio with rhombuses that alternate in color. Hardly took the designers any time to come up with this.",
+        "obtainApproach": "Dropped from some stages",
+        "processedProductId": "3401",
+        "processedProductCount": 5,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "name": "Auto Medicine Maker",
@@ -34137,6 +34626,109 @@
             "pos1": 0
           }
         ]
+      },
+      "furni_set_photoStudio": {
+        "id": "furni_set_photoStudio",
+        "name": "The Photography Hobbyist's Studio",
+        "themeType": "LUCKY",
+        "desc": "A photography studio Rhodes Island set up for its hobbyists. Fully equipped and professional, ready for the finest pictures to be taken.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_photoStudio_changingRoom_01",
+            "pos0": 0,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_photoStudio_mirror_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_abstractArt_01",
+            "pos0": 2,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_table_01",
+            "pos0": 5,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_stool_01",
+            "pos0": 5,
+            "pos1": 4
+          },
+          {
+            "furnitureId": "furni_photoStudio_curtain_01",
+            "pos0": 9,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_desk_01",
+            "pos0": 12,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_photoStudio_chair_01",
+            "pos0": 14,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_photoStudio_rack_01",
+            "pos0": 15,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_bananaLeaf_01",
+            "pos0": 9,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_lighting_01",
+            "pos0": 25,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_whiteDecor_01",
+            "pos0": 27,
+            "pos1": 2
+          },
+          {
+            "furnitureId": "furni_photoStudio_posingStool_01",
+            "pos0": 26,
+            "pos1": 5
+          },
+          {
+            "furnitureId": "furni_photoStudio_lightModifier_01",
+            "pos0": 30,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_carpet_01",
+            "pos0": 24,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_background_01",
+            "pos0": 28,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_ceilingLight_01",
+            "pos0": 13,
+            "pos1": 1
+          },
+          {
+            "furnitureId": "furni_photoStudio_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0
+          },
+          {
+            "furnitureId": "furni_photoStudio_floor_01",
+            "pos0": 0,
+            "pos1": 0
+          }
+        ]
       }
     },
     "groups": {
@@ -36247,6 +36839,61 @@
           "furni_perfumer_wallpaper_01",
           "furni_perfumer_floor_01",
           "furni_perfumer_shelf_01"
+        ]
+      },
+      "furni_set_photoStudio_1": {
+        "id": "furni_set_photoStudio_1",
+        "name": "Dressing Area",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 210,
+        "count": 4,
+        "furniture": [
+          "furni_photoStudio_changingRoom_01",
+          "furni_photoStudio_mirror_01",
+          "furni_photoStudio_table_01",
+          "furni_photoStudio_stool_01"
+        ]
+      },
+      "furni_set_photoStudio_2": {
+        "id": "furni_set_photoStudio_2",
+        "name": "Prepping Area",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 345,
+        "count": 5,
+        "furniture": [
+          "furni_photoStudio_desk_01",
+          "furni_photoStudio_chair_01",
+          "furni_photoStudio_rack_01",
+          "furni_photoStudio_ceilingLight_01",
+          "furni_photoStudio_curtain_01"
+        ]
+      },
+      "furni_set_photoStudio_3": {
+        "id": "furni_set_photoStudio_3",
+        "name": "Shooting Area",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 235,
+        "count": 6,
+        "furniture": [
+          "furni_photoStudio_lightModifier_01",
+          "furni_photoStudio_lighting_01",
+          "furni_photoStudio_whiteDecor_01",
+          "furni_photoStudio_background_01",
+          "furni_photoStudio_posingStool_01",
+          "furni_photoStudio_carpet_01"
+        ]
+      },
+      "furni_set_photoStudio_4": {
+        "id": "furni_set_photoStudio_4",
+        "name": "Studio Decorations",
+        "themeId": "furni_set_photoStudio",
+        "comfort": 150,
+        "count": 4,
+        "furniture": [
+          "furni_photoStudio_wallpaper_01",
+          "furni_photoStudio_floor_01",
+          "furni_photoStudio_bananaLeaf_01",
+          "furni_photoStudio_abstractArt_01"
         ]
       }
     },
