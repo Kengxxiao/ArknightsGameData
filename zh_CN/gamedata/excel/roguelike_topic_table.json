@@ -878,6 +878,11 @@
         "canBeFree": true,
         "uniEquipId": null
       },
+      "char_4019_ncdeer": {
+        "charId": "char_4019_ncdeer",
+        "canBeFree": false,
+        "uniEquipId": null
+      },
       "char_215_mantic": {
         "charId": "char_215_mantic",
         "canBeFree": true,
@@ -13184,8 +13189,12 @@
               ]
             },
             {
-              "key": "enemy_attribute_mul",
+              "key": "global_buff_normal",
               "blackboard": [
+                {
+                  "key": "key",
+                  "valueStr": "enemy_move_speed_down"
+                },
                 {
                   "key": "move_speed",
                   "value": -0.15
@@ -13202,10 +13211,10 @@
               "blackboard": [
                 {
                   "key": "key",
-                  "valueStr": "attr_up_on_finish[def&mag_resist]"
+                  "valueStr": "attr_up_on_trigger[def&mag_resist]"
                 },
                 {
-                  "key": "duration",
+                  "key": "interval",
                   "value": 100.0
                 },
                 {
