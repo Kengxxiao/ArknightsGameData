@@ -876,6 +876,7 @@
   "hpMax": 4225.0,
   "reMax": 100.0,
   "diamondToShdRate": 180,
+  "requestSameFriendCD": 14400,
   "baseMaxFriendNum": 15,
   "hardDiamondDrop": 1,
   "instFinDmdShdCost": 80,
@@ -892,10 +893,6 @@
   "richTextStyles": {
     "mission.levelname": "<color=#FFDE00>{0}</color>",
     "mission.number": "<color=#FFDE00>{0}</color>",
-    "lv.item": "<color=#FFFFFF>{0}</color>",
-    "lv.rem": "<color=#FFFFFF>{0}</color>",
-    "lv.fs": "<color=#FF0000>{0}</color>",
-    "lv.sp": "<color=#fd4600>{0}</color>",
     "tu.kw": "<color=#0098DC>{0}</color>",
     "tu.imp": "<color=#FF0000>{0}</color>",
     "cc.vup": "<color=#0098DC>{0}</color>",
@@ -922,6 +919,10 @@
     "ro.get": "<color=#0098DC>{0}</color>",
     "ro.lose": "<color=#C82A36>{0}</color>",
     "rolv.rem": "<color=#FF4C22>{0}</color>",
+    "lv.item": "<color=#FFFFFF>{0}</color>",
+    "lv.rem": "<color=#FFFFFF>{0}</color>",
+    "lv.fs": "<color=#FF0000>{0}</color>",
+    "lv.sp": "<color=#fd4600>{0}</color>",
     "rc.title": "<color=#FFFFFF>{0}</color>",
     "rc.subtitle": "<color=#FFC90E>{0}</color>",
     "rc.em": "<color=#FF7F27>{0}</color>",
@@ -971,7 +972,7 @@
   "commonPotentialLvlUpCount": 4,
   "weeklyOverrideDesc": "",
   "voucherDiv": 5,
-  "recruitPoolVersion": 2,
+  "recruitPoolVersion": 4,
   "v006RecruitTimeStep1Refresh": 1577172600,
   "v006RecruitTimeStep2Check": 1577154600,
   "v006RecruitTimeStep2Flush": 1577649600,
@@ -1039,6 +1040,201 @@
   ],
   "monthlySubWarningTime": 345600,
   "UnlimitSkinOutOfTime": 1209600,
-  "replicateShopStartTime": 1619676000,
-  "TSO": 1631172600
+  "replicateShopStartTime": 1597132800,
+  "TSO": 1608192000,
+  "isDynIllustEnabled": true,
+  "voucherSkinRedeem": 1,
+  "voucherSkinDesc": "當某位幹員的<color=#ffa633>首個</color>異格上線時，若曾使用<color=#ffa633>源石</color>購買過該幹員的時裝，則在該幹員的<color=#ffa633>首個</color>異格幹員上線後返還道具<color=#33b5ff>【時裝自選憑證】</color>*1。\n\n若有以下情況，則在異格幹員上線後<color=#ffa633>不進行返還</color>：\n1.在某位幹員的首個異格幹員上線前，使用【時裝自選憑證】兌換了原幹員的時裝。\n2.在某位幹員的首個異格幹員上線後，使用源石購買了原幹員的時裝。\n3.在某位幹員的首個異格幹員上線後，使用【時裝自選憑證】兌換了原幹員的時裝。\n\n【時裝自選憑證】僅可以兌換當期時裝商店中售賣的時裝，若已購買了時裝商店中所有的服裝或時裝商店中無時裝售賣時，則【時裝自選憑證】<color=#ffa633>無法使用</color>。\n\n此外，若今後有<color=#ffa633>不可使用</color>【時裝自選憑證】兌換的時裝出現時，屆時會告知博士，敬請注意。",
+  "termDescriptionDict": {
+    "ba.sluggish": {
+      "termId": "ba.sluggish",
+      "termName": "停頓",
+      "description": "移動速度降低80%"
+    },
+    "ba.root": {
+      "termId": "ba.root",
+      "termName": "束縛",
+      "description": "無法移動"
+    },
+    "ba.stun": {
+      "termId": "ba.stun",
+      "termName": "暈眩",
+      "description": "無法移動、阻擋、攻擊及使用技能"
+    },
+    "ba.buffres": {
+      "termId": "ba.buffres",
+      "termName": "抵抗",
+      "description": "<$ba.stun>暈眩</>、<$ba.cold>寒冷</>、<$ba.frozen>凍結</>等負面狀態的持續時間減半（同名效果不疊加）"
+    },
+    "ba.invisible": {
+      "termId": "ba.invisible",
+      "termName": "隱匿",
+      "description": "不阻擋時不成為敵方攻擊的目標"
+    },
+    "ba.camou": {
+      "termId": "ba.camou",
+      "termName": "迷彩",
+      "description": "不阻擋時不成為敵方普通攻擊的目標（無法躲避濺射類攻擊）"
+    },
+    "ba.fragile": {
+      "termId": "ba.fragile",
+      "termName": "脆弱",
+      "description": "受到的所有傷害提升相應比例（同名效果取最高）"
+    },
+    "ba.shield": {
+      "termId": "ba.shield",
+      "termName": "護盾",
+      "description": "每層護盾可以抵擋一次傷害"
+    },
+    "ba.protect": {
+      "termId": "ba.protect",
+      "termName": "庇護",
+      "description": "受到的物理和法術傷害降低相應比例（同名效果取最高）"
+    },
+    "ba.cold": {
+      "termId": "ba.cold",
+      "termName": "寒冷",
+      "description": "攻擊速度下降30，如果在持續時間內再次受到寒冷效果則會變為<$ba.frozen>凍結</>"
+    },
+    "ba.frozen": {
+      "termId": "ba.frozen",
+      "termName": "凍結",
+      "description": "無法移動、攻擊及使用技能（透過<$ba.cold>寒冷</>觸發）"
+    },
+    "ba.sleep": {
+      "termId": "ba.sleep",
+      "termName": "沉睡",
+      "description": "無敵且無法行動"
+    },
+    "ba.inspire": {
+      "termId": "ba.inspire",
+      "termName": "鼓舞",
+      "description": "獲得額外附加的基礎屬性加成（同類屬性取最高）"
+    },
+    "ba.binding": {
+      "termId": "ba.binding",
+      "termName": "綁定",
+      "description": "綁定對象不在場時技能強制結束，清空所有技力且無法回復技力"
+    },
+    "ba.dt.neural": {
+      "termId": "ba.dt.neural",
+      "termName": "神經損傷",
+      "description": "神經損傷累計至1000時，受到1000點真實傷害並<$ba.stun>暈眩</>10秒"
+    },
+    "cc.bd_A_1": {
+      "termId": "cc.bd_A_1",
+      "termName": "念力",
+      "description": "由以下幹員提供\n迷迭香"
+    },
+    "cc.bd_A_2": {
+      "termId": "cc.bd_A_2",
+      "termName": "意識實體",
+      "description": "由以下幹員提供\n迷迭香"
+    },
+    "cc.bd_A": {
+      "termId": "cc.bd_A",
+      "termName": "思維鏈環",
+      "description": "可影響<$cc.bd_A_1><@cc.rem>念力</></>、<$cc.bd_A_2><@cc.rem>意識實體</></>相關技能\n由以下幹員提供\n迷迭香"
+    },
+    "cc.bd_a1": {
+      "termId": "cc.bd_a1",
+      "termName": "感知資訊",
+      "description": "可影響<$cc.bd_A><@cc.rem>思維鏈環</></>相關技能\n由以下幹員提供\n迷迭香、夕、絮雨、愛麗絲"
+    },
+    "cc.bd_b1": {
+      "termId": "cc.bd_b1",
+      "termName": "人間煙火",
+      "description": "由以下幹員提供\n夕、烏有"
+    },
+    "cc.bd_ash": {
+      "termId": "cc.bd_ash",
+      "termName": "情報儲備",
+      "description": "由以下幹員提供\n灰燼"
+    },
+    "cc.bd_tachanka": {
+      "termId": "cc.bd_tachanka",
+      "termName": "烏薩斯特飲",
+      "description": "由以下幹員提供\n戰車"
+    },
+    "cc.bd_a1_a1": {
+      "termId": "cc.bd_a1_a1",
+      "termName": "記憶碎片",
+      "description": "可影響<$cc.bd_a1><@cc.rem>感知資訊</></>相關技能\n由以下幹員提供\n絮雨"
+    },
+    "cc.bd_a1_a2": {
+      "termId": "cc.bd_a1_a2",
+      "termName": "夢境",
+      "description": "可影響<$cc.bd_a1><@cc.rem>感知資訊</></>相關技能\n由以下幹員提供\n愛麗絲"
+    },
+    "cc.m.var1": {
+      "termId": "cc.m.var1",
+      "termName": "回收利用",
+      "description": "由以下幹員提供\n紅雲"
+    },
+    "cc.m.var2": {
+      "termId": "cc.m.var2",
+      "termName": "配合意識",
+      "description": "由以下幹員提供\n槐琥"
+    },
+    "cc.t.lgd": {
+      "termId": "cc.t.lgd",
+      "termName": "龍門近衛局",
+      "description": "包含以下幹員\n陳、星熊、詩懷雅"
+    },
+    "cc.t.lda": {
+      "termId": "cc.t.lda",
+      "termName": "鯉氏偵探所",
+      "description": "包含以下幹員\n阿、吽、槐琥"
+    },
+    "cc.t.ussg": {
+      "termId": "cc.t.ussg",
+      "termName": "烏薩斯學生自治團",
+      "description": "包含以下幹員\n早露、凜冬、真理、古米"
+    },
+    "cc.t.R6": {
+      "termId": "cc.t.R6",
+      "termName": "虹彩小隊",
+      "description": "包含以下幹員\nASH、TACHANKA、BLITZ、FROST"
+    },
+    "cc.t.sp": {
+      "termId": "cc.t.sp",
+      "termName": "異格",
+      "description": "包含以下幹員\n炎獄炎熔、濁心斯卡蒂"
+    },
+    "cc.t.egir": {
+      "termId": "cc.t.egir",
+      "termName": "深海獵人",
+      "description": "包含以下幹員\n歌蕾蒂婭、斯卡蒂、幽靈鯊、安哲拉"
+    },
+    "cc.c.egir2_1": {
+      "termId": "cc.c.egir2_1",
+      "termName": "特殊加成",
+      "description": "每有1個<$cc.t.egir><@cc.kw>深海獵人</></>幹員進駐在製造站，則控制中樞給每個進駐<$cc.t.egir><@cc.kw>深海獵人</></>的製造站提供<@cc.vup>5%</>生產力，最多給單個製造站提供<@cc.vup>45%</>生產力"
+    },
+    "cc.c.egir2_2": {
+      "termId": "cc.c.egir2_2",
+      "termName": "特殊加成",
+      "description": "每有1個<$cc.t.egir><@cc.kw>深海獵人</></>幹員進駐在製造站，則控制中樞給每個進駐<$cc.t.egir><@cc.kw>深海獵人</></>的製造站提供<@cc.vup>10%</>生產力，最多給單個製造站提供<@cc.vup>90%</>生產力"
+    },
+    "cc.c.egir2_3": {
+      "termId": "cc.c.egir2_3",
+      "termName": "特殊疊加規則",
+      "description": "無法與<$cc.m.var2><@cc.rem>配合意識</></>進行疊加，且優先生效\n無法與<$cc.m.pow1><@cc.rem>自動化·α</></>、<$cc.m.pow2><@cc.rem>自動化·β</></>、<$cc.m.pow3><@cc.rem>仿生海龍</></>進行疊加，且清零效果優先生效"
+    },
+    "cc.m.pow1": {
+      "termId": "cc.m.pow1",
+      "termName": "自動化·α",
+      "description": "由以下幹員提供\n溫蒂、森蚺、異客"
+    },
+    "cc.m.pow2": {
+      "termId": "cc.m.pow2",
+      "termName": "自動化·β",
+      "description": "由以下幹員提供\n森蚺"
+    },
+    "cc.m.pow3": {
+      "termId": "cc.m.pow3",
+      "termName": "仿生海龍",
+      "description": "由以下幹員提供\n溫蒂"
+    }
+  }
 }
