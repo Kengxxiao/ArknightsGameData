@@ -38,8 +38,8 @@
 [name=""]   시에스타
 [Blocker(a=0, fadetime=2, block=false)]
 [Image(image="ac3_title2", fadetime=2)]
-[Background(image="bg_beach",screenadapt="coverall",x=-200, y=0,block=true)]
-[BackgroundTween(image="bg_beach" ,screenadapt="coverall",xFrom=-200, yFrom=0, xTo=200, yTo=0,duration=25)]
+[largebg(imagegroup="bg_beach_1/bg_beach_2", solidwidth="920/920", solidheight=720,x=-180)]
+[largebgtween(xFrom=-180,xTo=-720,  duration=25, ease="1", block=false)]
 [playsound(key="$d_gen_transmissionget", volume=0.4)]
 [name="방송"]   관광객 여러분, 안녕하세요. 일 년에 단 한 번! 옵시디언 페스티벌을 맞아 시에스타에 오신 여러분을 환영합니다!
 [name="방송"]   우리 시에스타에서 여름을 날려버릴 당신! 절대 실망하지 않을 겁니다!
@@ -52,7 +52,7 @@
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Image]
 [Character]
-[Background]
+[largebg]
 [Blocker(a=0, fadetime=0.6, block=false)]
 [Background(image="bg_sunnytown_2",x=-80, y=0, xScale=1.1, yScale=1.1,block=true)]
 [BackgroundTween(image="bg_sunnytown_2", xFrom=-80, yFrom=0, xTo=20, yTo=0,duration=15)]
@@ -260,7 +260,7 @@
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [Character]
-[Background(image="bg_beach",screenadapt="coverall",x=-200, y=0,block=true)]
+[largebg(imagegroup="bg_beach_1/bg_beach_2", solidwidth="920/920", solidheight=720,x=-180)]
 [Blocker(a=0, fadetime=2, block=true)]
 [Character(name="avg_npc_021")]
 [name="남성 관광객"]   망고 마티니 스무디 한잔.
@@ -326,7 +326,7 @@
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [stopmusic(fadetime=1)]
 [Character]
-[Background(image="bg_beach",screenadapt="coverall",x=-200, y=0,block=true)]
+[largebg(imagegroup="bg_beach_1/bg_beach_2", solidwidth="920/920", solidheight=720,x=-180)]
 [Blocker(a=0, fadetime=2, block=true)]
 [PlayMusic(intro="$path_intro", key="$path_loop", volume=0.8, crossfade=1.5)]
 [Character(name="avg_npc_021")]
@@ -382,6 +382,7 @@
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=0.6, block=true)]
 [Blocker(a=0, fadetime=0.6, block=true)]
+[Character(name="char_340_shwaz_2#1")]
 [name="???"]   어떻게, 시에스타는 마음에 드십니까?
 [name="???"]   전 저분처럼 젊고 건강미 넘치게 성장한 모습이 제일 좋더군요.
 [Decision(options="당신은 여기 사람인가?",values="1")]
@@ -389,6 +390,8 @@
 [name="???"]   여기서 태어나 자란 건 아니지만, 지금은 여기가 바로 제집이라 할 수 있겠군요.
 [name="???"]   이곳을 지키기 위해서라면, 전 뭐든지 다 할 겁니다.
 [name="???"]   어디 사람이든, 자기 가족에 대한 감정은 다 똑같잖아요?
+[dialog]
+[character]
 [Character(name="avg_npc_020")]
 [name="경호원"]   보스, 크로닌 선생님께서 찾으십니다.
 [Character(name="char_340_shwaz_2#2",name2="avg_npc_020",focus=1)]

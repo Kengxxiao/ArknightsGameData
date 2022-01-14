@@ -1,0 +1,568 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_cher_3",screenadapt="coverall")]
+[playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+11:00 A.M 교외 모처
+[dialog]
+[Character(name="avg_npc_145", name2="avg_123_fang_1",fadetime=0.5)]
+[delay(time=1)]
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]계획대로 제10구역 침투 성공, 3시 방향에서 적을 발견했습니다.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=2)]
+[name="팽"]몇 명 더 남았죠?
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]……스캔 완료, 가시 범위에 총 세 명입니다.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=2)]
+[name="팽"]방금 10구역으로 달아난 게 네 명이니까 이곳에서 적을 섬멸하면 적의 정보 회수를 저지할 수 있고, 우리의 두 번째 단계 공격이 유리해질 수 있을 거예요.
+[Character(name="avg_npc_145", name2="avg_123_fang_1#6",focus=2)]
+[name="팽"]이 셋은…… 절대로 놓쳐서는 안 됩니다. 그리고 나머지 한 명도 찾아내야죠.
+[name="팽"]제가 그들을 견제하겠습니다! 모두 계획대로 진행하세요!
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#6",focus=1)]
+[name="애시드드롭"]계획…… 대로? 팽 팀장, 난 뭘 해야 하는데?
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#4",focus=2)]
+[name="팽"](아차, 설명하는 걸 또 깜빡했나?)
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]애시드드롭은 고지를 찾아서 엄호 사격을 하고, 프로스트리프는 제 뒤를 따라오면서 적을 확인하는 즉시 공격해 주세요.
+[name="팽"]렌즈는 계속해서 전체 시야를 확보하는 동시에 씬의 안전을 지켜주세요.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]네, 현재 렌즈의 복합 스텔스 가드는 아직 적에게 노출되지 않은 것으로 확인되었습니다.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=1)]
+[name="프로스트리프"]응? 뭐지, 이 탄내는……
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1#6",focus=2)]
+[name="팽"]……네 번째 상대가 파 놓은 함정입니다! 후퇴하면서 우리를 유인해 함정에 빠뜨리려는 것 같습니다!
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="팽"]애시드드롭, 부탁할게요!
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#6",focus=1)]
+[name="애시드드롭"]그게, 나보고 함정을 파괴하라는 거야?
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]네, 제 왼쪽에 있습니다. 저는 프로스트리프와 나머지 적을 잡을게요.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]알았어.
+[Dialog]
+[PlaySound(key="$rungeneral", volume=1)]
+[characteraction(name="left", type="move", xpos=-300, fadetime=2,block=false)]
+[character(name="char_empty",name2="avg_123_fang_1",fadetime=0.5)]
+[delay(time=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[character(fadetime=0.5)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=2)]
+[PlaySound(key="$d_gen_transmissionget",volume=1)]
+[CharacterCutin(widgetID="1", name="char_366_acdrop", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, width=200, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[name="애시드드롭"]잠깐만…… 팽 팀장, 목표가 내 공격 범위 밖인데? 위치를 바꿔야겠어……
+[dialog]
+[CharacterCutin(widgetID="1",block=true)]
+[character]
+[Delay(time=1)]
+[Character(name="avg_123_fang_1#4")]
+[name="팽"]네?
+[name="팽"](아, 맞다! 애시드드롭의 특기는 고정밀 근거리 사격이지! 지금의 위치는 공격 사거리에서 벗어났을 거야.)
+[name="팽"](내가 습관적으로 크루스의 사거리를 잡아버렸네……)
+[Character(name="avg_npc_145", name2="avg_123_fang_1#4",focus=1)]
+[name="렌즈"]팽 팀장님, 네 번째…… 네 번째 적이 앞이 아니라 뒤에 있습니다.
+[Character(name="avg_npc_145", name2="avg_123_fang_1#4",focus=2)]
+[name="팽"]네?!
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1#4",focus=1)]
+[name="프로스트리프"]……팀장! 매복 공격이야!
+[Character(name="avg_123_fang_1#4")]
+[name="팽"]아차, 저건 애시드드롭을 노린 함정인가……
+[dialog]
+[character]
+[CameraShake(duration=3, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_gen_explo_n")]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=1, block=true)]
+[delay(time=2.5)]
+[Character(name="avg_123_fang_1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="애시드드롭"]쿨럭, 쿨럭쿨럭…… 뭐야……
+[dialog]
+[character]
+[Character(name="avg_npc_145")]
+[PlaySound(key="$transmission",volume=1)]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[name="렌즈"]애시드드롭 아가씨, 애시드드롭 아가씨, 응답하십시오. 신호가 끊겼습니다……
+[delay(time=1)]
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=1)]
+[name="프로스트리프"]내가 찾으러 갈게.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=2)]
+[name="팽"]알겠습니다. 프로스트리프, 애시드드롭을 찾아 위치에서 벗어나세요. 제가 네 번째 적을 찾겠습니다…… 절대로 녀석을 놓치지 않겠습니다.
+[dialog]
+[character]
+[delay(time=1)]
+[character(name2="avg_123_fang_1#6")]
+[name="팽"]애시드드롭, 들려요? 애시드드롭!
+[PlaySound(key="$d_gen_transmissionget",volume=1)]
+[CharacterCutin(widgetID="1", name="char_366_acdrop", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[character(name2="avg_123_fang_1",focus=-1)]
+[name="애시드드롭"]팽 팀장…… 난 괜찮아. 폭발 때문에 통신에 문제가 있었을 뿐이야. 콜록……
+[dialog]
+[CharacterCutin(widgetID="1",fadetime=0)]
+[Character(name="avg_123_fang_1#6")]
+[name="팽"]……
+[delay(time=1)]
+[dialog]
+[PlaySound(key="$rungeneral", volume=1)]
+[characteraction(name="middle", type="move", xpos=-400, fadetime=1,block=false)]
+[character(fadetime=0.5)]
+[delay(time=1)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_1002_nsabr_2",focus=-1)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=2)]
+[Character(name="avg_123_fang_1#6")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="팽"]찾았다…… 이 자식!
+[Character(name="char_1002_nsabr_2")]
+[name="???"]!!!
+[Dialog]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[CameraShake(duration=1, ystrength=10, vibrato=10, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$swordtsing4", volume=0.4)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=1, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[CameraShake(duration=1, ystrength=20, vibrato=20, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$swordtsing3", volume=0.5)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[CameraShake(duration=1, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$swordtsing2", volume=0.6)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$swordtsing3", volume=0.6)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[delay(time=0.5)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[CameraShake(duration=1, ystrength=40, vibrato=40, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$swordtsing5", volume=0.7)]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=40, randomness=90, fadeout=true)]
+[delay(time=1)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.03, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=1)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[delay(time=1)]
+[Character(name="char_1002_nsabr_2")]
+[name="???"]으악!!
+[PlaySound(key="$bodyfalldown2", volume=1)]
+[characteraction(name="middle", type="move", ypos=-300, fadetime=2,block=true)]
+[dialog]
+[character(fadetime=0.5)]
+[delay(time=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_193_frostl_1")]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1.3)]
+[name="프로스트리프"]찾았어, 팀장. 그런데 애시드드롭이 다쳤어.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]가벼운 부상이라 움직이면 괜찮아질 거야. 걱정 마, 팽 팀장. 나 아직 싸울 수 있어.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#2",focus=2)]
+[name="팽"]……
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#2",focus=1)]
+[name="애시드드롭"]팀장?
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]일단 철수합니다. 렌즈, 지도상에 다른 위험은 있나요?
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]제10구역은 이제 안전합니다. 철수 루트에도 위험 요소는 발견되지 않았습니다.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]잠깐, 난 괜찮아 팽 팀장. 아까 세 명이 남았잖아……
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]네 사람 모두 처리했어요. 우리는 임무를 완수했고, 10구역의 위험도 제거된 걸 확인했습니다.
+[name="팽"]여기서 일단 철수합시다.
+[dialog]
+[delay(time=1)]
+[character(name="avg_123_fang_1#2")]
+[delay(time=0.51)]
+[name="팽"]……죄송합니다.
+[dialog]
+[musicvolume(volume=0.2, fadetime=3)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="bg_battlefield",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$darkalley_intro", key="$darkalley_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+10분 후
+[dialog]
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#5",fadetime=0.5)]
+[delay(time=0.51)]
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#5",focus=2)]
+[name="팽"]애시드드롭…… 상처는……
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#5",focus=1)]
+[name="애시드드롭"]난 괜찮아…… 콜록, 정말이야, 팽 팀장! 스케이트보드가 폭발 피해를 거의 다 막아줬어. 그냥 넘어져서 약간 다친 것뿐이야.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]죄송합니다…… 저 때문에 다치게 돼서……
+[name="팽"]10구역의 조사와 섬멸 임무를 무사히 마치고, 신속하게 그리고 안전하게 철수해야 했는데. 다 제 탓이에요……
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]팀장……? 정말 괜찮아. 이것 봐, 작은 부상이야. 다음 임무에 참가할 체력도 잔뜩 남겨뒀다니까!
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=1)]
+[name="프로스트리프"]다른 팀도 곧 합류할 거야.
+[name="프로스트리프"]첫 단계 임무는 완수했으니, 이제 다른 팀을 기다렸다가 다음 공격을 진행하면 되겠네.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1#5",focus=2)]
+[name="팽"]……제가 너무 경솔했습니다. 그 지역에 함정이 있을 가능성이 크다는 걸 뻔히 알면서도 스스로 뛰어들다니.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1#5",focus=1)]
+[name="프로스트리프"]팀장의 판단은 틀리지 않았어. 계산이 살짝 빗나가긴 했지만 단번에 적을 섬멸할 기회는 놓치지 않았잖아.
+[name="프로스트리프"]다소 과격하긴 했지만, 그때 동시에 공격했더라면 우리 실력으로 충분히 적을 물리칠 수 있었거든.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#5",focus=1)]
+[name="애시드드롭"]사실 나도 팽 팀장의 생각을 몰랐던 건 아니야.
+[name="애시드드롭"]아까 고지에 올라갔더니 바로 사태 파악이 되더라고.
+[name="애시드드롭"]팀장은 상대의 약점을 찾아냈으니 바로 속공하고 싶었던 거잖아? 지원사격으로 함정만 잘 해결한다면 딱히 위험할 것도 없었으니까.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#5",focus=2)]
+[name="팽"]저의 판단 실수입니다. 무의식적으로…… 실제 상황을 제게 더 익숙한 시뮬레이션 작전 방식으로 착각했습니다.
+[name="팽"]임무 시작 전에 모두의 특기를 숙지했는데, 정작 실전에서는 습관적으로 당연하다는 듯 애시드드롭에게 잘못된 지시를 내렸어요.
+[name="팽"]게다가 팀원들에게 작전계획도 제대로 전달하지 않아서…… 임무를 수행하는 데 더 많은 에너지를 쓰게 만들기나 하고……
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#5",focus=1)]
+[name="애시드드롭"]난 팽 팀장이 잘못한 거 없다고 생각해. 조금 전 상황에서 팽 팀장이 내게 함정을 맡기고, 프로스트리프와 적을 추격한 건 정말 좋은 전술이었어.
+[name="애시드드롭"]그런 상황에서의 반격은 예상치 못한 변수였을 뿐이야. 하지만 주제넘게 날뛰다가 결국 팽 팀장에게 제거당했잖아.
+[Character(name="char_336_Scene_1")]
+[name="씬"]……
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]씬 아가씨께서 “실은 팽 팀장도 자신의 팀원들을 믿었기에 각자 알아서 자신의 지시를 파악할 수 있을 거라고 생각한 거지?”라고 말씀하셨습니다.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=2)]
+[name="팽"]그게……
+[dialog]
+[character]
+[delay(time=0.51)]
+[Character(name="char_193_frostl_1", name2="char_366_acdrop",focus=1)]
+[name="프로스트리프"]팀장마다 스타일이 달라. 팽 팀장은 팽 팀장만의 장점이 있잖아.
+[Character(name="char_193_frostl_1", name2="char_366_acdrop",focus=2)]
+[name="애시드드롭"]그런데 좀 궁금하네. 아까 팽 팀장이 무의식적으로 익숙한 시뮬레이션을 적용했다고 했는데, 그게 무슨 말이야?
+[Character(name="avg_123_fang_1#5")]
+[name="팽"]아마…… 예비작전팀 A1에서 생긴 습관일 겁니다. 지금은 모의훈련이 아니라 더 중요한 실전 현장인데……
+[Character(name="avg_123_fang_1#6")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="팽"]으아아, 전 대체 뭘 하고 있는 걸까요!
+[Character(name="char_336_Scene_1")]
+[name="씬"]안…… 돼……
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]진정하세요, 팽 팀장님. 팀장님이 지나치게 자책하고 있다고 씬 아가씨가 걱정합니다.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]릴랙스, 릴랙스. 임무도 순조롭게 마쳤겠다, 기분전환이라도 할래? 아니면, 고민을 털어놔도 좋고. 우리 이제 한 팀이잖아.
+[name="애시드드롭"]예비작전팀 A1 얘기가 나와서 말인데…… 팽이 있는 예비작전팀은 시끌벅적하지? 훈련이며, 모의작전이며 뭐든 함께 하니까 팀워크도 좋고.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]고마워요, 애시드드롭, 씬, 프로스트리프…… 그리고 렌즈도.
+[name="팽"]사실…… 예비작전팀 A1의 팀워크는 다른 예비작전팀 못지않다고 생각합니다.
+[name="팽"]오랜 시간 함께 한 만큼 서로의 생각이나 행동 방식을 너무 잘 알아서 어떤 일들은 눈빛만 봐도 바로 해낼 수 있거든요.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]멋있는데? 팽은 비글, 크루스와 항상 함께 있던데, 평소에도 그 둘과 가장 친해?
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]네…… 저와 비글, 크루스는 로도스 아일랜드에 오기 전에 컬럼비아 경비대에서 실습 대원으로 일했습니다.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]대단하다. 난 컬럼비아에 있을 때 오로지 스케이트보드 생각뿐이었는데. 예전에 늙은 경찰관이 가르쳐준 석궁 기술도 로도스 아일랜드에 와서야 쓸모가 있다는 걸 알았어.
+[name="애시드드롭"]팽 팀장에 비하면 난 정말 아마추어지.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]하지만 애시드드롭은 벌써 실전 임무에 아주 잘 적응했잖아요.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]헤헷, 그런가? 하지만 나 실전에서 다친 거 이번이 처음이 아니야. 늘 방심하다 다쳐서 팀장들을 긴장하게 만들었어.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]그건 좀 더 경험을 쌓으면 나아질 겁니다.
+[name="팽"]예비작전팀 A1에서 저는 팀원들과 많은 훈련을 했습니다.
+[name="팽"]호흡을 맞추는 과정에서 우리만의 사인도 만들어 냈고요.
+[name="팽"]팀원들의 도움으로 제겐 상황을 판단할 시간과 여지가 생겼고, 덕분에 팀장이 되어 지휘를 할 수 있는 기회를 얻게 되었습니다. 그런데……
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]그런데?
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]사실 임시 팀의 팀장으로서 정식으로 작전을 지휘한 건 오늘이 처음입니다……
+[name="팽"]그런데 무엇 때문인지 계획도 지휘도 뭐 하나 제대로 할 수가 없었습니다…… 명확한 지시도 못 내리고, 적절한 역할 분담도 못 시키고.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1#5",focus=2)]
+[name="팽"]저는…… 정말 모르겠어요. 제 능력이 부족한 것 외에 또 뭐가 문제일까요?
+[Character(name="char_336_Scene_1")]
+[name="씬"]아니……
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]왜 그렇게 생각하십니까, 팽 팀장님! 아까의 반응과 판단은 전혀 틀리지 않았습니다.
+[name="렌즈"]저와 씬 아가씨가 똑똑히 봤습니다. 아까 전장에서의 상황 판단은 아주 정확했습니다.
+[name="렌즈"]최전방에서 신속하게 적의 약점을 발견하고, 매우 용감하게 돌진하여 모두에게 길을 터 주지 않았습니까.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=2)]
+[name="팽"]단지 용감할 뿐이라면, 이 전쟁터에 있는 누구나……
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=1)]
+[name="프로스트리프"]용감하지만은 않아.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1#4",focus=2)]
+[name="팽"]프로스트리프……?
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1#4",focus=1)]
+[name="프로스트리프"]날 때부터 전사인 사람들이 있어. 명령을 따르는 전사.
+[name="프로스트리프"]그런 사람들은 전장의 상황에 따라 사고하고 판단하지만, 상급자의 명령에는 절대복종하지.
+[name="프로스트리프"]하지만 팽, 너는 전사일 뿐만 아니라 모두를 지휘하는 심장이야.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1#5",focus=2)]
+[name="팽"]……내가 정말 잘할 수 있을까요?
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1#5",focus=1)]
+[name="프로스트리프"]응. 적어도 넌 우리 팀이 첫 임무를 완수할 수 있도록 최선을 다했잖아.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]어디 그뿐인가? 팽 팀장은 예비작전팀 A1을 뭉치게 해서 전장에서의 승리를 이끌어내고, 일상생활에서도 모두와 사이좋게 지낼 수 있는 팀장다운 팀장이야.
+[name="애시드드롭"]그리고 예비작전팀에서 서로 의지하며 성장할 수 있는 기회는 누구에게나 주어지는 게 아니야. 나를 봐. 너무 독단적이라서 고정 팀에 들어가고 싶어도 안 되잖아.
+[name="애시드드롭"]그러니까 기운 차려, 팽 팀장.
+[name="애시드드롭"]우린 네가 잘못된 명령을 내렸다고 생각하지 않아. 넌 그냥 더 잘하고 싶었을 뿐이지.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]변화를 모색하려면 더 많은 실전을 통해 실패의 경험을 살리는 것입니다. 팽 팀장님이라면 금세 문제를 해결할 수 있을 겁니다.
+[Character(name="avg_npc_145", name2="avg_123_fang_1#2",focus=2)]
+[name="팽"]스읍…… 하아……
+[dialog]
+[delay(time=2)]
+[name="팽"]알겠습니다.
+[name="팽"]앞으로도 팀장의 책임을 다하도록 노력하겠습니다. 그래도 이참에 저의 지휘방식에 대한 각자의 의견을 말해줬으면 좋겠습니다.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]음…… 아까는 팽 팀장이 왜 돌진하려 했는지 바로 이해하지 못해서 좀 당황했다는 거?
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]애시드드롭 아가씨, 그 말은 '소통 강화'라고 하는 게 더 좋을 것 같습니다.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]그래, 바로 그거야!
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]소통 강화라…… 팀원들이 좀 더 명확하고 분명한 지령을 받을 수 있게 해야죠……
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=1)]
+[name="프로스트리프"]맞아. 소통이 중요해. 팽은 반응과 행동이 과감하지만, 우리가 이를 제때 지원할 수 있어야 하니까.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=2)]
+[name="팽"]사전에 계획을 세워 팀원들의 안전을 확보하기……
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]작전 지휘는 가장 어렵고도 중요한 부분인데, 팽 아가씨가 팀장이 될만한 실력이 있다는 것에는 의심의 여지가 없습니다.
+[name="렌즈"]다만 팽 팀장님이 팀원들을 더 많이 격려해주신다면, 팀원들도 팀장님을 항상 신뢰할 것입니다!
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]참, 평소 예비작전팀 A1은 함께 훈련하는 것 말고, 어떻게 친목을 다져?
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]음, 함께 전술을 토론하고, 정리하고, 평소엔 수다도 떨고, 티격태격 싸우기도 하죠……
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]싸우기도 합니까? 정말 과격한 방법이네요.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=2)]
+[name="팽"]맞아요. 지금 같은 때에는 제가 오히려 억지로 쉬게 합니다. 그러지 않으면 수다를 떨다가 휴식 시간을 잊어버리기 일쑤라……
+[name="팽"]그러고 보니 다음 임무까지 30분 남았네요. 여러분도 일단 쉬세요. 시간이 되면 제가 여러분을 깨우겠습니다.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]엥? 하지만 난 팽 팀장에게 예비작전팀에 관한 이야기를 더 듣고 싶은데.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]……안 됩니다. 부상자는 더 충분히 휴식해야 합니다. 빨리 누우세요, 애시드드롭.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]흥, 알았어. 대신 임무 끝나고 재미있는 얘기 더 많이 해주기다! 내가 아주 관심이 많다고.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]알겠습니다……
+[Character(name="char_336_Scene_1")]
+[name="씬"]……
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]씬 아가씨께서 이제 기분은 나아졌는지 물으시면서, 조금 전의 대화가 도움이 되셨으면 좋겠다고 합니다.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=2)]
+[name="팽"]안심하세요, 씬, 렌즈. 생각을 좀 정리할 수 있도록 혼자 있는 시간이 필요할 뿐입니다.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=1)]
+[name="프로스트리프"]……응, 그러는 게 좋아.
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[stopmusic(fadetime=1)]
+[Background(image="bg_trainingcom",screenadapt="coverall")]
+[delay(time=1)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[delay(time=1)]
+15일 전, 로도스 아일랜드 훈련실 내
+[dialog]
+[Character(name="avg_npc_012",fadetime=1.5)]
+[delay(time=1.5)]
+[name="그레이스"]……오늘 훈련은 여기까지다.
+[Character(name="char_122_beagle_1")]
+[name="비글"]후우…… 넵!
+[Character(name="char_124_kroos_1")]
+[name="크루스"]드디어 끝났네~ 흐하~ 난 이제 안 되겠다~
+[Character(name="char_120_hibisc_1")]
+[name="히비스커스"]역시 크루스는 바로 쉬려고 하네…… 그러니까 내 조언대로 함께 건강식 먹지 않을래?
+[name="히비스커스"]정신이 맑아지고, 더 규칙적인 생활을 할 수 있다고.
+[Character(name="char_124_kroos_1")]
+[name="크루스"]싫어~ 히비스커스처럼 자기 관리를 하면 좋겠지만…… 그래도 난 편하게 살래~
+[Character(name="char_122_beagle_1")]
+[name="비글"]쉬잇! 크루스 씨, 교관님들 아직 계셔요……!
+[Character(name="avg_123_fang_1")]
+[name="팽"]자자, 그레이스 교관님에게 한 소리 듣기 전에 모두 정렬해 나가보죠……
+[Character(name="avg_npc_012")]
+[name="그레이스"]팽, 넌 남아.
+[Character(name="avg_123_fang_1#4")]
+[name="팽"]아……
+[delay(time=0.51)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="팽"]네!
+[Character(name="char_120_hibisc_1")]
+[name="히비스커스"]으, 딱해라. 팀장은 항상 늦게까지 남아야 하거든.
+[Character(name="char_124_kroos_1")]
+[name="크루스"]그래도 팽은 교관과 대화를 나누는데 별 거부감이 없잖아~ 책임감도 있고, 성실하고~ 나야 남보다 더 훈련받는 건 절대 못 참지만 팽은……
+[Character(name="char_122_beagle_1")]
+[name="비글"](아직도 신나게 꼬리를 흔들 에너지가 남아있다니, 팽 씨도 참 대단하네요.)
+[Character(name="char_124_kroos_1")]
+[name="크루스"]맞아~ 팽의 기분은 언제나 알기 쉽지~ 훈련할 때도 짜증 내는 법이 없고~ 우리 같으면 장기전은 질색인데~
+[Character(name="char_120_hibisc_1")]
+[name="히비스커스"]게으름 피우려는 건 너뿐이거든.
+[Character(name="avg_123_fang_1")]
+[name="팽"](이봐요……!)
+[Character(name="char_122_beagle_1")]
+[name="비글"]푸흡…… 그럼 우린 먼저 갈게요, 그레이스 교관님, 팽 팀장님!
+[dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[character(fadetime=1.5)]
+[delay(time=1.5)]
+[Character(name="avg_123_fang_1", name2="avg_npc_012",fadetime=1)]
+[delay(time=1)]
+[Character(name="avg_123_fang_1#5", name2="avg_npc_012",focus=1)]
+[name="팽"]으윽…… 죄송합니다, 교관님. 저런 모습을 보여 드려서. 저희가 너무 산만했죠……
+[Character(name="avg_123_fang_1#5", name2="avg_npc_012",focus=2)]
+[name="그레이스"]긴장 풀어. 넌 잘하고 있으니까. 내가 남으라고 한 건 예비작전팀 A1이 아니라 너에 관한 일 때문이야.
+[Character(name="avg_123_fang_1#4", name2="avg_npc_012",focus=1)]
+[name="팽"]저 말입니까?
+[Character(name="avg_123_fang_1#4", name2="avg_npc_012",focus=2)]
+[name="그레이스"]맞아, 팽. 내가 예비작전팀 A1 팀원들과 몇 차례 개별 면담을 하면서 들은 얘긴데, 팀장으로서 부담이 크다며?
+[Character(name="avg_123_fang_1#5", name2="avg_npc_012",focus=1)]
+[name="팽"]모두에게 걱정 끼치고 싶진 않았는데……
+[Character(name="avg_123_fang_1#5", name2="avg_npc_012",focus=2)]
+[name="그레이스"]예비작전팀 A1은 팀원 모두가 눈에 띄게 성장했어. 훈련 기간이 끝나면 각자 다른 임시 팀으로 파견되어 더 많은 실전 임무를 수행하게 될 거야.
+[name="그레이스"]그리고 팽, 너도 팀장으로서 제법 잘해왔어.
+[Character(name="avg_123_fang_1#5", name2="avg_npc_012",focus=1)]
+[name="팽"]하지만…… 저는 혼자서 임시 팀의 임무에 참여한 적이 거의 없는데요.
+[name="팽"]히비스커스와 크루스, 비글은 순조롭게 임시 팀의 임무를 마쳤고, 라바도 다양한 실전에 참여하며 독보적인 실력을 보여주었어요.
+[name="팽"]그런데 팀장인 저는 팀장이라는 역할을 수행하면서도 모두의 보호를 받고 있죠.
+[name="팽"]그걸 알면서도 계속 A1의 팀장으로 있을 수 있다면 좋겠다는 이기적인 생각을 할 때도 있습니다……
+[name="팽"]저야 A1의 모두가 계속 함께 하길 바라지만, 다들 각자 해야 할 일들이 있으니…… 앞으로 계속 나아가야겠죠.
+[Character(name="avg_123_fang_1#5", name2="avg_npc_012",focus=2)]
+[name="그레이스"]그래, 네가 어떻게 생각하고 있는지는 A1 팀원들에게 들었어. 너의 책임감과 마음에 대해서는 팀원들도 다 알고 있더라.
+[name="그레이스"]사실 팀원들과 어울려 기분을 푸는 것도 중요해.
+[name="그레이스"]선배로서 한마디 하자면 로도스 아일랜드의 훈련 평가는 단순히 전투 능력의 향상뿐이 아니라, 더욱 종합적인 것이야.
+[Character(name="avg_123_fang_1", name2="avg_npc_012",focus=1)]
+[name="팽"]네, 알겠습니다!
+[Character(name="avg_123_fang_1", name2="avg_npc_012",focus=2)]
+[name="그레이스"]도베르만 교관은 로도스 아일랜드의 오퍼레이터들이 탄탄한 실력과 확고한 신념뿐만 아니라…… 전장의 참혹함에 스스로를 가두지 않는, 그런 살아있는 심장을 가지길 원해.
+[name="그레이스"]그 누구도 전장에서 자신을 한낱 체스 말로 생각해서는 안 돼.
+[name="그레이스"]그러니까 팽, 앞으로는 너에겐 기회가 점점 더 많아질 거야. 그건 너의 실력을 로도스 아일랜드에 인정받을 뿐만 아니라, 너 자신도 더 활기차게 만들 수 있어.
+[Character(name="avg_123_fang_1#4", name2="avg_npc_012",focus=1)]
+[name="팽"]저 자신을…… 더 활기차게요?
+[Character(name="avg_123_fang_1#4", name2="avg_npc_012",focus=2)]
+[name="그레이스"]팀장이란 자리가 원래 호락호락하지가 않아. 그래도 예비작전팀 A1의 팀원들은 네 실력을 인정해주고, 너의 친구이자 동료가 되어 환상의 호흡을 자랑하고 있잖니?
+[name="그레이스"]자신을 믿어. 그리고 어떤 팀원이든 같은 목표 앞에서는 서로의 부족함을 채워주며 방법을 찾아낼 수 있을 거라는 것도 믿어.
+[name="그레이스"]혼자서는 안 되지만 두 명, 세 명이 모이면…… 차이나 갈등이 생길지는 몰라도, 그 힘의 중심은 더욱 강해질 거야.
+[name="그레이스"]난 언제나 네가 한 걸음 더 나아가길 바란다, 팽. 그러니 그 힘의 중심을 이끄는 사람이 될 수 있도록 노력해.
+[Character(name="avg_123_fang_1#3", name2="avg_npc_012",focus=1)]
+[name="팽"]교관님……
+[Character(name="avg_123_fang_1", name2="avg_npc_012",focus=1)]
+[name="팽"]……저는, 포기하지 않을 거예요.
+[Character(name="avg_123_fang_1", name2="avg_npc_012",focus=2)]
+[name="그레이스"]팀장으로서의 책임과 부담은 아무나 감당할 수 있는 게 아니야.
+[name="그레이스"]좋아, 자신을 믿고 그 해보고 싶다는 의지를 기억해. 팽, 넌 할 수 있어.
+[Character(name="avg_123_fang_1", name2="avg_npc_012",focus=1)]
+[name="팽"]네…… 그런데 그레이스 교관님…… 교관님이 그렇게 말씀하시니…… 왠지 이상한 기분이 듭니다.
+[Character(name="avg_123_fang_1", name2="avg_npc_012",focus=2)]
+[name="그레이스"]아하하하…… 평소 컨셉이랑 너무 달랐나?
+[Character(name="avg_123_fang_1#3", name2="avg_npc_012",focus=1)]
+[name="팽"]그런 건 아닌데…… 평소보다 훨씬 프로 같습니다!
+[Character(name="avg_123_fang_1#3", name2="avg_npc_012",focus=2)]
+[name="그레이스"]야, 넌 나를 잘 알잖아. 이런 거 진심으로 알려주고 싶은 사람이 누군지도 짐작이 될 거고.
+[name="그레이스"]그런데 말이야, '그 사람'은 직접 말하지 않아도 누군가를 통해 네게 자신감과 용기를 심어주고 싶어 해.
+[Character(name="avg_123_fang_1#7", name2="avg_npc_012",focus=1)]
+[name="팽"]네, 알고 있습니다!
+[Character(name="avg_123_fang_1#7", name2="avg_npc_012",focus=2)]
+[name="그레이스"]됐어, 빨리 가서 쉬어. 첫 번째 단독 팀장 임무에 곧 투입될 거다.
+[Character(name="avg_123_fang_1#4", name2="avg_npc_012",focus=1)]
+[name="팽"]네? 그렇게 빨리요?
+[Character(name="avg_123_fang_1#4", name2="avg_npc_012",focus=2)]
+[name="그레이스"]왜, 두렵나?
+[Character(name="avg_123_fang_1", name2="avg_npc_012",focus=1)]
+[name="팽"]그럴 리가요! 철저히 준비하겠습니다……
+[Character(name="avg_123_fang_1", name2="avg_npc_012",focus=2)]
+[name="그레이스"]명심해, 처음엔 누구나 실수를 범할 수 있다. 그러니까 팀원들 앞에서 울지마라.
+[Character(name="avg_123_fang_1#7", name2="avg_npc_012",focus=1)]
+[name="팽"]그럴 일은 없을 겁니다! 고맙습니다, 그레이스 교관님.
+[name="팽"](도베르만 교관님도…… 고마워요.)
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0.5)]
+[delay(time=1)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[character(name="avg_123_fang_1",fadetime=1)]
+[name="팽"]흐응…… 창피하게 하마터면 울 뻔했네. 하하하……
+[name="팽"]다들 날 응원해주고 있어. 난 할 수 있어, 나도 그걸 믿어.
+[name="팽"]도베르만 교관님, 그레이스 교관님, 저…… 알 것 같아요. 팀원들의 믿음과 이해가 얼마나 큰 위안이 되는지.
+[name="팽"]저는…… 팀장입니다. 계속 성장해서 팀장으로서 더 많은 일을 해낼 것입니다. 이건 저 스스로가 내린 결정입니다.
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="bg_battlefield",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$batmeeting_intro", key="$batmeeting_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+30분 후
+[dialog]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_123_fang_1",fadetime=1.5)]
+[delay(time=2)]
+[name="팽"]후우…… 좋아.
+[character(name="avg_123_fang_1#6")]
+[name="팽"]제3소대 집합!
+[Character(name="char_366_acdrop", name2="char_336_Scene_1",focus=1)]
+[name="애시드드롭"]흐아…… 짧게라도 쉬니까 좋다.
+[Character(name="char_366_acdrop", name2="char_336_Scene_1",focus=2)]
+[name="씬"]응……
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=1)]
+[name="렌즈"]팀원들에게는 휴식 시간을 주고, 팽 팀장님은 전혀 눈을 붙이지 않으셨습니다. 작전 파일과 자료를 열심히 훑어보는 팽 팀장님의 진지한 모습이 렌즈에 잔뜩 담겼습니다.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=2)]
+[name="팽"]벼, 별거 아닌데……
+[name="팽"]2단계 공격은 20분 후에 제2소대와 합동으로 개시합니다. 다시 10구역에 침투할 예정이니 신속하게 지형 파악 후 유리한 위치를 확보합니다.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]가장 먼저 적을 상대하는 선봉이 되는 건가? 만만치 않은 일이네. 하지만 우리에겐 딱이야.
+[name="애시드드롭"]팽 팀장, 우리의 다음 계획은 뭐야?
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=2)]
+[name="팽"]음, 제가 방금 전의 교전 내용을 바탕으로 작전 계획서를 수정해 봤는데, 지금 나눠줄게요.
+[name="팽"]그간의 작전 경험을 종합해보니 우리에겐 더욱 공격적인 작전이 적합한 것 같습니다.
+[name="팽"]렌즈와 씬은 정보 전달에 문제가 없도록 각자의 안전에 특히 주의해 주세요. 정확한 지형 정보와 영상자료는 전방 팀에겐 필수니까요.
+[name="팽"]애시드드롭은 이번에도 고지에서 지원사격을 부탁드립니다. 단, 너무 멀리 떨어지지 않도록 해주세요. 그러면 지원이 어려워지니까.
+[Character(name="char_366_acdrop", name2="avg_123_fang_1",focus=1)]
+[name="애시드드롭"]알았어! 적에 가까울수록 내 석궁의 위력은 더 강해.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=2)]
+[name="팽"]프로스트리프는 저와 함께 적진 중심을 공격합니다. 목표 지점에 들어가면 은밀하게 탐색을 실시합니다.
+[Character(name="char_193_frostl_1", name2="avg_123_fang_1",focus=1)]
+[name="프로스트리프"]알았어.
+[Character(name="avg_npc_145", name2="avg_123_fang_1",focus=2)]
+[name="팽"]렌즈는 지형 정보를 얻는 대로 최대한 빨리 제2소대에 전달해 주세요. 그러면 후방에서 신속하게 지원해 줄 것입니다.
+[name="팽"]적군의 최전선을 돌파하면 곧바로 화력 지원이 따라올 수 있게 유도할 것입니다.
+[name="팽"]전술 브리핑은 여기까지입니다. 10구역에 진입한 후에는 반드시 제 명령에 따라주십시오.
+[Dialog]
+[stopmusic(fadetime=2)]
+[delay(time=2)]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+[Character(name="avg_123_fang_1#7",fadetime=0.5)]
+[name="팽"]그리고…… 아까는 고마웠습니다. 1차 조사 작전 때에는 제 실수로 다친 팀원이 있었지만, 앞으로는 이런 실수가 없을 것입니다.
+[name="팽"]더 이상 판단과 명령을 소홀히 하지 않을 테니, 여러분, 저를 믿어주시기 바랍니다.
+[name="팽"]팀장으로서 무엇을 해야 하는지는 잘 알고 있으니까요.
+[name="팽"]자, 그럼 여러분…… 출발 전 마지막으로 장비 점검을 진행합니다.
+[PlaySound(key="$transmission",volume=1)]
+[name="팽"]……
+[delay(time=1)]
+[Dialog]
+[delay(time=1)]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[delay(time=1)]
+[Subtitle(text="적군 유닛 발견. 전투 준비!", x=500, y=370, alignment="middle", size=24, delay=0.04, width=750)]
+[Subtitle]
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Image]
