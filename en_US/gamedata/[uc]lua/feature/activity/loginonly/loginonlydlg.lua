@@ -47,6 +47,11 @@ function LoginOnlyDlg:_RefreshUI()
   self._imageGetRewardOutline:SetActive(hasReward);
   self._textGetReward:SetActive(hasReward);
   self._textRewardGot:SetActive(not hasReward);
+  
+  local titleEndTime = self._titleEndTime;
+  if titleEndTime ~= nil then
+    titleEndTime.text = StringRes.ACTLOGIN_END_TIME_TITLE
+  end
 
   self:_CreateItems();
 end
