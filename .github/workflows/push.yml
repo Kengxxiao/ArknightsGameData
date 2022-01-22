@@ -7,3 +7,9 @@ jobs:
     steps:
     - name: push
       run: 'wget -q "${{ secrets.SERVER_PATH }}${{ github.event.head_commit.message }}"'
+    - name: Repository Dispatch
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.PAT }}
+        event-type: update
+        repository: 050644zf/ArknightsStoryTextReader
