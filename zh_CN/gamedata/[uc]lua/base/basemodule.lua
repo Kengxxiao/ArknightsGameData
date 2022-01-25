@@ -9,8 +9,10 @@ require "Base/Collections/LuaList"
 require "Base/Dialog/UIBase"
 require "Base/Dialog/UIWidget"
 require "Base/Dialog/UIWidgetContainer"
+require "Base/Dialog/UIDlgGroup"
 require "Base/Dialog/UIPanel"
 require "Base/Dialog/DlgBase"
+require "Base/Dialog/BridgeDlgBase"
 require "Base/Dialog/DlgMgr"
 require "Base/Dialog/FadeInDlgBase"
 require "Base/Dialog/UIRecycleAdapterBase"
@@ -26,6 +28,7 @@ require "Base/Hotfix/UIPatchBase"
 
 require "Base/Timer/Timer"
 require "Base/Timer/TimerModel"
+require "Base/Timer/CoroutineModel"
 
 require "Base/PlayerData/PlayerData"
 

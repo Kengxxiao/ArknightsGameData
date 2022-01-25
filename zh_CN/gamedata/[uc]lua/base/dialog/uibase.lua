@@ -7,6 +7,9 @@
 
 
 
+
+
+
 UIBase = Class("UIBase");
 
 
@@ -61,12 +64,50 @@ function UIBase:Dispose()
     self.m_allTimer = nil;
   end
 
+  if self.m_disposeObjs then
+    for _, obj in ipairs(self.m_disposeObjs) do
+        obj:Dispose();
+    end
+    self.m_disposeObjs = nil;
+  end
+
   self.m_destroyed = true;
 
   if not self.m_rootDestroying then
     CS.UnityEngine.GameObject.Destroy(self.m_root);
   end
 
+end
+
+
+
+function UIBase:TransCoroutine(inOrOut)
+    if self.m_playingTransEffect then
+        return nil;
+    end
+    self.m_playingTransEffect = true;
+    if inOrOut then
+        self.m_layout:PlayTransInEffect();
+    else
+        self.m_layout:PlayTransOutEffect();
+    end
+    return self:StartCoroutine(function()
+        while self.m_playingTransEffect do
+            coroutine.yield();
+        end
+    end);
+end
+
+function UIBase:TransImmediatly(inOrOut)
+    if inOrOut then
+        self.m_layout:ShowImmediatly();
+    else
+        self.m_layout:HideImmediatly();
+    end
+end
+
+function UIBase:SetVisible(v)
+    CS.Torappu.Lua.Util.SetActiveIfNecessary(self.m_root, v)
 end
 
 
@@ -95,6 +136,17 @@ end
 
 
 function UIBase:OnExit()
+end
+
+
+function UIBase:OnTransInEnd()
+    print("OnTransInEnd");
+    self.m_playingTransEffect = false;
+end
+
+function UIBase:OnTransOutEnd()
+    print("OnTransOutEnd")
+    self.m_playingTransEffect = false;
 end
 
 function UIBase:IsDestroy()
@@ -167,8 +219,40 @@ function UIBase:_AddToDoWhenClose(func)
 end
 
 
-function UIBase:Delay(delay, func)
-    local timer = TimerModel.me:Delay(delay, Event.Create(self, func));
+
+
+
+function UIBase:_AddDisposableObj(obj)
+    if not obj then
+        return;
+    end
+
+    if not self.m_disposeObjs then
+        self.m_disposeObjs = {};
+    end
+    table.insert(self.m_disposeObjs, obj);
+end
+
+function UIBase:_ReleaseDisposableObj(obj)
+    if not obj then
+        return;
+    end
+
+    obj:Dispose();
+    if not self.m_disposeObjs then
+        return;
+    end
+    for idx, aObj in ipairs(self.m_disposeObjs) do
+        if aObj == obj then
+            table.remove(self.m_disposeObjs, idx);
+            return;
+        end
+    end
+end
+
+
+function UIBase:Delay(delay, func, ...)
+    local timer = TimerModel.me:Delay(delay, Event.Create(self, func, ...));
     self:_RecordTimer(timer);
     return timer;
 end
@@ -208,6 +292,28 @@ function UIBase:_RecordTimer(timer)
         self.m_allTimer = {};
     end
     table.insert(self.m_allTimer, timer);
+end
+
+function UIBase:StartCoroutine(func)
+    local co = CoroutineModel.me:StartCoroutine(func, self);
+    if not self.m_coroutines then
+        self.m_coroutines = {};
+    end
+    table.insert(self.m_coroutines, co);
+    return co;
+end
+
+function UIBase:StopCoroutine(co)
+    if not self.m_coroutines then
+        return;
+    end
+    CoroutineModel.me:StopCoroutine(co);
+    for idx , aCo in ipairs(self.m_coroutines) do
+        if aCo == co then
+            table.remove(self.m_coroutines, idx);
+            return;
+        end
+    end
 end
 
 

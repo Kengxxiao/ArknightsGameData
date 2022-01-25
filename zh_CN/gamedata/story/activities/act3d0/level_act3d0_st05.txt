@@ -2,7 +2,7 @@
 [PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
 [largebg(imagegroup="bg_beach_1/bg_beach_2", solidwidth="920/920", solidheight=720,x=-720)]
 [Delay(time=1)]
-[playsound(key="$beach", volume=0.7)]
+[playsound(key="$beach", volume=0.7, channel="B",loop=true)]
 [Character(name="char_002_amiya_summer_2#1",fadetime=1,block=true)]
 [delay(time=1)]
 [name="阿米娅"]   博士，这次我可要批评你了。
@@ -192,6 +192,8 @@
 [Character]
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[stopsound(channel="B", fadetime=1)]
+[delay(time=1)]
 [largebg]
 [Background(image="bg_bridge",screenadapt="coverall")]
 [Blocker(a=0, fadetime=1, block=true)]

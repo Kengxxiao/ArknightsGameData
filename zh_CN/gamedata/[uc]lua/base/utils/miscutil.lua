@@ -79,3 +79,7 @@ function CheckTimeAvailWithTimeStamp(startTime, endTime)
   end
   return true
 end
+
+function SetGameObjectActive(go, active)
+  CS.Torappu.Lua.Util.SetActiveIfNecessary(go, active);
+end

@@ -3,9 +3,9 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/MultiFunnelHitBehaviourHotfixer",
-  "HotFixes/UIMiscHotfixer",
-  "HotFixes/BuffDBHotfixer"
+  "HotFixes/DIYRoomHotfixer",
+  "HotFixes/DIYPageHotfixer",
+  "HotFixes/BuffHotfixer",
 };
 
 return list;
