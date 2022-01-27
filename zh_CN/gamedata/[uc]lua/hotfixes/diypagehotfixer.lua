@@ -25,9 +25,17 @@ local function _DoCameraTransFix(self, progress, isCeilingDir)
         self._diyRoom.mainCamera:ResetProjectionMatrix()
     end
 end
+
+local function _FixOpenPage(self, pageName, openType, options)
+  if pageName == "building_buy_labor" then
+    pageName = "dyn_building_buy_labor"
+  end
+  self:_OpenPage(pageName, openType, options)
+end
  
 function DIYPageHotfixer:OnInit()
     xlua.private_accessible(CS.Torappu.Building.UI.DIYPage)
+    xlua.private_accessible(CS.Torappu.UI.UIPageController)
 
     self:Fix_ex(CS.Torappu.Building.UI.DIYPage, "_DoCameraPerspectiveTransIfNeeded", function(self, progress, isCeilingDir)
         local ok, errorInfo = xpcall(_DoCameraTransFix, debug.traceback, self, progress, isCeilingDir)
@@ -35,6 +43,8 @@ function DIYPageHotfixer:OnInit()
             CS.UnityEngine.DLog.LogError(errorInfo)
         end
     end)
+
+    self:Fix_ex(CS.Torappu.UI.UIPageController, "_OpenPage", _FixOpenPage)
 end
  
 function DIYPageHotfixer:OnDispose()

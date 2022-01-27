@@ -29,9 +29,12 @@ end
 
 function ReturnCheckinView:RenderDots()
   if self.checkinRewardList == nil then
-    return
+    return false
   end
-  local dotNum = self.checkinRewardList.Count
+  local dotNum = self.checkinRewardList.Count 
+  if dotNum <= 1 then
+    return false
+  end
   local posDiff = self._progressAnchorRight.position - self._progressAnchorLeft.position
   local singleDiff = posDiff / (dotNum - 1)
   if self.m_progressDots == nil then
@@ -44,7 +47,10 @@ function ReturnCheckinView:RenderDots()
   end
   local checkinHistory = self.m_currentData.checkIn.history
   if checkinHistory == nil then
-    return
+    return false
+  end
+  if checkinHistory.Count == 0 then
+    return false
   end
  
   for idx = 1, dotNum do
@@ -65,13 +71,16 @@ function ReturnCheckinView:RenderDots()
   end
   
   local currentDotIndex = checkinHistory.Count
+  if currentDotIndex > dotNum or currentDotIndex == 0 then
+    return false
+  end
   local currentDotPos = self.m_progressDots[currentDotIndex]:RootGameObject().transform.position
   local leftDiffWorldPercent = math.abs((currentDotPos - self._progressAnchorLeft.position).x / posDiff.x)
   local rightDiffWorldPercent= 1 - leftDiffWorldPercent
   local anchoredDiffLength = (self._progressAnchorRight.anchoredPosition - self._progressAnchorLeft.anchoredPosition).x
   self._progressLineLeft.sizeDelta = CS.UnityEngine.Vector2(anchoredDiffLength * leftDiffWorldPercent, self._progressLineLeft.sizeDelta.y)
   self._progressLineRight.sizeDelta = CS.UnityEngine.Vector2(anchoredDiffLength * rightDiffWorldPercent, self._progressLineRight.sizeDelta.y)
-
+  return true
 end
 
 function ReturnCheckinView:RenderItems()
@@ -79,6 +88,9 @@ function ReturnCheckinView:RenderItems()
     return
   end
   local rewardNum = self.checkinRewardList.Count
+  if rewardNum == 0 then
+    return
+  end
   if self.m_checkinItemList == nil then
     self.m_checkinItemList = {}
     for idx = 1, rewardNum do
@@ -88,6 +100,9 @@ function ReturnCheckinView:RenderItems()
     end
   end
   local checkinHistory = self.m_currentData.checkIn.history
+  if checkinHistory.Count == 0 then
+    return
+  end
   for idx = 1, rewardNum do
     local csIdx = idx - 1
     local curItem = self.m_checkinItemList[idx]
@@ -113,7 +128,8 @@ function ReturnCheckinView:RenderItems()
 end
 function ReturnCheckinView:Render()
   self.m_currentData = CS.Torappu.PlayerData.instance.data.backflow.current
-  self:RenderDots()
+  local result = self:RenderDots()
+  SetGameObjectActive(self._dotContainerRect.gameObject, result)
   self:RenderItems()
   self:RenderEndTimeText()
 end
