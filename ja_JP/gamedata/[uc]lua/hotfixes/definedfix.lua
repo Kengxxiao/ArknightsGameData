@@ -6,7 +6,8 @@ local list =
   "HotFixes/CharacterShowViewHotfixer",
   "HotFixes/AbilityParallelGroupHotfixer",
   "HotFixes/AudioOptionsHotfixer",
-  "HotFixes/HGSDKHotfixer"
+  "HotFixes/HGSDKHotfixer",
+  "HotFixes/MedalGroupItemViewHotfixer"
 };
 
 return list;
