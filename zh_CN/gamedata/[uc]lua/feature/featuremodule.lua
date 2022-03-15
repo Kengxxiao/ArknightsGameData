@@ -27,8 +27,6 @@ require "Feature/Activity/Act9D4/Act9D4Dlg"
 require "Feature/Activity/Act14D0D2/Act14D0D2Dlg"
 require "Feature/Activity/Act16D5D1/Act16D5D1Dlg"
 
-require "Feature/Activity/Act17D7/Act17D7MainDlg"
-
 require "Feature/Activity/GridGacha/GridGachaDefine"
 require "Feature/Activity/GridGacha/GridGachaMainDlg"
 

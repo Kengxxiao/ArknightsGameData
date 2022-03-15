@@ -29,6 +29,7 @@ require "Base/Hotfix/UIPatchBase"
 require "Base/Timer/Timer"
 require "Base/Timer/TimerModel"
 require "Base/Timer/CoroutineModel"
+require "Base/Timer/TweenModel"
 
 require "Base/PlayerData/PlayerData"
 

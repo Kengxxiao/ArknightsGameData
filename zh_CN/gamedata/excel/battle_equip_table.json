@@ -2023,7 +2023,7 @@
             "overrideTraitDataBundle": {
               "candidates": [
                 {
-                  "additionalDescription": "攻击被阻挡的敌人时攻击力提升至<@ba.vup>{atk_scale:0%}</>",
+                  "additionalDescription": null,
                   "unlockCondition": {
                     "phase": 2,
                     "level": 60
@@ -2072,7 +2072,7 @@
             "overrideTraitDataBundle": {
               "candidates": [
                 {
-                  "additionalDescription": "被击倒时不撤退且回复生命但生命上限<@ba.vdown>-{value:0%}</>，攻击速度<@ba.vup>+{attack_speed}</>（单次部署只触发1次）",
+                  "additionalDescription": "被击倒时不撤退且回复所有生命但生命上限<@ba.vdown>-{value:0%}</>，攻击速度<@ba.vup>+{attack_speed}</>（单次部署只触发1次）",
                   "unlockCondition": {
                     "phase": 2,
                     "level": 60
@@ -2133,7 +2133,7 @@
             "overrideTraitDataBundle": {
               "candidates": [
                 {
-                  "additionalDescription": "被击倒时不撤退且回复生命但生命上限<@ba.vdown>-{value:0%}</>，攻击速度<@ba.vup>+{attack_speed}</>（单次部署只触发1次）",
+                  "additionalDescription": "被击倒时不撤退且回复所有生命但生命上限<@ba.vdown>-{value:0%}</>，攻击速度<@ba.vup>+{attack_speed}</>（单次部署只触发1次）",
                   "unlockCondition": {
                     "phase": 2,
                     "level": 50
@@ -2292,7 +2292,7 @@
             "overrideTraitDataBundle": {
               "candidates": [
                 {
-                  "additionalDescription": "被击倒时不撤退且回复生命但生命上限<@ba.vdown>-{value:0%}</>，攻击速度<@ba.vup>+{attack_speed}</>（单次部署只触发1次）",
+                  "additionalDescription": "被击倒时不撤退且回复所有生命但生命上限<@ba.vdown>-{value:0%}</>，攻击速度<@ba.vup>+{attack_speed}</>（单次部署只触发1次）",
                   "unlockCondition": {
                     "phase": 2,
                     "level": 40
@@ -2574,6 +2574,700 @@
             }
           ]
         }
+      }
+    ]
+  },
+  "uniequip_002_cqbw": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": "cqbw_equip_1_1_p1",
+            "target": "TRAIT",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "攻击被阻挡的敌人时攻击力提升至<@ba.kw>{atk_scale:0%}</>",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体物理伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          },
+          {
+            "resKey": "token_cqbw_equip_1_1_p1",
+            "target": "TRAIT",
+            "isToken": true,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": null,
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1
+                    }
+                  ],
+                  "overrideDescripton": null,
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "max_hp",
+            "value": 130.0
+          },
+          {
+            "key": "atk",
+            "value": 54.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_phenxi": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": "phenxi_equip_1_1_p1",
+            "target": "TRAIT",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "攻击时无视敌人<@ba.vup>{def_penetrate_fixed}</>点的防御力",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 100.0
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体物理伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "atk",
+            "value": 48.0
+          },
+          {
+            "key": "def",
+            "value": 26.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_meteo": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": "meteo_equip_1_1_p1",
+            "target": "TRAIT",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "攻击时无视敌人<@ba.vup>{def_penetrate_fixed}</>点的防御力",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 100.0
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体物理伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "max_hp",
+            "value": 100.0
+          },
+          {
+            "key": "atk",
+            "value": 37.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_sesa": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": "sesa_equip_1_1_p1",
+            "target": "TRAIT",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "攻击被阻挡的敌人时攻击力提升至<@ba.kw>{atk_scale:0%}</>",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "atk_scale",
+                      "value": 1.1
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体物理伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "atk",
+            "value": 38.0
+          },
+          {
+            "key": "def",
+            "value": 24.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_yuki": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": "yuki_equip_1_1_p1",
+            "target": "TRAIT",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "攻击时无视敌人<@ba.vup>{def_penetrate_fixed}</>点的防御力",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [
+                    {
+                      "key": "def_penetrate_fixed",
+                      "value": 100.0
+                    }
+                  ],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体物理伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "max_hp",
+            "value": 80.0
+          },
+          {
+            "key": "attack_speed",
+            "value": 3.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_dusk": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": null,
+            "target": "DISPLAY",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          },
+          {
+            "resKey": "dusk_equip_1_1_p1",
+            "target": "TALENT",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": [
+                {
+                  "displayRangeId": true,
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "3-1",
+                  "blackboard": []
+                }
+              ]
+            },
+            "overrideTraitDataBundle": {
+              "candidates": null
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "max_hp",
+            "value": 120.0
+          },
+          {
+            "key": "atk",
+            "value": 55.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_mostma": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": null,
+            "target": "DISPLAY",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "部署费用<@ba.kw>减少</>",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 60
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "cost",
+            "value": -8.0
+          },
+          {
+            "key": "atk",
+            "value": 51.0
+          },
+          {
+            "key": "attack_speed",
+            "value": 5.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_lava2": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": null,
+            "target": "DISPLAY",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          },
+          {
+            "resKey": "lava2_equip_1_1_p1",
+            "target": "TALENT",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": [
+                {
+                  "displayRangeId": true,
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "3-1",
+                  "blackboard": []
+                }
+              ]
+            },
+            "overrideTraitDataBundle": {
+              "candidates": null
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "max_hp",
+            "value": 80.0
+          },
+          {
+            "key": "atk",
+            "value": 43.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_skfire": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": null,
+            "target": "DISPLAY",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "部署费用<@ba.kw>减少</>",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "cost",
+            "value": -8.0
+          },
+          {
+            "key": "atk",
+            "value": 40.0
+          },
+          {
+            "key": "attack_speed",
+            "value": 4.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_lionhd": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": null,
+            "target": "DISPLAY",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          },
+          {
+            "resKey": "lionhd_equip_1_1_p1",
+            "target": "TALENT",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": [
+                {
+                  "displayRangeId": true,
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 50
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "3-1",
+                  "blackboard": []
+                }
+              ]
+            },
+            "overrideTraitDataBundle": {
+              "candidates": null
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "max_hp",
+            "value": 80.0
+          },
+          {
+            "key": "atk",
+            "value": 45.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_fmout": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": null,
+            "target": "DISPLAY",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "攻击范围<@ba.kw>扩大</>",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          },
+          {
+            "resKey": "fmout_equip_1_1_p1",
+            "target": "TALENT",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": [
+                {
+                  "displayRangeId": true,
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "prefabKey": "10",
+                  "name": null,
+                  "description": null,
+                  "rangeId": "3-1",
+                  "blackboard": []
+                }
+              ]
+            },
+            "overrideTraitDataBundle": {
+              "candidates": null
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "max_hp",
+            "value": 80.0
+          },
+          {
+            "key": "atk",
+            "value": 35.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
+      }
+    ]
+  },
+  "uniequip_002_greyy": {
+    "phases": [
+      {
+        "equipLevel": 1,
+        "parts": [
+          {
+            "resKey": null,
+            "target": "DISPLAY",
+            "isToken": false,
+            "addOrOverrideTalentDataBundle": {
+              "candidates": null
+            },
+            "overrideTraitDataBundle": {
+              "candidates": [
+                {
+                  "additionalDescription": "部署费用<@ba.kw>减少</>",
+                  "unlockCondition": {
+                    "phase": 2,
+                    "level": 40
+                  },
+                  "requiredPotentialRank": 0,
+                  "blackboard": [],
+                  "overrideDescripton": "攻击造成<@ba.kw>群体法术伤害</>",
+                  "prefabKey": null,
+                  "rangeId": null
+                }
+              ]
+            }
+          }
+        ],
+        "attributeBlackboard": [
+          {
+            "key": "cost",
+            "value": -8.0
+          },
+          {
+            "key": "max_hp",
+            "value": 75.0
+          },
+          {
+            "key": "attack_speed",
+            "value": 3.0
+          }
+        ],
+        "tokenAttributeBlackboard": {}
       }
     ]
   }
