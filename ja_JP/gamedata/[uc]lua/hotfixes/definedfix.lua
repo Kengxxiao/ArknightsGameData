@@ -3,11 +3,9 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/CharacterShowViewHotfixer",
-  "HotFixes/AbilityParallelGroupHotfixer",
-  "HotFixes/AudioOptionsHotfixer",
-  "HotFixes/HGSDKHotfixer",
-  "HotFixes/MedalGroupItemViewHotfixer"
+  "HotFixes/HandbookHotfixer",
+  "HotFixes/AbilitySelectableGroupHotfixer",
+  "HotFixes/RangeSelectorDoFindTargetsFixer"
 };
 
 return list;
