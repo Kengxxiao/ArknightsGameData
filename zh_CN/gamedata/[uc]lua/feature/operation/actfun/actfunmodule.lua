@@ -1,0 +1,7 @@
+require "Feature/Operation/ActFun/ActFun1MainDlg"
+require "Feature/Operation/ActFun/ActFun2MainDlg"
+require "Feature/Operation/ActFun/ActFun3MainDlg"
+require "Feature/Operation/ActFun/ActFun3BattleFinishDlg"
+require "Feature/Operation/ActFun/ActFun3BattleRankItem"
+require "Feature/Operation/ActFun/ActFunCollectionDlg"
+require "Feature/Operation/ActFun/ActFunMainDlgGroup"
