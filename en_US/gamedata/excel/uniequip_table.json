@@ -456,6 +456,63 @@
       ],
       "type": "ADVANCED"
     },
+    "uniequip_001_fartth": {
+      "uniEquipId": "uniequip_001_fartth",
+      "uniEquipName": "Fartooth's Badge",
+      "uniEquipIcon": "original",
+      "uniEquipDesc": "Operator Fartooth has demonstrated a remarkable aptitude for defeating enemies from long range. \nThe Field Operations Department has thus passed the following resolution: \nThis operator shall be appointed a Sniper Operator during field operations to exercise Deadeye responsibilities. \nIn witness whereof, \nThis badge is hereby conferred upon the above named.",
+      "typeIcon": "original",
+      "typeName": "ORIGINAL",
+      "equipShiningColor": "grey",
+      "showEvolvePhase": 2,
+      "unlockEvolvePhase": 0,
+      "charId": "char_430_fartth",
+      "tmplId": null,
+      "showLevel": 1,
+      "unlockLevel": 0,
+      "unlockFavorPoint": 0,
+      "missionList": [],
+      "itemCost": null,
+      "type": "INITIAL"
+    },
+    "uniequip_002_fartth": {
+      "uniEquipId": "uniequip_002_fartth",
+      "uniEquipName": "First-show Support Set",
+      "uniEquipIcon": "uniequip_002_fartth",
+      "uniEquipDesc": "......The wind. \nI can hear the wind's sound changing. \nIt was quiet before, but now it's become noisy.\n......\nLots of people... They're here to watch the match. \nMy first time competing in the knight tournament. \nThis is different from when I was in the underground arena... This is an official match. \n...Different? \nI've become an official Infected Knight, but does this really make a difference compared to before? \n...... \n......Soon. \nThere's not much time left. The match will start soon. \nI... \nI know, I will win. \nI will win...... \n...... \n\nExcuse me, is Miss Justyna Valentine here? We've brought your custom-made equipment! \nHuh, is Miss Valentine not here? \nShe... hasn't been seen since noon? What do you mean nobody knows where she is? The match is about to begin, and she's still not back yet? \nThis is quite unfortunate. Being late to her debut match will surely leave a bad taste in the fans' mouths. This certainly won't do any favors for Miss Valentine's future career! \nAnd in addition to that, she's going to need to personally look over her custom equipment, and if she's not here... \nHuh? Wait, what's that sound? \nHmm... Is that... somebody playing the flute? \n\nThe soft melody of the flute was gently carried along the wind, far, far away. \nEver higher, ever further away. \nThe wind continued to blow, to the place I promised to return to. \nPlease, take this tune back with you. \nPlease tell everyone. \nThat Justyna has finally become a knight. \nBut don't tell anyone. \nThat Justyna sorely misses her home. \n\n......\n......My goodness, how long have I been here?! \nI shouldn't be spacing out like that! Who has the time to sit around leisurely, playing a bland country tune? \nWell, whatever. \nThere's not much time left, I've gotta find Miss Valentine, and fast!",
+      "typeIcon": "dea-x",
+      "typeName": "DEA-X",
+      "equipShiningColor": "red",
+      "showEvolvePhase": 2,
+      "unlockEvolvePhase": 2,
+      "charId": "char_430_fartth",
+      "tmplId": null,
+      "showLevel": 1,
+      "unlockLevel": 60,
+      "unlockFavorPoint": 10070,
+      "missionList": [
+        "uniequip_001_fartth_1",
+        "uniequip_002_fartth_2"
+      ],
+      "itemCost": [
+        {
+          "id": "mod_unlock_token",
+          "count": 4,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "30135",
+          "count": 2,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "4001",
+          "count": 80000,
+          "type": "GOLD"
+        }
+      ],
+      "type": "ADVANCED"
+    },
     "uniequip_001_milu": {
       "uniEquipId": "uniequip_001_milu",
       "uniEquipName": "Firewatch's Badge",
@@ -1060,6 +1117,32 @@
       "uniEquipMissionSort": 2,
       "uniEquipId": "uniequip_002_doberm"
     },
+    "uniequip_001_fartth_1": {
+      "template": "EquipmentCharKilled",
+      "desc": "Defeat a total of 80 enemies with Fartooth (Fartooth cannot be a Support Unit)",
+      "paramList": [
+        "char_430_fartth",
+        "80",
+        "char_430_fartth"
+      ],
+      "uniEquipMissionId": "uniequip_001_fartth_1",
+      "uniEquipMissionSort": 1,
+      "uniEquipId": "uniequip_002_fartth"
+    },
+    "uniequip_002_fartth_2": {
+      "template": "EquipmentEventStageMore",
+      "desc": "Clear Main Theme S2-2 with a 3-star rating; a non-Support Fartooth must be deployed during the operation, and Fartooth must defeat at least 8 enemies with Feathershine Arrows",
+      "paramList": [
+        "3",
+        "sub_02-02",
+        "char_430_fartth",
+        "DEATHDETAIL,char_430_fartth,3",
+        "8"
+      ],
+      "uniEquipMissionId": "uniequip_002_fartth_2",
+      "uniEquipMissionSort": 2,
+      "uniEquipId": "uniequip_002_fartth"
+    },
     "uniequip_001_milu_3": {
       "template": "EquipmentEventTotal",
       "desc": "Defeat a total of 25 enemy ranged units with Firewatch (Firewatch cannot be a Support Unit)",
@@ -1357,6 +1440,11 @@
       "subProfessionName": "Duelist",
       "subProfessionCatagory": 23
     },
+    "fortress": {
+      "subProfessionId": "fortress",
+      "subProfessionName": "Fortress",
+      "subProfessionCatagory": 24
+    },
     "fastshot": {
       "subProfessionId": "fastshot",
       "subProfessionName": "Marksman",
@@ -1550,6 +1638,10 @@
     "char_130_doberm": [
       "uniequip_001_doberm",
       "uniequip_002_doberm"
+    ],
+    "char_430_fartth": [
+      "uniequip_001_fartth",
+      "uniequip_002_fartth"
     ],
     "char_158_milu": [
       "uniequip_001_milu",
