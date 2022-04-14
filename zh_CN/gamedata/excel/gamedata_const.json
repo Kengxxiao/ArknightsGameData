@@ -880,6 +880,7 @@
   "baseMaxFriendNum": 15,
   "hardDiamondDrop": 1,
   "instFinDmdShdCost": 80,
+  "easyCrystalBonus": 0,
   "diamondMaterialToShardExchangeRatio": 10,
   "apBuyCost": 1,
   "apBuyThreshold": 999,
@@ -890,6 +891,11 @@
     -1,
     -1
   ],
+  "mainlineCompatibleDesc": "PRTS检测到该关卡对应更低作战环境未获得三星评价，将自动开启<color=#fe6435>环境难度兼容</color>；\n环境难度兼容状态下挑战该关卡将<color=#fe6435>同时消耗</color>该环境与更低环境的理智，通关后则<color=#fe6435>会同步作战进度，并同时获得</color>该环境与更低环境的报酬奖励",
+  "mainlineToughDesc": "更有挑战的游玩体验环境\n三星首通奖励含有至纯源石\n会包含额外的高难关卡",
+  "mainlineEasyDesc": "更轻松的通关环境\n三星首通奖励仅有对应养成类材料\n\n<color=#c6c6c6>剧情体验环境只能继续解锁下一章节的对应剧情体验环境</color>",
+  "mainlineNormalDesc": "常规的游玩体验环境\n三星首通奖励含有至纯源石",
+  "addedRewardDisplayZone": "main_9",
   "richTextStyles": {
     "mission.levelname": "<color=#FFDE00>{0}</color>",
     "mission.number": "<color=#FFDE00>{0}</color>",
@@ -923,6 +929,7 @@
     "lv.rem": "<color=#FFFFFF>{0}</color>",
     "lv.fs": "<color=#FF0000>{0}</color>",
     "lv.sp": "<color=#fd4600>{0}</color>",
+    "lv.ez": "<color=#0098dc>{0}</color>",
     "ro1.get": "<color=#E5B684>{0}</color>",
     "rc.title": "<color=#FFFFFF>{0}</color>",
     "rc.subtitle": "<color=#FFC90E>{0}</color>",
@@ -977,7 +984,7 @@
   "commonPotentialLvlUpCount": 4,
   "weeklyOverrideDesc": "",
   "voucherDiv": 5,
-  "recruitPoolVersion": 7,
+  "recruitPoolVersion": 8,
   "v006RecruitTimeStep1Refresh": 1577172600,
   "v006RecruitTimeStep2Check": 1577154600,
   "v006RecruitTimeStep2Flush": 1577649600,
@@ -1071,7 +1078,7 @@
     "ba.buffres": {
       "termId": "ba.buffres",
       "termName": "抵抗",
-      "description": "<$ba.stun>晕眩</>、<$ba.cold>寒冷</>、<$ba.frozen>冻结</>等负面状态的持续时间减半（同名效果不叠加）"
+      "description": "<$ba.stun>晕眩</>、<$ba.cold>寒冷</>、<$ba.frozen>冻结</>等异常状态的持续时间减半（同名效果不叠加）"
     },
     "ba.invisible": {
       "termId": "ba.invisible",
@@ -1161,7 +1168,17 @@
     "ba.dt.element": {
       "termId": "ba.dt.element",
       "termName": "元素损伤",
-      "description": "包括<$ba.dt.neural>神经损伤</>、<$ba.dt.erosion>侵蚀损伤</>、<$ba.dt.burning>灼燃损伤</>"
+      "description": "包括<$ba.dt.neural>神经损伤</>、<$ba.dt.erosion>侵蚀损伤</>、<$ba.dt.burning>灼燃损伤</>、<$ba.dt.apoptosis>凋亡损伤</>"
+    },
+    "ba.overdrive": {
+      "termId": "ba.overdrive",
+      "termName": "过载",
+      "description": "技能持续拥有两段计量槽，技能进行到一半时触发额外效果"
+    },
+    "ba.dt.apoptosis": {
+      "termId": "ba.dt.apoptosis",
+      "termName": "凋亡损伤",
+      "description": "凋亡损伤累计至1000时，15秒内无法开启技能，每秒损失1点技力并受到100点法术伤害"
     },
     "cc.bd_A_1": {
       "termId": "cc.bd_A_1",
@@ -1325,6 +1342,6 @@
     }
   },
   "storyReviewUnlockItemLackTip": "事相碎片数量不足，请前往采购凭证区或活动期间商店获取",
-  "dataVersion": "26.7.0",
-  "resPrefVersion": "26d0d0"
+  "dataVersion": "27.0.0",
+  "resPrefVersion": "27d0d0"
 }

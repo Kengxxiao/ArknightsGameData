@@ -79,6 +79,7 @@ function ReturnMainDlg:_Render()
   
   SetGameObjectActive(self._objCheckinTab, not isSystemFinish)
   SetGameObjectActive(self._objTaskTab, not isSystemFinish)
+  SetGameObjectActive(self._btnWelcome.gameObject, not isSystemFinish);
   
   if isSystemFinish then
     self:_EventOnOpenTabClick()

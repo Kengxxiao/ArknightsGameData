@@ -1,0 +1,485 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]10-end
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="27_g4_giantwall",screenadapt="coverall")]
+[Delay(time=1)]
+[PlayMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[character(name="avg_npc_404_1#2$1",fadetime=1.5)]
+[delay(time=2)]
+[name="曼弗雷德"]街道打扫干净了？
+[character(name="avg_npc_419_1#1$1")]
+[name="萨卡兹战士"]是的，将军，我们拿到的名单上的人都处理了。
+[name="萨卡兹战士"]还有一些想逃去其他区块和城外的，也都照您说的那样，把他们拦了下来。
+[name="萨卡兹战士"]就是有几个漏网的......去抓他们的战士好像又撞上了昨天那个罗德岛的萨卡兹。
+[character(name="avg_npc_404_1#7$1")]
+[name="曼弗雷德"]......就让那些人钻回地下吧。
+[character(name="avg_npc_404_1#9$1")]
+[name="曼弗雷德"]这更方便我们一次性地把他们都解决掉。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="27_g6_hideout",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[character(name="avg_npc_401_1#4$1",fadetime=1.5)]
+[delay(time=2)]
+[name="克洛维希娅"]......多个地面上的联络点同时受到攻击？
+[name="克洛维希娅"]我们的信使呢？也都被拦下了？
+[character(name="avg_npc_401_1#6$1")]
+[name="克洛维希娅"]......
+[character(name="avg_npc_401_1#9$1")]
+[name="克洛维希娅"]博士，我想听一下你的意见。
+[dialog]
+[character(name="avg_npc_401_1#9$1", focus=-1)]
+[Decision(options="罗德岛不清楚自救军的地面联络点在哪里。", values="1")]
+[Predicate(references="1")]
+[character(name="avg_npc_401_1#6$1")]
+[name="克洛维希娅"]知道全部地面联络点的，只有我们自己的战士。
+[dialog]
+[character(name="avg_npc_401_1#6$1", focus=-1)]
+[Decision(options="昨天回来的路上，我们一直在被敌人追踪。", values="1")]
+[Predicate(references="1")]
+[character(name="avg_npc_401_1#6$1")]
+[name="克洛维希娅"]原来危机的种子在昨夜就已埋下......
+[character(name="avg_npc_401_1#8$1")]
+[name="克洛维希娅"]但是，我并不想怀疑我们的战士。
+[character(name="avg_npc_401_1#6$1")]
+[name="克洛维希娅"]他们不可能背叛自己的兄弟姐妹。
+[dialog]
+[character(name="avg_npc_401_1#6$1", focus=-1)]
+[Decision(options="指挥官要为整支队伍负责。;我们不能放过任何假设。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="从工厂中被救回来的战士，一共几位？", values="1")]
+[Predicate(references="1")]
+[character(name="avg_npc_401_1#6$1")]
+[name="克洛维希娅"]跟着海蒂一起回来的有十二人。
+[name="克洛维希娅"]这十二个人之中，有九人只是偶尔为我们提供情报。
+[name="克洛维希娅"]另外三人帮我们运送过物资，确实有可能掌握部分联络点位置。
+[dialog]
+[character(name="avg_npc_401_1#6$1", focus=-1)]
+[Decision(options="还有多少战士在萨卡兹手中？", values="1")]
+[Predicate(references="1")]
+[character(name="avg_npc_401_1#7$1")]
+[name="克洛维希娅"]......还有很多。
+[name="克洛维希娅"]博士，你比我更清楚，我们昨天的行动够艰难了。虽然我很想救出他们所有人，但我不得不承认，自救军还不够强大。
+[name="克洛维希娅"]海蒂非常努力。能救回这么多人，已然超出我的预期。
+[dialog]
+[character(name="avg_npc_401_1#7$1", focus=-1)]
+[Decision(options="那么，萨卡兹并不能确定哪些人会被救。;除非所有人都叛变了。;布下一枚棋子，就一定要令它生效。", values="1;2;3")]
+[Predicate(references="1")]
+[character(name="avg_npc_401_1#7$1")]
+[name="克洛维希娅"]我们昨夜的行动有很大不确定性......
+[name="克洛维希娅"]我想萨卡兹不可能有这样的把握。
+[Predicate(references="2")]
+[character(name="avg_npc_401_1#6$1")]
+[name="克洛维希娅"]这绝无可能。
+[Predicate(references="3")]
+[character(name="avg_npc_401_1#9$1")]
+[name="克洛维希娅"]是的。
+[name="克洛维希娅"]萨卡兹的指挥官并不愚蠢，他会想办法确保自己的计划能成功。
+[Predicate(references="1;2;3")]
+[character(name="avg_npc_401_1#6$1")]
+[name="克洛维希娅"]所以，假设战士之中真的有叛徒......
+[name="克洛维希娅"]那一定是最有可能被我们救出来的那一个。
+[dialog]
+[character(name="avg_npc_401_1#6$1", focus=-1)]
+[Decision(options="排查范围小了很多。;最有嫌疑的人显而易见。", values="1;2")]
+[Predicate(references="1;2")]
+[character(name="avg_npc_401_1#8$1")]
+[name="克洛维希娅"]我不想轻易指控任何一位为了家园而抛洒热血的战士......
+[character(name="avg_npc_401_1#6$1")]
+[name="克洛维希娅"]我们需要证据。
+[name="克洛维希娅"]博士，你有什么计划吗？
+[dialog]
+[character(name="avg_npc_401_1#6$1", focus=-1)]
+[Decision(options="请叫上费斯特和洛洛。", values="1")]
+[Predicate(references="1")]
+[Decision(options="我们一起去探望一下伤员。", values="1")]
+[Predicate(references="1")]
+[delay(time=1)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[delay(time=1)]
+[Background(image="27_g7_subway",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_npc_402_1#3$1", name2="avg_4040_rockr_1#1$1",fadetime=1.5)]
+[delay(time=2)]
+[character(name="avg_npc_402_1#3$1", name2="avg_4040_rockr_1#1$1", focus=1)]
+[name="费斯特"]......
+[character(name="avg_npc_402_1#3$1", name2="avg_4040_rockr_1#1$1", focus=2)]
+[name="洛洛"]为什么不往前走？指挥官刚刚发来消息，比尔快醒了。
+[character(name="avg_npc_402_1#3$1", name2="avg_4040_rockr_1#1$1", focus=1)]
+[name="费斯特"]......洛洛。
+[name="费斯特"]我想去找指挥官，跟她说，以后我不再担任行动队的队长。
+[character(name="avg_npc_402_1#3$1", name2="avg_4040_rockr_1#2$1", focus=2)]
+[name="洛洛"]......
+[stopmusic(fadetime=1)]
+[dialog]
+[playsound(key="$bodyfalldown3")]
+[character(name="avg_npc_402_1#3$1", name2="avg_4040_rockr_1#12$1", focus=2)]
+[name="洛洛"]看看这些。
+[character(name="avg_npc_402_1#5$1", name2="avg_4040_rockr_1#12$1", focus=1)]
+[name="费斯特"]包裹？里面是什么？
+[character(name="avg_npc_402_1#5$1", name2="avg_4040_rockr_1#2$1", focus=2)]
+[name="洛洛"]强尼和加比的东西。该留给他们家人的，我都拣出来了。
+[character(name="avg_npc_402_1#5$1", name2="avg_4040_rockr_1#8$1", focus=2)]
+[name="洛洛"]剩下的都是一些工具和武器装备，你真的......放不下他们的话，就选几样有用的好好加工，让他们继续陪我们一起战斗。
+[character(name="avg_npc_402_1#2$1", name2="avg_4040_rockr_1#8$1", focus=1)]
+[name="费斯特"]......
+[character(name="avg_npc_402_1#1$1", name2="avg_4040_rockr_1#8$1", focus=1)]
+[name="费斯特"]哈哈。
+[character(name="avg_npc_402_1#1$1", name2="avg_4040_rockr_1#8$1", focus=1)]
+[name="费斯特"]看来我的副队长驳回了我的辞职申请......那走吧，我们一起去看看比尔。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[delay(time=1)]
+[Background(image="27_g6_hideout",screenadapt="coverall")]
+[character(name="avg_npc_394_1#1$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="阿米娅"]您醒了？
+[PlayMusic(intro="$suspenseful_intro", key="$suspenseful_loop", volume=0.4)]
+[character(name="avg_npc_403_1#3$1")]
+[name="战士比尔"]是你啊。
+[character(name="avg_npc_394_1#1$1")]
+[name="阿米娅"]海蒂女士有事离开了，本来是她在这里负责伤员的救治统筹工作。
+[name="阿米娅"]等等......您是费斯特先生的队员。您叫比尔，对吧？
+[name="阿米娅"]比尔先生，需要我去把费斯特先生和洛洛小姐叫过来吗？
+[character(name="avg_npc_403_1#3$1")]
+[name="战士比尔"]不，不用。
+[name="战士比尔"]阿米娅小姐，我选择在此时醒过来，是为了与你聊聊。
+[character(name="avg_npc_394_1#5$1")]
+[name="阿米娅"]......嗯？
+[character(name="avg_npc_403_1#3$1")]
+[name="战士比尔"]我对你......嗯，一直很好奇。
+[name="战士比尔"]罗德岛的阿米娅......
+[name="战士比尔"]他们为何这么信任你？你只是个十几岁的卡特斯。
+[character(name="avg_npc_394_1#5$1")]
+[name="阿米娅"]您是指......罗德岛的干员们吗？
+[character(name="avg_npc_394_1#8$1")]
+[name="阿米娅"]我们一起经历了很多事。您说他们信任我，没错，可这份信任是相互的。
+[name="阿米娅"]在我看来，自救军的大家也是这样相处的。您也信任费斯特先生和洛洛小姐，还有克洛维希娅，不是吗？
+[character(name="avg_npc_403_1#3$1")]
+[name="战士比尔"]呵呵......相互的信任？那也需要一个由来，并且通过一连串艰难的考验。
+[name="战士比尔"]你的权力并非来自血统，你的地位也并不由力量保障。与你得到的信任相比，你还是太稚嫩了。
+[character(name="avg_npc_394_1#2$1")]
+[name="阿米娅"]......比尔先生？
+[character(name="avg_npc_403_1#3$1")]
+[name="战士比尔"]你心里也想过这些问题吧？但你不敢表现出来。你的恐惧，你的忧虑，你的焦灼，都被压抑在了他们强加于你的责任之下。
+[character(name="avg_npc_394_1#2$1")]
+[name="阿米娅"]您是在关心我吗？难道您听见了我和海蒂女士的对话？
+[character(name="avg_npc_403_1#3$1")]
+[name="战士比尔"]嗯......或许吧。我全都听见了。
+[character(name="avg_npc_394_1#3$1")]
+[name="阿米娅"]谢谢您的关心，但是，我不认同这责任是别人强加给我的。
+[character(name="avg_npc_394_1#8$1")]
+[name="阿米娅"]干员们对我有期待，而我也愿意回应这份期待。
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]当然......当然。你始终活在他们热切的视线中。
+[name="战士比尔"]可是阿米娅......他们在看着你的时候，是否是在透过你，寻找另一个沧桑得多的灵魂？
+[character(name="avg_npc_394_1#7$1")]
+[name="阿米娅"]......！
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]你所相信的，到底是你真正相信的，还是......
+[name="战士比尔"]你一直在做着一个别人给你的梦......怎么挣扎都醒不过来？
+[character(name="avg_npc_394_1#7$1")]
+[name="阿米娅"]比尔先生......不，你不是他！
+[character(name="avg_npc_394_1#13$1")]
+[name="阿米娅"]你究竟是谁？
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]不，这个问题该由我们来问你。
+[name="战士比尔"]阿米娅......阿米娅究竟是谁？
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[delay(time=1)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Subtitle(text="阿米娅，你喜欢我给你讲的这些故事吗？会不会影响你入睡？我可不希望你做噩梦。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="不会做噩梦吗？你真是个温柔的孩子。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="是啊，即使看起来有许多不一样的地方，我们也都是孕育自这片土地的生命。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="你所听到的这些故事，它们是给其他人带来恐惧的传说，但同时也是萨卡兹的历史。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[delay(time=1)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[delay(time=1)]
+[Background(image="27_g6_hideout",screenadapt="coverall")]
+[character(name="avg_npc_394_1#7$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="阿米娅"]......
+[name="阿米娅"]你该离开这里了。
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]我看到在你手心聚集的能量束了。你不是猜到我是谁了吗？为什么不动手？
+[character(name="avg_npc_394_1#7$1")]
+[name="阿米娅"]我触摸不到你的情绪，“比尔先生”。
+[character(name="avg_npc_394_1#20$1")]
+[name="阿米娅"]但是......我同样感受不到你的恶意。
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]哦？
+[character(name="avg_npc_394_1#7$1")]
+[name="阿米娅"]你明明可以继续装睡的。可你偏偏对我说了这些话......
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]唉，刚才说过了呀，我们对你很好奇。
+[name="战士比尔"]要不是因为你，我们也不想来这里。特雷西斯都不能命令我们。
+[character(name="avg_npc_394_1#7$1")]
+[name="阿米娅"]无论你的目的是什么......这很残忍。
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]残忍......
+[name="战士比尔"]你是指我们用的这张脸吗？
+[character(name="avg_npc_394_1#20$1")]
+[name="阿米娅"]所以，我必须请你离开。
+[CameraShake(duration=4, xstrength=10, ystrength=8, vibrato=20, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.2, block=true)]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[PlaySound(key="$p_skill_spiritexplo", volume=1)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.4, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[Blocker(a=0.8, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.5, block=true)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+黑色线条再次从她掌心涌出，在身穿自救军制服的男人身边结了一张网。
+其中一道凝成无光的锋刃，抵住了他的咽喉。
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]还真是......温柔的威胁啊。
+[name="战士比尔"]阿米娅，很多人都说过了吧？
+[name="战士比尔"]你真的挺像她。
+[character(name="avg_npc_394_1#7$1")]
+[name="阿米娅"]请别再说这些话了。
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]可惜，你还是太稚嫩......
+[name="战士比尔"]在动手之前，你应该先看一眼身后。
+[dialog]
+[character]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_npc_402_1#6$1", name2="avg_4040_rockr_1#4$1",fadetime=1.2)]
+[delay(time=2)]
+[character(name="avg_npc_402_1#10$1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="费斯特"]......阿米娅小姐？！
+[name="费斯特"]你你你......你要杀老比尔吗？
+[character(name="avg_npc_394_1#2$1")]
+[name="阿米娅"]不，不是的......
+[character(name="avg_npc_402_1#6$1")]
+[name="费斯特"]......
+[dialog]
+[character]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_npc_401_1#6$1",fadetime=1.5)]
+[delay(time=2)]
+[name="克洛维希娅"]博士，你让我带人来这里，不仅仅是想让我看到这一幕吧？
+[dialog]
+[character(name="avg_npc_401_1#6$1",focus=-1)]
+[Decision(options="我也想看看动手的人是谁。;你已经见到了“叛徒”。", values="1;2")]
+[Predicate(references="1;2")]
+[character(name="avg_npc_401_1#6$1")]
+[name="克洛维希娅"]你指的肯定不是阿米娅。那么，是比尔？
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]洛洛......洛洛，救救我。
+[character(name="avg_4040_rockr_1#4$1")]
+[name="洛洛"]......
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]我宁愿自己死去......也不会伤害你！
+[character(name="avg_npc_394_1#15$1")]
+[name="阿米娅"]......别靠近他。我......不，没人了解他源石技艺的全貌。
+[character(name="avg_npc_394_1#7$1")]
+[name="阿米娅"]他说的话......以及他本身，都很危险。
+[character(name="avg_4040_rockr_1#4$1")]
+[name="洛洛"]阿米娅小姐......我能相信你吗？
+[name="洛洛"]昨夜你和我们一起并肩作战。我以为罗德岛真的就像你们说的那样，是我们的朋友。
+[name="洛洛"]但是......
+[character(name="avg_npc_394_1#3$1")]
+[name="阿米娅"]......
+[character(name="avg_4040_rockr_1#8$1")]
+[name="洛洛"]你的表情让我害怕。我总觉得我在哪里见过......
+[name="洛洛"]对了，你在为你即将造成的伤痛而难过。
+[name="洛洛"]既然如此，你......你们为什么还要动手？！
+[name="洛洛"]她......萨卡兹在我面前夺走了我的父亲，你还要再一次把家人从我身边带走吗？
+[character(name="avg_npc_394_1#2$1")]
+[name="阿米娅"]对不起，洛洛小姐......你的家人，他已经离开了。
+[character(name="avg_4040_rockr_1#3$1")]
+[name="洛洛"]可是比尔明明就在这里！
+[character(name="avg_npc_394_1#2$1")]
+[name="阿米娅"]要接受这件事......对你们来说一定很难。
+[character(name="avg_4040_rockr_1#4$1")]
+[name="洛洛"]......我不明白。
+[character(name="avg_npc_401_1#9$1")]
+[name="克洛维希娅"]你看，阿米娅，我们不是不愿意相信你，但我们没有你的源石技艺，看不见你能看见的东西。
+[character(name="avg_npc_402_1#2$1")]
+[name="费斯特"]......
+[name="费斯特"]指挥官......我能看见。
+[character(name="avg_4040_rockr_1#4$1")]
+[name="洛洛"]队长？
+[character(name="avg_npc_402_1#2$1")]
+[name="费斯特"]他可能真的不是我们的老比尔。
+[character(name="avg_4040_rockr_1#9$1")]
+[name="洛洛"]可是他身上这些伤......都是昨天为了救我留下来的！
+[character(name="avg_npc_402_1#4$1")]
+[name="费斯特"]洛洛，是你说的，萨卡兹很会伪装，我们不能被表象蒙蔽。
+[character(name="avg_4040_rockr_1#9$1")]
+[name="洛洛"]怎么会......？
+[character(name="avg_npc_402_1#2$1")]
+[name="费斯特"]洛洛，我把准备送给老比尔的磐蟹带来了。
+[name="费斯特"]你看......
+[dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Image(image="27_i24",screenadapt="coverall", fadetime=0)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[name="战士比尔"]呃，这东西什么时候爬到我身上来的？
+[name="费斯特"]他一眼都没有看。他眼里只有阿米娅小姐，他在为成功欺骗了我们而得意，他早就忘记了......他眼里并没有我们的约定。
+[dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Image]
+[character(name="avg_4040_rockr_1#9$1")]
+[delay(time=0.6)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[name="洛洛"]......
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]就因为这不起眼的小机械？
+[name="战士比尔"]费斯特，你不觉得你的判断太草率了吗？我们可是最好的兄弟。
+[character(name="avg_npc_402_1#3$1")]
+[name="费斯特"]这两天我是做了挺多草率的决定。
+[name="费斯特"]比尔......老比尔，他要是还在的话，一定会狠狠地笑话我。我很想他，我真的很想他。
+[character(name="avg_npc_402_1#6$1")]
+[name="费斯特"]不管你是谁......别逼我用扳手把你脸上的面具捣下来。
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]洛洛，你也和他一样，要伤我的心吗？
+[character(name="avg_4040_rockr_1#2$1")]
+[name="洛洛"]我永远相信我的家人。
+[character(name="avg_4040_rockr_1#9$1")]
+[name="洛洛"]但是你......你越来越不像他。
+[character(name="avg_4040_rockr_1#8$1")]
+[name="洛洛"]比尔他不会像你这样说话，他从来不会逼迫我们。
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]......你们真觉得我不是他？费斯特，你真能接受这结果吗？
+[name="战士比尔"]要知道，这样的话，你那两个朋友可是白死了。
+[character(name="avg_npc_402_1#6$1")]
+[name="费斯特"]......
+[character(name="avg_npc_402_1#10$1")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="费斯特"]谁都有资格这么说，但你他妈的没有！
+[character(name="avg_npc_403_1#2$1")]
+[name="战士比尔"]呵呵......你挺聪明的，可惜......
+[character(name="avg_npc_403_1#5$1")]
+[name="战士比尔"]晚了。
+[stopmusic(fadetime=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="27_g4_giantwall",screenadapt="coverall")]
+[character(name="avg_npc_404_1#1$1")]
+[PlayMusic(intro="$warchaos_intro", key="$warchaos_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[name="曼弗雷德"]炮手，准备好了吗？
+[character(name="avg_npc_419_1#1$1")]
+[name="萨卡兹战士"]是的，将军，防御炮炮口瞄准了目标地块。
+[character(name="avg_npc_404_1#1$1")]
+[name="曼弗雷德"]记住，除了车站和铁轨以外，所有建筑都是我们的打击目标。
+[character(name="avg_npc_419_1#1$1")]
+[name="萨卡兹战士"]明白！
+[character(name="avg_npc_404_1#1$1")]
+[name="曼弗雷德"]把输出功率提到最高。
+[character(name="avg_npc_419_1#1$1")]
+[name="萨卡兹战士"]最、最高？那可能会炸穿结构层——
+[character(name="avg_npc_404_1#2$1")]
+[name="曼弗雷德"]听到赦罪师信使说的话了吗？在他们眼里，这地块连带着上面的厂房，对我们来说都没用了。
+[character(name="avg_npc_419_1#1$1")]
+[name="萨卡兹战士"]那......那我们在下面的人......
+[character(name="avg_npc_404_1#3$1")]
+[name="曼弗雷德"]赫德雷会守在城墙下的安全区。
+[character(name="avg_npc_419_1#1$1")]
+[name="萨卡兹战士"]不是还有......
+[character(name="avg_npc_404_1#2$1")]
+[name="曼弗雷德"]嗯......你知道准备去地下找反抗军的人是谁吗？
+[character(name="avg_npc_419_1#1$1")]
+[name="萨卡兹战士"]大君？
+[character(name="avg_npc_404_1#3$1")]
+[name="曼弗雷德"]知道就行。要是这炮能打死血魔大君，倒是会让我......非常意外。
+[character(name="avg_npc_404_1#9$1")]
+[name="曼弗雷德"]至于另一位......
+[character(name="avg_npc_404_1#4$1")]
+[name="曼弗雷德"]我好奇很久了，假如他尽全力和大君打一架，赢的到底会是谁？
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Background(image="27_g6_hideout",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[character(name="avg_npc_411_1#11$1",fadetime=1.5)]
+[delay(time=2)]
+[name="可露希尔"]太好了，你们都在这里——
+[character(name="avg_npc_411_1#5$1")]
+[name="可露希尔"]哈？为什么你们看起来像是要打架？
+[character(name="avg_npc_411_1#4$1")]
+[name="可露希尔"]博士，我照你说的，让无人机去了地面——他们果然又开始了！就、就那个城防炮！炮口出现了明显转动！
+[character(name="avg_npc_401_1#3$1")]
+[name="克洛维希娅"]通知海蒂女士和哈默，我们立刻撤离。
+[character(name="avg_npc_411_1#4$1")]
+[name="可露希尔"]等等，检测到强烈源石反应！他们正在瞄准我们所在的位置！
+[name="可露希尔"]十秒，还有十秒——
+[name="可露希尔"]九秒——
+[dialog]
+[character(name="avg_npc_411_1#4$1", focus=-1)]
+[Decision(options="别倒数了。;快跑！", values="1;2")]
+[Predicate(references="1;2")]
+[delay(time=1)]
+[character]
+[playsound(key="$d_avg_cannon")]
+[delay(time=0.6)]
+[CameraShake(duration=2, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[playsound(key="$d_avg_explosion")]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[playsound(key="$d_avg_explosion")]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=1, block=true)]
+[CameraShake(xstrength=5, ystrength=3, vibrato=30, randomness=90)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[delay(time=1)]
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[character(name="avg_npc_403_1#5$1")]
+[delay(time=0.51)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="战士比尔？"]——你为什么要抓住我？
+[character(name="avg_npc_402_1#6$1")]
+[name="费斯特"]......你说的，我们是最好的兄弟。我不想......判断得太草率。
+[character(name="avg_4040_rockr_1#9$1")]
+[name="洛洛"]队长......我有点......拉不动你们......
+[character(name="avg_npc_403_1#5$1")]
+[name="战士比尔？"]......
+[name="战士比尔？"]你们确实......很有趣。
+[name="战士比尔？"]再见了，队长。
+[name="战士比尔？"]再见了，洛洛。
+[name="战士比尔？"]老比尔希望你们都能活下去。这是他想说的最后一句话。
+[dialog]
+[playsound(key="$d_avg_clothmovement")]
+[character(fadetime=1.5)]
+[delay(time=2)] 
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=1, block=true)]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Image]

@@ -3,9 +3,7 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/UIHotfixer",
-  "HotFixes/CharacterRepoStateBeanHotFixer",
-  "HotFixes/RoguelikeFriendAssistDetailStateHotFixer",
+  "HotFixes/DynamicMusicCompInfoHotfixer",
 };
 
 return list;
