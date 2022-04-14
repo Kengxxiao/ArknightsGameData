@@ -1,22 +1,26 @@
 
+
+
+
+
 local UIHotfixer = Class("UIHotfixer", HotfixBase)
 
-local function _ProcessDataBeforeEnteringMainGame()
-  CS.Torappu.CharWord.VoiceLangManager.instance:UpdateGlobalVoiceLangWithPlayerData()
-end
-
-local function _HomePageOnCreate(self, savedInst)
-  self:OnCreate(savedInst)
-
-  local sceneBundle = CS.Torappu.GameFlowController.currentSceneBundle
-  if sceneBundle ~= nil and sceneBundle.fromScene == "login" and sceneBundle.toScene == "home" then
-    CS.Torappu.LocalTrackStore.NotifyEnteringMainGame()
+local function SendDiamondExchangeService(self)
+  local payCheckView = CS.Torappu.UI.UIPayCostCheckView.GetActiveInst()
+  if payCheckView == nil then
+    return
   end
+  if payCheckView:CheckNeedBuyDiamond(self.m_cacheDiamond) then
+    self:Dismiss()
+    return
+  end
+
+  self:SendDiamondExchangeService()
 end
 
 function UIHotfixer:OnInit()
-  self:Fix_ex(CS.Torappu.UI.Login.LoginViewController, "_ProcessDataBeforeEnteringMainGame", _ProcessDataBeforeEnteringMainGame)
-  self:Fix_ex(CS.Torappu.UI.Home.HomePage, "OnCreate", _HomePageOnCreate)
+  xlua.private_accessible(CS.Torappu.UI.Recruit.RecruitBuyDiamondShardView)
+	self:Fix_ex(CS.Torappu.UI.Recruit.RecruitBuyDiamondShardView,"SendDiamondExchangeService", SendDiamondExchangeService)
 end
 
 function UIHotfixer:OnDispose()
