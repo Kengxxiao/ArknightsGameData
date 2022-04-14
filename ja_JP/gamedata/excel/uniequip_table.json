@@ -456,6 +456,63 @@
       ],
       "type": "ADVANCED"
     },
+    "uniequip_001_fartth": {
+      "uniEquipId": "uniequip_001_fartth",
+      "uniEquipName": "ファートゥースの記章",
+      "uniEquipIcon": "original",
+      "uniEquipDesc": "ファートゥースは遠距離から敵を撃破することに秀でている。\n外勤部門の決定に基づき\n外勤任務においては狙撃オペレーターとして区分し、戦術射手の責務を担う。\n特別に本記章を授与し、\nその証明とする。",
+      "typeIcon": "original",
+      "typeName": "ORIGINAL",
+      "equipShiningColor": "grey",
+      "showEvolvePhase": 2,
+      "unlockEvolvePhase": 0,
+      "charId": "char_430_fartth",
+      "tmplId": null,
+      "showLevel": 1,
+      "unlockLevel": 0,
+      "unlockFavorPoint": 0,
+      "missionList": [],
+      "itemCost": null,
+      "type": "INITIAL"
+    },
+    "uniequip_002_fartth": {
+      "uniEquipId": "uniequip_002_fartth",
+      "uniEquipName": "デビュー戦サポートセット",
+      "uniEquipIcon": "uniequip_002_fartth",
+      "uniEquipDesc": "……風の音。\n風の音が変わった。\nさっきまで静かだったのに、騒々しくなってきた。\n……\nたくさんの人が……この試合を見に来てるんだ。\n初めての騎士競技。\nこれまでの地下競技場とは違う……正式な試合だ。\n……本当に違うのかな？\n正式に感染者騎士になったからって、本当に何か変わってしまったのかな？\n……\n……もうすぐだ。\n試合が始まる。待ち時間もあと少しだ。\n勝つ……\n分かっている。私なら勝てる。\n勝てるんだ……\n……\n\n失礼します。ユスティナ・バレンタインさんはいらっしゃいますか！？特注の新装備が届きましたよ！\n……あれ、いらっしゃらないのですか？\nそんな……昼間に見たきりですって？どちらに行かれたかご存じの方はいらっしゃいませんか？もうすぐ出場時間だっていうのに……\nいやはや困りました。もしデビュー戦に遅刻なんてしたら、評判ガタ落ちじゃないですか。今後に影響が出ますよ！\nそれに、特注装備は本人確認が必要なんですよ！いったいどうすれば……\nあら、皆さんちょっとお静かに――なんの音だ？\nこれは……笛の音？\n\n軽やかで心地よい音色が、柔らかな風に優しく包まれ、遠くまで運ばれていく。\nより高く、より遠くへ。\nいつか帰ると誓った彼の地へ向けて、風は止むことなく吹き続けている。\n風よ、このメロディーを届けて。\nそしてみんなに伝えて。\n「ユスティナは、やっと騎士になれたんだよ。」\nそれから、これは私の独り言。誰にも伝えなくていい。\n「ユスティナは、本当はみんなが、家がとても恋しいんだ。」\n\n……\n……まずい、聴き入ってる場合じゃない！\nそもそもこんな田舎くさいカントリーミュージックなんて、一体どこのどいつだ？\nいやいや、余計なこと考えるな！\nもう時間がないんだ、さっさとバレンタインさんを見つけないと！",
+      "typeIcon": "dea-x",
+      "typeName": "DEA-X",
+      "equipShiningColor": "red",
+      "showEvolvePhase": 2,
+      "unlockEvolvePhase": 2,
+      "charId": "char_430_fartth",
+      "tmplId": null,
+      "showLevel": 1,
+      "unlockLevel": 60,
+      "unlockFavorPoint": 10070,
+      "missionList": [
+        "uniequip_001_fartth_1",
+        "uniequip_002_fartth_2"
+      ],
+      "itemCost": [
+        {
+          "id": "mod_unlock_token",
+          "count": 4,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "30135",
+          "count": 2,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "4001",
+          "count": 80000,
+          "type": "GOLD"
+        }
+      ],
+      "type": "ADVANCED"
+    },
     "uniequip_001_milu": {
       "uniEquipId": "uniequip_001_milu",
       "uniEquipName": "ファイヤーウォッチの記章",
@@ -1060,6 +1117,32 @@
       "uniEquipMissionSort": 2,
       "uniEquipId": "uniequip_002_doberm"
     },
+    "uniequip_001_fartth_1": {
+      "template": "EquipmentCharKilled",
+      "desc": "サポート以外のファートゥースで敵を累計80体撃破する。",
+      "paramList": [
+        "char_430_fartth",
+        "80",
+        "char_430_fartth"
+      ],
+      "uniEquipMissionId": "uniequip_001_fartth_1",
+      "uniEquipMissionSort": 1,
+      "uniEquipId": "uniequip_002_fartth"
+    },
+    "uniequip_002_fartth_2": {
+      "template": "EquipmentEventStageMore",
+      "desc": "メインテーマS2-2を★3でクリア。その際、サポート以外のファートゥースを編成、配置し、スキル「フェザーアロー」にて敵を8体撃破する。",
+      "paramList": [
+        "3",
+        "sub_02-02",
+        "char_430_fartth",
+        "DEATHDETAIL,char_430_fartth,3",
+        "8"
+      ],
+      "uniEquipMissionId": "uniequip_002_fartth_2",
+      "uniEquipMissionSort": 2,
+      "uniEquipId": "uniequip_002_fartth"
+    },
     "uniequip_001_milu_3": {
       "template": "EquipmentEventTotal",
       "desc": "サポート以外のファイヤーウォッチで、遠距離武器を使用する敵を累計25体撃破する。",
@@ -1357,6 +1440,11 @@
       "subProfessionName": "決闘者",
       "subProfessionCatagory": 23
     },
+    "fortress": {
+      "subProfessionId": "fortress",
+      "subProfessionName": "堅城砲手",
+      "subProfessionCatagory": 24
+    },
     "fastshot": {
       "subProfessionId": "fastshot",
       "subProfessionName": "速射手",
@@ -1550,6 +1638,10 @@
     "char_130_doberm": [
       "uniequip_001_doberm",
       "uniequip_002_doberm"
+    ],
+    "char_430_fartth": [
+      "uniequip_001_fartth",
+      "uniequip_002_fartth"
     ],
     "char_158_milu": [
       "uniequip_001_milu",
