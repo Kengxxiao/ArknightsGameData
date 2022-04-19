@@ -1,25 +1,30 @@
--- local BaseHotfixer = require ("Module/Core/BaseHotfixer")
--- local xutil = require('xlua.util')
--- local stringRes = require("Module/Config/LuaStringRes")
-local eutil = CS.Torappu.Lua.Util
-
----@class ItemRepoHotfixer:HotfixBase
 local ItemRepoHotfixer = Class("ItemRepoHotfixer", HotfixBase)
 
-local function ClickToDetail(self,charId)
-  if (CS.Torappu.FastActionDetector.IsFastAction()) then
-    return;
-  end
-  self:OnClick(charId)
+local function _UpdateStageDropInfoFix(self,viewModel,descViewModel)
+	local stageDataMainLine = CS.Torappu.StageDataUtil:GetMainStageProgress();	
+	if (stageDataMainLine == nil)then
+		local curTs = CS.Torappu.DateTimeUtil.timeStampNow;
+		for i = viewModel.stageDrop.Count - 1,0,-1 do
+			local dropInfo = viewModel.stageDrop[i]
+			local stageSucc,stageDataWrapper = CS.Torappu.StageDataUtil.TryGetStageWrapper(dropInfo.stageId, curTs)
+			if (stageSucc) then
+	          	local stageData = stageDataWrapper.data;
+	          	if (stageData ~= nil) and (stageData.stageType == CS.Torappu.StageType.MAIN) then
+					local succ, playerStage = CS.Torappu.PlayerData.instance.data.dungeon.stages:TryGetValue(dropInfo.stageId)
+					if (succ == false) then
+						viewModel.stageDrop:RemoveAt(i)
+					end
+				end
+			end
+		end
+	end
+    return self:_UpdateStageDropInfo(viewModel,descViewModel)
 end
 
 function ItemRepoHotfixer:OnInit()
-  self:Fix_ex(CS.Torappu.UI.ItemRepo.ItemRepoChooseCharState, "OnClick", function(self,charId)
-    local ok, error = xpcall(ClickToDetail,debug.traceback,self,charId)
-    if not ok then
-      eutil.LogError("[ItemRepo] fix" .. error);
-    end
-  end)
+	self:Fix_ex(CS.Torappu.UI.ItemRepoDropInfoView, "_UpdateStageDropInfo", function(self,viewModel,descViewModel)
+        return _UpdateStageDropInfoFix(self,viewModel,descViewModel)
+    end)
 end
 
 function ItemRepoHotfixer:OnDispose()
