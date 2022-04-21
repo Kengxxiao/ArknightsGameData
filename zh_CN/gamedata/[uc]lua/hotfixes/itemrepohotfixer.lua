@@ -20,12 +20,16 @@ local function _UpdateStageDropInfoFix(self,viewModel,descViewModel)
 			end
 		end
 	end
-    return self:_UpdateStageDropInfo(viewModel,descViewModel)
+end
+
+local function _UpDateStageDropInfoFixWrapped(self,viewModel,descViewModel)
+	local ok = xpcall(_UpdateStageDropInfoFix, debug.traceback, self,viewModel, descViewModel)
+	return self:_UpdateStageDropInfo(viewModel,descViewModel)
 end
 
 function ItemRepoHotfixer:OnInit()
 	self:Fix_ex(CS.Torappu.UI.ItemRepoDropInfoView, "_UpdateStageDropInfo", function(self,viewModel,descViewModel)
-        return _UpdateStageDropInfoFix(self,viewModel,descViewModel)
+        return _UpDateStageDropInfoFixWrapped(self,viewModel,descViewModel)
     end)
 end
 
