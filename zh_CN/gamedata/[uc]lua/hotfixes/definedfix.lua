@@ -9,6 +9,7 @@ local list =
   "HotFixes/UIHotfixer",
   "HotFixes/NameCardHotfixer",
   "HotFixes/StagePreviewStateHotfixer",
+  "HotFixes/DeepSeaRPBattlePreviewStateHotfixer",
 };
 
 return list;
