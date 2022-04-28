@@ -31,4 +31,7 @@ require "Feature/Activity/Act17D7/Act17D7MainDlg"
 require "Feature/Activity/GridGacha/GridGachaDefine"
 require "Feature/Activity/GridGacha/GridGachaMainDlg"
 
+require "Feature/Activity/GridGachaV2/GridGachaV2Define"
+require "Feature/Activity/GridGachaV2/GridGachaV2MainDlg"
+
 require "Feature/Wardrobe/WardrobeModule"
