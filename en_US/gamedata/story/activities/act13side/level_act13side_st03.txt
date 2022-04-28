@@ -1,0 +1,946 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 卡西米尔 纯剧情3
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+Kawalerielki has entered a state of emergency, confirmed.
+Correct signal code, confirmed. Correct squad identification code, confirmed.
+Heed my orders.
+Remove your disguises, and enter the city.
+[dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_23_G09",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_237_gravel_1")]
+[name="Gravel"]  It'll still be some time until the power is completely restored.
+[name="Gravel"]  The Rhodes Islanders have returned to their rooms, as advised. If you two would like to review...
+[Character(name="char_002_amiya_1#7")]
+[name="Amiya"]  Doctor, I want to go see them.
+[name="Amiya"]  Everything happened so quickly, I'm sure there are many operators who still don't quite understand the situation. With all the anti-Infected protests going on, there's been a lot of pressure on everyone.
+[dialog]
+[Decision(options="I'll be counting on you again then, Amiya.;......;Are you sure you don't need my help?",values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="char_002_amiya_1#6")]
+[name="Amiya"]  Oh, it's fine, Doctor.
+[Character(name="char_002_amiya_1#4")]
+[name="Amiya"]  I know how busy you've been with business negotiations and social events recently. To be honest, I feel bad about it.
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]  You should get some rest while you still can.
+[Predicate(references="2")]
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]  Ahaha, you must already be worn out, Doctor.
+[name="Amiya"]  After all, you've been dealing with those businesspeople nonstop since yesterday. Of course you'd lose your voice, right?
+[Predicate(references="3")]
+[Character(name="char_002_amiya_1#3")]
+[name="Amiya"]  But it's okay, with Hibiscus here, I'm sure we won't have any trouble.
+[name="Amiya"]  I just want to go around and see how everyone's doing. I'll be right back.
+[Predicate(references="1;2;3")]
+[Character(name="avg_237_gravel_1", name2="char_002_amiya_1", focus=1)]
+[name="Gravel"]  There's no need to worry, Amiya. I'll take real good care of the Doctor while you're gone.
+[Character(name="avg_237_gravel_1", name2="char_002_amiya_1#2", focus=2)]
+[name="Amiya"]  Oh... Okay.
+[Character(name="avg_237_gravel_1", name2="char_002_amiya_1#3", focus=2)]
+[name="Amiya"]  See you later then.
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[characteraction(name="right", type="move", xpos=300, fadetime=2,block=false)]
+[character(name="avg_237_gravel_1",name2="char_empty",fadetime=0.5)]
+[delay(time=2)]
+[Character(name="avg_237_gravel_1")]
+[name="Gravel"]  ...{@nickname}Doctor.
+[name="Gravel"]  There've been some developments in the General Chamber of Commerce that may be disadvantageous to Rhodes Island.
+[name="Gravel"]  Coupled with the ongoing power outage, I'm afraid that what happens next will be nothing less than an open conspiracy.
+[name="Gravel"]  For the time being... do not leave my side, whatever you do. Of course, it'd be even better if you decided to stay with me of your own accord.
+[dialog]
+[Decision(options="Want to take a look around?",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1#3")]
+[name="Gravel"]  Heehee, I didn't expect you to be so forward. Caught me off guard.
+[name="Gravel"]  Did something good happen?
+[dialog]
+[Decision(options="Miss Gravel, what do you think of the K.G.C.C.?",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1#4")]
+[name="Gravel"]  Didn't you ask me something like this before? Or, do you just love the sound of my voice that much?
+[Character(name="avg_237_gravel_1#2")]
+[name="Gravel"]  They're parasites on Kazimierz.
+[name="Gravel"]  The business class bands together, corrupting the knights and the city, just to chase their ambitions.
+[dialog]
+[Decision(options="No.",values="1")]
+[Predicate(references="1")]
+[Decision(options="The General Chamber of Commerce, as its name implies, is just a 'general' assemblage.",values="1")]
+[Predicate(references="1")]
+[Decision(options="There is little that binds them beyond common interest, and they can be divided.",values="1")]
+[Predicate(references="1")]
+[Decision(options="It feels like they're acting as a unit because they're fighting against the knights.",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1#4")]
+[name="Gravel"]  ......
+[name="Gravel"]  What did you do?
+[dialog]
+[Decision(options="There are roughly four types of executive directors in the K.G.C.C.",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1")]
+[name="Gravel"]  Heh... Care to tell me more?
+[dialog]
+[Decision(options="One is committed, so radical as to eliminate the knight class.",values="1")]
+[Predicate(references="1")]
+[Decision(options="One is old-fashioned, a rock-solid faction that moves forward step by step.",values="1")]
+[Predicate(references="1")]
+[Decision(options="Another has no principles, just a group of opportunists flocking to potential profit.",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1#4")]
+[name="Gravel"]  And the last one?
+[dialog]
+[Decision(options="The type that Rhodes Island is not ready to contact yet.",values="1")]
+[Predicate(references="1")]
+[Decision(options="Rushing to contact them will only hurt us.",values="1")]
+[Predicate(references="1")]
+[Character(name="avg_237_gravel_1#4")]
+[name="Gravel"]  So what you're saying is there are cracks in the K.G.C.C.? And you... have already taken stock of them?
+[dialog]
+[Decision(options="I wouldn't call it 'cracks.';More like it was never possible for them to 'unite' in the first place.;Live for the sake of profit, die for the sake of profit.",values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_237_gravel_1#5")]
+[name="Gravel"]  But this is only your first time here, and you were only able to get to know a portion of the executives through your ties with a spokesman.
+[name="Gravel"]  How can you be so sure of yourself? The moment you place your trust in the wrong person, the Adeptus Sprawiedliwi will no longer bear the consequences.
+[dialog]
+[Decision(options="Rhodes Island has never relied on the sacrifices of others to advance its goals.;As if I'd approach those banquets if I wasn't ready to sacrifice something.",values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_237_gravel_1")]
+[name="Gravel"]  No.
+[Character(name="avg_237_gravel_1#6")]
+[name="Gravel"]  Of course not.
+[stopmusic(fadetime=1.5)]
+[dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_23_G04",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$normal01_intro", key="$normal01_loop", volume=0.4)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$swordtsing3", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="avg_npc_209_1")]
+[name="Roy"]  Do you still have time to waste?
+[name="Roy"]  About the bounty placed on the Infected, once the interference from the Great Separation has passed, you'll have no escape route.
+[Character(name="avg_npc_209_1#2")]
+[name="Roy"]  Ah, by the way, the reason it's called the 'Great Separation' is because after power from the core is lost, each plate will experience a short period of drift.
+[Character(name="avg_npc_209_1#6")]
+[name="Roy"]  Right now, the connections to the plates around the K.G.C.C. have broken off, and you won't be able to escape.
+[dialog]
+[character]
+[Character(name="avg_npc_123#6",name2="avg_npc_122#8",fadetime=1,block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_123#6",name2="avg_npc_122#8",focus=1)]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Greynuty"]  Ugh... Goddammit...
+[Character(name="avg_npc_123#6",name2="avg_npc_122#8",focus=2)]
+[name="Sona"]  This doesn't seem like an enemy we can take head-on.
+[Character(name="avg_npc_209_1")]
+[name="Roy"]  I'm glad you finally understand what you should've always understood. So let me ask again, will you hand me the goods? I wouldn't mind letting you go.
+[Character(name="avg_npc_122#8")]
+[name="Sona"]  Heh, when is the Armorless Union a charity?
+[Character(name="avg_npc_209_1#2")]
+[name="Roy"]  I guess it was a matter of mindset. After a long, long struggle... I finally saw the light.
+[name="Roy"]  From the ruins of Bolívar, to the prairies of Kazimierz, and finally here.
+[name="Roy"]  No normal person finds joy in the slaughter of others. Only idiotic pampered princelings derive any pleasure from seeing people bleed.
+[Character(name="avg_npc_209_1")]
+[name="Roy"]  Now, you can save me, Infected, and I can help you dismantle the Armorless Union.
+[Character(name="avg_npc_122#2")]
+[delay(time=0.2)]
+[name="Sona"]  Sorry, but even if that's true, I'm not about to give you this.
+[Character(name="avg_npc_209_1#3")]
+[name="Roy"]  Why not?
+[Character(name="avg_npc_122#8")]
+[name="Sona"]  We're sick and tired of being manipulated.
+[Character(name="avg_npc_123#6",name2="avg_npc_122#8",focus=2)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Sona"]  Ashley!
+[Character(name="avg_npc_123#6")]
+[name="Greynuty"]  Got it! Have a taste of this!
+[Character(name="avg_npc_209_1#5")]
+[name="Roy"]  Urgh...
+[dialog]
+[character]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=0.5)]
+[Character(name="avg_npc_209_1#5")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Roy"]  *cough*, *cough* *cough*... What's the meaning of this...?
+[Character(name="avg_npc_123#6",name2="avg_npc_122#8",focus=2)]
+[name="Sona"]  Ashley, run!
+[Character(name="avg_npc_123#6",name2="avg_npc_122#8",focus=1)]
+[name="Greynuty"]  I know!
+[dialog]
+[PlaySound(key="$rungeneral", volume=1)]
+[characteraction(name="left", type="move", xpos=-300, fadetime=0.8,block=false)]
+[characteraction(name="right", type="move", xpos=300, fadetime=0.8,block=false)]
+[character(name="char_empty",name2="char_empty",fadetime=0.5)]
+[delay(time=2)]
+[Character(name="avg_npc_209_1#5")]
+[name="Roy"]  Running into the substructure? One wrong step, and you'll be mincemeat in the engine.
+[name="Roy"]  There's nowhere for you to run––
+[Character(name="avg_npc_209_1#3")]
+[name="Roy"]  Hngh.
+[dialog]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Character(name="avg_npc_122#6")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Sona"]  ......?!
+[Character(name="avg_npc_123#6",name2="avg_npc_122#8",focus=2)]
+[name="Sona"]  Ashley! Watch out!
+[Character(name="avg_npc_123#6",name2="avg_npc_122#8",focus=1)]
+[name="Greynuty"]  —
+[dialog]
+[Character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1.5, block=true)]
+[Background]
+[Image(image="23_I12", x=-120, y=-50, xScale=1.15, yScale=1.15, fadetime=0)]
+[ImageTween(xFrom=-120, yFrom=-50, xTo=0, yTo=0, xScaleFrom=1.15, yScaleFrom=1.15, xScaleTo=0.85, yScaleTo=0.85, duration=15, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0, fadetime=0.5, block=true)]
+[PlaySound(key="$bodyfalldown3",volume=0.3)]
+A cyan arrow pierces Flametail Knight's armor.
+Sona tries to block it, but the massive force of the impact sends her petite body flying.
+Struggling in midair, she is launched into the gap between the city's plates.
+[dialog]
+[name="Greynuty"]  Sona––!!
+[delay(time=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[image]
+[Background(image="bg_23_G04",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_209_1#2")]
+[name="Roy"]  (Off the mark. Something blurred my vision for a second there...)
+[Character(name="avg_npc_209_1#5")]
+[name="Roy"]  (An illusion caused by my fatigue...? No, something got in my way after all.)
+[Character(name="avg_npc_123#6")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Greynuty"]  Roy–––!!
+[delay(time=0.5)]
+[Character(name="avg_npc_209_1#5")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Roy"]  ......!
+[dialog]
+[Character(name="avg_npc_123#6")]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$swordtsing3")] 
+[CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="avg_npc_209_1#5")]
+[name="Roy"]  You've lost your mind.
+[dialog]
+[Character(name="avg_npc_123#6",name2="avg_npc_209_1#5",focus=0)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Character(name="avg_npc_209_1#5")]
+[name="Roy"]  Tisk tisk, firing from such close range. Are you trying to get us both killed?
+[Character(name="avg_npc_123#6")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Greynuty"]  You... How dare you... do that to Sona!
+[Character(name="avg_npc_209_1")]
+[name="Roy"]  I'll admit, it was careless of me.
+[Character(name="avg_npc_209_1#5")]
+[name="Roy"]  I haven't had a chance to check if the chip is still intact. That's bad news, I wouldn't want that responsibility sitting on my shoulders.
+[Character(name="avg_npc_123#6")]
+[name="Greynuty"]  Shut up, bastard!
+[dialog]
+[character]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=0.5)]
+[Character(name="avg_npc_209_1#5")]
+[name="Roy"]  (What to do, what to do. Hurry and kill Ashlock, and look for a way to go check the corpse?)
+[Character(name="avg_npc_209_1#2")]
+[name="Roy"]  (No, this is far too dangerous. The power is about to come back on, and I wouldn't want to be caught between those plates.)
+[Character(name="avg_npc_123#6")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Greynuty"]  I'll have you pay in blood––!!
+[Character(name="avg_npc_209_1")]
+[name="Roy"]  So straightforward, so predictable. You've been all too easy to read since you lost your ability to think––
+[Character(name="avg_npc_123#6")]
+[name="Greynuty"]  Oh really?
+[Character(name="avg_npc_209_1#5")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Roy"]  ?!
+[dialog]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=51, g=51, b=51, fadetime=0.5, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Character(fadetime=0.6,block=true)]
+[delay(time=1.5)]
+[Character(name="avg_npc_209_1#5")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Roy"]  Hrmph. Was I the careless one?
+[dialog]
+[Character(name="avg_npc_209_1#3")]
+[delay(time=0.5)]
+[Character(name="avg_npc_209_1#2")]
+[name="Roy"]  She's gone?
+[name="Roy"]  Was she only pretending to be enraged...?
+[stopmusic(fadetime=1.5)]
+[Dialog]
+[character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$plot_intro", key="$plot_loop", volume=0.4)]
+Become a knight for the Infected.
+Fight to the bitter end for the Infected.
+That is my honor.
+There is no greater honor... than to die for a glorious cause.
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G04",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_122#3",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Sona"]  I would've liked to go out in a blaze of glory, but... what's going on now?
+[Character(name="avg_npc_122#3",name2="avg_npc_215_1#5",focus=2)]
+[name="The Candle Knight"]  Roy is still around here somewhere. He'll discover my Arts sooner or later, so we mustn't tarry here.
+[name="The Candle Knight"]  Contact your companion and have her escape. I'll do what I can for her.
+[Character(name="avg_npc_122")]
+[playsound(key="$d_gen_transmissionget", volume=0.6)]
+[name="Sona"]  Hey, Ashley, I'm fine.
+[name="Sona"]  Don't let him know, and look for a chance to escape. I slipped the chip into your pocket when I blocked that arrow for you. Go ahead and double-check.
+[name="Sona"]  No need to reply. See you on the way back.
+[playsound(key="$transmission", volume=0.6)]
+[dialog]
+[delay(time=0.5)]
+[Character(name="avg_npc_122#7",name2="avg_npc_215_1#5",focus=1)]
+[name="Sona"]  You broke my fall? But how?
+[Character(name="avg_npc_122#7",name2="avg_npc_215_1#1",focus=2)]
+[name="The Candle Knight"]  Arts can be applied in many different ways. After extensive studying, almost all Leithanians are able to use basic Arts, regardless of the nature of these Arts.
+[Character(name="avg_npc_122#5",name2="avg_npc_215_1#1",focus=1)]
+[name="Sona"]  You're the Candle Knight, right?
+[name="Sona"]  Why would a great knight like you... save an Infected like me?
+[Character(name="avg_npc_122#5",name2="avg_npc_215_1#1",focus=2)]
+[name="The Candle Knight"]  There's someone who wants to see you.
+[Character(name="avg_npc_122#6",name2="avg_npc_215_1#1",focus=1)]
+[name="Sona"]  Who?
+[Character(name="avg_npc_122#6",name2="avg_npc_215_1#1",focus=2)]
+[name="The Candle Knight"]  I can't tell you yet.
+[Character(name="avg_npc_122#3",name2="avg_npc_215_1#1",focus=1)]
+[name="Sona"]  Oh... You should already know that we're pretty busy right now, paralyzing the city, attacking the K.G.C.C... I don't have time for a picnic, you know?
+[Character(name="avg_npc_122#3",name2="avg_npc_215_1#2",focus=2)]
+[name="The Candle Knight"]  It's understandable that you would distrust me.
+[Character(name="avg_npc_122#5",name2="avg_npc_215_1#2",focus=1)]
+[name="Sona"]  No, I believe you.
+[name="Sona"]  You can tell what someone's thinking, just gotta look into their eyes.
+[Character(name="avg_npc_122",name2="avg_npc_215_1#2",focus=1)]
+[name="Sona"]  Of course, this trick doesn't work a hundred percent of the time, but this is desperate times, right?
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_23_G06",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_222")]
+[name="A Corporate Employee"]  Ugh... What the hell is going on? The roads are blocked, and I can't get a taxi. Do I not get to go home tonight either?
+[name="A Corporate Employee"]  What an idiot... 'finish in one day' my ass... That report should've been done yesterday...
+[dialog]
+[character]
+[CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="avg_npc_222")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="A Corporate Employee"]  Wh—What... what's happening?!
+[dialog]
+[character]
+[Character(name="avg_npc_208_1", name2="avg_npc_213_1",fadetime=1,block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_208_1#5")]
+[name="Monique"]  Out of my way, or I'm shooting through all of you.
+[Character(name="avg_npc_222")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="A Corporate Employee"]  Eep! P-P-Please don't, I'm moving––
+[Character(name="avg_npc_222",name2="avg_npc_213_1#3",focus=2)]
+[name="Toland"]  Stop moving around, lad. You wouldn't want that noggin of yours finding a new home, eh?
+[Character(name="avg_npc_222",name2="avg_npc_213_1#3",focus=1)]
+[CameraShake(duration=0.3, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="A Corporate Employee"]  B-But she told me to move––
+[Character(name="avg_npc_222",name2="avg_npc_213_1",focus=2)]
+[name="Toland"]  Would you really trust someone who'd take your head off on a whim?
+[Character(name="avg_npc_222",name2="avg_npc_213_1",focus=1)]
+[name="A Corporate Employee"]  I... I...
+[Character(name="avg_npc_208_1#4")]
+[name="Monique"]  Toland, have you no shame hiding behind a civilian?
+[Character(name="avg_npc_222")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="A Corporate Employee"]  Aaaaagh—!
+[Character(name="avg_npc_213_1")]
+[name="Toland"]  Good point. I'll count to three?
+[dialog]
+[Character(name="avg_npc_222")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="A Corporate Employee"]  P-P-P-please, I'm begging you, l-leave me alone!
+[Character(name="avg_npc_213_1")]
+[name="Toland"]  One.
+[Character(name="avg_npc_222")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="A Corporate Employee"]  Nooooooo––!!
+[Character(name="avg_npc_213_1")]
+[name="Toland"]  Two.
+[dialog]
+[character]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="avg_npc_208_1#2")]
+[name="Monique"]  ......
+[Character(name="avg_npc_213_1")]
+[name="Toland"]  Three!
+[Dialog]
+[Character(name="avg_npc_222")]
+[delay(time=1)]
+[PlaySound(key="$rungeneral", volume=0.6)]
+[Character(fadetime=0.8,block=true)]
+[Delay(time=1.5)]
+[Character(name="avg_npc_208_1#5", name2="avg_npc_213_1#5")]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=0.2, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$e_atk_arrow_h")]
+[Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
+[CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
+[Character(name="avg_npc_222",fadetime=1,block=true)]
+[delay(time=1)]
+[name="A Corporate Employee"]  They're both insane! They're both insane––!
+[name="A Corporate Employee"]  Where does this road lead–– Wait, over there, that's––
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="A Corporate Employee"]  Mr. Knight! Mr. Knight!
+[name="A Corporate Employee"]  I'm an employee of the Rose Paper Union! Please help me! You know who I am, right? I'll recommend you to the editorial department! There are two criminals over––
+[dialog]
+[character]
+[Character(name="avg_npc_225",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[delay(time=1)]
+[name="Nightmare Knight"]  ......
+[Character(name="avg_npc_222")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="A Corporate Employee"]  Eek...!
+[Character(name="avg_npc_225")]
+[name="Nightmare Knight"]  ......
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[Dialog]
+[character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G06",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_208_1", name2="avg_npc_213_1#5",focus=2)]
+[name="Toland"]  Do you ever run out of arrows?
+[Character(name="avg_npc_208_1", name2="avg_npc_213_1#5",focus=1)]
+[name="Monique"]  Grrr... This is the first time my prey's eluded me for several minutes... Not half bad, Toland Cash.
+[name="Monique"]  Is it your goal to stall me here?
+[Character(name="avg_npc_208_1", name2="avg_npc_213_1",focus=2)]
+[name="Toland"]  Haha... What about you? Are you here to play with me?
+[Character(name="avg_npc_208_1", name2="avg_npc_213_1",focus=1)]
+[name="Monique"]  No, there's a handsome bounty on your head, and we're always in need of money.
+[Character(name="avg_npc_208_1", name2="avg_npc_213_1",focus=2)]
+[name="Toland"]  Oh? Do you have a sickly little brother back home? Or maybe an elderly father who needs your support?
+[Character(name="avg_npc_208_1", name2="avg_npc_213_1",focus=1)]
+[name="Monique"]  This job brings more wealth than you can imagine, bounty hunter.
+[name="Monique"]  We know the rules of this society better than you, better than any of the knights.
+[name="Monique"]  We simply chose to take a little detour, and after tonight's hunt, we'll usher in a new beginning.
+[Character(name="avg_npc_208_1")]
+[name="Monique"]  But right now, it seems there's another idiot hellbent on messing things up.
+[Character(name="avg_npc_213_1#5")]
+[name="Toland"]  ......
+[dialog]
+[character]
+[Character(name="avg_npc_225",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[delay(time=1)]
+[name="Nightmare Knight"]  To think you could still see such a splend'rous night sky in this death-choked city.
+[name="Nightmare Knight"]  This is the kind of night I've always known. Let this manmade malediction be left behind... and shed every last drop of this city's blood! Bravo, ye faceless rebels!
+[Character(name="avg_npc_213_1#4")]
+[name="Toland"]  What a strange knight. The private duels must not be paying well.
+[Character(name="avg_npc_208_1#4")]
+[name="Monique"]  Clown.
+[stopmusic(fadetime=1.5)]
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_sportsbar",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$bar_intro", key="$bar_loop", volume=0.4)]
+[Character(name="avg_1014_nearl2_1#7$1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Margaret"]  Is everyone okay?
+[Character(name="avg_npc_061#5", name2="avg_1014_nearl2_1#7$1", focus=1)]
+[name="Maria"]  Margaret, I just found the spare battery... Alright, see, now the light's on, yeah? Doesn't feel like it'll last long though.
+[Character(name="avg_npc_064_weapon_1#5")]
+[name="Zofia"]  Looks like everyone's okay. V and Kowal went to check on the situation. They'll be back later.
+[name="Zofia"]  Where's Młynar?
+[Character(name="avg_npc_061#5", name2="avg_npc_064_weapon_1", focus=1)]
+[name="Maria"]  He stayed home. Said it would be difficult to get away from work, and wanted some time alone.
+[name="Maria"]  What about Shining and Nightingale?
+[Character(name="avg_npc_061#5", name2="avg_1014_nearl2_1#1$1", focus=2)]
+[name="Margaret"]  They were worried that the Armorless Union might have their sights on the Doctor, and rushed back to the Infected shelter.
+[Character(name="avg_npc_061#7", name2="avg_1014_nearl2_1#1$1", focus=1)]
+[name="Maria"]  ......
+[Character(name="avg_npc_061#7", name2="avg_1014_nearl2_1#1$1", focus=2)]
+[name="Margaret"]  Don't worry. They're both very dependable.
+[Character(name="avg_npc_061#7", name2="avg_1014_nearl2_1#1$1", focus=1)]
+[name="Maria"]  No, it's just that... I still don't know anything about the things going on around you.
+[Character(name="avg_npc_061#7", name2="avg_1014_nearl2_1#2$1", focus=2)]
+[name="Margaret"]  Sorry, but I deliberately kept you out of the loop. I can't afford to get Doctor and the others tangled up with my personal affairs.
+[Character(name="avg_npc_061#7", name2="avg_1014_nearl2_1#6$1", focus=2)]
+[name="Margaret"]  But maybe one day, you'll get to know each other. Maybe one day, Maria, you'll also find yourself aboard that ship.
+[Character(name="avg_npc_061#7", name2="avg_1014_nearl2_1#7$1", focus=2)]
+[name="Margaret"]  Their dazzling idealism will eventually guide everyone forward. Even if they hold vastly different beliefs and walk different paths, nothing can shake the conviction in their hearts.
+[Character(name="avg_npc_061#4", name2="avg_1014_nearl2_1#7$1", focus=1)]
+[name="Maria"]  That reminds me of...
+[Character(name="avg_npc_061#4", name2="avg_1014_nearl2_1#6$1", focus=2)]
+[name="Margaret"]  The knights from the stories.
+[dialog]
+[PlaySound(key="$dooropenquite", volume=0.6)]
+[character]
+[Character(name="avg_npc_120#2",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[delay(time=1)]
+[name="Old Knight"]  I'm back!
+[Character(name="avg_npc_101#3")]
+[name="Old Craftsman"]  It's pitch black... The flashlight merchant next door should've restocked by now, right?
+[Character(name="avg_npc_107", name2="avg_1014_nearl2_1#1$1", focus=1)]
+[name="Bald Marcin"]  Oh, it's Margaret.
+[Character(name="avg_npc_120", name2="avg_1014_nearl2_1#1$1", focus=1)]
+[name="Old Knight"]  It's an absolute mess outside right now. I say we behave ourselves, stay indoors, and wait for the power to come back.
+[Character(name="avg_npc_120", name2="avg_npc_101#2", focus=2)]
+[name="Old Craftsman"]  Just sit here doing nothing? Wasn't there supposed to be a match today?
+[Character(name="avg_npc_101#2", name2="avg_1014_nearl2_1#1$1", focus=2)]
+[name="Margaret"]  It was supposed to be the day the eight strongest knights were decided.
+[Character(name="avg_npc_064_weapon_1#5", name2="avg_1014_nearl2_1#1$1", focus=1)]
+[name="Zofia"]  Have you seen the latest news of the Blood Knight?
+[Character(name="avg_npc_064_weapon_1#5", name2="avg_1014_nearl2_1#1$1", focus=2)]
+[name="Margaret"]  More or less... He's the undefeated king this season, from the qualifiers to the Major... But beyond that...
+[name="Margaret"]  He's also the hero of the Infected.
+[stopmusic(fadetime=2)]
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_23_G06",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
+[playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
+[Character(name="avg_npc_122#5",name2="avg_npc_215_1#1",focus=1)]
+[name="Sona"]  Where are we going? I'm not complaining, but I really don't exactly have a lot of free time on my hands.
+[Character(name="avg_npc_122#5",name2="avg_npc_215_1#1",focus=2)]
+[name="The Candle Knight"]  We're here.
+[Character(name="avg_npc_122#6",name2="avg_npc_215_1#1",focus=1)]
+[name="Sona"]  ...the Wall of Champions exhibit hall?
+[Character(name="avg_npc_122#6",name2="avg_npc_215_1#1",focus=2)]
+[name="The Candle Knight"]  This is a secret meeting, so try to keep your voice down.
+[Character(name="avg_npc_122#7",name2="avg_npc_215_1#1",focus=1)]
+[name="Sona"]  So which knight wanted to meet me?
+[Character(name="avg_npc_122#7",name2="avg_npc_215_1#1",focus=2)]
+[name="The Candle Knight"]  Knight...? Well, you're not technically wrong. She was indeed a respectable knight.
+[Character(name="avg_npc_122#7",name2="avg_npc_215_1#1",focus=1)]
+[name="Sona"]  ......
+[Character(name="avg_npc_122#7",name2="avg_npc_215_1#1",focus=2)]
+[name="The Candle Knight"]  Haha, but don't be nervous... She's just a regular old lady now.
+[name="The Candle Knight"]  Head on in.
+[Character(name="avg_npc_122#5",name2="avg_npc_215_1#1",focus=1)]
+[name="Sona"]  You're not coming?
+[Character(name="avg_npc_122#5",name2="avg_npc_215_1#1",focus=2)]
+[name="The Candle Knight"]  Let's just say... she's one of the few people in Kazimierz who scares me even a bit.
+[Character(name="avg_npc_122#6",name2="avg_npc_215_1#1",focus=1)]
+[name="Sona"]  Wow... Even the Candle Knight, bearer of the Candle Sword, is afraid of someone? What chance do I have then?
+[Character(name="avg_npc_122#6",name2="avg_npc_215_1#2",focus=2)]
+[name="The Candle Knight"]  It probably won't be the same for you.
+[Character(name="avg_npc_122#6",name2="avg_npc_215_1#1",focus=2)]
+[name="The Candle Knight"]  After all, she counts as my half adoptive mother, at least in name.
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_23_G02",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
+[Character(name="avg_npc_122#7")]
+[name="Sona"]  (It's the same emergency power supply as the K.G.C.C... Was this place not affected by the outage either?)
+[Character(name="avg_npc_122#2")]
+[name="Sona"]  (Both the knights... and the General Chamber...)
+[name="Sona"]  (...are still shining through the darkness.)
+[name="Sona"]  ......
+[dialog]
+[character]
+The lights flicker.
+And so does Sona's train of thought.
+The knights, and the money, were able to avoid the deep night.
+Who drowns in the darkness?
+[dialog]
+[Character(name="avg_npc_210_1",fadetime=1,block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=0.6)]
+[delay(time=1)]
+[name="An Aged Knight"]  Flametail Knight... Sona.
+[name="An Aged Knight"]  Come here and let me have a closer look at you.
+[Character(name="avg_npc_122#6")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Sona"]  —!
+[name="Sona"]  You! You're...!
+[Character(name="avg_npc_210_1",name2="avg_npc_122#6",focus=1)]
+[name="An Aged Knight"]  Now, now. I didn't come here today to talk business.
+[name="An Aged Knight"]  I heard... the Infected knights made some kind of deal with the knights of the Adeptus Sprawiedliwi.
+[name="An Aged Knight"]  Between the Knights Association and Demian, a member of the Adeptus.
+[Character(name="avg_npc_210_1",name2="avg_npc_122#5",focus=2)]
+[name="Sona"]  ......
+[Character(name="avg_npc_210_1#2",name2="avg_npc_122#5",focus=1)]
+[name="An Aged Knight"]  In order for the Infected to survive in the Grand Knight Territory, they agreed to participate in this operation with his cooperation.
+[name="An Aged Knight"]  The Great Kawalerielki Separation... the Adeptus gave in, letting it happen once more.
+[Character(name="avg_npc_210_1#5",name2="avg_npc_122#5",focus=1)]
+[name="An Aged Knight"]  Look at this wall... These knights were supposed to become real heroes. Not... this, symbols for spectators to gawk at.
+[name="An Aged Knight"]  Does this sight not fill you with great sorrow?
+[Character(name="avg_npc_210_1#5",name2="avg_npc_122#2",focus=2)]
+[name="Sona"]  It certainly does, ma'am.
+[Character(name="avg_npc_210_1#5",name2="avg_npc_122#8",focus=2)]
+[name="Sona"]  But I feel more sorrow for... the Infected who still need equal treatment, and for those totally lost to entertainment and materialism.
+[name="Sona"]  I cry... for each and every person struggling to make it to the next sunrise here in Kazimierz.
+[Character(name="avg_npc_210_1",name2="avg_npc_122#8",focus=1)]
+[name="An Aged Knight"]  Truly a spectacular inaugural speech, young squirrel.
+[Character(name="avg_npc_210_1",name2="avg_npc_122#5",focus=2)]
+[name="Sona"]  Can the Adeptus Sprawiedliwi really give us a normal life?
+[Character(name="avg_npc_210_1",name2="avg_npc_122#5",focus=1)]
+[name="An Aged Knight"]  Paperwork, procedures, any documentation the National Council needs. Of course, the Adeptus will handle it all for you. That is what Demian promised you.
+[name="An Aged Knight"]  But what about the Originium crystals on your body?
+[Character(name="avg_npc_210_1",name2="avg_npc_122#6",focus=2)]
+[name="Sona"]  ......
+[Character(name="avg_npc_210_1",name2="avg_npc_122#6",focus=1)]
+[name="An Aged Knight"]  I admire Pinus Sylvestris, but the problems you must overcome... are not so well-defined.
+[name="An Aged Knight"]  In time, Demian will reach out to you. He may not be the sharpest tool in the shed, but trust him. He has his ways.
+[Character(name="avg_npc_210_1",name2="avg_npc_122#5",focus=2)]
+[name="Sona"]  Alright.
+[Character(name="avg_npc_210_1",name2="avg_npc_122#5",focus=1)]
+[name="An Aged Knight"]  Good. My knightclub will be here shortly, so hurry and find your companions.
+[name="An Aged Knight"]  Also, tell Viviana to come and have a meal with me when she's not busy.
+[Character(name="avg_npc_210_1",name2="avg_npc_122#2",focus=2)]
+[name="Sona"]  ......
+[Character(name="avg_npc_210_1",name2="avg_npc_122#8",focus=2)]
+[name="Sona"]  .........Ma'am, what does it mean to be a knight?
+[Character(name="avg_npc_210_1#2",name2="avg_npc_122#8",focus=1)]
+[name="An Aged Knight"]  The answer to the question is different for everyone, child.
+[name="An Aged Knight"]  You wouldn't be interested in mine anyway. Us old folks, we've seen too much.
+[Character(name="avg_npc_210_1#6",name2="avg_npc_122#8",focus=1)]
+[name="An Aged Knight"]  Go, little squirrel, go.
+[name="An Aged Knight"]  See if the sunrise in Kazimierz still blazes ever-bright.
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_23_G04",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
+[Character(name="avg_npc_209_1#3")]
+[name="Roy"]  ...I lost her.
+[Character(name="avg_npc_209_1#2")]
+[name="Roy"]  Would it be more efficient to post a surround and suppress mission later?
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[name="Roy"]  I'm here. What's the matter?
+[Character(name="avg_npc_209_1#5")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Roy"]  What...? How many?
+[PlaySound(key="$transmission",volume=0.6)]
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G06",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[CameraShake(duration=0.4, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
+[PlaySound(key="$fightgeneral")] 
+[Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
+[playsound(key="$e_atk_magic_n", volume=0.4)]
+[CameraShake(duration=0.3, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
+[Blocker(a=0, fadetime=1.5, block=false)]
+[CameraShake(duration=2, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_225")]
+[name="Nightmare Knight"]  Exceptional swordsmanship.
+[Character(name="avg_npc_213_1")]
+[name="Toland"]  Ahh, I'd prefer not to waste any more time here with you, old friend.
+[Character(name="avg_npc_208_1#5")]
+[name="Monique"]  Goddamned maniac...
+[Character(name="avg_npc_208_1#4")]
+[name="Monique"]  I'd best get out of here after I kill Toland.
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[Character(name="avg_npc_208_1")]
+[name="Monique"]  I'm in a game of hide-and-seek with the 'Guildmaster' and a Nightzmora. Not the best time to chat.
+[Character(name="avg_npc_208_1#3")]
+[name="Monique"]  ......
+[delay(time=0.5)]
+[Character(name="avg_npc_208_1")]
+[name="Monique"]  No... I'll head there now.
+[PlaySound(key="$transmission",volume=0.6)]
+[Character(name="avg_npc_208_1")]
+[name="Monique"]  Let's wrap up our little game, Toland.
+[Character(name="avg_npc_213_1")]
+[name="Toland"]  You're running?
+[Character(name="avg_npc_208_1")]
+[name="Monique"]  No.
+[name="Monique"]  Same goes for you, Nightzmora.
+[Character(name="avg_npc_213_1#3")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Toland"]  What? You're a Nightzmora?!
+[Character(name="avg_npc_225")]
+[name="Nightmare Knight"]  ......
+[Character(name="avg_npc_208_1")]
+[name="Monique"]  Let's call it here for now.
+[name="Monique"]  You came to Kawalerielki to find your people and a good fight, right?
+[Character(name="avg_npc_225")]
+[name="Nightmare Knight"]  Don't speak so lightly of our tradition of glory, Kazimierzian. You don't have that right.
+[Character(name="avg_npc_208_1")]
+[name="Monique"]  No, I'm just offering you a warning, Nightzmora, out of the kindness of my heart.
+[name="Monique"]  Don't waste your energy on us.
+[Character(name="avg_npc_213_1")]
+[name="Toland"]  I can agree with that.
+[Character(name="avg_npc_225")]
+[name="Nightmare Knight"]  Boastful nonsense.
+[Character(name="avg_npc_208_1#4")]
+[name="Monique"]  Hmph. See you never, dumbass.
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G06",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_222")]
+[name="A Corporate Employee"]  Is the traffic still stuck? I heard the power's already come back in some places.
+[Character(name="avg_npc_219")]
+[name="A Kazimierz Knight"]  Shouldn't the Knights Association compensate us for our terrible losses?!
+[Character(name="avg_npc_033")]
+[name="A Tourist"]  Yeah! The government should pay us back our travel expenses!
+[Character(name="avg_npc_222")]
+[name="A Corporate Employee"]  Ugh... I hope the meat in the fridge didn't go bad.
+[dialog]
+[character]
+[Character(name="avg_npc_208_1")]
+[name="Monique"]  Are you sure?
+[Character(name="avg_npc_209_1#2", name2="avg_npc_208_1", focus=1)]
+[name="Roy"]  Sigh...
+[name="Roy"]  You know, we can take out any single one of their people, alone.
+[name="Roy"]  Two of them, we'll need to bring help.
+[name="Roy"]  Three of them, and it's going to be one hell of a rough battle.
+[name="Roy"]  If there's three or more of them... that could take a full tactical squad, and the Armorless Union can't afford those losses.
+[name="Roy"]  If there's more of them than you can count on your fingers, calling in the entire Armorless Union might not even be enough to put them down.
+[Character(name="avg_npc_209_1#2", name2="avg_npc_208_1", focus=2)]
+[name="Monique"]  I know, I've seen them before. Your concern is better placed elsewhere.
+[name="Monique"]  So, how many did the scouts see?
+[Character(name="avg_npc_209_1", name2="avg_npc_208_1", focus=1)]
+[name="Roy"]  Roughly forty.
+[Character(name="avg_npc_209_1", name2="avg_npc_208_1#4", focus=2)]
+[name="Monique"]  Well shit... Right at this juncture?
+[Character(name="avg_npc_209_1#2", name2="avg_npc_208_1#4", focus=1)]
+[name="Roy"]  Yes. I've already notified the Board of Directors.
+[name="Roy"]  Do they intend to capture the Kawalerielki Alliance?
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_23_G03",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_212_1#5")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Spokesman McKee"]  Impossible!
+[name="Spokesman McKee"]  No, this can't be! Where are the military consultants? Where are the people monitoring the knights?!
+[name="Spokesman McKee"]  Those campaign knights dispatched by the Adeptus Sprawiedliwi... Where were they in the last report?
+[name="Spokesman McKee"]  Five hundred and seventy-three kilometers.
+[Character(name="avg_npc_212_1#2")]
+[name="Spokesman McKee"]  There's no way a normal squad of campaign knights would be able to march that fast... It's impossible...
+[name="Spokesman McKee"]  Did the Adeptus mobilize another branch behind the General Chamber's back? No, that can't be...
+[Character(name="avg_npc_212_1#3")]
+[name="Spokesman McKee"]  Wait.
+[name="Spokesman McKee"]  The Silverlance fast-response squad... What's their fastest record?
+[Character(name="avg_npc_212_1#5")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Spokesman McKee"]  Could they have disguised their military identification code? And even their armor and lances?
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G06",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Character(name="avg_npc_219")]
+[name="A Kazimierz Knight"]  Hm? It's a little brighter now, isn't it?
+[Character(name="avg_npc_222")]
+[name="A Corporate Employee"]  Look over there! That little halo of light on the other side of the road! The power must've come back over there!
+[Character(name="avg_npc_033")]
+[name="A Tourist"]  But... the lights still won't turn on...
+[name="A Tourist"]  That looks a lot more like... moonlight?
+[dialog]
+[character]
+[stopmusic(fadetime=1)]
+Moonlight.
+The prosperity afforded by the advent of the energized glass tubes gradually led to modern man forgetting the appearance of the primordial moonlight.
+This city, engulfed in a brief moment of darkness––
+––is illuminated by a silver glow.
+[dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[playMusic(intro="$tense_intro", key="$tense_loop", volume=0.4)]
+[Image(image="23_I01",x=0, y=0,  xScale=0.832, yScale=0.832, fadetime=0)]
+[ImageTween(yFrom=0, yTo=45, xScaleFrom=0.832, yScaleFrom=0.832, xScaleTo=1, yScaleTo=1, duration=30)]
+[Blocker(a=0, fadetime=2, block=true)]
+[delay(time=2)]
+[name="An Onlooker"]  Are..... are those knights over there?
+[name="A Kazimierz Knight"]  Th-The campaign knights?! Here?!
+[dialog]
+The knights pass through the crowd.
+Through the city known as the City of Knights.
+Through the city that does not recognize them.
+Through the city that they do not recognize.
+They came from a faraway fortress close to the border.
+Their bodies are stained with the clear and tangible scent of the soil.
+A scent mixed with flesh, blood, bones, and the lives of countless heroes buried on battlefields past.
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[image]
+[Background(image="bg_23_G06",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_209_1")]
+[name="Roy"]  Inform all members of the Armorless Union to stop whatever they're doing this instant, no matter what it is.
+[name="Roy"]  Do not make any moves unless you want trouble. Do not act rashly.
+[Character(name="avg_npc_209_1", name2="avg_npc_208_1#3", focus=2)]
+[name="Monique"]  Hmm.
+[Character(name="avg_npc_209_1#3", name2="avg_npc_208_1#3", focus=1)]
+[name="Roy"]  Monique?
+[Character(name="avg_npc_209_1#3", name2="avg_npc_208_1#3", focus=2)]
+[name="Monique"]  That one... over there...
+[dialog]
+[character]
+[delay(time=1)]
+[Character(name="avg_npc_108",fadetime=1,block=true)]
+[delay(time=1)]
+[name="Młynar"]  ......
+[Character(name="avg_npc_108", name2="avg_npc_213_1", focus=2)]
+[name="Toland"]  Nostalgic?
+[Character(name="avg_npc_108", name2="avg_npc_213_1", focus=1)]
+[name="Młynar"]  No.
+[Character(name="avg_npc_108", name2="avg_npc_213_1#4", focus=2)]
+[name="Toland"]  ...I certainly am.
+[name="Toland"]  I miss... that time when I stupidly thought this place wasn't so bad. Those were good times. Exciting times.
+[Character(name="avg_npc_108#3", name2="avg_npc_213_1#4", focus=1)]
+[name="Młynar"]  ......
+[Character(name="avg_npc_108#3", name2="avg_npc_213_1#2", focus=2)]
+[name="Toland"]  If you had really given up, then you wouldn't still be here, would you?
+[Character(name="avg_npc_108#3", name2="avg_npc_213_1#5", focus=2)]
+[name="Toland"]  Młynar, take a good look all around you. The city sleeps, and nobody has ever even woken up.
+[name="Toland"]  But what about you?
+[Dialog]
+[character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_23_G03",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$rungeneral", volume=0.6)]
+[Character(name="avg_npc_223")]
+[name="A Corporate Employee"]  Reporting! A portion of the communications lines are back––!
+[Character(name="avg_npc_212_1", name2="avg_npc_223", focus=1)]
+[name="Spokesman McKee"]  ––Connect me to the associate justice of the National Council.
+[Character(name="avg_npc_212_1", name2="avg_npc_223", focus=2)]
+[name="A Corporate Employee"]  Yessir.
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[Character(name="avg_npc_212_1#2")]
+[name="Spokesman McKee"]  Your honor?
+[name="Spokesman McKee"]  You already know what I'm about to say. This band of campaign knights trespassed into the Grand Knight Territory without authorization, violating the Second Act––
+[Character(name="avg_npc_212_1#2",focus=-1)]
+[name="A Voice from the Phone"]  Former Associate Justice Duke of the National Council, has been detained on suspicion of bribery, smuggling, murder, and dereliction of duty.
+[Character(name="avg_npc_212_1#4")]
+[name="Spokesman McKee"]  ......
+[Character(name="avg_npc_212_1#4",focus=-1)]
+[name="A Voice from the Phone"]  I would advise you to choose your words calmly and carefully, Spokesman.
+[name="A Voice from the Phone"]  The Grand Knight Territory is in a state of emergency due to a blackout, and the Adeptus Sprawiedliwi has the authority to send troops into the city during a state of emergency.
+[name="A Voice from the Phone"]  Do you have any further questions?
+[Character(name="avg_npc_212_1#2")]
+[name="Spokesman McKee"]  None. I apologize for the intrusion, sir.
+[PlaySound(key="$transmission",volume=0.6)]
+[Character(name="avg_npc_211_1#7", name2="avg_npc_212_1#2", focus=1)]
+[name="Spokesman Malkiewicz"]  Mr. McKee.
+[Character(name="avg_npc_211_1#7", name2="avg_npc_212_1#2", focus=2)]
+[name="Spokesman McKee"]  Yes?
+[Character(name="avg_npc_211_1#4", name2="avg_npc_212_1#2", focus=1)]
+[name="Spokesman Malkiewicz"]  Communications are more or less restored, Mr. McKee.
+[name="Spokesman Malkiewicz"]  Look how busy they are over there... What do you think a phone is?
+[Character(name="avg_npc_211_1#4", name2="avg_npc_212_1#3", focus=2)]
+[name="Spokesman McKee"]  Huh? Obviously a communication tool...
+[Character(name="avg_npc_211_1#5", name2="avg_npc_212_1#3", focus=1)]
+[name="Spokesman Malkiewicz"]  No. The phone is the spindle and plough of modern society, the pathway that weaves the fabric of life as we currently know it.
+[name="Spokesman Malkiewicz"]  It is a symbol of greatness, Mr. McKee.
+[Character(name="avg_npc_212_1#4")]
+[name="Spokesman McKee"]  ......
+[dialog]
+McKee's words fail him.
+Suddenly, he senses an aura of sorts from Malkiewicz.
+Over the last few months, a business venture failed spectacularly, amounting to nothing. Those who have been whipped almost naturally give off a certain kind of aura.
+He has seen this kind of aura in many people before.
+Most of them were chewed up and mangled by the changing times or by the competition. As for the few who survived––
+––nearly all of them turned out the same.
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Image]
