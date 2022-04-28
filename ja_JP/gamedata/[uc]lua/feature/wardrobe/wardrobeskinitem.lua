@@ -19,7 +19,8 @@ function WardrobeSkinItem:Render(skin)
   end 
   self.cacheData = skin
   
-  self._skinImg.sprite = CS.Torappu.CharacterUtil.LoadCharPortrait(skin.data:GetPortraitId())
+  local sprite = CS.Torappu.CharacterUtil.LoadCharPortrait(skin.data:GetPortraitId())
+  self._skinImg:SetSprite(sprite)
   CS.Torappu.Lua.Util.SetActiveIfNecessary(self._onSaleObj,WardrobeUtil.CheckSkinOnSale(skin))
   self._skinName.text = skin.data.displaySkin.skinName
   self._brandName.text = CS.Torappu.DataConvertUtil.GetSkinBrandCapitalName(skin.data.displaySkin.skinGroupId)

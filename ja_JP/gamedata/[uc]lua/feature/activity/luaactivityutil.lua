@@ -13,6 +13,7 @@ end
 
 local HOME_WEIGHT_DAILY_PRAY = 500
 local HOME_WEIGHT_GRID_GACHA = 510
+local HOME_WEIGHT_GRID_GACHA_V2 = 520
 
 
 
@@ -50,11 +51,31 @@ end
 
 
 
+function LuaActivityUtil:_FindValidGridGachaV2Acts(validActs, uncompleteActs)
+  local actList = {};
+
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.GRID_GACHA_V2);
+  if actList == nil then
+    return;
+  end
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i];
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_GRID_GACHA_V2);
+    validActs:Add(validAct);
+    if self:CheckIfActivityUncomplete(CS.Torappu.ActivityType.GRID_GACHA_V2, actId) then
+      uncompleteActs:Add(validAct);
+    end
+  end
+end
+
+
+
 
 function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   
   _FindValidPrayOnlyActs(validActs, uncompleteActs)
   _FindValidGridGachaActs(validActs, uncompleteActs)
+  self:_FindValidGridGachaV2Acts(validActs, uncompleteActs);
 end
 
 
@@ -73,7 +94,10 @@ local DEFINE_CLS_FUNCS = {
   end,
   GRID_GACHA = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, GridGachaMainDlg)
-  end
+  end,
+  GRID_GACHA_V2 = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, GridGachaV2MainDlg)
+  end,
 }
 
 
@@ -116,4 +140,32 @@ function LuaActivityUtil:EnsureActivityDialogClass(config)
   end
 
   return nil
+end
+
+
+
+
+function LuaActivityUtil:CheckIfActivityUncomplete(type, actId)
+  if type == nil or actId == nil then
+    return false;
+  end
+  
+  if type == CS.Torappu.ActivityType.GRID_GACHA_V2 then
+    return self:_CheckIfGridGachaV2Uncomplete(actId);
+  else
+    return false;
+  end
+end
+
+function LuaActivityUtil:_CheckIfGridGachaV2Uncomplete(actId)
+  local actList = CS.Torappu.PlayerData.instance.data.activity.gridGachaV2ActivityList;
+  if actList == nil then
+    return false;
+  end
+  local success, actData = actList:TryGetValue(actId);
+  if not success then
+    return false;
+  end
+  local data = eutils.ConvertJObjectToLuaTable(actData);
+  return data.today.done == 0;
 end
