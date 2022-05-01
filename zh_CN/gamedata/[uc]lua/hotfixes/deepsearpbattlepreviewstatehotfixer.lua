@@ -5,7 +5,7 @@ local function OnBtnStartBattleClickFix(self)
   if CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() then
     return;
   end
-  self:OnBtnStartPracticeClick();
+  self:OnBtnStartBattleClick();
 end
 
 local function OnBtnStartPracticeClickFix(self)
@@ -17,6 +17,27 @@ end
 
 local function ShowFix(self, param)
   self:Show(param);
+end
+
+local function OnValueChangedFix(self, property)
+  self:_InitIfNot();
+
+  local detailModel = property.Value;
+  if detailModel == nil then
+    return;
+  end
+
+  local stageModel = detailModel.currSelectStage;
+  self._mapDesc.text = stageModel.stageDesc;
+  local previewStageId = stageModel.id;
+  if stageModel.stageDifficulty == CS.Torappu.LevelData.Difficulty.FOUR_STAR then
+    local normalStage = detailModel.nodeModel.normalStage;
+    if normalStage ~= nil then
+      previewStageId = normalStage.id;
+    end
+  end
+  self:_LoadMapPreview(previewStageId);
+  self.m_switchTween.isShow = detailModel.isShowDetail;
 end
  
 function DeepSeaRPBattlePreviewStateHotfixer:OnInit()
@@ -39,6 +60,14 @@ function DeepSeaRPBattlePreviewStateHotfixer:OnInit()
     local ok, errorInfo = xpcall(ShowFix, debug.traceback, self, param)
     if not ok then
       eutil.SetActiveIfNecessary(self.gameObject, false);
+    end
+  end);
+
+  xlua.private_accessible(CS.Torappu.UI.DeepSeaRP.DeepSeaRPBattleDetailView);
+  self:Fix_ex(CS.Torappu.UI.DeepSeaRP.DeepSeaRPBattleDetailView, "OnValueChanged", function(self, property)
+    local ok, errorInfo = xpcall(OnValueChangedFix, debug.traceback, self, property)
+    if not ok then
+      eutil.LogError("[DeepSeaRPBattleDetailViewHotfixer] fix" .. errorInfo)
     end
   end);
 end
