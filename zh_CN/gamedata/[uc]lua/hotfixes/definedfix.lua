@@ -10,6 +10,7 @@ local list =
   "HotFixes/NameCardHotfixer",
   "HotFixes/StagePreviewStateHotfixer",
   "HotFixes/DeepSeaRPBattlePreviewStateHotfixer",
+  "HotFixes/DeepSeaRolePlayPageHotfixer",
 };
 
 return list;
