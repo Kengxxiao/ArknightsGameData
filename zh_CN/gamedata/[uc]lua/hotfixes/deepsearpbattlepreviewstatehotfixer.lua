@@ -88,7 +88,23 @@ local function StoryViewOnValueChangedFix(self, property)
     end
   end
 end
- 
+
+local function GoToSquadFix(self, stageId, hardId, isHard, isPractice, isAuto)
+  if isHard and isPractice then
+    local detailModel = self.m_stateBean.nodeDetailProperty.Value;
+    if detailModel == nil or detailModel.nodeModel == nil then
+      return;
+    end
+    local normalStage = detailModel.nodeModel.normalStage;
+    if normalStage == nil then
+      return;
+    end
+    self:_GoToSquad(normalStage.id, normalStage.hardStageId, isHard, isPractice, isAuto);
+    return;
+  end
+  self:_GoToSquad(stageId, hardId, isHard, isPractice, isAuto);
+end
+
 function DeepSeaRPBattlePreviewStateHotfixer:OnInit()
   xlua.private_accessible(CS.Torappu.UI.DeepSeaRP.DeepSeaRPBattlePreviewState)
   self:Fix_ex(CS.Torappu.UI.DeepSeaRP.DeepSeaRPBattlePreviewState, "OnBtnStartBattleClick", function(self)
@@ -125,6 +141,13 @@ function DeepSeaRPBattlePreviewStateHotfixer:OnInit()
     local ok, errorInfo = xpcall(StoryViewOnValueChangedFix, debug.traceback, self, property)
     if not ok then
       eutil.LogError("[DeepSeaRPBattleStoryViewHotfixer] fix" .. errorInfo)
+    end
+  end);
+
+  self:Fix_ex(CS.Torappu.UI.DeepSeaRP.DeepSeaRPBattlePreviewState, "_GoToSquad", function(self, stageId, hardId, isHard, isPractice, isAuto)
+    local ok, errorInfo = xpcall(GoToSquadFix, debug.traceback, self, stageId, hardId, isHard, isPractice, isAuto)
+    if not ok then
+      eutil.LogError("[DeepSeaRPBattlePreviewStateHotfixer] fix" .. errorInfo)
     end
   end);
 end
