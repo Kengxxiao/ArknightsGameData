@@ -1,6 +1,4 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 隐藏AVG1 逃离
-
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
@@ -8,15 +6,10 @@
 [Background(image="bg_black",screenadapt="coverall")]
 [playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-
-
-// （黑屏）
-// （缓出莫妮克）
 [Character(name="avg_npc_208_1",fadetime=1.5,block=true)]
 [delay(time=1)]
 [name="Monique"]  ......
 [dialog]
-// （出无胄盟杂兵）
 [PlaySound(key="$d_gen_soldiersrun", volume=0.6)]
 [Character(name="avg_npc_216", name2="avg_npc_208_1", focus=1)]
 [delay(time=1)]
@@ -36,21 +29,15 @@
 [characteraction(name="left", type="move", xpos=-300, fadetime=2,block=false)]
 [character(name="char_empty",name2="avg_npc_208_1",fadetime=0.5)]
 [delay(time=2)]
-// （下杂兵）
 [Character(name="avg_npc_208_1#2")]
 [name="Monique"]  ......
 [name="Monique"]  This is the choice you made.
 [name="Monique"]  Centaurea.
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_23_G10",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
-
-// （切场景，感染者街道）
-// （先出白金从左到右跑过，然后出白金）
 [Character(name="char_empty")]
 [PlaySound(key="$rungeneral", volume=0.5)]
 [characteraction(name="middle", type="move", xpos=200, fadetime=0.3, block=true)]
@@ -67,7 +54,6 @@
 [name="Platinum"]  Who would ever expect that the Platinum of the Armorless Union would one day be hiding in Area 0 that is controlled by the Adeptus Sprawiedliwi.
 [dialog]
 [Character(name="char_204_platnm_1#4", focus=-1)]
-// （一些响声）
 [PlaySound(key="$leaveshake", volume=0.5)]
 [delay(time=0.6)]
 [Character(name="char_204_platnm_1")]
@@ -79,8 +65,6 @@
 [characteraction(name="middle", type="move", xpos=-300, fadetime=2,block=false)]
 [Character(fadetime=0.5)]
 [delay(time=2)]
-
-// （下白金，然后出两个无胄盟成员）
 [Character(name="avg_npc_216", name2="avg_npc_216", fadetime=1,block=true)]
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
 [delay(time=2)]
@@ -138,14 +122,11 @@
 [characteraction(name="middle", type="move", xpos=200, fadetime=1, block=false)]
 [Character(name="char_204_platnm_1",fadetime=0.7)]
 [delay(time=2)]
-// （两个人向左平移出屏幕，然后白金从右出）
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Background(image="bg_23_G10",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
-// （切一下场景）
 [Character(name="avg_npc_216", name2="avg_npc_216", focus=2)]
 [name="Team 3 Member B"]  Look at that...
 [Character(name="avg_npc_216", name2="avg_npc_216", focus=1)]
@@ -156,7 +137,6 @@
 [PlaySound(key="$e_atk_arrow_h")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
 [CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
-// （飞箭声，队员B倒下，白金出场贴近A）
 [characteraction(name="right", type="move", ypos=-800, fadetime=1.5, block=true)]
 [delay(time=1.5)]
 [Character(name="char_204_platnm_1#6")]
@@ -173,16 +153,12 @@
 [name="Platinum"]  Hmph... We're both Armorless here. You know exactly what those words mean.
 [Character(name="char_204_platnm_1")]
 [name="Platinum"]  Maybe you could use some help jogging your memory.
-
 [Dialog]
 [Character]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
-
-// （黑屏）
-// （出青金和无胄盟成员）
 [Character(name="avg_npc_216")]
 [name="A Team 3 Member"]  Reporting in!
 [Character(name="avg_npc_216", name2="avg_npc_208_1", focus=2)]
@@ -234,15 +210,12 @@
 [characteraction(name="right", type="move", xpos=300, fadetime=2,block=false)]
 [character(name="avg_npc_208_1",name2="char_empty",fadetime=0.5)]
 [delay(time=2)]
-// （下无胄盟）
 [Character(name="avg_npc_208_1")]
 [name="Monique"]  (Team 3 should be enough to catch her. But... how much does she know about the way we hunt?)
 [name="Monique"]  (If she tries to flee to the main street...)
-// （通讯声）
 [PlaySound(key="$d_gen_transmissionget", volume=0.6)]
 [Character(name="avg_npc_208_1#2")]
 [name="Monique"]  It's me. If you have so much free time on your hands, why not come help out?
-// （以下都无立绘）
 [Character(name="avg_npc_208_1#2", focus=-1)]
 [name="Roy"]  Ahaha... We all have our own jobs to do, no? I'm a busy man, you know.
 [name="Roy"]  So, what's the situation?
@@ -260,7 +233,6 @@
 [name="Monique"]  ...Roy.
 [Character(name="avg_npc_208_1#2", focus=-1)]
 [name="Roy"]  Haha, don't worry. Just in case... those three magnanimous bosses of ours will do us a favor.
-
 [stopmusic(fadetime=1)]
 [Dialog]
 [Character]
@@ -268,8 +240,6 @@
 [Background(image="bg_indoor_2",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
 [playMusic(intro="$chasing_intro", key="$chasing_loop", volume=0.4)]
-
-// （切场景，indoor2）
 [Character(name="char_204_platnm_1#2",fadetime=1.5,block=true)]
 [PlaySound(key="$rungeneral", volume=0.6)]
 [delay(time=1)]
@@ -283,7 +253,6 @@
 [PlaySound(key="$e_atk_arrow_h")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
 [CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
-// （飞箭声）
 [Character(name="char_204_platnm_1#5")]
 [name="Platinum"]  Ugh...!
 [Character(name="avg_npc_216")]
@@ -295,12 +264,10 @@
 [name="A Team 3 Member"]  Don't even try to resist. We've blocked off all the exits and you have nowhere to run. If you know what's good for you, you'll––
 [dialog]
 [Character(name="avg_npc_216", focus=-1)]
-// （飞箭声）
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$d_avg_arrowshot")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
 [CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
-// （无胄盟成员倒下）
 [Character(name="avg_npc_216")]
 [name="A Team 3 Member"]  Nngh––!
 [Dialog]
@@ -315,14 +282,12 @@
 [name="Platinum"]  (...then I'll still have a chance.)
 [name="Platinum"]  (Just a little more...)
 [dialog]
-// （再上个无胄盟成员）
 [Character(name="char_204_platnm_1")]
 [characteraction(name="middle", type="jump", xpos=35, fadetime=0.6,block=false)]
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$e_atk_arrow_h")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
 [CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
-// （飞箭声，白金做个位移，然后平移出屏幕）
 [delay(time=0.7)]
 [PlaySound(key="$rungeneral", volume=0.6)]
 [characteraction(name="middle", type="move", xpos=300, fadetime=1,block=false)]
@@ -341,20 +306,12 @@
 [character(name="char_empty",name2="avg_npc_216",fadetime=0.5)]
 [delay(time=1.55)]
 [character]
-
-// （无胄盟成员也追上去）
-
 [Dialog]
 [Character]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_indoor_2",screenadapt="coverall")]
 [Blocker(a=0.2, r=0, g=0, b=0, fadetime=1.5, block=true)]
-
-// （切场景，仓库（warehouse）可以的话把背景压暗点）
-// （出白金，从右面出无胄盟成员）
-// （白金向左平移出屏幕，右面无胄盟成员追上去）
-// （白金从右进场景，从左面出无胄盟成员）
 [Character(name="avg_npc_216",fadetime=1.5,block=true)]
 [delay(time=1)]
 [name="A Team 3 Member"]  Where do you think you're going?
@@ -381,7 +338,6 @@
 [delay(time=0.5)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
-// （晃动，爆炸，如果有烟雾的话上烟雾）
 [Blocker(a=0.4, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Character(name="avg_npc_216")]
 [CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
@@ -390,22 +346,17 @@
 [PlaySound(key="$bodyfalldown2", volume=0.6)]
 [Character(fadetime=1,block=true)]
 [Delay(time=2)]
-// （无胄盟成员倒下）
 [Character(name="char_204_platnm_1#2")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="Platinum"]  *cough*, *cough* *cough*...
 [name="Platinum"]  Down to my last arrow, huh...
 [Character(name="char_204_platnm_1#5")]
 [name="Platinum"]  Gah.
-
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
-// （大骑士领街道）
 [Character(name="avg_237_gravel_1#2",fadetime=1,block=true)]
 [delay(time=1)]
 [name="Gravel"]  What young knights need is experience, not the decadence brought by competition knights weaned on the teats of prosperity!
@@ -415,7 +366,6 @@
 [Character(name="avg_237_gravel_1#6", name2="char_120_hibisc_1", focus=2)]
 [name="Hibiscus"]  Woah, Gravel, your impression is pretty dead-on, even if you don't change your voice at all.
 [dialog]
-
 [Decision(options="I agree. It's amazing.;......;How come you never told me you could do that?",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="avg_237_gravel_1")]
@@ -432,39 +382,30 @@
 [name="Gravel"]  The last time I brought it up, he got so mad he chased me out of the house...
 [Character(name="avg_237_gravel_1", name2="char_120_hibisc_1", focus=2)]
 [name="Hibiscus"]  I see...
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-// （切场景，仓库）
 [PlaySound(key="$rungeneral", volume=0.6)]
-// （跑动声）
 [Character(name="char_204_platnm_1#5",fadetime=0.7)]
 [delay(time=2)]
 [name="Platinum"]  *cough* *cough*... Haah... Ugh...
 [name="Platinum"]  Almost there... Just a bit more...
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-// （大骑士领街道）
-
 [Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5")]
 [characteraction(name="right", type="move", xpos=2000, fadetime=0.1,block=true)]
 [Delay(time=1)]
-
 [characteraction(name="right", type="move", xpos=-2200, fadetime=1.5,block=false)]
 [delay(time=1.5)]
 [CameraShake(duration=0.3, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
 [characteraction(name="left", type="move", xpos=-50, fadetime=0.7,block=false)]
 [characteraction(name="right", type="move", xpos=50, fadetime=0.7,block=false)]
 [delay(time=1)]
-// （从左快出白金，然后撞在芙蓉的立绘上）
 [name="Platinum & Hibiscus"]  Huh?
 [dialog]
 [character]
@@ -495,7 +436,6 @@ The only reason she stays her hand is the total exhaustion of the powerful enemy
 [PlaySound(key="$bodyfalldown2", volume=0.6)]
 [Character(fadetime=1,block=true)]
 [Delay(time=2)]
-// （晃动，白金倒下）
 [Character(name="char_120_hibisc_1")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="Hibiscus"]  Sh-She can't walk straight, but I'm not seeing any open wounds... Is she just exhausted, or...
@@ -508,21 +448,17 @@ The only reason she stays her hand is the total exhaustion of the powerful enemy
 [dialog]
 [character]
 The Armorless collapsed on the ground before you is nothing like the elegant assassin of your impressions.
-
-
 [Decision(options="......;......;......",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_204_platnm_1#4")]
 [name="Platinum"]  You're... the Doctor... from Rhodes Island...
 [name="Platinum"]  Are the outsiders... all like you?
 [dialog]
-
 [Decision(options="Gravel.",values="1")]
 [Predicate(references="1")]
 [Character(name="avg_237_gravel_1")]
 [name="Gravel"]  I'm here.
 [dialog]
-
 [Decision(options="I don't expect the Armorless Union to let us off easily.;We may be in danger as soon as we leave the protection of the Adeptus Sprawiedliwi.;The K.G.C.C. is just a single shield, one that won't hold for long.",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="avg_237_gravel_1#6")]
@@ -530,10 +466,8 @@ The Armorless collapsed on the ground before you is nothing like the elegant ass
 [Character(name="avg_237_gravel_1#2")]
 [name="Gravel"]  After all, the enemy operates from the shadows. In Kazimierz, the Armorless Union has countless ways to torment your company.
 [dialog]
-
 [Decision(options="Right.",values="1")]
 [Predicate(references="1")]
-
 [Decision(options="Hibiscus, tend to her wounds first!;Gravel, hold back the Armorless Union!",values="1;2;3")]
 [Predicate(references="1;2")]
 [Character(name="char_204_platnm_1#5")]
@@ -546,17 +480,13 @@ The Armorless collapsed on the ground before you is nothing like the elegant ass
 [Character(name="char_204_platnm_1#2")]
 [name="Platinum"]  Why?
 [dialog]
-
 [Decision(options="I'll explain on the way back. We can talk about your payment later.;......;I just have a big heart. Helping others is like helping myself.",values="1;2;3")]
 [Predicate(references="1;2;3")]
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
-// （白金跑出屏幕）
-// （出第三小队成员）
 [Character(name="avg_npc_216", name2="avg_npc_216", fadetime=1,block=true)]
 [PlaySound(key="$d_gen_soldiersrun", volume=0.6)]
 [delay(time=2)]
@@ -574,8 +504,6 @@ The Armorless collapsed on the ground before you is nothing like the elegant ass
 [name="Monique"]  That's right.
 [dialog]
 [character]
-// （无立绘）
-// （缓出莫妮克）
 [Character(name="avg_npc_208_1",fadetime=1.5,block=true)]
 [delay(time=2)]
 [name="Monique"]  We're short on time. To make matters worse, our activities have been exposed to a campaign knight.
@@ -606,7 +534,6 @@ The Armorless collapsed on the ground before you is nothing like the elegant ass
 [name="A Team 3 Member"]  Wait, hold on!
 [dialog]
 [character]
-// （拼刀特效）
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=0, fadetime=1.5, block=false)]
@@ -633,28 +560,22 @@ The Armorless collapsed on the ground before you is nothing like the elegant ass
 [character]
 Her pride forbids her from missing again.
 Monique draws back her longbow.
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-// （黑屏）
-// （屏中字）
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=0.6, r=0, g=0, b=0, fadetime=0.5, block=true)]
 [Subtitle(text="Who dares to harm Rhodes Island's medical staff?", x=300, y=370, alignment="center", size=24, delay=0.04, width=800)]
 [subtitle]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
 [delay(time=1)]
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-// （亮起）
 [Character(name="avg_npc_208_1#3")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="Monique"]  What?
@@ -666,7 +587,6 @@ It is a sense of imminent danger.
 The small Caprinae takes gentle steps forward, bearing a calm and leisurely casting pose that seems ill-suited to the battlefield.
 [dialog]
 [character]
-// （缓出Touch）
 [Character(name="avg_npc_249_1$1",fadetime=1.5,block=true)]
 [delay(time=1.5)]
 [name="Touch"]  I was just thinking how rarely my line of work brings me back to the landship, and how nice it would be to touch base again. Imagine my surprise when I happened across this lovely scene.
@@ -679,13 +599,11 @@ The small Caprinae takes gentle steps forward, bearing a calm and leisurely cast
 [name="Monique"]  ......
 [Character(name="avg_npc_249_1$1")]
 [name="Touch"]  That isn't allowed, Armorless.
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_23_G07",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
-// （转场，商业街）
 [Character(name="char_204_platnm_1#5")]
 [name="Platinum"]  Nngh...
 [Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5", focus=1)]
@@ -715,14 +633,11 @@ Her savior.
 She contemplates whether or not she wants to keep up appearances in front of the Doctor. She ponders whether or not she wants to ask to be taken away from the Grand Knight Territory. She...
 ...still has not awoken from beneath that ensorcelled sky.
 [dialog]
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-// （转场，大骑士领街道）
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$e_atk_arrow_h")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
@@ -738,7 +653,6 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [PlaySound(key="$b_char_defboost", volume=0.6)]
 [CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
 [delay(time=2)]
-// （打斗）
 [Character(name="avg_npc_249_1$1")]
 [name="Touch"]  Hm...
 [name="Touch"]  It would appear that optimism alone is not enough for just two to stop a Lazurite.
@@ -755,7 +669,6 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [name="Monique"]  Since you seem to know so much about the Armorless Union, then you should know that we have something much more terrifying–
 [dialog]
 [Character(name="avg_npc_208_1#3", focus=-1)]
-// （电话响声）
 [PlaySound(key="$phone",volume=0.6)]
 [CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
 [Character(name="avg_npc_208_1#4")]
@@ -791,8 +704,6 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [Character(name="avg_npc_249_1$1")]
 [name="Touch"]  Lucky?
 [name="Touch"]  We make our own luck, Armorless.
-
-// （电话挂断声，黑屏，然后切场景，野外）
 [stopmusic(fadetime=2)]
 [Dialog]
 [Character]
@@ -800,11 +711,8 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [Background(image="bg_coldforest",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
 [playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
-
 [name="???"]  I'm curious, Młynar.
 [dialog]
-// （玄铁，不出立绘）
-// （缓出玛恩纳）
 [Character(name="avg_npc_108#3",fadetime=1,block=true)]
 [delay(time=2)]
 [name="Młynar"]  ......
@@ -875,8 +783,6 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [Character(name="avg_npc_108#2", focus=-1)]
 [name="???"]  Ahh, as harsh as ever.
 [name="???"]  Goodbye, Młynar. I hope that your vacation... will prove fruitful.
-
-
 [stopmusic(fadetime=1.5)]
 [Dialog]
 [Character]
@@ -884,18 +790,14 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [Background(image="bg_23_G05",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
 [playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
-// （切场景，二期大骑士领街道）
 [Character(name="char_204_platnm_1",fadetime=0.7)]
 [delay(time=2)]
-
-// （出白金）
 [Decision(options="Are you feeling any better?;......;It stopped hurting, right?",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_204_platnm_1")]
 [name="Platinum"]  Just because the Lazurites went after me does not mean that I've lost my standing in the Union... I might still be answering to the Board of Directors.
 [name="Platinum"]  You have to know that, but...
 [dialog]
-
 [Decision(options="I think this will be a win-win situation.;......;We'll figure it out.",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_204_platnm_1#5")]
@@ -908,7 +810,6 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [name="Platinum"]  Th-Thank you, Doctor.
 [dialog]
 [character]
-// （缓出砾）
 [Character(name="avg_237_gravel_1#5",fadetime=1,block=true)]
 [delay(time=1)]
 [name="Gravel"]  Phew...
@@ -919,7 +820,6 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [name="Gravel"]  Thanks...
 [delay(time=0.5)]
 [dialog]
-// （顿一下，砾重新站起来）
 [Character(name="char_120_hibisc_1")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="Hibiscus"]  Gravel! How'd you end up with Instructor Touch?
@@ -932,7 +832,6 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [name="Touch"]  No need. I'm just here to report back to Amiya.
 [dialog]
 [character]
-
 [Decision(options="Good work, you two.",values="1")]
 [Predicate(references="1")]
 [Character(name="avg_237_gravel_1")]
@@ -944,7 +843,6 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [Character(name="avg_237_gravel_1")]
 [name="Gravel"]  You owe me big time, haha.
 [dialog]
-
 [Decision(options="Let's head back to Rhodes Island.",values="1")]
 [Predicate(references="1")]
 [Character(name="avg_237_gravel_1")]
@@ -955,16 +853,11 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [Character(name="avg_237_gravel_1#2")]
 [name="Gravel"]  Nnnnh... Maybe I should take a break too...
 [dialog]
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_corridor",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
-
-// （切场景，罗德岛走廊）
-// （缓出白金）
 [Character(name="char_204_platnm_1#3",fadetime=1.5,block=true)]
 [delay(time=1)]
 [name="Platinum"]  ......
@@ -1007,11 +900,6 @@ She contemplates whether or not she wants to keep up appearances in front of the
 [name="Platinum"]  No clue. Never gave it much thought.
 [Character(name="avg_237_gravel_1#4",name2="char_204_platnm_1#7", focus=2)]
 [name="Platinum"]  But for now, I just want to leave.
-
-
-
-
-
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [Dialog]
