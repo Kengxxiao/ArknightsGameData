@@ -1,6 +1,4 @@
 [HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 隐藏AVG1 逃离
-
-
 [stopmusic]
 [Dialog]
 [Delay(time=1)]
@@ -8,15 +6,10 @@
 [Background(image="bg_black",screenadapt="coverall")]
 [playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
-
-
-// （黑屏）
-// （缓出莫妮克）
 [Character(name="avg_npc_208_1",fadetime=1.5,block=true)]
 [delay(time=1)]
 [name="モニーク"]  ……
 [dialog]
-// （出无胄盟杂兵）
 [PlaySound(key="$d_gen_soldiersrun", volume=0.6)]
 [Character(name="avg_npc_216", name2="avg_npc_208_1", focus=1)]
 [delay(time=1)]
@@ -36,21 +29,15 @@
 [characteraction(name="left", type="move", xpos=-300, fadetime=2,block=false)]
 [character(name="char_empty",name2="avg_npc_208_1",fadetime=0.5)]
 [delay(time=2)]
-// （下杂兵）
 [Character(name="avg_npc_208_1#2")]
 [name="モニーク"]  ……
 [name="モニーク"]  これは、あんた自身が選んだ結果なのよ。
 [name="モニーク"]  セントーレア。
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_23_G10",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
-
-// （切场景，感染者街道）
-// （先出白金从左到右跑过，然后出白金）
 [Character(name="char_empty")]
 [PlaySound(key="$rungeneral", volume=0.5)]
 [characteraction(name="middle", type="move", xpos=200, fadetime=0.3, block=true)]
@@ -67,7 +54,6 @@
 [name="プラチナ"]  無冑盟のプラチナが、監査会管理下の零号地に身を隠す日が来るなんて、一体、誰が想像してただろうね……
 [dialog]
 [Character(name="char_204_platnm_1#4", focus=-1)]
-// （一些响声）
 [PlaySound(key="$leaveshake", volume=0.5)]
 [delay(time=0.6)]
 [Character(name="char_204_platnm_1")]
@@ -79,8 +65,6 @@
 [characteraction(name="middle", type="move", xpos=-300, fadetime=2,block=false)]
 [Character(fadetime=0.5)]
 [delay(time=2)]
-
-// （下白金，然后出两个无胄盟成员）
 [Character(name="avg_npc_216", name2="avg_npc_216", fadetime=1,block=true)]
 [PlaySound(key="$d_gen_walk_n", volume=0.6)]
 [delay(time=2)]
@@ -138,14 +122,11 @@
 [characteraction(name="middle", type="move", xpos=200, fadetime=1, block=false)]
 [Character(name="char_204_platnm_1",fadetime=0.7)]
 [delay(time=2)]
-// （两个人向左平移出屏幕，然后白金从右出）
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Background(image="bg_23_G10",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
-// （切一下场景）
 [Character(name="avg_npc_216", name2="avg_npc_216", focus=2)]
 [name="第三小隊隊員B"]  これは……
 [Character(name="avg_npc_216", name2="avg_npc_216", focus=1)]
@@ -156,7 +137,6 @@
 [PlaySound(key="$e_atk_arrow_h")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
 [CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
-// （飞箭声，队员B倒下，白金出场贴近A）
 [characteraction(name="right", type="move", ypos=-800, fadetime=1.5, block=true)]
 [delay(time=1.5)]
 [Character(name="char_204_platnm_1#6")]
@@ -173,16 +153,12 @@
 [name="プラチナ"]  はぁ……アンタも無冑盟の一員なら、そう答えたらどうなるかなんてわかってるでしょ？
 [Character(name="char_204_platnm_1")]
 [name="プラチナ"]  ――どうせ、すぐ思い出すことになると思うよ。
-
 [Dialog]
 [Character]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
-
-// （黑屏）
-// （出青金和无胄盟成员）
 [Character(name="avg_npc_216")]
 [name="第三小隊隊員"]  ご報告します！
 [Character(name="avg_npc_216", name2="avg_npc_208_1", focus=2)]
@@ -234,15 +210,12 @@
 [characteraction(name="right", type="move", xpos=300, fadetime=2,block=false)]
 [character(name="avg_npc_208_1",name2="char_empty",fadetime=0.5)]
 [delay(time=2)]
-// （下无胄盟）
 [Character(name="avg_npc_208_1")]
 [name="モニーク"]  （単に捕らえるだけなら、第三小隊で十分でしょうけど……向こうは私たちの捜索・捕獲手段をどこまで知っているかしら。）
 [name="モニーク"]  （もし大通りに逃げられでもしたら……）
-// （通讯声）
 [PlaySound(key="$d_gen_transmissionget", volume=0.6)]
 [Character(name="avg_npc_208_1#2")]
 [name="モニーク"]  ……私よ。あんた、そんなに暇なら手伝ってくれない？
-// （以下都无立绘）
 [Character(name="avg_npc_208_1#2", focus=-1)]
 [name="ロイ"]  アッハ、悪い悪い。でも、俺も自分の仕事で忙しいんだよ。
 [name="ロイ"]  そんで、そっちは今どんな状況なんだ？
@@ -260,7 +233,6 @@
 [name="モニーク"]  ……ロイ。
 [Character(name="avg_npc_208_1#2", focus=-1)]
 [name="ロイ"]  はいはい、安心しろって。本当に万が一のことが起きたら……我らが優しき三人のボスが、手助けしてくれるさ。
-
 [stopmusic(fadetime=1)]
 [Dialog]
 [Character]
@@ -268,8 +240,6 @@
 [Background(image="bg_indoor_2",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
 [playMusic(intro="$chasing_intro", key="$chasing_loop", volume=0.4)]
-
-// （切场景，indoor2）
 [Character(name="char_204_platnm_1#2",fadetime=1.5,block=true)]
 [PlaySound(key="$rungeneral", volume=0.6)]
 [delay(time=1)]
@@ -283,7 +253,6 @@
 [PlaySound(key="$e_atk_arrow_h")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
 [CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
-// （飞箭声）
 [Character(name="char_204_platnm_1#5")]
 [name="プラチナ"]  っ……！
 [Character(name="avg_npc_216")]
@@ -295,12 +264,10 @@
 [name="第三小隊隊員"]  っ、とにかく……抵抗はするな。この建物は、未完成の部分も含めてすべての出口をこちらの人員で塞いである。逃げ道はない。だから――
 [dialog]
 [Character(name="avg_npc_216", focus=-1)]
-// （飞箭声）
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$d_avg_arrowshot")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
 [CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
-// （无胄盟成员倒下）
 [Character(name="avg_npc_216")]
 [name="第三小隊構成員"]  うっ――！
 [Dialog]
@@ -315,14 +282,12 @@
 [name="プラチナ"]  （まだ、チャンスはある……！）
 [name="プラチナ"]  （もう少しだ……！）
 [dialog]
-// （再上个无胄盟成员）
 [Character(name="char_204_platnm_1")]
 [characteraction(name="middle", type="jump", xpos=35, fadetime=0.6,block=false)]
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$e_atk_arrow_h")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
 [CameraShake(duration=0.6, xstrength=5, ystrength=8, vibrato=30, randomness=90, block=true)]
-// （飞箭声，白金做个位移，然后平移出屏幕）
 [delay(time=0.7)]
 [PlaySound(key="$rungeneral", volume=0.6)]
 [characteraction(name="middle", type="move", xpos=300, fadetime=1,block=false)]
@@ -341,20 +306,12 @@
 [character(name="char_empty",name2="avg_npc_216",fadetime=0.5)]
 [delay(time=1.55)]
 [character]
-
-// （无胄盟成员也追上去）
-
 [Dialog]
 [Character]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_indoor_2",screenadapt="coverall")]
 [Blocker(a=0.2, r=0, g=0, b=0, fadetime=1.5, block=true)]
-
-// （切场景，仓库（warehouse）可以的话把背景压暗点）
-// （出白金，从右面出无胄盟成员）
-// （白金向左平移出屏幕，右面无胄盟成员追上去）
-// （白金从右进场景，从左面出无胄盟成员）
 [Character(name="avg_npc_216",fadetime=1.5,block=true)]
 [delay(time=1)]
 [name="第三小隊隊員"]  どこへ行くつもりだ？
@@ -381,7 +338,6 @@
 [delay(time=0.5)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
-// （晃动，爆炸，如果有烟雾的话上烟雾）
 [Blocker(a=0.4, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Character(name="avg_npc_216")]
 [CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
@@ -390,22 +346,17 @@
 [PlaySound(key="$bodyfalldown2", volume=0.6)]
 [Character(fadetime=1,block=true)]
 [Delay(time=2)]
-// （无胄盟成员倒下）
 [Character(name="char_204_platnm_1#2")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="プラチナ"]  うっ……げほ、ごほっ……
 [name="プラチナ"]  ……今ので、最後の一矢か……
 [Character(name="char_204_platnm_1#5")]
 [name="プラチナ"]  ……チッ……
-
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
-// （大骑士领街道）
 [Character(name="avg_237_gravel_1#2",fadetime=1,block=true)]
 [delay(time=1)]
 [name="グラベル"]  「年若い騎士には、この平和な時代へ騎士競技がもたらす腐敗に束縛される日々ではなく、より豊かな経験が必要なのよ。」
@@ -415,7 +366,6 @@
 [Character(name="avg_237_gravel_1#6", name2="char_120_hibisc_1", focus=2)]
 [name="ハイビスカス"]  わぁ～！　グラベルさんって、人が言ってたことを伝えるとき、真似するのが上手ですよね。実際には声は全く変わってないのに本人みたい……！
 [dialog]
-
 [Decision(options="確かに、これはすごいな。;……;グラベルにこんな特技があったなんて……",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="avg_237_gravel_1")]
@@ -432,39 +382,30 @@
 [name="グラベル"]  この間、たまたまこの話をしたときなんてぇ……怒ってあたしを追い出しちゃったくらいだから～。
 [Character(name="avg_237_gravel_1", name2="char_120_hibisc_1", focus=2)]
 [name="ハイビスカス"]  そうですか……
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-// （切场景，仓库）
 [PlaySound(key="$rungeneral", volume=0.6)]
-// （跑动声）
 [Character(name="char_204_platnm_1#5",fadetime=0.7)]
 [delay(time=2)]
 [name="プラチナ"]  げほ、ごほっ……はぁ……はぁ……
 [name="プラチナ"]  あと、少し……もう少し……！
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-// （大骑士领街道）
-
 [Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5")]
 [characteraction(name="right", type="move", xpos=2000, fadetime=0.1,block=true)]
 [Delay(time=1)]
-
 [characteraction(name="right", type="move", xpos=-2200, fadetime=1.5,block=false)]
 [delay(time=1.5)]
 [CameraShake(duration=0.3, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
 [characteraction(name="left", type="move", xpos=-50, fadetime=0.7,block=false)]
 [characteraction(name="right", type="move", xpos=50, fadetime=0.7,block=false)]
 [delay(time=1)]
-// （从左快出白金，然后撞在芙蓉的立绘上）
 [name="プラチナ＆ハイビスカス"]  わっ――！
 [dialog]
 [character]
@@ -495,7 +436,6 @@
 [PlaySound(key="$bodyfalldown2", volume=0.6)]
 [Character(fadetime=1,block=true)]
 [Delay(time=2)]
-// （晃动，白金倒下）
 [Character(name="char_120_hibisc_1")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="ハイビスカス"]  あ、歩くのもやっとみたいですよ……！　傷らしい傷は見当たりませんけど……ただの疲労なんでしょうか？　それとも……
@@ -508,21 +448,17 @@
 [dialog]
 [character]
 あなたは地面に倒れ込んだ無冑盟を見やる。彼女は、以前見た時の洗練された暗殺者らしい印象とはまるで違うように映った。
-
-
 [Decision(options="……;……;……",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_204_platnm_1#4")]
 [name="プラチナ"]  ……ねえ、ロドスの、ドクター……
 [name="プラチナ"]  この街の、外にいるのは……アンタたちみたいな人ばっかりなのかな……？
 [dialog]
-
 [Decision(options="――グラベル。",values="1")]
 [Predicate(references="1")]
 [Character(name="avg_237_gravel_1")]
 [name="グラベル"]  何かしら？
 [dialog]
-
 [Decision(options="無冑盟は我々を簡単には見逃さないだろう。;監査会の庇護を離れたら、危険な目に遭うかもしれない。;商業連合会は、一時凌ぎの盾でしかない。",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="avg_237_gravel_1#6")]
@@ -530,10 +466,8 @@
 [Character(name="avg_237_gravel_1#2")]
 [name="グラベル"]  向こうが影に潜んでいる以上、形勢は必然的に不利になる……無冑盟が一企業を仕留める卑劣な手段なんて、カジミエーシュにはいくらでもあるんだもの。
 [dialog]
-
 [Decision(options="わかった。",values="1")]
 [Predicate(references="1")]
-
 [Decision(options="ハイビスカス、まずは彼女を助けよう！;グラベル、無冑盟を抑えてくれ！",values="1;2;3")]
 [Predicate(references="1;2")]
 [Character(name="char_204_platnm_1#5")]
@@ -546,17 +480,13 @@
 [Character(name="char_204_platnm_1#2")]
 [name="プラチナ"]  ……どうして……
 [dialog]
-
 [Decision(options="説明はあとだ。この対価についてはその時に。;……;情けは人の為ならず、さ。",values="1;2;3")]
 [Predicate(references="1;2;3")]
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=0.6, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
-// （白金跑出屏幕）
-// （出第三小队成员）
 [Character(name="avg_npc_216", name2="avg_npc_216", fadetime=1,block=true)]
 [PlaySound(key="$d_gen_soldiersrun", volume=0.6)]
 [delay(time=2)]
@@ -574,8 +504,6 @@
 [name="モニーク"]  ――本当にね。
 [dialog]
 [character]
-// （无立绘）
-// （缓出莫妮克）
 [Character(name="avg_npc_208_1",fadetime=1.5,block=true)]
 [delay(time=2)]
 [name="モニーク"]  こっちは一刻を争う状況なのよ。それなのに、征戦騎士にまで見られただなんて……
@@ -606,7 +534,6 @@
 [name="第三小隊構成員"]  させるか！
 [dialog]
 [character]
-// （拼刀特效）
 [Blocker(a=1, r=1, g=1, b=1, afrom=0, rfrom=0, gfrom=0, bfrom=0, fadetime=0.1, block=true)]
 [PlaySound(key="$e_skill_skulsrsword", volume=0.9)]
 [Blocker(a=0, fadetime=1.5, block=false)]
@@ -633,28 +560,22 @@
 [character]
 二度と、狙いは外せない。彼女自身のプライドが、それを許さないからだ。
 モニークは長弓を目一杯引き絞った。
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-// （黑屏）
-// （屏中字）
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=0.6, r=0, g=0, b=0, fadetime=0.5, block=true)]
 [Subtitle(text="――どなたですか？ ロドスの医療オペレーターを傷つけようとしているのは。", x=300, y=370, alignment="center", size=24, delay=0.04, width=800)]
 [subtitle]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
 [delay(time=1)]
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-// （亮起）
 [Character(name="avg_npc_208_1#3")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="モニーク"]  ――何……？
@@ -666,7 +587,6 @@
 人影の正体は、小柄なキャプリニーだ。その歩幅はとても小さく、緩やかでゆったりとした所作でアーツを放つ姿は、この戦場にはそぐわない。
 [dialog]
 [character]
-// （缓出Touch）
 [Character(name="avg_npc_249_1$1",fadetime=1.5,block=true)]
 [delay(time=1.5)]
 [name="Touch"]  ……このような場面に出くわすとは、思ってもみませんでした。ロドス本艦の近くを通るついでに、せっかくなら少し顔を出していこうと思っただけだったのですが。
@@ -679,13 +599,11 @@
 [name="モニーク"]  ……
 [Character(name="avg_npc_249_1$1")]
 [name="Touch"]  であれば、話は別です。あなたの好きにはさせません。
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_23_G07",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
-// （转场，商业街）
 [Character(name="char_204_platnm_1#5")]
 [name="プラチナ"]  ぐ、っ……
 [Character(name="char_120_hibisc_1",name2="char_204_platnm_1#5", focus=1)]
@@ -715,14 +633,11 @@
 彼女の頭の中を、いくつかの考えごとが巡っていた。ドクターの前ではまだイメージを保っておくべきだろうか。……大騎士領から連れ出してもらえるよう、頼めないだろうか。……それから……
 そうして、ぼんやりとした空の下、彼女は上の空でいた。
 [dialog]
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [Background(image="bg_kxstreet",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-// （转场，大骑士领街道）
 [Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
 [PlaySound(key="$e_atk_arrow_h")]
 [Blocker(a=0, r=0.95, g=0.95, b=0.95, fadetime=0.25, block=true)]
@@ -738,7 +653,6 @@
 [PlaySound(key="$b_char_defboost", volume=0.6)]
 [CameraShake(duration=1, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
 [delay(time=2)]
-// （打斗）
 [Character(name="avg_npc_249_1$1")]
 [name="Touch"]  ……く、っ……
 [name="Touch"]  たった二人でラズライトを足止めするというのは、やはり少々厳しいものがありますね……
@@ -755,7 +669,6 @@
 [name="モニーク"]  無冑盟のことを理解してるなら、あんたも知ってるでしょ。私たちの中には、もっと恐ろしい相手が――
 [dialog]
 [Character(name="avg_npc_208_1#3", focus=-1)]
-// （电话响声）
 [PlaySound(key="$phone",volume=0.6)]
 [CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=true)]
 [Character(name="avg_npc_208_1#4")]
@@ -791,8 +704,6 @@
 [Character(name="avg_npc_249_1$1")]
 [name="Touch"]  「運」？　それは違うと思いますよ。
 [name="Touch"]  「何事も為せば成る」ですよ。無冑盟。
-
-// （电话挂断声，黑屏，然后切场景，野外）
 [stopmusic(fadetime=2)]
 [Dialog]
 [Character]
@@ -800,11 +711,8 @@
 [Background(image="bg_coldforest",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
 [playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
-
 [name="？？？"]  ムリナール。単なる好奇心から尋ねるのだが……
 [dialog]
-// （玄铁，不出立绘）
-// （缓出玛恩纳）
 [Character(name="avg_npc_108#3",fadetime=1,block=true)]
 [delay(time=2)]
 [name="ムリナール"]  ……
@@ -875,8 +783,6 @@
 [Character(name="avg_npc_108#2", focus=-1)]
 [name="？？？"]  ……ふっ、相変わらず手厳しいな。
 [name="？？？"]  ――さよなら、ムリナール。……君の旅が、実りあるものとなるよう願っているよ。
-
-
 [stopmusic(fadetime=1.5)]
 [Dialog]
 [Character]
@@ -884,18 +790,14 @@
 [Background(image="bg_23_G05",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
 [playMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
-// （切场景，二期大骑士领街道）
 [Character(name="char_204_platnm_1",fadetime=0.7)]
 [delay(time=2)]
-
-// （出白金）
 [Decision(options="具合はどうだ？;……;傷口の痛みは消えたかな？",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_204_platnm_1")]
 [name="プラチナ"]  ……ねえ。アンタなら、わかってるはずだよね。
 [name="プラチナ"]  ラズライトに追撃されてたからって、それで無冑盟内での立場を失うわけじゃない……私はまだ、理事会から命令を受けるかもしれないんだよ。……なのに、どうして……
 [dialog]
-
 [Decision(options="双方にとって、有益な結果に繋がると思ったからだ。;……;単なる偶然さ。",values="1;2;3")]
 [Predicate(references="1;2;3")]
 [Character(name="char_204_platnm_1#5")]
@@ -908,7 +810,6 @@
 [name="プラチナ"]  あ……ありがと、ドクター……
 [dialog]
 [character]
-// （缓出砾）
 [Character(name="avg_237_gravel_1#5",fadetime=1,block=true)]
 [delay(time=1)]
 [name="グラベル"]  ふぅ～……
@@ -919,7 +820,6 @@
 [name="グラベル"]  そうするわ、ありがとう……
 [delay(time=0.5)]
 [dialog]
-// （顿一下，砾重新站起来）
 [Character(name="char_120_hibisc_1")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="ハイビスカス"]  あれっ、グラベルさん！　どうしてTouch先生とご一緒なんですか！？
@@ -932,7 +832,6 @@
 [name="Touch"]  ……いえ、結構です。私は、アーミヤさんに業務報告をしに来ただけですから。
 [dialog]
 [character]
-
 [Decision(options="二人とも、お疲れ様。",values="1")]
 [Predicate(references="1")]
 [Character(name="avg_237_gravel_1")]
@@ -944,7 +843,6 @@
 [Character(name="avg_237_gravel_1")]
 [name="グラベル"]  ふふっ……あなた、あたしにと～っても大きな借りができちゃったんじゃない？
 [dialog]
-
 [Decision(options="それじゃ、ロドスに帰ろうか。",values="1")]
 [Predicate(references="1")]
 [Character(name="avg_237_gravel_1")]
@@ -955,16 +853,11 @@
 [Character(name="avg_237_gravel_1#2")]
 [name="グラベル"]  ……う～ん……話してたら、なんだか疲れが来ちゃったわ～。あたしも、少し休ませてもらおうかしら～……
 [dialog]
-
-
 [Dialog]
 [Character]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [Background(image="bg_corridor",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2.5, block=true)]
-
-// （切场景，罗德岛走廊）
-// （缓出白金）
 [Character(name="char_204_platnm_1#3",fadetime=1.5,block=true)]
 [delay(time=1)]
 [name="プラチナ"]  ……
@@ -1007,11 +900,6 @@
 [name="プラチナ"]  わかんない。その辺は、深く考えてなかったよ。
 [Character(name="avg_237_gravel_1#4",name2="char_204_platnm_1#7", focus=2)]
 [name="プラチナ"]  けど、今のところは……さっさと離れたい、かな。
-
-
-
-
-
 [Dialog]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
 [Dialog]
