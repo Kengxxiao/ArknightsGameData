@@ -105,6 +105,16 @@ local function GoToSquadFix(self, stageId, hardId, isHard, isPractice, isAuto)
   self:_GoToSquad(stageId, hardId, isHard, isPractice, isAuto);
 end
 
+local function EntryZoneButtonRenderFix(self, viewModel, isAllTimeout)
+  self:Render(viewModel, isAllTimeout);
+
+  if isAllTimeout then
+    eutil.SetActiveIfNecessary(self._textProgress.gameObject, false);
+    eutil.SetActiveIfNecessary(self._panelComplete, false);
+    eutil.SetActiveIfNecessary(self._progressBar.gameObject, false);
+  end
+end 
+
 function DeepSeaRPBattlePreviewStateHotfixer:OnInit()
   xlua.private_accessible(CS.Torappu.UI.DeepSeaRP.DeepSeaRPBattlePreviewState)
   self:Fix_ex(CS.Torappu.UI.DeepSeaRP.DeepSeaRPBattlePreviewState, "OnBtnStartBattleClick", function(self)
@@ -148,6 +158,14 @@ function DeepSeaRPBattlePreviewStateHotfixer:OnInit()
     local ok, errorInfo = xpcall(GoToSquadFix, debug.traceback, self, stageId, hardId, isHard, isPractice, isAuto)
     if not ok then
       eutil.LogError("[DeepSeaRPBattlePreviewStateHotfixer] fix" .. errorInfo)
+    end
+  end);
+
+  xlua.private_accessible(CS.Torappu.Activity.Act17side.Act17sideEntryZoneButtonView);
+  self:Fix_ex(CS.Torappu.Activity.Act17side.Act17sideEntryZoneButtonView, "Render", function(self, viewModel, isAllTimeout)
+    local ok, errorInfo = xpcall(EntryZoneButtonRenderFix, debug.traceback, self, viewModel, isAllTimeout);
+    if not ok then
+      eutil.LogError("[Act17sideEntryZoneButtonViewHotfixer] fix" .. errorInfo);
     end
   end);
 end
