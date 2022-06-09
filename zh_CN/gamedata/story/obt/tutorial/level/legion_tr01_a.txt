@@ -1,0 +1,77 @@
+[HEADER(is_tutorial=true)] 爬塔教学关卡01_a
+
+
+[Battle.Pause]
+
+[PopupDialog(dialogHead="$avatar_jesica")] 我无法击破敌人的装甲！请求火力支援！
+[PopupDialog(dialogHead="$avatar_doberm")] 杰西卡，干得不错。经历了这么多次模拟作战，还是有所成长的。
+[PopupDialog(dialogHead="$avatar_jesica")] 唉!？
+[PopupDialog(dialogHead="$avatar_doberm")] 呼叫守林人，T032<@tu.kw>待部署区域</>请求支援，请立即前往。
+[PopupDialog(dialogHead="$avatar_milu")] 收到。
+
+[Battle.Pause(pause=false)]
+[Delay(time=2)]
+[Battle.Pause(pause=true)]
+
+[PopupDialog(dialogHead="$avatar_milu")] 呼叫杜宾教官，守林人已达到指定位置。
+[PopupDialog(dialogHead="$avatar_doberm")] 注意，本次作战条件较为苛刻，只能部署两名干员。不过，你可以与杰西卡进行“<@tu.kw>接力</>”，直接部署在她的位置上。
+[PopupDialog(dialogHead="$avatar_jesica")] “<@tu.kw>接力</>”？与以往的作战部署相比，有什么不一样吗？
+[PopupDialog(dialogHead="$avatar_doberm")] 这是一种全新的战术。杰西卡注意，当守林人部署在你的位置时，你需要马上撤退。
+[Tutorial(focusX=35, focusY=63, focusWidth=69, focusHeight=125, anchor="BottomLeft", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_jesica")] \
+是直接撤往<@tu.kw>休整区</>吗？
+[PopupDialog(dialogHead="$avatar_doberm")] 没错，记得抓紧时间好好调整状态。预备区人手不足时，休整区待命的干员需要全部补充进来。
+[PopupDialog(dialogHead="$avatar_jesica")] 明白了！
+[PopupDialog(dialogHead="$avatar_doberm")] 另外，PRTS为大家配备了一种全新的“<@tu.kw>战术装备</>”。它可以使接力的干员继承被接力者的部分能力，从而获得<@tu.kw>增强</>。
+
+[Battle.LockFunction(mask="SYSTEM_MENU")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=false)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_doberm", animStyle="Drag", \
+          startX=-122, startY=60, startAnchor="BottomRight", endX=-185, endY=-40)] \
+博士，现在请将守林人部署在杰西卡的位置。
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_doberm", animStyle="Drag", \
+          startX=-70, startY=-50, endX=250, endY=-50)] \
+就是这样，<@tu.kw>选择方向</>。
+[InputBlocker(blockInput=true)]
+[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[Battle.Pause(pause=false)]
+[Delay(time=6)]
+[Battle.Pause(pause=true)]
+[PopupDialog(dialogHead="$avatar_milu")] 我的攻击速度好像变快了，是因为杰西卡留给我的<@tu.kw>战术装备</>吗？
+[Tutorial(focusX=-180, focusY=-37, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+是的，你身上的战术装备已经激活了，仔细看围绕在你身边的<@tu.kw>深色装备</>。
+[PopupDialog(dialogHead="$avatar_milu")] 原来如此。
+[Battle.LockFunction(mask="SYSTEM_MENU")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=false)]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[Tutorial(waitForSignal="char_info", focusX=-180, focusY=-37, focusWidth=150, focusHeight=150, \
+          animStyle="Click", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+另外，博士，请你聚焦守林人。
+[InputBlocker(blockInput=true)]
+[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+
+[Tutorial(focusX=242, focusY=-111, focusWidth=480, focusHeight=235, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",anchor="Left", \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+很好，这里详细显示了守林人当前继承的战术装备的具体效果。
+[Tutorial(focusX=242, focusY=-111, focusWidth=480, focusHeight=235, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",anchor="Left", \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+撤退干员的职业不同，接力干员所继承的战术装备也不同。比如杰西卡是<@tu.kw>狙击</>干员，守林人便获得了一件<@tu.kw>狙击装备</>。
+[Tutorial(focusX=242, focusY=-111, focusWidth=480, focusHeight=235, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",anchor="Left", \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+但请注意，每位干员最多只能继承<@tu.kw>五件</>战术装备。
+[PopupDialog(dialogHead="$avatar_milu")] 所以之后有其他干员继续来接力时，他也将<@tu.kw>继承</>杰西卡和我留下的战术装备。
+[PopupDialog(dialogHead="$avatar_doberm")] 正是如此。
+
+
+[Blocker(fadetime=0.3, block=true, a=0)]

@@ -1,0 +1,40 @@
+[HEADER(is_tutorial=true)] 爬塔教学关卡01_b
+
+[Battle.Pause]
+
+[PopupDialog(dialogHead="$avatar_milu")] 呼叫杜宾教官，前方出现重装敌人。
+[Battle.Pause(pause=false)]
+[Delay(time=3)]
+[Battle.Pause(pause=true)]
+[PopupDialog(dialogHead="$avatar_doberm")] 无需紧张。博士，我们可以消耗<@tu.kw>调用凭证</>，从预备区调度一名干员前来支援。
+[Battle.LockFunction(mask="SYSTEM_MENU")]
+[InputBlocker(blockInput=false)]
+[Tutorial(target="btn_draw_next_card", waitForSignal="draw_card", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",searchBtnInChildren=true, \
+          protectTime=0.5, dialogHead="$avatar_doberm")] \
+博士，点击这里呼叫支援。
+
+[InputBlocker(blockInput=true)]
+[PopupDialog(dialogHead="$avatar_gnosis")] 博士，杜宾教官，灵知前来支援。
+[InputBlocker(blockInput=false)]
+
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_gnosis", animStyle="Drag", \
+          startX=-150, startY=60, startAnchor="BottomRight", endX=-185, endY=-40)] \
+建议让我来<@tu.kw>接力</>守林人。
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_gnosis", animStyle="Drag", \
+          startX=-60, startY=-45, endX=240, endY=-45)] \
+就是这样。
+[InputBlocker(blockInput=true)]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+[Battle.Pause(pause=false)]
+[Delay(time=2)]
+[Battle.Pause(pause=true)]
+[PopupDialog(dialogHead="$avatar_doberm")] 对了博士，部分职业的战术装备，并非继承效果，比如<@tu.kw>辅助</>的装备效果将在<@tu.kw>部署时</>立即触发。
+[Tutorial(focusX=-48, focusY=292, focusWidth=92, focusHeight=124, anchor="BottomRight", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_gnosis")] \
+没错。作为辅助干员，我在部署后可立即<@tu.kw>额外呼叫</>一名干员进行<@tu.kw>支援</>，并且再带来一些调用凭证。
+[PopupDialog(dialogHead="$avatar_gnosis")] 博士，开始战斗吧。
+
+[Blocker(fadetime=0.3, block=true, a=0)]

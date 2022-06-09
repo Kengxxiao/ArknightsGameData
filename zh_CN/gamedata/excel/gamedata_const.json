@@ -871,9 +871,9 @@
     "char_500_noirc",
     "char_503_rang"
   ],
-  "attackMax": 1210.0,
-  "defMax": 826.0,
-  "hpMax": 4225.0,
+  "attackMax": 2000.0,
+  "defMax": 1000.0,
+  "hpMax": 6000.0,
   "reMax": 100.0,
   "diamondToShdRate": 180,
   "requestSameFriendCD": 14400,
@@ -1057,6 +1057,7 @@
   "isDynIllustEnabled": true,
   "isDynIllustStartEnabled": true,
   "isRoguelikeTopicFuncEnabled": true,
+  "isRoguelikeAvgAchieveFuncEnabled": false,
   "voucherSkinRedeem": 1,
   "voucherSkinDesc": "当某位干员的<color=#ffa633>首个</color>异格上线时，若曾使用<color=#ffa633>源石</color>购买过该干员的时装，则在该干员的<color=#ffa633>首个</color>异格上线后返还通过源石购买的该干员时装件数对应数量的道具<color=#33b5ff>【时装自选凭证】</color>。\n\n若有以下情况，则在异格干员上线后<color=#ffa633>不进行返还</color>：\n1.在某位干员的首个异格干员上线前，使用【时装自选凭证】兑换了原干员的时装。\n2.在某位干员的首个异格干员上线后，使用源石购买了原干员的时装。\n3.在某位干员的首个异格干员上线后，使用【时装自选凭证】兑换了原干员的时装。\n\n【时装自选凭证】仅可以兑换当期时装商店中售卖的时装，且<color=#ffa633>不可兑换</color>含有动态形象的时装。若已购买了时装商店中所有的服装或时装商店中无时装售卖时，则【时装自选凭证】<color=#ffa633>无法使用</color>。\n\n此外，若今后有其他<color=#ffa633>不可使用</color>【时装自选凭证】兑换的时装出现时，届时会告知博士，敬请注意。",
   "charmEquipCount": 5,
@@ -1191,50 +1192,80 @@
       "termName": "浮空",
       "description": "变为空中单位，无法移动、攻击及使用技能；对重量大于3的单位持续时间减半"
     },
+    "ba.physhield": {
+      "termId": "ba.physhield",
+      "termName": "物理护盾",
+      "description": "每层物理护盾可以抵挡一次物理伤害"
+    },
+    "ba.magicfragile": {
+      "termId": "ba.magicfragile",
+      "termName": "法术脆弱",
+      "description": "受到的法术伤害提升相应比例（同名效果取最高）"
+    },
     "cc.bd_A_1": {
       "termId": "cc.bd_A_1",
       "termName": "念力",
-      "description": "由以下干员提供\n迷迭香"
+      "description": "拥有该基建技能的干员\n迷迭香"
     },
     "cc.bd_A_2": {
       "termId": "cc.bd_A_2",
       "termName": "意识实体",
-      "description": "由以下干员提供\n迷迭香"
+      "description": "拥有该基建技能的干员\n迷迭香"
+    },
+    "cc.bd_B_1": {
+      "termId": "cc.bd_B_1",
+      "termName": "徘徊旋律",
+      "description": "拥有该基建技能的干员\n黑键"
+    },
+    "cc.bd_B_2": {
+      "termId": "cc.bd_B_2",
+      "termName": "怅惘和声",
+      "description": "拥有该基建技能的干员\n黑键"
     },
     "cc.bd_A": {
       "termId": "cc.bd_A",
       "termName": "思维链环",
-      "description": "可影响<$cc.bd_A_1><@cc.rem>念力</></>、<$cc.bd_A_2><@cc.rem>意识实体</></>相关技能\n由以下干员提供\n迷迭香"
+      "description": "可影响<$cc.bd_A_1><@cc.rem>念力</></>、<$cc.bd_A_2><@cc.rem>意识实体</></>相关技能\n由以下干员的基建技能提供\n迷迭香"
+    },
+    "cc.bd_B": {
+      "termId": "cc.bd_B",
+      "termName": "无声共鸣",
+      "description": "可影响<$cc.bd_B_1><@cc.rem>徘徊旋律</></>、<$cc.bd_B_2><@cc.rem>怅惘和声</></>相关技能\n由以下干员的基建技能提供\n黑键"
     },
     "cc.bd_a1": {
       "termId": "cc.bd_a1",
       "termName": "感知信息",
-      "description": "可影响<$cc.bd_A><@cc.rem>思维链环</></>相关技能\n由以下干员提供\n迷迭香、夕、令、絮雨、爱丽丝"
+      "description": "可影响<$cc.bd_A><@cc.rem>思维链环</></>、<$cc.bd_B><@cc.rem>无声共鸣</></>相关变量\n由以下干员的基建技能提供\n迷迭香、黑键、夕、令、絮雨、爱丽丝、车尔尼"
     },
     "cc.bd_b1": {
       "termId": "cc.bd_b1",
       "termName": "人间烟火",
-      "description": "由以下干员提供\n夕、令、乌有、桑葚"
+      "description": "由以下干员的基建技能提供\n夕、令、乌有、桑葚"
     },
     "cc.bd_ash": {
       "termId": "cc.bd_ash",
       "termName": "情报储备",
-      "description": "由以下干员提供\n灰烬"
+      "description": "由以下干员的基建技能提供\n灰烬"
     },
     "cc.bd_tachanka": {
       "termId": "cc.bd_tachanka",
       "termName": "乌萨斯特饮",
-      "description": "由以下干员提供\n战车"
+      "description": "由以下干员的基建技能提供\n战车"
     },
     "cc.bd_a1_a1": {
       "termId": "cc.bd_a1_a1",
       "termName": "记忆碎片",
-      "description": "可影响<$cc.bd_a1><@cc.rem>感知信息</></>相关技能\n由以下干员提供\n絮雨"
+      "description": "可影响<$cc.bd_a1><@cc.rem>感知信息</></>相关变量\n由以下干员的基建技能提供\n絮雨"
     },
     "cc.bd_a1_a2": {
       "termId": "cc.bd_a1_a2",
       "termName": "梦境",
-      "description": "可影响<$cc.bd_a1><@cc.rem>感知信息</></>相关技能\n由以下干员提供\n爱丽丝"
+      "description": "可影响<$cc.bd_a1><@cc.rem>感知信息</></>相关变量\n由以下干员的基建技能提供\n爱丽丝"
+    },
+    "cc.bd_a1_a3": {
+      "termId": "cc.bd_a1_a3",
+      "termName": "小节",
+      "description": "可影响<$cc.bd_a1><@cc.rem>感知信息</></>相关变量\n由以下干员的基建技能提供\n车尔尼"
     },
     "cc.m.var1": {
       "termId": "cc.m.var1",
@@ -1269,7 +1300,7 @@
     "cc.g.sp": {
       "termId": "cc.g.sp",
       "termName": "异格",
-      "description": "包含以下干员\n炎狱炎熔、浊心斯卡蒂、假日威龙陈、耀骑士临光、寒芒克洛丝、归溟幽灵鲨"
+      "description": "包含以下干员\n炎狱炎熔、浊心斯卡蒂、假日威龙陈、耀骑士临光、寒芒克洛丝、归溟幽灵鲨、濯尘芙蓉"
     },
     "cc.g.abyssal": {
       "termId": "cc.g.abyssal",
@@ -1353,6 +1384,6 @@
     }
   },
   "storyReviewUnlockItemLackTip": "事相碎片数量不足，请前往采购凭证区或活动期间商店获取",
-  "dataVersion": "27.15.0",
-  "resPrefVersion": "27d11d0"
+  "dataVersion": "28.0.0",
+  "resPrefVersion": "28d0d0"
 }

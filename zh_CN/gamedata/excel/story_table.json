@@ -323,8 +323,8 @@
     "disabled": false,
     "videoResource": false,
     "trigger": {
-      "type": "PAGE_LOADED",
-      "key": "stage|home",
+      "type": "CUSTOM_OPERATION",
+      "key": "skill_lvlup_sys_intro",
       "useRegex": false
     },
     "condition": {
@@ -332,7 +332,9 @@
       "maxProgress": -1,
       "minPlayerLevel": 1,
       "requiredFlags": [],
-      "excludedFlags": [],
+      "excludedFlags": [
+        "obt/guide/l0-6/0_upgrade_skill_mastery"
+      ],
       "requiredStages": [
         {
           "stageId": "main_00-06",
@@ -1318,6 +1320,71 @@
     "setProgress": -1,
     "setFlags": [],
     "completedRewards": []
+  },
+  "obt/guide/l0-6/0_upgrade_skill_mastery": {
+    "id": "obt/guide/l0-6/0_upgrade_skill_mastery",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "training_sys_intro",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": 600,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [
+        "obt/guide/l0-6/0_upgrade_skill"
+      ],
+      "requiredStages": [
+        {
+          "stageId": "main_00-06",
+          "minState": 2,
+          "maxState": 3
+        }
+      ]
+    },
+    "setProgress": 900,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "obt/guide/equip/uniequip_upgrade": {
+    "id": "obt/guide/equip/uniequip_upgrade",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "uniequip_lvlup_sys_intro",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": 0,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": [
+      {
+        "id": "mod_unlock_token",
+        "count": 4,
+        "type": "MATERIAL"
+      },
+      {
+        "id": "mod_update_token_1",
+        "count": 60,
+        "type": "MATERIAL"
+      }
+    ]
   },
   "obt/guide/equip/uniequip_intro": {
     "id": "obt/guide/equip/uniequip_intro",
@@ -9285,6 +9352,539 @@
     "trigger": {
       "type": "CUSTOM_OPERATION",
       "key": "interlock_sys",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_st01": {
+    "id": "activities/act18side/level_act18side_st01",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_st01",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_01_beg": {
+    "id": "activities/act18side/level_act18side_01_beg",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_01",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_01",
+          "minState": 0,
+          "maxState": 1
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_01_end": {
+    "id": "activities/act18side/level_act18side_01_end",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "AFTER_BATTLE",
+      "key": "act18side_01",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_01",
+          "minState": 2,
+          "maxState": 3
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_02_beg": {
+    "id": "activities/act18side/level_act18side_02_beg",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_02",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_02",
+          "minState": 0,
+          "maxState": 1
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_02_end": {
+    "id": "activities/act18side/level_act18side_02_end",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "AFTER_BATTLE",
+      "key": "act18side_02",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_02",
+          "minState": 2,
+          "maxState": 3
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_03_beg": {
+    "id": "activities/act18side/level_act18side_03_beg",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_03",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_03",
+          "minState": 0,
+          "maxState": 1
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_03_end": {
+    "id": "activities/act18side/level_act18side_03_end",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "AFTER_BATTLE",
+      "key": "act18side_03",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_03",
+          "minState": 2,
+          "maxState": 3
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_04_beg": {
+    "id": "activities/act18side/level_act18side_04_beg",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_04",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_04",
+          "minState": 0,
+          "maxState": 1
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_04_end": {
+    "id": "activities/act18side/level_act18side_04_end",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "AFTER_BATTLE",
+      "key": "act18side_04",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_04",
+          "minState": 2,
+          "maxState": 3
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_st02": {
+    "id": "activities/act18side/level_act18side_st02",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_st02",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_05_beg": {
+    "id": "activities/act18side/level_act18side_05_beg",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_05",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_05",
+          "minState": 0,
+          "maxState": 1
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_05_end": {
+    "id": "activities/act18side/level_act18side_05_end",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "AFTER_BATTLE",
+      "key": "act18side_05",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_05",
+          "minState": 2,
+          "maxState": 3
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_06_beg": {
+    "id": "activities/act18side/level_act18side_06_beg",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_06",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_06",
+          "minState": 0,
+          "maxState": 1
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_06_end": {
+    "id": "activities/act18side/level_act18side_06_end",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "AFTER_BATTLE",
+      "key": "act18side_06",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_06",
+          "minState": 2,
+          "maxState": 3
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_07_beg": {
+    "id": "activities/act18side/level_act18side_07_beg",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_07",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_07",
+          "minState": 0,
+          "maxState": 1
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_07_end": {
+    "id": "activities/act18side/level_act18side_07_end",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "AFTER_BATTLE",
+      "key": "act18side_07",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_07",
+          "minState": 2,
+          "maxState": 3
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_08_beg": {
+    "id": "activities/act18side/level_act18side_08_beg",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_08",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_08",
+          "minState": 0,
+          "maxState": 1
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_08_end": {
+    "id": "activities/act18side/level_act18side_08_end",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "AFTER_BATTLE",
+      "key": "act18side_08",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": [
+        {
+          "stageId": "act18side_08",
+          "minState": 2,
+          "maxState": 3
+        }
+      ]
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "activities/act18side/level_act18side_st03": {
+    "id": "activities/act18side/level_act18side_st03",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "BEFORE_BATTLE",
+      "key": "act18side_st03",
       "useRegex": false
     },
     "condition": {
@@ -23862,5 +24462,397 @@
     "setProgress": -1,
     "setFlags": null,
     "completedRewards": null
+  },
+  "obt/memory/story_ebnhlz_1_1": {
+    "id": "obt/memory/story_ebnhlz_1_1",
+    "needCommit": false,
+    "repeatable": true,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": null,
+      "useRegex": false
+    },
+    "condition": null,
+    "setProgress": -1,
+    "setFlags": null,
+    "completedRewards": null
+  },
+  "obt/memory/story_hbisc2_1_1": {
+    "id": "obt/memory/story_hbisc2_1_1",
+    "needCommit": false,
+    "repeatable": true,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": null,
+      "useRegex": false
+    },
+    "condition": null,
+    "setProgress": -1,
+    "setFlags": null,
+    "completedRewards": null
+  },
+  "obt/memory/story_skgoat_2_1": {
+    "id": "obt/memory/story_skgoat_2_1",
+    "needCommit": false,
+    "repeatable": true,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": null,
+      "useRegex": false
+    },
+    "condition": null,
+    "setProgress": -1,
+    "setFlags": null,
+    "completedRewards": null
+  },
+  "obt/memory/story_hmau_1_1": {
+    "id": "obt/memory/story_hmau_1_1",
+    "needCommit": false,
+    "repeatable": true,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": null,
+      "useRegex": false
+    },
+    "condition": null,
+    "setProgress": -1,
+    "setFlags": null,
+    "completedRewards": null
+  },
+  "obt/memory/story_greyy_1_1": {
+    "id": "obt/memory/story_greyy_1_1",
+    "needCommit": false,
+    "repeatable": true,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": null,
+      "useRegex": false
+    },
+    "condition": null,
+    "setProgress": -1,
+    "setFlags": null,
+    "completedRewards": null
+  },
+  "obt/memory/story_skadi_1_1": {
+    "id": "obt/memory/story_skadi_1_1",
+    "needCommit": false,
+    "repeatable": true,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": null,
+      "useRegex": false
+    },
+    "condition": null,
+    "setProgress": -1,
+    "setFlags": null,
+    "completedRewards": null
+  },
+  "obt/memory/story_aosta_1_1": {
+    "id": "obt/memory/story_aosta_1_1",
+    "needCommit": false,
+    "repeatable": true,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": null,
+      "useRegex": false
+    },
+    "condition": null,
+    "setProgress": -1,
+    "setFlags": null,
+    "completedRewards": null
+  },
+  "obt/memory/story_toddi_1_1": {
+    "id": "obt/memory/story_toddi_1_1",
+    "needCommit": false,
+    "repeatable": true,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": null,
+      "useRegex": false
+    },
+    "condition": null,
+    "setProgress": -1,
+    "setFlags": null,
+    "completedRewards": null
+  },
+  "Obt/Guide/LEGION/legion_tr01_intro": {
+    "id": "Obt/Guide/LEGION/legion_tr01_intro",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_tutorial_1",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "Obt/Guide/LEGION/legion_tr02_intro": {
+    "id": "Obt/Guide/LEGION/legion_tr02_intro",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_tutorial_2",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "Obt/Guide/LEGION/legion_tr03_intro": {
+    "id": "Obt/Guide/LEGION/legion_tr03_intro",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_tutorial_3",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "Obt/Guide/LEGION/legion_tr03_end": {
+    "id": "Obt/Guide/LEGION/legion_tr03_end",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_tutorial_complete",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": [
+      {
+        "id": "mod_unlock_token",
+        "count": 4,
+        "type": "MATERIAL"
+      },
+      {
+        "id": "mod_update_token_2",
+        "count": 20,
+        "type": "MATERIAL"
+      }
+    ]
+  },
+  "Obt/Guide/LEGION/legion_tower_squad": {
+    "id": "Obt/Guide/LEGION/legion_tower_squad",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_layer_recruit",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "Obt/Guide/LEGION/legion_tower_firstfailed": {
+    "id": "Obt/Guide/LEGION/legion_tower_firstfailed",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_battle_failed",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "Obt/Guide/LEGION/legion_tower_initial_equip": {
+    "id": "Obt/Guide/LEGION/legion_tower_initial_equip",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_first_tactical_buff",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "Obt/Guide/LEGION/legion_tower_initial_squad": {
+    "id": "Obt/Guide/LEGION/legion_tower_initial_squad",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_first_squad_create",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "Obt/Guide/LEGION/legion_tower_complete_equip": {
+    "id": "Obt/Guide/LEGION/legion_tower_complete_equip",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_tactical_buff_select",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "Obt/Guide/LEGION/legion_tower_entry": {
+    "id": "Obt/Guide/LEGION/legion_tower_entry",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "introduce_legion_first_tower_entry",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
+  },
+  "obt/legion/system_legion_01": {
+    "id": "obt/legion/system_legion_01",
+    "needCommit": true,
+    "repeatable": false,
+    "disabled": false,
+    "videoResource": false,
+    "trigger": {
+      "type": "CUSTOM_OPERATION",
+      "key": "climbtower_sys",
+      "useRegex": false
+    },
+    "condition": {
+      "minProgress": -1,
+      "maxProgress": -1,
+      "minPlayerLevel": 1,
+      "requiredFlags": [],
+      "excludedFlags": [],
+      "requiredStages": []
+    },
+    "setProgress": -1,
+    "setFlags": [],
+    "completedRewards": []
   }
 }
