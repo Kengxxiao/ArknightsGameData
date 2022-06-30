@@ -5,7 +5,6 @@ local LuaUIUtil = CS.Torappu.Lua.LuaUIUtil;
 
 
 
-
 DlgBase = Class("DlgBase", UIBase);
 DlgBase.s_ids = 1;
 
@@ -24,13 +23,6 @@ end
 
 
 function DlgBase:OnDispose()
-  
-  if self.m_childDlgs then
-    for _, child in ipairs(self.m_childDlgs) do
-      child:ClosedByParent();
-    end
-    self.m_childDlgs = nil;
-  end
   self.m_widgets:Clear();
   self:OnClose();
 
@@ -51,36 +43,6 @@ end
 
 function DlgBase:Id()
   return self.m_id;
-end
-
-
-function DlgBase:CreateChildDlg(dlgCls)
-  local child = DlgMgr.CreateDlg(dlgCls, self);
-  if not self.m_childDlgs then
-    self.m_childDlgs = {};
-  end
-  table.insert(self.m_childDlgs, child);
-  return child;
-end
-
-function DlgBase:GetChildDlg(dlgCls)
-  if not self.m_childDlgs then
-    return nil;
-  end
-  for _, child in ipairs(self.m_childDlgs) do
-    if child.class == dlgCls then
-      return child;
-    end
-  end
-  return nil;
-end
-
-function DlgBase:FetchChildDlg(dlgCls)
-  local child = self:GetChildDlg(dlgCls);
-  if not child then
-    child = self:CreateChildDlg(dlgCls);
-  end
-  return child;
 end
 
 
@@ -117,6 +79,11 @@ function DlgBase:ClosedByParent()
 end
 
 
+function DlgBase:GetGroup()
+  return self.m_parent:GetGroup();
+end
+
+
 function DlgBase:GetHookRoot()
   return self.m_parent:GetHookRoot();
 end
@@ -129,16 +96,12 @@ end
 
 
 function DlgBase:RequestClose(child)
-  if self.m_childDlgs ~= nil then
-    for idx, achild in ipairs(self.m_childDlgs) do
-      if achild == child then
-        table.remove(self.m_childDlgs, idx);
-        child:ClosedByParent();
-        return;
-      end
-    end
+  local group = self:GetGroup();
+  if group then
+    group:RemoveChild(child);
+  else
+    CS.Torappu.Lua.Util.LogError("Can't find group:"..self.__cname );
   end
-  CS.Torappu.Lua.Util.LogError(string.format("[%s]not the child of this dialog[%s]", child, self) );
 end
 
 

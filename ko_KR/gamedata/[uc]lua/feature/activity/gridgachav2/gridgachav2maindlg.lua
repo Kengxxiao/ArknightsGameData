@@ -302,8 +302,7 @@ function GridGachaV2MainDlg:EventOnConfirmClick()
       activityId = self.m_actId,
     },
     {
-      onProceed = Event.Create(self, self._OnGetAward),
-      hideMask = true
+      onProceed = Event.Create(self, self._OnGetAward)
     }
   );
 end

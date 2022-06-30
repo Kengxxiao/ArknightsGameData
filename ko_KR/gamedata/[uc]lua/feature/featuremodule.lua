@@ -2,6 +2,7 @@ require "Feature/Main/MainDlg"
 require "Feature/Main/TestDlg"
 
 require "Feature/ResDefines"
+require "Feature/Supportor/SupportorModule"
 
 require "Feature/Activity/Collection/CollectionItem"
 require "Feature/Activity/Collection/CollectionMainDlg"
@@ -35,3 +36,13 @@ require "Feature/Activity/GridGachaV2/GridGachaV2Define"
 require "Feature/Activity/GridGachaV2/GridGachaV2MainDlg"
 
 require "Feature/Wardrobe/WardrobeModule"
+
+require "Feature/Operation/Returnning/ReturnDefine"
+require "Feature/Operation/Returnning/ReturnService"
+require "Feature/Operation/Returnning/ReturnModel"
+require "Feature/Operation/Returnning/ReturnTrackPoint"
+require "Feature/Operation/Returnning/ReturnPageDlg"
+require "Feature/Operation/Returnning/ReturnMainDlg"
+require "Feature/Operation/Returnning/ReturnWelcomeDlg"
+require "Feature/Operation/Returnning/ReturnRewardsDlg"
+

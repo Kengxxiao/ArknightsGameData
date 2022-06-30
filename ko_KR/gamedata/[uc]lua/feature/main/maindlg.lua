@@ -20,7 +20,7 @@ function MainDlg:_HandleClick(label)
   
   
   
-  self:FetchChildDlg(TestDlg);
+  self:GetGroup():AddChildDlg(TestDlg);
 end
 
 function MainDlg:_HandleClose()

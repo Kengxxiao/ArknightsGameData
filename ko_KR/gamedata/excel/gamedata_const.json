@@ -923,6 +923,7 @@
     "lv.rem": "<color=#FFFFFF>{0}</color>",
     "lv.fs": "<color=#FF0000>{0}</color>",
     "lv.sp": "<color=#fd4600>{0}</color>",
+    "ro1.get": "<color=#E5B684>{0}</color>",
     "rc.title": "<color=#FFFFFF>{0}</color>",
     "rc.subtitle": "<color=#FFC90E>{0}</color>",
     "rc.em": "<color=#FF7F27>{0}</color>",
@@ -935,6 +936,9 @@
     "ga.limadgacha": "<color=#FF7E1F>{0}</color>",
     "ga.percent": "<color=#FFD800>{0}</color>",
     "ga.attention": "<color=#FF3126>{0}</color>",
+    "attainga.desc": "<color=#FF0000>{0}</color>",
+    "attainga.desc2": "<color=#FFD800>{0}</color>",
+    "attainga.attention": "<color=#E1322C>{0}</color>",
     "linkagega.charname": "<color=#FFF6A9>{0}</color>",
     "linkagega.title": "<color=#FF8A00>{0}</color>",
     "limtedga.title": "<color=#FFFFFF>{0}</color>",
@@ -1044,6 +1048,7 @@
   "replicateShopStartTime": 1597129200,
   "TSO": 1608188400,
   "isDynIllustEnabled": true,
+  "isRoguelikeTopicFuncEnabled": false,
   "voucherSkinRedeem": 1,
   "voucherSkinDesc": "오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시되기 전에 이미 <color=#ffa633>오리지늄</color>을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우, 해당 오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시된 후에 <color=#33b5ff>[컬렉션 자유 선택권]</color>*1매를 반환해드립니다.\n\n다음의 경우 얼터네이트가 출시되어도 <color=#ffa633>반환하지 않습니다</color>: \n1. 오퍼레이터의 첫 번째 얼터네이트가 출시되기 전에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 교환한 경우.\n2. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 오리지늄을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n3. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n\n[컬렉션 자유 선택권]으로 컬렉션 상점에서 판매 중인 컬렉션만 교환할 수 있습니다. 만약 컬렉션 상점에서 이미 모든 컬렉션을 구매했거나 또는 판매 중인 컬렉션이 없으면, [컬렉션 자유 선택권]을 <color=#ffa633>사용할 수 없습니다</color>.\n\n이밖에, [컬렉션 자유 선택권]으로 <color=#ffa633>교환할 수 없는</color> 컬렉션이 출시될 경우, 별도 공지가 진행될 예정이오니 참고하여 주시기 바랍니다.",
   "charmEquipCount": 5,
@@ -1101,7 +1106,7 @@
     "ba.frozen": {
       "termId": "ba.frozen",
       "termName": "빙결",
-      "description": "이동, 공격 및 스킬 사용 불가(<$ba.cold>냉기</>를 통해 발동)"
+      "description": "이동, 공격 및 스킬 사용 불가(<$ba.cold>냉기</>를 통해 발동), 적이 빙결될 때 마법 저항 -15"
     },
     "ba.sleep": {
       "termId": "ba.sleep",
@@ -1176,12 +1181,12 @@
     "cc.bd_a1": {
       "termId": "cc.bd_a1",
       "termName": "감지 정보",
-      "description": "<$cc.bd_A><@cc.rem>생각의 사슬</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n로즈몬티스, 시, 위스퍼레인, 아이리스"
+      "description": "<$cc.bd_A><@cc.rem>생각의 사슬</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n로즈몬티스, 시, 링, 위스퍼레인, 아이리스"
     },
     "cc.bd_b1": {
       "termId": "cc.bd_b1",
       "termName": "속세의 불꽃",
-      "description": "다음 오퍼레이터가 제공\n시, 우요우, 멀베리"
+      "description": "다음 오퍼레이터가 제공\n시, 링, 우요우, 멀베리"
     },
     "cc.bd_ash": {
       "termId": "cc.bd_ash",
@@ -1221,7 +1226,7 @@
     "cc.g.lda": {
       "termId": "cc.g.lda",
       "termName": "리 탐정사무소",
-      "description": "다음 오퍼레이터 포함\n아, 훔, 와이후"
+      "description": "다음 오퍼레이터 포함\n리, 아, 훔, 와이후"
     },
     "cc.g.ussg": {
       "termId": "cc.g.ussg",
@@ -1236,7 +1241,7 @@
     "cc.g.sp": {
       "termId": "cc.g.sp",
       "termName": "얼터네이트",
-      "description": "다음 오퍼레이터 포함\n라바 더 퍼거토리, 스카디 더 커럽팅 하트, 첸 더 홀룽데이, 니어 더 래디언트 나이트"
+      "description": "다음 오퍼레이터 포함\n라바 더 퍼거토리, 스카디 더 커럽팅 하트, 첸 더 홀룽데이, 니어 더 래디언트 나이트, 크루스 더 킨 글린트"
     },
     "cc.g.abyssal": {
       "termId": "cc.g.abyssal",
@@ -1248,15 +1253,25 @@
       "termName": "피누스 실베스트리스 기사단",
       "description": "다음 오퍼레이터 포함\n플레임테일, 파투스, 애쉬락, 와일드메인, 저스티스 나이트"
     },
+    "cc.g.karlan": {
+      "termId": "cc.g.karlan",
+      "termName": "카란 무역회사",
+      "description": "다음 오퍼레이터 포함\n실버애쉬, 노시스, 프라마닉스, 클리프하트, 마터호른, 쿠리어, 쉐라, 오로라"
+    },
+    "cc.g.sui": {
+      "termId": "cc.g.sui",
+      "termName": "쉐이",
+      "description": "다음 오퍼레이터 포함\n니엔, 시, 링"
+    },
     "cc.c.abyssal2_1": {
       "termId": "cc.c.abyssal2_1",
       "termName": "특수 버프",
-      "description": "제조소에<$cc.g.abyssal><@cc.kw>어비설 헌터스</></> 오퍼레이터가 1명 배치될 때마다 제어 센터가<$cc.g.abyssal><@cc.kw>어비설 헌터스</></> 오퍼레이터 1명당 제조소에 <@cc.vup>5%</>의 생산력 제공, 제조소 1개에 최대 <@cc.vup>45%</>의 생산력 제공"
+      "description": "제조소에 <$cc.g.abyssal><@cc.kw>어비설 헌터스</></> 오퍼레이터가 1명 배치될 때마다, 제어 센터가 <$cc.g.abyssal><@cc.kw>어비설 헌터스</></> 오퍼레이터 1명당 제조소에 <@cc.vup>5%</>의 생산력 제공, 제조소 1개에 최대 <@cc.vup>45%</>의 생산력 제공"
     },
     "cc.c.abyssal2_2": {
       "termId": "cc.c.abyssal2_2",
       "termName": "특수 버프",
-      "description": "제조소에<$cc.g.abyssal><@cc.kw>어비설 헌터스</></> 오퍼레이터가 1명 배치될 때마다 제어 센터가<$cc.g.abyssal><@cc.kw>어비설 헌터스</></> 오퍼레이터 1명당 제조소에 <@cc.vup>10%</>의 생산력 제공, 제조소 1개에 최대 <@cc.vup>90%</>의 생산력 제공"
+      "description": "제조소에 <$cc.g.abyssal><@cc.kw>어비설 헌터스</></> 오퍼레이터가 1명 배치될 때마다, 제어 센터가 <$cc.g.abyssal><@cc.kw>어비설 헌터스</></> 오퍼레이터 1명당 제조소에 <@cc.vup>10%</>의 생산력 제공, 제조소 1개에 최대 <@cc.vup>90%</>의 생산력 제공"
     },
     "cc.c.abyssal2_3": {
       "termId": "cc.c.abyssal2_3",
@@ -1300,5 +1315,6 @@
     }
   },
   "storyReviewUnlockItemLackTip": "기록 조각이 부족합니다. 증명서 상점 또는 이벤트 기간에 열리는 상점을 통해 교환할 수 있습니다.",
-  "isVoiceLangSettingEnabled": true
+  "dataVersion": "25.1.0 (风雪过境)",
+  "resPrefVersion": "25d0d0"
 }

@@ -2,7 +2,7 @@
 
 
 
-CollectionMainDlg = Class("CollectionMainDlg", DlgBase);
+CollectionMainDlg = Class("CollectionMainDlg", BridgeDlgBase);
 
 function CollectionMainDlg:OnInit()
   self.m_activityId = self.m_parent:GetData("actId");
@@ -205,7 +205,7 @@ function CollectionMainDlg:_CheckMissionStatus()
 end
 
 function CollectionMainDlg:_HandleOpenHelpPage()
-  local dlg = self:FetchChildDlg(CollectionTaskListDlg);
+  local dlg = self:GetGroup():AddChildDlg(CollectionTaskListDlg);
   dlg:Refresh(self.m_activityId, Event.Create(self, self._HandleHelpViewClose) );
   self._scrollView.gameObject:SetActive(false);
 end

@@ -1,0 +1,253 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="24_g11_snowylane",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",fadetime=0.7)]
+[delay(time=0.7)]
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="무딘 전사"]야. 우리가 지금 감시하고 있는 박사인지 뭔지 하는 손님 말이야, 실버애쉬 가문 사람들한테 공격받았다고 하더라?
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="오지랖 넓은 전사"]그걸 이제 알았냐? 어제부터 다들 그 얘기였구먼.
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="무딘 전사"]……그럼 이게 도대체 무슨 일인지 설명이나 좀 해 봐. 이 박사란 사람, 엔시오데스가 초대한 손님 아니었어?
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="오지랖 넓은 전사"]내가 들은 바로, 습격자들은 아크토즈 님이 박사를 데려 매수하려는 것으로 알고 있었대.
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="무딘 전사"]뭐? 아크토즈 님이 그런 일을 할 리가 없잖아!
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="오지랖 넓은 전사"]멍청아! 당연히 놈들이 지어낸 헛소리인 게 분명하잖아!
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="오지랖 넓은 전사"]내 생각은 이래. 아크토즈 님이 박사란 사람을 데려가겠다고 하자, 엔시오데스가 곧바로 주인님을 모함에 빠뜨리려고 계략을 세운 거지.
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="오지랖 넓은 전사"]습격해온 사람들도, 어쩌면 전부 엔시오데스가 보낸 놈들일 수도 있고 말이야.
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="무딘 전사"]오, 그렇게 말하니 일리 있는 것 같네.
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="무딘 전사"]그럼 우리가 이 박사를 감시할 이유가 있나? 아무리 봐도 엔시오데스랑 한패는 아니잖아.
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="24_g5_guestroom",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$darkalley_intro", key="$darkalley_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[character(name="avg_npc_261_1#2$1")]
+[name="발레"]박사님에 대해 잘 몰랐던 탓에, 지금껏 저희들이 많은 실례를 저지르고 말았습니다. 부디 용서해 주시기 바랍니다.
+[character(name="avg_npc_261_1#2$1")]
+[name="발레"]박사님은 엔시오데스의 손님이니, 말을 가려서 해야 할지도 모르겠습니다만……
+[character(name="avg_npc_261_1#1$1")]
+[name="발레"]이번 습격은 조금 수상쩍은 면이 있습니다.
+[dialog]
+[character(name="avg_npc_261_1#1$1",focus=-1)]
+[Decision(options="확실히 수상해.", values="1")]
+[Predicate(references="1")]
+[Decision(options="누군가 사람들을 이용하고 있어.;정확히 의도를 짐작하기 어렵군.;합리적인 행동이 아니었지.", values="4;5;6")]
+[Predicate(references="4")]
+[character(name="avg_npc_261_1#5$1")]
+[name="발레"]설마 엔시오데스가……
+[dialog]
+[character(name="avg_npc_261_1#5$1",focus=-1)]
+[Decision(options="아니, 엔시오데스는 이 일로 이득을 보기 힘들어.", values="4")]
+[Predicate(references="4")]
+[Decision(options="(더 그럴듯한 용의자가 있기는 하지만……)", values="4")]
+[Predicate(references="4")]
+[Predicate(references="5")]
+[character(name="avg_npc_261_1#2$1")]
+[name="발레"]저는 엔시오데스가 박사님을 제대로 보호하지 못했다는 책임을 물어, 페일로쉬 가문을 비난할 구실로 삼으려고 한 게 아닐까 생각했습니다.
+[dialog]
+[character(name="avg_npc_261_1#2$1",focus=-1)]
+[Decision(options="그건 아니야.", values="5")]
+[Predicate(references="5")]
+[Decision(options="범죄는 실직보다 더 미움을 받기 쉬우니까.", values="5")]
+[Predicate(references="5")]
+[Predicate(references="6")]
+[character(name="avg_npc_261_1#3$1")]
+[name="발레"]저 또한 그렇게 느꼈습니다. 엔시오데스를 대표하는 바이스의 말을 전했음에도 불구하고, 박사님을 믿지 못하는 눈치였습니다.
+[character(name="avg_npc_261_1#8$1")]
+[name="발레"]이건 마치……
+[dialog]
+[character(name="avg_npc_261_1#8$1",focus=-1)]
+[Decision(options="누군가 엔시오데스의 계획을 예상한 거야.", values="6")]
+[Predicate(references="6")]
+[Decision(options="그리고 이를 전제로 삼아 저들을 선동했고.", values="6")]
+[Predicate(references="6")]
+[Predicate(references="4;5;6")]
+[character(name="avg_npc_261_1#8$1")]
+[name="발레"]음……
+[character]
+[name="???"]하, 제법인데.
+[dialog]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_npc_254_1#1$1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="아크토즈"]발레, 다들 네가 머리가 좋으니 체스도 잘 둔다고 하지. 하지만 내가 보기에는 박사에게 더 배워야겠구나.
+[character(name="avg_npc_261_1#1$1")]
+[name="발레"]아크토즈 님의 말씀이 옳습니다.
+[character(name="avg_npc_254_1#1$1")]
+[name="아크토즈"]아, 맞다. 이제부터는 박사를 감시하지 않아도 되니, 대신 저택의 경비를 강화해.
+[character(name="avg_npc_254_1#1$1")]
+[name="아크토즈"]박사가 데려온 경호원들도 자유롭게 드나들 수 있게 조치해 둬라.
+[character(name="avg_npc_261_1#1$1")]
+[name="발레"]네.
+[Dialog]
+[playsound(key="$d_gen_walk_n")]
+[character(fadetime=1.5)]
+[delay(time=2)]
+[character(name="avg_npc_254_1#10$1")]
+[name="아크토즈"]복도를 지나다가 방금 나눈 얘기를 우연히 좀 들었는데 말이야.
+[character(name="avg_npc_254_1#10$1")]
+[name="아크토즈"]너희들의 추리 놀음에는 관심이 없다만, 단서 정도는 줄 수 있지.
+[character(name="avg_npc_254_1#2$1")]
+[name="아크토즈"]쉐라간드 신이시여. 박사, 먼저 페일로쉬 가문에서 저질렀던 무례에 대해 정중히 사과하지……
+[character(name="avg_npc_254_1#7$1")]
+[name="아크토즈"]페일로쉬 가문 가주의 명예를 걸고 쉐라간드께 맹세한다. 이번 습격은 결코, 나 아크토즈가 꾸민 일이 아니다.
+[character(name="avg_npc_254_1#7$1")]
+[name="아크토즈"]이 페일로쉬 가문에는, 감히 나를 등지고 이런 상스러운 습격을 벌일 만한 자는 결코 없다. 이 사실 만큼은 믿어 줬으면 좋겠군, 박사.
+[dialog]
+[character(name="avg_npc_254_1#7$1",focus=-1)]
+[Decision(options="믿어 줘서 고마워, 아크토즈.;단서를 줘서 고마워, 아크토즈.", values="1;2")]
+[Predicate(references="1")]
+[character(name="avg_npc_254_1#1$1")]
+[name="아크토즈"]뭐? 널 믿는다고는 하지 않았다, 박사.
+[character(name="avg_npc_254_1#10$1")]
+[name="아크토즈"]하지만 적어도, 네가 나를 상대로 음모를 꾸미고 있지는 않다는 건 확신하지.
+[Predicate(references="2")]
+[character(name="avg_npc_254_1#11$1")]
+[name="아크토즈"]하하하, 좋다.
+[Predicate(references="1;2")]
+[character(name="avg_npc_254_1#1$1")]
+[name="아크토즈"]박사. 내가 비록 섬세한 사람은 아닐지라도, 지금 쉐라그에 심상치 않은 일이 벌어지고 있다는 사실 만큼은 알고 있다.
+[character(name="avg_npc_254_1#1$1")]
+[name="아크토즈"]엔시오데스 녀석은 갑자기 성녀님께 권력을 돌려 드리겠다는 소리나 하면서 노시스를 쫓아내고 널 이 자리에 앉혔지.
+[character(name="avg_npc_254_1#1$1")]
+[name="아크토즈"]게다가 넌 하필이면 권력 이양에 관한 업무를 보는 와중에 습격까지 당했다.
+[character(name="avg_npc_254_1#2$1")]
+[name="아크토즈"]솔직히 말하자면 엔시오데스를 의심하지 않을 수가 없다. 하지만 막상 녀석이 지금 허점을 드러낸 것도 아니야.
+[character(name="avg_npc_254_1#2$1")]
+[name="아크토즈"]그렇다고 영문조차 모른 채, 쉐라간드께서 우리에게 맡긴 대지와 백성들에게 다가오는 위협을 두고 하염없이 기다리기만 해야 한다는 사실이 썩 달갑지만은 않아……
+[dialog]
+[character(name="avg_npc_254_1#2$1",focus=-1)]
+[Decision(options="그럼, 아크토즈……", values="1")]
+[Predicate(references="1")]
+[character(name="avg_npc_254_1#4$1")]
+[name="아크토즈"]왜?
+[dialog]
+[character(name="avg_npc_254_1#4$1",focus=-1)]
+[Decision(options="우리들의 화해가 의미하는 건……;상대가 네 반응을 예상할 수 있었다는 건……", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="상대가 나를 이용할 필요가 없어졌다는 거네.;상대가 준비를 마쳤다는 뜻이다. 남은 시간은 별로 없어.", values="1;2")]
+[Predicate(references="1;2")]
+[character(name="avg_npc_254_1#7$1")]
+[name="아크토즈"]뭐라고?!
+[Dialog]
+[character]
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_gen_explo_n",volume=0.6)]
+[delay(time=2.5)]
+'쾅'하고 터지는 거대한 소리와 멀리서 들려왔다.
+밖에 있는 사람들은 눈사태라도 오는 건 아닌지 수군댔다.
+방 안의 사람들은 고개를 숙이며, 보이지 않는 중압감을 느끼고 있었다.
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="24_g8_nobleroom",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",fadetime=0.7)]
+[delay(time=0.7)]
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]노시스 에델바이스 경.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="노시스"]라타토스 브라운테일 님.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="노시스"]내게 드디어 당신과 직접 만나 이야기를 나눌 자격이 생겼나 보군.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]그렇게 허세 떨어 봤자 감출 수 있는 건 없어, 노시스.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]너 또한 똑똑한 사람이니 다 까놓고 얘기해 보자고.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]내게서 뭔가를 얻어가려는 목적이 아니라면 지금처럼 두 번, 세 번씩이나 반복해서 날 찾아오지는 않았겠지.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=2)]
+[name="노시스"]하, 당신이 주도권을 가지고 있다는 소리나 하려고 온 거라면, 난 이만 돌아가도 되겠네.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="라타토스"]서두를 필요 없어, 노시스. 네게 묻고 싶은 게 좀 있어서 그래.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="라타토스"]처음에 에델바이스 가문 사람이 엔시오데스를 따라 쉐라그에 돌아온다는 말을 들었을 때, 솔직히 말하자면 그다지 놀랍진 않았어.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="라타토스"]에델바이스 가문이 실버애쉬 가문을 해하지 않았다는 증거를 가지고 있거나, 아니면 실버애쉬 가문의 약점을 쥐었다고 생각했지.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="라타토스"]하지만 너나 엔시오데스나 그때의 일에 대해 입을 다물고 있고, 실버애쉬 영지의 주민들이 너를 뻔뻔한 녀석이라 욕하도록 내버려 두었어.
+[character(name="avg_npc_253_1#10$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="라타토스"]도대체 무엇이 널 버틸 수 있게 해 준 거지? 그게 궁금하군.
+[character(name="avg_npc_253_1#10$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="노시스"]……엔시오데스는 내게 미래를 약속했다.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]미래?
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="노시스"]쉐라그의 미래 말이다. 내가 마음껏 학문의 날개를 펼칠 수 있고, 연구 성과가 멋대로 표절이나 남용 그리고 묻힐 것을 걱정하지 않아도 되는 신흥 공업 과학 국가를 말이야.
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]그게 다야?
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#4$1",focus=2)]
+[name="노시스"]그래서 애초에 난 네가 이해할 수 있을 거라는 기대는 접었다, 라타토스. 당신은 영원히 연구자가 될 수 없겠지.
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#4$1",focus=2)]
+[name="노시스"]안심할 수 있는 환경에서 충분한 자원과 권력의 지지하에 정당한 목적을 두고 기술의 개발과 응용에 몰두할 수 있다는 것이, 얼마나 가슴을 뛰게 하는 일인지 당신은 이해할 수 없겠지.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#4$1",focus=1)]
+[name="라타토스"]그래서 거래를 한 건가? 넌 기술을, 엔시오데스는 네게 무대를 제공했다는 거군.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#4$1",focus=1)]
+[name="라타토스"]그래서?
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#4$1",focus=1)]
+[name="라타토스"]설마 엔시오데스가 정말로 자신의 안위를 위해 널 희생양으로 삼은 거라고 말하려는 건 아니겠지?
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#4$1",focus=1)]
+[name="라타토스"]너희들이 카란 무역에서 보여 준 이해관계는 겨우 그런 정도가 아니었을 텐데?
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="노시스"]카란 무역에 대한 믿음은 오히려 네가 가지고 있는 것 같군. 그럼 2년 전에는 어째서 요청을 거절하고 엔시오데스에게 향했지?
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]바보 같은 소리. 엔시오데스가 아무리 잘났다 하더라도, 천 년간 쉐라그 사람들의 마음속에 깊게 자리 잡은 신앙심을 바꿀 수는 없어.
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]카란 무역은 결국 삼족 의회와 만주원에서 용인되는 수준까지만 성장할 수 있겠지. 애초에 쉐라그는 공업 과학 국가로 바뀔 수 없으니까……
+[character(name="avg_npc_253_1#2$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]……잠깐.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]그래서 새로운 카드를 찾았다는 건가?
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=2)]
+[name="노시스"]맞아.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#5$1",focus=2)]
+[name="노시스"]쉐라그 사람들에게서 쉐라간드에 대한 신앙심을 뺏을 수 없다는 걸 알게 된 엔시오데스는, 타협점을 찾을 수밖에 없었지.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#5$1",focus=2)]
+[name="노시스"]하지만 엔시오데스는 이 타협점에 너무 오래 머물러 있었어. 내가 몇 차례 흔들어 보았지만, 요지부동이었지.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="노시스"]마침내 상황이 반전될 때까지 말이야.
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="노시스"]엔시아의 광석병 증상이 호전되었어. 완치는 아니지만, 예전처럼 생기 넘치는 모습으로 돌아올 수 있었지……
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="노시스"]그리고 흥분된 목소리로, 박사와 함께한다면 광석병의 확산과 피해를 효과적이고도 저렴한 비용으로 통제할 수 있다고 말했다.
+[character(name="avg_npc_253_1#5$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="라타토스"]아니야, 엔시오데스가 그럴 리가……
+[character(name="avg_npc_253_1#2$1",name2="avg_206_gnosis_1#7$1",focus=2)]
+[name="노시스"]그라면 당연히 그렇게 할 거다. 일단 쉐라그의 문이 열리고 나면, 다시 닫는 건 불가능해.
+[character(name="avg_npc_253_1#2$1",name2="avg_206_gnosis_1#7$1",focus=2)]
+[name="노시스"]앞으로 쉐라그의 감염자 수는 계속해서 증가할 거다. 이건 테라의 각국이 보여 주고 있는 객관적인 사실이며, 쉐라그가 발전하는 동안 광석병을 처리하는 능력이야말로 곧 중요한 카드가 되겠지.
+[character(name="avg_npc_253_1#2$1",name2="avg_206_gnosis_1#7$1",focus=2)]
+[name="노시스"]엔시오데스는 곧 쉐라그 사람들에게 기술과 신앙 중 하나를 택하라고 강요할 것이며, 사람들은 곧 신앙이 광석병을 지켜 주지 못한다는 걸 깨닫게 될 거다.
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#7$1",focus=1)]
+[name="라타토스"]……헛소리는. 네 말에 아무런 증거도 없다.
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#9$1",focus=2)]
+[name="노시스"]……부하들을 데리고 나를 따라오도록. 잘 싸우는 녀석들이면 더욱 좋고. 당신에게 보여 줄 게 있다.
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Image]
