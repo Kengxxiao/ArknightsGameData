@@ -1,0 +1,253 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="24_g11_snowylane",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$exciting_intro", key="$exciting_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",fadetime=0.7)]
+[delay(time=0.7)]
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="鈍い戦士"]なぁ、俺たちが監視してるドクターとかいう客、シルバーアッシュ家の奴に襲われたんだって？
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="おせっかいな戦士"]今頃なに言ってんだよ。そんな話とっくにみんな知ってるぞ。
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="鈍い戦士"]……そんじゃ教えてくれよ、こいつは一体どういうことなんだ？　ドクターってのはエンシオディスに招かれた客なんじゃねぇのか？
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="おせっかいな戦士"]はぁ……俺が聞いた話によるとその襲撃者たちは、アークトス様がドクターを迎えたついでに買収したと思い込んでいたらしい。
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="鈍い戦士"]はぁ？　アークトス様がそんなことするはずねぇだろ！
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="おせっかいな戦士"]ったく、そんなの奴らの妄想に決まってんだろうが！
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="おせっかいな戦士"]アークトス様がドクターを連れて行くと聞いたエンシオディスが、それを逆手に取って旦那様を陥れようとしたんだろうよ。
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=2)]
+[name="おせっかいな戦士"]その襲撃者たちも、エンシオディスの差し金かもしれねぇな。
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="鈍い戦士"]確かに言われてみりゃ、そうかもしれねぇ。
+[character(name="avg_npc_283_1#1$1",name2="avg_npc_284_1#1$1",focus=1)]
+[name="鈍い戦士"]だったらどうして俺たちゃまだそのドクターを監視してるんだ？　あいつはエンシオディス側の奴にゃ見えねぇぞ。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="24_g5_guestroom",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$darkalley_intro", key="$darkalley_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[character(name="avg_npc_261_1#2$1")]
+[name="ヴァレス"]これまでドクターへの理解が足りずに、失礼な点が多々あったかもしれませんわ。どうかお許しを。
+[character(name="avg_npc_261_1#2$1")]
+[name="ヴァレス"]ドクターはエンシオディス様の大事なお客様ですし、私が言うべきでないかもしれませんが……
+[character(name="avg_npc_261_1#1$1")]
+[name="ヴァレス"]今回のドクターに対する襲撃は、どうも何か裏がありそうですわ。
+[dialog]
+[character(name="avg_npc_261_1#1$1",focus=-1)]
+[Decision(options="確かに何かありそうだ。", values="1")]
+[Predicate(references="1")]
+[Decision(options="何者かが領民たちを利用している。;だが、その狙いを正確に特定するのは難しい。;領民たちの行為は理にかなっていない。", values="4;5;6")]
+[Predicate(references="4")]
+[character(name="avg_npc_261_1#5$1")]
+[name="ヴァレス"]エンシオディス……
+[dialog]
+[character(name="avg_npc_261_1#5$1",focus=-1)]
+[Decision(options="いや、彼がそこから利を得るのは難しい。", values="4")]
+[Predicate(references="4")]
+[Decision(options="（より疑わしい人物はわかっている、しかし……）", values="4")]
+[Predicate(references="4")]
+[Predicate(references="5")]
+[character(name="avg_npc_261_1#2$1")]
+[name="ヴァレス"]ペイルロッシュ家がドクターをしっかり守れなかったという非難の口実をエンシオディス様に与えるために、何者かがドクターを襲わせたのかと思いましたが……
+[dialog]
+[character(name="avg_npc_261_1#2$1",focus=-1)]
+[Decision(options="それでは理屈が通らない。", values="5")]
+[Predicate(references="5")]
+[Decision(options="職務怠慢よりも襲撃の方が非難されるリスクが大きい。", values="5")]
+[Predicate(references="5")]
+[Predicate(references="6")]
+[character(name="avg_npc_261_1#3$1")]
+[name="ヴァレス"]彼らも、ヴァイスさんの口からエンシオディス様の言葉を聞いたはずなのに、それでもドクターのことを信じないなんて……
+[character(name="avg_npc_261_1#8$1")]
+[name="ヴァレス"]これはまるで──
+[dialog]
+[character(name="avg_npc_261_1#8$1",focus=-1)]
+[Decision(options="何者かがエンシオディスの計画を予測していた。", values="6")]
+[Predicate(references="6")]
+[Decision(options="そしてそれを前提として彼らを扇動した。", values="6")]
+[Predicate(references="6")]
+[Predicate(references="4;5;6")]
+[character(name="avg_npc_261_1#8$1")]
+[name="ヴァレス"]うーん……
+[character]
+[name="？？？"]ふん、悪くない。
+[dialog]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_npc_254_1#1$1",fadetime=1,block=true)]
+[delay(time=1)]
+[name="アークトス"]ヴァレス……皆お前の頭の回転とチェスの腕前を褒めるが、どうやらまだまだこのドクターに学ぶ必要がありそうだな。
+[character(name="avg_npc_261_1#1$1")]
+[name="ヴァレス"]旦那様の仰る通りですわね。
+[character(name="avg_npc_254_1#1$1")]
+[name="アークトス"]おっと、そうだヴァレス。今後このドクターを見張る必要はないと皆に伝えてくれ。家の番さえしていればいいと。
+[character(name="avg_npc_254_1#1$1")]
+[name="アークトス"]ドクターが連れてきた護衛に関しても、今後こちらへの出入りは自由とする。
+[character(name="avg_npc_261_1#1$1")]
+[name="ヴァレス"]はい。
+[Dialog]
+[playsound(key="$d_gen_walk_n")]
+[character(fadetime=1.5)]
+[delay(time=2)]
+[character(name="avg_npc_254_1#10$1")]
+[name="アークトス"]お前たちの話は廊下にまで聞こえていたぞ。
+[character(name="avg_npc_254_1#10$1")]
+[name="アークトス"]推理ごっこに興味はないが、いくつか手がかりは与えてやれる。
+[character(name="avg_npc_254_1#2$1")]
+[name="アークトス"]ドクター、まずはこれまでの当家の非礼をお詫びする──
+[character(name="avg_npc_254_1#7$1")]
+[name="アークトス"]ペイルロッシュ家当主の名の下、ここにイェラガンドに誓う。今回の襲撃は、決して俺が画策したものではない。
+[character(name="avg_npc_254_1#7$1")]
+[name="アークトス"]俺の言葉を信用してもらえるのならば、当家の他の者についても、俺に隠れてこんな下卑た真似をすることはないと思っていただきたい。
+[dialog]
+[character(name="avg_npc_254_1#7$1",focus=-1)]
+[Decision(options="信頼に感謝する、アークトス。;手がかりの提供に感謝する、アークトス。", values="1;2")]
+[Predicate(references="1")]
+[character(name="avg_npc_254_1#1$1")]
+[name="アークトス"]なんだと？　信頼しているとは言っていない。
+[character(name="avg_npc_254_1#10$1")]
+[name="アークトス"]だが少なくとも、お前が俺に何かしようと企んでいないことは信じている。
+[Predicate(references="2")]
+[character(name="avg_npc_254_1#11$1")]
+[name="アークトス"]ハハハハッ、そうか。
+[Predicate(references="1;2")]
+[character(name="avg_npc_254_1#1$1")]
+[name="アークトス"]ドクター、俺は生来粗雑な人間だが……それでもこのイェラグが異常事態に陥っていることはわかる。
+[character(name="avg_npc_254_1#1$1")]
+[name="アークトス"]エンシオディスの奴は突然権力を返還すると言い出し、さらにノーシスを追放した上で、お前をそのポジションに置いた。
+[character(name="avg_npc_254_1#1$1")]
+[name="アークトス"]そしてお前はその主権奉還の対応中に襲撃に遭った。
+[character(name="avg_npc_254_1#2$1")]
+[name="アークトス"]正直、エンシオディスを疑わざるを得ないが、奴は確かに現時点では何のボロも出していない。
+[character(name="avg_npc_254_1#2$1")]
+[name="アークトス"]だが、イェラガンドが我々にお与えになった土地と人民が危険に晒されているというのに、わけもわからず傍観していることしかできないというのは、いたたまれないものだ……
+[dialog]
+[character(name="avg_npc_254_1#2$1",focus=-1)]
+[Decision(options="では、アークトス……", values="1")]
+[Predicate(references="1")]
+[character(name="avg_npc_254_1#4$1")]
+[name="アークトス"]なんだ？
+[dialog]
+[character(name="avg_npc_254_1#4$1",focus=-1)]
+[Decision(options="我々の和解が示すのはつまり──;相手が君の反応をも予測していたのなら――", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="相手は自分を利用する必要がなくなったということだ。;相手はもう準備ができている、時間はあまりない。", values="1;2")]
+[Predicate(references="1;2")]
+[character(name="avg_npc_254_1#7$1")]
+[name="アークトス"]なに！？
+[Dialog]
+[character]
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_gen_explo_n",volume=0.6)]
+[delay(time=2.5)]
+「ドーン」という、巨大なくぐもった音が遠くから響いた。
+外にいる者は、雷雪でも訪れるのではないかと囁き合う。
+中にいる者は見えない重圧に、うつむいて黙り込んでいる。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="24_g8_nobleroom",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",fadetime=0.7)]
+[delay(time=0.7)]
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]ノーシス・エーデルワイス殿。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="ノーシス"]ラタトス・ブラウンテイル殿。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="ノーシス"]どうやら私は、ようやく君と真正面から言葉を交わせる資格を得たようだな？
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]その見せかけの高慢さでは何も隠せはしないよ、ノーシス。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]あんたも賢い人間のはずだ。腹の探り合いは止めにしないか。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]私から何か得ようという魂胆がなければ、あんたがこうして何度も訪れるなんてあり得ないだろ。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=2)]
+[name="ノーシス"]フッ、もし自分が主導権を握っていると誇示したいだけであれば、ここで失礼させてもらおう。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="ラタトス"]そう焦るな、ノーシス……いくつか教えてもらいたいことがある。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="ラタトス"]当時エーデルワイス家の者がエンシオディスと共にイェラグに戻ったと聞いた時、私は正直それほど驚かなかった。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="ラタトス"]てっきりあんたが、エーデルワイス家がシルバーアッシュ家に危害を加えていない証拠か、あるいはエンシオディスの弱みをつかんだものだと思っていた。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="ラタトス"]だがあんたにしろエンシオディスにしろ、当時のことを一切語らないばかりか、シルバーアッシュ家の領民があんたのことを恥知らずと口汚く罵っても気にも留めない。
+[character(name="avg_npc_253_1#10$1",name2="avg_206_gnosis_1#2$1",focus=1)]
+[name="ラタトス"]一体何があんたを支えていたんだ？　私はそれに興味があるんだ。
+[character(name="avg_npc_253_1#10$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="ノーシス"]……彼は私に未来を約束してくれた。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]未来？
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="ノーシス"]イェラグの未来だ。研究の中で才能を発揮でき、その成果が盗用、乱用されずに埋没することもない、新興工業科学技術国家となったイェラグを。
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]それだけか？
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#4$1",focus=2)]
+[name="ノーシス"]私は最初から君に理解できるとは思っていない……ラタトス。君は永遠に研究者にはなれないだろうな。
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#4$1",focus=2)]
+[name="ノーシス"]君に理解するのは難しいだろう。充分な資源と権力による支援、そして正当な目的があり、一切懸念材料のない条件の下で技術革新や応用を探求できることが、どれほど魅力的であることか。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#4$1",focus=1)]
+[name="ラタトス"]だからあんたたちは取引をした――あんたは彼に技術を提供し、彼はあんたに舞台を提供してやったってことか。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#4$1",focus=1)]
+[name="ラタトス"]それで？
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#4$1",focus=1)]
+[name="ラタトス"]まさかエンシオディスは本当に自らの保身のために、あんたに罪をかぶせたなんて言うつもりか？
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#4$1",focus=1)]
+[name="ラタトス"]あんたたちカランド貿易の利害に対する考え方は、そんなレベルのもんじゃないだろ？
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="ノーシス"]君はカランド貿易を随分と高く評価しているようだな。ならばなぜ二年前の招待を受け入れ、エンシオディスに服従しなかった？
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]バカ言うな。エンシオディスがいくら優秀でも、私らイェラグ人の骨の髄まで滲み込んだ千年もの信仰を変えることはできない。
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]カランド貿易は、三家会議と蔓珠院が許容する規模までしか成長はできない。イェラグが工業科学技術国家とやらになるなんてのは、そもそも不可能──
+[character(name="avg_npc_253_1#2$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]──いや、待て。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]ということは、あいつは新たな交渉材料を見つけたのか？
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#2$1",focus=2)]
+[name="ノーシス"]その通りだ。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#5$1",focus=2)]
+[name="ノーシス"]いかにエンシオディスといえど、イェラグ人をイェラガンドの教えに背かせることはできない……彼は革新と伝統の均衡点を探し出すしかなかった。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#5$1",focus=2)]
+[name="ノーシス"]しかし彼はその均衡点の模索で、あまりにも長い間停滞していた。私が何度彼の背を突き動かそうと試みても、まるで動かなかった。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="ノーシス"]ようやく転機が訪れるまでは、な。
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="ノーシス"]ある時、エンシアの鉱石病の症状が抑えられた。完治には至らなくとも、彼女はすっかり元気な状態でエンシオディスのもとへ帰ってきたのだ……
+[character(name="avg_npc_253_1#1$1",name2="avg_206_gnosis_1#1$1",focus=2)]
+[name="ノーシス"]そして彼女はエンシオディスに、ロドスとの協力体制を強めれば、より低いコストで鉱石病の拡大と脅威を抑えられるかもしれないと語った。
+[character(name="avg_npc_253_1#5$1",name2="avg_206_gnosis_1#1$1",focus=1)]
+[name="ラタトス"]いや、エンシオディスはこれ以上、外部の技術を引き入れることはしない──
+[character(name="avg_npc_253_1#2$1",name2="avg_206_gnosis_1#7$1",focus=2)]
+[name="ノーシス"]いいや、彼はするはずだ。一度開かれたイェラグの門扉が再び完全に閉じることはない。
+[character(name="avg_npc_253_1#2$1",name2="avg_206_gnosis_1#7$1",focus=2)]
+[name="ノーシス"]イェラグの鉱石病感染者が日々増加していくことは、諸国を客観的に分析すれば想像に容易い。イェラグが絶えず発展していく過程において、鉱石病の対応力は最終的に新たな交渉材料となるのだ。
+[character(name="avg_npc_253_1#2$1",name2="avg_206_gnosis_1#7$1",focus=2)]
+[name="ノーシス"]彼は信仰に頼るだけでは鉱石病から身を守ることはできないとした上で、イェラグ人に信仰か技術かどちらかを選ばせるだろう。
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#7$1",focus=1)]
+[name="ラタトス"]……デタラメだ。何の証拠もない。
+[character(name="avg_npc_253_1#7$1",name2="avg_206_gnosis_1#9$1",focus=2)]
+[name="ノーシス"]……ではその証拠を見せてやろう。腕の立つ部下を揃えて、私についてくるがいい。
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Image]

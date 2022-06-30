@@ -237,8 +237,7 @@ function PrayOnlyMainDlg:EventOnConfirmClick()
     prayArray = requestIndexList
   }, 
   {
-    onProceed = Event.Create(self, self._OnGetRewardResponse),
-    hideMask = true
+    onProceed = Event.Create(self, self._OnGetRewardResponse)
   });
 end
 

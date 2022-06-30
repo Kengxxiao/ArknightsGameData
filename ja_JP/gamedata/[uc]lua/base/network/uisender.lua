@@ -5,6 +5,9 @@ local rapidjson = require("rapidjson")
 
 UISender = ModelMgr.DefineModel("UISender")
 
+local ConcurrentType = CS.Torappu.UI.UISender.ConcurrentType
+
+
 
 
 
@@ -14,7 +17,8 @@ UISender = ModelMgr.DefineModel("UISender")
 
 local function _GenDefaultOptions()
   local options = CS.Torappu.Lua.LuaSender.Options()
-  options.useInvisibleMask = false
+  options.useInvisibleMask = true
+  options.concurrentType = ConcurrentType.ENQUEUE
   return options
 end
 
@@ -67,13 +71,19 @@ end
 
 
 
+
 function UISender:SendRequest(serviceCode, body, config)
   local options = _GenDefaultOptions()
   
   options.serviceCode = serviceCode
   options.body = rapidjson.encode(body)
-  if config ~= nil and config.hideMask ~= nil then
-    options.useInvisibleMask = config.hideMask
+  if config ~= nil then
+    if config.showLoadingMask then
+      options.useInvisibleMask = false
+    end
+    if config.abortIfBusy then
+      options.concurrentType = ConcurrentType.ABORT
+    end
   end
   if config ~= nil then
     options.headers = config.headers
