@@ -1,0 +1,779 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="bg_bar_1",screenadapt="showall")]
+[Delay(time=1)]
+[playMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[character(name="avg_npc_532_1#8$1")]
+[name="塞雷娅"]......
+[name="塞雷娅"]我们不认识你。
+[dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Image(image="29_i01",xScale=1.55,yScale=1.55, fadetime=0)]
+[ImageTween(xFrom=-30, xTo=0,yFrom=30, yTo=0,duration=40,xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=0.8, yScaleTo=0.8,block=false)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[name="霍尔海雅"]真的吗？
+[name="霍尔海雅"]那我可要伤心了。
+[name="霍尔海雅"]麻烦给我来一杯“汐斯塔冰茶”。
+[name="霍尔海雅"]——给这位先生。
+[name="醉醺醺的男人"]唔呃......
+[name="塞雷娅"]你怎么了？
+[name="霍尔海雅"]看来是酒吧里的冷气太足了，所以这位先生才哆嗦个不停。
+[name="霍尔海雅"]那为何不再多喝一杯暖暖身体？
+[name="醉醺醺的男人"]不......
+[name="霍尔海雅"]哦，差点忘了，你口味变了。
+[name="霍尔海雅"]以前还是主刀医生的时候，你最喜欢的还是“汐斯塔冰茶”，因为够烈，喝下去就能让你忘掉洛肯·威廉姆斯的挑刺和辱骂。
+[name="霍尔海雅"]现在他的刑期还剩一百二十二年，而你......你自由了。
+[name="醉醺醺的男人"]自由......你跟我谈论自由？！
+[name="醉醺醺的男人"]我按你们说的，每周都会上传身体数据......
+[name="霍尔海雅"]嘘。
+[name="霍尔海雅"]别提工作上的事。
+[name="霍尔海雅"]大家来酒吧，不都是为了放松一下吗？
+[name="霍尔海雅"]还是说，你宁可与这两位......一个看不清表情一个没有表情的人聊天，也不愿意和你的老朋友喝一杯？
+[name="醉醺醺的男人"]老朋友？呵......你开什么玩笑！
+[name="醉醺醺的男人"]我变成这样，不都是因为......
+[name="霍尔海雅"]来吧，敬自由。
+[dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Image]
+[delay(time=0.6)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[character(name="avg_npc_523_1#1$1")]
+[name="醉醺醺的男人"]......
+[name="醉醺醺的男人"]塞雷娅，他们让我别无选择。
+[character(name="avg_npc_532_1#5$1")]
+[name="塞雷娅"]——！
+[character(name="avg_npc_523_1#1$1")]
+[name="醉醺醺的男人"]你只能靠自己了。
+[dialog]
+[character]
+男人端起面前的酒杯，在众人目光下喝下大半。
+他用力瞪着双眼，什么人都没看，神情说不清是愤怒还是绝望。
+[dialog]
+[PlaySound(key="$bodyfalldown1")]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[delay(time=0.51)]
+很快，他就直挺挺地倒了下去。
+他的双腿像突然受到电击似的抖动着，左手却死死地抓着自己的右臂。
+他的指尖几乎要抠进自己的血肉里，仿佛想把那团折磨他的电子元件连同过去的罪恶一起扯出身体。
+[character(name="avg_npc_524_1$1")]
+[name="酒吧客人"]天哪，这个人怎么了？
+[name="酒吧客人"]快打急救电话！
+[character(name="avg_npc_532_1#5$1")]
+[name="塞雷娅"]——
+[dialog]
+[delay(time=0.51)]
+[character(name="avg_npc_532_1#8$1")]
+[delay(time=0.51)]
+[characteraction(name="middle",type="move",ypos=-50,fadetime=0.7)]
+[delay(time=2.5)]
+[characteraction(name="middle",type="move",ypos=50,fadetime=0.7)]
+[delay(time=1)]
+[Character(name="avg_npc_532_1#8$1",focus=-1)]
+[Decision(options="急病？;酒里有问题？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_532_1#1$1")]
+[name="塞雷娅"]......癫痫。
+[name="塞雷娅"]血液成分异常，是药物诱发。
+[name="塞雷娅"]我给他注射了急救药剂，他的命能保住。
+[Character(name="avg_npc_532_1#8$1")]
+[name="塞雷娅"]那杯酒......
+[Character(name="avg_npc_536_1#11$1")]
+[name="霍尔海雅"]还剩下半杯啊......我不喜欢浪费东西。
+[name="霍尔海雅"]——
+[dialog]
+[delay(time=0.51)]
+[Character(name="avg_npc_532_1#8$1")]
+[name="塞雷娅"]你喝掉了剩下的酒？
+[Character(name="avg_npc_536_1#3$1")]
+[name="霍尔海雅"]如你所见。
+[Character(name="avg_npc_532_1#8$1")]
+[name="塞雷娅"]......
+[Character(name="avg_npc_536_1#3$1")]
+[name="霍尔海雅"]想不通的话，你可以检查一下你朋友的牙齿。
+[name="霍尔海雅"]——左侧第二小臼齿。
+[dialog]
+[Character(name="avg_npc_532_1#8$1")]
+[delay(time=1)]
+[Character(name="avg_npc_532_1#5$1")]
+[name="塞雷娅"]......
+[name="塞雷娅"]一颗中空的假牙。
+[Character(name="avg_npc_536_1#3$1")]
+[name="霍尔海雅"]在离开洛肯水箱之前，他做了最后一场手术，手术对象正是自己。
+[Character(name="avg_npc_532_1#8$1")]
+[name="塞雷娅"]你早就知道这一点。
+[Character(name="avg_npc_536_1#1$1")]
+[name="霍尔海雅"]我本该亲手排除掉这个变量。毕竟，摘掉一颗牙齿并不会影响他的工作。
+[name="霍尔海雅"]但是我没有。
+[name="霍尔海雅"]我始终相信，在哥伦比亚，人们至少应该拥有拥抱死亡的自由。
+[Character(name="avg_npc_532_1#8$1")]
+[name="塞雷娅"]博士——
+[name="塞雷娅"]请你扶着这位病人，站远一些。
+[dialog]
+[Character(name="avg_npc_532_1#8$1",focus=-1)]
+[Decision(options="好。;你是打算......", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_532_1#1$1")]
+[name="塞雷娅"]我们眼前有一个问题不得不解决。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="29_g9_headquarter",screenadapt="showall")]
+[Delay(time=1)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[playsound(key="$rungeneral")]
+[character(name="avg_npc_530_1#1$1",fadetime=1.5)]
+[delay(time=2)]
+[name="莱茵实验员"]先生，新的测试数据出来了！
+[character(name="avg_npc_522_1#6$1")]
+[name="斐尔迪南"]我希望这结果值得你在我面前大喊大叫。
+[dialog]
+[delay(time=1)]
+[character(name="avg_npc_522_1#5$1")]
+[name="斐尔迪南"]......
+[name="斐尔迪南"]百分之六十七？
+[character(name="avg_npc_530_1#1$1")]
+[name="莱茵实验员"]先生，我、我们已经尽力了......
+[character(name="avg_npc_522_1#6$1")]
+[name="斐尔迪南"]重复实验的结果呢？
+[character(name="avg_npc_530_1#1$1")]
+[name="莱茵实验员"]也、也在这里了。
+[character(name="avg_npc_522_1#6$1")]
+[name="斐尔迪南"]把所有参数都拿过来。
+[character(name="avg_npc_530_1#1$1")]
+[name="莱茵实验员"]好......好。
+[dialog]
+[character(name="avg_npc_522_1#6$1")]
+[delay(time=1)]
+[name="斐尔迪南"]......
+[character(name="avg_npc_530_1#1$1")]
+[name="莱茵实验员"]先生......
+[character(name="avg_npc_522_1#6$1")]
+[name="斐尔迪南"]老山羊居然真的没有耍花招。
+[name="斐尔迪南"]剩下就看霍尔海雅的了......她最好给我拦住塞雷娅。
+[dialog]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1")]
+[Background(image="bg_bar_1",screenadapt="showall")]
+[Delay(time=1)]
+[playMusic(intro="$epic_intro", key="$epic_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1",focus=2)]
+[name="霍尔海雅"]能被前莱茵防卫科主任称作不得不解决的问题，我很荣幸。
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1",focus=1)]
+[name="塞雷娅"]你究竟是什么人？
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#3$1",focus=2)]
+[name="霍尔海雅"]你没见过我，塞雷娅主任。
+[name="霍尔海雅"]但我听过你的许多事迹。
+[name="霍尔海雅"]莱茵生命创始人之一，同样毕业于特里蒙理工大学，取得生物医学工程博士学位以后，却几乎在学界销声匿迹，转而负责防卫科——
+[name="霍尔海雅"]提到莱茵生命，人人皆知克丽斯腾·莱特，却很少有人听说过你。
+[name="霍尔海雅"]这么多年来，你有过不甘心吗？
+[Character(name="avg_npc_532_1#3$1",name2="avg_npc_536_1#3$1",focus=1)]
+[name="塞雷娅"]没这个必要。
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#3$1",focus=1)]
+[name="塞雷娅"]这是我自己的选择，也是我的职责所在。
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#1$1",focus=2)]
+[name="霍尔海雅"]我知道你没有。
+[name="霍尔海雅"]你把自己当成救火员，但你最享受的其实是冲进火场的感觉，不是吗？
+[name="霍尔海雅"]你喜欢战斗。
+[name="霍尔海雅"]这并不意味着你是个战士，塞雷娅。你没有不断挑战和破坏的欲望。
+[name="霍尔海雅"]这让你在科学界格格不入。
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#3$1",focus=2)]
+[name="霍尔海雅"]五年前，缪尔赛思送给过你一株嫁接植物。挺好看的，对吧？她用了一点她最擅长的小花招，让藤蔓学会了舞蹈。
+[name="霍尔海雅"]你收下了礼物，但在那之后，每天早上七点，你都会在办公室里将那些生长得过于恣意的嫩芽修剪掉。
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#3$1",focus=1)]
+[name="塞雷娅"]你一直在监控莱茵生命？
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#3$1",focus=2)]
+[name="霍尔海雅"]也许我只是听说了一点办公室八卦。
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#3$1",focus=1)]
+[name="塞雷娅"]那你一定没听说，那个夏天，缪尔赛思让三位主任的办公室变成了萨尔贡雨林。
+[name="塞雷娅"]这给防卫科造成了不小的麻烦。
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#3$1",focus=2)]
+[name="霍尔海雅"]那么......
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1",focus=2)]
+[name="霍尔海雅"]对你来说，炎魔是多大的麻烦？
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1",focus=1)]
+[name="塞雷娅"]......
+[name="塞雷娅"]你说了这么多废话，至少有一点是对的。
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1",focus=2)]
+[name="霍尔海雅"]嗯？
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1",focus=1)]
+[name="塞雷娅"]我确实不讨厌战斗。
+[dialog]
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1")]
+[PlaySound(key="$swordtsing6", volume=0.6)]
+[characteraction(name="left", type="jump", xpos=140, power=0, times=1, fadetime=0.4, block=true)]
+[characteraction(name="right", type="move", xpos=40,ypos=0,power=60,times=1, fadetime=0.4,block=true)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=0.6)]
+[PlaySound(key="$swordtsing1", volume=0.6)]
+[characteraction(name="left", type="jump", xpos=40, power=0, times=1, fadetime=0.4, block=true)]
+[characteraction(name="right", type="move", xpos=40,ypos=0,power=60,times=1, fadetime=0.2,block=true)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=1.2)]
+[PlaySound(key="$swordtsing4")] 
+[characteraction(name="left", type="jump", xpos=50, power=0, times=1, fadetime=0.4, block=true)]
+[characteraction(name="right", type="move", xpos=50,ypos=0,power=60,times=1, fadetime=0.2,block=true)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=0.51)]
+[PlaySound(key="$swordtsing2")] 
+[characteraction(name="left", type="move", xpos=-80, power=0, times=1, fadetime=0.4, block=true)]
+[characteraction(name="right", type="move", xpos=-120,ypos=0,power=60,times=1, fadetime=0.2,block=true)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=0.51)]
+[PlaySound(key="$e_atk_bigaxe_n", volume=0.6)]
+[characteraction(name="left", type="move", xpos=-170, power=60, times=1, fadetime=0.4, block=true)]
+[characteraction(name="right", type="move", xpos=-40,ypos=0,power=60,times=1, fadetime=0.4,block=true)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=0.51)]
+[PlaySound(key="$swordtsing2")] 
+[characteraction(name="left", type="move", xpos=90, power=60, times=1, fadetime=0.4, block=true)]
+[characteraction(name="right", type="move", xpos=-90,ypos=0,power=60,times=1, fadetime=0.4,block=true)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=0.51)]
+[PlaySound(key="$swordtsing4")] 
+[characteraction(name="left", type="move", xpos=-260, power=60, times=1, fadetime=1, block=true)]
+[characteraction(name="right", type="move", xpos=260,ypos=0,power=60,times=1, fadetime=1,block=true)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[delay(time=1.1)]
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1",focus=2)]
+[name="霍尔海雅"]好漂亮的源石技艺。
+[name="霍尔海雅"]当年你对你们总辖动手的时候，是不是也用的这招？
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1",focus=1)]
+[name="塞雷娅"]作为一个雇佣兵，你好奇的事情未免太多了。
+[Dialog]
+[Character(name="avg_npc_532_1#8$1",name2="avg_npc_536_1#2$1")]
+[characteraction(name="left",type="move",xpos=210,fadetime=0.4)]
+[characteraction(name="right",type="move",xpos=-210,fadetime=0.4)]
+[character(fadetime=0.6)]
+[delay(time=0.71)]
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$swordtsing4")] 
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$swordtsing2")] 
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$swordtsing6")] 
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$swordtsing4")] 
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$swordtsing2")] 
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$swordtsing4")] 
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=1, block=true)]
+[delay(time=1.1)]
+[character(name="avg_npc_524_1$1")]
+[name="酒吧客人"]她们怎么打、打起来了——
+[name="酒吧客人"]是喝醉了闹事吗？怎么没有保安管管？
+[Character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]......
+[character(name="avg_npc_524_1$1")]
+[name="酒吧客人"]你是保安吗？你快点把她们赶走！
+[Character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]抱歉，我只是一名机械师。
+[name="Mechanist"]为了性命考虑，该走的是各位。
+[dialog]
+[character]
+[PlaySound(key="$a_bat_buildingshaking_1")] 
+[CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=1.5)]
+[character(name="avg_npc_524_1$1")]
+[name="酒吧客人"]天哪！天花板快塌了，快、快走！
+[dialog]
+[playsound(key="$rungeneral")]
+[character(fadetime=1.5)]
+[delay(time=2)] 
+[Character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]博士！你没事吧？
+[dialog]
+[Character(name="avg_npc_521_1#1$1",focus=-1)]
+[Decision(options="我没事。;这位线人先生问题比较大。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="Mechanist，去帮塞雷娅。", values="1")]
+[dialog]
+[character]
+[Predicate(references="1")]
+[PlaySound(key="$swordtsing4", volume=1)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Delay(time=0.51)]
+[Dialog]
+[Character(name="char_empty", name2="char_empty")]
+[characteraction(name="right", type="move", xpos=50, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[PlaySound(key="$fightgeneral", volume=1)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[characteraction(name="right", type="move", xpos=100, fadetime=0.5, block=false)]
+[Character(name="char_empty", name2="avg_npc_536_1#2$1",fadetime=0.5)]
+[delay(time=0.51)]
+[Dialog]
+[Character(name="char_empty", name2="avg_npc_536_1#2$1")]
+[characteraction(name="left", type="move", xpos=-200, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="left", type="move", xpos=200, fadetime=0.5, block=false)]
+[Character(name="avg_npc_532_1#8$1", name2="avg_npc_536_1#2$1",fadetime=0.5)]
+[delay(time=0.51)]
+[Character(name="avg_npc_532_1#8$1", name2="avg_npc_536_1#2$1",focus=2)]
+[name="霍尔海雅"]这么急着结束战斗啊......
+[name="霍尔海雅"]你难道不想让我多陪你一会吗？
+[name="霍尔海雅"]在哥伦比亚，能扛下你一击的人不多吧？
+[Character(name="avg_npc_532_1#8$1", name2="avg_npc_536_1#2$1",focus=1)]
+[name="塞雷娅"]以你的身手，没几个人付得起这笔佣金。
+[name="塞雷娅"]此事与沃尔沃特科钦斯基关系不大，你的战斗方式也并不是军队训练出来的。
+[name="塞雷娅"]你急于让银色试剂的线索中断。
+[name="塞雷娅"]那么，你的雇主是斐尔迪南，还是......
+[Character(name="avg_npc_532_1#8$1", name2="avg_npc_536_1#2$1",focus=2)]
+[name="霍尔海雅"]......总辖？
+[name="霍尔海雅"]塞雷娅，哪怕到了这个地步，你第一个怀疑的对象也依然不是她吗？
+[Dialog]
+[Character(name="avg_npc_532_1#8$1", name2="avg_npc_536_1#2$1")]
+[PlaySound(key="$swordtsing6", volume=0.6)]
+[characteraction(name="left", type="jump", xpos=100, power=0, times=1, fadetime=0.4, block=true)]
+[characteraction(name="right", type="move", xpos=-150,ypos=0,power=60,times=1, fadetime=0.4,block=true)]
+[CameraShake(duration=1, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=0.51)]
+[PlaySound(key="$swordtsing4")] 
+[characteraction(name="left", type="move", xpos=-160, power=60, times=1, fadetime=0.4, block=true)]
+[characteraction(name="right", type="move", xpos=100,ypos=0,power=60,times=1, fadetime=0.4,block=true)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[delay(time=1.1)]
+[Character(name="avg_npc_532_1#8$1", name2="avg_npc_536_1#2$1",focus=1)]
+[name="塞雷娅"]你有太多问题。我必须把你留下。
+[Character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]塞雷娅！
+[dialog]
+[character]
+塞雷娅看清楚了自己同僚所在的位置。敌人的后路已被封锁。
+并不需要更多交流，她不假思索地施放了源石技艺。
+珐琅质的坚壁瞬间显现，手刀直指霍尔海雅的要害。
+[dialog]
+[PlaySound(key="$e_atk_circleatk_h")] 
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[delay(time=2.5)]
+[Character(name="avg_npc_536_1#3$1")]
+[name="霍尔海雅"]看来谈话该结束了。
+[Character(name="avg_npc_532_1#8$1")]
+[name="塞雷娅"]你不躲？
+[Character(name="avg_npc_536_1#3$1")]
+[name="霍尔海雅"]没这个必要。我从来不做成功率太低的事。
+[dialog]
+[Character]
+塞雷娅的五指本该触碰到对面之人的腹部。
+奇怪的是，那并非人类血肉的触感。
+霍尔海雅的脸上丝毫没有疼痛的痕迹。
+她甚至凑得更近，嘴唇几乎触碰到了塞雷娅的耳廓。
+[Character(name="avg_npc_536_1#3$1")]
+[name="霍尔海雅"]塞雷娅，不管你信不信，我真的只是想找你聊聊。
+[name="霍尔海雅"]我对你很好奇......我对莱茵生命很好奇。
+[Character(name="avg_npc_532_1#8$1")]
+[name="塞雷娅"]你的到来伤害了我的同伴。这种行为通常不能被称作搭讪。
+[Character(name="avg_npc_536_1#2$1")]
+[name="霍尔海雅"]呵呵......谁让我也有必须完成的工作呢？
+[name="霍尔海雅"]最后送你一句话吧。
+[Character(name="avg_npc_536_1#3$1")]
+[name="霍尔海雅"]不要急着与我为敌......
+[name="霍尔海雅"]不要急着与任何人为敌。
+[dialog]
+[stopmusic(fadetime=1)]
+[characteraction(name="middle", type="jump", xpos=400, power=50, times=1, fadetime=1.5)]
+[character(fadetime=1.5)]
+[delay(time=2)] 
+[character(name="avg_npc_532_1#8$1")]
+[name="塞雷娅"]......
+[Character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]她跳了出去？这墙上......怎么会有一个洞？
+[character(name="avg_npc_532_1#3$1")]
+[name="塞雷娅"]是我干的。
+[Character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]她的源石技艺误导了你？
+[character(name="avg_npc_532_1#1$1")]
+[name="塞雷娅"]不是源石技艺，是某项技术。
+[name="塞雷娅"]她改变了附近一定区域内的空气成分构成，干扰了我和我的源石技艺造物的联系，导致我的最后一击偏离了方向。
+[name="塞雷娅"]这项技术......我之前从未见过。
+[dialog]
+[Character(name="avg_npc_532_1#1$1",focus=-1)]
+[Decision(options="缪尔赛思......;她会不会也能切断施术者和水分子的联系？", values="1;2")]
+[Predicate(references="1")]
+[Character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]缪尔赛思的失踪很有可能与她有关。
+[Predicate(references="2")]
+[Character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]说不定。
+[name="Mechanist"]我也想过，定向加热空气不是什么高端的技术，不至于能控制住缪尔赛思。
+[Predicate(references="1;2")]
+[character(name="avg_npc_532_1#1$1")]
+[name="塞雷娅"]博士，我建议我们立刻追击。
+[name="塞雷娅"]不论从她掌握的情报来看，还是从她使用的离奇技术来看——
+[name="塞雷娅"]这位黎博利女士都极端危险。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="29_g2_edgeofbase",screenadapt="showall")]
+[Delay(time=1)]
+[PlayMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]警长，您这是要去哪里？
+[character(name="avg_npc_527_1#1$1")]
+[name="玛丽"]我不知道我还需要跟你报备。
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]记录显示，您取走了一辆载具的钥匙......
+[character(name="avg_npc_527_1#1$1")]
+[name="玛丽"]哦，借用一下你们莱茵的资产。
+[name="玛丽"]你乐意的话，帮我跟那个什么混蛋主任报备下。
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]......警长。
+[character(name="avg_npc_527_1#1$1")]
+[name="玛丽"]还有什么话要说？麻烦快一点，我赶时间。
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]玛丽·班纳女士，您从小就在特里蒙北郊的铁驮镇上生活。桑尼·罗马诺是您的邻居兼中学时的同窗好友。
+[character(name="avg_npc_527_1#1$1")]
+[name="玛丽"]你调查我？
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]四年前，罗马诺被登记为感染者，结束了在律所的实习工作，返回铁驮镇。他的医疗保险费用在六个月后停缴。
+[name="莱茵防卫科成员"]可是直到又过去三个月零十七天后，他的名字才出现在了这支拓荒队的名单上。
+[name="莱茵防卫科成员"]中间这段时间，他究竟躲在哪里？
+[character(name="avg_npc_527_1#1$1")]
+[name="玛丽"]我怎么知道？
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]预防问题发生也是我们防卫科工作的一部分。
+[character(name="avg_npc_527_1#1$1")]
+[name="玛丽"]......小子，别以为你背一段资料就能吓到我。
+[character(name="avg_npc_527_1#5$1")]
+[name="玛丽"]我花了五年时间才爬到这个位置上，你当我不知道怎么跟你们这帮大公司养的虫子打交道？
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]咳咳——女士，我从来没有质疑过您的能力。
+[character(name="avg_npc_527_1#1$1")]
+[name="玛丽"]那就别逼我把你丢到荒地上喂牙兽。
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]......警长，也许您不相信我，可我只是想提醒您。
+[name="莱茵防卫科成员"]您......您偶尔会让我想起我曾经的上司。我很尊敬她，但她被私人情感影响，亲手毁掉了自己的前途。
+[name="莱茵防卫科成员"]我不忍心看到您走上一样的路。
+[character(name="avg_npc_527_1#1$1")]
+[name="玛丽"]呵......私人情感？
+[name="玛丽"]就算这玩意儿能救人......
+[name="玛丽"]......也救不了自寻死路的那一个。
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]......
+[Dialog]
+[character(name="avg_npc_527_1#1$1")]
+[playsound(key="$motorbikestart")]
+[character(fadetime=1.5)]
+[delay(time=3.5)] 
+[character(name="avg_npc_528_1#1$1")]
+[name="莱茵防卫科成员"]紧急通讯——
+[name="莱茵防卫科成员"]联系斐尔迪南主任。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="29_g4_corridor",screenadapt="showall")]
+[Delay(time=1)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[character(name="avg_135_halo_1#8$1")]
+[name="埃琳娜"]......第十七次记录，坐标，九区走廊。
+[name="埃琳娜"]对象位置距离上次记录没有发生变化......
+[name="埃琳娜"]嗯......基础粒子结构稳定。
+[dialog]
+[Delay(time=1.5)]
+[character(name="avg_135_halo_1#3$1")]
+[name="埃琳娜"]——
+[name="埃琳娜"]还是没信号，什么消息都发不出去。
+[character(name="avg_135_halo_1#9$1")]
+[name="埃琳娜"]（进度不能耽搁，得尽快修改方案......）
+[name="埃琳娜"]（等通讯一恢复，得让老板收到这些报告。）
+[dialog]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_108_silent_1#1$1",fadetime=1.5)]
+[delay(time=2.5)]
+[name="赫默"]......埃琳娜？
+[characteraction(name="middle", type="jump" , power=5, times=2, fadetime=0.51,block=true)]
+[character(name="avg_135_halo_1#7$1")]
+[name="埃琳娜"]咳......咳咳咳。
+[character(name="avg_108_silent_1#10$1")]
+[name="赫默"]你在这里干什么？
+[character(name="avg_135_halo_1#3$1")]
+[name="埃琳娜"]我......我走两步喘口气。
+[character(name="avg_108_silent_1#6$1")]
+[name="赫默"]我明白你对拓荒者心有芥蒂......但我们最好还是待在一起。
+[name="赫默"]上一次袭击发生在十分钟前，距离这里很近。
+[name="赫默"]它们再次出现的话，你一个人会很危险。
+[character(name="avg_135_halo_1#10$1")]
+[name="埃琳娜"]好啊，我这就回去。
+[character(name="avg_108_silent_1#6$1")]
+[name="赫默"]等等。
+[character(name="avg_108_silent_1#10$1")]
+[name="赫默"]在回去之前，你......你真的没有什么想对我说的话吗？
+[character(name="avg_135_halo_1#8$1")]
+[name="埃琳娜"]我不懂你在说什么。
+[character(name="avg_108_silent_1#6$1")]
+[name="赫默"]拓荒者们的情绪并不稳定。要是再次激怒他们，乔伊丝会有危险。
+[name="赫默"]所以，我理解你并不想在他们面前说出真相。
+[name="赫默"]但这里只有我和你。
+[character(name="avg_135_halo_1#8$1")]
+[name="埃琳娜"]你是想问实验的事吗？
+[name="埃琳娜"]你不是项目成员，除非你向公司提出申请......
+[character(name="avg_108_silent_1#10$1")]
+[name="赫默"]别再用这样的说辞搪塞我了。
+[character(name="avg_135_halo_1#8$1")]
+[name="埃琳娜"]......
+[character(name="avg_108_silent_1#6$1")]
+[name="赫默"]我知道你跟我隐瞒了很多事。
+[name="赫默"]我并不生气。我们是朋友，也是同事。莱茵生命的保密规定一向严格，规则之外，每个人也习惯于隐藏自己的真实想法。
+[character(name="avg_135_halo_1#3$1")]
+[name="埃琳娜"]奥利维亚，我不是......
+[character(name="avg_108_silent_1#6$1")]
+[name="赫默"]你不是故意的。
+[name="赫默"]我知道。我怎么可能不知道？
+[name="赫默"]公司里的感染者并不多。那时候你刚来，午休的时候你主动跟我打招呼......能量科的同事拉住你，偷偷告诉你我是感染者。
+[name="赫默"]你还是向我走了过来。
+[character(name="avg_135_halo_1#6$1")]
+[name="埃琳娜"]我才不在意你身上那些石头，谁还没点毛病？说你闲话的人，他们就都完美无缺了吗？
+[name="埃琳娜"]就算后来......我也不在意我自己身上的石头！
+[character(name="avg_108_silent_1#2$1")]
+[name="赫默"]是啊，这才是我认识的埃琳娜·乌比卡。
+[character(name="avg_135_halo_1#3$1")]
+[name="埃琳娜"]我......
+[character(name="avg_108_silent_1#7$1")]
+[name="赫默"]你很清楚，这里的实验出现了问题。
+[name="赫默"]打从一开始，你就知道那些银色物体是什么。
+[character(name="avg_108_silent_1#4$1")]
+[name="赫默"]它们在威胁我们......和外面所有无辜者的生命。
+[character(name="avg_108_silent_1#7$1")]
+[name="赫默"]我认识的埃琳娜，绝对不会坐视这么可怕的事情发生。
+[character(name="avg_108_silent_1#4$1")]
+[name="赫默"]是什么让你选择闭口不言？
+[name="赫默"]是不是斐尔迪南......
+[character(name="avg_135_halo_1#8$1")]
+[name="埃琳娜"]......奥利维亚，这是我的工作。
+[name="埃琳娜"]就跟海伦，还有无数为莱茵生命工作的研究员一样......我的梦想就在这里。
+[character(name="avg_135_halo_1#3$1")]
+[name="埃琳娜"]你说过，你也曾经感激过帕尔维斯主任和莱茵生命。而我......
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[musicvolume(volume=0.2, fadetime=1)]
+[Delay(time=2)]
+[Background(image="bg_hotel",screenadapt="showall")]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+[Subtitle(text="背出那张星象图。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="不要给我看你的物理测验成绩。满分？和零分一样，都没有意义。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="你是乌比卡家的女儿。学习这些无用的大地上的知识，只会辱没你的姓氏。", x=300, y=370, alignment="center", size=24, delay=0.04, width=800)]
+[Subtitle(text="星源，我对你太失望了。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=2)]
+[Background(image="29_g9_headquarter",screenadapt="showall")]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=true)]
+[Subtitle(text="......这就是你努力了一个多月的成果？", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="......", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="我不否认你有天赋，但在哥伦比亚的科研界，天赋人人都有，是最没有价值的东西。", x=300, y=370, alignment="left", size=24, delay=0.04, width=800)]
+[Subtitle(text="你有决心，可未经考验的决心可能很脆弱。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="你很勤奋，可没有方向的勤奋等同于莽撞。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="这个时代正等着你来改变，你浪费的每一个机会，对你自己以及你身处的这个时代而言都是潜在的巨大损失。", x=300, y=370, alignment="left", size=24, delay=0.04, width=800)]
+[Subtitle(text="埃琳娜，我在成千上万的学生中挑选了你，这最好不是一个错误。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[CameraEffect(effect="Grayscale", fadetime=0, amount=0, block=true)]
+[Background(image="29_g4_corridor",screenadapt="showall")]
+[character(name="avg_135_halo_1#3$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[musicvolume(volume=0.7, fadetime=1)]
+[Delay(time=1)]
+[character(name="avg_135_halo_1#9$1")]
+[name="埃琳娜"]......斐尔迪南是我努力的目标。
+[character(name="avg_108_silent_1#10$1")]
+[name="赫默"]他许诺了你什么？帮弗兰克斯主任做完这个实验，就让你单独带项目？还是......
+[character(name="avg_135_halo_1#9$1")]
+[name="埃琳娜"]奥利维亚，你和姐姐一样，还当我是眼巴巴等着糖果的小孩子吗？
+[character(name="avg_135_halo_1#6$1")]
+[name="埃琳娜"]我知道你对斐尔迪南......对主任有很多误解，你这几年做的那些针对他的调查已经给他添了不少麻烦......
+[character(name="avg_135_halo_1#9$1")]
+[name="埃琳娜"]算了，我用不着替他解释。
+[name="埃琳娜"]可是，他原本可以拒绝你和罗德岛介入。
+[name="埃琳娜"]他也想改变莱茵生命，改变哥伦比亚......而且我相信只要有机会，他真的能做到。
+[character(name="avg_108_silent_1#5$1")]
+[name="赫默"]你......这么相信斐尔迪南？
+[character(name="avg_108_silent_1#10$1")]
+[name="赫默"]你知不知道莱茵......
+[dialog]
+[stopmusic]
+[PlaySound(key="$bodyfalldown1")]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true)]
+[delay(time=1.3)]
+[character(name="avg_108_silent_1#4$1")]
+[name="赫默"]谁在那里......？
+[character(name="avg_135_halo_1#6$1")]
+[name="埃琳娜"]是不是那些东西又追上来了？！
+[Dialog]
+[character]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_npc_534_1#1$1",fadetime=1.5)]
+[delay(time=2.5)]
+[PlayMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.7)]
+[character(name="avg_108_silent_1#5$1")]
+[name="赫默"]是拓荒队的人！
+[character(name="avg_npc_534_1#1$1")]
+[name="拓荒队成员"]别过来！
+[name="拓荒队成员"]原来......原来领队说的都是对的，你、你们的确是把我们当成实验用兽......
+[character(name="avg_135_halo_1#3$1")]
+[name="赫默"]你可能理解错了......
+[character(name="avg_npc_534_1#1$1")]
+[name="拓荒队成员"]你还想哄骗我们吗？
+[name="拓荒队成员"]我......我不会再相信了！你们对我们好，都是假的！
+[character(name="avg_108_silent_1#6$1")]
+[name="赫默"]请冷静一些，嗯......你叫迈尔对吧？
+[name="赫默"]迈尔先生，你不信任我们的话，桑尼就在旁边，你让他来解释一下。
+[character(name="avg_npc_534_1#1$1")]
+[name="拓荒队成员"]我不想......我不想死在这里......
+[name="拓荒队成员"]这该死的......该死的走廊！根本走不到尽头......就和感染者收治区的高墙一样让我喘不过气。
+[name="拓荒队成员"]放过我吧，让我们离开......求你了，我求你了！
+[name="拓荒队成员"]要是你不答应，我、我就杀了她！
+[character(name="avg_128_plosis_1#8$1")]
+[name="白面鸮"]......
+[character(name="avg_108_silent_1#5$1")]
+[name="赫默"]乔伊丝！
+[character(name="avg_135_halo_1#7$1")]
+[name="埃琳娜"]怎么会......怎么会这样？
+[character(name="avg_135_halo_1#6$1")]
+[name="埃琳娜"]不，放开乔伊丝......不要伤害她！
+[dialog]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="29_g7_mainstreet_n",screenadapt="showall")]
+[Delay(time=1)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",fadetime=1.5)]
+[delay(time=2.5)]
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=2)]
+[name="Mechanist"]从地面痕迹来看，她刚走过了这里。
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=1)]
+[name="塞雷娅"]能分辨她离去的方向吗？
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=2)]
+[name="Mechanist"]前面那条巷子。
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=1)]
+[name="塞雷娅"]继续追。
+[dialog]
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=-1)]
+[Decision(options="等一下。;还有几个疑点没有厘清。", values="1;2")]
+[Predicate(references="1;2")]
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=1)]
+[name="塞雷娅"]博士，你有什么新发现？
+[dialog]
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=-1)]
+[Decision(options="刚才那场战斗，我们赢了吗？", values="1")]
+[Predicate(references="1")]
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=1)]
+[name="塞雷娅"]我并不计较任意一场战斗的输赢。
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=2)]
+[name="Mechanist"]......我明白博士的意思。
+[name="Mechanist"]那个黎博利赢不了我们，但也不至于输得那么快。
+[name="Mechanist"]她至少还能再坚持个三分钟左右。
+[dialog]
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=-1)]
+[Decision(options="又或者，她可以在Mechanist赶来之前撤走。", values="1")]
+[Predicate(references="1")]
+[Decision(options="她像是故意等Mechanist和我赶到。;她像是故意留下什么信息。", values="1;2")]
+[Predicate(references="1;2")]
+[character(name="avg_npc_532_1#8$1",name2="avg_npc_521_1#1$1",focus=1)]
+[name="塞雷娅"]她想引我们进这条巷子。
+[character(name="avg_npc_532_1#8$1",name2="avg_npc_521_1#1$1",focus=2)]
+[name="Mechanist"]那我们还要进去吗？
+[dialog]
+[character(name="avg_npc_532_1#8$1",name2="avg_npc_521_1#1$1",focus=-1)]
+[Decision(options="进。", values="1")]
+[dialog]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="29_g8_alley_n",screenadapt="showall")]
+[Delay(time=1)]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[Character(name="avg_npc_399_1#1$1")]
+[name="哥伦比亚雇佣兵"]女士，我们都准备好了。
+[Character(name="avg_npc_536_1#1$1")]
+[name="霍尔海雅"]好。
+[Character(name="avg_npc_399_1#1$1")]
+[name="哥伦比亚雇佣兵"]他们很快就会追上来吧？
+[Character(name="avg_npc_536_1#3$1")]
+[name="霍尔海雅"]以塞雷娅的性格，就算猜到了我想引她来这里，她也一定会来。
+[Character(name="avg_npc_399_1#1$1")]
+[name="哥伦比亚雇佣兵"]我还是有点担心......那个，动力甲......
+[name="哥伦比亚雇佣兵"]真的不用经过斐尔迪南先生同意吗？
+[Character(name="avg_npc_536_1#10$1")]
+[name="霍尔海雅"]这么说，你想考虑一下我更早的提议？
+[Character(name="avg_npc_399_1#1$1")]
+[name="哥伦比亚雇佣兵"]您是说把我......不不，我什么都没说。
+[Character(name="avg_npc_536_1#3$1")]
+[name="霍尔海雅"]这是一场测试。
+[name="霍尔海雅"]我们的雇主会乐于见到结果。
+[Character(name="avg_npc_399_1#1$1")]
+[name="哥伦比亚雇佣兵"]女士，我听到脚步声了！
+[Character(name="avg_npc_536_1#1$1")]
+[name="霍尔海雅"]通知领航小队，开始行动。
+[Character(name="avg_npc_399_1#1$1")]
+[name="哥伦比亚雇佣兵"]我们呢？
+[Character(name="avg_npc_536_1#1$1")]
+[name="霍尔海雅"]撤。
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Image]
