@@ -8860,6 +8860,61 @@
           ]
         }
       ]
+    },
+    "char_4019_ncdeer": {
+      "charId": "char_4019_ncdeer",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_bonus1[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_bonus2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4025_aprot2": {
+      "charId": "char_4025_aprot2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession3[130]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
     }
   },
   "buffs": {
@@ -10627,6 +10682,30 @@
       "roomType": "WORKSHOP",
       "description": "가공소에 배치 후 <@cc.kw>임의류 재료</> 가공 시, 부산물 산출 확률 <@cc.vup>70%</>"
     },
+    "workshop_formula_bonus1[000]": {
+      "buffId": "workshop_formula_bonus1[000]",
+      "buffName": "인과",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_bonus1",
+      "sortId": 7601,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 시, <$cc.w.ncdeer1><@cc.rem>인과</></>가 <@cc.kw>40</> 누적될 경우 부산물 1회 확정 산출"
+    },
+    "workshop_formula_bonus2[000]": {
+      "buffId": "workshop_formula_bonus2[000]",
+      "buffName": "업보",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_bonus2",
+      "sortId": 7601,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 시, <$cc.w.ncdeer2><@cc.rem>업보</></>가 <@cc.kw>80</> 누적될 경우 부산물 1회 확정 산출"
+    },
     "workshop_formula_cost[000]": {
       "buffId": "workshop_formula_cost[000]",
       "buffName": "드래곤플라이 드론",
@@ -11574,6 +11653,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, <@cc.kw>스페셜리스트</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+60%</>"
+    },
+    "train_spd&profession3[130]": {
+      "buffId": "train_spd&profession3[130]",
+      "buffName": "실전 기술: 아츠 프로텍터",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_artsprotector",
+      "sortId": 9691,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>디펜더</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 만약 훈련 대상의 오퍼레이터 세부분류가 <@cc.kw>아츠 프로텍터</>일 경우, 훈련 속도가 추가로 <@cc.vup>+45%</>"
     },
     "train_spd&profession2[120]": {
       "buffId": "train_spd&profession2[120]",
@@ -12764,7 +12855,12 @@
       "description": "응접실에 배치 시, 단서 수집 속도 <@cc.vup>25%</> 상승"
     }
   },
-  "workshopBonus": {},
+  "workshopBonus": {
+    "char_4019_ncdeer": [
+      "ws_bonus1_40",
+      "ws_bonus2_80"
+    ]
+  },
   "customData": {
     "furnitures": {
       "furni_warehouse_storageshelf_01": {
@@ -35416,6 +35512,528 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_castle_partition_01": {
+        "id": "furni_castle_partition_01",
+        "sortId": 837,
+        "name": "낡은 난간",
+        "iconId": "furni_castle_partition_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_2",
+        "width": 7,
+        "depth": 1,
+        "height": 10,
+        "comfort": 255,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "날카로운 난간의 절단면은 많은 이야기를 품고 있다. 일찍이 평원 위에 서 있는 주인 없는 성을 노린 자는 많았으나, 그들이 처음이자 마지막으로 한 일이라곤 그저 고성 바깥쪽 울타리를 부순 것이 전부였다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_candlestick_01": {
+        "id": "furni_castle_candlestick_01",
+        "sortId": 838,
+        "name": "기둥 촛대",
+        "iconId": "furni_castle_candlestick_01",
+        "type": "DECORATION",
+        "subType": "WARM",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_2",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 190,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "부서진 기둥에 초를 꽂으면 이상적인 촛대가 된다. 넝쿨이 기둥을 휘감았고, 촛불은 색다른 느낌을 보인다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_jug_01": {
+        "id": "furni_castle_jug_01",
+        "sortId": 839,
+        "name": "부지깽이 항아리",
+        "iconId": "furni_castle_jug_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_2",
+        "width": 3,
+        "depth": 4,
+        "height": 3,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "항아리 속에서 뭔가 부딪치는 소리가 들리지만, 막상 들여다보면 아무 일도 없다. 벽난로의 불길은 늘 갑작스레 솟아오르니, 아무래도 이 쓸모없는 부지깽이는 다른 용도를 찾아봐야 할 것 같다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_fountainStand_01": {
+        "id": "furni_castle_fountainStand_01",
+        "sortId": 840,
+        "name": "생기 넘치는 분수",
+        "iconId": "furni_castle_fountainStand_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "액체가 끊임없이 솟아 나오지만 넘쳐난 적은 없다. 애초에 저건 물이 아니라 달콤한 향이 깃든 수액으로, 한 모금 마시기만 한다면…… 어라, 내가 방금 뭘 하려 했더라?",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_fireplace_01": {
+        "id": "furni_castle_fireplace_01",
+        "sortId": 841,
+        "name": "고풍스러운 벽난로",
+        "iconId": "furni_castle_fireplace_01",
+        "type": "DECORATION",
+        "subType": "WARM",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_2",
+        "width": 2,
+        "depth": 4,
+        "height": 5,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "스스로 타오르고, 스스로 꺼진다. 마치 초 단위로 정확하게 자신을 관리하는 충실한 집사와도 같은 모습으로, 절대 불똥이 벽난로 밖으로 튀는 걸 용납하지 않는다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_curtain_01": {
+        "id": "furni_castle_curtain_01",
+        "sortId": 842,
+        "name": "선홍빛 커튼",
+        "iconId": "furni_castle_curtain_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 4,
+        "depth": 1,
+        "height": 10,
+        "comfort": 115,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "걸쇠와 가죽끈으로 단단히 묶인 커튼. 대체 무얼 걱정하고 있는 걸까? 극단에서 옮겨온 이 선홍빛 천이 내려올 일은 오직 하나, 폐막뿐이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_carpet_01": {
+        "id": "furni_castle_carpet_01",
+        "sortId": 843,
+        "name": "손상된 카펫",
+        "iconId": "furni_castle_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 34,
+        "depth": 6,
+        "height": 1,
+        "comfort": 210,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "두 곳에 난 스크래치는 이 카펫을 세상에 단 하나뿐인 예술 작품으로 만들었다. 하나는 원석충이 새긴 것이고, 다른 하나는 필라인이 새긴 것이다. 이 빨간색 카펫 때문에 그들의 운명은 서로 얽히게 되었다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_ceilingLight_01": {
+        "id": "furni_castle_ceilingLight_01",
+        "sortId": 844,
+        "name": "프리즌 펜던트 조명",
+        "iconId": "furni_castle_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 6,
+        "depth": 3,
+        "height": 5,
+        "comfort": 145,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "찬란한 금빛 아래 모든 양초가 철창 안에서 전부 타버렸다. 이튿날 밤, 원래라면 꺼졌을 양초는 처음 모습 그대로였고, 불꽃은 약속이라도 한 듯 계속해서 자신의 사냥감을 불태운다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_chair_01": {
+        "id": "furni_castle_chair_01",
+        "sortId": 845,
+        "name": "가울식 귀족 의자",
+        "iconId": "furni_castle_chair_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 185,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "글을 쓰지 않고 노래를 부르지 않으면 이 의자에 앉을 자격이 없다. 처음 앉을 때는 편안하지만, 오래 앉아 있다 보면 오히려 그 편안함이 조롱으로 느껴진다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_bayWindow_01": {
+        "id": "furni_castle_bayWindow_01",
+        "sortId": 846,
+        "name": "창가의 돌침상",
+        "iconId": "furni_castle_bayWindow_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 10,
+        "depth": 4,
+        "height": 4,
+        "comfort": 395,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "그 어떤 귀한 천도 돌의 단단함과 차가움을 덮어주지 못한다. 어쩌면 잠이야말로 괴로움일지도 모르니, 깨어나라. 그리고 미친 듯이 즐겨라.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_table_01": {
+        "id": "furni_castle_table_01",
+        "sortId": 847,
+        "name": "금무늬 원목 테이블",
+        "iconId": "furni_castle_table_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 5,
+        "depth": 4,
+        "height": 5,
+        "comfort": 260,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "글을 쓰거나 기록하고 보관하는 데 사용한다. 각본, 공문서, 악보, 단지 다른 내용을 적는 것만으로 종이는 더욱더 깊은 의미를 부여받는다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_column_01": {
+        "id": "furni_castle_column_01",
+        "sortId": 848,
+        "name": "넝쿨이 휘감긴 돌기둥",
+        "iconId": "furni_castle_column_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 3,
+        "depth": 3,
+        "height": 10,
+        "comfort": 230,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "돌기둥을 단단히 휘감은 넝쿨은 오랫동안 떨어지려 하지 않는다. 애정 때문이 아니라, 이 죽어가는 생물은 단지 품속 사냥감의 생을 끊어버리고 싶기 때문이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_castle_longBench_01": {
+        "id": "furni_castle_longBench_01",
+        "sortId": 849,
+        "name": "고성의 낮은 걸상",
+        "iconId": "furni_castle_longBench_01",
+        "type": "SEATING",
+        "subType": "BENCH",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_3",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "잠자리에 들기 전에, 그리고 꿈에서 깨어난 후에 딛는 발판. 이것은 존재 자체가 거추장스럽고, 이것의 존재는 인간 세상에 갈등을 빚는다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_bed_01": {
+        "id": "furni_castle_bed_01",
+        "sortId": 850,
+        "name": "귀족 침대",
+        "iconId": "furni_castle_bed_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_3",
+        "width": 8,
+        "depth": 4,
+        "height": 8,
+        "comfort": 460,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "잘자? 응, 잘자! 침대는 대피소가 아니다. 악몽을 꾸게 되면, 아무리 푹신한 침대라도 이성을 앗아가는 마지막 지푸라기가 될 수 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_floorlamp_01": {
+        "id": "furni_castle_floorlamp_01",
+        "sortId": 851,
+        "name": "삼지창 촛대",
+        "iconId": "furni_castle_floorlamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 125,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "불꽃이 타오르면 양초는 천천히 눈물을 흘린다. 마지막 순간까지 타버린 후, 자신은 사라지고 눈물 자국만이 남는다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_mirror_01": {
+        "id": "furni_castle_mirror_01",
+        "sortId": 852,
+        "name": "부서진 전신 거울",
+        "iconId": "furni_castle_mirror_01",
+        "type": "DECORATION",
+        "subType": "DRESSING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_3",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 140,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "깨진 거울 사이로 자신의 진짜 모습을 엿볼 수 있다. 세간에 알려진 거울의 저주는 거울의 완전한 모습에서 시작되지만, 이미 깨진 거울이라면 아마 다른 사람을 해칠 수 없을지도 모른다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_wallpaper_01": {
+        "id": "furni_castle_wallpaper_01",
+        "sortId": 853,
+        "name": "얼룩덜룩한 벽면",
+        "iconId": "furni_castle_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "시간은 피조물에 흔적을 남기지만, 창밖의 숲은 예전 모습 그대로다. 변치 않는 자연은 지루하고, 허름한 고성만이 그의 취향이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_floor_01": {
+        "id": "furni_castle_floor_01",
+        "sortId": 854,
+        "name": "고성 바닥 타일",
+        "iconId": "furni_castle_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "그것은 목격했었고, 목격하고 있으며, 목격할 것이다. 당신이 그것을 밟고 지나간 순간, 그것은 당신의 모든 것을 목격한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "sortId": 855,
@@ -46960,6 +47578,155 @@
           "furni_stage_wallpaper_01",
           "furni_stage_floor_01"
         ]
+      },
+      "furni_set_castle": {
+        "id": "furni_set_castle",
+        "sortId": 48,
+        "name": "'캐슬 임프레션'",
+        "themeType": "EVENT",
+        "desc": "오퍼레이터들이 수집한 자료에 기반하여 만든 캐슬 임프레션의 룸. 불길한 기운이 가득 차 있다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_castle_partition_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_candlestick_01",
+            "pos0": 2,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_jug_01",
+            "pos0": 2,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_fountainStand_01",
+            "pos0": 9,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_fireplace_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_curtain_01",
+            "pos0": 5,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_carpet_01",
+            "pos0": 0,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_ceilingLight_01",
+            "pos0": 14,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_chair_01",
+            "pos0": 13,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_bayWindow_01",
+            "pos0": 12,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_table_01",
+            "pos0": 17,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_column_01",
+            "pos0": 9,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_column_01",
+            "pos0": 22,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_longBench_01",
+            "pos0": 25,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_bed_01",
+            "pos0": 25,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_floorlamp_01",
+            "pos0": 30,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_mirror_01",
+            "pos0": 32,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_castle_1",
+          "furni_set_castle_2",
+          "furni_set_castle_3",
+          "furni_set_castle_4"
+        ],
+        "furnitures": [
+          "furni_castle_partition_01",
+          "furni_castle_candlestick_01",
+          "furni_castle_jug_01",
+          "furni_castle_fountainStand_01",
+          "furni_castle_fireplace_01",
+          "furni_castle_curtain_01",
+          "furni_castle_carpet_01",
+          "furni_castle_ceilingLight_01",
+          "furni_castle_chair_01",
+          "furni_castle_bayWindow_01",
+          "furni_castle_table_01",
+          "furni_castle_column_01",
+          "furni_castle_longBench_01",
+          "furni_castle_bed_01",
+          "furni_castle_floorlamp_01",
+          "furni_castle_mirror_01",
+          "furni_castle_wallpaper_01",
+          "furni_castle_floor_01"
+        ]
       }
     },
     "groups": {
@@ -49632,6 +50399,64 @@
           "furni_stage_floor_01",
           "furni_stage_ceilingLamp_01",
           "furni_stage_carpet_01"
+        ]
+      },
+      "furni_set_castle_1": {
+        "id": "furni_set_castle_1",
+        "sortId": 1,
+        "name": "영감의 하인",
+        "themeId": "furni_set_castle",
+        "comfort": 275,
+        "count": 5,
+        "furniture": [
+          "furni_castle_bayWindow_01",
+          "furni_castle_table_01",
+          "furni_castle_chair_01",
+          "furni_castle_ceilingLight_01",
+          "furni_castle_fountainStand_01"
+        ]
+      },
+      "furni_set_castle_2": {
+        "id": "furni_set_castle_2",
+        "sortId": 2,
+        "name": "평범한 장식",
+        "themeId": "furni_set_castle",
+        "comfort": 185,
+        "count": 4,
+        "furniture": [
+          "furni_castle_fireplace_01",
+          "furni_castle_jug_01",
+          "furni_castle_partition_01",
+          "furni_castle_candlestick_01"
+        ]
+      },
+      "furni_set_castle_3": {
+        "id": "furni_set_castle_3",
+        "sortId": 3,
+        "name": "꿈속의 초대",
+        "themeId": "furni_set_castle",
+        "comfort": 205,
+        "count": 4,
+        "furniture": [
+          "furni_castle_bed_01",
+          "furni_castle_longBench_01",
+          "furni_castle_floorlamp_01",
+          "furni_castle_mirror_01"
+        ]
+      },
+      "furni_set_castle_4": {
+        "id": "furni_set_castle_4",
+        "sortId": 4,
+        "name": "부패한 육신",
+        "themeId": "furni_set_castle",
+        "comfort": 270,
+        "count": 5,
+        "furniture": [
+          "furni_castle_wallpaper_01",
+          "furni_castle_floor_01",
+          "furni_castle_curtain_01",
+          "furni_castle_column_01",
+          "furni_castle_carpet_01"
         ]
       }
     },
