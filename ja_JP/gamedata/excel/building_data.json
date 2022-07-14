@@ -8860,6 +8860,61 @@
           ]
         }
       ]
+    },
+    "char_4019_ncdeer": {
+      "charId": "char_4019_ncdeer",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_bonus1[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_bonus2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4025_aprot2": {
+      "charId": "char_4025_aprot2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession[030]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession3[130]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
     }
   },
   "buffs": {
@@ -10627,6 +10682,30 @@
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>任意の素材</>を加工時、副産物の入手確率<@cc.vup>+70%</>"
     },
+    "workshop_formula_bonus1[000]": {
+      "buffId": "workshop_formula_bonus1[000]",
+      "buffName": "因果",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_bonus1",
+      "sortId": 7601,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所に配置時、<$cc.w.ncdeer1><@cc.rem>因果</></>の累積値が<@cc.kw>40</>に達する時必ず副産物を1回獲得する"
+    },
+    "workshop_formula_bonus2[000]": {
+      "buffId": "workshop_formula_bonus2[000]",
+      "buffName": "応報",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_bonus2",
+      "sortId": 7601,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所に配置時、<$cc.w.ncdeer2><@cc.rem>応報</></>の累積値が<@cc.kw>80</>に達する時必ず副産物を1回獲得する"
+    },
     "workshop_formula_cost[000]": {
       "buffId": "workshop_formula_cost[000]",
       "buffName": "ドローン・DDF",
@@ -11574,6 +11653,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "訓練室で協力者として配置時、<@cc.kw>特殊</>の訓練速度<@cc.vup>+60%</>"
+    },
+    "train_spd&profession3[130]": {
+      "buffId": "train_spd&profession3[130]",
+      "buffName": "実戦技術：術技衛士",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_artsprotector",
+      "sortId": 9691,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>重装</>の訓練速度<@cc.vup>+30%</>。訓練者の職分が<@cc.kw>術技衛士</>であるとき、訓練速度がさらに<@cc.vup>+45%</>"
     },
     "train_spd&profession2[120]": {
       "buffId": "train_spd&profession2[120]",
@@ -12764,7 +12855,12 @@
       "description": "応接室配置時、手がかり捜索速度<@cc.vup>+25%</>"
     }
   },
-  "workshopBonus": {},
+  "workshopBonus": {
+    "char_4019_ncdeer": [
+      "ws_bonus1_40",
+      "ws_bonus2_80"
+    ]
+  },
   "customData": {
     "furnitures": {
       "furni_warehouse_storageshelf_01": {
@@ -35416,6 +35512,528 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_castle_partition_01": {
+        "id": "furni_castle_partition_01",
+        "sortId": 837,
+        "name": "朽ちた柵",
+        "iconId": "furni_castle_partition_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_2",
+        "width": 7,
+        "depth": 1,
+        "height": 10,
+        "comfort": 255,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "折れた金属の鋭い断面が、多くのことを物語っている。荒野にある無人の城には長い間目をつけていた多くの人々が、最初で最後にしたことは、城の外の柵を破壊することであった。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_candlestick_01": {
+        "id": "furni_castle_candlestick_01",
+        "sortId": 838,
+        "name": "石柱の燭台",
+        "iconId": "furni_castle_candlestick_01",
+        "type": "DECORATION",
+        "subType": "WARM",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_2",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 190,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "折れた石の柱に蝋燭を立てたものが、夢に見ていた燭台である。枯れた蔓がゆっくりと石材に巻きつくと、蝋燭は別の色合いを帯び始める。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_jug_01": {
+        "id": "furni_castle_jug_01",
+        "sortId": 839,
+        "name": "銀の壺",
+        "iconId": "furni_castle_jug_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_2",
+        "width": 3,
+        "depth": 4,
+        "height": 3,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "いつも壺の中から音がして辺りを見渡すが、中を覗いても何も起きていない。暖炉の炎は突然上がるため、火かき棒は全く役に立たないので、新しい使い道を探さなければならない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_fountainStand_01": {
+        "id": "furni_castle_fountainStand_01",
+        "sortId": 840,
+        "name": "生の泉",
+        "iconId": "furni_castle_fountainStand_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "液体が絶えず湧き上がるがあふれはしない。水ではなく、甘い香りのする樹液である。一口飲めば……あ、あれ、今何しようとしてたっけ？",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_fireplace_01": {
+        "id": "furni_castle_fireplace_01",
+        "sortId": 841,
+        "name": "クラシカルな暖炉",
+        "iconId": "furni_castle_fireplace_01",
+        "type": "DECORATION",
+        "subType": "WARM",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_2",
+        "width": 2,
+        "depth": 4,
+        "height": 5,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "自ら灯し、自ら消す。まるで有能な管理人のように、暖炉から火花ひとつ散らないほど精確に制御している。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_curtain_01": {
+        "id": "furni_castle_curtain_01",
+        "sortId": 842,
+        "name": "鮮血の垂れ幕",
+        "iconId": "furni_castle_curtain_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 4,
+        "depth": 1,
+        "height": 10,
+        "comfort": 115,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "金具やベルトできつく束ねられた緞帳。あれらは何を案じているのだろう？劇団から運ばれたこの赤い布が落ちる時に起きることは一つだけ、終わりだ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_carpet_01": {
+        "id": "furni_castle_carpet_01",
+        "sortId": 843,
+        "name": "欠けた絨毯",
+        "iconId": "furni_castle_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 34,
+        "depth": 6,
+        "height": 1,
+        "comfort": 210,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "二筋の傷跡は絨毯を空前絶後の芸術品に変貌させた。一筋はオリジムシに、もう一筋はフェリーンによるものである。この絨毯によって彼らの運命もまた結び付けられたのだ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_ceilingLight_01": {
+        "id": "furni_castle_ceilingLight_01",
+        "sortId": 844,
+        "name": "堅牢なシャンデリア",
+        "iconId": "furni_castle_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 6,
+        "depth": 3,
+        "height": 5,
+        "comfort": 145,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "煌やかな金碧の下、檻の中で蝋燭が一本また一本と燃え尽きようとしていた。だが翌日になっても、燃え尽きているはずの蝋燭は初めと同じ姿で、変わりなく獲物を燃やし続けている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_chair_01": {
+        "id": "furni_castle_chair_01",
+        "sortId": 845,
+        "name": "ガリア式貴族椅子",
+        "iconId": "furni_castle_chair_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 185,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ものを書くことなく、称えるものもないなら、この椅子には相応しくない。初めて座った時には心地よいと思うだろうが、長く腰かけていればその居心地の良さは嘲笑のように感じるだろう。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_bayWindow_01": {
+        "id": "furni_castle_bayWindow_01",
+        "sortId": 846,
+        "name": "窓辺の石ベッド",
+        "iconId": "furni_castle_bayWindow_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 10,
+        "depth": 4,
+        "height": 4,
+        "comfort": 395,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "どれほど高貴な布地であろうと、石の硬さや冷たさは取り除けない。或いは眠りこそが苦痛である。目覚めよ、狂喜せよ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_table_01": {
+        "id": "furni_castle_table_01",
+        "sortId": 847,
+        "name": "金紋の木机",
+        "iconId": "furni_castle_table_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_1",
+        "width": 5,
+        "depth": 4,
+        "height": 5,
+        "comfort": 260,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ものを書くのに使い、記録するのに使い、貯蓄するのに使う。脚本、公文書、楽譜、異なる記号を書き記しただけで、紙にもより深い意義が付与される。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_column_01": {
+        "id": "furni_castle_column_01",
+        "sortId": 848,
+        "name": "藤蔓の石柱",
+        "iconId": "furni_castle_column_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 3,
+        "depth": 3,
+        "height": 10,
+        "comfort": 230,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "枯れた藤がきつく石柱にまとわりつき、決して離れようとはしない。これは情の深い浅いの話ではない、いまにも命を失おうとしているこの生物は、最終的には懐の中の獲物を生きながらにして絞め殺すのである。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_castle_longBench_01": {
+        "id": "furni_castle_longBench_01",
+        "sortId": 849,
+        "name": "古城の椅子",
+        "iconId": "furni_castle_longBench_01",
+        "type": "SEATING",
+        "subType": "BENCH",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_3",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ベッドに入る前の一歩、夢を終わらせた後の一歩。その存在は本質的に重荷であり、その存在は人の世の溝を作り出すものである。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_bed_01": {
+        "id": "furni_castle_bed_01",
+        "sortId": 850,
+        "name": "貴族の寝台",
+        "iconId": "furni_castle_bed_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_3",
+        "width": 8,
+        "depth": 4,
+        "height": 8,
+        "comfort": 460,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "安眠？ああ、安眠。寝床はシェルターではなく、悪夢が降臨すれば、柔らかなベッドでさえも、ほんのわずかに残された理性を根こそぎ刈り取るものになりかねない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_floorlamp_01": {
+        "id": "furni_castle_floorlamp_01",
+        "sortId": 851,
+        "name": "燃え立つ燭台",
+        "iconId": "furni_castle_floorlamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 125,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎が燃え盛るにつれて、蝋燭はゆるゆると涙を流した。最後まで燃え尽きれば、もはや蘇ることはなく、なみなみとした涙の跡だけが残される。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_mirror_01": {
+        "id": "furni_castle_mirror_01",
+        "sortId": 852,
+        "name": "割れた鏡",
+        "iconId": "furni_castle_mirror_01",
+        "type": "DECORATION",
+        "subType": "DRESSING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_3",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 140,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "亀裂から真実の自分を窺う。鏡の呪詛は、その完全性に由来すると噂されている。もしとうの昔にひび割れていたなら、他者に危害を加えることはなかったかもしれない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_wallpaper_01": {
+        "id": "furni_castle_wallpaper_01",
+        "sortId": 853,
+        "name": "古びた壁紙",
+        "iconId": "furni_castle_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "時間はその痕跡を人工物に残すが、窓の外の森林は昔のままだ。不滅の自然にはうんざりさせられる。崩れかけた古城だけが彼の好みに合うのだ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_castle_floor_01": {
+        "id": "furni_castle_floor_01",
+        "sortId": 854,
+        "name": "古城の床",
+        "iconId": "furni_castle_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_castle",
+        "groupId": "furni_set_castle_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "それはすでに見届けた、それはまさに見届けている、それはやがて見届ける。それを踏み越える者がいれば、それがその者のすべてを見届ける。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "sortId": 855,
@@ -46960,6 +47578,155 @@
           "furni_stage_wallpaper_01",
           "furni_stage_floor_01"
         ]
+      },
+      "furni_set_castle": {
+        "id": "furni_set_castle",
+        "sortId": 48,
+        "name": "「古城の印象」",
+        "themeType": "EVENT",
+        "desc": "オペレーターが収集した資料に基づいて作られた古城のイメージハウス。不穏な空気が漂っている。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_castle_partition_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_candlestick_01",
+            "pos0": 2,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_jug_01",
+            "pos0": 2,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_fountainStand_01",
+            "pos0": 9,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_fireplace_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_curtain_01",
+            "pos0": 5,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_carpet_01",
+            "pos0": 0,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_ceilingLight_01",
+            "pos0": 14,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_chair_01",
+            "pos0": 13,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_bayWindow_01",
+            "pos0": 12,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_table_01",
+            "pos0": 17,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_column_01",
+            "pos0": 9,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_column_01",
+            "pos0": 22,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_longBench_01",
+            "pos0": 25,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_bed_01",
+            "pos0": 25,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_floorlamp_01",
+            "pos0": 30,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_mirror_01",
+            "pos0": 32,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_castle_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_castle_1",
+          "furni_set_castle_2",
+          "furni_set_castle_3",
+          "furni_set_castle_4"
+        ],
+        "furnitures": [
+          "furni_castle_partition_01",
+          "furni_castle_candlestick_01",
+          "furni_castle_jug_01",
+          "furni_castle_fountainStand_01",
+          "furni_castle_fireplace_01",
+          "furni_castle_curtain_01",
+          "furni_castle_carpet_01",
+          "furni_castle_ceilingLight_01",
+          "furni_castle_chair_01",
+          "furni_castle_bayWindow_01",
+          "furni_castle_table_01",
+          "furni_castle_column_01",
+          "furni_castle_longBench_01",
+          "furni_castle_bed_01",
+          "furni_castle_floorlamp_01",
+          "furni_castle_mirror_01",
+          "furni_castle_wallpaper_01",
+          "furni_castle_floor_01"
+        ]
       }
     },
     "groups": {
@@ -49632,6 +50399,64 @@
           "furni_stage_floor_01",
           "furni_stage_ceilingLamp_01",
           "furni_stage_carpet_01"
+        ]
+      },
+      "furni_set_castle_1": {
+        "id": "furni_set_castle_1",
+        "sortId": 1,
+        "name": "創作の助力",
+        "themeId": "furni_set_castle",
+        "comfort": 275,
+        "count": 5,
+        "furniture": [
+          "furni_castle_bayWindow_01",
+          "furni_castle_table_01",
+          "furni_castle_chair_01",
+          "furni_castle_ceilingLight_01",
+          "furni_castle_fountainStand_01"
+        ]
+      },
+      "furni_set_castle_2": {
+        "id": "furni_set_castle_2",
+        "sortId": 2,
+        "name": "過去の残火",
+        "themeId": "furni_set_castle",
+        "comfort": 185,
+        "count": 4,
+        "furniture": [
+          "furni_castle_fireplace_01",
+          "furni_castle_jug_01",
+          "furni_castle_partition_01",
+          "furni_castle_candlestick_01"
+        ]
+      },
+      "furni_set_castle_3": {
+        "id": "furni_set_castle_3",
+        "sortId": 3,
+        "name": "酔夢の誘い",
+        "themeId": "furni_set_castle",
+        "comfort": 205,
+        "count": 4,
+        "furniture": [
+          "furni_castle_bed_01",
+          "furni_castle_longBench_01",
+          "furni_castle_floorlamp_01",
+          "furni_castle_mirror_01"
+        ]
+      },
+      "furni_set_castle_4": {
+        "id": "furni_set_castle_4",
+        "sortId": 4,
+        "name": "悪夢の形骸",
+        "themeId": "furni_set_castle",
+        "comfort": 270,
+        "count": 5,
+        "furniture": [
+          "furni_castle_wallpaper_01",
+          "furni_castle_floor_01",
+          "furni_castle_curtain_01",
+          "furni_castle_column_01",
+          "furni_castle_carpet_01"
         ]
       }
     },
