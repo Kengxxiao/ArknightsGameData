@@ -8915,6 +8915,172 @@
           "buffData": []
         }
       ]
+    },
+    "char_2023_ling": {
+      "charId": "char_2023_ling",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_facCostReset[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_costToBD[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_322_lmlee": {
+      "charId": "char_322_lmlee",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_allCost_condChar[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_upMeetingSpeed[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1021_kroos2": {
+      "charId": "char_1021_kroos2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[900]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession3[140]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_476_blkngt": {
+      "charId": "char_476_blkngt",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[110]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_377_gdglow": {
+      "charId": "char_377_gdglow",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[003]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "power_rec_spd[023]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_492_quercu": {
+      "charId": "char_492_quercu",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_team[070]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_flag[070]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -9001,6 +9167,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "制御中枢配置時、事務連絡速度が<@cc.vup>30%</>(基本連絡速度5％を含む)を下回るとき、連絡速度が<@cc.vup>+20%</>増加(同類の効果は重複適用しない、他の基地スキルの影響を受けない)"
+    },
+    "control_upMeetingSpeed[000]": {
+      "buffId": "control_upMeetingSpeed[000]",
+      "buffName": "八面玲瓏",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_spd",
+      "sortId": 1402,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、応接室の手がかり捜索速度<@cc.vup>+25%</>"
     },
     "control_clue_cost[000]": {
       "buffId": "control_clue_cost[000]",
@@ -9134,6 +9312,18 @@
       "roomType": "CONTROL",
       "description": "制御中枢配置時、制御中枢内全員の体力が1時間ごとに<@cc.vup>+0.05</>回復"
     },
+    "control_allCost_condChar[000]": {
+      "buffId": "control_allCost_condChar[000]",
+      "buffName": "忙中有閑",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_lda",
+      "sortId": 1252,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "<@cc.kw>ア</>と共に制御中枢に配置時、制御中枢内全員の体力が1時間ごとに<@cc.vup>+0.25</>回復"
+    },
     "control_mp_cost&faction2[000]": {
       "buffId": "control_mp_cost&faction2[000]",
       "buffName": "温厚篤実",
@@ -9229,6 +9419,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "制御中枢配置時、自身の1時間ごとの体力消費量<@cc.vup>+0.5</>。自身の体力が<@cc.kw>12</>を上回る時、<$cc.bd_a1><@cc.rem>知覚情報</></><@cc.vup>+10</>"
+    },
+    "control_facCostReset[000]": {
+      "buffId": "control_facCostReset[000]",
+      "buffName": "杯停むること莫れ",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_clear_sui",
+      "sortId": 1007,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、配属された<$cc.g.sui><@cc.kw>歳</></>所属オペレーターの<@cc.kw>自身</>に対する体力消費に関する効果が<@cc.kw>無効</>になる"
+    },
+    "control_costToBD[000]": {
+      "buffId": "control_costToBD[000]",
+      "buffName": "「山河遠闊たり」",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd1&bd2",
+      "sortId": 1007,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、自身の体力が<@cc.kw>12</>を上回る時、<$cc.bd_b1><@cc.rem>俗世之憂</></><@cc.vup>+15</>。自身の体力が<@cc.kw>12</>を下回る時、<$cc.bd_a1><@cc.rem>知覚情報</></><@cc.vup>+10</>"
     },
     "control_mp_bd[000]": {
       "buffId": "control_mp_bd[000]",
@@ -9356,6 +9570,18 @@
       "buffIcon": "power",
       "skillIcon": "bskill_pow_spd3",
       "sortId": 2301,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "発電所配置時、ドローンの回復速度が1時間ごと<@cc.vup>+20%</>"
+    },
+    "power_rec_spd[023]": {
+      "buffId": "power_rec_spd[023]",
+      "buffName": "放電",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd3",
+      "sortId": 2303,
       "buffColor": "#8fc31f",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -11306,6 +11532,18 @@
       "roomType": "TRAINING",
       "description": "訓練室で協力者として配置時、<@cc.kw>先鋒</>の訓練速度<@cc.vup>+30%</>"
     },
+    "train_spd&profession2[010]": {
+      "buffId": "train_spd&profession2[010]",
+      "buffName": "先鋒エキスパートα",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_vanguard1",
+      "sortId": 9801,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>先鋒</>の訓練速度<@cc.vup>+30%</>"
+    },
     "train_spd&profession[011]": {
       "buffId": "train_spd&profession[011]",
       "buffName": "先鋒エキスパートβ",
@@ -11665,6 +11903,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "訓練室で協力者として配置時、<@cc.kw>重装</>の訓練速度<@cc.vup>+30%</>。訓練者の職分が<@cc.kw>術技衛士</>であるとき、訓練速度がさらに<@cc.vup>+45%</>"
+    },
+    "train_spd&profession3[140]": {
+      "buffId": "train_spd&profession3[140]",
+      "buffName": "実戦技術：速射手",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_fastshot",
+      "sortId": 9591,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>狙撃</>の訓練速度<@cc.vup>+30%</>。訓練者の職分が<@cc.kw>速射手</>であるとき、訓練速度がさらに<@cc.vup>+45%</>"
+    },
+    "train_spd&profession2[110]": {
+      "buffId": "train_spd&profession2[110]",
+      "buffName": "戦術研鑽",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train1_vanguard1",
+      "sortId": 9831,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>先鋒</>の訓練速度<@cc.vup>+30%</>。特化ランク<@cc.vup>1</>への訓練をサポートする場合、訓練速度がさらに<@cc.vup>+45%</>"
     },
     "train_spd&profession2[120]": {
       "buffId": "train_spd&profession2[120]",
@@ -12650,6 +12912,18 @@
       "roomType": "MEETING",
       "description": "応接室配置時、<@cc.kw>ロドス製薬</>の手がかりを入手しやすい（勤務時間が確率に影響する）"
     },
+    "meet_team[070]": {
+      "buffId": "meet_team[070]",
+      "buffName": "風の便り",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_glasgow1",
+      "sortId": 6511,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "応接室配置時、<@cc.kw>グラスゴー</>の手がかりを入手しやすい（勤務時間が確率に影響する）"
+    },
     "meet_flag[010]": {
       "buffId": "meet_flag[010]",
       "buffName": "クルビア史",
@@ -12697,6 +12971,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "応接室配置時、捜索で入手した手がかりが<@cc.kw>ロドス製薬</>でない時、<@cc.kw>ロドス製薬</>の手がかりを入手する確率が更に増加（勤務時間が確率に影響する）"
+    },
+    "meet_flag[070]": {
+      "buffId": "meet_flag[070]",
+      "buffName": "情報整理",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_flag_glasgow",
+      "sortId": 6511,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "応接室配置時、捜索で入手した手がかりが<@cc.kw>グラスゴー</>でない時、<@cc.kw>グラスゴー</>の手がかりを入手する確率が更に増加（勤務時間が確率に影響する）"
     },
     "meet_spd&team[000]": {
       "buffId": "meet_spd&team[000]",
@@ -35512,6 +35798,528 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_teaHouse_rack_01": {
+        "id": "furni_teaHouse_rack_01",
+        "sortId": 799,
+        "name": "新茶の棚",
+        "iconId": "furni_teaHouse_rack_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 4,
+        "depth": 3,
+        "height": 7,
+        "comfort": 270,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "茶葉を干すための四層になった棚。ざるの上に広げてしばらく空気にさらした後、番頭が小僧に裏の庭で煎るように申しつける。\n尚蜀の者にとって茶とは不可欠であり十分でもある。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_basket_01": {
+        "id": "furni_teaHouse_basket_01",
+        "sortId": 800,
+        "name": "茶摘みかご",
+        "iconId": "furni_teaHouse_basket_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 3,
+        "depth": 3,
+        "height": 2,
+        "comfort": 175,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "尚蜀の民家でよく見られる茶摘みの籠。底には蒙頂茶畑の赤土がついている。\n春摘みに冬片、一山一季、茶の葉三両三銭。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_cabinet_01": {
+        "id": "furni_teaHouse_cabinet_01",
+        "sortId": 801,
+        "name": "二重棚",
+        "iconId": "furni_teaHouse_cabinet_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 4,
+        "depth": 2,
+        "height": 6,
+        "comfort": 220,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "番頭の手近にある棚。時折売り出したばかりの湖松酒と雲遼酒が置いてある。 \n暮れに愁いを悉く匣へつめ、新年の訪れに樽を開く。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_carpet_01": {
+        "id": "furni_teaHouse_carpet_01",
+        "sortId": 802,
+        "name": "竹の敷物",
+        "iconId": "furni_teaHouse_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 13,
+        "depth": 5,
+        "height": 1,
+        "comfort": 90,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "山城の青竹を割いて作られた敷物。ひんやりと涼やかで、道行く人に休める場所を提供している。\n煩いの芽は絶えず萌せど、転寝の夢に遊べば枯野原。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_teaCooktop_01": {
+        "id": "furni_teaHouse_teaCooktop_01",
+        "sortId": 803,
+        "name": "青岩の茶台",
+        "iconId": "furni_teaHouse_teaCooktop_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 2,
+        "depth": 4,
+        "height": 4,
+        "comfort": 210,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "取江峰の上の青岩を丸ごと磨いて作られている。高い山から降ろされ、俗世の空気に触れてより艶を増した。\n雨雪の頃ふつふつ響く音に室の寒気も僅かにゆるむ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_pottedplant_01": {
+        "id": "furni_teaHouse_pottedplant_01",
+        "sortId": 804,
+        "name": "雲霧の盆栽",
+        "iconId": "furni_teaHouse_pottedplant_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_3",
+        "width": 3,
+        "depth": 3,
+        "height": 7,
+        "comfort": 230,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "大理石の盆に植えられた盆栽。素晴らしい姿は尚蜀「三山十七峰」の一角のようである。\n室は山に溶け込み、山々はさらに一つの室のようである。蜀人の山を楽しむこと、これを超えることなし。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_tableTea_01": {
+        "id": "furni_teaHouse_tableTea_01",
+        "sortId": 805,
+        "name": "黄梨木の茶卓",
+        "iconId": "furni_teaHouse_tableTea_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 6,
+        "depth": 4,
+        "height": 4,
+        "comfort": 325,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "樹齢四十年の上等な黄梨木を、山城の匠が先祖伝来の技を用いて削り出した。番頭はこの卓と釣り合う白磁を求めるため炎国中を探し回った。\n人の身で命の長短を嘆くこともなかろうにと、老木は諸行無常を笑う。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_tableWeiqi_01": {
+        "id": "furni_teaHouse_tableWeiqi_01",
+        "sortId": 806,
+        "name": "黄梨木の囲碁卓",
+        "iconId": "furni_teaHouse_tableWeiqi_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 6,
+        "depth": 4,
+        "height": 3,
+        "comfort": 290,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "茶卓と同じ木から削り出された。茶卓の製作には匠が五割の力を用いるが、碁盤には八割必要である。\n陽と月の互替りは千古不易、黒白の互先は一期一会。一局として同じ日没はない。  ",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_stool_01": {
+        "id": "furni_teaHouse_stool_01",
+        "sortId": 807,
+        "name": "黄梨木の椅子",
+        "iconId": "furni_teaHouse_stool_01",
+        "type": "SEATING",
+        "subType": "STOOL",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 90,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "卓を作って余った材木で、匠は四脚の椅子を製作して番頭に贈った。ちょっとした人情である。\n軽く一石置き、ゆっくりと身を起こし、友と語らって、杯を交わし楽を奏でる。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_teaHouse_birdcage_01": {
+        "id": "furni_teaHouse_birdcage_01",
+        "sortId": 808,
+        "name": "玲籠",
+        "iconId": "furni_teaHouse_birdcage_01",
+        "type": "DECORATION",
+        "subType": "ENTERTAINMENT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 3,
+        "depth": 3,
+        "height": 6,
+        "comfort": 225,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "素朴な造りの羽獣の籠だが、ここでは物置として扱われている。\n嘴は囀りをこぼし、金線は花の下で夢を形作るが、林間の枯れ枝には及ばない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_rubbings_01": {
+        "id": "furni_teaHouse_rubbings_01",
+        "sortId": 809,
+        "name": "詩軸",
+        "iconId": "furni_teaHouse_rubbings_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 3,
+        "depth": 1,
+        "height": 5,
+        "comfort": 150,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "装幀が見事な巻物。上に「春江此去千秋事、老鶴帰来一杯茶」と認められている。\n筆跡から書き手は判じ難いが、どこぞの無名の翁の作であろう。もしこれが名家によるものであれば、かえって俗物になろうというものだ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_column_01": {
+        "id": "furni_teaHouse_column_01",
+        "sortId": 810,
+        "name": "蜀風刺繍の細衝立",
+        "iconId": "furni_teaHouse_column_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_3",
+        "width": 2,
+        "depth": 2,
+        "height": 10,
+        "comfort": 200,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "手作りの刺繍布を飾った装飾品。古い客はみな、これが番頭が可愛がっている娘が、父に誕生日プレゼントとして渡した品だと知っている。\n尚蜀の女性には刺繍をする文化があり、江清峰のように美しい風景もそのまま針で布に縫い留められる。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_rollerBlind_01": {
+        "id": "furni_teaHouse_rollerBlind_01",
+        "sortId": 811,
+        "name": "湖光水色の簾",
+        "iconId": "furni_teaHouse_rollerBlind_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_3",
+        "width": 8,
+        "depth": 1,
+        "height": 8,
+        "comfort": 185,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "綿麻地の巻き簾。埃は遮るが、風はとめず、勘定台を使う人々が安心して仕事ができる。\n流れる雲が水面に影を落とし、済んだ夜空にははっきりと月が上がっている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_venetianBlind_01": {
+        "id": "furni_teaHouse_venetianBlind_01",
+        "sortId": 812,
+        "name": "竹簾",
+        "iconId": "furni_teaHouse_venetianBlind_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_3",
+        "width": 3,
+        "depth": 1,
+        "height": 8,
+        "comfort": 100,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "厭う者は視線を遮り、景色を損ねたとその突出を嫌う。好むものはそれが下されていることで、窓の外の喧噪が遮られ安心して碁を打てると喜ぶ。\n世の物悲しさよ我に取りつくな、ただ碁笥を前にし勝敗を繰り返す。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_teaHouse_ceilingLamp_01": {
+        "id": "furni_teaHouse_ceilingLamp_01",
+        "sortId": 813,
+        "name": "天井燈篭",
+        "iconId": "furni_teaHouse_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_4",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 65,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "茶館の大きな燈篭。番頭が常々これは朝廷に品を下ろしている腕利きの匠が製作した品だとうそぶいている。\n明月をむかえ、流霞に向かい、夜明けまで楽を奏でる。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_teaHouse_ceilingLight_01": {
+        "id": "furni_teaHouse_ceilingLight_01",
+        "sortId": 814,
+        "name": "茶館の壁照明",
+        "iconId": "furni_teaHouse_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_4",
+        "width": 8,
+        "depth": 1,
+        "height": 2,
+        "comfort": 80,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "茶館の吊り照明。明かりを上の方に掛けておくと、怒った客が割るようなこともない。\n寒い夜は無情なものであるが、人の世には光もある。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_teaHouse_wallpaper_01": {
+        "id": "furni_teaHouse_wallpaper_01",
+        "sortId": 815,
+        "name": "ウォールディスプレイ（山城）",
+        "iconId": "furni_teaHouse_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "投影技術を用いて、茶館外の尚蜀の春、細雨が降りそうな一瞬を切り取って映している。\n緑の葉を煎じて銀毫とし、西江と独り対する。六花は春の遅さを嘆き、人の世に、舞う花弁のように振りまかれる。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_floor_01": {
+        "id": "furni_teaHouse_floor_01",
+        "sortId": 816,
+        "name": "山城白玉床",
+        "iconId": "furni_teaHouse_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "現代工芸で焼成されたタイル。だが百年前の白玉のレンガと同じように汚れに強く、滑りにくく、山城の民に愛されている。\n客に吉事があり急いで席に着いたとしても、庭を清める前であるなら茶を淹れるべきではない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_castle_partition_01": {
         "id": "furni_castle_partition_01",
         "sortId": 837,
@@ -37397,6 +38205,64 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_act25d0_table_01": {
+        "id": "furni_act25d0_table_01",
+        "sortId": 903,
+        "name": "「山中の碁」",
+        "iconId": "furni_act25d0_table_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 180,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "大理石で作られた碁盤。山々と川を縦横十九路に見立て、側面は石本来の紋様を活かした雲影が彫られている。\n雲の傍らにて談笑し、山水に石を置く。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act25d0_decoration_01": {
+        "id": "furni_act25d0_decoration_01",
+        "sortId": 904,
+        "name": "「亭上の雪」",
+        "iconId": "furni_act25d0_decoration_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 5,
+        "comfort": 160,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "取江峰の頂上にある古い東屋を見本にした置き物。台座の形は「春雪兌墨、松枝破巻」の句に由来する。\n年月は薄く、天地は昏い、ただ東屋に降る雪が、我と同じく清白である。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_foolsDay_penguin_01": {
         "id": "furni_foolsDay_penguin_01",
         "sortId": 906,
@@ -39108,6 +39974,35 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_dropS025_mahjong_01": {
+        "id": "furni_dropS025_mahjong_01",
+        "sortId": 966,
+        "name": "パネル「同楽」",
+        "iconId": "furni_dropS025_mahjong_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「技術を試し、友情を試し。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_contract_s0_01": {
         "id": "furni_contract_s0_01",
         "sortId": 969,
@@ -39622,6 +40517,35 @@
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "激熱なリリックをメロディーに織り込み、止まることなく跳ね回る。一貫して思考を揺さぶるワードが自分の身体を完膚なきまでに叩きのめしても、思うのはただあと一言でも多く歌いたいってことだけ。もっと、もっと歌いたい！",
         "obtainApproach": "MSR引き換えコード特典",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": -1,
+        "quantity": 0
+      },
+      "furni_zone_rabbit_01": {
+        "id": "furni_zone_rabbit_01",
+        "sortId": 14012,
+        "name": "無敵のぞんうさ",
+        "iconId": "furni_zone_rabbit_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 3,
+        "themeId": "",
+        "groupId": "",
+        "width": 5,
+        "depth": 4,
+        "height": 6,
+        "comfort": 120,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "でっかいおすわりうさちゃん。\nZONe（ゾーン）を飲んでシャキッとしている。\n普段のかわいいうさちゃんと違い、なんだかすごく頼もしい。おはぞ～ん！",
+        "obtainApproach": "ZONeコラボ特典",
         "processedProductId": "3401",
         "processedProductCount": 0,
         "processedByProductPercentage": 0,
@@ -47727,6 +48651,197 @@
           "furni_castle_wallpaper_01",
           "furni_castle_floor_01"
         ]
+      },
+      "furni_set_teaHouse": {
+        "id": "furni_set_teaHouse",
+        "sortId": 49,
+        "name": "山城茶館",
+        "themeType": "EVENT",
+        "desc": "クルースとウユウの強い勧めで、二人の話す通りに再現した尚蜀の茶館。風景も香り高いお茶も、尚蜀の地の味わい。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_teaHouse_rack_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_basket_01",
+            "pos0": 0,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_cabinet_01",
+            "pos0": 4,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_carpet_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_teaCooktop_01",
+            "pos0": 9,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_pottedplant_01",
+            "pos0": 11,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_tableTea_01",
+            "pos0": 16,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_tableWeiqi_01",
+            "pos0": 25,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_stool_01",
+            "pos0": 14,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_stool_01",
+            "pos0": 17,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_stool_01",
+            "pos0": 27,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_stool_01",
+            "pos0": 27,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_birdcage_01",
+            "pos0": 22,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_rubbings_01",
+            "pos0": 20,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_column_01",
+            "pos0": 32,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_rollerBlind_01",
+            "pos0": 3,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_venetianBlind_01",
+            "pos0": 25,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_venetianBlind_01",
+            "pos0": 28,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLamp_01",
+            "pos0": 18,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLamp_01",
+            "pos0": 27,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLight_01",
+            "pos0": 1,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLight_01",
+            "pos0": 9,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLight_01",
+            "pos0": 17,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLight_01",
+            "pos0": 25,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_teaHouse_1",
+          "furni_set_teaHouse_2",
+          "furni_set_teaHouse_3",
+          "furni_set_teaHouse_4"
+        ],
+        "furnitures": [
+          "furni_teaHouse_rack_01",
+          "furni_teaHouse_basket_01",
+          "furni_teaHouse_cabinet_01",
+          "furni_teaHouse_carpet_01",
+          "furni_teaHouse_teaCooktop_01",
+          "furni_teaHouse_pottedplant_01",
+          "furni_teaHouse_tableTea_01",
+          "furni_teaHouse_tableWeiqi_01",
+          "furni_teaHouse_stool_01",
+          "furni_teaHouse_birdcage_01",
+          "furni_teaHouse_rubbings_01",
+          "furni_teaHouse_column_01",
+          "furni_teaHouse_rollerBlind_01",
+          "furni_teaHouse_venetianBlind_01",
+          "furni_teaHouse_ceilingLamp_01",
+          "furni_teaHouse_ceilingLight_01",
+          "furni_teaHouse_wallpaper_01",
+          "furni_teaHouse_floor_01"
+        ]
       }
     },
     "groups": {
@@ -50457,6 +51572,64 @@
           "furni_castle_curtain_01",
           "furni_castle_column_01",
           "furni_castle_carpet_01"
+        ]
+      },
+      "furni_set_teaHouse_1": {
+        "id": "furni_set_teaHouse_1",
+        "sortId": 1,
+        "name": "茶の香り",
+        "themeId": "furni_set_teaHouse",
+        "comfort": 215,
+        "count": 5,
+        "furniture": [
+          "furni_teaHouse_rack_01",
+          "furni_teaHouse_basket_01",
+          "furni_teaHouse_cabinet_01",
+          "furni_teaHouse_teaCooktop_01",
+          "furni_teaHouse_carpet_01"
+        ]
+      },
+      "furni_set_teaHouse_2": {
+        "id": "furni_set_teaHouse_2",
+        "sortId": 2,
+        "name": "木の温もり",
+        "themeId": "furni_set_teaHouse",
+        "comfort": 335,
+        "count": 5,
+        "furniture": [
+          "furni_teaHouse_tableTea_01",
+          "furni_teaHouse_tableWeiqi_01",
+          "furni_teaHouse_stool_01",
+          "furni_teaHouse_rubbings_01",
+          "furni_teaHouse_birdcage_01"
+        ]
+      },
+      "furni_set_teaHouse_3": {
+        "id": "furni_set_teaHouse_3",
+        "sortId": 3,
+        "name": "山上の雲",
+        "themeId": "furni_set_teaHouse",
+        "comfort": 195,
+        "count": 4,
+        "furniture": [
+          "furni_teaHouse_pottedplant_01",
+          "furni_teaHouse_rollerBlind_01",
+          "furni_teaHouse_venetianBlind_01",
+          "furni_teaHouse_column_01"
+        ]
+      },
+      "furni_set_teaHouse_4": {
+        "id": "furni_set_teaHouse_4",
+        "sortId": 4,
+        "name": "白昼の夢",
+        "themeId": "furni_set_teaHouse",
+        "comfort": 195,
+        "count": 4,
+        "furniture": [
+          "furni_teaHouse_wallpaper_01",
+          "furni_teaHouse_floor_01",
+          "furni_teaHouse_ceilingLamp_01",
+          "furni_teaHouse_ceilingLight_01"
         ]
       }
     },
