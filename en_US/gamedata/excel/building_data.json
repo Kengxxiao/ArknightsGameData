@@ -8915,6 +8915,172 @@
           "buffData": []
         }
       ]
+    },
+    "char_2023_ling": {
+      "charId": "char_2023_ling",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_facCostReset[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_costToBD[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_322_lmlee": {
+      "charId": "char_322_lmlee",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_allCost_condChar[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_upMeetingSpeed[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1021_kroos2": {
+      "charId": "char_1021_kroos2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[900]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession3[140]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_476_blkngt": {
+      "charId": "char_476_blkngt",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[110]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_377_gdglow": {
+      "charId": "char_377_gdglow",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd[003]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "power_rec_spd[023]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_492_quercu": {
+      "charId": "char_492_quercu",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_team[070]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_flag[070]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -9001,6 +9167,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, if the HR contacting speed of the HR Office is lower than <@cc.vup>30%</> (including the base 5%), increase the HR contacting speed by <@cc.vup>+20%</> (unique effect across the entire base, unaffected by other effects)"
+    },
+    "control_upMeetingSpeed[000]": {
+      "buffId": "control_upMeetingSpeed[000]",
+      "buffName": "Worldly Insight",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_c_spd",
+      "sortId": 1402,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, clue collection speed <@cc.vup>+25%</>"
     },
     "control_clue_cost[000]": {
       "buffId": "control_clue_cost[000]",
@@ -9134,6 +9312,18 @@
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
     },
+    "control_allCost_condChar[000]": {
+      "buffId": "control_allCost_condChar[000]",
+      "buffName": "Moment of Respite",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_lda",
+      "sortId": 1252,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned together with <@cc.kw>Aak</> to the Control Center, increases Morale recovery per hour of all Operators in the Control Center by <@cc.vup>+0.25</>"
+    },
     "control_mp_cost&faction2[000]": {
       "buffId": "control_mp_cost&faction2[000]",
       "buffName": "Adamantly Easygoing",
@@ -9229,6 +9419,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, decreases own morale consumption by<@cc.vdown>+0.5</>; and when self morale is above<@cc.kw>12</>, <$cc.bd_a1><@cc.rem>Perception Information</></><@cc.vup>+10</>"
+    },
+    "control_facCostReset[000]": {
+      "buffId": "control_facCostReset[000]",
+      "buffName": "Keep the Wine Flowing",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_clear_sui",
+      "sortId": 1007,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, <@cc.kw>remove</> any Morale reduction effects from <$cc.g.sui><@cc.kw>Sui</></> Operators assigned to the Control Center that affect <@cc.kw>themselves</>"
+    },
+    "control_costToBD[000]": {
+      "buffId": "control_costToBD[000]",
+      "buffName": "'Vast Mountains and Rivers'",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd1&bd2",
+      "sortId": 1007,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center and own Morale is above <@cc.kw>12</>,<$cc.bd_b1><@cc.rem>Worldly Plight</></> <@cc.vup>+15</>; When own Morale is <@cc.kw>12</> or below, <$cc.bd_a1><@cc.rem>Perception Information</></> <@cc.vup>+10</> instead"
     },
     "control_mp_bd[000]": {
       "buffId": "control_mp_bd[000]",
@@ -9356,6 +9570,18 @@
       "buffIcon": "power",
       "skillIcon": "bskill_pow_spd3",
       "sortId": 2301,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+20%</>"
+    },
+    "power_rec_spd[023]": {
+      "buffId": "power_rec_spd[023]",
+      "buffName": "Discharge",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd3",
+      "sortId": 2303,
       "buffColor": "#8fc31f",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -11306,6 +11532,18 @@
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Vanguard</> Operators' Specialization training speed <@cc.vup>+30%</>"
     },
+    "train_spd&profession2[010]": {
+      "buffId": "train_spd&profession2[010]",
+      "buffName": "Vanguard Expert α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_vanguard1",
+      "sortId": 9801,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Vanguard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+    },
     "train_spd&profession[011]": {
       "buffId": "train_spd&profession[011]",
       "buffName": "Vanguard Expert β",
@@ -11665,6 +11903,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Defender</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Arts Protector</>, training speed will be further increased by <@cc.vup>+45%</>"
+    },
+    "train_spd&profession3[140]": {
+      "buffId": "train_spd&profession3[140]",
+      "buffName": "Combat Techniques: Marksman",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_fastshot",
+      "sortId": 9591,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Marksman</>, training speed will be further increased by <@cc.vup>+45%</>"
+    },
+    "train_spd&profession2[110]": {
+      "buffId": "train_spd&profession2[110]",
+      "buffName": "Tactics Studies",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train1_vanguard1",
+      "sortId": 9831,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Vanguard</> Operators' Specialization training speed <@cc.vup>+30%</>; if training this skill to Specialization Level <@cc.vup>1</>, training speed will be further increased by <@cc.vup>+45%</>"
     },
     "train_spd&profession2[120]": {
       "buffId": "train_spd&profession2[120]",
@@ -12650,6 +12912,18 @@
       "roomType": "MEETING",
       "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining <@cc.kw>Rhodes Island</> clues (Rate is influenced by length of work time)"
     },
+    "meet_team[070]": {
+      "buffId": "meet_team[070]",
+      "buffName": "Sound of the Wind",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_glasgow1",
+      "sortId": 6511,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, the likelihood of obtaining <@cc.kw>Glasgow</> clues is increased (working time improves the likelihood)"
+    },
     "meet_flag[010]": {
       "buffId": "meet_flag[010]",
       "buffName": "Columbian History",
@@ -12697,6 +12971,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "When this Operator is assigned to the Reception Room, every time that a non-<@cc.kw>Rhodes Island</> clue is collected, increases the likelihood of obtaining <@cc.kw>Rhodes Island</> clues (Rate is influenced by length of work time)"
+    },
+    "meet_flag[070]": {
+      "buffId": "meet_flag[070]",
+      "buffName": "Information Collation",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_flag_glasgow",
+      "sortId": 6511,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, every time that a non-<@cc.kw>Glasgow</> clue is collected, the likelihood of obtaining <@cc.kw>Glasgow</> clues is increased (working time improves the likelihood)"
     },
     "meet_spd&team[000]": {
       "buffId": "meet_spd&team[000]",
@@ -35512,6 +35798,528 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_teaHouse_rack_01": {
+        "id": "furni_teaHouse_rack_01",
+        "sortId": 799,
+        "name": "New Tea Drying Rack",
+        "iconId": "furni_teaHouse_rack_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 4,
+        "depth": 3,
+        "height": 7,
+        "comfort": 270,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A four-layered holder used to dry fresh tea leaves. After a period of time, the shopkeeper will instruct the staff to move things to the back for processing. \nShancheng is hot and humid, and thus the Shangshuites love tea. Dawn to dusk it serves as their liquor, the spring river itself boiled into earthen bottles.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_basket_01": {
+        "id": "furni_teaHouse_basket_01",
+        "sortId": 800,
+        "name": "Tea-Harvesting Basket",
+        "iconId": "furni_teaHouse_basket_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 3,
+        "depth": 3,
+        "height": 2,
+        "comfort": 175,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A tea-picking basket found in every Shangshu household, its bottom still stained with the red mud of the Mengding tea mountains.\nIn the spring and winter, diligently sow the mountainside in one season, and carefully reap the rewards of your efforts in the next.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_cabinet_01": {
+        "id": "furni_teaHouse_cabinet_01",
+        "sortId": 801,
+        "name": "Two-Layered Cabinet",
+        "iconId": "furni_teaHouse_cabinet_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 4,
+        "depth": 2,
+        "height": 6,
+        "comfort": 220,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "On the counter next to the shopkeeper can occasionally be found a few jars of opened Husong or Yunliao liquor. \nInto the case go the thousand sorrows that come with passing years, yet with enough time all things shall be uncorked. ",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_carpet_01": {
+        "id": "furni_teaHouse_carpet_01",
+        "sortId": 802,
+        "name": "Green Bamboo Mat",
+        "iconId": "furni_teaHouse_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 13,
+        "depth": 5,
+        "height": 1,
+        "comfort": 90,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A floor mat woven together from the fresh bamboo strips of Shancheng. Cool and flexible, perfect for those with little time to rest. \nLeave the troubles of the world behind at the door, sink into a restful dream of boundless prosperity.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_teaCooktop_01": {
+        "id": "furni_teaHouse_teaCooktop_01",
+        "sortId": 803,
+        "name": "Verdant Stone Tea Set",
+        "iconId": "furni_teaHouse_teaCooktop_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_1",
+        "width": 2,
+        "depth": 4,
+        "height": 4,
+        "comfort": 210,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Made from a polished slab of verdant stone from the peak of Qujiang, it seems to become even more radiant after being exposed to worldly struggles. \nDuring the season is rain and snow, a charcoal flame dances, water boils and tea simmers, the yellow vessel fills the cup, and the harsh cold seems less daunting.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_pottedplant_01": {
+        "id": "furni_teaHouse_pottedplant_01",
+        "sortId": 804,
+        "name": "Cloudhaze Bonsai",
+        "iconId": "furni_teaHouse_pottedplant_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_3",
+        "width": 3,
+        "depth": 3,
+        "height": 7,
+        "comfort": 230,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A potted plant resting in a marble vase, vaguely reminiscent of Shangshu's 'Three Mountains and Seventeen Peaks.' \nThe corridors stretch not into the mountain range, yet the mountains reside within a single room. The people of Shu enjoy the mountains, nothing more.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_tableTea_01": {
+        "id": "furni_teaHouse_tableTea_01",
+        "sortId": 805,
+        "name": "Huangli Wooden Tea Table",
+        "iconId": "furni_teaHouse_tableTea_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 6,
+        "depth": 4,
+        "height": 4,
+        "comfort": 325,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Good Huangli wood takes over forty years to grow. The old carpenter of Shancheng passed down his ancestral craft, and the shopkeeper traveled all over Yan in search of matching porcelain. \nPassersby may well hate unexpected change, the old tree yet laughs in the distance.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_tableWeiqi_01": {
+        "id": "furni_teaHouse_tableWeiqi_01",
+        "sortId": 806,
+        "name": "Huangli Wooden Go Set",
+        "iconId": "furni_teaHouse_tableWeiqi_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 6,
+        "depth": 4,
+        "height": 3,
+        "comfort": 290,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Carved from the same piece of Huangli wood as the tea table. For the carpenter, if the difficulty of the tea table was a five, then this set is an eight. \n The long day disappears into black and white pieces, no two matches ever identical.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_stool_01": {
+        "id": "furni_teaHouse_stool_01",
+        "sortId": 807,
+        "name": "Huangli Wooden Square Stool",
+        "iconId": "furni_teaHouse_stool_01",
+        "type": "SEATING",
+        "subType": "STOOL",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 90,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The remaining bits of wood were used to make four square stools as a gift to the shopkeeper. \nPlay your pieces carefully, rise slowly. Sit down with friends, enjoy another cup and song.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_teaHouse_birdcage_01": {
+        "id": "furni_teaHouse_birdcage_01",
+        "sortId": 808,
+        "name": "'Delicage'",
+        "iconId": "furni_teaHouse_birdcage_01",
+        "type": "DECORATION",
+        "subType": "ENTERTAINMENT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 3,
+        "depth": 3,
+        "height": 6,
+        "comfort": 225,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Made in the likeness of a primitive fowlbeast cage, but bearing the fragrance of incense. \nHundreds of ephemeral buds, golden threads forming dreamlike flowers, yet less meaningful than dead branches in a forest.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_rubbings_01": {
+        "id": "furni_teaHouse_rubbings_01",
+        "sortId": 809,
+        "name": "Poetry Scroll",
+        "iconId": "furni_teaHouse_rubbings_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_2",
+        "width": 3,
+        "depth": 1,
+        "height": 5,
+        "comfort": 150,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A meticulously-framed hanging poetry scroll, bearing the text: 'The spring river runs towards the distant autumn; the old crane returns for a cup of tea.' \nThe calligraphy is nearly illegible, it must have been produced by someone seasoned. Should it actually be the product of a master, that would instead make it commonplace.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_column_01": {
+        "id": "furni_teaHouse_column_01",
+        "sortId": 810,
+        "name": "Elegant Shu Embroidery",
+        "iconId": "furni_teaHouse_column_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_3",
+        "width": 2,
+        "depth": 2,
+        "height": 10,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A decoration made from the embroidery of one's own house. Old customers know that this was originally a present from daughter to father, from the shopkeeper's beloved pearl. \nShangshu girls have a tradition of weaving and embroidery. Seventy miles along the clear river turn into three feet of yarn around her fingertips.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_rollerBlind_01": {
+        "id": "furni_teaHouse_rollerBlind_01",
+        "sortId": 811,
+        "name": "Lakelight Curtain",
+        "iconId": "furni_teaHouse_rollerBlind_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_3",
+        "width": 8,
+        "depth": 1,
+        "height": 8,
+        "comfort": 185,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Roller shutters made from cotton and linen, able to block dust and wind to allow people behind the counter to work with peace of mind. \nSkirting clouds cast playful shadows across the serene river, the sky shall remain clear for a month.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_venetianBlind_01": {
+        "id": "furni_teaHouse_venetianBlind_01",
+        "sortId": 812,
+        "name": "Open Bamboo Blinds",
+        "iconId": "furni_teaHouse_venetianBlind_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_3",
+        "width": 3,
+        "depth": 1,
+        "height": 8,
+        "comfort": 100,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Those who hate it do so because it's intermittent, because it blocks the view and chops up the scenery; Those who favor it do so because it is calming, partitioning off the noise beyond the window, allowing those inside to focus on their next move of weiqi. \nThe weight of the world is wearisome indeed. Instead count the number of victories and defeats.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_teaHouse_ceilingLamp_01": {
+        "id": "furni_teaHouse_ceilingLamp_01",
+        "sortId": 813,
+        "name": "Cordial Sojourner's Invitation",
+        "iconId": "furni_teaHouse_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_4",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 65,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A large teahouse lantern. The shopkeeper's regulars boast that this lantern is a superb piece made by a royal craftsman. \nInvite in the moonlight, let the dawn flow in. How deep the night; usher in the morn with a song.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_teaHouse_ceilingLight_01": {
+        "id": "furni_teaHouse_ceilingLight_01",
+        "sortId": 814,
+        "name": "Wall-Mounted Lights",
+        "iconId": "furni_teaHouse_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_4",
+        "width": 8,
+        "depth": 1,
+        "height": 2,
+        "comfort": 80,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The teahouse's ceiling lamp. Hang the lights out of reach, and there is no worry of guests smashing them in a fit of anger. \nThe cold night knows has no conscience; there is clarity between people.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_teaHouse_wallpaper_01": {
+        "id": "furni_teaHouse_wallpaper_01",
+        "sortId": 815,
+        "name": "Panoramic Display (Mountain City)",
+        "iconId": "furni_teaHouse_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Captures the poetic moment in which the spring breeze ushers in the rain to moisten the verdant crags outside the teahouse in Shancheng of Shangshu using holographic projection technology. \nDecoct green leaves into silver pieces, face the westward river. The white snow scowls, spring wakens anew. Spreads unto the world like petals in flight.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_teaHouse_floor_01": {
+        "id": "furni_teaHouse_floor_01",
+        "sortId": 816,
+        "name": "White Jade Floor Tiles",
+        "iconId": "furni_teaHouse_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_teaHouse",
+        "groupId": "furni_set_teaHouse_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Floor tiles fired through modern technology. But like the white jade tiles from hundreds of years ago, they are non-slip and dirt resistant, beloved by the people of Shancheng. \nVisitors in a hurry would sit; the doorway is swept of neither grass nor tea.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_castle_partition_01": {
         "id": "furni_castle_partition_01",
         "sortId": 837,
@@ -37397,6 +38205,64 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_act25d0_table_01": {
+        "id": "furni_act25d0_table_01",
+        "sortId": 903,
+        "name": "'A Game Among Mountains'",
+        "iconId": "furni_act25d0_table_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 5,
+        "depth": 5,
+        "height": 3,
+        "comfort": 180,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A weiqi table made of marble, engraving the landscape of mountain and river into its grid. On the sides, the shadows of clouds run along the grains of the stone itself. \nConversation and laughter accompany the wind beyond the mountain, the sound of pieces being set in-between.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act25d0_decoration_01": {
+        "id": "furni_act25d0_decoration_01",
+        "sortId": 904,
+        "name": "'Snow Atop the Pavilion'",
+        "iconId": "furni_act25d0_decoration_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 4,
+        "height": 5,
+        "comfort": 160,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The structure is based on an ancient pavilion located atop the peak, while the base draws inspiration from the poem: 'Spring snow melts with ink, pine branches snap and roll.' \nThe years are fleeting, the line between sky and earth muddy. Only the snow atop the pavilion absolves me.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_foolsDay_penguin_01": {
         "id": "furni_foolsDay_penguin_01",
         "sortId": 906,
@@ -39099,6 +39965,35 @@
         "comfort": 75,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "'What's on the other side of the mountain? Another mountain? Another you?'",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS025_mahjong_01": {
+        "id": "furni_dropS025_mahjong_01",
+        "sortId": 966,
+        "name": "Plaque - Shared Joy",
+        "iconId": "furni_dropS025_mahjong_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "'Test your techniques. Test your friendships.'",
         "obtainApproach": "Event Reward",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -47727,6 +48622,197 @@
           "furni_castle_wallpaper_01",
           "furni_castle_floor_01"
         ]
+      },
+      "furni_set_teaHouse": {
+        "id": "furni_set_teaHouse",
+        "sortId": 49,
+        "name": "Shan-Ch'eng Teahouse",
+        "themeType": "EVENT",
+        "desc": "A reproduction of a Shangshu teahouse. Kroos and Mr. Nothing strongly recommend enjoying tea before the majesty of nature as one of the premier charms of Shangshu.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_teaHouse_rack_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_basket_01",
+            "pos0": 0,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_cabinet_01",
+            "pos0": 4,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_carpet_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_teaCooktop_01",
+            "pos0": 9,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_pottedplant_01",
+            "pos0": 11,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_tableTea_01",
+            "pos0": 16,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_tableWeiqi_01",
+            "pos0": 25,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_stool_01",
+            "pos0": 14,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_stool_01",
+            "pos0": 17,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_stool_01",
+            "pos0": 27,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_stool_01",
+            "pos0": 27,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_birdcage_01",
+            "pos0": 22,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_rubbings_01",
+            "pos0": 20,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_column_01",
+            "pos0": 32,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_rollerBlind_01",
+            "pos0": 3,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_venetianBlind_01",
+            "pos0": 25,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_venetianBlind_01",
+            "pos0": 28,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLamp_01",
+            "pos0": 18,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLamp_01",
+            "pos0": 27,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLight_01",
+            "pos0": 1,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLight_01",
+            "pos0": 9,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLight_01",
+            "pos0": 17,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_ceilingLight_01",
+            "pos0": 25,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_teaHouse_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_teaHouse_1",
+          "furni_set_teaHouse_2",
+          "furni_set_teaHouse_3",
+          "furni_set_teaHouse_4"
+        ],
+        "furnitures": [
+          "furni_teaHouse_rack_01",
+          "furni_teaHouse_basket_01",
+          "furni_teaHouse_cabinet_01",
+          "furni_teaHouse_carpet_01",
+          "furni_teaHouse_teaCooktop_01",
+          "furni_teaHouse_pottedplant_01",
+          "furni_teaHouse_tableTea_01",
+          "furni_teaHouse_tableWeiqi_01",
+          "furni_teaHouse_stool_01",
+          "furni_teaHouse_birdcage_01",
+          "furni_teaHouse_rubbings_01",
+          "furni_teaHouse_column_01",
+          "furni_teaHouse_rollerBlind_01",
+          "furni_teaHouse_venetianBlind_01",
+          "furni_teaHouse_ceilingLamp_01",
+          "furni_teaHouse_ceilingLight_01",
+          "furni_teaHouse_wallpaper_01",
+          "furni_teaHouse_floor_01"
+        ]
       }
     },
     "groups": {
@@ -50457,6 +51543,64 @@
           "furni_castle_curtain_01",
           "furni_castle_column_01",
           "furni_castle_carpet_01"
+        ]
+      },
+      "furni_set_teaHouse_1": {
+        "id": "furni_set_teaHouse_1",
+        "sortId": 1,
+        "name": "Drunk 'til Dawn",
+        "themeId": "furni_set_teaHouse",
+        "comfort": 215,
+        "count": 5,
+        "furniture": [
+          "furni_teaHouse_rack_01",
+          "furni_teaHouse_basket_01",
+          "furni_teaHouse_cabinet_01",
+          "furni_teaHouse_teaCooktop_01",
+          "furni_teaHouse_carpet_01"
+        ]
+      },
+      "furni_set_teaHouse_2": {
+        "id": "furni_set_teaHouse_2",
+        "sortId": 2,
+        "name": "Harken the Woods",
+        "themeId": "furni_set_teaHouse",
+        "comfort": 335,
+        "count": 5,
+        "furniture": [
+          "furni_teaHouse_tableTea_01",
+          "furni_teaHouse_tableWeiqi_01",
+          "furni_teaHouse_stool_01",
+          "furni_teaHouse_rubbings_01",
+          "furni_teaHouse_birdcage_01"
+        ]
+      },
+      "furni_set_teaHouse_3": {
+        "id": "furni_set_teaHouse_3",
+        "sortId": 3,
+        "name": "Behold the Mountains",
+        "themeId": "furni_set_teaHouse",
+        "comfort": 195,
+        "count": 4,
+        "furniture": [
+          "furni_teaHouse_pottedplant_01",
+          "furni_teaHouse_rollerBlind_01",
+          "furni_teaHouse_venetianBlind_01",
+          "furni_teaHouse_column_01"
+        ]
+      },
+      "furni_set_teaHouse_4": {
+        "id": "furni_set_teaHouse_4",
+        "sortId": 4,
+        "name": "Long Reveries",
+        "themeId": "furni_set_teaHouse",
+        "comfort": 195,
+        "count": 4,
+        "furniture": [
+          "furni_teaHouse_wallpaper_01",
+          "furni_teaHouse_floor_01",
+          "furni_teaHouse_ceilingLamp_01",
+          "furni_teaHouse_ceilingLight_01"
         ]
       }
     },
