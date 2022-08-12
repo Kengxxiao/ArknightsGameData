@@ -2,6 +2,7 @@
 local BossRushHotfixer = Class("BossRushHotfixer", HotfixBase)
 local eutil = CS.Torappu.Lua.Util
 local DataConvertUtil = CS.Torappu.DataConvertUtil
+local BattleStartController = CS.Torappu.BattleStartController
  
 local function _GenBattleSlotsWithPlayerDataFix(squadSlots, playerModel, squad, isAutoBattle)
   local listType = CS.System.Collections.Generic.List(CS.Torappu.AdvancedCharacterInst)
@@ -36,9 +37,29 @@ local function _GenBattleSlotsWithPlayerDataFix(squadSlots, playerModel, squad, 
   end
   return battleSlots
 end
+
+local function GenPredefinedCardsToInjectFix(levelData)
+  if levelData.options.isPredefinedCardsSelectable then
+    return nil
+  end
+
+  local predefinedData
+  local stageId = BattleStartController.m_cache.param.stageId
+  if stageId == "act11d0_s02#f#" or stageId == "act11d0_s01#f#" then
+    predefinedData = DataConvertUtil.LoadComposeHardPredefine(levelData)
+  else
+    predefinedData = levelData.predefines
+  end
+
+  if predefinedData == nil then
+    return nil
+  end
+  return predefinedData.characterCards
+end
  
 function BossRushHotfixer:OnInit()
     xlua.private_accessible(DataConvertUtil)
+    xlua.private_accessible(BattleStartController)
  
     self:Fix_ex(DataConvertUtil, "_GenBattleSlotsWithPlayerData", function(squadSlots, playerModel, squad, isAutoBattle)
         local ok, ret = xpcall(_GenBattleSlotsWithPlayerDataFix, debug.traceback, squadSlots, playerModel, squad, isAutoBattle)
@@ -49,6 +70,16 @@ function BossRushHotfixer:OnInit()
         end
 
         return ret
+    end)
+
+    self:Fix_ex(DataConvertUtil, "GenPredefinedCardsToInject", function(levelData)
+      local ok, ret = xpcall(GenPredefinedCardsToInjectFix, debug.traceback, levelData)
+      if not ok then
+        eutil.LogError("[GenPredefinedCardsToInject] fix" .. ret)
+        return nil
+      end
+
+      return ret
     end)
 end
  
