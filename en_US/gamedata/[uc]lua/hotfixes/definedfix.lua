@@ -3,11 +3,9 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/DIYRoomHotfixer",
-  "HotFixes/DIYPageHotfixer",
-  "HotFixes/BuffHotfixer",
-  "HotFixes/SquadGroupViewModelHotfixer",
-  "HotFixes/MultiFunnelTraitHotfixer",
+  "HotFixes/UIHotfixer",
+  "HotFixes/CharacterRepoStateBeanHotFixer",
+  "HotFixes/RoguelikeFriendAssistDetailStateHotFixer",
 };
 
 return list;

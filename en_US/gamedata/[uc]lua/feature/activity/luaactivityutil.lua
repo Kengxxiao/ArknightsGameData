@@ -89,9 +89,6 @@ local DEFINE_CLS_FUNCS = {
   PRAY_ONLY = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, PrayOnlyMainDlg)
   end,
-  TYPE_ACT17D7 = function(clsName, config)
-    DlgMgr.DefineDialog(clsName, config.dlgPath, Act17D7MainDlg)
-  end,
   GRID_GACHA = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, GridGachaMainDlg)
   end,

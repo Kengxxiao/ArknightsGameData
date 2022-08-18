@@ -6,20 +6,14 @@
 [Delay(time=1)]
 [PlayMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
-//【黑屏
 Shaw's Work Log
 Jan 5 \ Overcast
 There was a fire at a residential building downtown.
-
 [PlaySound(key="$fireburst", volume=0.4)]
 [name="Shaw"]Everyone, don'tpanic! Pleasefollowourinstructions andevacuatetooutside thecordonedoffarea. Donotpanic...
 [name="???"]It's gone... My life savings... all gone...
 [name="???"]Hahaha... That's what I'm talking about! Burn this whole stinking place to the ground! Hahahaha...
 [name="???"]M-Mommy...
-
-//【缓出背景：bg_lungmen_d
-
 [musicvolume(volume=0.2, fadetime=1)]
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
@@ -30,7 +24,6 @@ There was a fire at a residential building downtown.
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [Delay(time=1)]
 [musicvolume(volume=0.4, fadetime=1)]
-
 [playsound(key="$d_gen_walk_n")]
 [character(name="avg_277_shaw_1#2",fadetime=1.5)]
 [delay(time=2)]
@@ -46,12 +39,10 @@ There was a fire at a residential building downtown.
 [name="Little Girl"] Mommy!
 [character(name="avg_npc_032")]
 [name="Female Resident"] Mio!
- 
 [character(name="char_015_lmg")]
 [name="Senior L.G.D. Officer"] *Sigh*...
 [character(name="char_015_lmg")]
 [name="Senior L.G.D. Officer"] Everyone, please take a look around and see if there's anyone you know who hasn't evacuated?
-
 [character(name="avg_npc_032")]
 [name="Female Resident"]Has anyone seen the weird guy who lives on the second floor...?
 [character(name="avg_npc_033")]
@@ -89,8 +80,6 @@ There was a fire at a residential building downtown.
 [name="Shaw"]I'verescuedmorethanoneperson trappedinafire! Pleasetrustme!
 [character(name="char_015_lmg")]
 [name="Senior L.G.D. Officer"] Stay in contact... and be careful.
-
-//【背景：bg_indoor_2
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
@@ -101,7 +90,6 @@ There was a fire at a residential building downtown.
 [playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
 [Blocker(a=0.2, r=0.85, g=0.2, b=0.2, fadetime=2, block=true)]
 [Delay(time=2)]
-
 [PlaySound(channel="bgs",key="$burningloop1", volume=1, loop=true)]
 [dialog]
 [PlaySound(key="$transmission",volume=0.6)]
@@ -120,19 +108,15 @@ There was a fire at a residential building downtown.
 [PlaySound(key="$transmission",volume=0.6)]
 [name="Comms"] Roger that. Be careful.
 [stopSound(channel="bgs")]
- 
-//【转场，同一张背景
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [delay(time=1)]
 [Blocker(a=0.2, r=0.85, g=0.2, b=0.2, fadetime=2, block=true)]
 [Delay(time=2)]
-
 [dialog]
 [character]
 [PlaySound(key="$transmission",volume=0.6)]
 [name="Comms"] Shaw, give me a status report.
-
 [character(name="avg_277_shaw_1#5")]
 [CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
 [name="Shaw"]*Cough*... There’saverythick layerofsmoke onthefirstfloor... Thesecondfloor mightbeevenworse.
@@ -148,21 +132,16 @@ There was a fire at a residential building downtown.
 [name="Shaw"]Chief, thefireescape canstillbeused! I'mproceedingtothesecondfl—
 [Dialog]
 [character(fadetime=0.5)]
-
-//（震动，重物倒下声）
 [delay(time=1)]
 [CameraShake(duration=1, xstrength=50, ystrength=50, vibrato=60, randomness=90, fadeout=true, block=false)]
 [PlaySound(key="$b_char_rockexplo", volume=1)]
 [delay(time=1)]
 [PlaySound(key="$d_avg_rockfall", volume=1)]
-
 [dialog]
 [character]
 [PlaySound(key="$transmission",volume=0.6)]
 [name="Comms"] Shaw!
 [dialog]
-
-//delay
 [delay(time=1.5)]
 [playsound(key="$d_avg_clothmovement")]
 [character(name="avg_277_shaw_1#5",fadetime=1.5)]
@@ -176,7 +155,6 @@ There was a fire at a residential building downtown.
 [PlaySound(key="$transmission",volume=0.6)]
 [name="Comms"] Be careful...
 [dialog]
-
 [delay(time=1)]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="???"] Help... Help... me...
@@ -190,73 +168,42 @@ There was a fire at a residential building downtown.
 [characteraction(name="middle", type="move", xpos=-300, fadetime=2,block=false)]
 [Character(fadetime=0.5)]
 [delay(time=2)]
-
-
-
-
-//key
-
-
-
-
-//【黑屏
 [Dialog]
 [PlaySound(key="$rungeneral", volume=1)]
-
 [name="Shaw"]It'sthisflathere!
 [name="???"]Help... help me...
 [name="Shaw"]Sir? Icanhearyou!
 [name="Shaw"]Please, coveryourmouthandnose. Don'ttalkandsaveyourstrength! I'llfindaway togetyouout!
-
-//【两次撞击声效。
 [PlaySound(key="$sheildimpact")]
 [CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
 The tiny Zalak slams on the burning hot steel door with her shoulder. It doesn't bulge.
-
 [name="Shaw"](Crap, thedoorframe'sstartedtodeform becauseoftheheat!)
 [name="Shaw"](Let'sseeifIcancutitopen withmyaxe.)
 [name="Shaw"]Sir, stayawayfromthedoor, please! Watchout!
 [name="Shaw"]Hyah—!
 [dialog]
-//【劈砍声效。
-
 [PlaySound(key="$d_avg_axeimp", volume=0.9)]
 [CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
 [delay(time=0.51)]
 [PlaySound(key="$d_avg_axeimp", volume=0.9)]
 [CameraShake(duration=0.5, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=true)]
-
 [name="Shaw"]It'sworking! Icandothis!
 [dialog]
-
 [CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
 [PlaySound(key="$e_skill_skulsrsword", volume=1)]
 [delay(time=1)]
-
 Sparks fly everywhere. Shaw's axe turns scalding hot from the heat of the fire.
 She tightly grips her axe's handle and slams it toward the door's lock. The fissure on the lock is already clear.
-
 [name="Shaw"]Almostthere...
 [dialog]
 [CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
 [PlaySound(key="$e_skill_skulsrsword", volume=1)]
 [delay(time=1)]
-
 [CameraShake(duration=1, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
 [PlaySound(key="$d_gen_explo_n")]
 [playsound(key="$smallearthquake", volume=1)]
 [CameraShake(duration=2, xstrength=4, ystrength=4, vibrato=20, randomness=30, fadeout=true)]
 [delay(time=2.5)]
-
-
-
-
-//key out
-
-
-
-
-//【黑屏。
 [Dialog]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [delay(time=1)]
@@ -264,8 +211,6 @@ She tightly grips her axe's handle and slams it toward the door's lock. The fiss
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [Delay(time=2)]
-
-
 [name="Shaw"]Gottafightthefire...
 [name="Shaw"]Gotta... Gotta... fightthefire...
 [name="Shaw"]Gottasaveeveryone...
@@ -277,9 +222,6 @@ She tightly grips her axe's handle and slams it toward the door's lock. The fiss
 [CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
 [name="???"]Shaw, Shaw! Wake up!
 [Dialog]
-
-//【背景：bg_lungmen_r
-
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
 [stopmusic(fadetime=1)]
@@ -292,7 +234,6 @@ She tightly grips her axe's handle and slams it toward the door's lock. The fiss
 [name="Shaw"]Isthefireout—?
 [dialog]
 [playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
-
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#1", fadetime=0.7)]
 [delay(time=0.7)]
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#1", focus=1)]
@@ -317,8 +258,6 @@ She tightly grips her axe's handle and slams it toward the door's lock. The fiss
 [name="Shaw"] Chief, Icanstill—
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#1", focus=1)]
 [name="Senior L.G.D. Officer"] It's too late.
- 
-//【背景：bg_windows
 [musicvolume(volume=0.2, fadetime=1)]
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
@@ -329,16 +268,13 @@ She tightly grips her axe's handle and slams it toward the door's lock. The fiss
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [Delay(time=1)]
 [musicvolume(volume=0.4, fadetime=1)]
-
 Shaw never expected to find such a small room behind the door.
 Everything inside has been burned to ashes, which in turn makes the room look that much more open.
 There is a safe in the corner of the room. Although warped from the heat, its contents are miraculously intact.
 A small stack of LMD bills and a stamp album.
- 
 [name="Shaw"] ......
 [name="Senior L.G.D. Officer"] Shaw.
 [name="Senior L.G.D. Officer"] Pack it up.
-
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
@@ -346,8 +282,6 @@ A small stack of LMD bills and a stamp album.
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [Delay(time=2)]
-
-//【黑屏
 The fire erupted so quickly. In the end, one person died, with eleven in critical condition.
 That was the first time I saw a life extinguished right before my eyes.
 [dialog]
@@ -366,8 +300,6 @@ Jan 13 \ Overcast
 I took the day off.
 [dialog]
 [delay(time=1.2)]
-
-
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
@@ -378,7 +310,6 @@ I took the day off.
 [PlayMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.4)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [Delay(time=2)]
-
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#4", focus=2)]
 [name="Shaw"] Y-Yousaidyoucouldn'tfindanything?
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#4", focus=1)]
@@ -394,10 +325,10 @@ I took the day off.
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#5", focus=1)]
 [name="Senior L.G.D. Officer"] That's not something we have to worry about.
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#1", focus=2)]
-[multiline(name="阿消")] 难道真的没有办法了吗......
+[multiline(name="Shaw")] Wecan'tbeoutofideasnow...
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#4", focus=2)]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
-[multiline(name="阿消",delay=0.02)] 对了，集邮册！
+[multiline(name="Shaw",delay=0.02)] That'sright, hisstampalbum!
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#4", focus=2)]
 [name="Shaw"] Wasn'tthereastampalbum inhisroom?
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#4", focus=1)]
@@ -420,8 +351,6 @@ I took the day off.
 [name="Senior L.G.D. Officer"] *Sigh*, what do I do with you... Come with me.
 [Character(name="char_015_lmg", name2="avg_277_shaw_1#7", focus=2)]
 [name="Shaw"] Thanks!
- 
-//【背景：bg_lungmen_b
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
@@ -432,7 +361,6 @@ I took the day off.
 [PlayMusic(intro="$darkalley_intro", key="$darkalley_loop", volume=0.4)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [Delay(time=2)]
-
 [character(name="avg_npc_033")]
 [name="Male Resident"]The guy who lived on the second floor? Didn't you ask me just a couple days ago? I didn't know him!
 [character(name="avg_npc_033")]
@@ -441,7 +369,6 @@ I took the day off.
 [name="Male Resident"]Look, half my flat got burned down. I don't have the time to worry about some guy. I'm busy. Now leave me alone.
 [Character(name="avg_277_shaw_1#5")]
 [name="Shaw"] Sorrytobotheryou...
- 
 [character(name="avg_npc_032")]
 [name="Female Resident"]There aren’t many of us in this building, so we all know each other, more or less...
 [character(name="avg_npc_032")]
@@ -462,7 +389,6 @@ I took the day off.
 [name="Shaw"] ......
 [Character(name="avg_277_shaw_1#5")]
 [name="Shaw"] Stillnoideawhohewas...
-
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
@@ -471,15 +397,11 @@ I took the day off.
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [Delay(time=2)]
-
-//【黑屏
 Jan 15 \ Overcast
 I took the day off.
-
 I talked to a lot of people, but no one knew anything about the man.
 It was like the fire burned away every trace of his life, like he never existed at all.
 No, this isn't in my job description. I can't write about this here...
- 
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
@@ -490,12 +412,9 @@ No, this isn't in my job description. I can't write about this here...
 [playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [Delay(time=2)]
- 
-
 [playsound(key="$d_gen_walk_n")]
 [character(name="avg_npc_223",fadetime=1.5)]
 [delay(time=2)]
-
 [PlaySound(key="$rungeneral", volume=0.9)]
 [character(name="avg_npc_223",focus=-1)]
 [delay(time=1)]
@@ -552,13 +471,9 @@ No, this isn't in my job description. I can't write about this here...
 [PlaySound(key="$d_gen_walk_n", volume=1)]
 [Character(name="char_empty",name2="avg_277_shaw_1#1",fadetime=1.5)]
 [delay(time=1.8)]
-//【撤员工立绘。
-
 [Character(name="avg_277_shaw_1#2")]
 [name="Shaw"] Kou-wu landscapes...
 [name="Shaw"] Washe... fromKou-wu?
-
-
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
@@ -569,7 +484,6 @@ No, this isn't in my job description. I can't write about this here...
 [playMusic(intro="$path_intro", key="$path_loop", volume=0.4)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [Delay(time=2)]
-
 [playsound(key="$d_gen_walk_n")]
 [character(name="avg_277_shaw_1#2",fadetime=1.5)]
 [delay(time=2)]
@@ -578,8 +492,6 @@ No, this isn't in my job description. I can't write about this here...
 [name="Restaurant Owner"]Come in, come in. Take a seat anywhere.
 [Character(name="avg_npc_006",name2="avg_277_shaw_1#1",focus=2)]
 [name="Shaw"]Hellothere... Iamwondering... ifyouserveauthentic Kou-wunesecuisinehere?
-
-
 [Character(name="avg_npc_006",name2="avg_277_shaw_1#1",focus=1)]
 [name="Restaurant Owner"]What? Girl, go ahead and ask every restaurant in Lungmen. See if anyone dares to say they serve more authentic Kou-wunese food than me?!
 [Character(name="avg_npc_006",name2="avg_277_shaw_1#3",focus=2)]
@@ -640,21 +552,15 @@ No, this isn't in my job description. I can't write about this here...
 [name="Restaurant Owner"]Right, he's a young man. Maybe a little older than you, but probably not by much.
 [dialog]
 [character]
-
-//（flash into memory01）
 [PlaySound(key="$flashback",volume=0.4)]
 [Blocker(a=0, r=255, g=255, b=255, fadetime=0.03, block=true)]
 [Blocker(a=0.4, r=255, g=255, b=255, fadetime=0.1, block=true)]
 [Blocker(a=0.8, r=255, g=255, b=255, fadetime=0.2, block=true)]
-
 [cameraEffect(effect="Grayscale", keep=true, amount=0.7, fadetime=0)]
 [Background(image="bg_building_2",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
 [Character(name="avg_npc_223",name2="avg_277_shaw_1#1",focus=1)]
 [name="Post Office Worker"] Now this 'Hui-ch'i Foothills' one is a classic. If my memory serves, it was issued a couple decades ago?
-
-//（memory scene01 Out）
 [Dialog]
 [character(fadetime=1)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
@@ -663,8 +569,6 @@ No, this isn't in my job description. I can't write about this here...
 [Background(image="bg_park",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
 [delay(time=1)]
-
-
 [Character(name="avg_npc_006",name2="avg_277_shaw_1#5",focus=2)]
 [name="Shaw"]......
 [Character(name="avg_npc_006",name2="avg_277_shaw_1#5",focus=1)]
@@ -679,21 +583,12 @@ No, this isn't in my job description. I can't write about this here...
 [character]
 [character(name="char_015_lmg",fadetime=1.5)]
 [delay(time=2)]
-
 [Character(name="avg_277_shaw_1#5")]
 [CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
 [name="Shaw"]I-It'syou...!
 [dialog]
 [character(name="char_015_lmg")]
 [name="Senior L.G.D. Officer"]Shaw?
-
-
-//【黑屏。
-
-
-
-//【缓出背景：龙门天台
-
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
@@ -760,32 +655,25 @@ No, this isn't in my job description. I can't write about this here...
 [name="Shaw"] *Sniffles*...
 [character(fadetime=1)]
 [delay(time=1)]
-
-//【渐黑屏。
-
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
 [delay(time=1)]
 [Background(image="bg_black",screenadapt="coverall")]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
-
 [name="Shaw"] *Sniffles*... *Sniffles*...
 [name="Shaw"] *Whimpers*...
 [dialog]
 [musicvolume(volume=0, fadetime=1.5)]
 [delay(time=3)]
 [musicvolume(volume=0.4, fadetime=1.5)]
-
 Shaw's Work Log
 Jan 16 \ Overcast
 Today's the last day of my vacation. I did something really embarrassing.
 In the end, I couldn't find anything about the man. I don't know what to do to pull myself together, but I still have more important work.
-
 Jan 17 \ Clear
 Today's my first day back on the job.
 I've fallen behind on my training, so I gotta catch up. I might've caught a cold, and I need to get better!
- 
 [Dialog]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
@@ -796,7 +684,6 @@ I've fallen behind on my training, so I gotta catch up. I might've caught a cold
 [PlayMusic(intro="$farce_intro", key="$farce_loop", volume=0.4)]
 [Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
 [Delay(time=2)]
-
 [character(name="avg_277_shaw_1#1")]
 [name="Shaw"]SoIjustdemonstratedthedangers thatyoureverydayfirestarters mightpose.
 [character(name="avg_277_shaw_1#1")]
@@ -808,8 +695,6 @@ I've fallen behind on my training, so I gotta catch up. I might've caught a cold
 [character(name="avg_277_shaw_1#1")]
 [name="Shaw"]Wecanstopanaccident atitssource, butonceatragedystrikes, there'snoturningthingsaround nomatterhowremorsefulwefeel.
 [dialog]
-
-//【过一些干员立绘，泡普卡卡缇孑槐琥伊芙利特天火。
 [Character(name="char_281_popka_1",name2="char_209_ardign",fadetime=1)]
 [delay(time=1)]
 [character]
@@ -841,7 +726,6 @@ I've fallen behind on my training, so I gotta catch up. I might've caught a cold
 [name="Shaw"]*Cough*... S-Sowejusttalkedabout firestarteraccidents, buttherearemanyotherways afirecanstart.
 [character(name="avg_277_shaw_1#1")]
 [name="Shaw"]Nextup, we'lltalkaboutelectricalsafety. EngineeringOperators, pleaselistencarefully.
- 
 [Dialog]
 [Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
 [Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
@@ -849,8 +733,3 @@ I've fallen behind on my training, so I gotta catch up. I might've caught a cold
 [stopmusic(fadetime=1)]
 [Character]
 [Image]
-
-
-
-
-

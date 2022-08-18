@@ -1,5 +1,25 @@
 {
   "basicInfo": {
+    "act10mini": {
+      "id": "act10mini",
+      "type": "MINISTORY",
+      "displayType": "MINISTORY",
+      "name": "A Light Spark in Darkness",
+      "startTime": 1660824000,
+      "endTime": 1661425199,
+      "rewardEndTime": 1661684399,
+      "displayOnHome": true,
+      "hasStage": true,
+      "actTopBarColor": null,
+      "actTopBarText": null,
+      "templateShopId": "shop_act10mini",
+      "medalGroupId": null,
+      "ungroupedMedalIds": [
+        "medal_activity_10mini_01",
+        "medal_activity_10mini_02"
+      ],
+      "isReplicate": false
+    },
     "act25sign": {
       "id": "act25sign",
       "type": "CHECKIN_ONLY",
@@ -1265,6 +1285,7 @@
     }
   },
   "zoneToActivity": {
+    "act10mini_zone1": "act10mini",
     "act15side_zone1": "act15side",
     "act15side_zone2": "act15side",
     "act9sre_zone1": "act9sre",
@@ -45918,6 +45939,38 @@
       }
     },
     "MINISTORY": {
+      "act10mini": {
+        "tokenItemId": "act10mini_token_ticket",
+        "zoneDescList": {
+          "act10mini_zone1": {
+            "zoneId": "act10mini_zone1",
+            "unlockText": "Clear Main Story 1-10 to unlock."
+          }
+        },
+        "favorUpList": {},
+        "extraDropZoneList": [
+          "main_0",
+          "main_1",
+          "main_2",
+          "main_3",
+          "main_4",
+          "main_5",
+          "main_6",
+          "main_7",
+          "main_8",
+          "main_9",
+          "weekly_1",
+          "weekly_2",
+          "weekly_3",
+          "weekly_4",
+          "weekly_5",
+          "weekly_6",
+          "weekly_7",
+          "weekly_8",
+          "weekly_9",
+          "act10mini_zone1"
+        ]
+      },
       "act9mini": {
         "tokenItemId": "act9mini_token_ticket",
         "zoneDescList": {
@@ -47114,6 +47167,9 @@
     }
   },
   "activityItems": {
+    "act10mini": [
+      "act10mini_token_ticket"
+    ],
     "act15side": [
       "act15side_token_tea"
     ],
@@ -47350,6 +47406,10 @@
     "act11d0": [
       1603886400,
       1605092399
+    ],
+    "act10mini": [
+      1660824000,
+      1661425199
     ],
     "act9mini": [
       1649948400,
@@ -48419,7 +48479,7 @@
     {
       "id": "dis_rogue_1",
       "type": "ROGUELIKE",
-      "funcId": "rogue_1",
+      "funcId": "rogue_1_entry_display_1",
       "endTs": 1659005999,
       "sortId": 11,
       "itemId": null,
@@ -48449,6 +48509,36 @@
         }
       ],
       "startTs": 1659106800
+    },
+    {
+      "id": "dis_mini_10",
+      "type": "ACTIVITY",
+      "funcId": "act10mini",
+      "endTs": 1661425199,
+      "sortId": 13,
+      "itemId": "act10mini_token_ticket",
+      "timeNodes": [
+        {
+          "title": "Event <A Light Spark in Darkness> opened",
+          "ts": 1660824000
+        }
+      ],
+      "startTs": 1660824000
+    },
+    {
+      "id": "dis_rogue_1_enroll_1",
+      "type": "ROGUELIKE",
+      "funcId": "rogue_1_entry_display_2",
+      "endTs": 1665226799,
+      "sortId": 17,
+      "itemId": null,
+      "timeNodes": [
+        {
+          "title": "Integrated Strategies <Phantom and Crimson Solitaire> Deep Investigation now available",
+          "ts": 1664622000
+        }
+      ],
+      "startTs": 1664622000
     }
   ]
 }
