@@ -107,7 +107,29 @@ function UIDlgGroup:RemoveChild(child)
       return true;
     end
   end
-  return flase;
+  return false;
+end
+
+function UIDlgGroup:SwitchChildDlg(dlgCls)
+  if self:_CheckTransitting() then
+    return nil;
+  end
+
+  
+  if self.m_childDlgs == nil then
+    return nil
+  end
+  local prevIdx = #self.m_childDlgs
+  local prevDlg = self.m_childDlgs[prevIdx]
+  if prevDlg == nil then
+    return nil
+  end
+
+  table.remove(self.m_childDlgs, prevIdx)
+  local newDlg = self:_HandleAdd(dlgCls)
+
+  self.m_coroutine = CoroutineModel.me:StartCoroutine(self._SwitchTo, self, prevDlg, newDlg);
+  return newDlg
 end
 
 function UIDlgGroup:_CheckTransitting()
@@ -155,4 +177,28 @@ function UIDlgGroup:_CloseTo(closeDlg, newTopDlg )
   end
   
   closeDlg:ClosedByParent();
+end
+
+
+
+function UIDlgGroup:_SwitchTo(closeDlg, newTopDlg)
+  local closeCoroutine = nil
+  if closeDlg ~= nil then
+    closeCoroutine = closeDlg:TransCoroutine(false)
+  end
+
+  local openCoroutine = nil
+  if newTopDlg ~= nil then
+    newTopDlg:SetVisible(true)
+    openCoroutine = newTopDlg:TransCoroutine(true)
+  end
+
+  while closeCoroutine and closeCoroutine:IsAlive() do
+    coroutine.yield()
+  end
+  closeDlg:ClosedByParent()
+
+  while openCoroutine and openCoroutine:IsAlive() do
+    coroutine.yield()
+  end
 end

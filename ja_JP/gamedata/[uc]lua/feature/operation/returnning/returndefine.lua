@@ -10,3 +10,12 @@ ReturnCheckInState = {
   STATE_CHECKIN_AVAILABLE  = 1,
 }
 ReturnCheckInState = Readonly(ReturnCheckInState);
+
+
+ReturnOnceRewardStatus = {
+  READY = 0,
+  GOT = 1,
+  TIME_OUT = 2,
+  ERROR = 3,
+}
+ReturnOnceRewardStatus = Readonly(ReturnOnceRewardStatus);

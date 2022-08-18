@@ -85,12 +85,28 @@ function ReturnModel:CheckIfNeedReadIntro(currentData)
   return introRecord == 0;
 end
 
-function ReturnModel:HasOnceReward()
+
+function ReturnModel:GetOnceRewardStatus()
   local currentData = CS.Torappu.PlayerData.instance.data.backflow.current;
   if not currentData then
-    return false;
+    return ReturnOnceRewardStatus.ERROR;
   end
-  return not currentData.reward;
+  if currentData.reward then
+    return ReturnOnceRewardStatus.GOT;
+  end
+
+  
+  local passSec = CS.Torappu.DateTimeUtil.timeStampNow - currentData.start;
+  local dur = CS.Torappu.OpenServerDB.returnData.constData.systemTab_time;
+  if passSec > dur * 24 * 3600 then
+    return ReturnOnceRewardStatus.TIME_OUT;
+  end
+
+  return ReturnOnceRewardStatus.READY;
+end
+
+function ReturnModel:HasOnceReward()
+  return self:GetOnceRewardStatus() == ReturnOnceRewardStatus.READY;
 end
 
 function ReturnModel:CanClaimTaskOrCredit()
@@ -174,9 +190,9 @@ function ReturnModel:GetReturnStatus()
   }
   status.open = CS.Torappu.PlayerData.instance.data.backflow.open;
   if status.open then
-    status.shouldPopup = self:_CheckIfPopupReturnPage();
-    status.showTrackPoint = self:_CheckShowTrackPoint();
     status.onlyWeekly = self:CheckIfOnlyWeeklyOpen();
+    status.shouldPopup = self:_CheckIfPopupReturnPage();
+    status.showTrackPoint = not status.onlyWeekly and self:_CheckShowTrackPoint();
   end
 
   return status;
