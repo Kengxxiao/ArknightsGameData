@@ -1,12 +1,13 @@
 [HEADER(is_tutorial=true, is_skippable=true)] 活动20side教学关1_a
 
 [Battle.Pause]
-[Battle.EnsureMinSp(charId="trap_080_garage", sp=100)]
 
-[Tutorial(focusX=205, focusY=165, focusWidth=150, focusHeight=150, \
-          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
-          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+[Tutorial(protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
 际崖城的路边经常会出现<@tu.kw>自走车出发点</>。虽然我还没试过，不过，据说它可以用来发射自走车。
+
+[Battle.Pause(pause=false)]
+[Delay(time=3)]
+[Battle.Pause(pause=true)]
 
 [Battle.UnlockFunction(mask="CHARACTER_INFO")]
 [Battle.UnlockFunction(mask="CHARACTER_MENU")]
