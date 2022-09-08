@@ -26,7 +26,7 @@ local function OnValueChanged_Fixed(self, property)
   self.m_tween:OnKill(function ()
       self:_OnRenderFinish()
     end)
-  self.m_tween:SetAutoKill(tweenCallBack)
+  self.m_tween:SetAutoKill()
   self.m_tween:Play()
 end
 
