@@ -9082,6 +9082,89 @@
           ]
         }
       ]
+    },
+    "char_300_phenxi": {
+      "charId": "char_300_phenxi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_recExcludeOther[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_exchangeAp[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4036_forcer": {
+      "charId": "char_4036_forcer",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "meet_spd&cost[100]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_4016_kazema": {
+      "charId": "char_4016_kazema",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd_condChar[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -12589,6 +12672,30 @@
       "roomType": "DORMITORY",
       "description": "숙소에 배치 시, 자신의 시간당 컨디션 회복 <@cc.vup>+0.55</>, 해당 숙소 안에 배치된 모든 오퍼레이터의 시간당 컨디션 회복 <@cc.vup>+0.1</> (동종 효과 중 가장 높은 수치만 적용) "
     },
+    "dorm_exchangeAp[000]": {
+      "buffId": "dorm_exchangeAp[000]",
+      "buffName": "생사지교",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_exchangeAp",
+      "sortId": 5501,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "숙소에 배치 시, 자신이 <@cc.kw>'기운 충만'</> 상태이면 숙소에 <@cc.kw>마지막으로</> 배치된 오퍼레이터(본인 제외)와 서로 컨디션 교환"
+    },
+    "dorm_recExcludeOther[000]": {
+      "buffId": "dorm_recExcludeOther[000]",
+      "buffName": "자율",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_reborn",
+      "sortId": 5501,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "숙소에 배치 시, 자신의 시간당 컨디션 회복 속도 <@cc.vup>2</>, 다른 곳에서 제공하는 컨디션 회복 효과 <@cc.vdown>획득 불가</>"
+    },
     "hire_spd[000]": {
       "buffId": "hire_spd[000]",
       "buffName": "인사관리 α",
@@ -12829,6 +12936,30 @@
       "roomType": "MEETING",
       "description": "응접실에 배치 시, 단서 수집 속도 <@cc.vup>10%</> 상승"
     },
+    "meet_spd&cost[000]": {
+      "buffId": "meet_spd&cost[000]",
+      "buffName": "단서 수집 α",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd1",
+      "sortId": 6001,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "응접실에 배치 시, 단서 수집 속도 <@cc.vup>10%</> 상승"
+    },
+    "meet_spd[010]": {
+      "buffId": "meet_spd[010]",
+      "buffName": "그림자화",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd2",
+      "sortId": 6011,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "응접실에 배치 시, 단서 수집 속도 <@cc.vup>15%</> 상승"
+    },
     "meet_spd[020]": {
       "buffId": "meet_spd[020]",
       "buffName": "단서 수집 β",
@@ -12876,6 +13007,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "응접실에 배치 시, 단서 수집 속도 <@cc.vup>25%</> 상승"
+    },
+    "meet_spd_condChar[000]": {
+      "buffId": "meet_spd_condChar[000]",
+      "buffName": "자유자재",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_condChar",
+      "sortId": 6042,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "응접실에 배치 시, 응접실에서 <@cc.kw>자신</>만 업무 중일 때 단서 수집 속도 <@cc.vup>35%</> 상승"
+    },
+    "meet_spd&cost[100]": {
+      "buffId": "meet_spd&cost[100]",
+      "buffName": "논리적 추리",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd&cost",
+      "sortId": 6041,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "응접실에 배치 시, 단서 수집 속도 <@cc.vup>35%</> 상승, 시간당 컨디션 소모 <@cc.vdown>+2</>"
     },
     "meet_team[020]": {
       "buffId": "meet_team[020]",
@@ -37423,6 +37578,499 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_NHL_showcase_01": {
+        "id": "furni_NHL_showcase_01",
+        "sortId": 855,
+        "name": "'좋은 선배' 진열장",
+        "iconId": "furni_NHL_showcase_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 4,
+        "depth": 4,
+        "height": 10,
+        "comfort": 400,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "수호총이 진열된 목제 진열장으로 스타일은 심플하고 중후하지만, 유리창은 방탄용이 아니다.\n이 수호총의 주인은 역대 '최고 집행자' 투표에서 꼴찌를 한 선배로, 이게 솔직히 '기념'인지 아니면 '반면교재'인지 잘 모르겠다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_frame_01": {
+        "id": "furni_NHL_frame_01",
+        "sortId": 856,
+        "name": "실물 액자",
+        "iconId": "furni_NHL_frame_01",
+        "type": "WALLDECO",
+        "subType": "ART_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 70,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "진열장을 구매할 때 사은품으로 따라온 나무 액자지만, 안에는 사진 대신 수호총의 제식 탄환이 끼워져 있다.\n“여차하면 액자를 깨서 얼마든지 쓸 수 있으니까.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_bookstand_01": {
+        "id": "furni_NHL_bookstand_01",
+        "sortId": 857,
+        "name": "독서대",
+        "iconId": "furni_NHL_bookstand_01",
+        "type": "DECORATION",
+        "subType": "ENTERTAINMENT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "집행자들이 책 읽기 편하게 설계된 독서대로, 예스럽고 정교하며 레트로한 느낌이 있다.\n누가 책을 《백일담》으로 바꿨는지는 모르겠지만, 원래 있었던 《성도행기》는 이미 행방을 알 수 없다. 그래도 뭐, 교의는 마음속에 있으면 되니까.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_shelf_01": {
+        "id": "furni_NHL_shelf_01",
+        "sortId": 858,
+        "name": "선반",
+        "iconId": "furni_NHL_shelf_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 175,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "현관에 있는 선반. 아무 물건이나 두면 안 된다. 특히 수호총!\n선배들은 출근할 때 우산을 들고 오는 법이 거의 없다. 그러나 에젤은 집행자가 된 이튿날에 선반에 우산을 하나 꽂아 넣었다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_sofa_01": {
+        "id": "furni_NHL_sofa_01",
+        "sortId": 859,
+        "name": "'좋은 동료' 소파",
+        "iconId": "furni_NHL_sofa_01",
+        "type": "SEATING",
+        "subType": "SOFA",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "공증소에서 주문 제작한 2인용 그린 스웨이드 소파. 동료들끼리 친하게 지내라고 일부러 작은 사이즈로 주문했다고 한다.\n아이러니하게도 소파에 두 명이 함께 앉은 적은 한 번도 없다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_floorlamp_01": {
+        "id": "furni_NHL_floorlamp_01",
+        "sortId": 860,
+        "name": "황동 플로어 스탠드",
+        "iconId": "furni_NHL_floorlamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 185,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "나무를 형상화한 플로어 스탠드로, 거꾸로 내리 드리워진 꽃잎 모양 설계는 빛을 효과적으로 모아 더 부드럽게 비춰준다.\n원래는 독서용으로 구매했으나, 집행자들이 독서 취미가 적어 사용률이 낮은 편이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_stand_01": {
+        "id": "furni_NHL_stand_01",
+        "sortId": 861,
+        "name": "장식용 석고대",
+        "iconId": "furni_NHL_stand_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 4,
+        "depth": 2,
+        "height": 5,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "장식용 석고 테이블로, 어느 만국 전달자가 라이타니엔에서 공수해 공증소에 증정했다.\n라이타니엔 마스터의 작품으로 예술과 사상의 피조물이라고 하지만, 집행자들은 이것이 시야를 가린다고 대부분 싫어한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_coffeeTable_01": {
+        "id": "furni_NHL_coffeeTable_01",
+        "sortId": 862,
+        "name": "낮은 대리석 테이블",
+        "iconId": "furni_NHL_coffeeTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 305,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "통 대리석에 광택을 내고 다듬어서 만든, 고가에 구매한 티테이블로 황동으로 된 구조물이 지탱하고 있다.\n“선반에 아무 물건이나 놓지 말라면 여기다 놓으면 되겠네. 간다. 계약과 공증, 유품 전달, 오늘 할 일이 산더미야.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_carpet_01": {
+        "id": "furni_NHL_carpet_01",
+        "sortId": 863,
+        "name": "기하무늬 카펫",
+        "iconId": "furni_NHL_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 14,
+        "depth": 10,
+        "height": 1,
+        "comfort": 185,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "심플한 디자인에 부드럽고 때를 잘 타지 않으며, 바닥 타일의 스타일에 맞춘 기하무늬의 카펫.\n먼 길을 가다 보면 길을 잃기 마련이지만, 신앙이 있는 사람은 발밑이 푹신하여 가시덤불을 밟을 일이 없다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_ceilingLight_L_01": {
+        "id": "furni_NHL_ceilingLight_L_01",
+        "sortId": 864,
+        "name": "나뭇가지 펜던트 조명",
+        "iconId": "furni_NHL_ceilingLight_L_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 6,
+        "depth": 4,
+        "height": 4,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "공증소의 메인 광원으로, 카란 무역회사를 통해 구매한 현대식 조명이다.\n폭풍에도 절대 기울어질 일이 없는 신성한 도시 라테라노는 모두의 빛이 될 것이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_ceilingLight_S_01": {
+        "id": "furni_NHL_ceilingLight_S_01",
+        "sortId": 865,
+        "name": "마름모 펜던트 조명",
+        "iconId": "furni_NHL_ceilingLight_S_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 70,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "공증소의 보조 광원으로 마름모형이 모여 마름모형을 이룬 절묘한 디자인을 자랑하지만, 조명 효과는 그다지 좋지 않다.\n라테라노의 율법은 불과 몇 개 조항뿐이지만, 수천 년의 역사를 자랑하는 신성한 도시의 존속을 지탱하기에는 충분하다. 오히려, 복잡하고 작위적인 생각이 현대인들의 통폐이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_NHL_seat_01": {
+        "id": "furni_NHL_seat_01",
+        "sortId": 866,
+        "name": "원목 좌탑",
+        "iconId": "furni_NHL_seat_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 10,
+        "depth": 3,
+        "height": 3,
+        "comfort": 360,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "만국 정상회담의 원활한 개최를 기원하기 위해 염국에서 보내온 홍목을 통째로 가공하여 만든 선물 중 하나.\n공증소에 돌아와 업무 인수인계를 할 때 집행자들이 가끔 이 위에서 쉬곤 한다. “너무 딱딱해 눕기 불편하다.”라는 게 피아메타의 평가이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_vase_01": {
+        "id": "furni_NHL_vase_01",
+        "sortId": 867,
+        "name": "유리 꽃병",
+        "iconId": "furni_NHL_vase_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 175,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "아무 생각 없이 사 온 유리그릇이었는데, 어떤 집행자에 의해 꽃병으로 재탄생했다.\n갓 부임한 수습 집행자 외엔 싱싱한 꽃으로 갈아 놓을 생각을 하는 사람이 별로 없다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_clock_01": {
+        "id": "furni_NHL_clock_01",
+        "sortId": 868,
+        "name": "'광륜과 시간' 탁상시계",
+        "iconId": "furni_NHL_clock_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 5,
+        "depth": 1,
+        "height": 9,
+        "comfort": 230,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "복고풍의 괘종시계. 장인들이 바위를 통째로 깎아 시계의 받침대를 만들었다고 한다.\n시간이 위에, 광륜이 아래에 있으며, 시간이 얼마 흘렀으면 광륜도 그만큼 존재한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_statue_01": {
+        "id": "furni_NHL_statue_01",
+        "sortId": 869,
+        "name": "'자율' 조각상",
+        "iconId": "furni_NHL_statue_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 6,
+        "depth": 6,
+        "height": 8,
+        "comfort": 600,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "라테라노 역사상 어느 한 교황을 모티브로 설계한 조각상으로, 받침대의 물은 자주 갈아줘야 한다.\n조각상의 손에 놓인 총은 당시 '좋은 선배' 진열장에 공간이 부족하여 임시로 올려놓은 것으로, 아무도 이질감을 느끼지 못해 이제는 조각상 일부가 되었다고 한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_wallpaper_01": {
+        "id": "furni_NHL_wallpaper_01",
+        "sortId": 870,
+        "name": "파노라마 디스플레이 (신성한 도시)",
+        "iconId": "furni_NHL_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "첨단 파노라마 기술 덕분에 집행자들은 자신이 사는 이 신성한 도시를 언제든지 감상할 수 있게 되었다.\n물론, 길가에서 수시로 일어나는 폭발 사건은 영상에 기록되지 않았다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_floor_01": {
+        "id": "furni_NHL_floor_01",
+        "sortId": 871,
+        "name": "공증소 바닥재",
+        "iconId": "furni_NHL_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "기하무늬로 된 어두운 톤의 바닥 타일로, 패턴이 심플하지만 보기에는 부드럽고 청소하기 편하다.\n자세히 들여다보면 타일 사이의 틈새가 전혀 보이지 않는다. 라테라노의 계율도 이처럼 간결하지만 엄밀하다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "sortId": 10001,
@@ -40604,6 +41252,35 @@
         "comfort": 75,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "“화목하면 재물이 들어온다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS026_seven_01": {
+        "id": "furni_dropS026_seven_01",
+        "sortId": 11055,
+        "name": "플레이트 《죄책》",
+        "iconId": "furni_dropS026_seven_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "“육 일간의 창조로 여섯 가지 죄악이 탄생했고, 하루 안식하면서 한 가지 책임을 확정한다.”",
         "obtainApproach": "이벤트 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -49638,6 +50315,148 @@
           "furni_castle_wallpaper_01",
           "furni_castle_floor_01"
         ]
+      },
+      "furni_set_NHL": {
+        "id": "furni_set_NHL",
+        "sortId": 51,
+        "name": "라테라노 공증소 휴게실",
+        "themeType": "EVENT",
+        "desc": "오퍼레이터 인포서의 묘사에 따라 재현한 라테라노 공증소 휴게실. 하지만 피아메타는 별로 관심을 보이지 않았다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_NHL_showcase_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_frame_01",
+            "pos0": 4,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_bookstand_01",
+            "pos0": 4,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_shelf_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_sofa_01",
+            "pos0": 9,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_floorlamp_01",
+            "pos0": 9,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_stand_01",
+            "pos0": 12,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_coffeeTable_01",
+            "pos0": 13,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_carpet_01",
+            "pos0": 8,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_ceilingLight_L_01",
+            "pos0": 14,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_ceilingLight_S_01",
+            "pos0": 7,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_ceilingLight_S_01",
+            "pos0": 25,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_seat_01",
+            "pos0": 12,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_vase_01",
+            "pos0": 32,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_clock_01",
+            "pos0": 28,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_statue_01",
+            "pos0": 23,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_NHL_1",
+          "furni_set_NHL_2",
+          "furni_set_NHL_3",
+          "furni_set_NHL_4"
+        ],
+        "furnitures": [
+          "furni_NHL_showcase_01",
+          "furni_NHL_frame_01",
+          "furni_NHL_bookstand_01",
+          "furni_NHL_shelf_01",
+          "furni_NHL_sofa_01",
+          "furni_NHL_floorlamp_01",
+          "furni_NHL_stand_01",
+          "furni_NHL_coffeeTable_01",
+          "furni_NHL_carpet_01",
+          "furni_NHL_ceilingLight_L_01",
+          "furni_NHL_ceilingLight_S_01",
+          "furni_NHL_seat_01",
+          "furni_NHL_vase_01",
+          "furni_NHL_clock_01",
+          "furni_NHL_statue_01",
+          "furni_NHL_wallpaper_01",
+          "furni_NHL_floor_01"
+        ]
       }
     },
     "groups": {
@@ -52486,6 +53305,63 @@
           "furni_lightArt_curtain_01",
           "furni_lightArt_ceilingLight_01",
           "furni_lightArt_candle_01"
+        ]
+      },
+      "furni_set_NHL_1": {
+        "id": "furni_set_NHL_1",
+        "sortId": 1,
+        "name": "'독서와 기념'",
+        "themeId": "furni_set_NHL",
+        "comfort": 195,
+        "count": 4,
+        "furniture": [
+          "furni_NHL_showcase_01",
+          "furni_NHL_shelf_01",
+          "furni_NHL_bookstand_01",
+          "furni_NHL_frame_01"
+        ]
+      },
+      "furni_set_NHL_2": {
+        "id": "furni_set_NHL_2",
+        "sortId": 2,
+        "name": "'업무와 휴식'",
+        "themeId": "furni_set_NHL",
+        "comfort": 260,
+        "count": 4,
+        "furniture": [
+          "furni_NHL_coffeeTable_01",
+          "furni_NHL_seat_01",
+          "furni_NHL_sofa_01",
+          "furni_NHL_carpet_01"
+        ]
+      },
+      "furni_set_NHL_3": {
+        "id": "furni_set_NHL_3",
+        "sortId": 3,
+        "name": "'신앙과 삶'",
+        "themeId": "furni_set_NHL",
+        "comfort": 345,
+        "count": 5,
+        "furniture": [
+          "furni_NHL_statue_01",
+          "furni_NHL_clock_01",
+          "furni_NHL_vase_01",
+          "furni_NHL_stand_01",
+          "furni_NHL_floorlamp_01"
+        ]
+      },
+      "furni_set_NHL_4": {
+        "id": "furni_set_NHL_4",
+        "sortId": 4,
+        "name": "'빛과 어둠'",
+        "themeId": "furni_set_NHL",
+        "comfort": 155,
+        "count": 4,
+        "furniture": [
+          "furni_NHL_wallpaper_01",
+          "furni_NHL_floor_01",
+          "furni_NHL_ceilingLight_L_01",
+          "furni_NHL_ceilingLight_S_01"
         ]
       }
     },
