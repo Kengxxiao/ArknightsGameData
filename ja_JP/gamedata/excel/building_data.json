@@ -9082,6 +9082,89 @@
           ]
         }
       ]
+    },
+    "char_300_phenxi": {
+      "charId": "char_300_phenxi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_recExcludeOther[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_exchangeAp[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4036_forcer": {
+      "charId": "char_4036_forcer",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "meet_spd&cost[100]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_4016_kazema": {
+      "charId": "char_4016_kazema",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd_condChar[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -12589,6 +12672,30 @@
       "roomType": "DORMITORY",
       "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.55</>。配置宿舎内、全員の1時間ごとの体力回復量<@cc.vup>+0.1</>（同種の効果は高いほうのみ適応）"
     },
+    "dorm_exchangeAp[000]": {
+      "buffId": "dorm_exchangeAp[000]",
+      "buffName": "一蓮托生",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_exchangeAp",
+      "sortId": 5501,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "宿舎休養時、自身が<@cc.kw>「元気十分」</>状態にいると、同じ宿舎内で自身以外の<@cc.kw>最後に</>配置したオペレーター1人と体力を入れ替わる"
+    },
+    "dorm_recExcludeOther[000]": {
+      "buffId": "dorm_recExcludeOther[000]",
+      "buffName": "自律",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_reborn",
+      "sortId": 5501,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "宿舎休養時、自身の体力が1時間ごとに<@cc.vup>2</>回復し、自身以外からの体力回復効果は<@cc.vdown>適用されない</>"
+    },
     "hire_spd[000]": {
       "buffId": "hire_spd[000]",
       "buffName": "人事管理α",
@@ -12829,6 +12936,30 @@
       "roomType": "MEETING",
       "description": "応接室配置時、手がかり捜索速度<@cc.vup>+10%</>"
     },
+    "meet_spd&cost[000]": {
+      "buffId": "meet_spd&cost[000]",
+      "buffName": "情報収集α",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd1",
+      "sortId": 6001,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "応接室配置時、手がかり捜索速度<@cc.vup>+10%</>"
+    },
+    "meet_spd[010]": {
+      "buffId": "meet_spd[010]",
+      "buffName": "影に潜む",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd2",
+      "sortId": 6011,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "応接室配置時、手がかり捜索速度<@cc.vup>+15%</>"
+    },
     "meet_spd[020]": {
       "buffId": "meet_spd[020]",
       "buffName": "情報収集β",
@@ -12876,6 +13007,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "応接室配置時、手がかり捜索速度<@cc.vup>+25%</>"
+    },
+    "meet_spd_condChar[000]": {
+      "buffId": "meet_spd_condChar[000]",
+      "buffName": "仕事上手",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_condChar",
+      "sortId": 6042,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "応接室配置時、<@cc.kw>自身だけ</>が仕事中であると、手がかり捜索速度<@cc.vup>+35%</>"
+    },
+    "meet_spd&cost[100]": {
+      "buffId": "meet_spd&cost[100]",
+      "buffName": "ロジックシンキング",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd&cost",
+      "sortId": 6041,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "応接室配置時、手がかり捜索速度<@cc.vup>+35%</>、1時間ごとの体力消費量<@cc.vdown>+2</>"
     },
     "meet_team[020]": {
       "buffId": "meet_team[020]",
@@ -37423,6 +37578,499 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_NHL_showcase_01": {
+        "id": "furni_NHL_showcase_01",
+        "sortId": 855,
+        "name": "「良き先輩」キャビネット",
+        "iconId": "furni_NHL_showcase_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 4,
+        "depth": 4,
+        "height": 10,
+        "comfort": 400,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "守護銃を陳列する木製キャビネット。シンプルな見た目だが重厚さがある。防弾ガラスではない。\n銃の持ち主はかつて「最優秀執行人」を選ぶ投票で獲得票数が少なかった者たちである。記念と言うべきか、反面教師と言うべきかは判然としない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_frame_01": {
+        "id": "furni_NHL_frame_01",
+        "sortId": 856,
+        "name": "額縁ケース",
+        "iconId": "furni_NHL_frame_01",
+        "type": "WALLDECO",
+        "subType": "ART_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 70,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "キャビネットの購入者に贈られる木製の額縁。中に保管されているのは写真ではなく、弾丸である。\n「トラブルが発生した場合は、自由にガラスを割って弾を使用していい。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_bookstand_01": {
+        "id": "furni_NHL_bookstand_01",
+        "sortId": 857,
+        "name": "書見台",
+        "iconId": "furni_NHL_bookstand_01",
+        "type": "DECORATION",
+        "subType": "ENTERTAINMENT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "クラシカルでコンパクトな台。執行人が休憩時間に書籍の閲読がしやすいように設計されている。\n元は『聖徒行記』がセットされていたが、『百日談』に入れ替えられている。しかし問題ない、教義はみなの心に刻まれている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_shelf_01": {
+        "id": "furni_NHL_shelf_01",
+        "sortId": 858,
+        "name": "傘立て",
+        "iconId": "furni_NHL_shelf_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 175,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "玄関に置いてある傘立て。物をみだりに置かないこと、特に銃！\n年長者たちは出勤する際に傘を携帯する習慣がないため、エゼルが見習い執行人となった次の日に一本放り込んでおいた。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_sofa_01": {
+        "id": "furni_NHL_sofa_01",
+        "sortId": 859,
+        "name": "「良き同僚」チェア",
+        "iconId": "furni_NHL_sofa_01",
+        "type": "SEATING",
+        "subType": "SOFA",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "公証人役場で使用される緑色の二人掛けソファ。サイズが小さめであるのはコミュニケーションを促進するためだと言われている。\n不思議なことにこのソファに同時に二人が腰かけたことはない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_floorlamp_01": {
+        "id": "furni_NHL_floorlamp_01",
+        "sortId": 860,
+        "name": "樹形照明",
+        "iconId": "furni_NHL_floorlamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 185,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ツリー型の照明。逆さの花弁は光を上手にまとめ柔らかい雰囲気である。\nブックライトとして用意されたものだが、執行人たちはその手の関心が低いため、使用率は高くない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_stand_01": {
+        "id": "furni_NHL_stand_01",
+        "sortId": 861,
+        "name": "石こうの飾り台",
+        "iconId": "furni_NHL_stand_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 4,
+        "depth": 2,
+        "height": 5,
+        "comfort": 200,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "装飾用の石こう台。某レガトゥスがリターニアから持ち帰り公証人役場に寄贈した。\nリターニアのとある大家による、芸術と思想の詰まった作品という話だが、執行人たちは視界を遮る邪魔もの扱いしている。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_coffeeTable_01": {
+        "id": "furni_NHL_coffeeTable_01",
+        "sortId": 862,
+        "name": "大理石のローテーブル",
+        "iconId": "furni_NHL_coffeeTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 305,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "高値で購入したローテーブル。磨かれた一枚板の大理石を黄銅の足が支えている。\n「傘立てに物を置いちゃいけないなら、ここに積み上げとけばいいだろう。いくぞ、公証に遺物の受け渡しに、今日は山ほど仕事があるんだ。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_carpet_01": {
+        "id": "furni_NHL_carpet_01",
+        "sortId": 863,
+        "name": "幾何学模様の絨毯",
+        "iconId": "furni_NHL_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 14,
+        "depth": 10,
+        "height": 1,
+        "comfort": 185,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "床と同じスタイルの幾何学絨毯。デザインはシンプルだが柔らかく丈夫である。\nこの絨毯を踏む者はいずれ道に迷う。しかし、信仰を持つ者の足がいばらを踏むことはない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_ceilingLight_L_01": {
+        "id": "furni_NHL_ceilingLight_L_01",
+        "sortId": 864,
+        "name": "樹形シャンデリア",
+        "iconId": "furni_NHL_ceilingLight_L_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 6,
+        "depth": 4,
+        "height": 4,
+        "comfort": 200,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "公証人役場の主な光源。カランド貿易から購入した現代照明。\n嵐に揺さぶられたことのないラテラーノでは、みなにとっての光である。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_ceilingLight_S_01": {
+        "id": "furni_NHL_ceilingLight_S_01",
+        "sortId": 865,
+        "name": "菱形照明",
+        "iconId": "furni_NHL_ceilingLight_S_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 70,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "公証人役場の補助照明。菱形を集合させて菱形を作る巧みな設計がされているが、光源としての効果はいまいちである。\nラテラーノの法律は短いものだが、聖都を1000年維持するのに十分であった。考えが複雑になりすぎるのは、現代人の共通の問題である。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_NHL_seat_01": {
+        "id": "furni_NHL_seat_01",
+        "sortId": 866,
+        "name": "木のカウチ",
+        "iconId": "furni_NHL_seat_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 10,
+        "depth": 3,
+        "height": 3,
+        "comfort": 360,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎国から万国サミット開催にあたって贈られた品物の一つ。上等な紅木で作られている。\n公証人役場に仕事の引継ぎに戻った際、執行人たちはこのカウチの上で小休止する。「硬すぎて快適とは言えないわね」これはフィアメッタの評である。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_vase_01": {
+        "id": "furni_NHL_vase_01",
+        "sortId": 867,
+        "name": "ガラスの花瓶",
+        "iconId": "furni_NHL_vase_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 175,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "元は適当に買ってきたガラスの器であるが、某執行人が花瓶にした。\n新任の見習い執行人以外に花を替える者はあまりいない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_clock_01": {
+        "id": "furni_NHL_clock_01",
+        "sortId": 868,
+        "name": "「光環と時間」柱時計",
+        "iconId": "furni_NHL_clock_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 5,
+        "depth": 1,
+        "height": 9,
+        "comfort": 230,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "クラシカルな柱時計。職人が一塊の岩から作り出した。\n時の恵みの下に光環は輝く。時の音が響く限り、光環はあり続ける。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_statue_01": {
+        "id": "furni_NHL_statue_01",
+        "sortId": 869,
+        "name": "「吾は行き吾は律する」像",
+        "iconId": "furni_NHL_statue_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 6,
+        "depth": 6,
+        "height": 8,
+        "comfort": 600,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ラテラーノのかつての教皇をモデルにした銅像。周囲の水は頻繁に換える必要がある。\n彫像が手にしている銃は当時「良き先輩」キャビネットに空きがなかったため、一時的に持たせたものだが、誰も違和感を感じなかったため彫像の一部となったらしい。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_wallpaper_01": {
+        "id": "furni_NHL_wallpaper_01",
+        "sortId": 870,
+        "name": "ウォールディスプレイ（聖都）",
+        "iconId": "furni_NHL_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "現代の投影技術を駆使することで、執行人は常に自分たちの住む聖地を眺めることができる。\nもちろん、時折街中で起こる爆破事件については記録されていない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_floor_01": {
+        "id": "furni_NHL_floor_01",
+        "sortId": 871,
+        "name": "公証役場の床",
+        "iconId": "furni_NHL_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "幾何学模様が描かれた暗い色のタイル。シンプルな図案で柔らかな印象を与える。掃除しやすい。\n注意深く見ても組み合わさったタイルの継ぎ目は分からない。ラテラーノ戒律と同じく簡潔で、厳格である。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "sortId": 10001,
@@ -40604,6 +41252,35 @@
         "comfort": 75,
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "「和を尊べば、財への道は開ける。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS026_seven_01": {
+        "id": "furni_dropS026_seven_01",
+        "sortId": 11055,
+        "name": "パネル「罪責」",
+        "iconId": "furni_dropS026_seven_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「六日の労苦は六種の罪業を生み出す、一日の安息は一種の責を明らかにする」",
         "obtainApproach": "イベント報酬",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -49667,6 +50344,148 @@
           "furni_castle_wallpaper_01",
           "furni_castle_floor_01"
         ]
+      },
+      "furni_set_NHL": {
+        "id": "furni_set_NHL",
+        "sortId": 51,
+        "name": "公証人役場休憩室",
+        "themeType": "EVENT",
+        "desc": "エンフォーサーの説明に基づいて再現したラテラーノ公証人役場休憩室。フィアメッタはあまり興味がないようだ。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_NHL_showcase_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_frame_01",
+            "pos0": 4,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_bookstand_01",
+            "pos0": 4,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_shelf_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_sofa_01",
+            "pos0": 9,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_floorlamp_01",
+            "pos0": 9,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_stand_01",
+            "pos0": 12,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_coffeeTable_01",
+            "pos0": 13,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_carpet_01",
+            "pos0": 8,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_ceilingLight_L_01",
+            "pos0": 14,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_ceilingLight_S_01",
+            "pos0": 7,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_ceilingLight_S_01",
+            "pos0": 25,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_seat_01",
+            "pos0": 12,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_vase_01",
+            "pos0": 32,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_clock_01",
+            "pos0": 28,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_statue_01",
+            "pos0": 23,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_NHL_1",
+          "furni_set_NHL_2",
+          "furni_set_NHL_3",
+          "furni_set_NHL_4"
+        ],
+        "furnitures": [
+          "furni_NHL_showcase_01",
+          "furni_NHL_frame_01",
+          "furni_NHL_bookstand_01",
+          "furni_NHL_shelf_01",
+          "furni_NHL_sofa_01",
+          "furni_NHL_floorlamp_01",
+          "furni_NHL_stand_01",
+          "furni_NHL_coffeeTable_01",
+          "furni_NHL_carpet_01",
+          "furni_NHL_ceilingLight_L_01",
+          "furni_NHL_ceilingLight_S_01",
+          "furni_NHL_seat_01",
+          "furni_NHL_vase_01",
+          "furni_NHL_clock_01",
+          "furni_NHL_statue_01",
+          "furni_NHL_wallpaper_01",
+          "furni_NHL_floor_01"
+        ]
       }
     },
     "groups": {
@@ -52515,6 +53334,63 @@
           "furni_lightArt_curtain_01",
           "furni_lightArt_ceilingLight_01",
           "furni_lightArt_candle_01"
+        ]
+      },
+      "furni_set_NHL_1": {
+        "id": "furni_set_NHL_1",
+        "sortId": 1,
+        "name": "休憩室の装飾",
+        "themeId": "furni_set_NHL",
+        "comfort": 195,
+        "count": 4,
+        "furniture": [
+          "furni_NHL_showcase_01",
+          "furni_NHL_shelf_01",
+          "furni_NHL_bookstand_01",
+          "furni_NHL_frame_01"
+        ]
+      },
+      "furni_set_NHL_2": {
+        "id": "furni_set_NHL_2",
+        "sortId": 2,
+        "name": "休憩室の家具",
+        "themeId": "furni_set_NHL",
+        "comfort": 260,
+        "count": 4,
+        "furniture": [
+          "furni_NHL_coffeeTable_01",
+          "furni_NHL_seat_01",
+          "furni_NHL_sofa_01",
+          "furni_NHL_carpet_01"
+        ]
+      },
+      "furni_set_NHL_3": {
+        "id": "furni_set_NHL_3",
+        "sortId": 3,
+        "name": "像と時計",
+        "themeId": "furni_set_NHL",
+        "comfort": 345,
+        "count": 5,
+        "furniture": [
+          "furni_NHL_statue_01",
+          "furni_NHL_clock_01",
+          "furni_NHL_vase_01",
+          "furni_NHL_stand_01",
+          "furni_NHL_floorlamp_01"
+        ]
+      },
+      "furni_set_NHL_4": {
+        "id": "furni_set_NHL_4",
+        "sortId": 4,
+        "name": "休憩室の内装",
+        "themeId": "furni_set_NHL",
+        "comfort": 155,
+        "count": 4,
+        "furniture": [
+          "furni_NHL_wallpaper_01",
+          "furni_NHL_floor_01",
+          "furni_NHL_ceilingLight_L_01",
+          "furni_NHL_ceilingLight_S_01"
         ]
       }
     },
