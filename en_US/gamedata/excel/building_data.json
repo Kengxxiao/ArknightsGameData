@@ -9082,6 +9082,89 @@
           ]
         }
       ]
+    },
+    "char_300_phenxi": {
+      "charId": "char_300_phenxi",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_recExcludeOther[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_exchangeAp[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4036_forcer": {
+      "charId": "char_4036_forcer",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "meet_spd&cost[100]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_4016_kazema": {
+      "charId": "char_4016_kazema",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd_condChar[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -12589,6 +12672,30 @@
       "roomType": "DORMITORY",
       "description": "When this Operator is assigned to a Dormitory, self Morale recovered per hour <@cc.vup>+0.55</>, and restores <@cc.vup>+0.1</> Morale per hour to all other Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
     },
+    "dorm_exchangeAp[000]": {
+      "buffId": "dorm_exchangeAp[000]",
+      "buffName": "Communal Suffering",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_exchangeAp",
+      "sortId": 5501,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "When this Operator is assigned to a Dormitory, if this unit has <@cc.kw>Full Morale</>, swaps Morale value with the <@cc.kw>last</> Operator assigned to that Dormitory (excluding self)"
+    },
+    "dorm_recExcludeOther[000]": {
+      "buffId": "dorm_recExcludeOther[000]",
+      "buffName": "Self-Discipline",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_reborn",
+      "sortId": 5501,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "When this Operator is assigned to a dormitory, recovers a fixed <@cc.vup>2</> Morale per hour, <@cc.vdown>unaffected</> by any other sources of Morale recovery"
+    },
     "hire_spd[000]": {
       "buffId": "hire_spd[000]",
       "buffName": "Personnel Management α",
@@ -12829,6 +12936,30 @@
       "roomType": "MEETING",
       "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</>"
     },
+    "meet_spd&cost[000]": {
+      "buffId": "meet_spd&cost[000]",
+      "buffName": "Clue Search α",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd1",
+      "sortId": 6001,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</>"
+    },
+    "meet_spd[010]": {
+      "buffId": "meet_spd[010]",
+      "buffName": "Avatar",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd2",
+      "sortId": 6011,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>15%</>"
+    },
     "meet_spd[020]": {
       "buffId": "meet_spd[020]",
       "buffName": "Clue Search β",
@@ -12876,6 +13007,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>25%</>"
+    },
+    "meet_spd_condChar[000]": {
+      "buffId": "meet_spd_condChar[000]",
+      "buffName": "Proficient Artistry",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_condChar",
+      "sortId": 6042,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, if <@cc.kw>no other</> Operators are working in the Reception Room, increases Clue search speed by <@cc.vup>35%</>"
+    },
+    "meet_spd&cost[100]": {
+      "buffId": "meet_spd&cost[100]",
+      "buffName": "Logical Deduction",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd&cost",
+      "sortId": 6041,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "When this Operator is assigned to the Reception Room, increases Clue search speed by <@cc.vup>35%</>, and Morale consumed per hour by <@cc.vdown>+2</>"
     },
     "meet_team[020]": {
       "buffId": "meet_team[020]",
@@ -37423,6 +37578,499 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_NHL_showcase_01": {
+        "id": "furni_NHL_showcase_01",
+        "sortId": 855,
+        "name": "'Role Model's' Display Case",
+        "iconId": "furni_NHL_showcase_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 4,
+        "depth": 4,
+        "height": 10,
+        "comfort": 400,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A display case, simple yet sturdy in design, housing a patron firearm. The glass is not bulletproof.\nThe patron firearm displayed within once belonged to someone ranked bottom among 'most distinguished' executors. It isn't clear if this is supposed to serve as a commemoration, or a cautionary story.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_frame_01": {
+        "id": "furni_NHL_frame_01",
+        "sortId": 856,
+        "name": "Practical Photo Frame",
+        "iconId": "furni_NHL_frame_01",
+        "type": "WALLDECO",
+        "subType": "ART_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 70,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The wooden frame bundled with the purchase of the display case doesn't hold a photo, but rather standard-issue ammo for use with the patron firearm.\n'Break glass in case of emergency.'",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_bookstand_01": {
+        "id": "furni_NHL_bookstand_01",
+        "sortId": 857,
+        "name": "Reading Desk",
+        "iconId": "furni_NHL_bookstand_01",
+        "type": "DECORATION",
+        "subType": "ENTERTAINMENT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "Designed to make it easier for an executor to read while resting. Simple, compact, and gives off a sense of tradition.\nAt some point, someone swapped out the copy of the religious classic, 'The Saints' Travels', with a copy of 'The Centameron'.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_shelf_01": {
+        "id": "furni_NHL_shelf_01",
+        "sortId": 858,
+        "name": "Racks",
+        "iconId": "furni_NHL_shelf_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_1",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 175,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The racks near the entrance are not to be tossed around, especially not the guns!\nThe senior executors didn't have a habit of bringing umbrellas to work, so Ezell put one of these in place shortly after becoming a trainee executor.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_sofa_01": {
+        "id": "furni_NHL_sofa_01",
+        "sortId": 859,
+        "name": "'Role Model's' Sofa",
+        "iconId": "furni_NHL_sofa_01",
+        "type": "SEATING",
+        "subType": "SOFA",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A small, green, two-seater sofa issued by the Notarial Hall. It is said to improve the relationship between colleagues.\nStrangely, never have two people been seen occupying this sofa at the same time.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_floorlamp_01": {
+        "id": "furni_NHL_floorlamp_01",
+        "sortId": 860,
+        "name": "Brass Floor Lamp",
+        "iconId": "furni_NHL_floorlamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 185,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A lamp designed in the likeness of tree branches, its inverted petals effectively converging the light to cast a soft array of light and shadow.\nIt was originally purchased to serve as a reading lamp, but as the executors were rather disinterested in that pursuit, it ended up not seeing much use.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_stand_01": {
+        "id": "furni_NHL_stand_01",
+        "sortId": 861,
+        "name": "Ornamental Plaster Table",
+        "iconId": "furni_NHL_stand_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 4,
+        "depth": 2,
+        "height": 5,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A decorative plaster table, brought back from Leithanien to the Notarial Hall by an Apostolic Nuncio.\nWhile said to be the magnum opus of a Leithanian master, crafted with thoughtful artistry, the executors found little to appreciate in a piece that often blocked their vision.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_coffeeTable_01": {
+        "id": "furni_NHL_coffeeTable_01",
+        "sortId": 862,
+        "name": "Marble Coffee Table",
+        "iconId": "furni_NHL_coffeeTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 8,
+        "depth": 3,
+        "height": 3,
+        "comfort": 305,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A coffee table, procured at a high price. It is supported by a brass frame and has a whole slab of polished marble sitting on top.\n'Since we're not allowed to stuff everything onto the shelves, let's pile 'em up here. Let's go. Contract certifications, relic transfers. There's still a lot of work to get done today.'",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_carpet_01": {
+        "id": "furni_NHL_carpet_01",
+        "sortId": 863,
+        "name": "Geometric-Patterned Rug",
+        "iconId": "furni_NHL_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 14,
+        "depth": 10,
+        "height": 1,
+        "comfort": 185,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A geometric-patterned rug that matches the flooring. Simple in design, but soft and stain-resistant.\nAll seekers will inevitably end up lost. Yet those of faith will find softness under their feet, not thorns.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_ceilingLight_L_01": {
+        "id": "furni_NHL_ceilingLight_L_01",
+        "sortId": 864,
+        "name": "Branch Chandelier",
+        "iconId": "furni_NHL_ceilingLight_L_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 6,
+        "depth": 4,
+        "height": 4,
+        "comfort": 200,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "The primary light source of the Notarial Hall, a modern lamp purchased from Karlan Trade.\nThe Holy City of Laterano, which has ever stood tall amidst the storms of conflict, will remain a beacon of light for all.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_ceilingLight_S_01": {
+        "id": "furni_NHL_ceilingLight_S_01",
+        "sortId": 865,
+        "name": "Diamond Cross Chandelier",
+        "iconId": "furni_NHL_ceilingLight_S_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 70,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "An auxiliary light source of the Notarial Hall, a group of diamonds arranged in a cross formation. Ingenious in design, yet ultimately not very practical as a form of lighting.\nFew laws exist in Laterano, but they have been enough to uphold the Holy City's existence for thousands of years. The mind tends to overthink and overcomplicate, a common affliction in the modern person.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_NHL_seat_01": {
+        "id": "furni_NHL_seat_01",
+        "sortId": 866,
+        "name": "Hardwood Ottoman",
+        "iconId": "furni_NHL_seat_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_2",
+        "width": 10,
+        "depth": 3,
+        "height": 3,
+        "comfort": 360,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A magnificent piece made from high-quality mahogany, gifted from Yan in commemoration of the successful convening of the Summit of Nations.\nWhen returning to the Notarial Hall to hand in their work, executors sometimes will use it for a bit of respite. 'It's too hard. Can't get any shut-eye,' laments Fiammetta.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_vase_01": {
+        "id": "furni_NHL_vase_01",
+        "sortId": 867,
+        "name": "Glass Vase",
+        "iconId": "furni_NHL_vase_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 175,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A piece of glassware purchased on a whim, which some executor decided to use as a vase.\nVery few people ever remembered to restock it with fresh flowers, with the exception of a few trainee executors first taking up their post.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_clock_01": {
+        "id": "furni_NHL_clock_01",
+        "sortId": 868,
+        "name": "'Halo and Timepiece' Grandfather Clock",
+        "iconId": "furni_NHL_clock_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 5,
+        "depth": 1,
+        "height": 9,
+        "comfort": 230,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "To make this antique-styled grandfather clock, the craftsman brought back an entire slab of mountain rock and meticulously carved it to serve as the base.\nTime is above, the halo is below. As long as time continues to tick, the halo will continue to exist.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_statue_01": {
+        "id": "furni_NHL_statue_01",
+        "sortId": 869,
+        "name": "'My Actions Become Law' Sculpture",
+        "iconId": "furni_NHL_statue_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_3",
+        "width": 6,
+        "depth": 6,
+        "height": 8,
+        "comfort": 600,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "A sculpture based on a historical Lateran Pope. \nThe gun in its hands was said to have been placed there temporarily, as there was no space left in the 'Role Model's' display case. Nobody saw anything wrong with it, and so soon the gun became a part of the sculpture.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_wallpaper_01": {
+        "id": "furni_NHL_wallpaper_01",
+        "sortId": 870,
+        "name": "Panoramic Display (Holy City)",
+        "iconId": "furni_NHL_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "With the power of modern projection technology, executors can, at any time, appreciate the splendor of the Holy City they spend their lives in.\nOf course, the occasional 'explosive' incidents are never captured on this screen.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_NHL_floor_01": {
+        "id": "furni_NHL_floor_01",
+        "sortId": 871,
+        "name": "Notarial Hall Floor Tiles",
+        "iconId": "furni_NHL_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_NHL",
+        "groupId": "furni_set_NHL_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "These dark, geometric-patterned floor tiles seem simple and austere, but provide a sense of softness and are easy to clean.\nUpon closer inspection of the way these tiles are tessellated, not even a single gap is visible. The same is true of Lateran principles - simple, yet exacting.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "sortId": 10001,
@@ -40604,6 +41252,35 @@
         "comfort": 75,
         "usage": "Can be used to decorate the dorm and improve the ambience.",
         "description": "'Peace and prosperity, wealth for posterity.'",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS026_seven_01": {
+        "id": "furni_dropS026_seven_01",
+        "sortId": 11055,
+        "name": "Plaque - Guilty",
+        "iconId": "furni_dropS026_seven_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Can be used to decorate the dorm and improve the ambience.",
+        "description": "'Six days of work breed six sins, one day of rest defines a singular responsibility.'",
         "obtainApproach": "Event Reward",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -49638,6 +50315,148 @@
           "furni_castle_wallpaper_01",
           "furni_castle_floor_01"
         ]
+      },
+      "furni_set_NHL": {
+        "id": "furni_set_NHL",
+        "sortId": 51,
+        "name": "Laterano Notarial Hall Lounge",
+        "themeType": "EVENT",
+        "desc": "A recreation of the lounge at the Laterano Notarial Hall, based on descriptions provided by Operator Enforcer. Fiammetta is not overly enthused by it.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_NHL_showcase_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_frame_01",
+            "pos0": 4,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_bookstand_01",
+            "pos0": 4,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_shelf_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_sofa_01",
+            "pos0": 9,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_floorlamp_01",
+            "pos0": 9,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_stand_01",
+            "pos0": 12,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_coffeeTable_01",
+            "pos0": 13,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_carpet_01",
+            "pos0": 8,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_ceilingLight_L_01",
+            "pos0": 14,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_ceilingLight_S_01",
+            "pos0": 7,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_ceilingLight_S_01",
+            "pos0": 25,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_seat_01",
+            "pos0": 12,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_vase_01",
+            "pos0": 32,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_clock_01",
+            "pos0": 28,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_statue_01",
+            "pos0": 23,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_NHL_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_NHL_1",
+          "furni_set_NHL_2",
+          "furni_set_NHL_3",
+          "furni_set_NHL_4"
+        ],
+        "furnitures": [
+          "furni_NHL_showcase_01",
+          "furni_NHL_frame_01",
+          "furni_NHL_bookstand_01",
+          "furni_NHL_shelf_01",
+          "furni_NHL_sofa_01",
+          "furni_NHL_floorlamp_01",
+          "furni_NHL_stand_01",
+          "furni_NHL_coffeeTable_01",
+          "furni_NHL_carpet_01",
+          "furni_NHL_ceilingLight_L_01",
+          "furni_NHL_ceilingLight_S_01",
+          "furni_NHL_seat_01",
+          "furni_NHL_vase_01",
+          "furni_NHL_clock_01",
+          "furni_NHL_statue_01",
+          "furni_NHL_wallpaper_01",
+          "furni_NHL_floor_01"
+        ]
       }
     },
     "groups": {
@@ -52486,6 +53305,63 @@
           "furni_lightArt_curtain_01",
           "furni_lightArt_ceilingLight_01",
           "furni_lightArt_candle_01"
+        ]
+      },
+      "furni_set_NHL_1": {
+        "id": "furni_set_NHL_1",
+        "sortId": 1,
+        "name": "'Reading and Remembrance'",
+        "themeId": "furni_set_NHL",
+        "comfort": 195,
+        "count": 4,
+        "furniture": [
+          "furni_NHL_showcase_01",
+          "furni_NHL_shelf_01",
+          "furni_NHL_bookstand_01",
+          "furni_NHL_frame_01"
+        ]
+      },
+      "furni_set_NHL_2": {
+        "id": "furni_set_NHL_2",
+        "sortId": 2,
+        "name": "'Work and Rest'",
+        "themeId": "furni_set_NHL",
+        "comfort": 260,
+        "count": 4,
+        "furniture": [
+          "furni_NHL_coffeeTable_01",
+          "furni_NHL_seat_01",
+          "furni_NHL_sofa_01",
+          "furni_NHL_carpet_01"
+        ]
+      },
+      "furni_set_NHL_3": {
+        "id": "furni_set_NHL_3",
+        "sortId": 3,
+        "name": "'Life and Faith'",
+        "themeId": "furni_set_NHL",
+        "comfort": 345,
+        "count": 5,
+        "furniture": [
+          "furni_NHL_statue_01",
+          "furni_NHL_clock_01",
+          "furni_NHL_vase_01",
+          "furni_NHL_stand_01",
+          "furni_NHL_floorlamp_01"
+        ]
+      },
+      "furni_set_NHL_4": {
+        "id": "furni_set_NHL_4",
+        "sortId": 4,
+        "name": "'Light and Shadow'",
+        "themeId": "furni_set_NHL",
+        "comfort": 155,
+        "count": 4,
+        "furniture": [
+          "furni_NHL_wallpaper_01",
+          "furni_NHL_floor_01",
+          "furni_NHL_ceilingLight_L_01",
+          "furni_NHL_ceilingLight_S_01"
         ]
       }
     },
