@@ -12,6 +12,7 @@ require "Feature/Activity/Collection/CollectionDailyTaskItem"
 require "Feature/Activity/Collection/CollectionTimedTaskItem"
 require "Feature/Activity/LoginOnly/LoginOnlyDefine"
 require "Feature/Activity/LoginOnly/LoginOnlyDlg"
+require "Feature/Activity/LoginOnly/NoEntryLoginOnlyDlg"
 
 require "Feature/Activity/PrayOnly/PrayOnlyDefine"
 require "Feature/Activity/PrayOnly/PrayOnlyMainDlg"
