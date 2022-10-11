@@ -9847,6 +9847,124 @@
           ]
         }
       ]
+    },
+    "char_4072_ironmn": {
+      "charId": "char_4072_ironmn",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost&dorm[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_dorm[002]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4071_peper": {
+      "charId": "char_4071_peper",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_tra_spd[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_wt&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_wt&cost[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_157_dagda": {
+      "charId": "char_157_dagda",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession3[150]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession3[151]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_4062_totter": {
+      "charId": "char_4062_totter",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_reduce[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition&cost[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -9904,6 +10022,18 @@
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_t_spd",
       "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，所有贸易站订单效率<@cc.vup>+7%</>（同种效果取最高）"
+    },
+    "control_tra_spd[020]": {
+      "buffId": "control_tra_spd[020]",
+      "buffName": "朝气蓬勃",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_t_spd",
+      "sortId": 1504,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10761,6 +10891,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "进驻制造站后，生产力首小时<@cc.vup>+15%</>，此后每小时<@cc.vup>+2%</>，最终达到<@cc.vup>+25%</>"
+    },
+    "manu_prod_spd_reduce[000]": {
+      "buffId": "manu_prod_spd_reduce[000]",
+      "buffName": "模糊视线",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_reduce",
+      "sortId": 3280,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，生产力<@cc.vup>+30%</>，自身每有<@cc.kw>4</>点<$cc.bd.costdrop><@cc.kw>心情落差</></>，生产力<@cc.vdown>-5%</>"
+    },
+    "manu_prod_spd_addition&cost[000]": {
+      "buffId": "manu_prod_spd_addition&cost[000]",
+      "buffName": "窗外雪啸",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add&cost",
+      "sortId": 3250,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，当自身<$cc.bd.costdrop><@cc.kw>心情落差</></>大于<@cc.kw>12</>时，生产力<@cc.vup>+10%</>，仓库容量<@cc.vup>+6</>"
     },
     "manu_prod_spd&limit[000]": {
       "buffId": "manu_prod_spd&limit[000]",
@@ -12142,6 +12296,18 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>技巧概要</>时，心情消耗为<@cc.kw>2</>的配方全部<@cc.vup>-1</>心情消耗"
     },
+    "workshop_formula_cost&dorm[000]": {
+      "buffId": "workshop_formula_cost&dorm[000]",
+      "buffName": "心相连",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost&dorm",
+      "sortId": 7300,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>精英材料</>时，宿舍内每有<@cc.kw>10</>名心情<@cc.vup>12</>以下的干员时，心情消耗为<@cc.kw>4</>的配方心情消耗全部<@cc.vup>-1</>"
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "技巧理论",
@@ -12393,6 +12559,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>精英材料</>时，宿舍内每有<@cc.kw>1</>名心情<@cc.vup>20</>以下的干员，副产品的产出概率提升<@cc.vup>5%</>"
+    },
+    "workshop_formula_dorm[002]": {
+      "buffId": "workshop_formula_dorm[002]",
+      "buffName": "意相通",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_dorm2",
+      "sortId": 7613,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>精英材料</>时，宿舍内每有<@cc.kw>1</>名心情<@cc.vup>12</>以下的干员，副产品的产出概率提升<@cc.vup>5%</>"
     },
     "workshop_formula_drop[020]": {
       "buffId": "workshop_formula_drop[020]",
@@ -13029,6 +13207,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "进驻训练室协助位时，<@cc.kw>狙击</>干员的专精技能训练速度<@cc.vup>+30%</>，如果训练位干员分支为<@cc.kw>速射手</>，则训练速度额外<@cc.vup>+45%</>"
+    },
+    "train_spd&profession3[150]": {
+      "buffId": "train_spd&profession3[150]",
+      "buffName": "近卫专精·α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_guard1",
+      "sortId": 9791,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，<@cc.kw>近卫</>干员的专精技能训练速度<@cc.vup>+30%</>"
+    },
+    "train_spd&profession3[151]": {
+      "buffId": "train_spd&profession3[151]",
+      "buffName": "实战技巧：斗士",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_fighter",
+      "sortId": 9791,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，<@cc.kw>近卫</>干员的专精技能训练速度<@cc.vup>+30%</>，如果训练位干员分支为<@cc.kw>斗士</>，则训练速度额外<@cc.vup>+45%</>"
     },
     "train_spd&profession2[110]": {
       "buffId": "train_spd&profession2[110]",
@@ -44320,6 +44522,557 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_classroom_bayWindow_01": {
+        "id": "furni_classroom_bayWindow_01",
+        "sortId": 1030,
+        "name": "窗下矮榻",
+        "iconId": "furni_classroom_bayWindow_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 8,
+        "depth": 3,
+        "height": 10,
+        "comfort": 485,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "由飘窗上几块软垫拼接成的矮榻，可供教师在课余时间休息。就算窗幔落下，还有一盏灯愿意驱逐黑暗。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 358,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_column_01": {
+        "id": "furni_classroom_column_01",
+        "sortId": 1031,
+        "name": "顶梁支柱",
+        "iconId": "furni_classroom_column_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 2,
+        "depth": 2,
+        "height": 10,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "高大结实的木柱，支撑着整间教室的房梁。当所有重量落在它身上，要么坚持屹立，要么轰然倒塌。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 125,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 2
+      },
+      "furni_classroom_stationeryHolder_01": {
+        "id": "furni_classroom_stationeryHolder_01",
+        "sortId": 1032,
+        "name": "书堆上的“笔筒”",
+        "iconId": "furni_classroom_stationeryHolder_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 105,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "一只缺了盖的茶壶放在高高摞起的旧书堆上，里面有几把断掉的尺子。老师眼里，有些蒙尘的旧物只需稍加擦拭，依然大有用途。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 95,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_lowTable_01": {
+        "id": "furni_classroom_lowTable_01",
+        "sortId": 1033,
+        "name": "窗边矮几",
+        "iconId": "furni_classroom_lowTable_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "散乱的书籍与纸张堆在桌子上，有人想收拾，但无从下手。看似堆叠得随意凌乱，但使用者总能从中快速找到需要的材料。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_ladder_01": {
+        "id": "furni_classroom_ladder_01",
+        "sortId": 1034,
+        "name": "木制书梯",
+        "iconId": "furni_classroom_ladder_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 150,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "摆放在书架前的陈旧木梯，略微摇晃。若想抬手触碰知识的边界，脚下便不能踏着一片虚渺。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_bookshelf_01": {
+        "id": "furni_classroom_bookshelf_01",
+        "sortId": 1035,
+        "name": "木制书架",
+        "iconId": "furni_classroom_bookshelf_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 2,
+        "depth": 4,
+        "height": 7,
+        "comfort": 215,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "简约质朴的落地书架，摆在上面的书籍都是精挑细选过的。有些书，每一次的传看，它都值得。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 178,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_map_01": {
+        "id": "furni_classroom_map_01",
+        "sortId": 1036,
+        "name": "巨幅地图",
+        "iconId": "furni_classroom_map_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 1,
+        "depth": 6,
+        "height": 6,
+        "comfort": 135,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用途广泛的超大地图，整片大地都绘制在上面。这一生，目光所触及的远方，脚步却终不能至。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_clock_01": {
+        "id": "furni_classroom_clock_01",
+        "sortId": 1037,
+        "name": "古董挂钟",
+        "iconId": "furni_classroom_clock_01",
+        "type": "WALLDECO",
+        "subType": "ORTHER_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 3,
+        "depth": 1,
+        "height": 4,
+        "comfort": 95,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "年代久远的挂钟，一堂课开始和结束时都会有悦耳的铃声响起。铃声清脆美妙，丝毫未变，听者却一时愁苦，一时欢喜。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 88,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_carpet_01": {
+        "id": "furni_classroom_carpet_01",
+        "sortId": 1038,
+        "name": "格纹地毯",
+        "iconId": "furni_classroom_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 4,
+        "depth": 3,
+        "height": 1,
+        "comfort": 40,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "厚实柔软的方格纹地毯，防止失足从梯子上跌下的人受到伤害。有些时代，孩子一降生，便毫无缓冲地落向坚硬的土地。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 38,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_lectern_01": {
+        "id": "furni_classroom_lectern_01",
+        "sortId": 1039,
+        "name": "“拥挤的知识”",
+        "iconId": "furni_classroom_lectern_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 12,
+        "depth": 3,
+        "height": 6,
+        "comfort": 505,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "狭窄的讲台上摆着雕像与画作，宽阔的黑板上写着公式和词句。讲桌上的台灯亮至深夜，伏案人的颈椎痛到黎明。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 373,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_tableChairGraffiti_01": {
+        "id": "furni_classroom_tableChairGraffiti_01",
+        "sortId": 1040,
+        "name": "凌乱的课桌组合",
+        "iconId": "furni_classroom_tableChairGraffiti_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 5,
+        "depth": 4,
+        "height": 3,
+        "comfort": 230,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "每间教室都会摆放的制式课桌组合，可容纳两个学生落座，书后藏着学生的涂鸦。坐在第一排的孩子总是调皮捣蛋，表达欲是人类难以改变的天性。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_tableChairPenRack_01": {
+        "id": "furni_classroom_tableChairPenRack_01",
+        "sortId": 1041,
+        "name": "课桌组合",
+        "iconId": "furni_classroom_tableChairPenRack_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 5,
+        "depth": 4,
+        "height": 3,
+        "comfort": 230,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "每间教室都会摆放的制式课桌组合，可容纳两个学生落座，上面整齐摆放着课本。坐在这一排的学生都爱刨根问底，求知欲是人类无法抑制的天性。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_displayScreen_01": {
+        "id": "furni_classroom_displayScreen_01",
+        "sortId": 1042,
+        "name": "投影幕布",
+        "iconId": "furni_classroom_displayScreen_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 8,
+        "depth": 1,
+        "height": 5,
+        "comfort": 130,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "价格便宜的白塑幕布，闲置时需要手动合起。在这片白色中，字母一遍遍重组，图形一遍遍重构，历史一遍遍重演。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 118,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_ceilingLamp_01": {
+        "id": "furni_classroom_ceilingLamp_01",
+        "sortId": 1043,
+        "name": "教室吊灯",
+        "iconId": "furni_classroom_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 50,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "绿色的玻璃吊灯，发出的光亮照得教室通明，却一点也不刺眼。柔和的光线不影响细细阅读，也不影响偷偷睡觉。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 43,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 4
+      },
+      "furni_classroom_bookBox_01": {
+        "id": "furni_classroom_bookBox_01",
+        "sortId": 1044,
+        "name": "小书箱",
+        "iconId": "furni_classroom_bookBox_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "与课桌等高的方形书箱，容量有限，只能放下几本书。所有的默默承受都是有限的。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_cabinet_01": {
+        "id": "furni_classroom_cabinet_01",
+        "sortId": 1045,
+        "name": "教具收纳柜",
+        "iconId": "furni_classroom_cabinet_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 3,
+        "depth": 5,
+        "height": 9,
+        "comfort": 325,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "放满教学用具的大型木柜，看着整齐，但柜子里面杂乱无章。就算是表面的井井有条，也很难维护。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 240,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_blackboard_01": {
+        "id": "furni_classroom_blackboard_01",
+        "sortId": 1046,
+        "name": "告示板",
+        "iconId": "furni_classroom_blackboard_01",
+        "type": "DECORATION",
+        "subType": "BOARD_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 150,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "教室后面立着的小黑板，上面贴着课程表和学校通知。光阴在相似的一格又一格间游走，岁月在重复的一周又一周里流逝。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_wallpaper_01": {
+        "id": "furni_classroom_wallpaper_01",
+        "sortId": 1047,
+        "name": "教室壁纸",
+        "iconId": "furni_classroom_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "雅致大方的绿色壁纸，和教室内的实木装潢相得益彰，有助于学生迅速平复心绪。当城市被鲜血和硝烟笼罩，是否还有一抹绿色可以抚平人们在梦中紧蹙的眉头呢？",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_floor_01": {
+        "id": "furni_classroom_floor_01",
+        "sortId": 1048,
+        "name": "教室地板",
+        "iconId": "furni_classroom_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "花色沉稳的木制地板，在师生的共同努力下，始终光洁如新。可每过一年，踏在上面的脚印便又少了一些。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
       "furni_oct1st_deckChair_01": {
         "id": "furni_oct1st_deckChair_01",
         "sortId": 9998,
@@ -44340,6 +45093,35 @@
         "comfort": 235,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "椅子与娱乐设备的巧妙结合，价格不菲。能够随时切换睡眠和游戏模式，没有人会用它来办公。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_animation_trophy_01": {
+        "id": "furni_animation_trophy_01",
+        "sortId": 10000,
+        "name": "观者如堵纪念奖杯",
+        "iconId": "furni_animation_trophy_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 3,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 90,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "为了纪念动画收获众多喜爱特别订做的奖杯。特意做成了得意兔兔的外形，对于制作人员而言，一部成功的作品确实能够引发源自内心的自豪感。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -48052,6 +48834,64 @@
         "comfort": 75,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "“经过长时间理性分析后做出的抉择，有时与冲动行事的后果并无区别。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS022_hamlet_01": {
+        "id": "furni_dropS022_hamlet_01",
+        "sortId": 11065,
+        "name": "饰牌《复弑》",
+        "iconId": "furni_dropS022_hamlet_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "“年轻的王子只想要一人性命,却在无意间造就了众人的死亡。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS022_holmes_01": {
+        "id": "furni_dropS022_holmes_01",
+        "sortId": 11066,
+        "name": "饰牌《洞察》",
+        "iconId": "furni_dropS022_holmes_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "“在烟与雾之中,有一双眼睛瞧见了真相。”",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -59061,6 +59901,180 @@
           "furni_outdoor_wallpaper_01",
           "furni_outdoor_floor_01"
         ]
+      },
+      "furni_set_classroom": {
+        "id": "furni_set_classroom",
+        "sortId": 61,
+        "name": "圣马尔索校内教室",
+        "themeType": "NORMAL",
+        "desc": "根据戈尔丁讲授课程的教室复刻的房间，美中不足的是少了孩子的欢笑声和朗朗读书声。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_classroom_bayWindow_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_column_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_column_01",
+            "pos0": 8,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_stationeryHolder_01",
+            "pos0": 0,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_lowTable_01",
+            "pos0": 0,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ladder_01",
+            "pos0": 10,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_bookshelf_01",
+            "pos0": 8,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_map_01",
+            "pos0": 10,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_clock_01",
+            "pos0": 19,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_carpet_01",
+            "pos0": 10,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_lectern_01",
+            "pos0": 10,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_tableChairGraffiti_01",
+            "pos0": 18,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_tableChairPenRack_01",
+            "pos0": 24,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_displayScreen_01",
+            "pos0": 22,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_bookBox_01",
+            "pos0": 25,
+            "pos1": 8,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_cabinet_01",
+            "pos0": 31,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_blackboard_01",
+            "pos0": 27,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 16,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 16,
+            "pos1": 6,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_classroom_1",
+          "furni_set_classroom_2",
+          "furni_set_classroom_3",
+          "furni_set_classroom_4"
+        ],
+        "furnitures": [
+          "furni_classroom_bayWindow_01",
+          "furni_classroom_column_01",
+          "furni_classroom_stationeryHolder_01",
+          "furni_classroom_lowTable_01",
+          "furni_classroom_ladder_01",
+          "furni_classroom_bookshelf_01",
+          "furni_classroom_map_01",
+          "furni_classroom_clock_01",
+          "furni_classroom_carpet_01",
+          "furni_classroom_lectern_01",
+          "furni_classroom_tableChairGraffiti_01",
+          "furni_classroom_tableChairPenRack_01",
+          "furni_classroom_displayScreen_01",
+          "furni_classroom_ceilingLamp_01",
+          "furni_classroom_bookBox_01",
+          "furni_classroom_cabinet_01",
+          "furni_classroom_blackboard_01",
+          "furni_classroom_wallpaper_01",
+          "furni_classroom_floor_01"
+        ]
       }
     },
     "groups": {
@@ -62542,6 +63556,65 @@
           "furni_outdoor_wallpaper_01",
           "furni_outdoor_floor_01"
         ]
+      },
+      "furni_set_classroom_1": {
+        "id": "furni_set_classroom_1",
+        "sortId": 1,
+        "name": "教师休息室",
+        "themeId": "furni_set_classroom",
+        "comfort": 185,
+        "count": 4,
+        "furniture": [
+          "furni_classroom_bayWindow_01",
+          "furni_classroom_stationeryHolder_01",
+          "furni_classroom_lowTable_01",
+          "furni_classroom_bookBox_01"
+        ]
+      },
+      "furni_set_classroom_2": {
+        "id": "furni_set_classroom_2",
+        "sortId": 2,
+        "name": "图书角",
+        "themeId": "furni_set_classroom",
+        "comfort": 200,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_column_01",
+          "furni_classroom_bookshelf_01",
+          "furni_classroom_map_01",
+          "furni_classroom_carpet_01",
+          "furni_classroom_ladder_01"
+        ]
+      },
+      "furni_set_classroom_3": {
+        "id": "furni_set_classroom_3",
+        "sortId": 3,
+        "name": "标准教室",
+        "themeId": "furni_set_classroom",
+        "comfort": 360,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_lectern_01",
+          "furni_classroom_tableChairGraffiti_01",
+          "furni_classroom_tableChairPenRack_01",
+          "furni_classroom_cabinet_01",
+          "furni_classroom_blackboard_01"
+        ]
+      },
+      "furni_set_classroom_4": {
+        "id": "furni_set_classroom_4",
+        "sortId": 4,
+        "name": "教室装饰",
+        "themeId": "furni_set_classroom",
+        "comfort": 170,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_wallpaper_01",
+          "furni_classroom_floor_01",
+          "furni_classroom_displayScreen_01",
+          "furni_classroom_clock_01",
+          "furni_classroom_ceilingLamp_01"
+        ]
       }
     },
     "types": {
@@ -64085,6 +65158,130 @@
       ],
       "requireStages": []
     },
+    "62": {
+      "sortId": 1999,
+      "formulaId": "62",
+      "rarity": 0,
+      "itemId": "30155",
+      "count": 1,
+      "goldCost": 400,
+      "apCost": 2880000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 84,
+          "itemId": "30014",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30024",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30034",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30044",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30054",
+          "itemCount": 1
+        },
+        {
+          "weight": 42,
+          "itemId": "30064",
+          "itemCount": 1
+        },
+        {
+          "weight": 72,
+          "itemId": "30074",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30084",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30094",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30104",
+          "itemCount": 1
+        },
+        {
+          "weight": 72,
+          "itemId": "31014",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31024",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "31034",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31044",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31054",
+          "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31064",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31054",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31044",
+          "count": 2,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "easy_11-03",
+          "rank": 2
+        }
+      ]
+    },
     "57": {
       "sortId": 2000,
       "formulaId": "57",
@@ -64170,6 +65367,11 @@
         {
           "weight": 63,
           "itemId": "31054",
+          "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
           "itemCount": 1
         }
       ],
@@ -64290,6 +65492,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64404,6 +65611,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64513,6 +65725,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64540,6 +65757,130 @@
         }
       ],
       "requireStages": []
+    },
+    "61": {
+      "sortId": 2097,
+      "formulaId": "61",
+      "rarity": 0,
+      "itemId": "31064",
+      "count": 1,
+      "goldCost": 300,
+      "apCost": 1440000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 60,
+          "itemId": "30013",
+          "itemCount": 1
+        },
+        {
+          "weight": 50,
+          "itemId": "30023",
+          "itemCount": 1
+        },
+        {
+          "weight": 50,
+          "itemId": "30033",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30043",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30053",
+          "itemCount": 1
+        },
+        {
+          "weight": 30,
+          "itemId": "30063",
+          "itemCount": 1
+        },
+        {
+          "weight": 45,
+          "itemId": "30073",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30083",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "30093",
+          "itemCount": 1
+        },
+        {
+          "weight": 30,
+          "itemId": "30103",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31013",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "31023",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "31033",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31043",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31063",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31043",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "30023",
+          "count": 1,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "sub_09-1-2",
+          "rank": 2
+        }
+      ]
     },
     "59": {
       "sortId": 2098,
@@ -64626,6 +65967,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64746,6 +66092,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64864,6 +66215,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64984,6 +66340,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -65102,6 +66463,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -65222,6 +66588,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -65335,6 +66706,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -65450,6 +66826,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -65563,6 +66944,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -65796,6 +67182,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -66027,6 +67418,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -66260,6 +67656,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -66491,6 +67892,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -66724,6 +68130,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -66955,6 +68366,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
