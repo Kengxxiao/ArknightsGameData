@@ -880,6 +880,7 @@
   "baseMaxFriendNum": 15,
   "hardDiamondDrop": 1,
   "instFinDmdShdCost": 80,
+  "easyCrystalBonus": 0,
   "diamondMaterialToShardExchangeRatio": 10,
   "apBuyCost": 1,
   "apBuyThreshold": 999,
@@ -890,6 +891,11 @@
     -1,
     -1
   ],
+  "mainlineCompatibleDesc": "PRTS에 해당 스테지의 하위 난이도 작전 환경에서 3★ 평가를 받지 못한 것이 탐지되어, <color=#fe6435>작전 난이도 호환</color> 모드가 자동으로 적용됩니다.\n작전 난이도 호환 모드에서 해당 스테이지를 도전하면 현재 난이도와 하위 난이도의 필요 이성을 <color=#fe6435>동시에 소모</color>하게 되며, 클리어 후 <color=#fe6435>작전 진행도의 동기화</color>뿐만 아니라, 하위 난이도의 보상도 <color=#fe6435>함께 획득</color>하게 됩니다.",
+  "mainlineToughDesc": "도전적인 플레이 환경\n3★ 평가의 첫 클리어 보상에는 순오리지늄이 포함됩니다\n또한, 난이도가 높은 추가 스테이지도 포함됩니다",
+  "mainlineEasyDesc": "쾌적한 플레이 환경\n3★ 평가의 첫 클리어 보상에는 육성류 재료만 포함됩니다\n\n<color=#c6c6c6>스토리 체험 환경 완료 시 다음 에피소드는 스토리 체험 환경만 개방됩니다</color>",
+  "mainlineNormalDesc": "일반적인 플레이 환경\n3★ 평가의 첫 클리어 보상에는 순오리지늄이 포함됩니다",
+  "addedRewardDisplayZone": "main_9",
   "richTextStyles": {
     "mission.levelname": "<color=#FFDE00>{0}</color>",
     "mission.number": "<color=#FFDE00>{0}</color>",
@@ -923,6 +929,7 @@
     "lv.rem": "<color=#FFFFFF>{0}</color>",
     "lv.fs": "<color=#FF0000>{0}</color>",
     "lv.sp": "<color=#fd4600>{0}</color>",
+    "lv.ez": "<color=#0098dc>{0}</color>",
     "ro1.get": "<color=#E5B684>{0}</color>",
     "rc.title": "<color=#FFFFFF>{0}</color>",
     "rc.subtitle": "<color=#FFC90E>{0}</color>",
@@ -977,7 +984,7 @@
   "commonPotentialLvlUpCount": 4,
   "weeklyOverrideDesc": "",
   "voucherDiv": 5,
-  "recruitPoolVersion": 7,
+  "recruitPoolVersion": 8,
   "v006RecruitTimeStep1Refresh": 1577169000,
   "v006RecruitTimeStep2Check": 1577151000,
   "v006RecruitTimeStep2Flush": 1577646000,
@@ -1126,7 +1133,7 @@
     "ba.dt.neural": {
       "termId": "ba.dt.neural",
       "termName": "신경 손상",
-      "description": "신경 손상이 1000까지 누적될 경우 1000 트루 대미지를 받고 10초간 <$ba.stun>기절</>"
+      "description": "신경 손상이 1000까지 누적될 경우 1000 트루 대미지를 받고, 10초 동안 <$ba.stun>기절</>"
     },
     "ba.charged": {
       "termId": "ba.charged",
@@ -1141,12 +1148,12 @@
     "ba.dt.erosion": {
       "termId": "ba.dt.erosion",
       "termName": "침식 피해",
-      "description": "침식 피해가 1000까지 누적 시, 방어력 100 영구 감소, 물리 대미지 800 부여"
+      "description": "침식 피해가 1000까지 누적될 경우 800 물리 대미지를 받고, 방어력 100 영구 감소"
     },
     "ba.dt.burning": {
       "termId": "ba.dt.burning",
       "termName": "소각 피해",
-      "description": "소각 피해가 1000까지 누적될 경우, 마법 대미지 1200 받고 10초간 마법 저항력 20 감소"
+      "description": "소각 피해가 1000까지 누적될 경우 1200 마법 대미지를 받고, 10초간 마법 저항력 20 감소"
     },
     "ba.float": {
       "termId": "ba.float",
@@ -1161,7 +1168,17 @@
     "ba.dt.element": {
       "termId": "ba.dt.element",
       "termName": "원소 피해",
-      "description": "<$ba.dt.neural>신경 손상</>, <$ba.dt.erosion>침식 피해</>, <$ba.dt.burning>소각 피해</> 포함"
+      "description": "<$ba.dt.neural>신경 손상</>, <$ba.dt.erosion>침식 피해</>, <$ba.dt.burning>소각 피해</>, <$ba.dt.apoptosis>쇠약 피해</> 포함"
+    },
+    "ba.overdrive": {
+      "termId": "ba.overdrive",
+      "termName": "과부하",
+      "description": "스킬 게이지가 2개의 단계로 구분되며, 스킬이 절반 진행 시 추가 효과 발동"
+    },
+    "ba.dt.apoptosis": {
+      "termId": "ba.dt.apoptosis",
+      "termName": "쇠약 피해",
+      "description": "쇠약 피해가 1000까지 누적될 경우 15초 동안 스킬 발동 불가, 초당 SP -1 및 100 마법 대미지 부여"
     },
     "cc.bd_A_1": {
       "termId": "cc.bd_A_1",
@@ -1241,7 +1258,7 @@
     "cc.g.sp": {
       "termId": "cc.g.sp",
       "termName": "얼터네이트",
-      "description": "다음 오퍼레이터 포함\n라바 더 퍼거토리, 스카디 더 커럽팅 하트, 첸 더 홀룽데이, 니어 더 래디언트 나이트, 크루스 더 킨 글린트"
+      "description": "다음 오퍼레이터 포함\n라바 더 퍼거토리, 스카디 더 커럽팅 하트, 첸 더 홀룽데이, 니어 더 래디언트 나이트, 크루스 더 킨 글린트, 스팩터 디 언체인드"
     },
     "cc.g.abyssal": {
       "termId": "cc.g.abyssal",
@@ -1325,6 +1342,6 @@
     }
   },
   "storyReviewUnlockItemLackTip": "기록 조각이 부족합니다. 증명서 상점 또는 이벤트 기간에 열리는 상점을 통해 교환할 수 있습니다.",
-  "dataVersion": "26.3.0",
-  "resPrefVersion": "26d0d0"
+  "dataVersion": "27.1.0",
+  "resPrefVersion": "27d0d0"
 }
