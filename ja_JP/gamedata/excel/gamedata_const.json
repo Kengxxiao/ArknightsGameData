@@ -880,6 +880,7 @@
   "baseMaxFriendNum": 15,
   "hardDiamondDrop": 1,
   "instFinDmdShdCost": 80,
+  "easyCrystalBonus": 0,
   "diamondMaterialToShardExchangeRatio": 10,
   "apBuyCost": 1,
   "apBuyThreshold": 999,
@@ -890,6 +891,11 @@
     -1,
     -1
   ],
+  "mainlineCompatibleDesc": "PRTSが当該ステージにおいて、★3評価未獲得の下位作戦環境を検出しました。自動的に<color=#fe6435>環境難易度互換</color>を有効化します。\nこの状態で当該ステージに挑戦すると、当該環境および下位環境での理性を<color=#fe6435>同時に消費</color>します。クリア後は<color=#fe6435>作戦進捗も同期され、下位環境の報酬も同時に受け取れます</color>",
+  "mainlineToughDesc": "より困難なプレイ環境\n★3初回クリア報酬は純正源石を含む\n追加の高難易度ステージを含む",
+  "mainlineEasyDesc": "より簡単なプレイ環境\n★3初回クリア報酬は育成用の素材のみ\n\n<color=#c6c6c6>物語体験環境で章節クリアによって解放できるのは次章の物語体験環境のみ</color>",
+  "mainlineNormalDesc": "通常のプレイ環境\n★3初回クリア報酬は純正源石を含む",
+  "addedRewardDisplayZone": "main_9",
   "richTextStyles": {
     "mission.levelname": "<color=#FFDE00>{0}</color>",
     "mission.number": "<color=#FFDE00>{0}</color>",
@@ -923,6 +929,7 @@
     "lv.rem": "<color=#FFFFFF>{0}</color>",
     "lv.fs": "<color=#FF0000>{0}</color>",
     "lv.sp": "<color=#fd4600>{0}</color>",
+    "lv.ez": "<color=#0098dc>{0}</color>",
     "ro1.get": "<color=#E5B684>{0}</color>",
     "rc.title": "<color=#FFFFFF>{0}</color>",
     "rc.subtitle": "<color=#FFC90E>{0}</color>",
@@ -977,7 +984,7 @@
   "commonPotentialLvlUpCount": 4,
   "weeklyOverrideDesc": "",
   "voucherDiv": 5,
-  "recruitPoolVersion": 7,
+  "recruitPoolVersion": 8,
   "v006RecruitTimeStep1Refresh": 1577169000,
   "v006RecruitTimeStep2Check": 1577151000,
   "v006RecruitTimeStep2Flush": 1577646000,
@@ -1068,7 +1075,7 @@
     "ba.buffres": {
       "termId": "ba.buffres",
       "termName": "レジスト",
-      "description": "<$ba.stun>スタン</>、<$ba.cold>寒冷</>、<$ba.frozen>凍結</>の継続時間が50%減少（同名の状態は重複不可）"
+      "description": "<$ba.stun>スタン</>、<$ba.cold>寒冷</>、<$ba.frozen>凍結</>などの状態異常の継続時間が50%減少(同名の状態は重複不可)"
     },
     "ba.invisible": {
       "termId": "ba.invisible",
@@ -1158,7 +1165,17 @@
     "ba.dt.element": {
       "termId": "ba.dt.element",
       "termName": "元素ダメージ",
-      "description": "以下のダメージ種類を含む：\n<$ba.dt.neural>神経ダメージ</>、<$ba.dt.erosion>侵蝕ダメージ</>、<$ba.dt.burning>灼熱ダメージ</>"
+      "description": "以下のダメージ種類を含む：<$ba.dt.neural>神経ダメージ</>、<$ba.dt.erosion>侵蝕ダメージ</>、<$ba.dt.burning>灼熱ダメージ</>、<$ba.dt.apoptosis>壊死ダメージ</>"
+    },
+    "ba.overdrive": {
+      "termId": "ba.overdrive",
+      "termName": "オーバードライブ",
+      "description": "スキル発動中は二段階のスキルゲージが存在し、スキルが後半にさしかかると追加効果を発動する"
+    },
+    "ba.dt.apoptosis": {
+      "termId": "ba.dt.apoptosis",
+      "termName": "壊死ダメージ",
+      "description": "壊死ダメージが累計1000に達すると、15秒間スキルが発動できなくなり、1秒ごとにSPを1失い、100の術ダメージを受ける"
     },
     "cc.bd_A_1": {
       "termId": "cc.bd_A_1",
@@ -1238,7 +1255,7 @@
     "cc.g.sp": {
       "termId": "cc.g.sp",
       "termName": "異格",
-      "description": "対象オペレーター：\n炎獄ラヴァ、濁心スカジ、遊龍チェン、耀騎士ニアール、寒芒クルース"
+      "description": "対象オペレーター：\n炎獄ラヴァ、濁心スカジ、遊龍チェン、耀騎士ニアール、寒芒クルース、帰溟スペクター"
     },
     "cc.g.abyssal": {
       "termId": "cc.g.abyssal",
@@ -1322,6 +1339,6 @@
     }
   },
   "storyReviewUnlockItemLackTip": "事象の欠片の数が足りません。購買資格証ショップあるいはイベントショップで購入してください",
-  "dataVersion": "26.3.0",
-  "resPrefVersion": "26d0d0"
+  "dataVersion": "27.1.0",
+  "resPrefVersion": "27d0d0"
 }

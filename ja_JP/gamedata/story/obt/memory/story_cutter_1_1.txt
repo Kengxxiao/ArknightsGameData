@@ -1,0 +1,570 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[stopmusic]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[Background(image="bg_black",screenadapt="coverall")]
+[delay(time=1)]
+傭兵とはレトルト食品のようなものだ、と言う人がいる。
+蓋を開ければすぐに食べられて、使い捨て。効率が良く、リスクは低く、戦場で最も都合のいい消耗品だ。
+でも、もし選ぶことができるなら、誰だって温かいできたての料理が食べたいし、命の危険を冒して食費を稼ぐような真似なんかしたくない。
+選ぶことができるなら、の話だけれど。
+[playsound(key="$d_avg_warfireamb_loop", volume=0.5, loop=true, channel="bgs")]
+[Background(image="bg_battlefield",fadetime=1, screenadapt="coverall")]
+[Dialog]
+[delay(time=1)]
+[Blocker(a=0.8, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[playsound(key="$d_gen_transmissionget",volume=0.4)]
+[name="？？？"] 総員に告ぐ、ターゲットが警戒範囲に入った。防御地点到着まであと一分。
+[name="？？？"] 三十秒以内に緊急態勢をとれ。繰り返す。三十秒以内に緊急態勢をとれ。
+[name="？？？"] オーバー。
+[StopSound(channel="bgs", fadetime=1)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playsound(key="$d_gen_walk_n")]
+[Character]
+[Dialog]
+[Character(name="char_301_cutter_1",fadetime=1,block=true)]
+[delay(time=1)]
+[PlayMusic(intro="$warm_intro", key="$warm_loop", volume=0.4,fadetime=2)]
+[name="カッター"]  あのぅ、何か手伝えることは……
+[Character(name="char_230_savage_1",fadetime=0,block=true)]
+[name="サベージ"]  あら、カッターじゃない。
+[name="サベージ"]  ちょうどよかった、わたしが作った野菜パンケーキ食べてみて、焼きたてだよ！
+[Character(name="char_301_cutter_1",name2="char_230_savage_1",focus=1)]
+[name="カッター"]  ありがとうございます。いただきます。
+[name="カッター"]  うん……おいしいと思う。
+[Character(name="char_301_cutter_1",name2="char_230_savage_1",focus=2)]
+[name="サベージ"]  ふふっ、わたしの得意料理だからね。
+[name="サベージ"]  気に入ったならもっと持って行って、遠慮しなくていいんだよ。
+[Character(name="char_301_cutter_1",name2="char_230_savage_1",focus=1)]
+[name="カッター"]  うぅ、ありがとう。でも大丈夫。何か手伝えないか見に来ただけで……
+[Character(name="char_301_cutter_1",name2="char_230_savage_1",focus=2)]
+[name="サベージ"]  そっか。でもわたしの料理はほとんどできてるの。マッターホルンのところへ行ってみたら？
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_199_yak_1#5",fadetime=0.5,block=true)]
+[delay(time=0.6)]
+[name="マッターホルン"]  ああ、カッターさんですか。ちょうどいい、このイェラグ風の獣肉シチューを試してもらえますか。
+[name="マッターホルン"]  便宜上、入手しやすい鱗トカゲの肉で代用して、味付けもアレンジしてみました。試食してくれる人を探していたところです。
+[Character(name="char_301_cutter_1",name2="char_199_yak_1#5",focus=1)]
+[name="カッター"]  うん、わかった、食べてみるよ。
+[Characteraction(name="left", type="jump", xpos=-11, power=0,times=1, fadetime=0.5, block=true)]
+[Blocker(a=0,fadetime=0.5, block=true)]
+[Characteraction(name="left", type="jump", xpos=11, power=0,times=1, fadetime=0.5, block=true)]
+[name="カッター"]  （モグモグ）
+[name="カッター"]  おいしい。理由はわからないけど……すごくおいしい。
+[Character(name="char_301_cutter_1",name2="char_199_yak_1",focus=2)]
+[name="マッターホルン"]  理由はわからない……うん、個性が足りないということですか。引き続き改良が必要ですね。
+[Character(name="char_301_cutter_1",name2="char_199_yak_1",focus=1)]
+[name="カッター"]  じゃなくて、私がうまく表現できないだけで……マッターホルンさんの料理なら、もうそれだけで十分おいしいと思います！
+[name="カッター"]  ところで、何かお手伝いできること、あります？
+[Character(name="char_301_cutter_1",name2="char_199_yak_1#5",focus=2)]
+[name="マッターホルン"]  ハハハ、ここにはないかな。料理はもう火にかけてあるし、あとは煮えるのを待つだけ。グムのところに行ってみては？
+[name="マッターホルン"]  あぁそうだ、ちょっと待って。頼みたいことを思い出しました。新しい料理の試作が何品かあるので、ぜひカッターさんに味見をお願いしたいんですよ。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_196_sunbr_1",fadetime=0.5, block=true)]
+[delay(time=0.6)]
+[name="グム"]  カッターお姉ちゃん！　グムが焼いたパイを食べてみて！
+[Character(name="char_301_cutter_1",name2="char_196_sunbr_1",focus=1)]
+[name="カッター"]  お腹いっぱい……
+[name="カッター"]  グムさんのところで、何か手伝えることは？
+[Character(name="char_301_cutter_1",name2="char_196_sunbr_1",focus=2)]
+[name="グム"]  グムのところは焼きたてのパイしかないよ～。
+[Character(name="char_301_cutter_1",name2="char_196_sunbr_1",focus=1)]
+[name="カッター"]  じゃあ、一個味見しますか。
+[Character(name="char_301_cutter_1",name2="char_196_sunbr_1",focus=2)]
+[name="グム"]  おいしい？
+[Character(name="char_301_cutter_1",name2="char_196_sunbr_1",focus=1)]
+[name="カッター"]  おいしい……はず。
+[Character]
+[Dialog]
+[delay(time=0.6)]
+[Character(name="char_301_cutter_1",fadetime=0.5)]
+[delay(time=0.6)]
+[name="カッター"]  うぅ……もう食べられない……
+[name="カッター"]  手伝いに来たのに、逆に早めの昼食をもらってしまった……
+[name="カッター"]  はぁ……
+[name="カッター"]  皆、気を遣ってくれてるんだ……
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_333_sidero_1#8",fadetime=0.5, block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[Delay(time=0.6)]
+[name="シデロカ"]  手伝いに来たよ！
+[Character(name="char_333_sidero_1#8",name2="char_230_savage_1",focus=2)]
+[name="サベージ"]  ふー、待ってたよ、シデロカ。早く手を貸して。今日は後方支援のオペレーターが二人も休んでて、わたしたち三人だけじゃ忙しくて手が回らないよ。
+[Character(name="char_333_sidero_1#8",name2="char_199_yak_1",focus=2)]
+[name="マッターホルン"]  死ぬ気で頑張ればなんとかなりそうだが、ギリギリ間に合うかどうか……
+[Character(name="char_196_sunbr_1#6", block=true)]
+[name="グム"]  グム、腕がだるい……
+[Character(name="char_333_sidero_1#2",name2="char_196_sunbr_1#6",focus=1)]
+[name="シデロカ"]  皆お疲れ様、今行くね。
+[Character(name="char_333_sidero_1#5")]
+[name="シデロカ"]  そうだ、さっき食堂でカッターを見たんだ。落ち込んでたみたいだけど、何かあったの？
+[Character(name="char_230_savage_1",fadetime=0, block=true)]
+[name="サベージ"]  そういえば、シデロカはあまりキッチンに来ないから、まだ知らないんだね……
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+一ヶ月前
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_301_cutter_1", block=true)]
+[name="カッター"]  皆さん、お疲れ様です……何か私に手伝えることはありますか？
+[Character(name="avg_npc_012",fadetime=0, block=true)]
+[name="後方支援オペレーター"]  おお、新しく入ったカッターさん。ちょうどいい、そこのジャガイモを角切りにしてもらえますか？　シチューに入れたいんです。
+[Character(name="char_301_cutter_1",fadetime=0, block=true)]
+[name="カッター"]  うん、わかった。
+[Dialog]
+[playsound(key="$gavel1",volume=0.5)]
+[CameraShake(duration=0.2, xstrength=0, ystrength=30, vibrato=20, randomness=50, fadeout=true, block=false)]
+[Delay(time=0.6)]
+[playsound(key="$gavel2",volume=0.5)]
+[CameraShake(duration=0.2, xstrength=0, ystrength=30, vibrato=20, randomness=50, fadeout=true, block=false)]
+[Delay(time=1)]
+[Character(name="avg_npc_012",fadetime=0, block=true)]
+[Characteraction(name="middle", type="jump", xpos=0, power=30, times=1, fadetime=0.3,block=false)]
+[name="後方支援オペレーター"]  カッターさん！　ジャガイモだけ切ればいいんです。まな板は切らないでください！！！
+[Character(name="char_301_cutter_1",fadetime=0, block=true)]
+[name="カッター"]  すみません！
+[name="カッター"]  わざとじゃないです。弁償します……
+[Character(name="avg_npc_012",fadetime=0, block=true)]
+[name="後方支援オペレーター"]  いえいえ、そこまでしなくても……そうですね。カッターさんは包丁の扱いに慣れていないでしょう。それなら、そこの鍋を見ていてください。焦げ付かないように、よくヘラで混ぜてくださいね。
+[Character(name="char_301_cutter_1",fadetime=0, block=true)]
+[name="カッター"]  わかりました。ちゃんとやります！
+[CameraShake(duration=1, xstrength=50, ystrength=0, vibrato=3, randomness=70, fadeout=true, block=false)]
+[name="カッター"]  混ぜて、混ぜて、焦げ付かないように、混ぜて……
+[Blocker(a=0.1, r=0.7, g=0.7, b=0.7, fadetime=0.6, block=true)]
+[CameraShake(duration=1, xstrength=50, ystrength=0, vibrato=5, randomness=80, fadeout=true, block=false)]
+[name="カッター"]  混ぜて、混ぜて……
+[playsound(key="$d_avg_woodcracle", loop=true, channel="bgs")]
+[Blocker(a=0.2, r=0.7, g=0.7, b=0.7, fadetime=0.6, block=true)]
+[Delay(time=0.6)]
+[Character(name="char_301_cutter_1",name2="avg_npc_012",focus=2)]
+[name="後方支援オペレーター"]  （くんくん）何の匂い？
+[Character(fadetime=0.5)]
+[Dialog]
+[StopSound(channel="bgs", fadetime=5)]
+[Delay(time=0.6)]
+[playsound(key="$alarmenter")]
+[Blocker(a=0.4, r=0.7, g=0, b=0, fadetime=0.5, block=true)]
+[Character(name="char_empty")]
+[Character(name="avg_277_shaw_1")]
+[characteraction(name="middle", type="move", xpos=-300, fadetime=0, block=false)]
+[characteraction(name="middle", type="move", xpos=300, fadetime=1, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.6, block=true)]
+[Delay(time=0.6)]
+[playsound(key="$alarmenter")]
+[Blocker(a=0.4, r=0.7, g=0, b=0, fadetime=0.5, block=true)]
+[characteraction(name="middle", type="move", xpos=1000, fadetime=1, block=false)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Delay(time=0.6)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_230_savage_1")]
+[name="サベージ"]  カッターの落ち込む姿は可哀そうだけど、ロドスのキッチンの一員として、あんな恐ろしいこと二度と起こしてはいけないから。
+[Character(name="char_196_sunbr_1#6")]
+[name="グム"]  「ケーちゃん進入禁止」の隣に「カッター進入禁止」のマークを入れようかって、後方支援のお姉ちゃんは真剣に考えてた……
+[Character(name="char_199_yak_1#2")]
+[name="マッターホルン"]  無用な損失は、なるべく避けるべきなのは確かですね……
+[Character(name="char_333_sidero_1#2")]
+[name="シデロカ"]  ああ、理解したぞ……
+[Character(name="char_333_sidero_1#7")]
+[name="シデロカ"]  絶対ダメだ！
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[Character]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.8, block=true)]
+[Character(name="char_301_cutter_1",name2="char_empty")]
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2")]
+[characteraction(name="right", type="move", xpos=500, fadetime=0, block=false)]
+[characteraction(name="right", type="move", xpos=-500, fadetime=1.5, block=false)]
+[PlaySound(key="$rungeneral",channel="bgs",volume=1)]
+[Delay(time=1)]
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2")]
+[Delay(time=0.6)]
+[StopSound(channel="bgs",time=1)]
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]  カッター！　待ってくれ！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]  え？　シデロカさん？
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#7",focus=2)]
+[name="シデロカ"]  途中であきらめちゃダメだ！
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[character]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_301_cutter_1")]
+[name="カッター"]   でも、皆に迷惑をかけるんじゃ……
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#8",focus=2)]
+[name="シデロカ"]   大丈夫、夕飯までまだ時間がある。それまでにきっと片付けを終わらせるから。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#8",focus=1)]
+[name="カッター"]   本当ですか、ありがとうございます。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   いいよ。私はただ、やりたいことがあるなら最後までやるべきだと思うんだ。
+[name="シデロカ"]   だから今日から、あんたに料理の特訓をするよ！
+[name="シデロカ"]   安心して、もう絶対にあんな事故は繰り返させないから。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]   私、頑張ります！
+[name="カッター"]   シデロカさん、よろしくお願いします！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   訓練中は教官と呼びなさい！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]   はい！　教官！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#8",focus=2)]
+[name="シデロカ"]   （ははっ、教官と呼ばれるのはこういう感覚なんだな）
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   コホン、教官から質問だ！　料理とは何か！？
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]   食材を食べられるようにすることですか？
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#7",focus=2)]
+[name="シデロカ"]   いいや！　大間違いだ！
+[name="シデロカ"]   料理はそんな単純なもんじゃない。食材を特徴に合わせておいしくするための手段だ！　わかった？
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#7",focus=1)]
+[name="カッター"]   わ、わかりました！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   あんたは完全な初心者みたいだから、基本の訓練から始めよう。いいか、気をつけ！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[Characteraction(name="left", type="jump", xpos=0, power=30, times=1, fadetime=0.5,block=false)]
+[name="カッター"]   はい！　教官！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   まずはどんな料理を作る時にも必要となる基本中の基本――包丁捌きだ。
+[name="シデロカ"]   いいか、包丁を持て！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]   はい――どちらの手でですか……？
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   ん、利き手でいい……もう一方の手でジャガイモを持って。このように包丁をジャガイモの形に沿って、そっと力を入れて皮を剥いていく……
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[CameraShake(duration=0.2, xstrength=5, ystrength=5, vibrato=5, randomness=20,fadeout=true,block=false)]
+[name="カッター"]   形に沿って……そっと力を入れて……飛んでった。
+[delay(time=0.5)]
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#6",focus=2)]
+[name="シデロカ"]   いったいなぜ……
+[name="シデロカ"]   あんたは刃物の扱いが得意なはずなのに。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#6",focus=1)]
+[name="カッター"]   野菜を切るのと敵を斬るのは、手応えが全然違いますから。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   確かにそうだけど……でも食材は敵じゃないよ。
+[name="シデロカ"]   まぁとにかく、何事も慣れだ。練習を続行する！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]   は、はい！
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",fadetime=0.5)]
+[Delay(time=0.6)]
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]   シデロカさん、すごいです。マッシュポテトがこんなにおいしくできるとは思ってもみませんでした。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#8",focus=2)]
+[name="シデロカ"]   ははっ、食べ物を粗末にしてはいけないからね……
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#6",focus=2)]
+[name="シデロカ"]   （大量のジャガイモをあんな風に刻まれちゃうと、ほかに処理方法がないんだよね）
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   実のところ、料理はそれほど難しくない。ほら、包丁の扱いに慣れたら、ジャガイモの皮を剥けるようになったじゃないか。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]   でもお湯が沸くまで待っていたら、また鍋が真っ黒になっちゃって……
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   やっぱりあんたは緊張しすぎだよ。料理は剣術と違って、任務をこなすように師匠の動きを全部真似すれば身につくようなものじゃないんだ。
+[name="シデロカ"]   料理とは、食材の特徴を把握した上で、希望を持って材料を望みの姿に作り変えることだ。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#7",focus=2)]
+[name="シデロカ"]   そう！　希望を持つことがポイントだな！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#7",focus=1)]
+[name="カッター"]   なるほど、はい、わかりました！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   そういえば、あんたはどうして料理を学ぼうと思ったの？
+[name="シデロカ"]   ロドスの食堂はメニューの種類が多いから、口に合う料理は見つかるはずだけど？
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]   私はレトルト食品以外のものを食べたことがないので、自分の手で料理を作ってみたかったんです。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#5",focus=2)]
+[name="シデロカ"]   え！？
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#5",focus=1)]
+[name="カッター"]  一回もないとは言えないかもしれませんが、物心付いた時からお師匠と一緒に暮らしていて、お師匠は料理が苦手で。
+[name="カッター"]  その後、傭兵になってからは、落ち着いて食事することもなくなりました。
+[name="カッター"]  料理がどうやって作られているか気になって、一度だけ飲み屋の厨房に潜り込んだことがあるけど、店主に泥棒と勘違いされてこっぴどく叱られました。ハハハ……
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   カッター！！！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=1)]
+[name="カッター"]   あっ！　はい！！！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#7",focus=2)]
+[Characteraction(name="right", type="jump", xpos=0, power=30, times=1, fadetime=0.3,block=false)]
+[name="シデロカ"]   絶対に料理ができるようにしてあげるから！
+[Characteraction(name="right", type="jump", xpos=0, power=30, times=2, fadetime=0.6,block=false)]
+[name="シデロカ"]   ジャガイモをあと十個、いや、百個使っても、必ずできるようにしてあげる！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#7",focus=1)]
+[name="カッター"]   あの、シデロカさん、落ち着いてください。さっきのはもう昔の話です。ほら、今は元気で生きてます――
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#7",focus=2)]
+[name="シデロカ"]   マッシュポテトを食べ終わったら特訓再開だ！！！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#7",focus=1)]
+[name="カッター"]   は、はい！
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[character]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  結局厨房にあるジャガイモを全部使ってしまった……シデロカさんは別の食材を探しに行ったけど……
+[Blocker(a=0.3, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.3, block=true)]
+[name="カッター"]  ちょっと疲れたな……眠い……
+[name="カッター"]  ダメダメ、シデロカさんの気持ちを無にするわけにはいかない！
+[name="カッター"]  ジャガイモの皮を剥けるようになった程度で、怠けるなんて！
+[name="カッター"]  ふあ……でも午後の日差しは、暖かくて気持ちいい……
+[name="カッター"]  眠くなってきちゃった……
+[stopmusic(fadetime=3)]
+[name="カッター"]  少しだけなら……
+[dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic]
+[character]
+[Background(image="bg_wild_m",screenadapt="coverall")]
+[name="？？？"] おい、起きろ。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlayMusic(intro="$patriot_intro", key="$patriot_loop", volume=0.4)]
+[Character(name="avg_npc_008")]
+[Delay(time=0.6)]
+[name="傭兵A"]  ほら、お前の分だ。
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  ありがと。
+[Character(name="avg_npc_008")]
+[name="傭兵A"]  よくこんなところで寝られるもんだ。まぁでも、出発までもう少し時間がある。体力を温存しておいた方がいい。
+[name="傭兵A"]  おい、そこのお前、ほら。
+[Dialog]
+[Character(name="avg_npc_007",fadetime=0.5)]
+[Delay(time=0.6)]
+[PlaySound(key="$bodyfalldown2",volume=0.5)]
+[Characteraction(name="middle", type="jump", xpos=0, power=30, times=1, fadetime=0.5,block=false)]
+[Delay(time=0.6)]
+[name="傭兵B"]  また缶詰か？
+[Character(name="avg_npc_008",name2="avg_npc_007",focus=1)]
+[name="傭兵A"]  缶詰があるだけありがたく思え。荒野で物資をなくした傭兵の末路を知らないのか？
+[name="傭兵A"]  荒野で倒れた傭兵は、腐肉食のオリジムシに死体とみなされ、ズボンごと脚を噛じられる。肉を喰われてる時、そいつはまだ意識があるんだ。
+[Character(name="avg_npc_008",name2="avg_npc_007",focus=2)]
+[name="傭兵B"]  あ、そう言われたら、砂虫の足の炭焼きが食べたくなったぞ。焼きたてが一番うまいんだ。
+[Character(name="avg_npc_008",name2="avg_npc_007",focus=1)]
+[name="傭兵A"]  *クルビアスラング*、バカ言うな。
+[Character(name="avg_npc_008",name2="avg_npc_007",focus=2)]
+[name="傭兵B"]  おい、肉を焼かないか？　スープを作ってもいいぜ。
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  ダメだ。
+[name="カッター"]  ここは荒野だ、風もない。火をつければ煙が出て、数キロ先からも見えてしまう。
+[name="カッター"]  ここにキャラバンがいるってことを、この辺りの傭兵に知らせるようなものだ。
+[name="カッター"]  今回の任務は荷物の護衛だ。位置がバレたらまずい。
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  ほう、小娘のわりに物慣れしてるな。まだ若いようだが、これで何回目だ？
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  もう数えきれない。
+[name="カッター"]  詐欺と人身売買以外、何でもやってる。経歴でいったら、あんたより先輩かもしれない。
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  はっ、大きく出たな。俺がいつから傭兵やってるか、どうやってわかるんだ？
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  刀を見ればわかる。
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  何だと？
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  あんたの刀はレイジアン工業が去年発売した物だ。新しい素材が使われてるから、重さが前のモデルの半分しかない。その帯刀ベルトにも大したキズがない。他の刀を使ったことはないだろう。
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  やるな、本物だ。
+[name="傭兵B"]  正直、俺は実家の畑が天災で潰れたから出てきた。農家を続られるなら、こんないつ死ぬかもわからない仕事なんざやらねぇさ。
+[name="傭兵B"]  ハッ、こう見えて、俺も失敗したことはないぜ。
+[name="傭兵B"]  あとで盗賊に遭ったら、腕を見せてやる。
+[Character(name="avg_npc_008")]
+[name="傭兵A"]  おい、縁起でもねぇこと言うな。
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  冗談だよ、冗談……それにしても、今回は出発する直前まで地図を渡されなかったな。秘密保持にどれだけ力を入れてんだ。
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  よく使われる対策だ。
+[name="カッター"]  違うルートが描かれた地図を数枚用意して、その全てに封をし、出発直前になったら仲介人にランダムで一枚選ばせ、傭兵に渡させる雇い主もいる。
+[name="カッター"]  傭兵は地図を渡されたとき、封に開けられた形跡があったら、出発を断ってもいい。
+[name="カッター"]  こうすれば、傭兵は雇い主との直接連絡が避けられるし、秘密を漏す可能性も排除できる。今回の雇い主はよくわかってる奴だ。
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  こんな大げさなことをするなんて、箱の中身はいったい何だよ。
+[Character(name="avg_npc_008",name2="avg_npc_007",focus=1)]
+[name="傭兵A"]  指定された場所に荷物を届けて報酬をもらえば、俺らの役目は終わりだ。余計なことを考えるんじゃない。
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  そうだな。けど今回は報酬も高ぇし、値打ちのある物が入ってるに違いねぇ！　俺の価値も上がった気がするぜ、ハハハハ！
+[name="傭兵B"]  金が入ったら、街のバーで浴びるように飲みてぇぜ。
+[name="傭兵B"]  こんな仕事をあと何回かやれば、南の方に土地を買って、ホップ農園でもやって自家製ビールが売れるぞ、ハハハハ！
+[name="傭兵B"]  お前らは？　金が入ったら何がしたい？
+[Character(name="avg_npc_008")]
+[name="傭兵A"]  そんな余裕はないな。とりあえず武器屋に行ってクロスボウのメンテナンスをしてもらわないと。
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  そこの小娘は？
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  新しいヘアピンを買うかな。
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  ぷっ――今なんて言った？
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  前のヘアピンがなくなってから、前髪が目にかかってイライラする……
+[Character(name="avg_npc_007")]
+[CameraShake(duration=0.5, xstrength=10, ystrength=10, vibrato=10, randomness=20, fadeout=true, block=false)]
+[name="傭兵B"]  ハハハハハハハハハ――
+[Character(name="avg_npc_008")]
+[CameraShake(duration=0.5, xstrength=10, ystrength=10, vibrato=10, randomness=20, fadeout=true, block=false)]
+[name="傭兵A"]  プハハハハ……
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  何がそんなにおかしい……
+[stopmusic(fadetime=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Delay(time=1)]
+[playsound(key="$d_avg_snowstormflp", loop=true, channel="bgs")]
+[Subtitle(text="傭兵とはレトルト食品みたいなものだ。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="その価値も、使い道も、自分自身では決められない。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="利用できるだけ利用され、後は邪魔なゴミにしかならない。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="戸惑うことなく荒野に捨てられてしまう。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Background(image="bg_wild_a",screenadapt="coverall")]
+[PlayMusic(intro="$drift_intro", key="$drift_loop",crossfade=1, delay=0.5,volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_301_cutter_1",fadetime=1)]
+[Delay(time=1)]
+[name="カッター"]  ゴホッ……
+[name="カッター"]  生き残ったのは、私とあんただけか……
+[Character(name="avg_npc_007")]
+[name="傭兵B"]  ……
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  敵の攻撃は、明らかに計画されたものだ。
+[name="カッター"]  何があったか知らないが、誰かが私たちの位置をバラしたに違いない――
+[Dialog]
+[Character]
+[playsound(key="$runsand")]
+[Character(name="char_empty",name2="avg_npc_007")]
+[characteraction(name="right", type="move", xpos=500, fadetime=0, block=false)]
+[characteraction(name="right", type="move", xpos=-600, fadetime=1.5, block=true)]
+[Delay(time=1)]
+[Character(name="char_301_cutter_1",name2="avg_npc_007",focus=1)]
+[name="カッター"]  何をする？　もう荷物はほっとけ。位置がバレてる以上、いずれまた敵が来る！
+[Character(name="char_301_cutter_1",name2="avg_npc_007",focus=2)]
+[name="傭兵B"]  どけ！
+[Character(name="char_301_cutter_1",name2="avg_npc_007",focus=1)]
+[name="カッター"]  任務は失敗だ！　早く先の町に行ってあんたの怪我を処置してもらわないと――
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="char_301_cutter_1",name2="avg_npc_007",focus=2)]
+[name="傭兵B"]  俺の首にできた源石結晶を見ろ！　何をしても無駄だ！
+[name="傭兵B"]  俺はじきに死ぬ！　その前に箱の中身を見て、何のせいで殺されたか知りてぇんだ！
+[Character(name="char_301_cutter_1",name2="avg_npc_007",focus=1)]
+[name="カッター"]  そこまで悲観しなくても――
+[character]
+[Dialog]
+[CameraShake(duration=0.3, xstrength=8, ystrength=6, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_sp_chixiaobadao",volume=0.4)]
+[Blocker(a=0.7, r=1, g=1, b=1, fadetime=0.03, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_npc_007")]
+[delay(time=0.6)]
+[name="傭兵B"]  ハ……ハハ……ハハハハハハハッ！
+[name="傭兵B"]  空っぽだ、何も入ってねぇ！
+[name="傭兵B"]  エサだ、俺たちは最初からエサだった！　あのクソ高ぇ報酬は、俺らの命を買うための金だったんだ！
+[name="傭兵B"]  傭兵になれば、使い切れねぇほどの金がラクに手に入る、そんなデタラメを信じた俺がバカだったぜ。
+[name="傭兵B"]  ハハハ……まぁ、デタラメでもねぇか。死んだら金がいくらあっても使い切れねぇもんな！
+[CameraShake(duration=1, xstrength=20, ystrength=20, vibrato=20, randomness=50, fadeout=true, block=false)]
+[name="傭兵B"]  クソッタレ！　傭兵なんざ忌々しいクソッタレだ！
+[stopmusic(fadetime=2)]
+[StopSound(channel="bgs", fadetime=1)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character]
+[Background(image="bg_canteen",screenadapt="coverall")]
+[Delay(time=1)]
+[name="？？？"] おい、カッター？　起きろ。
+[PlayMusic(intro="$warm_intro", key="$warm_loop", volume=0.1,fadetime=0)]
+[MusicVolume(volume=0.4, fadetime=3)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_301_cutter_1",fadetime=0.5)]
+[Delay(time=0.6)]
+[name="カッター"]  あ！　ごめんなさい。寝てしまったみたいです。
+[Character(name="char_333_sidero_1#2")]
+[name="シデロカ"]   確かに、最近の訓練は大変だったな。
+[name="シデロカ"]   しかし、今日は一ヶ月間の訓練の成果を見せてもらう日だ。元気出していこう！
+[name="シデロカ"]   準備はいいか？
+[Character(name="char_301_cutter_1")]
+[name="カッター"]   は……はい！
+[name="カッター"]  ゴクン……
+[name="カッター"]  （慎重に鍋の蓋を開ける）
+[dialog]
+[Blocker(a=0.3, r=0.95, g=0.95, b=0.95, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="カッター"]  やっと……できました。
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#8",focus=2)]
+[name="シデロカ"]   おお！　おいしそうじゃないか！
+[name="シデロカ"]   あんたはできるって信じていたよ！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#8",focus=1)]
+[name="カッター"]   シデロカさんのおかげです。私一人だったら、きっと無理でした……
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#8",focus=2)]
+[name="シデロカ"]   いいから早く食べさせろ！
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#8",focus=1)]
+[name="カッター"]   ちょ、ちょっと待って！
+[name="カッター"]   やっぱり最初は自分で……
+[Dialog]
+[Character(name="char_301_cutter_1")]
+[Delay(time=0.6)]
+[Characteraction(name="middle", type="jump", xpos=-11, power=0,times=1, fadetime=0.5, block=true)]
+[Blocker(a=0,fadetime=0.5, block=true)]
+[Characteraction(name="middle", type="jump", xpos=11, power=0,times=1, fadetime=0.5, block=true)]
+[name="カッター"]  （モグモグ）
+[Character(name="char_333_sidero_1#2")]
+[name="シデロカ"]   味はどう？
+[Character(name="char_301_cutter_1")]
+[name="カッター"]   なんか……
+[Character(name="char_333_sidero_1#2")]
+[name="シデロカ"]   なんか？
+[Character(name="char_301_cutter_1")]
+[name="カッター"]  あまりおいしくない……
+[Character(name="char_301_cutter_1",name2="char_333_sidero_1#2",focus=2)]
+[name="シデロカ"]   え？　私に食べさせてよ。
+[dialog]
+[Character(name="char_333_sidero_1#2")]
+[Delay(time=0.6)]
+[Characteraction(name="middle", type="jump", xpos=-11, power=0,times=1, fadetime=0.5, block=true)]
+[Blocker(a=0,fadetime=0.5, block=true)]
+[Characteraction(name="middle", type="jump", xpos=11, power=0,times=1, fadetime=0.5, block=true)]
+[Delay(time=0.6)]
+[Character(name="char_333_sidero_1#7")]
+[name="シデロカ"]   おいしいじゃない！　カッターは謙遜しすぎだよ！　黙って出されたら、マッターホルンさんが作ったと言われても信じちゃうよ。
+[Character(name="char_301_cutter_1")]
+[name="カッター"]   シデロカさんこそ、褒めすぎです……
+[Character(name="char_333_sidero_1#2")]
+[name="シデロカ"]   いやいや、カッターらしい一品というべきか！
+[name="シデロカ"]   最終課題で「砂虫缶のあんかけご飯」を作ると聞いてびっくりしたけど、まさかこんなにおいしいとは思わなかった！
+[Character(name="char_333_sidero_1#8")]
+[name="シデロカ"]   缶詰の濃い味付けがご飯によって緩和され、砂虫の肉も工夫を加えることで歯ごたえがだいぶ良くなってる。
+[name="シデロカ"]   うん、そしてマッシュポテトを入れたのは、まさに神技！　もうこの料理、ロドスの食堂のメニューに入れてもいいくらいだ！　
+[Character(name="char_301_cutter_1")]
+[name="カッター"]   よく知っている食材を望みの姿に作り変えるとシデロカさんに言われたけど、私がよく知ってるのは砂虫の缶詰くらいですから。
+[Character(name="char_333_sidero_1#2")]
+[name="シデロカ"]   それこそ料理の真髄を身につけた証だよ！
+[Character(name="char_301_cutter_1")]
+[name="カッター"]   まだこれしか作れませんけど……
+[Character(name="char_333_sidero_1#2")]
+[name="シデロカ"]   これは最初の一品で、新しい始まりでもあるんだ！
+[Character(name="char_301_cutter_1")]
+[name="カッター"]   はい、わかりました。
+[name="カッター"]   任務をこなすのとは違う。希望を持って……望みの姿に、作り変えるということ……
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[stopmusic(fadetime=3)]
+[Character]
+[Image(fadetime=2)]
