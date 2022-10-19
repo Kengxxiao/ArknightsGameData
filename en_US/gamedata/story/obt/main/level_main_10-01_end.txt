@@ -1,0 +1,687 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="27_g12_satellite",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+8:15 A.M. \ Overcast
+Several kilometers from Londinium, adjacent plate
+[dialog]
+[Character(name="avg_npc_012",name2="avg_npc_411_1#1$1",fadetime=0.7)]
+[delay(time=0.7)]
+[Character(name="avg_npc_012",name2="avg_npc_411_1#1$1",focus=1)]
+[name="Rhodes Island Operator"] Closure, we're getting a drone signal!
+[Character(name="avg_npc_012",name2="avg_npc_411_1#1$1",focus=2)]
+[name="Closure"]Move, move, lemme see!
+[Character(name="avg_npc_012",name2="avg_npc_411_1#3$1",focus=2)]
+[name="Closure"]Ooh... Woah, that's not half bad. The newly added camera module is working properly and has great clarity within a hundred meters.
+[Character(name="avg_npc_012",name2="avg_npc_411_1#3$1",focus=2)]
+[name="Closure"]The battery life seems pretty stable too! Keep at it with this baby and we might even be able to get it over the wall and sneak a peek at what's going on inside...
+[Character(name="avg_npc_012",name2="avg_npc_411_1#3$1",focus=1)]
+[name="Rhodes Island Operator"] Hold on a sec, that's practically asking the enemy to shoot it out of the sky!
+[Character(name="avg_npc_012",name2="avg_npc_411_1#7$1",focus=2)]
+[name="Closure"]Don't you worry, I wouldn't put everybody at risk like that.
+[Character(name="avg_npc_012",name2="avg_npc_411_1#1$1",focus=2)]
+[name="Closure"]We've just gotta hurry up and develop that stealth coating...
+[Character(name="avg_npc_012",name2="avg_npc_411_1#1$1",focus=1)]
+[name="Rhodes Island Operator"] Closure, the drone's sending an alert!
+[Character(name="avg_npc_012",name2="avg_npc_411_1#4$1",focus=2)]
+[name="Closure"]Got somebody within detection range... It's charging its automatic attack module.
+[Character(name="avg_npc_012",name2="avg_npc_411_1#4$1",focus=2)]
+[name="Closure"]Wait, wait, that's the rescue team! Disable the alert!
+[Character(name="avg_npc_012",name2="avg_npc_411_1#7$1",focus=2)]
+[name="Closure"]Amiya, Doctor! Indra and Dagda are back!
+[dialog]
+[character]
+[musicvolume(volume=0.2, fadetime=1)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[musicvolume(volume=0.4, fadetime=1)]
+[Character(name="avg_npc_394_1#1$1",fadetime=0.5)]
+[delay(time=0.51)]
+[Character(name="avg_npc_394_1#1$1",focus=-1)]
+[Decision(options="Closure's drones are getting good.;......;Our scouts haven't found anyone yet.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] They sure are. Closure's been totally focused on her drone research the whole way here.
+[Character(name="avg_npc_394_1#21$1")]
+[name="Amiya"] She's trying to improve their recon capabilities so the enemy can't ambush us.
+[Predicate(references="2")]
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] That would be a big relief for you too, right?
+[Character(name="avg_npc_394_1#19$1")]
+[name="Amiya"] After all, this is our first operation since coming to Londinium, and I... I'm still a little worried.
+[Predicate(references="3")]
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] Drones can do a lot to improve our sightlines.
+[Character(name="avg_npc_394_1#21$1")]
+[name="Amiya"] Doctor, once we get into Londinium, all the hard work Closure has put into her drones might really come in handy.
+[Character(name="avg_npc_394_1#19$1")]
+[name="Amiya"] Because... most of us don't have the slightest idea of what's going on in there. We're going to need more eyes.
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_394_1#18$1")]
+[name="Amiya"] Did it seem like Closure was kinda nervous?
+[Character(name="avg_npc_394_1#18$1")]
+[name="Amiya"] She hasn't left the landship for operations much before. And that's before we talk about how none of us know how long we'll be here.
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] But it's alright. I trust her, and I trust all our operators.
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] Whether it's the roughly-a-dozen operators following us, or Misery and Logos's two teams that went ahead of us...
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] Everyone signed up for this operation knowing exactly what we're here for.
+[Character(name="avg_npc_394_1#1$1")]
+[name="Amiya"] So far, we've successfully completed phase one and phase two of the operation. Now, we need to focus on phase three––
+[Character(name="avg_npc_394_1#7$1")]
+[name="Amiya"] Entering the city.
+[dialog]
+[Character(name="avg_npc_394_1#7$1",focus=-1)]
+[Decision(options="How are we going to infiltrate Londinium?;Are we going in through the structural level again?;If I'm scaling walls again, I'm gonna need a minute.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_394_1#3$1")]
+[name="Amiya"] We're not getting into Londinium the same way we got inside the Chernobog core city.
+[Character(name="avg_npc_394_1#2$1")]
+[name="Amiya"] We've got a visual on Londinium now, Doctor. Look at how high those walls are.
+[Character(name="avg_npc_394_1#3$1")]
+[name="Amiya"] Nothing has ever managed to breach Londinium's defenses, not even Ursus's high-speed warships.
+[Character(name="avg_npc_394_1#1$1")]
+[name="Amiya"] Londinium used to be the economic center of all Terra, as we all know, but only those who've seen the city with their own eyes understand its reputation as an impregnable fortress.
+[name="Amiya"] The waste drainage structures of most nomadic cities are vulnerable infiltration from the outside, but the engineers who built Londinium even made use of this weak point.
+[Character(name="avg_npc_394_1#10$1")]
+[name="Amiya"] Reportedly, they built an automatic assembly line into the underground structure––
+[Character(name="avg_npc_394_1#11$1")]
+[name="Amiya"] Back in Londinium's glory days, the machines worked day and night to perpetuate Victoria's golden age.
+[Character(name="avg_npc_394_1#19$1")]
+[name="Amiya"] In times of war, the assembly lines supplied weapons and ammunition to the defense systems built into their towering walls.
+[Character(name="avg_npc_394_1#18$1")]
+[name="Amiya"] The underground structure was designed so carefully that we wouldn't find a single gap in the engineering blueprints.
+[Character(name="avg_npc_394_1#18$1")]
+[name="Amiya"] And that's assuming we'd even be able to get our hands on Londinium's blueprints. That's kind of impossible in and of itself.
+[dialog]
+[Character(name="avg_npc_394_1#18$1",focus=-1)]
+[Decision(options="Then how did Logos and Misery get inside?;......;I thought Kal'tsit would be able to get us in.", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="avg_npc_394_1#15$1")]
+[name="Amiya"] Doctor, have some faith in our elite operators.
+[Character(name="avg_npc_394_1#21$1")]
+[name="Amiya"] Blaze is an expert in high-mobility combat and Rosmontis is the core of our annihilation force, those two are masters of very particular Arts that are useful for infiltration missions.
+[name="Amiya"] Once you've seen Misery's Originium Arts in action, you'll understand what I mean.
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] You've probably heard Lava talk about 'Spatial Arts'... That's heading in the right direction of explaining Misery's Arts, but it's not the whole story.
+[name="Amiya"] Before joining Rhodes Island, he even managed to infiltrate the dynastic catacombs of ancient Sargon.
+[Character(name="avg_npc_394_1#11$1")]
+[name="Amiya"] As for Logos... He has his own unique methods that require a specially trained caster.
+[name="Amiya"] I think, if there's a way for living things to get in and out of a city, there's no wall that could stop them.
+[name="Amiya"] We also have another special operator joining us after we get into the city, but we probably won't be able to get in the same way she did.
+[dialog]
+[Character(name="avg_npc_394_1#11$1",focus=-1)]
+[Predicate(references="2")]
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] I'm not too worried, Doctor.
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] As you know, we have a plan. Once it's successfully put into motion, we'll all be much safer.
+[Character(name="avg_npc_394_1#21$1")]
+[name="Amiya"] And even if this plan doesn't work, we have a backup plan, and another one after that.
+[dialog]
+[Character(name="avg_npc_394_1#21$1",focus=-1)]
+[Predicate(references="3")]
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] Doctor... I know you're just trying to lighten the mood.
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] Over the last year or so, we've held hundreds of intelligence meetings, and almost a thousand tactical simulations... We all know how hard Dr. Kal'tsit worked to make this operation possible.
+[Character(name="avg_npc_394_1#3$1")]
+[name="Amiya"] But there are some things we can't do, no matter how much effort we put in... and that's true for our uniquely talented elite operators, Rhodes Island itself, and even Dr. Kal'tsit.
+[dialog]
+[Character(name="avg_npc_394_1#3$1",focus=-1)]
+[Predicate(references="1;2;3")]
+[Decision(options="So that's why you found us a guide.;I'm really glad we're not starting with a fight.", values="1;2")]
+[Predicate(references="1")]
+[Character(name="avg_npc_394_1#17$1")]
+[name="Amiya"] Right... I wanted to try something a bit safer first.
+[Predicate(references="2")]
+[Character(name="avg_npc_394_1#17$1")]
+[name="Amiya"] It brings to mind, Doctor, that meeting before we left, everyone was surprisingly on the same page here.
+[name="Amiya"] Even if we had the Rhodes Island landship, we'd basically be trying to shatter a boulder by throwing eggs at it. That's what Londinium is to us.
+[Predicate(references="1;2")]
+[Character(name="avg_npc_394_1#17$1")]
+[name="Amiya"] We should save our strength for the tougher enemies. They're waiting out there.
+[Character(name="avg_npc_394_1#17$1")]
+[name="Amiya"] Doctor, I can feel everyone getting tenser each day we get closer to Londinium...
+[Character(name="avg_npc_394_1#7$1")]
+[name="Amiya"] But no matter what happens next, we're all ready to fight.
+[dialog]
+[Character(name="avg_npc_394_1#7$1",focus=-1)]
+[Decision(options="What about you, Amiya?;......;I'm worried about you too, Amiya.", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_npc_394_1#5$1")]
+[name="Amiya"] Doctor...
+[Character(name="avg_npc_394_1#1$1")]
+[name="Amiya"] You already know. If we have to make a stand right here, it wouldn't be Closure doing it, or any of the operators who came here with their own ideals.
+[Character(name="avg_npc_394_1#11$1")]
+[name="Amiya"] The responsibility is mine... Umm, though maybe it would be Siege's too.
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="bg_desert_1",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$drift_intro", key="$drift_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]...Indra.
+[Character(name="avg_npc_405_1#8$1")]
+[name="Morgan"]You're awake, Vina? You haven't gotten a wink of sleep all day. Might be good to get some shut-eye before we officially return to the city.
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]I can't sleep..
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]Shouldn't Indra and Dagda be back already?
+[Character(name="avg_npc_405_1#1$1")]
+[name="Morgan"]Heh. I don't even know if I should be jealous of those two. Even though they signed up for the job to buy you time to rest up, they just worry you anyway.
+[Character(name="avg_npc_407_1#9$1")]
+[name="Siege"]I should've gone with them. Ever since I came back, I can't close my eyes without seeing everything that happened back when we ran.
+[Character(name="avg_npc_407_1#9$1")]
+[name="Siege"]If they're in danger, I should be with them... No, I should be standing in front of them.
+[Character(name="avg_npc_405_1#3$1")]
+[name="Morgan"]Look, you... You always worry too much. They're just warming up a bit before their homecoming. How dangerous could it be?
+[Character(name="avg_npc_405_1#3$1")]
+[name="Morgan"]Setting Dagda aside for now, did you see how fidgety Hannah looked? Hah.
+[Character(name="avg_npc_405_1#1$1")]
+[name="Morgan"]If you didn't give her a little task to help her blow off steam, I bet she wouldn't have been able to control herself. Probably would've punched someone the moment we got back into the city.
+[Character(name="avg_npc_407_1#3$1")]
+[name="Siege"]She handles herself a lot better now.
+[Character(name="avg_npc_405_1#7$1")]
+[name="Morgan"]Hmph. If that was true, she wouldn't be arguing back and forth with Dagda all the time. Even though she knows you haven't been sleeping well, she still won't shut up.
+[Character(name="avg_npc_405_1#1$1")]
+[name="Morgan"]How about it, Vina? Wanna sneak a peek at our old home while they're out?
+[Character(name="avg_npc_405_1#1$1")]
+[name="Morgan"]They only know how to throw fists. I'm the brains here, so I'm naturally the most reliable.
+[dialog]
+[PlaySound(key="$d_avg_knock_head",volume=0.6)]
+[characteraction(name="middle", type="jump", power=10, times=2, fadetime=0.51,block=true)]
+[delay(time=1)]
+[character]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_155_tiger_1#1$1",fadetime=1.5)]
+[delay(time=2)]
+[name="Indra"]Why are you talking smack behind our backs again?!
+[Character(name="avg_npc_405_1#1$1")]
+[name="Morgan"]Look at that, Vina. Doesn't she seem more energetic than before?
+[Character(name="avg_npc_407_1#3$1")]
+[name="Siege"]Hah.
+[Character(name="avg_155_tiger_1#5$1")]
+[name="Indra"]A laugh out of Vina?
+[Character(name="avg_155_tiger_1#10$1")]
+[name="Indra"]You've been totally lost in thought this whole trip.
+[Character(name="avg_npc_405_1#2$1")]
+[name="Morgan"]You idiot, why even talk about that? Do you know how hard it was for me to––
+[Character(name="avg_npc_407_1#3$1")]
+[name="Siege"]Thank you, Morgan.
+[Character(name="avg_npc_407_1#3$1")]
+[name="Siege"]Except, I'd suggest you get some rest yourself. If I needed someone to manage my mood for me, I'd be a pretty useless leader.
+[Character(name="avg_npc_405_1#8$1")]
+[name="Morgan"]Alright, sounds good to me.
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]Dagda.
+[Character(name="avg_npc_396_1#1$1")]
+[name="Dagda"] Here.
+[Character(name="avg_npc_407_1#5$1")]
+[name="Siege"]You're bleeding?
+[Character(name="avg_npc_396_1#1$1")]
+[name="Dagda"] I'm fine. It's not my blood.
+[Character(name="avg_npc_407_1#3$1")]
+[name="Siege"]I'm glad.
+[dialog]
+[stopmusic(fadetime=1)]
+[delay(time=1.5)]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.4)]
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]Those men... they were Dublinn, right? What'd you think of them?
+[Character(name="avg_npc_396_1#1$1")]
+[name="Dagda"] They're about as strong as a regular standing army. And, the one squad captain that Indra and I took down fought with combat techniques that very distinctly showed signs of Victorian military training.
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]In other words...
+[Character(name="avg_npc_396_1#1$1")]
+[name="Dagda"] We might actually be dealing with a coup of some kind.
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]Are they working with the Sarkaz?
+[Character(name="avg_npc_396_1#1$1")]
+[name="Dagda"] They've no love for the Sarkaz. But that probably hasn't stopped them from forging a temporary alliance.
+[Character(name="avg_npc_407_1#10$1")]
+[name="Siege"]They want to carve up Londinium. No, probably much more than just Londinium.
+[Character(name="avg_npc_407_1#10$1")]
+[name="Siege"]Those dukes out there... How many of them support Dublinn? And how many... support the Sarkaz?
+[Character(name="avg_npc_396_1#7$1")]
+[name="Dagda"] For shame! They'd rather let the flags of foreign foes fly over Londinium than let go of their pitiful little power struggles, obsessed with their game of political tug-o'-war.
+[Character(name="avg_npc_396_1#7$1")]
+[name="Dagda"] These dukes and their troops are responsible for creating this crisis!
+[Character(name="avg_npc_396_1#7$1")]
+[name="Dagda"] Now that we've come this far, it's finally time for us to put an end to this mess.
+[Character(name="avg_npc_396_1#7$1")]
+[name="Dagda"] I've said it countless times: as a Knight of the Tower, my sword and I stand ready.
+[Character(name="avg_npc_396_1#7$1")]
+[name="Dagda"] We're just waiting for you to lead us back to Londinium, and gather up all those willing to fight for you.
+[Character(name="avg_npc_405_1#4$1")]
+[name="Morgan"]Dagda!
+[Character(name="avg_npc_405_1#5$1")]
+[name="Morgan"]We agreed to not talk about that until after we got back.
+[Character(name="avg_npc_396_1#3$1")]
+[name="Dagda"] But we're already at the gates of Londinium.
+[Character(name="avg_155_tiger_1#6$1")]
+[name="Indra"]Didn't I tell you, Morgan? I'm not the only one who's sick of her. She's been acting a bit kooky lately, and she keeps blathering on about random nonsense.
+[Character(name="avg_155_tiger_1#9$1")]
+[name="Indra"]Hey, Dagda, you don't even carry a sword on you, and I don't care if you're a knight or not. Just don't forget what weapon you have in your hands, and whose side you're on!
+[Character(name="avg_npc_396_1#2$1")]
+[name="Dagda"] I...
+[Character(name="avg_npc_407_1#5$1")]
+[name="Siege"]......
+[Character(name="avg_npc_407_1#5$1")]
+[name="Siege"]Don't be too hard on her. Either of you.
+[Character(name="avg_npc_407_1#9$1")]
+[name="Siege"]We... all have a past that we can't shrug aside. The reason we're all here today is precisely because we still have a score to settle.
+[Character(name="avg_npc_407_1#9$1")]
+[name="Siege"]I've told you before, Dagda, I don't want to let any of you down.
+[Character(name="avg_npc_396_1#2$1")]
+[name="Dagda"] Siege...
+[Character(name="avg_npc_396_1#2$1")]
+[name="Dagda"] I'm sorry. I swore to trust you... and I swore to trust that you'd make the right decisions. But, I lost myself today.
+[Character(name="avg_npc_407_1#4$1")]
+[name="Siege"]Don't blame yourself.
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]Our primary objective is still to enter Londinium with Rhodes Island.
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]Is the one you rescued talking to Amiya right now?
+[Character(name="avg_npc_396_1#1$1")]
+[name="Dagda"] Yes. Balin took him to see Amiya and the Doctor.
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]Looks just like your average Londinier.
+[Character(name="avg_npc_396_1#9$1")]
+[name="Dagda"] It could be a disguise.
+[Character(name="avg_npc_396_1#9$1")]
+[name="Dagda"] The Dublinn fighters said he used to work for the Sarkaz, but deserted them.
+[Character(name="avg_npc_396_1#7$1")]
+[name="Dagda"] Those Sarkaz... I've fought them before. They killed the other Knights of the Tower...
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]Dagda.
+[Character(name="avg_npc_396_1#3$1")]
+[name="Dagda"] I'm fine. But, we can't underestimate them. The fact that this guy managed to escape the city on their watch means he's probably more than meets the eye.
+[Character(name="avg_npc_407_1#2$1")]
+[name="Siege"]If he really was that ordinary, Dublinn wouldn't care to abduct him, and Rhodes Island wouldn't be looking for him, right?
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]Let's head over and see what's going on.
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]I want to see... if he really can lead us into Londinium.
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="27_g12_satellite",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$frontline_intro", key="$frontline_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[Character(name="avg_npc_012",name2="avg_npc_411_1#1$1",focus=1)]
+[name="Rhodes Island Operator"] Amiya, there's a communication request on Blacksteel's channel.
+[Character(name="avg_npc_394_1#1$1")]
+[name="Amiya"] Please put them through.
+[dialog]
+[character]
+[delay(time=1)]
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[CharacterCutin(widgetID="1", name="avg_npc_237", style="cutin", fadestyle= "horiz_expand_center", fadetime=0.5, offsetx=-300, width=200, block=true)]
+[Character(name="char_empty",name2="avg_npc_394_1#1$1",focus=-1)]
+[name="Jessica"]Amiya!
+[Character(name="char_empty",name2="avg_npc_394_1#18$1",focus=2)]
+[name="Amiya"] Did you get our signal? I'm sorry to say that by the time we got to the scene, the pilot Blacksteel hired was already dead.
+[Character(name="char_empty",name2="avg_npc_394_1#18$1",focus=-1)]
+[name="Jessica"]How could this happen...?
+[Character(name="char_empty",name2="avg_npc_394_1#18$1",focus=-1)]
+[name="Jessica"]Poor Thorpe... *sigh*, I'll let the rest of the team know.
+[Character(name="char_empty",name2="avg_npc_394_1#18$1",focus=2)]
+[name="Amiya"]We also weren't able to retrieve the low-altitude aircraft. It was... um, destroyed during the battle.
+[Character(name="char_empty",name2="avg_npc_394_1#18$1",focus=-1)]
+[name="Jessica"]Ugh, that aircraft was rented... But, umm, that's not too big of a problem. We still have spare vehicles, so that won't disrupt the operation.
+[Character(name="char_empty",name2="avg_npc_394_1#18$1",focus=-1)]
+[name="Jessica"]Is Mr. Thomas with you right now?
+[Character(name="char_empty",name2="avg_npc_394_1#2$1",focus=2)]
+[name="Amiya"]Yes, he's a bit shaken up still, but doesn't seem to have any injuries. Our medics are looking after him right now.
+[Character(name="char_empty",name2="avg_npc_394_1#1$1",focus=2)]
+[name="Amiya"]Is he the informant you said could get us into Londinium?
+[Character(name="char_empty",name2="avg_npc_394_1#1$1",focus=-1)]
+[name="Jessica"]That's right.
+[name="Jessica"]Mr. Thomas, who used to own a candy plant in Londinium's Sudean borough, and his uncle who lives in Columbia, are long-time partners of Blacksteel.
+[name="Jessica"]His uncle put in a request to bring Mr. Thomas back to Columbia. The last time we talked, we told Mr. Thomas that we'd bring someone to pick him up if he found some way to leave Londinium.
+[name="Jessica"]I just never expected...
+[Character(name="char_empty",name2="avg_npc_394_1#2$1",focus=2)]
+[name="Amiya"]...that Dublinn would hijack your aircraft. And by the way, they seem very interested in Mr. Thomas too.
+[Character(name="char_empty",name2="avg_npc_394_1#2$1",focus=-1)]
+[name="Jessica"]Hm, really?
+[Character(name="char_empty",name2="avg_npc_394_1#2$1",focus=-1)]
+[name="Jessica"]I suppose that's because... Mr. Thomas is very familiar with Sudean–– It's the place closest to you with a point of entry and exit.
+[Character(name="char_empty",name2="avg_npc_394_1#2$1",focus=-1)]
+[name="Jessica"]I'm sure he can help you find a suitable way in, and they're probably after him for very similar reasons.
+[Character(name="char_empty",name2="avg_npc_394_1#2$1",focus=2)]
+[name="Amiya"]Right. I'll ask if he is willing to help us, once he's rested up.
+[Character(name="char_empty",name2="avg_npc_394_1#2$1",focus=-1)]
+[name="Jessica"]Umm... say again please? We've lost contact with the team sent to link up with the embassy? I, I see... Sorry, Amiya, but something just came up...
+[Character(name="char_empty",name2="avg_npc_394_1#17$1",focus=2)]
+[name="Amiya"]That's alright. Take care of what you have to do first. We'll go talk to Mr. Thomas.
+[Character(name="char_empty",name2="avg_npc_394_1#17$1",focus=-1)]
+[name="Jessica"]D-Do your best... Um, I hope that doesn't come off the wrong way... Maybe there's a better way to say it...
+[Character(name="char_empty",name2="avg_npc_394_1#17$1",focus=-1)]
+[name="Jessica"]Amiya... and you too, Doctor. Good luck.
+[PlaySound(key="$d_gen_transmissionget",volume=0.6)]
+[CharacterCutin(widgetID="1",block=true)]
+[Dialog]
+[delay(time=1.5)]
+[Character(name="avg_npc_416_1#1$1")]
+[name="Londinium Citizen"] ......
+[Character(name="avg_npc_394_1#5$1")]
+[name="Amiya"] Mr. Thomas?
+[Character(name="avg_npc_416_1#1$1")]
+[name="Londinium Citizen"]So you're... the one.
+[Character(name="avg_npc_394_1#5$1")]
+[name="Amiya"] Which one?
+[Character(name="avg_npc_416_1#1$1")]
+[name="Londinium Citizen"]We didn't expect you to come so quickly. Hmm... Quite an unexpected surprise.
+[Character(name="avg_npc_394_1#5$1")]
+[name="Amiya"] Were we quick...?
+[Character(name="avg_npc_394_1#11$1")]
+[name="Amiya"] We've been worried about you ever since we heard from Blacksteel.
+[name="Amiya"] By the way, Mr. Thomas, are you feeling unwell at all?
+[Character(name="avg_npc_394_1#3$1")]
+[name="Amiya"] I just noticed that your expression... looks a bit different now.
+[Character(name="avg_npc_416_1#1$1")]
+[name="Londinium Citizen"]Aha... Haha. I might've gotten a bit ahead of myself.
+[Character(name="avg_npc_416_1#1$1")]
+[name="Londinium Citizen"]What I meant to say is, thank you.
+[Character(name="avg_npc_416_1#1$1")]
+[name="Londinium Citizen"]Madam, you and your subordinates saved me. I have no doubt that you are good people.
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] There's no need to thank us. If you're a partner to Blacksteel, you're also a partner to us.
+[Character(name="avg_npc_394_1#11$1")]
+[name="Amiya"] And... there's something else I need your opinion on.
+[name="Amiya"] We have work that needs doing inside Londinium. On our way here, we heard a little bit about what's going on inside the city.
+[Character(name="avg_npc_394_1#18$1")]
+[name="Amiya"] Right now, Londinium isn't allowing anybody into the city without authorization.
+[Character(name="avg_npc_394_1#11$1")]
+[name="Amiya"] From the perspective of outside visitors like us, those high walls are an impossible obstacle.
+[Character(name="avg_npc_394_1#3$1")]
+[name="Amiya"] We've tried a few methods already, but it's far too difficult for a small business like ours to pass through a military blockade.
+[Character(name="avg_npc_394_1#11$1")]
+[multiline(name="Amiya")] As you can see, we have only a few office clerks with us, and we would like to know if there is a...
+[Character(name="avg_npc_394_1#17$1")]
+[multiline(name="Amiya",end=true)] Safe way to get inside Londinium.
+[Character(name="avg_npc_416_1#1$1")]
+[name="Londinium Citizen"]You're... you're trying to get INSIDE Londinium? You know, the people inside are desperately trying to escape... Those damned Sarkaz, they're just too horrible!
+[Character(name="avg_npc_394_1#3$1")]
+[name="Amiya"] I understand that.
+[Character(name="avg_npc_394_1#2$1")]
+[name="Amiya"] And it's why I'm not going to force you to help us.
+[Character(name="avg_npc_394_1#2$1")]
+[name="Amiya"] I'm also not going to lie to you and try to cover up the potential dangers of working with us.
+[Character(name="avg_npc_394_1#8$1")]
+[name="Amiya"] But if you're willing to show us the way, we'll escort you to Blacksteel's evacuation team, once all is said and done.
+[Character(name="avg_npc_394_1#17$1")]
+[name="Amiya"] If you don't want to go back, we won't blame you. You can go ahead and leave right now, and we'll look for another way into the city.
+[Character(name="avg_npc_416_1#1$1")]
+[name="Londinium Citizen"]Of course I...
+[dialog]
+[Character(name="avg_npc_416_1#1$1",focus=-1)]
+[Decision(options="If you leave, you may bump into Dublinn.;I understand the way out isn't exactly very safe.", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_416_1#1$1")]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[name="Londinium Citizen"]Of course I'll choose to work with you!
+[dialog]
+[Character(name="avg_npc_416_1#1$1",focus=-1)]
+[Decision(options="Thank you.;Here's to fruitful cooperation.", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_394_1#2$1")]
+[name="Amiya"] Doctor...
+[Character(name="avg_npc_394_1#2$1")]
+[name="Amiya"] (I never intended to threaten him... If he didn't want to help us, I would've arranged for someone to escort him...)
+[dialog]
+[Character(name="avg_npc_394_1#2$1",focus=-1)]
+[Decision(options="(I know.);(I was just stating the facts.)", values="1;2")]
+[Predicate(references="1;2")]
+[character]
+[delay(time=1)]
+[playsound(key="$d_gen_walk_n")]
+[character(name="avg_npc_407_1#1$1",fadetime=1.5)]
+[delay(time=2)]
+[name="Siege"]Looks like we found our guide?
+[dialog]
+[Character(name="avg_npc_407_1#1$1",focus=-1)]
+[Decision(options="That's right, Amiya's making moves.;Mr. Thomas agreed to cooperate with us just now.", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_npc_407_1#4$1")]
+[name="Siege"]......
+[stopmusic(fadetime=1)]
+[Character(name="avg_npc_407_1#1$1")]
+[name="Siege"]It's time for our homecoming.
+[PlayMusic(intro="$suspenseful_intro", key="$suspenseful_loop", volume=0.4)]
+[dialog]
+[character]
+[Image(image="27_i02", fadetime=2, xScale=1, yScale=1)]
+[ImageTween(image="27_i02",xScale=1, yScale=1,xScaleTo=0.9, yScaleTo=0.9, duration=40)]
+[delay(time=1)]
+[name="Amiya"] Closure, go ahead and call your drones back.
+[name="Closure"]Woah... Are we finally going to start the operation?
+[name="Amiya"] It's not safe to stay outside the city for too long either.
+[name="Amiya"] Thanks to Misery's intel, we've largely been able to bypass Dublinn's troops.
+[name="Amiya"] But we just got into a fight with Dublinn, and judging from previous experiences, the leader of that squad can be a bit... vengeful.
+[name="Siege"]You think they'll come after us?
+[name="Amiya"] I can't say for sure. That depends on whether or not they give up on Mr. Thomas.
+[name="Amiya"] Even if we successfully enter the city, we might end up having to fight the Sarkaz troops garrisoned inside and Dublinn's forces at the same time.
+[name="Closure"]Ugh, if only I could splash a coat of stealth paint on our operators too...
+[name="Amiya"] We'll be fine. We've already done everything we can to prepare for this day.
+[name="Amiya"] Doctor, please stand beside me. Just like always, I won't let anyone hurt you.
+[name="Amiya"] Let's... get ready to move out.
+[name="Amiya"] Attention, all members of Special Ops Squad Amiya––
+[name="Amiya"] We are now heading directly for the port at Sudean, Londinium!
+[Dialog]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[image]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="bg_desert_1",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$plot_intro", key="$plot_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Captain, I've checked our surroundings, and there are no signs of any Londiniers.
+[character(name="avg_npc_233_1#1")]
+[name="Mandragora"]......
+[character(name="avg_npc_233_1#2")]
+[name="Mandragora"]In other words, your entire squad wasn't enough to stop a few people, and you even let them take our crucial objective.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Captain...
+[character(name="avg_npc_233_1#7")]
+[name="Mandragora"]Rubbish... the whole lot of you!
+[Dialog]
+[playsound(key="$smallearthquake", volume=0.6)]
+[delay(time=1)]
+[Blocker(a=0.7, r=0.95, g=0.95, b=0.95, fadetime=0.02, block=true)]
+[PlaySound(key="$d_sp_ballista")]
+[PlaySound(key="$e_imp_rock_n",volume=0.8)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.25, block=true)]
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Ma'am...
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]Stop sniveling, it's irritating. When have you ever seen me hurt my own people? Besides, I'm not mad at you, I'm mad at myself.
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]Even something as minor as this... Not a single thing has gone smoothly since we've come to Londinium.
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]Those... damned Sarkaz... Those meddlesome nobles too...
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]And then there's that blasted Victorian soldier... the one they call 'Horn'...
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]It's all Harmonie's fault. She forced me to bring the wolf along to Londinium, with all that talk about how she'd be able to use the soldier to buy the support of some nobles sitting on the fence if she were to come here...
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]If I knew she was going to run away and continue to be a thorn in our side, I would've killed her right there at County Hillock!
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Captain, this time, um... I don't think it was her...
+[character(name="avg_npc_233_1#7")]
+[name="Mandragora"]It wasn't?
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] According to the survivors, the attackers were people we had never seen before. They didn't appear to be Victorian military either.
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]So what you're telling me is a couple of nobodies can appear out of thin air and snatch a man from right under our noses.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] I-It's completely our fault, Captain! We'll track them down right away...
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]Hold it! Stop bumbling around. We're about to leave this place.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] We're leaving...?
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]Otherwise? Do you plan on bunkering down on this street? We're not ready to go masks-off with the Sarkaz yet.
+[character(name="avg_npc_233_1#2")]
+[name="Mandragora"]Also, I promised Harmonie that I'd let the nobles keep some of their stupid pride.
+[character(name="avg_npc_233_1#5")]
+[name="Mandragora"]It's all... for the sake of Dublinn. For the Leader.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Understood, Captain.
+[character(name="avg_npc_233_1#1")]
+[name="Mandragora"]You say you understand, but deep down, you don't understand anything at all. Otherwise, how would you have let that Londinier get away? Do you have any idea how important the information he has on him is?
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Uhh... He was the one driving for the Sarkaz...
+[character(name="avg_npc_233_1#2")]
+[name="Mandragora"]Yes... driving.
+[character(name="avg_npc_233_1#1")]
+[name="Mandragora"]If he can drive for the Sarkaz, that obviously means he knows his way around!
+[character(name="avg_npc_233_1#1")]
+[name="Mandragora"]He can help us find the ones we're looking for. Our compatriots who are still in Sarkaz hands... but are of great importance to us!
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]Why do you think I'm swallowing my disgust and dealing with the Sarkaz here in Londinium? Just the way they look at us makes me want to run them through with stones a hundred times over!
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]It's just because... after coming all this way, I can finally do something useful for the Leader!
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] I... I'm sorry, Captain...
+[character(name="avg_npc_233_1#2")]
+[name="Mandragora"]A driver, a driver... Hmph, you just reminded me of something.
+[character(name="avg_npc_233_1#1")]
+[name="Mandragora"]The ones who snatched him from us... Were they also looking for a guide?
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Captain, do you mean...?
+[character(name="avg_npc_233_1#1")]
+[name="Mandragora"]We're turning back right now.
+[character(name="avg_npc_233_1#1")]
+[name="Mandragora"]I want to see if I come across any familiar faces at the port.
+[character(name="avg_npc_233_1#8")]
+[name="Mandragora"]Say, for example... that bloody Victorian soldier.
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="bg_warehouse",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Not so fast, you lot.
+[Character(name="avg_npc_413_1#1$1")]
+[name="Victorian Soldier"] ......
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Once the Captain comes back and we get some reliable information, then we'll let you go.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] To be honest, I'd rather not raise a hand against you. You've been slaves to the Sarkaz for so long, you can't even be called soldiers anymore.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] But it's not my call. If we can't get any useful information out of you, the boss won't want to keep you around.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] And I can't let you go either. What if you fall into Sarkaz hands again and spill our plans?
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] I say, how about...
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] You join Dublinn?
+[Character(name="avg_npc_413_1#1$1")]
+[name="Victorian Soldier"]......
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Never mind. If you were Tarans, the boss would've had you change clothes already.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] It's up to you whether or not you believe me. I, for one, would rather be out there killing Sarkaz than interrogating you bunch.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Look, Londinium's fallen into the hands of the devils. And who is to blame for that? Old friend, I heard you barely even put up a fight. You just surrendered to the Sarkaz, one by one.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Who made the Victorian Army, once the scourge of all of Terra, so weak and pathetic?
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Where's your commander? Still wearing a fancy uniform, off drinking with the Sarkaz?
+[Character(name="avg_npc_413_1#1$1")]
+[name="Victorian Soldier"]...Nngh!
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] The commanders were right. Victoria really is rotten to the core. Without us cauterizing it, this great place will turn into a swamp of rotten detritus that won't even burn.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Soldier, you should feel grateful that you get to die at the hands of your former countrymen.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] At least your pride as a Victorian soldier won't be tarnished by the stench of those devils.
+[dialog]
+[character]
+[Character(name="avg_4039_horn_1#1$1",blackstart=0.2,blackend=0.7)]
+[name="???"]––You people betrayed Victoria, and still have the gall to pay lip service to pride?
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] Who's there?!
+[Character(name="avg_4039_horn_1#1$1",blackstart=0.2,blackend=0.7)]
+[name="???"]I won't let you lay a finger on our troops.
+[Character(name="avg_4039_horn_1#1$1",blackstart=0.2,blackend=0.7)]
+[name="???"]The occupiers are unworthy, and you, Dublinn, are even less worthy.
+[Character(name="avg_npc_406_1#1$1")]
+[name="Dublinn Soldier"] You... You're... the one who fled...
+[Dialog]
+[Blocker(a=0, r=255,g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255,g=255, b=255, fadetime=0.03, block=true)]
+[CameraShake(duration=0.5, xstrength=40, ystrength=40, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$fightgeneral", volume=0.6)]
+[Blocker(a=0, r=255,g=255, b=255, fadetime=0.5, block=true)]
+[name="Dublinn Soldier"] Urgh!!
+[Dialog]
+[delay(time=0.51)]
+[PlaySound(key="$bodyfalldown2", volume=1)]
+[characteraction(name="middle", type="move", ypos=-300, fadetime=2,block=true)]
+[character(fadetime=0.5)]
+[delay(time=2)]
+[dialog]
+[character]
+[Character(name="avg_4039_horn_1#1$1",blackstart=0.2,blackend=0.7)]
+[name="???"]......
+[Character(name="avg_4039_horn_1#1$1",blackstart=0.2,blackend=0.7)]
+[name="???"]The eighth nest has been wiped out.
+[Character(name="avg_npc_413_1#1$1")]
+[name="Victorian Soldier"]You're... here to save us?
+[Character(name="avg_4039_horn_1#1$1",blackstart=0.2,blackend=0.7)]
+[name="???"]Stand up, soldier.
+[Character(name="avg_4039_horn_1#1$1",blackstart=0.2,blackend=0.7)]
+[name="???"]Let's get out of here first.
+[Character(name="avg_npc_413_1#1$1")]
+[name="Victorian Soldier"]...Soldier?
+[Character(name="avg_npc_413_1#1$1")]
+[name="Victorian Soldier"]You're... a lieutenant? Which company are you with?
+[Character(name="avg_npc_413_1#1$1")]
+[name="Victorian Soldier"]I didn't think we still had anyone...
+[Character(name="avg_4039_horn_1#1$1",blackstart=0.2,blackend=0.7)]
+[name="???"]Rita Skamandros, 7th Frontline Infantry Battalion, 2nd Tempest Platoon Leader.
+[Character(name="avg_4039_horn_1#1$1",blackstart=0.2,blackend=0.7)]
+[multiline(name="???")]Or,
+[character]
+[Character(name="avg_4039_horn_1#1$1")]
+[multiline(name="Horn",end=true)]Horn, if it pleases you.
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[Character]
+[Image]
