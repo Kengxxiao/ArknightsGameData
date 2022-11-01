@@ -34,6 +34,13 @@ require "Feature/Activity/GridGacha/GridGachaMainDlg"
 require "Feature/Activity/GridGachaV2/GridGachaV2Define"
 require "Feature/Activity/GridGachaV2/GridGachaV2MainDlg"
 
+require "Feature/Activity/FloatParade/FloatParadeProbDetailPanel"
+require "Feature/Activity/FloatParade/FloatParadeRulePanel"
+require "Feature/Activity/FloatParade/FloatParadeRewardRulePanel"
+require "Feature/Activity/FloatParade/FloatParadeRecycleDayListAdapter"
+require "Feature/Activity/FloatParade/FloatParadeTacticTab"
+require "Feature/Activity/FloatParade/FloatParadeMainDlg"
+
 require "Feature/Wardrobe/WardrobeModule"
 
 require "Feature/Operation/Returnning/ReturnDefine"

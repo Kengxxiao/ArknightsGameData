@@ -14,6 +14,7 @@ end
 local HOME_WEIGHT_DAILY_PRAY = 500
 local HOME_WEIGHT_GRID_GACHA = 510
 local HOME_WEIGHT_GRID_GACHA_V2 = 520
+local HOME_WEIGHT_FLOAT_PARADE = 530;
 
 
 
@@ -70,12 +71,32 @@ end
 
 
 
+function LuaActivityUtil:_FindValidFloatParadeAct(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.FLOAT_PARADE);
+  if actList == nil then
+    return;
+  end
+
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i];
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_FLOAT_PARADE);
+    validActs:Add(validAct);
+    if self:_CheckIfFloatParadeUncomplete(actId) then
+      uncompleteActs:Add(validAct);
+    end
+  end
+
+end
+
+
+
 
 function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   
   _FindValidPrayOnlyActs(validActs, uncompleteActs)
   _FindValidGridGachaActs(validActs, uncompleteActs)
   self:_FindValidGridGachaV2Acts(validActs, uncompleteActs);
+  self:_FindValidFloatParadeAct(validActs, uncompleteActs);
 end
 
 
@@ -94,6 +115,9 @@ local DEFINE_CLS_FUNCS = {
   end,
   GRID_GACHA_V2 = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, GridGachaV2MainDlg)
+  end,
+  FLOAT_PARADE = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, FloatParadeMainDlg)
   end,
 }
 
@@ -149,6 +173,8 @@ function LuaActivityUtil:CheckIfActivityUncomplete(type, actId)
   
   if type == CS.Torappu.ActivityType.GRID_GACHA_V2 then
     return self:_CheckIfGridGachaV2Uncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.FLOAT_PARADE then
+    return self:_CheckIfFloatParadeUncomplete(actId);
   else
     return false;
   end
@@ -165,4 +191,16 @@ function LuaActivityUtil:_CheckIfGridGachaV2Uncomplete(actId)
   end
   local data = eutils.ConvertJObjectToLuaTable(actData);
   return data.today.done == 0;
+end
+
+function LuaActivityUtil:_CheckIfFloatParadeUncomplete(actId)
+  local floatParades = CS.Torappu.PlayerData.instance.data.activity.floatParadeActivityList;
+  if floatParades == nil then
+    return false;
+  end
+  local suc, playerActData = floatParades:TryGetValue(actId);
+  if not suc then
+    return false;
+  end
+  return playerActData.canRaffle;
 end
