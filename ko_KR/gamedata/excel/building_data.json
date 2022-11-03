@@ -9284,6 +9284,124 @@
           ]
         }
       ]
+    },
+    "char_1023_ghost2": {
+      "charId": "char_1023_ghost2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[080]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession2[680]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_cost&profession[380]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4009_irene": {
+      "charId": "char_4009_irene",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd_doubleProf[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd_reduceTime[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4042_lumen": {
+      "charId": "char_4042_lumen",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_powToRecAll[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "dorm_powToRecAll[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_433_windft": {
+      "charId": "char_433_windft",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_probability[115]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&power[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -11411,6 +11529,18 @@
       "roomType": "WORKSHOP",
       "description": "가공소에 배치 후 <@cc.kw>정예화 재료</> 가공 시, 부산물 산출 확률 <@cc.vup>70%</> 상승"
     },
+    "workshop_formula_probability[115]": {
+      "buffId": "workshop_formula_probability[115]",
+      "buffName": "필수 과목",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve2",
+      "sortId": 7525,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 후 <@cc.kw>정예화 재료</> 가공 시, 부산물 산출 확률 <@cc.vup>75%</> 상승"
+    },
     "workshop_formula_probability[119]": {
       "buffId": "workshop_formula_probability[119]",
       "buffName": "공업디자인",
@@ -11794,6 +11924,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, 기반시설(어시스턴트 미포함) 내 배치된 <$cc.tag.knight><@cc.kw>기사</></> 오퍼레이터마다 스킬 훈련 속도 <@cc.vup>+5%</> (최대 <@cc.kw>8</>명 적용)"
+    },
+    "train_spd_doubleProf[000]": {
+      "buffId": "train_spd_doubleProf[000]",
+      "buffName": "검과 핸드캐논",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_vanguard&sniper",
+      "sortId": 9901,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>가드</> 및 <@cc.kw>스나이퍼</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>"
+    },
+    "train_spd_reduceTime[000]": {
+      "buffId": "train_spd_reduceTime[000]",
+      "buffName": "정신 단련",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_reduceTime",
+      "sortId": 9901,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, 오퍼레이터의 훈련 협조 시간이 <@cc.vup>5</>시간에 도달한 경우, 해당 오퍼레이터의 다음 훈련 시간이 <@cc.vup>-50%</> (어느 쪽이든 훈련실을 이탈하면 효과가 사라짐)"
     },
     "train_spd&profession[010]": {
       "buffId": "train_spd&profession[010]",
@@ -12335,6 +12489,18 @@
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, <@cc.kw>서포터</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 만약 이번 훈련을 통해 스킬 마스터리가 <@cc.vup>3</>레벨까지 도달한 경우, 훈련 속도가 추가로 <@cc.vup>+65%</>"
     },
+    "train_spd&profession2[680]": {
+      "buffId": "train_spd&profession2[680]",
+      "buffName": "에기르의 전술",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train3_specialist2",
+      "sortId": 9152,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시 <@cc.kw>스페셜리스트</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 만약 이번 훈련을 통해 스킬 마스터리가 <@cc.vup>3</>레벨까지 도달한 경우, 훈련 속도가 추가로 <@cc.vup>+65%</>"
+    },
     "train_cost&profession[140]": {
       "buffId": "train_cost&profession[140]",
       "buffName": "워커홀릭",
@@ -12370,6 +12536,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, <@cc.kw>서포터</> 오퍼레이터의 훈련 마스터리 스킬이 <@cc.vup>3</>레벨까지 도달한 경우, 시간당 컨디션 소모 <@cc.vdown>+1</>"
+    },
+    "train_cost&profession[380]": {
+      "buffId": "train_cost&profession[380]",
+      "buffName": "투쟁의 갈망",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_specter",
+      "sortId": 9152,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치하여 <@cc.kw>스페셜리스트</> 훈련 마스터리 스킬이 <@cc.vup>3</>레벨까지 도달한 경우, 시간당 컨디션 소모 <@cc.vdown>+1</>"
     },
     "dorm_rec_oneself[000]": {
       "buffId": "dorm_rec_oneself[000]",
@@ -12682,6 +12860,30 @@
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
       "description": "숙소에 배치 시, 해당 숙소 안에 배치된 모든 오퍼레이터의 시간당 컨디션 회복 <@cc.vup>+0.2</> (동종 효과 중 가장 높은 수치만 적용) "
+    },
+    "dorm_powToRecAll[000]": {
+      "buffId": "dorm_powToRecAll[000]",
+      "buffName": "부드러운 불빛 α",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_powToRecAll1",
+      "sortId": 5321,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "숙소에 배치 시, 해당 숙소 안에 배치된 모든 오퍼레이터 시간당 컨디션 회복 <@cc.vup>+0.1</>, 발전소가 <@cc.kw>1</>개 늘어날 때마다 회복 효과 추가로 <@cc.vup>+0.05</> (중첩 후의 최종 수치는 동종 효과 중 가장 높은 수치만 적용)"
+    },
+    "dorm_powToRecAll[010]": {
+      "buffId": "dorm_powToRecAll[010]",
+      "buffName": "부드러운 불빛 β",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_powToRecAll2",
+      "sortId": 5411,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "숙소에 배치 시, 해당 숙소 안에 배치된 모든 오퍼레이터 시간당 컨디션 회복 <@cc.vup>+0.15</>, 발전소가 <@cc.kw>1</>개 늘어날 때마다 회복 효과 추가로 <@cc.vup>+0.05</> (중첩 후의 최종 수치는 동종 효과 중 가장 높은 수치만 적용)"
     },
     "dorm_rec_single&oneself[000]": {
       "buffId": "dorm_rec_single&oneself[000]",
@@ -39306,6 +39508,470 @@
         "isOnly": -1,
         "quantity": 1
       },
+      "furni_goldBoat_ceilingDeco_S_01": {
+        "id": "furni_goldBoat_ceilingDeco_S_01",
+        "sortId": 908,
+        "name": "사이드 홀 커튼",
+        "iconId": "furni_goldBoat_ceilingDeco_S_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_1",
+        "width": 1,
+        "depth": 5,
+        "height": 4,
+        "comfort": 100,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "막대 장식의 띠를 이어서 만든 쇼트 커튼. 새로운 그러데이션 재료를 채택해 디자인적 감각이 한 층 더 돋보인다.\n선실 밖은 온통 바다뿐이고, '대지'에 갇힌 테라인은 바다의 신비함과 광활함을 알 길이 없다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_goldBoat_ceilingDeco_L_01": {
+        "id": "furni_goldBoat_ceilingDeco_L_01",
+        "sortId": 909,
+        "name": "메인 홀 커튼",
+        "iconId": "furni_goldBoat_ceilingDeco_L_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_1",
+        "width": 10,
+        "depth": 1,
+        "height": 5,
+        "comfort": 175,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "막대 장식의 띠를 이어서 만든 롱 커튼. 새로운 그러데이션 재료를 채택해 디자인적 감각이 한 층 더 돋보인다.\n선실 밖은 온통 바다뿐이다. 과연, 이 배의 숙명은 이베리아 항구로 돌아가는 것일까, 아니면 더 먼 바다로 향하는 것일까?",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_floorlamp_01": {
+        "id": "furni_goldBoat_floorlamp_01",
+        "sortId": 910,
+        "name": "장식용 촛대",
+        "iconId": "furni_goldBoat_floorlamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_3",
+        "width": 3,
+        "depth": 3,
+        "height": 8,
+        "comfort": 235,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "독특한 모양의 장식대. 나뭇가지 형태의 촛대와 젬베를 연상케 하는 받침대, 실로 기묘한 조합이다.\n촛불은 타오르고, 그들은 사냥 후에 기도한다. 이건 '인간'의 의식이고, 그들이 아직도 고수하는 의례이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_stairs_01": {
+        "id": "furni_goldBoat_stairs_01",
+        "sortId": 911,
+        "name": "대리석 나선계단",
+        "iconId": "furni_goldBoat_stairs_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_4",
+        "width": 9,
+        "depth": 9,
+        "height": 7,
+        "comfort": 980,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "라이타니엔 건축 스타일을 모방한 나선형 계단. 거대한 대리석을 통째로 조각해 만든 자체가 예술이다.\n위는 존속을, 아래는 소멸을 의미한다. 이건 진화의 법칙이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_carpet_S_01": {
+        "id": "furni_goldBoat_carpet_S_01",
+        "sortId": 912,
+        "name": "논슬립 계단 매트",
+        "iconId": "furni_goldBoat_carpet_S_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_4",
+        "width": 4,
+        "depth": 3,
+        "height": 1,
+        "comfort": 45,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "나선계단 앞에 깔아놓는 매트. 때를 잘 안 타고 미끄럼을 방지한다.\n명흔이 배에 퍼지고 있다. 이 배는 이러한 형광 따위는 필요 없다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_ceilingLight_L_01": {
+        "id": "furni_goldBoat_ceilingLight_L_01",
+        "sortId": 913,
+        "name": "기둥형 샹들리에 세트",
+        "iconId": "furni_goldBoat_ceilingLight_L_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_1",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 110,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로비의 메인 조명. 에기르 양식의 공예품으로 밝기가 충분하다.\n등대가 꺼진 기나긴 세월 동안, 바다 위 외로이 떠 있는 이 배에 방향을 가리켜 준 건 과연 무엇일까?",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_ceilingLight_S_01": {
+        "id": "furni_goldBoat_ceilingLight_S_01",
+        "sortId": 914,
+        "name": "파이프형 펜던트 조명",
+        "iconId": "furni_goldBoat_ceilingLight_S_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_1",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 70,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로비의 서브 조명. 에기르 양식의 공예품으로 에너지를 절약할 수 있고 친환경적이다.\n고요함이 조용히 도래하였을 때, 모든 소리가 사라졌었다. 만약 빛까지 없었다면, 시간은 정말 멈춘 것 같았을 것이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_goldBoat_chair_01": {
+        "id": "furni_goldBoat_chair_01",
+        "sortId": 915,
+        "name": "가리비 캐주얼 의자",
+        "iconId": "furni_goldBoat_chair_01",
+        "type": "SEATING",
+        "subType": "CHAIR",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_2",
+        "width": 4,
+        "depth": 2,
+        "height": 4,
+        "comfort": 175,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "가리비를 모티브로 디자인한 캐주얼 의자. 좌석 부분이 누공 처리가 되어있다.\n선장 전용 의자. 60여 년이란 세월 동안, 선장은 이미 이 배와 한 몸이 되었다. “그는 그 자신의 왕이다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_stool_01": {
+        "id": "furni_goldBoat_stool_01",
+        "sortId": 916,
+        "name": "이동식 소프트 스툴",
+        "iconId": "furni_goldBoat_stool_01",
+        "type": "SEATING",
+        "subType": "STOOL",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 135,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "평범한 소프트 스툴. 짙은 색의 시트는 해체할 수 있어 세탁하기 편리하다.\n사람을 위해 만든 가구지만, 이미 오래전부터 쓰는 사람이 없다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_table_01": {
+        "id": "furni_goldBoat_table_01",
+        "sortId": 917,
+        "name": "응접실 회의 책상",
+        "iconId": "furni_goldBoat_table_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_2",
+        "width": 6,
+        "depth": 6,
+        "height": 4,
+        "comfort": 405,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "스툴티페라 나비스가 출항할 때부터 존재했던 접대용 테이블. 암석을 통째로 다듬어 만들었으며, 얼굴이 비칠 정도로 광이 난다.\n선장은 과거 이 테이블에서 손님과 함께 이베리아의 영광과 미래를 얘기했을 것이다…… 시본은 초대받지 못한 게 분명하다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_mirror_01": {
+        "id": "furni_goldBoat_mirror_01",
+        "sortId": 918,
+        "name": "'진화하는 자아'",
+        "iconId": "furni_goldBoat_mirror_01",
+        "type": "DECORATION",
+        "subType": "DRESSING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_3",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 160,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "빅토리아 양식의 전신 거울. 황동 거울과 도금 테두리가 고급스러움을 더해준다.\n60여 년이란 세월 동안, 그들은 과연 거울에 비친 모습을 '자신'으로 인정했을까?",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_paintingArea_01": {
+        "id": "furni_goldBoat_paintingArea_01",
+        "sortId": 919,
+        "name": "'문명과 예술'",
+        "iconId": "furni_goldBoat_paintingArea_01",
+        "type": "DECORATION",
+        "subType": "ENTERTAINMENT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_3",
+        "width": 8,
+        "depth": 6,
+        "height": 5,
+        "comfort": 555,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "그림 거치대 세트. 스크럽 받침대, 나뭇가지 모양의 난간과 화구 세트가 포함되어 있다.\n예술은 노랫소리와 붓을 통해 종족을 넘나든다. 이 점은 의심할 여지가 없다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_vase_01": {
+        "id": "furni_goldBoat_vase_01",
+        "sortId": 920,
+        "name": "유리 꽃병",
+        "iconId": "furni_goldBoat_vase_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_3",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 145,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "평범한 유리 공예품. 꽃을 꽂아두어 기나긴 항해에 포인트를 장식한다.\n60여 년이란 기나긴 세월 동안, 이 배는 육지의 봄을 맞이한 적이 없다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_carpet_L_01": {
+        "id": "furni_goldBoat_carpet_L_01",
+        "sortId": 921,
+        "name": "논슬립 카펫",
+        "iconId": "furni_goldBoat_carpet_L_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_2",
+        "width": 14,
+        "depth": 8,
+        "height": 1,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "회의 책상과 한 세트인 미끄럼 방지 카펫. 수공예 제품으로 도안이 심플하면서도 고상하다.\n이곳은 스툴티페라 나비스, 과거 출항할 때마다 이베리아에 무한한 영광을 안겨줬다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_wallpaper_01": {
+        "id": "furni_goldBoat_wallpaper_01",
+        "sortId": 922,
+        "name": "응접실 벽지",
+        "iconId": "furni_goldBoat_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 225,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "스툴티페라 나비스의 응접실 벽지. 단순하면서도 난해한 그림이 가득 그려져 있는데, 이 배의 설계사가 직접 그렸다는 소문이 있다.\n이 배는 오리지늄 에너지와 에기르 과학 기술의 집합체로, 선실의 모든 그림은 충분히 해석해볼 만한 가치가 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_goldBoat_floor_01": {
+        "id": "furni_goldBoat_floor_01",
+        "sortId": 923,
+        "name": "응접실 바닥 타일",
+        "iconId": "furni_goldBoat_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_goldBoat",
+        "groupId": "furni_set_goldBoat_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 225,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "어두운색의 원목과 밝은색 타일을 이어서 만든 바닥재. 재질과 색상의 차이는 극명하지만, 의외로 상당히 조화를 이룬다.\n자신의 배가 더러워지는 걸 절대로 용납하지 않는 선장 때문에, 매일같이 사냥해도 바닥은 늘 새것처럼 깨끗하다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "sortId": 10001,
@@ -42574,6 +43240,35 @@
         "comfort": 75,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "“같음에 기뻐하고, 다름에 탄식한다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS026_wrath_01": {
+        "id": "furni_dropS026_wrath_01",
+        "sortId": 11062,
+        "name": "플레이트 《인내》",
+        "iconId": "furni_dropS026_wrath_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "“장시간 고민하고 분석해 내린 결정은, 충동적으로 행한 결과와 별반 다르지 않을 때가 있다.”",
         "obtainApproach": "이벤트 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -52123,6 +52818,147 @@
           "furni_vcWarRoom_wallpaper_01",
           "furni_vcWarRoom_floor_01"
         ]
+      },
+      "furni_set_goldBoat": {
+        "id": "furni_set_goldBoat",
+        "sortId": 54,
+        "name": "스툴티페라 나비스 응접실",
+        "themeType": "EVENT",
+        "desc": "아이린의 묘사에 따라 재현한 스툴티페라 나비스 응접실. 그 눈부신 화려함은 마치 '옛 이베리아'의 영광과도 같다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_goldBoat_ceilingDeco_S_01",
+            "pos0": 2,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_ceilingDeco_S_01",
+            "pos0": 31,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_ceilingDeco_L_01",
+            "pos0": 12,
+            "pos1": 8,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_floorlamp_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_stairs_01",
+            "pos0": 3,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_carpet_S_01",
+            "pos0": 5,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_ceilingLight_L_01",
+            "pos0": 15,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_ceilingLight_S_01",
+            "pos0": 9,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_ceilingLight_S_01",
+            "pos0": 23,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_chair_01",
+            "pos0": 12,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_stool_01",
+            "pos0": 20,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_table_01",
+            "pos0": 14,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_mirror_01",
+            "pos0": 23,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_paintingArea_01",
+            "pos0": 26,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_vase_01",
+            "pos0": 29,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_carpet_L_01",
+            "pos0": 10,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_goldBoat_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_goldBoat_1",
+          "furni_set_goldBoat_2",
+          "furni_set_goldBoat_3",
+          "furni_set_goldBoat_4"
+        ],
+        "furnitures": [
+          "furni_goldBoat_ceilingDeco_S_01",
+          "furni_goldBoat_ceilingDeco_L_01",
+          "furni_goldBoat_floorlamp_01",
+          "furni_goldBoat_stairs_01",
+          "furni_goldBoat_carpet_S_01",
+          "furni_goldBoat_ceilingLight_L_01",
+          "furni_goldBoat_ceilingLight_S_01",
+          "furni_goldBoat_chair_01",
+          "furni_goldBoat_stool_01",
+          "furni_goldBoat_table_01",
+          "furni_goldBoat_mirror_01",
+          "furni_goldBoat_paintingArea_01",
+          "furni_goldBoat_vase_01",
+          "furni_goldBoat_carpet_L_01",
+          "furni_goldBoat_wallpaper_01",
+          "furni_goldBoat_floor_01"
+        ]
       }
     },
     "groups": {
@@ -55144,6 +55980,62 @@
           "furni_vcWarRoom_curtain_01",
           "furni_vcWarRoom_ceiling_01",
           "furni_vcWarRoom_flag_01"
+        ]
+      },
+      "furni_set_goldBoat_1": {
+        "id": "furni_set_goldBoat_1",
+        "sortId": 1,
+        "name": "느낀 형태",
+        "themeId": "furni_set_goldBoat",
+        "comfort": 105,
+        "count": 4,
+        "furniture": [
+          "furni_goldBoat_ceilingDeco_L_01",
+          "furni_goldBoat_ceilingDeco_S_01",
+          "furni_goldBoat_ceilingLight_L_01",
+          "furni_goldBoat_ceilingLight_S_01"
+        ]
+      },
+      "furni_set_goldBoat_2": {
+        "id": "furni_set_goldBoat_2",
+        "sortId": 2,
+        "name": "거주한 곳",
+        "themeId": "furni_set_goldBoat",
+        "comfort": 205,
+        "count": 4,
+        "furniture": [
+          "furni_goldBoat_table_01",
+          "furni_goldBoat_chair_01",
+          "furni_goldBoat_stool_01",
+          "furni_goldBoat_carpet_L_01"
+        ]
+      },
+      "furni_set_goldBoat_3": {
+        "id": "furni_set_goldBoat_3",
+        "sortId": 3,
+        "name": "관찰한 물체",
+        "themeId": "furni_set_goldBoat",
+        "comfort": 280,
+        "count": 4,
+        "furniture": [
+          "furni_goldBoat_paintingArea_01",
+          "furni_goldBoat_mirror_01",
+          "furni_goldBoat_vase_01",
+          "furni_goldBoat_floorlamp_01"
+        ]
+      },
+      "furni_set_goldBoat_4": {
+        "id": "furni_set_goldBoat_4",
+        "sortId": 4,
+        "name": "도달한 곳",
+        "themeId": "furni_set_goldBoat",
+        "comfort": 350,
+        "count": 4,
+        "furniture": [
+          "furni_goldBoat_wallpaper_01",
+          "furni_goldBoat_floor_01",
+          "furni_goldBoat_stairs_01",
+          "furni_goldBoat_carpet_S_01"
         ]
       }
     },
