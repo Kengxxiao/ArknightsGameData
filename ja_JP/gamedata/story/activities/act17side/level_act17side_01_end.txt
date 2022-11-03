@@ -1,0 +1,605 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[playsound(key="$d_avg_snowstormflp", volume=0.7, loop=true, channel="b")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="27_g18_lighthouse_square",screenadapt="coverall")]
+[playsound(key="$d_avg_sea", loop=true, channel="a")]
+[playMusic(intro="$loneliness_intro", key="$loneliness_loop",fadetime=3, volume=0.4)]
+その日の海は黒かった。
+四、五歳の頃、僕は、グランファーロの町長であるティアゴおじさんと、武器を手にした大勢の大人たちと一緒に、海辺へ出かけたことがあった。
+僕は今でも、その時の天気まで覚えている。雲行きは怪しく、まだ昼過ぎにもかかわらず、普段の夕暮れ時よりよほど肌寒く感じた。その原因は気温そのものではなく、情熱を失った色彩にあった。
+のちに知ったことには、それはグランファーロがイベリアの眼の補修工事を行った――正確には、「試みた」最後の日だったそうだ。
+その日、懲罰軍はすぐに何かの知らせを持ってきた。それを聞いた大人たちは皆気落ちした様子だったけれど、僕にはその意味がよくわからず、ただ海と空との境目をぼんやりと眺めていた。
+視界に映った黒い海は――
+この絶望に満ちた大地には、驚くほど似つかわしい光景だった。
+[Dialog]
+[StopSound(channel="a", fadetime=1)]
+[StopSound(channel="b", fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[name="群がる民衆"]ティアゴ町長が来たぞ！
+[Dialog]
+[Character(name="avg_npc_451_1#7$1",fadetime=1)]
+[PlaySound(key="$d_gen_walk_n",volume=0.8)]
+[Delay(time=2)]
+[Character(name="avg_npc_449_1#1$1",name2="avg_npc_451_1#7$1",focus=2)]
+[name="ティアゴ"]ペドロ爺さんの与太話は本当だったらしいな。
+[Character(name="avg_npc_449_1#1$1",name2="avg_npc_451_1#1$1",focus=1)]
+[name="アマイア"]ええ。否定したくとも、目の前の状況がそれを許してくれそうにはありませんね。
+[Character(name="avg_npc_449_1#1$1",name2="avg_npc_451_1#9$1",focus=2)]
+[name="ティアゴ"]しかし、どこのどいつがやったんだ？　この怪物を殺した上で、広場にほったらかしていきやがるとは。
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#9$1",focus=1)]
+[name="アマイア"]……この死体の処遇、任せていただけませんか。
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#1$1",focus=2)]
+[name="ティアゴ"]そりゃ一体……
+[Character(name="avg_npc_449_1#1$1",name2="avg_npc_451_1#1$1",focus=1)]
+[name="アマイア"]このまま何の処置もせず放っておくのは危険な気がして、心配なのです。その上、これは恐魚を観察するまたとない機会ですから。
+[Character(name="avg_npc_449_1#1$1",name2="avg_npc_451_1#1$1",focus=2)]
+[name="ティアゴ"]……わかった。だが、俺もついていくとしよう。
+[name="ティアゴ"]なんせ、これが何なのかすら誰にもわかっちゃいない上に、こいつの血はほかの仲間を引き寄せる可能性もあるからな。
+[Character(name="avg_npc_449_1#1$1",name2="avg_npc_451_1#1$1",focus=1)]
+[name="アマイア"]では、そのように。
+[Character(name="avg_npc_451_1#4$1")]
+[name="ティアゴ"]さあ若いの、道を開けろ。その死体を運び出させてもらうぞ。
+[Dialog]
+[CameraShake(duration=1, xstrength=20, vibrato=3, randomness=0, fadeout=false, block=true)]
+[PlaySound(key="$d_avg_clothmovement",volume=0.5)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_empty",name2="avg_npc_451_1#1$1")]
+[Character(name="avg_npc_457_1#1$1",name2="avg_npc_451_1#1$1",fadetime=0.5)]
+[characteraction(name="right", type="move", xpos=-200, fadetime=0, block=true)]
+[characteraction(name="left", type="zoom" , scale=0.8, fadetime=0, block=true)]
+[characteraction(name="left", type="move", xpos=100, fadetime=0, block=true)]
+[characteraction(name="left", type="move", ypos=-150, fadetime=0, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=false)]
+[Delay(time=2)]
+[name="ティアゴ"]……見た目より軽いな。さて、どこへ運べばいい？
+[Character]
+[Character(name="avg_npc_449_1#9$1")]
+[name="アマイア"]こちらへ。ついてきてください。
+[Character(name="avg_npc_451_1#1$1")]
+[name="ティアゴ"]お前たちも、こんなところに突っ立ってないで、家に帰るんだぞ。
+[Character(name="avg_npc_460_1#1$1")]
+[name="慌てる町民"]で、でも……裁判所へ報告しなくていいんでしょうか……？　もしほかにも怪物が出たら、どうすれば……？
+[Character(name="avg_npc_451_1#4$1")]
+[name="ティアゴ"]報告する必要はない。
+[Character(name="avg_npc_460_1#1$1")]
+[name="慌てる町民"]ですが――
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="avg_npc_451_1#5$1")]
+[name="ティアゴ"]必要ないと言っとるだろうが！
+[Character(name="avg_npc_460_1#1$1")]
+[name="慌てる町民"]っ……
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#5$1",focus=1)]
+[name="アマイア"]ティアゴ。
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#2$1",focus=2)]
+[name="ティアゴ"]……
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#1$1",focus=2)]
+[name="ティアゴ"]この町にはまだ、懲罰軍の介入なんざいらん。俺たちには俺たちのやり方があるんだ。
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#4$1",focus=2)]
+[name="ティアゴ"]もし裁判所の奴らがここへ来て、こいつを見ちまったら、このグランファーロには平和な日々なんて二度と来やしない。お前らにはそれがわからんのか？
+[Character(name="avg_npc_460_1#1$1")]
+[name="慌てる町民"]しかし……いえ、何でもありません……
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#1$1",focus=2)]
+[name="ティアゴ"]行くぞ、アマイア。
+[Dialog]
+[PlaySound(key="$d_gen_walk_n",volume=1)]
+[Character(fadetime=1)]
+[Delay(time=2)]
+[Character(name="avg_npc_460_1#1$1")]
+[name="慌てる町民"]なあ、本当にあの人の言う通りにしていいのかな？
+[Character(name="avg_npc_460_1#1$1",name2="avg_npc_459_1#1$1",focus=2)]
+[name="困惑する町民"]ティアゴの裁判所嫌いは今に始まったことじゃないとはいえ、万が一何か起きたら、懲罰軍なしでどう戦えって言うんだろうな。
+[name="困惑する町民"]しかも、ティアゴは見て見ぬ振りしてるが、最近はよそ者がやけに多いし……あいつらの中に何か企んでる奴がいたら、どうすりゃいいんだ？
+[Character(name="avg_npc_460_1#1$1",name2="avg_npc_459_1#1$1",focus=1)]
+[name="慌てる町民"]やっぱり、裁判所に報告するべきじゃないか？　懲罰軍に見つかってからじゃ、釈明のしようがないし、俺は異端者扱いされるなんて御免だ！
+[PlaySound(key="$d_gen_walk_n",volume=0.7)]
+[Character(fadetime=0.5)]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_450_1#2$1")]
+[name="エリジウム"]……アマイアさんって、あの作家のことかな……？
+[Character(name="avg_npc_450_1#9$1")]
+[name="エリジウム"]とにかく、なんだか放っておけない気がするし、まずはAUSの人たちに声をかけてこないとね。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Delay(time=1)]
+[Background(image="bg_ibchurch",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="npc_2004_Alty")]
+[name="Alty"]ここの礼拝堂って、いつもこんなに閑散としてるの？　だとしたらあなたたちがいつも口にしてる神様や信仰ってどうなっちゃってるのかしら？
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n",volume=1)]
+[Character(name="avg_npc_450_1#1$1",fadetime=1)]
+[Delay(time=1)]
+[name="エリジウム"]まあ、イベリア人全員がラテラーノ教の信徒ってわけでもないですからね。――っと、それよりAltyさん、この町は危険です。先生が到着するまでの間、皆さんの安全を確保しないと……
+[Character(name="avg_npc_450_1#1$1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]それなら、ライブをするのはどう？　音楽で皆の不安をかき消してあげるの。
+[Character(name="avg_npc_450_1#1$1",name2="npc_2004_Alty",focus=1)]
+[name="エリジウム"]あはは、素敵なご提案ですけど、そういう意味じゃ――
+[Character(name="avg_npc_450_1#1$1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]ストップ。何が起きたか当ててあげるわ。
+[Character(name="avg_npc_450_1#8$1",name2="npc_2004_Alty",focus=1)]
+[name="エリジウム"]ええっ……？
+[Character(name="avg_npc_450_1#8$1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]ん～……見えてきたのは……海洋生物が一匹。ああ、あなたたちの言うところの恐魚のことね。最初にそう呼び始めたのは、イベリア人かケルシーだったと思うけど、それはどっちでもいいとして……
+[name="Alty"]その恐魚は乾いた空の下にいた。もちろん鱗を落ち着けられる場所なんてないし、ここが彼らの家でないことはわかっていたでしょうね。だって、家にいたなら消えゆく命も長らえられるはずだもの。
+[name="Alty"]……ということは――ずばり、あの背の高い彫刻から吊り下げられた恐魚が、流行りのロックを歌っていた！　どう？　当たってる？
+[Character(name="avg_npc_450_1#1$1",name2="npc_2004_Alty",focus=1)]
+[name="エリジウム"]……吊り下げられてはないですし、歌ってもいませんでしたけど、大体そんなところです。
+[name="エリジウム"]正直びっくりしましたよ。それって、あなたのアーツですか？
+[Character(name="avg_npc_450_1#1$1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]さあ、どうかしら？　ともあれ、「死」とはある種の歌なのかもしれない、と恐魚が教えてくれたような気はするわ。ただ、自然界の悲しい事実として、この美学は種を超えて伝わりはしないのよね。
+[name="Alty"]――その辺り、あなたはどう思う？
+[Dialog]
+[Character]
+[stopmusic(fadetime=2)]
+[CameraShake(duration=0.5, xstrength=10, ystrength=10, vibrato=20, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$doorclosequite")]
+[PlaySound(key="$dooropenquite",delay=0.2)]
+[Delay(time=0.6)]
+[Character(name="char_003_kalts_1#1",fadetime=0.5)]
+[name="ケルシー"]幸いにして、その「美学」はすべての生物に必要なものというわけではない。
+[playMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop",fadetime=2, volume=0.4)]
+[Character(name="char_003_kalts_1#1",name2="avg_npc_450_1#5$1",focus=2)]
+[name="エリジウム"]け、ケルシー先生！　なんで今まで連絡の一つもくれなかったんですか～……！
+[Character(name="char_003_kalts_1#1",name2="avg_npc_450_1#5$1",focus=1)]
+[name="ケルシー"]端的に言えば、信用を得るためだ。私は今もイベリア裁判所の監視下に置かれているのでな。
+[name="ケルシー"]さて、時間はないが、為すべき仕事は山とある。――エリジウム、君は恐魚の死体を持ち去った町民二人を見張りに行ってくれ。私はAltyと二人で話をする。
+[Character(name="char_003_kalts_1#1",name2="avg_npc_450_1#1$1",focus=2)]
+[name="エリジウム"]……わかりました。
+[name="エリジウム"]それじゃ、この通信機を。僕のアーツはご存知の通りですから、先生の協力者になら渡してもらって大丈夫です。
+[Character(name="char_003_kalts_1#1",name2="avg_npc_450_1#1$1",focus=1)]
+[name="ケルシー"]了解した。
+[Character(name="char_003_kalts_1#1",name2="avg_npc_450_1#1$1",focus=2)]
+[name="エリジウム"]……あの、先生はシンプルな引継ぎのほうがお好きかもしれませんけど、一つだけ。――あなたが無事でよかった。心底ほっとしました。
+[name="エリジウム"]それじゃ、お先に失礼します。何かあればすぐにご報告しますね。
+[Character(name="char_003_kalts_1#4",name2="avg_npc_450_1#1$1",focus=1)]
+[name="ケルシー"]……ああ。苦労をかける。
+[Dialog]
+[Character(name="char_003_kalts_1#4",name2="avg_npc_450_1#1$1",focus=1)]
+[Character(name="char_003_kalts_1#4",name2="char_empty",fadetime=1)]
+[Delay(time=1)]
+[PlaySound(key="$dooropenquite")]
+[Delay(time=2)]
+[Character(name="char_003_kalts_1#4",name2="npc_2004_Alty",fadetime=0.5)]
+[Delay(time=0.6)]
+[Character(name="char_003_kalts_1#4",name2="npc_2004_Alty",fadetime=0.5,focus=2)]
+[name="Alty"]改めて、久しぶりね、ケルシー先生。
+[Character(name="char_003_kalts_1#4",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]そうだな。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]この場所へ呼び立てたことは申し訳なく思っている。君たちからすれば、リスクを伴う行動だろう。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]いいのよ。そんなことより、どうしてあなたがイベリアに監視なんかされてるの？　まさか連中のあしらい方を知らないわけじゃないわよね？
+[Character(name="char_003_kalts_1#2",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]先ほども述べた通り、時間がないというのが一つ。加えて、イベリアが宗教という仮面で隠した慎重さと恐怖心は、私と裁判所上層部との面会を阻害する可能性があったからという理由もあるな。
+[Character(name="char_003_kalts_1#2",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]へえ……じゃあ、相当急いでるってこと？
+[Character(name="char_003_kalts_1#2",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]――我々の直面しているものが何なのかということに、諸国は未だ気付いていない。彼らは、広大な土地が、その栄華を極めた時代と共に静謐の中へ消え去ったという事実を信じはしないだろう。
+[name="ケルシー"]だが、私は……その一切を目撃したに等しい。
+[Character(name="char_003_kalts_1#2",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]ま、それもそうね。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]ときに、ほかのメンバーはどうした？
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]せっかくのお出かけなんだし、あの子たちのことは自由にさせてあげて。必要なものは、ちゃんと私が持ってきたから。
+[Dialog]
+[PlaySound(key="$burin_n",delay=0.2,volume=0.5)]
+[ShowItem(image="item_act27_1", style="photo", fadestyle="horiz_expand_center", fadetime=1)]
+[Delay(time=0.6)]
+[hideItem(fadetime=0.5)]
+[name="Alty"]さてと。こうしてまた、あなたに会いに来たはいいけど……
+[name="Alty"]今の海への思い入れは、薄れてきちゃってるのよね。……あなたが海に関する「答え」をくれてからは、特にそうなのよ。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",fadetime=0.5,focus=1)]
+[name="ケルシー"]……願わくば、今日までの間に、君が決断を下してくれていると良いのだがな。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",fadetime=0.5,focus=2)]
+[name="Alty"]……ねえ、私たちの決断について話す前に……先生、あなたなんだか少し人間味が出てきたんじゃない？
+[name="Alty"]たとえるなら、音声アシスタント機能がついたX線検査装置くらいにはなってる気がするんだけど。
+[Character(name="char_003_kalts_1#3",name2="npc_2004_Alty",fadetime=0.5,focus=1)]
+[name="ケルシー"]……
+[Character(name="char_003_kalts_1#3",name2="npc_2004_Alty",fadetime=0.5,focus=2)]
+[name="Alty"]あ～、ごめんなさい。私ったらまたやっちゃった？　まあ、あなたもそろそろ慣れてきてるでしょ。
+[name="Alty"]こういうのって本当に珍しいことだから、ついね。何しろ、あなたが人と接する上での普遍的方法論――あるいは、「性格」と呼ばれるものを変えることなんてないと思ってたんだもの。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",fadetime=0.5,focus=1)]
+[name="ケルシー"]起こりえないことなど、存在しないものだ。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",fadetime=0.5,focus=2)]
+[name="Alty"]OK、この話はここまでにするわ。あんまりあなたのプライベートな問題には立ち入らないほうがいいでしょうしね。
+[StopMusic(fadetime=3)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Delay(time=0.6)]
+[Background(image="27_g16_lighthouse_street",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$loneliness_intro", key="$loneliness_loop",fadetime=3, volume=0.4)]
+[Character(name="avg_npc_453_1#1$1",fadetime=0.5)]
+[name="不気味な深海教徒"]……我が兄弟の匂いだ。まだここにいるようだな。その上、彼のみならず、たくさんの……海の匂いがする。一体いつから、これほど多くのエーギル人がこの町に寄り付くようになったんだ？
+[Dialog]
+[Character]
+[Character(name="char_empty",name2="char_empty")]
+[PlaySound(key="$d_avg_footstep_stonestep")]
+[Character(name="avg_npc_454_1#1$1",name2="avg_npc_454_1#1$1",fadetime=1)]
+[Delay(time=1.5)]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[Character(name="avg_npc_454_1#1$1",name2="avg_npc_454_1#1$1",fadetime=1)]
+[Delay(time=1.5)]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_454_1#1$1",fadetime=1)]
+[Delay(time=0.6)]
+[name="寡黙な深海教徒"]きっと裁判所の陰謀だろう。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]かもしれないな。恐らくは今この瞬間にも、馬鹿げた法律で頭が一杯の審問官どもは、独善的な行いを続けていることだろうし……
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]……おや？　敵から逃れてきたばかりだというのに、傷の手当をする余裕があったのか？
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]……あるエーギル人が助けてくれたんだ。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]ほう。仲間のエーギルか？
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]いいや。ただの……海を愛するエーギルだよ。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]そうか。それで、兄弟の遺体はどうする？
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]アマイアとティアゴが回収していった以上、何らかの手立てを考えるべきだろうな。
+[name="不気味な深海教徒"]それと、兄弟の葬儀の準備をしておかなくては。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]。
+[name="寡黙な深海教徒"]葬儀とは言うが……埋葬は人間のやり方であって、我らのものではないのだぞ。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]だが、アマイアは、あの愚かな審問官たちが教義に殉ずるのと同じように、純粋な憧れと崇拝を以て心のままに生きろと言っていた。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]しかし、そうしてしまったら、我らも奴らと同じく愚かだということになるのではないか？
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]その愚かさは、我らが捨てきれぬ「さが」というものだ。何しろ、我らはまだ彼らになってはいないのだから。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]詭弁だな。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]……否定はしないさ。けれどお前とて、あの陸生家畜どもが兄弟の亡骸を弄ぶさまなど見たくはあるまい。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]……
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]我らは今なお陸地におり、導いてくれる使者もない。ゆえに、自ら海を受け入れる方法を見つけ出さねばならんのだ。
+[name="不気味な深海教徒"]しかしながら、その前に……まずは、兄弟を埋葬してやろう。我らは無益な死の一切を悼むべきなのだから。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#1$1")]
+[Background(image="bg_ibbar",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#1$1",focus=1)]
+[name="アマイア"]……考えてもみてください、ティアゴ。一体何者ならば、こうも簡単にこの生き物を殺めることができるのでしょう？
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#9$1",focus=2)]
+[name="ティアゴ"]何が言いたい？
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#9$1",focus=1)]
+[name="アマイア"]たとえば、四、五人の懲罰軍が力を合わせて対処した場合や、審判の火がともった灯りを携えていた場合には、これを下すこともできようかとは思います。
+[Character(name="avg_npc_449_1#8$1",name2="avg_npc_451_1#9$1",focus=1)]
+[name="アマイア"]しかし……この哀れな恐魚の遺体には、傷が一つしかありません。
+[Character(name="avg_npc_449_1#4$1",name2="avg_npc_451_1#9$1",focus=1)]
+[name="アマイア"]私も、音に聞く大審問官の戦いぶりをこの目で見たことはありませんが……思うに、このイベリアでこんなことができるのは、彼らくらいのものでしょう。
+[Character(name="avg_npc_449_1#4$1",name2="avg_npc_451_1#4$1",focus=2)]
+[name="ティアゴ"]ッ、審問官だと！？　ありえん！　奴らがグランファーロを訪れるところなんぞ誰も見ちゃいないんだぞ！
+[Character(name="avg_npc_449_1#5$1",name2="avg_npc_451_1#4$1",focus=1)]
+[name="アマイア"]けれど、普段は外部の人など滅多に来ないこの町に、これだけ多くの客人がやってきたのですよ。その原因のすべてが裁判所の油断にあるとは思えないでしょう？
+[Character(name="avg_npc_449_1#5$1",name2="avg_npc_451_1#2$1",focus=2)]
+[name="ティアゴ"]それは……
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#2$1",focus=1)]
+[name="アマイア"]確かに、懲罰軍の行進する物音を誤魔化すことなどできませんが、訪れたのが審問官だったら？　彼らが制服から着替え、剣と灯りを隠していたなら、その正体に気付くことなどできるでしょうか？
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#2$1",focus=2)]
+[name="ティアゴ"]……
+[Character(name="avg_npc_449_1#10$1",name2="avg_npc_451_1#7$1",focus=2)]
+[name="ティアゴ"]……つまりお前は、審問官が紛れ込んでると言いたいのか？　その上それが、よそ者たちの中にいると？
+[Character(name="avg_npc_449_1#4$1",name2="avg_npc_451_1#7$1",focus=1)]
+[name="アマイア"]あくまで、可能性の話ですが。
+[Character(name="avg_npc_449_1#4$1",name2="avg_npc_451_1#1$1",focus=2)]
+[name="ティアゴ"]……急用ができた。
+[Character(name="avg_npc_449_1#5$1",name2="avg_npc_451_1#1$1",focus=1)]
+[name="アマイア"]ティアゴ！
+[Character(name="avg_npc_449_1#9$1",name2="avg_npc_451_1#1$1",focus=1)]
+[name="アマイア"]よくご存知だとは思いますが……大多数の人は、審問官が恐魚を退治してくれたほうがいいと考えているものですよ。
+[Character(name="avg_npc_449_1#9$1",name2="avg_npc_451_1#4$1",focus=2)]
+[name="ティアゴ"]ああ。もちろん、わかってるさ。――俺だって、理由もなく何かを憎んだりはしないが、あいつらは……審問官は別なんだ。
+[Dialog]
+[Character(name="avg_npc_449_1#9$1",name2="avg_npc_451_1#4$1")]
+[Character(name="avg_npc_449_1#9$1",name2="char_empty",fadetime=0.5)]
+[Delay(time=1)]
+[PlaySound(key="$doorclosequite")]
+[Delay(time=1)]
+[Character(name="avg_npc_449_1#4$1",name2="char_empty",focus=1)]
+[name="アマイア"]……はぁ……
+[Dialog]
+[Character]
+[Character(name="avg_npc_457_1#2$1",fadetime=1,focus=3)]
+[Delay(time=1)]
+残されたアマイアは、恐魚の死体を優しく撫でる。死がそれにもたらした最期は、決して凄惨なものではなかった。
+人類の目から見れば恐魚は禍々しい異形だが、別の視点から見た場合にはどうだろうか。進化論の観点であれば、この完璧な生物をどう見るのだろう。
+[StopMusic(fadetime=1)]
+アマイアはそこで思考を止めた。――この酒場には誰もいない。少なくともそう見えており、ティアゴもアマイアもそう思っていた。
+[Dialog]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[Background(image="bg_ibbar",screenadapt="coverall", xScale=1.05, yScale=1.05,fadetime=1.5,block=true)]
+[PlayMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.4)]
+だがその時、影がするりと忍び寄ってきた。そして、その中から何かが現れ、かすかな光にそのおぼろげな輪郭を浮かび上がらせた。
+[Dialog]
+[Character(name="avg_npc_445_1#1$1",blackstart=0.1,blackend=0.8,fadetime=3,focus=3,block=false)]
+そこにいたのは一人の人間――エーギル人だ。
+[Character(name="avg_npc_449_1#10$1")]
+[name="アマイア"]……手を下したのはあなたですか？
+[Dialog]
+[Character]
+[Character(name="avg_npc_445_1#1$1",fadetime=1)]
+[Delay(time=1)]
+[name="謎の狩人"]（エーギル語）そんなことはどうでもいいだろう。
+[Character(name="avg_npc_449_1#1$1",name2="avg_npc_445_1#1$1",focus=1)]
+[name="アマイア"]見たところ、懲罰軍ではないようですが……
+[Character(name="avg_npc_449_1#1$1",name2="avg_npc_445_1#1$1",focus=2)]
+[name="謎の狩人"]（エーギル語）俺の目を誤魔化せると思うな。
+[Character(name="avg_npc_449_1#7$1",name2="avg_npc_445_1#1$1",focus=1)]
+[name="アマイア"]……あなたはエーギル人ですね？　であれば、審問官と考えるには無理があるはず。
+[Character(name="avg_npc_449_1#7$1",name2="avg_npc_445_1#1$1",focus=2)]
+[name="謎の狩人"]（エーギル語）……この海で耳にするものとして、静寂は何より恐ろしい。二度目があれば、今度こそ終わりだ。
+[Character(name="avg_npc_449_1#9$1",name2="avg_npc_445_1#1$1",focus=1)]
+[name="アマイア"]何を仰っているのかはよくわかりませんが、お引き取りを――
+[Character(name="avg_npc_449_1#9$1",name2="avg_npc_445_1#1$1",focus=2)]
+[name="謎の狩人"]――（エーギル語）サルヴィエントの司教は死んだ。
+[Character(name="avg_npc_449_1#7$1",name2="avg_npc_445_1#1$1",focus=1)]
+[name="アマイア"]……
+[Character(name="avg_npc_449_1#7$1",name2="avg_npc_445_1#1$1",focus=2)]
+[name="謎の狩人"]（エーギル語）俺は、貴様が思うほど我慢強くはないぞ。
+[Character(name="avg_npc_449_1#8$1",name2="avg_npc_445_1#1$1",focus=1)]
+[name="アマイア"]まさか……
+[Character(name="avg_npc_449_1#4$1",name2="avg_npc_445_1#1$1",focus=1)]
+[name="アマイア"]（エーギル語）こうして、生きたアビサルハンターを目にすることになろうとは。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Delay(time=0.6)]
+[Background(image="27_g16_lighthouse_street",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_451_1#2$1")]
+[name="ティアゴ"]まったく、審問官だと……？　馬鹿げた話だ、この町にあの連中が来るはずなんざ……
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_450_1#11$1",fadetime=1)]
+[Delay(time=1)]
+[name="エリジウム"]ティアゴさん！　実はさっき――
+[Character(name="avg_npc_451_1#2$1")]
+[name="ティアゴ"]……
+[Character(name="avg_npc_450_1#11$1",name2="avg_npc_451_1#2$1",focus=1)]
+[name="エリジウム"]あれ、ティアゴさん……？
+[Character(name="avg_npc_450_1#11$1",name2="avg_npc_451_1#1$1",focus=2)]
+[name="ティアゴ"]……あんたの待ってる相手が来たら、そいつを連れてすぐにこの町から出て行ってくれ。
+[name="ティアゴ"]俺も、あんたが良い奴だってのはわかってる。ジョディもそう言ってたしな。だが……
+[name="ティアゴ"]この町に何かが潜んでることは確かだ。今は何もかもが普通じゃない……そもそも、あれ以来イベリアが普通だったことなんざないがな。
+[Character(name="avg_npc_450_1#11$1",name2="avg_npc_451_1#1$1",focus=1)]
+[name="エリジウム"]……わかりました。なるべく早くここを離れるようにします。
+[name="エリジウム"]ただ、さっき礼拝堂の前にいた――
+[Character(name="avg_npc_450_1#11$1",name2="avg_npc_451_1#4$1",focus=2)]
+[name="ティアゴ"]――なあ、若いの。その前に聞かせてくれ。あんた、裁判所から来た人間じゃないだろうな？　ジョディに近づいたのは、あの子を連れ去るためだったりはしないか？
+[Character(name="avg_npc_450_1#2$1",name2="avg_npc_451_1#4$1",focus=1)]
+[name="エリジウム"]えっ……？
+[Character(name="avg_npc_450_1#2$1",name2="avg_npc_451_1#4$1",focus=2)]
+[name="ティアゴ"]もちろん、嘘をついても構わんが、その時は俺と命を懸けてやり合うことになる。その覚悟をして答えてくれ。
+[Character(name="avg_npc_450_1#11$1",name2="avg_npc_451_1#4$1",focus=1)]
+[name="エリジウム"]……そんなわけないじゃないですか。エーギルを捕まえに来ただけなら、こんなに待つ必要もないでしょう？
+[Character(name="avg_npc_450_1#11$1",name2="avg_npc_451_1#2$1",focus=2)]
+[name="ティアゴ"]――
+[name="ティアゴ"]――あんたが言う礼拝堂の前にいたやつは、ただの恐魚だ。ここは海が近いし、俺たちは十数年前にも似たようなものを見たことがある。
+[Character(name="avg_npc_450_1#11$1",name2="avg_npc_451_1#1$1",focus=2)]
+[name="ティアゴ"]よそから来たあんたには関係のないことさ。あまり気にするな。
+[Character(name="avg_npc_450_1#3$1",name2="avg_npc_451_1#1$1",focus=1)]
+[name="エリジウム"]……ティアゴ町長。もしよかったら、この町の問題、解決して差し上げますよ。
+[Character(name="avg_npc_450_1#3$1",name2="avg_npc_451_1#9$1",focus=2)]
+[name="ティアゴ"]あんたが？　馬鹿言え、よそ者の手出しは――
+[Character(name="avg_npc_450_1#11$1",name2="avg_npc_451_1#9$1",focus=1)]
+[name="エリジウム"]いらない、ですか？　――ジョディが危険にさらされるとしても？
+[Character(name="avg_npc_450_1#11$1",name2="avg_npc_451_1#7$1",focus=2)]
+[name="ティアゴ"]……
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(fadetime=0)]
+[Delay(time=0.6)]
+[Background(image="bg_ibbar",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",fadetime=0.5)]
+[Delay(time=1)]
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]……誰もいない……？　アマイアとティアゴはどこに……？
+[Dialog]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]――！
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]奴の匂いだ！
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]あのエーギルめ、彼女を連れ去ったのか！？　一体何を――
+[name="不気味な深海教徒"]――いや、待てよ。アマイアが戦いを選ぶはずはない。彼女は恐らく無事だろう……
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]ひとまず、兄弟の遺体は見つかったな。
+[Character(name="avg_npc_457_1#2$1",focus=3)]
+[name="死んだ恐魚"]……
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]……それで、どうするつもりだ？
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]兄弟を連れて出よう。この腐臭漂う建物は、彼の棺桶には相応しくない。
+[name="不気味な深海教徒"]そのあとは……どこか落ち着ける場所を探す。あのエーギルの殺戮狂には理解の及ばぬことだろうが、見ての通り、兄弟からすれば、死などというものは従順な下僕に過ぎんのだからな。
+[name="不気味な深海教徒"]さあ、行くぞ。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty")]
+[Background(image="bg_ibchurch",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]んーと……つまり、私たちの役割は？　単なる保険かしら？
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]君たちが、海へ戻ることであの怪物たちを敵に回す、という事態を望まないのは理解できる。
+[name="ケルシー"]この海から生まれた君たちは非常に強大ではあるが、元の姿に戻ったとしても、あの泥濘から抜け出すことはできないだろうしな。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]ふぅん。そんなに危ないの？
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]ああ。君が思っている以上に。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]でも、ほんとのこと言うと……私たちは元々、あんまり気にしてないの。ただ好きなことをやりたいだけ。この大地では、大体の人がそう思ってるでしょうけどね。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]確かに、シーボーンに音楽を解する心があれば、たとえテラの大地に災厄が降りかかろうとも、聴衆に困ることはないだろうな。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]そうね。実はあれって人間よりも完璧に近いし、色んなものに対応していけるもの。あと数百年もすれば、源石にも適応してたって不思議じゃないくらいよ。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]だろうな。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]それで……あなたはどうなの？　先生。
+[name="Alty"]私たちやエーギル人、そして恐魚にシーボーン――それと、海の底に潜む可哀想な同族たち――
+[name="Alty"]――あなたからしたら、それにどんな違いがあるのかしら？
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]遅く生まれてきた君たちには理解し得ないことも、多く存在するものだ。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]……Frostが岩の奥深くで目覚めた時、一番最初に「この同類とは呼べない連中や怪物たちから離れたい」と思ったんですって。
+[name="Alty"]海の中には交流のできる仲間はいなかったし、地上ではほとんどの同族が姿を隠して、大地に帰属していたから。まあ幸い、音楽が孤独を引き裂いてくれたんだけどね。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]――すべてが無事に終われば、そうした昔話をする時間もたっぷり取れるだろう。
+[name="ケルシー"]加えて言うなら、私自身……あまり君たちをイベリアとエーギルの目論見に関わらせたくはない。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]あら、どうして？　きっとすぐにでも私たちの手を借りたがるとばかり思ってたんだけど。
+[Character(name="char_003_kalts_1#2",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]エーギルとは長年、連絡を取り合っていないからな。その上、潮汐はむせび泣いており、限られた情報はむしろ推測を妨げかねない。
+[name="ケルシー"]そもそも、あの災厄の真の原因は今もなお、手がかりの一つも見つけられない状況だ。
+[name="ケルシー"]ゆえに、最悪の事態も予測される。君たちにすら対処不能ということも――おや。どうやら招かれざる客が訪れたようだな。
+[Character(name="char_003_kalts_1#2",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]……あら。
+[name="Alty"]もうコソコソせずに町へ出てきはじめちゃったってこと？
+[Dialog]
+[Character]
+[PlaySound(key="$doorknockquite")]
+[Delay(time=1)]
+誰かが扉をノックした。
+ケルシーは無言で礼拝堂の扉を見やった。その分厚い木板は、これまでに数え切れないほどの混乱を経験しており、そこについた傷一つ一つが過去を物語っている。
+彼女には、扉の向こうに何がいるのかがわかっていた。けれども、深海教徒がここまであからさまな動きを見せてくることは予想していなかった。
+あるいは……
+[Dialog]
+[PlaySound(key="$dooropenquite")]
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",fadetime=1)]
+[Delay(time=1)]
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]……
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]よそ者がいるな。この妙な匂いは……件のおかしなエーギルか。
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1")]
+二人の邪教徒たちが、礼拝堂へと足を踏み入れた。かつて信仰心に包まれていたラテラーノ建築は、見知らぬ人々を迎え入れる。
+彼らは、「兄弟」と呼ぶ一匹の恐魚を――あるいは、人が与えた名を用いぬのなら、単に「生きていたものの亡骸」とでも呼ぶべきものを抱えていた。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]あの人たちが抱えてるのって……
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]恐魚だな。だが、彼らに戦意はない。
+[Character(name="avg_npc_453_1#1$1")]
+[name="不気味な深海教徒"]……
+「兄弟」の遺体を抱えた邪教徒は、まるで二人の邪魔者など見えていないかのように、ケルシーには目もくれずその横を通り過ぎた。
+礼拝堂の入口から歩みを進めるその姿は、まるで殉教の深淵へと進んでいくようにすら見えた。
+[Character(name="avg_npc_453_1#1$1")]
+[name="不気味な深海教徒"]（片言のエーギル語）我が兄弟よ、聞きたまえ。
+[name="不気味な深海教徒"]（片言のエーギル語）我らの無能さが。お前を、こうした憂き目に遭わせた。そして我らの臆病さが。お前を海へと帰す道を、閉ざしてしまった。
+[name="不気味な深海教徒"]（片言のエーギル語）どうか許してくれ、兄弟。私には、お前の声が聞こえている。
+[name="不気味な深海教徒"]（片言のエーギル語）人々は死を生の終わりと捉えている。しかし我らは、個を超越すれば、死すらも無力となることを知っている。
+[Dialog]
+[PlaySound(key="$d_avg_clothmovement",volume=0.5)]
+[Blocker(a=0,fadetime=0.2, block=true)]
+[Characteraction(name="middle", type="jump", xpos=25,power=0,times=1, fadetime=0.5, block=true)]
+[Blocker(a=0,fadetime=0.5, block=true)]
+[Characteraction(name="middle", type="jump", xpos=-25, power=0,times=1, fadetime=0.5, block=true)]
+[Blocker(a=0,fadetime=0.5, block=true)]
+彼は「兄弟」の遺体を床に下ろすと、両膝をついて息を整え、瞳に悲しみの色をたたえた。
+[Character(name="avg_npc_453_1#1$1")]
+[name="不気味な深海教徒"]（片言のエーギル語）我らが海へと還るまで……私が、お前の棺となろう。そうして、お前を深海へ連れ戻してやる。
+[name="不気味な深海教徒"]（片言のエーギル語）兄弟よ、安らかに眠れ。我らは共に在る。
+有機物を口から含んで摂取すれば、それは摂食行為となる。彼は、兄弟を食べようなどと考えはしなかった。
+そのため彼は、より原始的な方法を用いて、二つを一つにしなくてはならなかった。
+物理的に、「嵌め合わせる」のだ。
+[Dialog]
+[Delay(time=1)]
+[Character(name="avg_npc_453_1#1$1")]
+[CameraShake(duration=2, xstrength=10, ystrength=12, vibrato=30, randomness=20,fadeout=true, block=false)]
+[Blocker(a=0.3, r=0.7, g=0, b=0, fadetime=0.1, block=true)]
+[playsound(key="$yoyo_n")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[name="不気味な深海教徒"]ぐッ、あああっ――
+[Delay(time=1)]
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]あの人、何をしてるの？
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]――恐魚の身体で自らの肉体を刺し貫くという、最も単純な方法で同化を図っているんだ。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=2)]
+[name="Alty"]さすがに止めたほうがいいんじゃない？　ちょっと気持ち悪いし、美しさにも欠けるもの。
+[Character(name="char_003_kalts_1#1",name2="npc_2004_Alty",focus=1)]
+[name="ケルシー"]止めることにはなるが、そうするのは私たちではない。
+[Dialog]
+[Character]
+[StopMusic(fadetime=1)]
+[PlaySound(key="$dooropenquite")]
+[Delay(time=1)]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=20, randomness=20, block=false)]
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]――！　ファン！
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]はっ、あ……なぜ、か……彼が、まだ……生きているように、感じる……お前……今、何か……？
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=2)]
+[name="寡黙な深海教徒"]裁判所の奴らが来たんだ！
+[Character(name="avg_npc_453_1#1$1",name2="avg_npc_454_1#1$1",focus=1)]
+[name="不気味な深海教徒"]なっ……ぐ、ぐああッ……！！
+[Dialog]
+[Character]
+[playMusic(intro="$frontline_intro", key="$frontline_loop",fadetime=3, volume=0.4)]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(name="avg_npc_447_1#1$1",fadetime=1)]
+[Delay(time=1)]
+[name="聖徒カルメン"]……なんと醜悪な。
+[name="聖徒カルメン"]たとえ荒れ果てた礼拝堂であろうと、ここはイベリア裁判所にとって神聖な場所なのだ。このような形で公然と、我らの法や教義を冒涜するとはな。
+[Character(name="avg_npc_454_1#1$1")]
+[name="寡黙な深海教徒"]……本当に裁判所の人間が紛れ込んでいたのか……！　ならば、あのエーギルを放っておくのはなぜなんだ！？
+[name="寡黙な深海教徒"]っおい、ファン！
+[Character(name="avg_npc_453_1#1$1")]
+[name="不気味な深海教徒"]貴様……！　この、イベリア人め……ぐ、ぁ……クソッ……！
+[name="不気味な深海教徒"]奴を、殺せ！
+[Dialog]
+[Character(name="avg_npc_447_1#1$1")]
+[Blocker(a=, r=0,g=0, b=0, fadetime=0.3, block=true)]
+[Character]
+[Character(name="avg_npc_453_1#1$1")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=20,fadeout=true, block=false)]
+[playsound(key="$p_imp_sword_n")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0,block=true)]
+[Blocker(a=0.3, r=1, g=0, b=0, fadetime=0.03,block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.02,block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5,block=true)]
+[name="不気味な深海教徒"]ぐ、あああ……っ！
+[Dialog]
+[playsound(key="$bodyfalldown2", volume=0.5)]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[Character(name="avg_npc_447_1#1$1")]
+[name="聖徒カルメン"]暗き湖の恐魚どもが、黄昏に染まる山々の色を変ずるが如く押し寄せてくるか。逆賊風情が腐臭に紛れて、新天地における王座を簒奪せんと目論む様は、まさしく笑止千万よ。
+[name="聖徒カルメン"]しかし、サルヴィエントの次は、斯様な田舎町で目にすることになろうとは……裁判所は深海教会の影響力を見くびっていたようだ。お前たちは確かに、隙あらばどこからでも入り込んでくるのだな。
+[Character(name="avg_npc_454_1#1$1")]
+[CameraShake(duration=0.3, xstrength=10, ystrength=12, vibrato=30, randomness=20,fadeout=true, block=false)]
+[name="寡黙な深海教徒"]ファン、しっかりしろ！　――審問官、貴様ッ……！
+[Character(name="avg_npc_447_1#1$1")]
+[name="聖徒カルメン"]だが、お前たちはこれまで目にしたいかなる深海の残党よりも軟弱で無能だ。……何故このありふれた町を選んだ？
+[Character(name="avg_npc_447_1#3$1")]
+[name="聖徒カルメン"]答えるがいい。
+[Dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=3)]
+[Character]
