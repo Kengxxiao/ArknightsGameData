@@ -891,7 +891,7 @@
     -1,
     -1
   ],
-  "mainlineCompatibleDesc": "PRTS에 해당 스테지의 하위 난이도 작전 환경에서 3★ 평가를 받지 못한 것이 탐지되어, <color=#fe6435>작전 난이도 호환</color> 모드가 자동으로 적용됩니다.\n작전 난이도 호환 모드에서 해당 스테이지를 도전하면 현재 난이도와 하위 난이도의 필요 이성을 <color=#fe6435>동시에 소모</color>하게 되며, 클리어 후 <color=#fe6435>작전 진행도의 동기화</color>뿐만 아니라, 하위 난이도의 보상도 <color=#fe6435>함께 획득</color>하게 됩니다.",
+  "mainlineCompatibleDesc": "PRTS에 해당 스테이지의 하위 난이도 작전 환경에서 3★ 평가를 받지 못한 것이 탐지되어, <color=#fe6435>작전 난이도 호환</color> 모드가 자동으로 적용됩니다.\n작전 난이도 호환 모드에서 해당 스테이지를 도전하면 현재 난이도와 하위 난이도의 필요 이성을 <color=#fe6435>동시에 소모</color>하게 되며, 클리어 후 <color=#fe6435>작전 진행도의 동기화</color>뿐만 아니라, 하위 난이도의 보상도 <color=#fe6435>함께 획득</color>하게 됩니다.",
   "mainlineToughDesc": "도전적인 플레이 환경\n3★ 평가의 첫 클리어 보상에는 순오리지늄이 포함됩니다\n또한, 난이도가 높은 추가 스테이지도 포함됩니다",
   "mainlineEasyDesc": "쾌적한 플레이 환경\n3★ 평가의 첫 클리어 보상에는 육성류 재료만 포함됩니다\n\n<color=#c6c6c6>스토리 체험 환경 완료 시 다음 에피소드는 스토리 체험 환경만 개방됩니다</color>",
   "mainlineNormalDesc": "일반적인 플레이 환경\n3★ 평가의 첫 클리어 보상에는 순오리지늄이 포함됩니다",
@@ -959,6 +959,7 @@
     "vc.adgacha": "<color=#0098DC>{0}</color>",
     "vc.attention": "<color=#FFD800>{0}</color>",
     "act.missiontips": "<color=#d9bd6a>{0}</color>",
+    "lv.hdbg": "<color=#7ba61f>{0}</color>",
     "tu.ht": "<color=#ff8d00>{0}</color>",
     "act.spreward": "<color=#FF5001>{0}</color>",
     "act.timelimit": "<color=#ffe300>{0}</color>",
@@ -1057,6 +1058,7 @@
   "isDynIllustEnabled": true,
   "isDynIllustStartEnabled": true,
   "isRoguelikeTopicFuncEnabled": true,
+  "isRoguelikeAvgAchieveFuncEnabled": true,
   "voucherSkinRedeem": 1,
   "voucherSkinDesc": "오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시되기 전에 이미 <color=#ffa633>오리지늄</color>을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우, 해당 오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시된 후에 <color=#33b5ff>[컬렉션 자유 선택권]</color>*1매를 반환해드립니다.\n\n다음의 경우 얼터네이트가 출시되어도 <color=#ffa633>반환하지 않습니다</color>: \n1. 오퍼레이터의 첫 번째 얼터네이트가 출시되기 전에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 교환한 경우.\n2. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 오리지늄을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n3. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n\n[컬렉션 자유 선택권]으로 컬렉션 상점에서 판매 중인 컬렉션만 교환할 수 있습니다. 만약 컬렉션 상점에서 이미 모든 컬렉션을 구매했거나 또는 판매 중인 컬렉션이 없으면, [컬렉션 자유 선택권]을 <color=#ffa633>사용할 수 없습니다</color>.\n\n이밖에, [컬렉션 자유 선택권]으로 <color=#ffa633>교환할 수 없는</color> 컬렉션이 출시될 경우, 별도 공지가 진행될 예정이오니 참고하여 주시기 바랍니다.",
   "charmEquipCount": 5,
@@ -1191,60 +1193,90 @@
       "termName": "공중 부양",
       "description": "공중의 적으로 간주되며, 공격 및 이동 불가, 스킬 사용 불가, 무게가 3보다 클 경우 지속 시간 50% 단축"
     },
+    "ba.physhield": {
+      "termId": "ba.physhield",
+      "termName": "물리 실드",
+      "description": "물리 실드 1스택당 물리 공격 1회 막기 가능"
+    },
+    "ba.magicfragile": {
+      "termId": "ba.magicfragile",
+      "termName": "마법 취약",
+      "description": "받은 마법 대미지가 해당 비례만큼 증가 (동종 효과 중 최대 수치만 적용)"
+    },
     "cc.bd_A_1": {
       "termId": "cc.bd_A_1",
       "termName": "염력",
-      "description": "다음 오퍼레이터가 제공\n로즈몬티스"
+      "description": "해당 인프라 스킬을 보유한 오퍼레이터\n로즈몬티스"
     },
     "cc.bd_A_2": {
       "termId": "cc.bd_A_2",
       "termName": "의식의 실체",
-      "description": "다음 오퍼레이터가 제공\n로즈몬티스"
+      "description": "해당 인프라 스킬을 보유한 오퍼레이터\n로즈몬티스"
+    },
+    "cc.bd_B_1": {
+      "termId": "cc.bd_B_1",
+      "termName": "배회하는 멜로디",
+      "description": "해당 인프라 스킬을 보유한 오퍼레이터\n에벤홀츠"
+    },
+    "cc.bd_B_2": {
+      "termId": "cc.bd_B_2",
+      "termName": "서글픈 하모니",
+      "description": "해당 인프라 스킬을 보유한 오퍼레이터\n에벤홀츠"
     },
     "cc.bd_A": {
       "termId": "cc.bd_A",
       "termName": "생각의 사슬",
-      "description": "<$cc.bd_A_1><@cc.rem>염력</></>, <$cc.bd_A_2><@cc.rem>의식의 실체</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n로즈몬티스"
+      "description": "<$cc.bd_A_1><@cc.rem>염력</></>, <$cc.bd_A_2><@cc.rem>의식의 실체</></> 관련 스킬에 영향\n다음 오퍼레이터의 인프라 스킬에서 제공\n로즈몬티스"
+    },
+    "cc.bd_B": {
+      "termId": "cc.bd_B",
+      "termName": "침묵의 공명",
+      "description": "<$cc.bd_B_1><@cc.rem>배회하는 멜로디</></>, <$cc.bd_B_2><@cc.rem>서글픈 하모니</></> 관련 스킬에 영향\n다음 오퍼레이터의 인프라 스킬에서 제공\n에벤홀츠"
     },
     "cc.bd_a1": {
       "termId": "cc.bd_a1",
       "termName": "감지 정보",
-      "description": "<$cc.bd_A><@cc.rem>생각의 사슬</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n로즈몬티스, 시, 링, 위스퍼레인, 아이리스"
+      "description": "<$cc.bd_A><@cc.rem>생각의 사슬</></>, <$cc.bd_B><@cc.rem>침묵의 공명</></> 관련 변수에 영향\n다음 오퍼레이터의 인프라 스킬에서 제공\n로즈몬티스, 에벤홀츠, 시, 링, 위스퍼레인, 아이리스, 체르니"
     },
     "cc.bd_b1": {
       "termId": "cc.bd_b1",
       "termName": "속세의 불꽃",
-      "description": "다음 오퍼레이터가 제공\n시, 링, 우요우, 멀베리"
+      "description": "다음 오퍼레이터의 인프라 스킬에서 제공\n시, 링, 우요우, 멀베리"
     },
     "cc.bd_ash": {
       "termId": "cc.bd_ash",
       "termName": "정보 저장",
-      "description": "다음 오퍼레이터가 제공\nAsh"
+      "description": "다음 오퍼레이터의 인프라 스킬에서 제공\nAsh"
     },
     "cc.bd_tachanka": {
       "termId": "cc.bd_tachanka",
       "termName": "우르수스 특제 음료",
-      "description": "다음 오퍼레이터가 제공\nTachanka"
+      "description": "다음 오퍼레이터의 인프라 스킬에서 제공\nTachanka"
     },
     "cc.bd_a1_a1": {
       "termId": "cc.bd_a1_a1",
       "termName": "기억 조각",
-      "description": "<$cc.bd_a1><@cc.rem>감지 정보</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n위스퍼레인"
+      "description": "<$cc.bd_a1><@cc.rem>감지 정보</></> 관련 변수에 영향\n다음 오퍼레이터의 인프라 스킬에서 제공\n위스퍼레인"
     },
     "cc.bd_a1_a2": {
       "termId": "cc.bd_a1_a2",
       "termName": "꿈나라",
-      "description": "<$cc.bd_a1><@cc.rem>감지 정보</></> 관련 스킬에 영향을 줌\n다음 오퍼레이터가 제공\n아이리스"
+      "description": "<$cc.bd_a1><@cc.rem>감지 정보</></> 관련 변수에 영향\n다음 오퍼레이터의 인프라 스킬에서 제공\n아이리스"
+    },
+    "cc.bd_a1_a3": {
+      "termId": "cc.bd_a1_a3",
+      "termName": "소절",
+      "description": "<$cc.bd_a1><@cc.rem>감지 정보</></> 관련 변수에 영향\n다음 오퍼레이터의 인프라 스킬에서 제공\n체르니"
     },
     "cc.m.var1": {
       "termId": "cc.m.var1",
       "termName": "재활용",
-      "description": "다음 오퍼레이터가 제공\n버메일"
+      "description": "해당 인프라 스킬을 보유한 오퍼레이터\n버메일"
     },
     "cc.m.var2": {
       "termId": "cc.m.var2",
       "termName": "협동의식",
-      "description": "다음 오퍼레이터가 제공\n와이후"
+      "description": "해당 인프라 스킬을 보유한 오퍼레이터\n와이후"
     },
     "cc.g.lgd": {
       "termId": "cc.g.lgd",
@@ -1269,7 +1301,7 @@
     "cc.g.sp": {
       "termId": "cc.g.sp",
       "termName": "얼터네이트",
-      "description": "다음 오퍼레이터 포함\n라바 더 퍼거토리, 스카디 더 커럽팅 하트, 첸 더 홀룽데이, 니어 더 래디언트 나이트, 크루스 더 킨 글린트, 스팩터 디 언체인드"
+      "description": "다음 오퍼레이터 포함\n라바 더 퍼거토리, 스카디 더 커럽팅 하트, 첸 더 홀룽데이, 니어 더 래디언트 나이트, 크루스 더 킨 글린트, 스펙터 디 언체인드, 히비스커스 더 퓨리파이어"
     },
     "cc.g.abyssal": {
       "termId": "cc.g.abyssal",
@@ -1321,8 +1353,8 @@
       "termName": "해마 리프",
       "description": "다음 오퍼레이터가 제공\n위디"
     },
-    "cc.t.line_gold": {
-      "termId": "cc.t.line_gold",
+    "cc.t.flow_gold": {
+      "termId": "cc.t.flow_gold",
       "termName": "순금 생산 라인",
       "description": "<@cc.kw>1</>개의 <@cc.kw>제조소</>에서 <@cc.kw>순금</>을 생산할 때마다, 순금 생산 라인 <@cc.kw>+1</>"
     },
@@ -1353,6 +1385,6 @@
     }
   },
   "storyReviewUnlockItemLackTip": "기록 조각이 부족합니다. 증명서 상점 또는 이벤트 기간에 열리는 상점을 통해 교환할 수 있습니다.",
-  "dataVersion": "27.4.0",
-  "resPrefVersion": "27d11d0"
+  "dataVersion": "28.1.0",
+  "resPrefVersion": "28d2d0"
 }

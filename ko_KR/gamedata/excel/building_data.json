@@ -9429,6 +9429,97 @@
           "buffData": []
         }
       ]
+    },
+    "char_4046_ebnhlz": {
+      "charId": "char_4046_ebnhlz",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd_bd_n1[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd_bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_spd_bd[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1024_hbisc2": {
+      "charId": "char_1024_hbisc2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[900]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[270]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4047_pianst": {
+      "charId": "char_4047_pianst",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_bd_n1_n3[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_bd_n1[100]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -11016,17 +11107,53 @@
       "roomType": "TRADING",
       "description": "무역소에 배치 시, 오더 수주 효율 <@cc.vup>+30%</>, 시간당 컨디션 소모 <@cc.vup>-0.25</>"
     },
+    "trade_ord_spd_bd_n1[000]": {
+      "buffId": "trade_ord_spd_bd_n1[000]",
+      "buffName": "음감",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_bd_n1",
+      "sortId": 4012,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "무역소에 배치 시, 숙소 내 오퍼레이터 <@cc.kw>1</>명당 <$cc.bd_a1><@cc.rem>감지 정보</></> <@cc.vup>+1</>, 이와 동시에, <$cc.bd_a1><@cc.rem>감지 정보</></> <@cc.vup>1</>점당 <$cc.bd_B><@cc.rem>침묵의 공명</></> <@cc.vup>1</>점으로 전환"
+    },
     "trade_ord_spd_bd_n2[000]": {
       "buffId": "trade_ord_spd_bd_n2[000]",
       "buffName": "\"원하는 자가 걸려든다\"",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_bd_n2",
-      "sortId": 4004,
+      "sortId": 4011,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "무역소에 배치 시, 숙소 내 오퍼레이터 <@cc.kw>1</>명당 <$cc.bd_b1><@cc.rem>속세의 불꽃</></> <@cc.vup>+1</>, <$cc.bd_b1><@cc.rem>속세의 불꽃</></> <@cc.vup>1</>점당 오더 수주 효율 <@cc.vup>+1%</>"
+    },
+    "trade_ord_spd_bd[000]": {
+      "buffId": "trade_ord_spd_bd[000]",
+      "buffName": "배회하는 멜로디",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_bd1",
+      "sortId": 4012,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "무역소에 배치 시, <$cc.bd_B><@cc.rem>침묵의 공명</></> <@cc.vup>4</>점당 오더 수주 효율 <@cc.vup>+1%</>"
+    },
+    "trade_ord_spd_bd[010]": {
+      "buffId": "trade_ord_spd_bd[010]",
+      "buffName": "서글픈 하모니",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_bd2",
+      "sortId": 4012,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "무역소에 배치 시, <$cc.bd_B><@cc.rem>침묵의 공명</></> <@cc.vup>2</>점당 오더 수주 효율 <@cc.vup>+1%</>"
     },
     "trade_ord_limit&cost[000]": {
       "buffId": "trade_ord_limit&cost[000]",
@@ -11069,7 +11196,7 @@
       "buffName": "재봉 α",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_wt&cost1",
-      "sortId": 4011,
+      "sortId": 4004,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -11081,7 +11208,7 @@
       "buffName": "재봉 β",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_wt&cost2",
-      "sortId": 4012,
+      "sortId": 4005,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -11093,7 +11220,7 @@
       "buffName": "수공예품 α",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_wt&cost1",
-      "sortId": 4011,
+      "sortId": 4004,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -11105,7 +11232,7 @@
       "buffName": "수공예품 β",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_wt&cost2",
-      "sortId": 4012,
+      "sortId": 4005,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -12492,6 +12619,18 @@
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, <@cc.kw>캐스터</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 만약 이번 훈련을 통해 스킬 마스터리가 <@cc.vup>2</>레벨까지 도달한 경우, 훈련 속도가 추가로 <@cc.vup>+45%</>"
     },
+    "train_spd&profession2[270]": {
+      "buffId": "train_spd&profession2[270]",
+      "buffName": "간호 마스터리",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train2_medic1",
+      "sortId": 9241,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>메딕</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 만약 훈련 마스터리 스킬이 <@cc.vup>2</>레벨까지 도달한 경우, 훈련 속도가 추가로 <@cc.vup>+45%</>"
+    },
     "train_spd&profession2[320]": {
       "buffId": "train_spd&profession2[320]",
       "buffName": "전심전력",
@@ -12660,6 +12799,18 @@
       "roomType": "DORMITORY",
       "description": "숙소에 배치 시 자신의 시간당 컨디션 회복 <@cc.vup>+0.7</>, 만약 해당 숙소 내에 다른 오퍼레이터가 있는 경우, 모든 인원의 시간당 컨디션 회복 <@cc.vup>+0.05</>"
     },
+    "dorm_rec_single[010]": {
+      "buffId": "dorm_rec_single[010]",
+      "buffName": "자상함",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_single1",
+      "sortId": 5201,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "숙소에 배치 시, 해당 숙소 안에 자신을 제외한 컨디션이 가득차지 않은 임의 오퍼레이터의 시간당 회복 <@cc.vup>+0.55</> (동종 효과 중 가장 높은 수치만 적용)"
+    },
     "dorm_rec_single[000]": {
       "buffId": "dorm_rec_single[000]",
       "buffName": "의료 서비스",
@@ -12684,29 +12835,29 @@
       "roomType": "DORMITORY",
       "description": "숙소에 배치 시, 해당 숙소 안에 자신을 제외한 컨디션이 가득차지 않은 임의 오퍼레이터의 시간당 회복 <@cc.vup>+0.65</> (동종 효과 중 가장 높은 수치만 적용)"
     },
-    "dorm_rec_single[010]": {
-      "buffId": "dorm_rec_single[010]",
-      "buffName": "자상함",
+    "dorm_rec_bd_n1_n3[000]": {
+      "buffId": "dorm_rec_bd_n1_n3[000]",
+      "buffName": "완행의 노래",
       "buffIcon": "dormitory",
-      "skillIcon": "bskill_dorm_single1",
-      "sortId": 5201,
+      "skillIcon": "bskill_dorm_all&bd_n1_n3",
+      "sortId": 5223,
       "buffColor": "#21cdcb",
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "숙소에 배치 시, 해당 숙소 안에 자신을 제외한 컨디션이 가득차지 않은 임의 오퍼레이터의 시간당 회복 <@cc.vup>+0.55</> (동종 효과 중 가장 높은 수치만 적용)"
+      "description": "숙소에 배치 시, 해당 숙소 안에 자신을 제외한 컨디션이 가득 차지 않은 임의 오퍼레이터의 시간당 회복 <@cc.vup>+0.65</> (동종 효과 중 가장 높은 수치만 적용), 현재 숙소 레벨당 <$cc.bd_a1_a3><@cc.rem>소절</></> <@cc.vup>1</>스택 제공"
     },
-    "dorm_rec_single[020]": {
-      "buffId": "dorm_rec_single[020]",
-      "buffName": "자비",
+    "dorm_rec_bd_n1[100]": {
+      "buffId": "dorm_rec_bd_n1[100]",
+      "buffName": "건반의 만보",
       "buffIcon": "dormitory",
-      "skillIcon": "bskill_dorm_single4",
-      "sortId": 5241,
+      "skillIcon": "bskill_dorm_all&bd_n1_2",
+      "sortId": 5223,
       "buffColor": "#21cdcb",
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "숙소에 배치 시, 해당 숙소 안에 자신을 제외한 컨디션이 가득차지 않은 임의 오퍼레이터의 시간당 회복 <@cc.vup>+0.75</> (동종 효과 중 가장 높은 수치만 적용)"
+      "description": "숙소에 배치 시, <$cc.bd_a1_a3><@cc.rem>소절</></> <@cc.vup>1</>스택당 <$cc.bd_a1><@cc.rem>감지 정보</></> <@cc.vup>1</>점으로 전환"
     },
     "dorm_rec_single[030]": {
       "buffId": "dorm_rec_single[030]",
@@ -12743,6 +12894,18 @@
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
       "description": "숙소에 배치 시, 해당 숙소 안에 자신을 제외한 컨디션이 가득차지 않은 임의 오퍼레이터의 시간당 회복 <@cc.vup>+0.7</> (동종 효과 중 가장 높은 수치만 적용)"
+    },
+    "dorm_rec_single[020]": {
+      "buffId": "dorm_rec_single[020]",
+      "buffName": "자비",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_single4",
+      "sortId": 5241,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "숙소에 배치 시, 해당 숙소 안에 자신을 제외한 컨디션이 가득차지 않은 임의 오퍼레이터의 시간당 회복 <@cc.vup>+0.75</> (동종 효과 중 가장 높은 수치만 적용)"
     },
     "dorm_rec_single_P[000]": {
       "buffId": "dorm_rec_single_P[000]",
@@ -40011,6 +40174,586 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_concertHall_ceilingLight_01": {
+        "id": "furni_concertHall_ceilingLight_01",
+        "sortId": 924,
+        "name": "'뭇별'",
+        "iconId": "furni_concertHall_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 2,
+        "depth": 8,
+        "height": 2,
+        "comfort": 70,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "세련된 모양의 펜던트 조명. 두드리면 풍령과 같은 맑은 소리를 내어 드넓은 평야의 별하늘을 떠올리게 만든다.\n주의: 전기가 통한 상태에서 두드리지 말 것!",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 5,
+        "quantity": 5
+      },
+      "furni_concertHall_ceiling_01": {
+        "id": "furni_concertHall_ceiling_01",
+        "sortId": 925,
+        "name": "'먹구름'",
+        "iconId": "furni_concertHall_ceiling_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 6,
+        "depth": 8,
+        "height": 2,
+        "comfort": 135,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "반투명한 검은 천장. 펜던트 조명의 흰 빛과는 대조되어 별빛도 가리지 못할 만큼 얇은 먹구름을 떠올리게 한다.\n고요함 속에 깃든 어렴풋한 슬픔이 마치 마이너 세븐 코드와도 같은 인상을 준다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_concertHall_wallSticker_01": {
+        "id": "furni_concertHall_wallSticker_01",
+        "sortId": 926,
+        "name": "'저녁노을'",
+        "iconId": "furni_concertHall_wallSticker_01",
+        "type": "WALLDECO",
+        "subType": "POSTER",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 15,
+        "depth": 1,
+        "height": 4,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "붉은색의 사각형 벽 장식. 무늬는 벽지의 나뭇결과 비슷하지만, 색감은 그보다 더욱 강렬하다.\n태양이 완전히 가라앉은 순간에도 저녁노을은 밤하늘을 불태운다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_screen_01": {
+        "id": "furni_concertHall_screen_01",
+        "sortId": 927,
+        "name": "'땅거미'",
+        "iconId": "furni_concertHall_screen_01",
+        "type": "WALLDECO",
+        "subType": "CURTAIN",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 14,
+        "depth": 1,
+        "height": 10,
+        "comfort": 285,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "짙은 남색의 커튼. 커튼의 무늬는 어느 라이타니엔 귀족 화가의 풍경화에서 영감을 얻었다.\n“추위에 떠는 게으름뱅이들은 지는 석양에 한탄할 시간이 있어도, 똑같이 아름다운 밤의 빛을 감상할 여유는 없는 듯하다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_pianoKit_01": {
+        "id": "furni_concertHall_pianoKit_01",
+        "sortId": 928,
+        "name": "중고 피아노 세트",
+        "iconId": "furni_concertHall_pianoKit_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 7,
+        "depth": 7,
+        "height": 5,
+        "comfort": 430,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "체르니가 어릴 때부터 사용하던 피아노. 위에 올려진 꽃다발은 피아노를 배우러 온 어린 오퍼레이터가 선물해 준 것이다.\n체르니는 아직도 첫 곡을 배울 때의 설렘을 기억하고 있다. 그는 그 설렘을 더 많은 사람들과 공유하고 싶어 한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_stool_01": {
+        "id": "furni_concertHall_stool_01",
+        "sortId": 929,
+        "name": "악보 거치대 세트",
+        "iconId": "furni_concertHall_stool_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 125,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "유백색의 의자와 악보 거치대.\n연주할 줄 모른다고 하더라도, 의자에 앉아 악보 거치대를 마주하다 보면 악기를 배우고 싶은 의욕이 샘솟는다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_musicStand_01": {
+        "id": "furni_concertHall_musicStand_01",
+        "sortId": 930,
+        "name": "미완성 원고",
+        "iconId": "furni_concertHall_musicStand_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 125,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "거치대엔 악보가 여러 장 놓여 있는데, 아직 완성되지 않은 곡의 원고들이다.\n제아무리 위대한 음악가라 할지라도 영감이 바닥날 때가 있기 마련이다. 너무 긁어 볼품없이 헝클어진 체르니의 머리카락을 보면 알 수 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_stool2_01": {
+        "id": "furni_concertHall_stool2_01",
+        "sortId": 931,
+        "name": "사용 중인 악보 거치대 세트",
+        "iconId": "furni_concertHall_stool2_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "유백색의 의자와 악보 거치대. 옆에는 어느 오퍼레이터의 악기 케이스가 놓여 있다.\n계속해서 노력하리라, 마음속에 묻어둔 감정을 악기로 표현할 수 있게 될 그날까지.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_violinCase_01": {
+        "id": "furni_concertHall_violinCase_01",
+        "sortId": 932,
+        "name": "수제 바이올린",
+        "iconId": "furni_concertHall_violinCase_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 4,
+        "depth": 3,
+        "height": 3,
+        "comfort": 135,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "로도스 아일랜드 창고에서 찾아낸 주인 없는 바이올린. 이곳에 두면 어울릴 것 같아서 히비스커스가 꺼내온 것이다.\n이 바이올린이 보기 드문 진품이란 걸 알아챈 체르니는 감탄을 금치 못했다. 아쉽게도 관리지 않은 탓에 지금은 그저 장식용으로밖에 쓰지 못한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_soundSystem_01": {
+        "id": "furni_concertHall_soundSystem_01",
+        "sortId": 933,
+        "name": "고풍스러운 목제 스피커",
+        "iconId": "furni_concertHall_soundSystem_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 5,
+        "depth": 1,
+        "height": 5,
+        "comfort": 160,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "초기 라이타니엔 스타일로 디자인된 스피커. 그러나 안에 있는 오리지늄 회로는 영락없이 컬럼비아의 최신식 설계이다.\n어느 쪽이든 모두 훌륭하지만, 오리지늄 아츠에 능숙하지 않은 오퍼레이터들에겐 컬럼비아 제품 쪽이 더 접근성이 좋다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_clock_01": {
+        "id": "furni_concertHall_clock_01",
+        "sortId": 934,
+        "name": "'붉은 노을'",
+        "iconId": "furni_concertHall_clock_01",
+        "type": "WALLDECO",
+        "subType": "ORTHER_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 50,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "붉은 노을 전당의 외관을 형상화한 벽걸이 시계.\n본함에 휴가를 온 안단테 말로는 붉은 노을 전당은 아직도 관계자 외의 접근을 엄금하고 있다고 한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_decoration_01": {
+        "id": "furni_concertHall_decoration_01",
+        "sortId": 935,
+        "name": "'합주'",
+        "iconId": "furni_concertHall_decoration_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 3,
+        "depth": 3,
+        "height": 8,
+        "comfort": 175,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "석고를 소재로 만든 예술품. 디자인에 참여한 몇몇을 빼면, 주제가 무엇인지 도통 알아볼 수 없다.\n굳건한 백악색의 테마, 우아한 흑단목 뼈대, 흰 건반을 형상화한 장식은 구름 위로 솟아오를 듯 하다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_cabinet_01": {
+        "id": "furni_concertHall_cabinet_01",
+        "sortId": 936,
+        "name": "소박한 낮은 협탁",
+        "iconId": "furni_concertHall_cabinet_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 10,
+        "depth": 2,
+        "height": 4,
+        "comfort": 220,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "체르니의 저택에 있던 서랍. 심플한 디자인에 수납공간이 커 굉장히 실용적이다. \n꽃은 조화이고 사진은 복사본이며, 플루트도 단 한 번도 사용한 적 없는 모조품이지만, 남겨진 기억이 자아내는 아픔은 그 무엇보다도 생생하다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_coffeeTable_01": {
+        "id": "furni_concertHall_coffeeTable_01",
+        "sortId": 937,
+        "name": "삼각형 티테이블",
+        "iconId": "furni_concertHall_coffeeTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 4,
+        "depth": 3,
+        "height": 2,
+        "comfort": 160,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "금속제 테이블을 얹은 찻상. 디자이너의 재치가 녹아 있다.\n적당한 물건으로 테이블의 특정 부분을 두드리면 일정한 음이 울린다. 어쩌면 실로폰으로 써도 될지도.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_carpet_01": {
+        "id": "furni_concertHall_carpet_01",
+        "sortId": 938,
+        "name": "캐러멜 커피 카펫",
+        "iconId": "furni_concertHall_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 5,
+        "depth": 5,
+        "height": 1,
+        "comfort": 45,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "한때 비세하임에서 유행했던 카펫. 무늬가 마치 캐러멜을 뿌린 커피 거품 같다.\n에벤홀츠로부터 라이타니엔의 이 무늬에 대한 속칭을 듣자, 히비스커스는 잠시 침묵했다. 모두의 머릿속에 커피와 관련된 누군가가 스쳐 지나갔다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_celloCase_01": {
+        "id": "furni_concertHall_celloCase_01",
+        "sortId": 939,
+        "name": "우아한 첼로 케이스",
+        "iconId": "furni_concertHall_celloCase_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "굉장히 값비싸 보이는 첼로 케이스. 에벤홀츠의 첼로와 한 세트다.\n에벤홀츠는 첼로를 케이스 안에 넣어두지 않는다. 케이스 안은 너무나도 어둡고 답답하다고 생각하기 때문이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_clothesStand_01": {
+        "id": "furni_concertHall_clothesStand_01",
+        "sortId": 940,
+        "name": "들쭉날쭉한 옷걸이",
+        "iconId": "furni_concertHall_clothesStand_01",
+        "type": "DECORATION",
+        "subType": "DRESSING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 6,
+        "depth": 2,
+        "height": 8,
+        "comfort": 210,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "독특한 디자인의 옷걸이. 위에 걸려 있는 옷은 아무도 입은 적이 없으나, 먼지 한 톨 묻지 않았다.\n방치된 흰색 겉옷은 결국 누런 때 올라왔지만, 이를 눈치채지 못한 사람은 매일 여기를 청소하는 사람뿐이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_floorlamp_01": {
+        "id": "furni_concertHall_floorlamp_01",
+        "sortId": 941,
+        "name": "예술 느낌의 스탠드",
+        "iconId": "furni_concertHall_floorlamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 2,
+        "depth": 2,
+        "height": 6,
+        "comfort": 135,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "16분음표 모양의 플로어 스탠드.\n히비스커스가 컨펌한 디자인이다. 곁에 있던 다른 둘은 비록 입 밖에 내지는 않았지만, 이런 모양의 등불은 수명이 길지 않을 것 같다고 생각했다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_wallpaper_01": {
+        "id": "furni_concertHall_wallpaper_01",
+        "sortId": 942,
+        "name": "나뭇결 벽지",
+        "iconId": "furni_concertHall_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "WALL",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "나뭇결을 모방한 두꺼운 벽지. 이렇게 두껍게 설계한 목적은 촘촘한 구멍을 통해 방음 효과를 주기 위해서이다.\n그래 봤자 벽지인지라 방음 효과는 썩 좋지 않다. 심지어 옆 방 오퍼레이터의 코골이 소리까지도 완벽하게 차단하지 못한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_floor_01": {
+        "id": "furni_concertHall_floor_01",
+        "sortId": 943,
+        "name": "무대 바닥재",
+        "iconId": "furni_concertHall_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "붉은 노을 전당의 무대 바닥을 본떠 디자인한 바닥재. 음향학적으로 유리하다는 얘기가 있다.\n체르니가 연주할 때 주변에서 어린 오퍼레이터들이 뛰어다니는 일이 잦다는 점을 감안하면, 바닥재가 가져다주는 음향학적인 효과는 아마 무시해도 좋을 것 같다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "sortId": 10001,
@@ -43346,6 +44089,35 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_dropS026_envy_01": {
+        "id": "furni_dropS026_envy_01",
+        "sortId": 11061,
+        "name": "플레이트 《관대》",
+        "iconId": "furni_dropS026_envy_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "“당신이야말로 유일무이한 존재다. 당신이 질투해야 할 것은 당신 자신이다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_dropS026_wrath_01": {
         "id": "furni_dropS026_wrath_01",
         "sortId": 11062,
@@ -43888,6 +44660,35 @@
         "comfort": 105,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "카시미어 나이트 챔피언 쇼 섬멸을 완료하고 보고를 제출하면 획득 가능한 기념품. 경기장의 소리가 아직도 귓가에 남아 울리는 듯하다.",
+        "obtainApproach": "섬멸 의뢰 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_annihilation_s11_01": {
+        "id": "furni_annihilation_s11_01",
+        "sortId": 13009,
+        "name": "염국의 메아리 (상촉의 길)",
+        "iconId": "furni_annihilation_s11_01",
+        "type": "WALLDECO",
+        "subType": "ANNIHILATION",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 105,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "염국 상촉 산길 섬멸을 완료하고 보고를 제출하면 획득 가능한 기념품. 상촉 산길의 소리가 아직도 귓가에 남아 울리는 듯하다.",
         "obtainApproach": "섬멸 의뢰 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -53085,6 +53886,205 @@
           "furni_goldBoat_wallpaper_01",
           "furni_goldBoat_floor_01"
         ]
+      },
+      "furni_set_concertHall": {
+        "id": "furni_set_concertHall",
+        "sortId": 55,
+        "name": "붉은 노을의 인상 음악실",
+        "themeType": "EVENT",
+        "desc": "체르니가 소장한 악기를 주체로 한 음악실로, 에벤홀츠와 히비스커스도 인테리어에 많은 도움을 줬다. 체르니를 찾아 악기를 배우는 어린 오퍼레이터들이 많아, 일명 '체르니의 음악 교실'로 불리기도 한다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 0,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 16,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 24,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 32,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceiling_01",
+            "pos0": 2,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceiling_01",
+            "pos0": 10,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceiling_01",
+            "pos0": 18,
+            "pos1": 1,
+            "dir": 2
+          },
+          {
+            "furnitureId": "furni_concertHall_ceiling_01",
+            "pos0": 26,
+            "pos1": 1,
+            "dir": 2
+          },
+          {
+            "furnitureId": "furni_concertHall_wallSticker_01",
+            "pos0": 2,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_screen_01",
+            "pos0": 1,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_pianoKit_01",
+            "pos0": 2,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_stool_01",
+            "pos0": 16,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_musicStand_01",
+            "pos0": 13,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_stool2_01",
+            "pos0": 11,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_violinCase_01",
+            "pos0": 17,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_soundSystem_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_clock_01",
+            "pos0": 22,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_decoration_01",
+            "pos0": 23,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_cabinet_01",
+            "pos0": 16,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_coffeeTable_01",
+            "pos0": 28,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_carpet_01",
+            "pos0": 28,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_celloCase_01",
+            "pos0": 31,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_clothesStand_01",
+            "pos0": 28,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_floorlamp_01",
+            "pos0": 32,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_concertHall_1",
+          "furni_set_concertHall_2",
+          "furni_set_concertHall_3",
+          "furni_set_concertHall_4"
+        ],
+        "furnitures": [
+          "furni_concertHall_ceilingLight_01",
+          "furni_concertHall_ceiling_01",
+          "furni_concertHall_wallSticker_01",
+          "furni_concertHall_screen_01",
+          "furni_concertHall_pianoKit_01",
+          "furni_concertHall_stool_01",
+          "furni_concertHall_musicStand_01",
+          "furni_concertHall_stool2_01",
+          "furni_concertHall_violinCase_01",
+          "furni_concertHall_soundSystem_01",
+          "furni_concertHall_clock_01",
+          "furni_concertHall_decoration_01",
+          "furni_concertHall_cabinet_01",
+          "furni_concertHall_coffeeTable_01",
+          "furni_concertHall_carpet_01",
+          "furni_concertHall_celloCase_01",
+          "furni_concertHall_clothesStand_01",
+          "furni_concertHall_floorlamp_01",
+          "furni_concertHall_wallpaper_01",
+          "furni_concertHall_floor_01"
+        ]
       }
     },
     "groups": {
@@ -56162,6 +57162,66 @@
           "furni_goldBoat_floor_01",
           "furni_goldBoat_stairs_01",
           "furni_goldBoat_carpet_S_01"
+        ]
+      },
+      "furni_set_concertHall_1": {
+        "id": "furni_set_concertHall_1",
+        "sortId": 1,
+        "name": "선율",
+        "themeId": "furni_set_concertHall",
+        "comfort": 235,
+        "count": 5,
+        "furniture": [
+          "furni_concertHall_pianoKit_01",
+          "furni_concertHall_stool_01",
+          "furni_concertHall_musicStand_01",
+          "furni_concertHall_stool2_01",
+          "furni_concertHall_violinCase_01"
+        ]
+      },
+      "furni_set_concertHall_2": {
+        "id": "furni_set_concertHall_2",
+        "sortId": 2,
+        "name": "화음",
+        "themeId": "furni_set_concertHall",
+        "comfort": 205,
+        "count": 5,
+        "furniture": [
+          "furni_concertHall_wallSticker_01",
+          "furni_concertHall_screen_01",
+          "furni_concertHall_soundSystem_01",
+          "furni_concertHall_cabinet_01",
+          "furni_concertHall_clock_01"
+        ]
+      },
+      "furni_set_concertHall_3": {
+        "id": "furni_set_concertHall_3",
+        "sortId": 3,
+        "name": "리듬",
+        "themeId": "furni_set_concertHall",
+        "comfort": 140,
+        "count": 5,
+        "furniture": [
+          "furni_concertHall_clothesStand_01",
+          "furni_concertHall_celloCase_01",
+          "furni_concertHall_floorlamp_01",
+          "furni_concertHall_coffeeTable_01",
+          "furni_concertHall_carpet_01"
+        ]
+      },
+      "furni_set_concertHall_4": {
+        "id": "furni_set_concertHall_4",
+        "sortId": 4,
+        "name": "음색",
+        "themeId": "furni_set_concertHall",
+        "comfort": 330,
+        "count": 5,
+        "furniture": [
+          "furni_concertHall_wallpaper_01",
+          "furni_concertHall_floor_01",
+          "furni_concertHall_decoration_01",
+          "furni_concertHall_ceilingLight_01",
+          "furni_concertHall_ceiling_01"
         ]
       }
     },
