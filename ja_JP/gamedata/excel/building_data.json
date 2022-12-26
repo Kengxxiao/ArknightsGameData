@@ -9429,6 +9429,97 @@
           "buffData": []
         }
       ]
+    },
+    "char_4046_ebnhlz": {
+      "charId": "char_4046_ebnhlz",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd_bd_n1[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd_bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_spd_bd[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1024_hbisc2": {
+      "charId": "char_1024_hbisc2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&faction[900]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession2[270]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4047_pianst": {
+      "charId": "char_4047_pianst",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_bd_n1_n3[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_bd_n1[100]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -11016,17 +11107,53 @@
       "roomType": "TRADING",
       "description": "貿易所配置時、受注効率<@cc.vup>+30%</>、1時間ごとの体力消費量<@cc.vup>-0.25</>"
     },
+    "trade_ord_spd_bd_n1[000]": {
+      "buffId": "trade_ord_spd_bd_n1[000]",
+      "buffName": "音感",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_bd_n1",
+      "sortId": 4012,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "製造所配置時、宿舎中のオペレーター<@cc.kw>1</>人につき、<$cc.bd_a1><@cc.rem>知覚情報</></><@cc.vup>+1</>。<@cc.vup>1</>の<$cc.bd_a1><@cc.rem>知覚情報</></>が<@cc.vup>1</>の<$cc.bd_B><@cc.rem>静かなる共鳴</></>に転化される"
+    },
     "trade_ord_spd_bd_n2[000]": {
       "buffId": "trade_ord_spd_bd_n2[000]",
       "buffName": "「和気生財」",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_bd_n2",
-      "sortId": 4004,
+      "sortId": 4011,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "貿易所配置時、宿舎にいるオペレーター<@cc.kw>1</>人につき、<$cc.bd_b1><@cc.rem>俗世之憂</></><@cc.vup>+1</>、<$cc.bd_b1><@cc.rem>俗世之憂</></><@cc.vup>1</>につき、受注効率<@cc.vup>+1%</>"
+    },
+    "trade_ord_spd_bd[000]": {
+      "buffId": "trade_ord_spd_bd[000]",
+      "buffName": "彷徨う旋律",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_bd1",
+      "sortId": 4012,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、<$cc.bd_B><@cc.rem>静かなる共鳴</></><@cc.vup>4</>につき、受注効率<@cc.vup>+1%</>"
+    },
+    "trade_ord_spd_bd[010]": {
+      "buffId": "trade_ord_spd_bd[010]",
+      "buffName": "茫然たる和声",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd_bd2",
+      "sortId": 4012,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、<$cc.bd_B><@cc.rem>静かなる共鳴</></><@cc.vup>2</>につき、受注効率<@cc.vup>+1%</>"
     },
     "trade_ord_limit&cost[000]": {
       "buffId": "trade_ord_limit&cost[000]",
@@ -11069,7 +11196,7 @@
       "buffName": "裁縫α",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_wt&cost1",
-      "sortId": 4011,
+      "sortId": 4004,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -11081,7 +11208,7 @@
       "buffName": "裁縫β",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_wt&cost2",
-      "sortId": 4012,
+      "sortId": 4005,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -11093,7 +11220,7 @@
       "buffName": "手芸α",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_wt&cost1",
-      "sortId": 4011,
+      "sortId": 4004,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -11105,7 +11232,7 @@
       "buffName": "手芸β",
       "buffIcon": "trading",
       "skillIcon": "bskill_tra_wt&cost2",
-      "sortId": 4012,
+      "sortId": 4005,
       "buffColor": "#0075a9",
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
@@ -12492,6 +12619,18 @@
       "roomType": "TRAINING",
       "description": "訓練室で協力者として配置時、<@cc.kw>術師</>の訓練速度<@cc.vup>+30%</>。特化ランク<@cc.vup>2</>への訓練をサポートする場合、訓練速度がさらに<@cc.vup>+45%</>"
     },
+    "train_spd&profession2[270]": {
+      "buffId": "train_spd&profession2[270]",
+      "buffName": "健康管理",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train2_medic1",
+      "sortId": 9241,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>医療</>の訓練速度<@cc.vup>+30%</>。特化ランク<@cc.vup>2</>への訓練をサポートする場合、訓練速度がさらに<@cc.vup>+45%</>"
+    },
     "train_spd&profession2[320]": {
       "buffId": "train_spd&profession2[320]",
       "buffName": "粉骨砕身",
@@ -12660,6 +12799,18 @@
       "roomType": "DORMITORY",
       "description": "宿舎休養時、自身の1時間ごとの体力回復量<@cc.vup>+0.7</>。配置宿舎内、他のオペレーター1人につき、自身の1時間ごとの体力回復量が追加で<@cc.vup>+0.05</>"
     },
+    "dorm_rec_single[010]": {
+      "buffId": "dorm_rec_single[010]",
+      "buffName": "思いやり",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_single1",
+      "sortId": 5201,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.55</>（同種の効果は高いほうのみ適応）"
+    },
     "dorm_rec_single[000]": {
       "buffId": "dorm_rec_single[000]",
       "buffName": "医療サービス",
@@ -12684,29 +12835,29 @@
       "roomType": "DORMITORY",
       "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.65</>（同種の効果は高いほうのみ適応）"
     },
-    "dorm_rec_single[010]": {
-      "buffId": "dorm_rec_single[010]",
-      "buffName": "思いやり",
+    "dorm_rec_bd_n1_n3[000]": {
+      "buffId": "dorm_rec_bd_n1_n3[000]",
+      "buffName": "アンダンテ",
       "buffIcon": "dormitory",
-      "skillIcon": "bskill_dorm_single1",
-      "sortId": 5201,
+      "skillIcon": "bskill_dorm_all&bd_n1_n3",
+      "sortId": 5223,
       "buffColor": "#21cdcb",
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.55</>（同種の効果は高いほうのみ適応）"
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.65</>（同種の効果は高いほうのみ適応）、配置宿舎のレベル1につき、<$cc.bd_a1_a3><@cc.rem>小節</></><@cc.vup>+1</>"
     },
-    "dorm_rec_single[020]": {
-      "buffId": "dorm_rec_single[020]",
-      "buffName": "慈悲",
+    "dorm_rec_bd_n1[100]": {
+      "buffId": "dorm_rec_bd_n1[100]",
+      "buffName": "インプロヴィゼーション",
       "buffIcon": "dormitory",
-      "skillIcon": "bskill_dorm_single4",
-      "sortId": 5241,
+      "skillIcon": "bskill_dorm_all&bd_n1_2",
+      "sortId": 5223,
       "buffColor": "#21cdcb",
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
-      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.75</>（同種の効果は高いほうのみ適応）"
+      "description": "宿舎配置時、<@cc.vup>1</>の<$cc.bd_a1_a3><@cc.rem>小節</></>が<@cc.vup>1</>の<$cc.bd_a1><@cc.rem>知覚情報</></>に転化される"
     },
     "dorm_rec_single[030]": {
       "buffId": "dorm_rec_single[030]",
@@ -12743,6 +12894,18 @@
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
       "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.7</>（同種の効果は高いほうのみ適応）"
+    },
+    "dorm_rec_single[020]": {
+      "buffId": "dorm_rec_single[020]",
+      "buffName": "慈悲",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_single4",
+      "sortId": 5241,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "配置宿舎内、自身以外のオペレーター1人の1時間ごとの体力回復量<@cc.vup>+0.75</>（同種の効果は高いほうのみ適応）"
     },
     "dorm_rec_single_P[000]": {
       "buffId": "dorm_rec_single_P[000]",
@@ -40011,6 +40174,586 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_concertHall_ceilingLight_01": {
+        "id": "furni_concertHall_ceilingLight_01",
+        "sortId": 924,
+        "name": "「星々」",
+        "iconId": "furni_concertHall_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 2,
+        "depth": 8,
+        "height": 2,
+        "comfort": 70,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "上品なデザインの天井照明。叩くと風鈴のような音が鳴り、野原の上に広がる星空を思い起こさせる。\n通電中に叩かないように！",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 5,
+        "quantity": 5
+      },
+      "furni_concertHall_ceiling_01": {
+        "id": "furni_concertHall_ceiling_01",
+        "sortId": 925,
+        "name": "「黒雲」",
+        "iconId": "furni_concertHall_ceiling_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 6,
+        "depth": 8,
+        "height": 2,
+        "comfort": 135,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "半透明の黒い吊り天井。天井照明の白いライトとは相性抜群で、星明かりを通すような淡い黒雲を思い起こさせる。\n静けさの中に漂うかすかな哀愁は、マイナーセブンスコードのようだ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_concertHall_wallSticker_01": {
+        "id": "furni_concertHall_wallSticker_01",
+        "sortId": 926,
+        "name": "「夕映え」",
+        "iconId": "furni_concertHall_wallSticker_01",
+        "type": "WALLDECO",
+        "subType": "POSTER",
+        "location": "POSTER",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 15,
+        "depth": 1,
+        "height": 4,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "赤い正方形のポスター。壁紙の木目と模様が似ているが、こちらはより情熱的な色をしている。\n太陽が完全に沈んでも、夕陽は空の上でしばしの間燃え続けている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_screen_01": {
+        "id": "furni_concertHall_screen_01",
+        "sortId": 927,
+        "name": "「夜の帳」",
+        "iconId": "furni_concertHall_screen_01",
+        "type": "WALLDECO",
+        "subType": "CURTAIN",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 14,
+        "depth": 1,
+        "height": 10,
+        "comfort": 285,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "紺色のカーテン。とあるリターニア貴族画家の風景画から着想を得ている。\n「あの凍えゆく凡人たちは、消えゆく夕陽を嘆く時間はあるのに、同じく美しき夜の景色を楽しむことは知らない。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_pianoKit_01": {
+        "id": "furni_concertHall_pianoKit_01",
+        "sortId": 928,
+        "name": "中古ピアノセット",
+        "iconId": "furni_concertHall_pianoKit_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 7,
+        "depth": 7,
+        "height": 5,
+        "comfort": 430,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ツェルニーが子供の頃から弾き続けているピアノ。花束はピアノを学ぶ小さなオペレーターが贈った物。\n彼は初めて曲を学んだ時の感動が忘れられず、それを多くの人に分け与えたいと思っている。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_stool_01": {
+        "id": "furni_concertHall_stool_01",
+        "sortId": 929,
+        "name": "譜面台セット",
+        "iconId": "furni_concertHall_stool_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 125,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "クリーム色のピアノ椅子と譜面台。\n楽器が弾けなくても、しばらく座っていると、楽器を学びたいという意志が少し湧いてくる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_musicStand_01": {
+        "id": "furni_concertHall_musicStand_01",
+        "sortId": 930,
+        "name": "未完の手稿",
+        "iconId": "furni_concertHall_musicStand_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 125,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "台に置かれた譜面の上に、とある未完の曲が書かれている。\n偉大なる音楽家にもスランプの時期はある。ツェルニーのぐちゃぐちゃにかきむしられた髪の毛からも、このことが見て取れる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_stool2_01": {
+        "id": "furni_concertHall_stool2_01",
+        "sortId": 931,
+        "name": "使用中の譜面台セット",
+        "iconId": "furni_concertHall_stool2_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 150,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "クリーム色のピアノ椅子と譜面台。横にはとあるオペレーターの楽器ケースが置かれている。\nひたすら練習し続けよう。楽器があなたの心の内を代弁してくれるその日まで。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_violinCase_01": {
+        "id": "furni_concertHall_violinCase_01",
+        "sortId": 932,
+        "name": "手製のバイオリン",
+        "iconId": "furni_concertHall_violinCase_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_1",
+        "width": 4,
+        "depth": 3,
+        "height": 3,
+        "comfort": 135,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ロドスの倉庫から出てきた持ち主のないバイオリン。ここにあるのは単純にハイビスカスが雰囲気に合うと思ったからである。\nツェルニー曰く珍品らしいが、惜しいことに保存状態が悪いため、今はただの置物だ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_soundSystem_01": {
+        "id": "furni_concertHall_soundSystem_01",
+        "sortId": 933,
+        "name": "レトロ風木製スピーカー",
+        "iconId": "furni_concertHall_soundSystem_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 5,
+        "depth": 1,
+        "height": 5,
+        "comfort": 160,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "リターニア初期のスタイルを模したエンクロージャ。内部の源石回路は正真正銘クルビアの最新製品である。\n両者とも似たような発想だが、クルビア製品の方がアーツが苦手な人に親切らしい。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_clock_01": {
+        "id": "furni_concertHall_clock_01",
+        "sortId": 934,
+        "name": "「アフターグロー」",
+        "iconId": "furni_concertHall_clock_01",
+        "type": "WALLDECO",
+        "subType": "ORTHER_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 50,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "アフターグローホールの外観に溶け込んだデザインの掛け時計。\nロドス本艦で余暇を過ごすアンダンテ曰く、アフターグローホールは相変わらず許可なしに近づいてはいけないらしい。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_decoration_01": {
+        "id": "furni_concertHall_decoration_01",
+        "sortId": 935,
+        "name": "「アンサンブル」",
+        "iconId": "furni_concertHall_decoration_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 3,
+        "depth": 3,
+        "height": 8,
+        "comfort": 175,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "石膏を使って制作された工芸品。デザインに携わった数人を除き、テーマがなんであるか見抜ける者は少ない。\n白亜の堅固な本体に組み合わせた黒檀のフレームは気品に溢れ、白鍵に似た装飾が天高く上りゆく。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_cabinet_01": {
+        "id": "furni_concertHall_cabinet_01",
+        "sortId": 936,
+        "name": "素朴なローボード",
+        "iconId": "furni_concertHall_cabinet_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_2",
+        "width": 10,
+        "depth": 2,
+        "height": 4,
+        "comfort": 220,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "元はツェルニーの家にあったローボード。素朴なデザインだが、収納部が広く、実用性が高い。\n花は造花、写真はコピーで、フルートは模造品。記憶がもたらす痛みだけがいつまでも鮮明に残る。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_coffeeTable_01": {
+        "id": "furni_concertHall_coffeeTable_01",
+        "sortId": 937,
+        "name": "三角ティーテーブル",
+        "iconId": "furni_concertHall_coffeeTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 4,
+        "depth": 3,
+        "height": 2,
+        "comfort": 160,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "金属板のティーテーブル。デザイナーの工夫が凝らされている。\n天板の特定の場所を特定の物で叩くと、決まった高さの音が鳴る。鉄琴の代わりに使えるかもしれない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_carpet_01": {
+        "id": "furni_concertHall_carpet_01",
+        "sortId": 938,
+        "name": "キャラメルカフェ絨毯",
+        "iconId": "furni_concertHall_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 5,
+        "depth": 5,
+        "height": 1,
+        "comfort": 45,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "かつてヴィセハイムで一世を風靡した絨毯。シロップを垂らしたコーヒーの泡に似た模様。\nこの模様の俗称をエーベンホルツから聞いた後、ハイビスカスたちは揃ってある人物のことを連想した。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_celloCase_01": {
+        "id": "furni_concertHall_celloCase_01",
+        "sortId": 939,
+        "name": "典雅なチェロケース",
+        "iconId": "furni_concertHall_celloCase_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 150,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "とても高価そうなチェロケース。エーベンホルツがよく弾くチェロとセットになっている。\nエーベンホルツはチェロをこの中にしまったことがない。そこは暗く、狭苦しい場所だと思うから。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_clothesStand_01": {
+        "id": "furni_concertHall_clothesStand_01",
+        "sortId": 940,
+        "name": "不揃いのハンガー",
+        "iconId": "furni_concertHall_clothesStand_01",
+        "type": "DECORATION",
+        "subType": "DRESSING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 6,
+        "depth": 2,
+        "height": 8,
+        "comfort": 210,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "スタイリッシュなハンガーラック。掛けられた服の一着は誰も着る人がおらず、ずっと綺麗なまま。\n白いコートは既に黄ばんでいる。毎日この服を手入れしている者だけがそれに気づいていない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_floorlamp_01": {
+        "id": "furni_concertHall_floorlamp_01",
+        "sortId": 941,
+        "name": "芸術的なフロアライト",
+        "iconId": "furni_concertHall_floorlamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_3",
+        "width": 2,
+        "depth": 2,
+        "height": 6,
+        "comfort": 135,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "十六分音符の形をしたフロアランプ。\nハイビスカスがデザインした物。他の二人はただ横で黙って見守りながら、こんな形のランプは寿命も短いだろうなと心の中で思っていた。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_wallpaper_01": {
+        "id": "furni_concertHall_wallpaper_01",
+        "sortId": 942,
+        "name": "木目の壁紙",
+        "iconId": "furni_concertHall_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "WALL",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "木目調の分厚い壁紙。これだけ分厚いのは、表面にびっしりと空いた穴を利用した防音機能のため。\nただの壁紙なので防音効果は低く、夜中に隣の部屋から響くいびきすら完全には遮断できない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_concertHall_floor_01": {
+        "id": "furni_concertHall_floor_01",
+        "sortId": 943,
+        "name": "ステージの床",
+        "iconId": "furni_concertHall_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_concertHall",
+        "groupId": "furni_set_concertHall_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "コンサートホールのステージを模した床。音響学的効果は優秀らしい。\nツェルニーが演奏すると小さなオペレーターが床を跳ね回るので、音響学的効果は誤差の範疇かもしれない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_MA2020_rabbit_01": {
         "id": "furni_MA2020_rabbit_01",
         "sortId": 10001,
@@ -43346,6 +44089,35 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_dropS026_envy_01": {
+        "id": "furni_dropS026_envy_01",
+        "sortId": 11061,
+        "name": "パネル「寛容」",
+        "iconId": "furni_dropS026_envy_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「あなたこそ類を見ないその一人。嫉妬すべきのは、自分だけだ。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_dropS026_wrath_01": {
         "id": "furni_dropS026_wrath_01",
         "sortId": 11062,
@@ -43888,6 +44660,35 @@
         "comfort": 105,
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "カジミエーシュ「ナイトチャンピオン」 の殲滅を完了し、その報告をするともらえる記念品。観客たちの歓声と怒号がまだ耳元でこだましているようだ。",
+        "obtainApproach": "殲滅作戦報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_annihilation_s11_01": {
+        "id": "furni_annihilation_s11_01",
+        "sortId": 13009,
+        "name": "炎国のこだま（蜀道） ",
+        "iconId": "furni_annihilation_s11_01",
+        "type": "WALLDECO",
+        "subType": "ANNIHILATION",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 105,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "蜿蜒たる蜀道の殲滅を完了し、その報告をするともらえる記念品。蜀道の余韻がまだ耳元でこだましているようだ。",
         "obtainApproach": "殲滅作戦報酬",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -53114,6 +53915,205 @@
           "furni_goldBoat_wallpaper_01",
           "furni_goldBoat_floor_01"
         ]
+      },
+      "furni_set_concertHall": {
+        "id": "furni_set_concertHall",
+        "sortId": 55,
+        "name": "アフターグロー風音楽室",
+        "themeType": "EVENT",
+        "desc": "ツェルニーの楽器コレクションをメインとした音楽室。インテリアの配置に関してはエーベンホルツとハイビスカスも一役買っている。楽器を教わるために通う若いオペレーターが多いため、「ツェルニーの音楽教室」とも呼ばれている。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 0,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 16,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 24,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceilingLight_01",
+            "pos0": 32,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceiling_01",
+            "pos0": 2,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceiling_01",
+            "pos0": 10,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_ceiling_01",
+            "pos0": 18,
+            "pos1": 1,
+            "dir": 2
+          },
+          {
+            "furnitureId": "furni_concertHall_ceiling_01",
+            "pos0": 26,
+            "pos1": 1,
+            "dir": 2
+          },
+          {
+            "furnitureId": "furni_concertHall_wallSticker_01",
+            "pos0": 2,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_screen_01",
+            "pos0": 1,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_pianoKit_01",
+            "pos0": 2,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_stool_01",
+            "pos0": 16,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_musicStand_01",
+            "pos0": 13,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_stool2_01",
+            "pos0": 11,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_violinCase_01",
+            "pos0": 17,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_soundSystem_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_clock_01",
+            "pos0": 22,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_decoration_01",
+            "pos0": 23,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_cabinet_01",
+            "pos0": 16,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_coffeeTable_01",
+            "pos0": 28,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_carpet_01",
+            "pos0": 28,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_celloCase_01",
+            "pos0": 31,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_clothesStand_01",
+            "pos0": 28,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_floorlamp_01",
+            "pos0": 32,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_concertHall_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_concertHall_1",
+          "furni_set_concertHall_2",
+          "furni_set_concertHall_3",
+          "furni_set_concertHall_4"
+        ],
+        "furnitures": [
+          "furni_concertHall_ceilingLight_01",
+          "furni_concertHall_ceiling_01",
+          "furni_concertHall_wallSticker_01",
+          "furni_concertHall_screen_01",
+          "furni_concertHall_pianoKit_01",
+          "furni_concertHall_stool_01",
+          "furni_concertHall_musicStand_01",
+          "furni_concertHall_stool2_01",
+          "furni_concertHall_violinCase_01",
+          "furni_concertHall_soundSystem_01",
+          "furni_concertHall_clock_01",
+          "furni_concertHall_decoration_01",
+          "furni_concertHall_cabinet_01",
+          "furni_concertHall_coffeeTable_01",
+          "furni_concertHall_carpet_01",
+          "furni_concertHall_celloCase_01",
+          "furni_concertHall_clothesStand_01",
+          "furni_concertHall_floorlamp_01",
+          "furni_concertHall_wallpaper_01",
+          "furni_concertHall_floor_01"
+        ]
       }
     },
     "groups": {
@@ -56191,6 +57191,66 @@
           "furni_goldBoat_floor_01",
           "furni_goldBoat_stairs_01",
           "furni_goldBoat_carpet_S_01"
+        ]
+      },
+      "furni_set_concertHall_1": {
+        "id": "furni_set_concertHall_1",
+        "sortId": 1,
+        "name": "メロディー",
+        "themeId": "furni_set_concertHall",
+        "comfort": 235,
+        "count": 5,
+        "furniture": [
+          "furni_concertHall_pianoKit_01",
+          "furni_concertHall_stool_01",
+          "furni_concertHall_musicStand_01",
+          "furni_concertHall_stool2_01",
+          "furni_concertHall_violinCase_01"
+        ]
+      },
+      "furni_set_concertHall_2": {
+        "id": "furni_set_concertHall_2",
+        "sortId": 2,
+        "name": "コード",
+        "themeId": "furni_set_concertHall",
+        "comfort": 205,
+        "count": 5,
+        "furniture": [
+          "furni_concertHall_wallSticker_01",
+          "furni_concertHall_screen_01",
+          "furni_concertHall_soundSystem_01",
+          "furni_concertHall_cabinet_01",
+          "furni_concertHall_clock_01"
+        ]
+      },
+      "furni_set_concertHall_3": {
+        "id": "furni_set_concertHall_3",
+        "sortId": 3,
+        "name": "リズム",
+        "themeId": "furni_set_concertHall",
+        "comfort": 140,
+        "count": 5,
+        "furniture": [
+          "furni_concertHall_clothesStand_01",
+          "furni_concertHall_celloCase_01",
+          "furni_concertHall_floorlamp_01",
+          "furni_concertHall_coffeeTable_01",
+          "furni_concertHall_carpet_01"
+        ]
+      },
+      "furni_set_concertHall_4": {
+        "id": "furni_set_concertHall_4",
+        "sortId": 4,
+        "name": "トーン",
+        "themeId": "furni_set_concertHall",
+        "comfort": 330,
+        "count": 5,
+        "furniture": [
+          "furni_concertHall_wallpaper_01",
+          "furni_concertHall_floor_01",
+          "furni_concertHall_decoration_01",
+          "furni_concertHall_ceilingLight_01",
+          "furni_concertHall_ceiling_01"
         ]
       }
     },

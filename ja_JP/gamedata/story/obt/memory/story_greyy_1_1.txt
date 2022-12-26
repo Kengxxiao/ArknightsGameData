@@ -1,0 +1,474 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[PlayMusic(intro="$darkness02_intro", key="$darkness02_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[name="事務所オペレーターA"]装備は持ったか？　スラムの方だ！
+[name="事務所オペレーターA"]夜になってやっと情報が入ったから、もうだいぶ出遅れてる。まだ何かできることがあればいいんだが……医療機器は起動させておこう、ここに──
+[name="事務所オペレーターB"]──いや、ここはマズイ。何が起きたのかまだ分かっていない現状を考えると、人目を引く行動は避けた方がいいだろう。
+[name="事務所オペレーターA"]それもそうだな……なら医療テントを出すか。裏山の森辺りだったらめったに人も来ないし、そこに建てよう。まずはスラムへ状況確認しに向かうぞ！
+[dialog]
+[PlaySound(key="$d_avg_crowdrun", volume=1)]
+[Delay(time=3)]
+[name="事務所オペレーターA"]ここだ！
+[name="事務所オペレーターB"]おい！　君、意識はあるか？　俺の声は聞こえるか？
+[name="事務所オペレーターA"]目立った源石結晶はないようだ。外見では感染者かどうかわからんな……ん？　何か抱えてるぞ。アーツユニットか？　こんな小さな子が……
+[name="虚弱なペッロー少年"]……うっ……
+[name="事務所オペレーターB"]行くぞ、急ぐんだ！
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_coldforest",fadetime=0.5, screenadapt="coverall", block=true)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+[Character(name="avg_npc_012", name2="avg_npc_089",fadetime=0.5)]
+[delay(time=1)]
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=1)]
+[name="事務所オペレーターA"]連れてきたぞ！
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]お疲れ様。あとは私に任せて。
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=2)]
+[name="事務所オペレーターB"]感染者かどうかは不明だ。ずっとそのアーツユニットを抱えていたから、おそらくアーツを使えるのだろう──他に何か俺たちにできることは？
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]そうね、ひとまず休憩して。この子は私の方で少し検査してみる。事務所には何人か連絡員を残してきたから、あなたたちはここが人に見つからないようにしてくれればそれでいいわ。
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=2)]
+[name="事務所オペレーターB"]了解。ついでに何か夜食でも作ってこようか？　その子もロクに食事をとっていないようだから、粥にしよう。
+[Dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[characteraction(name="right", type="move", xpos=300, fadetime=2,block=false)]
+[character(name="avg_npc_012",name2="char_empty",fadetime=0.5)]
+[delay(time=2)]
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]ええ、じゃあ中に入ってるわね。
+[Dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[character(fadetime=1)]
+[delay(time=1.5)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background(image="bg_ri_1", screenadapt="coverall", block=true)]
+[character]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=1)]
+[name="虚弱なペッロー少年"]……
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]十歳ちょっとってところね……こんな歳の子がこうも苦しまなきゃいけないなんて。
+[name="医療オペレーター"]……
+[name="医療オペレーター"]…………
+[name="医療オペレーター"]体表には鉱石病の病巣が見られないけど……検査結果の数値を見る限り、既に感染しているわ……
+[name="医療オペレーター"]受けた傷はさほど酷くはないようだけど、身体はだいぶ弱ってるみたいね。まずはアーツで傷口をふさいで……
+[dialog]
+[delay(time=1)]
+[name="医療オペレーター"]抑制剤はまだ予備が残ってるはず。鎮静剤の注射も完了。
+[Character(name="char_016_medic",focus=-1)]
+[name="虚弱なペッロー少年"]……
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]（発電機がうるさいわね。検査も済んだことだし、医療機器はもう必要ないかな。灯りも強すぎて睡眠を妨げそうだわ。）
+[name="医療オペレーター"]（灯りを消して、発電機も止めて、と。これでこの子も熟睡できるかしら。）
+[Dialog]
+[character]
+[delay(time=0.51)]
+[PlaySound(key="$d_avg_snapping", volume=1)]
+[Background(fadetime=0.5)]
+[delay(time=1)]
+[name="医療オペレーター"]（あとはタイマーをセットして……そうね、二時間後に様子を見に来ましょう。）
+[name="医療オペレーター"]……はぁ。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[Background(image="bg_black", screenadapt="coverall", block=true)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=1)]
+暗いテントの中、小さな人影がベッドの上で縮こまっていた。
+熱と疲労に伴う体の痛みが、薬剤による鎮静効果を上回っていた。彼は悪夢の中、ふと何かを探しに行きたいという欲求に駆られた。
+それは両親の抱擁かもしれないし、我が家の温もりかもしれない。
+幸福の象徴とも言えるそれらは、昨日の時点ですでに彼とは縁遠いものとなっていた。はっきりと認識していなくとも、彼は今、夢の中でそれらを失う苦痛を感じていた。
+[Dialog]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.4)]
+[Character(name="avg_253_greyy_1#7$1",fadetime=0.5,block=true)]
+[delay(time=0.51)]
+[name="虚弱なペッロー少年"]……ゴホゴホッ！
+[name="虚弱なペッロー少年"]ん……暗い……
+[name="虚弱なペッロー少年"]だれも……いない……
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]うっ……真っ暗だ……ここも電気が通ってないのかな？
+[Character(name="avg_253_greyy_1#5$1")]
+[name="虚弱なペッロー少年"]ひっ、何か当たった……これは点滴？　お母さんに送り出されて、それから……僕、誰かに助けられたのかな？
+[dialog]
+[delay(time=0.51)]
+[Character(name="avg_253_greyy_1#11$1")]
+[name="虚弱なペッロー少年"]周りには……あっ、僕のアーツユニットだ、よかった。
+[name="虚弱なペッロー少年"]そうだ、二人組のおじさんが僕を見つけて、ここへ連れてきてくれたんだ。お礼を言わなきゃ……！
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]ベッドから出よう、ぐっ……あ……起き上がるのもつらいな……
+[Dialog]
+[character]
+[delay(time=1)]
+[PlaySound(key="$d_avg_clothmovement", volume=1)]
+[delay(time=1)]
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]うっ……誰もいない、僕しかいないんだ。
+[name="虚弱なペッロー少年"]何が起こったのか、どうしてお母さんはなにも教えてくれなかったんだろう……ただ、逃げなさいって……
+[Character(name="avg_253_greyy_1#7$1")]
+[name="虚弱なペッロー少年"]……お父さん、お母さん、また会えるかな、ううっ……
+[name="虚弱なペッロー少年"]暗いし、誰もいない……あの人たちの身に何かあったんじゃ……僕は……僕はアーツが使えるんだ。お母さんが教えてくれた……
+[Dialog]
+[character]
+[delay(time=1)]
+ひ弱な少年は医療ベッドに横たわり、そばにあるアーツユニットに手を伸ばした。
+それは彼が色々な部品を少しずつかき集め、つなぎ合わせて出来たもの。壊れたパーツも、廃棄された鉱石も、やがて彼の手の中で光を放つに至った。
+「光」。彼はこの言葉に思いを巡らせた。ひと塊の光を灯して、自分を助けてくれた人の力になろうと決心したのだった。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[character]
+[delay(time=1)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Background(image="bg_indoor_u", screenadapt="coverall", block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]このガラスのランプシェード、どこも欠けてないんだけどな……この歯車もネジも、まだ全然使えそうなのに……ただ機構が動かなくなったってだけで捨てられちゃうだなんて、もったいないなぁ。
+[name="虚弱なペッロー少年"]でもこれでパーツは揃った！　ここの配線をパネルに接続して、ここと繋げれば……よし、アーツを使って試してみようかな？
+[Dialog]
+[CameraShake(duration=0.5, xstrength=15, ystrength=15, vibrato=20, randomness=70, fadeout=true, block=false)]
+[delay(time=0.51)]
+[name="虚弱なペッロー少年"]うわぁっ、電流が！　痛たた……うまくいかないな……
+[Character(name="avg_253_greyy_1#10$1")]
+[name="虚弱なペッロー少年"]お父さんとお母さんが帰るまでにはまだ時間がある、それまでには成功させるぞ。絶対喜んでくれるはず！
+[name="虚弱なペッロー少年"]僕にも何かいい仕事が見つかったら、お母さんにたくさん薬を買ってあげて、病気を治してあげるんだ。そうすればお父さんも工場なんかで働かなくて済むよね……
+[name="虚弱なペッロー少年"]ふぅ……ネジを締めるのって大変だな。お父さんはほんとに力持ちだなぁ。何をしてもすぐできちゃうし……
+[name="虚弱なペッロー少年"]よーし！　二人が帰ってくるまでに仕上げよう！
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[character]
+[delay(time=1)]
+[Background(image="bg_indoor_u", screenadapt="coverall", block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[Character(name="avg_253_greyy_1#10$1")]
+[name="虚弱なペッロー少年"]お母さん、見て！　教えてもらったアーツを、このアーツユニットで使えちゃうんだ！
+[Dialog]
+[PlaySound(key="$e_atk_magic_m", volume=1)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.1, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_253_greyy_1#3$1")]
+[name="虚弱なペッロー少年"]ほら──明かりがついた！　これ僕が一から作ったんだよ！
+[name="虚弱なペッロー少年"]お母さんに教えてもらったアーツは全部覚えてるよ、ノートにちゃんと書いたからね。こうやって、電圧を上げれば──できた！　ほら見て！
+[Dialog]
+[PlaySound(key="$e_atk_magic_m", volume=1)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.1, block=true)]
+[Delay(time=1)]
+[name="虚弱なペッロー少年"]僕、上達するの早いでしょ？　これからは、ここ一番の術師を目指すんだ。昼間でも灯りをずっとつけていられるくらい、使い切れないほどの電気を作るんだ！
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[character]
+[delay(time=1)]
+[Background(image="bg_indoor_u", screenadapt="coverall", block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[CameraShake(duration=2, xstrength=10, ystrength=10, vibrato=30, randomness=90, block=false)]
+[PlaySound(key="$smallearthquake", volume=1)]
+[Character(name="avg_253_greyy_1#7$1")]
+[name="虚弱なペッロー少年"]お母さん、待って。外に出たら病気になるってみんな言ってたよ。今外に出ちゃ──
+[name="虚弱なペッロー少年"]お父さんの工場が？　お父さん帰ってきてないよね、まだあそこにいるの！？
+[name="虚弱なペッロー少年"]僕が行く、行かせてよお母さん……僕もアーツが使えるんだから、僕だって──
+[name="虚弱なペッロー少年"]お母さん！
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character]
+[delay(time=1)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[Background(image="bg_black", screenadapt="coverall", block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+幾重もの夢の中、母に閉められた扉から勢いよく飛び出した。工場に溢れる微かな光を放つ廃棄物を次々とかき分けていく彼に、皆の言う恐ろしい病気は何の影響ももたらさなかった。
+母から教わったアーツで辺りをまばゆく照らし出すと、人々はその光の下で、昏倒した労働者たちを救助し始めた。幸いにも軽傷で済んだ彼の父は、一緒に救助に加わっていた。
+そして家に帰ると、すぐに荷物をまとめてその地を離れ、粉塵が舞うような空気を吸わなくて済む場所へと移り住んだ。
+彼はもっともっと多くのアーツを覚え、両親と一緒に、ずっと幸せな生活を送り続けるのであった。
+[dialog]
+[Delay(time=1)]
+[Character(name="avg_253_greyy_1#10$1")]
+[name="虚弱なペッロー少年"]ふぅ──取れた……
+[name="虚弱なペッロー少年"]ゴホゴホッ……
+[name="虚弱なペッロー少年"]よいしょ──
+[Dialog]
+[character]
+[delay(time=0.51)]
+[PlaySound(key="$e_atk_magic_m", volume=1)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.2, block=true)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1, block=false)]
+[Background(image="bg_ri_1", fadetime=1.2,screenadapt="coverall", block=true)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4, fadetime=2)]
+[delay(time=1)]
+[Character(name="avg_253_greyy_1#10$1")]
+[name="虚弱なペッロー少年"]……今はほんの少し、ちょっとしか照らせないけど……
+[name="虚弱なペッロー少年"]これで十分。足元さえ照らせれば、きっと助けになれるはず……！
+[Dialog]
+[character]
+[delay(time=1)]
+冷たい空気を吸い込みながら、ひ弱なペッローの少年はいつも夢に出てくる情景を思い描いていた。
+工場の廃墟にたどり着いたとき、彼は初めて母が大規模なアーツを行使する姿を目にした――光が闇夜を払い除け、廃工場の隅々まで照らしていた。
+彼もこんな風に、自分の光で誰かを助けたいと思った。
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]うっ、寒い──
+[name="虚弱なペッロー少年"]大きなテントだなぁ、本当に誰もいないのかな。あの人たちはどこへ行ったんだろう？
+[name="虚弱なペッロー少年"]お父さんが言ってたもんね……誰かを助けられる時は、必ず助けてあげようって。そうすれば、僕たちの暮らしもより良くなるって……
+[Character(name="avg_253_greyy_1#5$1")]
+[name="虚弱なペッロー少年"]どこもかしこも真っ暗だ。ほんとに何かあったんじゃ……い、行かなきゃ──
+[Dialog]
+[PlaySound(key="$d_avg_clothmovement", volume=0.7)]
+[delay(time=1.5)]
+[CameraShake(duration=0.5, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=true)]
+[Delay(time=0.51)]
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]ううっ、全身がギシギシする……ここはいったいどこだろう？
+[Character(name="avg_253_greyy_1#2$1")]
+[name="虚弱なペッロー少年"]森？　あ、山の裏側かな……遠いところだ……この辺の森は誰も行かないから危ないって、お母さんが言ってたっけ……
+[name="虚弱なペッロー少年"]もうこんな夜だし、あの人たち、明かりになるものを持ってないならきっと僕の助けがいるよね。ぼ、僕もお母さんみたいに……人助けをするんだ！
+[Character(name="avg_253_greyy_1#1$1")]
+[name="虚弱なペッロー少年"]あの人たちを探そう……！　か、必ず力になるんだ！
+[dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[character]
+[delay(time=1)]
+[Background(image="bg_coldforest", screenadapt="coverall", block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+[Character(name="avg_253_greyy_1#1$1")]
+[name="虚弱なペッロー少年"]ゴホゴホッ、結構歩いたような……まだ誰も見つからないなんて……
+[name="虚弱なペッロー少年"]うっ、頭がくらくらする──
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]ダメだ、しっかりしなきゃ。一度決めたことは最後までやるんだ。強くなるんだ、僕は……
+[name="虚弱なペッロー少年"]ぼ、僕は……
+[dialog]
+[PlaySound(key="$bodyfalldown2", volume=1)]
+[CameraShake(duration=0.5, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[characteraction(name="middle", type="move", ypos=-50, fadetime=2,block=true)]
+[character(fadetime=0.5)]
+[delay(time=2)]
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Background(image="bg_black", screenadapt="coverall", block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[delay(time=0.51)]
+二時間後
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=1)]
+[Background(image="bg_ri_1", screenadapt="coverall", block=true)]
+[PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=1)]
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]（三時五十分、そろそろね。）
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[delay(time=1.5)]
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]……！　どうしてテントが開いてるの！？
+[name="医療オペレーター"]あの子がいない！？　一体どこに！？
+[name="医療オペレーター"]何てこと……失敗した、二時間は長すぎたんだわ……！
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[character]
+[delay(time=1)]
+[Background(image="bg_coldforest", screenadapt="coverall", block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$rungeneral", volume=1)]
+[delay(time=1)]
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]大変よ、さっき助けたあの子がいなくなってしまったの。あなたたちも周りを捜索して──！
+[dialog]
+[character]
+[delay(time=1)]
+[Character(name="char_empty")]
+[PlaySound(key="$rungeneral", volume=1)]
+[characteraction(name="middle", type="move", xpos=-200, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="middle", type="move", xpos=200, fadetime=0.8, block=false)]
+[Character(name="avg_npc_012",fadetime=0.8)]
+[delay(time=1)]
+[name="事務所オペレーターA"]ここにはいないようだ──
+[dialog]
+[character]
+[delay(time=1)]
+[Character(name="char_empty")]
+[PlaySound(key="$rungeneral", volume=1)]
+[characteraction(name="middle", type="move", xpos=200, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="middle", type="move", xpos=-200, fadetime=0.8, block=false)]
+[Character(name="avg_npc_089",fadetime=0.8)]
+[delay(time=1)]
+[name="事務所オペレーターB"]こっちもいない──
+[dialog]
+[character]
+[PlaySound(key="$rungeneral", volume=1)]
+[delay(time=1)]
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]ちょっと、あそこ、なんか光ってない？
+[name="医療オペレーター"]──あっ、いたわ、ここよ！
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[character]
+[delay(time=1)]
+[Background(image="bg_ri_1", screenadapt="coverall", block=true)]
+[PlayMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+翌日の朝
+[Character(name="avg_253_greyy_1#1$1",fadetime=0.5, block=true)]
+[name="虚弱なペッロー少年"]……
+[name="虚弱なペッロー少年"]……うっ、朝？
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]ふぅ──ようやく目を覚ましたわね。
+[name="医療オペレーター"]お水よ、飲める？
+[Character(name="avg_npc_089")]
+[name="事務所オペレーターB"]温めてる粥を持ってくる。胃に優しいやつだ。ゆうべから炊いていたから、噛まずに飲み込んでも大丈夫だろう。
+[Character(name="avg_253_greyy_1#10$1")]
+[name="虚弱なペッロー少年"]えっ、あ、ありがとうございます！
+[Character(name="avg_253_greyy_1#9$1")]
+[name="虚弱なペッロー少年"]ぼ、僕はいったい──？
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]……その、ごめんなさいね……きちんと看てあげられなくて……
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]い、いえそんな！　僕が勝手に外に出たんです、外が暗くなってたから──
+[Character(name="avg_npc_089")]
+[name="事務所オペレーターB"]──粥を持ってきたぞ。
+[name="事務所オペレーターB"]何の話をしてる？　君、喋るのもいいが、まずは腹ごしらえだ。昨日から何も食べていないだろう？　あとでもう一回リィタが検査をするからな。
+[Character(name="avg_npc_012")]
+[name="事務所オペレーターA"]よっ！　目が覚めたんだな。ほら、体を起こすの手伝ってやるよ。夜中にあんだけ歩き回って、体力も限界だろ？　リィタ、ここは俺らで見てるから、お前は自分の仕事に戻っていいぞ。
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]ええ、頼むわね。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[character]
+[delay(time=1)]
+[Background(image="bg_ri_1", screenadapt="coverall", block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=1)]
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]検査が終わったわ。多少栄養不足ではあるけど、ほかは特に問題なさそうね。鉱石病に関してはまだ軽症の段階。詳しくは専門的な設備があるところで精密検査してからだね。
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=1)]
+[name="事務所オペレーターA"]心配すんな！　おじさんもお姉さんも、君のことを助けたからには途中で放り出したりしないさ。ここで安心して休みな。元気になってもらわないと困るからな！
+[name="事務所オペレーターA"]それとだな。君に言っておかなくちゃならないことがあるんだ。
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=2)]
+[name="事務所オペレーターB"]ここは臨時の医療用テントで、俺たちはロドスという医療会社の事務所の駐在員なんだ。
+[name="事務所オペレーターB"]昨日ちょっと話し合ったんだが、今の状況では……すまないが、君の安全を長期間保証してやることはできない。
+[name="事務所オペレーターB"]それと君……君の住んでいたところで一体何があったのか、わかるかい？
+[Character(name="avg_253_greyy_1#7$1")]
+[name="虚弱なペッロー少年"]わ、わかりません……
+[name="虚弱なペッロー少年"]お母さんが、遠くへ逃げなさいって言って僕を送り出したんです……そ、それからお母さんは戻って行きました……
+[name="虚弱なペッロー少年"]お父さんも、何日か前に、工場へ新しい仕事を探しに行くと言ったきり、帰ってこなくて……
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]……あとのことは、僕もよくわかりません……
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=2)]
+[name="事務所オペレーターB"]なら、自分の病気のことについては？
+[Character(name="avg_253_greyy_1#7$1")]
+[name="虚弱なペッロー少年"]知ってます……身体に石が出る病気だってみんなが言ってました。僕たちの住むところでは、これにかかる人がとても多くて……
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=2)]
+[name="事務所オペレーターB"]じゃあ……君のご両親も感染者なのか？
+[Character(name="avg_253_greyy_1#7$1")]
+[name="虚弱なペッロー少年"]うん……工場で事故にあって……
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=1)]
+[name="事務所オペレーターA"]……
+[name="事務所オペレーターA"]大勢を感染者にしたうえで、生き延びるチャンスすらも奪うのか、ヤツらはなんて*ボリバルスラング*だ！
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]ちょっと、子供の前よ！
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=1)]
+[name="事務所オペレーターA"]……悪い、興奮しすぎた。でもこんなことってよぉ……
+[name="事務所オペレーターA"]すまん、早く続きを話してやれ。俺はちょっと考えただけでも爆発しそうだ。
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=2)]
+[name="事務所オペレーターB"]ああ、昨日話し合った結果だが、君に俺たちの会社を紹介しようってことになった。話を聞いて、君がどう思うか聞きたいんだ。それと、本部に行ってみる気はあるのかどうかもな。
+[name="事務所オペレーターB"]ここにも設備はあるが、ロドス本部にはより優れたものが備わっている。それに、君は電気系のアーツを使えるのだろう？
+[name="事務所オペレーターB"]本部には優秀な人材が多く在籍している。中には強力なアーツを使える者も多い。君にとっても学べることが多いだろう。
+[Character(name="avg_253_greyy_1#5$1")]
+[name="虚弱なペッロー少年"]強力なアーツ？
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=2)]
+[name="事務所オペレーターB"]ああ、そうだ。君のアーツは誰に教わった？
+[Character(name="avg_253_greyy_1#10$1")]
+[name="虚弱なペッロー少年"]お母さんに……
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=1)]
+[name="事務所オペレーターA"]はぁ……
+[name="事務所オペレーターA"]さっきはすまなかった、おじさんもわざと君の前で汚い言葉を使ったわけじゃない。君のご両親については、残念ながら今のところは……でも、約束するよ。絶対ここで探し続けるから。
+[Character(name="avg_253_greyy_1#10$1")]
+[name="虚弱なペッロー少年"]い、いいえ。そんな謝らないでください！
+[name="虚弱なペッロー少年"]その……
+[Character(name="avg_253_greyy_1#12$1")]
+[name="虚弱なペッロー少年"]助けてくださって、本当に感謝しています……ぼ、僕も、何か皆さんにお返しがしたくて……
+[name="虚弱なペッロー少年"]ぼ、僕は少しだけ電気系のアーツが使えるので、昨日の夜中に目が覚めて、辺りは暗くて、灯りもなかったから……
+[name="虚弱なペッロー少年"]皆さんもここでは電気がないんでしょう？　僕の家もそうでしたから……だから、ぼ、僕、電気を作ってあげたくって……今の僕にできるお礼はそれくらいしか……
+[name="虚弱なペッロー少年"]その、昨日はテントの中が真っ暗だったから、皆さんに何かあったんじゃないかと思って……でも、ちょっと歩いたら気を失っちゃって、目が覚めたらベッドの上で……
+[Character(name="avg_253_greyy_1#6$1")]
+[name="虚弱なペッロー少年"]これ、僕のアーツユニットなんです。昨日はすごく疲れてたから、そんなに光らなかったけど……いつもなら家じゅうを照らせるんです！
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]あなた、昨日はここに明かりをつけようとして……？
+[Character(name="avg_253_greyy_1#10$1")]
+[name="虚弱なペッロー少年"]は、はい！
+[name="虚弱なペッロー少年"]お母さんに教わったアーツを使えば、僕のアーツユニットはずっと光り続けられるんです！
+[name="虚弱なペッロー少年"]僕はお役に立てましたか……？
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]……！
+[name="医療オペレーター"]（この子は……そんなことのために……！）
+[name="医療オペレーター"]ええ！　とっても役に立ったわよ！
+[name="医療オペレーター"]ゆうべ、このおじさん二人は道に迷っちゃって、外は真っ暗だったから、あなたの作った光を頼りにやっとここに帰れたのよ。
+[name="医療オペレーター"]二人ともずっとあなたにお礼が言いたかったんだけど、朝から忙しくて忘れちゃってたみたいね。ね、そうでしょ？
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=2)]
+[name="事務所オペレーターB"]……ああ！　そうだ！
+[name="事務所オペレーターB"]いやあ、危うく野宿をしなきゃならないところだった。そんな時に遠くでぼんやりと光ってるのが見えて、それを辿ったら君がいたってわけさ。君がいなかったら道すら見当たらなかっただろうな！
+[name="事務所オペレーターB"]（目くばせをする）
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=1)]
+[name="事務所オペレーターA"]（ハッと気づく）
+[name="事務所オペレーターA"]そうだぞ！　君の作ってくれた光は、夜ではすごく明るかったよ。本当にありがとうな！
+[Character(name="avg_253_greyy_1#3$1")]
+[name="虚弱なペッロー少年"]ほ、本当ですか！
+[name="虚弱なペッロー少年"]えっと、じゃあ僕……ロドスに行きたいです！　体を治して、超強力なアーツを学んで、それで戻ったら皆さんのお役に立ちます！
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]ええ、それがいいわ！
+[Character(name="avg_253_greyy_1#1$1")]
+[name="虚弱なペッロー少年"]今の僕じゃ、ここにいても皆さんのお役に立てないことはわかってます。お父さんとお母さんもどこにいるのか……探すのは皆さんにお願いするしかありません……
+[name="虚弱なペッロー少年"]でも病気を治したら、きっとここへ戻ります！　必ず戻ってきて、ここを夜でも明るくしてみせますから……！
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]うん。それじゃあ私たちも、ここであなたの帰りを待ってるわね。約束よ？　もっとたくさんアーツを学んで、私たちを助けてちょうだいね。
+[Character(name="avg_253_greyy_1#10$1")]
+[name="虚弱なペッロー少年"]はい！
+[Character(name="char_016_medic")]
+[name="医療オペレーター"]そうだ、あなた名前は何て言うの？　まだ聞いてなかったわね。
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=1)]
+[name="事務所オペレーターA"]そうそう、ロドスじゃみんなコードネームを持ってるんだぜ。俺たちは昔馴染みだから、本名で呼び合ってるんだけどな。
+[name="事務所オペレーターA"]俺はフェルナンド、こいつはペドロ、であのお姉さんはリィタってんだ。
+[Character(name="avg_npc_012",name2="avg_npc_089",focus=2)]
+[name="事務所オペレーターB"]ロドスに行くからには、コードネームを持たなきゃな。好きなように決めていいぞ。
+[Character(name="avg_253_greyy_1#9$1")]
+[name="虚弱なペッロー少年"]うーんと……
+[dialog]
+[Character(name="avg_253_greyy_1#10$1",fadetime=0.6,block=true)]
+[Delay(time=0.61)]
+[name="虚弱なペッロー少年"]じゃあ、僕は……グレイです！
+[Dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=3, block=true)]
+[Character]
+[Image]

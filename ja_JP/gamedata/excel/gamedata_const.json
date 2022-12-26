@@ -959,6 +959,7 @@
     "vc.adgacha": "<color=#0098DC>{0}</color>",
     "vc.attention": "<color=#FFD800>{0}</color>",
     "act.missiontips": "<color=#d9bd6a>{0}</color>",
+    "lv.hdbg": "<color=#7ba61f>{0}</color>",
     "tu.ht": "<color=#ff8d00>{0}</color>",
     "act.spreward": "<color=#FF5001>{0}</color>",
     "act.timelimit": "<color=#ffe300>{0}</color>",
@@ -1054,6 +1055,7 @@
   "isDynIllustEnabled": true,
   "isDynIllustStartEnabled": true,
   "isRoguelikeTopicFuncEnabled": true,
+  "isRoguelikeAvgAchieveFuncEnabled": true,
   "voucherSkinRedeem": 1,
   "voucherSkinDesc": "各オペレーターの異格バージョン（異格オペレーター）が<color=#ffa633>初回</color>実装される際、<color=#ffa633>純正源石</color>を使用して該当オペレーターのコーデを購入したことがある場合、異格オペレーター<color=#ffa633>初回</color>実装後に<color=#33b5ff>【コーデ交換券】</color>*1が付与されます。\n\n以下の状況においては、選択券は<color=#ffa633>付与されません</color>：\n1.異格オペレーターの初回実装前に、該当オペレーターのコーデを【コーデ交換券】を使用して交換した場合。\n2.異格オペレーターが初回実装された後、純正源石を使用して該当オペレーターのコーデを購入した場合。\n3.異格オペレーターが初回実装された後、該当オペレーターのコーデを【コーデ交換券】を使用して交換した場合。\n\n【コーデ交換券】は使用時に発売中のコーデのみ交換することができます。発売中のコーデを全て購入済みの場合、【コーデ交換券】は<color=#ffa633>使用できません</color>。\n\nまた、今後【コーデ交換券】<color=#ffa633>使用不可</color>のコーデが実装される場合は、随時告知を行ってまいります。",
   "charmEquipCount": 5,
@@ -1081,12 +1083,12 @@
     "ba.invisible": {
       "termId": "ba.invisible",
       "termName": "ステルス",
-      "description": "未ブロック時敵の攻撃の対象にならない"
+      "description": "未ブロック時、攻撃の対象にならない"
     },
     "ba.camou": {
       "termId": "ba.camou",
       "termName": "迷彩",
-      "description": "未ブロック時敵の通常攻撃の対象にならない（範囲攻撃のダメージは無効化できない）"
+      "description": "未ブロック時、通常攻撃の対象にならない（範囲攻撃のダメージは無効化できない）"
     },
     "ba.fragile": {
       "termId": "ba.fragile",
@@ -1186,62 +1188,92 @@
     "ba.levitate": {
       "termId": "ba.levitate",
       "termName": "浮遊",
-      "description": "飛行ユニットとなり、移動、攻撃、スキル発動不能となる。重量ランクが3以上の敵に対しては効果時間が50%減少"
+      "description": "飛行ユニットとなり、移動、攻撃、スキル発動不能となる。重量ランクが4以上のユニットに対しては効果時間が50%減少"
+    },
+    "ba.physhield": {
+      "termId": "ba.physhield",
+      "termName": "対物理シールド",
+      "description": "ダメージを受けるとき、対物理シールドを1枚消耗することによって物理ダメージを1回ガード可能"
+    },
+    "ba.magicfragile": {
+      "termId": "ba.magicfragile",
+      "termName": "対術脆弱",
+      "description": "術の被ダメージが効果値分上昇（同名の状態は効果値が高いほうのみ適用）"
     },
     "cc.bd_A_1": {
       "termId": "cc.bd_A_1",
       "termName": "念力",
-      "description": "付与可能オペレーター：\nロスモンティス"
+      "description": "当該基地スキルを持つオペレーター：\nロスモンティス"
     },
     "cc.bd_A_2": {
       "termId": "cc.bd_A_2",
       "termName": "意識実体",
-      "description": "付与可能オペレーター：\nロスモンティス"
+      "description": "当該基地スキルを持つオペレーター：\nロスモンティス"
+    },
+    "cc.bd_B_1": {
+      "termId": "cc.bd_B_1",
+      "termName": "彷徨う旋律",
+      "description": "当該基地スキルを持つオペレーター：\nエーベンホルツ"
+    },
+    "cc.bd_B_2": {
+      "termId": "cc.bd_B_2",
+      "termName": "茫然たる和声",
+      "description": "当該基地スキルを持つオペレーター：\nエーベンホルツ"
     },
     "cc.bd_A": {
       "termId": "cc.bd_A",
       "termName": "思念連鎖",
-      "description": "スキル<$cc.bd_A_1><@cc.rem>念力</></>、<$cc.bd_A_2><@cc.rem>意識実体</></>に影響する\n付与可能オペレーター：\nロスモンティス"
+      "description": "スキル<$cc.bd_A_1><@cc.rem>念力</></>、<$cc.bd_A_2><@cc.rem>意識実体</></>に影響する\n以下のオペレーターが持つ基地スキルにより付与可能：\nロスモンティス"
+    },
+    "cc.bd_B": {
+      "termId": "cc.bd_B",
+      "termName": "静かなる共鳴",
+      "description": "スキル<$cc.bd_B_1><@cc.rem>彷徨う旋律</></>、<$cc.bd_B_2><@cc.rem>茫然たる和声</></>に影響する\n以下のオペレーターが持つ基地スキルにより付与可能：\nエーベンホルツ"
     },
     "cc.bd_a1": {
       "termId": "cc.bd_a1",
       "termName": "知覚情報",
-      "description": "<$cc.bd_A><@cc.rem>思念連鎖</></>と関連するスキルに影響する\n付与可能オペレーター：\nロスモンティス、ウィスパーレイン、シー、リィン、アイリス"
+      "description": "<$cc.bd_A><@cc.rem>思念連鎖</></>、<$cc.bd_B><@cc.rem>静かなる共鳴</></>と関連するスキルに影響する\n付与可能オペレーター：\nロスモンティス、エーベンホルツ、ウィスパーレイン、シー、リィン、アイリス、ツェルニー"
     },
     "cc.bd_b1": {
       "termId": "cc.bd_b1",
       "termName": "俗世の憂",
-      "description": "付与可能オペレーター：\nシー、リィン、ウユウ、マルベリー"
+      "description": "以下のオペレーターが持つ基地スキルから提供される：\nシー、リィン、ウユウ、マルベリー"
     },
     "cc.bd_ash": {
       "termId": "cc.bd_ash",
       "termName": "情報備蓄",
-      "description": "付与可能オペレーター：\nAsh"
+      "description": "以下のオペレーターが持つ基地スキルから提供される：\nAsh"
     },
     "cc.bd_tachanka": {
       "termId": "cc.bd_tachanka",
       "termName": "ウルサスドリンク",
-      "description": "付与可能オペレーター：\nTachanka"
+      "description": "以下のオペレーターが持つ基地スキルから提供される：\nTachanka"
     },
     "cc.bd_a1_a1": {
       "termId": "cc.bd_a1_a1",
       "termName": "記憶の欠片",
-      "description": "<$cc.bd_a1><@cc.rem>知覚情報</></>と関連するスキルに影響する\n付与可能オペレーター：\nウィスパーレイン"
+      "description": "<$cc.bd_a1><@cc.rem>知覚情報</></>と関連する変量に影響する\n付与可能オペレーター：\nウィスパーレイン"
     },
     "cc.bd_a1_a2": {
       "termId": "cc.bd_a1_a2",
       "termName": "夢",
-      "description": "<$cc.bd_a1><@cc.rem>知覚情報</></>と関連するスキルに影響する\n付与可能オペレーター：\nアイリス"
+      "description": "<$cc.bd_a1><@cc.rem>知覚情報</></>と関連する変量に影響する\n付与可能オペレーター：\nアイリス"
+    },
+    "cc.bd_a1_a3": {
+      "termId": "cc.bd_a1_a3",
+      "termName": "小節",
+      "description": "<$cc.bd_a1><@cc.rem>知覚情報</></>と関連する変量に影響する\n付与可能オペレーター：\nツェルニー"
     },
     "cc.m.var1": {
       "termId": "cc.m.var1",
       "termName": "再利用",
-      "description": "付与可能オペレーター：\nヴァーミル"
+      "description": "当該基地スキルを持つオペレーター：\nヴァーミル"
     },
     "cc.m.var2": {
       "termId": "cc.m.var2",
       "termName": "コンビネーション",
-      "description": "付与可能オペレーター：\nワイフー"
+      "description": "当該基地スキルを持つオペレーター：\nワイフー"
     },
     "cc.g.lgd": {
       "termId": "cc.g.lgd",
@@ -1266,7 +1298,7 @@
     "cc.g.sp": {
       "termId": "cc.g.sp",
       "termName": "異格",
-      "description": "対象オペレーター：\n炎獄ラヴァ、濁心スカジ、遊龍チェン、耀騎士ニアール、寒芒クルース、帰溟スペクター"
+      "description": "対象オペレーター：\n炎獄ラヴァ、濁心スカジ、遊龍チェン、耀騎士ニアール、寒芒クルース、帰溟スペクター、濯塵ハイビスカス"
     },
     "cc.g.abyssal": {
       "termId": "cc.g.abyssal",
@@ -1318,8 +1350,8 @@
       "termName": "シードラゴン",
       "description": "付与可能オペレーター：\nウィーディ"
     },
-    "cc.t.line_gold": {
-      "termId": "cc.t.line_gold",
+    "cc.t.flow_gold": {
+      "termId": "cc.t.flow_gold",
       "termName": "純金生産ライン",
       "description": "<@cc.kw>純金</>を製造中の<@cc.kw>製造所</><@cc.kw>1</>つにつき、純金生産ライン<@cc.kw>+1</>"
     },
@@ -1350,6 +1382,6 @@
     }
   },
   "storyReviewUnlockItemLackTip": "事象の欠片の数が足りません。購買資格証ショップあるいはイベントショップで購入してください",
-  "dataVersion": "27.4.0",
-  "resPrefVersion": "27d11d0"
+  "dataVersion": "28.1.0",
+  "resPrefVersion": "28d2d0"
 }
