@@ -1,0 +1,755 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="bg_lungmencommand",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$m_dia_street_intro",key="$m_dia_street_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[delay(time=1)]
+1099年
+罗德岛工程部
+实用性科学技术第十三项目组
+“对于腐蚀剂的进一步研究与相应防护”
+负责人：蚀清 星源
+[Dialog]
+[delay(time=1)]
+[Character(name="avg_489_serum_1#1$1",fadetime=1)]
+[delay(time=2)]
+[name="蚀清"]大家工作辛苦了。
+[name="蚀清"]那么......
+[Dialog]
+[Character(fadetime=1)]
+话音未落，蚀清就惯常地戴上了眼罩休憩。
+[Dialog]
+[delay(time=1)]
+[PlaySound(key="$d_gen_walk_n", volume=0.7)]
+[Character(name="avg_135_halo_1#1$1",fadetime=1)]
+[delay(time=2)]
+[name="星源"]博士，晚上好。
+[Dialog]
+[Character]
+[Decision(options="星源，晚上好。;蚀清睡着了？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#1$1",fadetime=1.5)]
+[delay(time=2)]
+[name="蚀清"]博士。
+[name="蚀清"]晚上好。
+[Dialog]
+[Character]
+[Decision(options="我正好顺路过来看看，一切顺利吗？;项目上有遇到什么困难吗？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#10$1")]
+[name="蚀清"]如果博士有兴趣了解的话......
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]博士，可以麻烦您举着这个吗？
+[Dialog]
+[Delay(time=1)]
+[characteraction(name="middle", type="move", xpos=30, fadetime=0.5,block=false)]
+[Delay(time=0.5)]
+[characteraction(name="middle", type="move", xpos=-30, fadetime=0.5,block=false)]
+[Delay(time=1)]
+[name="蚀清"]博士请放心，接下来的实验会在可控范围内进行。
+[name="蚀清"]您手中这块装甲板已经喷涂了最新改进过的防护覆膜，足以保护您的安全。
+[Dialog]
+[Character]
+[Decision(options="没问题，是这样拿吗？;等等，保护我的安全？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]博士您可以看到，这块装甲板已经遭到了相当程度的腐蚀侵害。不过新的覆膜技术的改进重点并不在反腐蚀上面......
+[name="蚀清"]星源，可以麻烦你一下吗？请对装甲板使用源石技艺攻击。
+[Character(name="avg_135_halo_1#7$1")]
+[name="星源"]等下，这样的实验方法是否有些太过冒险。
+[Dialog]
+[Character]
+[Decision(options="没有关系，我相信你们的技术。;放心，我能够保护好自己。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]非常感谢您的配合，博士。
+[Character(name="avg_135_halo_1#12$1")]
+[name="星源"]既然这样......那好吧......
+[Dialog]
+[Character(name="avg_135_halo_1#11$1")]
+[Delay(time=1)]
+[PlaySound(key="$d_avg_magic_4")]
+[CameraShake(duration=0.5, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=2)]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]没错，改进后的防护覆膜即使遭到腐蚀损害，依旧能够发挥抵挡一定程度的源石技艺攻击的效果。这是之前所不具备的。
+[name="蚀清"]当然，这都要归功于星源小姐的努力。
+[Character(name="avg_489_serum_1#7$1")]
+[name="蚀清"]很遗憾，在腐蚀剂的侵蚀效果提升方面我还没有取得非常明显的突破。
+[Character(name="avg_135_halo_1#4$1")]
+[name="星源"]......
+[Character(name="avg_135_halo_1#8$1")]
+[name="星源"]博士，对不起。我需要你再配合我进行一次攻击实验。
+[Dialog]
+[Character]
+[Decision(options="没有问题。;等......等一下！", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_135_halo_1#6$1")]
+[name="星源"]以我电光！哈！！ 
+[Dialog]
+[Blocker(a=0.5, r=255, g=255, b=20, fadetime=0.1,block=true)]
+[PlaySound(key="$b_char_energyharm")]
+[CameraShake(duration=1, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1,block=true)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#11$1")]
+[Delay(time=2)]
+[name="星源"]果然......在这样强烈的攻击下，居然才将将穿透了装甲板的防御。
+[Character(name="avg_135_halo_1#7$1")]
+[name="星源"]啊！博士你没事吧！对不起......我......
+[Dialog]
+[Character]
+[Decision(options="放心，我没事。;好厉害的攻击力。;好强悍的防御力。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_135_halo_1#3$1")]
+[name="星源"]......呼，对不起......
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]很显然，这种防护覆膜的强度已经远远超过了项目的需求。
+[Character(name="avg_135_halo_1#4$1")]
+[name="星源"]但它并没达到理论设计中我们能够实现的上限。
+[Character(name="avg_135_halo_1#11$1")]
+[name="星源"]如果我们进一步改进呢？我认为有必要进行更多的实验和测试。
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]我认同你的看法，但是我不认为盲目地追求极致是一个明智的选择。
+[Character(name="avg_135_halo_1#8$1")]
+[name="星源"]......
+[name="星源"]我需要详细记录下这一次的实验效果。
+[Character(name="avg_135_halo_1#10$1")]
+[name="星源"]博士，辛苦了。
+[Dialog]
+[Character]
+[Decision(options="很荣幸能够帮上忙。;你们也辛苦了。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]博士，现在正好六点了。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]那么请允许我先行下班离开，非常感谢博士今天能陪同我们实验。
+[name="蚀清"]对了，我的桌上有夏栎小姐送来的糖果，还有鲤先生拿来的炎国的茶叶，都可以很好地去除疲惫。请不要客气，随意拿取。
+[name="蚀清"]那么......博士，星源，回见。
+[dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(fadetime=1)]
+[Delay(time=2)]
+[Character(name="avg_135_halo_1#11$1")]
+[name="星源"]......
+[Dialog]
+[Character]
+[Decision(options="星源，你要不也休息一下。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_135_halo_1#10$1")]
+[name="星源"]啊......博士你不用在意我，我可能会弄到很晚。
+[Character(name="avg_135_halo_1#11$1")]
+[name="星源"]我要再做一些研究和测试。
+[stopmusic(fadetime=3)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[PlaySound(key="$d_avg_doorknob",volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[playMusic(intro="$alive_intro",key="$alive_loop", volume=0.2)]
+[Delay(time=2)]
+[Character(name="avg_489_serum_1#9$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="蚀清"]（深呼吸）
+[Character(name="avg_489_serum_1#10$1")]
+[name="蚀清"]（伸个懒腰）
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]（深呼吸）
+[Dialog]
+[MusicVolume(volume=0.5, fadetime=2)]
+[Delay(time=2)]
+[Character(name="avg_489_serum_1#10$1")]
+[name="蚀清"]呼......下班！
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]音乐有点太大声了，不能打扰其他人，调小一点。
+[Dialog]
+[MusicVolume(volume=0.3, fadetime=2)]
+[Delay(time=2)]
+[Character(name="avg_489_serum_1#10$1")]
+[Characteraction(name="middle", type="jump", xpos=20, power=-15,times=1, fadetime=1, block=true)]
+[delay(time=1.3)]
+[Characteraction(name="middle", type="jump", xpos=-20, power=-15,times=1, fadetime=1, block=true)]
+[name="蚀清"]哼哼~（跟着音乐舞动）
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]把加湿打开吧，屋里有些过于干燥了。
+[Dialog]
+[Character]
+[PlaySound(key="$doorknockquite")]
+[Delay(time=1)]
+[name="工程部干员"]蚀清组长，你在吗？
+[name="工程部干员"]东西我给你送过来了。
+[Dialog]
+[StopMusic(fadetime=1)]
+[Delay(time=1)]
+[playMusic(intro="$m_dia_street_intro",key="$m_dia_street_loop", volume=0.4)]
+[PlaySound(key="$dooropenquite")]
+[Character(name="avg_npc_012",fadetime=0.5)]
+[Delay(time=1)]
+[name="工程部干员"]这是你申请的材料，麻烦签收一下。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]辛苦了，麻烦放在那边角落的位置吧。
+[name="蚀清"]卸下来就可以了，之后我自己会进行整理的。
+[Character(name="avg_npc_012")]
+[name="工程部干员"]话说你怎么申请了这么多的废弃实验材料？不仅有我们组的，还有其他几个组的。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]这只不过是我自己的一点兴趣而已，跟工作无关。
+[Character(name="avg_npc_012")]
+[name="工程部干员"]......
+[name="工程部干员"]你是个人兴趣......星源小姐是个人想法。
+[name="工程部干员"]真不知道你们两个神神秘秘在搞什么。
+[Character(name="avg_489_serum_1#9$1")]
+[PlaySound(key="$d_avg_paper2")]
+[name="蚀清"]这里是签收单，给你。
+[name="蚀清"]还有别的事情吗？
+[Character(name="avg_npc_012")]
+[name="工程部干员"]蚀清组长......这会儿出门一看，就只有我们实验室还亮着灯了。
+[name="工程部干员"]星源小姐都好几天没有回去休息了，要不......你去看看吧。
+[StopMusic(fadetime=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_motorroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$tech_intro",key="$tech_loop", volume=0.4)]
+[Delay(time=1)]
+1089年
+雷神工业实验原型工程部
+[Dialog]
+[Character(name="avg_npc_177",fadetime=0.5)]
+[Delay(time=1)]
+[name="年长的项目经理"]进来吧。
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite")]
+[Character(name="avg_489_serum_1#1$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="蚀清"]大家好！我是新来的研究员蚀清，专业领域是......
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]行了，你先把这些报表填完，然后今天晚上送到财务办公室去。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]好的！大家如果有需要帮忙的地方，都可以叫我哦。
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]干活。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]是！
+[Dialog] 
+[character(fadetime=1)]
+[Background(image="bg_black",screenadapt="coverall",fadetime=2)]
+[Delay(time=3)]
+[Subtitle(text="看到了吗？", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="对，就是在屏幕里的那个人。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Background(image="bg_motorroom",screenadapt="coverall",fadetime=1.5)]
+[Delay(time=2)]
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]还不走吗？
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]我今天不回去了。
+[name="蚀清"]反正我也没什么其他事情，先把这个做完。
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]还有时间呢，不用着急。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]没事，正好我这会儿有些灵感。
+[name="蚀清"]老大你先回去吧。
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]对了蚀清，你来工程部多长时间了？
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]......大概快半年了吧？
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]哦......
+[name="年长的项目经理"]加油。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]是！
+[Dialog] 
+[character(fadetime=1)]
+[Background(image="bg_black",screenadapt="coverall",fadetime=2)]
+[Delay(time=3)]
+[Subtitle(text="你看清屏幕里的样貌了吗？", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Background(image="bg_motorroom",screenadapt="coverall",fadetime=1.5)]
+[Delay(time=2)]
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]蚀清，你过来一下。
+[Character(name="avg_489_serum_1#3$1")]
+[name="蚀清"]怎么了？
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]你来工程部也有两年了吧？我一直觉得你小子很聪明，平时也非常努力。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]谢谢老大！
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]所以......有个项目，不过不是我们项目组的。是我在军方的一个朋友，他们急需一种给士兵用的新型防护材料，活儿很急......
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]我可以做。
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]我可没有跟你开玩笑，你想清楚，也没办法给你派额外的人手。而且你在工程部的日常工作也不能耽误。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]放心交给我吧。
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]......
+[name="年长的项目经理"]好好加油。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]是！
+[Dialog] 
+[character(fadetime=1)]
+[Background(image="bg_black",screenadapt="coverall",fadetime=2)]
+[Delay(time=3)]
+[Subtitle(text="你还记得他的名字吗？", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[StopMusic(fadetime=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_lungmencommand",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$ponder_intro",key="$ponder_loop", volume=0.4)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#11$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="星源"]这组数据......不可能啊？
+[name="星源"]如此明显的错误他怎么会没有发现......
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite")]
+[Delay(time=1)]
+[Character(name="avg_489_serum_1#1$1",fadetime=0.5)]
+[Delay(time=0.6)]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#12$1")]
+[name="星源"]......你不是下班了吗？
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]不好意思打扰了，我回来取一个文件。
+[name="蚀清"]那么，我先走了。
+[Dialog]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#9$1")]
+[name="星源"]你等一下！
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]怎么，是还有别的事情吗？
+[Character(name="avg_135_halo_1#11$1")]
+[name="星源"]我有问题要问你。关于你所负责的腐蚀剂的改进工作。
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]请说。 
+[Character(name="avg_135_halo_1#11$1")]
+[name="星源"]这几个月以来，你在腐蚀剂上一直没有取得特别明显的进展。即便是我和其他组员一起参与，依旧寸步不前。
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]是的，这方面的开发的确远比我预计的要更加困难。
+[Character(name="avg_135_halo_1#11$1")]
+[name="星源"]虽然我一直觉得奇怪，毕竟从理论数据上来看，每一次实验都不应该是这样一个结果。但出于对你的信任，我也没有多想。
+[name="星源"]直到我刚刚查阅之前的实验记录，偶然发现了这个......
+[name="星源"]你的样品报告。
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]请问有什么问题吗？
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="avg_135_halo_1#6$1")]
+[name="星源"]有什么问题？！
+[Character(name="avg_135_halo_1#9$1")]
+[name="星源"]你制造的每一批次的样品中，这一项关键原料的用量都要比我们理论计算的数值小。
+[name="星源"]也就是说，我们几个月以来实验用的样品一直都是不合格的残次品！
+[name="星源"]难怪腐蚀剂的实验效果一直不理想。直到目前为止，也只是勉强达到了项目设计要求。
+[Character(name="avg_489_serum_1#7$1")]
+[name="蚀清"]......
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]对不起，看来的确是我个人非常严重的疏忽。
+[Character(name="avg_135_halo_1#11$1")]
+[name="星源"]你真的没有发现？
+[Character(name="avg_489_serum_1#8$1")]
+[name="蚀清"]是的，对此我深表歉意。
+[Character(name="avg_135_halo_1#11$1")]
+[name="星源"]......
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]......
+[Character(name="avg_135_halo_1#11$1")]
+[name="星源"]那你现在可以按照数据要求，做出合格的样品吗？
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]抱歉，现在不行。
+[name="蚀清"]因为我已经下班了。
+[Character(name="avg_135_halo_1#9$1")]
+[name="星源"]你！
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]明天我会全力配合你的工作，但现在的确是我的下班休息时间。
+[name="蚀清"]关于我工作上的严重失误，我会自己去找到博士说明情况，并承担一切相应的后果。
+[name="蚀清"]那么......明天见。
+[dialog]
+[PlaySound(key="$d_gen_walk_n",volume=0.5)]
+[Character(fadetime=0.5)]
+[Delay(time=0.5)]
+[Character(name="avg_135_halo_1#6$1")]
+[name="星源"]喂！
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="星源"]蚀清！
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_489_serum_1#8$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="蚀清"]（深呼吸）
+[Dialog]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=1, block=true)]
+[Subtitle(text="蚀清对着镜子中的自己......", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="重复着每日的练习。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]（面对工作。）
+[Character(name="avg_489_serum_1#7$1")]
+[name="蚀清"]（各种场合。）
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]（不同同事。）
+[Character(name="avg_489_serum_1#5$1")]
+[name="蚀清"]（什么表情才是最合适的呢？）
+[Dialog]
+[Delay(time=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_motorroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_npc_177")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="年长的项目经理"]蚀清，你在搞什么！
+[name="年长的项目经理"]亏我这么信任你！
+[Character(name="avg_489_serum_1#11$1")]
+[name="蚀清"]可是......我们的数据性能要比原先要求的高出一倍还多。
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]成本呢？！我们得卖多少钱才能收回成本？
+[name="年长的项目经理"]你做赔钱的生意啊？现在这么高的报价，人家那边都不高兴了你知道吗？
+[Character(name="avg_489_serum_1#11$1")]
+[name="蚀清"]可老大你不是说是朋友......
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]哎哟喂......年轻人啊......
+[name="年长的项目经理"]你出去吧。
+[Character(name="avg_489_serum_1#4$1")]
+[name="蚀清"]可是老大......
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]出去！
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]......是。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]所有人！把手上的工作放一放！现在上面有一个紧急的项目。
+[name="年长的项目经理"]你们手上拿到的，是一种出现在战场上的新型防护材料。
+[Character(name="avg_489_serum_1#3$1")]
+[name="蚀清"]这个？！
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]现在，我们的一位重要客户急需能够克制这种防护材料的武器。
+[name="年长的项目经理"]上面只给了我们最多一个月的时间。所以我现在需要你们所有人打起精神，在这一个月里不准请假！不准偷懒！必须完成任务！
+[name="年长的项目经理"]听明白了吗！
+[Character(name="avg_489_serum_1#4$1")]
+[name="蚀清"]老大......
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]什么？
+[Character(name="avg_489_serum_1#11$1")]
+[name="蚀清"]这块材料......我觉得非常像我半年前的那次......
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]干活！有什么话之后再跟我讲。
+[Character(name="avg_489_serum_1#7$1")]
+[name="蚀清"]......
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]听到了吗？
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]是，我明白了。
+[StopMusic(fadetime=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Delay(time=2)]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$sjoyasorrow_intro",key="$sjoyasorrow_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_npc_222",fadetime=0.5)]
+[Delay(time=1)]
+[name="客户方代表"]我们人齐了吗？
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]是的，我的另一位同事还有些事情要处理，我们先开始吧。
+[Character(name="avg_npc_222")]
+[name="客户方代表"]好的......之前的数据资料和样品我们的确都已经收到并进行了试用测试。
+[name="客户方代表"]无论是在性能、品质还是其他方面的确达到了我们的要求。不过......
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]请问还有什么问题吗？
+[Character(name="avg_npc_222")]
+[name="客户方代表"]是这样，我们内部......前段时间也是......经历了一些变动。
+[name="客户方代表"]新来的负责人提出了新的目标方针，并对目前腐蚀剂的性能感到不满，他希望能够达到以下的一些指标要求。
+[Dialog]
+[Character(name="avg_489_serum_1#2$1")]
+[PlaySound(key="$d_avg_paper1")]
+[Delay(time=2)]
+[name="蚀清"]如此高的腐蚀性要求......这已经可以作为大规模杀伤性武器了吧。
+[Character(name="avg_npc_222")]
+[name="客户方代表"]只是......用于个人自卫罢了。
+[name="客户方代表"]另外也是基于一些原因，该项目的预算目前被大幅度地削减......
+[name="客户方代表"]所以在成本控制和接下来的研发费用上，可能会有一些困难，希望你们能够理解......
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]对不起，我打断一下。
+[name="蚀清"]首先对于腐蚀剂新的要求，我现在无法保证一定可以满足，必须先跟我的同事讨论一下。
+[name="蚀清"]但研发周期的延长，必然导致开发成本的增加。如果你说要削减预算......
+[Character(name="avg_npc_222")]
+[name="客户方代表"]那......那把防护系统上那些非必要的功能去掉呢？就只保留基础的防御能力。
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]抱歉，设计修改不是这么简简单单一句话的事情。
+[Character(name="avg_npc_222")]
+[name="客户方代表"]不就是去掉一些功能吗？虽然我不懂啊，但是我觉得对于你们这些专业人士来说，肯定没有那么难吧。
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]......
+[Character(name="avg_npc_222")]
+[name="客户方代表"]然后预算的事情......这个的确没有办法。但是我们内部，非常欣赏你们所表现出来的实力。
+[name="客户方代表"]所以我觉得，大家能不能一起克服一下这些眼前的小困难，当然啦......我们也的确非常抱歉。
+[name="客户方代表"]相信我们未来会有更多长期合作机会。
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]对于这样的回答......
+[name="蚀清"]博士？
+[Dialog]
+[Character]
+[Decision(options="抱歉，对于这样的要求我们无法答应。", values="1;2")]
+[Predicate(references="1")]
+[Character(name="avg_npc_222")]
+[name="客户方代表"]......
+[name="客户方代表"]好吧，那我们这边再商量一下。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[name="客户方代表"]抱歉，鉴于目前的情况，我们这边不得不决定终止该项目的研发。
+[dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_lungmencommand",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Decision(options="辛苦你们做这么久，最后变成这样。;我会跟对方确定违约赔偿的事情。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]谢谢博士。不过我觉得，这是最好的结果了。
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite",volume=0.7)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#8$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="星源"]......
+[Character(name="avg_489_serum_1#4$1")]
+[name="蚀清"]......
+[Character(name="avg_135_halo_1#1$1")]
+[name="星源"]博士！你来得正好！
+[name="星源"]这几天通过对之前实验数据的反复对比，终于找到了问题所在！这是新的腐蚀剂样品。
+[Character(name="avg_135_halo_1#7$1")]
+[name="星源"]啊，博士！你这次不用站在装甲板后面了。注意安全！
+[Character(name="avg_489_serum_1#7$1")]
+[name="蚀清"]......
+[Dialog]
+[Character]
+[Delay(time=1)]
+[PlaySound(key="$d_avg_magic_4")]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=2)]
+[Character(name="avg_135_halo_1#2$1")]
+[name="星源"]博士，你看到了吗？新的腐蚀剂对于之前版本的防护覆膜几乎造成了毁灭性的打击。
+[Character(name="avg_135_halo_1#5$1")]
+[name="星源"]但是！但是！针对新的腐蚀剂，我又调整升级了防护覆膜的技术设计思路！
+[Dialog]
+[Character]
+[Decision(options="......;星源，有件事我需要跟你说明一下。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_135_halo_1#1$1")]
+[name="星源"]博士，怎么了？
+[name="星源"]是刚刚开会有什么问题吗？
+[Character(name="avg_489_serum_1#7$1")]
+[name="蚀清"]......
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]没什么大的事情。
+[name="蚀清"]客户认为现有的腐蚀剂已经达到了他们预期的效果，反而希望在防护能力上进一步提升。
+[name="蚀清"]星源小姐的努力给我们接下来的研究指出了明确的方向。
+[name="蚀清"]而且这种材料之后也能够用在我们自己干员的防护上，对吧博士？
+[Dialog]
+[Character]
+[Decision(options="是的，罗德岛的干员会得到更好的保护。;......蚀清，星源，你们辛苦了。;星源，你现在必须去休息。这是命令。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]对了，博士。
+[name="蚀清"]我有事找您。
+[Predicate(references="2")]
+[Character(name="avg_135_halo_1#1$1")]
+[name="星源"]谢谢博士！
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]这是我们应该做的。
+[name="蚀清"]对了，博士。
+[name="蚀清"]我有事找您。
+[Predicate(references="3")]
+[Character(name="avg_135_halo_1#12$1")]
+[name="星源"]......好吧。
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]对了，博士。
+[name="蚀清"]我有事找您。
+[Predicate(references="1;2;3")]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_489_serum_1#4$1")]
+[name="蚀清"]所以，在腐蚀剂的研究上，的确是我的疏忽，弄错了一项关键原料的用量。
+[name="蚀清"]我愿意承担所有的责任和后果。
+[Dialog]
+[Character]
+[Decision(options="......;蚀清，你刚刚为什么没有说实话？;你是在担心星源吗？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]嗯？
+[name="蚀清"]博士，您知道我的专业领域是什么吗？
+[Dialog]
+[Character]
+[Decision(options="腐蚀剂科学。;反腐蚀覆膜防护技术。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]没错，从加入工程部的第一天开始，我就在腐蚀和反腐蚀之间不断地研究，不断地遭遇挫折，又不断地取得突破。
+[name="蚀清"]但我从来没有注意对自身的防护，也没有想过这些试剂也在悄悄地腐蚀着我自己。
+[Character(name="avg_489_serum_1#7$1")]
+[name="蚀清"]直到有一天，我才突然意识到，所谓的梦想、激情、理想其实也是不耐腐蚀的材料。
+[name="蚀清"]......
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]所以......星源现在的工作状态，不也挺好的吗？博士。
+[name="蚀清"]说起来，已经快六点了。
+[Character(name="avg_489_serum_1#1$1")]
+[name="蚀清"]博士，可以申请下班了吗？
+[Dialog]
+[Character]
+[Decision(options="最后一个问题。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]博士您请讲。
+[Dialog]
+[Character]
+[Decision(options="你和我说实话，真的弄错原料用量了吗？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]......
+[name="蚀清"]博士，炎国有一个矛与盾的故事。很久之前鲤先生和我讲的。
+[Dialog]
+[Character]
+[Decision(options="我知道。;我不知道。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]当你拥有最坚固的盾的时候，一定会有人想来挑战，想要尝试突破你的极限。所以就诞生了最锋利的矛。
+[name="蚀清"]而当这把最锋利的矛无往不利的时候，一定会有人试图找到办法，挑战它的锋芒与威力。于是就诞生了最坚固的盾。
+[Character(name="avg_489_serum_1#7$1")]
+[name="蚀清"]这是一个永无止境的循环，没有人可以预料到最终的结果是什么。
+[name="蚀清"]除非......
+[name="蚀清"]再没有能够拿起矛与盾的人。
+[Dialog]
+[Character]
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]啊......一不小心扯远了。无论如何，这都是我的工作失误，所有责任我一个人承担。
+[name="蚀清"]不过还是等明天上班再说吧。
+[name="蚀清"]既然现在已经下班了......
+[name="蚀清"]（深呼吸）
+[Character(name="avg_489_serum_1#10$1")]
+[name="蚀清"]（伸个懒腰）
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]（深呼吸）
+[Dialog]
+[Character]
+[Decision(options="蚀清，你在干嘛？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]嗯？
+[StopMusic(fadetime=2)]
+[name="蚀清"]博士您要听听吗？
+[Dialog]
+[Delay(time=1)]
+[playMusic(intro="$alive_intro",key="$alive_loop", volume=0.4)]
+[Delay(time=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_motorroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]我问你，它能不能对目标造成明显的伤害？
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]没有问题，因为那块材料用的就是我之前实验出的那套配方。
+[name="蚀清"]虽然我不知道为什么会出现在外面。
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]*哥伦比亚俚语*！
+[name="年长的项目经理"]目前这个武器的安全使用寿命是多少？
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]大概在三十个弹药基数左右。
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]那能不能按时批量交付？
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]不能，因为我们并没有完成全部的测试。那些士兵拿着它就是送死。
+[Dialog]
+[Character(name="avg_489_serum_1#5$1")]
+[PlaySound(key="$d_avg_slap",volume=0.7)]
+[CameraShake(duration=0.3, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=1)]
+[name="蚀清"]......
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]你是不是有什么毛病！非要我打你才能清醒一点是不是！
+[name="年长的项目经理"]人家急着要，我们现在有！这就是生意！就能挣钱！
+[Character(name="avg_489_serum_1#7$1")]
+[name="蚀清"]......
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]人家要的就是能用，够用，又不是太贵！这就足够了！
+[name="年长的项目经理"]至于那些什么士兵，人家跟你有关系吗？有关系吗？！
+[Character(name="avg_489_serum_1#8$1")]
+[name="蚀清"]......
+[Character(name="avg_npc_177")]
+[name="年长的项目经理"]三十个弹药基数还不够吗？那些大头兵实际能不能用得完三十个基数都是个未知数。
+[name="年长的项目经理"]年纪轻轻的，能不能脑子活络一点？！
+[name="年长的项目经理"]你真的是太让我失望了。
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]（需要生气吗？）
+[Character(name="avg_489_serum_1#5$1")]
+[name="蚀清"]（当然会生气。）
+[Character(name="avg_489_serum_1#5$1")]
+[name="蚀清"]（不过......）
+[Character(name="avg_489_serum_1#2$1")]
+[name="蚀清"]（这只是工作。）
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]（何必较真。）
+[Character(name="avg_npc_177")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="年长的项目经理"]你什么表情？！
+[Character(name="avg_489_serum_1#9$1")]
+[name="蚀清"]对不起，经理。
+[name="蚀清"]那么......我先去工作了。
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[Character]
+[Image]
