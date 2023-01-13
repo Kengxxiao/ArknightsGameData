@@ -3,7 +3,10 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/UIHotfixer"
+  "HotFixes/BossRushHotfixer",
+  "HotFixes/HpRatioToggleCheckerHotfixer",
+  "HotFixes/BossRushSquadHomeStateHotfixer",
+  "HotFixes/UIEquipSelectFix"
 };
 
 return list;
