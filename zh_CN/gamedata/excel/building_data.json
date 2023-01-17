@@ -10222,6 +10222,125 @@
           ]
         }
       ]
+    },
+    "char_2024_chyue": {
+      "charId": "char_2024_chyue",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&bd_up[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd_cost_expand[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4080_lin": {
+      "charId": "char_4080_lin",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd_cost[111]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd_cost&extra[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_493_firwhl": {
+      "charId": "char_493_firwhl",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&share[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4078_bdhkgt": {
+      "charId": "char_4078_bdhkgt",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_bd_to_bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_bd[200]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_prod_spd_bd[201]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -10597,6 +10716,30 @@
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，自身心情每小时消耗<@cc.vdown>+0.5</>；当自身心情大于<@cc.kw>12</>时，<$cc.bd_a1><@cc.rem>感知信息</></><@cc.vup>+10</>"
     },
+    "control_mp_cost&bd_up[000]": {
+      "buffId": "control_mp_cost&bd_up[000]",
+      "buffName": "知我为我",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd3",
+      "sortId": 1009,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，自身心情每小时消耗<@cc.vdown>+0.5</>；每个<$cc.g.sui><@cc.kw>岁</></>干员进驻在宿舍以外的设施则<$cc.bd_b1><@cc.rem>人间烟火</></><@cc.vup>+5</>（最多5名）"
+    },
+    "control_mp_bd_cost_expand[000]": {
+      "buffId": "control_mp_bd_cost_expand[000]",
+      "buffName": "孤光共照",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd4",
+      "sortId": 1009,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，<$cc.c.room2><@cc.kw>其他设施</></>内处于工作状态的干员心情每小时恢复<@cc.vup>+0.05</>；同时每有<@cc.vup>20</>点<$cc.bd_b1><@cc.rem>人间烟火</></>，则额外<@cc.vup>+0.05</>，（与控制中枢加成有<$cc.c.sui2_1><@cc.rem>特殊比较规则</></>）"
+    },
     "control_facCostReset[000]": {
       "buffId": "control_facCostReset[000]",
       "buffName": "杯莫停",
@@ -10944,6 +11087,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "进驻发电站时，<@cc.kw>野鬃</>所在的制造站生产力<@cc.vup>+5%</>"
+    },
+    "manu_bd_to_bd[000]": {
+      "buffId": "manu_bd_to_bd[000]",
+      "buffName": "古老巫术",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_bd1",
+      "sortId": 4013,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，每<@cc.vup>5</>点<$cc.bd_b1><@cc.rem>人间烟火</></>转化为<@cc.vup>1</>点<$cc.bd_C><@cc.rem>巫术结晶</></>"
     },
     "manu_prod_spd&power[000]": {
       "buffId": "manu_prod_spd&power[000]",
@@ -11497,6 +11652,30 @@
       "roomType": "MANUFACTURE",
       "description": "进驻制造站时，每<@cc.vup>1</>点<$cc.bd_A><@cc.rem>思维链环</></><@cc.vup>+1%</>生产力"
     },
+    "manu_prod_spd_bd[200]": {
+      "buffId": "manu_prod_spd_bd[200]",
+      "buffName": "逐水草",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_bd5",
+      "sortId": 3730,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，每<@cc.vup>1</>点<$cc.bd_C><@cc.rem>巫术结晶</></><@cc.vup>+1%</>生产力"
+    },
+    "manu_prod_spd_bd[201]": {
+      "buffId": "manu_prod_spd_bd[201]",
+      "buffName": "问枯荣",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_bd6",
+      "sortId": 3731,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，每<@cc.vup>1</>点<$cc.bd_C><@cc.rem>巫术结晶</></><@cc.vup>+2%</>生产力"
+    },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
       "buffName": "胜利之计",
@@ -11652,6 +11831,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "进驻制造站时，<@cc.kw>消除</>当前制造站内所有干员<@cc.kw>自身</>心情消耗的影响"
+    },
+    "trade_cost[000]": {
+      "buffId": "trade_cost[000]",
+      "buffName": "暖场",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_cost1",
+      "sortId": 4103,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，贸易站内干员心情每小时消耗<@cc.vup>-0.1</>"
     },
     "trade_ord_spd[000]": {
       "buffId": "trade_ord_spd[000]",
@@ -12144,6 +12335,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "进驻贸易站时，<@cc.kw>提升</>当前贸易站<@cc.kw>高品质贵金属订单</>的出现概率（工作时长影响概率），心情每小时消耗<@cc.vup>-0.25</>"
+    },
+    "trade_ord_spd&share[000]": {
+      "buffId": "trade_ord_spd&share[000]",
+      "buffName": "代为说项",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_share1",
+      "sortId": 4703,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，贸易站内除自身以外每名处于工作状态的干员<@cc.vup>+15%</>订单获取效率"
     },
     "trade_ord_spd&cost_P[000]": {
       "buffId": "trade_ord_spd&cost_P[000]",
@@ -14557,6 +14760,18 @@
       "roomType": "HIRE",
       "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，心情每小时消耗<@cc.vup>-0.25</>"
     },
+    "hire_spd_cost[111]": {
+      "buffId": "hire_spd_cost[111]",
+      "buffName": "特殊渠道 ",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&cost4",
+      "sortId": 8101,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，心情每小时消耗<@cc.vup>-0.25</>"
+    },
     "hire_spd_cost&clue[001]": {
       "buffId": "hire_spd_cost&clue[001]",
       "buffName": "救援队·外界联络",
@@ -14580,6 +14795,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
       "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+35%</>，同时每个招募位（不包含初始招募位）使心情每小时消耗<@cc.vup>-0.1</>"
+    },
+    "hire_spd_cost&extra[000]": {
+      "buffId": "hire_spd_cost&extra[000]",
+      "buffName": "用人唯才",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&extra1",
+      "sortId": 8122,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "进驻人力办公室时，每个招募位（不包含初始招募位）<@cc.vup>+10%</>人脉资源的联络速度"
     },
     "hire_spd&clue[010]": {
       "buffId": "hire_spd&clue[010]",
@@ -45184,7 +45411,7 @@
         "location": "WALL",
         "category": "FURNITURE",
         "validOnRotate": false,
-        "enableRotate": true,
+        "enableRotate": false,
         "rarity": 2,
         "themeId": "furni_set_classroom",
         "groupId": "furni_set_classroom_4",
@@ -46141,7 +46368,7 @@
         "location": "CARPET",
         "category": "FURNITURE",
         "validOnRotate": false,
-        "enableRotate": false,
+        "enableRotate": true,
         "rarity": 2,
         "themeId": "furni_set_court",
         "groupId": "furni_set_court_1",
@@ -46315,7 +46542,7 @@
         "location": "FLOOR",
         "category": "FURNITURE",
         "validOnRotate": false,
-        "enableRotate": false,
+        "enableRotate": true,
         "rarity": 2,
         "themeId": "furni_set_court",
         "groupId": "furni_set_court_3",
@@ -47011,7 +47238,7 @@
         "location": "CARPET",
         "category": "FURNITURE",
         "validOnRotate": false,
-        "enableRotate": false,
+        "enableRotate": true,
         "rarity": 2,
         "themeId": "furni_set_bookshop",
         "groupId": "furni_set_bookshop_3",
@@ -47601,6 +47828,528 @@
         "comfort": 240,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "色彩丰富的软木地面，选用自然的暖色调适配乡间风格。上面时不时会浮着一些干燥的苇絮，打扫起来很费劲。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_walldeco_01": {
+        "id": "furni_martialClub_walldeco_01",
+        "sortId": 1121,
+        "name": "晾药簸箕架",
+        "iconId": "furni_martialClub_walldeco_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 4,
+        "depth": 4,
+        "height": 5,
+        "comfort": 330,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "上等藤柳编织成的三层簸箕架，避阳透气，用来摊晾未干燥的药材。\n清早街巷，医馆老板一边蹲桩扎马，一边抖筛扬尘。晨风撩动衣摆，他手中的药材却半点也没被吹散。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_fireplace_01": {
+        "id": "furni_martialClub_fireplace_01",
+        "sortId": 1122,
+        "name": "煎药柴火炉",
+        "iconId": "furni_martialClub_fireplace_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "取地表深层的优质白泥，经十余道工序烧制而成的炎式泥炉。\n怕药汤过了火候，医馆老板直接端起壶柄倒入碗中。炉上余热正劲，他想到曾在大漠中握过的沙。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_ceilingLamp_01": {
+        "id": "furni_martialClub_ceilingLamp_01",
+        "sortId": 1123,
+        "name": "悬吊长明灯",
+        "iconId": "furni_martialClub_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 115,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "古朴精致的炎式吊灯，光线柔和，但在深夜里足够醒目。\n每逢征战归来之日，医馆内必然灯火通明，等待救治伤重的兵士。而如今，深夜的灯火偶尔才能等来几位念旧的故人。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_plantShelf_01": {
+        "id": "furni_martialClub_plantShelf_01",
+        "sortId": 1124,
+        "name": "“塞上春生”",
+        "iconId": "furni_martialClub_plantShelf_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 3,
+        "depth": 4,
+        "height": 8,
+        "comfort": 355,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "上等红木雕琢成的景观台壁，栽种着自大漠带回的一截枯杈。\n或许是小孩子常偷着往盆里浇苦口药汤的缘故，油尽灯枯的枝杈偶尔也会冒出几株新芽儿来。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_medicineTable_01": {
+        "id": "furni_martialClub_medicineTable_01",
+        "sortId": 1125,
+        "name": "配药研磨桌",
+        "iconId": "furni_martialClub_medicineTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 2,
+        "depth": 5,
+        "height": 2,
+        "comfort": 205,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "雕磨景观台余下的木料，木匠动手钉成一方矮桌，赠予老友。\n药方早已牢记于心，册上记着的，是一些老主顾的病症。年深月久，未曾间断，堂内捣杵研磨声常至寅时才止。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_pillar_01": {
+        "id": "furni_martialClub_pillar_01",
+        "sortId": 1126,
+        "name": "“梁下安”",
+        "iconId": "furni_martialClub_pillar_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 3,
+        "depth": 2,
+        "height": 10,
+        "comfort": 285,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "支撑顶梁的实木立柱，屋内的装潢翻新了很多次，只有它始终屹立于此。\n撑过山摇地动，挡过刀来剑往，现如今哪怕只是用来挂些衣物，它仍以自己的方式撑扶着玉门一角。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_medicine_01": {
+        "id": "furni_martialClub_medicine_01",
+        "sortId": 1127,
+        "name": "碾药青石台",
+        "iconId": "furni_martialClub_medicine_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 2,
+        "height": 2,
+        "comfort": 180,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "上等青石料削砍磨制成的碾药台，使用多年，洗净碎屑也仍余药香。\n偶尔有习武之人练功后用其开背疏筋，据说比医馆老板亲自上手揉按要轻柔、舒服得多。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_washtub_01": {
+        "id": "furni_martialClub_washtub_01",
+        "sortId": 1128,
+        "name": "“涤沙洗尘”",
+        "iconId": "furni_martialClub_washtub_01",
+        "type": "DECORATION",
+        "subType": "WASH",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 165,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "玉门百姓常用的木制洗衣盆，底部放有细密的隔网，用来滤出衣物中夹杂的沙。\n自从老板将研磨好的山药偷偷洒进药柜里，小学徒便再也不敢偷拿皂角粉搓洗衣物了。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_seatstone_01": {
+        "id": "furni_martialClub_seatstone_01",
+        "sortId": 1129,
+        "name": "“聚力”",
+        "iconId": "furni_martialClub_seatstone_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "取青石凿成古铜锁的形状，挥握时可带动全身肌力。\n对质地坚硬的矿物药材而言，这方石锁比源石研磨机更加高效，但前提是你的力气和那位魁梧的菲林伙计一样大。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_drum_01": {
+        "id": "furni_martialClub_drum_01",
+        "sortId": 1130,
+        "name": "“鼓声争鸣”",
+        "iconId": "furni_martialClub_drum_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 235,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "红木作架，取良质兽皮铺张其上。击鼓鸣，玉门安。\n刚跟老板练武个把月的小学徒，听罢三通鼓，竟也觉得血热，一套拳打得有模有样。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_weaponRack_01": {
+        "id": "furni_martialClub_weaponRack_01",
+        "sortId": 1131,
+        "name": "“藏锋”",
+        "iconId": "furni_martialClub_weaponRack_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 7,
+        "depth": 3,
+        "height": 6,
+        "comfort": 450,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "黄檀木制成的兵器架，工匠将侧板雕琢成传统的云纹样式，寓意平安祥和。\n架上尘沙积厚，仿佛已有二十年之久，至于当年那位曾将弓箭寄放此处的游侠，或许早就忘了这回事。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_Dummy_01": {
+        "id": "furni_martialClub_Dummy_01",
+        "sortId": 1132,
+        "name": "“互搏”",
+        "iconId": "furni_martialClub_Dummy_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 4,
+        "depth": 3,
+        "height": 5,
+        "comfort": 280,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "常见的木人桩形制，却多了一条兽尾和几处抓痕。\n值夜无人时，魁梧的菲林伙计常对桩行礼，然后同这架与自己样貌相似的木人桩酣畅试招，直至天明。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_carpet_01": {
+        "id": "furni_martialClub_carpet_01",
+        "sortId": 1133,
+        "name": "“踏沙”",
+        "iconId": "furni_martialClub_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 16,
+        "depth": 8,
+        "height": 1,
+        "comfort": 210,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "纹案对称，样式规整的炎国地毯，织法细密，但也易积沙尘。\n舞刀弄棍时切记轻缓步法，否则老板可能会将你连同被激起的黄沙，一道扫出门去。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_floorLamp_01": {
+        "id": "furni_martialClub_floorLamp_01",
+        "sortId": 1134,
+        "name": "“终觉浅”",
+        "iconId": "furni_martialClub_floorLamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "造型古朴的落地宣纸灯，灯罩上涂抹了草药汁液，防蚊驱虫。\n来瞧病的榜单高手曾以手蘸酒，在纸罩上题下字迹，伙计们以为是什么上等武学，偷偷去看，只见水印模糊的“躬行”二字。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_chair_01": {
+        "id": "furni_martialClub_chair_01",
+        "sortId": 1135,
+        "name": "“冥心坐忘”",
+        "iconId": "furni_martialClub_chair_01",
+        "type": "SEATING",
+        "subType": "CHAIR",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 180,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "宽幅过长，不适倚坐，反倒双腿盘曲于上刚好契合。\n草药针罐医不好的病症，医馆老板就会尝试传授病人一套功法，打坐运功于其上，或可活络淤塞，宽慰心结。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_pile_01": {
+        "id": "furni_martialClub_pile_01",
+        "sortId": 1136,
+        "name": "“朴拙”",
+        "iconId": "furni_martialClub_pile_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 70,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "原本是一架木人桩，充满好胜心的一记腿法造就了这一杰作。\n武馆派来拿药的伙计学艺不精又非要展示，本是替师父来跑腿的，走的时候顺便也给自己开了几贴“百跌不挠”。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_wallpaper_01": {
+        "id": "furni_martialClub_wallpaper_01",
+        "sortId": 1137,
+        "name": "“且去也”",
+        "iconId": "furni_martialClub_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "实木贴装的墙面，取方圆之形装饰其上，意在德行切不可逾矩，意在心性须圆满融通。\n药理如功法，草木效用似拳脚形意，其间自有规律可察，体悟贯通后方可出师前去。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_floor_01": {
+        "id": "furni_martialClub_floor_01",
+        "sortId": 1138,
+        "name": "“念归人”",
+        "iconId": "furni_martialClub_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "不过是最普通的粗制石砖，倒也在玉门城里驻扎了数百年。\n二十年前的甲胄摩擦声渐近，医馆老板点起长灯，泡好浓茶，等待抗灾归来的军士侠客们登门问医。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -49524,6 +50273,64 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_SF2023_vase_01": {
+        "id": "furni_SF2023_vase_01",
+        "sortId": 10106,
+        "name": "喜上梢头",
+        "iconId": "furni_SF2023_vase_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 100,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "形制古朴素雅的置物架，上面放置了一盆盛开的红梅。盏中的酒液被梅香浸染，闻之令人陶陶欲醉。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_SF2023_weaponRack_01": {
+        "id": "furni_SF2023_weaponRack_01",
+        "sortId": 10107,
+        "name": "枯木逢春",
+        "iconId": "furni_SF2023_weaponRack_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 100,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "别致雅观的剑架，原是一截被剑削下的枯梅枝。往事再不提，宝剑藏锋鞘内，枯木又萌新苞。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_obsidianFestival_DJBooth_01": {
         "id": "furni_obsidianFestival_DJBooth_01",
         "sortId": 10201,
@@ -51206,9 +52013,38 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_dropS025_cnKnot_01": {
+        "id": "furni_dropS025_cnKnot_01",
+        "sortId": 11057,
+        "name": "饰牌《扣春》",
+        "iconId": "furni_dropS025_cnKnot_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "冬日编织的绳扣，紧系来年的春意。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_dropS026_seven_01": {
         "id": "furni_dropS026_seven_01",
-        "sortId": 11057,
+        "sortId": 11058,
         "name": "饰牌《罪责》",
         "iconId": "furni_dropS026_seven_01",
         "type": "WALLDECO",
@@ -51237,7 +52073,7 @@
       },
       "furni_dropS026_gluttony_01": {
         "id": "furni_dropS026_gluttony_01",
-        "sortId": 11058,
+        "sortId": 11059,
         "name": "饰牌《节制》",
         "iconId": "furni_dropS026_gluttony_01",
         "type": "WALLDECO",
@@ -51266,7 +52102,7 @@
       },
       "furni_dropS026_greed_01": {
         "id": "furni_dropS026_greed_01",
-        "sortId": 11059,
+        "sortId": 11060,
         "name": "饰牌《慷慨》",
         "iconId": "furni_dropS026_greed_01",
         "type": "WALLDECO",
@@ -51295,7 +52131,7 @@
       },
       "furni_dropS026_sloth_01": {
         "id": "furni_dropS026_sloth_01",
-        "sortId": 11060,
+        "sortId": 11061,
         "name": "饰牌《勤勉》",
         "iconId": "furni_dropS026_sloth_01",
         "type": "WALLDECO",
@@ -51324,7 +52160,7 @@
       },
       "furni_dropS026_lust_01": {
         "id": "furni_dropS026_lust_01",
-        "sortId": 11061,
+        "sortId": 11062,
         "name": "饰牌《克己》",
         "iconId": "furni_dropS026_lust_01",
         "type": "WALLDECO",
@@ -51353,7 +52189,7 @@
       },
       "furni_dropS026_pride_01": {
         "id": "furni_dropS026_pride_01",
-        "sortId": 11062,
+        "sortId": 11063,
         "name": "饰牌《谦虚》",
         "iconId": "furni_dropS026_pride_01",
         "type": "WALLDECO",
@@ -51382,7 +52218,7 @@
       },
       "furni_dropS026_envy_01": {
         "id": "furni_dropS026_envy_01",
-        "sortId": 11063,
+        "sortId": 11064,
         "name": "饰牌《宽容》",
         "iconId": "furni_dropS026_envy_01",
         "type": "WALLDECO",
@@ -51411,7 +52247,7 @@
       },
       "furni_dropS026_wrath_01": {
         "id": "furni_dropS026_wrath_01",
-        "sortId": 11064,
+        "sortId": 11065,
         "name": "饰牌《忍耐》",
         "iconId": "furni_dropS026_wrath_01",
         "type": "WALLDECO",
@@ -51440,7 +52276,7 @@
       },
       "furni_dropS022_hamlet_01": {
         "id": "furni_dropS022_hamlet_01",
-        "sortId": 11065,
+        "sortId": 11066,
         "name": "饰牌《复弑》",
         "iconId": "furni_dropS022_hamlet_01",
         "type": "WALLDECO",
@@ -51469,7 +52305,7 @@
       },
       "furni_dropS022_holmes_01": {
         "id": "furni_dropS022_holmes_01",
-        "sortId": 11066,
+        "sortId": 11067,
         "name": "饰牌《洞察》",
         "iconId": "furni_dropS022_holmes_01",
         "type": "WALLDECO",
@@ -51498,7 +52334,7 @@
       },
       "furni_dropS033_hannibal_01": {
         "id": "furni_dropS033_hannibal_01",
-        "sortId": 11067,
+        "sortId": 11068,
         "name": "饰牌《延续》",
         "iconId": "furni_dropS033_hannibal_01",
         "type": "WALLDECO",
@@ -51527,7 +52363,7 @@
       },
       "furni_dropS034_traveler_01": {
         "id": "furni_dropS034_traveler_01",
-        "sortId": 11068,
+        "sortId": 11069,
         "name": "饰牌《漫游》",
         "iconId": "furni_dropS034_traveler_01",
         "type": "WALLDECO",
@@ -63459,6 +64295,149 @@
           "furni_countryside_wallpaper_01",
           "furni_countryside_floor_01"
         ]
+      },
+      "furni_set_martialClub": {
+        "id": "furni_set_martialClub",
+        "sortId": 66,
+        "name": "玉门医馆",
+        "themeType": "EVENT",
+        "desc": "根据槐琥描述复现的玉门医馆。武具比药具占地更多的医馆，或许只有在玉门才能一见。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_martialClub_walldeco_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_fireplace_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_ceilingLamp_01",
+            "pos0": 6,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_plantShelf_01",
+            "pos0": 9,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_medicineTable_01",
+            "pos0": 5,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_pillar_01",
+            "pos0": 12,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_medicine_01",
+            "pos0": 11,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_washtub_01",
+            "pos0": 14,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_seatstone_01",
+            "pos0": 22,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_drum_01",
+            "pos0": 15,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_weaponRack_01",
+            "pos0": 20,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_Dummy_01",
+            "pos0": 26,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_carpet_01",
+            "pos0": 16,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_floorLamp_01",
+            "pos0": 32,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_chair_01",
+            "pos0": 32,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_pile_01",
+            "pos0": 23,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_martialClub_1",
+          "furni_set_martialClub_2",
+          "furni_set_martialClub_3",
+          "furni_set_martialClub_4"
+        ],
+        "furnitures": [
+          "furni_martialClub_walldeco_01",
+          "furni_martialClub_fireplace_01",
+          "furni_martialClub_ceilingLamp_01",
+          "furni_martialClub_plantShelf_01",
+          "furni_martialClub_medicineTable_01",
+          "furni_martialClub_pillar_01",
+          "furni_martialClub_medicine_01",
+          "furni_martialClub_washtub_01",
+          "furni_martialClub_seatstone_01",
+          "furni_martialClub_drum_01",
+          "furni_martialClub_weaponRack_01",
+          "furni_martialClub_Dummy_01",
+          "furni_martialClub_carpet_01",
+          "furni_martialClub_floorLamp_01",
+          "furni_martialClub_chair_01",
+          "furni_martialClub_pile_01",
+          "furni_martialClub_wallpaper_01",
+          "furni_martialClub_floor_01"
+        ]
       }
     },
     "groups": {
@@ -67230,6 +68209,64 @@
           "furni_countryside_ceilingLamp_01",
           "furni_countryside_curtain_01",
           "furni_countryside_partitionWall_01"
+        ]
+      },
+      "furni_set_martialClub_1": {
+        "id": "furni_set_martialClub_1",
+        "sortId": 1,
+        "name": "“回春妙手”",
+        "themeId": "furni_set_martialClub",
+        "comfort": 230,
+        "count": 5,
+        "furniture": [
+          "furni_martialClub_walldeco_01",
+          "furni_martialClub_fireplace_01",
+          "furni_martialClub_ceilingLamp_01",
+          "furni_martialClub_medicineTable_01",
+          "furni_martialClub_medicine_01"
+        ]
+      },
+      "furni_set_martialClub_2": {
+        "id": "furni_set_martialClub_2",
+        "sortId": 2,
+        "name": "“日进有功”",
+        "themeId": "furni_set_martialClub",
+        "comfort": 270,
+        "count": 5,
+        "furniture": [
+          "furni_martialClub_seatstone_01",
+          "furni_martialClub_weaponRack_01",
+          "furni_martialClub_Dummy_01",
+          "furni_martialClub_carpet_01",
+          "furni_martialClub_pile_01"
+        ]
+      },
+      "furni_set_martialClub_3": {
+        "id": "furni_set_martialClub_3",
+        "sortId": 3,
+        "name": "“塞上景韵”",
+        "themeId": "furni_set_martialClub",
+        "comfort": 220,
+        "count": 4,
+        "furniture": [
+          "furni_martialClub_plantShelf_01",
+          "furni_martialClub_washtub_01",
+          "furni_martialClub_drum_01",
+          "furni_martialClub_chair_01"
+        ]
+      },
+      "furni_set_martialClub_4": {
+        "id": "furni_set_martialClub_4",
+        "sortId": 4,
+        "name": "“巷陌寻常”",
+        "themeId": "furni_set_martialClub",
+        "comfort": 225,
+        "count": 4,
+        "furniture": [
+          "furni_martialClub_pillar_01",
+          "furni_martialClub_floorLamp_01",
+          "furni_martialClub_wallpaper_01",
+          "furni_martialClub_floor_01"
         ]
       }
     },
