@@ -4,7 +4,7 @@ local list =
   
   "HotFixes/ShopHotfixer",
   "HotFixes/Act33SignRedpackDetailViewHotfixer",
-  "HotFixes/AbilityStandardHotfixer",
+  "HotFixes/MultiRangedAttackHotfixer",
 };
 
 return list;
