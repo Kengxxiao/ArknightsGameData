@@ -1,0 +1,48 @@
+[HEADER(actId="act1sandbox", npcId="trap_432_oldisin")] 
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]唔......老伊辛一直在寻找一个能用生机盖过黄沙的人。
+[name="老伊辛"]老伊辛看到，你们已经用双手建立起了一个家园的雏形啦......
+[character(name="avg_npc_070", offsetX="125", offsetY="100")]
+[name="部族人A"]我们加油干！有了这些物资，我们就能再建一个厨房！说不定真的能在这里好好生活下去！
+[character(name="avg_npc_071", offsetX="100", offsetY="100")]
+[name="部族人B"]干活......干活......我昨天一整天都在打猎......我们捕猎的效率还是太低了！
+[name="部族人B"]我昨天还不小心摔到矿坑里去了！
+[character(name="avg_npc_070", offsetX="125", offsetY="100")]
+[name="部族人A"]别丧气！大家鼓起劲来，这里还等着我们呢！
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]嘿——哈！嘿——哈！运完这批矿，再运下一批，美好的明天在招手了！
+[Decision(option1="（一同欢呼）", value1="1.1")]
+[predicate(references="1.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]过去的事让老伊辛清楚，一支涓流能浸润一小片青草，但最终只会被沙海吞下......
+[name="老伊辛"]涓流需要汇集更多的力量。
+[name="老伊辛"]你们需要研究，需要学习......一时的果腹不能带来长久的繁荣，智慧才是能够长久留存的事物。
+[name="老伊辛"]老伊辛会给你们提供更多的力量。
+[Decision(option1="（接过物资）", value1="2.1")]
+[predicate(references="2.1")]
+[AddItem(itemId="sandbox_0_wood", itemCount="15")]
+[AddItem(itemId="sandbox_0_stone", itemCount="5")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【获得了15个木材、5个石材】
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]我们只要按照这个势头继续发展下去，再大的困难也不算什么了！
+[name="巴塞尔"]还有这位老人，真的十分感谢您提供这些东西。对我们很有帮助！
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]一切都应当从最基础的开始做起......
+[Decision(option1="（表达感谢）", value1="3.1")]
+[predicate(references="3.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]你们的感谢老伊辛会收下，但老伊辛不需要酬劳。
+[name="老伊辛"]老伊辛过来，只是为了消息的传递。
+[name="老伊辛"]“沙卒”......是的，“沙卒”希望你们能够在此处立足。危机即将到来，你们需要一把......锋利的宝刀。
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]“锋利的宝刀”......？
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]这个老人果然知道什么！
+[name=""]“沙卒”......我们还从未见过这个人，但他似乎对我们这里发生的任何事情都了如指掌。
+[name=""]最重要的是，他现在表现出的态度是善意的。
+[name=""]或许我们可以尝试一下，在这里拥有一个靠山，对我们的发展没有任何坏处。
+[SetConditionProgress(conditionKey="route_main", itemCount="3")]
+[SetConditionProgress(conditionKey="route_main_interval", itemCount="0")]
+[withdraw(charId="trap_432_oldisin")]
+[End]

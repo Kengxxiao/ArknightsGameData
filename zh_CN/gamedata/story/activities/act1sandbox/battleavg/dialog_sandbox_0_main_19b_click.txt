@@ -1,0 +1,58 @@
+[HEADER(actId="act1sandbox", npcId="trap_434_klmantc")] 
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]我们找个别的地方，躲起来，我们都能活着，就像之前那样......！
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="爱麦拉"]你可以不去的。你们也都可以不去的。只有我们几个去，这是我们几个人的决定。
+[name="爱麦拉"]你可以什么都不知道地继续在这里生活下去啊，我都说了这些和你们无关，只是我们几个的决定。
+[name="爱麦拉"]你已经在这里住下了，你们也有自己的家人和朋友，你们的未来还有希望，没必要和我们一起冒这个险。
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]......
+[name="曼提柯杀手"]真的要，这样吗......？
+[name="曼提柯杀手"]我们把这些东西交出去，我们，就能平安度过那一天......王酋就能暂时放过我们......
+[name="曼提柯杀手"]我们都不会死，这样......不好吗......？
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="爱麦拉"]再过几天就是他路过这里的日子了。
+[name="爱麦拉"]......我等了......很久啦。
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]部落中的人们已经明显分成了两部分。
+[name=""]是时候作出选择了。
+[Decision(option1="（不支持复仇，活下来最重要）", value1="1.1", option2="（支持复仇，刺杀王酋）", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="爱麦拉"]......哈哈......
+[name="爱麦拉"]我知道了。
+[Decision(option1="你要做什么？", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="爱麦拉"]这是部落中大家共同的决定，我会遵守的，我什么都不会做。
+[name="爱麦拉"]我什么都不会做的。
+[name="爱麦拉"]把这些东西交出去吧，它们能保证过几天后，王酋能不在意我们这个小小的部落。
+[Decision(option1="（交出物资）", value1="3.1")]
+[predicate(references="3.1")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]我们......都能在这里活着，就最好了......
+[name="曼提柯杀手"]哪怕是交税，只要......我们都还活着，总会好的......！
+[SetConditionProgress(conditionKey="route_main", itemCount="20")]
+[SetConditionProgress(conditionKey="route_main_b", itemCount="13")]
+[withdraw(charId="trap_434_klmantc")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="爱麦拉"]......哈哈......
+[name="爱麦拉"]谢谢你们啦。
+[Decision(option1="我们失去了太多，已经没有可以再失去的了！", value1="4.1")]
+[predicate(references="4.1")]
+[Decision(option1="就算是死，也要让王酋知道我们的仇恨！", value1="5.1")]
+[predicate(references="5.1")]
+[Decision(option1="族人们！我们要拿起武器，向王酋复仇！", value1="6.1")]
+[predicate(references="6.1")]
+[Decision(option1="我们要继续呐喊，我们是活在这里的人们！", value1="7.1")]
+[predicate(references="7.1")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]......
+[name="曼提柯杀手"]这是，你们的决定......
+[SetConditionProgress(conditionKey="route_main", itemCount="21")]
+[SetConditionProgress(conditionKey="route_main_b", itemCount="14")]
+[SetConditionProgress(conditionKey="main_19b_enemy_rush", itemCount="1")]
+[withdraw(charId="trap_434_klmantc")]
+[End]

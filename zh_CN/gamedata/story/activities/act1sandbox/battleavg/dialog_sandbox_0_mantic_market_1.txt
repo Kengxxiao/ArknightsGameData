@@ -1,0 +1,29 @@
+[HEADER(actId="act1sandbox", npcId="trap_434_klmantc")] 
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]这里有些目标遗留下的物品，我想你们可能会感兴趣......
+[Decision(option1="购买6个蟹腿（粗制赤金-15）", value1="1.1", option2="购买3个圆圆肉片（粗制赤金-15）", value2="1.2", option3="购买3个带骨腿肉（粗制赤金-25）", value3="1.3", option4="结束交易", value4="1.4")]
+[predicate(references="1.1", selectableCondition="c0")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-15")]
+[AddItem(itemId="sandbox_0_crab", itemCount="6")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]保持联络......
+[End]
+[predicate(references="1.2", selectableCondition="c1")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-15")]
+[AddItem(itemId="sandbox_0_venison", itemCount="3")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]保持联络......
+[End]
+[predicate(references="1.3", selectableCondition="c2")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-25")]
+[AddItem(itemId="sandbox_0_beef", itemCount="3")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]保持联络......
+[End]
+[predicate(references="1.4")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]保持联络......
+[End]
+[Condition(references="c0", key="itemGT", itemId="sandbox_0_gold", value="15")]
+[Condition(references="c1", key="itemGT", itemId="sandbox_0_gold", value="15")]
+[Condition(references="c2", key="itemGT", itemId="sandbox_0_gold", value="25")]

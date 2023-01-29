@@ -1,0 +1,25 @@
+[HEADER(actId="act1sandbox", npcId="trap_432_oldisin")] 
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]年轻人，纷争不会从这片黄沙上消失。
+[name="老伊辛"]你们改换了自己的想法吗？
+[Decision(option1="只是偶然路过。", value1="1.1", option2="我们会去沁礁黑市找“沙卒”的。", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]可惜......
+[withdraw(charId="trap_432_oldisin")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]老伊辛没有看错......
+[name="老伊辛"]请收下这个吧。它能帮助你们看清那黄沙中未知的未来......
+[Decision(option1="（接过）", value1="2.1")]
+[predicate(references="2.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【获得了跨局信物<命运的水晶球>】
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]那么，祝各位顺利。
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_432_oldisin")]
+[End]

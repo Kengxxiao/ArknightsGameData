@@ -1,0 +1,40 @@
+[HEADER(actId="act1sandbox", npcId="trap_415_trademan")] 
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]......
+[name="联络员"]啊，是各位啊。
+[Decision(option1="吓死我们了，你这么久都去哪了？！", value1="1.1")]
+[predicate(references="1.1")]
+[Decision(option1="而且，怎么感觉黑市好像和之前不一样了？", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]当然。
+[name="联络员"]这里可是少了不少人呢......好像就是前不久的事。各位才发现吗？
+[Decision(option1="那你最近怎么样，你怎么不卖东西了？", value1="3.1")]
+[predicate(references="3.1")]
+[Decision(option1="那些太阳谷的商品呢？", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]各位要是想买的话，请随意看看。
+[name="联络员"]但是放着这么多好东西，为什么还只想着要买太阳谷的东西呢？
+[Decision(option1="嗯？这些不是别人的摊子吗？", value1="5.1")]
+[predicate(references="5.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]哈哈，各位请尽管买吧。
+[name="联络员"]不论是哥伦比亚的，还是莱塔尼亚的，或者各位就是喜欢太阳谷的，都能买到。
+[name="联络员"]之前的事情，我还要谢谢各位替我保密，各位请收下这个吧——
+[Decision(option1="（收下）", value1="6.1")]
+[predicate(references="6.1")]
+[AddItem(itemId="sandbox_0_craft_14", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【获得了跨局信物<太阳谷名片>】
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]什么意思，他怎么看起来和之前不一样了。
+[name=""]我们问的那些问题他也绕开，一副不想回答的样子。
+[name=""]只买了零星几个商品，我们决定返回部落。
+[name=""]“毒牙”“副手”“爆炸”“威胁”，这些事情好像从来没有发生过一样离开了我们的生活，没有任何事情再找上我们。除了那场交易中死了的王酋的下属，因为这件事，王酋似乎盯上了我们。
+[name=""]不过，好在那天拿回的钱足够我们接下来继续发展。而且黑市的“沙卒”不知为何，似乎最近开始有意无意地与我们展开了更深层的接触。
+[name=""]但有些事情我们还没想清楚。之前那些黑市里我们已经有些脸熟的商人怎么都不见了？联络员为什么不再继续推销了？如果“毒牙”根本不存在，那究竟是谁威胁了我们，让我们做了这一场荒唐又吓人的任务？
+[name=""]奇怪，那些商人为什么要和联络员汇报并核对刚刚我们买东西的账目？
+[SetConditionProgress(conditionKey="route_trademan", itemCount="6")]
+[withdraw(charId="trap_415_trademan")]
+[End]

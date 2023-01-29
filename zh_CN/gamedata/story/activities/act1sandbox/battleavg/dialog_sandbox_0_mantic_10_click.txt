@@ -1,0 +1,51 @@
+[HEADER(actId="act1sandbox", npcId="trap_433_sandsdr")] 
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="“沙卒”"]......任务......完成......？
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]......雇主......答谢......
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]追上了！就在前面......！呼......不管怎么样也要说清楚了再走......！
+[name="巴塞尔"]前面那是......“沙卒”？
+[name="巴塞尔"]什么意思？她为什么会去见“沙卒”？
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]怎么会是“沙卒”？
+[name=""]曼提柯杀手在部落这段日子，所有行动都在我们的安排之下，行动时间也从没出过错，她不该和“沙卒”有什么联系。
+[name=""]究竟发生了什么？
+[name=""]但这样贸然上去询问她为什么背叛，不会得到什么回答，我们需要换一种方式。
+[Decision(option1="“沙卒”。", value1="1.1")]
+[predicate(references="1.1")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="曼提柯杀手"]......嗬？！
+[Decision(option1="我们很感激您之前对部落的帮助。", value1="2.1")]
+[predicate(references="2.1")]
+[Decision(option1="为了能更好地和您达成合作，", value1="3.1")]
+[predicate(references="3.1")]
+[Decision(option1="我们也付出了很多努力。", value1="4.1")]
+[predicate(references="4.1")]
+[Decision(option1="但如果是想通过这位杀手姑娘利用我们，", value1="5.1")]
+[predicate(references="5.1")]
+[Decision(option1="不如请直接说明。", value1="6.1")]
+[predicate(references="6.1")]
+[Decision(option1="我们相信自己有能力成为“沙卒”的盟友，", value1="7.1")]
+[predicate(references="7.1")]
+[Decision(option1="而不是一枚棋子。", value1="8.1")]
+[predicate(references="8.1")]
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="“沙卒”"]啊，我想你们......应该是误会了什么。
+[name="“沙卒”"]对于各位，我从来没有利用的想法。
+[name="“沙卒”"]相反，我一直在帮助各位。
+[name="“沙卒”"]之前你们能从王酋的手下那里连夜安全回到自己的部落，仅仅依靠几个每天打猎的猎手，和一位已经重伤的姑娘，难道一次都没有想过是为什么吗？
+[name="“沙卒”"]......
+[name="“沙卒”"]我总是愿意去帮助像各位这样的人——收下吧，会有用的。
+[Decision(option1="(收下)", value1="9.1")]
+[predicate(references="9.1")]
+[AddItem(itemId="sandbox_0_craft_13", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【获得了跨局信物<划线的名单>】
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="“沙卒”"]但......“盟友”？
+[name="“沙卒”"]或许我们可以在沁礁好好谈一谈。
+[name="“沙卒”"]这位姑娘的事情也一样。
+[SetConditionProgress(conditionKey="route_klmantic", itemCount="10")]
+[withdraw(charId="trap_433_sandsdr")]
+[End]

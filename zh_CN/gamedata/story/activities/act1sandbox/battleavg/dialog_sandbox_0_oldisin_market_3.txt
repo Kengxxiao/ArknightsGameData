@@ -1,0 +1,20 @@
+[HEADER(actId="act1sandbox", npcId="trap_432_oldisin")] 
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]你们需要老伊辛那不可知的梦吗？
+[Decision(option1="接受占卜（粗制赤金-10）", value1="1.1", option2="不进行占卜", value2="1.2")]
+[predicate(references="1.1", selectableCondition="c0")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-10")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]老伊辛在梦里看到了——
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]“堆积如山的财富藏于黄沙之间，无人能够将之移动半分。”
+[SetConditionProgress(conditionKey="already_met_isin", itemCount="1")]
+[withdraw(charId="trap_432_oldisin")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]如果你们有需要，你们知道在哪里能找到老伊辛。
+[SetConditionProgress(conditionKey="already_met_isin", itemCount="1")]
+[withdraw(charId="trap_432_oldisin")]
+[End]
+[Condition(references="c0", key="itemGT", itemId="sandbox_0_gold", value="10")]

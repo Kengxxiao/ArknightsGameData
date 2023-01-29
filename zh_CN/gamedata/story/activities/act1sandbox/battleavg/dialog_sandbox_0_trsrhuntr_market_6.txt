@@ -1,0 +1,23 @@
+[HEADER(actId="act1sandbox", npcId="trap_435_trsrhuntr")] 
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="寻宝人"]萨尔贡的黄沙下到处都是宝藏，你们要是发现了看上去值钱的东西，可以找我帮你们鉴定一下。
+[Decision(option1="支付15粗制赤金开始鉴定", value1="1.1", option2="不进行鉴定", value2="1.2")]
+[predicate(references="1.1", selectableCondition="c0&&c1")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-15")]
+[AddItem(itemId="sandbox_0_craft_5", itemCount="-1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="寻宝人"]唔噢，这，这个可不多见。
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="寻宝人"]是荒地秘匣：安眠迷香！我都有点羡慕你们的运气了！给，一定要拿好啊！
+[Decision(option1="收下鉴定后的物品", value1="2.1")]
+[predicate(references="2.1")]
+[AddItem(itemId="sandbox_0_tactical_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_trsrhuntr_interval", itemCount="0")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="1.2")]
+[SetConditionProgress(conditionKey="market_trsrhuntr_interval", itemCount="0")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[Condition(references="c0", key="itemGT", itemId="sandbox_0_gold", value="15")]
+[Condition(references="c1", key="itemGT", itemId="sandbox_0_craft_5", value="1")]

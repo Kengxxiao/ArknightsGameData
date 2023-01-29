@@ -1,0 +1,75 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 活动act1sandbox教学关2_a
+
+[Battle.Pause]
+[Battle.LockFunction(mask="SYSTEM_MENU")]
+[InputBlocker(blockInput=true)]
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+伐木的工具各位都带全了吗？如果还缺什么，我可以给各位开一个友情价哦。 
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+木材和其他各类资源可以用来制作设施和道具，它们可以帮助各位减少生存压力。 
+
+[Battle.Pause(pause=false)]
+[Delay(time=1)]
+[Battle.Pause(pause=true)] 
+
+[Tutorial(focusX=177, focusY=-66, focusWidth=300, focusHeight=260, \
+          animStyle="Highlight",focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这里的监控塔已经发现了一片树林，各位，加油吧！ 
+
+[Battle.Pause(pause=false)]
+[Delay(time=16)]
+[Battle.Pause(pause=true)] 
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+伐木完成后，树木周围的人将会自动捡起木材。
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+每个干员能拾取的资源数量取决于自身的 <@tu.kw>阻挡数</>。
+
+[Battle.Pause(pause=false)]
+[Delay(time=5)]
+[Battle.Pause(pause=true)] 
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+由于萨尔贡资源有限，所以各位采集资源时会遇到敌人的骚扰，不过各位可以不用太过担心这点。 
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+毕竟对方的敌意并不强烈，大多数情况下他们只是来争抢资源。所以不必担心，哪怕敌人进入保护点，也不会对各位造成伤害。 
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+而且，不论各位是主动撤回还是被击倒，资源都会被成功搬运回来。 
+
+[Battle.Pause(pause=false)]
+[Delay(time=15)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+
+[Tutorial(target="card_toggle", waitForSignal="put_down", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",searchBtnInChildren=true, \
+          protectTime=0.5, dialogHead="$avatar_trademan")] \
+有没有觉得采集资源有些吃力？在这里可以看到各位携带的各类设施。看看这个——！
+
+[Tutorial(focusX=-138, focusY=61, focusWidth=120, focusHeight=120, \
+          animStyle="Highlight",anchor="BottomRight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这是敝司，也就是太阳谷机械工业出产的机械拼装设备——采集站！
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+它能够拼装出机械劳工，帮助收集采集站范围内特定的资源。
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+只要有了它，各位的采集效率就会有极大的提升。相逢就是有缘，我让各位免费试用一次看看！
+
+[InputBlocker(blockInput=false)]
+[Battle.EnsureMinCost(cost=5)]
+ 
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_trademan", animStyle="Drag", \
+          startX=-138, startY=61, startAnchor="BottomRight",endAnchor="BottomRight", endX=-338, endY=261)] \
+它的使用方法非常简单，只需要找到一个<@tu.kw>远离敌人</>的地方——
+
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_trademan", animStyle="Drag", \
+          startX=56, startY=33, endX=269, endY=33)] \
+然后<@tu.kw>向右</>安置！它就可以自动收集各位想要的资源啦！

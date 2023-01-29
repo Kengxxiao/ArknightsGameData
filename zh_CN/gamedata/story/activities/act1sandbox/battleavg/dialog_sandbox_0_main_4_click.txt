@@ -1,0 +1,234 @@
+[HEADER(actId="act1sandbox", npcId="trap_415_trademan")] 
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]喂！喂！各位怎么还在这里愣神？！
+[name="联络员"]你们新开垦的地挤占了王酋领地上的小溪，王酋大人很不满意，现在派人过来打你们了！
+[name="联络员"]你们问我怎么知道？
+[name="联络员"]上个月就有两位王酋大人因为划分领地出了分歧，两方属下打了三天三夜，最后连分界线上一棵果树的果子都分得清清楚楚。
+[name="联络员"]而且你们......也还没有给王酋大人交过税吧？他们当然要过来找个说法了！
+[Decision(option1="只能打了吗？不能再商量商量吗？", value1="1.1", option2="这，小溪难道不是公共资源吗？", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]现在说这些还有什么用啊？他们就要打过来了！虽然过来可能还需要一些时间......
+[name="联络员"]我可是一知道这个消息就赶过来告知各位了，各位可千万要重视起来才行！前几天还有一个小部落因为发展不下去被吞并。
+[name="联络员"]你们要有足够的钱和资源，才能在这里站稳脚跟。比如，我这里正好有能帮上各位忙的好东西——瞧瞧它！
+[name="联络员"]这可是太阳谷工业最新......
+[Decision(option1="（打断他）", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]这、这样啊......
+[name="联络员"]看来还是我们太阳谷的商品没有满足各位的需求了......
+[name="联络员"]不过，既然选择来萨尔贡发展，想必各位之前对这种情况也不是没有准备吧？现在最要紧的还是在他们过来之前，起码建几个防御建筑！
+[name="联络员"]而且我也听说过，沁礁黑市曾经售卖过一些能跨地块的联络基站，有了它，各位可以联络到这个地块之外的佣兵寻求援助，直接逃跑！
+[name="联络员"]不仅如此，还能带走不少钱财！留得黄沙在，不怕没坑挖嘛！
+[Decision(option1="明白了，我们会好好准备的！", value1="3.1", option2="是可以跑的吗？", value2="3.2")]
+[predicate(references="3.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]那我们就不要在这里聊天了，各位快去做准备吧！我一定会以十二万分的精神，为各位祈祷获得胜利的！
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]总之，各位先好好加固一下他们打过来时要经过的各个区块，升级技术也是发展的必经之路，还有，要多造些建筑......
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]我大致明白了。我这就去组织大家清点各类物资，部落里的其他人都会对这次的袭击做好准备的。
+[name="巴塞尔"]没想到在这里也逃不开这样的事情，不过，以我之前的经验，我们应该是可以成功抵挡的。
+[name="巴塞尔"]等结束后，我们再一起商量一下以后应当怎么做吧。
+[Decision(option1="还有交税的事情......", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]看来我们也需要为这个做准备了，不知道需要交多少呢......
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]各位，毕竟打仗可不是闹着玩的，要是需要敝司的商品作为帮助，也一定不要吝惜钱财！
+[name="联络员"]你们可一定要挺过来啊！
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]老伊辛看到了你们的勇敢......年轻而有活力的部族正在这片黄沙上成长起来。
+[name="老伊辛"]你们能够经受住这一切的。
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]嗯？这位老人什么时候来的？
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]你们在想些什么？老伊辛看不出来，老伊辛只是来兑现自己之前的承诺。
+[name="老伊辛"]沙暴无法吹倒的树苗只会长出更加遒劲的根系，会汇集更多的水源。
+[name="老伊辛"]请来黑市吧，带着胜利，“沙卒”会想要见见你们的。
+[Decision(option1="这里真的适合我们生活吗......？", value1="5.1", option2="我们绝对不会轻易被欺负！", value2="5.2")]
+[predicate(references="5.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]唔......老伊辛无权干涉你们的决定。
+[name="老伊辛"]你们会得到自己的答案。
+[SetConditionProgress(conditionKey="route_main", itemCount="4")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="5.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]......老伊辛没有看错。
+[name="老伊辛"]请收下这个吧。它能帮助你们看清那黄沙中未知的未来......
+[Decision(option1="（接过）", value1="6.1")]
+[predicate(references="6.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【获得了跨局信物<命运的水晶球>】
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]......祝各位一切顺利。
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="3.2")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]当然！不然各位以为我是如何做生......
+[name="联络员"]如何发展的！
+[name="联络员"]必要的时候权衡利弊，多给自己留一条路，才是生存的硬道理啊......
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]总之，各位先好好加固一下他们打过来时要经过的各个区块，升级技术也是发展的必经之路，还有，要多造些建筑......
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]我大致明白了。我这就去组织大家清点各类物资，部落里的其他人都会对这次的袭击做好准备的。
+[name="巴塞尔"]没想到在这里也逃不开这样的事情，不过，以我之前的经验，我们应该是可以成功抵挡的。
+[name="巴塞尔"]等结束后，我们再一起商量一下以后应当怎么做吧。
+[Decision(option1="还有交税的事情......", value1="7.1")]
+[predicate(references="7.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]看来我们也需要为这个做准备了，不知道需要交多少呢......
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]各位，毕竟打仗可不是闹着玩的，要是需要敝司的商品作为帮助，也一定不要吝惜钱财！
+[name="联络员"]你们可一定要挺过来啊！
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]老伊辛看到了你们的勇敢......年轻而有活力的部族正在这片黄沙上成长起来。
+[name="老伊辛"]你们能够经受住这一切的。
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]嗯？这位老人什么时候来的？
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]你们在想些什么？老伊辛看不出来，老伊辛只是来兑现自己之前的承诺。
+[name="老伊辛"]沙暴无法吹倒的树苗只会长出更加遒劲的根系，会汇集更多的水源。
+[name="老伊辛"]请来黑市吧，带着胜利，“沙卒”会想要见见你们的。
+[Decision(option1="这里真的适合我们生活吗......？", value1="8.1", option2="我们绝对不会轻易被欺负！", value2="8.2")]
+[predicate(references="8.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]唔......老伊辛无权干涉你们的决定。
+[name="老伊辛"]你们会得到自己的答案。
+[SetConditionProgress(conditionKey="route_main", itemCount="4")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="8.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]......老伊辛没有看错。
+[name="老伊辛"]请收下这个吧。它能帮助你们看清那黄沙中未知的未来......
+[Decision(option1="（接过）", value1="9.1")]
+[predicate(references="9.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【获得了跨局信物<命运的水晶球>】
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]......祝各位一切顺利。
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]现在说这些还有什么用啊？他们就要打过来了！虽然过来可能还需要一些时间......
+[name="联络员"]我可是一知道这个消息就赶过来告知各位了，各位可千万要重视起来才行！前几天还有一个小部落因为发展不下去被吞并。
+[name="联络员"]你们要有足够的钱和资源，才能在这里站稳脚跟。比如，我这里正好有能帮上各位忙的好东西——瞧瞧它！
+[name="联络员"]这可是太阳谷工业最新......
+[Decision(option1="（打断他）", value1="10.1")]
+[predicate(references="10.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]这、这样啊......
+[name="联络员"]看来还是我们太阳谷的商品没有满足各位的需求了......
+[name="联络员"]不过，既然选择来萨尔贡发展，想必各位之前对这种情况也不是没有准备吧？现在最要紧的还是在他们过来之前，起码建几个防御建筑！
+[name="联络员"]而且我也听说过，沁礁黑市曾经售卖过一些能跨地块的联络基站，有了它，各位可以联络到这个地块之外的佣兵寻求援助，直接逃跑！
+[name="联络员"]不仅如此，还能带走不少钱财！留得黄沙在，不怕没坑挖嘛！
+[Decision(option1="明白了，我们会好好准备的！", value1="11.1", option2="是可以跑的吗？", value2="11.2")]
+[predicate(references="11.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]那我们就不要在这里聊天了，各位快去做准备吧！我一定会以十二万分的精神，为各位祈祷获得胜利的！
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]总之，各位先好好加固一下他们打过来时要经过的各个区块，升级技术也是发展的必经之路，还有，要多造些建筑......
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]我大致明白了。我这就去组织大家清点各类物资，部落里的其他人都会对这次的袭击做好准备的。
+[name="巴塞尔"]没想到在这里也逃不开这样的事情，不过，以我之前的经验，我们应该是可以成功抵挡的。
+[name="巴塞尔"]等结束后，我们再一起商量一下以后应当怎么做吧。
+[Decision(option1="还有交税的事情......", value1="12.1")]
+[predicate(references="12.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]看来我们也需要为这个做准备了，不知道需要交多少呢......
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]各位，毕竟打仗可不是闹着玩的，要是需要敝司的商品作为帮助，也一定不要吝惜钱财！
+[name="联络员"]你们可一定要挺过来啊！
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]老伊辛看到了你们的勇敢......年轻而有活力的部族正在这片黄沙上成长起来。
+[name="老伊辛"]你们能够经受住这一切的。
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]嗯？这位老人什么时候来的？
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]你们在想些什么？老伊辛看不出来，老伊辛只是来兑现自己之前的承诺。
+[name="老伊辛"]沙暴无法吹倒的树苗只会长出更加遒劲的根系，会汇集更多的水源。
+[name="老伊辛"]请来黑市吧，带着胜利，“沙卒”会想要见见你们的。
+[Decision(option1="这里真的适合我们生活吗......？", value1="13.1", option2="我们绝对不会轻易被欺负！", value2="13.2")]
+[predicate(references="13.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]唔......老伊辛无权干涉你们的决定。
+[name="老伊辛"]你们会得到自己的答案。
+[SetConditionProgress(conditionKey="route_main", itemCount="4")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="13.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]......老伊辛没有看错。
+[name="老伊辛"]请收下这个吧。它能帮助你们看清那黄沙中未知的未来......
+[Decision(option1="（接过）", value1="14.1")]
+[predicate(references="14.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【获得了跨局信物<命运的水晶球>】
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]......祝各位一切顺利。
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="11.2")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]当然！不然各位以为我是如何做生......
+[name="联络员"]如何发展的！
+[name="联络员"]必要的时候权衡利弊，多给自己留一条路，才是生存的硬道理啊......
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]总之，各位先好好加固一下他们打过来时要经过的各个区块，升级技术也是发展的必经之路，还有，要多造些建筑......
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]我大致明白了。我这就去组织大家清点各类物资，部落里的其他人都会对这次的袭击做好准备的。
+[name="巴塞尔"]没想到在这里也逃不开这样的事情，不过，以我之前的经验，我们应该是可以成功抵挡的。
+[name="巴塞尔"]等结束后，我们再一起商量一下以后应当怎么做吧。
+[Decision(option1="还有交税的事情......", value1="15.1")]
+[predicate(references="15.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]看来我们也需要为这个做准备了，不知道需要交多少呢......
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]各位，毕竟打仗可不是闹着玩的，要是需要敝司的商品作为帮助，也一定不要吝惜钱财！
+[name="联络员"]你们可一定要挺过来啊！
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]老伊辛看到了你们的勇敢......年轻而有活力的部族正在这片黄沙上成长起来。
+[name="老伊辛"]你们能够经受住这一切的。
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]嗯？这位老人什么时候来的？
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]你们在想些什么？老伊辛看不出来，老伊辛只是来兑现自己之前的承诺。
+[name="老伊辛"]沙暴无法吹倒的树苗只会长出更加遒劲的根系，会汇集更多的水源。
+[name="老伊辛"]请来黑市吧，带着胜利，“沙卒”会想要见见你们的。
+[Decision(option1="这里真的适合我们生活吗......？", value1="16.1", option2="我们绝对不会轻易被欺负！", value2="16.2")]
+[predicate(references="16.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]唔......老伊辛无权干涉你们的决定。
+[name="老伊辛"]你们会得到自己的答案。
+[SetConditionProgress(conditionKey="route_main", itemCount="4")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="16.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]......老伊辛没有看错。
+[name="老伊辛"]请收下这个吧。它能帮助你们看清那黄沙中未知的未来......
+[Decision(option1="（接过）", value1="17.1")]
+[predicate(references="17.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【获得了跨局信物<命运的水晶球>】
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="老伊辛"]......祝各位一切顺利。
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_415_trademan")]
+[End]

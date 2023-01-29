@@ -1,0 +1,108 @@
+[HEADER(actId="act1sandbox", npcId="trap_415_trademan")] 
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]哎，各位，又见面了！
+[name="联络员"]真巧啊！
+[name="联络员"]你们来这里是要做什么？狩猎？还是采集矿物？真辛苦啊！
+[name="联络员"]不管是来做什么，相逢就是有缘！各位还记得我吧？我是太阳谷机械工业驻扎在这里的联络员。
+[name="联络员"]要是各位对之前的事还有疑惑，或者这几天又遇到了什么不好解决的问题，都可以来问问我！
+[name="联络员"]当然，各位问完以后能再来看看敝司这些新推出的产品，就更好了！
+[name="联络员"]如何？
+[Decision(option1="要为部落发展找资源，我们应该去哪？", value1="1.1", option2="太好了，快帮帮我们！", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]各位首选自然是太阳谷机械工业，也就是敝司了。
+[name="联络员"]敝司的产品全都经过层层改良和试用，不仅物美价廉，还提供整套售后服务！保证能够满足各位在这里生存发展的一切需求哦。
+[name="联络员"]各位看看？
+[Decision(option1="（诉说困难）", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]......原来如此！
+[name="联络员"]难得我和各位如此聊得来，我从业这么久还是第一次遇到如此有缘之人！
+[name="联络员"]不如这样，为了表达我的欣喜之情，我们从今天开始就是合作者了，如何？
+[name="联络员"]我还可以再给大家透露一个伊巴特地区最大的交易场——沁礁黑市，就在各位驻扎地的西北处！在那里只要有钱，就能买到各位想要的所有东西。
+[name="联络员"]哦，那边的小哥我之前好像在你们部落里也见过，这么急匆匆的样子，干什么去了？
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]呼......呼......这鬼天气......
+[name="巴塞尔"]我们回来了！刚才带着几个人一起去附近看了看，有不少可以捕猎采集的地方，我们过一会儿就先去收集资源吧。
+[name="巴塞尔"]还有什么事需要我去做吗？
+[Decision(option1="暂时没有了。", value1="3.1")]
+[predicate(references="3.1")]
+[Decision(option1="我们在听这位联络员讲黑市的事。", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]黑市......我们在来的时候好像注意过那个地方。
+[name="巴塞尔"]如果只是单纯地在这里生活一阵，我们之前倒已经做了一些准备——这片土地虽然有些贫瘠，但暂时养活我们，还没什么问题。
+[name="巴塞尔"]但这里毕竟还是萨尔贡，征税队发现我们，只是早晚的问题，我们现在根本没有钱去交税......
+[name="巴塞尔"]......出于更长远的考虑，黑市，确实是一个选择。
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]对，这就是我刚刚说的了！各位，不论是想花钱买想要的东西，还是想要快速地挣钱，黑市都是一个好去处。
+[name="联络员"]只要各位愿意，找一位雇主接下几个单子，或者是帮他们送送东西，报酬够各位这样的部落好好生活一阵子了。
+[name="联络员"]特别是——
+[name="联络员"]（小声）要是能得到黑市背后某位的支持......
+[name="联络员"]那位掌控着整个黑市的人名叫“沙卒”，我对他慕名已久，可惜自己只是一个小小的联络员......
+[Decision(option1="黑市......谢谢你告诉我们。", value1="5.1", option2="好，我们这就去！", value2="5.2")]
+[predicate(references="5.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]各位是我的合作者，这点小忙不算什么。
+[name="联络员"]你们刚到这里，却被我一直拉着说话，真是过意不去。各位请先在这里安顿下来，我那时再来打扰吧！
+[name="联络员"]别忘了，黑市就在各位驻扎地的西北处，而且，敝司在那里也有点小生意，各位也要多多光顾我们太阳谷啊！
+[SetConditionProgress(conditionKey="route_main", itemCount="1")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="5.2")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]欸，请再稍等一下！不来看看敝司的新产品吗？价格十分优惠！比如这个——
+[name="联络员"]欸，真走了？
+[name="联络员"]那、那——别忘了黑市在各位驻扎地的西北处，敝司在那里也有点小生意——祝各位今天一切顺利！
+[SetConditionProgress(conditionKey="route_main", itemCount="1")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]哎呀，这么急迫啊。
+[name="联络员"]别着急，敝司正好最近新研发出了一款械能按摩椅，能消除人体上的一切疲劳，身上不累了，心里就不烦了，事也就好办了。
+[name="联络员"]不如我们先坐下来慢慢聊？
+[Decision(option1="（诉说困难）", value1="6.1")]
+[predicate(references="6.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]......原来如此！
+[name="联络员"]难得我和各位如此聊得来，我从业这么久还是第一次遇到如此有缘之人！
+[name="联络员"]不如这样，为了表达我的欣喜之情，我们从今天开始就是合作者了，如何？
+[name="联络员"]我还可以再给大家透露一个伊巴特地区最大的交易场——沁礁黑市，就在各位驻扎地的西北处！在那里只要有钱，就能买到各位想要的所有东西。
+[name="联络员"]哦，那边的小哥我之前好像在你们部落里也见过，这么急匆匆的样子，干什么去了？
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]呼......呼......这鬼天气......
+[name="巴塞尔"]我们回来了！刚才带着几个人一起去附近看了看，有不少可以捕猎采集的地方，我们过一会儿就先去收集资源吧。
+[name="巴塞尔"]还有什么事需要我去做吗？
+[Decision(option1="暂时没有了。", value1="7.1")]
+[predicate(references="7.1")]
+[Decision(option1="我们在听这位联络员讲黑市的事。", value1="8.1")]
+[predicate(references="8.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="巴塞尔"]黑市......我们在来的时候好像注意过那个地方。
+[name="巴塞尔"]如果只是单纯地在这里生活一阵，我们之前倒已经做了一些准备——这片土地虽然有些贫瘠，但暂时养活我们，还没什么问题。
+[name="巴塞尔"]但这里毕竟还是萨尔贡，征税队发现我们，只是早晚的问题，我们现在根本没有钱去交税......
+[name="巴塞尔"]......出于更长远的考虑，黑市，确实是一个选择。
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]对，这就是我刚刚说的了！各位，不论是想花钱买想要的东西，还是想要快速地挣钱，黑市都是一个好去处。
+[name="联络员"]只要各位愿意，找一位雇主接下几个单子，或者是帮他们送送东西，报酬够各位这样的部落好好生活一阵子了。
+[name="联络员"]特别是——
+[name="联络员"]（小声）要是能得到黑市背后某位的支持......
+[name="联络员"]那位掌控着整个黑市的人名叫“沙卒”，我对他慕名已久，可惜自己只是一个小小的联络员......
+[Decision(option1="黑市......谢谢你告诉我们。", value1="9.1", option2="好，我们这就去！", value2="9.2")]
+[predicate(references="9.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]各位是我的合作者，这点小忙不算什么。
+[name="联络员"]你们刚到这里，却被我一直拉着说话，真是过意不去。各位请先在这里安顿下来，我那时再来打扰吧！
+[name="联络员"]别忘了，黑市就在各位驻扎地的西北处，而且，敝司在那里也有点小生意，各位也要多多光顾我们太阳谷啊！
+[SetConditionProgress(conditionKey="route_main", itemCount="1")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="9.2")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="联络员"]欸，请再稍等一下！不来看看敝司的新产品吗？价格十分优惠！比如这个——
+[name="联络员"]欸，真走了？
+[name="联络员"]那、那——别忘了黑市在各位驻扎地的西北处，敝司在那里也有点小生意——祝各位今天一切顺利！
+[SetConditionProgress(conditionKey="route_main", itemCount="1")]
+[withdraw(charId="trap_415_trademan")]
+[End]
