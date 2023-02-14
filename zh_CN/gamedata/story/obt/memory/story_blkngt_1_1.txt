@@ -1,0 +1,861 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[dialog]
+[stopmusic]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$drift_intro",key="$drift_loop", volume=0.4)]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playsound(key="$d_avg_paper1", volume=1)]
+[delay(time=1.5)]
+[playsound(key="$d_avg_paper2", volume=1)]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1", duration=2, isblock=true)]
+[name="桑葚"]唉......
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="桑葚小姐，作为夜半小姐的引导人，这件事你怎么看呢？", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]博、博士，我想，按夜半小姐说一不二的个性，应该刚递交完申请书就离开这里了吧。
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="你听起来好像有些埋怨她。; 所以，你同意她离去吗？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="桑葚"]嗯......不过我的想法也没那么重要，博士，我想问问您的意见。
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="算了，既然她已经离开，我们再讨论也没有什么必要。", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="桑葚"]感觉博士您好像也不太开心的样子......
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="没有，你多想了。; 嗯咳，你多虑了。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="你知道她为什么选择离开吗？; 不过，我很好奇她离开的原因。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#10$1")]
+[name="桑葚"]我、我也不知道原因。
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[name="桑葚"]唉......我本来以为她早已适应了这里的生活，虽然我初次见她的时候，她确实显得不太自在。
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="桑葚"]那时她的病情不太稳定，所以应医疗部的建议，决定驻舰成为正式干员，以便他们随时观察。
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="桑葚"]我被任命为她的引导人，带她熟悉舰内大小事宜......
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[playMusic(intro="$path_intro",key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$2", duration=1, isblock=true)]
+[name="夜半"]所以......你就是我在这艘船上的队长？看你这小胳膊小腿，你能保护我吗？
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="桑葚"]夜、夜半小姐，我的体能虽然比不上你，但如果遇到危险，我也会倾尽所能保护你的。
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$2")]
+[name="夜半"]呵，挺有自信嘛，看你表现好了。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[PlaySound(key="$dooropenquite", volume=0.5)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[playMusic(intro="$path_intro",key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", duration=1)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2", duration=1)]
+[delay(time=2)]
+[charslot(slot = "L", focus="L")]
+[name="夜半"]......以后我和你就住在这屋子里吗？
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", focus="R")]
+[name="桑葚"]虽然夜半小姐你的病情还没有严重到要住进医疗部的程度，但也是需要时刻关注的。
+[name="桑葚"]这段时间，为了方便监测你的健康状况，我会与你同住。
+[dialog]
+[charslot(slot = "L", posfrom="0,0", posto="100,0", duration=1)]
+[delay(time=1.2)]
+[PlaySound(key="$d_avg_doorknob", volume=1)]
+[delay(time=0.5)]
+[PlaySound(key="$d_avg_doorknob", volume=1)]
+[delay(time=1)]
+[charslot(slot = "L", posfrom="100,0", posto="0,0", duration=0.5)]
+[delay(time=0.8)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="none")]
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="夜半"]这里的窗户打不开吗？我想吹吹风。
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1", focus="R")]
+[name="桑葚"]你觉得温度太高了？我这就把空调打开。
+[dialog]
+[delay(time=1)]
+[PlaySound(key="$d_avg_devicebeep", volume=1)]
+[delay(time=2)]
+[name="桑葚"]现在感觉怎么样？
+[charslot(slot = "L", name = "avg_476_blkngt_1#7$2",focus="L")]
+[name="夜半"]嗯......感觉有点不对劲。
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1", focus="R")]
+[name="桑葚"]夜半小姐，你是不太舒服吗？
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="夜半"]或许吧，可能是我身体的原因。
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="桑葚"]不好意思，那个，冒犯了。
+[charslot(slot = "L", name = "avg_476_blkngt_1#5$2",focus="L")]
+[name="夜半"]欸，你要做什么？
+[dialog]
+[charslot(slot = "L",focus="all")]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[charslot(slot = "R", posfrom="0,0", posto="-220,0", duration=1.5)]
+[delay(time=1.8)]
+[charslot(slot = "R", posfrom="-220,0", posto="-250,30", duration=0.5, isblock=true)]
+[delay(time=1)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="桑葚"]感觉你额头的温度很正常......
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[charslot(slot = "R", posfrom="-250,30", posto="-220,0", duration=0.5)]
+[delay(time=1)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="桑葚"]一会儿吃完晚饭我们可以去医疗部做一个更为细致的检查。
+[dialog]
+[charslot(slot = "R", focus="all")]
+[charslot(slot = "L", posfrom="0,0", posto="-100,0", duration=0.8)]
+[delay(time=1)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#9$2",focus="L")]
+[name="夜半"]呃......我看应该没什么问题，医疗部就不用去了吧？
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="桑葚"]你确定吗？你看起来不太舒服。
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="夜半"]当然。
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="桑葚"]好、好吧......
+[dialog]
+[charslot(slot = "L",focus="all")]
+[charslot(slot = "R", posfrom="-220,0", posto="0,0", duration=1)]
+[delay(time=1.5)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#2$2")]
+[delay(time=1.5)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2")]
+[charslot(slot = "L", posfrom="-100,0", posto="0,0", duration=2)]
+[delay(time=2.5)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", focus="R")]
+[name="桑葚"]哦，差点忘了把这个给你。
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="夜半"]这是？
+[charslot(slot = "R", name = "avg_473_mberry_1#11$1", focus="R")]
+[name="桑葚"]护身符。
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="夜半"]我知道这是护身符，但是这一串也太多了吧。
+[charslot(slot = "R", name = "avg_473_mberry_1#8$1", focus="R")]
+[name="桑葚"]我想......多的话，会更加灵验。
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="夜半"]先说好，我是不会把这一堆东西挂在身上到处跑的。
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", focus="R")]
+[name="桑葚"]不用带出去，挂在柜子里也可以的。
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="夜半"]不了吧，香火味太浓了，衣服会变得难闻。
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="桑葚"]对、对不起，是我考虑不周！
+[charslot(slot = "L", name = "avg_476_blkngt_1#11$2",focus="L")]
+[name="夜半"]......啧，我就说了，和你们这样的娇娇女打交道是真的麻烦。
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1", focus="R")]
+[name="桑葚"]（呜，好难相处啊......不行，再怎么说，这也是我的任务，得努力和她处好关系才行。）
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1", focus="R")]
+[name="桑葚"]那......你想去哪里看看吗？我带你去？
+[charslot(slot = "L", name = "avg_476_blkngt_1#11$2",focus="L")]
+[name="夜半"]不用了，你站住，不要跟着我。
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="桑葚"]可是......
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="夜半"]没有可是。
+[dialog]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2")]
+[charslot(slot = "L", posfrom="0,0", posto="500,0", afrom = 1, ato = 0, duration=1.2)]
+[PlaySound(key="$rungeneral", volume=1)]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="桑葚"]夜半小姐，等等！
+[dialog]
+[PlaySound(key="$rungeneral", volume=1)]
+[charslot(slot = "R", posfrom="0,0", posto="300,0", afrom = 1, ato = 0, duration=1)]
+[stopmusic(fadetime=1)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$drift_intro",key="$drift_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="桑葚"]很长一段时间里，我以为是夜半小姐她性格如此，不愿意和人亲近，再加上初来乍到，有些拘谨。
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]......现在看来，她只是不喜欢这里。
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="但当时她并没有直接离开。; 可她为什么现在才选择离开？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="桑葚"]上个月，我们的外出救援任务结束，从荒地回到了舰船上。不久后她就向我提出要辞去正式干员的职位，恢复合作干员的身份。
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="桑葚"]我想，或许是荒地上发生的一些事情让她对这里产生了不满。
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]又或许......问题出在我身上，是我让她无法忍受继续留在这里。
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="别乱想，这纯属无稽之谈。; 相信我，夜半小姐绝不会这样想。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="桑葚"]谢谢您......博士。
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="介意将你们在荒地上的经历讲给我听听吗？", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="桑葚"]其实，这也是让我一直百思不得其解的地方，因为在我看来，这段经历并没有什么让人烦恼的地方。相反，我觉得它很有趣，也很愉快。
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="桑葚"]我以为，经过这次外勤任务，我和夜半小姐亲近了不少。
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="桑葚"]甚至说，我觉得她已经融入了我们的生活。
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_forest",screenadapt="coverall")]
+[playMusic(intro="$warm_intro",key="$warm_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="none")]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1",focus="L")]
+[name="夜半"]先说好，这次到外面你要听我的，不许拖我后腿。
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1",focus="R")]
+[name="桑葚"]但是，我是队长啊？
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1",focus="L")]
+[name="夜半"]你比我能打吗？
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="R")]
+[name="桑葚"]......没有。
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1",focus="L")]
+[name="夜半"]你在荒地上生活的时间比我久吗？
+[charslot(slot = "R", name = "avg_473_mberry_1#8$1",focus="R")]
+[name="桑葚"]也没有......
+[charslot(slot = "L", name = "avg_476_blkngt_1#2$1",focus="L")]
+[name="夜半"]那我为什么要听你的命令？
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1",focus="R")]
+[name="桑葚"]可......
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="夜半"]......噗嗤，哈哈哈哈。
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1",focus="R")]
+[name="桑葚"]夜半小姐你......为什么突然笑了？
+[charslot(slot = "L", name = "avg_476_blkngt_1#3$1",focus="L")]
+[name="夜半"]没什么，看你这呆头呆脑的样子，觉得有些好玩。
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1",focus="R")]
+[name="桑葚"]你刚刚的话......？
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="夜半"]都是逗你玩的。明明任务都快要结束了，你还一副紧张兮兮的样子，天天拘在帐篷里面，我这次非得把你拉到外面逛逛。
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1",focus="R")]
+[name="桑葚"]我还以为......
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="夜半"]还以为那些话是我的真心话吗？
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="R")]
+[name="桑葚"]......嗯。
+[charslot(slot = "L", name = "avg_476_blkngt_1#9$1",focus="L")]
+[name="夜半"]实话说，我之前确实这么认为。
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1",focus="R")]
+[name="桑葚"]......原来不是错觉啊。
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="夜半"]但那都是我的偏见，不是吗？和你相处这么久，你所做的点点滴滴都已经足够向我证明，你非常优秀。
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1",focus="R")]
+[name="桑葚"]怎么突然就开始夸我，多、多不好意思。
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="夜半"]有什么不好意思？做得好就应该被大家赞扬。我还记得那位老人家，谁都觉得没戏，但你居然真想到法子把她救出来了。
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="R")]
+[name="桑葚"]没有大家的帮忙，我也做不到的。
+[charslot(slot = "L", name = "avg_476_blkngt_1#3$1",focus="L")]
+[name="夜半"]少和我扯这些，夸你厉害就是因为你厉害，不许怀疑。
+[dialog]
+[playsound(key="$rungeneral", volume=1)]
+[charslot(slot = "L", posfrom="0,0", posto="-300,0", afrom=1, ato=0, duration=0.5)]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1",focus="R")]
+[playsound(key="$leaveshake", volume=1)]
+[delay(time=3)]
+[charslot]
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1")]
+[name="夜半"]给，接着，尝尝吧。
+[dialog]
+[charslot(slot = "M", posfrom="0,0", posto="80,0", duration=0.5)]
+[playsound(key="$d_avg_throwstone", volume=1)]
+[delay(time=0.6)]
+[charslot]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[delay(time=0.5)]
+[playsound(key="$fightgeneral", volume=0.3)]
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[charslot(slot = "M", posfrom="0,0", posto="0,-50", duration=0.3)]
+[delay(time=0.3)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[charslot(slot = "M", posfrom="0,-50", posto="0,0", duration=0.2)]
+[delay(time=1.5)]
+[charslot]
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1")]
+[delay(time=0.5)]
+[charslot(slot = "M", posfrom="0,0", posto="300,0", afrom=1, ato=0, duration=1)]
+[playsound(key="$rungeneral", volume=1)]
+[delay(time=1)]
+[charslot]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[charslot(slot = "L", name = "avg_476_blkngt_1#5$1", duration=1)]
+[charslot(slot = "L", posfrom="-300,0", posto="200,0", duration=2)]
+[delay(time=3.5)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#2$1")]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[delay(time=1)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#7$1")]
+[charslot(slot = "L", posfrom="200,0", posto="0,0", duration=2)]
+[delay(time=2)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#7$1", focus="L")]
+[name="夜半"]啧，你怎么这么近都接不到......
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="夜半"]算了，你吃另外一个吧。
+[dialog]
+[charslot(slot = "L", posfrom="0,0", posto="0,-30", duration=1)]
+[delay(time=1.1)]
+[charslot(slot = "L", posfrom="0,-30", posto="0,0", duration=1)]
+[delay(time=1.5)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="桑葚"]你、你不要捡那个果子了，掉在地上不卫生，吃了要肚子痛的。
+[charslot(slot = "L", name = "avg_476_blkngt_1#11$1", focus="L")]
+[name="夜半"]事多，就破了点皮，怎么就不能吃了。
+[dialog]
+[playsound(key="$d_avg_humaneat", volume=0.8)]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="桑葚"]好歹拿袖子擦擦呀。
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1", focus="R")]
+[playsound(key="$d_avg_humaneat", volume=0.5)]
+[delay(time=3)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="桑葚"]......好、好吃，我从来没有吃过这种果子。
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="夜半"]有一次，我和同伴行进的路线上有一片靠近河流的树林。
+[name="夜半"]林子里长着很多这样的果子，离开的时候我们每个人都摘了一堆，身上的口袋都塞满了。
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1", focus="L")]
+[name="夜半"]后来就再没碰见过了，没想到这里居然长了这么多。
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="桑葚"]我们可以多摘一些带回去，让大家都尝尝。
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="夜半"]我今天带你出来可不是为了摘果子的。
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="桑葚"]啊，我、我不知道这个......夜半小姐，你还有其他什么事吗？我以为我们就是来外面走走。
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="夜半"]你紧张什么？跟我来。
+[dialog]
+[charslot(slot = "L", posfrom="0,0", posto="200,0", duration=1, isblock=true)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="桑葚"]哎，你、你别拉我！
+[dialog]
+[charslot(slot = "L", posfrom="200,0", posto="-200,0", afrom = 1, ato = 0, duration=2)]
+[charslot(slot = "R", posfrom="0,0", posto="-400,0", afrom = 1, ato = 0, duration=2)]
+[delay(time=1)]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_caveentrance",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_avg_stream_loop", volume=0.4, loop=true, channel="BG")]
+[charslot(slot = "M", name = "avg_473_mberry_1#10$1", duration=1.5)]
+[delay(time=1.5)]
+[name="桑葚"]这里是......
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]嘘，小点声儿，洞穴里藏着一只大家伙，别吓到它。
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="桑葚"]（你为什么要带我来这里？太危险了。）
+[charslot(slot = "M", name = "avg_476_blkngt_1#11$1")]
+[name="夜半"]（危险？有我在，你很安全好吗？）
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]（专业老师曾经讲过，野外工作需要我们尽可能避开野生动物的。）
+[charslot(slot = "M", name = "avg_476_blkngt_1#11$1")]
+[name="夜半"]（打住，打住，谁管你的老师怎么说，注意看，它要出来了。）
+[dialog]
+[charslot]
+[PlaySound(key="$d_avg_deeplion", volume=0.3, loop=true, channel="monster")]
+[delay(time=2)]
+[StopSound(channel="monster", fadetime=1)]
+[delay(time=1)]
+细微的响动从洞穴中传来，桑葚眯起眼睛，想要看个仔细。
+[dialog]
+[StopSound(channel="BG", fadetime=1)]
+[PlaySound(key="$d_avg_grass", volume=1)]
+[delay(time=2)]
+但过了半天，声音沉寂下去，只有洞穴前方的灌木在被风吹过后，发出沙沙的响动。
+就在她快要失去耐性，想要叫旁边那个人一起回营地时，一只野兽从洞穴中探出头来。
+它肌肉结实，皮毛光滑，张着嘴，粗壮的獠牙清晰可见，可以轻松咬断猎物的喉管。
+[dialog]
+[PlaySound(key="$d_avg_deeplion", volume=0.5, loop=true, channel="monster")]
+[delay(time=2)]
+[StopSound(channel="monster", fadetime=1)]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[name="桑葚"]（好、好大一只......）
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="桑葚"]（我、我有点害怕，夜半，我们，那个......回去吧。）
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]（放心，这个距离它发现不了我们。你这么着急地爬起来，反而会让它注意到这里。）
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]（可、可是我......）
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]（别着急离开，再等一下。）
+[dialog]
+[charslot]
+野兽凶猛的样子让桑葚不由得把半张脸埋进双臂间，只露出一双眼睛，偷偷打量着它在洞穴口抽动鼻子的样子。
+似乎是确定周围没有危险，那只野兽松懈下来，从咽喉里滚出几声嚎叫，像是在呼唤着什么。
+[dialog]
+[PlaySound(key="$d_avg_deeplion", volume=1, loop=true, channel="monster")]
+[delay(time=2)]
+[StopSound(channel="monster", fadetime=1)]
+[delay(time=1.5)]
+很快，一只小兽步履蹒跚，晃晃悠悠地从洞穴中走出。
+或许是因为泥土湿滑，它还没走几步就狠狠跌了一跤，脑袋撞上了野兽的后腿。
+野兽丝毫不恼，只是回过头轻轻舔舐它的脑袋，鼓励它再次站起来。
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="桑葚"]（加油，你一定可以的，小宝宝。）
+[dialog]
+[charslot]
+[PlaySound(key="$d_avg_pawfootstep_1", volume=0.5)]
+[delay(time=2)]
+[PlaySound(key="$d_avg_pawfootstep_2", volume=0.6)]
+[delay(time=2)]
+[PlayMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[charslot(slot = "M", name = "avg_473_mberry_1#9$1")]
+[name="桑葚"]（哇哇哇，它做到了。）
+[charslot(slot = "M", name = "avg_473_mberry_1#9$1")]
+[name="桑葚"]（好、好可爱啊。）
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1")]
+[name="夜半"]（我之前来这里寻找食物的时候发现了怀孕的它，算算日子，我估计它的孩子应该诞生了。）
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="桑葚"]（真好，和妈妈在一起，它什么都不用怕。）
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="夜半"]（看，它们要离开了。）
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="桑葚"]（它们要去哪里？）
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="夜半"]（它们得趁秋天的时候吃得饱饱的，这样才好度过漫长寒冷的冬天。）
+[dialog]
+[charslot(slot = "M", name = "avg_473_mberry_1#9$1")]
+[delay(time=2)]
+[charslot]
+[charslot(slot = "L", name = "avg_473_mberry_1#9$1", focus="none")]
+[charslot(slot = "R", name = "avg_476_blkngt_1#1$1", focus="R")]
+[name="夜半"]好了，别看了，它们都跑得不见影儿了，我们也该回去了。
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="桑葚"]我没见过这样的场景，从来没有。啊不，其实在纪录片里面看到过，但是那样不算数的。
+[charslot(slot = "L", name = "avg_473_mberry_1#9$1", focus="L")]
+[name="桑葚"]没有亲眼见到的这么震撼。
+[charslot(slot = "R", name = "avg_476_blkngt_1#5$1", focus="R")]
+[name="夜半"]震撼？很稀松平常的事情啊。
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="桑葚"]夜半小姐以前生活的地方一定常常能看到这样美好的场景，所以才会说出这样的话来。
+[charslot(slot = "R", name = "avg_476_blkngt_1#10$1", focus="R")]
+[name="夜半"]......你说的对，总能看见。
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="桑葚"]你要记得写下来呀，夜半小姐。
+[charslot(slot = "R", name = "avg_476_blkngt_1#6$1", focus="R")]
+[name="夜半"]啊？记得什么？
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="桑葚"]记得写进发往本舰的报告里，这可是很特殊的见闻呢，很值得一提。
+[dialog]
+[charslot(slot = "R", name = "avg_476_blkngt_1#1$1", focus="R")]
+[delay(time=1.5)]
+[charslot(slot = "R", name = "avg_476_blkngt_1#2$1", focus="R")]
+[delay(time=2)]
+[name="夜半"]......知道了，会写的。
+[charslot(slot = "L", name = "avg_473_mberry_1#2$1", focus="L")]
+[name="桑葚"]不许拖到最后一天才写哦。
+[charslot(slot = "R", name = "avg_476_blkngt_1#10$1", focus="R")]
+[name="夜半"]好了好了，快走吧，我带你去摘那些果子，营地里的大家应该都想尝尝。
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="桑葚"]应该是那句话触怒了夜半小姐吧，怪我不会看气氛，讲出那么扫兴的话。按她的个性，一定对那些条条框框很抵触。
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]唉，博士，怎么办？现在夜半小姐已经离开，我才后知后觉地反应过来，想道歉也没有机会了。
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="这不是你的错，不必介怀。;我想，你其实遗憾的不是没有道歉，而是没有道别吧。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="桑葚"]是或者不是，现在谈什么都晚了。
+[dialog]
+[charslot]
+[playsound(key="$dooropenquite", volume=1)]
+[delay(time=1)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1", duration=1.5)]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[name="桑葚"]欸？！
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]你俩在这里嘀嘀咕咕什么呢？哎，博士，我的申请书批下来了没有？递上去好多天了，怎么一点儿动静都没有？
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="我们正在讨论。;你应该先敲门。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#11$1")]
+[name="夜半"]哼，婆婆妈妈的，麻烦。
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]夜半小姐，呜......我以为你已经离开了，我还想，都没和你告别......
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="夜半"]啊，不是你们规定了离开前必须提交报告，然后等待批准吗？
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[name="桑葚"]......主要是，你不是很厌恶这些规定吗？
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[name="夜半"]待了这么久，我清楚，你们的规定自有你们的道理，虽然不喜欢，但也不是不能适应。
+[charslot(slot = "M", name = "avg_476_blkngt_1#9$1")]
+[name="夜半"]再者......这里有朋友，不能不告而别。 
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="你必须离开的理由是什么呢，夜半小姐。;你为什么不愿意留在这里呢？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="桑葚"]对啊，夜半小姐，如果你有哪里不适应，尽可以提出来，我们都会帮助你解决。
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[name="夜半"]不是这里的问题。
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="桑葚"]不是因为这里，难道是因为这里的人吗？你、你是不是因为讨厌我，才、才不愿意留下的......
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]我从来没有这么想过。
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]你不讨厌我吗？
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="夜半"]你人很好，工作负责，业务能力也强。我直到现在才离开，就是因为你需要我帮忙，不然我早就走了。
+[charslot(slot = "M", name = "avg_473_mberry_1#10$1")]
+[name="桑葚"]我需要你帮忙？
+[charslot(slot = "M", name = "avg_476_blkngt_1#9$1")]
+[name="夜半"]对啊，你还记不记得那天？
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_infirmary", xScale=1.1,yScale=1.1)]
+[playMusic(intro="$path_intro",key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1", duration = 2)]
+[charslot(slot = "M", posfrom = "-300,0", posto = "0,0",duration = 2)]
+[delay(time=3)]
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]哎，夜半小姐，你怎么来了，是身体不舒服吗？
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="夜半"]没有，劳烦问下，桑葚在里面吗？
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]对，你......是在等她？
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]听说她的任务结束了，昨天就回舰了，但是直到现在我都没有看到她，怎么，她受伤了？
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]没有没有。
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]那她在干什么？
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]这次救援任务带回来的患者数目远超估计，医疗部的人手紧缺，所以暂时借调桑葚小姐来这里为一些轻症病人做应急治疗。
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]这不太好吧？她可是刚刚出完外勤任务回来。
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]她执意留下，本来她应该第二天再来的。
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[name="夜半"]呼......
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]你似乎很担心她。
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="夜半"]你为什么一脸不可思议的表情？
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]没，只是桑葚小姐提起你的时候总是唉声叹气，她好像觉得你并不喜欢和她相处。
+[charslot(slot = "M", name = "avg_476_blkngt_1#9$1")]
+[name="夜半"]没有，我从来没这么说过。
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]那就好，大家都希望你能多帮帮她呢。
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1")]
+[name="夜半"]帮她，为什么？
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]桑葚小姐的专业能力值得信赖，但是年纪还小，在荒地上的生存经验尚且不足，有你在，正好带她学些东西。
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]那现在她的工作结束了吗？
+[charslot]
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]应该早就结束了啊......
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1", afrom=0, ato=0, duration=0)]
+[BackgroundTween(xFrom=0, xTo=-180, duration=3,ease="OutQuad",block=false)]
+[charslot(slot="M", posfrom="0,0", posto="-50,0", afrom=1, ato=0, duration=1)]
+[delay(time=2)]
+[charslot(slot="R", posfrom="150,-100", posto="150,-100", afrom=0, ato=1, duration=2)]
+[delay(time=3)]
+[name="桑葚"]呼......呼......大叔、你受伤......别乱动......
+[charslot(slot = "M", focus = "none")]
+[name="医疗干员"]哎呀，桑葚小姐居然就这么靠着衣柜门睡着了，一定是累坏了。
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1",afrom=0, ato=0, duration=0)]
+[BackgroundTween(xFrom=-180, xTo=0, duration=3,ease="OutQuad",block=false)]
+[charslot(slot="R", posfrom="150,-100", posto="150,-100", afrom=1, ato=0, duration=1)]
+[delay(time=2)]
+[charslot(slot="M", posfrom="0,0", posto="0,0", afrom=0, ato=1, duration=1)]
+[delay(time=3)]
+[name="夜半"]她念叨什么呢？睡都睡不踏实......
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]小帽。
+[charslot]
+[name="小帽"]啾！
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="夜半"]让那家伙睡得更深些吧。
+[charslot]
+[name="小帽"]咻——
+[name="桑葚"]呼......
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]那个，帮个忙可以吗？让这家伙趴到我背上，睡在这里可不行。
+[charslot(slot = "M", name = "char_016_medic")]
+[name="医疗干员"]啊，哦哦，好的。
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="夜半"]真是的，光会给我找麻烦。
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[charslot(slot = "M", posfrom = "0,0", posto = "0,-100",duration = 1.5)]
+[delay(time=2.5)]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1", duration = 2)]
+[charslot(slot = "R", posfrom = "200,-100", posto = "-100,-100",duration = 2)]
+[delay(time=3)]
+[charslot(slot = "M", posfrom = "0,-100", posto = "0,0",duration = 1)]
+[charslot(slot = "R", posfrom = "-100,-100", posto = "-100,0",duration = 1)]
+[delay(time=2.5)]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]原来那天把我送回宿舍的人是夜半小姐你。
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]不然呢？那天你能睡得那么香，可是多亏了小帽。
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]是我误会了......
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]r
+[name="夜半"]你就是爱多想。
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="我想，或许误会产生的原因不仅仅是多想。;可夜半小姐你的讲话方式也很容易让人误会啊。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="夜半"]......
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]对不起，我之前相处的人里，没有你这样的女孩子。
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]我不是故意想让你难过的。
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="桑葚"]没关系，既然、既然误会澄清了，夜半小姐，请你留下吧！我在这里学到了很多，一定可以帮助你稳定病情。
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]可我......还是想回到荒地上，那里的生活对我来说，更加惬意。
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="这不是问题，有很多外勤任务都需要干员外出。;你可以专门负责荒地上的外勤任务。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]不一样，还是不一样。我知道，在这里我能衣食无忧，还有药物可以控制我的病情。我认识了新的同伴，学会了新的技能。
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="夜半"]人应该知足的......
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[delay(time=1.5)]
+[PlayMusic(intro="$newhope01_intro", key="$newhope01_loop", volume=0.4)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]可有些时候，晚上醒来，盯着白花花的天花板，没有月亮，没有星星，没有虫鸣，心里还是空落落的。
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]我的直觉告诉我，我的内心呼唤我，我的念头折磨我。
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[multiline(name="夜半")]那只不过是很简单的一句话——
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[multiline(name="夜半",end=true)]我要活在一抬头就能看到天空的地方。
+[charslot(slot = "M", name = "avg_473_mberry_1#7$1")]
+[name="桑葚"]你知道......你身体的状况有多糟糕吗，夜半小姐？那片天空它要如何保护你？
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="桑葚"]我不同意！你的申请我不批准！博士，请您也不要批准夜半小姐的申请书！
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]桑葚，听我说，我知道我的选择不多，所以我才要认认真真，选出自己最想要的那个。
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]还记得我带你去看的那只野兽吗？
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]嗯......一直记得。
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]荒地上，那样的野兽有很多，很多很多。
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]几年前，我还遇到过一只眠兽。那是个强壮的孩子，看到它第一眼，我就下定决心要将它驯服。
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="夜半"]可我几次尝试靠近与交流，都被它拒绝。它一旦见到我，立刻就逃得无影无踪。好吃的食物，绵软的暖窝，它都无动于衷。
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]一次意外，它被自己的猎物伤害，我将它救下，带回营地治疗。
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="夜半"]随着它的伤势逐渐好转，它对我从一开始的警惕满满，变为后来的亲昵。
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="夜半"]我以为自己已将它驯服，不再时时刻刻都盯着它。
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]就在一次简短的狩猎过后，我回到营地，它已经不在了，只留下我给它织的一顶小帽子。
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="夜半"]我很生气，荒地上毛线并不好搞到手......我以为它很喜欢这顶帽子的。
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="夜半"]于是顺着它的足迹，我跟了上去。
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="夜半"]等我找到它时，看见它在一片沙地中打滚，滚得脏兮兮的。但它非常快乐，是我见过的最快乐的样子。
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="夜半"]然后我便转身离开了，那一刻我深知，它不属于我，它属于那片沙地，属于那片广阔的沙漠。
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="桑葚"]我......我......
+[dialog]
+[delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[delay(time=2)]
+[dialog]
+[charslot]
+[Decision(options="......好了;我明白了。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="夜半小姐，你的辞行申请我批准了。", values="1")]
+[Predicate(references="1")]
+[Decision(options="从此以后你的身份恢复为罗德岛的合作干员，不必再驻舰了。", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[delay(time=1.5)]
+[name="夜半"]......谢谢。
+[dialog]
+[delay(time=1)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[delay(time=1.2)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]如果非要离开......至少、至少你离开前，记得带足药。
+[dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Subtitle(text="半年后", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[PlaySound(key="$d_avg_snowstormflp", volume=0.6, loop=true, channel="wind")]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Background(image="bg_desert_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0.15, r=255, g=255, b=0, fadetime=2, block=true)]
+[Blocker(a=0.1, r=255, g=255, b=0, fadetime=2, block=true)]
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="桑葚"]快点啊，快点接通啊。
+[PlaySound(key="$transmission", volume=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="桑葚"]喂？有人在听吗？我是干员桑葚，在前往龙门的任务途中遭遇特大沙暴，请求紧急支援！
+[PlaySound(key="$d_avg_telephonebusy", volume=1, loop=true, channel="TX")]
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="桑葚"]有人吗？有人在吗？
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="桑葚"]真的没办法了吗？怎么办，难道......
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]（我会死在这里吧。）
+[dialog]
+[StopSound(channel="TX", fadetime=1)]
+[PlaySound(key="$d_avg_snowstormflp", volume=1, loop=true, channel="wind")]
+[Blocker(a=0.2, r=204, g=102, b=0, fadetime=1, block=true)]
+[Blocker(a=0.1, r=204, g=102, b=0, fadetime=1, block=true)]
+[Blocker(a=0.2, r=204, g=102, b=0, fadetime=1, block=true)]
+[Blocker(a=0.1, r=204, g=102, b=0, fadetime=1, block=true)]
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[name="桑葚"]好饿，好困，好难受。
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="桑葚"]没人会来吧......根本没人。
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[name="桑葚"]呜......爸爸......妈妈。
+[dialog]
+[charslot(slot = "M", posfrom = "0,0", posto = "0,-80", duration=1)]
+[delay(time=1.5)]
+[charslot(slot = "M", posfrom = "0,-80", posto = "0,-300", afrom=1, ato=0, duration=0.8)]
+[delay(time=0.4)]
+[PlaySound(key="$bodyfalldown2", volume=1)]
+[delay(time=1.5)]
+[name="桑葚"]对不起......我真的......坚持不住了......
+[dialog]
+[stopmusic(fadetime=2)]
+[charslot]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[StopSound(channel="wind", fadetime=2)]
+[delay(time=3.5)]
+[name="？？？"]啾——啾——
+[name="桑葚"]（谁......是谁在舔我？呜，好痒......）
+[name="？？？"]醒了就赶紧把眼睛睁开。
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1", bstart=0.2, bend=0.7, duration= 0.01, end=false)] 
+[charslot(slot = "M", action="zoom", poszoom = "0.5,0.5", scale=0.9,duration = 0)]
+[delay(time=0.1)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="桑葚"]（看不清，声音好熟悉......）
+[name="？？？"]你在那里眯着眼睛干什么？
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "M", action="zoom", poszoom = "0.5,0.5", scale=1, duration = 2)]
+[delay(time=2)]
+[name="？？？"]啊，原来是被沙子迷住眼睛了。
+[name="？？？"]（吹气）
+[name="？？？"]眨眨眼看看，好了没？
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1", duration=3)]
+[PlayMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[delay(time=4)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1")]
+[name="夜半"]哎呀呀，没了我，你可怎么办呢？
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#4$1", duration = 1)]
+[charslot(slot = "R", posfrom = "300,0", posto = "-60,0",duration = 1)]
+[charslot(slot = "R", focus= "R")]
+[name="桑葚"]哇——
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1", focus= "M")]
+[name="夜半"]哎哎哎，你干嘛抱那么紧！
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1", focus= "M")]
+[name="夜半"]快松开！
+[charslot(slot = "R", posfrom = "-60,0", posto = "-80,0", duration = 1)]
+[charslot(slot = "R", focus= "R")]
+[name="桑葚"]......我好想你啊。
+[Dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1", focus= "M")]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1", focus= "M")]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1", focus= "M")]
+[name="夜半"]好了好了......算了，就一小会儿，我容许你再抱一小会儿。
+[Dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[charslot(slot = "M", focus= "all")]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1")]
+[delay(time=3)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[Character]
+[Image]
