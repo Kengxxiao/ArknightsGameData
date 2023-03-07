@@ -10395,6 +10395,90 @@
           "buffData": []
         }
       ]
+    },
+    "char_1029_yato2": {
+      "charId": "char_1029_yato2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&bd2[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_token_prod_spd2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1030_noirc2": {
+      "charId": "char_1030_noirc2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_token_tra_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4077_palico": {
+      "charId": "char_4077_palico",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&limit&bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&limit&bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 30
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -10421,6 +10505,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，如果有<@cc.kw>2</>台以上<$cc.tag.op><@cc.kw>作业平台</></>进驻在<@cc.kw>发电站</>，则所有制造站生产力<@cc.vup>+2%</>（同种效果取最高）"
+    },
+    "control_token_prod_spd2[000]": {
+      "buffId": "control_token_prod_spd2[000]",
+      "buffName": "以身作则",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_token_p_spd2",
+      "sortId": 1610,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "当与<$cc.tag.mh><@cc.kw>怪物猎人小队</></>干员进驻控制中枢一起工作时，所有制造站生产力<@cc.vup>+2%</>（同种效果取最高）"
+    },
+    "control_token_tra_spd[000]": {
+      "buffId": "control_token_tra_spd[000]",
+      "buffName": "秘传交涉术",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_token_t_spd",
+      "sortId": 1611,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "当与<$cc.tag.mh><@cc.kw>怪物猎人小队</></>干员进驻控制中枢一起工作时，所有贸易站订单效率<@cc.vup>+7%</>（同种效果取最高）"
     },
     "control_pow_bot[000]": {
       "buffId": "control_pow_bot[000]",
@@ -10794,6 +10902,18 @@
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，<$cc.c.room2><@cc.kw>其他设施</></>内处于工作状态的干员心情每小时恢复<@cc.vup>+0.05</>；同时每有<@cc.vup>20</>点<$cc.bd_b1><@cc.rem>人间烟火</></>，则额外<@cc.vup>+0.05</>，（与控制中枢加成有<$cc.c.sui2_1><@cc.rem>特殊比较规则</></>）"
     },
+    "control_mp_cost&bd2[010]": {
+      "buffId": "control_mp_cost&bd2[010]",
+      "buffName": "耐力回复",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_felyne",
+      "sortId": 1011,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，自身心情每小时消耗<@cc.vdown>+0.5</>，<$cc.bd_felyne><@cc.rem>木天蓼</></><@cc.vup>+8</>"
+    },
     "control_facCostReset[000]": {
       "buffId": "control_facCostReset[000]",
       "buffName": "杯莫停",
@@ -10841,6 +10961,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，控制中枢内每有1名<$cc.g.ussg><@cc.kw>乌萨斯学生自治团</></>干员，则<$cc.bd_tachanka><@cc.rem>乌萨斯特饮</></><@cc.vup>+1</>"
+    },
+    "control_mp_bd2[000]": {
+      "buffId": "control_mp_bd2[000]",
+      "buffName": "团队合作",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_felyne",
+      "sortId": 1021,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内每有1名<$cc.tag.mh><@cc.kw>怪物猎人小队</></>干员，则<$cc.bd_felyne><@cc.rem>木天蓼</></><@cc.vup>+2</>"
     },
     "control_mp_aegir1[000]": {
       "buffId": "control_mp_aegir1[000]",
@@ -11417,6 +11549,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "进驻制造站时，仓库容量上限<@cc.vup>+10</>，生产力<@cc.vup>+10%</>"
+    },
+    "manu_prod_spd&limit&bd[000]": {
+      "buffId": "manu_prod_spd&limit&bd[000]",
+      "buffName": "可靠的随从们",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&limit_felyne",
+      "sortId": 3411,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，仓库容量上限<@cc.vup>+8</>，生产力<@cc.vup>+5%</>，同时每有1个<$cc.bd_felyne><@cc.rem>木天蓼</></>，则生产力<@cc.vup>+1%</>"
     },
     "manu_prod_limit&cost[000]": {
       "buffId": "manu_prod_limit&cost[000]",
@@ -12437,6 +12581,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "当与<@cc.kw>拉普兰德</>在同一个贸易站时，心情每小时消耗<@cc.vdown>+0.3</>，订单获取效率<@cc.vup>+65%</>"
+    },
+    "trade_ord_spd&limit&bd[000]": {
+      "buffId": "trade_ord_spd&limit&bd[000]",
+      "buffName": "可爱的艾露猫",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd&limit_felyne",
+      "sortId": 4101,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，订单获取效率<@cc.vup>+5%</>，且订单上限<@cc.vup>+2</>，同时每有1个<$cc.bd_felyne><@cc.rem>木天蓼</></>，则订单获取效率<@cc.vup>+3%</>"
     },
     "trade_ord_limit&cost_P[010]": {
       "buffId": "trade_ord_limit&cost_P[010]",
@@ -49128,6 +49284,470 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_eastern_cabinet_01": {
+        "id": "furni_eastern_cabinet_01",
+        "sortId": 1162,
+        "name": "古典立柜",
+        "iconId": "furni_eastern_cabinet_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 2,
+        "depth": 4,
+        "height": 7,
+        "comfort": 245,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "古朴典雅的实木立柜，与摆放其上的盆景浑然一体。花瓣凋枯易落，无人愿意惊动此方景致，柜子也顺势成了赏玩的对象。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_tatami_01": {
+        "id": "furni_eastern_tatami_01",
+        "sortId": 1163,
+        "name": "“茶汤”",
+        "iconId": "furni_eastern_tatami_01",
+        "type": "DECORATION",
+        "subType": "CATERING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 12,
+        "depth": 5,
+        "height": 4,
+        "comfort": 705,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "东国传统的茶室用具套组，烧红的木头毕毕剥剥地响着。烧炉煮茶别有风趣，榻榻米上“远离明火”的标签当然已被撕毁。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_plant_01": {
+        "id": "furni_eastern_plant_01",
+        "sortId": 1164,
+        "name": "松木盆景",
+        "iconId": "furni_eastern_plant_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 205,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "老干虬枝的松木盆景，造型经精心蟠扎而成。一片翠绿奋力地向阳伸展，些许意境因约束而成就。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_bed_01": {
+        "id": "furni_eastern_bed_01",
+        "sortId": 1165,
+        "name": "东国实木床",
+        "iconId": "furni_eastern_bed_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 6,
+        "depth": 3,
+        "height": 3,
+        "comfort": 270,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "东国风格的实木板床，为了美观搭配了传统的木头方枕。睡在上面的人想必脖子不会好受。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_leafScreen_01": {
+        "id": "furni_eastern_leafScreen_01",
+        "sortId": 1166,
+        "name": "秋风红叶屏风",
+        "iconId": "furni_eastern_leafScreen_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 10,
+        "depth": 1,
+        "height": 8,
+        "comfort": 395,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "绘有《秋风红叶图》的屏风，宽阔的屏面隔断了空间，彰显宁静之美。自带的衣服挂钩则补足了功能性，增添了实用价值，正契合时下评论家们的审美趣味。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_pipeline_01": {
+        "id": "furni_eastern_pipeline_01",
+        "sortId": 1167,
+        "name": "“暖流”",
+        "iconId": "furni_eastern_pipeline_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 9,
+        "depth": 4,
+        "height": 1,
+        "comfort": 180,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "供应暖气的专用管道，维持室内怡人温度的关键。曾经也有工匠想在上面雕刻花纹，出于安全的考量最终放弃。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_airCleaner_01": {
+        "id": "furni_eastern_airCleaner_01",
+        "sortId": 1168,
+        "name": "“清风”",
+        "iconId": "furni_eastern_airCleaner_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 190,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "东国生产的空气净化器，据宣传其核心零件都是手工打造。尽管它的空气净化效果并不出众，模拟林间的风声却是一绝。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_steps_01": {
+        "id": "furni_eastern_steps_01",
+        "sortId": 1169,
+        "name": "“登高”",
+        "iconId": "furni_eastern_steps_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 3,
+        "depth": 2,
+        "height": 2,
+        "comfort": 165,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "精致的木制小台阶，将一步的高度优雅地拆为两步。据说使用它能带来充足的仪式感，它的磨损程度在家具中总是名列前茅。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_JapaneseScreen_01": {
+        "id": "furni_eastern_JapaneseScreen_01",
+        "sortId": 1170,
+        "name": "竹林猎景屏风",
+        "iconId": "furni_eastern_JapaneseScreen_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 6,
+        "depth": 3,
+        "height": 9,
+        "comfort": 455,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "绘有《竹林猎景图》的屏风，暂时搁置的短刀置于案前，更衬萧瑟之景。坚固的木梁同样加装了挂钩，它也因此被誉为“物尽其用”的设计典范。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_carpet_01": {
+        "id": "furni_eastern_carpet_01",
+        "sortId": 1171,
+        "name": "驳纹地毯",
+        "iconId": "furni_eastern_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 5,
+        "depth": 3,
+        "height": 1,
+        "comfort": 50,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "纯手工缝制的地毯，斑驳的纹路富有高级感。工厂生产的同样花纹的地毯，售价只要它的三分之一，但人们显然更喜欢它。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_sling_01": {
+        "id": "furni_eastern_sling_01",
+        "sortId": 1172,
+        "name": "竹制吊索",
+        "iconId": "furni_eastern_sling_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 5,
+        "depth": 3,
+        "height": 6,
+        "comfort": 175,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用绿竹手工制作的吊索，风趣横生。由于并不稳固的结构，它挂不了任何东西。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_dresser_01": {
+        "id": "furni_eastern_dresser_01",
+        "sortId": 1173,
+        "name": "东国妆镜台",
+        "iconId": "furni_eastern_dresser_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "东国风格的妆镜台，光亮的镜面被擦洗得纤尘不染。它的美丽令一切想要使用它的人自惭形秽。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_case_01": {
+        "id": "furni_eastern_case_01",
+        "sortId": 1174,
+        "name": "置物木箱",
+        "iconId": "furni_eastern_case_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 190,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "以竹木制成的小箱子，用于承载小件的家居用品。精美的镂空结构导致其对承载的物品有着严苛的重量要求。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_lamp_01": {
+        "id": "furni_eastern_lamp_01",
+        "sortId": 1175,
+        "name": "柔光顶灯",
+        "iconId": "furni_eastern_lamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 2,
+        "depth": 1,
+        "height": 1,
+        "comfort": 45,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "光芒柔和的普通白炽灯，被指定用于特定风格的装潢，因而变得身价不凡。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_eastern_wallpaper_01": {
+        "id": "furni_eastern_wallpaper_01",
+        "sortId": 1176,
+        "name": "全景显示屏（枫林）",
+        "iconId": "furni_eastern_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "展现东国山林秋景的全景显示屏。“日暮秋风起，簌簌红叶响霜篱，好梦枕边栖。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_floor_01": {
+        "id": "furni_eastern_floor_01",
+        "sortId": 1177,
+        "name": "素净草席",
+        "iconId": "furni_eastern_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "以蒲草编制的席子，素净的颜色清淡雅致。人们更愿意欣赏它，而不是打扫它。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_oct1st_deckChair_01": {
         "id": "furni_oct1st_deckChair_01",
         "sortId": 9998,
@@ -50946,6 +51566,64 @@
         "comfort": 280,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "设置了立体投影的沙盘，计日程功，实时演算。绿洲生机涌现，部落繁衍其上，沙海接纳了这一切。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act36d0_grill_01": {
+        "id": "furni_act36d0_grill_01",
+        "sortId": 10064,
+        "name": "户外明火烧烤架",
+        "iconId": "furni_act36d0_grill_01",
+        "type": "DECORATION",
+        "subType": "CATERING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 120,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "能轻松搭成的便携式烧烤架，在户外能方便地用于烤肉。\n它异常猛烈的火力被设计成无法调节，做出的烤肉能否食用完全取决于烤肉者对时机的把控。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act36d0_MaterialBox_01": {
+        "id": "furni_act36d0_MaterialBox_01",
+        "sortId": 10065,
+        "name": "硬质合金收纳箱",
+        "iconId": "furni_act36d0_MaterialBox_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 2,
+        "comfort": 120,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "以硬质合金一体铸成的收纳箱，坚固耐用。\n旧款的此类收纳箱尚需要扩充容积，但现在，你很难知道装满它需要多少东西。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -65535,6 +66213,153 @@
           "furni_reception_wallpaper_01",
           "furni_reception_floor_01"
         ]
+      },
+      "furni_set_eastern": {
+        "id": "furni_set_eastern",
+        "sortId": 69,
+        "name": "红叶旅舍",
+        "themeType": "LINKAGE",
+        "desc": "富有东国乡野气息的房间，在温馨的木制空间中，客人们可以静享闲适的秋日时光。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 3,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 12,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 20,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 29,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_case_01",
+            "pos0": 13,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_tatami_01",
+            "pos0": 5,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_steps_01",
+            "pos0": 8,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_sling_01",
+            "pos0": 9,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_bed_01",
+            "pos0": 26,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_leafScreen_01",
+            "pos0": 24,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_JapaneseScreen_01",
+            "pos0": 20,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_carpet_01",
+            "pos0": 26,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_dresser_01",
+            "pos0": 31,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_cabinet_01",
+            "pos0": 0,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_plant_01",
+            "pos0": 19,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_pipeline_01",
+            "pos0": 21,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_airCleaner_01",
+            "pos0": 2,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_eastern_1",
+          "furni_set_eastern_2",
+          "furni_set_eastern_3",
+          "furni_set_eastern_4"
+        ],
+        "furnitures": [
+          "furni_eastern_cabinet_01",
+          "furni_eastern_tatami_01",
+          "furni_eastern_plant_01",
+          "furni_eastern_bed_01",
+          "furni_eastern_leafScreen_01",
+          "furni_eastern_pipeline_01",
+          "furni_eastern_airCleaner_01",
+          "furni_eastern_steps_01",
+          "furni_eastern_JapaneseScreen_01",
+          "furni_eastern_carpet_01",
+          "furni_eastern_sling_01",
+          "furni_eastern_dresser_01",
+          "furni_eastern_case_01",
+          "furni_eastern_lamp_01",
+          "furni_eastern_wallpaper_01",
+          "furni_eastern_floor_01"
+        ]
       }
     },
     "groups": {
@@ -69457,6 +70282,62 @@
           "furni_reception_carpet_01",
           "furni_reception_wallpaper_01",
           "furni_reception_floor_01"
+        ]
+      },
+      "furni_set_eastern_1": {
+        "id": "furni_set_eastern_1",
+        "sortId": 1,
+        "name": "东国风格装潢",
+        "themeId": "furni_set_eastern",
+        "comfort": 140,
+        "count": 3,
+        "furniture": [
+          "furni_eastern_lamp_01",
+          "furni_eastern_wallpaper_01",
+          "furni_eastern_floor_01"
+        ]
+      },
+      "furni_set_eastern_2": {
+        "id": "furni_set_eastern_2",
+        "sortId": 2,
+        "name": "“怡情”",
+        "themeId": "furni_set_eastern",
+        "comfort": 290,
+        "count": 4,
+        "furniture": [
+          "furni_eastern_tatami_01",
+          "furni_eastern_steps_01",
+          "furni_eastern_sling_01",
+          "furni_eastern_case_01"
+        ]
+      },
+      "furni_set_eastern_3": {
+        "id": "furni_set_eastern_3",
+        "sortId": 3,
+        "name": "“歇息”",
+        "themeId": "furni_set_eastern",
+        "comfort": 325,
+        "count": 5,
+        "furniture": [
+          "furni_eastern_bed_01",
+          "furni_eastern_leafScreen_01",
+          "furni_eastern_JapaneseScreen_01",
+          "furni_eastern_carpet_01",
+          "furni_eastern_dresser_01"
+        ]
+      },
+      "furni_set_eastern_4": {
+        "id": "furni_set_eastern_4",
+        "sortId": 4,
+        "name": "“惬意”",
+        "themeId": "furni_set_eastern",
+        "comfort": 190,
+        "count": 4,
+        "furniture": [
+          "furni_eastern_cabinet_01",
+          "furni_eastern_plant_01",
+          "furni_eastern_pipeline_01",
+          "furni_eastern_airCleaner_01"
         ]
       }
     },

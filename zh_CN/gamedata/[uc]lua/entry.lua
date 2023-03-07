@@ -99,8 +99,8 @@ EntryTable.Dispose = function ()
   print("Disposed");
 end
 
-EntryTable.Update = function(deltaTime)
-  TimerModel.me:Update(deltaTime);
+EntryTable.Update = function(unscaledDeltaTime, deltaTime)
+  TimerModel.me:Update(unscaledDeltaTime, deltaTime);
 end
 
 CS.Torappu.Lua.LuaEntry.Init = EntryTable.Init;

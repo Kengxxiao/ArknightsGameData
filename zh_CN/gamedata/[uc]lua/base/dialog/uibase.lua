@@ -10,6 +10,7 @@
 
 
 
+
 UIBase = Class("UIBase");
 
 
@@ -58,10 +59,15 @@ function UIBase:Dispose()
   end
 
   if self.m_allTimer then
-    for index, timer in ipairs(self.m_allTimer) do
-      TimerModel.me:Destroy(timer);
-    end
-    self.m_allTimer = nil;
+    self.m_allTimer:ReleaseAll();
+  end
+
+  if self.m_coroutines then
+    self.m_coroutines:ReleaseAll();
+  end
+
+  if self.m_tweens then
+    self.m_tweens:ReleaseAll();
   end
 
   if self.m_disposeObjs then
@@ -144,12 +150,10 @@ end
 
 
 function UIBase:OnTransInEnd()
-    print("OnTransInEnd");
     self.m_playingTransEffect = false;
 end
 
 function UIBase:OnTransOutEnd()
-    print("OnTransOutEnd")
     self.m_playingTransEffect = false;
 end
 
@@ -273,37 +277,51 @@ function UIBase:Frame(loop, func, ...)
     return timer;
 end
 
-function UIBase:NextFrame(func)
-    local timer = TimerModel.me:NextFrame(Event.Create(self, func));
+function UIBase:NextFrame(func, ...)
+    local timer = TimerModel.me:NextFrame(Event.Create(self, func, ...));
     self:_RecordTimer(timer);
     return timer;
 end
 
+function UIBase:SetScaled(timerID)
+    TimerModel.me:SetScaled(timerID);
+end
+
 function UIBase:DestroyTimer(timer)
-    TimerModel.me:Destroy(timer);
     if self.m_allTimer then
-        for idx, v in ipairs(self.m_allTimer) do
-            if v == timer then
-                table.remove(self.m_allTimer, idx);
-            end
-        end
+        self.m_allTimer:Release(timer);
     end
 end
 
 
 function UIBase:_RecordTimer(timer)
     if not self.m_allTimer then
-        self.m_allTimer = {};
+        self.m_allTimer = ReleaseCollection.Build(
+            function(timer)
+                return not TimerModel.me:Alive(timer);
+            end,
+            function(timer)
+                TimerModel.me:Destroy(timer);
+            end
+        );
     end
-    table.insert(self.m_allTimer, timer);
+    self.m_allTimer:Collect(timer);
 end
 
-function UIBase:StartCoroutine(func)
-    local co = CoroutineModel.me:StartCoroutine(func, self);
+function UIBase:StartCoroutine(func, ...)
     if not self.m_coroutines then
-        self.m_coroutines = {};
+        self.m_coroutines = ReleaseCollection.Build(
+            function(co)
+                return not co:IsAlive();
+            end,
+            function(co)
+                CoroutineModel.me:StopCoroutine(co);
+            end
+        );
     end
-    table.insert(self.m_coroutines, co);
+
+    local co = CoroutineModel.me:StartCoroutine(func, self, ...);
+    self.m_coroutines:Collect(co);
     return co;
 end
 
@@ -311,13 +329,33 @@ function UIBase:StopCoroutine(co)
     if not self.m_coroutines then
         return;
     end
-    CoroutineModel.me:StopCoroutine(co);
-    for idx , aCo in ipairs(self.m_coroutines) do
-        if aCo == co then
-            table.remove(self.m_coroutines, idx);
-            return;
-        end
+    self.m_coroutines:Release(co);
+end
+
+
+function UIBase:PlayTween(config)
+    if not self.m_tweens then
+        self.m_tweens = ReleaseCollection.Build(
+            function(tween)
+                return not tween:IsAlive();
+            end,
+            function(tween)
+                tween:Kill(false);
+            end
+        );
     end
+    
+    local tweenItem = TweenModel:Play(config);
+    self.m_tweens:Collect(tweenItem);
+    return tweenItem;
+end
+
+
+function UIBase:KillTween(tweenItem)
+    if not self.m_tweens then
+        return;
+    end
+    self.m_tweens:Release(tweenItem);
 end
 
 
@@ -376,4 +414,11 @@ end
 function UIBase:OnDestroy()
     self.m_rootDestroying = true;
     self:Dispose();
+end
+
+
+
+
+function UIBase:LoadSpriteFromAutoPackHub(hubPath, spriteName)
+    return self.m_parent:LoadSpriteFromAutoPackHub(hubPath, spriteName);
 end
