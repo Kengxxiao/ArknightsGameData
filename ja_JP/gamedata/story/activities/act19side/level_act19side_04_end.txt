@@ -1,0 +1,471 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="bg_black",screenadapt="showall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[Subtitle(text="小さな空間を暗闇が満たして、光と空気、そして音までもを遮断している。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="叫びたいと思っても――", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="源石エンジンが発する高熱で喉が詰まり、声が出せない。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="暴れたいと思っても――", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="鋼鉄が四肢を縛り付け、身じろぎすらもままならない。まして抵抗などもってのほかだ。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="せめて泣くことができたらいいのに。涙は素敵な武器になるって、子供の頃お母さんがよく言っていたから。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="だけど、この目は涙を拒む。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="数百年もの間、膨大な数の山々の崩落と水の干上がる様を見つめ、おびただしい数の親類たちが行方をくらますのを見てきたこの目は――", x=300, y=370, alignment="center", size=24, delay=0.04, width=800)]
+[Subtitle(text="移動都市が通ったあとに広がる荒れ地のごとく、みるみるうちに乾いていく。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="29_g8_alley_n",screenadapt="showall")]
+[Delay(time=1)]
+[PlayMusic(intro="$chasing_intro", key="$chasing_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=2)]
+[name="Mechanist"]六体目のパワードスーツを停止させた。
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=1)]
+[name="サリア"]これで全部か？
+[character(name="avg_npc_532_1#1$1",name2="avg_npc_521_1#1$1",focus=2)]
+[name="Mechanist"]そのようだ。十三分の足止めをくらったな。
+[name="Mechanist"]――いや、待て。
+[name="Mechanist"]反応あり、七体目を捕捉！
+[dialog]
+[character]
+[playsound(key="$d_avg_mechawalk")]
+[character(name="avg_npc_526_1#1$1",fadetime=2.5)]
+[delay(time=3.5)]
+[name="奇妙なパワードスーツ"]――
+[Character(name="avg_npc_526_1#1$1")]
+[Dialog]
+[delay(time=0.7)]
+[playsound(key="$d_avg_mecharun")]
+[characteraction(name="middle", type="move", xpos=300, fadetime=1,block=false)]
+[Character(fadetime=0.5)]
+[delay(time=1.1)]
+[character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]気をつけろ、ドクター！　そちらへ向かったぞ！
+[dialog]
+[character]
+[Character(name="char_empty", name2="char_empty")]
+[characteraction(name="left", type="move", xpos=-200, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="left", type="move", xpos=200, fadetime=1, block=false)]
+[Character(name="avg_npc_526_1#1$1", name2="char_empty",fadetime=0.7)]
+[delay(time=0.8)]
+[name="奇妙なパワードスーツ"]――
+[Dialog]
+[characteraction(name="left", type="move", xpos=100, fadetime=0.6, block=false)]
+[delay(time=0.61)]
+[Character(name="avg_npc_526_1#1$1", name2="char_empty")]
+[PlaySound(key="$rungeneral", volume=1)]
+[characteraction(name="right", type="move", xpos=200, fadetime=0.3, block=true)]
+[delay(time=0.51)]
+[characteraction(name="right", type="move", xpos=-200, fadetime=0.51, block=false)]
+[Character(name="avg_npc_526_1#1$1", name2="avg_npc_532_1#4$1",fadetime=0.7)]
+[delay(time=0.51)]
+[PlaySound(key="$fightgeneral", volume=0.6)]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=0.51)]
+[Character(name="avg_npc_526_1#1$1", name2="avg_npc_532_1#4$1",focus=2)]
+[name="サリア"]任せておけ。
+[Character(name="avg_npc_526_1#1$1", name2="avg_npc_532_1#4$1")]
+[dialog]
+[characteraction(name="left", type="move", xpos=-60, fadetime=0.51, block=false)]
+[PlaySound(key="$fightgeneral", volume=0.6)]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[delay(time=0.52)]
+あなたの足が反応するより早く、瞬きの間にサリアが目の前へと現れた。
+彼女はライン生命製のあの盾を、クルビアの街中には持ち込んでいない。
+代わりに自らを盾とするのだ。
+交差させた腕からエナメル質が急速に膨れ上がり、パワードスーツの一撃を防ぐ。
+[Character(name="avg_npc_532_1#8$1")]
+[name="サリア"]……害虫が。
+[dialog]
+[Characteraction(name="middle", type="move",xpos=-100,fadetime=1)]
+[character(fadetime=0.4)]
+[delay(time=1.1)]
+サリアの低い声が聞こえた。
+暴走するクルビアの技術の産物に対して、彼女は常々そう思っているのだ。
+その表情と姿勢から、次の動作が読み取れる。
+「害虫」を駆除せんとする時、彼女は時間を無駄にはしない。
+サリアの手がパワードスーツの胸部に突き込まれれば、その瞬間そこには黒々とした穴が空き――
+それは破壊される、あるいは「死を迎える」ことになるだろう。
+――その時、あなたの脳裏にある考えが浮かんだ。
+[dialog]
+[MusicVolume(volume=0.1, fadetime=1)]
+[Decision(options="ダメだ、サリア！", values="1")]
+[Predicate(references="1")]
+その耳に届いたのは初めの一音節だけだったかもしれない。だが、彼女は瞬時に動きを止めた。
+それは、長い間共に戦ってきたあなたへの信頼の表れだ。
+[dialog]
+[PlaySound(key="$e_atk_circleatk_h")] 
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[delay(time=1.1)]
+しかし、彼女の拳がコアから逸れても、攻撃の余波はパワードスーツの頭部パーツを破砕するには足るものだった。
+無数に飛び散る金属片の中に、それとは異なる金色が――
+髪の毛のような、何かが見えた。
+[character(name="avg_npc_521_1#1$1")]
+[name="Mechanist"]ドクター、危険だ！　離れていろ――
+[Character(name="avg_npc_532_1#5$1")]
+[name="サリア"]あれは……
+[dialog]
+[dialog]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[playMusic(intro="$drift_intro", key="$drift_loop", volume=0.7)]
+[Image(image="29_i02",xScale=1.5,yScale=1.5, fadetime=0)]
+[ImageTween(xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=0.8, yScaleTo=0.8, duration=40, block=false)]
+[Blocker(a=0, fadetime=1, block=true)]
+[Delay(time=1)]
+パワードスーツが倒れ込む。
+と、破片がばらばらと落ちていき、髪が、肌の一部が、そして片方の目があらわになった。
+その目はこちらを見つめている。
+怒り、驚き、混乱……一瞬の間に、あなたは多くの感情を見た。
+そして、そうしたあらゆる感情が偽りの外殻と共に剥がれ落ちた時――その瞳が助けを求めていることに気付いた。
+ゆえに、あなたは手を差し伸べる。
+[dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[Character]
+[Image]
+[delay(time=0.6)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Decision(options="初めまして、ミュルジス。", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="29_g4_corridor",screenadapt="showall")]
+[Delay(time=1)]
+[PlayMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[Character(name="avg_npc_535_1#7$1")]
+[name="サニー"]マイヤーズ、これはどういうことだ？
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]わ、わからない……わからなくなっちまったんだよ、リーダー……
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]とにかく、モル先生を放せ。
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]先、生を……
+[Character(name="avg_128_plosis_1#8$1")]
+[name="フィリオプシス"]……
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]無理だ、できない。
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]俺の言うことが聞けないのか？
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]……あんたこそ、なんでまだそいつらと一緒にいるんだ？
+[name="開拓隊の隊員"]情けをかけるなって言ったのも、俺たちはそいつらに実験動物扱いされてるんだって言ったのも……全部リーダーじゃないか……！
+[name="開拓隊の隊員"]一緒にやろうって説得してきたのもあんたなんだぞ……！　俺はモル先生のこと、いい人だって思ってたのに……！
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]……真っ先に俺を裏切るのがお前になるとは思わなかったよ。
+[name="サニー"]サムやほかの連中ならまだしも……お前はいつも、俺の話を一番よく聞いてくれてたじゃないか。
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]要するにそれって、俺が従順すぎるってことでもあるだろ。
+[name="開拓隊の隊員"]俺は昔、上司の命令通りにやった結果鉱石病になった……そうしてここへ来て、今度はあんたの言う通りにやってきた。
+[name="開拓隊の隊員"]あんたたちは有能で賢くて、勉強だってたくさんしてる人間だ。だから従ってれば間違いないと思ってたのさ。
+[name="開拓隊の隊員"]それなのに、今……俺たちは皆死にかけてる。
+[name="開拓隊の隊員"]なあサニー、目を覚ましてくれ！　このままじゃ、俺たちみんなその研究者たちに殺されちまうんだぞ！　なんせそいつらは、まだ何もかもをコントロールできるなんて思い込んでるんだからな！
+[Character(name="avg_135_halo_1#9$1")]
+[name="エレナ"]……
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]信じてくれないなら、そいつの持ち物を確かめてくれ。きっと録音用の機械を隠してるはずなんだ。そいつは、俺たちとあの銀色の化け物を観察するためについてきてるんだよ！
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]……ウビカ博士。もしこの状況を打開する方法があるなら、今すぐ話してくれ。
+[Character(name="avg_108_silent_1#6$1")]
+[name="サイレンス"]エレナ……
+[Character(name="avg_135_halo_1#9$1")]
+[name="エレナ"]……オリヴィア。確かに、実験のことは言ってなかったけど……
+[name="エレナ"]キミに嘘をついたりなんて、絶対にしないよ。
+[name="エレナ"]それにサニー、マイヤーズ……キミたちにも嘘なんてついてない。
+[Character(name="avg_135_halo_1#3$1")]
+[name="エレナ"]私は……本当に、アレへの対処法なんて知らないんだ。
+[Character(name="avg_135_halo_1#8$1")]
+[name="エレナ"]アレのデータを記録して、研究しようとしてるのは全部、目の前の問題を解決したいからでもあるの……さっきも言った通り、これも私の仕事だから。
+[Character(name="avg_108_silent_1#6$1")]
+[name="サイレンス"]……うん。
+[Character(name="avg_108_silent_1#10$1")]
+[name="サイレンス"]マイヤーズさん。私には、エレナが嘘をついてるとは思えない。
+[name="サイレンス"]ジョイスを解放してもらえる？
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]は……はは、ははは……
+[dialog]
+[character]
+開拓者はフィリオプシスをじっと見つめると、突然手を挙げた。
+サイレンスの喉まで叫び声が出かけたその時、ドローンは主人の意を受けて、開拓者の体に思い切りぶつかる。
+けれども彼は単に、フィリオプシスの手からあるものを――
+数時間前、彼自身が彼女につけてやったはずの緊急医療用バングルを奪い去っただけだった。
+[Character(name="avg_128_plosis_1#8$1")]
+[name="フィリオプシス"]……
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]俺は……一体、何を……
+[name="開拓隊の隊員"]――モル先生……
+[name="開拓隊の隊員"]あんたは、俺を恨むかな。俺に良くしてくれたこと、後悔しちまうのかな……
+[name="開拓隊の隊員"]俺みたいな奴には……あんたに救われる資格なんてない。
+[dialog]
+[character]
+医師は友人たちの元へと戻ってきた。彼女は依然静かで、美しく、傷一つない状態だった。
+それでも、この場からは誰も逃れられはしない。このラボが彼らの墓となるのだ。
+誰一人助かるはずもない。この忌々しいバングルは、この腹立たしい会社にはめられた枷でしかなかった。
+自由を得るための、たった一つの方法はといえば……
+その時、マイヤーズがそのバングルを口の中へと押し込んだ。
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]マイヤーズ！
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]リ、リーダー……
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]何やってるんだ！　今すぐ吐き出せ！
+[Character(name="avg_108_silent_1#5$1")]
+[name="サイレンス"]！　このバングル……
+[Character(name="avg_135_halo_1#7$1")]
+[name="エレナ"]鎮痛剤が中にまだたくさん残ってる……！
+[Character(name="avg_135_halo_1#6$1")]
+[name="エレナ"]こんな量を一気に飲み込んだら、心臓が持たないよ！　ショック状態になっちゃう！
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]見たこと、あるんだ……これを、こっそり……飲み込んだ奴……
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]そんなことした奴はみんな死んだじゃないか！
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]ああ……そうなりゃ、幸せだろうと……思ってさ。
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]やめろ、いいから吐き出すんだ！
+[name="サニー"]クソッ……俺が押さえてるから、こいつの腹を殴ってくれ、サム！
+[Dialog]
+[character]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$fightgeneral",volume=1)] 
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.05, block=true)]
+[Delay(time=0.51)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$fightgeneral",volume=1)] 
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.05, block=true)]
+[Delay(time=0.51)]
+[Character(name="avg_npc_534_1#1$1")]
+[characteraction(name="middle", type="jump" , power=5, times=2, fadetime=0.51,block=true)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="開拓隊の隊員"]げほ、ごほっ……う、ごほっ……！！
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]バングルの影が見えた……！　もう一回！
+[Character(name="avg_135_halo_1#6$1")]
+[name="エレナ"]オリヴィア、あの人を助けないと――
+[Character(name="avg_135_halo_1#12$1")]
+[name="エレナ"]……オリヴィア？
+[Character(name="avg_108_silent_1#10$1")]
+[name="サイレンス"]……ジョイスが……
+[dialog]
+[Character(name="avg_128_plosis_1#8$1")]
+[name="フィリオプシス"]……
+[dialog]
+[delay(time=0.51)]
+[Character(name="avg_128_plosis_1#1$1")]
+[stopmusic(fadetime=1)]
+[name="フィリオプシス"]――プログラム、起動します。
+[Character(name="avg_135_halo_1#7$1")]
+[name="エレナ"]め、目が覚めたの！？
+[Character(name="avg_128_plosis_1#5$1")]
+[name="フィリオプシス"]――なんて暗いんだ……
+[Character(name="avg_128_plosis_1#1$1")]
+[name="フィリオプシス"]外は……どうしてこんなに暗いんだろう？
+[Character(name="avg_135_halo_1#12$1")]
+[name="エレナ"]く、暗いって……？　照明なら全部ついてるけど……
+[name="エレナ"]もしかして、目の調子が悪いとか……？
+[Character(name="avg_128_plosis_1#1$1")]
+[playMusic(intro="$drift_intro", key="$drift_loop", volume=0.6)]
+[name="フィリオプシス"]……光が……
+[name="フィリオプシス"]光が欲しい……光のある場所は……とても温かいから。
+[name="フィリオプシス"]共に進もう……
+[name="フィリオプシス"]怖がらなくていいんだ……
+[Character(name="avg_135_halo_1#12$1")]
+[name="エレナ"]ちょっと、ジョイス……聞こえてる？
+[Character(name="avg_108_silent_1#10$1")]
+[name="サイレンス"]聞こえてないみたい。
+[Character(name="avg_135_halo_1#12$1")]
+[name="エレナ"]何が起きてるの？
+[Character(name="avg_108_silent_1#10$1")]
+[name="サイレンス"]私にもわからないけど……ジョイスらしくない言葉遣いだ。
+[Character(name="avg_135_halo_1#12$1")]
+[name="エレナ"]ええと、彼女の病気って……
+[Character(name="avg_108_silent_1#10$1")]
+[name="サイレンス"]ジョイスのことならよく知ってるから、はっきり言える。手術の前にせよ後にせよ、こんな喋り方はしてなかった。
+[Character(name="avg_135_halo_1#12$1")]
+[name="エレナ"]……確かに。
+[Character(name="avg_108_silent_1#3$1")]
+[name="サイレンス"]驚いてるみたいだね。そうなると、ジョイスに何が起きたのか、あなたにはわからないということになる。
+[name="サイレンス"]これは、この状況がとっくに、コントロールできる範疇を超えていることを意味するはず。
+[Character(name="avg_108_silent_1#10$1")]
+[name="サイレンス"]エレナ。この実験について……話すべき時が来てるの。
+[Character(name="avg_135_halo_1#12$1")]
+[name="エレナ"]じゃあ、ドロシーは本当に……
+[Character(name="avg_135_halo_1#3$1")]
+[name="エレナ"]ううん。何にせよ、私はこの実験で誰かが傷付くところなんてみたくない。ジョイスが傷付くならなおさらね。
+[name="エレナ"]キミの言う通り、一緒に問題解決に当たるべきだったのかも……
+[dialog]
+[character]
+[name="優しい女性の声"]大丈夫よ、エレナ。もう迷わなくていいわ。
+[name="優しい女性の声"]みんなをここに招き入れたのは私だもの。サイレンスさんであれ、開拓隊の仲間たちであれ、真実を知る権利がある。
+[Character(name="avg_npc_535_1#7$1")]
+[name="サニー"]あんた……ずっと俺たちを監視してたのか？
+[Character(name="avg_npc_535_1#7$1",focus=-1)]
+[name="優しい女性の声"]あなたたちが心配だったのよ。
+[name="優しい女性の声"]だって、みんなが足を止めてお喋りをしている間は、代わりに扉を閉めてあげる人が必要だし……
+[Character(name="avg_npc_535_1#7$1")]
+[name="サニー"]じゃあ、銀色の化け物を食い止めてたのはあんただ、と？
+[Character(name="avg_npc_535_1#7$1",focus=-1)]
+[name="優しい女性の声"]そんなふうに呼ばないであげて、サニー。
+[name="優しい女性の声"]みんなにはちゃんと聞こえてるのよ。
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]……
+[dialog]
+[character]
+[name="優しい女性の声"]ねえ、エレナ。私の親愛なる助手さんに、もう一つお願いしてもいいかしら。
+[name="優しい女性の声"]みんなを連れて、会いに来てくれない？
+[name="優しい女性の声"]あなたから説明しにくいことは、私が説明するわ。
+[name="優しい女性の声"]それに……知っての通り、私のラボが一番安全な場所だから。
+[dialog]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Background(image="29_g3_cottage",screenadapt="showall")]
+[Delay(time=1)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[character(name="avg_1027_greyy2_1#1$2")]
+[name="グレイ"]外に敵影は無し……
+[name="グレイ"]きっと、リーダーさんやサイレンス先生を追っていったんだろうな……
+[character(name="avg_1027_greyy2_1#6$2")]
+[name="グレイ"]……通信はまだ遮断されたままみたいだ。
+[name="グレイ"]多分これは、大抵の通信機器に干渉できるようにされてるはず。ここにMechanistさんがいてくれたら、何とかできたかもしれないけど……
+[dialog]
+[playsound(key="$d_gen_walk_n")]
+[delay(time=2)]
+[character(name="avg_1027_greyy2_1#4$2")]
+[name="グレイ"]っ、誰ですか？
+[name="グレイ"]もしかして……リーダーさん？
+[name="？？？"]動かないで。
+[name="グレイ"]その声は……
+[name="グレイ"]メアリーさんですか？
+[dialog]
+[character]
+[character(name="avg_npc_527_1#1$1",fadetime=1.5)]
+[delay(time=2)]
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#4$2",focus=1)]
+[name="メアリー"]悪くない記憶力ね。
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#6$2",focus=2)]
+[name="グレイ"]ど……どうしてあなたがここに……？
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#6$2",focus=1)]
+[name="メアリー"]言いなさい。あいつはどこに隠れたの？
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#5$2",focus=2)]
+[name="グレイ"]あいつって……サニーさんのことですか？
+[character(name="avg_npc_527_1#5$1",name2="avg_1027_greyy2_1#5$2",focus=1)]
+[name="メアリー"]ええ。今すぐ出てくるように伝えなさい。……あの男、子供の影に隠れようだなんて一体どういうつもりなのかしら！
+[character(name="avg_npc_527_1#5$1",name2="avg_1027_greyy2_1#6$2",focus=2)]
+[name="グレイ"]あの、失礼ですが……僕はもう大人ですよ。
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#6$2",focus=1)]
+[name="メアリー"]確かに、自分ではそう思う年頃でしょうね。
+[name="メアリー"]さあ、教えて。あいつらはどこへ行ったの？
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#5$2",focus=2)]
+[name="グレイ"]開拓者の皆さんでしたら、近くのバラックに……
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#5$2",focus=1)]
+[name="メアリー"]あなた……嘘をつくときに自分の耳が動いてるって自覚はある？
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#4$2",focus=2)]
+[name="グレイ"]え……えっ？
+[character(name="avg_npc_527_1#2$1",name2="avg_1027_greyy2_1#4$2",focus=1)]
+[name="メアリー"]今のは嘘よ。
+[name="メアリー"]だけど、あなたがかなり騙されやすいのは確かみたいね。
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#4$2",focus=1)]
+[name="メアリー"]知ってることを全部話したほうが良いと思うわよ。一番手っ取り早いから。
+[name="メアリー"]でないと、そうね……この電気を復旧させたのはあなたでしょ？　それだけでもう公務執行妨害に当たってもおかしくないわよ。
+[name="メアリー"]本当の悪者を連行できないようなら、代わりにあなたを連れて行ってもいいかもね。
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#5$2",focus=2)]
+[name="グレイ"]そ、それは困ります……！
+[name="グレイ"]ドクターには迷惑をかけたくないですし……！
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#5$2",focus=1)]
+[name="メアリー"]じゃあ、どうしてためらってるの？
+[character(name="avg_npc_527_1#1$1",name2="avg_1027_greyy2_1#6$2",focus=2)]
+[name="グレイ"]信じてもらえるかはわからないんですが……
+[name="グレイ"]僕たちはさっき、これまで見たこともないような何かに――変形能力を持つ銀色の物体に襲われたんです。
+[dialog]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="29_g4_corridor",screenadapt="showall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[character(name="avg_npc_535_1#11$1",name2="avg_135_halo_1#8$1",focus=1)]
+[name="サニー"]それで……あいつはこの中にいるんだな。
+[character(name="avg_npc_535_1#11$1",name2="avg_135_halo_1#8$1",focus=2)]
+[name="エレナ"]そうだよ。ここがドロシーのラボで、研究エリア全体の中心なの。
+[character(name="avg_npc_535_1#11$1",name2="avg_135_halo_1#8$1",focus=1)]
+[name="サニー"]確実、なんだよな？
+[Character(name="avg_108_silent_1#10$1")]
+[name="サイレンス"]どうしたの？　急に顔色が悪くなってるけど……
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]……何でもない。
+[name="サニー"]誰しも、真相に近付いたら緊張くらいするものだろ。
+[name="サニー"]――サム、俺が言ったことを覚えてるよな？　準備しといてくれ。
+[Character(name="avg_npc_534_1#1$1")]
+[name="開拓隊の隊員"]了解。
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]ウビカ博士、この扉を開けてもらえるか？
+[Character(name="avg_135_halo_1#8$1")]
+[name="エレナ"]もちろん。
+[character(name="avg_108_silent_1#6$1",name2="avg_135_halo_1#8$1",focus=1)]
+[name="サイレンス"]（小声）……エレナ。
+[character(name="avg_108_silent_1#6$1",name2="avg_135_halo_1#8$1",focus=2)]
+[name="エレナ"]（小声）何？
+[character(name="avg_108_silent_1#6$1",name2="avg_135_halo_1#8$1",focus=1)]
+[name="サイレンス"]（小声）開拓者たちの様子がおかしい……
+[character(name="avg_108_silent_1#6$1",name2="avg_135_halo_1#3$1",focus=2)]
+[name="エレナ"]（小声）でも、ここまで来ちゃったし……
+[name="エレナ"]（小声）私を説得したのはキミなんだよ。私たちは皆、問題を解決するためにここへ来たはずじゃない。
+[character(name="avg_108_silent_1#6$1",name2="avg_135_halo_1#3$1",focus=1)]
+[name="サイレンス"]（小声）だけど、彼らもそうかは……
+[Character(name="avg_npc_535_1#11$1")]
+[name="サニー"]博士、皆待ってるんだが。
+[character]
+[name="優しい女性の声"]そうね、私も待ってたわ。
+[name="優しい女性の声"]さあ入って、みんな。
+[dialog]
+[character]
+エレナの手は生体認証装置に置かれてはいなかった。
+しかし、ラボの主人の意志によって、そのドアは開かれた。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Character]
+[Background(image="29_g5_laboratory",screenadapt="showall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]	
+[Character(name="avg_4048_doroth_1#1$1")]
+[name="ドロシー"]よく来てくれたわね。
+[name="ドロシー"]ライン生命アーツ応用課主任、ドロシー・フランクスよ。この359号実験基地の責任者でもあるの。
+[name="ドロシー"]私のラボへようこそ。
+[Character(name="avg_npc_535_1#11$1")]
+[stopmusic(fadetime=1)]
+[name="サニー"]……やっと会えたな。
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="サニー"]行くぞ、サム。かかれ！
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=1, block=true)]
+[stopmusic(fadetime=1)]
+[Character]
+[Image]

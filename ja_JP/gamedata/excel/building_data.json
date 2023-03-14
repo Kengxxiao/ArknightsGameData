@@ -8897,14 +8897,14 @@
         {
           "buffData": [
             {
-              "buffId": "train_spd&profession[030]",
+              "buffId": "train_spd&profession3[130]",
               "cond": {
                 "phase": 0,
                 "level": 1
               }
             },
             {
-              "buffId": "train_spd&profession3[130]",
+              "buffId": "train_spd&profession3[131]",
               "cond": {
                 "phase": 2,
                 "level": 1
@@ -9521,6 +9521,89 @@
         }
       ]
     },
+    "char_4048_doroth": {
+      "charId": "char_4048_doroth",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_skill_spd1[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1027_greyy2": {
+      "charId": "char_1027_greyy2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_drone[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "power_count[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_135_halo": {
+      "charId": "char_135_halo",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd[001]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_prod_spd[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
     "char_1026_gvial2": {
       "charId": "char_1026_gvial2",
       "maxManpower": 8640000,
@@ -9910,7 +9993,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "制御中枢配置時、制御中枢内の<$cc.g.lda><@cc.kw>リー探偵事務所</></>所属オペレーターは1人につき、中枢内全員の体力が1時間ごとに<@cc.vup>+0.05</>回復。所属オペレーターは体力回復量が1時間ごとに追加で<@cc.vup>+0.2</>回復"
+      "description": "制御中枢配置時、制御中枢内の<$cc.g.lda><@cc.kw>リー探偵事務所</></>所属オペレーター1人につき、中枢内全員の体力が1時間ごとに<@cc.vup>+0.2</>回復。所属オペレーターは体力回復量が<@cc.kw>更に増加</>"
     },
     "control_mp_cost&faction[000]": {
       "buffId": "control_mp_cost&faction[000]",
@@ -10284,6 +10367,30 @@
       "roomType": "POWER",
       "description": "発電所配置時、ドローンの回復速度<@cc.vup>+15%</>"
     },
+    "power_rec_drone[000]": {
+      "buffId": "power_rec_drone[000]",
+      "buffName": "配電工事",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_drone",
+      "sortId": 2001,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "発電所配置時、ドローンの上限数<@cc.vup>10</>につき、ドローンの回復速度<@cc.vup>+1%</>"
+    },
+    "power_count[000]": {
+      "buffId": "power_count[000]",
+      "buffName": "曙光",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_count",
+      "sortId": 2001,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "発電所配置時、他の<@cc.kw>発電所</>に<$cc.tag.op><@cc.kw>作業用プラットフォーム </></>が配置されていない場合、<@cc.kw>発電所</>の施設数<@cc.vup>+1</>（施設の数以外に影響なし）"
+    },
     "power_prod_spd_P[000]": {
       "buffId": "power_prod_spd_P[000]",
       "buffName": "“Di-di、作業開始ー！”",
@@ -10439,6 +10546,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、製造所の<$cc.sk.manu1><@cc.kw>標準化系スキル</></>の発動数1につき、製造効率<@cc.vup>+5%</>"
+    },
+    "manu_skill_spd1[010]": {
+      "buffId": "manu_skill_spd1[010]",
+      "buffName": "アーツ理論応用",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_skill_spd2",
+      "sortId": 3501,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、配置製造所の<$cc.sk.manu2><@cc.kw>ラインテク系スキル</></>の発動数1につき、製造効率<@cc.vup>+5%</>"
     },
     "manu_prod_spd_addition[030]": {
       "buffId": "manu_prod_spd_addition[030]",
@@ -11158,7 +11277,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "貿易所配置時、受注効率<@cc.vup>+5%</>、<$cc.t.flow_gold><@cc.kw>純金生産ライン</></>の数<@cc.kw>4</>につき、<$cc.t.flow_gold><@cc.kw>純金生産ライン</></>の数追加で<@cc.vup>+2</>"
+      "description": "貿易所配置時、受注効率<@cc.vup>+5%</>、<$cc.t.flow_gold><@cc.kw>純金生産ライン</></>の数<@cc.kw>4</>につき、配置貿易所の<$cc.t.flow_gold><@cc.kw>純金生産ライン</></>の数追加で<@cc.vup>+2</>"
     },
     "trade_ord_line_gold[010]": {
       "buffId": "trade_ord_line_gold[010]",
@@ -11170,7 +11289,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "貿易所配置時、受注効率<@cc.vup>+5%</>、<$cc.t.flow_gold><@cc.kw>純金生産ライン</></>の数<@cc.kw>2</>につき、<$cc.t.flow_gold><@cc.kw>純金生産ライン</></>の数追加で<@cc.vup>+2</>"
+      "description": "貿易所配置時、受注効率<@cc.vup>+5%</>、<$cc.t.flow_gold><@cc.kw>純金生産ライン</></>の数<@cc.kw>2</>につき、配置貿易所の<$cc.t.flow_gold><@cc.kw>純金生産ライン</></>の数追加で<@cc.vup>+2</>"
     },
     "trade_ord_line_durin[010]": {
       "buffId": "trade_ord_line_durin[010]",
@@ -11482,7 +11601,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "貿易所配置時、次に受注する<@cc.kw>金属オーダー</>の納品数が<@cc.kw>3</>を上回るならば、当該オーダーの報酬金額が<@cc.kw>+250</>追加され、1時間ごとの体力消費量<@cc.vup>-0.25</>"
+      "description": "貿易所配置時、次に受注する<@cc.kw>金属オーダー</>の納品数が<@cc.kw>3</>を上回るならば（違約オーダーは金属オーダーと見なされない）、当該オーダーの報酬金額が<@cc.kw>+250</>追加され、1時間ごとの体力消費量<@cc.vup>-0.25</>"
     },
     "trade_ord_long[010]": {
       "buffId": "trade_ord_long[010]",
@@ -11494,7 +11613,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "貿易所配置時、次に受注する<@cc.kw>金属オーダー</>の納品数が<@cc.kw>3</>を上回るならば、当該オーダーの報酬金額が<@cc.kw>+500</>追加され、1時間ごとの体力消費量<@cc.vup>-0.25</>"
+      "description": "貿易所配置時、次に受注する<@cc.kw>金属オーダー</>の納品数が<@cc.kw>3</>を上回るならば（違約オーダーは金属オーダーと見なされない）、当該オーダーの報酬金額が<@cc.kw>+500</>追加され、1時間ごとの体力消費量<@cc.vup>-0.25</>"
     },
     "workshop_proc_probability[000]": {
       "buffId": "workshop_proc_probability[000]",
@@ -12052,7 +12171,7 @@
       "buffId": "workshop_formula_dorm[001]",
       "buffName": "「適材適所」",
       "buffIcon": "workshop",
-      "skillIcon": "bskill_ws_evolve_dorm2",
+      "skillIcon": "bskill_ws_evolve_dorm3",
       "sortId": 7612,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
@@ -12662,6 +12781,18 @@
     },
     "train_spd&profession3[130]": {
       "buffId": "train_spd&profession3[130]",
+      "buffName": "重装エキスパートα",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_defender1",
+      "sortId": 9691,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>重装</>の訓練速度<@cc.vup>+30%</>"
+    },
+    "train_spd&profession3[131]": {
+      "buffId": "train_spd&profession3[131]",
       "buffName": "実戦技術：術技衛士",
       "buffIcon": "training",
       "skillIcon": "bskill_train_artsprotector",
@@ -24679,7 +24810,7 @@
         "height": 7,
         "comfort": 365,
         "usage": "宿舎に飾れば、雰囲気を良くする。",
-        "description": "サンクタの銃がずらっと並んだ陳列棚。サルカズの一部には同族に対し自身の戦利品を展示することで力を誇示する習慣がある。",
+        "description": "サンクタの銃がずらっと並んだ陳列棚。一部のサルカズには自身の戦利品を同族に見せびらかすことで力を誇示する習慣がある。",
         "obtainApproach": "購買部期間限定",
         "processedProductId": "3401",
         "processedProductCount": 278,
@@ -40987,6 +41118,470 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_rhineLab_incubator_01": {
+        "id": "furni_rhineLab_incubator_01",
+        "sortId": 944,
+        "name": "「夢の始まり」",
+        "iconId": "furni_rhineLab_incubator_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_1",
+        "width": 3,
+        "depth": 3,
+        "height": 8,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "新技術を培養している実験カプセル。ガラスは特殊な強化工程が施されており、非常に頑丈。\n夢が実体化して眼前に現れる。それはすべてが始まった時のように、ただ静かに存在し続ける。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_accessControl_01": {
+        "id": "furni_rhineLab_accessControl_01",
+        "sortId": 945,
+        "name": "消毒顔認証ターミナル",
+        "iconId": "furni_rhineLab_accessControl_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_1",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "洗練された顔認識技術付き、非接触のスプレー式消毒。\n忙しげに行き来する人が珍しくここで足を止める。技術は進歩を止めず、人もまた歩みを止めない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_plant_01": {
+        "id": "furni_rhineLab_plant_01",
+        "sortId": 946,
+        "name": "「生命樹」",
+        "iconId": "furni_rhineLab_plant_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_2",
+        "width": 3,
+        "depth": 3,
+        "height": 5,
+        "comfort": 190,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "開拓者が信頼と友情の証に持ってきた植物。\nドロシーが心を込めてこれを世話していた頃、彼女はとある優しく穏やかな秘密を心に秘めていた。少なくとも彼女からすればそうだったはずだ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_trolley_01": {
+        "id": "furni_rhineLab_trolley_01",
+        "sortId": 947,
+        "name": "医療カート",
+        "iconId": "furni_rhineLab_trolley_01",
+        "type": "DECORATION",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_2",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "可動式医療作業台に改造を施し、使用者の作業中のニーズを満たせるようにした物。\n時々置かれるコーヒーや眠気覚ましは、使用者が深夜でも眠気を感じず、多くのデータを弾き出すのに一役買う。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_stool_01": {
+        "id": "furni_rhineLab_stool_01",
+        "sortId": 948,
+        "name": "医療用スツール",
+        "iconId": "furni_rhineLab_stool_01",
+        "type": "SEATING",
+        "subType": "STOOL",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_3",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 90,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "細かく高さの調節ができ、ソフトな革張りは人間工学に基づいている。\n徹夜で働く研究員はよく座ったまま寝ており、夢の中でも変わらず来週の審査と自分のローンのことばかり考えている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_rhineLab_table_01": {
+        "id": "furni_rhineLab_table_01",
+        "sortId": 949,
+        "name": "実験テーブル",
+        "iconId": "furni_rhineLab_table_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_3",
+        "width": 10,
+        "depth": 4,
+        "height": 6,
+        "comfort": 520,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "特注の実験テーブル。片側には実験器具が、もう片側にはコンピュータと繋がったライン生命の端末が置いてある。\n上に置かれた花はドロシーが危険な荒野から摘んできて、安全な室内に移した物である。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_folder_T_01": {
+        "id": "furni_rhineLab_folder_T_01",
+        "sortId": 950,
+        "name": "ライン生命フォルダーA",
+        "iconId": "furni_rhineLab_folder_T_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_3",
+        "width": 5,
+        "depth": 3,
+        "height": 1,
+        "comfort": 50,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ライン生命の制式ファイルクリップ。こだわり抜いたフォルムは外部へ帰属を示す機能も担っている。\n技術が文字へと圧縮されて、紙一面に羅列されている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_folder_O_01": {
+        "id": "furni_rhineLab_folder_O_01",
+        "sortId": 951,
+        "name": "ライン生命フォルダーB",
+        "iconId": "furni_rhineLab_folder_O_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_3",
+        "width": 3,
+        "depth": 3,
+        "height": 1,
+        "comfort": 35,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ライン生命の制式ファイルクリップ。こだわり抜いたフォルムは外部へ帰属を示す機能も担っている。\n野心が進歩に美化されて、クリップの間に収まっている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_ceiling_01": {
+        "id": "furni_rhineLab_ceiling_01",
+        "sortId": 952,
+        "name": "カラーフィルター付き天井",
+        "iconId": "furni_rhineLab_ceiling_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_2",
+        "width": 14,
+        "depth": 6,
+        "height": 1,
+        "comfort": 260,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "実験室の補助照明。目を保護するフィルター付きで、職員の健康に配慮している。\n決まった時間に消灯するのは着任したての研究員だけ。段々と彼らも照明と同じように、朝8時から夜明けまで働き続ける。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_device_01": {
+        "id": "furni_rhineLab_device_01",
+        "sortId": 953,
+        "name": "「夢見た地」",
+        "iconId": "furni_rhineLab_device_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_1",
+        "width": 8,
+        "depth": 8,
+        "height": 10,
+        "comfort": 945,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "生命と源石が結びつき、アーツによる造物が感情を持ってここに生まれ、夢の中で描いた場所へ向かって進む。\nドロシーはそれらを、その命に代えても守りたいと願っている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_ceilingLight_01": {
+        "id": "furni_rhineLab_ceilingLight_01",
+        "sortId": 954,
+        "name": "「凝視」",
+        "iconId": "furni_rhineLab_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_2",
+        "width": 5,
+        "depth": 1,
+        "height": 3,
+        "comfort": 90,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "可動式のアームは使用者の思うままに調節が効き、満足のいくものである。\nライトは机の上の一角を狙って照らし出し、長い長い労働時間の間も、決して方向を変えたりはしない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_stand_01": {
+        "id": "furni_rhineLab_stand_01",
+        "sortId": 955,
+        "name": "デュアルディスプレイ",
+        "iconId": "furni_rhineLab_stand_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_1",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "人体に配慮したデザインで、使用者はどこにいても自分の欲しい情報を得ることができる。\n前を向けば前進、後ろを向けば継続。技術はその方向に限定されず、いつまでも発展し続ける。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_curtain_L_01": {
+        "id": "furni_rhineLab_curtain_L_01",
+        "sortId": 956,
+        "name": "透過防止カーテンA",
+        "iconId": "furni_rhineLab_curtain_L_01",
+        "type": "WALLDECO",
+        "subType": "CURTAIN",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_4",
+        "width": 10,
+        "depth": 1,
+        "height": 10,
+        "comfort": 290,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "薄いグレーのレースカーテン。マジックミラー式で、流線型の模様はデザイン性が高い。\n簡単な布が実験室と荒野を隔てる。研究員は生活の為に室内で奮闘し、開拓隊は生きる為に荒野を行く。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_curtain_S_01": {
+        "id": "furni_rhineLab_curtain_S_01",
+        "sortId": 957,
+        "name": "透過防止カーテンB",
+        "iconId": "furni_rhineLab_curtain_S_01",
+        "type": "WALLDECO",
+        "subType": "CURTAIN",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_4",
+        "width": 10,
+        "depth": 1,
+        "height": 10,
+        "comfort": 290,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "薄いグレーのレースカーテン。マジックミラー式で、流線型の模様はデザイン性が高い。\n簡単な布が実験室と荒野を隔てる。幻想は世に平等を撒き、現実は地に陰謀を注ぐ。科学は常に思い通りにならない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_wallpaper_01": {
+        "id": "furni_rhineLab_wallpaper_01",
+        "sortId": 958,
+        "name": "培養室の壁紙",
+        "iconId": "furni_rhineLab_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "WALL",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "培養室の壁紙。簡潔なデザインで、余分な模様は一つもない。\n一心不乱に科学に身を捧げ、ついに新たな成果を上げる。すべての研究員がこのような日が来るのを夢見ている。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_floor_01": {
+        "id": "furni_rhineLab_floor_01",
+        "sortId": 959,
+        "name": "培養室の床",
+        "iconId": "furni_rhineLab_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "培養室のフロアタイル。防滑処理が施されており、非常に清潔。\n報告書への記入や、議事録の作成、データ更新。研究員たちの歩みはこのタイルの上に留まることなく、常に忙しげに前進し続ける。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_idealCity_ceilingLamp_01": {
         "id": "furni_idealCity_ceilingLamp_01",
         "sortId": 960,
@@ -41944,6 +42539,64 @@
         "isOnly": -1,
         "quantity": 1
       },
+      "furni_animation_projector_01": {
+        "id": "furni_animation_projector_01",
+        "sortId": 9999,
+        "name": "「願いを映すもの」",
+        "iconId": "furni_animation_projector_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 3,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 7,
+        "comfort": 140,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "アニメ放映を記念して特注された映写機。フィルムには歩んできた歴史が刻まれ、画面には魂が込められているが、クリエイターたちは作品を形にした喜びと共に観客の反応への不安も抱えている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_animation_trophy_01": {
+        "id": "furni_animation_trophy_01",
+        "sortId": 10000,
+        "name": "うさ監督トロフィー",
+        "iconId": "furni_animation_trophy_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 3,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 90,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "アニメ版アークナイツの御愛顧を記念して特別に製作されたトロフィー。得意気なうさちゃんの形にデザインされている。クリエイターは素晴らしい作品を心の底から誇りに思うものである。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_reception_screen_01": {
         "id": "furni_reception_screen_01",
         "sortId": 1153,
@@ -42265,7 +42918,7 @@
       },
       "furni_oct1st_seating_01": {
         "id": "furni_oct1st_seating_01",
-        "sortId": 10003,
+        "sortId": 10007,
         "name": "ゆらゆらチェア",
         "iconId": "furni_oct1st_seating_01",
         "type": "SEATING",
@@ -42294,7 +42947,7 @@
       },
       "furni_oct1st_ladder_01": {
         "id": "furni_oct1st_ladder_01",
-        "sortId": 10004,
+        "sortId": 10008,
         "name": "手作りの踏み台",
         "iconId": "furni_oct1st_ladder_01",
         "type": "DECORATION",
@@ -42323,7 +42976,7 @@
       },
       "furni_duanwu_lazysofa_01": {
         "id": "furni_duanwu_lazysofa_01",
-        "sortId": 10005,
+        "sortId": 10009,
         "name": "ちまきソファ",
         "iconId": "furni_duanwu_lazysofa_01",
         "type": "SEATING",
@@ -42352,7 +43005,7 @@
       },
       "furni_duanwu_bed_L_01": {
         "id": "furni_duanwu_bed_L_01",
-        "sortId": 10006,
+        "sortId": 10010,
         "name": "竜舟床（首）",
         "iconId": "furni_duanwu_bed_L_01",
         "type": "BEDDING",
@@ -42381,7 +43034,7 @@
       },
       "furni_duanwu_bed_R_01": {
         "id": "furni_duanwu_bed_R_01",
-        "sortId": 10007,
+        "sortId": 10011,
         "name": "竜舟床（尾）",
         "iconId": "furni_duanwu_bed_R_01",
         "type": "BEDDING",
@@ -42410,7 +43063,7 @@
       },
       "furni_duanwu_wormwoodFloorLamp_01": {
         "id": "furni_duanwu_wormwoodFloorLamp_01",
-        "sortId": 10010,
+        "sortId": 10014,
         "name": "ヨモギの吊り行灯",
         "iconId": "furni_duanwu_wormwoodFloorLamp_01",
         "type": "DECORATION",
@@ -42439,7 +43092,7 @@
       },
       "furni_act12d0_throne_01": {
         "id": "furni_act12d0_throne_01",
-        "sortId": 10011,
+        "sortId": 10015,
         "name": "大族長の玉座",
         "iconId": "furni_act12d0_throne_01",
         "type": "SEATING",
@@ -42468,7 +43121,7 @@
       },
       "furni_act10d5_sideboard_01": {
         "id": "furni_act10d5_sideboard_01",
-        "sortId": 10012,
+        "sortId": 10016,
         "name": "ウルサス食器棚",
         "iconId": "furni_act10d5_sideboard_01",
         "type": "CABINET",
@@ -42497,7 +43150,7 @@
       },
       "furni_act10d5_coatRack_01": {
         "id": "furni_act10d5_coatRack_01",
-        "sortId": 10013,
+        "sortId": 10017,
         "name": "真新しい軍服",
         "iconId": "furni_act10d5_coatRack_01",
         "type": "DECORATION",
@@ -42526,7 +43179,7 @@
       },
       "furni_act10d5_plushBear_01": {
         "id": "furni_act10d5_plushBear_01",
-        "sortId": 10014,
+        "sortId": 10018,
         "name": "でっかいおすわりクマ",
         "iconId": "furni_act10d5_plushBear_01",
         "type": "DECORATION",
@@ -42555,7 +43208,7 @@
       },
       "furni_act10d5_walldecoKit_01": {
         "id": "furni_act10d5_walldecoKit_01",
-        "sortId": 10015,
+        "sortId": 10019,
         "name": "壁掛けセット",
         "iconId": "furni_act10d5_walldecoKit_01",
         "type": "WALLDECO",
@@ -42584,7 +43237,7 @@
       },
       "furni_act10d5_banner_01": {
         "id": "furni_act10d5_banner_01",
-        "sortId": 10016,
+        "sortId": 10020,
         "name": "学生自治団看板",
         "iconId": "furni_act10d5_banner_01",
         "type": "DECORATION",
@@ -42613,7 +43266,7 @@
       },
       "furni_act10d5_honeyDrink_01": {
         "id": "furni_act10d5_honeyDrink_01",
-        "sortId": 10017,
+        "sortId": 10021,
         "name": "ウルサス風ドリンク",
         "iconId": "furni_act10d5_honeyDrink_01",
         "type": "DECORATION",
@@ -42642,7 +43295,7 @@
       },
       "furni_act9d0_carpet_01": {
         "id": "furni_act9d0_carpet_01",
-        "sortId": 10018,
+        "sortId": 10022,
         "name": "1周年絨毯",
         "iconId": "furni_act9d0_carpet_01",
         "type": "CARPET",
@@ -42671,7 +43324,7 @@
       },
       "furni_act9d0_bed_01": {
         "id": "furni_act9d0_bed_01",
-        "sortId": 10019,
+        "sortId": 10023,
         "name": "1周年ベッド",
         "iconId": "furni_act9d0_bed_01",
         "type": "BEDDING",
@@ -42700,7 +43353,7 @@
       },
       "furni_act9d0_walllamp_01": {
         "id": "furni_act9d0_walllamp_01",
-        "sortId": 10020,
+        "sortId": 10024,
         "name": "1周年ライト",
         "iconId": "furni_act9d0_walllamp_01",
         "type": "WALLLAMP",
@@ -42729,7 +43382,7 @@
       },
       "furni_act18d0_cabinet_01": {
         "id": "furni_act18d0_cabinet_01",
-        "sortId": 10021,
+        "sortId": 10025,
         "name": "2周年記念茶器棚",
         "iconId": "furni_act18d0_cabinet_01",
         "type": "TABLE",
@@ -42758,7 +43411,7 @@
       },
       "furni_act18d0_cakeTower_01": {
         "id": "furni_act18d0_cakeTower_01",
-        "sortId": 10022,
+        "sortId": 10026,
         "name": "2周年記念ケーキ",
         "iconId": "furni_act18d0_cakeTower_01",
         "type": "DECORATION",
@@ -42787,7 +43440,7 @@
       },
       "furni_act7d5_bookshelf": {
         "id": "furni_act7d5_bookshelf",
-        "sortId": 10023,
+        "sortId": 10027,
         "name": "矢印本棚",
         "iconId": "furni_act7d5_bookshelf",
         "type": "DECORATION",
@@ -42816,7 +43469,7 @@
       },
       "furni_act7d5_atomicClock": {
         "id": "furni_act7d5_atomicClock",
-        "sortId": 10024,
+        "sortId": 10028,
         "name": "ライン生命原子時計",
         "iconId": "furni_act7d5_atomicClock",
         "type": "DECORATION",
@@ -42845,7 +43498,7 @@
       },
       "furni_act7d5_weaponRack": {
         "id": "furni_act7d5_weaponRack",
-        "sortId": 10025,
+        "sortId": 10029,
         "name": "ケオベの武器棚",
         "iconId": "furni_act7d5_weaponRack",
         "type": "WALLDECO",
@@ -42874,7 +43527,7 @@
       },
       "furni_act7d5_wallSticker": {
         "id": "furni_act7d5_wallSticker",
-        "sortId": 10026,
+        "sortId": 10030,
         "name": "予備隊激励ポスター",
         "iconId": "furni_act7d5_wallSticker",
         "type": "WALLDECO",
@@ -42903,7 +43556,7 @@
       },
       "furni_act7d5_petHouse": {
         "id": "furni_act7d5_petHouse",
-        "sortId": 10027,
+        "sortId": 10031,
         "name": "どすぐろちゃんハウス",
         "iconId": "furni_act7d5_petHouse",
         "type": "DECORATION",
@@ -42932,7 +43585,7 @@
       },
       "furni_act7d5_apron": {
         "id": "furni_act7d5_apron",
-        "sortId": 10028,
+        "sortId": 10032,
         "name": "家庭用エプロン",
         "iconId": "furni_act7d5_apron",
         "type": "WALLDECO",
@@ -42961,7 +43614,7 @@
       },
       "furni_act14d0_arcadegame_01": {
         "id": "furni_act14d0_arcadegame_01",
-        "sortId": 10029,
+        "sortId": 10033,
         "name": "新型ゲームマシン",
         "iconId": "furni_act14d0_arcadegame_01",
         "type": "DECORATION",
@@ -42990,7 +43643,7 @@
       },
       "furni_act15d0_carpet_01": {
         "id": "furni_act15d0_carpet_01",
-        "sortId": 10030,
+        "sortId": 10034,
         "name": "ベルベットの雪柄絨毯",
         "iconId": "furni_act15d0_carpet_01",
         "type": "CARPET",
@@ -43019,7 +43672,7 @@
       },
       "furni_act15d0_stool_01": {
         "id": "furni_act15d0_stool_01",
-        "sortId": 10031,
+        "sortId": 10035,
         "name": "雪うさソファ",
         "iconId": "furni_act15d0_stool_01",
         "type": "SEATING",
@@ -43048,7 +43701,7 @@
       },
       "furni_act15d0_snowman_01": {
         "id": "furni_act15d0_snowman_01",
-        "sortId": 10032,
+        "sortId": 10036,
         "name": "『かくかくスノーマン』",
         "iconId": "furni_act15d0_snowman_01",
         "type": "DECORATION",
@@ -43077,7 +43730,7 @@
       },
       "furni_act16d0_floorLamp_01": {
         "id": "furni_act16d0_floorLamp_01",
-        "sortId": 10033,
+        "sortId": 10037,
         "name": "『曲がり松と提灯』",
         "iconId": "furni_act16d0_floorLamp_01",
         "type": "DECORATION",
@@ -43106,7 +43759,7 @@
       },
       "furni_act16d0_drum_01": {
         "id": "furni_act16d0_drum_01",
-        "sortId": 10034,
+        "sortId": 10038,
         "name": "てんつくうさちゃん",
         "iconId": "furni_act16d0_drum_01",
         "type": "DECORATION",
@@ -43135,7 +43788,7 @@
       },
       "furni_act16d0_walldeco_01": {
         "id": "furni_act16d0_walldeco_01",
-        "sortId": 10035,
+        "sortId": 10039,
         "name": "開運扇子",
         "iconId": "furni_act16d0_walldeco_01",
         "type": "WALLDECO",
@@ -43164,7 +43817,7 @@
       },
       "furni_act17d0_box_01": {
         "id": "furni_act17d0_box_01",
-        "sortId": 10036,
+        "sortId": 10040,
         "name": "争奪目標",
         "iconId": "furni_act17d0_box_01",
         "type": "CABINET",
@@ -43193,7 +43846,7 @@
       },
       "furni_act17d0_acog_01": {
         "id": "furni_act17d0_acog_01",
-        "sortId": 10037,
+        "sortId": 10041,
         "name": "スコープ型望遠鏡",
         "iconId": "furni_act17d0_acog_01",
         "type": "DECORATION",
@@ -43222,7 +43875,7 @@
       },
       "furni_act19d0_showcase_01": {
         "id": "furni_act19d0_showcase_01",
-        "sortId": 10038,
+        "sortId": 10042,
         "name": "アンティークキャビネット",
         "iconId": "furni_act19d0_showcase_01",
         "type": "CABINET",
@@ -43251,7 +43904,7 @@
       },
       "furni_act21d0_fan_01": {
         "id": "furni_act21d0_fan_01",
-        "sortId": 10039,
+        "sortId": 10043,
         "name": "リゾート式扇風機",
         "iconId": "furni_act21d0_fan_01",
         "type": "DECORATION",
@@ -43280,7 +43933,7 @@
       },
       "furni_act21d0_foodCart_01": {
         "id": "furni_act21d0_foodCart_01",
-        "sortId": 10040,
+        "sortId": 10044,
         "name": "シェイブアイスカー",
         "iconId": "furni_act21d0_foodCart_01",
         "type": "DECORATION",
@@ -43309,7 +43962,7 @@
       },
       "furni_act21d0_barrel_01": {
         "id": "furni_act21d0_barrel_01",
-        "sortId": 10041,
+        "sortId": 10045,
         "name": "ドリンクバレル",
         "iconId": "furni_act21d0_barrel_01",
         "type": "DECORATION",
@@ -43338,7 +43991,7 @@
       },
       "furni_act21d0_motorcycle_01": {
         "id": "furni_act21d0_motorcycle_01",
-        "sortId": 10042,
+        "sortId": 10046,
         "name": "ドッソレス限定モデル",
         "iconId": "furni_act21d0_motorcycle_01",
         "type": "DECORATION",
@@ -43367,7 +44020,7 @@
       },
       "furni_act22d0_chair_01": {
         "id": "furni_act22d0_chair_01",
-        "sortId": 10043,
+        "sortId": 10047,
         "name": "ロイヤルチェア",
         "iconId": "furni_act22d0_chair_01",
         "type": "SEATING",
@@ -43396,7 +44049,7 @@
       },
       "furni_act22d4_letterBox_01": {
         "id": "furni_act22d4_letterBox_01",
-        "sortId": 10044,
+        "sortId": 10048,
         "name": "灰毫のメールボックス",
         "iconId": "furni_act22d4_letterBox_01",
         "type": "DECORATION",
@@ -43425,7 +44078,7 @@
       },
       "furni_act22d4_ceiling_01": {
         "id": "furni_act22d4_ceiling_01",
-        "sortId": 10045,
+        "sortId": 10049,
         "name": "遠牙の風鈴",
         "iconId": "furni_act22d4_ceiling_01",
         "type": "CEILING",
@@ -43454,7 +44107,7 @@
       },
       "furni_act23d0_decoration_01": {
         "id": "furni_act23d0_decoration_01",
-        "sortId": 10046,
+        "sortId": 10050,
         "name": "「他日幻景」",
         "iconId": "furni_act23d0_decoration_01",
         "type": "DECORATION",
@@ -43483,7 +44136,7 @@
       },
       "furni_act23d0_ceilingLamp_01": {
         "id": "furni_act23d0_ceilingLamp_01",
-        "sortId": 10047,
+        "sortId": 10051,
         "name": "有翼クランタの吊下げ灯",
         "iconId": "furni_act23d0_ceilingLamp_01",
         "type": "CEILINGLAMP",
@@ -43512,7 +44165,7 @@
       },
       "furni_act24d0_dunhuang_01": {
         "id": "furni_act24d0_dunhuang_01",
-        "sortId": 10048,
+        "sortId": 10052,
         "name": "「九彩の雲間」",
         "iconId": "furni_act24d0_dunhuang_01",
         "type": "DECORATION",
@@ -43541,7 +44194,7 @@
       },
       "furni_act24d0_clock_01": {
         "id": "furni_act24d0_clock_01",
-        "sortId": 10049,
+        "sortId": 10053,
         "name": "「終幕の声」",
         "iconId": "furni_act24d0_clock_01",
         "type": "DECORATION",
@@ -43570,7 +44223,7 @@
       },
       "furni_act24d0_house_01": {
         "id": "furni_act24d0_house_01",
-        "sortId": 10050,
+        "sortId": 10054,
         "name": "ドスグロちゃんの新居",
         "iconId": "furni_act24d0_house_01",
         "type": "DECORATION",
@@ -43599,7 +44252,7 @@
       },
       "furni_act24d0_table_01": {
         "id": "furni_act24d0_table_01",
-        "sortId": 10051,
+        "sortId": 10055,
         "name": "炎国式の化粧台",
         "iconId": "furni_act24d0_table_01",
         "type": "TABLE",
@@ -43628,7 +44281,7 @@
       },
       "furni_act25d0_table_01": {
         "id": "furni_act25d0_table_01",
-        "sortId": 10052,
+        "sortId": 10056,
         "name": "「山中の碁」",
         "iconId": "furni_act25d0_table_01",
         "type": "TABLE",
@@ -43657,7 +44310,7 @@
       },
       "furni_act25d0_decoration_01": {
         "id": "furni_act25d0_decoration_01",
-        "sortId": 10053,
+        "sortId": 10057,
         "name": "「亭上の雪」",
         "iconId": "furni_act25d0_decoration_01",
         "type": "DECORATION",
@@ -43686,7 +44339,7 @@
       },
       "furni_act27d0_prizeWheel_01": {
         "id": "furni_act27d0_prizeWheel_01",
-        "sortId": 10055,
+        "sortId": 10059,
         "name": "3周年ルーレット",
         "iconId": "furni_act27d0_prizeWheel_01",
         "type": "DECORATION",
@@ -43715,7 +44368,7 @@
       },
       "furni_act30d0_fan_01": {
         "id": "furni_act30d0_fan_01",
-        "sortId": 10056,
+        "sortId": 10060,
         "name": "「キャビネット扇風機」",
         "iconId": "furni_act30d0_fan_01",
         "type": "DECORATION",
@@ -45252,7 +45905,7 @@
       },
       "furni_dropS018_needlePhobia_01": {
         "id": "furni_dropS018_needlePhobia_01",
-        "sortId": 11046,
+        "sortId": 11047,
         "name": "パネル「針」",
         "iconId": "furni_dropS018_needlePhobia_01",
         "type": "WALLDECO",
@@ -45281,7 +45934,7 @@
       },
       "furni_dropS018_thalassophobia_01": {
         "id": "furni_dropS018_thalassophobia_01",
-        "sortId": 11047,
+        "sortId": 11048,
         "name": "パネル「沈没」",
         "iconId": "furni_dropS018_thalassophobia_01",
         "type": "WALLDECO",
@@ -45310,7 +45963,7 @@
       },
       "furni_dropS018_octopus_01": {
         "id": "furni_dropS018_octopus_01",
-        "sortId": 11048,
+        "sortId": 11049,
         "name": "パネル「日の出」",
         "iconId": "furni_dropS018_octopus_01",
         "type": "WALLDECO",
@@ -45339,7 +45992,7 @@
       },
       "furni_dropS018_claustrophobia_01": {
         "id": "furni_dropS018_claustrophobia_01",
-        "sortId": 11049,
+        "sortId": 11050,
         "name": "パネル「幽閉」",
         "iconId": "furni_dropS018_claustrophobia_01",
         "type": "WALLDECO",
@@ -45368,7 +46021,7 @@
       },
       "furni_dropS022_aos_01": {
         "id": "furni_dropS022_aos_01",
-        "sortId": 11050,
+        "sortId": 11051,
         "name": "パネル「構造」",
         "iconId": "furni_dropS022_aos_01",
         "type": "WALLDECO",
@@ -45397,7 +46050,7 @@
       },
       "furni_dropS022_mountain_01": {
         "id": "furni_dropS022_mountain_01",
-        "sortId": 11051,
+        "sortId": 11052,
         "name": "パネル「連峰」",
         "iconId": "furni_dropS022_mountain_01",
         "type": "WALLDECO",
@@ -45426,7 +46079,7 @@
       },
       "furni_dropS023_birdmanOfAlcatraz_01": {
         "id": "furni_dropS023_birdmanOfAlcatraz_01",
-        "sortId": 11052,
+        "sortId": 11053,
         "name": "パネル「改変」",
         "iconId": "furni_dropS023_birdmanOfAlcatraz_01",
         "type": "WALLDECO",
@@ -45455,7 +46108,7 @@
       },
       "furni_dropS024_twinPeaks_01": {
         "id": "furni_dropS024_twinPeaks_01",
-        "sortId": 11053,
+        "sortId": 11054,
         "name": "パネル「双峰」",
         "iconId": "furni_dropS024_twinPeaks_01",
         "type": "WALLDECO",
@@ -45484,7 +46137,7 @@
       },
       "furni_dropS025_mahjong_01": {
         "id": "furni_dropS025_mahjong_01",
-        "sortId": 11054,
+        "sortId": 11055,
         "name": "パネル「同楽」",
         "iconId": "furni_dropS025_mahjong_01",
         "type": "WALLDECO",
@@ -45513,7 +46166,7 @@
       },
       "furni_dropS025_cai_01": {
         "id": "furni_dropS025_cai_01",
-        "sortId": 11055,
+        "sortId": 11056,
         "name": "パネル「生財」",
         "iconId": "furni_dropS025_cai_01",
         "type": "WALLDECO",
@@ -45542,7 +46195,7 @@
       },
       "furni_dropS026_seven_01": {
         "id": "furni_dropS026_seven_01",
-        "sortId": 11056,
+        "sortId": 11057,
         "name": "パネル「罪責」",
         "iconId": "furni_dropS026_seven_01",
         "type": "WALLDECO",
@@ -45569,9 +46222,38 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_dropS026_greed_01": {
+        "id": "furni_dropS026_greed_01",
+        "sortId": 11059,
+        "name": "パネル「寛大」",
+        "iconId": "furni_dropS026_greed_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「これらは全てあなたのものだが、使うことはできない。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_dropS026_sloth_01": {
         "id": "furni_dropS026_sloth_01",
-        "sortId": 11059,
+        "sortId": 11060,
         "name": "パネル「勤勉」",
         "iconId": "furni_dropS026_sloth_01",
         "type": "WALLDECO",
@@ -45600,7 +46282,7 @@
       },
       "furni_dropS026_lust_01": {
         "id": "furni_dropS026_lust_01",
-        "sortId": 11060,
+        "sortId": 11061,
         "name": "パネル「克己」",
         "iconId": "furni_dropS026_lust_01",
         "type": "WALLDECO",
@@ -45629,7 +46311,7 @@
       },
       "furni_dropS026_pride_01": {
         "id": "furni_dropS026_pride_01",
-        "sortId": 11061,
+        "sortId": 11062,
         "name": "パネル「謙虚」",
         "iconId": "furni_dropS026_pride_01",
         "type": "WALLDECO",
@@ -45658,7 +46340,7 @@
       },
       "furni_dropS026_envy_01": {
         "id": "furni_dropS026_envy_01",
-        "sortId": 11062,
+        "sortId": 11063,
         "name": "パネル「寛容」",
         "iconId": "furni_dropS026_envy_01",
         "type": "WALLDECO",
@@ -45687,7 +46369,7 @@
       },
       "furni_dropS026_wrath_01": {
         "id": "furni_dropS026_wrath_01",
-        "sortId": 11063,
+        "sortId": 11064,
         "name": "パネル「忍耐」",
         "iconId": "furni_dropS026_wrath_01",
         "type": "WALLDECO",
@@ -47481,64 +48163,6 @@
         "processedByProductGroup": [],
         "canBeDestroy": true,
         "isOnly": -1,
-        "quantity": 0
-      },
-      "furni_animation_projector_01": {
-        "id": "furni_animation_projector_01",
-        "sortId": 9999,
-        "name": "「願いを映すもの」",
-        "iconId": "furni_animation_projector_01",
-        "type": "DECORATION",
-        "subType": "DEVICE",
-        "location": "FLOOR",
-        "category": "FURNITURE",
-        "validOnRotate": false,
-        "enableRotate": true,
-        "rarity": 3,
-        "themeId": "",
-        "groupId": "",
-        "width": 3,
-        "depth": 3,
-        "height": 7,
-        "comfort": 140,
-        "usage": "宿舎に飾れば、雰囲気を良くする。",
-        "description": "アニメ放映を記念して特注された映写機。フィルムには歩んできた歴史が刻まれ、画面には魂が込められているが、クリエイターたちは作品を形にした喜びと共に観客の反応への不安も抱えている。",
-        "obtainApproach": "イベント報酬",
-        "processedProductId": "3401",
-        "processedProductCount": 0,
-        "processedByProductPercentage": 0,
-        "processedByProductGroup": [],
-        "canBeDestroy": false,
-        "isOnly": 1,
-        "quantity": 0
-      },
-      "furni_animation_trophy_01": {
-        "id": "furni_animation_trophy_01",
-        "sortId": 10000,
-        "name": "うさ監督トロフィー",
-        "iconId": "furni_animation_trophy_01",
-        "type": "DECORATION",
-        "subType": "ART_D",
-        "location": "FLOOR",
-        "category": "FURNITURE",
-        "validOnRotate": false,
-        "enableRotate": true,
-        "rarity": 3,
-        "themeId": "",
-        "groupId": "",
-        "width": 3,
-        "depth": 2,
-        "height": 4,
-        "comfort": 90,
-        "usage": "宿舎に飾れば、雰囲気を良くする。",
-        "description": "アニメ版アークナイツの御愛顧を記念して特別に製作されたトロフィー。得意気なうさちゃんの形にデザインされている。クリエイターは素晴らしい作品を心の底から誇りに思うものである。",
-        "obtainApproach": "イベント報酬",
-        "processedProductId": "3401",
-        "processedProductCount": 0,
-        "processedByProductPercentage": 0,
-        "processedByProductGroup": [],
-        "canBeDestroy": false,
-        "isOnly": 1,
         "quantity": 0
       }
     },
@@ -55740,9 +56364,144 @@
           "furni_concertHall_floor_01"
         ]
       },
+      "furni_set_rhineLab": {
+        "id": "furni_set_rhineLab",
+        "sortId": 59,
+        "name": "ライン生命培養室",
+        "themeType": "EVENT",
+        "desc": "ドロシーたちの説明に基づいて再現されたライン生命の実験室。カプセル内で培養された夢は、人に恩を返してくれるが、時には仇で返すこともある。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_rhineLab_incubator_01",
+            "pos0": 0,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_accessControl_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_plant_01",
+            "pos0": 6,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_trolley_01",
+            "pos0": 4,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_stool_01",
+            "pos0": 11,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_stool_01",
+            "pos0": 15,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_table_01",
+            "pos0": 9,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_folder_T_01",
+            "pos0": 9,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_folder_O_01",
+            "pos0": 16,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_ceiling_01",
+            "pos0": 3,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_device_01",
+            "pos0": 20,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_ceilingLight_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_stand_01",
+            "pos0": 28,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_curtain_L_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_curtain_S_01",
+            "pos0": 24,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_rhineLab_1",
+          "furni_set_rhineLab_2",
+          "furni_set_rhineLab_3",
+          "furni_set_rhineLab_4"
+        ],
+        "furnitures": [
+          "furni_rhineLab_incubator_01",
+          "furni_rhineLab_accessControl_01",
+          "furni_rhineLab_plant_01",
+          "furni_rhineLab_trolley_01",
+          "furni_rhineLab_stool_01",
+          "furni_rhineLab_table_01",
+          "furni_rhineLab_folder_T_01",
+          "furni_rhineLab_folder_O_01",
+          "furni_rhineLab_ceiling_01",
+          "furni_rhineLab_device_01",
+          "furni_rhineLab_ceilingLight_01",
+          "furni_rhineLab_stand_01",
+          "furni_rhineLab_curtain_L_01",
+          "furni_rhineLab_curtain_S_01",
+          "furni_rhineLab_wallpaper_01",
+          "furni_rhineLab_floor_01"
+        ]
+      },
       "furni_set_idealCity": {
         "id": "furni_set_idealCity",
-        "sortId": 57,
+        "sortId": 56,
         "name": "わくわく水たまりハウス",
         "themeType": "EVENT",
         "desc": "ミニマリストがしぶしぶ行った説明を参考に、例のどでかい水たまりを完全再現。ガヴィルが現場監督に入ってから、彼の作業効率は何倍にも跳ね上がった。",
@@ -55896,7 +56655,7 @@
       },
       "furni_set_durin": {
         "id": "furni_set_durin",
-        "sortId": 58,
+        "sortId": 57,
         "name": "フェアリーホール",
         "themeType": "LUCKY",
         "desc": "ロドス制作の舞台「木の実割り人形」のセットを元に作られたフェアリーホール。ひと時の夢であるが、その意味は計り知れない。",
@@ -56025,10 +56784,10 @@
       },
       "furni_set_reception": {
         "id": "furni_set_reception",
-        "sortId": 68,
+        "sortId": 58,
         "name": "龍門茶室",
         "themeType": "EVENT",
-        "desc": "龍門ですこぶる人気が高い茶屋の貴賓室。噂によれば、大物が頻繁に出入りしているらしい。内装の色遣いはクラシカルでありながらも暖かで、都市の冷たい夜にあっては、ことのほかぬくもりを感じさせる。",
+        "desc": "龍門ですこぶる人気が高い茶屋の貴賓室。噂によれば、大物が頻繁に出入りしているらしい。内装の色遣いはクラシカルでありながらも暖かで、都市の冷たい夜にあっては、ことのほかぬくもりを感じさせる。  ",
         "quickSetup": [
           {
             "furnitureId": "furni_reception_screen_01",
@@ -59240,6 +59999,62 @@
           "furni_concertHall_ceiling_01"
         ]
       },
+      "furni_set_rhineLab_1": {
+        "id": "furni_set_rhineLab_1",
+        "sortId": 1,
+        "name": "偏移",
+        "themeId": "furni_set_rhineLab",
+        "comfort": 355,
+        "count": 4,
+        "furniture": [
+          "furni_rhineLab_incubator_01",
+          "furni_rhineLab_accessControl_01",
+          "furni_rhineLab_device_01",
+          "furni_rhineLab_stand_01"
+        ]
+      },
+      "furni_set_rhineLab_2": {
+        "id": "furni_set_rhineLab_2",
+        "sortId": 2,
+        "name": "選別",
+        "themeId": "furni_set_rhineLab",
+        "comfort": 155,
+        "count": 4,
+        "furniture": [
+          "furni_rhineLab_ceiling_01",
+          "furni_rhineLab_ceilingLight_01",
+          "furni_rhineLab_plant_01",
+          "furni_rhineLab_trolley_01"
+        ]
+      },
+      "furni_set_rhineLab_3": {
+        "id": "furni_set_rhineLab_3",
+        "sortId": 3,
+        "name": "測定",
+        "themeId": "furni_set_rhineLab",
+        "comfort": 190,
+        "count": 4,
+        "furniture": [
+          "furni_rhineLab_table_01",
+          "furni_rhineLab_stool_01",
+          "furni_rhineLab_folder_T_01",
+          "furni_rhineLab_folder_O_01"
+        ]
+      },
+      "furni_set_rhineLab_4": {
+        "id": "furni_set_rhineLab_4",
+        "sortId": 4,
+        "name": "確証",
+        "themeId": "furni_set_rhineLab",
+        "comfort": 235,
+        "count": 4,
+        "furniture": [
+          "furni_rhineLab_wallpaper_01",
+          "furni_rhineLab_floor_01",
+          "furni_rhineLab_curtain_L_01",
+          "furni_rhineLab_curtain_S_01"
+        ]
+      },
       "furni_set_idealCity_1": {
         "id": "furni_set_idealCity_1",
         "sortId": 1,
@@ -59356,7 +60171,7 @@
       "furni_set_reception_1": {
         "id": "furni_set_reception_1",
         "sortId": 1,
-        "name": "「日進斗金 」",
+        "name": "「日進斗金」",
         "themeId": "furni_set_reception",
         "comfort": 455,
         "count": 3,
@@ -61483,7 +62298,7 @@
       ],
       "requireStages": [
         {
-          "stageId": "main_09-03",
+          "stageId": "easy_09-03",
           "rank": 2
         }
       ]
@@ -61602,7 +62417,7 @@
       ],
       "requireStages": [
         {
-          "stageId": "main_09-05",
+          "stageId": "easy_09-05",
           "rank": 2
         }
       ]
