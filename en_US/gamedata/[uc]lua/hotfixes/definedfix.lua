@@ -3,10 +3,9 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/BossRushHotfixer",
-  "HotFixes/HpRatioToggleCheckerHotfixer",
-  "HotFixes/BossRushSquadHomeStateHotfixer",
-  "HotFixes/UIEquipSelectFix"
+  "HotFixes/AutoTriggerSkillAbilityHotfixer",
+  "HotFixes/RoguelikeTopicMonthSquadBpMaxHotfixer",
+  "HotFixes/ForcerSkill2HitBehaviourHotfixer",
 };
 
 return list;
