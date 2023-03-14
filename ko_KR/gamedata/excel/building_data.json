@@ -8897,14 +8897,14 @@
         {
           "buffData": [
             {
-              "buffId": "train_spd&profession[030]",
+              "buffId": "train_spd&profession3[130]",
               "cond": {
                 "phase": 0,
                 "level": 1
               }
             },
             {
-              "buffId": "train_spd&profession3[130]",
+              "buffId": "train_spd&profession3[131]",
               "cond": {
                 "phase": 2,
                 "level": 1
@@ -9521,6 +9521,89 @@
         }
       ]
     },
+    "char_4048_doroth": {
+      "charId": "char_4048_doroth",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_skill_spd1[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1027_greyy2": {
+      "charId": "char_1027_greyy2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_drone[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "power_count[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_135_halo": {
+      "charId": "char_135_halo",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd[001]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_prod_spd[011]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
     "char_1026_gvial2": {
       "charId": "char_1026_gvial2",
       "maxManpower": 8640000,
@@ -9910,7 +9993,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.g.lda><@cc.kw>리 탐정사무소</></> 오퍼레이터가 1명 증가할 때마다 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 <@cc.vup>+0.05</>, 해당 소속 오퍼레이터는 시간당 <@cc.vup>+0.2</> 추가 회복"
+      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.g.lda><@cc.kw>리 탐정사무소</></> 오퍼레이터가 1명 증가할 때마다 해당 소속 오퍼레이터의 <@cc.kw>컨디션 회복량이 추가로 증가</>하고, 1명 증가할 때마다 제어 센터 내 모든 오퍼레이터의 시간당 컨디션 회복 <@cc.vup>+0.2</>"
     },
     "control_mp_cost&faction[000]": {
       "buffId": "control_mp_cost&faction[000]",
@@ -10284,6 +10367,30 @@
       "roomType": "POWER",
       "description": "발전소에 배치 시, 드론 회복 <@cc.vup>+15%</>"
     },
+    "power_rec_drone[000]": {
+      "buffId": "power_rec_drone[000]",
+      "buffName": "점검 매뉴얼",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_drone",
+      "sortId": 2001,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "발전소에 배치 시, 드론 상한 <@cc.vup>10</>당 드론 회복 속도 <@cc.vup>+1%</>"
+    },
+    "power_count[000]": {
+      "buffId": "power_count[000]",
+      "buffName": "아침 햇살",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_count",
+      "sortId": 2001,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "발전소에 배치 시, 다른 <@cc.kw>발전소</>에 배치된 <$cc.tag.op><@cc.kw>작업 플랫폼</></>이 없을 경우, <@cc.kw>발전소</> <@cc.vup>+1</>개로 간주함 (시설 수량에만 영향을 줌)"
+    },
     "power_prod_spd_P[000]": {
       "buffId": "power_prod_spd_P[000]",
       "buffName": "'띠띠~, 가동!'",
@@ -10439,6 +10546,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, 해당 제조소 내 <$cc.sk.manu1><@cc.kw>표준화류 스킬</></> 1개당 자신의 생산력 <@cc.vup>+5%</>"
+    },
+    "manu_skill_spd1[010]": {
+      "buffId": "manu_skill_spd1[010]",
+      "buffName": "오리지늄 아츠 이론 응용",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_skill_spd2",
+      "sortId": 3501,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 해당 제조소 내 <$cc.sk.manu2><@cc.kw>라인테크류 스킬</></> 1개당 자신의 생산력 <@cc.vup>+5%</>"
     },
     "manu_prod_spd_addition[030]": {
       "buffId": "manu_prod_spd_addition[030]",
@@ -11482,7 +11601,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "무역소에 배치 후, 다음 <@cc.kw>순금 오더</>의 납품 수가 <@cc.kw>3</> 초과할 경우, 용문폐 수익 <@cc.kw>+250</>, 시간당 컨디션 소모 <@cc.vup>-0.25</>"
+      "description": "무역소에 배치 후, 다음 <@cc.kw>순금 오더</>의 납품 수가 <@cc.kw>3</> 초과할 경우(위약 오더는 순금 오더로 간주하지 않음), 용문폐 수익 <@cc.kw>+250</>, 시간당 컨디션 소모 <@cc.vup>-0.25</>"
     },
     "trade_ord_long[010]": {
       "buffId": "trade_ord_long[010]",
@@ -11494,7 +11613,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "무역소에 배치 후, 다음 <@cc.kw>순금 오더</>의 납품 수가 <@cc.kw>3</> 초과할 경우, 용문폐 수익 <@cc.kw>+500</>, 시간당 컨디션 소모 <@cc.vup>-0.25</>"
+      "description": "무역소에 배치 후, 다음 <@cc.kw>순금 오더</>의 납품 수가 <@cc.kw>3</> 초과할 경우(위약 오더는 순금 오더로 간주하지 않음), 용문폐 수익 <@cc.kw>+500</>, 시간당 컨디션 소모 <@cc.vup>-0.25</>"
     },
     "workshop_proc_probability[000]": {
       "buffId": "workshop_proc_probability[000]",
@@ -12052,7 +12171,7 @@
       "buffId": "workshop_formula_dorm[001]",
       "buffName": "“쓸모없는 인간은 없다”",
       "buffIcon": "workshop",
-      "skillIcon": "bskill_ws_evolve_dorm2",
+      "skillIcon": "bskill_ws_evolve_dorm3",
       "sortId": 7612,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
@@ -12662,6 +12781,18 @@
     },
     "train_spd&profession3[130]": {
       "buffId": "train_spd&profession3[130]",
+      "buffName": "디펜더 마스터리 α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_defender1",
+      "sortId": 9691,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>디펜더</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>"
+    },
+    "train_spd&profession3[131]": {
+      "buffId": "train_spd&profession3[131]",
       "buffName": "실전 기술: 아츠 프로텍터",
       "buffIcon": "training",
       "skillIcon": "bskill_train_artsprotector",
@@ -40987,6 +41118,470 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_rhineLab_incubator_01": {
+        "id": "furni_rhineLab_incubator_01",
+        "sortId": 944,
+        "name": "'꿈의 시작'",
+        "iconId": "furni_rhineLab_incubator_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_1",
+        "width": 3,
+        "depth": 3,
+        "height": 8,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "신기술을 품고 기르는 실험용 캡슐. 특수 강화 처리한 유리는 놀라울 정도로 튼튼하다.\n꿈은 현실이 되어 눈앞에 조용히 나타난다. 마치 세상 모든 것들이 태어날 때 조용했던 것처럼.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_accessControl_01": {
+        "id": "furni_rhineLab_accessControl_01",
+        "sortId": 945,
+        "name": "소독 겸용 출입 센서",
+        "iconId": "furni_rhineLab_accessControl_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_1",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "첨단 안면인식 기술에 비접촉 살포식 소독 장치까지 탑재됐다.\n아무리 분주히 드나드는 사람이라도 이 앞에서는 발걸음을 늦추기 마련이다. 하지만, 과학기술이 멈추지 않은 것처럼 그들 또한 멈추지는 않는다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_plant_01": {
+        "id": "furni_rhineLab_plant_01",
+        "sortId": 946,
+        "name": "'생명의 나무'",
+        "iconId": "furni_rhineLab_plant_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_2",
+        "width": 3,
+        "depth": 3,
+        "height": 5,
+        "comfort": 190,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "개척자가 가져온, 신뢰와 우정을 상징하는 식물.\n도로시가 이를 정성스럽게 돌볼 때, 그녀의 마음속에는 부드러우면서도 따스한 비밀이 숨겨져 있었다. 적어도 그녀에게는 말이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_trolley_01": {
+        "id": "furni_rhineLab_trolley_01",
+        "sortId": 947,
+        "name": "의료 카트",
+        "iconId": "furni_rhineLab_trolley_01",
+        "type": "DECORATION",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_2",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "사용자의 요구를 만족시키기 위해 개조된 이동형 의료 플랫폼.\n가끔 야간작업의 효율을 위해 커피와 각성 시약을 올려놓기도 한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_stool_01": {
+        "id": "furni_rhineLab_stool_01",
+        "sortId": 948,
+        "name": "의료용 원형 의자",
+        "iconId": "furni_rhineLab_stool_01",
+        "type": "SEATING",
+        "subType": "STOOL",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_3",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 90,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "정밀한 회전축으로 높이를 조절할 수 있으며, 부드러운 쿠션은 인체공학적 디자인이 적용되어 있다.\n철야 작업을 하는 연구원이 자주 앉아서 졸고는 한다. 꿈속에는 다음 주의 심사와 갚아야 할 대출이긴 하지만.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_rhineLab_table_01": {
+        "id": "furni_rhineLab_table_01",
+        "sortId": 949,
+        "name": "실험용 조작대",
+        "iconId": "furni_rhineLab_table_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_3",
+        "width": 10,
+        "depth": 4,
+        "height": 6,
+        "comfort": 520,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "특별 주문 제작한 실험용 작업대. 한쪽에는 실험 기구들이 올려져 있으며, 다른 한쪽의 컴퓨터는 라인 랩의 터미널에 연결되어 있다.\n위에 놓인 꽃은 황무지 식물에서 따온 것으로, 황야의 위험으로부터 지켜내기 위해 도로시가 일부러 실험실로 옮긴 것이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_folder_T_01": {
+        "id": "furni_rhineLab_folder_T_01",
+        "sortId": 950,
+        "name": "라인 랩 서류철 (좌)",
+        "iconId": "furni_rhineLab_folder_T_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_3",
+        "width": 5,
+        "depth": 3,
+        "height": 1,
+        "comfort": 50,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "라인 랩의 로고가 새겨진 서류철. 세련된 겉모양은 대외 이미지 향상을 위해 섬세히 디자인되었다.\n글자 하나하나에 녹아든 과학 기술이 종이를 가득 채우고 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_folder_O_01": {
+        "id": "furni_rhineLab_folder_O_01",
+        "sortId": 951,
+        "name": "라인 랩 서류철 (우)",
+        "iconId": "furni_rhineLab_folder_O_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_3",
+        "width": 3,
+        "depth": 3,
+        "height": 1,
+        "comfort": 35,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "라인 랩의 로고가 새겨진 서류철. 세련된 겉모양은 대외 이미지 향상을 위해 섬세히 디자인되었다.\n야망은 진보로 미화되어 중간에 끼워져 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_ceiling_01": {
+        "id": "furni_rhineLab_ceiling_01",
+        "sortId": 952,
+        "name": "시력 보호 천장 조명",
+        "iconId": "furni_rhineLab_ceiling_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_2",
+        "width": 14,
+        "depth": 6,
+        "height": 1,
+        "comfort": 260,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "실험실의 보조 조명. 임직원의 건강을 위해 시력 보호 필터가 장착되어 있다.\n막 부임했을 때는 그래도 제때 불을 끄긴 하지만, 얼마 지나지 않아 그들도 이 조명과 함께 아침 여덟 시부터 심야까지 일한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_device_01": {
+        "id": "furni_rhineLab_device_01",
+        "sortId": 953,
+        "name": "'꿈의 땅'",
+        "iconId": "furni_rhineLab_device_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_1",
+        "width": 8,
+        "depth": 8,
+        "height": 10,
+        "comfort": 945,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "생명과 오리지늄이 함께하는 곳. 감정을 지닌 오리지늄 아츠는 이곳에서 탄생하여 꿈에 그리던 곳으로 나아간다.\n그들을 지켜내기 위해 도로시는 기꺼이 목숨을 바친다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_ceilingLight_01": {
+        "id": "furni_rhineLab_ceilingLight_01",
+        "sortId": 954,
+        "name": "'주시'",
+        "iconId": "furni_rhineLab_ceilingLight_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_2",
+        "width": 5,
+        "depth": 1,
+        "height": 3,
+        "comfort": 90,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "사용자의 요구사항에 맞춰 어떤 방향으로든 조정이 가능하도록 디자인되었다.\n오래전 탁자의 한구석을 비추게 된 조명은, 그 후로 다시는 방향을 바꾸지 못했다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_stand_01": {
+        "id": "furni_rhineLab_stand_01",
+        "sortId": 955,
+        "name": "듀얼 모니터",
+        "iconId": "furni_rhineLab_stand_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_1",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "사용자 중심적인 디자인. 어디에 있든 원하는 정보를 손쉽게 파악할 수 있도록 만들어졌다.\n정면은 전진이고 후면은 지속이다. 기술은 방향에 구애받지 않고 영원히 발전해 나간다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_curtain_L_01": {
+        "id": "furni_rhineLab_curtain_L_01",
+        "sortId": 956,
+        "name": "일방 투명 커튼 (좌)",
+        "iconId": "furni_rhineLab_curtain_L_01",
+        "type": "WALLDECO",
+        "subType": "CURTAIN",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_4",
+        "width": 10,
+        "depth": 1,
+        "height": 10,
+        "comfort": 290,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "옅은 회색을 띤 망사 원단의 커튼. 바깥에서는 안을 들여다볼 수 없으며, 유선형의 무늬가 굉장히 모던한 느낌을 준다.\n커튼 한 장으로 실험실을 황야로부터 완전히 격리했다. 연구원은 실내를 분주히 뛰어다니고, 개척자는 황야를 분주히 뛰어다닌다. 전자는 생활을 위해, 후자는 생존을 위해.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_curtain_S_01": {
+        "id": "furni_rhineLab_curtain_S_01",
+        "sortId": 957,
+        "name": "일방 투명 커튼 (우)",
+        "iconId": "furni_rhineLab_curtain_S_01",
+        "type": "WALLDECO",
+        "subType": "CURTAIN",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_4",
+        "width": 10,
+        "depth": 1,
+        "height": 10,
+        "comfort": 290,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "옅은 회색을 띤 망사 원단의 커튼. 바깥에서는 안을 들여다볼 수 없으며, 유선형의 무늬가 굉장히 모던한 느낌을 준다.\n커튼 한 장으로 실험실을 황야로부터 완전히 격리했다. 꿈은 모두에게 평등하고 현실은 음모라는 씨앗을 땅속에 심지만, 과학기술은 사람의 마음만큼이나 까다로운 것 같다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_wallpaper_01": {
+        "id": "furni_rhineLab_wallpaper_01",
+        "sortId": 958,
+        "name": "배양실 벽지",
+        "iconId": "furni_rhineLab_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "WALL",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "배양실의 벽지. 불필요한 무늬가 들어가지 않은 심플한 디자인이다.\n정신을 가다듬고 과학에 몸을 바쳐 새로운 성과를 이뤄내는 것. 모든 연구원이 언젠가 그러한 날이 오기만을 꿈꾸고 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_rhineLab_floor_01": {
+        "id": "furni_rhineLab_floor_01",
+        "sortId": 959,
+        "name": "배양실 바닥재",
+        "iconId": "furni_rhineLab_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_rhineLab",
+        "groupId": "furni_set_rhineLab_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "배양실의 바닥 타일. 미끄럼 방지 처리가 되어 있으며 때가 잘 묻지 않는다.\n보고서 작성, 회의 내용 기록, 데이터 업데이트, 연구원들의 발걸음은 이 위에서 오래 머무는 법이 없다. 그들은 늘 바쁘게 앞을 향해 나아간다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_idealCity_ceilingLamp_01": {
         "id": "furni_idealCity_ceilingLamp_01",
         "sortId": 960,
@@ -41944,10 +42539,68 @@
         "isOnly": -1,
         "quantity": 1
       },
+      "furni_animation_projector_01": {
+        "id": "furni_animation_projector_01",
+        "sortId": 9999,
+        "name": "소원을 비추는 영사기",
+        "iconId": "furni_animation_projector_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 3,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 7,
+        "comfort": 140,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "애니메이션의 방영을 기념하여 특별 제작된 영사기. 필름에는 걸어온 역사가 새겨져 있고 화면에는 제작자의 심혈이 담겨 있지만, 작품을 영상화한 기쁨과 함께 관객들의 반응에 대한 불안감도 안고 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_animation_trophy_01": {
+        "id": "furni_animation_trophy_01",
+        "sortId": 10000,
+        "name": "토끼 감독 트로피",
+        "iconId": "furni_animation_trophy_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 3,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 90,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "애니메이션에 대한 관객들의 사랑을 기념하여 특별 제작된 트로피. 의기양양한 토끼 모양으로 디자인되었다. 제작자에게 있어 훌륭한 작품은 충분히 마음속으로부터 자랑스럽게 여길 만하다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_reception_screen_01": {
         "id": "furni_reception_screen_01",
         "sortId": 1153,
-        "name": " '재물운'",
+        "name": "'재물운'",
         "iconId": "furni_reception_wallpaper_01",
         "type": "DECORATION",
         "subType": "PARTITION",
@@ -41963,7 +42616,7 @@
         "height": 8,
         "comfort": 925,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "선반과 낮은 협탁을 포함한 염국식 병풍 세트. 동전 문양이 촌스럽다는 의견도 있지만, 몇몇 방문객이 남기고 간 장식품이 그 이미지를 바꿀 수 있을지는 장담할 수 없다.",
+        "description": "선반과 서랍을 포함하고 있는 염국식 병풍. 엽전 무늬가 촌스럽다는 의견도 있지만, 몇몇 방문객들이 남긴 장식품만으로 이 병풍의 이미지를 바꿀 수 있을지는 장담할 수 없다.",
         "obtainApproach": "특전에서 획득",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -41976,7 +42629,7 @@
       "furni_reception_sofa_01": {
         "id": "furni_reception_sofa_01",
         "sortId": 1154,
-        "name": "찻집 룸 소파의자 ",
+        "name": "찻집 룸 소파의자",
         "iconId": "furni_reception_sofa_01",
         "type": "SEATING",
         "subType": "SOFA",
@@ -41992,7 +42645,7 @@
         "height": 4,
         "comfort": 295,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "특수 디자인과 개량을 거친 염국식 원목 소파 의자. 딱딱한 겉모습과 달리 의자 앞면과 등받이에 있는 쿠션의 두께를 최대한 늘려 앉아보면 의외로 편안하다.",
+        "description": "특수한 설계와 개량을 통해 만들어진 염국식 원목 소파 의자. 견고해 보이는 외관과는 달리 의자 밑부분과 등 부분의 쿠션에 두께를 더하여, 앉아보면 의외로 편안하다.",
         "obtainApproach": "특전에서 획득",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -42005,7 +42658,7 @@
       "furni_reception_longBench_01": {
         "id": "furni_reception_longBench_01",
         "sortId": 1155,
-        "name": " '불로송'",
+        "name": "'불로송'",
         "iconId": "furni_reception_longBench_01",
         "type": "SEATING",
         "subType": "BENCH",
@@ -42021,7 +42674,7 @@
         "height": 5,
         "comfort": 655,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "한쪽 팔걸이를 소나무 분재로 장식한 염국식 전통 벤치. 넘쳐나는 생기를 소나무에 비유하고 있다.",
+        "description": "한쪽 팔걸이를 소나무 분재로 장식한 염국식 전통 의자. 소나무처럼 끝없는 생명력을 의미한다.",
         "obtainApproach": "특전에서 획득",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -42034,7 +42687,7 @@
       "furni_reception_coffeetable_01": {
         "id": "furni_reception_coffeetable_01",
         "sortId": 1156,
-        "name": " '장류수'",
+        "name": "'장류수'",
         "iconId": "furni_reception_coffeetable_01",
         "type": "TABLE",
         "subType": "NONE",
@@ -42050,7 +42703,7 @@
         "height": 2,
         "comfort": 505,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "흐르는 물 장식품으로 한쪽 가장자리를 장식한 염국식 전통 티테이블. 끊임없는 행복을 흐르는 물에 비유하고 있다.",
+        "description": "물이 흐르는 모습으로 한쪽 가장자리를 장식한 염국식 전통 찻상. 물이 흐르는 것처럼 복이 끊임없이 흘러 들어옴을 의미한다.",
         "obtainApproach": "특전에서 획득",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -42063,7 +42716,7 @@
       "furni_reception_showcase_01": {
         "id": "furni_reception_showcase_01",
         "sortId": 1157,
-        "name": " '보물운'",
+        "name": "'보물운'",
         "iconId": "furni_reception_showcase_01",
         "type": "CABINET",
         "subType": "NONE",
@@ -42079,7 +42732,7 @@
         "height": 9,
         "comfort": 580,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "정성껏 장식한 염국식 복고 선반으로, 일명 '다보각'으로 불리기도 한다. 우아한 장식이 뒤섞여 있어 사람들의 탄성을 자아내며, 전문가만이 진정한 가치를 알아볼 수 있다.",
+        "description": "정성껏 장식한 염국식 앤틱 진열장. 다층 진열장이라고 불리기도 한다. 우아한 장식품들이 불규칙하지만 고풍스럽게 펼쳐져 있어 사람들의 탄성을 자아낸다. 이 진열장에 얼마나 많은 보물이 놓여 있는지는 전문가만이 알고 있을 것이다.",
         "obtainApproach": "특전에서 획득",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -42108,7 +42761,7 @@
         "height": 1,
         "comfort": 125,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "경사스러움을 의미하는 염국식 카펫. 바닥보다 밝은 빨간색은 공간적 볼륨감을 주지만 청소 작업에는 번거로움을 준다.",
+        "description": "색채로 기념일을 축하하는 염국에 걸맞는 카펫. 바닥보다 밝은 붉은색이 공간의 볼륨감을 살렸지만, 청소는 오히려 번거로워졌다.",
         "obtainApproach": "특전에서 획득",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -42137,7 +42790,7 @@
         "height": 6,
         "comfort": 345,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "대형 관엽식물이 심어져 있는 염국식 꽃병과 소박한 스탠드. 개업 당시 한 방문객이 특정 위치에 특정 식물을 놓으면 행운이 온다는 말에 찻집 주인은 반신반의하면서도 그대로 따랐다.",
+        "description": "거대한 관엽 식물을 심어 둔 염국식 꽃병과 심플한 조명등. 개업 당시, 한 손님이 특정 위치에 특정 식물을 놓으면 행운이 찾아온다고 얘기했기에, 찻집 사장은 반신반의하면서도 그 말을 따랐다.",
         "obtainApproach": "특전에서 획득",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -42166,7 +42819,7 @@
         "height": 10,
         "comfort": 320,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "상서로운 문양이 그려진 찻집 벽지. 찻잔 속에서 천천히 피어오르는 물안개는 벽지의 문양과 아주 잘 어울린다.",
+        "description": "전통 문양으로 꾸며진 찻집 벽지. 찻잔 안의 수증기가 천천히 피어오르면, 벽의 문양과도 잘 어울리는 것을 알 수 있을 것이다.",
         "obtainApproach": "특전에서 획득",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -42195,7 +42848,7 @@
         "height": 1,
         "comfort": 320,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "뜨거운 분위기를 자아내는 찻집 바닥 타일. 창밖의 차가운 바람은 불같이 뜨거운 바닥의 빛깔을 더욱 돋보이게 한다.",
+        "description": "뜨거운 분위기를 자아낼 수 있는 찻집 바닥. 창밖에 부는 바람이 차가울수록, 불처럼 뜨거운 색채가 더욱 돋보인다.",
         "obtainApproach": "특전에서 획득",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -42265,7 +42918,7 @@
       },
       "furni_oct1st_seating_01": {
         "id": "furni_oct1st_seating_01",
-        "sortId": 10003,
+        "sortId": 10007,
         "name": "라탄 흔들의자",
         "iconId": "furni_oct1st_seating_01",
         "type": "SEATING",
@@ -42294,7 +42947,7 @@
       },
       "furni_oct1st_ladder_01": {
         "id": "furni_oct1st_ladder_01",
-        "sortId": 10004,
+        "sortId": 10008,
         "name": "수제 이동식 사다리",
         "iconId": "furni_oct1st_ladder_01",
         "type": "DECORATION",
@@ -42323,7 +42976,7 @@
       },
       "furni_duanwu_lazysofa_01": {
         "id": "furni_duanwu_lazysofa_01",
-        "sortId": 10005,
+        "sortId": 10009,
         "name": "쫑즈 빈백소파",
         "iconId": "furni_duanwu_lazysofa_01",
         "type": "SEATING",
@@ -42352,7 +43005,7 @@
       },
       "furni_duanwu_bed_L_01": {
         "id": "furni_duanwu_bed_L_01",
-        "sortId": 10006,
+        "sortId": 10010,
         "name": "드래곤 보트 침대 (머리)",
         "iconId": "furni_duanwu_bed_L_01",
         "type": "BEDDING",
@@ -42381,7 +43034,7 @@
       },
       "furni_duanwu_bed_R_01": {
         "id": "furni_duanwu_bed_R_01",
-        "sortId": 10007,
+        "sortId": 10011,
         "name": "드래곤 보트 침대 (꼬리)",
         "iconId": "furni_duanwu_bed_R_01",
         "type": "BEDDING",
@@ -42410,7 +43063,7 @@
       },
       "furni_duanwu_wormwoodFloorLamp_01": {
         "id": "furni_duanwu_wormwoodFloorLamp_01",
-        "sortId": 10010,
+        "sortId": 10014,
         "name": "쑥갓 플로어 스탠드",
         "iconId": "furni_duanwu_wormwoodFloorLamp_01",
         "type": "DECORATION",
@@ -42439,7 +43092,7 @@
       },
       "furni_act12d0_throne_01": {
         "id": "furni_act12d0_throne_01",
-        "sortId": 10011,
+        "sortId": 10015,
         "name": "대족장의 보좌",
         "iconId": "furni_act12d0_throne_01",
         "type": "SEATING",
@@ -42468,7 +43121,7 @@
       },
       "furni_act10d5_sideboard_01": {
         "id": "furni_act10d5_sideboard_01",
-        "sortId": 10012,
+        "sortId": 10016,
         "name": "우르수스 찬장",
         "iconId": "furni_act10d5_sideboard_01",
         "type": "CABINET",
@@ -42497,7 +43150,7 @@
       },
       "furni_act10d5_coatRack_01": {
         "id": "furni_act10d5_coatRack_01",
-        "sortId": 10013,
+        "sortId": 10017,
         "name": "신규 제식 군복",
         "iconId": "furni_act10d5_coatRack_01",
         "type": "DECORATION",
@@ -42526,7 +43179,7 @@
       },
       "furni_act10d5_plushBear_01": {
         "id": "furni_act10d5_plushBear_01",
-        "sortId": 10014,
+        "sortId": 10018,
         "name": "초대형 우르수스 인형",
         "iconId": "furni_act10d5_plushBear_01",
         "type": "DECORATION",
@@ -42555,7 +43208,7 @@
       },
       "furni_act10d5_walldecoKit_01": {
         "id": "furni_act10d5_walldecoKit_01",
-        "sortId": 10015,
+        "sortId": 10019,
         "name": "벽걸이 소품들",
         "iconId": "furni_act10d5_walldecoKit_01",
         "type": "WALLDECO",
@@ -42584,7 +43237,7 @@
       },
       "furni_act10d5_banner_01": {
         "id": "furni_act10d5_banner_01",
-        "sortId": 10016,
+        "sortId": 10020,
         "name": "동아리 간판",
         "iconId": "furni_act10d5_banner_01",
         "type": "DECORATION",
@@ -42613,7 +43266,7 @@
       },
       "furni_act10d5_honeyDrink_01": {
         "id": "furni_act10d5_honeyDrink_01",
-        "sortId": 10017,
+        "sortId": 10021,
         "name": "우르수스 스타일 꿀음료",
         "iconId": "furni_act10d5_honeyDrink_01",
         "type": "DECORATION",
@@ -42642,7 +43295,7 @@
       },
       "furni_act9d0_carpet_01": {
         "id": "furni_act9d0_carpet_01",
-        "sortId": 10018,
+        "sortId": 10022,
         "name": "애니버서리 기념 카펫",
         "iconId": "furni_act9d0_carpet_01",
         "type": "CARPET",
@@ -42671,7 +43324,7 @@
       },
       "furni_act9d0_bed_01": {
         "id": "furni_act9d0_bed_01",
-        "sortId": 10019,
+        "sortId": 10023,
         "name": "애니버서리 기념 침대",
         "iconId": "furni_act9d0_bed_01",
         "type": "BEDDING",
@@ -42700,7 +43353,7 @@
       },
       "furni_act9d0_walllamp_01": {
         "id": "furni_act9d0_walllamp_01",
-        "sortId": 10020,
+        "sortId": 10024,
         "name": "애니버서리 기념 벽등",
         "iconId": "furni_act9d0_walllamp_01",
         "type": "WALLLAMP",
@@ -42729,7 +43382,7 @@
       },
       "furni_act18d0_cabinet_01": {
         "id": "furni_act18d0_cabinet_01",
-        "sortId": 10021,
+        "sortId": 10025,
         "name": "애니버서리 차선반",
         "iconId": "furni_act18d0_cabinet_01",
         "type": "TABLE",
@@ -42758,7 +43411,7 @@
       },
       "furni_act18d0_cakeTower_01": {
         "id": "furni_act18d0_cakeTower_01",
-        "sortId": 10022,
+        "sortId": 10026,
         "name": "애니버서리 케이크",
         "iconId": "furni_act18d0_cakeTower_01",
         "type": "DECORATION",
@@ -42787,7 +43440,7 @@
       },
       "furni_act7d5_bookshelf": {
         "id": "furni_act7d5_bookshelf",
-        "sortId": 10023,
+        "sortId": 10027,
         "name": "조립식 책꽂이",
         "iconId": "furni_act7d5_bookshelf",
         "type": "DECORATION",
@@ -42816,7 +43469,7 @@
       },
       "furni_act7d5_atomicClock": {
         "id": "furni_act7d5_atomicClock",
-        "sortId": 10024,
+        "sortId": 10028,
         "name": "라인 랩 원자 시계",
         "iconId": "furni_act7d5_atomicClock",
         "type": "DECORATION",
@@ -42845,7 +43498,7 @@
       },
       "furni_act7d5_weaponRack": {
         "id": "furni_act7d5_weaponRack",
-        "sortId": 10025,
+        "sortId": 10029,
         "name": "케오베의 무기 선반",
         "iconId": "furni_act7d5_weaponRack",
         "type": "WALLDECO",
@@ -42874,7 +43527,7 @@
       },
       "furni_act7d5_wallSticker": {
         "id": "furni_act7d5_wallSticker",
-        "sortId": 10026,
+        "sortId": 10030,
         "name": "예비 오퍼레이터 격려 포스터",
         "iconId": "furni_act7d5_wallSticker",
         "type": "WALLDECO",
@@ -42903,7 +43556,7 @@
       },
       "furni_act7d5_petHouse": {
         "id": "furni_act7d5_petHouse",
-        "sortId": 10027,
+        "sortId": 10031,
         "name": "까망이의 새집",
         "iconId": "furni_act7d5_petHouse",
         "type": "DECORATION",
@@ -42932,7 +43585,7 @@
       },
       "furni_act7d5_apron": {
         "id": "furni_act7d5_apron",
-        "sortId": 10028,
+        "sortId": 10032,
         "name": "가정용 앞치마",
         "iconId": "furni_act7d5_apron",
         "type": "WALLDECO",
@@ -42961,7 +43614,7 @@
       },
       "furni_act14d0_arcadegame_01": {
         "id": "furni_act14d0_arcadegame_01",
-        "sortId": 10029,
+        "sortId": 10033,
         "name": "신형 오락기",
         "iconId": "furni_act14d0_arcadegame_01",
         "type": "DECORATION",
@@ -42990,7 +43643,7 @@
       },
       "furni_act15d0_carpet_01": {
         "id": "furni_act15d0_carpet_01",
-        "sortId": 10030,
+        "sortId": 10034,
         "name": "벨벳 눈꽃 카펫",
         "iconId": "furni_act15d0_carpet_01",
         "type": "CARPET",
@@ -43019,7 +43672,7 @@
       },
       "furni_act15d0_stool_01": {
         "id": "furni_act15d0_stool_01",
-        "sortId": 10031,
+        "sortId": 10035,
         "name": "토끼 아이스크림 소파",
         "iconId": "furni_act15d0_stool_01",
         "type": "SEATING",
@@ -43048,7 +43701,7 @@
       },
       "furni_act15d0_snowman_01": {
         "id": "furni_act15d0_snowman_01",
-        "sortId": 10032,
+        "sortId": 10036,
         "name": "'네모 브로스'",
         "iconId": "furni_act15d0_snowman_01",
         "type": "DECORATION",
@@ -43077,7 +43730,7 @@
       },
       "furni_act16d0_floorLamp_01": {
         "id": "furni_act16d0_floorLamp_01",
-        "sortId": 10033,
+        "sortId": 10037,
         "name": "'굽은 나무 제등'",
         "iconId": "furni_act16d0_floorLamp_01",
         "type": "DECORATION",
@@ -43106,7 +43759,7 @@
       },
       "furni_act16d0_drum_01": {
         "id": "furni_act16d0_drum_01",
-        "sortId": 10034,
+        "sortId": 10038,
         "name": "북 치는 토끼 장난감",
         "iconId": "furni_act16d0_drum_01",
         "type": "DECORATION",
@@ -43135,7 +43788,7 @@
       },
       "furni_act16d0_walldeco_01": {
         "id": "furni_act16d0_walldeco_01",
-        "sortId": 10035,
+        "sortId": 10039,
         "name": "상서로운 무늬의 접이 부채",
         "iconId": "furni_act16d0_walldeco_01",
         "type": "WALLDECO",
@@ -43164,7 +43817,7 @@
       },
       "furni_act17d0_box_01": {
         "id": "furni_act17d0_box_01",
-        "sortId": 10036,
+        "sortId": 10040,
         "name": "점령 목표",
         "iconId": "furni_act17d0_box_01",
         "type": "CABINET",
@@ -43193,7 +43846,7 @@
       },
       "furni_act17d0_acog_01": {
         "id": "furni_act17d0_acog_01",
-        "sortId": 10037,
+        "sortId": 10041,
         "name": "스코프형 망원경",
         "iconId": "furni_act17d0_acog_01",
         "type": "DECORATION",
@@ -43222,7 +43875,7 @@
       },
       "furni_act19d0_showcase_01": {
         "id": "furni_act19d0_showcase_01",
-        "sortId": 10038,
+        "sortId": 10042,
         "name": "골동품 진열장",
         "iconId": "furni_act19d0_showcase_01",
         "type": "CABINET",
@@ -43251,7 +43904,7 @@
       },
       "furni_act21d0_fan_01": {
         "id": "furni_act21d0_fan_01",
-        "sortId": 10039,
+        "sortId": 10043,
         "name": "홀리데이 스탠딩 선풍기",
         "iconId": "furni_act21d0_fan_01",
         "type": "DECORATION",
@@ -43280,7 +43933,7 @@
       },
       "furni_act21d0_foodCart_01": {
         "id": "furni_act21d0_foodCart_01",
-        "sortId": 10040,
+        "sortId": 10044,
         "name": "해변풍 과일 빙수차",
         "iconId": "furni_act21d0_foodCart_01",
         "type": "DECORATION",
@@ -43309,7 +43962,7 @@
       },
       "furni_act21d0_barrel_01": {
         "id": "furni_act21d0_barrel_01",
-        "sortId": 10041,
+        "sortId": 10045,
         "name": "도솔레스 얼음통",
         "iconId": "furni_act21d0_barrel_01",
         "type": "DECORATION",
@@ -43338,7 +43991,7 @@
       },
       "furni_act21d0_motorcycle_01": {
         "id": "furni_act21d0_motorcycle_01",
-        "sortId": 10042,
+        "sortId": 10046,
         "name": "도솔레스 한정판 바이크",
         "iconId": "furni_act21d0_motorcycle_01",
         "type": "DECORATION",
@@ -43367,7 +44020,7 @@
       },
       "furni_act22d0_chair_01": {
         "id": "furni_act22d0_chair_01",
-        "sortId": 10043,
+        "sortId": 10047,
         "name": "궁전 스타일 의자",
         "iconId": "furni_act22d0_chair_01",
         "type": "SEATING",
@@ -43396,7 +44049,7 @@
       },
       "furni_act22d4_letterBox_01": {
         "id": "furni_act22d4_letterBox_01",
-        "sortId": 10044,
+        "sortId": 10048,
         "name": "애쉬락의 사서함",
         "iconId": "furni_act22d4_letterBox_01",
         "type": "DECORATION",
@@ -43425,7 +44078,7 @@
       },
       "furni_act22d4_ceiling_01": {
         "id": "furni_act22d4_ceiling_01",
-        "sortId": 10045,
+        "sortId": 10049,
         "name": "파투스의 풍경",
         "iconId": "furni_act22d4_ceiling_01",
         "type": "CEILING",
@@ -43454,7 +44107,7 @@
       },
       "furni_act23d0_decoration_01": {
         "id": "furni_act23d0_decoration_01",
-        "sortId": 10046,
+        "sortId": 10050,
         "name": "'지난날의 환상'",
         "iconId": "furni_act23d0_decoration_01",
         "type": "DECORATION",
@@ -43483,7 +44136,7 @@
       },
       "furni_act23d0_ceilingLamp_01": {
         "id": "furni_act23d0_ceilingLamp_01",
-        "sortId": 10047,
+        "sortId": 10051,
         "name": "쿠란타 샹들리에",
         "iconId": "furni_act23d0_ceilingLamp_01",
         "type": "CEILINGLAMP",
@@ -43512,7 +44165,7 @@
       },
       "furni_act24d0_dunhuang_01": {
         "id": "furni_act24d0_dunhuang_01",
-        "sortId": 10048,
+        "sortId": 10052,
         "name": "'희미한 구름 사이'",
         "iconId": "furni_act24d0_dunhuang_01",
         "type": "DECORATION",
@@ -43541,7 +44194,7 @@
       },
       "furni_act24d0_clock_01": {
         "id": "furni_act24d0_clock_01",
-        "sortId": 10049,
+        "sortId": 10053,
         "name": "'종막의 알림'",
         "iconId": "furni_act24d0_clock_01",
         "type": "DECORATION",
@@ -43570,7 +44223,7 @@
       },
       "furni_act24d0_house_01": {
         "id": "furni_act24d0_house_01",
-        "sortId": 10050,
+        "sortId": 10054,
         "name": "까망이의 홀리데이 하우스",
         "iconId": "furni_act24d0_house_01",
         "type": "DECORATION",
@@ -43599,7 +44252,7 @@
       },
       "furni_act24d0_table_01": {
         "id": "furni_act24d0_table_01",
-        "sortId": 10051,
+        "sortId": 10055,
         "name": "염국식 화장대",
         "iconId": "furni_act24d0_table_01",
         "type": "TABLE",
@@ -43628,7 +44281,7 @@
       },
       "furni_act25d0_table_01": {
         "id": "furni_act25d0_table_01",
-        "sortId": 10052,
+        "sortId": 10056,
         "name": "'산속에서의 대국'",
         "iconId": "furni_act25d0_table_01",
         "type": "TABLE",
@@ -43657,7 +44310,7 @@
       },
       "furni_act25d0_decoration_01": {
         "id": "furni_act25d0_decoration_01",
-        "sortId": 10053,
+        "sortId": 10057,
         "name": "'정자 위의 눈'",
         "iconId": "furni_act25d0_decoration_01",
         "type": "DECORATION",
@@ -43686,7 +44339,7 @@
       },
       "furni_act27d0_prizeWheel_01": {
         "id": "furni_act27d0_prizeWheel_01",
-        "sortId": 10055,
+        "sortId": 10059,
         "name": "애니버서리 돌림판",
         "iconId": "furni_act27d0_prizeWheel_01",
         "type": "DECORATION",
@@ -43715,7 +44368,7 @@
       },
       "furni_act30d0_fan_01": {
         "id": "furni_act30d0_fan_01",
-        "sortId": 10056,
+        "sortId": 10060,
         "name": "유리상자 선풍기",
         "iconId": "furni_act30d0_fan_01",
         "type": "DECORATION",
@@ -45252,7 +45905,7 @@
       },
       "furni_dropS018_needlePhobia_01": {
         "id": "furni_dropS018_needlePhobia_01",
-        "sortId": 11046,
+        "sortId": 11047,
         "name": "플레이트 《침》",
         "iconId": "furni_dropS018_needlePhobia_01",
         "type": "WALLDECO",
@@ -45281,7 +45934,7 @@
       },
       "furni_dropS018_thalassophobia_01": {
         "id": "furni_dropS018_thalassophobia_01",
-        "sortId": 11047,
+        "sortId": 11048,
         "name": "플레이트 《침몰》",
         "iconId": "furni_dropS018_thalassophobia_01",
         "type": "WALLDECO",
@@ -45310,7 +45963,7 @@
       },
       "furni_dropS018_octopus_01": {
         "id": "furni_dropS018_octopus_01",
-        "sortId": 11048,
+        "sortId": 11049,
         "name": "플레이트 《일출》",
         "iconId": "furni_dropS018_octopus_01",
         "type": "WALLDECO",
@@ -45339,7 +45992,7 @@
       },
       "furni_dropS018_claustrophobia_01": {
         "id": "furni_dropS018_claustrophobia_01",
-        "sortId": 11049,
+        "sortId": 11050,
         "name": "플레이트 《유폐》",
         "iconId": "furni_dropS018_claustrophobia_01",
         "type": "WALLDECO",
@@ -45368,7 +46021,7 @@
       },
       "furni_dropS022_aos_01": {
         "id": "furni_dropS022_aos_01",
-        "sortId": 11050,
+        "sortId": 11051,
         "name": "플레이트 《구조》",
         "iconId": "furni_dropS022_aos_01",
         "type": "WALLDECO",
@@ -45397,7 +46050,7 @@
       },
       "furni_dropS022_mountain_01": {
         "id": "furni_dropS022_mountain_01",
-        "sortId": 11051,
+        "sortId": 11052,
         "name": "플레이트 《군산》",
         "iconId": "furni_dropS022_mountain_01",
         "type": "WALLDECO",
@@ -45426,7 +46079,7 @@
       },
       "furni_dropS023_birdmanOfAlcatraz_01": {
         "id": "furni_dropS023_birdmanOfAlcatraz_01",
-        "sortId": 11052,
+        "sortId": 11053,
         "name": "플레이트 《변화》",
         "iconId": "furni_dropS023_birdmanOfAlcatraz_01",
         "type": "WALLDECO",
@@ -45455,7 +46108,7 @@
       },
       "furni_dropS024_twinPeaks_01": {
         "id": "furni_dropS024_twinPeaks_01",
-        "sortId": 11053,
+        "sortId": 11054,
         "name": "플레이트 《쌍봉》",
         "iconId": "furni_dropS024_twinPeaks_01",
         "type": "WALLDECO",
@@ -45484,7 +46137,7 @@
       },
       "furni_dropS025_mahjong_01": {
         "id": "furni_dropS025_mahjong_01",
-        "sortId": 11054,
+        "sortId": 11055,
         "name": "플레이트 《동락》",
         "iconId": "furni_dropS025_mahjong_01",
         "type": "WALLDECO",
@@ -45513,7 +46166,7 @@
       },
       "furni_dropS025_cai_01": {
         "id": "furni_dropS025_cai_01",
-        "sortId": 11055,
+        "sortId": 11056,
         "name": "플레이트 《축재》",
         "iconId": "furni_dropS025_cai_01",
         "type": "WALLDECO",
@@ -45542,7 +46195,7 @@
       },
       "furni_dropS026_seven_01": {
         "id": "furni_dropS026_seven_01",
-        "sortId": 11056,
+        "sortId": 11057,
         "name": "플레이트 《죄책》",
         "iconId": "furni_dropS026_seven_01",
         "type": "WALLDECO",
@@ -45569,9 +46222,38 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_dropS026_greed_01": {
+        "id": "furni_dropS026_greed_01",
+        "sortId": 11059,
+        "name": "플레이트 《호쾌》",
+        "iconId": "furni_dropS026_greed_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "“이 모든 게 당신 것이지만, 당신은 사용할 수 없다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_dropS026_sloth_01": {
         "id": "furni_dropS026_sloth_01",
-        "sortId": 11059,
+        "sortId": 11060,
         "name": "플레이트 《근면》",
         "iconId": "furni_dropS026_sloth_01",
         "type": "WALLDECO",
@@ -45600,7 +46282,7 @@
       },
       "furni_dropS026_lust_01": {
         "id": "furni_dropS026_lust_01",
-        "sortId": 11060,
+        "sortId": 11061,
         "name": "플레이트 《극복》",
         "iconId": "furni_dropS026_lust_01",
         "type": "WALLDECO",
@@ -45629,7 +46311,7 @@
       },
       "furni_dropS026_pride_01": {
         "id": "furni_dropS026_pride_01",
-        "sortId": 11061,
+        "sortId": 11062,
         "name": "플레이트 《겸손》",
         "iconId": "furni_dropS026_pride_01",
         "type": "WALLDECO",
@@ -45658,7 +46340,7 @@
       },
       "furni_dropS026_envy_01": {
         "id": "furni_dropS026_envy_01",
-        "sortId": 11062,
+        "sortId": 11063,
         "name": "플레이트 《관대》",
         "iconId": "furni_dropS026_envy_01",
         "type": "WALLDECO",
@@ -45687,7 +46369,7 @@
       },
       "furni_dropS026_wrath_01": {
         "id": "furni_dropS026_wrath_01",
-        "sortId": 11063,
+        "sortId": 11064,
         "name": "플레이트 《인내》",
         "iconId": "furni_dropS026_wrath_01",
         "type": "WALLDECO",
@@ -47452,64 +48134,6 @@
         "processedByProductGroup": [],
         "canBeDestroy": true,
         "isOnly": -1,
-        "quantity": 0
-      },
-      "furni_animation_projector_01": {
-        "id": "furni_animation_projector_01",
-        "sortId": 9999,
-        "name": "소원을 비추는 영사기",
-        "iconId": "furni_animation_projector_01",
-        "type": "DECORATION",
-        "subType": "DEVICE",
-        "location": "FLOOR",
-        "category": "FURNITURE",
-        "validOnRotate": false,
-        "enableRotate": true,
-        "rarity": 3,
-        "themeId": "",
-        "groupId": "",
-        "width": 3,
-        "depth": 3,
-        "height": 7,
-        "comfort": 140,
-        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "애니메이션의 방영을 기념하여 특별 제작된 영사기. 필름에는 걸어온 역사가 새겨져 있고 화면에는 제작자의 심혈이 담겨 있지만, 작품을 영상화한 기쁨과 함께 관객들의 반응에 대한 불안감도 안고 있다.",
-        "obtainApproach": "이벤트 보상",
-        "processedProductId": "3401",
-        "processedProductCount": 0,
-        "processedByProductPercentage": 0,
-        "processedByProductGroup": [],
-        "canBeDestroy": false,
-        "isOnly": 1,
-        "quantity": 0
-      },
-      "furni_animation_trophy_01": {
-        "id": "furni_animation_trophy_01",
-        "sortId": 10000,
-        "name": "토끼 감독 트로피",
-        "iconId": "furni_animation_trophy_01",
-        "type": "DECORATION",
-        "subType": "ART_D",
-        "location": "FLOOR",
-        "category": "FURNITURE",
-        "validOnRotate": false,
-        "enableRotate": true,
-        "rarity": 3,
-        "themeId": "",
-        "groupId": "",
-        "width": 3,
-        "depth": 2,
-        "height": 4,
-        "comfort": 90,
-        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "애니메이션에 대한 관객들의 사랑을 기념하여 특별 제작된 트로피. 의기양양한 토끼 모양으로 디자인되었다. 제작자에게 있어 훌륭한 작품은 충분히 마음속으로부터 자랑스럽게 여길 만하다.",
-        "obtainApproach": "이벤트 보상",
-        "processedProductId": "3401",
-        "processedProductCount": 0,
-        "processedByProductPercentage": 0,
-        "processedByProductGroup": [],
-        "canBeDestroy": false,
-        "isOnly": 1,
         "quantity": 0
       }
     },
@@ -55711,9 +56335,144 @@
           "furni_concertHall_floor_01"
         ]
       },
+      "furni_set_rhineLab": {
+        "id": "furni_set_rhineLab",
+        "sortId": 59,
+        "name": "라인 랩 배양실",
+        "themeType": "EVENT",
+        "desc": "오퍼레이터 도로시의 묘사에 따라 재현한 라인 랩 배양실. 여기서 꿈을 키우고 그 꿈은 인간에게 보답한다. 뭐, 때로는 꿈이 인간을 집어삼키기도 하지만.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_rhineLab_incubator_01",
+            "pos0": 0,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_accessControl_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_plant_01",
+            "pos0": 6,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_trolley_01",
+            "pos0": 4,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_stool_01",
+            "pos0": 11,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_stool_01",
+            "pos0": 15,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_table_01",
+            "pos0": 9,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_folder_T_01",
+            "pos0": 9,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_folder_O_01",
+            "pos0": 16,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_ceiling_01",
+            "pos0": 3,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_device_01",
+            "pos0": 20,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_ceilingLight_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_stand_01",
+            "pos0": 28,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_curtain_L_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_curtain_S_01",
+            "pos0": 24,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_rhineLab_floor_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_rhineLab_1",
+          "furni_set_rhineLab_2",
+          "furni_set_rhineLab_3",
+          "furni_set_rhineLab_4"
+        ],
+        "furnitures": [
+          "furni_rhineLab_incubator_01",
+          "furni_rhineLab_accessControl_01",
+          "furni_rhineLab_plant_01",
+          "furni_rhineLab_trolley_01",
+          "furni_rhineLab_stool_01",
+          "furni_rhineLab_table_01",
+          "furni_rhineLab_folder_T_01",
+          "furni_rhineLab_folder_O_01",
+          "furni_rhineLab_ceiling_01",
+          "furni_rhineLab_device_01",
+          "furni_rhineLab_ceilingLight_01",
+          "furni_rhineLab_stand_01",
+          "furni_rhineLab_curtain_L_01",
+          "furni_rhineLab_curtain_S_01",
+          "furni_rhineLab_wallpaper_01",
+          "furni_rhineLab_floor_01"
+        ]
+      },
       "furni_set_idealCity": {
         "id": "furni_set_idealCity",
-        "sortId": 57,
+        "sortId": 56,
         "name": "그레이트 아쿠아핏 체험 하우스",
         "themeType": "EVENT",
         "desc": "미니멀리스트의 별로 내키지 않은 묘사에 따라 재현한 그레이트 아쿠아핏 관광 하우스. 가비알이 감독해서 그런지 미니멀리스트의 효율이 두 배 이상 높아졌다.",
@@ -55867,7 +56626,7 @@
       },
       "furni_set_durin": {
         "id": "furni_set_durin",
-        "sortId": 58,
+        "sortId": 57,
         "name": "캔디 페어리의 연회장",
         "themeType": "LUCKY",
         "desc": "로도스 아일랜드 자체 제작 연극인 《열매까기 인형》의 세트를 테마로 재현한 캔디 페어리의 연회장. 꿈속의 풍경에 불과하지만, 긴 여운을 남긴다.",
@@ -55996,7 +56755,7 @@
       },
       "furni_set_reception": {
         "id": "furni_set_reception",
-        "sortId": 68,
+        "sortId": 58,
         "name": "용문 분위기 찻집",
         "themeType": "EVENT",
         "desc": "용문에서 꽤 인기가 있는 찻집의 고층 룸으로, 높은 분들이 자주 드나든다고 한다. 장식품들의 색상은 전통적이고 강렬하여, 도시의 차가운 야경 속에서 유난히 따뜻해 보인다.",
@@ -59211,6 +59970,62 @@
           "furni_concertHall_ceiling_01"
         ]
       },
+      "furni_set_rhineLab_1": {
+        "id": "furni_set_rhineLab_1",
+        "sortId": 1,
+        "name": "편중",
+        "themeId": "furni_set_rhineLab",
+        "comfort": 355,
+        "count": 4,
+        "furniture": [
+          "furni_rhineLab_incubator_01",
+          "furni_rhineLab_accessControl_01",
+          "furni_rhineLab_device_01",
+          "furni_rhineLab_stand_01"
+        ]
+      },
+      "furni_set_rhineLab_2": {
+        "id": "furni_set_rhineLab_2",
+        "sortId": 2,
+        "name": "엄선",
+        "themeId": "furni_set_rhineLab",
+        "comfort": 155,
+        "count": 4,
+        "furniture": [
+          "furni_rhineLab_ceiling_01",
+          "furni_rhineLab_ceilingLight_01",
+          "furni_rhineLab_plant_01",
+          "furni_rhineLab_trolley_01"
+        ]
+      },
+      "furni_set_rhineLab_3": {
+        "id": "furni_set_rhineLab_3",
+        "sortId": 3,
+        "name": "측량",
+        "themeId": "furni_set_rhineLab",
+        "comfort": 190,
+        "count": 4,
+        "furniture": [
+          "furni_rhineLab_table_01",
+          "furni_rhineLab_stool_01",
+          "furni_rhineLab_folder_T_01",
+          "furni_rhineLab_folder_O_01"
+        ]
+      },
+      "furni_set_rhineLab_4": {
+        "id": "furni_set_rhineLab_4",
+        "sortId": 4,
+        "name": "확증",
+        "themeId": "furni_set_rhineLab",
+        "comfort": 235,
+        "count": 4,
+        "furniture": [
+          "furni_rhineLab_wallpaper_01",
+          "furni_rhineLab_floor_01",
+          "furni_rhineLab_curtain_L_01",
+          "furni_rhineLab_curtain_S_01"
+        ]
+      },
       "furni_set_idealCity_1": {
         "id": "furni_set_idealCity_1",
         "sortId": 1,
@@ -59327,7 +60142,7 @@
       "furni_set_reception_1": {
         "id": "furni_set_reception_1",
         "sortId": 1,
-        "name": " '일진투금'",
+        "name": "'일진투금'",
         "themeId": "furni_set_reception",
         "comfort": 455,
         "count": 3,
@@ -59340,7 +60155,7 @@
       "furni_set_reception_2": {
         "id": "furni_set_reception_2",
         "sortId": 2,
-        "name": " '복수쌍전'",
+        "name": "'복수쌍전'",
         "themeId": "furni_set_reception",
         "comfort": 330,
         "count": 3,
@@ -59353,7 +60168,7 @@
       "furni_set_reception_3": {
         "id": "furni_set_reception_3",
         "sortId": 3,
-        "name": " '금옥만당'",
+        "name": "'금옥만당'",
         "themeId": "furni_set_reception",
         "comfort": 145,
         "count": 3,
@@ -61454,7 +62269,7 @@
       ],
       "requireStages": [
         {
-          "stageId": "main_09-03",
+          "stageId": "easy_09-03",
           "rank": 2
         }
       ]
@@ -61573,7 +62388,7 @@
       ],
       "requireStages": [
         {
-          "stageId": "main_09-05",
+          "stageId": "easy_09-05",
           "rank": 2
         }
       ]

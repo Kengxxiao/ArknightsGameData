@@ -931,6 +931,11 @@
     "lv.sp": "<color=#fd4600>{0}</color>",
     "lv.ez": "<color=#0098dc>{0}</color>",
     "ro1.get": "<color=#E5B684>{0}</color>",
+    "ro2.lose": "<color=#FF6E6E>{0}</color>",
+    "ro2.get": "<color=#59DDDC>{0}</color>",
+    "ro2.virtue": "<color=#0098dc>{0}</color>",
+    "ro2.mutation": "<color=#9266b2>{0}</color>",
+    "ro2.desc": "<color=#6d6d6d>{0}</color>",
     "rc.title": "<color=#FFFFFF>{0}</color>",
     "rc.subtitle": "<color=#FFC90E>{0}</color>",
     "rc.em": "<color=#FF7F27>{0}</color>",
@@ -1061,7 +1066,7 @@
   "isRoguelikeTopicFuncEnabled": true,
   "isRoguelikeAvgAchieveFuncEnabled": true,
   "voucherSkinRedeem": 1,
-  "voucherSkinDesc": "오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시되기 전에 이미 <color=#ffa633>오리지늄</color>을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우, 해당 오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시된 후에 <color=#33b5ff>[컬렉션 자유 선택권]</color>*1매를 반환해드립니다.\n\n다음의 경우 얼터네이트가 출시되어도 <color=#ffa633>반환하지 않습니다</color>: \n1. 오퍼레이터의 첫 번째 얼터네이트가 출시되기 전에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 교환한 경우.\n2. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 오리지늄을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n3. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n\n[컬렉션 자유 선택권]으로 컬렉션 상점에서 판매 중인 컬렉션만 교환할 수 있습니다. 만약 컬렉션 상점에서 이미 모든 컬렉션을 구매했거나 또는 판매 중인 컬렉션이 없으면, [컬렉션 자유 선택권]을 <color=#ffa633>사용할 수 없습니다</color>.\n\n이밖에, [컬렉션 자유 선택권]으로 <color=#ffa633>교환할 수 없는</color> 컬렉션이 출시될 경우, 별도 공지가 진행될 예정이오니 참고하여 주시기 바랍니다.",
+  "voucherSkinDesc": "한 오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시되기 전에 이미 <color=#ffa633>오리지늄</color>을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우, 해당 오퍼레이터의 <color=#ffa633>첫 번째</color> 얼터네이트가 출시된 후 오리지늄으로 구매했던 컬렉션 수량에 해당하는 만큼의 <color=#33b5ff>[컬렉션 자유 선택권]</color>을 반환해드립니다.\n\n다음의 경우 얼터네이트가 출시되어도 <color=#ffa633>반환하지 않습니다</color>: \n1. 오퍼레이터의 첫 번째 얼터네이트가 출시되기 전에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 교환한 경우.\n2. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 오리지늄을 소모해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n3. 오퍼레이터의 첫 번째 얼터네이트가 출시된 후에 [컬렉션 자유 선택권]을 사용해 해당 오퍼레이터의 컬렉션을 구매한 경우.\n\n[컬렉션 자유 선택권]으로 컬렉션 상점에서 판매 중인 해당 시즌의 컬렉션만 교환할 수 있으며, 일러스트 애니메이션이 포함된 컬렉션은 <color=#ffa633>교환할 수 없습니다</color>. 만약 컬렉션 상점에서 이미 모든 컬렉션을 구매했거나 또는 판매 중인 컬렉션이 없으면, [컬렉션 자유 선택권]을 <color=#ffa633>사용할 수 없습니다</color>.\n\n이밖에, [컬렉션 자유 선택권]으로 <color=#ffa633>교환할 수 없는</color> 다른 컬렉션이 출시될 경우, 별도 공지가 진행될 예정이오니 참고하여 주시기 바랍니다.",
   "charmEquipCount": 5,
   "termDescriptionDict": {
     "ba.sluggish": {
@@ -1102,7 +1107,7 @@
     "ba.shield": {
       "termId": "ba.shield",
       "termName": "실드",
-      "description": "실드 1스택당 대미지 1회 막기 가능"
+      "description": "실드 1회당 대미지 1회 무효화"
     },
     "ba.protect": {
       "termId": "ba.protect",
@@ -1197,7 +1202,7 @@
     "ba.physhield": {
       "termId": "ba.physhield",
       "termName": "물리 실드",
-      "description": "물리 실드 1스택당 물리 공격 1회 막기 가능"
+      "description": "물리 실드 1회당 물리 대미지 1회 무효화"
     },
     "ba.magicfragile": {
       "termId": "ba.magicfragile",
@@ -1284,6 +1289,16 @@
       "termName": "협동의식",
       "description": "해당 인프라 스킬을 보유한 오퍼레이터\n와이후"
     },
+    "cc.t.snsant1": {
+      "termId": "cc.t.snsant1",
+      "termName": "근면성실 α",
+      "description": "해당 인프라 스킬을 보유한 오퍼레이터\n스노우상트"
+    },
+    "cc.t.snsant2": {
+      "termId": "cc.t.snsant2",
+      "termName": "근면성실 β",
+      "description": "해당 인프라 스킬을 보유한 오퍼레이터\n스노우상트"
+    },
     "cc.g.lgd": {
       "termId": "cc.g.lgd",
       "termName": "용문근위국",
@@ -1312,7 +1327,7 @@
     "cc.g.abyssal": {
       "termId": "cc.g.abyssal",
       "termName": "어비설 헌터스",
-      "description": "다음 오퍼레이터 포함\\글래디아, 스카디, 스펙터, 안드레아나"
+      "description": "다음 오퍼레이터 포함\n글래디아, 스카디, 스펙터, 안드레아나"
     },
     "cc.g.psk": {
       "termId": "cc.g.psk",
@@ -1343,6 +1358,11 @@
       "termId": "cc.c.abyssal2_3",
       "termName": "특수 중첩 규칙",
       "description": "<$cc.m.var2><@cc.rem>협동의식</></> 스킬과 중첩되지 않으며, 우선적으로 발동됨\n<$cc.m.pow1><@cc.rem>자동화 α</></>, <$cc.m.pow2><@cc.rem>자동화 β</></>, <$cc.m.pow3><@cc.rem>해마 리프</></> 스킬과 중첩되지 않으며, 초기화 효과가 우선적으로 발동됨"
+    },
+    "cc.t.strong2": {
+      "termId": "cc.t.strong2",
+      "termName": "특수 중첩 규칙",
+      "description": "<$cc.t.snsant1><@cc.rem>근면성실 α</></>, <$cc.t.snsant2><@cc.rem>근면성실 β</></>와 별도로 중첩할 수 없으며 우선적으로 적용\n<$cc.t.snsant1><@cc.rem>근면성실 α</></>, <$cc.t.snsant2><@cc.rem>근면성실 β</></>가 다른 스킬과 중첩 시에만 중첩 효과가 적용 가능"
     },
     "cc.m.pow1": {
       "termId": "cc.m.pow1",
@@ -1379,6 +1399,11 @@
       "termName": "표준화류 스킬",
       "description": "다음의 스킬 포함\n표준화 α, 표준화 β"
     },
+    "cc.sk.manu2": {
+      "termId": "cc.sk.manu2",
+      "termName": "라인테크류 스킬",
+      "description": "다음의 스킬 포함\n라인테크 α, 라인테크 β"
+    },
     "cc.tag.op": {
       "termId": "cc.tag.op",
       "termName": "작업 플랫폼",
@@ -1401,6 +1426,6 @@
     }
   },
   "storyReviewUnlockItemLackTip": "기록 조각이 부족합니다. 증명서 상점 또는 이벤트 기간에 열리는 상점을 통해 교환할 수 있습니다.",
-  "dataVersion": "29.3.0",
-  "resPrefVersion": "30d0d0"
+  "dataVersion": "30.1.0",
+  "resPrefVersion": "29d0d0"
 }
