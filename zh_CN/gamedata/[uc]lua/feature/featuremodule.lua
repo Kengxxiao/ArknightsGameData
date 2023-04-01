@@ -58,3 +58,4 @@ require "Feature/Operation/Returnning/ReturnMainDlg"
 require "Feature/Operation/Returnning/ReturnWelcomeDlg"
 require "Feature/Operation/Returnning/ReturnRewardsDlg"
 
+require "Feature/Operation/ActFun/ActFunModule"
