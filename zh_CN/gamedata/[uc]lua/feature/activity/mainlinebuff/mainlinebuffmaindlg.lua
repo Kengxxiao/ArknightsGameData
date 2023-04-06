@@ -29,6 +29,8 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
+
+
 MainlineBuffMainDlg = Class("MainlineBuffMainDlg", DlgBase);
 
 local STEP_1_NORMAL_ALPHA = 1;
@@ -167,7 +169,11 @@ function MainlineBuffMainDlg:_RefreshStepView()
   if self.m_secondStepView ~= nil then
     self.m_secondStepView:Render(viewModel.secondStepModel);
   end
-  if viewModel.secondStepModel:IsUnlock() then
+
+  local step2UnlockFlag = viewModel.secondStepModel:IsUnlock();
+  _SetActive(self._backNormal, not step2UnlockFlag);
+  _SetActive(self._backStep2, step2UnlockFlag);
+  if step2UnlockFlag then
     self._canvasGroupFirstStep.alpha = STEP_1_BLOCK_ALPHA;
   else
     self._canvasGroupFirstStep.alpha = STEP_1_NORMAL_ALPHA;
