@@ -9819,6 +9819,124 @@
           ]
         }
       ]
+    },
+    "char_4072_ironmn": {
+      "charId": "char_4072_ironmn",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost&dorm[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_dorm[002]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4071_peper": {
+      "charId": "char_4071_peper",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_tra_spd[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_wt&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_wt&cost[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_157_dagda": {
+      "charId": "char_157_dagda",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession3[150]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession3[151]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_4062_totter": {
+      "charId": "char_4062_totter",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_reduce[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition&cost[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -9876,6 +9994,18 @@
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_t_spd",
       "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、全貿易所の受注効率<@cc.vup>+7%</>（同種の効果は高いほうのみ適応）"
+    },
+    "control_tra_spd[020]": {
+      "buffId": "control_tra_spd[020]",
+      "buffName": "やる気十分",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_t_spd",
+      "sortId": 1504,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10721,6 +10851,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、最初の1時間製造効率<@cc.vup>+15%</>、その後まで1時間ごと更に<@cc.vup>+2%</>、最終的に<@cc.vup>+25%</>になる"
+    },
+    "manu_prod_spd_reduce[000]": {
+      "buffId": "manu_prod_spd_reduce[000]",
+      "buffName": "霞む視界",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_reduce",
+      "sortId": 3280,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、製造効率<@cc.vup>+30%</>、自身の<$cc.bd.costdrop><@cc.kw>体力減少分</></>が<@cc.kw>4</>ごとに、製造効率<@cc.vdown>-5%</>"
+    },
+    "manu_prod_spd_addition&cost[000]": {
+      "buffId": "manu_prod_spd_addition&cost[000]",
+      "buffName": "窓外の吹雪",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add&cost",
+      "sortId": 3250,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、自身の<$cc.bd.costdrop><@cc.kw>体力減少分</></>が<@cc.kw>12</>を上回る時、製造効率<@cc.vup>+10%</>、保管上限<@cc.vup>+6</>"
     },
     "manu_prod_spd&limit[000]": {
       "buffId": "manu_prod_spd&limit[000]",
@@ -12102,6 +12256,18 @@
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>アーツ学</>を加工時、体力消費が<@cc.kw>2</>の素材の体力消費<@cc.vup>-1</>"
     },
+    "workshop_formula_cost&dorm[000]": {
+      "buffId": "workshop_formula_cost&dorm[000]",
+      "buffName": "以心伝心",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost&dorm",
+      "sortId": 7300,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>昇進素材</>を加工時、宿舎で休養中の体力が<@cc.vup>12</>以下のオペレーター<@cc.kw>10</>人につき、体力消費が<@cc.kw>4</>以上の素材の体力消費が<@cc.vup>-1</>"
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "アーツ理論",
@@ -12353,6 +12519,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "加工所で<@cc.kw>昇進素材</>を加工時、宿舎で休養中の体力が<@cc.vup>20</>以下のオペレーター<@cc.kw>1</>人につき、副産物の入手確率<@cc.vup>+5%</>"
+    },
+    "workshop_formula_dorm[002]": {
+      "buffId": "workshop_formula_dorm[002]",
+      "buffName": "意気投合",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_dorm2",
+      "sortId": 7613,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "加工所で<@cc.kw>昇進素材</>を加工時、宿舎で休養中の体力が<@cc.vup>12</>以下のオペレーター<@cc.kw>1</>人につき、副産物の入手確率<@cc.vup>+5%</>"
     },
     "workshop_formula_drop[020]": {
       "buffId": "workshop_formula_drop[020]",
@@ -12989,6 +13167,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "訓練室で協力者として配置時、<@cc.kw>狙撃</>の訓練速度<@cc.vup>+30%</>。訓練者の職分が<@cc.kw>速射手</>であるとき、訓練速度がさらに<@cc.vup>+45%</>"
+    },
+    "train_spd&profession3[150]": {
+      "buffId": "train_spd&profession3[150]",
+      "buffName": "前衛エキスパートα",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_guard1",
+      "sortId": 9791,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>前衛</>の訓練速度<@cc.vup>+30%</>"
+    },
+    "train_spd&profession3[151]": {
+      "buffId": "train_spd&profession3[151]",
+      "buffName": "実戦技術：闘士",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_fighter",
+      "sortId": 9791,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "訓練室で協力者として配置時、<@cc.kw>前衛</>の訓練速度<@cc.vup>+30%</>。訓練者の職分が<@cc.kw>闘士</>であるとき、訓練速度がさらに<@cc.vup>+45%</>"
     },
     "train_spd&profession2[110]": {
       "buffId": "train_spd&profession2[110]",
@@ -43207,6 +43409,586 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_classroom_bayWindow_01": {
+        "id": "furni_classroom_bayWindow_01",
+        "sortId": 1030,
+        "name": "窓下のカウチ",
+        "iconId": "furni_classroom_bayWindow_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 8,
+        "depth": 3,
+        "height": 10,
+        "comfort": 485,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "出窓の上にクッションをいくつか置いて繋ぎ合わせたカウチ。休み時間中の教師たちに安らぎを与えてくれる。カーテンが閉じても、暗闇を追い払ってくれるランプがある。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 358,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_column_01": {
+        "id": "furni_classroom_column_01",
+        "sortId": 1031,
+        "name": "木製中柱",
+        "iconId": "furni_classroom_column_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 2,
+        "depth": 2,
+        "height": 10,
+        "comfort": 170,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "大きく丈夫な木の柱。教室全体の梁を支えてくれている。全ての重みがその身にのしかかる時、踏ん張り続けることができなければ、音を立てて崩れ落ちるしかない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 125,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 2
+      },
+      "furni_classroom_stationeryHolder_01": {
+        "id": "furni_classroom_stationeryHolder_01",
+        "sortId": 1032,
+        "name": "本の上の「筆立て」",
+        "iconId": "furni_classroom_stationeryHolder_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 105,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "積み上げられた古い本の上に蓋のないポットが置かれてあり。中に折れた定規が数本挿してある。教師からすれば、ほこりの積もったお下がりでも、少し拭いてきれいにすればまだまだ使い道はたくさんある。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 95,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_lowTable_01": {
+        "id": "furni_classroom_lowTable_01",
+        "sortId": 1033,
+        "name": "窓辺のローテーブル",
+        "iconId": "furni_classroom_lowTable_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "本や紙が乱雑に机の上に積まれている。片付けようにも、手をつけようがない。適当に積まれているように見えるが、持ち主はいつもこの中から必要なものを素早く見つけ出すことができる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_ladder_01": {
+        "id": "furni_classroom_ladder_01",
+        "sortId": 1034,
+        "name": "木製脚立",
+        "iconId": "furni_classroom_ladder_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 150,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "本棚の前に置いてある古い脚立。少しぐらぐらする。手を伸ばし知識の果てに触れたいのなら、虚空を踏みしめるわけにはいかない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_bookshelf_01": {
+        "id": "furni_classroom_bookshelf_01",
+        "sortId": 1035,
+        "name": "木製本棚",
+        "iconId": "furni_classroom_bookshelf_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 2,
+        "depth": 4,
+        "height": 7,
+        "comfort": 215,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "シンプルかつ素朴な壁面本棚。並べられている書籍はどれも選りすぐりのものばかりで、中には何度読んでも価値のある本も存在する。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 178,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_map_01": {
+        "id": "furni_classroom_map_01",
+        "sortId": 1036,
+        "name": "大きな地図",
+        "iconId": "furni_classroom_map_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 1,
+        "depth": 6,
+        "height": 6,
+        "comfort": 135,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "大地全体が描かれている大きな地図で、様々な用途使える。目は遥か遠い先に届くのに、足がそこにたどり着くことは永遠にかなわない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_clock_01": {
+        "id": "furni_classroom_clock_01",
+        "sortId": 1037,
+        "name": "アンティーク掛け時計",
+        "iconId": "furni_classroom_clock_01",
+        "type": "WALLDECO",
+        "subType": "ORTHER_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 3,
+        "depth": 1,
+        "height": 4,
+        "comfort": 95,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "かなり古い年代物の掛け時計。美しい鐘の音を響かせながら、授業の始まりと終わりを告げる。その清らかで美しい音色は時を経ても変わることはなく、聴く者は哀愁を覚えると同時に思わず心も弾む。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 88,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_carpet_01": {
+        "id": "furni_classroom_carpet_01",
+        "sortId": 1038,
+        "name": "チェック柄の絨毯",
+        "iconId": "furni_classroom_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 4,
+        "depth": 3,
+        "height": 1,
+        "comfort": 40,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "柔らかく分厚いチェック柄の絨毯。足を滑らせて脚立から落ちた人が怪我をするのを防いでいる。生まれ落ちた子供が、そのまま思いっきり固い地面に落ちていく時代も存在するのだ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 38,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_lectern_01": {
+        "id": "furni_classroom_lectern_01",
+        "sortId": 1039,
+        "name": "「ひしめく知識」",
+        "iconId": "furni_classroom_lectern_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 12,
+        "depth": 3,
+        "height": 6,
+        "comfort": 505,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "狭い教壇の上に彫像や絵画が置かれており、大きな黒板には公式や単語が書かれている。教卓の上の電気スタンドは夜遅くまで灯されており、その前に座る者の首は夜明けまで痛み続ける。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 373,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_tableChairGraffiti_01": {
+        "id": "furni_classroom_tableChairGraffiti_01",
+        "sortId": 1040,
+        "name": "乱雑な学習机セット",
+        "iconId": "furni_classroom_tableChairGraffiti_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 5,
+        "depth": 4,
+        "height": 3,
+        "comfort": 230,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "各教室に置かれている指定の学習机と椅子のセット。二人までが座ることができ、本の下には学生の残した落書きが隠れている。最前列に座る子供は常に言うことを聞かない、いたずらっ子である。顕示欲とは変え難い人の本性なのだ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_tableChairPenRack_01": {
+        "id": "furni_classroom_tableChairPenRack_01",
+        "sortId": 1041,
+        "name": "学習机セット",
+        "iconId": "furni_classroom_tableChairPenRack_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 5,
+        "depth": 4,
+        "height": 3,
+        "comfort": 230,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "各教室に置かれている指定の学習机と椅子のセット。二人までが座ることができ、上に置かれた教科書はきちんと整頓されている。この列に座る生徒は皆好奇心旺盛である探求欲とは抑え難い人の本性なのだ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_displayScreen_01": {
+        "id": "furni_classroom_displayScreen_01",
+        "sortId": 1042,
+        "name": "プロジェクタースクリーン",
+        "iconId": "furni_classroom_displayScreen_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 8,
+        "depth": 1,
+        "height": 5,
+        "comfort": 130,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "安物の白いスクリーン。使わない時は手動で畳む必要がある。この一面の白の中で、文字が再編成され、図形が再構築され、歴史が再演される。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 118,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_ceilingLamp_01": {
+        "id": "furni_classroom_ceilingLamp_01",
+        "sortId": 1043,
+        "name": "教室の照明",
+        "iconId": "furni_classroom_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 50,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "緑色のガラスでできた照明。どの光は教室を明るく照らしてくれる上、目にもとても優しい。柔らかな光は熱心に教科書を読んだり、こっそり居眠りをする妨げにならない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 43,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 4
+      },
+      "furni_classroom_bookBox_01": {
+        "id": "furni_classroom_bookBox_01",
+        "sortId": 1044,
+        "name": "小さな本箱",
+        "iconId": "furni_classroom_bookBox_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "学習机と同じ高さの正方形の本入れ。スペース上の関係で、数冊しか入らない。どんなことでも、黙って耐え抜くには限度があるのだ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_cabinet_01": {
+        "id": "furni_classroom_cabinet_01",
+        "sortId": 1045,
+        "name": "授業用品収納棚",
+        "iconId": "furni_classroom_cabinet_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 3,
+        "depth": 5,
+        "height": 9,
+        "comfort": 325,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "授業用品を置くための大きな木製の棚。スッキリしているように見えるが、棚の中は雑然としている。見える部分を取り繕うだけでも、長く続けるのは難しい。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 240,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_blackboard_01": {
+        "id": "furni_classroom_blackboard_01",
+        "sortId": 1046,
+        "name": "掲示板",
+        "iconId": "furni_classroom_blackboard_01",
+        "type": "DECORATION",
+        "subType": "BOARD_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 150,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "教室の後ろに設置された小さな黒板。授業の時間割と学校からのお知らせが貼られている。時間は似たようなコマの間をすり抜け、歳月はくり返される毎週の中に消えていく。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_wallpaper_01": {
+        "id": "furni_classroom_wallpaper_01",
+        "sortId": 1047,
+        "name": "教室の壁紙",
+        "iconId": "furni_classroom_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "上品なグリーンの壁紙。木を基調とした教室との相乗効果によって、学生たちの平常心を一瞬で取り戻させてくれる。鮮血と硝煙に覆われているこの都市に、眉をひそめ眠る人々の安らぎとなる緑はまだ残されているのだろうか。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_floor_01": {
+        "id": "furni_classroom_floor_01",
+        "sortId": 1048,
+        "name": "教室の床",
+        "iconId": "furni_classroom_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "穏やかな色合いの木製床。教師と学生の共同作業のおかげで、常に新品のようにピカピカだ。しかし年月を経るごとに、床を汚す靴跡はどんどん少なくなっていった。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_oct1st_deckChair_01": {
+        "id": "furni_oct1st_deckChair_01",
+        "sortId": 9998,
+        "name": "一体型ゲーミングチェア",
+        "iconId": "furni_oct1st_deckChair_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 6,
+        "depth": 4,
+        "height": 6,
+        "comfort": 235,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ゲーミングチェアと娯楽設備の巧みなコンビネーション。かなりお高い。睡眠モードとゲームモードをいつでも切り替えられる。これを業務用に使う人は誰もいない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_animation_projector_01": {
         "id": "furni_animation_projector_01",
         "sortId": 9999,
@@ -47238,6 +48020,64 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_dropS022_hamlet_01": {
+        "id": "furni_dropS022_hamlet_01",
+        "sortId": 11065,
+        "name": "パネル『復讐』",
+        "iconId": "furni_dropS022_hamlet_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「若き王子はたった一人の命を奪おうとしたが、無意識のうちに多くの者の命を奪っていた。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS022_holmes_01": {
+        "id": "furni_dropS022_holmes_01",
+        "sortId": 11066,
+        "name": "パネル『洞察』",
+        "iconId": "furni_dropS022_holmes_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「煙と霧の中、真相を目撃する一対の目があった。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_contract_s0_01": {
         "id": "furni_contract_s0_01",
         "sortId": 12001,
@@ -47838,6 +48678,35 @@
         "comfort": 105,
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "ラテラーノチョコストリートの殲滅戦を完了し、その報告をするともらえる記念品。チョコストリートの喧噪がまだ耳元でこだましているようだ。",
+        "obtainApproach": "殲滅作戦報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_annihilation_s13_01": {
+        "id": "furni_annihilation_s13_01",
+        "sortId": 13011,
+        "name": "イベリアの呼び声（造船所）",
+        "iconId": "furni_annihilation_s13_01",
+        "type": "WALLDECO",
+        "subType": "ANNIHILATION",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 105,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "イベリア暗き造船所の殲滅を完了し、その報告をするともらえる記念品。造船所の潮騒がまだ耳元でこだましているようだ。",
         "obtainApproach": "殲滅作戦報酬",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -57760,6 +58629,180 @@
           "furni_camp_floor_01"
         ]
       },
+      "furni_set_classroom": {
+        "id": "furni_set_classroom",
+        "sortId": 62,
+        "name": "聖マルソー校教室",
+        "themeType": "NORMAL",
+        "desc": "ゴールディングが講義を行った教室を再現した部屋。子供たちの笑い声や、授業中の元気な発言が聞こえないのが少しだけ残念だ。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_classroom_bayWindow_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_column_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_column_01",
+            "pos0": 8,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_stationeryHolder_01",
+            "pos0": 0,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_lowTable_01",
+            "pos0": 0,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ladder_01",
+            "pos0": 10,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_bookshelf_01",
+            "pos0": 8,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_map_01",
+            "pos0": 10,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_clock_01",
+            "pos0": 19,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_carpet_01",
+            "pos0": 10,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_lectern_01",
+            "pos0": 10,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_tableChairGraffiti_01",
+            "pos0": 18,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_tableChairPenRack_01",
+            "pos0": 24,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_displayScreen_01",
+            "pos0": 22,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_bookBox_01",
+            "pos0": 25,
+            "pos1": 8,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_cabinet_01",
+            "pos0": 31,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_blackboard_01",
+            "pos0": 27,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 16,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 16,
+            "pos1": 6,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_classroom_1",
+          "furni_set_classroom_2",
+          "furni_set_classroom_3",
+          "furni_set_classroom_4"
+        ],
+        "furnitures": [
+          "furni_classroom_bayWindow_01",
+          "furni_classroom_column_01",
+          "furni_classroom_stationeryHolder_01",
+          "furni_classroom_lowTable_01",
+          "furni_classroom_ladder_01",
+          "furni_classroom_bookshelf_01",
+          "furni_classroom_map_01",
+          "furni_classroom_clock_01",
+          "furni_classroom_carpet_01",
+          "furni_classroom_lectern_01",
+          "furni_classroom_tableChairGraffiti_01",
+          "furni_classroom_tableChairPenRack_01",
+          "furni_classroom_displayScreen_01",
+          "furni_classroom_ceilingLamp_01",
+          "furni_classroom_bookBox_01",
+          "furni_classroom_cabinet_01",
+          "furni_classroom_blackboard_01",
+          "furni_classroom_wallpaper_01",
+          "furni_classroom_floor_01"
+        ]
+      },
       "furni_set_reception": {
         "id": "furni_set_reception",
         "sortId": 58,
@@ -61203,6 +62246,65 @@
           "furni_camp_floor_01"
         ]
       },
+      "furni_set_classroom_1": {
+        "id": "furni_set_classroom_1",
+        "sortId": 1,
+        "name": "教師の休憩室",
+        "themeId": "furni_set_classroom",
+        "comfort": 185,
+        "count": 4,
+        "furniture": [
+          "furni_classroom_bayWindow_01",
+          "furni_classroom_stationeryHolder_01",
+          "furni_classroom_lowTable_01",
+          "furni_classroom_bookBox_01"
+        ]
+      },
+      "furni_set_classroom_2": {
+        "id": "furni_set_classroom_2",
+        "sortId": 2,
+        "name": "図書コーナー",
+        "themeId": "furni_set_classroom",
+        "comfort": 200,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_column_01",
+          "furni_classroom_bookshelf_01",
+          "furni_classroom_map_01",
+          "furni_classroom_carpet_01",
+          "furni_classroom_ladder_01"
+        ]
+      },
+      "furni_set_classroom_3": {
+        "id": "furni_set_classroom_3",
+        "sortId": 3,
+        "name": "ありふれた教室",
+        "themeId": "furni_set_classroom",
+        "comfort": 360,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_lectern_01",
+          "furni_classroom_tableChairGraffiti_01",
+          "furni_classroom_tableChairPenRack_01",
+          "furni_classroom_cabinet_01",
+          "furni_classroom_blackboard_01"
+        ]
+      },
+      "furni_set_classroom_4": {
+        "id": "furni_set_classroom_4",
+        "sortId": 4,
+        "name": "教室の装飾",
+        "themeId": "furni_set_classroom",
+        "comfort": 170,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_wallpaper_01",
+          "furni_classroom_floor_01",
+          "furni_classroom_displayScreen_01",
+          "furni_classroom_clock_01",
+          "furni_classroom_ceilingLamp_01"
+        ]
+      },
       "furni_set_reception_1": {
         "id": "furni_set_reception_1",
         "sortId": 1,
@@ -62763,6 +63865,130 @@
       ],
       "requireStages": []
     },
+    "62": {
+      "sortId": 1999,
+      "formulaId": "62",
+      "rarity": 0,
+      "itemId": "30155",
+      "count": 1,
+      "goldCost": 400,
+      "apCost": 2880000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 84,
+          "itemId": "30014",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30024",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30034",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30044",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30054",
+          "itemCount": 1
+        },
+        {
+          "weight": 42,
+          "itemId": "30064",
+          "itemCount": 1
+        },
+        {
+          "weight": 72,
+          "itemId": "30074",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30084",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30094",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30104",
+          "itemCount": 1
+        },
+        {
+          "weight": 72,
+          "itemId": "31014",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31024",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "31034",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31044",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31054",
+          "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31064",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31054",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31044",
+          "count": 2,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "easy_11-03",
+          "rank": 2
+        }
+      ]
+    },
     "57": {
       "sortId": 2000,
       "formulaId": "57",
@@ -62848,6 +64074,11 @@
         {
           "weight": 63,
           "itemId": "31054",
+          "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
           "itemCount": 1
         }
       ],
@@ -62968,6 +64199,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63082,6 +64318,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63191,6 +64432,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63218,6 +64464,130 @@
         }
       ],
       "requireStages": []
+    },
+    "61": {
+      "sortId": 2097,
+      "formulaId": "61",
+      "rarity": 0,
+      "itemId": "31064",
+      "count": 1,
+      "goldCost": 300,
+      "apCost": 1440000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 60,
+          "itemId": "30013",
+          "itemCount": 1
+        },
+        {
+          "weight": 50,
+          "itemId": "30023",
+          "itemCount": 1
+        },
+        {
+          "weight": 50,
+          "itemId": "30033",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30043",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30053",
+          "itemCount": 1
+        },
+        {
+          "weight": 30,
+          "itemId": "30063",
+          "itemCount": 1
+        },
+        {
+          "weight": 45,
+          "itemId": "30073",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30083",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "30093",
+          "itemCount": 1
+        },
+        {
+          "weight": 30,
+          "itemId": "30103",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31013",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "31023",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "31033",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31043",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31063",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31043",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "30023",
+          "count": 1,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "sub_09-1-2",
+          "rank": 2
+        }
+      ]
     },
     "59": {
       "sortId": 2098,
@@ -63304,6 +64674,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -63424,6 +64799,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63542,6 +64922,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -63662,6 +65047,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63780,6 +65170,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -63900,6 +65295,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64013,6 +65413,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64128,6 +65533,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64241,6 +65651,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64474,6 +65889,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64705,6 +66125,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64938,6 +66363,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -65169,6 +66599,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -65402,6 +66837,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -65633,6 +67073,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
