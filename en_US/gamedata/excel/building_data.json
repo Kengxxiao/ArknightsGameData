@@ -9819,6 +9819,124 @@
           ]
         }
       ]
+    },
+    "char_4072_ironmn": {
+      "charId": "char_4072_ironmn",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost&dorm[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_dorm[002]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4071_peper": {
+      "charId": "char_4071_peper",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_tra_spd[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_wt&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_wt&cost[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_157_dagda": {
+      "charId": "char_157_dagda",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession3[150]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession3[151]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_4062_totter": {
+      "charId": "char_4062_totter",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_reduce[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition&cost[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -9876,6 +9994,18 @@
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_t_spd",
       "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, all Trading Posts' order efficiency <@cc.vup>+7%</> (only the most effective one will take effect when assigned Operators have the same skill effect)"
+    },
+    "control_tra_spd[020]": {
+      "buffId": "control_tra_spd[020]",
+      "buffName": "Full of Vigor",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_t_spd",
+      "sortId": 1504,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10721,6 +10851,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+15%</> in the first hour and thereafter <@cc.vup>+2%</> per hour, up to <@cc.vup>+25%</>"
+    },
+    "manu_prod_spd_reduce[000]": {
+      "buffId": "manu_prod_spd_reduce[000]",
+      "buffName": "Blurry Vision",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_reduce",
+      "sortId": 3280,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, Productivity <@cc.vup>+30%</>. For every <@cc.kw>4</> points of <$cc.bd.costdrop><@cc.kw>Morale difference</></> on self, Productivity <@cc.vdown>-5%</>"
+    },
+    "manu_prod_spd_addition&cost[000]": {
+      "buffId": "manu_prod_spd_addition&cost[000]",
+      "buffName": "Blizzard Outside",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add&cost",
+      "sortId": 3250,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, if own <$cc.bd.costdrop><@cc.kw>Morale difference</></> is greater than <@cc.kw>12</>, Productivity <@cc.vup>+10%</>, storage capacity <@cc.vup>+6</>"
     },
     "manu_prod_spd&limit[000]": {
       "buffId": "manu_prod_spd&limit[000]",
@@ -12102,6 +12256,18 @@
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Skill Summaries</>, reduces the Morale consumed by all corresponding formulas that cost <@cc.kw>2</> by <@cc.vup>-1</>"
     },
+    "workshop_formula_cost&dorm[000]": {
+      "buffId": "workshop_formula_cost&dorm[000]",
+      "buffName": "Heart to Heart",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost&dorm",
+      "sortId": 7300,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, for every <@cc.kw>10</> Operators in Dormitories with Morale below <@cc.vup>12</>, recipes with Morale cost of <@cc.kw>4</> have <@cc.vup>-1</> Morale cost"
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "Tech Theory",
@@ -12353,6 +12519,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the byproduct production rate by <@cc.vup>5%</> for every <@cc.kw>1</> Operator with <@cc.vup>20</> or less Morale assigned to the Dorms"
+    },
+    "workshop_formula_dorm[002]": {
+      "buffId": "workshop_formula_dorm[002]",
+      "buffName": "Mind to Mind",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_dorm2",
+      "sortId": 7613,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the byproduct production rate by <@cc.vup>5%</> for every <@cc.kw>1</> Operator with <@cc.vup>12</> or less Morale assigned to the Dorms"
     },
     "workshop_formula_drop[020]": {
       "buffId": "workshop_formula_drop[020]",
@@ -12989,6 +13167,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Marksman</>, training speed will be further increased by <@cc.vup>+45%</>"
+    },
+    "train_spd&profession3[150]": {
+      "buffId": "train_spd&profession3[150]",
+      "buffName": "Guard Expert α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_guard1",
+      "sortId": 9791,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+    },
+    "train_spd&profession3[151]": {
+      "buffId": "train_spd&profession3[151]",
+      "buffName": "Combat Techniques: Fighter",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_fighter",
+      "sortId": 9791,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Fighter</>, training speed will be further increased by <@cc.vup>+45%</>"
     },
     "train_spd&profession2[110]": {
       "buffId": "train_spd&profession2[110]",
@@ -43207,6 +43409,586 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_classroom_bayWindow_01": {
+        "id": "furni_classroom_bayWindow_01",
+        "sortId": 1030,
+        "name": "Window-Side Couch Bed",
+        "iconId": "furni_classroom_bayWindow_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 8,
+        "depth": 3,
+        "height": 10,
+        "comfort": 485,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Couch-bed made from cushions to allow teachers to take some rest between classes. Even when the curtains are drawn, there is still a light there to drive out the darkness.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 358,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_column_01": {
+        "id": "furni_classroom_column_01",
+        "sortId": 1031,
+        "name": "Sturdy Pillar",
+        "iconId": "furni_classroom_column_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 2,
+        "depth": 2,
+        "height": 10,
+        "comfort": 170,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Tall and solid pillar that supports the classroom ceiling. When the weight of the world is placed on its shoulders, it must either stand tall or fall apart.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 125,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 2
+      },
+      "furni_classroom_stationeryHolder_01": {
+        "id": "furni_classroom_stationeryHolder_01",
+        "sortId": 1032,
+        "name": "'Pen Holder' on Books",
+        "iconId": "furni_classroom_stationeryHolder_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 105,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A lidless teapot lies on a tall pile of books, with several broken rulers within. That which is old and dusty may still be useful after a bit of cleaning.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 95,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_lowTable_01": {
+        "id": "furni_classroom_lowTable_01",
+        "sortId": 1033,
+        "name": "Small Window-Side Table",
+        "iconId": "furni_classroom_lowTable_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Books and papers are scattered on the desk. Even cleaning up seems impossible, but some people seem to be able to find what they need in the mess.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_ladder_01": {
+        "id": "furni_classroom_ladder_01",
+        "sortId": 1034,
+        "name": "Wooden Bookcase Stepladder",
+        "iconId": "furni_classroom_ladder_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 150,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Old wooden steps placed before a bookcase, wobbling ever so slightly. One must be on solid footing in order to raise one's hands towards the frontiers of knowledge.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_bookshelf_01": {
+        "id": "furni_classroom_bookshelf_01",
+        "sortId": 1035,
+        "name": "Wooden Bookcase",
+        "iconId": "furni_classroom_bookshelf_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 2,
+        "depth": 4,
+        "height": 7,
+        "comfort": 215,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Simple bookcase with a carefully picked selection of books, volumes that are worth your time every read.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 178,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_map_01": {
+        "id": "furni_classroom_map_01",
+        "sortId": 1036,
+        "name": "Large Map",
+        "iconId": "furni_classroom_map_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 1,
+        "depth": 6,
+        "height": 6,
+        "comfort": 135,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A big, versatile map of the entire known world. Far does the gaze cast, to places that the feet cannot reach.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_clock_01": {
+        "id": "furni_classroom_clock_01",
+        "sortId": 1037,
+        "name": "Antique Clock",
+        "iconId": "furni_classroom_clock_01",
+        "type": "WALLDECO",
+        "subType": "ORTHER_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 3,
+        "depth": 1,
+        "height": 4,
+        "comfort": 95,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "An old hanging clock that rings at the start and end of each lesson. The sound of the clock never changes, only the mood of the listener.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 88,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_carpet_01": {
+        "id": "furni_classroom_carpet_01",
+        "sortId": 1038,
+        "name": "Checker Rug",
+        "iconId": "furni_classroom_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 4,
+        "depth": 3,
+        "height": 1,
+        "comfort": 40,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Soft and thick checkered rug, helping to prevent injuries from falling off the steps. In some eras, children are born diving towards the hard ground with nothing to buffer the impact.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 38,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_lectern_01": {
+        "id": "furni_classroom_lectern_01",
+        "sortId": 1039,
+        "name": "'Cramped Knowledge'",
+        "iconId": "furni_classroom_lectern_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 12,
+        "depth": 3,
+        "height": 6,
+        "comfort": 505,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Sculptures and paintings line the lectern, while formulae and language lessons fill the blackboard. The lights of the desks stay on until late at night, while the necks of those who study in front of them ache until the sun sets.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 373,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_tableChairGraffiti_01": {
+        "id": "furni_classroom_tableChairGraffiti_01",
+        "sortId": 1040,
+        "name": "Messy Desk Set",
+        "iconId": "furni_classroom_tableChairGraffiti_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 5,
+        "depth": 4,
+        "height": 3,
+        "comfort": 230,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A standard desk set used in any classroom, allowing two students to sit side-by-side. Students' scrawlings are hidden behind the books. After all, the urge for self-expression is an eternal part of human nature.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_tableChairPenRack_01": {
+        "id": "furni_classroom_tableChairPenRack_01",
+        "sortId": 1041,
+        "name": "Desk Set",
+        "iconId": "furni_classroom_tableChairPenRack_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 5,
+        "depth": 4,
+        "height": 3,
+        "comfort": 230,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A standard desk set used in any classroom, allowing two students to sit side-by-side. Books are lined up tidily on the desk, used by students who embody the human nature of curiosity.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_displayScreen_01": {
+        "id": "furni_classroom_displayScreen_01",
+        "sortId": 1042,
+        "name": "Projector Screen",
+        "iconId": "furni_classroom_displayScreen_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 8,
+        "depth": 1,
+        "height": 5,
+        "comfort": 130,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Cheap screen that needs to be manually wound-up when idle. Letters form words, pictures form information, and history recreates itself on this white screen.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 118,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_ceilingLamp_01": {
+        "id": "furni_classroom_ceilingLamp_01",
+        "sortId": 1043,
+        "name": "Classroom Light",
+        "iconId": "furni_classroom_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 50,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Green ceiling light that illuminates the classroom without hurting the eyes. Read quietly, or take a little nap under it.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 43,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 4
+      },
+      "furni_classroom_bookBox_01": {
+        "id": "furni_classroom_bookBox_01",
+        "sortId": 1044,
+        "name": "Small Book Box",
+        "iconId": "furni_classroom_bookBox_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Book box that is the same height as a desk. Can only hold a few books, just as how everyone's patience has a limit.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_cabinet_01": {
+        "id": "furni_classroom_cabinet_01",
+        "sortId": 1045,
+        "name": "Classroom Storage Cabinet",
+        "iconId": "furni_classroom_cabinet_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 3,
+        "depth": 5,
+        "height": 9,
+        "comfort": 325,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Wooden cabinet filled with classroom materials. Looks tidy on the outside, but messy on the inside. Appearances are hard to keep up.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 240,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_blackboard_01": {
+        "id": "furni_classroom_blackboard_01",
+        "sortId": 1046,
+        "name": "Notices",
+        "iconId": "furni_classroom_blackboard_01",
+        "type": "DECORATION",
+        "subType": "BOARD_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 150,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Class schedules and school announcements are posted on a small blackboard at the back of the classroom. Time flies from row to row, from week to week.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_wallpaper_01": {
+        "id": "furni_classroom_wallpaper_01",
+        "sortId": 1047,
+        "name": "Classroom Wallpaper",
+        "iconId": "furni_classroom_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Dignified green wallpaper that goes well with the wooden furnishings in the classroom. When the city is filled with the scent of blood and saltpeter, will there be a speck of green to ease those furrowed brows?",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_floor_01": {
+        "id": "furni_classroom_floor_01",
+        "sortId": 1048,
+        "name": "Classroom Floor",
+        "iconId": "furni_classroom_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Subdued wooden floor that remains clean and shiny thanks to the work of the staff and students. But it sees less footprints by the year.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_oct1st_deckChair_01": {
+        "id": "furni_oct1st_deckChair_01",
+        "sortId": 9998,
+        "name": "All-in-one Leisure Pod",
+        "iconId": "furni_oct1st_deckChair_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 6,
+        "depth": 4,
+        "height": 6,
+        "comfort": 235,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "The miraculous combination of chair and entertainment system, achieved at no small cost. It can switch between sleep mode and game mode. No one uses it to work.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_animation_projector_01": {
         "id": "furni_animation_projector_01",
         "sortId": 9999,
@@ -47238,6 +48020,64 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_dropS022_hamlet_01": {
+        "id": "furni_dropS022_hamlet_01",
+        "sortId": 11065,
+        "name": "Plaque - Murder",
+        "iconId": "furni_dropS022_hamlet_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "'The young prince only wanted to take one life, but inadvertently caused the loss of many.'",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS022_holmes_01": {
+        "id": "furni_dropS022_holmes_01",
+        "sortId": 11066,
+        "name": "Plaque - Insight",
+        "iconId": "furni_dropS022_holmes_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "'In the smoke and the fog, one pair of eyes sees the truth.'",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_contract_s0_01": {
         "id": "furni_contract_s0_01",
         "sortId": 12001,
@@ -47838,6 +48678,35 @@
         "comfort": 105,
         "usage": "Used in the dorm to improve the ambience.",
         "description": "A souvenir awarded for completing the Laterano Chocolate Street Annihilation mission and submitting the mission report. The echoes of Chocolate Street yet reverberate in your ears.",
+        "obtainApproach": "Annihilation Mission Award",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_annihilation_s13_01": {
+        "id": "furni_annihilation_s13_01",
+        "sortId": 13011,
+        "name": "Iberian Echoes (Shipyard)",
+        "iconId": "furni_annihilation_s13_01",
+        "type": "WALLDECO",
+        "subType": "ANNIHILATION",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 105,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A souvenir awarded for completing the Iberian Penumbra Shipyards Annihilation mission and submitting the mission report. The echoes of the shipyards yet reverberate in your ears.",
         "obtainApproach": "Annihilation Mission Award",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -57731,6 +58600,180 @@
           "furni_camp_floor_01"
         ]
       },
+      "furni_set_classroom": {
+        "id": "furni_set_classroom",
+        "sortId": 62,
+        "name": "Saint-Marsol Classroom",
+        "themeType": "NORMAL",
+        "desc": "Room recreated in the image of Golding's classes, but missing the sound of children laughing and reading.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_classroom_bayWindow_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_column_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_column_01",
+            "pos0": 8,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_stationeryHolder_01",
+            "pos0": 0,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_lowTable_01",
+            "pos0": 0,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ladder_01",
+            "pos0": 10,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_bookshelf_01",
+            "pos0": 8,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_map_01",
+            "pos0": 10,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_clock_01",
+            "pos0": 19,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_carpet_01",
+            "pos0": 10,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_lectern_01",
+            "pos0": 10,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_tableChairGraffiti_01",
+            "pos0": 18,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_tableChairPenRack_01",
+            "pos0": 24,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_displayScreen_01",
+            "pos0": 22,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_bookBox_01",
+            "pos0": 25,
+            "pos1": 8,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_cabinet_01",
+            "pos0": 31,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_blackboard_01",
+            "pos0": 27,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 16,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 16,
+            "pos1": 6,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_classroom_1",
+          "furni_set_classroom_2",
+          "furni_set_classroom_3",
+          "furni_set_classroom_4"
+        ],
+        "furnitures": [
+          "furni_classroom_bayWindow_01",
+          "furni_classroom_column_01",
+          "furni_classroom_stationeryHolder_01",
+          "furni_classroom_lowTable_01",
+          "furni_classroom_ladder_01",
+          "furni_classroom_bookshelf_01",
+          "furni_classroom_map_01",
+          "furni_classroom_clock_01",
+          "furni_classroom_carpet_01",
+          "furni_classroom_lectern_01",
+          "furni_classroom_tableChairGraffiti_01",
+          "furni_classroom_tableChairPenRack_01",
+          "furni_classroom_displayScreen_01",
+          "furni_classroom_ceilingLamp_01",
+          "furni_classroom_bookBox_01",
+          "furni_classroom_cabinet_01",
+          "furni_classroom_blackboard_01",
+          "furni_classroom_wallpaper_01",
+          "furni_classroom_floor_01"
+        ]
+      },
       "furni_set_reception": {
         "id": "furni_set_reception",
         "sortId": 58,
@@ -61174,6 +62217,65 @@
           "furni_camp_floor_01"
         ]
       },
+      "furni_set_classroom_1": {
+        "id": "furni_set_classroom_1",
+        "sortId": 1,
+        "name": "Teacher's Lounge",
+        "themeId": "furni_set_classroom",
+        "comfort": 185,
+        "count": 4,
+        "furniture": [
+          "furni_classroom_bayWindow_01",
+          "furni_classroom_stationeryHolder_01",
+          "furni_classroom_lowTable_01",
+          "furni_classroom_bookBox_01"
+        ]
+      },
+      "furni_set_classroom_2": {
+        "id": "furni_set_classroom_2",
+        "sortId": 2,
+        "name": "Book Corner",
+        "themeId": "furni_set_classroom",
+        "comfort": 200,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_column_01",
+          "furni_classroom_bookshelf_01",
+          "furni_classroom_map_01",
+          "furni_classroom_carpet_01",
+          "furni_classroom_ladder_01"
+        ]
+      },
+      "furni_set_classroom_3": {
+        "id": "furni_set_classroom_3",
+        "sortId": 3,
+        "name": "Standard Classroom",
+        "themeId": "furni_set_classroom",
+        "comfort": 360,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_lectern_01",
+          "furni_classroom_tableChairGraffiti_01",
+          "furni_classroom_tableChairPenRack_01",
+          "furni_classroom_cabinet_01",
+          "furni_classroom_blackboard_01"
+        ]
+      },
+      "furni_set_classroom_4": {
+        "id": "furni_set_classroom_4",
+        "sortId": 4,
+        "name": "Classroom Decor",
+        "themeId": "furni_set_classroom",
+        "comfort": 170,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_wallpaper_01",
+          "furni_classroom_floor_01",
+          "furni_classroom_displayScreen_01",
+          "furni_classroom_clock_01",
+          "furni_classroom_ceilingLamp_01"
+        ]
+      },
       "furni_set_reception_1": {
         "id": "furni_set_reception_1",
         "sortId": 1,
@@ -62734,6 +63836,130 @@
       ],
       "requireStages": []
     },
+    "62": {
+      "sortId": 1999,
+      "formulaId": "62",
+      "rarity": 0,
+      "itemId": "30155",
+      "count": 1,
+      "goldCost": 400,
+      "apCost": 2880000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 84,
+          "itemId": "30014",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30024",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30034",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30044",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30054",
+          "itemCount": 1
+        },
+        {
+          "weight": 42,
+          "itemId": "30064",
+          "itemCount": 1
+        },
+        {
+          "weight": 72,
+          "itemId": "30074",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30084",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30094",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30104",
+          "itemCount": 1
+        },
+        {
+          "weight": 72,
+          "itemId": "31014",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31024",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "31034",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31044",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31054",
+          "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31064",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31054",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31044",
+          "count": 2,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "easy_11-03",
+          "rank": 2
+        }
+      ]
+    },
     "57": {
       "sortId": 2000,
       "formulaId": "57",
@@ -62819,6 +64045,11 @@
         {
           "weight": 63,
           "itemId": "31054",
+          "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
           "itemCount": 1
         }
       ],
@@ -62939,6 +64170,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63053,6 +64289,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63162,6 +64403,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63189,6 +64435,130 @@
         }
       ],
       "requireStages": []
+    },
+    "61": {
+      "sortId": 2097,
+      "formulaId": "61",
+      "rarity": 0,
+      "itemId": "31064",
+      "count": 1,
+      "goldCost": 300,
+      "apCost": 1440000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 60,
+          "itemId": "30013",
+          "itemCount": 1
+        },
+        {
+          "weight": 50,
+          "itemId": "30023",
+          "itemCount": 1
+        },
+        {
+          "weight": 50,
+          "itemId": "30033",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30043",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30053",
+          "itemCount": 1
+        },
+        {
+          "weight": 30,
+          "itemId": "30063",
+          "itemCount": 1
+        },
+        {
+          "weight": 45,
+          "itemId": "30073",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30083",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "30093",
+          "itemCount": 1
+        },
+        {
+          "weight": 30,
+          "itemId": "30103",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31013",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "31023",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "31033",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31043",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31063",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31043",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "30023",
+          "count": 1,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "sub_09-1-2",
+          "rank": 2
+        }
+      ]
     },
     "59": {
       "sortId": 2098,
@@ -63275,6 +64645,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -63395,6 +64770,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63513,6 +64893,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -63633,6 +65018,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63751,6 +65141,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -63871,6 +65266,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63984,6 +65384,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64099,6 +65504,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64212,6 +65622,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64445,6 +65860,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64676,6 +66096,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64909,6 +66334,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -65140,6 +66570,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -65373,6 +66808,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -65604,6 +67044,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
