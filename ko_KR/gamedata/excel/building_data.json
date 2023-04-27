@@ -9819,6 +9819,124 @@
           ]
         }
       ]
+    },
+    "char_4072_ironmn": {
+      "charId": "char_4072_ironmn",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost&dorm[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_dorm[002]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4071_peper": {
+      "charId": "char_4071_peper",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_tra_spd[020]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_wt&cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_wt&cost[010]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_157_dagda": {
+      "charId": "char_157_dagda",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd&profession3[150]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "train_spd&profession3[151]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_4062_totter": {
+      "charId": "char_4062_totter",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_reduce[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_addition&cost[000]",
+              "cond": {
+                "phase": 1,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -9876,6 +9994,18 @@
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_t_spd",
       "sortId": 1502,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 모든 무역소의 오더 수주 효율 <@cc.vup>+7%</> (동종 효과 중 가장 높은 수치만 적용)"
+    },
+    "control_tra_spd[020]": {
+      "buffId": "control_tra_spd[020]",
+      "buffName": "생기발랄",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_t_spd",
+      "sortId": 1504,
       "buffColor": "#005752",
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
@@ -10721,6 +10851,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, 첫 시간 생산력<@cc.vup>+15%</>, 그 이후 시간당 <@cc.vup>+2%</>, 최대 <@cc.vup>+25%</>"
+    },
+    "manu_prod_spd_reduce[000]": {
+      "buffId": "manu_prod_spd_reduce[000]",
+      "buffName": "흐려진 시야",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_reduce",
+      "sortId": 3280,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 생산력 <@cc.vup>+30%</>, 자신의 <$cc.bd.costdrop><@cc.kw>컨디션 낙차</></> <@cc.kw>4</>당 생산력 <@cc.vdown>-5%</>"
+    },
+    "manu_prod_spd_addition&cost[000]": {
+      "buffId": "manu_prod_spd_addition&cost[000]",
+      "buffName": "창밖 눈보라",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_add&cost",
+      "sortId": 3250,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 자신의 <$cc.bd.costdrop><@cc.kw>컨디션 낙차</></>가 <@cc.kw>12</> 이상일 경우, 생산력 <@cc.vup>+10%</>, 창고 용량 상한 <@cc.vup>+6</>"
     },
     "manu_prod_spd&limit[000]": {
       "buffId": "manu_prod_spd&limit[000]",
@@ -12102,6 +12256,18 @@
       "roomType": "WORKSHOP",
       "description": "가공소에 배치 후 컨디션 <@cc.kw>2</> 소모하는 <@cc.kw>스킬개론</> 가공 시 컨디션 소모 <@cc.vup>-1</>"
     },
+    "workshop_formula_cost&dorm[000]": {
+      "buffId": "workshop_formula_cost&dorm[000]",
+      "buffName": "연결된 마음",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost&dorm",
+      "sortId": 7300,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 후 <@cc.kw>정예화 재료</> 가공 시, 숙소 내 컨디션이 <@cc.vup>12</> 이하인 오퍼레이터 <@cc.kw>10</>명당 컨디션 <@cc.kw>4</> 소모하는 항목의 컨디션 소모가 전부 <@cc.vup>-1</>"
+    },
     "workshop_formula_probability[000]": {
       "buffId": "workshop_formula_probability[000]",
       "buffName": "스킬 이론",
@@ -12353,6 +12519,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "WORKSHOP",
       "description": "가공소에 배치 후 <@cc.kw>정예화 재료</> 가공 시, 숙소 내 컨디션이 <@cc.vup>20</> 이하인 오퍼레이터 <@cc.kw>1</>명당 부산물 산출 확률 <@cc.vup>5%</> 상승"
+    },
+    "workshop_formula_dorm[002]": {
+      "buffId": "workshop_formula_dorm[002]",
+      "buffName": "일치한 뜻",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_evolve_dorm2",
+      "sortId": 7613,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "가공소에 배치 후 <@cc.kw>정예화 재료</> 가공 시, 숙소 내 컨디션이 <@cc.vup>12</> 이하인 오퍼레이터 <@cc.kw>1</>명당 부산물 산출 확률 <@cc.vup>5%</> 상승"
     },
     "workshop_formula_drop[020]": {
       "buffId": "workshop_formula_drop[020]",
@@ -12989,6 +13167,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "TRAINING",
       "description": "훈련실에 배치 시, <@cc.kw>스나이퍼</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 만약 훈련 대상의 오퍼레이터 세부 분류가 <@cc.kw>명사수</>일 경우, 훈련 속도가 추가로 <@cc.vup>+45%</>"
+    },
+    "train_spd&profession3[150]": {
+      "buffId": "train_spd&profession3[150]",
+      "buffName": "가드 마스터리 α",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_guard1",
+      "sortId": 9791,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>가드</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>"
+    },
+    "train_spd&profession3[151]": {
+      "buffId": "train_spd&profession3[151]",
+      "buffName": "실전 기술: 파이터",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_fighter",
+      "sortId": 9791,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "훈련실에 배치 시, <@cc.kw>가드</> 오퍼레이터의 스킬 훈련 속도 <@cc.vup>+30%</>, 만약 훈련 대상의 오퍼레이터 세부분류가 <@cc.kw>파이터</>일 경우, 훈련 속도가 추가로 <@cc.vup>+45%</>"
     },
     "train_spd&profession2[110]": {
       "buffId": "train_spd&profession2[110]",
@@ -43207,6 +43409,586 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_classroom_bayWindow_01": {
+        "id": "furni_classroom_bayWindow_01",
+        "sortId": 1030,
+        "name": "창문 아래의 낮은 침상",
+        "iconId": "furni_classroom_bayWindow_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 8,
+        "depth": 3,
+        "height": 10,
+        "comfort": 485,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "창문 위에 푹신한 쿠션들을 이어 만든 낮은 침상. 교사는 수업이 없는 시간을 이용해 이곳에서 휴식을 취할 수 있다. 커튼을 내린다고 해도 어둠을 몰아낼 등이 하나 더 설치되어 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 358,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_column_01": {
+        "id": "furni_classroom_column_01",
+        "sortId": 1031,
+        "name": "목제 기둥",
+        "iconId": "furni_classroom_column_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 2,
+        "depth": 2,
+        "height": 10,
+        "comfort": 170,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "높고 튼실한 목제 기둥. 온 교실을 지탱하고 있다. 모든 무게가 그것으로 떨어지게 되면, 굳건히 버티거나, 혹은 쾅 하고 무너지거나 둘 중 하나일 것이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 125,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 2
+      },
+      "furni_classroom_stationeryHolder_01": {
+        "id": "furni_classroom_stationeryHolder_01",
+        "sortId": 1032,
+        "name": "책더미 속 '필통'",
+        "iconId": "furni_classroom_stationeryHolder_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 105,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "뚜껑 없는 찻주전자가 겹겹이 쌓인 낡은 책더미 위에 올려졌으며, 그 안에는 부러진 자들이 있다. 선생님은 먼지가 묻은 낡은 물건들도 조금만 닦아 주면 예전과 같이 쓸모 있을 거로 생각했다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 95,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_lowTable_01": {
+        "id": "furni_classroom_lowTable_01",
+        "sortId": 1033,
+        "name": "낮은 창가의 테이블",
+        "iconId": "furni_classroom_lowTable_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "어지럽게 널브러진 책과 종이들이 탁자 위에 놓여 있다. 누군가 이를 정리하고 싶어 했지만, 어디서부터 손을 대야 할지는 몰랐다. 아무렇게나 쌓아둔 것 같아 보여도, 사용자는 언제나 필요한 물건을 빠르게 찾을 수 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_ladder_01": {
+        "id": "furni_classroom_ladder_01",
+        "sortId": 1034,
+        "name": "목제 나무 사다리",
+        "iconId": "furni_classroom_ladder_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "책꽂이 앞에 놓인 낡은 나무 사다리. 조금 흔들린다. 지식의 경계에 손을 대려는 그 순간, 발아래는 공허해질 것이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_bookshelf_01": {
+        "id": "furni_classroom_bookshelf_01",
+        "sortId": 1035,
+        "name": "목제 책꽂이",
+        "iconId": "furni_classroom_bookshelf_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 2,
+        "depth": 4,
+        "height": 7,
+        "comfort": 215,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "간단하게 만들어진 소박한 책꽂이. 위에 꽂힌 책들은 전부 엄선된 것들로, 몇몇 책들은 잠깐 둘러보기만 해도 가치 있어 보이는 것들이었다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 178,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_map_01": {
+        "id": "furni_classroom_map_01",
+        "sortId": 1036,
+        "name": "초대형 지도",
+        "iconId": "furni_classroom_map_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 1,
+        "depth": 6,
+        "height": 6,
+        "comfort": 135,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "다양한 용도의 초대형 지도. 온 대지를 전부 그려 두었다. 시선은 머나먼 곳들에 닿을 수 있을지 몰라도, 발걸음은 끝내 닿지 못할 것이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_clock_01": {
+        "id": "furni_classroom_clock_01",
+        "sortId": 1037,
+        "name": "오래된 괘종시계",
+        "iconId": "furni_classroom_clock_01",
+        "type": "WALLDECO",
+        "subType": "ORTHER_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 3,
+        "depth": 1,
+        "height": 4,
+        "comfort": 95,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "오래된 괘종시계. 수업이 시작되거나 끝날 때마다 듣기 좋은 종소리를 울려 댄다. 종소리는 맑고 아름다웠으며, 조금도 변하지 않았다. 그것을 들으면 한편으로는 불안을, 또 한편으론 기쁨을 느낀다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 88,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_carpet_01": {
+        "id": "furni_classroom_carpet_01",
+        "sortId": 1038,
+        "name": "격자 무늬 카펫",
+        "iconId": "furni_classroom_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_2",
+        "width": 4,
+        "depth": 3,
+        "height": 1,
+        "comfort": 40,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "두툼하고 부드러운 격자무늬 카펫. 발을 헛디뎌 계단에서 미끄러지는 이들이 다치게 않게 해 준다. 과거엔 아이들이 태어나자마자 아무런 안전 대비 없이 딱딱한 땅으로 떨어지던 시절도 있었다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 38,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_lectern_01": {
+        "id": "furni_classroom_lectern_01",
+        "sortId": 1039,
+        "name": "'혼잡한 지식'",
+        "iconId": "furni_classroom_lectern_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 12,
+        "depth": 3,
+        "height": 6,
+        "comfort": 505,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "좁은 교단 위에 조각상과 작품들이 놓여 있고, 넓은 칠판엔 공식과 문구들이 쓰여 있다. 교단 위의 등은 깊은 밤까지도 빛을 내며, 책상에 앉은 이의 경추는 날이 밝아올 때까지 아팠다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 373,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_tableChairGraffiti_01": {
+        "id": "furni_classroom_tableChairGraffiti_01",
+        "sortId": 1040,
+        "name": "어지러운 테이블 세트",
+        "iconId": "furni_classroom_tableChairGraffiti_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 5,
+        "depth": 4,
+        "height": 3,
+        "comfort": 230,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "교실마다 배치되어 있는 테이블 세트. 학생 두 명 정도가 앉을 수 있는 의자가 있으며, 책 뒤엔 학생들의 낙서가 감춰져 있다. 맨 앞에 앉아 있는 학생들은 늘 장난기가 많다. 자신을 표현하고자 하는 욕구는, 인간의 가장 고치기 힘든 천성이 아닐까 싶다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_tableChairPenRack_01": {
+        "id": "furni_classroom_tableChairPenRack_01",
+        "sortId": 1041,
+        "name": "교실 테이블 세트",
+        "iconId": "furni_classroom_tableChairPenRack_01",
+        "type": "SEATING",
+        "subType": "ORTHER_S",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 5,
+        "depth": 4,
+        "height": 3,
+        "comfort": 230,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "교실마다 배치되어 있는 테이블 세트. 학생 두 명 정도가 앉을 수 있는 의자가 있으며, 위에는 가지런히 정리된 교과서들이 올려져 있다. 이 열에 앉아 있는 학생들은 모두 질문하길 좋아하는 아이들이다. 학구열은 인간의 제어할 수 없는 천성이 아닐까 싶다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 170,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_displayScreen_01": {
+        "id": "furni_classroom_displayScreen_01",
+        "sortId": 1042,
+        "name": "플라스틱 스크린",
+        "iconId": "furni_classroom_displayScreen_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 8,
+        "depth": 1,
+        "height": 5,
+        "comfort": 130,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "저렴한 가격의 하얀 플라스틱 스크린. 사용하지 않을 때는 수동으로 접어놓을 수 있다. 이 하얀색 스크린 위에서 글자가 재조립되고, 도형이 재구성되며, 역사가 재연된다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 118,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_ceilingLamp_01": {
+        "id": "furni_classroom_ceilingLamp_01",
+        "sortId": 1043,
+        "name": "교실 천장등",
+        "iconId": "furni_classroom_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 50,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "초록빛을 내는 유리전등. 이것이 내뿜는 빛은 교실을 환하게 만들지만, 눈은 하나도 부시지 않는다. 따스한 빛은 책을 읽는 데 방해되지 않고, 몰래 자는 것 또한 방해하지 않는다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 43,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 4
+      },
+      "furni_classroom_bookBox_01": {
+        "id": "furni_classroom_bookBox_01",
+        "sortId": 1044,
+        "name": "사각형 책장",
+        "iconId": "furni_classroom_bookBox_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_1",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 135,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "탁자와 비슷한 높이의 사각형 책장. 넣을 수 있는 책의 수가 제한되어 있어, 몇 권의 책만 보관할 수 있다. 묵묵히 받아들이는 것 역시 그 한계가 있는 법이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_cabinet_01": {
+        "id": "furni_classroom_cabinet_01",
+        "sortId": 1045,
+        "name": "교구용 대형 서랍",
+        "iconId": "furni_classroom_cabinet_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 3,
+        "depth": 5,
+        "height": 9,
+        "comfort": 325,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "교육용 도구로 가득한 대형 서랍. 겉보기엔 정리 정돈이 잘 되어 있을 것 같지만, 그 안은 엉망진창이다. 겉모습은 깔끔해 보이지만 관리하기가 힘들다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 240,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_blackboard_01": {
+        "id": "furni_classroom_blackboard_01",
+        "sortId": 1046,
+        "name": "게시판",
+        "iconId": "furni_classroom_blackboard_01",
+        "type": "DECORATION",
+        "subType": "BOARD_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_3",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 150,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "교실 뒤편에 세워져 있는 작은 칠판. 칠판에는 수업 시간표와 학교의 공지사항이 붙어 있다. 시간은 비슷한 한 칸 또 한 칸 사이를 헤매고 다니며, 세월은 한 주 또 한 주를 반복하며 흘러간다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 123,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_wallpaper_01": {
+        "id": "furni_classroom_wallpaper_01",
+        "sortId": 1047,
+        "name": "교실 벽지",
+        "iconId": "furni_classroom_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "우아한 색감의 녹색 벽지. 교실 내에 있는 원목 장식들과 잘 어우러지며, 학생들의 기분을 빠르게 진정시키는 데 도움을 준다. 도시가 피와 연기로 뒤덮일 때, 꿈속에서나마 찌부러진 사람들의 미간을 달래줄 녹색은 없는 걸까?",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_classroom_floor_01": {
+        "id": "furni_classroom_floor_01",
+        "sortId": 1048,
+        "name": "교실 바닥",
+        "iconId": "furni_classroom_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_classroom",
+        "groupId": "furni_set_classroom_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "차분한 느낌의 목재 바닥. 학생과 교사의 노력 덕분에 언제나 새것처럼 빛이 난다. 하지만 해가 지날 때마다 이 바닥을 밟는 발자국이 조금씩 줄어든다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_oct1st_deckChair_01": {
+        "id": "furni_oct1st_deckChair_01",
+        "sortId": 9998,
+        "name": "일체형 레저 의자",
+        "iconId": "furni_oct1st_deckChair_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 6,
+        "depth": 4,
+        "height": 6,
+        "comfort": 235,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "의자와 오락 시설의 절묘한 만남이 이루어졌다. 가격은 결코 착하지 않다. 수면 모드와 게임 모드를 언제든지 전환할 수 있으며, 아무도 이것을 사무용으로 사용하지 않는다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_animation_projector_01": {
         "id": "furni_animation_projector_01",
         "sortId": 9999,
@@ -47238,6 +48020,64 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_dropS022_hamlet_01": {
+        "id": "furni_dropS022_hamlet_01",
+        "sortId": 11065,
+        "name": "플레이트 《처형》",
+        "iconId": "furni_dropS022_hamlet_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "“젊은 왕자는 단 한 사람의 목숨만을 원했지만, 그는 자신도 모르는 새에 무수히 많은 이들의 죽음을 자아내었다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS022_holmes_01": {
+        "id": "furni_dropS022_holmes_01",
+        "sortId": 11066,
+        "name": "플레이트 《통찰》",
+        "iconId": "furni_dropS022_holmes_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "“연기와 안개 속에서도 진실을 꿰뚫어 보는 눈이 있다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_contract_s0_01": {
         "id": "furni_contract_s0_01",
         "sortId": 12001,
@@ -47838,6 +48678,35 @@
         "comfort": 105,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "라테라노 초콜릿 애비뉴 섬멸을 완료하고 보고를 제출하면 획득 가능한 기념품. 초콜릿 애비뉴의 소리가 아직도 귓가에 남아 울리는 듯하다.",
+        "obtainApproach": "섬멸 의뢰 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_annihilation_s13_01": {
+        "id": "furni_annihilation_s13_01",
+        "sortId": 13011,
+        "name": "이베리아의 메아리 (조선소)",
+        "iconId": "furni_annihilation_s13_01",
+        "type": "WALLDECO",
+        "subType": "ANNIHILATION",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 105,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "이베리아 암흑 조선소 섬멸을 완료하고 보고를 제출하면 획득 가능한 기념품. 암흑 조선소의 소리가 아직도 귓가에 남아 울리는 듯하다.",
         "obtainApproach": "섬멸 의뢰 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -57731,6 +58600,180 @@
           "furni_camp_floor_01"
         ]
       },
+      "furni_set_classroom": {
+        "id": "furni_set_classroom",
+        "sortId": 62,
+        "name": "생 마르셀 학교 교실",
+        "themeType": "NORMAL",
+        "desc": "골딩이 강의하는 교실을 복원한 방. 아이들의 웃음소리와 낭랑한 책 읽는 소리가 없는 것이 흠이라면 흠이다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_classroom_bayWindow_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_column_01",
+            "pos0": 8,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_column_01",
+            "pos0": 8,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_stationeryHolder_01",
+            "pos0": 0,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_lowTable_01",
+            "pos0": 0,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ladder_01",
+            "pos0": 10,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_bookshelf_01",
+            "pos0": 8,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_map_01",
+            "pos0": 10,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_clock_01",
+            "pos0": 19,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_carpet_01",
+            "pos0": 10,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_lectern_01",
+            "pos0": 10,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_tableChairGraffiti_01",
+            "pos0": 18,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_tableChairPenRack_01",
+            "pos0": 24,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_displayScreen_01",
+            "pos0": 22,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_bookBox_01",
+            "pos0": 25,
+            "pos1": 8,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_cabinet_01",
+            "pos0": 31,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_blackboard_01",
+            "pos0": 27,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 24,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 16,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_classroom_ceilingLamp_01",
+            "pos0": 16,
+            "pos1": 6,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_classroom_1",
+          "furni_set_classroom_2",
+          "furni_set_classroom_3",
+          "furni_set_classroom_4"
+        ],
+        "furnitures": [
+          "furni_classroom_bayWindow_01",
+          "furni_classroom_column_01",
+          "furni_classroom_stationeryHolder_01",
+          "furni_classroom_lowTable_01",
+          "furni_classroom_ladder_01",
+          "furni_classroom_bookshelf_01",
+          "furni_classroom_map_01",
+          "furni_classroom_clock_01",
+          "furni_classroom_carpet_01",
+          "furni_classroom_lectern_01",
+          "furni_classroom_tableChairGraffiti_01",
+          "furni_classroom_tableChairPenRack_01",
+          "furni_classroom_displayScreen_01",
+          "furni_classroom_ceilingLamp_01",
+          "furni_classroom_bookBox_01",
+          "furni_classroom_cabinet_01",
+          "furni_classroom_blackboard_01",
+          "furni_classroom_wallpaper_01",
+          "furni_classroom_floor_01"
+        ]
+      },
       "furni_set_reception": {
         "id": "furni_set_reception",
         "sortId": 58,
@@ -61174,6 +62217,65 @@
           "furni_camp_floor_01"
         ]
       },
+      "furni_set_classroom_1": {
+        "id": "furni_set_classroom_1",
+        "sortId": 1,
+        "name": "교사 휴게실",
+        "themeId": "furni_set_classroom",
+        "comfort": 185,
+        "count": 4,
+        "furniture": [
+          "furni_classroom_bayWindow_01",
+          "furni_classroom_stationeryHolder_01",
+          "furni_classroom_lowTable_01",
+          "furni_classroom_bookBox_01"
+        ]
+      },
+      "furni_set_classroom_2": {
+        "id": "furni_set_classroom_2",
+        "sortId": 2,
+        "name": "도서 코너",
+        "themeId": "furni_set_classroom",
+        "comfort": 200,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_column_01",
+          "furni_classroom_bookshelf_01",
+          "furni_classroom_map_01",
+          "furni_classroom_carpet_01",
+          "furni_classroom_ladder_01"
+        ]
+      },
+      "furni_set_classroom_3": {
+        "id": "furni_set_classroom_3",
+        "sortId": 3,
+        "name": "기본 교실",
+        "themeId": "furni_set_classroom",
+        "comfort": 360,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_lectern_01",
+          "furni_classroom_tableChairGraffiti_01",
+          "furni_classroom_tableChairPenRack_01",
+          "furni_classroom_cabinet_01",
+          "furni_classroom_blackboard_01"
+        ]
+      },
+      "furni_set_classroom_4": {
+        "id": "furni_set_classroom_4",
+        "sortId": 4,
+        "name": "교실 장식",
+        "themeId": "furni_set_classroom",
+        "comfort": 170,
+        "count": 5,
+        "furniture": [
+          "furni_classroom_wallpaper_01",
+          "furni_classroom_floor_01",
+          "furni_classroom_displayScreen_01",
+          "furni_classroom_clock_01",
+          "furni_classroom_ceilingLamp_01"
+        ]
+      },
       "furni_set_reception_1": {
         "id": "furni_set_reception_1",
         "sortId": 1,
@@ -62734,6 +63836,130 @@
       ],
       "requireStages": []
     },
+    "62": {
+      "sortId": 1999,
+      "formulaId": "62",
+      "rarity": 0,
+      "itemId": "30155",
+      "count": 1,
+      "goldCost": 400,
+      "apCost": 2880000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 84,
+          "itemId": "30014",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30024",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30034",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30044",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30054",
+          "itemCount": 1
+        },
+        {
+          "weight": 42,
+          "itemId": "30064",
+          "itemCount": 1
+        },
+        {
+          "weight": 72,
+          "itemId": "30074",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30084",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "30094",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "30104",
+          "itemCount": 1
+        },
+        {
+          "weight": 72,
+          "itemId": "31014",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31024",
+          "itemCount": 1
+        },
+        {
+          "weight": 56,
+          "itemId": "31034",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31044",
+          "itemCount": 1
+        },
+        {
+          "weight": 63,
+          "itemId": "31054",
+          "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31064",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31054",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31044",
+          "count": 2,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "easy_11-03",
+          "rank": 2
+        }
+      ]
+    },
     "57": {
       "sortId": 2000,
       "formulaId": "57",
@@ -62819,6 +64045,11 @@
         {
           "weight": 63,
           "itemId": "31054",
+          "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
           "itemCount": 1
         }
       ],
@@ -62939,6 +64170,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63053,6 +64289,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63162,6 +64403,11 @@
           "weight": 63,
           "itemId": "31054",
           "itemCount": 1
+        },
+        {
+          "weight": 67,
+          "itemId": "31064",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63189,6 +64435,130 @@
         }
       ],
       "requireStages": []
+    },
+    "61": {
+      "sortId": 2097,
+      "formulaId": "61",
+      "rarity": 0,
+      "itemId": "31064",
+      "count": 1,
+      "goldCost": 300,
+      "apCost": 1440000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 60,
+          "itemId": "30013",
+          "itemCount": 1
+        },
+        {
+          "weight": 50,
+          "itemId": "30023",
+          "itemCount": 1
+        },
+        {
+          "weight": 50,
+          "itemId": "30033",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30043",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30053",
+          "itemCount": 1
+        },
+        {
+          "weight": 30,
+          "itemId": "30063",
+          "itemCount": 1
+        },
+        {
+          "weight": 45,
+          "itemId": "30073",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "30083",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "30093",
+          "itemCount": 1
+        },
+        {
+          "weight": 30,
+          "itemId": "30103",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31013",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "31023",
+          "itemCount": 1
+        },
+        {
+          "weight": 40,
+          "itemId": "31033",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31043",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31063",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31043",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "30023",
+          "count": 1,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "sub_09-1-2",
+          "rank": 2
+        }
+      ]
     },
     "59": {
       "sortId": 2098,
@@ -63275,6 +64645,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -63395,6 +64770,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63513,6 +64893,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -63633,6 +65018,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63751,6 +65141,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -63871,6 +65266,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -63984,6 +65384,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64099,6 +65504,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64212,6 +65622,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64445,6 +65860,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -64676,6 +66096,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -64909,6 +66334,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -65140,6 +66570,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
@@ -65373,6 +66808,11 @@
           "weight": 36,
           "itemId": "31053",
           "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -65604,6 +67044,11 @@
         {
           "weight": 36,
           "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 32,
+          "itemId": "31063",
           "itemCount": 1
         }
       ],
