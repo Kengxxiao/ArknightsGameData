@@ -16,6 +16,7 @@ local HOME_WEIGHT_GRID_GACHA = 510;
 local HOME_WEIGHT_GRID_GACHA_V2 = 520;
 local HOME_WEIGHT_FLOAT_PARADE = 530;
 local HOME_WEIGHT_DAILY_FLIP = 540;
+local HOME_WEIGHT_CHECKIN_ALLPLAYER = 550;
 
 local HOME_WEIGHT_MAIN_BUFF = 600;
 
@@ -126,6 +127,22 @@ function LuaActivityUtil:_FindValidMainlineBuffAct(validActs, uncompleteActs)
   end
 end
 
+function LuaActivityUtil:_FindValidCheckinAllActs(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.CHECKIN_ALL_PLAYER);
+  if actList == nil then
+    return;
+  end
+
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i];
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_CHECKIN_ALLPLAYER);
+    validActs:Add(validAct);
+    if self:_CheckIfCheckinAllUncomplete(actId) then
+      uncompleteActs:Add(validAct);
+    end
+  end
+end
+
 
 
 
@@ -137,6 +154,7 @@ function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   self:_FindValidGridGachaV2Acts(validActs, uncompleteActs);
   self:_FindValidFloatParadeAct(validActs, uncompleteActs);
   self:_FindValidMainlineBuffAct(validActs, uncompleteActs);
+  self:_FindValidCheckinAllActs(validActs, uncompleteActs);
 end
 
 
@@ -164,6 +182,9 @@ local DEFINE_CLS_FUNCS = {
   end,
   FLIP_ONLY = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, ActFlipMainDlg)
+  end,
+  CHECKIN_ALL_PLAYER = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, CheckinAllPlayerMainDlg)
   end,
 }
 
@@ -225,6 +246,8 @@ function LuaActivityUtil:CheckIfActivityUncomplete(type, actId)
     return self:_CheckIfMainlineBuffUncomplete(actId);
   elseif type == CS.Torappu.ActivityType.FLIP_ONLY then
     return self:_CheckIfFlipUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.CHECKIN_ALL_PLAYER then
+    return self:_CheckIfCheckinAllUncomplete(actId);
   else
     return false;
   end
@@ -275,6 +298,30 @@ function LuaActivityUtil:_CheckIfMainlineBuffUncomplete(actId)
 
   local periodId = MainlineBuffUtil.GetCurrMainlineBuffActPeriodId(actId);
   return MainlineBuffUtil.IsPeriodChecked(actId, periodId);
+end
+
+function LuaActivityUtil:_CheckIfCheckinAllUncomplete(actId)
+  local checkinAllPlayers = CS.Torappu.PlayerData.instance.data.activity.checkinAllActivityList;
+  if checkinAllPlayers == nil then
+    return false;
+  end
+  local suc, playerActData = checkinAllPlayers:TryGetValue(actId);
+  if not suc then
+    return false;
+  end
+  for pubBhvId, bhvStatus in pairs(playerActData.allRewardStatus) do
+    if bhvStatus == CheckinAllPlayerRewardStatus.AVAILABLE then
+      return true;
+    end
+  end
+
+  for idx = 0, playerActData.history.Count -1 do
+    local status = playerActData.history[idx];
+    if status == CheckinAllPlayerRewardStatus.AVAILABLE then
+      return true;
+    end
+  end
+  return false;
 end
 
 function LuaActivityUtil:_CheckIfFlipUncomplete(actId)

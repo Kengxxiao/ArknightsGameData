@@ -4,3 +4,7 @@ string.split = function(s, p)
   string.gsub(s, '[^' .. p .. ']+', function(w) table.insert(rt, w) end)
   return rt
 end
+
+string.formatWithThousand = function(num)
+  return CS.Torappu.FormatUtil.FormatNumWithThousand(num);
+end

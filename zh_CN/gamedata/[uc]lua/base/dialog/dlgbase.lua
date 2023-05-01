@@ -60,6 +60,7 @@ end
 
 
 
+
 function DlgBase:CreateWidgetByGO(widgetCls, layout)
   return self.m_widgets:CreateWidgetByGO(widgetCls, layout);
 end

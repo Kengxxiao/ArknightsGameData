@@ -1,0 +1,658 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 
+[stopmusic]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="29_g6_mainstreet",screenadapt="coverall")]
+[playMusic(intro="$plot_intro",key="$plot_loop", volume=0.6)]
+[PlaySound(key="$d_avg_snowstormflp", volume=1, loop=true, channel="a")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "m", name = "avg_npc_536_1#1$1", duration = 1.5, isblock=true)]
+[name="霍尔海雅"]唔，时间刚刚好。
+[dialog]
+[charslot]
+黎博利踏上高楼的天台，她抬头看向天空。高处的风声藏住了隐约的尖啸，一枚模糊的光点在她的眸子里急速放大。
+粗壮的尾巴轻巧而规律地移动，那是曼妙的标尺，黎博利借此对脚下的这座城市比画着看不见的网格。
+[charslot(slot = "m", name = "avg_npc_536_1#1$1")]
+[name="霍尔海雅"]让我来看看，这颗“星星”会砸在特里蒙的哪个位置呢？
+[charslot(slot = "m", name = "avg_npc_536_1#1$1")]
+[name="霍尔海雅"]三、五区主要是住宅区，十一区的新产业园正在施工......
+[charslot(slot = "m", name = "avg_npc_536_1#3$1")]
+[name="霍尔海雅"]别是中央区吧，密集的商业写字楼像是超市里的罐头，工作日，那里面塞了多少人......啧。
+[charslot(slot = "m", name = "avg_npc_536_1#3$1")]
+[name="霍尔海雅"]你是算准了这个试验物的落点......
+[charslot(slot = "m", name = "avg_npc_536_1#3$1")]
+[name="霍尔海雅"]还是，你压根不在意它会引发多大的动静？
+[dialog]
+[Delay(time=1.5)]
+[charslot(slot = "m", name = "avg_npc_536_1#10$1")]
+[name="霍尔海雅"]不管怎样，你的计划进展到这一步，越来越有趣了......克丽斯腾。
+[dialog]
+[charslot(slot = "m", focus="none")]
+[PlaySound(key="$d_avg_explosion", volume=0.8)]
+[delay(time=2.5)]
+[PlaySound(key="$transmission", volume=0.5)]
+[delay(time=1)]
+[charslot(slot = "m", name = "avg_npc_536_1#10$1")]
+[name="霍尔海雅"]确定——十三区的特莱顿工厂。
+[dialog]
+[PlaySound(key="$d_avg_clothmovement", volume=1)]
+[charslot(duration=1)]
+[delay(time=1.5)]
+黎博利从高楼跃下。
+[dialog]
+[StopSound(channel="a", fadetime=1)]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Background(image="38_g13_trimountlivingroom",screenadapt="coverall")]
+[Delay(time=1)]
+[bgeffect(name="$eb_dim_openeye",layer=1)]
+[charslot(slot="m",name = "avg_249_mlyss_1#1$1",action="zoom",poszoom="0.5,0.65",scale=1.4,duration=0,isblock=true)]
+[PlaySound(key="$d_avg_femaleexhale", volume=1)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[charslot(slot = "m", name = "avg_249_mlyss_1#1$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=0.5)]
+[playMusic(intro="$warm_intro", key="$warm_loop", volume=0.6)]
+[Delay(time=1)]
+[bgeffect]
+[charslot(slot = "m", focus="none")]
+[Decision(options="呼啊......;......;嘶......谁把窗帘拉开的？", values="1;2;3")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_249_mlyss_1#1$1")]
+[name="缪尔赛思"]哈欠打得这么大，是不是没睡好啊？
+[dialog]
+[Predicate(references="2")]
+[charslot(slot = "m", name = "avg_249_mlyss_1#9$1")]
+[name="缪尔赛思"]你起床的时候，也会对着天花板发一会儿呆吗？
+[dialog]
+[Predicate(references="3")]
+[charslot(slot = "m", name = "avg_249_mlyss_1#8$1")]
+[name="缪尔赛思"]这个点，莱茵的员工已经上班一小时了。
+[dialog]
+[Predicate(references="1;2;3")]
+[charslot(slot = "m", focus="none")]
+[Decision(options="特里蒙的酒店就是这么保护客人隐私的？;莱茵生命的主任就是这么拜访客人的吗？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_249_mlyss_1#1$1")]
+[name="缪尔赛思"]想见你，就来喽。
+[charslot(slot = "m", name = "avg_249_mlyss_1#8$1")]
+[name="缪尔赛思"]你从动力甲里救了我，我来给你送个早饭，很奇怪吗？
+[charslot(slot = "m", name = "avg_249_mlyss_1#1$1")]
+[name="缪尔赛思"]莱茵生命楼下咖啡店的早餐，每天限量一百份哦。
+[dialog]
+[charslot(slot = "m", focus="none")]
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_249_mlyss_1#7$1")]
+[name="缪尔赛思"]好啦，别用这种眼神看我，你的起床气好重哦。
+[dialog]
+[charslot(slot = "m", focus="none")]
+[Decision(options="你是在找塞雷娅吧？", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_249_mlyss_1#1$1")]
+[name="缪尔赛思"]我确实和她失去了联系。但她不在，拜托你也是一样的......
+[charslot(slot = "m", name = "avg_249_mlyss_1#2$1")]
+[name="缪尔赛思"]首先，看看这个吧。
+[dialog]
+[charslot]
+[musicvolume(volume=0.2, fadetime=2)]
+[PlaySound(key="$d_avg_devicebeep", volume=1)]
+[delay(time=0.8)]
+[PlaySound(key="$transmission", volume=0.5)]
+[delay(time=2)]
+[name="新闻"]各位市民，今晨，位于十三区的特莱顿第三化工厂发生了爆炸。
+[name="新闻"]爆炸的具体原因尚未确认，相关部门初步判定为实验人员操作失误引发了施工机械爆炸。
+[name="新闻"]特莱顿第三化工厂储存着大量的催化物和中间试剂，为防止这些化学原料泄露造成更大的危害，军方配合政府部门进行了必要的清场。
+[name="新闻"]目前，十三区整体处于临时管控状态，出入受到严格限制，请有关市民调整行程，配合工作。
+[name="新闻"]另外，十三区的临时管控是否会影响到杰克逊副总统在特里蒙接下来的行程，我们已经咨询了有关部门，但尚未得到回应。
+[dialog]
+[Decision(options="莫非又是另一个359号基地？;莫非这也和莱茵生命有关？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_249_mlyss_1#2$1")]
+[name="缪尔赛思"]具体的我也不清楚。
+[charslot(slot = "m", name = "avg_249_mlyss_1#1$1")]
+[name="缪尔赛思"]但博士你，或者说罗德岛既然在特里蒙，一定不愿意错过这则大新闻。毕竟塞雷娅很信任你们。
+[dialog]
+[delay(time=1.5)]
+[charslot(slot = "m", name = "avg_249_mlyss_1#9$1")]
+[name="缪尔赛思"]好了，博士，你有新的客人......我们很快会再见的。
+[dialog]
+[PlaySound(key="$d_avg_watersubbreak", volume=1)]
+[Effect(name="$e_muesys_hide", layer = 1)]
+[charslot(duration=1.5)]
+[delay(time=4)]
+[Decision(options="果然是分身。;新的客人？", values="1;2")]
+[Predicate(references="1;2")]
+[musicvolume(volume=0.6, fadetime=2)]
+[PlaySound(key="$rungeneral", volume=0.4)]
+[delay(time=2)]
+[PlaySound(key="$dooropenquite", volume=1)]
+[charslot(slot = "m", name = "avg_npc_895_1#2$1", duration=1, isblock=true)]
+[name="伊芙利特"]博士，太阳晒屁股啦！
+[dialog]
+[charslot(slot = "m", focus="none")]
+[Decision(options="伊芙利特......谁带你来的？", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", posfrom="0,0", posto="100,0", afrom=1, ato=0, duration=1)]
+[delay(time=1.5)]
+[charslot]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "m", name = "char_003_kalts_1", duration = 2, isblock=true)]
+[name="凯尔希"]好久不见，Dr.{@nickname}。
+[charslot(slot = "m", name = "char_003_kalts_1")]
+[name="凯尔希"]白面鸮已经在埃琳娜的陪同下返回本舰接受机能检查与治疗，Mechanist在执行新的任务。接下来，我将与你共同行动。
+[charslot(slot = "m", name = "avg_npc_895_1#2$1")]
+[name="伊芙利特"]还有我！还有......
+[dialog]
+[charslot]
+[Decision(options="迷迭香。;凯尔希，我需要一个解释。", values="1;2")]
+[Predicate(references="1;2")]
+云朵般的菲林孩子不知何时已经进入了房间，她靠着窗边站着，安静地听你们说话。
+她打量着你和你的房间。她的身后，洁白的云朵流过特里蒙的晴空。
+[dialog]
+[StopSound(channel="a", fadetime=2)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "m", name = "avg_npc_042", duration=2, isblock=true)]
+[name="迷迭香"]博士，不要生气。
+[name="迷迭香"]是我自己请求凯尔希医生带我来的。我收到了......一个人的邀请。
+[dialog]
+[charslot(slot = "m", name = "char_003_kalts_1")]
+[name="凯尔希"]具体的我之后会解释......你打开了电视，看来你已经知道了十三区的情况。
+[name="凯尔希"]那场爆炸的罪魁祸首不是什么粗心的实验员，而是，来自天空的坠落物。
+[dialog]
+[charslot(slot = "m", focus="none")]
+[Decision(options="......;我们有必要弄清楚。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "char_003_kalts_1")]
+[name="凯尔希"]是的，塞雷娅已经先一步前往事发现场尝试调查了。
+[charslot(slot = "m", name = "char_003_kalts_1#2")]
+[name="凯尔希"]而你要做的，是起床和洗漱。
+[dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="29_g6_mainstreet",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.6)]
+[PlaySound(key="$d_avg_crwddiscuss_outside", volume=0.6, loop=true, channel="a")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]       
+[Delay(time=2)]
+[charslot(slot = "l", name = "avg_npc_523_1#1$1", duration=1, focus = "l")]
+[charslot(slot = "m", bstart=0.2,bend=0.7, name = "avg_108_silent_1#1$1", duration=1, focus = "none")]
+[charslot(slot = "r", name = "avg_npc_524_1#1$1",duration=1, focus = "none")]
+[delay(time=1)]
+[name="气愤的市民"]我家就在里面，凭什么不让进？
+[name="气愤的市民"]说封锁就封锁，你们的手续合法合规吗，你们拿到批文了吗，你们说是紧急事态就是紧急事态了？
+[charslot(slot = "r", focus = "r")]
+[name="着急的市民"]我进去十分钟就出来！
+[name="着急的市民"]我急着回去取项目书，客户还在会议室里等着呢！
+[charslot]
+[SoundVolume(volume=0.4, channel="a",fadetime=2)]
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]对不起，请出示临时电子通行证。
+[dialog]
+[charslot]
+[charslot(slot = "l", name = "avg_npc_523_1#1$1", focus = "l")]
+[charslot(slot = "r", name = "avg_npc_524_1#1$1", focus = "r")]
+[charslot(slot = "m", bstart=0.2,bend=0.7, name = "avg_108_silent_1#1$1", focus = "none")]
+[name="市民？"]......
+[dialog]
+[StopSound(channel="a", fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[delay(time=1)]
+[charslot(slot = "m", name = "avg_npc_536_1#3$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="霍尔海雅"]真有趣，本来想留下观察一下塞雷娅的动向，想不到还有一只小鸟闯了进来。
+[charslot(slot = "m", name = "avg_npc_536_1#6$1")]
+[name="霍尔海雅"]......对了，她是“炎魔事件”的那个小研究员。
+[name="霍尔海雅"]利用无人机在死角侦察，自己则混在拥挤的人群里寻找机会，做得还不赖。
+[name="霍尔海雅"]但军方恨不得在每个路口都塞满士兵，哪儿那么容易让你突破警戒线。
+[name="霍尔海雅"]不过......
+[dialog]
+[delay(time=1.5)]
+[charslot(slot = "m", name = "avg_npc_536_1#3$1")]
+[name="霍尔海雅"]虽然不知道你能做什么，但说不定能给这帮坏事的家伙找点小麻烦。让我帮你一把好了。
+[dialog]
+[charslot(slot = "m", focus="none")]
+[PlaySound(key="$transmission", volume=0.5)]
+[delay(time=1)]
+[name="？？？"]你在嘀咕什么？
+[charslot(slot = "m", name = "avg_npc_536_1#3$1")]
+[name="霍尔海雅"]没什么。东西已经成功回收，马上送货上门。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="29_g6_mainstreet",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.6)]
+[PlaySound(key="$d_avg_crwddiscuss_outside", volume=0.6, loop=true, channel="a")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]       
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]各位已经听到了广播......
+[charslot]
+[charslot(slot = "l", name = "avg_npc_523_1#1$1", focus = "l")]
+[charslot(slot = "r", name = "avg_npc_524_1#1$1", focus = "none")]
+[charslot(slot = "m", bstart=0.2,bend=0.7, name = "avg_108_silent_1#1$1", focus = "none")]
+[name="气愤的市民"]一个工厂出事，为什么要封锁整个十三区？
+[name="气愤的市民"]真要是怕化学原料泄露，你们为什么没戴防毒设备，为什么还是允许你们的人进出？没人会相信你们那套说辞！
+[charslot(slot = "r", focus = "r")]
+[name="着急的市民"]这个项目可是关系到整个高新产业园的升级计划，如果黄了，你们能负责吗？
+[name="着急的市民"]赶紧让我进去！
+[dialog]
+[PlaySound(key="$d_avg_doorbreak", volume=1)]
+[PlaySound(key="$d_avg_audience_chaos", volume=1)]
+[CameraShake(duration=4, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot]
+[CameraShake(duration=0.3, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]别往前挤！
+[dialog]
+[SoundVolume(volume=0.4, channel="a",fadetime=1)]
+[PlaySound(key="$d_avg_magic_1", volume=1)]
+[Blocker(a=0, r=255,g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=0.5, r=255,g=255, b=255, fadetime=0.5, block=true)]
+[Blocker(a=0, r=255,g=255, b=255, fadetime=1, block=true)]
+[charslot(slot = "m", action="shake", power=5, times=60,isblock=true,duration=0.5)]
+[name="哥伦比亚士兵"]我的胳膊，为什么突然动不了了......
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="哥伦比亚士兵"]有人闯警戒线......通讯怎么也失灵了？
+[dialog]
+[charslot(slot = "m", bstart=0.2,bend=0.7, name = "avg_108_silent_1#1$1")]
+[name="市民？"]......
+[dialog]
+[PlaySound(key="$d_avg_walkfast", volume=1)]
+[charslot(slot = "m", posfrom="0,0", posto="300,0", afrom=1, ato=0, duration=1)]
+[delay(time=2)]
+[StopSound(channel="a", fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="29_g6_mainstreet",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "m", name = "avg_npc_896_1#1$1",duration=2)]
+[Delay(time=2.5)]
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]请出示通行证，塞雷娅女士。
+[charslot(slot = "m", name = "avg_npc_896_1#1$1")]
+[name="塞雷娅"]你认识我？
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]前莱茵生命防卫科主任，在特里蒙名气很大。
+[charslot(slot = "m", name = "avg_npc_896_1#1$1")]
+[name="塞雷娅"]所以我没法进入十三区？
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]不只是您。
+[name="哥伦比亚士兵"]如果没有通行证，那就请回吧。
+[dialog]
+[charslot]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "m", name = "avg_npc_900_1#1$1",duration=1.5)]
+[delay(time=2)]
+[CameraShake(duration=0.5, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]你——！
+[charslot(slot = "m", name = "avg_npc_900_1#1$1")]
+[name="锡人"]别紧张，把武器收起来吧。
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]你的脸，你的手，你......
+[charslot(slot = "m", name = "avg_npc_900_1#1$1")]
+[name="锡人"]其他部位也是一样的，看着吓人，只是一副外骨骼而已。
+[name="锡人"]我在梅兰德历史协会工作，现在担任杰克逊副总统的随行秘书，这是我的认证码。
+[name="锡人"]塞雷娅女士是我们邀请的问题专家。
+[charslot(slot = "m", name = "avg_npc_896_1#8$1")]
+[name="塞雷娅"]......
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]梅兰德基金会啊，你们的人总是那么奇怪。
+[charslot(slot = "m", name = "avg_npc_900_1#1$1")]
+[name="锡人"]向你的上级请示一下吧，我们希望进入十三区了解情况。
+[Character(slot = "m", name="avg_npc_901_1#1$1")]
+[name="哥伦比亚士兵"]请稍等。
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(duration=1.5)]
+[delay(time=2)]
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="none")]
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]你的这身装束......看起来你打算放下你的盾？
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[name="塞雷娅"]不，只是我判断接下来的情况需要放开手脚。
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]放开手脚......这句话从莱茵生命前防卫科主任口中说出的压迫力，和从普通人口中说出真是天差地别。
+[name="锡人"]看来我来得还算及时。
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[name="塞雷娅"]上一次见面还是为海顿制药的事情吧，锡人侦探。
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]那次光顾着谈事情，都忘了请你和缪尔赛思喝上一杯生酿啤酒。
+[charslot(slot = "r", name = "avg_npc_896_1#3$1", focus="r")]
+[name="塞雷娅"]虽然知道梅兰德基金会神通广大，但我收到凯尔希的消息时还是很惊讶......你们俩是怎么认识的？
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]老朋友而已。
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[name="塞雷娅"]这次的事情，梅兰德基金会又扮演了什么样的角色？
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]塞雷娅女士，你喜欢政治？
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[name="塞雷娅"]......谈不上喜欢。
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]那么，我真的有回答这个问题的必要吗？
+[dialog]
+[charslot]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "m", name="avg_npc_901_1#1$1", duration = 1, isblock=true)]
+[name="哥伦比亚士兵"]上校正在去见副总统先生的路上，您的身份确认无误，上校同意两位进入十三区。
+[name="哥伦比亚士兵"]但目前我们正在紧急排查化工原料的泄露风险，所以二位不能靠近事故核心区域，也就是特莱顿第三化工厂。
+[name="哥伦比亚士兵"]另外，我们会派人跟在二位身边，提供必要的帮助。
+[dialog]
+[charslot]
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="none")]
+[name="塞雷娅"]......
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]没问题，一定配合。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="29_g8_alley_n",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "m", bstart=0.2,bend=0.7, name = "avg_108_silent_1#1$1", posfrom="-300,0", posto="0,0", duration=1.5, isblock=true)]
+[charslot(slot = "m", name = "avg_108_silent_1#1$1", duration=1.5, isblock=true)]
+[name="赫默"]呼——进来了。
+[dialog]
+[charslot(slot = "m", focus="none")]
+[PlaySound(key="$d_avg_devicebeep", volume=1)]
+[delay(time=1.5)]
+[PlaySound(key="$d_avg_drone", volume=1, loop=true, channel="b")]
+[delay(time=2)]
+[StopSound(channel="b", fadetime=2)]
+[charslot(slot = "m", name = "avg_108_silent_1#1$1")]
+[name="赫默"]接下来，让两架无人机在一百米的距离保持飞行，侦察情况。
+[charslot(slot = "m", name = "avg_108_silent_1#1$1")]
+[name="赫默"]前面应该就是特莱顿工厂，希望在罗德岛学到的潜行作战能管用，慢慢靠过去吧......
+[dialog]
+[delay(time=1.5)]
+[charslot(slot = "m", name = "avg_108_silent_1#10$1")]
+[name="赫默"]这里真的会有递质的线索吗？
+[dialog]
+[musicvolume(volume=0.4, fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[charslot]
+[Background(image="29_g5_laboratory",screenadapt="coverall")]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=0.5)]
+[charslot(slot = "l", name = "avg_108_silent_1#8$1", focus="l")]
+[charslot(slot = "r", name = "avg_4048_doroth_1#1$1", focus="none")]
+[name="赫默"]有一批递质去向不明？
+[charslot(slot = "r", name = "avg_4048_doroth_1#7$1", focus="r")]
+[name="多萝西"]没错。确切地说，是包含了递质的一批实验物资，它们本应和其他应清扫的物资一起被运往总部。
+[charslot(slot = "l", name = "avg_108_silent_1#7$1", focus="l")]
+[name="赫默"]有人偷走了递质。
+[charslot(slot = "r", name = "avg_4048_doroth_1#6$1", focus="r")]
+[name="多萝西"]而且，很有可能是莱茵生命内部的人。
+[charslot(slot = "r", name = "avg_4048_doroth_1#1$1", focus="r")]
+[name="多萝西"]赫默，我希望你前往特里蒙帮我调查这件事。
+[charslot(slot = "l", name = "avg_108_silent_1#10$1", focus="l")]
+[name="赫默"]我？
+[charslot(slot = "r", name = "avg_4048_doroth_1#1$1", focus="r")]
+[name="多萝西"]我必须留在359号基地配合军方的调查，短时间内抽不出身来。
+[charslot(slot = "l", name = "avg_108_silent_1#5$1", focus="l")]
+[name="赫默"]你要去和军方交涉？
+[charslot(slot = "r", name = "avg_4048_doroth_1#8$1", focus="r")]
+[name="多萝西"]别担心，我不喜欢打这种交道，但不意味着我不会。我毕竟也是莱茵生命的主任。
+[charslot(slot = "r", name = "avg_4048_doroth_1#7$1", focus="r")]
+[name="多萝西"]我更担心这批递质会成为其他人野心的催化剂。
+[charslot(slot = "r", name = "avg_4048_doroth_1#1$1", focus="r")]
+[name="多萝西"]所以，可以吗？
+[charslot(slot = "l", name = "avg_108_silent_1#10$1", focus="l")]
+[name="赫默"]但是......
+[charslot(slot = "r", name = "avg_4048_doroth_1#1$1", focus="r")]
+[name="多萝西"]赫默，你是帕尔维斯主任的学生，却出现在了359号基地。
+[charslot(slot = "r", name = "avg_4048_doroth_1#8$1", focus="r")]
+[name="多萝西"]我一开始有些疑惑，但现在，我知道了，你是想要寻求我的帮助才来的。
+[name="多萝西"]或者说，你想知道，源石技艺应用科的主任，是否是一个值得信任的人。
+[charslot(slot = "l", name = "avg_108_silent_1#6$1", focus="l")]
+[name="赫默"]......抱歉。
+[charslot(slot = "r", name = "avg_4048_doroth_1#8$1", focus="r")]
+[name="多萝西"]不用道歉。我确实险些酿成了恶果，我必须感谢你，赫默。
+[charslot(slot = "r", name = "avg_4048_doroth_1#1$1", focus="r")]
+[name="多萝西"]同时，这也是我拜托你的理由。你在坚持自己的标准，你在寻找自己的答案。
+[charslot(slot = "l", name = "avg_108_silent_1#6$1", focus="l")]
+[name="赫默"]但......
+[charslot(slot = "r", name = "avg_4048_doroth_1#1$1", focus="r")]
+[name="多萝西"]就算我不这么做，你也打算返回特里蒙了，不是吗？
+[dialog]
+[charslot(slot = "l", name = "avg_108_silent_1#6$1", focus="l")]
+[delay(time=1.5)]
+[charslot(slot = "l", name = "avg_108_silent_1#7$1", focus="l")]
+[name="赫默"]......是的。
+[dialog]
+[musicvolume(volume=0.6, fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[CameraEffect(effect="Grayscale", fadetime=0, amount=0, block=true)]
+[Background(image="29_g8_alley_n",screenadapt="coverall")]
+[charslot(slot = "m", name = "avg_108_silent_1#8$1")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="赫默"]......
+[dialog]
+[charslot(slot = "m", focus="none")]
+[PlaySound(key="$d_gen_soldiersrun", volume=0.6)]
+[delay(time=2)]
+[charslot(slot = "m", name = "avg_108_silent_1#4$1")]
+[name="赫默"]糟糕，巡逻的士兵怎么突然多了一队？
+[dialog]
+[charslot(slot = "m", name = "avg_108_silent_1#4$1", isblock=true)]
+[charslot(slot = "m", posfrom="0,0", posto="-300,0", afrom=1, ato=0, duration=1)]
+[delay(time=2)]
+[charslot]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "r", name = "avg_npc_901_1#1$1", duration=1)]
+[charslot(slot = "l", name = "avg_npc_901_1#1$1", duration=1)]
+[delay(time=2)]
+[charslot(slot = "l", focus="l")]
+[name="哥伦比亚士兵A"]该死，你那边有没有？
+[charslot(slot = "r", focus="r")]
+[name="哥伦比亚士兵B"]这两条巷子都搜过了，没看见。
+[charslot(slot = "l", focus="l")]
+[name="哥伦比亚士兵A"]上校正要去见副总统，不能撕破脸皮，只能放那两人进来，但一定要贴身跟着。这怎么能跟丢？！
+[charslot(slot = "r", focus="r")]
+[name="哥伦比亚士兵B"]那两个人一直闲庭信步，就是经过一堵围墙，系个鞋带的工夫，就不见了。
+[charslot(slot = "l", focus="l")]
+[name="哥伦比亚士兵A"]还是太小瞧那个浑身都是铁皮的家伙了，梅兰德的人，都神出鬼没的。
+[charslot(slot = "r", focus="r")]
+[name="哥伦比亚士兵B"]我去跟上面汇报这个情况，你带人继续找。
+[name="哥伦比亚士兵B"]对了，往工厂附近多调点人手。
+[dialog]
+[PlaySound(key="$d_gen_soldiersrun", volume=1, loop=true, channel="a")]
+[charslot(slot = "l", posfrom="0,0", posto="-200,0", afrom=1, ato=0, duration=1)]
+[delay(time=0.3)]
+[charslot(slot = "r", posfrom="0,0", posto="200,0", afrom=1, ato=0, duration=1)]
+[delay(time=2)]
+[StopSound(channel="a", fadetime=1)]
+[delay(time=2.5)]
+[charslot]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", duration=2)]
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", duration=2,isblock=true)]
+[charslot(slot = "r", name = "avg_npc_896_1#6$1", focus="r")]
+[name="塞雷娅"]侦探先生的反应能力和藏匿的手段令人佩服。
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]过奖。有手段摆脱的话，还是犯不着直接出手打晕这些跟屁虫。
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[name="塞雷娅"]到了，前面就是特莱顿第三化工厂。
+[dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="27_g8_jail",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]    
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", duration=1.5)]
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", duration=1.5, isblock=true)]
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]周遭拉起了警戒线，每个位置都布置了全副武装的士兵，没法再靠近了。
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[name="塞雷娅"]已经足够近了，看得很清楚。
+[dialog]
+[charslot]
+[PlayMusic(intro="$suspenseful_intro", key="$suspenseful_loop", volume=0.6)]
+塞雷娅的视线越过人群，越过那些醒目的黄色隔离带，看向后面的工厂。
+平整的厂房已经残破得不像样子，无数碎片在地上涂出焦黑的凹痕，连续爆炸剔空了立面材料，只剩下基础的结构，反而看得更清楚——
+厂房正中，一个巨大的环状机械物斜嵌进地面，像是某种夸张的艺术装置。
+那是爆炸的根源。
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="none")]
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]有什么收获？
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[name="塞雷娅"]无论是坠落物的形状，还是力学结构，都无法表明它的用途，但不像是应用于地面设施的装置。
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]是从天上砸下来的。
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[name="塞雷娅"]......
+[charslot(slot = "r", name = "avg_npc_896_1#1$1", focus="r")]
+[name="塞雷娅"]太远了，没法辨明具体的细节。但可以确认的是......这个东西，有莱茵的技术痕迹。
+[charslot(slot = "r", name = "avg_npc_896_1#10$1", focus="r")]
+[name="塞雷娅"]准确地说，有克丽斯腾的参与......不会错。
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]......
+[name="锡人"]“地平弧光计划”。
+[charslot(slot = "r", name = "avg_npc_896_1#3$1", focus="r")]
+[name="塞雷娅"]什么？
+[charslot(slot = "l", name = "avg_npc_900_1#1$1", focus="l")]
+[name="锡人"]以你在莱茵的地位，以你和克丽斯腾的关系，你竟然对这个名字如此陌生。
+[charslot(slot = "r", name = "avg_npc_896_1#9$1", focus="r")]
+[name="塞雷娅"]......
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="27_g8_jail",screenadapt="coverall", xScale=1.3,yScale=1.3)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "m", name = "avg_108_silent_1#1$1", duration=1, isblock=true)]
+[name="赫默"]还好没被发现......
+[dialog]
+[BackgroundTween(xFrom=0, xTo=150, duration=2,ease="OutQuad",block=false)]
+[charslot(slot = "m", posfrom="0,0", posto="300,0", afrom = 1, ato = 0, duration=2)]
+[delay(time=2.5)]
+[charslot]
+[playsound(key="$d_avg_liquidmetal")]
+[charslot(slot = "m", posfrom="0,0", posto="-250,0", duration=0)]
+[charslot(slot = "m", name = "avg_npc_533_1#1$1", duration=0.8)]
+[delay(time=2)]
+[playsound(key="$rungeneral")]
+[charslot(slot = "r", name = "avg_108_silent_1#4$1", posfrom="300,0", posto="0,0", duration=1,isblock=true)]
+[charslot(slot = "r", focus="r")]
+[name="赫默"]......递质真的在这里！
+[dialog]
+[playsound(key="$d_avg_liquidmetalfly")]
+[charslot(slot = "m", name = "avg_npc_533_1#1$1", posfrom="-250,0", posto="-400,0", afrom=1, ato=0, duration = 1)]
+[delay(time=2)]
+[charslot(slot = "r", focus="r")]
+[name="赫默"]消失了......
+[dialog]
+[playsound(key="$rungeneral")]
+[charslot(slot = "r", posfrom="0,0", posto="-500,0", afrom=1, ato=0, duration = 1.5)]
+[delay(time=2)]
+[charslot]
+[delay(time=1)]
+[BackgroundTween(xFrom=150, xTo=0, duration=2, ease="OutQuad",block=false)]
+[delay(time=2.5)]
+[playsound(key="$d_avg_liquidmetalfly")]
+[charslot(slot = "m", name = "avg_npc_533_1#1$1", duration = 1.5)]
+[delay(time=2)]
+[playsound(key="$d_avg_magic_1")]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=1, block=true)]
+[charslot(duration=1.5)]
+[delay(time=2)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "m", name = "avg_108_silent_1#2$1", posfrom="-300,0", posto="0,0", duration = 2,isblock=true)]
+[name="赫默"]多萝西说的果然没错，递质彼此之间存在反应，依靠她留给我的递质，捕获起来并不难。
+[charslot(slot = "m", name = "avg_108_silent_1#10$1")]
+[name="赫默"]但这个数量太少，和多萝西说的根本对不上，附近还有？
+[dialog]
+[delay(time=1.5)]
+[charslot(slot = "m", name = "avg_108_silent_1#8$1")]
+[name="赫默"]等等......
+[charslot(slot = "m", name = "avg_108_silent_1#8$1")]
+[name="赫默"]这里是......特莱顿工厂？
+[dialog]
+[charslot]
+巨大的废墟。
+有多少人在其中伤亡？赫默记得新闻并未提及相关的数据。
+她又想起了被摧毁的359号基地，同眼前一样，满目疮痍，让人很难想象它之前的景象。
+[charslot(slot = "m", name = "avg_108_silent_1#4$1")]
+[name="赫默"]那是，塞雷娅？她身边的那个人是谁......
+[charslot(slot = "m", name = "avg_108_silent_1#4$1")]
+[name="赫默"]......
+[charslot(slot = "m", name = "avg_108_silent_1#8$1")]
+[name="赫默"]塞雷娅，这件事情，也和你有关吗？
+[dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="29_g7_mainstreet_n",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]      
+[charslot(slot = "m", name = "avg_npc_895_1#1$1")]
+[name="伊芙利特"]你知道我们要去哪里吗？
+[charslot(slot = "m", name = "avg_npc_042")]
+[name="迷迭香"]（摇头）
+[charslot(slot = "m", name = "char_003_kalts_1")]
+[name="凯尔希"]去塞雷娅在特里蒙的据点，已经约定好了。
+[charslot(slot = "m", name = "avg_npc_895_1#8$1")]
+[name="伊芙利特"]塞雷娅！我有好久没有看见她了。
+[charslot(slot = "m", name = "avg_npc_895_1#6$1")]
+[name="伊芙利特"]不过凯尔希要找塞雷娅的话，你们一定很忙，是不是都没时间和我说话？
+[charslot(slot = "m", name = "char_003_kalts_1")]
+[name="凯尔希"]你和迷迭香先好好待在博士身边。
+[charslot(slot = "m", name = "avg_npc_895_1#6$1")]
+[name="伊芙利特"]......
+[dialog]
+[charslot(slot = "m", focus="none")]
+[Decision(options="伊芙利特，你刚刚说到哪儿了？;伊芙利特，继续讲路上发生的事吧。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_895_1#8$1")]
+[name="伊芙利特"]哦，对了......那颗星星掉下来的时候，我正在给迷迭香讲一个赫默跟我说过的故事。
+[charslot(slot = "m", name = "avg_npc_895_1#1$1")]
+[name="伊芙利特"]应该没忘记吧？你当时没有记下来......
+[charslot(slot = "m", name = "avg_npc_042")]
+[name="迷迭香"]嗯，我还记得。
+[dialog]
+[PlayMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.6)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[delay(time=2)]
+[Subtitle(text="那一夜，全城的人似乎都听见了王后喃喃的祷告，以及涟涟泪水洇进黄沙的声响......王后最终昏倒在了宫殿的高台上。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="王后的虔诚感动了星星，一颗星星穿透浩瀚的天空，来到了老国王的面前。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="老国王被无限的光芒淹没，他看见了自己毕生不曾看到，也不曾想象过的景象。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="第二天早上，王后醒来，只看见被砸出一个大洞的宫殿，和死去多时的老国王......他已经僵硬的嘴角还挂着微笑。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="星星就是王后苦求的结果吗？", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle]
+[delay(time=1)]
+[Subtitle(text="星星实现了她的愿望，星星带走了她的爱人。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle]
+[Dialog]
+[stopmusic(fadetime=2)]
+[charslot]
+[Image]

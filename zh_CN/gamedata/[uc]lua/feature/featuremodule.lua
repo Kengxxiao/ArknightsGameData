@@ -44,6 +44,8 @@ require "Feature/Activity/FloatParade/FloatParadeRecycleDayListAdapter"
 require "Feature/Activity/FloatParade/FloatParadeTacticTab"
 require "Feature/Activity/FloatParade/FloatParadeMainDlg"
 
+require "Feature/Activity/CheckinAllPlayer/CheckinAllPlayerMainDlg"
+
 require "Feature/Activity/MainlineBuff/MainlineBuffDefine"
 require "Feature/Activity/MainlineBuff/MainlineBuffMainDlg"
 
