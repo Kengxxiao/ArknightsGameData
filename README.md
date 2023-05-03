@@ -1,7 +1,6 @@
 # ArknightsGameData
-《明日方舟》游戏数据 
+《明日方舟》游戏数据  
+基于[https://github.com/MooncellWiki/OpenArknightsFBS](OpenArknightsFBS)项目解析部分数据。  
 
-UPD 2021/07/29: 测试Github的新要求  
-UPD 2023/05/01: 由于鹰角对CN 2.0.01开始的游戏版本内部分数据使用了```FlatBufferSignedConverter```和一些静态Codegen，自动化更新变得复杂，现对```zh_CN```语言中的数据暂停更新，直到找到合适的解决方法。  
-UPD 2023/05/01: 跑路惹，后面有时间写好FBS||大概率不会写了，连写带修四个写的我脑壳子疼||再更新。对于后续想要获取数据的玩家建议直接dump，不要尝试写FBS做静态转换。  
-![摆烂惹](https://s1.ax1x.com/2023/05/01/p9G3c7j.jpg)
+UPD 2023/05/03: 自动BOT正在修改中，由于官方数据格式变动，本仓库未来将进行一次破坏性更新，新数据格式预览已发布于Releases中，请基于本仓库的自动化工具开发者及时完成修改。  
+
