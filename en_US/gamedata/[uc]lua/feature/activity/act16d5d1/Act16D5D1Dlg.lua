@@ -1,0 +1,1 @@
+Act16D5D1Dlg = DlgMgr.DefineDialog("Act16D5D1Dlg", "Activity/Act16D5D1/act_dlg", LoginOnlyDlg);
