@@ -1,1 +1,0 @@
-Act3D5Dlg = DlgMgr.DefineDialog("Act3D5Dlg", "Activity/Act3D5/Act3D5Dlg", CollectionMainDlg);

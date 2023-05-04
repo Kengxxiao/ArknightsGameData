@@ -1,1 +1,0 @@
-WardrobePage = DlgMgr.DefineDialog("WardrobePage", "LuaUI/Wardrobe/wardrobe_holder", WardrobePageHolder);
