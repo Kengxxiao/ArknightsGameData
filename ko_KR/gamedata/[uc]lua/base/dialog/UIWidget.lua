@@ -1,0 +1,3 @@
+
+
+UIWidget = Class("UIWidget", UIBase);
