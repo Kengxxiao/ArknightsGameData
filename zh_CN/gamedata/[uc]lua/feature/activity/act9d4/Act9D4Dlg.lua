@@ -1,0 +1,1 @@
+Act9D4Dlg = DlgMgr.DefineDialog("Act9D4Dlg", "Activity/Act9D4/act_dlg", CollectionMainDlg);
