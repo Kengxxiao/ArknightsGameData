@@ -9,10 +9,14 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
+
+
+
 ActFunCollectionDlg = DlgMgr.DefineDialog("ActFunCollectionDlg", "Activity/ActFun/actfun_collection_dlg", DlgBase)
 local AprilFoolCollectionItem = require("Feature/Operation/ActFun/ActFunCollectionItem");
 
 function ActFunCollectionDlg:OnInit()
+  self:_BindAndRenderItem(self._layout1Item, self:_CheckCollection2020Completed(), ActFun1MainDlg)
   self:_BindAndRenderItem(self._layout2Item, self:_CheckCollection2021Completed(), ActFun2MainDlg)
   self:_BindAndRenderItem(self._layout3Item, self:_CheckCollection2022Completed(), ActFun3MainDlg)
 end
@@ -31,6 +35,11 @@ function ActFunCollectionDlg:_BindCollectionItem(luaLayout)
     collectionItem:Bind(self)
   end
   return collectionItem
+end
+
+function ActFunCollectionDlg:_CheckCollection2020Completed()
+  local instData = CS.Torappu.PlayerData.instance:GetCharInstById(self._char2020Id)
+  return instData ~= nil
 end
 
 function ActFunCollectionDlg:_CheckCollection2021Completed()

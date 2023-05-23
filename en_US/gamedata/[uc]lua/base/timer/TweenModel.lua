@@ -90,3 +90,11 @@ function TweenModel:Play(config)
   tween.m_coroutine = CoroutineModel.me:StartCoroutine(tween._Coroutine, tween)
   return tween
 end
+
+TweenModel.EaseFunc = {};
+TweenModel.EaseFunc.easeOutQuad =  function(x)
+  return 1 - (1 - x) * (1 - x);
+end
+
+
+Readonly(TweenModel.EaseFunc);
