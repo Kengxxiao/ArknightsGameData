@@ -50,6 +50,7 @@ end
 
 
 
+
 function DlgBase:CreateWidgetByPrefab(widgetCls, layout, parent)
   return self.m_widgets:CreateWidgetByPrefab(widgetCls, layout, parent);
 end
@@ -114,6 +115,12 @@ end
 
 function DlgBase:LoadLayout( path)
   return self.m_parent:LoadLayout(path);
+end
+
+
+
+function DlgBase:LoadSprite(path)
+  return self.m_parent:LoadSprite(path);
 end
 
 function UIBase:GetLuaLayout()

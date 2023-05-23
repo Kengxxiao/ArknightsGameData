@@ -110,6 +110,10 @@ function UIBase:SetVisible(v)
     CS.Torappu.Lua.Util.SetActiveIfNecessary(self.m_root, v)
 end
 
+function UIBase:IsVisible()
+    return self.m_root.activeSelf;
+end
+
 
 function UIBase:OnInitialize()
 end
