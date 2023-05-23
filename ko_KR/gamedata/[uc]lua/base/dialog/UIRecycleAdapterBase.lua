@@ -17,6 +17,7 @@ end
 
 function UIRecycleAdapterBase:Dispose()
   self.m_layout:BindLayoutEventListener(nil);
+  self.m_layout.OnScrollLayoutUpdated = nil;
   if self.m_widgets then
     self.m_widgets:Clear();
   end
@@ -61,4 +62,20 @@ end
 
 function UIRecycleAdapterBase:NotifyDataSourceChanged()
   self.m_layout:NotifyDataSourceChanged()
+end
+
+
+function UIRecycleAdapterBase:NotifyRebuildWithIndex(index)
+  self.m_layout:NotifyRebuildWithIndex(index)
+end
+
+
+function UIRecycleAdapterBase:ListenScrollUpdatedEvent(evt)
+  if evt then
+    self.m_layout.OnScrollLayoutUpdated = function()
+      evt:Call();
+    end
+  else
+    self.m_layout.OnScrollLayoutUpdated = nil;
+  end
 end
