@@ -17,6 +17,8 @@ local HOME_WEIGHT_GRID_GACHA_V2 = 520;
 local HOME_WEIGHT_FLOAT_PARADE = 530;
 local HOME_WEIGHT_DAILY_FLIP = 540;
 local HOME_WEIGHT_CHECKIN_ALLPLAYER = 550;
+local HOME_WEIGHT_SWITCH_ONLY = 560;
+local HOME_WEIGHT_CHECKIN_VS = 570;
 
 local HOME_WEIGHT_MAIN_BUFF = 600;
 
@@ -146,6 +148,40 @@ end
 
 
 
+function LuaActivityUtil:_FindValidCheckinVsActs(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.CHECKIN_VS)
+  if actList == nil then
+    return
+  end
+
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i]
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_CHECKIN_VS)
+    validActs:Add(validAct)
+    if self:CheckIfActivityUncomplete(CS.Torappu.ActivityType.CHECKIN_VS, actId) then
+      uncompleteActs:Add(validAct)
+    end
+  end
+end
+
+function LuaActivityUtil:_FindValidSwitchOnly(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.SWITCH_ONLY);
+  if actList == nil then
+    return;
+  end
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i];
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_SWITCH_ONLY);
+    validActs:Add(validAct);
+    if self:_CheckIfSwitchOnlyUncomplete(actId) then
+      uncompleteActs:Add(validAct);
+    end
+  end
+end
+
+
+
+
 function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   
   _FindValidPrayOnlyActs(validActs, uncompleteActs)
@@ -155,6 +191,8 @@ function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   self:_FindValidFloatParadeAct(validActs, uncompleteActs);
   self:_FindValidMainlineBuffAct(validActs, uncompleteActs);
   self:_FindValidCheckinAllActs(validActs, uncompleteActs);
+  self:_FindValidCheckinVsActs(validActs, uncompleteActs);
+  self:_FindValidSwitchOnly(validActs,uncompleteActs);
 end
 
 
@@ -185,6 +223,12 @@ local DEFINE_CLS_FUNCS = {
   end,
   CHECKIN_ALL_PLAYER = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, CheckinAllPlayerMainDlg)
+  end,
+  CHECKIN_VS = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, CheckinVsMainDlg)
+  end,
+  SWITCH_ONLY = function (clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, SwitchOnlyDlg)
   end,
 }
 
@@ -248,6 +292,10 @@ function LuaActivityUtil:CheckIfActivityUncomplete(type, actId)
     return self:_CheckIfFlipUncomplete(actId);
   elseif type == CS.Torappu.ActivityType.CHECKIN_ALL_PLAYER then
     return self:_CheckIfCheckinAllUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.CHECKIN_VS then
+    return self:_CheckIfCheckinVsUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.SWITCH_ONLY then
+    return self:_CheckIfSwitchOnlyUncomplete(actId);
   else
     return false;
   end
@@ -300,6 +348,21 @@ function LuaActivityUtil:_CheckIfMainlineBuffUncomplete(actId)
   return MainlineBuffUtil.IsPeriodChecked(actId, periodId);
 end
 
+
+
+function LuaActivityUtil:_CheckIfCheckinVsUncomplete(actId)
+  local checkinVsPlayers = CS.Torappu.PlayerData.instance.data.activity.checkinVsActivityList
+  if checkinVsPlayers == nil then
+    return false
+  end
+  local suc, playerActData = checkinVsPlayers:TryGetValue(actId)
+  if not suc then
+    return false
+  end
+
+  return playerActData.availSignCnt > 0
+end
+
 function LuaActivityUtil:_CheckIfCheckinAllUncomplete(actId)
   local checkinAllPlayers = CS.Torappu.PlayerData.instance.data.activity.checkinAllActivityList;
   if checkinAllPlayers == nil then
@@ -318,6 +381,30 @@ function LuaActivityUtil:_CheckIfCheckinAllUncomplete(actId)
   for idx = 0, playerActData.history.Count -1 do
     local status = playerActData.history[idx];
     if status == CheckinAllPlayerRewardStatus.AVAILABLE then
+      return true;
+    end
+  end
+  return false;
+end
+
+function LuaActivityUtil:_CheckIfSwitchOnlyUncomplete(actId)
+  local swichOnlyPlayer = CS.Torappu.PlayerData.instance.data.activity.switchOnlyList;
+  if swichOnlyPlayer == nil then
+    return false;
+  end
+  local suc, playerActData = swichOnlyPlayer:TryGetValue(actId);
+  if not suc then
+    return false;
+  end
+
+  local cacheKey = actId;
+  local firstPop = CS.Torappu.Activity.ActLocalCacheHandler.GetParamFromCache(cacheKey) <= 0;
+  if firstPop then
+    return true;
+  end
+
+  for k, vStatus in pairs(playerActData.rewards) do
+    if vStatus == SwitchOnlyPlayerRewardStatus.AVAILABLE then
       return true;
     end
   end

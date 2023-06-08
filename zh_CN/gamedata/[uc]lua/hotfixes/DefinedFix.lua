@@ -3,8 +3,7 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/SpineAnimatorHotfixer",
-  "HotFixes/ShopJumpGachaHotfixer"
+  "HotFixes/EnemyHandbookHotfixer",
 };
 
 return list;

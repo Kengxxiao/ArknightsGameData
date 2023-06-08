@@ -10765,6 +10765,104 @@
           ]
         }
       ]
+    },
+    "char_1032_excu2": {
+      "charId": "char_1032_excu2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_spd[030]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_formula_spd[031]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_formula_limit[020]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4015_spuria": {
+      "charId": "char_4015_spuria",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd&addition[000]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            },
+            {
+              "buffId": "power_rec_spd&addition[001]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "power_rec_spd&cost[010]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_498_inside": {
+      "charId": "char_498_inside",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd&clue[110]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_single&oneself[040]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -11344,6 +11442,18 @@
       "roomType": "POWER",
       "description": "进驻发电站时，心情每小时消耗<@cc.vup>-0.52</>"
     },
+    "power_rec_spd&cost[010]": {
+      "buffId": "power_rec_spd&cost[010]",
+      "buffName": "外卖水果挞",
+      "buffIcon": "power",
+      "skillIcon": "bskill_pow_spd&cost",
+      "sortId": 2004,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "进驻发电站时，心情每小时消耗<@cc.vup>-0.3</>"
+    },
     "power_rec_spd[000]": {
       "buffId": "power_rec_spd[000]",
       "buffName": "备用能源",
@@ -11583,6 +11693,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "进驻发电站时，无人机充能速度<@cc.vup>+10%</>，基建内（不包含副手）每有1名除自身以外的<$cc.g.rh><@cc.kw>莱茵生命</></>干员（最多<@cc.kw>5</>名），充能速度额外<@cc.vup>+3%</>"
+    },
+    "power_rec_spd&addition[000]": {
+      "buffId": "power_rec_spd&addition[000]",
+      "buffName": "技术交流α",
+      "buffIcon": "power",
+      "skillIcon": "bskill_power_rec_spd&addition1",
+      "sortId": 2200,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "进驻发电站时，无人机充能速度首小时<@cc.vup>+10%</>，此后每小时<@cc.vup>+1%</>，最终达到<@cc.vup>+15%</>"
+    },
+    "power_rec_spd&addition[001]": {
+      "buffId": "power_rec_spd&addition[001]",
+      "buffName": "技术交流β",
+      "buffIcon": "power",
+      "skillIcon": "bskill_power_rec_spd&addition2",
+      "sortId": 2201,
+      "buffColor": "#8fc31f",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "POWER",
+      "description": "进驻发电站时，无人机充能速度首小时<@cc.vup>+15%</>，此后每小时<@cc.vup>+1%</>，最终达到<@cc.vup>+20%</>"
     },
     "manu_bd_to_bd[000]": {
       "buffId": "manu_bd_to_bd[000]",
@@ -12004,6 +12138,18 @@
       "roomType": "MANUFACTURE",
       "description": "进驻制造站时，生产<@cc.kw>作战记录</>类配方时，仓库容量上限<@cc.vup>+15</>"
     },
+    "manu_formula_limit[020]": {
+      "buffId": "manu_formula_limit[020]",
+      "buffName": "合理利用",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp&limit3",
+      "sortId": 3303,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，生产<@cc.kw>作战记录</>类配方时，仓库容量上限<@cc.vup>+4</>"
+    },
     "manu_prod_spd&limit&cost[000]": {
       "buffId": "manu_prod_spd&limit&cost[000]",
       "buffName": "工匠精神·α",
@@ -12243,6 +12389,30 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "进驻制造站时，<@cc.kw>作战记录</>类配方的生产力<@cc.vup>+35%</>"
+    },
+    "manu_formula_spd[030]": {
+      "buffId": "manu_formula_spd[030]",
+      "buffName": "公证所教习α",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp4",
+      "sortId": 3821,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，<@cc.kw>作战记录</>类配方的生产力<@cc.vup>+20%</>"
+    },
+    "manu_formula_spd[031]": {
+      "buffId": "manu_formula_spd[031]",
+      "buffName": "公证所教习β",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_exp2",
+      "sortId": 3822,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，<@cc.kw>作战记录</>类配方的生产力<@cc.vup>+30%</>"
     },
     "manu_prod_spd&trade[000]": {
       "buffId": "manu_prod_spd&trade[000]",
@@ -15172,6 +15342,18 @@
       "roomType": "DORMITORY",
       "description": "进驻宿舍时，使该宿舍内除自身以外心情未满的某个干员每小时恢复<@cc.vup>+0.5</>（同种效果取最高）；同时自身心情每小时恢复<@cc.vup>+0.25</>"
     },
+    "dorm_rec_single&oneself[040]": {
+      "buffId": "dorm_rec_single&oneself[040]",
+      "buffName": "甜甜圈派对",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_single&one12",
+      "sortId": 5124,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "进驻宿舍时，使该宿舍内除自身以外心情未满的某个干员每小时恢复<@cc.vup>+0.4</>（同种效果取最高）；同时自身心情每小时恢复<@cc.vup>+0.4</>"
+    },
     "dorm_rec_all&oneself[000]": {
       "buffId": "dorm_rec_all&oneself[000]",
       "buffName": "慵懒",
@@ -15543,6 +15725,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
       "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+35%</>，同时每个招募位（不包含初始招募位）额外<@cc.vup>+5%</>会客室线索搜集速度"
+    },
+    "hire_spd&clue[110]": {
+      "buffId": "hire_spd&clue[110]",
+      "buffName": "交游广阔",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&clue2",
+      "sortId": 8402,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+30%</>，同时每个招募位（不包含初始招募位）额外<@cc.vup>+5%</>会客室线索搜集速度"
     },
     "hire_spd&clue2[230]": {
       "buffId": "hire_spd&clue2[230]",
@@ -15930,7 +16124,7 @@
     },
     "meet_spd&team[031]": {
       "buffId": "meet_spd&team[031]",
-      "buffName": "B.P.R.S",
+      "buffName": "B.P.R.S.",
       "buffIcon": "meeting",
       "skillIcon": "bskill_meet_blacksteel2",
       "sortId": 6322,
@@ -49104,7 +49298,7 @@
         "groupId": "furni_set_bookshop_3",
         "width": 16,
         "depth": 8,
-        "height": 0,
+        "height": 1,
         "comfort": 190,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "柔软的针织地毯，无论穿鞋还是赤脚踩起来都很舒服。大帝来访时趁没人注意在下面塞了一张自己的绝版专辑，查不出犯人的侦探对此大为光火。",
@@ -51713,7 +51907,7 @@
         "themeId": "furni_set_boxing",
         "groupId": "furni_set_boxing_4",
         "width": 13,
-        "depth": 0,
+        "depth": 1,
         "height": 7,
         "comfort": 155,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
@@ -51764,7 +51958,7 @@
         "iconId": "furni_boxing_scoreboard_01",
         "interactType": "NONE",
         "type": "WALLDECO",
-        "subType": "POSTER",
+        "subType": "BOARD_WD",
         "location": "WALL",
         "category": "FURNITURE",
         "validOnRotate": false,
@@ -51773,7 +51967,7 @@
         "themeId": "furni_set_boxing",
         "groupId": "furni_set_boxing_2",
         "width": 4,
-        "depth": 0,
+        "depth": 1,
         "height": 5,
         "comfort": 130,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
@@ -53488,6 +53682,546 @@
         "comfort": 240,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "地面倒映着天空的颜色。\n特里蒙的天空，是钢筋水泥的银色。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_woodPillar_01": {
+        "id": "furni_LAbbey_woodPillar_01",
+        "sortId": 1247,
+        "name": "实木弧形柱",
+        "iconId": "furni_LAbbey_woodPillar_01",
+        "interactType": "NONE",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_3",
+        "width": 6,
+        "depth": 1,
+        "height": 10,
+        "comfort": 265,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "切面潦草的木制立柱，弧形的一体式斜梁提高了它的承重力。\n对于习惯荒野的萨卡兹来说，砍树，做木工，都是平常事。至于立柱的造型设计，都交给萨科塔就好啦。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_LAbbey_chandelier_01": {
+        "id": "furni_LAbbey_chandelier_01",
+        "sortId": 1248,
+        "name": "修道院吊灯",
+        "iconId": "furni_LAbbey_chandelier_01",
+        "interactType": "NONE",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_4",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 80,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "在安布罗修修道院中很常见的吊灯，翼形的灯架轻轻托起圣洁的光明。\n莱蒙德取下蜡烛，恰好与福尔图娜对视。椅子太高了他恐高，不然无法解释为什么他突然慌神，不小心燎着了福尔图娜的头发。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_LAbbey_statueBox_01": {
+        "id": "furni_LAbbey_statueBox_01",
+        "sortId": 1249,
+        "name": "实木圣像墙柜",
+        "iconId": "furni_LAbbey_statueBox_01",
+        "interactType": "NONE",
+        "type": "WALLDECO",
+        "subType": "ART_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_3",
+        "width": 3,
+        "depth": 1,
+        "height": 4,
+        "comfort": 95,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "平稳悬挂的墙柜，做工有点粗糙。在斜方格状的窗棱之后，信仰的化身在此静静地守候着信徒。\n柜门本来并不是封闭的，直到某位居民发现了她丈夫在这里偷藏的私房钱。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_plants_01": {
+        "id": "furni_LAbbey_plants_01",
+        "sortId": 1250,
+        "name": "“栽培希望”",
+        "iconId": "furni_LAbbey_plants_01",
+        "interactType": "NONE",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_1",
+        "width": 3,
+        "depth": 3,
+        "height": 5,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "一盆由人精心打理的盆栽。新绿与淡紫攀援在铜质的花架上，它追逐阳光，如同在追逐希望。\n克莱芒曾详尽标注了养护细则，只是他所珍爱的已然付之一炬。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_bed_01": {
+        "id": "furni_LAbbey_bed_01",
+        "sortId": 1251,
+        "name": "实木四柱床",
+        "iconId": "furni_LAbbey_bed_01",
+        "interactType": "NONE",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_3",
+        "width": 8,
+        "depth": 3,
+        "height": 7,
+        "comfort": 425,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "有点老旧的拉特兰四柱床。床铺平整而净白，一如圣堂的高墙，聆听着虔信者的祝祷。\n无数个夜晚，小福和菲娜躺在这里说悄悄话，畅想着大家的美好未来。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_prayerTable_01": {
+        "id": "furni_LAbbey_prayerTable_01",
+        "sortId": 1252,
+        "name": "实木祷告台",
+        "iconId": "furni_LAbbey_prayerTable_01",
+        "interactType": "NONE",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_3",
+        "width": 4,
+        "depth": 2,
+        "height": 6,
+        "comfort": 195,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "跪台被磨亮，露出了木质本色的祷告台。有谁的秘密是它所不知晓的呢？\n孩子们会在祷告台边缠着斯特凡诺爷爷，不是为了圣餐，而是为了分得一些祝福与糖果。主要还是为了糖果。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_chair_01": {
+        "id": "furni_LAbbey_chair_01",
+        "sortId": 1253,
+        "name": "“凝思之椅”",
+        "iconId": "furni_LAbbey_chair_01",
+        "interactType": "NONE",
+        "type": "SEATING",
+        "subType": "CHAIR",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_2",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 115,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "休息室中与书桌配套定制的椅子，千万注意，它可比看上去要重得多。\n不要独自搬动它！要是扭伤了腰，你只能祈祷圣餐仪式早点结束，好有人来扶你！",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 2,
+        "quantity": 2
+      },
+      "furni_LAbbey_desk_01": {
+        "id": "furni_LAbbey_desk_01",
+        "sortId": 1254,
+        "name": "“释解之桌”",
+        "iconId": "furni_LAbbey_desk_01",
+        "interactType": "NONE",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_2",
+        "width": 6,
+        "depth": 3,
+        "height": 5,
+        "comfort": 290,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "放置着诸多拉特兰典籍的书桌。舒展纸页，教义在等待着诠释。\n听我愿，赐我知，见我行。——《圣徒行记》",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_carpet_01": {
+        "id": "furni_LAbbey_carpet_01",
+        "sortId": 1255,
+        "name": "安布罗修花纹地毯",
+        "iconId": "furni_LAbbey_carpet_01",
+        "interactType": "NONE",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_4",
+        "width": 6,
+        "depth": 5,
+        "height": 1,
+        "comfort": 70,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "纹有安布罗修特色图案的地毯。居民们编织着花纹，围坐着谈天，修道院的故事与花纹的样式依此流传。\n赫曼偷学了几种纹样，只为了给她的孩子们添几件好看的新衣裳。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_skewBox_01": {
+        "id": "furni_LAbbey_skewBox_01",
+        "sortId": 1256,
+        "name": "“记叙苦厄”",
+        "iconId": "furni_LAbbey_skewBox_01",
+        "interactType": "NONE",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_1",
+        "width": 4,
+        "depth": 2,
+        "height": 5,
+        "comfort": 195,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "纯白色的斜台面柜子。既是一段过往的记载，也是一种理想的珍存。\n“我们不会忘记那位萨科塔兄弟，不会忘记他的铳。”这是萨卡兹代表在纸上的留言，“铳”字有修改笔误的痕迹。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_standLight_01": {
+        "id": "furni_LAbbey_standLight_01",
+        "sortId": 1257,
+        "name": "“明辨之灯”",
+        "iconId": "furni_LAbbey_standLight_01",
+        "interactType": "NONE",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_2",
+        "width": 1,
+        "depth": 1,
+        "height": 5,
+        "comfort": 100,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "看上去不太稳的灯台。小心点，不要碰倒它，以免酿成消防事故。\n“茶话会”结束后，休息室重归沉静。吹灭烛火，居民们告别今晚的欢聚。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_statue_01": {
+        "id": "furni_LAbbey_statue_01",
+        "sortId": 1258,
+        "name": "“见证友谊”",
+        "iconId": "furni_LAbbey_statue_01",
+        "interactType": "NONE",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_1",
+        "width": 4,
+        "depth": 4,
+        "height": 9,
+        "comfort": 300,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "树枝状的铜质灯具撑起光明与圣像，花藤缠绕着栅条，组合成一个雕像展台。\n十岁的莱蒙德与另一位小萨科塔打作一团，就算一脸不情愿，仍在大人的敦促下于圣像前拥抱和解。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_door_01": {
+        "id": "furni_LAbbey_door_01",
+        "sortId": 1259,
+        "name": "“消弭残缺”",
+        "iconId": "furni_LAbbey_door_01",
+        "interactType": "NONE",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_1",
+        "width": 5,
+        "depth": 2,
+        "height": 7,
+        "comfort": 205,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "于敌袭中被毁坏的拱门。植物蔓生在断柱上，用生命力去弥补它的缺憾。\n解救了陷入苦战的萨卡兹之后，前来救援的萨科塔却在敌人的无情攻势中化为残垣。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_longBench_01": {
+        "id": "furni_LAbbey_longBench_01",
+        "sortId": 1260,
+        "name": "有点长的长椅",
+        "iconId": "furni_LAbbey_longBench_01",
+        "interactType": "NONE",
+        "type": "SEATING",
+        "subType": "BENCH",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_4",
+        "width": 5,
+        "depth": 2,
+        "height": 3,
+        "comfort": 230,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "一张常见的长椅，萨科塔在这里保养铳、分享甜食。\n椅背处写着“萨科塔专用”，如今已被刀的刻痕划去。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_shortBench_01": {
+        "id": "furni_LAbbey_shortBench_01",
+        "sortId": 1261,
+        "name": "不太长的长椅",
+        "iconId": "furni_LAbbey_shortBench_01",
+        "interactType": "NONE",
+        "type": "SEATING",
+        "subType": "BENCH",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_4",
+        "width": 2,
+        "depth": 3,
+        "height": 3,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "一张常见的长椅，刚刚好能让一个萨卡兹卧睡。\n椅背处写着“萨卡兹专用”，如今已被刀的刻痕划去。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_bell_01": {
+        "id": "furni_LAbbey_bell_01",
+        "sortId": 1262,
+        "name": "“谛听救赎”",
+        "iconId": "furni_LAbbey_bell_01",
+        "interactType": "NONE",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_1",
+        "width": 3,
+        "depth": 2,
+        "height": 7,
+        "comfort": 195,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "仿制的修道院撞钟，体积虽小，钟声却厚重浑长，和爱琳最爱的一模一样。\n杰拉尔德花了很长时间制作了这份礼物，却没来得及送出。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_wallpaper_01": {
+        "id": "furni_LAbbey_wallpaper_01",
+        "sortId": 1263,
+        "name": "全景显示屏（花庭）",
+        "iconId": "furni_LAbbey_wallpaper_01",
+        "interactType": "NONE",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "展现修道院庭院景观的全景显示屏。\n即使并未真正身处花庭，安布罗修的往事也已然在心中。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_LAbbey_floor_01": {
+        "id": "furni_LAbbey_floor_01",
+        "sortId": 1264,
+        "name": "圣堂石砖",
+        "iconId": "furni_LAbbey_floor_01",
+        "interactType": "NONE",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_LAbbey",
+        "groupId": "furni_set_LAbbey_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "依照圣堂铺设的地砖，并不那么严丝合缝。\n砖石夹缝里的青草与修道院中的一样，没人知道是谁把种子撒在了这里。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -57898,6 +58632,36 @@
         "comfort": 75,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "“请收下这份由未知发件人经未知途径发来的未知礼物。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS034_ascension_01": {
+        "id": "furni_dropS034_ascension_01",
+        "sortId": 11074,
+        "name": "饰牌《飏升》",
+        "iconId": "furni_dropS034_ascension_01",
+        "interactType": "NONE",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "“我将成为第一颗从大地坠向天空的流星。”",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -71097,6 +71861,167 @@
           "furni_cultureroom_wallpaper_01",
           "furni_cultureroom_floor_01"
         ]
+      },
+      "furni_set_LAbbey": {
+        "id": "furni_set_LAbbey",
+        "sortId": 74,
+        "name": "安布罗修休息室",
+        "themeType": "EVENT",
+        "desc": "根据执行者里凯莱的描述复现的修道院休息室。圣餐用毕，尚有闲暇的居民会来到休息室，共享恩泽，度过静好时光。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_LAbbey_woodPillar_01",
+            "pos0": 0,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_woodPillar_01",
+            "pos0": 28,
+            "pos1": 5,
+            "dir": 2
+          },
+          {
+            "furnitureId": "furni_LAbbey_chandelier_01",
+            "pos0": 3,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_chandelier_01",
+            "pos0": 27,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_statueBox_01",
+            "pos0": 9,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_plants_01",
+            "pos0": 8,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_bed_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_prayerTable_01",
+            "pos0": 0,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_chair_01",
+            "pos0": 9,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_chair_01",
+            "pos0": 13,
+            "pos1": 3,
+            "dir": 1
+          },
+          {
+            "furnitureId": "furni_LAbbey_desk_01",
+            "pos0": 11,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_carpet_01",
+            "pos0": 25,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_skewBox_01",
+            "pos0": 15,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_standLight_01",
+            "pos0": 23,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_statue_01",
+            "pos0": 18,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_door_01",
+            "pos0": 22,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_longBench_01",
+            "pos0": 25,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_shortBench_01",
+            "pos0": 32,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_bell_01",
+            "pos0": 30,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_LAbbey_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_LAbbey_1",
+          "furni_set_LAbbey_2",
+          "furni_set_LAbbey_3",
+          "furni_set_LAbbey_4"
+        ],
+        "furnitures": [
+          "furni_LAbbey_woodPillar_01",
+          "furni_LAbbey_chandelier_01",
+          "furni_LAbbey_statueBox_01",
+          "furni_LAbbey_plants_01",
+          "furni_LAbbey_bed_01",
+          "furni_LAbbey_prayerTable_01",
+          "furni_LAbbey_chair_01",
+          "furni_LAbbey_desk_01",
+          "furni_LAbbey_carpet_01",
+          "furni_LAbbey_skewBox_01",
+          "furni_LAbbey_standLight_01",
+          "furni_LAbbey_statue_01",
+          "furni_LAbbey_door_01",
+          "furni_LAbbey_longBench_01",
+          "furni_LAbbey_shortBench_01",
+          "furni_LAbbey_bell_01",
+          "furni_LAbbey_wallpaper_01",
+          "furni_LAbbey_floor_01"
+        ]
       }
     },
     "groups": {
@@ -75304,6 +76229,64 @@
           "furni_cultureroom_culturedish_01",
           "furni_cultureroom_wallpaper_01",
           "furni_cultureroom_floor_01"
+        ]
+      },
+      "furni_set_LAbbey_1": {
+        "id": "furni_set_LAbbey_1",
+        "sortId": 1,
+        "name": "启谕",
+        "themeId": "furni_set_LAbbey",
+        "comfort": 260,
+        "count": 5,
+        "furniture": [
+          "furni_LAbbey_plants_01",
+          "furni_LAbbey_skewBox_01",
+          "furni_LAbbey_statue_01",
+          "furni_LAbbey_door_01",
+          "furni_LAbbey_bell_01"
+        ]
+      },
+      "furni_set_LAbbey_2": {
+        "id": "furni_set_LAbbey_2",
+        "sortId": 2,
+        "name": "默观",
+        "themeId": "furni_set_LAbbey",
+        "comfort": 150,
+        "count": 3,
+        "furniture": [
+          "furni_LAbbey_desk_01",
+          "furni_LAbbey_chair_01",
+          "furni_LAbbey_standLight_01"
+        ]
+      },
+      "furni_set_LAbbey_3": {
+        "id": "furni_set_LAbbey_3",
+        "sortId": 3,
+        "name": "颂祷",
+        "themeId": "furni_set_LAbbey",
+        "comfort": 310,
+        "count": 4,
+        "furniture": [
+          "furni_LAbbey_bed_01",
+          "furni_LAbbey_prayerTable_01",
+          "furni_LAbbey_woodPillar_01",
+          "furni_LAbbey_statueBox_01"
+        ]
+      },
+      "furni_set_LAbbey_4": {
+        "id": "furni_set_LAbbey_4",
+        "sortId": 4,
+        "name": "谛思",
+        "themeId": "furni_set_LAbbey",
+        "comfort": 210,
+        "count": 6,
+        "furniture": [
+          "furni_LAbbey_chandelier_01",
+          "furni_LAbbey_wallpaper_01",
+          "furni_LAbbey_floor_01",
+          "furni_LAbbey_longBench_01",
+          "furni_LAbbey_shortBench_01",
+          "furni_LAbbey_carpet_01"
         ]
       }
     },

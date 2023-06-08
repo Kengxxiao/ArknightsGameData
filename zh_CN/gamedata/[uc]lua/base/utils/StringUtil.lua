@@ -8,3 +8,10 @@ end
 string.formatWithThousand = function(num)
   return CS.Torappu.FormatUtil.FormatNumWithThousand(num);
 end
+
+
+
+
+string.isNullOrEmpty = function(str)
+  return str == nil or str == ""
+end

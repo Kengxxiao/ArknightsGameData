@@ -45,6 +45,7 @@ require "Feature/Activity/FloatParade/FloatParadeTacticTab"
 require "Feature/Activity/FloatParade/FloatParadeMainDlg"
 
 require "Feature/Activity/CheckinAllPlayer/CheckinAllPlayerMainDlg"
+require "Feature/Activity/CheckinVs/CheckinVsMainDlg"
 
 require "Feature/Activity/MainlineBuff/MainlineBuffDefine"
 require "Feature/Activity/MainlineBuff/MainlineBuffMainDlg"
@@ -61,3 +62,7 @@ require "Feature/Operation/Returnning/ReturnWelcomeDlg"
 require "Feature/Operation/Returnning/ReturnRewardsDlg"
 
 require "Feature/Operation/ActFun/ActFunModule"
+
+require "Feature/Activity/SwitchOnly/SwitchOnlyDefine"
+require "Feature/Activity/SwitchOnly/SwitchOnlyDlg"
+require "Feature/Activity/SwitchOnly/SwitchOnlyItemView"
