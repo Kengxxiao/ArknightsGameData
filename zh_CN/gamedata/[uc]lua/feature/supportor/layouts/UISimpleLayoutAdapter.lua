@@ -6,6 +6,7 @@
 
 
 
+
 UISimpleLayoutAdapter = Class("UISimpleLayoutAdapter")
 
 
@@ -14,11 +15,13 @@ UISimpleLayoutAdapter = Class("UISimpleLayoutAdapter")
 
 
 
-function UISimpleLayoutAdapter:Initialize(host, layout, createWidgetFunc ,getCountFunc, updateViewFunc)
+
+function UISimpleLayoutAdapter:Initialize(host, layout, createWidgetFunc, getCountFunc, updateViewFunc, overridePrefab)
   self.m_host = host
   self.m_createWidgetFunc = createWidgetFunc
   self.m_getCountFunc = getCountFunc
   self.m_updateViewFunc = updateViewFunc
+  self.m_overridePrefab = overridePrefab;
   self.m_viewList = {}
   self:_BindToLayout(layout);
 end
@@ -66,6 +69,11 @@ function UISimpleLayoutAdapter:UpdateView(index, gameObj)
   if self.m_updateViewFunc then
     self.m_updateViewFunc(self.m_host, index, view)
   end
+end
+
+
+function UISimpleLayoutAdapter:GetOverridePrefab()
+  return self.m_overridePrefab;
 end
 
 function UISimpleLayoutAdapter:NotifyDataSetChanged()

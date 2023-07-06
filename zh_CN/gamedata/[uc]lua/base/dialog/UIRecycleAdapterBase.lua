@@ -56,6 +56,7 @@ function UIRecycleAdapterBase:NotifyRebuild()
   self.m_layout:NotifyRebuild()
 end
 
+
 function UIRecycleAdapterBase:NotifyDataChanged()
   self.m_layout:NotifyDataChanged()
 end

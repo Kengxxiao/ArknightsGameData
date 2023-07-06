@@ -188,16 +188,42 @@ function ReturnModel:GetReturnStatus()
     showTrackPoint = false;
     onlyWeekly = false;
   }
-  status.open = CS.Torappu.PlayerData.instance.data.backflow.open;
-  if status.open then
+  local playerData = CS.Torappu.PlayerData.instance.data.backflow;
+  if playerData == nil then
+    status.open = false;
+    return status;
+  else
+    status.open = playerData.open;
+  end
+
+  local returnV2Model = ReturnV2Model.me;
+  local useOld = self:GetReturnVersion();
+  if not useOld then
+    status.open = status.open and returnV2Model:IsReturnV2Show(playerData);
+  end
+  if not status.open then
+    return status;
+  end
+
+  if useOld then
     status.onlyWeekly = self:CheckIfOnlyWeeklyOpen();
     status.shouldPopup = self:_CheckIfPopupReturnPage();
     status.showTrackPoint = not status.onlyWeekly and self:_CheckShowTrackPoint();
+  else
+    status.onlyWeekly = returnV2Model:CheckIfOnlyWeeklyOpen(playerData);
+    status.shouldPopup = returnV2Model:CheckIfPopupReturnPage();
+    status.showTrackPoint = not status.onlyWeekly and returnV2Model:CheckShowTrackPoint();
   end
 
   return status;
 end
 
+
+function ReturnModel:GetReturnVersion()
+  return CS.Torappu.PlayerData.instance.data.backflow == nil or 
+      CS.Torappu.PlayerData.instance.data.backflow.version == nil or
+      CS.Torappu.PlayerData.instance.data.backflow.version == CS.Torappu.PlayerReturnData.Version.OLD;
+end
 
 function ReturnModel:_CheckIfPopupReturnPage()
 

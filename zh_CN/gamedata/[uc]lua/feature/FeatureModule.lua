@@ -52,6 +52,14 @@ require "Feature/Activity/MainlineBuff/MainlineBuffMainDlg"
 
 require "Feature/Wardrobe/WardrobeModule"
 
+require "Feature/Operation/ReturnV2/ReturnV2Model";
+require "Feature/Operation/ReturnV2/ReturnV2MainDlgViewModel"
+require "Feature/Operation/ReturnV2/ReturnV2MainDlg";
+require "Feature/Operation/ReturnV2/ReturnV2Define";
+require "Feature/Operation/ReturnV2/ReturnV2WelcomeDlg"
+require "Feature/Operation/ReturnV2/ReturnV2RewardsDlg"
+require "Feature/Operation/ReturnV2/ReturnV2TrackPoint";
+
 require "Feature/Operation/Returnning/ReturnDefine"
 require "Feature/Operation/Returnning/ReturnService"
 require "Feature/Operation/Returnning/ReturnModel"

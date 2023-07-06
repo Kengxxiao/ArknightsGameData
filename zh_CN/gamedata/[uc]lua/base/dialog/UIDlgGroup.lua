@@ -25,20 +25,25 @@ function UIDlgGroup:InitList(dlgClsList)
     if idx == #dlgClsList then
       self:AddChildDlg(dlgCls);
     else
-      self:AddChildDlgImmediatly(dlgCls);
+      local child = self:AddChildDlgImmediatly(dlgCls);
+      if child ~= nil then
+        child:SetVisible(false);
+      end
     end
   end
 end
 
+
 function UIDlgGroup:AddChildDlgImmediatly(dlgCls)
   if self:_CheckTransitting() then
-    return;
+    return nil;
   end
   local newAdd, preDlg = self:_HandleAdd(dlgCls);
   newAdd:TransImmediatly(true);
   if preDlg then
     preDlg:SetVisible(false);
   end
+  return newAdd;
 end
 
 function UIDlgGroup:AddChildDlg(dlgCls)

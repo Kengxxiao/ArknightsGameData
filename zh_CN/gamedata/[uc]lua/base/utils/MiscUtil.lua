@@ -124,3 +124,15 @@ function YieldWaitForSeconds(seconds)
     coroutine.yield();
   end
 end
+
+
+
+function AsignItemCardClickDelegate(uibase, itemCard)
+  if itemCard:GetComponent("Torappu.UI.UIItemCard") ~= nil then
+    uibase:AsignDelegate(itemCard, "onItemClick", function(this, index)
+      CS.Torappu.UI.UIItemDescFloatController.ShowItemDesc(itemCard.gameObject, itemCard.model)
+    end)
+  else
+    LogError("input gameobject should have UIItemCard Component")
+  end
+end
