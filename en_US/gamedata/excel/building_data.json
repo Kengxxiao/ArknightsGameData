@@ -10222,6 +10222,125 @@
           ]
         }
       ]
+    },
+    "char_2024_chyue": {
+      "charId": "char_2024_chyue",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&bd_up[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd_cost_expand[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4080_lin": {
+      "charId": "char_4080_lin",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd_cost[111]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd_cost&extra[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_493_firwhl": {
+      "charId": "char_493_firwhl",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&share[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4078_bdhkgt": {
+      "charId": "char_4078_bdhkgt",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_bd_to_bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_bd[200]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_prod_spd_bd[201]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -10597,6 +10716,30 @@
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, decreases own morale consumption by<@cc.vdown>+0.5</>; and when self morale is above<@cc.kw>12</>, <$cc.bd_a1><@cc.rem>Perception Information</></><@cc.vup>+10</>"
     },
+    "control_mp_cost&bd_up[000]": {
+      "buffId": "control_mp_cost&bd_up[000]",
+      "buffName": "I am I",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd3",
+      "sortId": 1009,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, self Morale loss per hour <@cc.vdown>+0.5</>; for each <$cc.g.sui><@cc.kw>Sui</></> Operator assigned to buildings other than Dormitories, <$cc.bd_b1><@cc.rem>Worldly Plight</></> <@cc.vup>+5</> (max 5)"
+    },
+    "control_mp_bd_cost_expand[000]": {
+      "buffId": "control_mp_bd_cost_expand[000]",
+      "buffName": "Solitary Light",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd4",
+      "sortId": 1009,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, Operators working in <$cc.c.room2><@cc.kw>other buildings</></> recover <@cc.vup>+0.05</> Morale per hour, with an additional <@cc.vup>+0.05</> for every <@cc.vup>20</> <$cc.bd_b1><@cc.rem>Worldly Plight</></> (<$cc.c.sui2_1><@cc.rem>Special Comparison Rules</></> apply with Control Center bonus)"
+    },
     "control_facCostReset[000]": {
       "buffId": "control_facCostReset[000]",
       "buffName": "Keep the Wine Flowing",
@@ -10944,6 +11087,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "When this Operator is assigned to a Power Plant, increases the productivity of the Factory <@cc.kw>Wild Mane</> is assigned to by <@cc.vup>+5%</>"
+    },
+    "manu_bd_to_bd[000]": {
+      "buffId": "manu_bd_to_bd[000]",
+      "buffName": "Ancient Witchcraft",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_bd1",
+      "sortId": 4013,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, every <@cc.vup>5</> <$cc.bd_b1><@cc.rem>Worldly Plight</></> is converted to <@cc.vup>1</> <$cc.bd_C><@cc.rem>Witchcraft Crystal</></>"
     },
     "manu_prod_spd&power[000]": {
       "buffId": "manu_prod_spd&power[000]",
@@ -11497,6 +11652,30 @@
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to Factory, for every <@cc.vup>1</> points of <$cc.bd_A><@cc.rem>Chain of Thought</>, productivity </><@cc.vup>+1%</>"
     },
+    "manu_prod_spd_bd[200]": {
+      "buffId": "manu_prod_spd_bd[200]",
+      "buffName": "Always on the Move",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_bd5",
+      "sortId": 3730,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, for every <@cc.vup>1</> <$cc.bd_C><@cc.rem>Witchcraft Crystal</></>, productivity <@cc.vup>+1%</>"
+    },
+    "manu_prod_spd_bd[201]": {
+      "buffId": "manu_prod_spd_bd[201]",
+      "buffName": "Of Death and Rebirth",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_bd6",
+      "sortId": 3731,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, for every <@cc.vup>1</> <$cc.bd_C><@cc.rem>Witchcraft Crystal</></>, productivity <@cc.vup>+2%</>"
+    },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
       "buffName": "Plan to Victory",
@@ -11652,6 +11831,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, <@cc.kw>ignore</> the effects of any Operators stationed in that Factory that would affect the Morale consumption of <@cc.kw>this Operator</>"
+    },
+    "trade_cost[000]": {
+      "buffId": "trade_cost[000]",
+      "buffName": "Warm-Up",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_cost1",
+      "sortId": 4103,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "When this Operator is assigned to a Trading Post, Morale loss of Operators in the Trading Post <@cc.vup>-0.1</> per hour"
     },
     "trade_ord_spd[000]": {
       "buffId": "trade_ord_spd[000]",
@@ -12144,6 +12335,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "When this Operator is assigned to a Trading Post, the chance of getting <@cc.kw>higher-yield Precious Metal orders</> is <@cc.kw>increased</> (rate is influenced by length of work time), and Morale consumed per hour is reduced by <@cc.vup>-0.25</>"
+    },
+    "trade_ord_spd&share[000]": {
+      "buffId": "trade_ord_spd&share[000]",
+      "buffName": "Advocate",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_share1",
+      "sortId": 4703,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "When this Operator is assigned to a Trading Post, other Operators working in the Trading Post have <@cc.vup>+15%</> order acquisition efficiency"
     },
     "trade_ord_spd&cost_P[000]": {
       "buffId": "trade_ord_spd&cost_P[000]",
@@ -14557,6 +14760,18 @@
       "roomType": "HIRE",
       "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>, Morale consumed per hour <@cc.vup>-0.25</>"
     },
+    "hire_spd_cost[111]": {
+      "buffId": "hire_spd_cost[111]",
+      "buffName": "Special Channel",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&cost4",
+      "sortId": 8101,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>, Morale consumed per hour <@cc.vup>-0.25</>"
+    },
     "hire_spd_cost&clue[001]": {
       "buffId": "hire_spd_cost&clue[001]",
       "buffName": "Rescue Team - External Contact",
@@ -14580,6 +14795,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
       "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+35%</>, and for every recruit slot (excluding initial slot), Morale consumed per hour <@cc.vup>-0.1</>"
+    },
+    "hire_spd_cost&extra[000]": {
+      "buffId": "hire_spd_cost&extra[000]",
+      "buffName": "Meritocracy",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&extra1",
+      "sortId": 8122,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "When this Operator is assigned to the HR Office, <@cc.vup>+10%</> HR contacting speed for every Recruit slot other than the initial slot"
     },
     "hire_spd&clue[010]": {
       "buffId": "hire_spd&clue[010]",
@@ -47117,6 +47344,528 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_martialClub_walldeco_01": {
+        "id": "furni_martialClub_walldeco_01",
+        "sortId": 1121,
+        "name": "Herb Basket Rack",
+        "iconId": "furni_martialClub_walldeco_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 4,
+        "depth": 4,
+        "height": 5,
+        "comfort": 330,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A three-layer basket frame woven from fine willow branches, used to spread out undried medicinal materials for ventilation and protection from the sunlight.\nEarly in the morning, the clinic owner squats in the alleyway before a pile of herbs, sifting and shaking out dust and dirt. The morning breeze tugs at his clothes, but the herbs in his hands are not blown away at all.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_fireplace_01": {
+        "id": "furni_martialClub_fireplace_01",
+        "sortId": 1122,
+        "name": "Decoction Wood Stove",
+        "iconId": "furni_martialClub_fireplace_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 200,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "High-quality white clay from deep within the ground, fired through over ten stages into a Yan-style clay stove.\nAfter the medicinal decoction passes over the flame, the clinic's owner picks up the pot's handle and pours its contents into a bowl. The residual heat from the stove is strong, and reminds him of the sand he once held between his hands in the desert.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_ceilingLamp_01": {
+        "id": "furni_martialClub_ceilingLamp_01",
+        "sortId": 1123,
+        "name": "Eternal Fire Pendant Lamp",
+        "iconId": "furni_martialClub_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 115,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "This exquisite, antique Yan-style pendant lamp glows with a gentle light, but draws one's gaze in the dead of night.\nIn the days after the end of the war, the clinic's hall was always lit up, waiting to tend to the wounds of seriously injured soldiers. Nowadays, the eternal flame only awaits a few old friends.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_plantShelf_01": {
+        "id": "furni_martialClub_plantShelf_01",
+        "sortId": 1124,
+        "name": "'Replete With Life Anew'",
+        "iconId": "furni_martialClub_plantShelf_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 3,
+        "depth": 4,
+        "height": 8,
+        "comfort": 355,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "The observation deck's walls are carved from the finest mahogany, with a dead branch brought back from the desert planted within the pot.\nPerhaps because children often pour their bitter herbal soups into the pot, fresh shoots will occasionally emerge from these dry branches.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_medicineTable_01": {
+        "id": "furni_martialClub_medicineTable_01",
+        "sortId": 1125,
+        "name": "Dispensary Grinding Table",
+        "iconId": "furni_martialClub_medicineTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 2,
+        "depth": 5,
+        "height": 2,
+        "comfort": 205,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "After the carving and grinding of the observation deck, the carpenter turned the leftover wood into a low table, and presented it to old friends.\nThe herbal formulae have long been memorized, and the book keeps record of old clients' illnesses. For a great many seasons, the sound of pestle against mortar would resound without pause until the crack of dawn.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_pillar_01": {
+        "id": "furni_martialClub_pillar_01",
+        "sortId": 1126,
+        "name": "'The Peace Beneath'",
+        "iconId": "furni_martialClub_pillar_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 3,
+        "depth": 2,
+        "height": 10,
+        "comfort": 285,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A solid wooden pillar supporting the beams of the roof. The room's interior has been renovated many times, and only it remains constant.\nIt has survived the shaking of the mountains and the splitting of the earth, it has blocked knives and swords. Even if it is now only used to hang clothes, it still props up a corner of Yumen in its own way.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_medicine_01": {
+        "id": "furni_martialClub_medicine_01",
+        "sortId": 1127,
+        "name": "Bluestone Mortar",
+        "iconId": "furni_martialClub_medicine_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 2,
+        "height": 2,
+        "comfort": 180,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A medicinal grinding station made from chiseled and smoothed high-quality bluestone. It has been in use for many years, and the fragrance of herbs remains even after the debris has been washed away.\nOccasionally, martial artists will use it to stretch their backs and loosen their sinews after practicing kung fu. They say it's gentler and more comfortable than having the clinic's owner do it.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_washtub_01": {
+        "id": "furni_martialClub_washtub_01",
+        "sortId": 1128,
+        "name": "'Wash Sand, Cleanse Dust'",
+        "iconId": "furni_martialClub_washtub_01",
+        "type": "DECORATION",
+        "subType": "WASH",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 165,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "The wooden laundry tubs commonly used by the people of Yumen often have a fine mesh at the bottom to filter out the sand mixed in with their clothes.\nSince the boss secretly sprinkled ground shan yao into the medicine cabinet, the apprentice no longer dares to wash clothes with saponin powder.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_seatstone_01": {
+        "id": "furni_martialClub_seatstone_01",
+        "sortId": 1129,
+        "name": "'Cohesion'",
+        "iconId": "furni_martialClub_seatstone_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A chunk of bluestone chiseled into the shape of an ancient bronze anvil, capable of pulling all the muscles in one's body when swung.\nWhen dealing with the hardest substances in the pharmacopeia, this rectangular stone anvil is more efficient than Originium grinders, provided you're as strong as that strapping Feline fellow.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_drum_01": {
+        "id": "furni_martialClub_drum_01",
+        "sortId": 1130,
+        "name": "'Symphony of Drums'",
+        "iconId": "furni_martialClub_drum_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 235,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A mahogany frame with a high-quality animal skin spread across it. Sound the drums, usher peace into Yumen.\nThe young apprentice who had just started training kung fu with the boss for a few months hears the pounding of the three drums, feels the heat of his blood, and throws a set of respectable punches.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_weaponRack_01": {
+        "id": "furni_martialClub_weaponRack_01",
+        "sortId": 1131,
+        "name": "'Concealed Edge'",
+        "iconId": "furni_martialClub_weaponRack_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 7,
+        "depth": 3,
+        "height": 6,
+        "comfort": 450,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A weapon rack made from yellow sandalwood. The craftsman carved the side panels with a traditional cloud pattern that signifies peace and harmony.\nA thick layer of dust and sand has accumulated on the shelf. It has been twenty years, and the ranger who brought the bow and arrow here has perhaps long forgotten about them.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_Dummy_01": {
+        "id": "furni_martialClub_Dummy_01",
+        "sortId": 1132,
+        "name": "'Duel With Oneself'",
+        "iconId": "furni_martialClub_Dummy_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 4,
+        "depth": 3,
+        "height": 5,
+        "comfort": 280,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A commonly-seen wooden training dummy, distinguished only by the extra animal tail and a few scratches on its surface.\nAt night, when nobody is on duty, a burly Feline can sometimes be seen saluting the self-resembling dummy before testing a flurry of moves on it all the way until the sun rises.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_carpet_01": {
+        "id": "furni_martialClub_carpet_01",
+        "sortId": 1133,
+        "name": "'Treading Sand'",
+        "iconId": "furni_martialClub_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 16,
+        "depth": 8,
+        "height": 1,
+        "comfort": 210,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A Yanese carpet with a regular symmetrical pattern. It is finely-woven, but also accumulates sand and dust easily.\nRemember to tread carefully when dancing with the sword or brandishing the staff, lest the boss sweep you out the door along with the sand you kicked up.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_floorLamp_01": {
+        "id": "furni_martialClub_floorLamp_01",
+        "sortId": 1134,
+        "name": "'All Shallow'",
+        "iconId": "furni_martialClub_floorLamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 170,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "An antique-style floor lamp with a rice paper shade treated with an herbal balm to ward off biting insects.\nA prestigious figure who once came to see the doctor here dipped his hand in wine and wrote something on the lampshade. People often mistake it for some high-level fung fu, but when they go sneak a peek, they only see a few blurry words: 'Do it yourself.'",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_chair_01": {
+        "id": "furni_martialClub_chair_01",
+        "sortId": 1135,
+        "name": "'Meditation'",
+        "iconId": "furni_martialClub_chair_01",
+        "type": "SEATING",
+        "subType": "CHAIR",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 180,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "The seat is too deep to be suitable for reclining, but is perfect for drawing your legs back and curling up.\nFor maladies that cannot be cured with herbs, acupuncture, or cupping, the clinic's owner will teach patients a set of exercises such as meditation or qigong, which may dispel blood stasis and relieve knotting of the heart.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_pile_01": {
+        "id": "furni_martialClub_pile_01",
+        "sortId": 1136,
+        "name": "'Simplicity'",
+        "iconId": "furni_martialClub_pile_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 70,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Once a wooden dummy, turned into this masterpiece by an ambitious kick.\nThe fellow sent by the dojo to retrieve medicine was more interested in showing off than learning; while originally here on an errand for his master, by the time he left, he had prescribed himself a few portions of 'Get Back Up' decoction.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_wallpaper_01": {
+        "id": "furni_martialClub_wallpaper_01",
+        "sortId": 1137,
+        "name": "'I Go'",
+        "iconId": "furni_martialClub_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A wall of real wood, decorated with the interplay of square and circle that reflects the adage that talent must not transcend righteousness, and that mindfulness ought to encompass all things.\nHerbalism is much like kung fu, in that herbs and trees are just like punches and kicks– each has their own identifiable rules, and only after understanding them can one move forward.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_floor_01": {
+        "id": "furni_martialClub_floor_01",
+        "sortId": 1138,
+        "name": "'Remembrance'",
+        "iconId": "furni_martialClub_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Though they are but crude stone tiles, they have been stationed in the city of Yumen for hundreds of years.\nTwenty years ago, upon them approached the sound of armor scraping against stone. The clinic's lights shone a long vigil, and the doctor brewed strong tea, waiting for warriors to return from the disaster seeking medical treatment.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_reception_screen_01": {
         "id": "furni_reception_screen_01",
         "sortId": 1153,
@@ -49263,6 +50012,64 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_SF2023_vase_01": {
+        "id": "furni_SF2023_vase_01",
+        "sortId": 10106,
+        "name": "Plum Blossom Joy",
+        "iconId": "furni_SF2023_vase_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 100,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A simple and elegant shelf with a potted red plum in full bloom. The wine in the cup is contaminated by the fragrance of plum, and even a single whiff is intoxicating.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_SF2023_weaponRack_01": {
+        "id": "furni_SF2023_weaponRack_01",
+        "sortId": 10107,
+        "name": "New Life for a Dead Tree",
+        "iconId": "furni_SF2023_weaponRack_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 100,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "This chic and elegant sword stand was originally the branch of a withered plum tree, severed by this sword. The past is no longer worth mentioning; the sword now sleeps within its scabbard, and from the dead branch buds new life.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_obsidianFestival_DJBooth_01": {
         "id": "furni_obsidianFestival_DJBooth_01",
         "sortId": 10201,
@@ -50936,6 +51743,35 @@
         "comfort": 75,
         "usage": "Used in the dorm to improve the ambience.",
         "description": "'Peace and prosperity, wealth for posterity.'",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS025_cnKnot_01": {
+        "id": "furni_dropS025_cnKnot_01",
+        "sortId": 11057,
+        "name": "Plaque - Welcome the Spring",
+        "iconId": "furni_dropS025_cnKnot_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Rope knots are woven in the winter, for the spring of the coming year must closely follow.",
         "obtainApproach": "Event Reward",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -62854,6 +63690,149 @@
           "furni_countryside_floor_01"
         ]
       },
+      "furni_set_martialClub": {
+        "id": "furni_set_martialClub",
+        "sortId": 67,
+        "name": "Yumen Clinic",
+        "themeType": "EVENT",
+        "desc": "A clinic, reconstructed based on Waai Fu's descriptions. A place like this, where martial instruments outnumber medical ones, would only be found in Yumen.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_martialClub_walldeco_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_fireplace_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_ceilingLamp_01",
+            "pos0": 6,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_plantShelf_01",
+            "pos0": 9,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_medicineTable_01",
+            "pos0": 5,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_pillar_01",
+            "pos0": 12,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_medicine_01",
+            "pos0": 11,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_washtub_01",
+            "pos0": 14,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_seatstone_01",
+            "pos0": 22,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_drum_01",
+            "pos0": 15,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_weaponRack_01",
+            "pos0": 20,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_Dummy_01",
+            "pos0": 26,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_carpet_01",
+            "pos0": 16,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_floorLamp_01",
+            "pos0": 32,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_chair_01",
+            "pos0": 32,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_pile_01",
+            "pos0": 23,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_martialClub_1",
+          "furni_set_martialClub_2",
+          "furni_set_martialClub_3",
+          "furni_set_martialClub_4"
+        ],
+        "furnitures": [
+          "furni_martialClub_walldeco_01",
+          "furni_martialClub_fireplace_01",
+          "furni_martialClub_ceilingLamp_01",
+          "furni_martialClub_plantShelf_01",
+          "furni_martialClub_medicineTable_01",
+          "furni_martialClub_pillar_01",
+          "furni_martialClub_medicine_01",
+          "furni_martialClub_washtub_01",
+          "furni_martialClub_seatstone_01",
+          "furni_martialClub_drum_01",
+          "furni_martialClub_weaponRack_01",
+          "furni_martialClub_Dummy_01",
+          "furni_martialClub_carpet_01",
+          "furni_martialClub_floorLamp_01",
+          "furni_martialClub_chair_01",
+          "furni_martialClub_pile_01",
+          "furni_martialClub_wallpaper_01",
+          "furni_martialClub_floor_01"
+        ]
+      },
       "furni_set_reception": {
         "id": "furni_set_reception",
         "sortId": 58,
@@ -66646,6 +67625,64 @@
           "furni_countryside_ceilingLamp_01",
           "furni_countryside_curtain_01",
           "furni_countryside_partitionWall_01"
+        ]
+      },
+      "furni_set_martialClub_1": {
+        "id": "furni_set_martialClub_1",
+        "sortId": 1,
+        "name": "'Life From Death's Door'",
+        "themeId": "furni_set_martialClub",
+        "comfort": 230,
+        "count": 5,
+        "furniture": [
+          "furni_martialClub_walldeco_01",
+          "furni_martialClub_fireplace_01",
+          "furni_martialClub_ceilingLamp_01",
+          "furni_martialClub_medicineTable_01",
+          "furni_martialClub_medicine_01"
+        ]
+      },
+      "furni_set_martialClub_2": {
+        "id": "furni_set_martialClub_2",
+        "sortId": 2,
+        "name": "'The Fruits of Daily Effort'",
+        "themeId": "furni_set_martialClub",
+        "comfort": 270,
+        "count": 5,
+        "furniture": [
+          "furni_martialClub_seatstone_01",
+          "furni_martialClub_weaponRack_01",
+          "furni_martialClub_Dummy_01",
+          "furni_martialClub_carpet_01",
+          "furni_martialClub_pile_01"
+        ]
+      },
+      "furni_set_martialClub_3": {
+        "id": "furni_set_martialClub_3",
+        "sortId": 3,
+        "name": "'Ambience Abound'",
+        "themeId": "furni_set_martialClub",
+        "comfort": 220,
+        "count": 4,
+        "furniture": [
+          "furni_martialClub_plantShelf_01",
+          "furni_martialClub_washtub_01",
+          "furni_martialClub_drum_01",
+          "furni_martialClub_chair_01"
+        ]
+      },
+      "furni_set_martialClub_4": {
+        "id": "furni_set_martialClub_4",
+        "sortId": 4,
+        "name": "'Ordinary Alleys'",
+        "themeId": "furni_set_martialClub",
+        "comfort": 225,
+        "count": 4,
+        "furniture": [
+          "furni_martialClub_pillar_01",
+          "furni_martialClub_floorLamp_01",
+          "furni_martialClub_wallpaper_01",
+          "furni_martialClub_floor_01"
         ]
       },
       "furni_set_reception_1": {
