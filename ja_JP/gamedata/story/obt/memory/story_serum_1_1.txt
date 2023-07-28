@@ -1,0 +1,755 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="bg_lungmencommand",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(intro="$m_dia_street_intro",key="$m_dia_street_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[delay(time=1)]
+1099年
+ロドスエンジニア部
+実用的科学技術プロジェクトチームNo.13
+「腐食剤のさらなる研究とその防護措置について」
+責任者：コロセラム アステジーニ
+[Dialog]
+[delay(time=1)]
+[Character(name="avg_489_serum_1#1$1",fadetime=1)]
+[delay(time=2)]
+[name="コロセラム"]皆さんお疲れ様です。
+[name="コロセラム"]では……
+[Dialog]
+[Character(fadetime=1)]
+そう言いながら、コロセラムはいつものようにアイマスクをつけ、休憩し始めた。
+[Dialog]
+[delay(time=1)]
+[PlaySound(key="$d_gen_walk_n", volume=0.7)]
+[Character(name="avg_135_halo_1#1$1",fadetime=1)]
+[delay(time=2)]
+[name="アステジーニ"]ドクター、こんばんは。
+[Dialog]
+[Character]
+[Decision(options="こんばんは、アステジーニ。;コロセラムは寝てるのか？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#1$1",fadetime=1.5)]
+[delay(time=2)]
+[name="コロセラム"]ドクターですか。
+[name="コロセラム"]どーもこんばんは。
+[Dialog]
+[Character]
+[Decision(options="通りがかりに様子を見に来たけど順調かな？;プロジェクトに問題はない？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#10$1")]
+[name="コロセラム"]気になるんですか、ドクター。それなら……
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]これを持ってくれやがりますか？
+[Dialog]
+[Delay(time=1)]
+[characteraction(name="middle", type="move", xpos=30, fadetime=0.5,block=false)]
+[Delay(time=0.5)]
+[characteraction(name="middle", type="move", xpos=-30, fadetime=0.5,block=false)]
+[Delay(time=1)]
+[name="コロセラム"]安心しやがってください。これからやる実験は制御可能な範囲内で行われますんで。
+[name="コロセラム"]今持ってもらいやがった装甲板にも改良した最新版の防護コーティングが施されていますので、安全も保障されてやがりますよ。
+[Dialog]
+[Character]
+[Decision(options="分かった、こう持てばいいのかな？;待って、安全が保障されてるとは？", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]ご覧の通り、その装甲板は既に腐蝕によるダメージをかなり受けています。ですが、最新のコーディングの改良点は、腐蝕耐性ではなく……
+[name="コロセラム"]アステジーニさん、ちーっとお願いしてもいいですかね？　装甲板をアーツで攻撃してください。
+[Character(name="avg_135_halo_1#7$1")]
+[name="アステジーニ"]待って、この実験方法は少しリスクが高すぎるんじゃない？
+[Dialog]
+[Character]
+[Decision(options="構わない、君たちの技術を信じている。;安心して、自分の身は自分で守れる。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]ご協力感謝します、ドクター。
+[Character(name="avg_135_halo_1#12$1")]
+[name="アステジーニ"]分かった……ドクターがそう言うのなら……
+[Dialog]
+[Character(name="avg_135_halo_1#11$1")]
+[Delay(time=1)]
+[PlaySound(key="$d_avg_magic_4")]
+[CameraShake(duration=0.5, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=2)]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]この通り、改良後の防護コーディングは腐蝕損害を受けた後でも、ある程度のアーツ攻撃であれば防ぐことが可能です。これは改良前にはできなかったことです。
+[name="コロセラム"]もちろん、これはアステジーニさんの努力の成果です。
+[Character(name="avg_489_serum_1#7$1")]
+[name="コロセラム"]残念ながら、私が担当している腐蝕剤の腐蝕力の向上に関しては、まだ目覚ましい成果は得られていません。
+[Character(name="avg_135_halo_1#4$1")]
+[name="アステジーニ"]……
+[Character(name="avg_135_halo_1#8$1")]
+[name="アステジーニ"]ドクター、ごめん。もう一回さっきと同じ耐久性実験に付き合ってくれる？
+[Dialog]
+[Character]
+[Decision(options="問題ない。;ま……待って！", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_135_halo_1#6$1")]
+[name="アステジーニ"]我が電光よ！　ハァッ！！ 
+[Dialog]
+[Blocker(a=0.5, r=255, g=255, b=20, fadetime=0.1,block=true)]
+[PlaySound(key="$b_char_energyharm")]
+[CameraShake(duration=1, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1,block=true)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#11$1")]
+[Delay(time=2)]
+[name="アステジーニ"]やっぱり……これだけ強力な攻撃でも、辛うじて装甲板を貫通させられる程度なんだね。
+[Character(name="avg_135_halo_1#7$1")]
+[name="アステジーニ"]……あっ！　ドクター、大丈夫？　ごめんね……私……
+[Dialog]
+[Character]
+[Decision(options="大丈夫、なんともないよ。;すごい攻撃力だ。;すごい防御力だ。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_135_halo_1#3$1")]
+[name="アステジーニ"]よかった……本当にごめんね。
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]防護コーディングの強度は、明らかにプロジェクトが求める基準値を超えてやがりますね。
+[Character(name="avg_135_halo_1#4$1")]
+[name="アステジーニ"]でも理論上の限界にはまだ達していない。
+[Character(name="avg_135_halo_1#11$1")]
+[name="アステジーニ"]これ以上改良したらどうなるのか……もっと実験と試験を繰り返す必要があると思うの。
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]アステジーニさんの意見は確かに一理ありますが、盲目的に限界を追い求めるのは賢い選択じゃねーと思いますよ。
+[Character(name="avg_135_halo_1#8$1")]
+[name="アステジーニ"]……
+[name="アステジーニ"]今回の実験結果を詳しくまとめてこなきゃ。
+[Character(name="avg_135_halo_1#10$1")]
+[name="アステジーニ"]ドクター、お疲れ様。
+[Dialog]
+[Character]
+[Decision(options="役に立てて幸いだ。;君たちの方こそお疲れ様。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]ではドクター、ちょうど六時になりましたので――
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]お先に失礼させていただきます。本日は実験にお付き合いくださりやがって感謝します。
+[name="コロセラム"]あっ、そういえば、私のデスクにクエルクスさんからもらったキャンディと、リーさんからもらった炎国の茶葉が置いてあります。どちらも疲労回復に効果的ですので、どーぞご自由に。
+[name="コロセラム"]それでは……ドクター、アステジーニさん、また。
+[dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Character(fadetime=1)]
+[Delay(time=2)]
+[Character(name="avg_135_halo_1#11$1")]
+[name="アステジーニ"]……
+[Dialog]
+[Character]
+[Decision(options="アステジーニ、君も少し休憩しては？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_135_halo_1#10$1")]
+[name="アステジーニ"]いや……私のことは気にしないで。たぶん遅くなるまで作業してるから。
+[Character(name="avg_135_halo_1#11$1")]
+[name="アステジーニ"]まだ調べものと試験が残っているの。
+[stopmusic(fadetime=3)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[PlaySound(key="$d_avg_doorknob",volume=0.7)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[playMusic(intro="$alive_intro",key="$alive_loop", volume=0.2)]
+[Delay(time=2)]
+[Character(name="avg_489_serum_1#9$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="コロセラム"]（深呼吸）
+[Character(name="avg_489_serum_1#10$1")]
+[name="コロセラム"]（背伸び）
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]（深呼吸）
+[Dialog]
+[MusicVolume(volume=0.5, fadetime=2)]
+[Delay(time=2)]
+[Character(name="avg_489_serum_1#10$1")]
+[name="コロセラム"]ふぅ……仕事終わり！
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]ちーと音量が大きいかな。迷惑をかけちゃ悪りーし下げるか。
+[Dialog]
+[MusicVolume(volume=0.3, fadetime=2)]
+[Delay(time=2)]
+[Character(name="avg_489_serum_1#10$1")]
+[Characteraction(name="middle", type="jump", xpos=20, power=-15,times=1, fadetime=1, block=true)]
+[delay(time=1.3)]
+[Characteraction(name="middle", type="jump", xpos=-20, power=-15,times=1, fadetime=1, block=true)]
+[name="コロセラム"]フフ～ン（リズムに乗ってダンスする）
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]部屋ん中がちーと乾燥してるな。加湿器もつけよっと。
+[Dialog]
+[Character]
+[PlaySound(key="$doorknockquite")]
+[Delay(time=1)]
+[name="エンジニア部オペレーター"]コロセラム班長、いますか？
+[name="エンジニア部オペレーター"]頼まれていたものを届けに来ました。
+[Dialog]
+[StopMusic(fadetime=1)]
+[Delay(time=1)]
+[playMusic(intro="$m_dia_street_intro",key="$m_dia_street_loop", volume=0.4)]
+[PlaySound(key="$dooropenquite")]
+[Character(name="avg_npc_012",fadetime=0.5)]
+[Delay(time=1)]
+[name="エンジニア部オペレーター"]班長が申請された材料です。こちらにサインをお願いいたします。
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]お疲れ様です。そこの隅っこにでも置いときやがってください。
+[name="コロセラム"]後は自分で整理しますんで。
+[Character(name="avg_npc_012")]
+[name="エンジニア部オペレーター"]こんなにたくさんの実験廃棄材料、何に使うつもりなのです？　うちのチームだけでなく、他のチームからも回収されてますよね？
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]ただの個人的な趣味ですよ、仕事とは関係ありません。
+[Character(name="avg_npc_012")]
+[name="エンジニア部オペレーター"]……
+[name="エンジニア部オペレーター"]コロセラム班長は個人的な趣味で……アステジーニさんは個人的な思いつきか。
+[name="エンジニア部オペレーター"]二人揃って、一体何をするつもりやら。
+[Character(name="avg_489_serum_1#9$1")]
+[PlaySound(key="$d_avg_paper2")]
+[name="コロセラム"]はい、受領書をどうぞ。
+[name="コロセラム"]他に要件はありますか？
+[Character(name="avg_npc_012")]
+[name="エンジニア部オペレーター"]コロセラム班長……さっき外に出て気付いたのですが、まだ明かりがついてるのはうちの実験室だけですよ。
+[name="エンジニア部オペレーター"]アステジーニさんは、もう何日も泊まり込みで作業をしているようです。その、少し様子を見てきた方がいいのでは……
+[StopMusic(fadetime=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_motorroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$tech_intro",key="$tech_loop", volume=0.4)]
+[Delay(time=1)]
+1089年
+レイジアン工業原型試作エンジニア部
+[Dialog]
+[Character(name="avg_npc_177",fadetime=0.5)]
+[Delay(time=1)]
+[name="プロジェクトマネージャー"]入れ。
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite")]
+[Character(name="avg_489_serum_1#1$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="コロセラム"]初めまして！　新人研究員のコロセラムです。専門分野は……
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]挨拶はいい。この報告書を埋めたら、今夜財務担当のオフィスに提出したまえ。
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]承知しました！　皆さんも何かお手伝いできることがあれば、遠慮なく声をお掛けください。
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]さっさと取り掛かれ。
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]はい！
+[Dialog] 
+[character(fadetime=1)]
+[Background(image="bg_black",screenadapt="coverall",fadetime=2)]
+[Delay(time=3)]
+[Subtitle(text="見たか？", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="そう、画面に映ってるそいつだ。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Background(image="bg_motorroom",screenadapt="coverall",fadetime=1.5)]
+[Delay(time=2)]
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]まだ帰らないのかね？
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]今日は泊まろうと思います。
+[name="コロセラム"]帰ってもどうせやることがないですし、だったらこれを終わらせようかと。
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]まだ時間があるんだから、そう急がなくてもいいのに。
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]大丈夫です、ちょうどいいアイディアが浮かんだので。
+[name="コロセラム"]ボスは先にお帰りください。
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]コロセラムくん、君がエンジニア部に来てからどれくらい経ったのかね？
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]……大体半年くらいじゃないですか？
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]そうか……
+[name="プロジェクトマネージャー"]頑張れよ。
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]はい！
+[Dialog] 
+[character(fadetime=1)]
+[Background(image="bg_black",screenadapt="coverall",fadetime=2)]
+[Delay(time=3)]
+[Subtitle(text="画面に映っている顔がちゃんと見えるか？", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Background(image="bg_motorroom",screenadapt="coverall",fadetime=1.5)]
+[Delay(time=2)]
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]コロセラムくん、ちょっといいかね。
+[Character(name="avg_489_serum_1#3$1")]
+[name="コロセラム"]はい。
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]エンジニア部に来てもう二年経つだろ？　君は頭もよく回るし、普段からいつも努力している。
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]ありがとうございます！
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]それでだ……君に話がある。実は軍に友人がいてね、兵士用の新しい防護素材を急ぎで必要としているんだ。かなり急な仕事だし、うちのチームのプロジェクトではないけど……
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]やります。
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]これは冗談で言ってるんじゃないんだぞ。君に助手をつけることもできないし、こちらの仕事も予定通りこなさなければならない。もう少しよく考えたらどうだ？
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]問題ありません。任せてください。
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]……
+[name="プロジェクトマネージャー"]なら頑張りたまえ。
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]はい！
+[Dialog] 
+[character(fadetime=1)]
+[Background(image="bg_black",screenadapt="coverall",fadetime=2)]
+[Delay(time=3)]
+[Subtitle(text="この人の名前をまだ覚えているか？", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[StopMusic(fadetime=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_lungmencommand",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playMusic(intro="$ponder_intro",key="$ponder_loop", volume=0.4)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#11$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="アステジーニ"]このデータ……ありえない。
+[name="アステジーニ"]あの人がこんな目立つミスに気付かないはずが……
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite")]
+[Delay(time=1)]
+[Character(name="avg_489_serum_1#1$1",fadetime=0.5)]
+[Delay(time=0.6)]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#12$1")]
+[name="アステジーニ"]……もう退勤したんじゃなかったの？
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]邪魔しちまってすみません。ちーと資料を取りに来ただけです。
+[name="コロセラム"]では、お先に。
+[Dialog]
+[Character(fadetime=0.5)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#9$1")]
+[name="アステジーニ"]ちょっと待って！
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]何です？　他に要件でも？
+[Character(name="avg_135_halo_1#11$1")]
+[name="アステジーニ"]訊きたいことがあるの。コロセラムさんが担当している、腐蝕剤の改良研究について。
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]いーですよ。 
+[Character(name="avg_135_halo_1#11$1")]
+[name="アステジーニ"]この数か月の間、私や他のメンバーが手伝っても、コロセラムさんの腐蝕剤の研究に大きな進展は見られなかった。
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]そーですね、この研究は私が予想していたよりもずっと難しいようです。
+[Character(name="avg_135_halo_1#11$1")]
+[name="アステジーニ"]正直、おかしいと思ってたよ。理論上では、実験結果が毎回あんな数値になるはずないもの。でもコロセラムさんを信じていたから、深く追及しようとは思わなかった。
+[name="アステジーニ"]だけどさっき、今までの実験データを確認していた時、偶然これを見つけたんだ……
+[name="アステジーニ"]キミのサンプル報告書。
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]何か問題でもおありで？
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Character(name="avg_135_halo_1#6$1")]
+[name="アステジーニ"]大問題よ！！
+[Character(name="avg_135_halo_1#9$1")]
+[name="アステジーニ"]キミが作ったサンプルはどれも肝心な原料の使用量が、計算で割り出した数値よりも少ないの。
+[name="アステジーニ"]つまり、数ヵ月もの間、私たちはずっと不良品のサンプルで実験してきたってことだよ！
+[name="アステジーニ"]どうりでずっとうまくいかなかったわけだ。これだけ実験しても、プロジェクトの設定値にギリギリ達するのがやっと。
+[Character(name="avg_489_serum_1#7$1")]
+[name="コロセラム"]……
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]すみませんでした。私のうっかりミスのせいで皆さんに大きな迷惑をおかけしたよーですね。
+[Character(name="avg_135_halo_1#11$1")]
+[name="アステジーニ"]本当に気付いていなかったの？
+[Character(name="avg_489_serum_1#8$1")]
+[name="コロセラム"]ええ、それについては深くお詫びします。
+[Character(name="avg_135_halo_1#11$1")]
+[name="アステジーニ"]……
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]……
+[Character(name="avg_135_halo_1#11$1")]
+[name="アステジーニ"]じゃあ、今からデータ通りの原料で、正しいサンプルを作ってもらえる？
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]すみません、今は無理です。
+[name="コロセラム"]勤務時間外ですから。
+[Character(name="avg_135_halo_1#9$1")]
+[name="アステジーニ"]なっ……！
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]明日からは、ちゃんと全力でアステジーニさんのお仕事に協力しますよ。ですが、今は私のプライベートの時間です。
+[name="コロセラム"]自分が犯した業務上の過失に関しては、後で私の方からドクターへ説明し、全責任を負います。
+[name="コロセラム"]では……また明日。
+[dialog]
+[PlaySound(key="$d_gen_walk_n",volume=0.5)]
+[Character(fadetime=0.5)]
+[Delay(time=0.5)]
+[Character(name="avg_135_halo_1#6$1")]
+[name="アステジーニ"]あっ、ちょっと！
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="アステジーニ"]コロセラムさん！
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_489_serum_1#8$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="コロセラム"]（深呼吸）
+[Dialog]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=1, block=true)]
+[Subtitle(text="コロセラムは鏡に映る自分の姿を見つめながら……", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="毎日繰り返し練習している。", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]（仕事中の――）
+[Character(name="avg_489_serum_1#7$1")]
+[name="コロセラム"]（あらゆる場面で――）
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]（それぞれの同僚に対し――）
+[Character(name="avg_489_serum_1#5$1")]
+[name="コロセラム"]（どんな表情が一番適切なのか。）
+[Dialog]
+[Delay(time=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_motorroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_npc_177")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="プロジェクトマネージャー"]コロセラムくん、何をしてくれたんだ！
+[name="プロジェクトマネージャー"]君をあんなに信用していたのに！
+[Character(name="avg_489_serum_1#11$1")]
+[name="コロセラム"]ですが……データ上での性能の数値は、要求されていた二倍以上をも上回っていますよ。
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]コストは！？　いくらで売ればコストを回収できるのかね！
+[name="プロジェクトマネージャー"]赤字商売をしてどうする？　見積が高くなったせいで、先方がお怒りだぞ。分かっているのか？
+[Character(name="avg_489_serum_1#11$1")]
+[name="コロセラム"]でも、先方とボスは友人だと……
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]まったく……これだから若い奴は……
+[name="プロジェクトマネージャー"]出て行きなさい。
+[Character(name="avg_489_serum_1#4$1")]
+[name="コロセラム"]でも……
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]出て行け！
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]……はい。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]全員、手を一旦止めてくれ！　上から緊急のプロジェクトが来た。
+[name="プロジェクトマネージャー"]今全員の手元に配ったのは、戦場で出回ってる新しい防護素材だ。
+[Character(name="avg_489_serum_1#3$1")]
+[name="コロセラム"]これは！？
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]そして、我々の大切なとあるお得意先が、この防衛素材に対して優位性を持った武器を、大至急所望されている。
+[name="プロジェクトマネージャー"]上から与えられた期間は最大一ヶ月。全員気を引き締めるんだ！　この一ヶ月は休みがないと思え！　必ず期限内に仕上げるんだ！
+[name="プロジェクトマネージャー"]分かったか！
+[Character(name="avg_489_serum_1#4$1")]
+[name="コロセラム"]ボス……
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]なんだ？
+[Character(name="avg_489_serum_1#11$1")]
+[name="コロセラム"]この素材……私が半年前に作ったものとかなり似ているような……
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]話は後にしろ！　さっさと仕事に取り掛かれ！
+[Character(name="avg_489_serum_1#7$1")]
+[name="コロセラム"]……
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]聞こえなかったのか？
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]はい、承知いたしました。
+[StopMusic(fadetime=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Delay(time=2)]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$sjoyasorrow_intro",key="$sjoyasorrow_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_npc_222",fadetime=0.5)]
+[Delay(time=1)]
+[name="クライアント代表"]これで全員揃いましたか？
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]はい、同僚の一人がまだ取り込み中ですが、先に始めましょう。
+[Character(name="avg_npc_222")]
+[name="クライアント代表"]分かりました……前回お送り頂いたデータとサンプルですが、既にテストを行わせて頂きました。
+[name="クライアント代表"]確かに性能や品質を含むすべての点において、我々の希望する基準値に達していました。ですが……
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]何か問題でもあったのですか？
+[Character(name="avg_npc_222")]
+[name="クライアント代表"]それがですね、こちらの内部で……少し前にその……人員の異動がありましてね。
+[name="クライアント代表"]新しく来た責任者が新たな方針を打ち出したんです。それと、現在の腐蝕性の性能にも満足していないようでして、こちらの新しい指標を満たすものを希望されているのです。
+[Dialog]
+[Character(name="avg_489_serum_1#2$1")]
+[PlaySound(key="$d_avg_paper1")]
+[Delay(time=2)]
+[name="コロセラム"]これほど強力な腐蝕性ですと……大量破壊兵器として使用することでも想定されていやがるのですか？
+[Character(name="avg_npc_222")]
+[name="クライアント代表"]とんでもない、ただ自己防衛用ですよ……
+[name="クライアント代表"]それと様々な事情が重なってしまい、プロジェクトの予算も大幅に削減されてしまいましてね……
+[name="クライアント代表"]コスト削減や、今後の開発費用に関して、色々と難しいお願いをすることになるかもしれませんが、ご理解頂けますと幸いです……
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]ちょっとすみません。
+[name="コロセラム"]まず、腐蝕剤の新しい要求ですが、現時点では希望に添えられるかどうかは答えかねます。先にうちの者と検討する必要があるんで。
+[name="コロセラム"]ですが、開発期間を延長するとなれば、コストの増加は避けられないでしょう。なのにコスト削減となると……
+[Character(name="avg_npc_222")]
+[name="クライアント代表"]ならば……防護システムから不要な機能を取り除き、基本的な防御機能だけ残すのはどうでしょうか？
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]申し訳ありませんが、仕様変更はそう簡単にできるもんではないですよ。
+[Character(name="avg_npc_222")]
+[name="クライアント代表"]機能をいくつか取り除くだけでしょう？　詳しいことはよく分かりませんが、あなたたちプロにとってはさほど難しいことではないはずですよね？
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]……
+[Character(name="avg_npc_222")]
+[name="クライアント代表"]それから予算についてですが……こちらは残念ながらどうにもなりません。ですが、我々はあなたたちの実力を非常に高く評価しております。
+[name="クライアント代表"]なので、お互い力を合わせて、共にこの小さな困難を乗り越えませんか？　もちろん……無理なお願いをしていることに関して、充分申し訳なく思っています。
+[name="クライアント代表"]それに今回をきっかけに、今後も長期的な業務提携がさらに増えることでしょう。
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]それはいくらなんでも……
+[name="コロセラム"]ドクター？
+[Dialog]
+[Character]
+[Decision(options="悪いが、そのような要求は受け入れられない。", values="1;2")]
+[Predicate(references="1")]
+[Character(name="avg_npc_222")]
+[name="クライアント代表"]……
+[name="クライアント代表"]分かりました、社内の者と改めて相談させてください。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[name="クライアント代表"]大変残念ですが、現在の状況を踏まえると、このプロジェクトの開発を中止せざるを得ないという結論に至りました。
+[dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_lungmencommand",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Decision(options="長い間頑張っていたのにすまない。;契約違反の賠償に関しては改めて先方に確認する。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]ありがとうございます、ドクター。きっとこれが最善の結果だったと思いますよ。
+[Dialog]
+[Character]
+[PlaySound(key="$dooropenquite",volume=0.7)]
+[Delay(time=1)]
+[Character(name="avg_135_halo_1#8$1",fadetime=0.5)]
+[Delay(time=1)]
+[name="アステジーニ"]……
+[Character(name="avg_489_serum_1#4$1")]
+[name="コロセラム"]……
+[Character(name="avg_135_halo_1#1$1")]
+[name="アステジーニ"]ドクター！　ちょうどいいところに来てくれたね！
+[name="アステジーニ"]この数日で、今までの実験データを繰り返し比較したところ、やっと問題の原因を特定できたの！　これが新しい腐蝕剤のサンプルだよ。
+[Character(name="avg_135_halo_1#7$1")]
+[name="アステジーニ"]あ、ドクター！　今回は装甲板の後ろに立たなくていいからね。いくよ！
+[Character(name="avg_489_serum_1#7$1")]
+[name="コロセラム"]……
+[Dialog]
+[Character]
+[Delay(time=1)]
+[PlaySound(key="$d_avg_magic_4")]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=2)]
+[Character(name="avg_135_halo_1#2$1")]
+[name="アステジーニ"]ドクター、今の見た？　新しい腐蝕剤は以前の古い防衛コーディングに対して、壊滅的なダメージを与えられるようになったの。
+[Character(name="avg_135_halo_1#5$1")]
+[name="アステジーニ"]でもねでもね！　新しい腐蝕剤に対応できるように、防護コーディングの設計案もさらに改良したんだ！
+[Dialog]
+[Character]
+[Decision(options="……;アステジーニ、話したいことがある。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_135_halo_1#1$1")]
+[name="アステジーニ"]どうしたの？
+[name="アステジーニ"]さっきのミーティングで何か問題でも起きた？
+[Character(name="avg_489_serum_1#7$1")]
+[name="コロセラム"]……
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]大したこたーありませんよ。
+[name="コロセラム"]腐蝕剤はもう期待通りの効果に達しているので、むしろ防護性能をさらに向上させたいと、クライアントは言ってやがりました。
+[name="コロセラム"]アステジーニさんのおかげで、これからの研究の方向性がはっきりしましたよ。
+[name="コロセラム"]それに、この素材は今後、うちのオペレーターの装甲にも使えますよね、ドクター？
+[Dialog]
+[Character]
+[Decision(options="ああ、これでみんなをもっと守られる。;……二人とも、お疲れ様。;アステジーニ、命令だ。今すぐ休憩を取りなさい。", values="1;2;3")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]そうだ、ドクター。
+[name="コロセラム"]ちーと話したいことがあります。
+[Predicate(references="2")]
+[Character(name="avg_135_halo_1#1$1")]
+[name="アステジーニ"]ありがとう、ドクター！
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]私たちはやるべきことをしたまでです。
+[name="コロセラム"]そうだ、ドクター。
+[name="コロセラム"]ちーと話したいことがあります。
+[Predicate(references="3")]
+[Character(name="avg_135_halo_1#12$1")]
+[name="アステジーニ"]……分かったよ。
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]そうだ、ドクター。
+[name="コロセラム"]ちーと話したいことがあります。
+[Predicate(references="1;2;3")]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_489_serum_1#4$1")]
+[name="コロセラム"]ですので、腐蝕剤の研究において、私の不注意でキーとなる重要な原料の使用量を間違えていたんです。
+[name="コロセラム"]これはすべて私一人の責任です。
+[Dialog]
+[Character]
+[Decision(options="……;さっき、なぜ本当のことを言わなかった？;アステジーニを心配しているのか？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]はい？
+[name="コロセラム"]ドクター、私の専門分野が何かご存じですか？
+[Dialog]
+[Character]
+[Decision(options="腐蝕剤科学。;アンチ腐蝕防護コーティング技術。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]その通りです。エンジニア部に入ってからずっと、腐蝕とアンチ腐蝕について研究し続け、何度も挫折しては、それを乗り越えてここまできました。
+[name="コロセラム"]ですが、私は自身の防護を疎かにしていたのです……実験用の試剤がいつの間にか、少しずつ自身を腐蝕してやがったことにも気付かずに……
+[Character(name="avg_489_serum_1#7$1")]
+[name="コロセラム"]そしてある日、突然気付いちまったんですよ。夢だの情熱だの理想だのも、腐蝕に弱いんだってことに。
+[name="コロセラム"]……
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]だから……アステジーニさんが仕事をまだ楽しんでやがるのなら、そのままでいーんじゃないですか、ドクター？
+[name="コロセラム"]そういえば、そろそろ六時ですね。
+[Character(name="avg_489_serum_1#1$1")]
+[name="コロセラム"]もう退勤してもいーですか？
+[Dialog]
+[Character]
+[Decision(options="最後にもう一つ聞きたい。", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]どーぞ。
+[Dialog]
+[Character]
+[Decision(options="本当に、ただ間違えただけなのか？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]……
+[name="コロセラム"]ドクター、だいぶ前にリーさんから、矛と盾という炎国の話を聞いたんです。
+[Dialog]
+[Character]
+[Decision(options="聞いたことがある。;聞いたことがない。", values="1;2")]
+[Predicate(references="1;2")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]この世で最も堅い盾を持っていれば、必ず誰かがそれを貫こうと挑んでくる。そうして、この世で最も鋭い矛が生まれます。
+[name="コロセラム"]その矛があらゆる物を貫いた時、必ず誰かがその鋭さと威力を防ぐ方法を見つけようとし、再び最も堅い盾が生み出されます。
+[Character(name="avg_489_serum_1#7$1")]
+[name="コロセラム"]これは無限に続くループなんですよ。最終的にどうなるのか、誰にも予想できねーんです。
+[name="コロセラム"]矛と盾を持つ誰かが――
+[name="コロセラム"]この世からいなくなるまでは。
+[Dialog]
+[Character]
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]おっと……話が逸れてしまいました。とにかく、これは私の業務上の過失ですんで、責任はすべて一人で負います。
+[name="コロセラム"]でも、詳しい話はまた明日の出勤後にしましょう。
+[name="コロセラム"]もう就業時間は過ぎましたんで……
+[name="コロセラム"]（深呼吸）
+[Character(name="avg_489_serum_1#10$1")]
+[name="コロセラム"]（伸びをする）
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]（深呼吸）
+[Dialog]
+[Character]
+[Decision(options="コロセラム、何をしているんだ？", values="1")]
+[Predicate(references="1")]
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]ん？
+[StopMusic(fadetime=2)]
+[name="コロセラム"]ドクターも聞いてみやがりますか？
+[Dialog]
+[Delay(time=1)]
+[playMusic(intro="$alive_intro",key="$alive_loop", volume=0.4)]
+[Delay(time=2)]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[character(fadetime=0)]
+[Background(image="bg_motorroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]それはターゲットに深刻なダメージを与えることができるのかね？
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]もちろんです、あの素材は私が前に実験で割り出した配合で作られてますので。
+[name="コロセラム"]なぜそんな物が出回っているのかは分かりませんが。
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]*クルビアスラング*！
+[name="プロジェクトマネージャー"]この武器の現時点での安全耐用上限はどれくらいだ？
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]発射弾数にしておよそ三十発分です。
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]なら期限通りに納品できるか？
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]できません。すべての試用テストを終えているわけではないので、兵士に持たせても無駄死にさせるだけです。
+[Dialog]
+[Character(name="avg_489_serum_1#5$1")]
+[PlaySound(key="$d_avg_slap",volume=0.7)]
+[CameraShake(duration=0.3, xstrength=15, ystrength=10, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=1)]
+[name="コロセラム"]……
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]少しは目が醒めたかね？　君はどうかしているよ！　それとももっとはっきり言われないと分からないのかね？
+[name="プロジェクトマネージャー"]客が今すぐ欲しがっている物を、我々が持っている！　そうすれば金が稼げる！　これがビジネスなんだ！
+[Character(name="avg_489_serum_1#7$1")]
+[name="コロセラム"]……
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]先方が求めているのは、そこそこ使えて、それなりの数があって、値段が手頃な物なんだ！
+[name="プロジェクトマネージャー"]それが兵士だのテストだの……君に何の関係があると言うのだ！
+[Character(name="avg_489_serum_1#8$1")]
+[name="コロセラム"]……
+[Character(name="avg_npc_177")]
+[name="プロジェクトマネージャー"]三十発も撃てれば十分だろうが！　あの下っ端兵士どもが三十発分を使い切れるまで持ちこたえられるかどうかも怪しいもんだ。
+[name="プロジェクトマネージャー"]若いくせに、もっと柔軟に物事を考えられんのかね！？
+[name="プロジェクトマネージャー"]まったく君にはがっかりだ。
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]（怒った方がいいのか？）
+[Character(name="avg_489_serum_1#5$1")]
+[name="コロセラム"]（もちろん怒ってはいるよ。）
+[Character(name="avg_489_serum_1#5$1")]
+[name="コロセラム"]（でも……）
+[Character(name="avg_489_serum_1#2$1")]
+[name="コロセラム"]（これはただの仕事だ。）
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]（本気になってどうする？）
+[Character(name="avg_npc_177")]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="プロジェクトマネージャー"]なんだその顔は！？
+[Character(name="avg_489_serum_1#9$1")]
+[name="コロセラム"]すみませんでした、マネージャー。
+[name="コロセラム"]では……先に仕事に戻ります。
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[Character]
+[Image]

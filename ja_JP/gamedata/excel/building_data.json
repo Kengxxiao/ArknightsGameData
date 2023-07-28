@@ -10222,6 +10222,125 @@
           ]
         }
       ]
+    },
+    "char_2024_chyue": {
+      "charId": "char_2024_chyue",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&bd_up[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd_cost_expand[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4080_lin": {
+      "charId": "char_4080_lin",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd_cost[111]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd_cost&extra[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_493_firwhl": {
+      "charId": "char_493_firwhl",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&share[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4078_bdhkgt": {
+      "charId": "char_4078_bdhkgt",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_bd_to_bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_bd[200]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_prod_spd_bd[201]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -10597,6 +10716,30 @@
       "roomType": "CONTROL",
       "description": "制御中枢配置時、自身の1時間ごとの体力消費量<@cc.vup>+0.5</>。自身の体力が<@cc.kw>12</>を上回る時、<$cc.bd_a1><@cc.rem>知覚情報</></><@cc.vup>+10</>"
     },
+    "control_mp_cost&bd_up[000]": {
+      "buffId": "control_mp_cost&bd_up[000]",
+      "buffName": "我を我と知る",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd3",
+      "sortId": 1009,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、自身の1時間ごとの体力消費量が<@cc.vdown>+0.5</>。宿舎以外の施設内の<$cc.g.sui><@cc.kw>歳</></>所属オペレーター1人につき、<$cc.bd_b1><@cc.rem>俗世之憂</></><@cc.vup>+5</>（最大5人まで）"
+    },
+    "control_mp_bd_cost_expand[000]": {
+      "buffId": "control_mp_bd_cost_expand[000]",
+      "buffName": "孤光共に照らす",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd4",
+      "sortId": 1009,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、<$cc.c.room2><@cc.kw>他の施設</></>内で仕事中のオペレーターの体力が1時間ごとに<@cc.vup>+0.05</>回復し、<$cc.bd_b1><@cc.rem>俗世之憂</></><@cc.vup>20</>につき、体力が追加で<@cc.vup>+0.05</>回復（制御中枢内の他のスキル間とは<$cc.c.sui2_1><@cc.rem>特殊比較方式</></>が適用される）"
+    },
     "control_facCostReset[000]": {
       "buffId": "control_facCostReset[000]",
       "buffName": "杯停むること莫れ",
@@ -10944,6 +11087,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "発電所配置時、<@cc.kw>ワイルドメイン</>の配置された製造所の製造効率<@cc.vup>+5%</>"
+    },
+    "manu_bd_to_bd[000]": {
+      "buffId": "manu_bd_to_bd[000]",
+      "buffName": "古の巫術",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_bd1",
+      "sortId": 4013,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、<@cc.vup>5</>の<$cc.bd_b1><@cc.rem>俗世之憂</></>が<@cc.vup>1</>の<$cc.bd_C><@cc.rem>巫術の結晶</></>に転化される"
     },
     "manu_prod_spd&power[000]": {
       "buffId": "manu_prod_spd&power[000]",
@@ -11497,6 +11652,30 @@
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、<$cc.bd_A><@cc.rem>思念連鎖</></><@cc.vup>1</>につき、製造効率<@cc.vup>+1%</>"
     },
+    "manu_prod_spd_bd[200]": {
+      "buffId": "manu_prod_spd_bd[200]",
+      "buffName": "浮き草",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_bd5",
+      "sortId": 3730,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、<$cc.bd_C><@cc.rem>巫術の結晶</></><@cc.vup>1</>につき、製造効率<@cc.vup>+1%</>"
+    },
+    "manu_prod_spd_bd[201]": {
+      "buffId": "manu_prod_spd_bd[201]",
+      "buffName": "枯栄花",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_bd6",
+      "sortId": 3731,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、<$cc.bd_C><@cc.rem>巫術の結晶</></><@cc.vup>1</>につき、製造効率<@cc.vup>+2%</>"
+    },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
       "buffName": "制勝の秘策",
@@ -11652,6 +11831,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、配属オペレーターの<@cc.kw>自身</>に対する体力消費に関する効果が<@cc.kw>無効</>になる"
+    },
+    "trade_cost[000]": {
+      "buffId": "trade_cost[000]",
+      "buffName": "ムードメーカー",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_cost1",
+      "sortId": 4103,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、配属オペレーターの1時間ごとの体力消費量<@cc.vup>-0.1</>"
     },
     "trade_ord_spd[000]": {
       "buffId": "trade_ord_spd[000]",
@@ -12144,6 +12335,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "貿易所配置時、配置貿易所の<@cc.kw>高価値な金属オーダー</>の獲得率が<@cc.kw>上昇</>（勤務時間が確率に影響する）、1時間ごとの体力消費量<@cc.vup>-0.25</>"
+    },
+    "trade_ord_spd&share[000]": {
+      "buffId": "trade_ord_spd&share[000]",
+      "buffName": "褒め上手",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_share1",
+      "sortId": 4703,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、自身を除く仕事に配属されているオペレーター1人につき、受注効率<@cc.vup>+15%</>"
     },
     "trade_ord_spd&cost_P[000]": {
       "buffId": "trade_ord_spd&cost_P[000]",
@@ -14557,6 +14760,18 @@
       "roomType": "HIRE",
       "description": "事務室配置時、事務連絡速度<@cc.vup>+20%</>、1時間ごとの体力消費量<@cc.vup>-0.25</>"
     },
+    "hire_spd_cost[111]": {
+      "buffId": "hire_spd_cost[111]",
+      "buffName": "特別ルート",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&cost4",
+      "sortId": 8101,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "事務室配置時、事務連絡速度<@cc.vup>+20%</>、1時間ごとの体力消費量<@cc.vup>-0.25</>"
+    },
     "hire_spd_cost&clue[001]": {
       "buffId": "hire_spd_cost&clue[001]",
       "buffName": "救助隊・連絡要員",
@@ -14580,6 +14795,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
       "description": "事務室配置時、事務連絡速度<@cc.vup>+35%</>、公開求人の最大同時求人可能数が2より1多いごとに、1時間ごとの体力消費量<@cc.vup>-0.1</>"
+    },
+    "hire_spd_cost&extra[000]": {
+      "buffId": "hire_spd_cost&extra[000]",
+      "buffName": "唯才是挙",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&extra1",
+      "sortId": 8122,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "事務室配置時、公開求人の最大同時求人可能数が2より1多いごとに、事務連絡速度<@cc.vup>+10%</>"
     },
     "hire_spd&clue[010]": {
       "buffId": "hire_spd&clue[010]",
@@ -47117,6 +47344,528 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_martialClub_walldeco_01": {
+        "id": "furni_martialClub_walldeco_01",
+        "sortId": 1121,
+        "name": "薬草乾燥棚",
+        "iconId": "furni_martialClub_walldeco_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 4,
+        "depth": 4,
+        "height": 5,
+        "comfort": 330,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "上質な藤で編まれた三段式の乾燥棚。風通しの良い日陰で薬草を干すのに使う。\n早朝の街角で、医館の主人が鍛錬しながら薬草をふるいにかけている。風が吹けども、その薬草は一つとして飛ばされはしなかった。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_fireplace_01": {
+        "id": "furni_martialClub_fireplace_01",
+        "sortId": 1122,
+        "name": "煎じ薬用の七輪",
+        "iconId": "furni_martialClub_fireplace_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 200,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "良質な白泥を使い、いくつもの工程を経て作られた炎国式七輪。\n頃合いを見て、医館の主人は七輪にかけ熱された薬土瓶を素手で持ち上げ、薬を椀へと注ぎ入れた。まだ熱の残る七輪は、砂漠で触れた砂を思い出させた。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_ceilingLamp_01": {
+        "id": "furni_martialClub_ceilingLamp_01",
+        "sortId": 1123,
+        "name": "吊り下げ式常夜灯",
+        "iconId": "furni_martialClub_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 115,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "素朴で精巧な作りの炎国式照明。光は柔らかいが、暗闇でも十分明るい。\n戦から兵士たちが戻る頃、医館は日夜明かりを灯して重傷者を受け入れていた。今では、過去を懐かしむ者が時折訪れるばかりだ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_plantShelf_01": {
+        "id": "furni_martialClub_plantShelf_01",
+        "sortId": 1124,
+        "name": "「春の芽生え」",
+        "iconId": "furni_martialClub_plantShelf_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 3,
+        "depth": 4,
+        "height": 8,
+        "comfort": 355,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "上質な紅木を彫って作った台形の仕切り。鉢代わりのそれには、砂漠から持ち帰った枯れ枝が植えられている。\n子供が苦い薬をこっそりここに捨てているからか、枯れ木から時々新芽が生えてくる。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_medicineTable_01": {
+        "id": "furni_martialClub_medicineTable_01",
+        "sortId": 1125,
+        "name": "薬師の長机",
+        "iconId": "furni_martialClub_medicineTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 2,
+        "depth": 5,
+        "height": 2,
+        "comfort": 205,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "大工は仕切りを作った時に余った木材でこの長机を組み立てて、旧友へと贈った。\n処方はすべて頭の中にあり、冊子には常連の患者たちの症状が記録されている。寅の刻まで絶え間なく続く乳鉢や薬研の音は、幾年経っても変わらない。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_pillar_01": {
+        "id": "furni_martialClub_pillar_01",
+        "sortId": 1126,
+        "name": "「梁下に安ず」",
+        "iconId": "furni_martialClub_pillar_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 3,
+        "depth": 2,
+        "height": 10,
+        "comfort": 285,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "屋根の棟を支える木の柱。内装を幾度変えようと、この柱だけは変わらずそこに立ち続ける。\n地震に揺られ、家主に降りかかる刃を防ぎ、今は服を掛ける以外の用途がなくなったとしても、それは今も玉門の一角を支え続けている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_medicine_01": {
+        "id": "furni_martialClub_medicine_01",
+        "sortId": 1127,
+        "name": "青石の薬研",
+        "iconId": "furni_martialClub_medicine_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 2,
+        "height": 2,
+        "comfort": 180,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "上質な青石を研磨して作った薬研。何年も使い込まれており、洗ってもほのかに薬の香りがする。\n時折、武人が鍛錬後に背中をほぐすために使っている。医館の主人の按摩よりよほど優しく気持ちいい、らしい。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_washtub_01": {
+        "id": "furni_martialClub_washtub_01",
+        "sortId": 1128,
+        "name": "「砂塵落とし」",
+        "iconId": "furni_martialClub_washtub_01",
+        "type": "DECORATION",
+        "subType": "WASH",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "玉門の住民がよく使う木製の洗濯おけ。底に敷かれた細かい網が衣服の砂をこし落としてくれる。\nかゆみをもたらす山薬の粉を店主がこっそり薬棚に撒いてからというもの、弟子は二度とサイカチの粉を黙って取ることはなくなった。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_seatstone_01": {
+        "id": "furni_martialClub_seatstone_01",
+        "sortId": 1129,
+        "name": "「全力」",
+        "iconId": "furni_martialClub_seatstone_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "振るうときに全身の力を籠められるよう、錠前型に彫られた石。\n硬い鉱物で薬を作るべくすり潰す時などは、源石の研磨機より効率的な道具だ。とはいえそれは、使用者が店を手伝う逞しいフェリーンのような人だというのが前提にはなるが……",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_drum_01": {
+        "id": "furni_martialClub_drum_01",
+        "sortId": 1130,
+        "name": "「鼓声不絶」",
+        "iconId": "furni_martialClub_drum_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 235,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "胴には紅木が、面には良質な獣皮が使われている。太鼓の音色は、玉門大安の証。\n数ヶ月学んだだけの弟子でも、その音色を耳にすれば不思議と血が沸き立ち、様になる拳法をくり出せる。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_weaponRack_01": {
+        "id": "furni_martialClub_weaponRack_01",
+        "sortId": 1131,
+        "name": "「蔵鋒」",
+        "iconId": "furni_martialClub_weaponRack_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 7,
+        "depth": 3,
+        "height": 6,
+        "comfort": 450,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "黄檀木で作られた武器置き場。伝統的な雲の模様は、安全と平和の象徴だ。\n二十年以上放置されたかのように埃を被っている。かつてここに弓矢を預けた者は、とうにそれを忘れているのだろうか。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_Dummy_01": {
+        "id": "furni_martialClub_Dummy_01",
+        "sortId": 1132,
+        "name": "「修練」",
+        "iconId": "furni_martialClub_Dummy_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 4,
+        "depth": 3,
+        "height": 5,
+        "comfort": 280,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "よくある訓練用の木人に、尻尾とひっかき傷が足された代物。\n一人で夜の番をするフェリーンはしばしば、自分に似せた木人に礼をし、朝まで技を磨いている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_carpet_01": {
+        "id": "furni_martialClub_carpet_01",
+        "sortId": 1133,
+        "name": "「踏砂」",
+        "iconId": "furni_martialClub_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 16,
+        "depth": 8,
+        "height": 1,
+        "comfort": 210,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "シンメトリーの模様がついた炎国式絨毯。細やかな編み目は美しく、しかし砂埃がたまりやすい。\n鍛錬の時はゆっくりと歩かねばならない。さもなくば、店主の手でほこりと一緒に外へ掃き出されてしまうだろう。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_floorLamp_01": {
+        "id": "furni_martialClub_floorLamp_01",
+        "sortId": 1134,
+        "name": "「終覚浅」",
+        "iconId": "furni_martialClub_floorLamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 170,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "古風な唐紙のフロアランプ。その紙には虫よけの薬が塗られている。\n診察を受けに来た武芸の達人が指に酒をつけ、唐紙に何か書き記した。さぞすごいことが書かれているのだろうと店の見習いたちがこっそり見に行ったところ、そこにあるのは武芸の極意ではなく、「躬行」の二文字――「何事も自ら実践して会得せよ」という文言だった。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_chair_01": {
+        "id": "furni_martialClub_chair_01",
+        "sortId": 1135,
+        "name": "「冥心坐忘」",
+        "iconId": "furni_martialClub_chair_01",
+        "type": "SEATING",
+        "subType": "CHAIR",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 180,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "奥行きがあり、座ってもたれかかるより上で胡坐をかくほうが向いている椅子。\n薬草や針では完治させられない患者には、この椅子でできる気功を教え、気のよどみを整えることで、その葛藤を解消できるかもしれない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_pile_01": {
+        "id": "furni_martialClub_pile_01",
+        "sortId": 1136,
+        "name": "「朴拙」",
+        "iconId": "furni_martialClub_pile_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 70,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "よくある訓練用の木人が、とある負けず嫌いの蹴りを食らってこうなってしまった。\n師匠のお使いで薬を取りに来た道場の人間が、未熟な技をひけらかしたばかりに、自分も薬の厄介になってしまったようだ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_wallpaper_01": {
+        "id": "furni_martialClub_wallpaper_01",
+        "sortId": 1137,
+        "name": "「且去也」",
+        "iconId": "furni_martialClub_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "無垢材の壁に四角と丸を組み合わせた装飾が施され、「規則に従うべし」という戒めと「融通を利かせるべし」という教訓を表している。\n薬理は功法に、草木の効用は技に通じる。規則に従い、理を身につけたあかつきには独立も夢ではない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_floor_01": {
+        "id": "furni_martialClub_floor_01",
+        "sortId": 1138,
+        "name": "「念帰人」",
+        "iconId": "furni_martialClub_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ごく普通の石畳だが、玉門城の数百年の歴史を知る物でもある。\n二十年前に響いた甲冑の音が再び聞こえた。医館の主人は明かりを灯し、茶を用意して、災害救助を終えた兵士や勇士たちが治療を受けに来るのを待っている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_reception_screen_01": {
         "id": "furni_reception_screen_01",
         "sortId": 1153,
@@ -49263,6 +50012,64 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_SF2023_vase_01": {
+        "id": "furni_SF2023_vase_01",
+        "sortId": 10106,
+        "name": "枝先に幸せ",
+        "iconId": "furni_SF2023_vase_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 100,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "満開の紅梅が飾られた、古風で趣のある棚。盃に注がれた瑞露が梅の香りに染まり、かぐわしい香りが人々を酔わせる。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_SF2023_weaponRack_01": {
+        "id": "furni_SF2023_weaponRack_01",
+        "sortId": 10107,
+        "name": "枯れ木に春",
+        "iconId": "furni_SF2023_weaponRack_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 100,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "独特な形の剣掛け。その刃で切り落とされた梅の枯れ枝を使っている。過去は水に流すとしよう。刃は鞘に収まって、枯れ木は新たに芽吹いたのだから。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_obsidianFestival_DJBooth_01": {
         "id": "furni_obsidianFestival_DJBooth_01",
         "sortId": 10201,
@@ -50936,6 +51743,35 @@
         "comfort": 75,
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "「和を尊べば、財への道は開ける。」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS025_cnKnot_01": {
+        "id": "furni_dropS025_cnKnot_01",
+        "sortId": 11057,
+        "name": "パネル「春結び」",
+        "iconId": "furni_dropS025_cnKnot_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "冬に縄を結び、来たる春に繋ぐ。",
         "obtainApproach": "イベント報酬",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -62883,6 +63719,149 @@
           "furni_countryside_floor_01"
         ]
       },
+      "furni_set_martialClub": {
+        "id": "furni_set_martialClub",
+        "sortId": 67,
+        "name": "玉門医館",
+        "themeType": "EVENT",
+        "desc": "ワイフーの語る通りに再現した玉門の医館。医療用具より武具のほうが多い医館など、恐らく玉門以外にはないだろう。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_martialClub_walldeco_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_fireplace_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_ceilingLamp_01",
+            "pos0": 6,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_plantShelf_01",
+            "pos0": 9,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_medicineTable_01",
+            "pos0": 5,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_pillar_01",
+            "pos0": 12,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_medicine_01",
+            "pos0": 11,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_washtub_01",
+            "pos0": 14,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_seatstone_01",
+            "pos0": 22,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_drum_01",
+            "pos0": 15,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_weaponRack_01",
+            "pos0": 20,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_Dummy_01",
+            "pos0": 26,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_carpet_01",
+            "pos0": 16,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_floorLamp_01",
+            "pos0": 32,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_chair_01",
+            "pos0": 32,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_pile_01",
+            "pos0": 23,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_martialClub_1",
+          "furni_set_martialClub_2",
+          "furni_set_martialClub_3",
+          "furni_set_martialClub_4"
+        ],
+        "furnitures": [
+          "furni_martialClub_walldeco_01",
+          "furni_martialClub_fireplace_01",
+          "furni_martialClub_ceilingLamp_01",
+          "furni_martialClub_plantShelf_01",
+          "furni_martialClub_medicineTable_01",
+          "furni_martialClub_pillar_01",
+          "furni_martialClub_medicine_01",
+          "furni_martialClub_washtub_01",
+          "furni_martialClub_seatstone_01",
+          "furni_martialClub_drum_01",
+          "furni_martialClub_weaponRack_01",
+          "furni_martialClub_Dummy_01",
+          "furni_martialClub_carpet_01",
+          "furni_martialClub_floorLamp_01",
+          "furni_martialClub_chair_01",
+          "furni_martialClub_pile_01",
+          "furni_martialClub_wallpaper_01",
+          "furni_martialClub_floor_01"
+        ]
+      },
       "furni_set_reception": {
         "id": "furni_set_reception",
         "sortId": 58,
@@ -66675,6 +67654,64 @@
           "furni_countryside_ceilingLamp_01",
           "furni_countryside_curtain_01",
           "furni_countryside_partitionWall_01"
+        ]
+      },
+      "furni_set_martialClub_1": {
+        "id": "furni_set_martialClub_1",
+        "sortId": 1,
+        "name": "調剤の供",
+        "themeId": "furni_set_martialClub",
+        "comfort": 230,
+        "count": 5,
+        "furniture": [
+          "furni_martialClub_walldeco_01",
+          "furni_martialClub_fireplace_01",
+          "furni_martialClub_ceilingLamp_01",
+          "furni_martialClub_medicineTable_01",
+          "furni_martialClub_medicine_01"
+        ]
+      },
+      "furni_set_martialClub_2": {
+        "id": "furni_set_martialClub_2",
+        "sortId": 2,
+        "name": "修練の供",
+        "themeId": "furni_set_martialClub",
+        "comfort": 270,
+        "count": 5,
+        "furniture": [
+          "furni_martialClub_seatstone_01",
+          "furni_martialClub_weaponRack_01",
+          "furni_martialClub_Dummy_01",
+          "furni_martialClub_carpet_01",
+          "furni_martialClub_pile_01"
+        ]
+      },
+      "furni_set_martialClub_3": {
+        "id": "furni_set_martialClub_3",
+        "sortId": 3,
+        "name": "暮らしの供",
+        "themeId": "furni_set_martialClub",
+        "comfort": 220,
+        "count": 4,
+        "furniture": [
+          "furni_martialClub_plantShelf_01",
+          "furni_martialClub_washtub_01",
+          "furni_martialClub_drum_01",
+          "furni_martialClub_chair_01"
+        ]
+      },
+      "furni_set_martialClub_4": {
+        "id": "furni_set_martialClub_4",
+        "sortId": 4,
+        "name": "医館の内装",
+        "themeId": "furni_set_martialClub",
+        "comfort": 225,
+        "count": 4,
+        "furniture": [
+          "furni_martialClub_pillar_01",
+          "furni_martialClub_floorLamp_01",
+          "furni_martialClub_wallpaper_01",
+          "furni_martialClub_floor_01"
         ]
       },
       "furni_set_reception_1": {
