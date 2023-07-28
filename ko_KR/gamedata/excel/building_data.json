@@ -10222,6 +10222,125 @@
           ]
         }
       ]
+    },
+    "char_2024_chyue": {
+      "charId": "char_2024_chyue",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&bd_up[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd_cost_expand[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4080_lin": {
+      "charId": "char_4080_lin",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd_cost[111]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "hire_spd_cost&extra[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_493_firwhl": {
+      "charId": "char_493_firwhl",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_cost[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&share[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4078_bdhkgt": {
+      "charId": "char_4078_bdhkgt",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_bd_to_bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_bd[200]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_prod_spd_bd[201]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -10597,6 +10716,30 @@
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 <@cc.vdown>+0.5</>. 자신의 컨디션이 <@cc.kw>12</> 이상일 경우, <$cc.bd_a1><@cc.rem>감지 정보</></> <@cc.vup>+10</>"
     },
+    "control_mp_cost&bd_up[000]": {
+      "buffId": "control_mp_cost&bd_up[000]",
+      "buffName": "자신을 아는 자",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd3",
+      "sortId": 1009,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 <@cc.vdown>+0.5</>. 숙소를 제외한 시설에 배치한 <$cc.g.sui><@cc.kw>쉐이</></> 오퍼레이터 1명당 <$cc.bd_b1><@cc.rem>속세의 화식</></><@cc.vup>+5</> (최대 5명)"
+    },
+    "control_mp_bd_cost_expand[000]": {
+      "buffId": "control_mp_bd_cost_expand[000]",
+      "buffName": "외로운 빛과 함께",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_bd4",
+      "sortId": 1009,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, <$cc.c.room2><@cc.kw>기타 시설</></>의 작업 중인 오퍼레이터의 시간당 컨디션 회복 <@cc.vup>+0.05</>, 동시에 <$cc.bd_b1><@cc.rem>속세의 화식</></> <@cc.vup>20</>당 추가로 <@cc.vup>+0.05</> (제어 센터의 버프와 <$cc.c.sui2_1><@cc.rem>특별 비교 규칙</></> 적용)"
+    },
     "control_facCostReset[000]": {
       "buffId": "control_facCostReset[000]",
       "buffName": "멈추지 않는 술잔",
@@ -10944,6 +11087,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
       "description": "발전소에 배치 시, <@cc.kw>와일드메인</>이 배치된 제조소의 생산력 <@cc.vup>+5%</>"
+    },
+    "manu_bd_to_bd[000]": {
+      "buffId": "manu_bd_to_bd[000]",
+      "buffName": "고대 주술",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_bd1",
+      "sortId": 4013,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, <$cc.bd_b1><@cc.rem>속세의 화식</></> <@cc.vup>5</>점당 <$cc.bd_C><@cc.rem>주술 결정</></> <@cc.vup>1</>점으로 전환"
     },
     "manu_prod_spd&power[000]": {
       "buffId": "manu_prod_spd&power[000]",
@@ -11497,6 +11652,30 @@
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, <$cc.bd_A><@cc.rem>생각의 사슬</></> <@cc.vup>1</>점당 생산력 <@cc.vup>+1%</>"
     },
+    "manu_prod_spd_bd[200]": {
+      "buffId": "manu_prod_spd_bd[200]",
+      "buffName": "숲을 따라",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_bd5",
+      "sortId": 3730,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, <$cc.bd_C><@cc.rem>주술 결정</></> <@cc.vup>1</>점당 생산력 <@cc.vup>+1%</>"
+    },
+    "manu_prod_spd_bd[201]": {
+      "buffId": "manu_prod_spd_bd[201]",
+      "buffName": "흥망성쇠",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_bd6",
+      "sortId": 3731,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, <$cc.bd_C><@cc.rem>주술 결정</></> <@cc.vup>1</>점당 생산력 <@cc.vup>+2%</>"
+    },
     "manu_formula_spd[000]": {
       "buffId": "manu_formula_spd[000]",
       "buffName": "승리의 계책",
@@ -11652,6 +11831,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, 해당 제조소 내의 모든 오퍼레이터 <@cc.kw>본인</>이 컨디션 소모로 인해 받는 영향 <@cc.kw>제거</>"
+    },
+    "trade_cost[000]": {
+      "buffId": "trade_cost[000]",
+      "buffName": "분위기 업",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_cost1",
+      "sortId": 4103,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "무역소에 배치 시, 무역소 내 오퍼레이터의 시간당 컨디션 소모 <@cc.vup>-0.1</>"
     },
     "trade_ord_spd[000]": {
       "buffId": "trade_ord_spd[000]",
@@ -12144,6 +12335,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "무역소에 배치 시, 해당 무역소의 <@cc.kw>고품질 귀금속 오더</>의 출현 확률이 <@cc.kw>상승</> (확률은 작업 시간의 영향을 받음), 시간당 컨디션 소모 <@cc.vup>-0.25</>"
+    },
+    "trade_ord_spd&share[000]": {
+      "buffId": "trade_ord_spd&share[000]",
+      "buffName": "대신 부탁",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_share1",
+      "sortId": 4703,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "무역소에 배치 시, 무역소 내 자신을 제외한 작업 중인 오퍼레이터 1명당 오더 수주 효율 <@cc.vup>+15%</>"
     },
     "trade_ord_spd&cost_P[000]": {
       "buffId": "trade_ord_spd&cost_P[000]",
@@ -14557,6 +14760,18 @@
       "roomType": "HIRE",
       "description": "인사부 사무실에 배치 시, 인맥 레퍼런스 누적 속도 <@cc.vup>+20%</>, 시간당 컨디션 소모 <@cc.vup>-0.25</>"
     },
+    "hire_spd_cost[111]": {
+      "buffId": "hire_spd_cost[111]",
+      "buffName": "특수 경로",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&cost4",
+      "sortId": 8101,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "인사부 사무실에 배치 시, 인맥 레퍼런스 누적 속도 <@cc.vup>+20%</>, 시간당 컨디션 소모 <@cc.vup>-0.25</>"
+    },
     "hire_spd_cost&clue[001]": {
       "buffId": "hire_spd_cost&clue[001]",
       "buffName": "구조대: 외부 연락",
@@ -14580,6 +14795,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "HIRE",
       "description": "인사부 사무실에 배치 시, 인맥 레퍼런스의 누적 속도 <@cc.vup>+35%</>, 모집 인원마다 시간당 컨디션 회복이 추가로 <@cc.vup>-0.1</> (초기 모집 인원은 포함하지 않음)"
+    },
+    "hire_spd_cost&extra[000]": {
+      "buffId": "hire_spd_cost&extra[000]",
+      "buffName": "적재적소",
+      "buffIcon": "hire",
+      "skillIcon": "bskill_hire_spd&extra1",
+      "sortId": 8122,
+      "buffColor": "#565656",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "HIRE",
+      "description": "인사부 사무실에 배치 시, 모집 인원마다 인맥 레퍼런스의 누적 속도 <@cc.vup>+10%</> (초기 모집 인원은 포함하지 않음)"
     },
     "hire_spd&clue[010]": {
       "buffId": "hire_spd&clue[010]",
@@ -47117,6 +47344,528 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_martialClub_walldeco_01": {
+        "id": "furni_martialClub_walldeco_01",
+        "sortId": 1121,
+        "name": "약초 건조대",
+        "iconId": "furni_martialClub_walldeco_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 4,
+        "depth": 4,
+        "height": 5,
+        "comfort": 330,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "품질이 좋은 버드나무 가지로 엮은 건조대. 햇빛 가리기에 용이하며, 공기가 잘 통해 약재를 말리는 데 쓰인다.\n골목에 아침이 찾아오면, 의원 주인은 쭈그리고 앉아 먼지를 털고는 한다. 아침 바람에 옷자락이 펄럭거리지만, 그의 손에 들려 있는 약재들은 조금도 날아가지 않았다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_fireplace_01": {
+        "id": "furni_martialClub_fireplace_01",
+        "sortId": 1122,
+        "name": "탕약용 화로",
+        "iconId": "furni_martialClub_fireplace_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 200,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "지표면 깊은 곳에서 얻어 낸 양질의 흰 진흙으로 10가지 공정을 거쳐 만들어진 염국식 화로.\n약탕의 불 조절을 위해, 의원 주인이 직접 주전자 손잡이를 들어 그릇에 붓는다. 아직 잔열이 남아 있는 화로를 보며, 주인은 과거 사막에서 움켜쥐었던 모래를 떠올렸다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_ceilingLamp_01": {
+        "id": "furni_martialClub_ceilingLamp_01",
+        "sortId": 1123,
+        "name": "천장 조명",
+        "iconId": "furni_martialClub_ceilingLamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 115,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "예스럽고 정교한 염국식 조명. 따스한 빛이지만, 깊은 밤에도 충분히 눈에 띄는 빛의 세기다.\n병사들이 전장에서 돌아오는 날이면 의원의 불빛은 언제나 환하게 밝혀져 있으며, 혹시 모를 심한 부상을 입은 병사들을 기다리곤 한다. 하지만 현재, 심야의 불빛에 이끌리는 건 과거를 그리워하는 옛 친구들뿐이다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_plantShelf_01": {
+        "id": "furni_martialClub_plantShelf_01",
+        "sortId": 1124,
+        "name": "'변방의 봄'",
+        "iconId": "furni_martialClub_plantShelf_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 3,
+        "depth": 4,
+        "height": 8,
+        "comfort": 355,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "품질 좋은 홍목을 깎아 만든 장식용 탁상. 이 위에는 사막에서 가져온 죽은 나뭇가지 하나가 심어져 있다.\n어린 아이들이 몰래 이 화분에 쓴 약탕을 부어서 그런 것인지는 모르겠지만, 생명이 다한 이 나뭇가지에도 가끔 새순이 자랄 때가 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_medicineTable_01": {
+        "id": "furni_martialClub_medicineTable_01",
+        "sortId": 1125,
+        "name": "약재 배합용 탁자",
+        "iconId": "furni_martialClub_medicineTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 2,
+        "depth": 5,
+        "height": 2,
+        "comfort": 205,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "목수가 전망대를 만들고 남은 목재들을 깎고, 못을 박아 만든 낮은 탁자. 옛 친구에게 선물했다.\n처방전은 이미 마음속에 깊이 새겨둔 지 오래, 책에는 단골손님들의 병이 기록되어 있다. 오랜 세월이 흘러도 멈추지 않는 방아 찧는 소리는 깊은 새벽이 되어서야 멈췄다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_pillar_01": {
+        "id": "furni_martialClub_pillar_01",
+        "sortId": 1126,
+        "name": "'대들보'",
+        "iconId": "furni_martialClub_pillar_01",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 3,
+        "depth": 2,
+        "height": 10,
+        "comfort": 285,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "대들보를 받치고 있는 원목 기둥. 집안의 인테리어는 여러 차례 바뀌었으나, 이 기둥만큼은 언제나 그 자리를 지키고 서 있었다.\n땅의 울림을 버티고, 빗발치는 칼날을 막았다. 비록 지금은 옷이나 걸치는 신세일지 몰라도, 그것은 자신만의 방식으로 옥문의 일부분을 지탱하고 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_medicine_01": {
+        "id": "furni_martialClub_medicine_01",
+        "sortId": 1127,
+        "name": "청석대 약연",
+        "iconId": "furni_martialClub_medicine_01",
+        "type": "DECORATION",
+        "subType": "COOKING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_1",
+        "width": 3,
+        "depth": 2,
+        "height": 2,
+        "comfort": 180,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "품질 좋은 청석을 깎아 만든 약연. 수년간 사용한 탓에, 아무리 약연을 깨끗이 씻어내도 약의 향이 남아있다.\n가끔 무예를 연마하는 이가 이것 위에 누워 안마를 받는다고 하는데, 소문에 의하면 의원 주인이 직접 손으로 눌러주는 것보다 더 부드럽고 시원하다고 한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_washtub_01": {
+        "id": "furni_martialClub_washtub_01",
+        "sortId": 1128,
+        "name": "'빨래통'",
+        "iconId": "furni_martialClub_washtub_01",
+        "type": "DECORATION",
+        "subType": "WASH",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "옥문 백성들이 자주 사용하는 목제 빨래 대야. 대야의 밑부분에는 촘촘한 망이 있어, 의류에 붙어 있는 모래를 걸러낼 수 있다.\n주인이 갈은 참마를 몰래 약품 선반에 뿌려둔 이후부터, 어린 제자들은 몰래 세제를 훔쳐 옷을 비벼빨 수 없었다고 한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_seatstone_01": {
+        "id": "furni_martialClub_seatstone_01",
+        "sortId": 1129,
+        "name": "'취력'",
+        "iconId": "furni_martialClub_seatstone_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 145,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "청석을 깎아 옛 구리 자물쇠의 형태로 만들었다. 갖고 다닐 시 근육이 단련되는 효과를 볼 수 있다.\n단단한 재질의 광물 약재의 경우 이 자물쇠가 오리지늄 그라인더보다 더 효율적이지만, 이는 당신의 힘이 그 우람한 필라인 직원만큼 강력하다는 것을 전제로 해야 할 것이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_drum_01": {
+        "id": "furni_martialClub_drum_01",
+        "sortId": 1130,
+        "name": "'우렁찬 북소리'",
+        "iconId": "furni_martialClub_drum_01",
+        "type": "DECORATION",
+        "subType": "INSTRUMENT_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 4,
+        "depth": 4,
+        "height": 2,
+        "comfort": 235,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "홍목으로 제작한 뒤 우수한 품질의 짐승 가죽을 위에 덮었다. 북소리가 울리면, 옥문이 평안하리.\n주인을 따라 한 달 정도를 수련한 어린 제자는 북이 세 번 울리자 피가 끓어오르는 것을 느꼈고, 주먹 한 번을 휘둘러도 어딘가 더 그럴듯하게 휘두를 수 있게 되었다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_weaponRack_01": {
+        "id": "furni_martialClub_weaponRack_01",
+        "sortId": 1131,
+        "name": "'장봉'",
+        "iconId": "furni_martialClub_weaponRack_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 7,
+        "depth": 3,
+        "height": 6,
+        "comfort": 450,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "황단목으로 만든 무기 보관대. 장인은 보관대의 측면을 전통적인 구름 문양으로 다듬었으며, 이는 곧 평안을 뜻했다.\n보관대 위에 먼지가 두껍게 쌓여 있는 걸 보니, 아무래도 20년 전쯤에 만들어진 물건처럼 보인다. 아마 당시에 활을 이곳에 보관하던 협객이 깜빡 잊고 두고 간 것일지도 모르겠다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_Dummy_01": {
+        "id": "furni_martialClub_Dummy_01",
+        "sortId": 1132,
+        "name": "'대련'",
+        "iconId": "furni_martialClub_Dummy_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 4,
+        "depth": 3,
+        "height": 5,
+        "comfort": 280,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "흔히 보이는 나무 말뚝 인형. 짐승의 꼬리가 달려 있으며, 곳곳에 긁힌 자국이 있다.\n체격이 좋은 한 필라인은 숙직을 할 때면 종종 자신과 비슷하게 생긴 이 녀석을 상대로 예를 갖추고 대련을 한다. 그리고 이 대련은 아침까지 계속되곤 한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_carpet_01": {
+        "id": "furni_martialClub_carpet_01",
+        "sortId": 1133,
+        "name": "'모래 양탄자'",
+        "iconId": "furni_martialClub_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 16,
+        "depth": 8,
+        "height": 1,
+        "comfort": 210,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "대칭을 이루는 문양과 함께 반듯한 스타일을 한 염국식 카펫. 정교하게 짜여졌지만 모래 먼지가 쌓이기 쉽다.\n검과 곤봉을 다룰 때는 천천히 걷는 것을 잊지 말아야 한다. 그렇지 않으면, 주인이 먼지와 함께 당신을 밖으로 쓸어내 버릴 수도 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_floorLamp_01": {
+        "id": "furni_martialClub_floorLamp_01",
+        "sortId": 1134,
+        "name": "'책만으로는 배울 수 없다'",
+        "iconId": "furni_martialClub_floorLamp_01",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 170,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "고풍스러운 스탠드 조명. 전등갓에 약초즙을 발라두어 벌레를 쫓아낼 수 있다.\n진료를 받으러 온 이름난 고수가 손가락에 술을 적셔 종이갓에 글을 남겼다. 동료들은 이것이 일종의 엄청난 무학인 줄 알았으나, 이후 남몰래 그 종이를 보니, 그곳에 쓰여 있던 것은 '실천' 두 글자뿐이었다고 한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_chair_01": {
+        "id": "furni_martialClub_chair_01",
+        "sortId": 1135,
+        "name": "'명상 의자'",
+        "iconId": "furni_martialClub_chair_01",
+        "type": "SEATING",
+        "subType": "CHAIR",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 180,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "폭이 너무 길어 기대서 앉기 불편한 의자. 다리를 꼬아서 앉기엔 적절할 듯하다.\n약초와 침, 부항으로도 치료하기 힘든 병과 마주했을 때 의원 주인은 환자에게 좌선을 포함한 수련법을 가르치는데, 이를 통해 환자는 막힌 혈을 뚫고, 엉킨 마음을 달랠 수 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_pile_01": {
+        "id": "furni_martialClub_pile_01",
+        "sortId": 1136,
+        "name": "'고지식함'",
+        "iconId": "furni_martialClub_pile_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 70,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "원래는 나무 말뚝 인형이었으며, 승부욕이 강한 어떤 이의 발차기에 의해 만들어진 걸작이다.\n무도관에서 약초를 받으러 사람을 보냈었다. 학문과 기예는 그리 뛰어나지 않았으나, 그는 계속 사람들에게 자신의 능력을 뽐내고 싶어 했다. 원래는 사부를 대신하여 자신이 심부름을 온 것이었지만, 그는 떠나는 길에 겸사겸사 자신을 위해 '백절불굴'을 몇 장 붙이고 갔다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_wallpaper_01": {
+        "id": "furni_martialClub_wallpaper_01",
+        "sortId": 1137,
+        "name": "'차거야'",
+        "iconId": "furni_martialClub_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "원목으로 만들어진 벽면. 벽면 위 네모난 장식은 덕행은 절대로 관례를 넘어선 안 되며, 심성은 융통성 있게 다뤄야 한다는 의미를 담고 있다.\n약리학은 수련법과도 같다. 풀과 나무는 주먹과 발처럼 작용하며, 그 사이엔 나름대로 분명한 법칙이 존재한다. 그리고 두 가지 모두 완벽히 터득해야만 출사할 수 있다는 점이 매우 유사하다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_martialClub_floor_01": {
+        "id": "furni_martialClub_floor_01",
+        "sortId": 1138,
+        "name": "'그리움'",
+        "iconId": "furni_martialClub_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_martialClub",
+        "groupId": "furni_set_martialClub_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "흔히 볼 수 있는 거친 벽돌로 보이지만 사실 이미 옥문성에서 수백 년 동안이나 자리를 지키고 있는 녀석이다.\n20년 전 갑옷 마찰음이 가까워지자, 의원 주인은 등을 켜고 차를 우려내기 시작했다. 그리고 재앙에 맞서 돌아온 협객들의 방문을 기다렸다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_reception_screen_01": {
         "id": "furni_reception_screen_01",
         "sortId": 1153,
@@ -49263,6 +50012,64 @@
         "isOnly": 1,
         "quantity": 0
       },
+      "furni_SF2023_vase_01": {
+        "id": "furni_SF2023_vase_01",
+        "sortId": 10106,
+        "name": "가지에 피어난 기쁨",
+        "iconId": "furni_SF2023_vase_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 5,
+        "comfort": 100,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "예스럽고 소박한 모양의 선반. 위에는 붉은 매화가 활짝 피어 있다. 잔 속의 술은 매화향으로 물들어, 사람을 더더욱 취하게 만든다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_SF2023_weaponRack_01": {
+        "id": "furni_SF2023_weaponRack_01",
+        "sortId": 10107,
+        "name": "봄을 맞이한 고목",
+        "iconId": "furni_SF2023_weaponRack_01",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 100,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "독특한 아름다움의 검 보관대. 원래는 검으로 베어 낸 마른 매화나무의 가지였다. 과거는 중요하지 않다. 보검이 검집 안에 숨겨져 있으니, 고목에는 또다시 새순이 피어난다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
       "furni_obsidianFestival_DJBooth_01": {
         "id": "furni_obsidianFestival_DJBooth_01",
         "sortId": 10201,
@@ -50936,6 +51743,35 @@
         "comfort": 75,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "“화목하면 재물이 들어온다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_dropS025_cnKnot_01": {
+        "id": "furni_dropS025_cnKnot_01",
+        "sortId": 11057,
+        "name": "플레이트 《봄》",
+        "iconId": "furni_dropS025_cnKnot_01",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "겨울에 엮은 이 매듭이 다가올 봄기운을 꽉 붙잡는다.",
         "obtainApproach": "이벤트 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -62854,6 +63690,149 @@
           "furni_countryside_floor_01"
         ]
       },
+      "furni_set_martialClub": {
+        "id": "furni_set_martialClub",
+        "sortId": 67,
+        "name": "옥문 의원",
+        "themeType": "EVENT",
+        "desc": "와이후의 묘사에 따라 재현한 옥문 의원. 의료 용품보다 무기가 더 많은 의원은 옥문이 유일할 것이다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_martialClub_walldeco_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_fireplace_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_ceilingLamp_01",
+            "pos0": 6,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_plantShelf_01",
+            "pos0": 9,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_medicineTable_01",
+            "pos0": 5,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_pillar_01",
+            "pos0": 12,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_medicine_01",
+            "pos0": 11,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_washtub_01",
+            "pos0": 14,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_seatstone_01",
+            "pos0": 22,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_drum_01",
+            "pos0": 15,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_weaponRack_01",
+            "pos0": 20,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_Dummy_01",
+            "pos0": 26,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_carpet_01",
+            "pos0": 16,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_floorLamp_01",
+            "pos0": 32,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_chair_01",
+            "pos0": 32,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_pile_01",
+            "pos0": 23,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_martialClub_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_martialClub_1",
+          "furni_set_martialClub_2",
+          "furni_set_martialClub_3",
+          "furni_set_martialClub_4"
+        ],
+        "furnitures": [
+          "furni_martialClub_walldeco_01",
+          "furni_martialClub_fireplace_01",
+          "furni_martialClub_ceilingLamp_01",
+          "furni_martialClub_plantShelf_01",
+          "furni_martialClub_medicineTable_01",
+          "furni_martialClub_pillar_01",
+          "furni_martialClub_medicine_01",
+          "furni_martialClub_washtub_01",
+          "furni_martialClub_seatstone_01",
+          "furni_martialClub_drum_01",
+          "furni_martialClub_weaponRack_01",
+          "furni_martialClub_Dummy_01",
+          "furni_martialClub_carpet_01",
+          "furni_martialClub_floorLamp_01",
+          "furni_martialClub_chair_01",
+          "furni_martialClub_pile_01",
+          "furni_martialClub_wallpaper_01",
+          "furni_martialClub_floor_01"
+        ]
+      },
       "furni_set_reception": {
         "id": "furni_set_reception",
         "sortId": 58,
@@ -66646,6 +67625,64 @@
           "furni_countryside_ceilingLamp_01",
           "furni_countryside_curtain_01",
           "furni_countryside_partitionWall_01"
+        ]
+      },
+      "furni_set_martialClub_1": {
+        "id": "furni_set_martialClub_1",
+        "sortId": 1,
+        "name": "'회춘의 달인'",
+        "themeId": "furni_set_martialClub",
+        "comfort": 230,
+        "count": 5,
+        "furniture": [
+          "furni_martialClub_walldeco_01",
+          "furni_martialClub_fireplace_01",
+          "furni_martialClub_ceilingLamp_01",
+          "furni_martialClub_medicineTable_01",
+          "furni_martialClub_medicine_01"
+        ]
+      },
+      "furni_set_martialClub_2": {
+        "id": "furni_set_martialClub_2",
+        "sortId": 2,
+        "name": "'절차탁마'",
+        "themeId": "furni_set_martialClub",
+        "comfort": 270,
+        "count": 5,
+        "furniture": [
+          "furni_martialClub_seatstone_01",
+          "furni_martialClub_weaponRack_01",
+          "furni_martialClub_Dummy_01",
+          "furni_martialClub_carpet_01",
+          "furni_martialClub_pile_01"
+        ]
+      },
+      "furni_set_martialClub_3": {
+        "id": "furni_set_martialClub_3",
+        "sortId": 3,
+        "name": "'변방의 정취'",
+        "themeId": "furni_set_martialClub",
+        "comfort": 220,
+        "count": 4,
+        "furniture": [
+          "furni_martialClub_plantShelf_01",
+          "furni_martialClub_washtub_01",
+          "furni_martialClub_drum_01",
+          "furni_martialClub_chair_01"
+        ]
+      },
+      "furni_set_martialClub_4": {
+        "id": "furni_set_martialClub_4",
+        "sortId": 4,
+        "name": "'평범하지 않은 골목'",
+        "themeId": "furni_set_martialClub",
+        "comfort": 225,
+        "count": 4,
+        "furniture": [
+          "furni_martialClub_pillar_01",
+          "furni_martialClub_floorLamp_01",
+          "furni_martialClub_wallpaper_01",
+          "furni_martialClub_floor_01"
         ]
       },
       "furni_set_reception_1": {
