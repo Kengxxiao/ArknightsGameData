@@ -10,6 +10,8 @@ local list =
   "HotFixes/MultiRangedAttackHotfixer",
   "HotFixes/SandboxHotfixer",
   "HotFixes/StormManagerHotfixer",
+  "HotFixes/ShopVoucherGachaHotfixer",
+  "HotFixes/ItemVoucherGachaHotfixer",
 };
 
 return list;
