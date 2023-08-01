@@ -57,12 +57,21 @@ function WardrobeSkinGroupDetailState:CheckData(data)
   self.notOnSaleData = {}
   self.cacheData = data
 
+  local skinGroupTimeRef = {}
+  for i,groupInfo in pairs(data.data.groupList) do
+    skinGroupTimeRef[groupInfo.skinGroupId] = groupInfo.publishTime
+  end
+
   self:_RenderCheck(data)
 
+  local currentTime =  CS.Torappu.DateTimeUtil.timeStampNow
   local spriteList = {}
-  for k,v in pairs(data.data.kvImgIdList) do
-    local sprite = CS.Torappu.UI.Wardrobe.WardrobeKVSpriteLoader.LoadSpriteFromHubStatic(v,CS.Torappu.ResourceUrls.GetSkinKvHubPath())
-    table.insert(spriteList,sprite)
+  for k,kvImgInfo in pairs(data.data.kvImgIdList) do
+    local publishTime = skinGroupTimeRef[kvImgInfo.linkedSkinGroupId]
+    if publishTime < currentTime then
+      local sprite = CS.Torappu.UI.Wardrobe.WardrobeKVSpriteLoader.LoadSpriteFromHubStatic(kvImgInfo.kvImgId, CS.Torappu.ResourceUrls.GetSkinKvHubPath())
+      table.insert(spriteList,sprite)
+    end
   end
   local sprite =  CS.Torappu.UI.Wardrobe.WardrobeKVSpriteLoader.LoadSpriteFromHubStatic(string.format("default_kv_%s",data.data.brandId),CS.Torappu.ResourceUrls.GetSkinKvHubPath())
   if (sprite ~= nil) then

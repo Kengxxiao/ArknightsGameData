@@ -34,17 +34,26 @@ function WardrobeSortBySkinGroupState:CheckData(data)
   self.effectFlag = false
   local brandRef = {}
   local brandData = CS.Torappu.SkinDB.data.brandList
-  for k,v in pairs(brandData) do
-    for index, group in pairs(v.groupList) do
-      brandRef[group] = k
-    end
-    local brand = {}
-    brand.brandId = k
-    brand.data = v
-    brand.skinList = {}
-    table.insert(self.stateBean.brandList,brand)
-  end
+
   local currentTime =  CS.Torappu.DateTimeUtil.timeStampNow
+  for k,v in pairs(brandData) do
+    if (v.publishTime < currentTime) then
+      local haveValidGroup = false
+      for index, groupInfo in pairs(v.groupList) do
+        if (groupInfo.publishTime < currentTime) then
+          haveValidGroup = true
+          brandRef[groupInfo.skinGroupId] = k
+        end
+      end
+      if haveValidGroup then
+        local brand = {}
+        brand.brandId = k
+        brand.data = v
+        brand.skinList = {}
+        table.insert(self.stateBean.brandList,brand)
+      end
+    end
+  end
   for getTime, skinList in pairs(data) do
     for index, skin in pairs(skinList) do
       if (skin.data.displaySkin.getTime< currentTime) then
