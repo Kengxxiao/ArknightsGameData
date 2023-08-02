@@ -3,7 +3,8 @@ local list =
 {
   
   "HotFixes/ShopHotfixer",
-  "HotFixes/BattleConverterHotfixer"
+  "HotFixes/BattleConverterHotfixer",
+  "HotFixes/UIBattleClearStateHotfixer",
 };
 
 return list;
