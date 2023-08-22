@@ -1,0 +1,861 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[dialog]
+[stopmusic]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$drift_intro",key="$drift_loop", volume=0.4)]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playsound(key="$d_avg_paper1", volume=1)]
+[delay(time=1.5)]
+[playsound(key="$d_avg_paper2", volume=1)]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1", duration=2, isblock=true)]
+[name="Mulberry"]*sigh*...
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="Mulberry, your thoughts as her guide?", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]D-Doctor, I think, given how straightforward Blacknight always is, she must've left right after handing in the form.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="You sound disgruntled about her.; So you let her leave?", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="Mulberry"]Mm... but my opinion doesn't matter much, Doctor. What do <i>you</i> think?
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="If she's gone, there's nothing more to discuss.", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="Mulberry"]Something tells me you're not too happy with this yourself...
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="You're overthinking it.; *cough* I appreciate your concern.", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="Do you know why she decided to leave?; Still, I'm curious what her reasons were.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#10$1")]
+[name="Mulberry"]I-I'm not sure myself.
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[name="Mulberry"]*sigh*... I thought she'd gotten used to life here. Though she did seem uncomfortable when we first met.
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="Mulberry"]Her condition wasn't too stable at that point, so Medical suggested she remain aboard as an official operator so they could check up on her at any time, which she agreed to.
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="Mulberry"]That's when they assigned me as her guide, to get her used to the ins and outs of the landship...
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[playMusic(intro="$path_intro",key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$2", duration=1, isblock=true)]
+[name="Blacknight"]So... you're my captain here? You think you can protect me with those stubby limbs of yours?
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="Mulberry"]B-Blacknight, I may not be a match for you physically, but if we ever run into danger, I'll do everything I can to keep you safe.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$2")]
+[name="Blacknight"]Heh, someone's confident. Good show.
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[PlaySound(key="$dooropenquite", volume=0.5)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[playMusic(intro="$path_intro",key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", duration=1)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2", duration=1)]
+[delay(time=2)]
+[charslot(slot = "L", focus="L")]
+[name="Blacknight"]...Am I gonna be living with you in this room then?
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", focus="R")]
+[name="Mulberry"]Your condition isn't bad enough to require admission to Medical, but we still can't leave you unobserved yet.
+[name="Mulberry"]So I'll be living with you to make it more convenient to give you check-ups.
+[dialog]
+[charslot(slot = "L", posfrom="0,0", posto="100,0", duration=1)]
+[delay(time=1.2)]
+[PlaySound(key="$d_avg_doorknob", volume=1)]
+[delay(time=0.5)]
+[PlaySound(key="$d_avg_doorknob", volume=1)]
+[delay(time=1)]
+[charslot(slot = "L", posfrom="100,0", posto="0,0", duration=0.5)]
+[delay(time=0.8)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="none")]
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="Blacknight"]Man, can't we open some windows in here? I need some breeze.
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1", focus="R")]
+[name="Mulberry"]Is it too stuffy for you? I can turn on the air conditioner.
+[dialog]
+[delay(time=1)]
+[PlaySound(key="$d_avg_devicebeep", volume=1)]
+[delay(time=2)]
+[name="Mulberry"]How's that?
+[charslot(slot = "L", name = "avg_476_blkngt_1#7$2",focus="L")]
+[name="Blacknight"]Hmm... a little ehh, if you ask me.
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1", focus="R")]
+[name="Mulberry"]Are you feeling uncomfortable?
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="Blacknight"]I guess? Probably down to my health.
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="Mulberry"]Sorry, um, excuse me.
+[charslot(slot = "L", name = "avg_476_blkngt_1#5$2",focus="L")]
+[name="Blacknight"]Hey, what're you up to?
+[dialog]
+[charslot(slot = "L",focus="all")]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[charslot(slot = "R", posfrom="0,0", posto="-220,0", duration=1.5)]
+[delay(time=1.8)]
+[charslot(slot = "R", posfrom="-220,0", posto="-250,30", duration=0.5, isblock=true)]
+[delay(time=1)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="Mulberry"]Your forehead temperature feels normal...
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[charslot(slot = "R", posfrom="-250,30", posto="-220,0", duration=0.5)]
+[delay(time=1)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="Mulberry"]We can visit Medical after dinner, and carry out a detailed examination.
+[dialog]
+[charslot(slot = "R", focus="all")]
+[charslot(slot = "L", posfrom="0,0", posto="-100,0", duration=0.8)]
+[delay(time=1)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#9$2",focus="L")]
+[name="Blacknight"]Er... why exactly? I'm basically fine.
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="Mulberry"]Are you sure? You still seem uneasy.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="Blacknight"]'Course I'm sure.
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="Mulberry"]A-Alright then...
+[dialog]
+[charslot(slot = "L",focus="all")]
+[charslot(slot = "R", posfrom="-220,0", posto="0,0", duration=1)]
+[delay(time=1.5)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#2$2")]
+[delay(time=1.5)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2")]
+[charslot(slot = "L", posfrom="-100,0", posto="0,0", duration=2)]
+[delay(time=2.5)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", focus="R")]
+[name="Mulberry"]Oh, I almost forgot to give you this.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="Blacknight"]And... what is it?
+[charslot(slot = "R", name = "avg_473_mberry_1#11$1", focus="R")]
+[name="Mulberry"]Talismans.
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="Blacknight"]I can see that. Little too many for one string though, yeah?
+[charslot(slot = "R", name = "avg_473_mberry_1#8$1", focus="R")]
+[name="Mulberry"]Well... I was thinking the more I add, the more effective it'll be.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="Blacknight"]Look, I'm gonna be upfront—I wouldn't be caught dead carrying that mess everywhere I go.
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", focus="R")]
+[name="Mulberry"]You don't need to take it with you, you can just hang it in your wardrobe.
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="Blacknight"]Pass. Reeks of incense. It'll get on my clothes too.
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="Mulberry"]I-I'm sorry, I didn't even consider that!
+[charslot(slot = "L", name = "avg_476_blkngt_1#11$2",focus="L")]
+[name="Blacknight"]Tch... That's the thing with pampered little princesses like you. Such a pain to deal with.
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1", focus="R")]
+[name="Mulberry"](Oh dear, she's so hard to get along with... No, whatever else, this is my mission. I <i>need</i> to make sure I'm on good terms with her.)
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1", focus="R")]
+[name="Mulberry"]So... is there anywhere you'd like to see? I can show you around?
+[charslot(slot = "L", name = "avg_476_blkngt_1#11$2",focus="L")]
+[name="Blacknight"]Don't bother. And don't follow me either.
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="Mulberry"]But—
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="Blacknight"]'But' my arse.
+[dialog]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2")]
+[charslot(slot = "L", posfrom="0,0", posto="500,0", afrom = 1, ato = 0, duration=1.2)]
+[PlaySound(key="$rungeneral", volume=1)]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="Mulberry"]Blacknight, wait!
+[dialog]
+[PlaySound(key="$rungeneral", volume=1)]
+[charslot(slot = "R", posfrom="0,0", posto="300,0", afrom = 1, ato = 0, duration=1)]
+[stopmusic(fadetime=1)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$drift_intro",key="$drift_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="Mulberry"]For the longest time, I thought she was just a loner by nature. And coupled with being fresh aboard, it made sense she was cautious.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]...But now I realize, she simply didn't like it here.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="But she didn't leave straight away.; Still, why only choose to leave now?", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="Mulberry"]There was one time last month, when we wrapped up a field support mission and came back from the wilds. Not long after, she gave me her application to resign from formal operator status and return to being a cooperative contractor.
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="Mulberry"]I think what happened out there might've made her dissatisfied with us.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]Or maybe... I was the problem. Maybe I'm the reason she couldn't stand being here.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="Cool it. That's nonsense.; Trust me, she wouldn't think like that.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="Mulberry"]Thank you, Doctor...
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="So what went down out there anyway?", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="Mulberry"]I've been wondering that myself, honestly. As far as I could tell, it wasn't particularly distressing. I found it all very fascinating, actually, even pleasant.
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="Mulberry"]I thought we'd grown quite a bit closer, too, after that mission.
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="Mulberry"]I even felt like she was finally fitting in here.
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_forest",screenadapt="coverall")]
+[playMusic(intro="$warm_intro",key="$warm_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="none")]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1",focus="L")]
+[name="Blacknight"]First things first. Follow my directions while we're out there, and don't drag me down.
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1",focus="R")]
+[name="Mulberry"]But—I'm the captain?
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1",focus="L")]
+[name="Blacknight"]Could you beat me in a fight?
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="R")]
+[name="Mulberry"]...No.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1",focus="L")]
+[name="Blacknight"]Have you lived in the barrens longer than I have?
+[charslot(slot = "R", name = "avg_473_mberry_1#8$1",focus="R")]
+[name="Mulberry"]No...
+[charslot(slot = "L", name = "avg_476_blkngt_1#2$1",focus="L")]
+[name="Blacknight"]So why should I listen to your orders?
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1",focus="R")]
+[name="Mulberry"]I—
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="Blacknight"]...Pfft. Hahahaha.
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1",focus="R")]
+[name="Mulberry"]Wha— What's so funny, all of a sudden?
+[charslot(slot = "L", name = "avg_476_blkngt_1#3$1",focus="L")]
+[name="Blacknight"]Nothing, just thought it was hilarious watching your brain lock up in real time like that.
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1",focus="R")]
+[name="Mulberry"]So when you said...?
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="Blacknight"]Just pulling your leg. Mission's almost over as is and you're still all wound up, stuck inside a tent all day. Had to yank you out for a walk.
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1",focus="R")]
+[name="Mulberry"]Oh. And here I thought...
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="Blacknight"]Thought I was speaking my mind there?
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="R")]
+[name="Mulberry"]...Mm.
+[charslot(slot = "L", name = "avg_476_blkngt_1#9$1",focus="L")]
+[name="Blacknight"]Tell you the truth, it <i>would've</i> been, not too long ago.
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1",focus="R")]
+[name="Mulberry"]...So I wasn't just imagining things.
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="Blacknight"]But I was being unfair, wasn't I? We've been around each other plenty now, and every little thing you do's proven just how amazing you really are.
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1",focus="R")]
+[name="Mulberry"]I-I'm very flattered, but for you to suddenly start praising me like this...
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="Blacknight"]Why so awkward? You earned a thumb's up, so you get one. I still remember that old woman we'd all written off, but you found a way to save her against all odds.
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="R")]
+[name="Mulberry"]I couldn't have done it without everyone's help.
+[charslot(slot = "L", name = "avg_476_blkngt_1#3$1",focus="L")]
+[name="Blacknight"]Stop quibbling and take the compliment. I'm calling you amazing because you <i>are</i>. Don't you doubt that.
+[dialog]
+[playsound(key="$rungeneral", volume=1)]
+[charslot(slot = "L", posfrom="0,0", posto="-300,0", afrom=1, ato=0, duration=0.5)]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1",focus="R")]
+[playsound(key="$leaveshake", volume=1)]
+[delay(time=3)]
+[charslot]
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1")]
+[name="Blacknight"]Here, catch. Give it a try.
+[dialog]
+[charslot(slot = "M", posfrom="0,0", posto="80,0", duration=0.5)]
+[playsound(key="$d_avg_throwstone", volume=1)]
+[delay(time=0.6)]
+[charslot]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[delay(time=0.5)]
+[playsound(key="$fightgeneral", volume=0.3)]
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[charslot(slot = "M", posfrom="0,0", posto="0,-50", duration=0.3)]
+[delay(time=0.3)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[charslot(slot = "M", posfrom="0,-50", posto="0,0", duration=0.2)]
+[delay(time=1.5)]
+[charslot]
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1")]
+[delay(time=0.5)]
+[charslot(slot = "M", posfrom="0,0", posto="300,0", afrom=1, ato=0, duration=1)]
+[playsound(key="$rungeneral", volume=1)]
+[delay(time=1)]
+[charslot]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[charslot(slot = "L", name = "avg_476_blkngt_1#5$1", duration=1)]
+[charslot(slot = "L", posfrom="-300,0", posto="200,0", duration=2)]
+[delay(time=3.5)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#2$1")]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[delay(time=1)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#7$1")]
+[charslot(slot = "L", posfrom="200,0", posto="0,0", duration=2)]
+[delay(time=2)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#7$1", focus="L")]
+[name="Blacknight"]The hell? How'd you miss a pass from that close?
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="Blacknight"]Whatever, you can have the other one.
+[dialog]
+[charslot(slot = "L", posfrom="0,0", posto="0,-30", duration=1)]
+[delay(time=1.1)]
+[charslot(slot = "L", posfrom="0,-30", posto="0,0", duration=1)]
+[delay(time=1.5)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="Mulberry"]D-Don't pick it back up! You shouldn't eat fruit off the ground, it's unsanitary! You'll ruin your stomach.
+[charslot(slot = "L", name = "avg_476_blkngt_1#11$1", focus="L")]
+[name="Blacknight"]Stuff that, it's just a bit of broken skin. Still good.
+[dialog]
+[playsound(key="$d_avg_humaneat", volume=0.8)]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="Mulberry"]At least wipe it off with your sleeve.
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1", focus="R")]
+[playsound(key="$d_avg_humaneat", volume=0.5)]
+[delay(time=3)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="Mulberry"]...Th-This is amazing. I've never had fruit like this before.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="Blacknight"]Once, me and my mates were taking a route that passed through a forest by a river.
+[name="Blacknight"]The trees were full of fruit like this. Each of us left with a giant heap we'd picked, all crammed into our bags.
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1", focus="L")]
+[name="Blacknight"]Never came across any again after that. Surprised there's so many growing around here.
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="Mulberry"]We can pick a few more to take back, to let everyone try some.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="Blacknight"]I didn't drag you out today to go fruit-picking.
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="Mulberry"]Oh, I-I didn't realize... Was there something else, then? I thought we were just outside for a walk.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="Blacknight"]What're you sweating buckets for? Follow me.
+[dialog]
+[charslot(slot = "L", posfrom="0,0", posto="200,0", duration=1, isblock=true)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="Mulberry"]Ah—don't—don't pull me!
+[dialog]
+[charslot(slot = "L", posfrom="200,0", posto="-200,0", afrom = 1, ato = 0, duration=2)]
+[charslot(slot = "R", posfrom="0,0", posto="-400,0", afrom = 1, ato = 0, duration=2)]
+[delay(time=1)]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_caveentrance",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_avg_stream_loop", volume=0.4, loop=true, channel="BG")]
+[charslot(slot = "M", name = "avg_473_mberry_1#10$1", duration=1.5)]
+[delay(time=1.5)]
+[name="Mulberry"]Where are...
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Shh, quiet. There's a massive bugger tucked inside this cave. Don't scare her.
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="Mulberry"](Why did you take me here? This is so dangerous.)
+[charslot(slot = "M", name = "avg_476_blkngt_1#11$1")]
+[name="Blacknight"](Dangerous? You're safe as houses with me, okay?)
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"](My professor used to say we should steer clear of wild animals as much as we can while working in the field.)
+[charslot(slot = "M", name = "avg_476_blkngt_1#11$1")]
+[name="Blacknight"](Shut it. Who cares what your professor said? Watch carefully. It's coming out.)
+[dialog]
+[charslot]
+[PlaySound(key="$d_avg_deeplion", volume=0.3, loop=true, channel="monster")]
+[delay(time=2)]
+[StopSound(channel="monster", fadetime=1)]
+[delay(time=1)]
+Subtle stirrings emanate from the cave. Mulberry squints, trying to catch a closer look.
+[dialog]
+[StopSound(channel="BG", fadetime=1)]
+[PlaySound(key="$d_avg_grass", volume=1)]
+[delay(time=2)]
+But after a long while, the stirrings abate, leaving the bushes in front of the opening to rustle in the wind, swaying and shuffling as they do.
+Just as she's about to lose patience and tell her companion that they should head back to camp, a wild beast emerges from the cave without fanfare.
+Its flesh is rugged, its hide sleek, and with a yawn it bares its coarse tusks for all to see, easily capable of mauling the throats of its prey.
+[dialog]
+[PlaySound(key="$d_avg_deeplion", volume=0.5, loop=true, channel="monster")]
+[delay(time=2)]
+[StopSound(channel="monster", fadetime=1)]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[name="Mulberry"](That—That's a big one...)
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="Mulberry"](I-I'm getting scared now, Blacknight, we—we should... head back.)
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"](Relax, she won't notice us from this distance. Besides, getting up now would just draw her attention here.)
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"](B-But I...)
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"](Hold tight, just a little longer.)
+[dialog]
+[charslot]
+The sheer fearsomeness of the beast makes Mulberry involuntarily bury her face halfway into her arms, leaving only a pair of eyes peeking out, furtively taking in the sight of it sniffing about its cave's entrance.
+Seemingly assured no danger lurks nearby, it settles down and lets out a rumbling howl, as if calling for something.
+[dialog]
+[PlaySound(key="$d_avg_deeplion", volume=1, loop=true, channel="monster")]
+[delay(time=2)]
+[StopSound(channel="monster", fadetime=1)]
+[delay(time=1.5)]
+Sure enough, a beastling soon waddles out from the cave, its gait unsteady.
+After just a few steps, it tumbles heavily—perhaps the mud is too slick—and knocks its head on the senior beast's hind legs.
+The beast isn't the least bit perturbed, simply craning its head around and lapping at the beastling's head, encouraging it to get up again.
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="Mulberry"](Go on. You can do it, little one.)
+[dialog]
+[charslot]
+[PlaySound(key="$d_avg_pawfootstep_1", volume=0.5)]
+[delay(time=2)]
+[PlaySound(key="$d_avg_pawfootstep_2", volume=0.6)]
+[delay(time=2)]
+[PlayMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[charslot(slot = "M", name = "avg_473_mberry_1#9$1")]
+[name="Mulberry"](Wow, wooow, he did it!)
+[charslot(slot = "M", name = "avg_473_mberry_1#9$1")]
+[name="Mulberry"](He—He's so cute.)
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1")]
+[name="Blacknight"](I was looking for food around here a while back and found her pregnant. By my count, I figured the baby'd be born by now.)
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="Mulberry"](That's so sweet. He'll have nothing to fear with his mom by his side.)
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="Blacknight"](Look. They're about to go.)
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="Mulberry"](Go where?)
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="Blacknight"](They need to stuff themselves while it's still autumn, so they can make it through the freezing winter okay.)
+[dialog]
+[charslot(slot = "M", name = "avg_473_mberry_1#9$1")]
+[delay(time=2)]
+[charslot]
+[charslot(slot = "L", name = "avg_473_mberry_1#9$1", focus="none")]
+[charslot(slot = "R", name = "avg_476_blkngt_1#1$1", focus="R")]
+[name="Blacknight"]Alright, enough gawking, they're out of sight now. About time we headed back too.
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="Mulberry"]I've never seen anything like that before, never ever. Oh, no, I did see a documentary once, but it's not like that counts.
+[charslot(slot = "L", name = "avg_473_mberry_1#9$1", focus="L")]
+[name="Mulberry"]I've never seen something so stunning with my own eyes.
+[charslot(slot = "R", name = "avg_476_blkngt_1#5$1", focus="R")]
+[name="Blacknight"]Stunning? It's the most normal thing there is.
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="Mulberry"]You must've seen sights this wonderful all the time where you used to live. Otherwise you wouldn't say that.
+[charslot(slot = "R", name = "avg_476_blkngt_1#10$1", focus="R")]
+[name="Blacknight"]...You're right. Saw it all over.
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="Mulberry"]Remember to write it down.
+[charslot(slot = "R", name = "avg_476_blkngt_1#6$1", focus="R")]
+[name="Blacknight"]Eh? Write what down?
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="Mulberry"]Remember to put it in the report we're sending back to the landship. It's a very special kind of experience. It deserves a mention.
+[dialog]
+[charslot(slot = "R", name = "avg_476_blkngt_1#1$1", focus="R")]
+[delay(time=1.5)]
+[charslot(slot = "R", name = "avg_476_blkngt_1#2$1", focus="R")]
+[delay(time=2)]
+[name="Blacknight"]...Got it. Will do.
+[charslot(slot = "L", name = "avg_473_mberry_1#2$1", focus="L")]
+[name="Mulberry"]And don't put it off until the very last day, either.
+[charslot(slot = "R", name = "avg_476_blkngt_1#10$1", focus="R")]
+[name="Blacknight"]Alright, alright, get a move on. Let's go pick the rest of those fruits. Bet everyone at camp'll want to try some.
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="Mulberry"]I think that must be what angered her. It's my fault for not reading the room, for spoiling the mood like that. I'm sure all the paperwork and regulations go completely against her style.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]*sigh* What now, Doctor? Blacknight's already gone, and I only realized after the fact. I didn't even get the chance to apologize.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="Don't worry, it's not your fault.;Don't regret not saying sorry. Regret not saying goodbye.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="Mulberry"]Regardless, it's too late now.
+[dialog]
+[charslot]
+[playsound(key="$dooropenquite", volume=1)]
+[delay(time=1)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1", duration=1.5)]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[name="Mulberry"]Huh?!
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]What're you two muttering about in here? Hey, Doctor, has my application gone through? It's been days already. Why haven't I heard a peep?
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="We're in the middle of discussing it.;You should've knocked first.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#11$1")]
+[name="Blacknight"]Hmph. You act like you're my nan.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]Blacknight, oh... I thought you'd left, I-I was wondering how I never even got to say goodbye...
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="Blacknight"]What? Don't you lot have a rule about submitting a report and waiting for approval before leaving?
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[name="Mulberry"]...Um, I thought you were fed up with all the rules?
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[name="Blacknight"]Eh, I've spent enough time here to work out why you have 'em. I don't <i>like</i> them, but I can adapt.
+[charslot(slot = "M", name = "avg_476_blkngt_1#9$1")]
+[name="Blacknight"]Besides... I've got friends here. Can't just vanish without a word.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="At least tell us why you're leaving.;Why aren't you a fan of this place?", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="Mulberry"]That's right! If there's anything bothering you, you're absolutely free to mention it, and we'll help you sort it out.
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[name="Blacknight"]It's not the place, that's not the issue.
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="Mulberry"]If not the place, then... the people here? Y-You don't want to stay because you're s-sick of me, aren't you...
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Never even crossed my mind.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]You don't hate me?
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="Blacknight"]You kidding? You're amazing. Responsible, professional, you name it. Would've left ages ago if you didn't need my help.
+[charslot(slot = "M", name = "avg_473_mberry_1#10$1")]
+[name="Mulberry"]I did?
+[charslot(slot = "M", name = "avg_476_blkngt_1#9$1")]
+[name="Blacknight"]Yeah. You remember that day, right?
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_infirmary", xScale=1.1,yScale=1.1)]
+[playMusic(intro="$path_intro",key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1", duration = 2)]
+[charslot(slot = "M", posfrom = "-300,0", posto = "0,0",duration = 2)]
+[delay(time=3)]
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]Oh, Blacknight. What brings you here? Are you feeling unwell?
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="Blacknight"]No, sorry, 'scuse me. Is Mulberry in?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]She is. Are you... waiting for her?
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]I heard she finished her mission and came back yesterday, but I still haven't seen her yet. Something wrong? She hurt?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]Oh, not at all.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]So what's she been up to?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]We brought back more patients than expected for this rescue mission. Medical's been all hands on deck, so we've temporarily transferred Mulberry here for urgent treatment of our less critical patients.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]How's that fair? She just got back from a field mission.
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]She insisted. She was originally meant to be coming back the next day, anyway.
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[name="Blacknight"]Whoof...
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]So you're worried about her?
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="Blacknight"]Why do you look so surprised about that?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]No, it's just that she's always so gloomy whenever she brings you up. She seems to think you don't like being around her.
+[charslot(slot = "M", name = "avg_476_blkngt_1#9$1")]
+[name="Blacknight"]Hey, I never said that.
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]That's good, then. We're all hoping you'll be able to help her out more.
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1")]
+[name="Blacknight"]Help her out? With what?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]You can totally trust her on the professional front, but she's still young, and doesn't have much experience with wasteland survival. But now that she has you, you can teach her as you go.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]So is she done with work right now?
+[charslot]
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]She should've been done forever ago...
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1", afrom=0, ato=0, duration=0)]
+[BackgroundTween(xFrom=0, xTo=-180, duration=3,ease="OutQuad",block=false)]
+[charslot(slot="M", posfrom="0,0", posto="-50,0", afrom=1, ato=0, duration=1)]
+[delay(time=2)]
+[charslot(slot="R", posfrom="150,-100", posto="150,-100", afrom=0, ato=1, duration=2)]
+[delay(time=3)]
+[name="Mulberry"]*pant*... *pant*... sir, you're wounded... please stay still...
+[charslot(slot = "M", focus = "none")]
+[name="Medic Operator"]Oh, gosh. She's just fallen asleep up against the clothes locker. The exhaustion must've gotten to her.
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1",afrom=0, ato=0, duration=0)]
+[BackgroundTween(xFrom=-180, xTo=0, duration=3,ease="OutQuad",block=false)]
+[charslot(slot="R", posfrom="150,-100", posto="150,-100", afrom=1, ato=0, duration=1)]
+[delay(time=2)]
+[charslot(slot="M", posfrom="0,0", posto="0,0", afrom=0, ato=1, duration=1)]
+[delay(time=3)]
+[name="Blacknight"]What's she nattering about? She can't even sleep easy...
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Helmet.
+[charslot]
+[name="Helmet"]Mreep!
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="Blacknight"]Put her under properly.
+[charslot]
+[name="Helmet"]Shrrp—
+[name="Mulberry"](Lets out a long, slow breath.)
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Say, mind if I lend a hand here? I'll carry her on my back. Won't do her any good sleeping here.
+[charslot(slot = "M", name = "char_016_medic")]
+[name="Medic Operator"]Oh, uhh, okay.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="Blacknight"]Seriously, you give me nothing but trouble.
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[charslot(slot = "M", posfrom = "0,0", posto = "0,-100",duration = 1.5)]
+[delay(time=2.5)]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1", duration = 2)]
+[charslot(slot = "R", posfrom = "200,-100", posto = "-100,-100",duration = 2)]
+[delay(time=3)]
+[charslot(slot = "M", posfrom = "0,-100", posto = "0,0",duration = 1)]
+[charslot(slot = "R", posfrom = "-100,-100", posto = "-100,0",duration = 1)]
+[delay(time=2.5)]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]So you're the one who brought me back to the dorms that day.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Who else? It's thanks to Helmet you slept so sound that night, y'know.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]I had it all wrong...
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]r
+[name="Blacknight"]You just love overthinking things.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="I bet it took more than just overthinking.;It's your fault too, for not being clearer.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="Blacknight"]......
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]Sorry, I'd never gotten to know any girls like you before.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]Didn't mean to make you worry.
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="Mulberry"]It's okay, we—we sorted out the misunderstanding, so, um, please stay! I've learned so much here, and I'm sure I can help you keep your illness under control.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]Thing is, I just... wanna go back to the barrens. Life out there suits me better.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="No problem. There's always more fieldwork.;You can specialize in barrenlands field missions.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Nah, it's just not the same. I know, I know, I don't have to worry about the basics here, and I can get drugs for my sickness. I've made new friends, learned new tricks, the whole shebang.
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="Blacknight"]Ought to know a good thing when I see it...
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[delay(time=1.5)]
+[PlayMusic(intro="$newhope01_intro", key="$newhope01_loop", volume=0.4)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]But sometimes, I wake up at night, and I stare at the ceiling and it's all white. No moons, no stars, no chirping, and I just feel hollow inside.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]My instincts are shouting it, my heart's screaming it, and my thinker's torturing me over it.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[multiline(name="Blacknight")]It's just the simplest thing—
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[multiline(name="Blacknight",end=true)]I need to live somewhere I can see the sky when I look up.
+[charslot(slot = "M", name = "avg_473_mberry_1#7$1")]
+[name="Mulberry"]Do you... Do you know just how bad your health is, Blacknight? How will the sky do anything to protect you?
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="Mulberry"]I don't agree to this! I do <i>not</i> approve your application! Doctor, please don't approve her application!
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Listen to me, Mulberry. I know I'm skint for choices. That's why I'm choosing what I want most, honest.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Remember that beast I took you to see?
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]Mm... It's never left my mind.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Out in the barrens, there's plenty more like her. Loads and loads.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Few years back, I came across a slumberfoot. She was a tough little cub. The moment I saw her, I decided I wanted to tame her.
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="Blacknight"]But I tried a few times to get close and communicate with her, and she kept refusing. Whenever she saw me, she just scurried straight away. Tasty food, a soft bed, nothing could make her care.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]Then one time, by accident, she got hurt by her own prey. I saved her, took her back to camp, and treated her.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="Blacknight"]As she healed up, gradually, that tension she had around me gave way to a new familiarity.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="Blacknight"]Thought I'd managed to tame her, so I stopped keeping an eye on her round the clock.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]But after a short hunting trip, I came back to camp and she was gone. Left nothing but the little cap I knitted her.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="Blacknight"]I was furious. Imagine how hard it is to even get a hold of yarn in the barrens... I thought she loved that cap.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="Blacknight"]So I followed her tracks. Went after her.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="Blacknight"]And when I found her, she was rolling about in the dunes, absolutely grimy. But she was happy as could be, the happiest I'd ever seen her.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="Blacknight"]So I just turned around and left. In that instant, I learned. She didn't belong to me. She belonged to those dunes, to that huge old desert.
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="Mulberry"]I... I...
+[dialog]
+[delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[delay(time=2)]
+[dialog]
+[charslot]
+[Decision(options="...Alright.;I understand.", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="Blacknight, I approve your application to depart.", values="1")]
+[Predicate(references="1")]
+[Decision(options="You are once again an RI collaborative operator. You can go.", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[delay(time=1.5)]
+[name="Blacknight"]...Thank you.
+[dialog]
+[delay(time=1)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[delay(time=1.2)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]If you have to leave... then—then at least, remember to bring enough medicine before you go.
+[dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Subtitle(text="Half a year later", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[PlaySound(key="$d_avg_snowstormflp", volume=0.6, loop=true, channel="wind")]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Background(image="bg_desert_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0.15, r=255, g=255, b=0, fadetime=2, block=true)]
+[Blocker(a=0.1, r=255, g=255, b=0, fadetime=2, block=true)]
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="Mulberry"]Come on. Come on, connect.
+[PlaySound(key="$transmission", volume=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="Mulberry"]Hello? Is anyone listening? This is Operator Mulberry! I've encountered an exceptionally bad sandstorm en route to a mission in Lungmen! Requesting urgent support!
+[PlaySound(key="$d_avg_telephonebusy", volume=1, loop=true, channel="TX")]
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="Mulberry"]Hello? Is anyone there?
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="Mulberry"]Is this really it? This can't be... No...
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"](I'm going to die here.)
+[dialog]
+[StopSound(channel="TX", fadetime=1)]
+[PlaySound(key="$d_avg_snowstormflp", volume=1, loop=true, channel="wind")]
+[Blocker(a=0.2, r=204, g=102, b=0, fadetime=1, block=true)]
+[Blocker(a=0.1, r=204, g=102, b=0, fadetime=1, block=true)]
+[Blocker(a=0.2, r=204, g=102, b=0, fadetime=1, block=true)]
+[Blocker(a=0.1, r=204, g=102, b=0, fadetime=1, block=true)]
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[name="Mulberry"]I feel so hungry. So tired. So terrible.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="Mulberry"]Nobody's coming, are they...? There's nobody <i>to</i> come.
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[name="Mulberry"]*whimper*... Mom... Dad...
+[dialog]
+[charslot(slot = "M", posfrom = "0,0", posto = "0,-80", duration=1)]
+[delay(time=1.5)]
+[charslot(slot = "M", posfrom = "0,-80", posto = "0,-300", afrom=1, ato=0, duration=0.8)]
+[delay(time=0.4)]
+[PlaySound(key="$bodyfalldown2", volume=1)]
+[delay(time=1.5)]
+[name="Mulberry"]I'm sorry... I can't... hold on any longer...
+[dialog]
+[stopmusic(fadetime=2)]
+[charslot]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[StopSound(channel="wind", fadetime=2)]
+[delay(time=3.5)]
+[name="???"]Mreep—mreep—
+[name="Mulberry"](Who... Who's that licking me? Uwgh, that tickles...)
+[name="???"]If you're awake, hurry up and open your eyes.
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1", bstart=0.2, bend=0.7, duration= 0.01, end=false)] 
+[charslot(slot = "M", action="zoom", poszoom = "0.5,0.5", scale=0.9,duration = 0)]
+[delay(time=0.1)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="Mulberry"](I can't see properly. That voice sounds so familiar...)
+[name="???"]What're you doing just squinting there?
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "M", action="zoom", poszoom = "0.5,0.5", scale=1, duration = 2)]
+[delay(time=2)]
+[name="???"]Oh, you got sand in your eyes.
+[name="???"](Blows)
+[name="???"]Give me a blink. That any better?
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1", duration=3)]
+[PlayMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[delay(time=4)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1")]
+[name="Blacknight"]Strewth, what would you do without me?
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#4$1", duration = 1)]
+[charslot(slot = "R", posfrom = "300,0", posto = "-60,0",duration = 1)]
+[charslot(slot = "R", focus= "R")]
+[name="Mulberry"]Waah—
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1", focus= "M")]
+[name="Blacknight"]Hey, hey, what're you hugging me so hard for?!
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1", focus= "M")]
+[name="Blacknight"]Come on, let go!
+[charslot(slot = "R", posfrom = "-60,0", posto = "-80,0", duration = 1)]
+[charslot(slot = "R", focus= "R")]
+[name="Mulberry"]...I missed you so, so much.
+[Dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1", focus= "M")]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1", focus= "M")]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1", focus= "M")]
+[name="Blacknight"]Alright, alright... fine, just a little. I'll let you hug me just a little longer.
+[Dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[charslot(slot = "M", focus= "all")]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1")]
+[delay(time=3)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[Character]
+[Image]
