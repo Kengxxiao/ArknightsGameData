@@ -1,0 +1,861 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[dialog]
+[stopmusic]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$drift_intro",key="$drift_loop", volume=0.4)]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[playsound(key="$d_avg_paper1", volume=1)]
+[delay(time=1.5)]
+[playsound(key="$d_avg_paper2", volume=1)]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1", duration=2, isblock=true)]
+[name="멀베리"]하아……
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="멀베리, 블랙나이트의 안내자로서 이번 일에 대해 어떻게 생각하고 있지?", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]바, 박사님. 블랙나이트 씨의 성격으로 봤을 때 아마 신청서를 내자마자 이곳을 떠났을 거예요.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="블랙나이트를 원망하는 것 같은데.;그래서 넌 블랙나이트가 떠난 것에 동의해?", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="멀베리"]으음, 제 의견보단…… 박사님 의견을 듣고 싶어요.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="됐어. 이미 여기를 떠나버린 이상 우리가 더 얘기할 것도 없지.", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="멀베리"]박사님도 기분이 좋아 보이진 않네요……
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="아니야, 걱정 마.;크흠, 괜한 걱정 말라고.", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="그런데 블랙나이트가 왜 떠났는지 알아?;그나저나 블랙나이트가 떠난 이유는 궁금하네.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#10$1")]
+[name="멀베리"]그, 그건 저도 잘 모르겠어요.
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[name="멀베리"]하아…… 블랙나이트 씨가 이곳 생활에 익숙해졌다고 생각했어요. 처음 봤을 땐 편해 보이진 않으셨거든요.
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="멀베리"]의료부에서도 블랙나이트 씨의 상태가 불안정하니 언제든 경과를 살필 수 있도록 본함 주둔 정식 오퍼레이터로 지정하자고 제안했었고요.
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="멀베리"]그때 전 블랙나이트 씨의 안내자로서 함선 구석구석을 안내해 줬는데……
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_corridor",screenadapt="coverall")]
+[playMusic(intro="$path_intro",key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$2", duration=1, isblock=true)]
+[name="블랙나이트"]그러니까…… 이 함선에선 네가 내 대장이라는 거지? 그 뻣뻣한 팔다리로 날 지킬 수나 있겠어?
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="멀베리"]브, 블랙나이트 씨에 비하면 부족한 실력이지만 위험한 상황이 생기면 제가 최선을 다해서 지켜 드릴게요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$2")]
+[name="블랙나이트"]흠, 자신 있나 보네. 기대할게.
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[PlaySound(key="$dooropenquite", volume=0.5)]
+[Background(image="bg_room_2",screenadapt="coverall")]
+[playMusic(intro="$path_intro",key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", duration=1)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2", duration=1)]
+[delay(time=2)]
+[charslot(slot = "L", focus="L")]
+[name="블랙나이트"]……앞으로 여기서 너랑 같이 지내야 하는 거야?
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", focus="R")]
+[name="멀베리"]의료부에 입원할 정도는 아니지만 아직 블랙나이트 씨의 경과를 지켜봐야 해서요.
+[name="멀베리"]그래서 당분간은 언제든 건강 상태를 확인할 수 있도록 제가 같이 지낼 거예요.
+[dialog]
+[charslot(slot = "L", posfrom="0,0", posto="100,0", duration=1)]
+[delay(time=1.2)]
+[PlaySound(key="$d_avg_doorknob", volume=1)]
+[delay(time=0.5)]
+[PlaySound(key="$d_avg_doorknob", volume=1)]
+[delay(time=1)]
+[charslot(slot = "L", posfrom="100,0", posto="0,0", duration=0.5)]
+[delay(time=0.8)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="none")]
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="블랙나이트"]혹시 여기 창문 못 열어? 바람 좀 쐬고 싶은데.
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1", focus="R")]
+[name="멀베리"]더우세요? 에어컨을 틀어드릴게요.
+[dialog]
+[delay(time=1)]
+[PlaySound(key="$d_avg_devicebeep", volume=1)]
+[delay(time=2)]
+[name="멀베리"]이제 좀 어떠세요?
+[charslot(slot = "L", name = "avg_476_blkngt_1#7$2",focus="L")]
+[name="블랙나이트"]으음…… 별로야.
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1", focus="R")]
+[name="멀베리"]블랙나이트 씨, 혹시 어디가 불편하신 거예요?
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="블랙나이트"]그럴 수도, 내 몸이 문제인 거 같아.
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="멀베리"]앗, 죄송해요. 제가 실례했어요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#5$2",focus="L")]
+[name="블랙나이트"]잠깐? 뭐 하는 거야?
+[dialog]
+[charslot(slot = "L",focus="all")]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[charslot(slot = "R", posfrom="0,0", posto="-220,0", duration=1.5)]
+[delay(time=1.8)]
+[charslot(slot = "R", posfrom="-220,0", posto="-250,30", duration=0.5, isblock=true)]
+[delay(time=1)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="멀베리"]이마에 열은 없는 것 같은데……
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[charslot(slot = "R", posfrom="-250,30", posto="-220,0", duration=0.5)]
+[delay(time=1)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="멀베리"]저녁 식사 후에 의료부에 가서 다시 꼼꼼히 검사받는 게 좋겠어요.
+[dialog]
+[charslot(slot = "R", focus="all")]
+[charslot(slot = "L", posfrom="0,0", posto="-100,0", duration=0.8)]
+[delay(time=1)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#9$2",focus="L")]
+[name="블랙나이트"]음…… 큰 문제는 없을 것 같은데. 의료부는 안 가도 되지 않을까?
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="멀베리"]정말 괜찮으신 거죠? 안색이 안 좋아 보여요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="블랙나이트"]진짜 괜찮아.
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="멀베리"]아, 알겠어요……
+[dialog]
+[charslot(slot = "L",focus="all")]
+[charslot(slot = "R", posfrom="-220,0", posto="0,0", duration=1)]
+[delay(time=1.5)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#2$2")]
+[delay(time=1.5)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2")]
+[charslot(slot = "L", posfrom="-100,0", posto="0,0", duration=2)]
+[delay(time=2.5)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", focus="R")]
+[name="멀베리"]참, 이걸 깜빡할 뻔했네요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="블랙나이트"]이게 뭐야?
+[charslot(slot = "R", name = "avg_473_mberry_1#11$1", focus="R")]
+[name="멀베리"]호신 부적이에요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="블랙나이트"]그건 아는데, 너무 잔뜩 가져온 거 아니야?
+[charslot(slot = "R", name = "avg_473_mberry_1#8$1", focus="R")]
+[name="멀베리"]그…… 부적이 많을수록…… 효과가 좋지 않을까 해서요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="블랙나이트"]미리 말해두는데, 난 그 이상한 걸 목에 걸고 활보할 생각은 없어.
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1", focus="R")]
+[name="멀베리"]갖고 다니실 필요는 없어요. 그냥 캐비닛 같은 데 걸어두셔도 돼요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#6$2",focus="L")]
+[name="블랙나이트"]싫어, 향냄새가 너무 강해, 이러면 옷에 냄새 밴단 말이야.
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="멀베리"]죄, 죄송해요. 제 생각이 짧았어요!
+[charslot(slot = "L", name = "avg_476_blkngt_1#11$2",focus="L")]
+[name="블랙나이트"]……쯧, 하여간. 너희들처럼 온실 속 화초 같은 여자애들 상대하는 건 정말 귀찮다니까.
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1", focus="R")]
+[name="멀베리"](후, 다가가기가 정말 어렵네…… 아니지, 어쨌든 이것도 내 임무니까 친해질 수 있도록 노력해야 해.)
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1", focus="R")]
+[name="멀베리"]그럼…… 어디 가고 싶은 곳 있으세요? 제가 안내해 드릴까요?
+[charslot(slot = "L", name = "avg_476_blkngt_1#11$2",focus="L")]
+[name="블랙나이트"]아니, 넌 여기 있어, 그만 좀 쫓아와.
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="멀베리"]하지만……
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2",focus="L")]
+[name="블랙나이트"]됐어, 안 돼.
+[dialog]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$2")]
+[charslot(slot = "L", posfrom="0,0", posto="500,0", afrom = 1, ato = 0, duration=1.2)]
+[PlaySound(key="$rungeneral", volume=1)]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="멀베리"]블랙나이트 씨, 잠시만요!
+[dialog]
+[PlaySound(key="$rungeneral", volume=1)]
+[charslot(slot = "R", posfrom="0,0", posto="300,0", afrom = 1, ato = 0, duration=1)]
+[stopmusic(fadetime=1)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[playMusic(intro="$drift_intro",key="$drift_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="멀베리"]한동안은 블랙나이트 씨가 원래 친화력이 부족한 성격인 줄 알았어요. 아무래도 처음 이곳에 왔으니 낯설어한다고 생각했죠.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]하지만 지금 돌이켜보니…… 그냥 이곳이 싫었나 봐요.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="근데 그때 바로 떠나지 않았잖아.;왜 이제야 떠났을까?", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="멀베리"]지난달 황야에서 야외 구조 임무를 마치고 함선으로 돌아온 뒤…… 얼마 지나지 않아 블랙나이트 씨가 정식 오퍼레이터를 그만두고 다시 협력 오퍼레이터가 될 수 없냐고 물어왔어요.
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="멀베리"]황야에서 뭔가 마음에 들지 않는 일이 있었던 것 같기도 해요.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]어쩌면…… 제 잘못일 수도 있어요. 저 때문에 더 이상 여기 남고 싶지 않다고 생각했을지도 몰라요.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="그럴 리가 없잖아. 넘겨짚지 마.;블랙나이트가 그렇게 생각할 리 없잖아. 날 믿어.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="멀베리"]고맙습니다…… 박사님.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="황야에서 무슨 일이 있었는지 얘기해 줄래?", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="멀베리"]솔직히 말하면 아무리 생각해도 잘 모르겠어요. 제 입장에선 딱히 고민거리가 될 만한 일은 없었거든요. 오히려 너무 즐거운 여정이었어요.
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="멀베리"]이번 외근 임무로 블랙나이트 씨와 제법 친해진 줄 알았는데.
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="멀베리"]심지어 블랙나이트 씨가 이곳 생활에 완전히 적응했다고 생각했다고요.
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_forest",screenadapt="coverall")]
+[playMusic(intro="$warm_intro",key="$warm_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="none")]
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1",focus="L")]
+[name="블랙나이트"]미리 말해두는데 이번에 나가면 내 말대로 해. 괜히 짐만 되지 말고.
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1",focus="R")]
+[name="멀베리"]하지만 팀장은 저인데요?
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1",focus="L")]
+[name="블랙나이트"]너 나보다 강해?
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="R")]
+[name="멀베리"]그건 아니지만……
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1",focus="L")]
+[name="블랙나이트"]황야에서 나보다 오래 살았어?
+[charslot(slot = "R", name = "avg_473_mberry_1#8$1",focus="R")]
+[name="멀베리"]아니요……
+[charslot(slot = "L", name = "avg_476_blkngt_1#2$1",focus="L")]
+[name="블랙나이트"]근데 내가 왜 네 명령에 따라야 하지?
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1",focus="R")]
+[name="멀베리"]하지만……
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="블랙나이트"]……풉, 푸하하핫!
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1",focus="R")]
+[name="멀베리"]블랙나이트 씨, 갑자기 왜 웃으세요……?
+[charslot(slot = "L", name = "avg_476_blkngt_1#3$1",focus="L")]
+[name="블랙나이트"]아니, 그게 아니라 네가 당황해하는 게 왠지 재미있어서.
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1",focus="R")]
+[name="멀베리"]그럼 조금 전에 한 말은……?
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="블랙나이트"]농담이야. 임무가 거의 끝났는데도 맨날 잔뜩 긴장한 얼굴로 텐트에만 박혀있잖아. 그래서 일부러 데리고 나온 거야.
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1",focus="R")]
+[name="멀베리"]저는 또……
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="블랙나이트"]근데 진심으로 하는 소리라고 생각했어?
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="R")]
+[name="멀베리"]……네.
+[charslot(slot = "L", name = "avg_476_blkngt_1#9$1",focus="L")]
+[name="블랙나이트"]솔직히 말하면 예전 같으면 분명 그렇게 생각했을 거야.
+[charslot(slot = "R", name = "avg_473_mberry_1#6$1",focus="R")]
+[name="멀베리"]……역시 착각이 아니었네요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="블랙나이트"]하지만 그건 내 편견이었지. 너와 지내면서, 오랫동안 지켜본 끝에 알게 됐어. 네가 대단한 사람이라는 걸.
+[charslot(slot = "R", name = "avg_473_mberry_1#10$1",focus="R")]
+[name="멀베리"]미, 민망하게 왜 갑자기 칭찬하고 그러세요?
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1",focus="L")]
+[name="블랙나이트"]민망하긴 뭐가 민망해? 잘했으면 칭찬받는 게 당연하지. 그 할머니도 다들 가망 없다고 못 살린다고 했는데 네가 방법을 생각해 낸 덕분에 구했잖아.
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1",focus="R")]
+[name="멀베리"]모두의 도움이 없었다면 불가능했을 거예요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#3$1",focus="L")]
+[name="블랙나이트"]겸손해하지 않아도 돼. 정말 잘해서 칭찬하는 거니까 의심하지도 말고.
+[dialog]
+[playsound(key="$rungeneral", volume=1)]
+[charslot(slot = "L", posfrom="0,0", posto="-300,0", afrom=1, ato=0, duration=0.5)]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1",focus="R")]
+[playsound(key="$leaveshake", volume=1)]
+[delay(time=3)]
+[charslot]
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1")]
+[name="블랙나이트"]자, 여기. 먹어봐.
+[dialog]
+[charslot(slot = "M", posfrom="0,0", posto="80,0", duration=0.5)]
+[playsound(key="$d_avg_throwstone", volume=1)]
+[delay(time=0.6)]
+[charslot]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[delay(time=0.5)]
+[playsound(key="$fightgeneral", volume=0.3)]
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[charslot(slot = "M", posfrom="0,0", posto="0,-50", duration=0.3)]
+[delay(time=0.3)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[charslot(slot = "M", posfrom="0,-50", posto="0,0", duration=0.2)]
+[delay(time=1.5)]
+[charslot]
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1")]
+[delay(time=0.5)]
+[charslot(slot = "M", posfrom="0,0", posto="300,0", afrom=1, ato=0, duration=1)]
+[playsound(key="$rungeneral", volume=1)]
+[delay(time=1)]
+[charslot]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[charslot(slot = "L", name = "avg_476_blkngt_1#5$1", duration=1)]
+[charslot(slot = "L", posfrom="-300,0", posto="200,0", duration=2)]
+[delay(time=3.5)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#2$1")]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[delay(time=1)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#7$1")]
+[charslot(slot = "L", posfrom="200,0", posto="0,0", duration=2)]
+[delay(time=2)]
+[charslot(slot = "L", name = "avg_476_blkngt_1#7$1", focus="L")]
+[name="블랙나이트"]쯧, 그거 하나 제대로 못 받아?
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="블랙나이트"]됐고, 넌 이걸 먹어.
+[dialog]
+[charslot(slot = "L", posfrom="0,0", posto="0,-30", duration=1)]
+[delay(time=1.1)]
+[charslot(slot = "L", posfrom="0,-30", posto="0,0", duration=1)]
+[delay(time=1.5)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="멀베리"]주, 줍지 마세요. 땅에 떨어진 과일은 비위생적이고, 먹으면 배탈 날 거예요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#11$1", focus="L")]
+[name="블랙나이트"]배탈은 무슨. 껍질만 살짝 흠집 난 거라 먹어도 돼.
+[dialog]
+[playsound(key="$d_avg_humaneat", volume=0.8)]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="멀베리"]그럼 옷에라도 닦고 드세요.
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1", focus="R")]
+[playsound(key="$d_avg_humaneat", volume=0.5)]
+[delay(time=3)]
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="멀베리"]……마, 맛있다! 이런 과일은 처음 먹어봐요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="블랙나이트"]전에 동료들과 길을 가다가 강가에 있는 숲을 발견했어.
+[name="블랙나이트"]근데 숲에 이런 과일이 엄청 많은 거야. 숲에서 빠져나올 때 보니까 다들 얼마나 챙긴 건지 주머니가 불룩했었지.
+[charslot(slot = "L", name = "avg_476_blkngt_1#10$1", focus="L")]
+[name="블랙나이트"]그 이후로는 한 번도 못 봤는데, 여기 이렇게 많이 열렸을 줄이야.
+[charslot(slot = "R", name = "avg_473_mberry_1#5$1", focus="R")]
+[name="멀베리"]그럼 저희도 다들 맛볼 수 있게 돌아갈 때 더 챙겨가요.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="블랙나이트"]오늘 널 데리고 나온 건 과일이나 따기 위해서가 아니야.
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="멀베리"]앗, 모, 몰랐어요…… 블랙나이트 씨, 혹시 무슨 일 있으세요? 전 그저 산책하러 나온 줄 알았는데.
+[charslot(slot = "L", name = "avg_476_blkngt_1#1$1", focus="L")]
+[name="블랙나이트"]뭘 긴장하고 그래? 됐어, 나 따라오기나 해.
+[dialog]
+[charslot(slot = "L", posfrom="0,0", posto="200,0", duration=1, isblock=true)]
+[charslot(slot = "R", name = "avg_473_mberry_1#2$1", focus="R")]
+[name="멀베리"]으앗! 자, 잡아당기지 마세요!
+[dialog]
+[charslot(slot = "L", posfrom="200,0", posto="-200,0", afrom = 1, ato = 0, duration=2)]
+[charslot(slot = "R", posfrom="0,0", posto="-400,0", afrom = 1, ato = 0, duration=2)]
+[delay(time=1)]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_caveentrance",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_avg_stream_loop", volume=0.4, loop=true, channel="BG")]
+[charslot(slot = "M", name = "avg_473_mberry_1#10$1", duration=1.5)]
+[delay(time=1.5)]
+[name="멀베리"]여긴……
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]쉿, 조용히 해. 저 동굴엔 덩치 큰 놈이 숨어 있으니까, 놀래키면 안 돼.
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="멀베리"](작은 목소리로) 왜 저를 데려오신 거예요? 너무 위험하잖아요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#11$1")]
+[name="블랙나이트"](작은 목소리로) 위험? 내가 있는 한 넌 더할 나위 없이 안전할걸?
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"](작은 목소리로) 전공 교수님께서 야외 임무 시에는 가능한 야생 동물을 피해야 한다고 하셨어요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#11$1")]
+[name="블랙나이트"](작은 목소리로) 됐어, 그만해. 네 교수님이랑 나랑 무슨 상관이야? 잘 봐, 저기 나온다.
+[dialog]
+[charslot]
+[PlaySound(key="$d_avg_deeplion", volume=0.3, loop=true, channel="monster")]
+[delay(time=2)]
+[StopSound(channel="monster", fadetime=1)]
+[delay(time=1)]
+동굴 안에서 작은 소리가 들려왔고, 멀베리는 그 소리의 흔적을 찾기 위해 눈을 가늘게 뜨고는 동굴 안을 쳐다봤다.
+[dialog]
+[StopSound(channel="BG", fadetime=1)]
+[PlaySound(key="$d_avg_grass", volume=1)]
+[delay(time=2)]
+하지만 얼마 지나지 않아 주변은 다시 고요해졌고, 오직 동굴 앞에 있는 나무만이 바람에 흔들리며 바스락바스락 소리를 냈다.
+인내심이 바닥난 멀베리가 캠프로 돌아가자고 얘기하려는 그 순간, 야수 한 마리가 동굴 밖으로 머리를 내밀었다.
+단단한 몸에 매끈한 털을 가진 야수가 입을 벌리자, 사냥감의 숨통을 단숨에 끊을 정도로 날카로운 송곳니가 보였다.
+[dialog]
+[PlaySound(key="$d_avg_deeplion", volume=0.5, loop=true, channel="monster")]
+[delay(time=2)]
+[StopSound(channel="monster", fadetime=1)]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[name="멀베리"](작은 목소리로) 어, 엄청 커요……
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="멀베리"](작은 목소리로) 저, 이제 좀 무, 무서워요. 블랙나이트 씨…… 이만 돌아가는 게 좋겠어요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"](작은 목소리로) 걱정하지 마, 거리가 멀어서 우릴 발견하진 못할 거야. 오히려 괜히 성급하게 일어났다가 녀석이 눈치챌지도 몰라.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"](작은 목소리로) 하, 하지만……
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"](작은 목소리로) 초조해하지 말고, 조금만 더 기다려 보자.
+[dialog]
+[charslot]
+야수의 사나운 모습에 자신도 모르게 두 팔 사이에 머리를 파묻은 멀베리가 눈만 빼꼼 내놓고 킁킁거리는 짐승을 지켜봤다.
+야수는 주변이 안전하다고 느꼈는지 경계심을 풀고는 낮은 목소리로 누군가를 부르듯 그르렁거렸다.
+[dialog]
+[PlaySound(key="$d_avg_deeplion", volume=1, loop=true, channel="monster")]
+[delay(time=2)]
+[StopSound(channel="monster", fadetime=1)]
+[delay(time=1.5)]
+그러자 아장아장 걷는 작은 짐승 한 마리가 어설픈 발걸음으로 비틀거리며 동굴에서부터 모습을 드러냈다.
+축축한 진흙 탓에 새끼 야수는 몇 걸음 채 걷기도 전에 넘어지며 굴렀고, 이내 앞에 있던 야수의 뒷다리에 머리를 부딪혔다.
+야수는 별일 아니라는 듯 그저 돌아서선 다시 일어나보라는 듯 부드럽게 새끼 야수의 머리를 핥아줄 뿐이었다.
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="멀베리"](작은 목소리로) 아가야, 힘내! 넌 할 수 있어!
+[dialog]
+[charslot]
+[PlaySound(key="$d_avg_pawfootstep_1", volume=0.5)]
+[delay(time=2)]
+[PlaySound(key="$d_avg_pawfootstep_2", volume=0.6)]
+[delay(time=2)]
+[PlayMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[charslot(slot = "M", name = "avg_473_mberry_1#9$1")]
+[name="멀베리"](작은 목소리로) 와아아, 혼자 일어났어요!
+[charslot(slot = "M", name = "avg_473_mberry_1#9$1")]
+[name="멀베리"](작은 목소리로) 어, 엄청 귀여워요!
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1")]
+[name="블랙나이트"](작은 목소리로) 전에 먹을 걸 찾으러 왔다가 임신한 저 녀석을 발견했거든. 얼추 세어보니까 이쯤이면 새끼를 낳았겠다 싶었지.
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="멀베리"](작은 목소리로) 정말 보기 좋아요. 저 아가는 엄마와 함께라면 두려울 게 없을 거예요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="블랙나이트"](작은 목소리로) 어, 이제 떠나려나 봐.
+[charslot(slot = "M", name = "avg_473_mberry_1#11$1")]
+[name="멀베리"](작은 목소리로) 어디로 가는 걸까요?
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="블랙나이트"](작은 목소리로) 가을에 배불리 먹어둬야 춥고 기나긴 겨울을 버틸 수 있겠지.
+[dialog]
+[charslot(slot = "M", name = "avg_473_mberry_1#9$1")]
+[delay(time=2)]
+[charslot]
+[charslot(slot = "L", name = "avg_473_mberry_1#9$1", focus="none")]
+[charslot(slot = "R", name = "avg_476_blkngt_1#1$1", focus="R")]
+[name="블랙나이트"]자, 녀석들도 떠났으니 우리도 이만 돌아가자.
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="멀베리"]이런 광경은 정말 처음이에요. 아니지, 다큐멘터리에서 보긴 했지만 그건 아무것도 아니었어요.
+[charslot(slot = "L", name = "avg_473_mberry_1#9$1", focus="L")]
+[name="멀베리"]방금 직접 봤을 때처럼의 이런 감동을 느끼지 못했거든요.
+[charslot(slot = "R", name = "avg_476_blkngt_1#5$1", focus="R")]
+[name="블랙나이트"]감동? 이건 평범하고 일상적인 일인데.
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="멀베리"]블랙나이트 씨가 예전에 살던 곳에선 자주 볼 수 있었던 광경이라 그렇게 얘기하시는 거예요.
+[charslot(slot = "R", name = "avg_476_blkngt_1#10$1", focus="R")]
+[name="블랙나이트"]……맞아, 이런 건 늘 볼 수 있었지.
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="멀베리"]블랙나이트 씨, 잊지 말고 적으셔야 해요.
+[charslot(slot = "R", name = "avg_476_blkngt_1#6$1", focus="R")]
+[name="블랙나이트"]응? 뭘 적어?
+[charslot(slot = "L", name = "avg_473_mberry_1#11$1", focus="L")]
+[name="멀베리"]함선에 보낼 보고서 말이에요. 이건 매우 신기한 발견이니 꼭 적어주셔야 해요.
+[dialog]
+[charslot(slot = "R", name = "avg_476_blkngt_1#1$1", focus="R")]
+[delay(time=1.5)]
+[charslot(slot = "R", name = "avg_476_blkngt_1#2$1", focus="R")]
+[delay(time=2)]
+[name="블랙나이트"]……알겠어, 적어둘게.
+[charslot(slot = "L", name = "avg_473_mberry_1#2$1", focus="L")]
+[name="멀베리"]마지막 날까지 미루시면 안 돼요!
+[charslot(slot = "R", name = "avg_476_blkngt_1#10$1", focus="R")]
+[name="블랙나이트"]알겠어, 알겠으니까 어서 돌아가자. 내가 저 과일 딸 수 있는 곳으로 데려가 줄게. 캠프에 있는 사람들에게 과일을 맛보여 주고 싶다며.
+[dialog]
+[stopmusic(fadetime=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="멀베리"]아마 그 말에 화가 난 걸지도 몰라요. 분위기 파악 하나 못 하고 그렇게 말한 제 잘못이겠죠. 블랙나이트 씨는 얽매이는 걸 질색할 테니까요.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]하아…… 박사님, 이제 어쩌죠? 블랙나이트 씨가 떠난 지금에서야 깨달았어요. 이제 사과하고 싶어도 할 수 없게 되어 버렸는데.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="네 잘못 아니니 너무 신경 쓰지 마.;사실 사과보다 작별 인사를 못 한 게 더 아쉬운 거 아니야?", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="멀베리"]무슨 말이든, 이미 늦은 거겠죠.
+[dialog]
+[charslot]
+[playsound(key="$dooropenquite", volume=1)]
+[delay(time=1)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1", duration=1.5)]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[name="멀베리"]어?!
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]둘이 뭘 그렇게 속닥거려? 아, 박사. 그것보다 내 신청서는 결재한 거야? 제출한 지가 언젠데 왜 아무런 소식이 없어?
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="지금 논의 중이야.;들어오기 전에 노크부터 해야지.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#11$1")]
+[name="블랙나이트"]쳇, 꾸물거리기는. 하여튼 귀찮다니까.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]블랙나이트 씨…… 이미 떠나신 줄 알았잖아요. 아직 작별 인사도 못 했는데……
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="블랙나이트"]어? 신청서에 결재가 나야 떠날 수 있다는 규정이 있다고 말한 건 너잖아.
+[charslot(slot = "M", name = "avg_473_mberry_1#5$1")]
+[name="멀베리"]……하지만 블랙나이트 씨는 그런 규정을 싫어하시잖아요……
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[name="블랙나이트"]여기 있는 동안 규정에도 나름 일리가 있다는 걸 깨달았어. 솔직히 아직 싫긴 한데 못 지킬 정도도 아니고.
+[charslot(slot = "M", name = "avg_476_blkngt_1#9$1")]
+[name="블랙나이트"]그리고…… 어떻게 친구한테 인사도 안 하고 가겠어?
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="블랙나이트, 떠나야 하는 이유가 뭐야?;왜 떠나려는 거야?", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_473_mberry_1#1$1")]
+[name="멀베리"]블랙나이트 씨, 혹시 마음에 안 드는 부분이 있는 거면 말씀해 주세요. 저희가 해결해 볼게요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[name="블랙나이트"]장소의 문제가 아니야.
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="멀베리"]장소의 문제가 아니라면…… 여기 있는 사람 때문인가요? 서, 설마 제가 싫어서 떠나시려는 건……
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]그렇게 생각한 적 없어.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]제가 싫지 않으세요?
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="블랙나이트"]넌 착하고 일도 책임감 있게 잘하잖아. 내가 여기에 남아 있던 건 네가 내 도움을 필요로 했기 때문이야. 그렇지 않았다면 진작 여기를 떠났을 거야.
+[charslot(slot = "M", name = "avg_473_mberry_1#10$1")]
+[name="멀베리"]제가 블랙나이트 씨의 도움을요……?
+[charslot(slot = "M", name = "avg_476_blkngt_1#9$1")]
+[name="블랙나이트"]그래, 그날 기억 안 나?
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_infirmary", xScale=1.1,yScale=1.1)]
+[playMusic(intro="$path_intro",key="$path_loop", volume=0.4)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1", duration = 2)]
+[charslot(slot = "M", posfrom = "-300,0", posto = "0,0",duration = 2)]
+[delay(time=3)]
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]아, 블랙나이트 씨. 무슨 일이세요? 혹시 어디가 불편해서 오신 거예요?
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="블랙나이트"]아니. 혹시 멀베리 안에 있어?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]네…… 멀베리 씨를 기다리시는 거예요?
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]임무를 마치고 어제 본함으로 돌아왔다고 들었는데 지금껏 안 보이길래. 혹시 다친 거야?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]그런 건 아니에요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]그럼 뭐 하고 있는데?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]이번 임무에서 구조된 환자가 예상보다 많아서 의료부에 인력이 부족한 상황이거든요. 그래서 멀베리 씨에게 경증 환자의 응급처치를 부탁드렸어요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]너네 너무 심한 거 아니야? 방금 막 외근 임무를 마치고 온 사람한테.
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]원래 다음날에 와주셔도 됐었는데 본인이 어떻게든 남고 싶다고 하셔서요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[name="블랙나이트"]후……
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]많이 걱정되시나 봐요?
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="블랙나이트"]왜 그렇게 신기하다는 표정으로 보는 건데?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]그게 아니라…… 멀베리 씨는 블랙나이트 씨 얘기를 할 때마다 한숨을 쉬거든요. 아무래도 블랙나이트 씨가 자신을 싫어한다고 생각하나 봐요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#9$1")]
+[name="블랙나이트"]그렇지 않아. 그렇게 말한 적도 없고.
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]그럼 다행이네요. 다들 블랙나이트 씨가 멀베리 씨를 도와주기를 바라고 있어요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1")]
+[name="블랙나이트"]도와줘? 왜?
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]멀베리 씨가 전문 분야에 있어서는 믿음직스럽지만, 아무래도 나이가 아직 어린 탓에 황야 생존 경험이 부족하거든요. 블랙나이트 씨가 곁에 있다면 아무래도 많은 걸 배울 수 있겠죠.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]지금쯤이면 멀베리도 일이 끝났겠지?
+[charslot]
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]아마 진작 끝났을 거예요……
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1", afrom=0, ato=0, duration=0)]
+[BackgroundTween(xFrom=0, xTo=-180, duration=3,ease="OutQuad",block=false)]
+[charslot(slot="M", posfrom="0,0", posto="-50,0", afrom=1, ato=0, duration=1)]
+[delay(time=2)]
+[charslot(slot="R", posfrom="150,-100", posto="150,-100", afrom=0, ato=1, duration=2)]
+[delay(time=3)]
+[name="멀베리"]음냐…… 아저씨, 다치셨으니…… 움직이지 마세요……
+[charslot(slot = "M", focus = "none")]
+[name="메딕 오퍼레이터"]어머, 옷장에 기대 잠든 걸 보니, 멀베리 씨 엄청 피곤했나 봐요.
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1",afrom=0, ato=0, duration=0)]
+[BackgroundTween(xFrom=-180, xTo=0, duration=3,ease="OutQuad",block=false)]
+[charslot(slot="R", posfrom="150,-100", posto="150,-100", afrom=1, ato=0, duration=1)]
+[delay(time=2)]
+[charslot(slot="M", posfrom="0,0", posto="0,0", afrom=0, ato=1, duration=1)]
+[delay(time=3)]
+[name="블랙나이트"]뭐라고 중얼거리는 거야? 잠도 마음 편히 못 자고……
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]헬멧.
+[charslot]
+[name="헬멧"]뀨!
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="블랙나이트"]푹 잘 수 있게 가서 좀 도와줘.
+[charslot]
+[name="헬멧"]슈웅~
+[name="멀베리"]후……
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]그, 좀 도와줄래? 내 등에 업으려고. 바닥에서 재울 수는 없잖아.
+[charslot(slot = "M", name = "char_016_medic")]
+[name="메딕 오퍼레이터"]아아, 네, 알겠습니다!
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="블랙나이트"]하여튼 손이 많이 간다니까.
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[charslot(slot = "M", posfrom = "0,0", posto = "0,-100",duration = 1.5)]
+[delay(time=2.5)]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1", duration = 2)]
+[charslot(slot = "R", posfrom = "200,-100", posto = "-100,-100",duration = 2)]
+[delay(time=3)]
+[charslot(slot = "M", posfrom = "0,-100", posto = "0,0",duration = 1)]
+[charslot(slot = "R", posfrom = "-100,-100", posto = "-100,0",duration = 1)]
+[delay(time=2.5)]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]그날 절 숙소로 데려다준 사람이 블랙나이트 씨였군요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]아니면 누가 그랬겠어. 네가 그날 푹 잘 수 있었던 것도 헬멧 덕분이라고.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]제 오해였네요……
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]r
+[name="블랙나이트"]넌 쓸데없이 생각이 많아.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="오해가 생긴 게 꼭 멀베리 때문은 아닌 듯한데.;블랙나이트, 네 말투도 오해하기 딱 좋아.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="블랙나이트"]……
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]미안. 지금까지 상대해 온 사람들 중에 너 같은 여자애는 없었어서.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]일부러 그런 건 아니었어.
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="멀베리"]괜찮아요, 블랙나이트 씨. 이, 이제 오해가 풀렸으니까 여기 남으실 거죠? 제가 쌓은 지식으로 분명 블랙나이트 씨의 병세를 완화시킬 수 있을 거예요!
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]하지만 난…… 황야로 돌아가고 싶어. 거기서 지내는 게 더 좋거든.
+[dialog]
+[charslot(slot = "M", focus = "none")]
+[Decision(options="그건 걱정 마, 외출이 필요한 외근 임무라면 많이 있어.;황야 외근 임무만 전담해도 돼.", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]아니, 그건 달라. 이곳엔 의식주 문제도 없고, 내 증상을 완화해 줄 약도 있다는 거 알아. 이곳에서 동료들을 사귀고 새로운 기술도 배울 수 있었지.
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="블랙나이트"]사람이라면 만족할 줄 알아야 하지만……
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[delay(time=1.5)]
+[PlayMusic(intro="$newhope01_intro", key="$newhope01_loop", volume=0.4)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]가끔 밤에 깨서 새하얀 천장을 바라보고 있자면 헛헛한 마음이 들어. 달도, 별도, 벌레 울음소리도 없어서 그런 거겠지.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]난 알 수 있어. 내 직감과 마음이 말해주고 있거든.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[multiline(name="블랙나이트")]그건 간단한 한마디로 표현할 수 있는 감정이 아니야……
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[multiline(name="블랙나이트",end=true)]난 고개만 들면 하늘이 보이는 곳에 살아야 하는 것 같아.
+[charslot(slot = "M", name = "avg_473_mberry_1#7$1")]
+[name="멀베리"]블랙나이트 씨…… 지금 건강 상태가 얼마나 안 좋은지 모르세요? 그 하늘이 블랙나이트 씨를 지켜줄 수 있을 것 같아요?
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="멀베리"]전 동의할 수 없어요! 절대 신청서에 사인하지 않을 거예요! 박사님도 절대 결재해 주지 마세요!
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]멀베리, 내게 남은 선택지가 별로 없다는 거 알아. 그래서 신중히 고민하고 결정한 거야.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]전에 내가 널 데려가 봤던 야수 기억나?
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]네…… 기억하고 있어요.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]황야에는 그런 짐승이 정말 많아. 아주 많지.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]몇 년 전에 슬럼버풋과 마주친 적이 있었어. 아주 강한 녀석이었지. 녀석을 처음 본 순간, 잘 길들여 봐야겠다고 생각했어.
+[charslot(slot = "M", name = "avg_476_blkngt_1#6$1")]
+[name="블랙나이트"]하지만 아무리 다가가려 해도 계속 날 거부하는 거야. 나만 보면 꽁무니가 빠지게 도망치기 일쑤였지. 맛있는 먹이에도 포근한 잠자리에도 전혀 관심이 없었어.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]그런데 한번은, 녀석이 사냥 중에 다친 거야. 그래서 난 그 아이를 캠프로 데려와 잘 치료해 줬어.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="블랙나이트"]상처가 아물수록 녀석은 내게 경계심을 풀었고, 나중엔 아주 친해졌지.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="블랙나이트"]난 내가 녀석을 길들였다고, 전처럼 자주 지켜볼 필요가 없겠다고 생각했어.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]그런데 하루는 사냥에 나갔다 캠프로 돌아왔는데, 녀석이 이미 떠나고 없는 거야. 그 녀석이 있어야 할 그 자리에는 내가 떠준 모자만 남겨져 있었어.
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[name="블랙나이트"]난 화가 났어. 털실은 황야에서 아주 귀했거든…… 그때까지만 해도 난 녀석이 그 모자를 좋아한다고 생각했는데.
+[charslot(slot = "M", name = "avg_476_blkngt_1#1$1")]
+[name="블랙나이트"]그래서 녀석이 남기고 간 발자국을 따라가 봤지.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="블랙나이트"]도착해 보니 녀석은 모래밭에서 구르고 있더라고. 얼마나 굴렀는지 정말 꾀죄죄했지. 하지만 정말 신나 보였어. 난 그 녀석이 그렇게 즐거워하는 모습은 처음 봤어.
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[name="블랙나이트"]그렇게 몸을 돌려 다시 돌아오는 길에서야 깨달았어. 녀석이 속해야 하는 곳은 내 품이 아니라 광활한 사막이라는 사실을.
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="멀베리"]저…… 저는……
+[dialog]
+[delay(time=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[delay(time=2)]
+[dialog]
+[charslot]
+[Decision(options="……그렇군.;알겠어.", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="블랙나이트, 네 신청서 처리해 줄게.", values="1")]
+[Predicate(references="1")]
+[Decision(options="지금부터 넌 로도스 아일랜드 협력 오퍼레이터야. 더 이상 본함에 주둔하지 않아도 돼.", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1")]
+[delay(time=1.5)]
+[name="블랙나이트"]……고마워.
+[dialog]
+[delay(time=1)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#2$1")]
+[delay(time=1.2)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#7$1")]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]꼭 떠나야겠다면…… 적어도 가기 전에 약을 충분히 챙겨가 주세요.
+[dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Subtitle(text="반년 후", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[PlaySound(key="$d_avg_snowstormflp", volume=0.6, loop=true, channel="wind")]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.4)]
+[Background(image="bg_desert_1",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0.15, r=255, g=255, b=0, fadetime=2, block=true)]
+[Blocker(a=0.1, r=255, g=255, b=0, fadetime=2, block=true)]
+[charslot(slot = "M", name = "avg_473_mberry_1#2$1")]
+[name="멀베리"]빨리, 빨리 좀 연결돼라!
+[PlaySound(key="$transmission", volume=1)]
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="멀베리"]여보세요? 들리시나요? 오퍼레이터 멀베리입니다. 용문으로 향하는 임무 도중 거대한 모래폭풍을 맞닥뜨렸어요! 지원 부탁드립니다!
+[PlaySound(key="$d_avg_telephonebusy", volume=1, loop=true, channel="TX")]
+[charslot(slot = "M", name = "avg_473_mberry_1#4$1")]
+[name="멀베리"]여보세요? 아무도 안 계시나요?
+[charslot(slot = "M", name = "avg_473_mberry_1#8$1")]
+[name="멀베리"]정말 여기까지인가? 어떡하지, 이러다……
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"](나 여기서 죽는 건가.)
+[dialog]
+[StopSound(channel="TX", fadetime=1)]
+[PlaySound(key="$d_avg_snowstormflp", volume=1, loop=true, channel="wind")]
+[Blocker(a=0.2, r=204, g=102, b=0, fadetime=1, block=true)]
+[Blocker(a=0.1, r=204, g=102, b=0, fadetime=1, block=true)]
+[Blocker(a=0.2, r=204, g=102, b=0, fadetime=1, block=true)]
+[Blocker(a=0.1, r=204, g=102, b=0, fadetime=1, block=true)]
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[name="멀베리"]너무 힘들어. 배도 고프고 너무 졸린데.
+[charslot(slot = "M", name = "avg_473_mberry_1#6$1")]
+[name="멀베리"]아무도…… 날 구하러 오지 않겠지?
+[charslot(slot = "M", name = "avg_473_mberry_1#3$1")]
+[name="멀베리"]흐윽…… 아빠, 엄마……
+[dialog]
+[charslot(slot = "M", posfrom = "0,0", posto = "0,-80", duration=1)]
+[delay(time=1.5)]
+[charslot(slot = "M", posfrom = "0,-80", posto = "0,-300", afrom=1, ato=0, duration=0.8)]
+[delay(time=0.4)]
+[PlaySound(key="$bodyfalldown2", volume=1)]
+[delay(time=1.5)]
+[name="멀베리"]미안해요…… 더는…… 못 버티겠어요……
+[dialog]
+[stopmusic(fadetime=2)]
+[charslot]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[StopSound(channel="wind", fadetime=2)]
+[delay(time=3.5)]
+[name="???"]할짝할짝……
+[name="멀베리"](누가…… 날 핥는 거지? 으아아, 간지러워……)
+[name="???"]정신 차렸으면 어서 눈이나 떠.
+[dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1", bstart=0.2, bend=0.7, duration= 0.01, end=false)] 
+[charslot(slot = "M", action="zoom", poszoom = "0.5,0.5", scale=0.9,duration = 0)]
+[delay(time=0.1)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.5, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="멀베리"](익숙한 목소리인데, 누구지? 잘 안 보여……)
+[name="???"]왜 눈을 찡그리고 있어?
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot = "M", action="zoom", poszoom = "0.5,0.5", scale=1, duration = 2)]
+[delay(time=2)]
+[name="???"]아, 눈에 모래가 들어간 건가.
+[name="???"](눈을 향해 후후 분다)
+[name="???"]눈 깜빡여 봐. 괜찮아?
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1", duration=3)]
+[PlayMusic(intro="$warm_intro", key="$warm_loop", volume=0.4)]
+[delay(time=4)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#3$1")]
+[name="블랙나이트"]정말이지, 나 아니면 어쩔 뻔했어?
+[dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#4$1", duration = 1)]
+[charslot(slot = "R", posfrom = "300,0", posto = "-60,0",duration = 1)]
+[charslot(slot = "R", focus= "R")]
+[name="멀베리"]우와!
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1", focus= "M")]
+[name="블랙나이트"]잠깐만, 갑자기 왜 안는 거야!
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1", focus= "M")]
+[name="블랙나이트"]얼른 안 놔?
+[charslot(slot = "R", posfrom = "-60,0", posto = "-80,0", duration = 1)]
+[charslot(slot = "R", focus= "R")]
+[name="멀베리"]……보고 싶었어요.
+[Dialog]
+[charslot(slot = "M", name = "avg_476_blkngt_1#5$1", focus= "M")]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1", focus= "M")]
+[delay(time=2)]
+[charslot(slot = "M", name = "avg_476_blkngt_1#10$1", focus= "M")]
+[name="블랙나이트"]그래그래…… 하여간, 어쩔 수 없지. 잠깐만 이렇게 더 안고 있는 거다?
+[Dialog]
+[charslot(slot = "R", name = "avg_473_mberry_1#1$1")]
+[charslot(slot = "M", focus= "all")]
+[delay(time=2)]
+[charslot(slot = "R", name = "avg_473_mberry_1#3$1")]
+[delay(time=3)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[Character]
+[Image]
