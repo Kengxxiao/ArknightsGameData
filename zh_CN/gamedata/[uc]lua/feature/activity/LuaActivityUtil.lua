@@ -19,8 +19,10 @@ local HOME_WEIGHT_DAILY_FLIP = 540;
 local HOME_WEIGHT_CHECKIN_ALLPLAYER = 550;
 local HOME_WEIGHT_SWITCH_ONLY = 560;
 local HOME_WEIGHT_CHECKIN_VS = 570;
+local HOME_WEIGHT_UNIQUE_ONLY = 580;
 
 local HOME_WEIGHT_MAIN_BUFF = 600;
+local HOME_WEIGHT_MAINLINE_BP = 610;
 
 
 
@@ -181,6 +183,39 @@ end
 
 
 
+function LuaActivityUtil:_FindValidUniqueOnly(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.UNIQUE_ONLY);
+  if actList == nil then
+    return;
+  end
+
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i];
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_UNIQUE_ONLY);
+    validActs:Add(validAct);
+    if self:_CheckIfUniqueOnlyUncomplete(actId) then
+      uncompleteActs:Add(validAct);
+    end
+  end
+end
+
+function LuaActivityUtil:_FindValidMainlineBpAct(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.MAINLINE_BP);
+  if actList == nil then
+    return;
+  end
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i];
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_MAINLINE_BP);
+    validActs:Add(validAct);
+    if self:CheckIfActivityUncomplete(CS.Torappu.ActivityType.MAINLINE_BP, actId) then
+      uncompleteActs:Add(validAct);
+    end
+  end
+end
+
+
+
 
 function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   
@@ -193,6 +228,8 @@ function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   self:_FindValidCheckinAllActs(validActs, uncompleteActs);
   self:_FindValidCheckinVsActs(validActs, uncompleteActs);
   self:_FindValidSwitchOnly(validActs,uncompleteActs);
+  self:_FindValidUniqueOnly(validActs,uncompleteActs);
+  self:_FindValidMainlineBpAct(validActs, uncompleteActs);
 end
 
 
@@ -229,6 +266,12 @@ local DEFINE_CLS_FUNCS = {
   end,
   SWITCH_ONLY = function (clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, SwitchOnlyDlg)
+  end,
+  UNIQUE_ONLY = function (clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, UniqueOnlyDlg)
+  end,
+  MAINLINE_BP = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, MainlineBpMainDlg);
   end,
 }
 
@@ -296,6 +339,10 @@ function LuaActivityUtil:CheckIfActivityUncomplete(type, actId)
     return self:_CheckIfCheckinVsUncomplete(actId);
   elseif type == CS.Torappu.ActivityType.SWITCH_ONLY then
     return self:_CheckIfSwitchOnlyUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.UNIQUE_ONLY then
+    return self:_CheckIfUniqueOnlyUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.MAINLINE_BP then
+    return self:_CheckIfMainlineBpUncomplete(actId);
   else
     return false;
   end
@@ -421,4 +468,22 @@ function LuaActivityUtil:_CheckIfFlipUncomplete(actId)
     return false;
   end
   return (actData.remainingRaffleCount > 0) or (actData.grandStatus == 1);
+end
+
+function LuaActivityUtil:_CheckIfUniqueOnlyUncomplete(actId)
+  if not UniqueOnlyUtil.GetUniqueOnlyActClicked(actId) then
+    return true;
+  end
+
+  if UniqueOnlyUtil.CheckIfHaveRewardCanClaimByActId(actId) then
+    return true;
+  end
+
+  return false;
+end
+
+
+
+function LuaActivityUtil:_CheckIfMainlineBpUncomplete(actId)
+  return MainlineBpUtil.CheckIfUncomplete(actId);
 end

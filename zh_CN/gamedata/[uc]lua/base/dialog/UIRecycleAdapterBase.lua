@@ -67,7 +67,7 @@ end
 
 
 function UIRecycleAdapterBase:NotifyRebuildWithIndex(index)
-  self.m_layout:NotifyRebuildWithIndex(index)
+  self.m_layout:NotifyRebuildWithIndexWithCountChange(index)
 end
 
 

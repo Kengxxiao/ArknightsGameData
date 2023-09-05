@@ -12,6 +12,7 @@ local UIItemViewModel = CS.Torappu.UI.UIItemViewModel
 
 
 
+
 local UICommonItemCard = Class("UICommonItemCard", UIWidget)
 
 
@@ -52,6 +53,12 @@ function UICommonItemCard:Render(itemBundle, initConfig)
     self.m_showBkg = initConfig.showBackground
   end
 
+  if initConfig.fastClickBlock == nil then
+    self.m_fastClickBlock = false
+  else
+    self.m_fastClickBlock = initConfig.fastClickBlock
+  end
+
   self.m_itemModel = UIItemViewModel.FromSharedItemGetModel(itemBundle);
 
   self:_CreateRewardCardIfNeed()
@@ -86,7 +93,26 @@ function UICommonItemCard:_OnRewardItemClick(index)
   if self.m_itemModel == nil then
     return
   end
+  if self.m_fastClickBlock and CS.Torappu.FastActionDetector.IsFastAction() then
+    return
+  end
   CS.Torappu.UI.UIItemDescFloatController.ShowItemDesc(self.m_itemCard.gameObject, self.m_itemModel)
+end
+
+
+function UICommonItemCard:ChangeItemCardStyle(styleConfig)
+  if self.m_itemCard == nil or styleConfig == nil then
+    return
+  end
+
+  
+  if styleConfig.isCardClickable ~= nil then
+    self.m_itemCard.isCardClickable = styleConfig.isCardClickable;
+  end
+
+  if styleConfig.mainColor ~= nil then
+    self.m_itemCard.mainColor = styleConfig.mainColor;
+  end
 end
 
 return UICommonItemCard 
