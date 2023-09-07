@@ -1,0 +1,48 @@
+[HEADER(actId="act1sandbox", npcId="trap_432_oldisin")] 
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="イシン"]ああ……イシンはずっと探し求めていたのです。砂漠を圧倒するほどの生命力を持つ者を。
+[name="イシン"]イシンは見ました。あなた方がその両手で、安住の地の原形を作り出すのを……
+[character(name="avg_npc_070", offsetX="125", offsetY="100")]
+[name="部族民A"]やってやろうぜ！　これだけ物資がありゃキッチンも作れるし、本当にここで良い暮らしができるかもしれねえぞ！
+[character(name="avg_npc_071", offsetX="100", offsetY="100")]
+[name="部族民B"]だけど、働いても働いてもって感じじゃねえか……昨日は一日中狩りしてたしよ……今の方法じゃ効率悪すぎんだろ！
+[name="部族民B"]昨日はうっかり採掘場に落っこっちまったしよ！
+[character(name="avg_npc_070", offsetX="125", offsetY="100")]
+[name="部族民A"]そう気を落とすなって！　みんなもやる気出そうぜ、俺たちがやらなきゃ誰がやるってんだ！
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="バーゼル"]よっ……と！　よい……せ、っと！　この辺の鉱物が終わったら、次のも運ぶぞ。そーら、もっと良い明日が手招きしてるぜ！
+[Decision(option1="（一同、気勢を上げる）", value1="1.1")]
+[predicate(references="1.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="イシン"]過去の出来事が、イシンに教えてくれたのです。細流が小さな草むらを潤すことがあったとしても、それは結局砂の海に飲まれてしまうだけ……
+[name="イシン"]ゆえに、細流を細流のままにせず、そこにより多くの力を集めねばなりません。
+[name="イシン"]あなた方は研究し、学ばなくてはならぬのです……ひと時の飢えを満たせても、長久の繁栄をもたらすことはできません。知恵こそが永く残る力となるものです。
+[name="イシン"]イシンがあなた方に力を貸しましょう。
+[Decision(option1="（物資を受け取る）", value1="2.1")]
+[predicate(references="2.1")]
+[AddItem(itemId="sandbox_0_wood", itemCount="15")]
+[AddItem(itemId="sandbox_0_stone", itemCount="5")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【木材15個、石材5個を手に入れた】
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="バーゼル"]この勢いで開拓を進められたら、どんな困難も怖かねえな！
+[name="バーゼル"]色々と都合してくれてありがとな、爺さん。本当助かるよ！
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="イシン"]すべては基礎より始めるべきですから……
+[Decision(option1="（感謝を示す）", value1="3.1")]
+[predicate(references="3.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="イシン"]その感謝の気持ちは受け取りましょう。ですが、イシンに謝礼を払う必要はございませんよ。
+[name="イシン"]イシンは、ただメッセージを伝えるために来たのですから。
+[name="イシン"]「サンドソルジャー」……「サンドソルジャー」は、あなた方がこの地で足場を築くことを望んでいるのでございます。危機は近付いており、あなた方には……鋭利な宝刀が必要になるでしょう。
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="バーゼル"]「鋭利な宝刀」って……？
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]このご老人はやはり何か知っている……！
+[name=""]「サンドソルジャー」……まだ顔も見たことがないその人物は我々のこの地での動きをすべて把握しているようだ。
+[name=""]しかし何より、「サンドソルジャー」は友好的な態度を見せてくれている。
+[name=""]あるいはそれを頼ってみるのもいいかもしれない。この地で後ろ盾を得ることは、今後の開拓の妨げにはならないはずだ。
+[SetConditionProgress(conditionKey="route_main", itemCount="3")]
+[SetConditionProgress(conditionKey="route_main_interval", itemCount="0")]
+[withdraw(charId="trap_432_oldisin")]
+[End]

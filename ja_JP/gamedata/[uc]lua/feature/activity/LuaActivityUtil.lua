@@ -11,10 +11,13 @@ function LuaActivityUtil:OnDispose()
   CS.Torappu.UI.LuaActivityUtil.BindInterface(nil)
 end
 
-local HOME_WEIGHT_DAILY_PRAY = 500
-local HOME_WEIGHT_GRID_GACHA = 510
-local HOME_WEIGHT_GRID_GACHA_V2 = 520
+local HOME_WEIGHT_DAILY_PRAY = 500;
+local HOME_WEIGHT_GRID_GACHA = 510;
+local HOME_WEIGHT_GRID_GACHA_V2 = 520;
 local HOME_WEIGHT_FLOAT_PARADE = 530;
+local HOME_WEIGHT_DAILY_FLIP = 540;
+
+local HOME_WEIGHT_MAIN_BUFF = 600;
 
 
 
@@ -29,6 +32,23 @@ local function _FindValidPrayOnlyActs(validActs, uncompleteActs)
     validActs:Add(validAct)
     if CS.Torappu.UI.ActivityUtil.CheckIfPrayOnlyActUncomplete(actId) then
       uncompleteActs:Add(validAct)
+    end
+  end
+end
+
+
+
+function LuaActivityUtil:_FindValidFlipOnlyActs(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidFlipOnlyActs()
+  if actList == nil then
+    return
+  end
+  for i = 0, actList.Count - 1 do 
+    local actId = actList[i]
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_DAILY_FLIP)
+    validActs:Add(validAct)
+    if self:CheckIfActivityUncomplete(CS.Torappu.ActivityType.FLIP_ONLY, actId) then
+      uncompleteActs:Add(validAct);
     end
   end
 end
@@ -90,13 +110,33 @@ end
 
 
 
+function LuaActivityUtil:_FindValidMainlineBuffAct(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.MAIN_BUFF);
+  if actList == nil then
+    return;
+  end
+
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i];
+    local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_MAIN_BUFF);
+    validActs:Add(validAct);
+    if self:CheckIfActivityUncomplete(CS.Torappu.ActivityType.MAIN_BUFF, actId) then
+      uncompleteActs:Add(validAct);
+    end
+  end
+end
+
+
+
 
 function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   
   _FindValidPrayOnlyActs(validActs, uncompleteActs)
   _FindValidGridGachaActs(validActs, uncompleteActs)
+  self:_FindValidFlipOnlyActs(validActs, uncompleteActs)
   self:_FindValidGridGachaV2Acts(validActs, uncompleteActs);
   self:_FindValidFloatParadeAct(validActs, uncompleteActs);
+  self:_FindValidMainlineBuffAct(validActs, uncompleteActs);
 end
 
 
@@ -118,6 +158,12 @@ local DEFINE_CLS_FUNCS = {
   end,
   FLOAT_PARADE = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, FloatParadeMainDlg)
+  end,
+  MAIN_BUFF = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, MainlineBuffMainDlg)
+  end,
+  FLIP_ONLY = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, ActFlipMainDlg)
   end,
 }
 
@@ -175,6 +221,10 @@ function LuaActivityUtil:CheckIfActivityUncomplete(type, actId)
     return self:_CheckIfGridGachaV2Uncomplete(actId);
   elseif type == CS.Torappu.ActivityType.FLOAT_PARADE then
     return self:_CheckIfFloatParadeUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.MAIN_BUFF then
+    return self:_CheckIfMainlineBuffUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.FLIP_ONLY then
+    return self:_CheckIfFlipUncomplete(actId);
   else
     return false;
   end
@@ -203,4 +253,38 @@ function LuaActivityUtil:_CheckIfFloatParadeUncomplete(actId)
     return false;
   end
   return playerActData.canRaffle;
+end
+
+function LuaActivityUtil:_CheckIfMainlineBuffUncomplete(actId)
+  if actId == nil or actId == "" then
+    return false;
+  end
+
+  local actList = CS.Torappu.PlayerData.instance.data.activity.mainlineBuffActivityList;
+  if actList == nil then
+    return false;
+  end
+  local success, actData = actList:TryGetValue(actId);
+  if not success then
+    return false;
+  end
+
+  if MainlineBuffUtil.CheckIfMissionGroupNeedComplete(actId) then
+    return true;
+  end
+
+  local periodId = MainlineBuffUtil.GetCurrMainlineBuffActPeriodId(actId);
+  return MainlineBuffUtil.IsPeriodChecked(actId, periodId);
+end
+
+function LuaActivityUtil:_CheckIfFlipUncomplete(actId)
+  local actList = CS.Torappu.PlayerData.instance.data.activity.flipOnlyActivityList;
+  if actList == nil then
+    return false;
+  end
+  local success, actData = actList:TryGetValue(actId);
+  if not success then
+    return false;
+  end
+  return (actData.remainingRaffleCount > 0) or (actData.grandStatus == 1);
 end

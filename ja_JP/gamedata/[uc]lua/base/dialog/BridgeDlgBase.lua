@@ -27,3 +27,12 @@ end
 function BridgeDlgBase:SetPureGroup()
   self.m_pureGroup = true;
 end
+
+
+function BridgeDlgBase:OnResume()
+  local topDlg = self.m_childDlgs:GetTopDlg()
+  if topDlg == nil then
+    return
+  end
+  topDlg:OnResume()
+end

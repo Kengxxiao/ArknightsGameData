@@ -54,12 +54,18 @@ end
 
 function UIWidgetContainer:_CheckWdigetClass(widgetCls)
   if not widgetCls then
-    LogError("Param widgetCls can't be nil!")
+    LogError("Param widgetCls can't be nil!"..debug.traceback())
     return false;
   end
   if not IsSubclassOf(widgetCls, UIWidget) then
-    LogError(widgetCls.__cname .. " not the subclass of UIWidget")
+    LogError(widgetCls.__cname .. " not the subclass of UIWidget"..debug.traceback())
     return false;
   end
   return true;
+end
+
+function UIWidgetContainer:EnumerateAllWidgets(func)
+  for _, widget in ipairs(self.m_widgets) do
+    func(widget);
+  end
 end

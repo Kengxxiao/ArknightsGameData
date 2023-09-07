@@ -64,11 +64,23 @@ end
 
 
 
-function TimerModel:Destroy(timer)
-  local timer = self._alives[timer];
+function TimerModel:Destroy(timerID)
+  local timer = self._alives[timerID];
   if timer then
     timer:Kill();
   end
+end
+
+
+
+function TimerModel:Alive(timerID)
+  local timer = self._alives[timerID];
+  return timer and timer:Alive();
+end
+
+function TimerModel:SetScaled(timerID)
+  local timer = self._alives[timerID];
+  timer:SetScaled();
 end
 
 
@@ -90,13 +102,13 @@ function TimerModel:_SetTimer(interval, loop, evt)
 end
 
 
-function TimerModel:Update(deltaTime)
+function TimerModel:Update(unscaledDeltaTime, deltaTime)
   
   local pos = 1;
   for idx = 1, #self._timers do
     local timer = self._timers[idx];
     if timer:Alive() then
-      timer:Update(deltaTime);
+      timer:Update(unscaledDeltaTime, deltaTime);
       self._timers[pos] = timer;
       pos = pos + 1;
     else

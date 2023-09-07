@@ -5,6 +5,7 @@ local LuaUIUtil = CS.Torappu.Lua.LuaUIUtil;
 
 
 
+
 DlgBase = Class("DlgBase", UIBase);
 DlgBase.s_ids = 1;
 
@@ -96,6 +97,11 @@ function DlgBase:GetData(key)
 end
 
 
+function DlgBase:GetParamData()
+  return self.m_parent.paramData;
+end
+
+
 function DlgBase:RequestClose(child)
   local group = self:GetGroup();
   if group then
@@ -123,6 +129,41 @@ function DlgBase:LoadSprite(path)
   return self.m_parent:LoadSprite(path);
 end
 
-function UIBase:GetLuaLayout()
+
+
+
+function DlgBase:LoadSpriteFromAutoPackHub(hubPath, spriteName)
+  return self.m_parent:LoadSpriteFromAutoPackHub(hubPath, spriteName);
+end
+
+function DlgBase:GetLuaLayout()
   return self.m_layout
+end
+
+
+function DlgBase:CreateViewModel(viewModelCls)
+  if not viewModelCls then
+    LogError("dataCls can't be nil");
+    return nil;
+  end
+  if not IsSubclassOf(viewModelCls, UIViewModel) then
+    LogError(viewModelCls.__cname .. " must be the subclass of UIViewModel")
+    return nil
+  end
+  return viewModelCls.new(self);
+end
+
+
+function DlgBase:_UpdateViewModel(viewModel)
+  if self.m_updateViewTimer then
+    return;
+  end
+  self.m_updateViewTimer = self:NextFrame(self._DoUpdateViewModel, viewModel);
+end
+
+function DlgBase:_DoUpdateViewModel(viewModel)
+  self.m_updateViewTimer = nil;
+  self.m_widgets:EnumerateAllWidgets(function(widget)
+    widget:OnViewModelUpdate(viewModel);
+  end);
 end

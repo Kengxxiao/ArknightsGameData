@@ -10395,6 +10395,90 @@
           "buffData": []
         }
       ]
+    },
+    "char_1029_yato2": {
+      "charId": "char_1029_yato2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&bd2[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_token_prod_spd2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1030_noirc2": {
+      "charId": "char_1030_noirc2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_token_tra_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4077_palico": {
+      "charId": "char_4077_palico",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&limit&bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&limit&bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 30
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -10421,6 +10505,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "制御中枢配置時、<@cc.kw>2</>台以上の<$cc.tag.op><@cc.kw>作業用プラットフォーム</></>が<@cc.kw>発電所</>に配置されている時、全製造所の製造効率<@cc.vup>+2%</>（同種の効果は高いほうのみ適応）"
+    },
+    "control_token_prod_spd2[000]": {
+      "buffId": "control_token_prod_spd2[000]",
+      "buffName": "率先垂範",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_token_p_spd2",
+      "sortId": 1610,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "<$cc.tag.mh><@cc.kw>アイルーと愉快な仲間たち</></>所属オペレーターと共に制御中枢に配置時、全製造所の製造効率<@cc.vup>+2%</>（同種の効果は高いほうのみ適応）"
+    },
+    "control_token_tra_spd[000]": {
+      "buffId": "control_token_tra_spd[000]",
+      "buffName": "秘伝交渉術",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_token_t_spd",
+      "sortId": 1611,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "<$cc.tag.mh><@cc.kw>アイルーと愉快な仲間たち</></>所属オペレーターと共に制御中枢に配置時、全貿易所の受注効率<@cc.vup>+7%</>（同種の効果は高いほうのみ適応）"
     },
     "control_pow_bot[000]": {
       "buffId": "control_pow_bot[000]",
@@ -10768,7 +10876,7 @@
       "textColor": "#ffffff",
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
-      "description": "制御中枢配置時、自身の1時間ごとの体力消費量<@cc.vup>+0.5</>。自身の体力が<@cc.kw>12</>を上回る時、<$cc.bd_a1><@cc.rem>知覚情報</></><@cc.vup>+10</>"
+      "description": "制御中枢配置時、自身の1時間ごとの体力消費量<@cc.vdown>+0.5</>。自身の体力が<@cc.kw>12</>を上回る時、<$cc.bd_a1><@cc.rem>知覚情報</></><@cc.vup>+10</>"
     },
     "control_mp_cost&bd_up[000]": {
       "buffId": "control_mp_cost&bd_up[000]",
@@ -10793,6 +10901,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "制御中枢配置時、<$cc.c.room2><@cc.kw>他の施設</></>内で仕事中のオペレーターの体力が1時間ごとに<@cc.vup>+0.05</>回復し、<$cc.bd_b1><@cc.rem>俗世之憂</></><@cc.vup>20</>につき、体力が追加で<@cc.vup>+0.05</>回復（制御中枢内の他のスキル間とは<$cc.c.sui2_1><@cc.rem>特殊比較方式</></>が適用される）"
+    },
+    "control_mp_cost&bd2[010]": {
+      "buffId": "control_mp_cost&bd2[010]",
+      "buffName": "スタミナ回復",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_felyne",
+      "sortId": 1011,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、自身の1時間ごとの体力消費量<@cc.vdown>+0.5</>、<$cc.bd_felyne><@cc.rem>マタタビ</></><@cc.vup>+8</>"
     },
     "control_facCostReset[000]": {
       "buffId": "control_facCostReset[000]",
@@ -10841,6 +10961,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "制御中枢配置時、制御中枢内の<$cc.g.ussg><@cc.kw>ウルサス学生自治団</></>所属オペレーター1人につき、<$cc.bd_tachanka><@cc.rem>ウルサスドリンク</></><@cc.vup>+1</>本"
+    },
+    "control_mp_bd2[000]": {
+      "buffId": "control_mp_bd2[000]",
+      "buffName": "チームワーク",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_felyne",
+      "sortId": 1021,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "制御中枢配置時、制御中枢内の<$cc.tag.mh><@cc.kw>アイルーと愉快な仲間たち</></>所属オペレーター1人につき、<$cc.bd_felyne><@cc.rem>マタタビ</></><@cc.vup>+2</>"
     },
     "control_mp_aegir1[000]": {
       "buffId": "control_mp_aegir1[000]",
@@ -11417,6 +11549,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "製造所配置時、保管上限<@cc.vup>+10</>、製造効率<@cc.vup>+10%</>"
+    },
+    "manu_prod_spd&limit&bd[000]": {
+      "buffId": "manu_prod_spd&limit&bd[000]",
+      "buffName": "頼もしきオトモたち",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&limit_felyne",
+      "sortId": 3411,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "製造所配置時、保管上限<@cc.vup>+8</>、製造効率<@cc.vup>+5%</>、<$cc.bd_felyne><@cc.rem>マタタビ</></>1個につき、製造効率<@cc.vup>+1%</>"
     },
     "manu_prod_limit&cost[000]": {
       "buffId": "manu_prod_limit&cost[000]",
@@ -12004,7 +12148,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
-      "description": "貿易所配置時、自身以外の配属オペレーター全員の受注効率を<@cc.vdown>０にする</>。自身以外の配属オペレーター1人につき、製造効率<@cc.vup>+45%</>。配属オペレーター全員の体力消費が1時間ごと<@cc.vup>+0.25</>"
+      "description": "貿易所配置時、自身以外の配属オペレーター全員の受注効率を<@cc.vdown>0にする</>。自身以外の配属オペレーター1人につき、製造効率<@cc.vup>+45%</>。配属オペレーター全員の体力消費が1時間ごと<@cc.vdown>+0.25</>"
     },
     "trade_ord_spd_variable2[000]": {
       "buffId": "trade_ord_spd_variable2[000]",
@@ -12437,6 +12581,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "<@cc.kw>ラップランド</>と同じ貿易所に配置時、1時間ごとの体力消費量<@cc.vdown>+0.3</>、受注効率<@cc.vup>+65%</>"
+    },
+    "trade_ord_spd&limit&bd[000]": {
+      "buffId": "trade_ord_spd&limit&bd[000]",
+      "buffName": "愛らしきアイルー",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd&limit_felyne",
+      "sortId": 4101,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "貿易所配置時、受注効率<@cc.vup>+5%</>、注文上限<@cc.vup>+2</>、<$cc.bd_felyne><@cc.rem>マタタビ</></>1個につき、受注効率<@cc.vup>+3%</>"
     },
     "trade_ord_limit&cost_P[010]": {
       "buffId": "trade_ord_limit&cost_P[010]",
@@ -24265,7 +24421,7 @@
         "height": 2,
         "comfort": 160,
         "usage": "宿舎に飾れば、雰囲気を良くする。",
-        "description": "作業室に設置されたスツール。Logosはずっとスツール滑走大会への再参加を拒否してきた。大会準優勝のScoutが彼に対して挑戦を持ち掛けるまでは。",
+        "description": "作業室に設置されたスツール。前回大会準優勝のScoutに再び勝負を挑まれる日が来ない限り、Logosは二度とスツール滑走大会に参加する気はない。",
         "obtainApproach": "購買部期間限定",
         "processedProductId": "3401",
         "processedProductCount": 133,
@@ -48635,6 +48791,470 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_eastern_cabinet_01": {
+        "id": "furni_eastern_cabinet_01",
+        "sortId": 1162,
+        "name": "素朴な箪笥",
+        "iconId": "furni_eastern_cabinet_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 2,
+        "depth": 4,
+        "height": 7,
+        "comfort": 245,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "素朴で上品な木製の箪笥。上に盆栽が飾られており、一体感のある雰囲気を醸し出している。儚いその花と合わせて、箪笥もオブジェの一部として大切に扱われているようだ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_tatami_01": {
+        "id": "furni_eastern_tatami_01",
+        "sortId": 1163,
+        "name": "「茶の湯」",
+        "iconId": "furni_eastern_tatami_01",
+        "type": "DECORATION",
+        "subType": "CATERING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 12,
+        "depth": 5,
+        "height": 4,
+        "comfort": 705,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "極東の伝統的な茶室をイメージした炉と茶道具一式。静かに薪が燃える炉で淹れたお茶は格別だ。しかし、畳に貼られた「火の用心」のラベルは当然の如く剥がされてしまっている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_plant_01": {
+        "id": "furni_eastern_plant_01",
+        "sortId": 1164,
+        "name": "松の盆栽",
+        "iconId": "furni_eastern_plant_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 205,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "年季の入った松の盆栽。曲がりくねったその樹形は丁寧な針金かけによって生み出されたもの。翠緑が太陽に向かい懸命に伸びゆくその姿は、抑圧を経て生まれた新たな趣を備えている。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_bed_01": {
+        "id": "furni_eastern_bed_01",
+        "sortId": 1165,
+        "name": "極東風木製ベッド",
+        "iconId": "furni_eastern_bed_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 6,
+        "depth": 3,
+        "height": 3,
+        "comfort": 270,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "極東風の木製ベッド。見栄え重視の四角い木の枕がついている。しかし寝心地は良いとは言えず、使えば首が痛くなること間違いなし。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_leafScreen_01": {
+        "id": "furni_eastern_leafScreen_01",
+        "sortId": 1166,
+        "name": "「秋風に紅葉」",
+        "iconId": "furni_eastern_leafScreen_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 10,
+        "depth": 1,
+        "height": 8,
+        "comfort": 395,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「秋風に紅葉」を描いたついたて。空間を分かち、静寂の美を演出する。上着をかけられるようにした構造が実用性をも補っており、現代的な評論家たちの嗜好にもあっているようだ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_pipeline_01": {
+        "id": "furni_eastern_pipeline_01",
+        "sortId": 1167,
+        "name": "「暖流」",
+        "iconId": "furni_eastern_pipeline_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 9,
+        "depth": 4,
+        "height": 1,
+        "comfort": 180,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "室内を適温に保つには欠かせない暖房用の通気管。かつて職人が彫刻を施そうとしたそうだが、安全面を考慮して最終的には見送ったらしい。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_airCleaner_01": {
+        "id": "furni_eastern_airCleaner_01",
+        "sortId": 1168,
+        "name": "「清風」",
+        "iconId": "furni_eastern_airCleaner_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 190,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "極東で製造された空気清浄機。核心部のパーツがすべて手作りされているのが売りで、性能はそこそこだが、森を吹き抜ける風のような駆動音は唯一無二のものだ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_steps_01": {
+        "id": "furni_eastern_steps_01",
+        "sortId": 1169,
+        "name": "「登頂」",
+        "iconId": "furni_eastern_steps_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 3,
+        "depth": 2,
+        "height": 2,
+        "comfort": 165,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "しっかりした木製昇降台。本来一歩分の高さを敢えて二歩分に分けた優雅な造り。使うたびにわびさびが感じられるらしく、家具の中でも消耗度合いが高いほうである。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_JapaneseScreen_01": {
+        "id": "furni_eastern_JapaneseScreen_01",
+        "sortId": 1170,
+        "name": "「竹林狩猟図」",
+        "iconId": "furni_eastern_JapaneseScreen_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 6,
+        "depth": 3,
+        "height": 9,
+        "comfort": 455,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "「竹林狩猟図」が描かれたついたて。手前に飾られた脇差しが、吹き抜ける秋風を際立たせる。木製の梁には小物かけがついており、無駄がないと評価を受けているようだ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_carpet_01": {
+        "id": "furni_eastern_carpet_01",
+        "sortId": 1171,
+        "name": "まだら模様の絨毯",
+        "iconId": "furni_eastern_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 5,
+        "depth": 3,
+        "height": 1,
+        "comfort": 50,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "まだら模様が高級感を醸し出す手編みの絨毯。工場製のものならば同じ模様の絨毯を三分の一の値段で買えるのだが、人々はこちらのほうを好んでいる。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_sling_01": {
+        "id": "furni_eastern_sling_01",
+        "sortId": 1172,
+        "name": "竹の自在鉤",
+        "iconId": "furni_eastern_sling_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 5,
+        "depth": 3,
+        "height": 6,
+        "comfort": 175,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "趣豊かな竹製の手作り自在鉤。あまり頑丈ではないので、物をかけておくには不向き。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_dresser_01": {
+        "id": "furni_eastern_dresser_01",
+        "sortId": 1173,
+        "name": "極東風化粧台",
+        "iconId": "furni_eastern_dresser_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 170,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "極東の風情溢れる化粧台。まばゆい鏡面は綺麗に磨き上げられていてほこり一つついていない。その美しさは使用者に引け目を感じさせるほどだ。",
+        "obtainApproach": "購買部期間限定",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_case_01": {
+        "id": "furni_eastern_case_01",
+        "sortId": 1174,
+        "name": "竹の小物置き",
+        "iconId": "furni_eastern_case_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 190,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ちょっとした物を置いておける竹の小物置き。美しい透かし彫りが入っている分耐久性が高くないので、あまり重い物は乗せられない。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_lamp_01": {
+        "id": "furni_eastern_lamp_01",
+        "sortId": 1175,
+        "name": "柔らかな照明",
+        "iconId": "furni_eastern_lamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 2,
+        "depth": 1,
+        "height": 1,
+        "comfort": 45,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "柔らかい光を放つ白熱灯。そのまま使えば普通の灯りだが、装飾の一部として取り入れられることで価値を持つ。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_eastern_wallpaper_01": {
+        "id": "furni_eastern_wallpaper_01",
+        "sortId": 1176,
+        "name": "楓の秋景色",
+        "iconId": "furni_eastern_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "極東の山林の秋模様を映したウォールディスプレイ。「夕暮れに　秋風が立ち　色葉散る　麗しき夢の訪れしかな」",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_floor_01": {
+        "id": "furni_eastern_floor_01",
+        "sortId": 1177,
+        "name": "蒲草のラグ",
+        "iconId": "furni_eastern_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "素朴な色合いをした蒲草の格調高いラグ。掃除は大変だが、手を止めて見とれてしまうような魅力がある。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_oct1st_deckChair_01": {
         "id": "furni_oct1st_deckChair_01",
         "sortId": 9998,
@@ -50366,6 +50986,93 @@
         "comfort": 90,
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "爽やかな色合いで、吹く風すら快く感じる。\n中のミニチュアは、ドゥリン族のどでかい水たまりによく置いてあるリラックス用三点セットで、パラソル、浮き輪、それからデッキチェアである。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act35d3_sandboxTable_01": {
+        "id": "furni_act35d3_sandboxTable_01",
+        "sortId": 10063,
+        "name": "シミュレーション砂盤",
+        "iconId": "furni_act35d3_sandboxTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 7,
+        "depth": 6,
+        "height": 5,
+        "comfort": 280,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "ホログラム投影機能のついた砂盤。時間を記録する機能が付いており、リアルタイムで演算を行い、緑生い茂るオアシスから繁栄する部落まですべてが盤上に再現される。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act36d0_grill_01": {
+        "id": "furni_act36d0_grill_01",
+        "sortId": 10064,
+        "name": "携帯用肉焼きセット",
+        "iconId": "furni_act36d0_grill_01",
+        "type": "DECORATION",
+        "subType": "CATERING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 120,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "簡易組み立て式の携帯用肉焼きセット。屋外で手軽に肉を焼くことができる。\nその異常に強い火力は仕組み上調整不可能で、マトモに食べられる肉が焼けるかは使用者の腕前次第である。",
+        "obtainApproach": "イベント報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act36d0_MaterialBox_01": {
+        "id": "furni_act36d0_MaterialBox_01",
+        "sortId": 10065,
+        "name": "合金製収納ボックス",
+        "iconId": "furni_act36d0_MaterialBox_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 2,
+        "comfort": 120,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "硬い合金で作られた収納ボックス。かなり丈夫な造りをしている。\n旧式の収納ボックスは常に容量不足だったが、このボックスはいくら使ってもいっぱいにはできそうもない。",
         "obtainApproach": "イベント報酬",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -53353,6 +54060,35 @@
         "comfort": 105,
         "usage": "宿舎に飾れば、雰囲気を良くする。",
         "description": "クルビア実験基地格納庫の殲滅を完了し、その報告をするともらえる記念品。格納庫で聞こえた無機質な音がまだ耳元でこだましているようだ。",
+        "obtainApproach": "殲滅作戦報酬",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_annihilation_s15_01": {
+        "id": "furni_annihilation_s15_01",
+        "sortId": 13013,
+        "name": "炎国龍門の残響（商店街）",
+        "iconId": "furni_annihilation_s15_01",
+        "type": "WALLDECO",
+        "subType": "ANNIHILATION",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 105,
+        "usage": "宿舎に飾れば、雰囲気を良くする。",
+        "description": "炎国龍門商店街の殲滅を完了し、その報告をするともらえる記念品。商店街で響く物音がまだ耳元でこだましているようだ。",
         "obtainApproach": "殲滅作戦報酬",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -58004,7 +58740,7 @@
       "furni_set_community": {
         "id": "furni_set_community",
         "sortId": 25,
-        "name": "ウルサス自治団活動室",
+        "name": "ウルサス自治団本部",
         "themeType": "NORMAL",
         "desc": "5名のウルサスの学生が給料で購入した活動拠点の部屋。握手は友達の始まり。",
         "quickSetup": [
@@ -64610,6 +65346,153 @@
           "furni_reception_wallpaper_01",
           "furni_reception_floor_01"
         ]
+      },
+      "furni_set_eastern": {
+        "id": "furni_set_eastern",
+        "sortId": 69,
+        "name": "紅葉そよぐ旅籠屋",
+        "themeType": "LINKAGE",
+        "desc": "極東の田舎情緒溢れる部屋。木のぬくもりが感じられる空間で、穏やかな秋のひと時を。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 3,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 12,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 20,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 29,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_case_01",
+            "pos0": 13,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_tatami_01",
+            "pos0": 5,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_steps_01",
+            "pos0": 8,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_sling_01",
+            "pos0": 9,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_bed_01",
+            "pos0": 26,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_leafScreen_01",
+            "pos0": 24,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_JapaneseScreen_01",
+            "pos0": 20,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_carpet_01",
+            "pos0": 26,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_dresser_01",
+            "pos0": 31,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_cabinet_01",
+            "pos0": 0,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_plant_01",
+            "pos0": 19,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_pipeline_01",
+            "pos0": 21,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_airCleaner_01",
+            "pos0": 2,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_eastern_1",
+          "furni_set_eastern_2",
+          "furni_set_eastern_3",
+          "furni_set_eastern_4"
+        ],
+        "furnitures": [
+          "furni_eastern_cabinet_01",
+          "furni_eastern_tatami_01",
+          "furni_eastern_plant_01",
+          "furni_eastern_bed_01",
+          "furni_eastern_leafScreen_01",
+          "furni_eastern_pipeline_01",
+          "furni_eastern_airCleaner_01",
+          "furni_eastern_steps_01",
+          "furni_eastern_JapaneseScreen_01",
+          "furni_eastern_carpet_01",
+          "furni_eastern_sling_01",
+          "furni_eastern_dresser_01",
+          "furni_eastern_case_01",
+          "furni_eastern_lamp_01",
+          "furni_eastern_wallpaper_01",
+          "furni_eastern_floor_01"
+        ]
       }
     },
     "groups": {
@@ -68475,6 +69358,62 @@
           "furni_reception_carpet_01",
           "furni_reception_wallpaper_01",
           "furni_reception_floor_01"
+        ]
+      },
+      "furni_set_eastern_1": {
+        "id": "furni_set_eastern_1",
+        "sortId": 1,
+        "name": "極東風内装",
+        "themeId": "furni_set_eastern",
+        "comfort": 140,
+        "count": 3,
+        "furniture": [
+          "furni_eastern_lamp_01",
+          "furni_eastern_wallpaper_01",
+          "furni_eastern_floor_01"
+        ]
+      },
+      "furni_set_eastern_2": {
+        "id": "furni_set_eastern_2",
+        "sortId": 2,
+        "name": "極東風小物",
+        "themeId": "furni_set_eastern",
+        "comfort": 290,
+        "count": 4,
+        "furniture": [
+          "furni_eastern_tatami_01",
+          "furni_eastern_steps_01",
+          "furni_eastern_sling_01",
+          "furni_eastern_case_01"
+        ]
+      },
+      "furni_set_eastern_3": {
+        "id": "furni_set_eastern_3",
+        "sortId": 3,
+        "name": "極東風家具",
+        "themeId": "furni_set_eastern",
+        "comfort": 325,
+        "count": 5,
+        "furniture": [
+          "furni_eastern_bed_01",
+          "furni_eastern_leafScreen_01",
+          "furni_eastern_JapaneseScreen_01",
+          "furni_eastern_carpet_01",
+          "furni_eastern_dresser_01"
+        ]
+      },
+      "furni_set_eastern_4": {
+        "id": "furni_set_eastern_4",
+        "sortId": 4,
+        "name": "極東風調度品",
+        "themeId": "furni_set_eastern",
+        "comfort": 190,
+        "count": 4,
+        "furniture": [
+          "furni_eastern_cabinet_01",
+          "furni_eastern_plant_01",
+          "furni_eastern_pipeline_01",
+          "furni_eastern_airCleaner_01"
         ]
       }
     },

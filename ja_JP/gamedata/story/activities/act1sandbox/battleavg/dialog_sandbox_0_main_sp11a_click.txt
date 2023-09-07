@@ -1,0 +1,18 @@
+[HEADER(actId="act1sandbox", npcId="trap_435_trsrhuntr")] 
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="トレジャーハンター"]お願いだから、信じてもらえないかな？　私なら絶対地図を解読できるから！
+[name="トレジャーハンター"]君たちにも、私みたいな専門家の助けが必要でしょ？
+[Decision(option1="そうでもない。偶然通りかかっただけだから。", value1="1.1", option2="やっぱりお願いしようかな！", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="トレジャーハンター"]はぁ……わかった。
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="トレジャーハンター"]ありがとう！　信頼には絶対応えるからね！
+[name="トレジャーハンター"]何日かのうちに、翻訳した情報を持って君たちのところへ行くよ！
+[SetConditionProgress(conditionKey="route_main", itemCount="13")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="6")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]

@@ -1,0 +1,58 @@
+[HEADER(actId="act1sandbox", npcId="trap_434_klmantc")] 
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="殺し屋のマンティコア"]別の場所を見つけて、隠れよう……そうしたら、生きていける……前みたいに……！
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="アイマラ"]あなたは来なくてもいい。――みんなもよ。これは私たちが決めたことだから、付き合わせるつもりはないわ。
+[name="アイマラ"]こっちが勝手に決めたことなんだし、お嬢さんは何も知らなかったことにして、ここで生きていっていいのよ。
+[name="アイマラ"]だって、あなたはもうここの住民だし……みんなにだって、自分の家族や友人がいるでしょう。あなたたちの未来にはまだ希望があるんだから、こんな危険を冒す必要はないわ。
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="殺し屋のマンティコア"]……
+[name="殺し屋のマンティコア"]ほんとに、やるの……？
+[name="殺し屋のマンティコア"]物資を差し出せば、今日は、無事にやり過ごせる……首長も、ひとまず、見逃してくれる……
+[name="殺し屋のマンティコア"]誰も死なずに済む……それじゃ……ダメなの……？
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="アイマラ"]――もうすぐ、首長がこの辺りを通る……
+[name="アイマラ"]……私は……この時を待ってたの。
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]集落の人々はもはや、完全に二分化されようとしていた。
+[name=""]選択の時が来たのだ。
+[Decision(option1="（復讐を支持しない：命が一番大切だ。）", value1="1.1", option2="（復讐を支持する：首長を暗殺しよう。）", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="アイマラ"]……ふ、ふふっ……
+[name="アイマラ"]わかったわ。
+[Decision(option1="君はどうする？", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="アイマラ"]それが集落全員の決定なら、私もそれに従って、何もしないわ。
+[name="アイマラ"]……ええ、何も。
+[name="アイマラ"]物資を引き渡せば、数日の間は、この小さな集落も見逃してもらえるでしょう。
+[Decision(option1="（物資を差し出す）", value1="3.1")]
+[predicate(references="3.1")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="殺し屋のマンティコア"]みんなで……ここで生きていけたら、それでいい……
+[name="殺し屋のマンティコア"]お金を払うことに、なっても……みんなが生きていたら、きっと大丈夫だから……！
+[SetConditionProgress(conditionKey="route_main", itemCount="20")]
+[SetConditionProgress(conditionKey="route_main_b", itemCount="13")]
+[withdraw(charId="trap_434_klmantc")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="アイマラ"]……ふ、ふふっ……
+[name="アイマラ"]ありがとう、みんな。
+[Decision(option1="多くを亡くした我々に、失うものなど何もない！", value1="4.1")]
+[predicate(references="4.1")]
+[Decision(option1="命を賭しても、あの首長に我々の憎しみを思い知らせてやる！", value1="5.1")]
+[predicate(references="5.1")]
+[Decision(option1="部族の民よ！　武器を取り、首長に復讐を！", value1="6.1")]
+[predicate(references="6.1")]
+[Decision(option1="我々はここで生きているんだと、雄叫びを上げろ！", value1="7.1")]
+[predicate(references="7.1")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="殺し屋のマンティコア"]……
+[name="殺し屋のマンティコア"]これが、あなたたちの決めたこと……
+[SetConditionProgress(conditionKey="route_main", itemCount="21")]
+[SetConditionProgress(conditionKey="route_main_b", itemCount="14")]
+[SetConditionProgress(conditionKey="main_19b_enemy_rush", itemCount="1")]
+[withdraw(charId="trap_434_klmantc")]
+[End]

@@ -1,0 +1,25 @@
+[HEADER(actId="act1sandbox", npcId="trap_432_oldisin")] 
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="イシン"]若者よ、紛争はこの砂漠から消えないものなのです。
+[name="イシン"]お考えが変わりましたか？
+[Decision(option1="偶然通りかかっただけだ。", value1="1.1", option2="「サンドソルジャー」を探しに、沁礁闇市に行くつもりだ。", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="イシン"]それは残念です……
+[withdraw(charId="trap_432_oldisin")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="イシン"]……イシンの目に狂いはなかったようですね。
+[name="イシン"]さあ、お受け取りください。これは砂漠の中に未知なる未来を見る一助となるやもしれません……
+[Decision(option1="（受け取る）", value1="2.1")]
+[predicate(references="2.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【演算継承キーアイテム「運命の水晶玉」を手に入れた】
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="イシン"]……あなた方の幸運を祈ります。
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_432_oldisin")]
+[End]

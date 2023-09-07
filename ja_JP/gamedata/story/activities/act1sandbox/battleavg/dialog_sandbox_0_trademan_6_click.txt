@@ -1,0 +1,40 @@
+[HEADER(actId="act1sandbox", npcId="trap_415_trademan")] 
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="連絡員"]……
+[name="連絡員"]ああ、君たちか。
+[Decision(option1="驚いた……！　長い間どこに行っていたんだ？", value1="1.1")]
+[predicate(references="1.1")]
+[Decision(option1="それにこの闇市、なんだか前と違うような……", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="連絡員"]そうだね。
+[name="連絡員"]随分人が減っちゃったから……まあ、それもちょっと前のことみたいだけどね。今頃気付いたの？
+[Decision(option1="最近はどうしてる？　今日は何も売ってないのか？", value1="3.1")]
+[predicate(references="3.1")]
+[Decision(option1="サンバレーの商品はどうした？", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="連絡員"]欲しいものがあったら、好きなだけ見ていって。
+[name="連絡員"]でも、これだけ良いものがたくさん置いてあるんだから、何もサンバレーの商品にこだわる必要はないんじゃない？
+[Decision(option1="え？　ここは他人の店じゃないのか？", value1="5.1")]
+[predicate(references="5.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="連絡員"]あははっ、まあよかったら見て行ってよ。
+[name="連絡員"]クルビアの物でも、リターニアの物でも、あるいはサンバレーの商品がお気に召したならそれだって構わないし、好きなものを買うといいさ。
+[name="連絡員"]そうだ、この前の件、秘密を守ってくれてありがとう。お礼にこれを受け取って。
+[Decision(option1="（受け取る）", value1="6.1")]
+[predicate(references="6.1")]
+[AddItem(itemId="sandbox_0_craft_14", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【演算継承キーアイテム「サンバレーの名刺」を手に入れた】
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]どういうわけか、彼は以前と様子が違って見えた。
+[name=""]我々の質問にも答えようとはしない。
+[name=""]結局我々は、いくつか商品を買っただけで集落に帰ることにした。
+[name=""]「毒牙」もその右腕も、あの爆発も、受けた脅しすらも、何もかもがまるで最初から存在しなかったかのように消え、二度とかかわってこなくなった。あの取引の中、首長の手下が死んだことで目をつけられたこと以外、何も変わりはしないまま。
+[name=""]しかし幸い、あの日持ち帰った金は、我々が開拓を続けていくには十分な額だった。そして闇市の「サンドソルジャー」も、なぜだか最近我々との関わりを深めているように感じる。
+[name=""]とはいえわからないこともある。以前闇市にいた顔なじみの商人たちはなぜいなくなったのか？　連絡員はなぜセールスをしなくなったのか？　「毒牙」が存在しないなら、我々を脅してあんなバカげた恐ろしい任務を命じたのは誰だったのか？
+[name=""]奇妙なことに、我々が今した買い物の帳簿を、商人たちがあの連絡員に見せ、確認を取っているのはなぜなのか？
+[SetConditionProgress(conditionKey="route_trademan", itemCount="6")]
+[withdraw(charId="trap_415_trademan")]
+[End]

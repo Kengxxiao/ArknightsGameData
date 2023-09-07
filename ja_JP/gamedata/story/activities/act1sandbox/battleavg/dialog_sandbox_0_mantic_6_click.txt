@@ -1,0 +1,40 @@
+[HEADER(actId="act1sandbox", npcId="trap_434_klmantc")] 
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="殺し屋のマンティコア"]早く！　あっちにまだ……ケガしてる人が、いる！
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name="おびえた子供"]ママ！　ママ！　どこにいるの！
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name="すすり泣く老人"]っ……うう……どうしてこんなことに……
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="バーゼル"]こいつらを連れて後ろへ！
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="殺し屋のマンティコア"]うん……！
+[character(name="avg_npc_008", offsetX="100", offsetY="100")]
+[name="未知の勢力の傭兵"]動くな！　動けば撃つ！
+[name="未知の勢力の傭兵"]武器を置け！　置いたら下がれ！
+[name="未知の勢力の傭兵"]バカな真似はすんじゃねえぞ！
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="殺し屋のマンティコア"]……この人たち……ほんとは、逃げたいのかな？
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="バーゼル"]……ごほっ……げほっ……
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="殺し屋のマンティコア"]それなら……放っておこう……！
+[name="殺し屋のマンティコア"]向こうは……ターゲットを、間違えたみたい……本当の狙いは……わたしたちの、集落じゃない……！
+[name="殺し屋のマンティコア"]この人たち、首長に雇われてるって言ってた……これ以上戦ったら……何を言ってくるか、わからない……！
+[name="殺し屋のマンティコア"]自分の部下が、強くなりすぎるのは、嬉しくない……それは、首長も一緒。……あの人たちは、誰が誰を侵略したかなんて……気にしない。徴収された、税金の額が……合うかだけを、気にしてる……
+[name="殺し屋のマンティコア"]あの人たちに従えば……何もされずに、済む……！
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="バーゼル"]……どうする……？
+[Decision(option1="……みんな、武器を放すな！", value1="1.1")]
+[predicate(references="1.1")]
+[Decision(option1="いいか、そこの傭兵たち。我々は首長に逆う気はないし……", value1="2.1")]
+[predicate(references="2.1")]
+[Decision(option1="未納だった税金もすべて納めてある。", value1="3.1")]
+[predicate(references="3.1")]
+[Decision(option1="だが、お前たちが集落に足を踏み入れた瞬間から――", value1="4.1")]
+[predicate(references="4.1")]
+[Decision(option1="見逃してやる理由はなくなった！", value1="5.1")]
+[predicate(references="5.1")]
+[SetConditionProgress(conditionKey="mantic_6_enemy_rush", itemCount="1")]
+[withdraw(charId="trap_434_klmantc")]
+[End]

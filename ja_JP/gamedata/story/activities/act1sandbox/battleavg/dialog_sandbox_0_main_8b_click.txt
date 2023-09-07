@@ -1,0 +1,19 @@
+[HEADER(actId="act1sandbox", npcId="trap_433_sandsdr")] 
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="「サンドソルジャー」"]あの時私が介入したことで、皆様と彼女の間に誤解を生じさせてしまったのなら、申し訳ございません。
+[name="「サンドソルジャー」"]もし必要であれば、彼女の行き先をお伝えすることもいたしましょう。
+[name="「サンドソルジャー」"]それと……あなた方が盟友となってくださるなら、喜んでお迎えしたいと存じます。――こちらをお受け取りください。
+[Decision(option1="（受け取る）", value1="1.1")]
+[predicate(references="1.1")]
+[AddItem(itemId="sandbox_0_craft_9", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【演算継承キーアイテム「砂漠のコイン」を手に入れた】
+[SetConditionProgress(conditionKey="market_sandsdr", itemCount="1")]
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="「サンドソルジャー」"]無論、この協力は謝罪を示してのものではございません。
+[name="「サンドソルジャー」"]「悔しさ」を感じることは、多くの人にとって常態的なことですが……その先へ一歩踏み出そうとする方は稀有ですので。
+[name="「サンドソルジャー」"]これ以上何か申し上げる必要はないでしょう。そちら様は、すでに準備ができておいでのようですから。
+[SetConditionProgress(conditionKey="route_main", itemCount="9")]
+[SetConditionProgress(conditionKey="route_main_b", itemCount="2")]
+[withdraw(charId="trap_433_sandsdr")]
+[End]
