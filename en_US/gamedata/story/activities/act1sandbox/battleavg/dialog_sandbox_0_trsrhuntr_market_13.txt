@@ -1,0 +1,23 @@
+[HEADER(actId="act1sandbox", npcId="trap_435_trsrhuntr")] 
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]The sands of Sargon hide many treasures. I can help you identify anything you find.
+[Decision(option1="Pay 15 Crude Gold to identify", value1="1.1", option2="Decline", value2="1.2")]
+[predicate(references="1.1", selectableCondition="c1&&c0")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-15")]
+[AddItem(itemId="sandbox_0_craft_5", itemCount="-1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Oh, this is a rare one.
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Looks like a Wasteland Cache: Remote Shield Generator. Man, I envy your luck. Keep it safe!
+[Decision(option1="Accept the identified item", value1="2.1")]
+[predicate(references="2.1")]
+[AddItem(itemId="sandbox_0_tactical_13", itemCount="1")]
+[SetConditionProgress(conditionKey="market_trsrhuntr_interval", itemCount="0")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="1.2")]
+[SetConditionProgress(conditionKey="market_trsrhuntr_interval", itemCount="0")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[Condition(references="c1", key="itemGT", itemId="sandbox_0_gold", value="15")]
+[Condition(references="c0", key="itemGT", itemId="sandbox_0_craft_5", value="1")]

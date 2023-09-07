@@ -22,13 +22,15 @@ function ActFunMainDlgGroup:OnInit()
     self:GetReward(reward)
   end
 
-  local initDlgCls = ActFun3MainDlg
+  local initDlgCls = ActFun4MainDlg
   if initDlgName == ActFun1MainDlg.DLG_NAME then
     initDlgCls = ActFun1MainDlg
   elseif initDlgName == ActFun2MainDlg.DLG_NAME then
     initDlgCls = ActFun2MainDlg
   elseif initDlgName == ActFun3MainDlg.DLG_NAME then
     initDlgCls = ActFun3MainDlg
+  elseif initDlgName == ActFun4MainDlg.DLG_NAME then
+    initDlgCls = ActFun4MainDlg
   end
 
   local initDlgStack = {initDlgCls};

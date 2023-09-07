@@ -10395,6 +10395,90 @@
           "buffData": []
         }
       ]
+    },
+    "char_1029_yato2": {
+      "charId": "char_1029_yato2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&bd2[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_token_prod_spd2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1030_noirc2": {
+      "charId": "char_1030_noirc2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_token_tra_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4077_palico": {
+      "charId": "char_4077_palico",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&limit&bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&limit&bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 30
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -10421,6 +10505,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, if there are <@cc.kw>2</> or more <$cc.tag.op><@cc.kw>Operation Platforms</></> assigned to <@cc.kw>Power Plants</>, all Factories' productivity <@cc.vup>+2%</> (only the most effective one will take effect when assigned Operators have the same skill effect)"
+    },
+    "control_token_prod_spd2[000]": {
+      "buffId": "control_token_prod_spd2[000]",
+      "buffName": "Leading By Example",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_token_p_spd2",
+      "sortId": 1610,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned together with other <$cc.tag.mh><@cc.kw>Monster Hunter Party</></> Operators to the Control Center, all Factories' productivity <@cc.vup>+2%</> (Only the strongest effect of this type takes place)"
+    },
+    "control_token_tra_spd[000]": {
+      "buffId": "control_token_tra_spd[000]",
+      "buffName": "Esoteric Negotiations",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_token_t_spd",
+      "sortId": 1611,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned together with other <$cc.tag.mh><@cc.kw>Monster Hunter Party</></> Operators to the Control Center, all Trading Posts' order efficiency <@cc.vup>+7%</> (Only the strongest effect of this type takes place)"
     },
     "control_pow_bot[000]": {
       "buffId": "control_pow_bot[000]",
@@ -10794,6 +10902,18 @@
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, Operators working in <$cc.c.room2><@cc.kw>other buildings</></> recover <@cc.vup>+0.05</> Morale per hour, with an additional <@cc.vup>+0.05</> for every <@cc.vup>20</> <$cc.bd_b1><@cc.rem>Worldly Plight</></> (<$cc.c.sui2_1><@cc.rem>Special Comparison Rules</></> apply with Control Center bonus)"
     },
+    "control_mp_cost&bd2[010]": {
+      "buffId": "control_mp_cost&bd2[010]",
+      "buffName": "Endurance Recovery",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_felyne",
+      "sortId": 1011,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, self Morale loss per hour <@cc.vdown>+0.5</>, <$cc.bd_felyne><@cc.rem>Felvine</></> <@cc.vup>+8</>"
+    },
     "control_facCostReset[000]": {
       "buffId": "control_facCostReset[000]",
       "buffName": "Keep the Wine Flowing",
@@ -10841,6 +10961,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "When this Operator is assigned to the Control Center, for each <$cc.g.ussg><@cc.kw>Ursus Student Self-Governing Group</></> Operator, <$cc.bd_tachanka><@cc.rem>Ursus Specialty Beverage</></><@cc.vup>+1</>"
+    },
+    "control_mp_bd2[000]": {
+      "buffId": "control_mp_bd2[000]",
+      "buffName": "Teamwork",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_felyne",
+      "sortId": 1021,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "When this Operator is assigned to the Control Center, for each <$cc.tag.mh><@cc.kw>Monster Hunter Party</></> Operator, <$cc.bd_felyne><@cc.rem>Felvine</></> <@cc.vup>+2</>"
     },
     "control_mp_aegir1[000]": {
       "buffId": "control_mp_aegir1[000]",
@@ -11417,6 +11549,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+10</> and productivity <@cc.vup>+10%</>"
+    },
+    "manu_prod_spd&limit&bd[000]": {
+      "buffId": "manu_prod_spd&limit&bd[000]",
+      "buffName": "Trusty Buddies",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&limit_felyne",
+      "sortId": 3411,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+8</>, Productivity <@cc.vup>+5%</>, plus an additional Productivity <@cc.vup>+1%</> for every <$cc.bd_felyne><@cc.rem>Felvine</></>"
     },
     "manu_prod_limit&cost[000]": {
       "buffId": "manu_prod_limit&cost[000]",
@@ -12437,6 +12581,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "When this Operator is assigned to the same Trading Post as <@cc.kw>Lappland</>, Morale consumed each hour <@cc.vdown>+0.3</>, and order acquisition efficiency <@cc.vup>+65%</>"
+    },
+    "trade_ord_spd&limit&bd[000]": {
+      "buffId": "trade_ord_spd&limit&bd[000]",
+      "buffName": "Lovable Felynes",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd&limit_felyne",
+      "sortId": 4101,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+5%</>, order limit <@cc.vup>+2</>, plus an additional order acquisition efficiency <@cc.vup>+3%</> for every <$cc.bd_felyne><@cc.rem>Felvine</></>"
     },
     "trade_ord_limit&cost_P[010]": {
       "buffId": "trade_ord_limit&cost_P[010]",
@@ -48635,6 +48791,470 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_eastern_cabinet_01": {
+        "id": "furni_eastern_cabinet_01",
+        "sortId": 1162,
+        "name": "Old-Fashioned Cabinet",
+        "iconId": "furni_eastern_cabinet_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 2,
+        "depth": 4,
+        "height": 7,
+        "comfort": 245,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A simple and elegant solid wooden cabinet, integrated with the bonsai tree placed on top of it. Petals wither and fall easily, so nobody wishes to disturb the scenery here. Thus, the cabinet has become an object of appreciation.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_tatami_01": {
+        "id": "furni_eastern_tatami_01",
+        "sortId": 1163,
+        "name": "'Ochazuke'",
+        "iconId": "furni_eastern_tatami_01",
+        "type": "DECORATION",
+        "subType": "CATERING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 12,
+        "depth": 5,
+        "height": 4,
+        "comfort": 705,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A set of traditional tearoom utensils from Higashi, chunks of red-hot wood crackling and peeling. Preparing tea on the stove is a rather interesting experience, and of course, the 'avoid open flames' sticker on the tatami mat has been torn off.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_plant_01": {
+        "id": "furni_eastern_plant_01",
+        "sortId": 1164,
+        "name": "Pine Tree Bonsai",
+        "iconId": "furni_eastern_plant_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 205,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A carefully-shaped pine tree bonsai, with an old trunk and gnarled branches. A patch of emerald green struggles to stretch towards the sun, perhaps finding some artistic merit despite its limitations.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_bed_01": {
+        "id": "furni_eastern_bed_01",
+        "sortId": 1165,
+        "name": "Higashinese Solid Wood Bed",
+        "iconId": "furni_eastern_bed_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 6,
+        "depth": 3,
+        "height": 3,
+        "comfort": 270,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A Higashi-style solid wooden bed with matching traditional wooden pillows for aesthetic value. Must be unpleasant for the necks that rest upon it.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_leafScreen_01": {
+        "id": "furni_eastern_leafScreen_01",
+        "sortId": 1166,
+        "name": "Maple Leaves Upon Autumnal Wind Screen",
+        "iconId": "furni_eastern_leafScreen_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 10,
+        "depth": 1,
+        "height": 8,
+        "comfort": 395,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A screen painted with 'Maple Leaves Upon Autumnal Wind.' The wide screen partitions off the room's space, accentuating beauty in tranquility. A built-in coat hook boosts functionality and adds practicality, in line with the aesthetic tastes of today's critics.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_pipeline_01": {
+        "id": "furni_eastern_pipeline_01",
+        "sortId": 1167,
+        "name": "'Flow of Warmth'",
+        "iconId": "furni_eastern_pipeline_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 9,
+        "depth": 4,
+        "height": 1,
+        "comfort": 180,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Special pipes used for heating, key to maintaining a pleasant indoor temperature. At some point, craftsmen tried to carve patterns onto it, but ultimately gave up due to safety concerns.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_airCleaner_01": {
+        "id": "furni_eastern_airCleaner_01",
+        "sortId": 1168,
+        "name": "'Light Breeze'",
+        "iconId": "furni_eastern_airCleaner_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 190,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A Higashi-manufactured air purifier, marketed as having all handmade core components. Though its air purifying functionalities leave much to be desired, the way it simulates the wind through the forest is a keeper.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_steps_01": {
+        "id": "furni_eastern_steps_01",
+        "sortId": 1169,
+        "name": "'Ascent'",
+        "iconId": "furni_eastern_steps_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 3,
+        "depth": 2,
+        "height": 2,
+        "comfort": 165,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "Small, exquisite wooden stairs that elegantly split the height of one step into two. It is said that using them confers a sense of ritual, and the degree of wear-and-tear on them ranks among the best of all furniture.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_JapaneseScreen_01": {
+        "id": "furni_eastern_JapaneseScreen_01",
+        "sortId": 1170,
+        "name": "Bamboo Forest Huntscape Screen",
+        "iconId": "furni_eastern_JapaneseScreen_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 6,
+        "depth": 3,
+        "height": 9,
+        "comfort": 455,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A screen painted with 'Bamboo Forest Huntscape.' A dagger, set aside for the time being, has been placed front and center, accentuating the bleakness of the scenery. Its sturdy wooden beams are also equipped with hooks, which is why it is praised as a prime example of 'waste not, want not' when it comes to design philosophy.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_carpet_01": {
+        "id": "furni_eastern_carpet_01",
+        "sortId": 1171,
+        "name": "Mottled Rug",
+        "iconId": "furni_eastern_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 5,
+        "depth": 3,
+        "height": 1,
+        "comfort": 50,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A luxurious hand-stitched rug with a mottled texture. A factory-made rug with the same pattern sells for a third of the price, but some people clearly prefer it nevertheless.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_sling_01": {
+        "id": "furni_eastern_sling_01",
+        "sortId": 1172,
+        "name": "Bamboo Hanger",
+        "iconId": "furni_eastern_sling_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 5,
+        "depth": 3,
+        "height": 6,
+        "comfort": 175,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A quaint, handmade hanger made with green bamboo. Due to its unstable structure, it can't actually hang anything up.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_dresser_01": {
+        "id": "furni_eastern_dresser_01",
+        "sortId": 1173,
+        "name": "Higashinese Mirrored Dressing Table",
+        "iconId": "furni_eastern_dresser_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 170,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A Higashi-style dressing table with a mirror. The bright mirror's surface has been scrubbed spotless time and time again, its beauty putting that of its users to shame.",
+        "obtainApproach": "Purchased from the Limited Furniture Store",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_case_01": {
+        "id": "furni_eastern_case_01",
+        "sortId": 1174,
+        "name": "Ornamental Crate",
+        "iconId": "furni_eastern_case_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 190,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A small crate made from bamboo and wood, used to carry small household items. Its delicate hollow structure leads to strict weight requirements for the items it carries.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_lamp_01": {
+        "id": "furni_eastern_lamp_01",
+        "sortId": 1175,
+        "name": "Soft Ceiling Light",
+        "iconId": "furni_eastern_lamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 2,
+        "depth": 1,
+        "height": 1,
+        "comfort": 45,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "An ordinary incandescent lamp with a soft glow. But after being designated as a particular style of decor, its suddenly became expensive.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_eastern_wallpaper_01": {
+        "id": "furni_eastern_wallpaper_01",
+        "sortId": 1176,
+        "name": "Panoramic Display (Maple Forest)",
+        "iconId": "furni_eastern_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A panoramic display showing an autumnal landscape from Higashi's mountains and forests. 'The autumn wind rises at dusk, red leaves rustle aloud frosted rails, at pillow's side do pleasant dreams dwell.'",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_floor_01": {
+        "id": "furni_eastern_floor_01",
+        "sortId": 1177,
+        "name": "Austere Straw Mat",
+        "iconId": "furni_eastern_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A light and elegant mat woven from typhaceae reeds. People would rather admire it than clean it.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_oct1st_deckChair_01": {
         "id": "furni_oct1st_deckChair_01",
         "sortId": 9998,
@@ -50366,6 +50986,93 @@
         "comfort": 90,
         "usage": "Used in the dorm to improve the ambience.",
         "description": "A refreshing color palette. You might even swear it makes the breeze it blows more soothing.\nThe miniature landscape inside draws on the trio of leisure you'll see all around the Durin Great Aquapit—a parasol, a swim ring, and the most comfortable deck chair ever.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act35d3_sandboxTable_01": {
+        "id": "furni_act35d3_sandboxTable_01",
+        "sortId": 10063,
+        "name": "Sand Table Simulator",
+        "iconId": "furni_act35d3_sandboxTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 7,
+        "depth": 6,
+        "height": 5,
+        "comfort": 280,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A sand table with a holographic projection that can take care of accounting, scheduling, and deductive statistical calculations. The oasis springs to life, allowing tribes to thrive. The sea of sand accepts all.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act36d0_grill_01": {
+        "id": "furni_act36d0_grill_01",
+        "sortId": 10064,
+        "name": "Open Flame BBQ Spit",
+        "iconId": "furni_act36d0_grill_01",
+        "type": "DECORATION",
+        "subType": "CATERING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 120,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A portable grill that can easily be set up for outdoor BBQs.\nIts unusually intense firepower is designed not to be adjustable, and the resulting char is entirely dependent on how long you run it for.",
+        "obtainApproach": "Event Reward",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act36d0_MaterialBox_01": {
+        "id": "furni_act36d0_MaterialBox_01",
+        "sortId": 10065,
+        "name": "Tough Alloy Supply Box",
+        "iconId": "furni_act36d0_MaterialBox_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 2,
+        "comfort": 120,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A storage box made of hard alloy, making it strong and durable.\nOlder boxes of this type always needed to be expanded, but these days, it's hard to know how much of it you'll even need.",
         "obtainApproach": "Event Reward",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -53353,6 +54060,35 @@
         "comfort": 105,
         "usage": "Used in the dorm to improve the ambience.",
         "description": "A souvenir awarded for completing the Columbian Research Base Hangar Annihilation mission and submitting the mission report. The sounds of the research base hangar yet reverberate in your ears.",
+        "obtainApproach": "Annihilation Mission Award",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_annihilation_s15_01": {
+        "id": "furni_annihilation_s15_01",
+        "sortId": 13013,
+        "name": "Echoes of Yan-Lungmen (Shopping District)",
+        "iconId": "furni_annihilation_s15_01",
+        "type": "WALLDECO",
+        "subType": "ANNIHILATION",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 105,
+        "usage": "Used in the dorm to improve the ambience.",
+        "description": "A souvenir awarded for completing the Yan-Lungmen Shopping District Annihilation mission and submitting the mission report. The echoes of Lungmen's shopping district yet reverberate in your ears.",
         "obtainApproach": "Annihilation Mission Award",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -64581,6 +65317,153 @@
           "furni_reception_wallpaper_01",
           "furni_reception_floor_01"
         ]
+      },
+      "furni_set_eastern": {
+        "id": "furni_set_eastern",
+        "sortId": 69,
+        "name": "Momiji Hotel",
+        "themeType": "LINKAGE",
+        "desc": "A room of richly rustic Higashinese trappings, where guests can soak in tranquil autumn days amidst the warm timber.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 3,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 12,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 20,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 29,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_case_01",
+            "pos0": 13,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_tatami_01",
+            "pos0": 5,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_steps_01",
+            "pos0": 8,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_sling_01",
+            "pos0": 9,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_bed_01",
+            "pos0": 26,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_leafScreen_01",
+            "pos0": 24,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_JapaneseScreen_01",
+            "pos0": 20,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_carpet_01",
+            "pos0": 26,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_dresser_01",
+            "pos0": 31,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_cabinet_01",
+            "pos0": 0,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_plant_01",
+            "pos0": 19,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_pipeline_01",
+            "pos0": 21,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_airCleaner_01",
+            "pos0": 2,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_eastern_1",
+          "furni_set_eastern_2",
+          "furni_set_eastern_3",
+          "furni_set_eastern_4"
+        ],
+        "furnitures": [
+          "furni_eastern_cabinet_01",
+          "furni_eastern_tatami_01",
+          "furni_eastern_plant_01",
+          "furni_eastern_bed_01",
+          "furni_eastern_leafScreen_01",
+          "furni_eastern_pipeline_01",
+          "furni_eastern_airCleaner_01",
+          "furni_eastern_steps_01",
+          "furni_eastern_JapaneseScreen_01",
+          "furni_eastern_carpet_01",
+          "furni_eastern_sling_01",
+          "furni_eastern_dresser_01",
+          "furni_eastern_case_01",
+          "furni_eastern_lamp_01",
+          "furni_eastern_wallpaper_01",
+          "furni_eastern_floor_01"
+        ]
       }
     },
     "groups": {
@@ -68446,6 +69329,62 @@
           "furni_reception_carpet_01",
           "furni_reception_wallpaper_01",
           "furni_reception_floor_01"
+        ]
+      },
+      "furni_set_eastern_1": {
+        "id": "furni_set_eastern_1",
+        "sortId": 1,
+        "name": "Higashi-style Decor",
+        "themeId": "furni_set_eastern",
+        "comfort": 140,
+        "count": 3,
+        "furniture": [
+          "furni_eastern_lamp_01",
+          "furni_eastern_wallpaper_01",
+          "furni_eastern_floor_01"
+        ]
+      },
+      "furni_set_eastern_2": {
+        "id": "furni_set_eastern_2",
+        "sortId": 2,
+        "name": "'Joy'",
+        "themeId": "furni_set_eastern",
+        "comfort": 290,
+        "count": 4,
+        "furniture": [
+          "furni_eastern_tatami_01",
+          "furni_eastern_steps_01",
+          "furni_eastern_sling_01",
+          "furni_eastern_case_01"
+        ]
+      },
+      "furni_set_eastern_3": {
+        "id": "furni_set_eastern_3",
+        "sortId": 3,
+        "name": "'Rest'",
+        "themeId": "furni_set_eastern",
+        "comfort": 325,
+        "count": 5,
+        "furniture": [
+          "furni_eastern_bed_01",
+          "furni_eastern_leafScreen_01",
+          "furni_eastern_JapaneseScreen_01",
+          "furni_eastern_carpet_01",
+          "furni_eastern_dresser_01"
+        ]
+      },
+      "furni_set_eastern_4": {
+        "id": "furni_set_eastern_4",
+        "sortId": 4,
+        "name": "'Comfort'",
+        "themeId": "furni_set_eastern",
+        "comfort": 190,
+        "count": 4,
+        "furniture": [
+          "furni_eastern_cabinet_01",
+          "furni_eastern_plant_01",
+          "furni_eastern_pipeline_01",
+          "furni_eastern_airCleaner_01"
         ]
       }
     },

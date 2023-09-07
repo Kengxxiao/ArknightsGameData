@@ -1,0 +1,40 @@
+[HEADER(actId="act1sandbox", npcId="trap_434_klmantc")] 
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="Manticore Killer"]Over there... injuries!
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name="Frightened Child"]Mom! Mom! Where are you?
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name="Weeping Elder"]How... How could this happen...?
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Take these people to the back!
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="Manticore Killer"]Understood!
+[character(name="avg_npc_008", offsetX="100", offsetY="100")]
+[name="Unidentified Mercenary"]Freeze, or we'll shoot!
+[name="Unidentified Mercenary"]Put down your weapons! Back off!
+[name="Unidentified Mercenary"]No funny moves!
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="Manticore Killer"]Are they... leaving?
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]*cough* *cough*...
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="Manticore Killer"]It's okay... Let them go...
+[name="Manticore Killer"]They said they mistook their target... They weren't here for us...
+[name="Manticore Killer"]They said they were hired by the Lord Ameer... But if we keep fighting we'll lose our chance to talk it out!
+[name="Manticore Killer"]No one likes seeing a powerful faction rise under them... the Lord Ameer is the same... They don't care who invaded who, only whether the taxes are paid in full...
+[name="Manticore Killer"]We'll be fine if we just obey!
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Should we...?
+[Decision(option1="...No!", value1="1.1")]
+[predicate(references="1.1")]
+[Decision(option1="We meant no disrespect to the Lord Ameer.", value1="2.1")]
+[predicate(references="2.1")]
+[Decision(option1="We paid our outstanding taxes in full.", value1="3.1")]
+[predicate(references="3.1")]
+[Decision(option1="But the moment you set foot in our settlement,", value1="4.1")]
+[predicate(references="4.1")]
+[Decision(option1="you weren't going to walk away!", value1="5.1")]
+[predicate(references="5.1")]
+[SetConditionProgress(conditionKey="mantic_6_enemy_rush", itemCount="1")]
+[withdraw(charId="trap_434_klmantc")]
+[End]

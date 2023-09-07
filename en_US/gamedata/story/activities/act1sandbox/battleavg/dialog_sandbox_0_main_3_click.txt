@@ -1,0 +1,48 @@
+[HEADER(actId="act1sandbox", npcId="trap_432_oldisin")] 
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]Old Isin has been looking for one who can cover the yellow sands in verdant life.
+[name="Old Isin"]And Old Isin sees that you've built the beginnings of a home.
+[character(name="avg_npc_070", offsetX="125", offsetY="100")]
+[name="Villager A"]Keep at it! We can build another kitchen with these supplies. Maybe we'll really be able to make a living here!
+[character(name="avg_npc_071", offsetX="100", offsetY="100")]
+[name="Villager B"]Work, work, work... I was out hunting the whole day... We're just not efficient enough!
+[name="Villager B"]I fell into a mine shaft yesterday!
+[character(name="avg_npc_070", offsetX="125", offsetY="100")]
+[name="Villager A"]Keep your chin up! There's so much waiting in store for us!
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Heave—ho! Heave—ho! Another batch of ore! And along with it, a better tomorrow!
+[Decision(option1="(Cheers)", value1="1.1")]
+[predicate(references="1.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]Old Isin knows that a tiny stream may water a small patch of grass, but will eventually be swallowed by the sea of sand.
+[name="Old Isin"]The stream needs more strength.
+[name="Old Isin"]You must study, learn... Filling one's stomach is not enough to bring lasting prosperity. Only wisdom is eternal.
+[name="Old Isin"]Old Isin will help you.
+[Decision(option1="(Accept supplies)", value1="2.1")]
+[predicate(references="2.1")]
+[AddItem(itemId="sandbox_0_wood", itemCount="15")]
+[AddItem(itemId="sandbox_0_stone", itemCount="5")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""](Received 15 Wood, 5 Stone)
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]We can overcome anything as long as we keep growing like this!
+[name="Basil"]And thank you very much for the supplies, sir. It's a big help!
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]All things start from the foundation...
+[Decision(option1="(Express gratitude)", value1="3.1")]
+[predicate(references="3.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]Old Isin will accept your gratitude, but needs no compensation.
+[name="Old Isin"]Old Isin came to deliver a message.
+[name="Old Isin"]'Sand Soldier'... yes. 'Sand Soldier' wants you to succeed here. A crisis is coming, and you'll need... a sharp sword.
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]A... sharp sword?
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]This old man knows something!
+[name=""]We've never met this mysterious 'Sand Soldier,' but he seems to know everything that happens here.
+[name=""]So far he seems friendly, at least.
+[name=""]It's worth a shot. Having a strong ally here can only help us.
+[SetConditionProgress(conditionKey="route_main", itemCount="3")]
+[SetConditionProgress(conditionKey="route_main_interval", itemCount="0")]
+[withdraw(charId="trap_432_oldisin")]
+[End]

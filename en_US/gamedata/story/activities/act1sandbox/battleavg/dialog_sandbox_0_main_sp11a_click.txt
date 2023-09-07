@@ -1,0 +1,18 @@
+[HEADER(actId="act1sandbox", npcId="trap_435_trsrhuntr")] 
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]I knew you wanted the help of a professional!
+[name="Treasure Hunter"]I'll decipher the writings on it!
+[Decision(option1="Sorry, just passing through.", value1="1.1", option2="Counting on you, then.", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Alright...
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Thank you so much! I won't let you down!
+[name="Treasure Hunter"]I'll be back in a few days with the translation!
+[SetConditionProgress(conditionKey="route_main", itemCount="13")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="6")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]

@@ -1,0 +1,38 @@
+[HEADER(actId="act1sandbox", npcId="trap_432_oldisin")] 
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]I can help no more, children...
+[name="Old Isin"]Go...
+[Decision(option1="(Pull out an injured child from the embers)", value1="1.1")]
+[predicate(references="1.1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name="Injured Child"]My mom! My mom's gone...
+[name="Injured Child"]Mom's gone...
+[Decision(option1="(Work together to lift a collapsed wall)", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_071", offsetX="100", offsetY="100")]
+[name="Injured Villager"]No, it's too late for her...
+[name="Injured Villager"]Let's help the people still alive...
+[Decision(option1="(Look inside a temporary tent)", value1="3.1")]
+[predicate(references="3.1")]
+[character(name="avg_npc_073", offsetX="100", offsetY="100")]
+[name="Busy Villager"]Hang in there, just hang in there...
+[name="Busy Villager"]We lost our medicine too... bite down on this towel for now...
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]How could this be... why did we come back so late?
+[name=""]The remaining villagers are here. But what about the ones who brought us the news and headed back first?
+[name=""]...Where are they?
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="Emilia"]Who are you looking for? The ones who came back earlier?
+[name="Emilia"]Dead. Trying to shield a group of children. My love among them...
+[name="Emilia"]They're over there. I covered them with straw mats.
+[Decision(option1="(Go to the place she indicated)", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_163", offsetX="75", offsetY="100")]
+[name="Emilia"]What are you doing? What good can you do there now?
+[name="Emilia"]Stop wasting your time with the dead when there are people waiting for help! My love... Basil gave everything for the settlement, and finally even his life...
+[name="Emilia"]Follow me! We can't let their deaths be in vain.
+[SetConditionProgress(conditionKey="route_main", itemCount="11")]
+[SetConditionProgress(conditionKey="route_main_b", itemCount="4")]
+[SetConditionProgress(conditionKey="main_10b_enemy_rush", itemCount="1")]
+[withdraw(charId="trap_432_oldisin")]
+[End]

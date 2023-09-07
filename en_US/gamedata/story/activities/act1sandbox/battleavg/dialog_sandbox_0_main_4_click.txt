@@ -1,0 +1,234 @@
+[HEADER(actId="act1sandbox", npcId="trap_415_trademan")] 
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Hey, stop daydreaming, guys!
+[name="Liaison"]The Lord Ameer is angry that you've encroached on a stream in his territory! He's sending over troops!
+[name="Liaison"]You're wondering how I know that?
+[name="Liaison"]Well, last month, two lords ameer fought three days and nights over a territorial dispute. They finally came to an agreement that sorted it out down to the last fruit hanging on a tree by the border.
+[name="Liaison"]And you haven't paid your taxes, have you? Of course they'll be coming for you.
+[Decision(option1="Can't we talk our way out of this?", value1="1.1", option2="I, I thought the stream was a public resource...", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Is this really the time for that? The troops are already on their way! It might take a little while though...
+[name="Liaison"]I ran over as soon as I heard, so stay sharp! Just a few days ago, another settlement was annexed for running too close to a wall.
+[name="Liaison"]You need money and resources to get a firm footing here. Speaking of which, I have just the product for you right here! Ta-da!
+[name="Liaison"]Sunvalley Industries' latest...
+[Decision(option1="(Interrupt him)", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]I-I see.
+[name="Liaison"]What a shame that our product can't meet your needs...
+[name="Liaison"]But surely you were ready for something like this when you settled in Sargon? Use what time you have to build up your defenses!
+[name="Liaison"]I heard that the Reefsteep Black Market sells base stations that can communicate across regions. With that, you could even contact mercenaries from outside and evacuate!
+[name="Liaison"]Best of all, you could escape with the loot! You know, make the best of a bad situation.
+[Decision(option1="Got it, we'll prepare.", value1="3.1", option2="We can just run away?", value2="3.2")]
+[predicate(references="3.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Alright then, no time to chat! You guys need to get ready. I'll be cheering for you!
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Anyway, you'll need to reinforce the blocks that they'll pass through. Research is important, too. And more buildings, of course...
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Understood. I'll get our supplies inventoried, and have everyone prepare for the attack.
+[name="Basil"]Guess conflict has a way of finding you no matter where you are. But I think we have the experience to fend this off.
+[name="Basil"]Afterward, we should talk about what to do going forward.
+[Decision(option1="And we have taxes to think about...", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]We should be getting ready for that too. I wonder how much we'll have to pay...
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]You think war is all fun and games? If you need our products to make it through, this is no time to pinch pennies!
+[name="Liaison"]Just remember, I'm rooting for you!
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]Old Isin sees your courage... A settlement full of youth and vitality is growing on the yellow sands.
+[name="Old Isin"]You will endure.
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]Hey, when did the old man show up?
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]What are you thinking? Old Isin cannot tell. He only came to fulfill his promise.
+[name="Old Isin"]Saplings that survive the sandstorms grow deeper roots and gather more water.
+[name="Old Isin"]Come to the black market when you have earned victory. 'Sand Soldier' will see you.
+[Decision(option1="Can we really survive out here?", value1="5.1", option2="We won't be bullied!", value2="5.2")]
+[predicate(references="5.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]It's not Old Isin's place to influence your decision.
+[name="Old Isin"]You will find your own answer.
+[SetConditionProgress(conditionKey="route_main", itemCount="4")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="5.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]...Old Isin was right.
+[name="Old Isin"]Accept this. It will help you see your future through the whirling sands...
+[Decision(option1="(Accept)", value1="6.1")]
+[predicate(references="6.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""](Received persistent token <Crystal Ball of Fate>)
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]...Good luck.
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="3.2")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Of course! How do you think I do busi-
+[name="Liaison"]Er, survive here!
+[name="Liaison"]Always analyze the situation and have an exit plan.
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Anyway, you'll need to reinforce the blocks that they'll pass through. Research is important, too. And more buildings, of course...
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Understood. I'll get our supplies inventoried, and have everyone prepare for the attack.
+[name="Basil"]Guess conflict has a way of finding you no matter where you are. But I think we have the experience to fend this off.
+[name="Basil"]Afterward, we should talk about what to do going forward.
+[Decision(option1="And we have taxes to think about...", value1="7.1")]
+[predicate(references="7.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]We should be getting ready for that too. I wonder how much we'll have to pay...
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]You think war is all fun and games? If you need our products to make it through, this is no time to pinch pennies!
+[name="Liaison"]Just remember, I'm rooting for you!
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]Old Isin sees your courage... A settlement full of youth and vitality is growing on the yellow sands.
+[name="Old Isin"]You will endure.
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]Hey, when did the old man show up?
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]What are you thinking? Old Isin cannot tell. He only came to fulfill his promise.
+[name="Old Isin"]Saplings that survive the sandstorms grow deeper roots and gather more water.
+[name="Old Isin"]Come to the black market when you have earned victory. 'Sand Soldier' will see you.
+[Decision(option1="Can we really survive out here?", value1="8.1", option2="We won't be bullied!", value2="8.2")]
+[predicate(references="8.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]It's not Old Isin's place to influence your decision.
+[name="Old Isin"]You will find your own answer.
+[SetConditionProgress(conditionKey="route_main", itemCount="4")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="8.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]...Old Isin was right.
+[name="Old Isin"]Accept this. It will help you see your future through the whirling sands...
+[Decision(option1="(Accept)", value1="9.1")]
+[predicate(references="9.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""](Received persistent token <Crystal Ball of Fate)
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]...Good luck.
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Is this really the time for that? The troops are already on their way! It might take a little while though...
+[name="Liaison"]I ran over as soon as I heard, so stay sharp! Just a few days ago, another settlement was annexed for running too close to a wall.
+[name="Liaison"]You need money and resources to get a firm footing here. Speaking of which, I have just the product for you right here! Ta-da!
+[name="Liaison"]Sunvalley Industries' latest...
+[Decision(option1="(Interrupt him)", value1="10.1")]
+[predicate(references="10.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]I-I see.
+[name="Liaison"]What a shame that our product can't meet your needs...
+[name="Liaison"]But surely you were ready for something like this when you settled in Sargon? Use what time you have to build up your defenses!
+[name="Liaison"]I heard that the Reefsteep Black Market sells base stations that can communicate across regions. With that, you could even contact mercenaries from outside and evacuate!
+[name="Liaison"]Best of all, you could escape with the loot! You know, make the best of a bad situation.
+[Decision(option1="Got it, we'll prepare.", value1="11.1", option2="We can just run away?", value2="11.2")]
+[predicate(references="11.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Alright then, no time to chat! You guys need to get ready. I'll be cheering for you!
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Anyway, you'll need to reinforce the blocks that they'll pass through. Research is important, too. And more buildings, of course...
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Understood. I'll get our supplies inventoried, and have everyone prepare for the attack.
+[name="Basil"]Guess conflict has a way of finding you no matter where you are. But I think we have the experience to fend this off.
+[name="Basil"]Afterward, we should talk about what to do going forward.
+[Decision(option1="And we have taxes to think about...", value1="12.1")]
+[predicate(references="12.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]We should be getting ready for that too. I wonder how much we'll have to pay...
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]You think war is all fun and games? If you need our products to make it through, this is no time to pinch pennies!
+[name="Liaison"]Just remember, I'm rooting for you!
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]Old Isin sees your courage... A settlement full of youth and vitality is growing on the yellow sands.
+[name="Old Isin"]You will endure.
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]Hey, when did the old man show up?
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]What are you thinking? Old Isin cannot tell. He only came to fulfill his promise.
+[name="Old Isin"]Saplings that survive the sandstorms grow deeper roots and gather more water.
+[name="Old Isin"]Come to the black market when you have earned victory. 'Sand Soldier' will see you.
+[Decision(option1="Can we really survive out here?", value1="13.1", option2="We won't be bullied!", value2="13.2")]
+[predicate(references="13.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]It's not Old Isin's place to influence your decision.
+[name="Old Isin"]You will find your own answer.
+[SetConditionProgress(conditionKey="route_main", itemCount="4")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="13.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]...Old Isin was right.
+[name="Old Isin"]Accept this. It will help you see your future through the whirling sands...
+[Decision(option1="(Accept)", value1="14.1")]
+[predicate(references="14.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""](Received persistent token <Crystal Ball of Fate>)
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]...Good luck.
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="11.2")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Of course! How do you think I do busi-
+[name="Liaison"]Er, survive here!
+[name="Liaison"]Always analyze the situation and have an exit plan.
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Anyway, you'll need to reinforce the blocks that they'll pass through. Research is important, too. And more buildings, of course...
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Understood. I'll get our supplies inventoried, and have everyone prepare for the attack.
+[name="Basil"]Guess conflict has a way of finding you no matter where you are. But I think we have the experience to fend this off.
+[name="Basil"]Afterward, we should talk about what to do going forward.
+[Decision(option1="And we have taxes to think about...", value1="15.1")]
+[predicate(references="15.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]We should be getting ready for that too. I wonder how much we'll have to pay...
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]You think war is all fun and games? If you need our products to make it through, this is no time to pinch pennies!
+[name="Liaison"]Just remember, I'm rooting for you!
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]Old Isin sees your courage... A settlement full of youth and vitality is growing on the yellow sands.
+[name="Old Isin"]You will endure.
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]Hey, when did the old man show up?
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]What are you thinking? Old Isin cannot tell. He only came to fulfill his promise.
+[name="Old Isin"]Saplings that survive the sandstorms grow deeper roots and gather more water.
+[name="Old Isin"]Come to the black market when you have earned victory. 'Sand Soldier' will see you.
+[Decision(option1="Can we really survive out here?", value1="16.1", option2="We won't be bullied!", value2="16.2")]
+[predicate(references="16.1")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]It's not Old Isin's place to influence your decision.
+[name="Old Isin"]You will find your own answer.
+[SetConditionProgress(conditionKey="route_main", itemCount="4")]
+[withdraw(charId="trap_415_trademan")]
+[End]
+[predicate(references="16.2")]
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]...Old Isin was right.
+[name="Old Isin"]Accept this. It will help you see your future through the whirling sands...
+[Decision(option1="(Accept)", value1="17.1")]
+[predicate(references="17.1")]
+[AddItem(itemId="sandbox_0_craft_6", itemCount="1")]
+[SetConditionProgress(conditionKey="market_isin", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""](Received persistent token <Crystal Ball of Fate>)
+[character(name="avg_npc_173", offsetX="100", offsetY="100")]
+[name="Old Isin"]...Good luck.
+[SetConditionProgress(conditionKey="route_main", itemCount="5")]
+[withdraw(charId="trap_415_trademan")]
+[End]

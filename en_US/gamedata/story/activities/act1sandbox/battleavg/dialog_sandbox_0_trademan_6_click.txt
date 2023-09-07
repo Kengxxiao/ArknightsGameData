@@ -1,0 +1,40 @@
+[HEADER(actId="act1sandbox", npcId="trap_415_trademan")] 
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]......
+[name="Liaison"]Oh, it's you.
+[Decision(option1="Where have you been?!", value1="1.1")]
+[predicate(references="1.1")]
+[Decision(option1="And the black market feels different, for some reason.", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Of course.
+[name="Liaison"]We lost a bunch of people... not too long ago. Did you just realize that?
+[Decision(option1="What about you? Still doing your sales pitches?", value1="3.1")]
+[predicate(references="3.1")]
+[Decision(option1="What about your Sunvalley goods?", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]By all means, peruse my wares.
+[name="Liaison"]But why limit yourself when there are so many quality goods all around you?
+[Decision(option1="Those stands belong to other people, don't they?", value1="5.1")]
+[predicate(references="5.1")]
+[character(name="avg_npc_803_1", offsetX="100", offsetY="100")]
+[name="Liaison"]Haha, don't worry about that, take your pick!
+[name="Liaison"]You can get anything here, whether from Columbia, Leithanien... and Sunvalley too, if you insist.
+[name="Liaison"]Thanks for keeping the secret, by the way. Please, take this.
+[Decision(option1="(Accept)", value1="6.1")]
+[predicate(references="6.1")]
+[AddItem(itemId="sandbox_0_craft_14", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""](Received persistent token <Sunvalley Business Card>)
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]What does this all mean? Something seems different with him.
+[name=""]And he's clearly dodging our questions.
+[name=""]We buy a few things and return to the settlement.
+[name=""]Venomfang, the lieutenant, the explosion, the threat... It's like none of it ever happened. No one came looking for us, although the Lord Ameer seems to have set his sights on us after his men died at the meeting.
+[name=""]Fortunately, we retrieved enough money to continue growing. Meanwhile, 'Sand Soldier' seems to have taken an increased interest in us for whatever reason.
+[name=""]Many mysteries remain, however. Where did the familiar merchants in the black market go? Why has the liaison stopped peddling his company's goods? And if Venomfang never existed, who was it who coerced us into that absurd and terrifying mission?
+[name=""]Last but not least, why are all the merchants reporting to the liaison whenever we buy something?
+[SetConditionProgress(conditionKey="route_trademan", itemCount="6")]
+[withdraw(charId="trap_415_trademan")]
+[End]

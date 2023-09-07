@@ -1,0 +1,29 @@
+[HEADER(actId="act1sandbox", npcId="trap_434_klmantc")] 
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="Manticore Killer"]So there are rumors like that... But you don't want to wrongly accuse anyone...?
+[name="Manticore Killer"]......
+[name="Manticore Killer"]Thank you... for coming to ask me.
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]There are only a few people saying it, but they're saying it a lot, and we have to deal with the fallout. We trust you, though, because you saved our lives.
+[name="Basil"]Show them where you stand, and we'll handle the rest.
+[Decision(option1="Do you remember Hess?", value1="1.1")]
+[predicate(references="1.1")]
+[Decision(option1="He got into a fight with the rumormongers over this.", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="Manticore Killer"]So more than one person is saying it...? I knew it...
+[name="Manticore Killer"]How could I earn everyone's trust... I'm an outsider...
+[name="Manticore Killer"]......
+[name="Manticore Killer"]Yes, I did it...
+[name="Manticore Killer"]Sorry...
+[Decision(option1="Wait, where are you going?!", value1="3.1")]
+[predicate(references="3.1")]
+[Decision(option1="...We didn't build that house for you to hide in!", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Did she just admit it...? That's impossible!
+[name="Basil"]I can't see her at all... what kind of Originium Arts is that?
+[name="Basil"]No, wait... There she is! That way!
+[SetConditionProgress(conditionKey="route_klmantic", itemCount="9")]
+[withdraw(charId="trap_434_klmantc")]
+[End]

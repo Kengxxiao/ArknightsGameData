@@ -1,0 +1,203 @@
+[HEADER(actId="act1sandbox", npcId="trap_435_trsrhuntr")] 
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Whoa! I was so focused I didn't notice you coming up behind me...
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Sorry, we didn't mean to surprise you.
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]It's okay. Look at this old gold coin I just cleaned up. Pretty, ain't she?
+[name="Treasure Hunter"]Ha, to think I'd meet a kindred spirit in a place like this!
+[name="Treasure Hunter"]I'm something of an expert treasure hunter, here to collect all sorts of antique gold coins!
+[Decision(option1="Treasure hunter! Awesome.", value1="1.1", option2="You seem pretty young to be an expert.", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]I don't mean to brag, but I'm confident in my skills.
+[name="Treasure Hunter"]I want to be an archaeologist, like my father.
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Gah, why'd I even bring him up? He left on an expedition a few years ago and never came back. End of story.
+[name="Treasure Hunter"]But forget that. Is that... a treasure map?
+[name="Treasure Hunter"]The old paper and faded text... Just imagine the sights it's seen... Huh, it's not in Sargonian...
+[name="Treasure Hunter"]Let's see... 'treasure,' 'rocks,' 'buried'...
+[Decision(option1="'Treasure'?", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]It's part of a longer phrase too... I think it means 'mountains of treasure.'
+[Decision(option1="'Mountains of treasure'!", value1="3.1")]
+[predicate(references="3.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Wow... With that we wouldn't have to worry about the Lord Ameer's taxes anymore, would we?
+[name="Basil"]They really don't leave us much to spend. All that hard work, and we barely get to enjoy any of it...
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]The language is pretty hard to decipher. Do you understand it? I'm impressed.
+[Decision(option1="Nope, not at all.", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Oh... so you're just guessing? Well, why don't you bring me along then?
+[name="Treasure Hunter"]You don't see maps like this every day. Someone drew it decades ago, maybe centuries. Picture it, one map, right here, linking us to our forefathers. To seek their treasure is also to uncover their history.
+[name="Treasure Hunter"]Incredible, isn't it?
+[name="Treasure Hunter"]......
+[name="Treasure Hunter"]Hey, you're just nodding along blindly, aren't you?
+[name="Treasure Hunter"]...You've only just now started studying the map?
+[name="Treasure Hunter"]...We're not colleagues in the same field at all, are we?
+[Decision(option1="We're famous Columbian archaeologists.", value1="5.1", option2="Nope.", value2="5.2")]
+[predicate(references="5.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Yeah, and I'm the pope of Laterano!
+[name="Treasure Hunter"]Ahem... I mean, just be honest. No archaeologist worth their salt would carry around a valuable map like that unprotected.
+[name="Treasure Hunter"]You're just normal folks who stumbled on it, aren't you?
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Finding that treasure would let us pay the Lord Ameer's taxes, expand our settlement, improve our relationship with the black market...
+[name="Basil"]A black market mogul offered his help earlier, but a lot of time has passed, and maybe we let him down somehow.
+[name="Basil"]This money would solve so many problems! We wouldn't have to hunt and mine all day! We could just sit around and live the high life!
+[Decision(option1="(Talk about how you found it)", value1="6.1")]
+[predicate(references="6.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Old Isin? The soothsayer at the black market?
+[name="Treasure Hunter"]I asked him some questions, and he told me that I might find the one I'd been looking for for years on this journey. He sure is mysterious...
+[name="Treasure Hunter"]So, would you like the services of a professional treasure hunter? I can translate the text for you.
+[name="Treasure Hunter"]Incidentally, I'm here to find some ruins and a certain someone. I'm definitely not asking for a share of the treasure! C'mon, please?
+[Decision(option1="Why should we trust you?", value1="7.1", option2="Why not? Welcome aboard.", value2="7.2")]
+[predicate(references="7.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]......
+[name="Treasure Hunter"]I understand, it's your map, not mine. I got ahead of myself.
+[SetConditionProgress(conditionKey="route_main", itemCount="12")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="5")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="7.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Thank you so much! I won't let you down!
+[name="Treasure Hunter"]I'll be back in a few days with the translation!
+[SetConditionProgress(conditionKey="route_main", itemCount="13")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="6")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="5.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]I see... I let my excitement get to me. You were holding the map with your bare hands, after all...
+[name="Treasure Hunter"]May I ask how you came across it?
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Finding that treasure would let us pay the Lord Ameer's taxes, expand our settlement, improve our relationship with the black market...
+[name="Basil"]A black market mogul offered his help earlier, but a lot of time has passed, and maybe we let him down somehow.
+[name="Basil"]This money would solve so many problems! We wouldn't have to hunt and mine all day! We could just sit around and live the high life!
+[Decision(option1="(Talk about how you found it)", value1="8.1")]
+[predicate(references="8.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Old Isin? The soothsayer at the black market?
+[name="Treasure Hunter"]I asked him some questions, and he told me that I might find the one I'd been looking for for years on this journey. He sure is mysterious...
+[name="Treasure Hunter"]So, would you like the services of a professional treasure hunter? I can translate the text for you.
+[name="Treasure Hunter"]Incidentally, I'm here to find some ruins and a certain someone. I'm definitely not asking for a share of the treasure! C'mon, please?
+[Decision(option1="Why should we trust you?", value1="9.1", option2="Why not? Welcome aboard.", value2="9.2")]
+[predicate(references="9.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]......
+[name="Treasure Hunter"]I understand, it's your map, not mine. I got ahead of myself.
+[SetConditionProgress(conditionKey="route_main", itemCount="12")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="5")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="9.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Thank you so much! I won't let you down!
+[name="Treasure Hunter"]I'll be back in a few days with the translation!
+[SetConditionProgress(conditionKey="route_main", itemCount="13")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="6")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]What? Don't you dare look down on me because of my age.
+[name="Treasure Hunter"]All the old fools who used to now come to me for my expert opinion.
+[name="Treasure Hunter"]Even Dad, with all his accomplishments, used to praise my work.
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Gah, why'd I even bring him up? He left on an expedition a few years ago and never came back. End of story.
+[name="Treasure Hunter"]But forget that. Is that... a treasure map?
+[name="Treasure Hunter"]The old paper and faded text... Just imagine the sights it's seen... Huh, it's not in Sargonian...
+[name="Treasure Hunter"]Let's see... 'treasure,' 'rocks,' 'buried'...
+[Decision(option1="'Treasure'?", value1="10.1")]
+[predicate(references="10.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]It's part of a longer phrase too... I think it means 'mountains of treasure.'
+[Decision(option1="'Mountains of treasure'!", value1="11.1")]
+[predicate(references="11.1")]
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Wow... With that we wouldn't have to worry about the Lord Ameer's taxes anymore, would we?
+[name="Basil"]They really don't leave us much to spend. All that hard work, and we barely get to enjoy any of it...
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]The language is pretty hard to decipher. Do you understand it? I'm impressed.
+[Decision(option1="Nope, not at all.", value1="12.1")]
+[predicate(references="12.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Oh... so you're just guessing? Well, why don't you bring me along then?
+[name="Treasure Hunter"]You don't see maps like this every day. Someone drew it decades ago, maybe centuries. Picture it, one map, right here, linking us to our forefathers. To seek their treasure is also to uncover their history.
+[name="Treasure Hunter"]Incredible, isn't it?
+[name="Treasure Hunter"]......
+[name="Treasure Hunter"]Hey, you're just nodding along blindly, aren't you?
+[name="Treasure Hunter"]...You've only just now started studying the map?
+[name="Treasure Hunter"]...We're not colleagues in the same field at all, are we?
+[Decision(option1="We're famous Columbian archaeologists.", value1="13.1", option2="Nope.", value2="13.2")]
+[predicate(references="13.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Yeah, and I'm the pope of Laterano!
+[name="Treasure Hunter"]Ahem... I mean, just be honest. No archaeologist worth their salt would carry around a valuable map like that unprotected.
+[name="Treasure Hunter"]You're just normal folks who stumbled on it, aren't you?
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Finding that treasure would let us pay the Lord Ameer's taxes, expand our settlement, improve our relationship with the black market...
+[name="Basil"]A black market mogul offered his help earlier, but a lot of time has passed, and maybe we let him down somehow.
+[name="Basil"]This money would solve so many problems! We wouldn't have to hunt and mine all day! We could just sit around and live the high life!
+[Decision(option1="(Talk about how you found it)", value1="14.1")]
+[predicate(references="14.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Old Isin? The soothsayer at the black market?
+[name="Treasure Hunter"]I asked him some questions, and he told me that I might find the one I'd been looking for for years on this journey. He sure is mysterious...
+[name="Treasure Hunter"]So, would you like the services of a professional treasure hunter? I can translate the text for you.
+[name="Treasure Hunter"]Incidentally, I'm here to find some ruins and a certain someone. I'm definitely not asking for a share of the treasure! C'mon, please?
+[Decision(option1="Why should we trust you?", value1="15.1", option2="Why not? Welcome aboard.", value2="15.2")]
+[predicate(references="15.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]......
+[name="Treasure Hunter"]I understand, it's your map, not mine. I got ahead of myself.
+[SetConditionProgress(conditionKey="route_main", itemCount="12")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="5")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="15.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Thank you so much! I won't let you down!
+[name="Treasure Hunter"]I'll be back in a few days with the translation!
+[SetConditionProgress(conditionKey="route_main", itemCount="13")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="6")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="13.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]I see... I let my excitement get to me. You were holding the map with your bare hands, after all...
+[name="Treasure Hunter"]May I ask how you came across it?
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="Basil"]Finding that treasure would let us pay the Lord Ameer's taxes, expand our settlement, improve our relationship with the black market...
+[name="Basil"]A black market mogul offered his help earlier, but a lot of time has passed, and maybe we let him down somehow.
+[name="Basil"]This money would solve so many problems! We wouldn't have to hunt and mine all day! We could just sit around and live the high life!
+[Decision(option1="(Talk about how you found it)", value1="16.1")]
+[predicate(references="16.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Old Isin? The soothsayer at the black market?
+[name="Treasure Hunter"]I asked him some questions, and he told me that I might find the one I'd been looking for for years on this journey. He sure is mysterious...
+[name="Treasure Hunter"]So, would you like the services of a professional treasure hunter? I can translate the text for you.
+[name="Treasure Hunter"]Incidentally, I'm here to find some ruins and a certain someone. I'm definitely not asking for a share of the treasure! C'mon, please?
+[Decision(option1="Why should we trust you?", value1="17.1", option2="Why not? Welcome aboard.", value2="17.2")]
+[predicate(references="17.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]......
+[name="Treasure Hunter"]I understand, it's your map, not mine. I got ahead of myself.
+[SetConditionProgress(conditionKey="route_main", itemCount="12")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="5")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="17.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="Treasure Hunter"]Thank you so much! I won't let you down!
+[name="Treasure Hunter"]I'll be back in a few days with the translation!
+[SetConditionProgress(conditionKey="route_main", itemCount="13")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="6")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]

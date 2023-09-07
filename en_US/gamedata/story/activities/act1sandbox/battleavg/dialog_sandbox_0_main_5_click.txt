@@ -1,0 +1,64 @@
+[HEADER(actId="act1sandbox", npcId="trap_433_sandsdr")] 
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'Sand Soldier'"]You're from that settlement Old Isin was talking about?
+[name="'Sand Soldier'"]It's an honor to provide you assistance.
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]We got an audience with the 'Sand Soldier' so easily?
+[name=""]Looks like that old man wasn't just messing with us.
+[name=""]But to meet the overlord of the black market so easily...
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'Sand Soldier'"]No need to be nervous. The Reefsteep Black Market is simply a channel for goods and services. I'm a businessman myself.
+[name="'Sand Soldier'"]You pay money to get help, and I take my cut.
+[name="'Sand Soldier'"]That's why I was happy to get in touch with you. There's plenty of business for us to do.
+[name="'Sand Soldier'"]No need to be impatient, either. We've only just met.
+[Decision(option1="(Accept)", value1="1.1")]
+[predicate(references="1.1")]
+[AddItem(itemId="sandbox_0_building_8", itemCount="4")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""](Received 4 Urban Style Barrier I)
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'Sand Soldier'"]To commemorate our meeting, so to speak.
+[name="'Sand Soldier'"]But it seems you have questions?
+[name="'Sand Soldier'"]Go ahead. I wouldn't want to leave you with doubt in your hearts.
+[Decision(option1="Why did you choose us?", value1="2.1")]
+[predicate(references="2.1")]
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'Sand Soldier'"]...How direct.
+[name="'Sand Soldier'"]What if I told you that I'd had my eyes on you for a while?
+[name="'Sand Soldier'"]......
+[name="'Sand Soldier'"]Ah, I see that some of you are getting jittery. Lower your weapons. You lack the capital to fight me on my home turf.
+[name="'Sand Soldier'"]Simply put, the Reefsteep Black Market wants to do business.
+[name="'Sand Soldier'"]Any settlement that establishes a foothold in the sands is worth my attention. I see potential profit in you.
+[name="'Sand Soldier'"]Is that a satisfactory answer?
+[Decision(option1="Yes.", value1="3.1", option2="No.", value2="3.2")]
+[predicate(references="3.1")]
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'Sand Soldier'"]Well then, I think this is the beginning of a beautiful partnership.
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'Sand Soldier'"]Though, while we're here, have you decided on what your next goal is, after you return?
+[name="'Sand Soldier'"]And on a related note, I have a bit of information you might find interesting.
+[name="'Sand Soldier'"]The Lord Ameer is highly interested in everything going on in his territory, and you are no exception. The stream itself is proof enough.
+[name="'Sand Soldier'"]This has nothing to do with my personal interests, mind you, just some friendly advice for someone trying to get established here.
+[SetConditionProgress(conditionKey="route_main", itemCount="6")]
+[withdraw(charId="trap_433_sandsdr")]
+[End]
+[predicate(references="3.2")]
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'Sand Soldier'"]Hm.
+[name="'Sand Soldier'"]You're just a newly-established settlement. But now you've piqued my interest.
+[name="'Sand Soldier'"]You're few in number, but every life is precious. Aside from that, though, what do you have to offer me?
+[Decision(option1="Anger.", value1="4.1")]
+[predicate(references="4.1")]
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'Sand Soldier'"]A new tribe settles down, and the local chieftain fires a warning shot, all over a plot of barren land by a stream.
+[name="'Sand Soldier'"]That's why you're angry.
+[name="'Sand Soldier'"]Still, not bad for a first introduction.
+[name="'Sand Soldier'"]As always, I'm happy to provide assistance.
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'Sand Soldier'"]Though, while we're here, have you decided on what your next goal is, after you return?
+[name="'Sand Soldier'"]And on a related note, I have a bit of information you might find interesting.
+[name="'Sand Soldier'"]The Lord Ameer is highly interested in everything going on in his territory, and you are no exception. The stream itself is proof enough.
+[name="'Sand Soldier'"]This has nothing to do with my personal interests, mind you, just some friendly advice for someone trying to get established here.
+[SetConditionProgress(conditionKey="route_main", itemCount="6")]
+[withdraw(charId="trap_433_sandsdr")]
+[End]

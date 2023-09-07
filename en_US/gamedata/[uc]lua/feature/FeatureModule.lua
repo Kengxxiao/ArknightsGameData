@@ -1,8 +1,9 @@
+require "Feature/ResDefines"
+require "Feature/AudioConsts"
+require "Feature/Supportor/SupportorModule"
+
 require "Feature/Main/MainDlg"
 require "Feature/Main/TestDlg"
-
-require "Feature/ResDefines"
-require "Feature/Supportor/SupportorModule"
 
 require "Feature/Activity/Collection/CollectionItem"
 require "Feature/Activity/Collection/CollectionMainDlg"
@@ -17,6 +18,8 @@ require "Feature/Activity/LoginOnly/NoEntryLoginOnlyDlg"
 require "Feature/Activity/PrayOnly/PrayOnlyDefine"
 require "Feature/Activity/PrayOnly/PrayOnlyMainDlg"
 require "Feature/Activity/PrayOnly/PrayOnlyActDefines"
+
+require "Feature/Activity/ActFlip/ActFlipMainDlg"
 
 require "Feature/Activity/LuaActivityUtil"
 
@@ -40,6 +43,9 @@ require "Feature/Activity/FloatParade/FloatParadeRewardRulePanel"
 require "Feature/Activity/FloatParade/FloatParadeRecycleDayListAdapter"
 require "Feature/Activity/FloatParade/FloatParadeTacticTab"
 require "Feature/Activity/FloatParade/FloatParadeMainDlg"
+
+require "Feature/Activity/MainlineBuff/MainlineBuffDefine"
+require "Feature/Activity/MainlineBuff/MainlineBuffMainDlg"
 
 require "Feature/Wardrobe/WardrobeModule"
 

@@ -76,6 +76,16 @@ function UISimpleLayoutAdapter:NotifyDataSetChanged()
 end
 
 
+function UISimpleLayoutAdapter:FindViewByIndex(index)
+  if not self.m_bridge then
+    return nil
+  end
+  
+  local obj = self.m_bridge:GetView(index)
+  return self:_FindViewByObj(obj)
+end
+
+
 function UISimpleLayoutAdapter:_FindViewByObj(gameObj)
   for i, item in ipairs(self.m_viewList) do
     if item.obj == gameObj then
