@@ -83,3 +83,44 @@ end
 function SetGameObjectActive(go, active)
   CS.Torappu.Lua.Util.SetActiveIfNecessary(go, active);
 end
+
+
+
+
+function RemoveIf(array, func)
+  local cnt = #array;
+  if cnt <= 0 then
+    return;
+  end
+
+  local validPos = 0;
+  for idx = 1, cnt do
+    if not func(array[idx]) then
+      validPos = validPos + 1;
+      array[validPos] = array[idx];
+    end
+  end
+  for idx = validPos+1, cnt do
+    table.remove(array);
+  end
+end
+
+
+
+
+
+function FindIndex(array, element)
+  for idx, value in ipairs(array) do
+    if value == element then
+      return idx;
+    end
+  end
+  return -1;
+end
+
+function YieldWaitForSeconds(seconds)
+  local startTime = CS.UnityEngine.Time.time;
+  while CS.UnityEngine.Time.time < startTime + seconds do
+    coroutine.yield();
+  end
+end

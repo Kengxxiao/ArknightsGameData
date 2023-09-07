@@ -7,19 +7,25 @@ local eutil = CS.Torappu.Lua.Util
 
 
 
+
+
+
+
+
 TweenItem = Class("TweenItem")
 
 TweenItem.DEFAULT_DUR = 0.1
 
-function TweenItem:ctor(duration, delay)
-  self.m_startTick = eutil.GetCurrentTicks()
+function TweenItem:ctor(duration, delay, watch)
+  self.m_watch = watch;
+  self.m_startTick = self.m_watch.GetCurrentTime();
   if delay ~= nil and delay ~= 0 then
-    self.m_startTick = self.m_startTick + delay * 1000 * 10000
+    self.m_startTick = self.m_startTick + self.m_watch.ConvertTimeUnit(delay);
   end
   if duration == nil or duration == 0 then
     duration = TweenItem.DEFAULT_DUR
   end
-  self.m_endTick = self.m_startTick + duration * 1000 * 10000
+  self.m_endTick = self.m_startTick + self.m_watch.ConvertTimeUnit(duration);
 end
 
 function TweenItem:IsAlive()
@@ -50,7 +56,7 @@ function TweenItem:_Coroutine()
   local setter = self.m_setFunc
 
   while not isFinished do
-    local curTick = eutil.GetCurrentTicks()
+    local curTick = self.m_watch.GetCurrentTime();
 
     if curTick >= s then 
       local k = (curTick - s) / (e - s) 
@@ -83,13 +89,39 @@ TweenModel = ModelMgr.DefineModel("TweenModel")
 
 
 function TweenModel:Play(config)
-  local tween = TweenItem.new(config.duration, config.delay)
+  local watch = TweenModel.Watches.TickWatch;
+  if config.timeScaled then
+    watch = TweenModel.Watches.TimeWatch;
+  end
+  local tween = TweenItem.new(config.duration, config.delay, watch)
   tween.m_easeFunc = config.easeFunc
   tween.m_setFunc = config.setFunc
   tween.m_onComplete = config.onComplete
   tween.m_coroutine = CoroutineModel.me:StartCoroutine(tween._Coroutine, tween)
   return tween
 end
+
+TweenModel.Watches = {};
+
+TweenModel.Watches.TickWatch = 
+{
+  GetCurrentTime = function()
+    return eutil.GetCurrentTicks();
+  end,
+  ConvertTimeUnit = function(timeSec)
+    return timeSec * 1000 * 10000;
+  end,
+};
+
+TweenModel.Watches.TimeWatch = 
+{
+  GetCurrentTime = function()
+    return CS.UnityEngine.Time.time;
+  end,
+  ConvertTimeUnit = function(timeSec)
+    return timeSec;
+  end,
+};
 
 TweenModel.EaseFunc = {};
 TweenModel.EaseFunc.easeOutQuad =  function(x)

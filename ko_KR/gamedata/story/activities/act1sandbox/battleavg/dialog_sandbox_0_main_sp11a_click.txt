@@ -1,0 +1,18 @@
+[HEADER(actId="act1sandbox", npcId="trap_435_trsrhuntr")] 
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="트레져헌터"]역시, 여러분에게 전문가인 제 도움이 필요할 줄 알았어요. 그렇죠?
+[name="트레져헌터"]제가 위에 적힌 모든 정보를 해독할 테니까 저를 꼭 믿어주세요!
+[Decision(option1="그냥 지나가던 길이야.", value1="1.1", option2="그럼 부탁할게!", value2="1.2")]
+[predicate(references="1.1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="트레져헌터"]앗…… 네네.
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="1.2")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="트레져헌터"]정말 감사합니다! 절 믿어준 여러분을 실망시키지 않을게요!
+[name="트레져헌터"]며칠 뒤에 해독한 정보를 들고 여러분을 다시 찾아올게요!
+[SetConditionProgress(conditionKey="route_main", itemCount="13")]
+[SetConditionProgress(conditionKey="route_main_a", itemCount="6")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]

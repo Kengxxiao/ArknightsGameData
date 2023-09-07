@@ -30,7 +30,7 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
-ActFun3BattleFinishDlg = DlgMgr.DefineDialog("ActFun3BattleFinishDlg", "Activity/ActFun/actfun3_battle_finish", DlgBase);
+ActFun3BattleFinishDlg = DlgMgr.DefineDialog("ActFun3BattleFinishDlg", "Activity/ActFun/Actfun3/BattleFinish/actfun3_battle_finish", DlgBase);
 local ActFun3BattleFinishViewModel = require("Feature/Operation/ActFun/ActFun3BattleFinishViewModel");
 
 local ANIM_KEY_WIN = "anim_win"

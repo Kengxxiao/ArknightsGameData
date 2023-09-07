@@ -45,7 +45,7 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
-ActFun3MainDlg = DlgMgr.DefineDialog("ActFun3MainDlg", "Activity/ActFun/actfun3_dlg", DlgBase)
+ActFun3MainDlg = DlgMgr.DefineDialog("ActFun3MainDlg", "Activity/ActFun/Actfun3/actfun3_dlg", DlgBase)
 
 ActFun3MainDlg.DLG_NAME = "fun3"
 

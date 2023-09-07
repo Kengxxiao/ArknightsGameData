@@ -132,6 +132,14 @@ function UIDlgGroup:SwitchChildDlg(dlgCls)
   return newDlg
 end
 
+function UIDlgGroup:GetTopDlg()
+  if not self.m_childDlgs then
+    return nil;
+  end
+  local lastIdx = #self.m_childDlgs
+  return self.m_childDlgs[lastIdx]
+end
+
 function UIDlgGroup:_CheckTransitting()
   local trans = self:IsTransitting();
   if trans then

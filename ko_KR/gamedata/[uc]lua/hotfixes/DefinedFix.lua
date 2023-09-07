@@ -2,14 +2,12 @@
 local list = 
 {
   
-  "HotFixes/HoleTileHotfixer",
   "HotFixes/ShopHotfixer",
-  "HotFixes/Act33SignRedpackDetailViewHotfixer",
-  "HotFixes/SandboxGameModeHotfixer",
-  "HotFixes/AdvancedSelectorInSandboxHotfixer",
-  "HotFixes/MultiRangedAttackHotfixer",
-  "HotFixes/SandboxHotfixer",
-  "HotFixes/StormManagerHotfixer",
+  "HotFixes/HandbookHotfixer",
+  "HotFixes/TileHotfixer",
+  "HotFixes/MhwrctSkill_1Hotfixer",
+  "HotFixes/MhwrbgSkill_1Hotfixer",
+  "HotFixes/Yato2Skill_2Hotfixer"
 };
 
 return list;

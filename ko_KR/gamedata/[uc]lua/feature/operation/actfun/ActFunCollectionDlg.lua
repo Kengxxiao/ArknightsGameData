@@ -12,6 +12,7 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
+
 ActFunCollectionDlg = DlgMgr.DefineDialog("ActFunCollectionDlg", "Activity/ActFun/actfun_collection_dlg", DlgBase)
 local AprilFoolCollectionItem = require("Feature/Operation/ActFun/ActFunCollectionItem");
 
@@ -19,6 +20,7 @@ function ActFunCollectionDlg:OnInit()
   self:_BindAndRenderItem(self._layout1Item, self:_CheckCollection2020Completed(), ActFun1MainDlg)
   self:_BindAndRenderItem(self._layout2Item, self:_CheckCollection2021Completed(), ActFun2MainDlg)
   self:_BindAndRenderItem(self._layout3Item, self:_CheckCollection2022Completed(), ActFun3MainDlg)
+  self:_BindAndRenderItem(self._layout4Item, self:_CheckCollection2023Completed(), ActFun4MainDlg)
 end
 
 function ActFunCollectionDlg:_BindAndRenderItem(layoutItem, isActCompleted, cls)
@@ -51,6 +53,19 @@ function ActFunCollectionDlg:_CheckCollection2022Completed()
   local state2Compeleted = self:_CheckAprilFoolStageCompeleted(self._stage2022Id2)
   local state3Compeleted = self:_CheckAprilFoolStageCompeleted(self._stage2022Id3)
   return state1Compeleted and state2Compeleted and state3Compeleted
+end
+
+function ActFunCollectionDlg:_CheckCollection2023Completed()
+  local playerData = CS.Torappu.PlayerData.instance.data.playerAprilFool
+  if playerData == nil or playerData.actFun4 == nil or playerData.actFun4.missions == nil then
+    return false
+  end
+  for missionId, playerMission in pairs(playerData.actFun4.missions) do
+    if not playerMission.finished or not playerMission.hasRecv then
+      return false
+    end
+  end
+  return true
 end
 
 function ActFunCollectionDlg:_CheckStageCompeleted(stageId)

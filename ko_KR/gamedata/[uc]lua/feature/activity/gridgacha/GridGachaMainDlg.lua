@@ -209,7 +209,7 @@ function GridGachaMainDlg:_RefreshTextsAndButtons()
 
   if self.m_viewModel:HasGacha() then
     self._imgFinish1.sizeDelta = {x = 192, y = 10};
-    self._textGroup1.sizeDelta = {x = 225, y = 52};
+    self._textGroup1.sizeDelta = {x = 200, y = 52};
     self._textGroup2.sizeDelta = {x = 200, y = 52};
     self._textGroup3.sizeDelta = {x = 200, y = 52};
     self._textGroup4.sizeDelta = {x = 200, y = 34};
@@ -507,7 +507,7 @@ function GridGachaMainDlg:_OnGetRewardResponse(response)
     self:_InitSound(SOUND_SIGNAL_REWARD);
     self._imgTri1:DOFade(1, 0.3);
     self._rectTri1:DOAnchorPos({x = -72, y = 95, z = 0}, 0.3);
-    self._textGroup1:DOSizeDelta({x = 225, y = 52, z = 0}, 0.6);
+    self._textGroup1:DOSizeDelta({x = 192, y = 52, z = 0}, 0.6);
   end);
   self:Interval(7.5, 1, function()
     self._imgFinish1:DOSizeDelta({x = 192, y = 10, z = 0}, 0.6);

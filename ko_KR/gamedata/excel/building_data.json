@@ -10395,6 +10395,90 @@
           "buffData": []
         }
       ]
+    },
+    "char_1029_yato2": {
+      "charId": "char_1029_yato2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost&bd2[010]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_token_prod_spd2[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_1030_noirc2": {
+      "charId": "char_1030_noirc2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_bd2[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_token_tra_spd[000]",
+              "cond": {
+                "phase": 2,
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4077_palico": {
+      "charId": "char_4077_palico",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&limit&bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd&limit&bd[000]",
+              "cond": {
+                "phase": 0,
+                "level": 30
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -10421,6 +10505,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, <@cc.kw>2</>대 이상의 <$cc.tag.op><@cc.kw>작업 플랫폼</></>이 <@cc.kw>발전소</>에 배치된 경우, 모든 제조소의 생산력 <@cc.vup>+2%</> (동종 효과 중 가장 높은 수치만 적용)"
+    },
+    "control_token_prod_spd2[000]": {
+      "buffId": "control_token_prod_spd2[000]",
+      "buffName": "솔선수범",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_token_p_spd2",
+      "sortId": 1610,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "<$cc.tag.mh><@cc.kw>아이루와 유쾌한 친구들</></> 오퍼레이터와 함께 제어 센터에 배치 시, 모든 제조소의 생산력 <@cc.vup>+2%</> (동종 효과 중 가장 높은 수치만 적용)"
+    },
+    "control_token_tra_spd[000]": {
+      "buffId": "control_token_tra_spd[000]",
+      "buffName": "비전 교섭술",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_token_t_spd",
+      "sortId": 1611,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "<$cc.tag.mh><@cc.kw>아이루와 유쾌한 친구들</></> 오퍼레이터와 함께 제어 센터에 배치 시, 모든 무역소의 오더 수주 효율 <@cc.vup>+7%</> (동종 효과 중 가장 높은 수치만 적용)"
     },
     "control_pow_bot[000]": {
       "buffId": "control_pow_bot[000]",
@@ -10794,6 +10902,18 @@
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, <$cc.c.room2><@cc.kw>기타 시설</></>의 작업 중인 오퍼레이터의 시간당 컨디션 회복 <@cc.vup>+0.05</>, 동시에 <$cc.bd_b1><@cc.rem>속세의 화식</></> <@cc.vup>20</>당 추가로 <@cc.vup>+0.05</> (제어 센터의 버프와 <$cc.c.sui2_1><@cc.rem>특별 비교 규칙</></> 적용)"
     },
+    "control_mp_cost&bd2[010]": {
+      "buffId": "control_mp_cost&bd2[010]",
+      "buffName": "내구력 회복",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost_felyne",
+      "sortId": 1011,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 자신의 시간당 컨디션 소모 <@cc.vdown>+0.5</>, <$cc.bd_felyne><@cc.rem>아이룰루</></> <@cc.vup>+8</>"
+    },
     "control_facCostReset[000]": {
       "buffId": "control_facCostReset[000]",
       "buffName": "멈추지 않는 술잔",
@@ -10841,6 +10961,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.g.ussg><@cc.kw>우르수스 학생자치단</> 오퍼레이터가 1명 증가할 때마다 <$cc.bd_tachanka><@cc.rem>우르수스 특제 음료</></> <@cc.vup>+1</>"
+    },
+    "control_mp_bd2[000]": {
+      "buffId": "control_mp_bd2[000]",
+      "buffName": "팀워크",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_felyne",
+      "sortId": 1021,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "제어 센터에 배치 시, 제어 센터 내 <$cc.tag.mh><@cc.kw>아이루와 유쾌한 친구들</></> 오퍼레이터 1명이 늘어날 때마다 <$cc.bd_felyne><@cc.rem>아이룰루</></> <@cc.vup>+2</>"
     },
     "control_mp_aegir1[000]": {
       "buffId": "control_mp_aegir1[000]",
@@ -11417,6 +11549,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "제조소에 배치 시, 창고 용량 상한 <@cc.vup>+10</>, 생산력 <@cc.vup>+10%</>"
+    },
+    "manu_prod_spd&limit&bd[000]": {
+      "buffId": "manu_prod_spd&limit&bd[000]",
+      "buffName": "믿음직한 동반자들",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd&limit_felyne",
+      "sortId": 3411,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "제조소에 배치 시, 창고 용량 상한 <@cc.vup>+8</>, 생산력 <@cc.vup>+5%</>, <$cc.bd_felyne><@cc.rem>아이룰루</></>가 1개 늘어날 때마다 생산력 <@cc.vup>+1%</>"
     },
     "manu_prod_limit&cost[000]": {
       "buffId": "manu_prod_limit&cost[000]",
@@ -12437,6 +12581,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "<@cc.kw>라플란드</>와 함께 무역소에 배치 시, 시간당 컨디션 소모 <@cc.vdown>+0.3</>, 오더 수주 효율 <@cc.vup>+65%</>"
+    },
+    "trade_ord_spd&limit&bd[000]": {
+      "buffId": "trade_ord_spd&limit&bd[000]",
+      "buffName": "귀요미 아이루",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd&limit_felyne",
+      "sortId": 4101,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "무역소에 배치 시, 오더 수주 효율 <@cc.vup>+5%</>, 오더 상한 <@cc.vup>+2</>, <$cc.bd_felyne><@cc.rem>아이룰루</></>가 1개 늘어날 때마다 오더 수주 효율 <@cc.vup>+3%</>"
     },
     "trade_ord_limit&cost_P[010]": {
       "buffId": "trade_ord_limit&cost_P[010]",
@@ -48635,6 +48791,470 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_eastern_cabinet_01": {
+        "id": "furni_eastern_cabinet_01",
+        "sortId": 1162,
+        "name": "고전식 장롱",
+        "iconId": "furni_eastern_cabinet_01",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 2,
+        "depth": 4,
+        "height": 7,
+        "comfort": 245,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "고풍스럽고 우아한 목제 장롱이 위에 올려놓은 화분과 한 몸이 되었다. 꽃잎은 메말라 떨어졌지만, 아무도 이 경치를 망치고 싶지 않아 장롱도 화분과 함께 자연스럽게 감상의 대상이 되었다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_tatami_01": {
+        "id": "furni_eastern_tatami_01",
+        "sortId": 1163,
+        "name": "'다실'",
+        "iconId": "furni_eastern_tatami_01",
+        "type": "DECORATION",
+        "subType": "CATERING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 12,
+        "depth": 5,
+        "height": 4,
+        "comfort": 705,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "극동의 전통 다실 용품 세트. 붉게 타오른 장작에서는 타닥타닥 소리가 났고, 화로에 끓인 차는 색다른 느낌을 준다. 다다미에 붙어 있던 '불조심'이란 태그는 이미 타서 없어진 지 오래다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_plant_01": {
+        "id": "furni_eastern_plant_01",
+        "sortId": 1164,
+        "name": "소나무 분재",
+        "iconId": "furni_eastern_plant_01",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 205,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "꼬불꼬불 마른 나뭇가지의 소나무 분재. 조형에 상당한 노력을 들인 게 보인다. 푸른 빛은 온 힘을 향해 태양을 향해 뻗어 있고, 이런 얽매임에 되려 예술적 정취가 완성된다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_bed_01": {
+        "id": "furni_eastern_bed_01",
+        "sortId": 1165,
+        "name": "극동 나무 침대",
+        "iconId": "furni_eastern_bed_01",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 6,
+        "depth": 3,
+        "height": 3,
+        "comfort": 270,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "극동 스타일의 목제 침대. 미관을 위해 전통 목재 베개를 매치했지만, 이 침대에서 자면 왠지 다음날에 목이 불편할 것 같다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_leafScreen_01": {
+        "id": "furni_eastern_leafScreen_01",
+        "sortId": 1166,
+        "name": "추풍홍엽 병풍",
+        "iconId": "furni_eastern_leafScreen_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 10,
+        "depth": 1,
+        "height": 8,
+        "comfort": 395,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "《추풍홍엽도》가 그려져 있는 병풍. 널찍한 병풍으로 공간을 분리해 고요함의 미가 느껴진다. 병풍에 달린 옷걸이는 기능성을 보완하고 실용성마저 가미해, 요즘 평론가들의 예술적 취향에도 딱 들어맞는다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_pipeline_01": {
+        "id": "furni_eastern_pipeline_01",
+        "sortId": 1167,
+        "name": "'난류'",
+        "iconId": "furni_eastern_pipeline_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 9,
+        "depth": 4,
+        "height": 1,
+        "comfort": 180,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "난방을 공급하기 위해 만들어진 배관. 실내의 쾌적한 온도를 유지하는 중요한 역할을 맡고 있다. 과거 한 장인이 위에 꽃무늬로 조각하려 했지만, 안전상의 이유로 이 제안은 받아들여지지 않았다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_airCleaner_01": {
+        "id": "furni_eastern_airCleaner_01",
+        "sortId": 1168,
+        "name": "'청풍'",
+        "iconId": "furni_eastern_airCleaner_01",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_4",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 190,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "극동에서 만든 공기 청정기. 광고에 따르면 핵심 부품들은 전부 수제라고 한다. 공기 정화 기능은 별로지만, 숲속에서 느끼는 바람을 연출하는 기능은 일품이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_steps_01": {
+        "id": "furni_eastern_steps_01",
+        "sortId": 1169,
+        "name": "'등척'",
+        "iconId": "furni_eastern_steps_01",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 3,
+        "depth": 2,
+        "height": 2,
+        "comfort": 165,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "정교하게 만들어진 목제 계단. 한 걸음의 높이를 우아한 두 걸음으로 늘려 사용할 때마다 의식감을 준다고 한다. 뭐, 다른 가구에 비해 훨씬 많이 닳아 있지만.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_JapaneseScreen_01": {
+        "id": "furni_eastern_JapaneseScreen_01",
+        "sortId": 1170,
+        "name": "죽림수렵 병풍",
+        "iconId": "furni_eastern_JapaneseScreen_01",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 6,
+        "depth": 3,
+        "height": 9,
+        "comfort": 455,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "《죽림수렵도》가 그려져 있는 병풍. 앞에 놓여 있는 단검은 그림의 쓸쓸한 분위기를 더욱 돋보이게 한다. 튼튼한 나무 액자에 고리가 달려 있어 '최대한의 활용'이라는 평가를 받고 있다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_carpet_01": {
+        "id": "furni_eastern_carpet_01",
+        "sortId": 1171,
+        "name": "얼룩무늬 카펫",
+        "iconId": "furni_eastern_carpet_01",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 5,
+        "depth": 3,
+        "height": 1,
+        "comfort": 50,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "순수 수공업으로 만든 카펫. 얼룩무늬가 고급스러운 분위기를 자아낸다. 공장에서 찍어낸 같은 무늬의 카펫은 가격이 3분의 1밖에 안 되지만, 사람들은 이 카펫을 더욱 선호한다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_sling_01": {
+        "id": "furni_eastern_sling_01",
+        "sortId": 1172,
+        "name": "대나무 고리",
+        "iconId": "furni_eastern_sling_01",
+        "type": "CEILING",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 5,
+        "depth": 3,
+        "height": 6,
+        "comfort": 175,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "푸른 대나무를 이용해 만든 수제 천장 고리. 사실은 불안정한 구조 때문에 그 무엇도 이 고리에 걸어둘 수 없다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_dresser_01": {
+        "id": "furni_eastern_dresser_01",
+        "sortId": 1173,
+        "name": "극동 화장대",
+        "iconId": "furni_eastern_dresser_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 170,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "극동 스타일의 화장대. 반짝거리는 거울은 먼지 한 톨 없이 깨끗하다. 화장대의 아름다움은 그것을 사용하는 사람을 부끄럽게 만들 정도다.",
+        "obtainApproach": "가구상점 한정 구매",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_case_01": {
+        "id": "furni_eastern_case_01",
+        "sortId": 1174,
+        "name": "목제 장식장",
+        "iconId": "furni_eastern_case_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_2",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 190,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "대나무로 제작된 장식장. 주로 작은 소품을 보관할 때 사용된다. 정교한 투각 구조 때문에 보관하는 소품의 무게를 잘 고려해야 한다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_lamp_01": {
+        "id": "furni_eastern_lamp_01",
+        "sortId": 1175,
+        "name": "온화한 빛의 천장등",
+        "iconId": "furni_eastern_lamp_01",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 2,
+        "depth": 1,
+        "height": 1,
+        "comfort": 45,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "온화한 빛을 내뿜는 평범한 백열등. 특정 스타일의 인테리어 전용으로 지정되어 꽤 비싼 몸이 되었다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 4,
+        "quantity": 4
+      },
+      "furni_eastern_wallpaper_01": {
+        "id": "furni_eastern_wallpaper_01",
+        "sortId": 1176,
+        "name": "파노라마 디스플레이 (풍림)",
+        "iconId": "furni_eastern_wallpaper_01",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "극동의 가을 숲 풍경을 보여 주는 파노라마 디스플레이. “해가 저물고 가을바람이 불어오니, 단풍잎의 바스락 소리가 울려 퍼지고, 아름다운 꿈과 함께 잠에 든다.”",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_eastern_floor_01": {
+        "id": "furni_eastern_floor_01",
+        "sortId": 1177,
+        "name": "수수한 다다미",
+        "iconId": "furni_eastern_floor_01",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_eastern",
+        "groupId": "furni_set_eastern_1",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "부들로 엮어 만든 다다미. 수수한 색깔이 고상한 분위기를 자아내고 있다. 사람들은 다다미를 청결하기 보다는 주로 감상용으로 쓴다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_oct1st_deckChair_01": {
         "id": "furni_oct1st_deckChair_01",
         "sortId": 9998,
@@ -48683,7 +49303,7 @@
         "height": 7,
         "comfort": 140,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
-        "description": "애니메이션의 방영을 기념하여 특별 제작된 영사기. 필름에는 걸어온 역사가 새겨져 있고 화면에는 제작자의 심혈이 담겨 있지만, 작품을 영상화한 기쁨과 함께 관객들의 반응에 대한 불안감도 안고 있다.",
+        "description": "애니메이션 방영을 기념하여 특별 제작된 영사기. 필름에는 걸어온 역사가 새겨져 있고 화면에는 제작자의 심혈이 담겨 있지만, 작품을 영상화한 기쁨과 함께 관객들의 반응에 대한 불안감도 안고 있다.",
         "obtainApproach": "이벤트 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -50366,6 +50986,93 @@
         "comfort": 90,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "시원한 색감 덕분에 불어오는 바람마저 한층 더 상쾌한 느낌을 준다.\n안에 든 미니어처는 아쿠아핏 주변에서 흔히 보이는 파라솔, 튜브, 그리고 편안한 선베드 3종 세트이다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act35d3_sandboxTable_01": {
+        "id": "furni_act35d3_sandboxTable_01",
+        "sortId": 10063,
+        "name": "시뮬레이션 모래판",
+        "iconId": "furni_act35d3_sandboxTable_01",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 7,
+        "depth": 6,
+        "height": 5,
+        "comfort": 280,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "입체 프로젝터를 설치한 사판. 날짜와 일정을 계산하고, 실시간으로 이를 연산한다. 오아시스에는 생기가 넘쳤고, 부족은 번성했으며, 사해는 이 모든 것을 받아들였다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act36d0_grill_01": {
+        "id": "furni_act36d0_grill_01",
+        "sortId": 10064,
+        "name": "휴대용 바베큐 세트",
+        "iconId": "furni_act36d0_grill_01",
+        "type": "DECORATION",
+        "subType": "CATERING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 3,
+        "comfort": 120,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "손쉽게 조립 가능한 휴대용 바베큐 세트로, 덕분에 야외에서 고기 굽기가 너무 쉬워졌다.\n대신 화력이 너무 강하고 조절할 수도 없어, 고기를 먹느냐 마느냐는 굽는 사람의 기술에 달려 있다.",
+        "obtainApproach": "이벤트 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_act36d0_MaterialBox_01": {
+        "id": "furni_act36d0_MaterialBox_01",
+        "sortId": 10065,
+        "name": "경질 합금 수납함",
+        "iconId": "furni_act36d0_MaterialBox_01",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 3,
+        "depth": 3,
+        "height": 2,
+        "comfort": 120,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "경질 합금으로 제작된 수납함으로 상당히 견고하다.\n기존 제품은 수납 용량을 어느 정도 가늠할 수 있지만, 이 제품은 얼마나 많은 물건을 수납할 수 있는지 알 수 없다.",
         "obtainApproach": "이벤트 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -53353,6 +54060,35 @@
         "comfort": 105,
         "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
         "description": "컬럼비아 실험 기지 격납고 섬멸을 완료하고 보고를 제출하면 획득 가능한 기념품. 실험 기지 격납고의 소리가 아직도 귓가에 남아 울리는 듯하다.",
+        "obtainApproach": "섬멸 의뢰 보상",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_annihilation_s15_01": {
+        "id": "furni_annihilation_s15_01",
+        "sortId": 13013,
+        "name": "염국 용문의 메아리 (번화가)",
+        "iconId": "furni_annihilation_s15_01",
+        "type": "WALLDECO",
+        "subType": "ANNIHILATION",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 105,
+        "usage": "숙소를 꾸며 분위기 수치를 높일 수 있다.",
+        "description": "염국 용문 번화가 섬멸을 완료하고 보고를 제출하면 획득 가능한 기념품. 용문 번화가의 소리가 아직도 귓가에 남아 울리는 듯하다.",
         "obtainApproach": "섬멸 의뢰 보상",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -60412,7 +61148,7 @@
         "sortId": 41,
         "name": "촬영 마니아 스튜디오",
         "themeType": "LUCKY",
-        "desc": "로도스 아일랜드의 촬영 마니아들이 지은 스튜디오, 완벽한 설비와 프로패셔널한 솜씨는 오로지 좋은 작품을 촬영하기 위함이다.",
+        "desc": "로도스 아일랜드의 촬영 마니아들이 지은 스튜디오, 완벽한 설비와 프로페셔널한 솜씨는 오로지 좋은 작품을 촬영하기 위함이다.",
         "quickSetup": [
           {
             "furnitureId": "furni_photoStudio_changingRoom_01",
@@ -64581,6 +65317,153 @@
           "furni_reception_wallpaper_01",
           "furni_reception_floor_01"
         ]
+      },
+      "furni_set_eastern": {
+        "id": "furni_set_eastern",
+        "sortId": 69,
+        "name": "단풍잎 여관",
+        "themeType": "LINKAGE",
+        "desc": "극동의 시골 분위기가 물씬 풍기는 방, 아늑한 목조공간에서 손님들은 한가로운 가을을 만끽할 수 있다.",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 3,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 12,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 20,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_lamp_01",
+            "pos0": 29,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_case_01",
+            "pos0": 13,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_tatami_01",
+            "pos0": 5,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_steps_01",
+            "pos0": 8,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_sling_01",
+            "pos0": 9,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_bed_01",
+            "pos0": 26,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_leafScreen_01",
+            "pos0": 24,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_JapaneseScreen_01",
+            "pos0": 20,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_carpet_01",
+            "pos0": 26,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_dresser_01",
+            "pos0": 31,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_cabinet_01",
+            "pos0": 0,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_plant_01",
+            "pos0": 19,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_pipeline_01",
+            "pos0": 21,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_eastern_airCleaner_01",
+            "pos0": 2,
+            "pos1": 0,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_eastern_1",
+          "furni_set_eastern_2",
+          "furni_set_eastern_3",
+          "furni_set_eastern_4"
+        ],
+        "furnitures": [
+          "furni_eastern_cabinet_01",
+          "furni_eastern_tatami_01",
+          "furni_eastern_plant_01",
+          "furni_eastern_bed_01",
+          "furni_eastern_leafScreen_01",
+          "furni_eastern_pipeline_01",
+          "furni_eastern_airCleaner_01",
+          "furni_eastern_steps_01",
+          "furni_eastern_JapaneseScreen_01",
+          "furni_eastern_carpet_01",
+          "furni_eastern_sling_01",
+          "furni_eastern_dresser_01",
+          "furni_eastern_case_01",
+          "furni_eastern_lamp_01",
+          "furni_eastern_wallpaper_01",
+          "furni_eastern_floor_01"
+        ]
       }
     },
     "groups": {
@@ -68446,6 +69329,62 @@
           "furni_reception_carpet_01",
           "furni_reception_wallpaper_01",
           "furni_reception_floor_01"
+        ]
+      },
+      "furni_set_eastern_1": {
+        "id": "furni_set_eastern_1",
+        "sortId": 1,
+        "name": "극동 스타일",
+        "themeId": "furni_set_eastern",
+        "comfort": 140,
+        "count": 3,
+        "furniture": [
+          "furni_eastern_lamp_01",
+          "furni_eastern_wallpaper_01",
+          "furni_eastern_floor_01"
+        ]
+      },
+      "furni_set_eastern_2": {
+        "id": "furni_set_eastern_2",
+        "sortId": 2,
+        "name": "'힐링'",
+        "themeId": "furni_set_eastern",
+        "comfort": 290,
+        "count": 4,
+        "furniture": [
+          "furni_eastern_tatami_01",
+          "furni_eastern_steps_01",
+          "furni_eastern_sling_01",
+          "furni_eastern_case_01"
+        ]
+      },
+      "furni_set_eastern_3": {
+        "id": "furni_set_eastern_3",
+        "sortId": 3,
+        "name": "'휴식'",
+        "themeId": "furni_set_eastern",
+        "comfort": 325,
+        "count": 5,
+        "furniture": [
+          "furni_eastern_bed_01",
+          "furni_eastern_leafScreen_01",
+          "furni_eastern_JapaneseScreen_01",
+          "furni_eastern_carpet_01",
+          "furni_eastern_dresser_01"
+        ]
+      },
+      "furni_set_eastern_4": {
+        "id": "furni_set_eastern_4",
+        "sortId": 4,
+        "name": "'흡족'",
+        "themeId": "furni_set_eastern",
+        "comfort": 190,
+        "count": 4,
+        "furniture": [
+          "furni_eastern_cabinet_01",
+          "furni_eastern_plant_01",
+          "furni_eastern_pipeline_01",
+          "furni_eastern_airCleaner_01"
         ]
       }
     },

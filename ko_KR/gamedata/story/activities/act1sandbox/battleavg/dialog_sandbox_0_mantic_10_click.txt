@@ -1,0 +1,51 @@
+[HEADER(actId="act1sandbox", npcId="trap_433_sandsdr")] 
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'샌드솔저'"]……임무…… 완료인가……?
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="맨티코어 킬러"]……고용주…… 고마워……
+[character(name="avg_npc_165", offsetX="100", offsetY="50")]
+[name="바실"]따라잡았어! 바로 앞이야……! 후우…… 어찌 됐든 확실하게 얘기는 하고 가야지……!
+[name="바실"]그런데, 앞에 있는 저 사람은…… '샌드솔저'?
+[name="바실"]뭐지? 저 아가씨가 왜 '샌드솔저'와 함께 있지?
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]어째서 '샌드솔저'가?
+[name=""]마을에 있는 동안, 맨티코어 킬러는 모든 작전을 우리의 계획에 따랐고 작전 기간에도 실수한 적이 없었다. '샌드솔저'와 어떤 관계가 있어서도 안 됐다.
+[name=""]대체 무슨 일이 있었던 걸까?
+[name=""]하지만 무턱대고 다가가서 배신한 이유를 물어봤자 대답하지 않을 것이다. 다른 방식으로 접근해야 한다.
+[Decision(option1="'샌드솔저'.", value1="1.1")]
+[predicate(references="1.1")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="맨티코어 킬러"]……오옷?!
+[Decision(option1="마을에 대한 도움은 진심으로 고마웠어.", value1="2.1")]
+[predicate(references="2.1")]
+[Decision(option1="그쪽과의 원활한 협력을 위해,", value1="3.1")]
+[predicate(references="3.1")]
+[Decision(option1="우리도 많이 노력했어.", value1="4.1")]
+[predicate(references="4.1")]
+[Decision(option1="그런데 이 아가씨를 통해 우릴 이용하려던 거라면,", value1="5.1")]
+[predicate(references="5.1")]
+[Decision(option1="그냥 솔직하게 말해주는 게 좋겠어.", value1="6.1")]
+[predicate(references="6.1")]
+[Decision(option1="우리는 '샌드솔저'의 동맹이 될 능력이 있다고 믿어.", value1="7.1")]
+[predicate(references="7.1")]
+[Decision(option1="일개 장기말이 아니라.", value1="8.1")]
+[predicate(references="8.1")]
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'샌드솔저'"]음, 아무래도…… 뭔가 오해한 것 같군요.
+[name="'샌드솔저'"]저는 여러분을 이용하려 했던 적이 단 한 번도 없었습니다.
+[name="'샌드솔저'"]오히려 줄곧 여러분을 돕고 있었죠.
+[name="'샌드솔저'"]일전에, 여러분이 아미르의 수하에게서 벗어나 밤새 무사히 마을로 돌아올 수 있었던 게, 과연 사냥이나 할 줄 아는 몇몇 사냥꾼과 중상을 입은 아가씨 덕분만이었을까요? 한 번도 그 이유를 생각해 보지 않았습니까?
+[name="'샌드솔저'"]……
+[name="'샌드솔저'"]저는 언제나 여러분 같은 사람들을 기꺼이 도와주길 원합니다…… 자, 이걸 받으세요. 유용하게 쓰일 거예요.
+[Decision(option1="(건네받는다)", value1="9.1")]
+[predicate(references="9.1")]
+[AddItem(itemId="sandbox_0_craft_13", itemCount="1")]
+[character(name="char_empty_b", offsetX="100", offsetY="100")]
+[name=""]【증표 《밑줄 그은 명단》 획득】
+[character(name="avg_npc_801_1", offsetX="100", offsetY="100")]
+[name="'샌드솔저'"]그리고…… '동맹'은……
+[name="'샌드솔저'"]아무래도 리프스팁에서 자세히 얘기해봐야 할 것 같네요.
+[name="샌드솔저'"]이 아가씨의 일도 함께 말입니다.
+[SetConditionProgress(conditionKey="route_klmantic", itemCount="10")]
+[withdraw(charId="trap_433_sandsdr")]
+[End]

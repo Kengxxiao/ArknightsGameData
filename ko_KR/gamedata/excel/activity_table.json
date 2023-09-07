@@ -1,5 +1,68 @@
 {
   "basicInfo": {
+    "act24side": {
+      "id": "act24side",
+      "type": "TYPE_ACT24SIDE",
+      "displayType": "SIDESTORY",
+      "name": "불을 쫓는 낙엽",
+      "startTime": 1694052000,
+      "endTime": 1695236399,
+      "rewardEndTime": 1695841199,
+      "displayOnHome": true,
+      "hasStage": true,
+      "templateShopId": null,
+      "medalGroupId": null,
+      "ungroupedMedalIds": [
+        "medal_hidden_24side_01",
+        "medal_hidden_24side_02"
+      ],
+      "isReplicate": false
+    },
+    "act1flip": {
+      "id": "act1flip",
+      "type": "FLIP_ONLY",
+      "name": "와르르 소원패",
+      "startTime": 1694052000,
+      "endTime": 1695236399,
+      "rewardEndTime": 1695236399,
+      "displayOnHome": false,
+      "hasStage": false,
+      "templateShopId": null,
+      "medalGroupId": null,
+      "isReplicate": false
+    },
+    "act14login": {
+      "id": "act14login",
+      "type": "LOGIN_ONLY",
+      "name": "로그인하여 보상 수령",
+      "startTime": 1694052000,
+      "endTime": 1695236399,
+      "rewardEndTime": 1695236399,
+      "displayOnHome": false,
+      "hasStage": false,
+      "templateShopId": null,
+      "medalGroupId": null,
+      "isReplicate": false
+    },
+    "act1sandbox": {
+      "id": "act1sandbox",
+      "type": "SANDBOX",
+      "name": "생존 연산: 모래 속의 불",
+      "startTime": 1694052000,
+      "endTime": 1697050799,
+      "rewardEndTime": 1697655599,
+      "displayOnHome": true,
+      "hasStage": true,
+      "templateShopId": null,
+      "medalGroupId": null,
+      "ungroupedMedalIds": [
+        "medal_activity_1sandbox_01",
+        "medal_activity_1sandbox_02",
+        "medal_activity_1sandbox_03",
+        "medal_activity_1sandbox_04"
+      ],
+      "isReplicate": false
+    },
     "act14mini": {
       "id": "act14mini",
       "type": "MINISTORY",
@@ -1641,6 +1704,20 @@
     }
   },
   "homeActConfig": {
+    "act1flip": {
+      "actId": "act1flip",
+      "isPopupAfterCheckin": false,
+      "showTopBarMenu": true,
+      "actTopBarColor": "d43822",
+      "actTopBarText": "와르르 소원패"
+    },
+    "act14login": {
+      "actId": "act14login",
+      "isPopupAfterCheckin": false,
+      "showTopBarMenu": true,
+      "actTopBarColor": "e74d38",
+      "actTopBarText": "불꽃으로 벼려진 로그인 이벤트"
+    },
     "act33sign": {
       "actId": "act33sign",
       "isPopupAfterCheckin": false,
@@ -2070,6 +2147,8 @@
     }
   },
   "zoneToActivity": {
+    "act24side_zone1": "act24side",
+    "act24side_zone2": "act24side",
     "act14mini_zone1": "act14mini",
     "act23side_zone1": "act23side",
     "act23side_zone2": "act23side",
@@ -2182,6 +2261,769 @@
     "A001_zone2": "1stact"
   },
   "missionData": [
+    {
+      "id": "24sideActivity_1",
+      "sortId": 1,
+      "description": "CF-1 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_01",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_2",
+      "sortId": 2,
+      "description": "CF-2 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_02",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_3",
+      "sortId": 3,
+      "description": "CF-3 클리어, 혼비스트 최소 1회 처치",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteStageCondition",
+      "templateType": "8",
+      "param": [
+        "8",
+        "2",
+        "act24side_03",
+        "enemy_1303_mhshep",
+        "killed",
+        "1"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_4",
+      "sortId": 4,
+      "description": "CF-4 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_04",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_2",
+          "count": 20
+        },
+        {
+          "type": "CHAR",
+          "id": "char_4077_palico",
+          "count": 1
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_5",
+      "sortId": 5,
+      "description": "CF-5 클리어, 트리케라비스트의 충돌 최소 2회 저지",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteStageCondition",
+      "templateType": "8",
+      "param": [
+        "8",
+        "2",
+        "act24side_05",
+        "enemy_1309_mhboar",
+        "stoprush",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_2",
+          "count": 20
+        },
+        {
+          "type": "MATERIAL",
+          "id": "mod_unlock_token",
+          "count": 1
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_6",
+      "sortId": 6,
+      "description": "CF-6 클리어, 섬광 폭탄을 사용해 샤프파울비스트 최소 2마리 격추",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteStageCondition",
+      "templateType": "8",
+      "param": [
+        "8",
+        "2",
+        "act24side_06",
+        "enemy_1308_mheagl",
+        "flashstun",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_2",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_7",
+      "sortId": 7,
+      "description": "CF-7 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_07",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_3",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_8",
+      "sortId": 8,
+      "description": "CF-8 클리어, 티라노비스트 최소 1회 처치",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteStageCondition",
+      "templateType": "8",
+      "param": [
+        "8",
+        "2",
+        "act24side_08",
+        "enemy_1311_mhkryk",
+        "killed",
+        "1"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_3",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_9",
+      "sortId": 9,
+      "description": "3★ 평가로 CF-9 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_09",
+        "3"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_3",
+          "count": 20
+        },
+        {
+          "type": "MATERIAL",
+          "id": "mod_unlock_token",
+          "count": 1
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_10",
+      "sortId": 10,
+      "description": "연금 소재 부서진 뼛조각 200개 수집",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "ActivityCoinGain",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side",
+        "200",
+        "act24side_melding_1"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 10
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_11",
+      "sortId": 11,
+      "description": "연금 소재 원석충 껍데기 200개 수집",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "ActivityCoinGain",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side",
+        "200",
+        "act24side_melding_2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_2",
+          "count": 10
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_12",
+      "sortId": 12,
+      "description": "연금 소재 케라토비스트 송곳니 200개 수집",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "ActivityCoinGain",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side",
+        "200",
+        "act24side_melding_3"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_3",
+          "count": 10
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_13",
+      "sortId": 13,
+      "description": "연금 소재 트리케라비스트 가죽 100개 수집",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "ActivityCoinGain",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side",
+        "100",
+        "act24side_melding_4"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_4",
+          "count": 10
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_14",
+      "sortId": 14,
+      "description": "연금 소재 '짐승의 눈물' 80개 수집",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "ActivityCoinGain",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side",
+        "80",
+        "act24side_melding_5"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_5",
+          "count": 10
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_15",
+      "sortId": 15,
+      "description": "이벤트 스테이지에서 섬광 폭탄을 사용해 공중의 적 누적 10회 격추",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "StageWithCondition",
+      "templateType": "4",
+      "param": [
+        "4",
+        "act24side_01^act24side_02^act24side_03^act24side_04^act24side_05^act24side_06^act24side_07^act24side_08^act24side_09^act24side_ex01^act24side_ex01#f#^act24side_ex02^act24side_ex02#f#^act24side_ex03^act24side_ex03#f#^act24side_ex04^act24side_ex04#f#^act24side_ex05^act24side_ex05#f#^act24side_ex06^act24side_ex06#f#^act24side_ex07^act24side_ex07#f#^act24side_ex08^act24side_ex08#f#^act24side_s01",
+        "flashstun",
+        "10"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 50
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_16",
+      "sortId": 16,
+      "description": "이벤트 스테이지에서 적의 약점 부위에 누적 200000 대미지 부여",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "StageWithCondition",
+      "templateType": "4",
+      "param": [
+        "4",
+        "act24side_01^act24side_02^act24side_03^act24side_04^act24side_05^act24side_06^act24side_07^act24side_08^act24side_09^act24side_ex01^act24side_ex01#f#^act24side_ex02^act24side_ex02#f#^act24side_ex03^act24side_ex03#f#^act24side_ex04^act24side_ex04#f#^act24side_ex05^act24side_ex05#f#^act24side_ex06^act24side_ex06#f#^act24side_ex07^act24side_ex07#f#^act24side_ex08^act24side_ex08#f#^act24side_s01",
+        "criticaldamage",
+        "200000"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 50
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_17",
+      "sortId": 17,
+      "description": "스테이지 '산지의 진동' 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_ex01",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_18",
+      "sortId": 18,
+      "description": "스테이지 '숲속 대폭동' 클리어, 폭염 원석충 최소 30마리 처치",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteStageCondition",
+      "templateType": "8",
+      "param": [
+        "8",
+        "2",
+        "act24side_ex02",
+        "enemy_1305_mhslim_2",
+        "killed",
+        "30"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_19",
+      "sortId": 19,
+      "description": "스테이지 '단단한 부딪힘' 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_ex03",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 30
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_20",
+      "sortId": 20,
+      "description": "스테이지 '추락 주의' 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_ex04",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_1",
+          "count": 30
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_21",
+      "sortId": 21,
+      "description": "스테이지 '통행금지' 클리어, 하드록 크라운비스트 최소 4마리 처치",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteStageCondition",
+      "templateType": "8",
+      "param": [
+        "8",
+        "2",
+        "act24side_ex05",
+        "enemy_1307_mhrhcr_2",
+        "killed",
+        "4"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_2",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_22",
+      "sortId": 22,
+      "description": "스테이지 '고지에 오르는 험난한 길' 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_ex06",
+        "2"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_2",
+          "count": 20
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_23",
+      "sortId": 23,
+      "description": "스테이지 '영웅의 탄생' 클리어, 화살 가스토비스트 최소 1마리 처치",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteStageCondition",
+      "templateType": "8",
+      "param": [
+        "8",
+        "2",
+        "act24side_ex07",
+        "enemy_1310_mhprpn_2",
+        "killed",
+        "1"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_2",
+          "count": 30
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
+    {
+      "id": "24sideActivity_24",
+      "sortId": 24,
+      "description": "3★ 평가로 스테이지 '들불은 대지를 불태우고' 클리어",
+      "type": "ACTIVITY",
+      "itemBgType": "COMMON",
+      "preMissionIds": null,
+      "template": "CompleteAnyStage",
+      "templateType": "0",
+      "param": [
+        "0",
+        "act24side_ex08",
+        "3"
+      ],
+      "unlockCondition": null,
+      "unlockParam": null,
+      "missionGroup": "act24side",
+      "toPage": null,
+      "periodicalPoint": 0,
+      "rewards": [
+        {
+          "type": "ACTIVITY_ITEM",
+          "id": "act24side_melding_2",
+          "count": 30
+        }
+      ],
+      "backImagePath": null,
+      "foldId": null,
+      "haveSubMissionToUnlock": false
+    },
     {
       "id": "23sideActivity_1",
       "sortId": 1,
@@ -40277,6 +41119,42 @@
   ],
   "missionGroup": [
     {
+      "id": "act24side",
+      "title": null,
+      "type": "ACTIVITY",
+      "preMissionGroup": null,
+      "period": null,
+      "rewards": [],
+      "missionIds": [
+        "24sideActivity_1",
+        "24sideActivity_2",
+        "24sideActivity_3",
+        "24sideActivity_4",
+        "24sideActivity_5",
+        "24sideActivity_6",
+        "24sideActivity_7",
+        "24sideActivity_8",
+        "24sideActivity_9",
+        "24sideActivity_10",
+        "24sideActivity_11",
+        "24sideActivity_12",
+        "24sideActivity_13",
+        "24sideActivity_14",
+        "24sideActivity_15",
+        "24sideActivity_16",
+        "24sideActivity_17",
+        "24sideActivity_18",
+        "24sideActivity_19",
+        "24sideActivity_20",
+        "24sideActivity_21",
+        "24sideActivity_22",
+        "24sideActivity_23",
+        "24sideActivity_24"
+      ],
+      "startTs": 1694052000,
+      "endTs": 1695841199
+    },
+    {
       "id": "act23side",
       "title": null,
       "type": "ACTIVITY",
@@ -42423,7 +43301,7 @@
             "order": 4,
             "blessing": "화목하시길 바랍니다",
             "absolutData": 1691348400,
-            "adTip": "10일 차에 획득 가능",
+            "adTip": "15일 차에 획득 가능",
             "relativeData": 10,
             "itemList": [
               {
@@ -80880,6 +81758,17 @@
       }
     },
     "LOGIN_ONLY": {
+      "act14login": {
+        "description": "<color value=#898989>해당 물품 유효 기간</color>\n<color value=#54d600>2023/09/21 03:59</color>",
+        "itemList": [
+          {
+            "id": "LINKAGE_TKT_GACHA_10_3601",
+            "count": 1,
+            "type": "LINKAGE_TKT_GACHA_10"
+          }
+        ],
+        "apSupplyOutOfDateDict": {}
+      },
       "act13login": {
         "description": "<color value=#898989>해당 물품 유효 기간</color>\n<color value=#54d600>2023/08/11 03:59</color>",
         "itemList": [
@@ -84164,8 +85053,8 @@
                     {
                       "key": "char_attribute_add",
                       "selector": {
-                        "professionMask": 0,
-                        "buildableMask": 0,
+                        "professionMask": 1023,
+                        "buildableMask": 3,
                         "charIdFilter": null,
                         "enemyIdFilter": null,
                         "enemyIdExcludeFilter": null,
@@ -88247,9 +89136,2864 @@
         }
       }
     },
-    "SANDBOX": {}
+    "SANDBOX": {
+      "act1sandbox": {
+        "milestoneDataList": [
+          {
+            "milestoneId": "mileStone_1",
+            "orderId": 1,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 20,
+            "item": {
+              "id": "4001",
+              "count": 10000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_2",
+            "orderId": 2,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 40,
+            "item": {
+              "id": "3301",
+              "count": 15,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_3",
+            "orderId": 3,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 60,
+            "item": {
+              "id": "2002",
+              "count": 20,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_4",
+            "orderId": 4,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 80,
+            "item": {
+              "id": "30013",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_5",
+            "orderId": 5,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 100,
+            "item": {
+              "id": "mod_unlock_token",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_6",
+            "orderId": 6,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 120,
+            "item": {
+              "id": "4001",
+              "count": 10000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_7",
+            "orderId": 7,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 140,
+            "item": {
+              "id": "30064",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_8",
+            "orderId": 8,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 160,
+            "item": {
+              "id": "2003",
+              "count": 10,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_9",
+            "orderId": 9,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 180,
+            "item": {
+              "id": "31013",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_10",
+            "orderId": 10,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 200,
+            "item": {
+              "id": "7003",
+              "count": 1,
+              "type": "TKT_GACHA"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_11",
+            "orderId": 11,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 250,
+            "item": {
+              "id": "4001",
+              "count": 10000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_12",
+            "orderId": 12,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 300,
+            "item": {
+              "id": "3302",
+              "count": 15,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_13",
+            "orderId": 13,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 350,
+            "item": {
+              "id": "2002",
+              "count": 20,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_14",
+            "orderId": 14,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 400,
+            "item": {
+              "id": "30033",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_15",
+            "orderId": 15,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 450,
+            "item": {
+              "id": "furni_act35d3_sandboxTable_01",
+              "count": 1,
+              "type": "FURN"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_16",
+            "orderId": 16,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 500,
+            "item": {
+              "id": "4001",
+              "count": 10000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_17",
+            "orderId": 17,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 550,
+            "item": {
+              "id": "30054",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_18",
+            "orderId": 18,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 600,
+            "item": {
+              "id": "2003",
+              "count": 10,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_19",
+            "orderId": 19,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 650,
+            "item": {
+              "id": "30083",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_20",
+            "orderId": 20,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 700,
+            "item": {
+              "id": "7003",
+              "count": 1,
+              "type": "TKT_GACHA"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_21",
+            "orderId": 21,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 750,
+            "item": {
+              "id": "4001",
+              "count": 10000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_22",
+            "orderId": 22,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 800,
+            "item": {
+              "id": "3303",
+              "count": 10,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_23",
+            "orderId": 23,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 850,
+            "item": {
+              "id": "2002",
+              "count": 20,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_24",
+            "orderId": 24,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 900,
+            "item": {
+              "id": "31043",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_25",
+            "orderId": 25,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 950,
+            "item": {
+              "id": "itempack_mod_4",
+              "count": 1,
+              "type": "ITEM_PACK"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_26",
+            "orderId": 26,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1000,
+            "item": {
+              "id": "4001",
+              "count": 10000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_27",
+            "orderId": 27,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1050,
+            "item": {
+              "id": "30044",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_28",
+            "orderId": 28,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1100,
+            "item": {
+              "id": "2003",
+              "count": 10,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_29",
+            "orderId": 29,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1150,
+            "item": {
+              "id": "31063",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_30",
+            "orderId": 30,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1200,
+            "item": {
+              "id": "7003",
+              "count": 1,
+              "type": "TKT_GACHA"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_31",
+            "orderId": 31,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1250,
+            "item": {
+              "id": "4001",
+              "count": 10000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_32",
+            "orderId": 32,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1300,
+            "item": {
+              "id": "3301",
+              "count": 15,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_33",
+            "orderId": 33,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1350,
+            "item": {
+              "id": "2003",
+              "count": 15,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_34",
+            "orderId": 34,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1400,
+            "item": {
+              "id": "30023",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_35",
+            "orderId": 35,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1500,
+            "item": {
+              "id": "char_485_pallas@epoque#19",
+              "count": 1,
+              "type": "CHAR_SKIN"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_36",
+            "orderId": 36,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1600,
+            "item": {
+              "id": "4001",
+              "count": 15000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_37",
+            "orderId": 37,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1700,
+            "item": {
+              "id": "30074",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_38",
+            "orderId": 38,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1800,
+            "item": {
+              "id": "2003",
+              "count": 15,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_39",
+            "orderId": 39,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 1900,
+            "item": {
+              "id": "30043",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_40",
+            "orderId": 40,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2000,
+            "item": {
+              "id": "mod_update_token_2",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_41",
+            "orderId": 41,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2100,
+            "item": {
+              "id": "4001",
+              "count": 15000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_42",
+            "orderId": 42,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2200,
+            "item": {
+              "id": "3302",
+              "count": 15,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_43",
+            "orderId": 43,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2300,
+            "item": {
+              "id": "2003",
+              "count": 15,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_44",
+            "orderId": 44,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2400,
+            "item": {
+              "id": "31023",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_45",
+            "orderId": 45,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2500,
+            "item": {
+              "id": "mod_update_token_1",
+              "count": 20,
+              "type": "MATERIAL"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_46",
+            "orderId": 46,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2600,
+            "item": {
+              "id": "4001",
+              "count": 15000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_47",
+            "orderId": 47,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2700,
+            "item": {
+              "id": "30064",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_48",
+            "orderId": 48,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2800,
+            "item": {
+              "id": "2003",
+              "count": 15,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_49",
+            "orderId": 49,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 2900,
+            "item": {
+              "id": "30103",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_50",
+            "orderId": 50,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3000,
+            "item": {
+              "id": "30155",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_51",
+            "orderId": 51,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3100,
+            "item": {
+              "id": "4001",
+              "count": 15000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_52",
+            "orderId": 52,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3200,
+            "item": {
+              "id": "3303",
+              "count": 10,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_53",
+            "orderId": 53,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3300,
+            "item": {
+              "id": "2003",
+              "count": 15,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_54",
+            "orderId": 54,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3400,
+            "item": {
+              "id": "30053",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_55",
+            "orderId": 55,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3500,
+            "item": {
+              "id": "mod_update_token_1",
+              "count": 20,
+              "type": "MATERIAL"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_56",
+            "orderId": 56,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3600,
+            "item": {
+              "id": "4001",
+              "count": 15000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_57",
+            "orderId": 57,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3700,
+            "item": {
+              "id": "30054",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_58",
+            "orderId": 58,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3800,
+            "item": {
+              "id": "2004",
+              "count": 10,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_59",
+            "orderId": 59,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 3900,
+            "item": {
+              "id": "30063",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_60",
+            "orderId": 60,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4000,
+            "item": {
+              "id": "itempack_mod_4",
+              "count": 1,
+              "type": "ITEM_PACK"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_61",
+            "orderId": 61,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4100,
+            "item": {
+              "id": "4001",
+              "count": 20000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_62",
+            "orderId": 62,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4200,
+            "item": {
+              "id": "3303",
+              "count": 10,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_63",
+            "orderId": 63,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4300,
+            "item": {
+              "id": "2003",
+              "count": 15,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_64",
+            "orderId": 64,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4400,
+            "item": {
+              "id": "31053",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_65",
+            "orderId": 65,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4500,
+            "item": {
+              "id": "mod_update_token_2",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_66",
+            "orderId": 66,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4600,
+            "item": {
+              "id": "4001",
+              "count": 20000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_67",
+            "orderId": 67,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4700,
+            "item": {
+              "id": "30044",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_68",
+            "orderId": 68,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4800,
+            "item": {
+              "id": "2004",
+              "count": 10,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_69",
+            "orderId": 69,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 4900,
+            "item": {
+              "id": "30073",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_70",
+            "orderId": 70,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5000,
+            "item": {
+              "id": "mod_update_token_1",
+              "count": 20,
+              "type": "MATERIAL"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_71",
+            "orderId": 71,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5100,
+            "item": {
+              "id": "4001",
+              "count": 20000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_72",
+            "orderId": 72,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5200,
+            "item": {
+              "id": "3303",
+              "count": 10,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_73",
+            "orderId": 73,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5300,
+            "item": {
+              "id": "2004",
+              "count": 10,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_74",
+            "orderId": 74,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5400,
+            "item": {
+              "id": "30093",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_75",
+            "orderId": 75,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5500,
+            "item": {
+              "id": "mod_unlock_token",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": true
+          },
+          {
+            "milestoneId": "mileStone_76",
+            "orderId": 76,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5600,
+            "item": {
+              "id": "4001",
+              "count": 20000,
+              "type": "GOLD"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_77",
+            "orderId": 77,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5700,
+            "item": {
+              "id": "30074",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_78",
+            "orderId": 78,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5800,
+            "item": {
+              "id": "2004",
+              "count": 10,
+              "type": "CARD_EXP"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_79",
+            "orderId": 79,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 5900,
+            "item": {
+              "id": "31033",
+              "count": 5,
+              "type": "MATERIAL"
+            },
+            "isPrecious": false
+          },
+          {
+            "milestoneId": "mileStone_80",
+            "orderId": 80,
+            "tokenId": "act1sandbox_milestone_point",
+            "tokenNum": 6000,
+            "item": {
+              "id": "30145",
+              "count": 1,
+              "type": "MATERIAL"
+            },
+            "isPrecious": true
+          }
+        ],
+        "milestoneTokenId": "act1sandbox_milestone_point"
+      }
+    },
+    "MAIN_BUFF": {},
+    "TYPE_ACT24SIDE": {
+      "act24side": {
+        "toolDataList": {
+          "tool_trap": {
+            "toolId": "tool_trap",
+            "sortId": 1,
+            "toolName": "고압 펄스 트랩",
+            "toolDesc": "배치 일정 시간이 후 작동하며 적이 밟으면 주변을 기절시킨다",
+            "toolIcon1": "tool_trap_icon1",
+            "toolIcon2": "tool_trap_icon2",
+            "toolUnlockDesc": "CF-2 클리어",
+            "toolBuffId": "rune_act24side_mhshok",
+            "runeData": {
+              "id": "rune_act24side_mhshok",
+              "points": 1.0,
+              "mutexGroupKey": null,
+              "description": "스테이지 내 고압 펄스 트랩 개방",
+              "runes": [
+                {
+                  "key": "level_predefines_cards_enable",
+                  "selector": {
+                    "professionMask": 1023,
+                    "buildableMask": 3,
+                    "charIdFilter": null,
+                    "enemyIdFilter": null,
+                    "enemyIdExcludeFilter": null,
+                    "skillIdFilter": null,
+                    "tileKeyFilter": null,
+                    "groupTagFilter": null,
+                    "filterTagFilter": null
+                  },
+                  "blackboard": [
+                    {
+                      "key": "trap_101_mhshok#1",
+                      "value": 1.0
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "tool_wirebug": {
+            "toolId": "tool_wirebug",
+            "sortId": 2,
+            "toolName": "공중 견인 드론",
+            "toolDesc": "오퍼레이터의 위치에 배치할 수 있으며, 배치 후 해당 오퍼레이터를 다른 위치로 옮길 수 있다",
+            "toolIcon1": "tool_wirebug_icon1",
+            "toolIcon2": "tool_wirebug_icon2",
+            "toolUnlockDesc": "CF-3 클리어",
+            "toolBuffId": "rune_act24side_mhwrbg",
+            "runeData": {
+              "id": "rune_act24side_mhwrbg",
+              "points": 1.0,
+              "mutexGroupKey": null,
+              "description": "스테이지 내 공중 견인 드론 개방",
+              "runes": [
+                {
+                  "key": "level_predefines_cards_enable",
+                  "selector": {
+                    "professionMask": 1023,
+                    "buildableMask": 3,
+                    "charIdFilter": null,
+                    "enemyIdFilter": null,
+                    "enemyIdExcludeFilter": null,
+                    "skillIdFilter": null,
+                    "tileKeyFilter": null,
+                    "groupTagFilter": null,
+                    "filterTagFilter": null
+                  },
+                  "blackboard": [
+                    {
+                      "key": "trap_102_mhwrbg#1",
+                      "value": 1.0
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "tool_flashbomb": {
+            "toolId": "tool_flashbomb",
+            "sortId": 3,
+            "toolName": "섬광 폭탄",
+            "toolDesc": "전방으로 투척해 터뜨리면 폭발 중심을 등지지 않은 적을 기절시키고 일부 공중 목표를 격추한다",
+            "toolIcon1": "tool_flashbomb_icon1",
+            "toolIcon2": "tool_flashbomb_icon2",
+            "toolUnlockDesc": "CF-5 클리어",
+            "toolBuffId": "rune_act24side_mhflsb",
+            "runeData": {
+              "id": "rune_act24side_mhflsb",
+              "points": 1.0,
+              "mutexGroupKey": null,
+              "description": "스테이지 내 섬광 폭탄 개방",
+              "runes": [
+                {
+                  "key": "level_predefines_cards_enable",
+                  "selector": {
+                    "professionMask": 1023,
+                    "buildableMask": 3,
+                    "charIdFilter": null,
+                    "enemyIdFilter": null,
+                    "enemyIdExcludeFilter": null,
+                    "skillIdFilter": null,
+                    "tileKeyFilter": null,
+                    "groupTagFilter": null,
+                    "filterTagFilter": null
+                  },
+                  "blackboard": [
+                    {
+                      "key": "trap_099_mhflsb#1",
+                      "value": 1.0
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "tool_bomb": {
+            "toolId": "tool_bomb",
+            "sortId": 4,
+            "toolName": "오리지늄 폭약통",
+            "toolDesc": "배치 후 직접 기폭할 수 있으며, 주변에 마법 대미지를 입히고 다른 《오리지늄 폭약통》을 폭발시킨다",
+            "toolIcon1": "tool_bomb_icon1",
+            "toolIcon2": "tool_bomb_icon2",
+            "toolUnlockDesc": "CF-7 클리어",
+            "toolBuffId": "rune_act24side_mhlbmb",
+            "runeData": {
+              "id": "rune_act24side_mhlbmb",
+              "points": 1.0,
+              "mutexGroupKey": null,
+              "description": "스테이지 내 오리지늄 폭약통 개방",
+              "runes": [
+                {
+                  "key": "level_predefines_cards_enable",
+                  "selector": {
+                    "professionMask": 1023,
+                    "buildableMask": 3,
+                    "charIdFilter": null,
+                    "enemyIdFilter": null,
+                    "enemyIdExcludeFilter": null,
+                    "skillIdFilter": null,
+                    "tileKeyFilter": null,
+                    "groupTagFilter": null,
+                    "filterTagFilter": null
+                  },
+                  "blackboard": [
+                    {
+                      "key": "trap_100_mhlbmb#1",
+                      "value": 1.0
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "mealDataList": {
+          "meal_1": {
+            "mealId": "meal_1",
+            "sortId": 1,
+            "mealName": "따끈 국물 초밥 세트",
+            "mealEffectDesc": "식사 후 이벤트 스테이지를 <color=#FD5A16>최초</color> 클리어 시 <color=#CCEB50>30</color>개의 <color=#F1AD56>부서진 뼛조각</color> 추가 획득",
+            "mealDesc": "간판 메뉴인 붉은 린수 뱃살 초밥에 구수한 버섯 두부 된장국, 거기다 튀김과 구이까지. 이렇게 푸짐한 극동 요리는 파인다이닝에서도 절대 찾아볼 수 없다.",
+            "mealIcon": "meal_1",
+            "mealCost": 200,
+            "mealRewardAP": 20,
+            "mealRewardItemInfo": {
+              "id": "act24side_melding_1",
+              "count": 30,
+              "type": "ACTIVITY_ITEM"
+            }
+          },
+          "meal_2": {
+            "mealId": "meal_2",
+            "sortId": 2,
+            "mealName": "바삭 팬케이크 세트",
+            "mealEffectDesc": "식사 후 이벤트 스테이지를 <color=#FD5A16>최초</color> 클리어 시 <color=#CCEB50>20</color>개의 <color=#F1AD56>원석충 껍데기</color> 추가 획득",
+            "mealDesc": "겉바속촉 소시지 감자 팬케이크에 비법 채소 수프. 소시지든 오트밀 빵이든 배부를 때까지 제공한다. 양적으로도 우르수스의 특징이 물씬 드러난다.",
+            "mealIcon": "meal_2",
+            "mealCost": 200,
+            "mealRewardAP": 20,
+            "mealRewardItemInfo": {
+              "id": "act24side_melding_2",
+              "count": 20,
+              "type": "ACTIVITY_ITEM"
+            }
+          },
+          "meal_3": {
+            "mealId": "meal_3",
+            "sortId": 3,
+            "mealName": "맛도 좋은 건강 세트",
+            "mealEffectDesc": "식사 후 이벤트 스테이지를 <color=#FD5A16>최초</color> 클리어 시 <color=#CCEB50>12</color>개의 <color=#F1AD56>케라토비스트 송곳니</color> 추가 획득",
+            "mealDesc": "부드러운 식감에 육즙이 흘러넘치는 파울비스트 가슴살 스테이크, 새콤달콤 캐비지 주스, 그리고 영양 만점 샐러드까지. 건강식은 당연히 먹을수록 건강해지는 법.",
+            "mealIcon": "meal_3",
+            "mealCost": 200,
+            "mealRewardAP": 20,
+            "mealRewardItemInfo": {
+              "id": "act24side_melding_3",
+              "count": 12,
+              "type": "ACTIVITY_ITEM"
+            }
+          },
+          "meal_4": {
+            "mealId": "meal_4",
+            "sortId": 4,
+            "mealName": "화끈 볶음 우동 세트",
+            "mealEffectDesc": "식사 후 이벤트 스테이지를 <color=#FD5A16>최초</color> 클리어 시 <color=#CCEB50>6</color>개의 <color=#F1AD56>트리케라비스트 가죽</color> 추가 획득",
+            "mealDesc": "린수 뱃살 맑은탕, 버든비스트 우동 볶음, 파울비스트 소금구이, 거기다 크리스탈 만두까지…… 최고급 식재료를 엄선하여 만든 5성급 수준의 용문 가정식이다.",
+            "mealIcon": "meal_4",
+            "mealCost": 200,
+            "mealRewardAP": 20,
+            "mealRewardItemInfo": {
+              "id": "act24side_melding_4",
+              "count": 6,
+              "type": "ACTIVITY_ITEM"
+            }
+          },
+          "meal_5": {
+            "mealId": "meal_5",
+            "sortId": 5,
+            "mealName": "행운을 부르는 세트",
+            "mealEffectDesc": "식사 후 이벤트 스테이지를 <color=#FD5A16>최초</color> 클리어 시 <color=#CCEB50>3</color>개의 <color=#F1AD56>'짐승의 눈물'</color> 추가 획득",
+            "mealDesc": "캐러멜 향이 진동하는 특대자 벌꿀 케이크에 뽀글뽀글 기포의 짙은 갈색 음료, 갯지렁이 다리 숯불구이 스낵은 덤. 이 메뉴의 원작자는 이름을 남기지 않았다고 한다.",
+            "mealIcon": "meal_5",
+            "mealCost": 200,
+            "mealRewardAP": 20,
+            "mealRewardItemInfo": {
+              "id": "act24side_melding_5",
+              "count": 3,
+              "type": "ACTIVITY_ITEM"
+            }
+          }
+        },
+        "meldingDict": {
+          "act24side_melding_1": {
+            "meldingId": "act24side_melding_1",
+            "sortId": 1,
+            "meldingPrice": 2,
+            "rarity": 1
+          },
+          "act24side_melding_2": {
+            "meldingId": "act24side_melding_2",
+            "sortId": 2,
+            "meldingPrice": 3,
+            "rarity": 2
+          },
+          "act24side_melding_3": {
+            "meldingId": "act24side_melding_3",
+            "sortId": 3,
+            "meldingPrice": 5,
+            "rarity": 3
+          },
+          "act24side_melding_4": {
+            "meldingId": "act24side_melding_4",
+            "sortId": 4,
+            "meldingPrice": 10,
+            "rarity": 4
+          },
+          "act24side_melding_5": {
+            "meldingId": "act24side_melding_5",
+            "sortId": 5,
+            "meldingPrice": 20,
+            "rarity": 5
+          },
+          "act24side_melding_6": {
+            "meldingId": "act24side_melding_6",
+            "sortId": 6,
+            "meldingPrice": 200,
+            "rarity": 6
+          }
+        },
+        "meldingGachaBoxDataList": {
+          "gachabox1": {
+            "gachaBoxId": "gachabox1",
+            "gachaSortId": 1,
+            "gachaIcon": "gachabox1",
+            "gachaBoxName": "연금술·재구성",
+            "gachaCost": 100,
+            "gachaTimesLimit": 10,
+            "themeColor": "#314065",
+            "remainItemBgColor": "#3d4559"
+          },
+          "gachabox2": {
+            "gachaBoxId": "gachabox2",
+            "gachaSortId": 2,
+            "gachaIcon": "gachabox2",
+            "gachaBoxName": "연금술·변환",
+            "gachaCost": 40,
+            "gachaTimesLimit": 10,
+            "themeColor": "#2f484c",
+            "remainItemBgColor": "#4b6367"
+          }
+        },
+        "meldingGachaBoxGoodDataMap": {
+          "gachabox1": [
+            {
+              "goodId": "gachabox1_6",
+              "gachaBoxId": "gachabox1",
+              "orderId": 6,
+              "itemId": "mod_update_token_2",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 2,
+              "totalCount": 5,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_7",
+              "gachaBoxId": "gachabox1",
+              "orderId": 7,
+              "itemId": "mod_update_token_1",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 6,
+              "totalCount": 10,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_8",
+              "gachaBoxId": "gachabox1",
+              "orderId": 8,
+              "itemId": "furni_eastern_cabinet_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_9",
+              "gachaBoxId": "gachabox1",
+              "orderId": 9,
+              "itemId": "furni_eastern_tatami_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_10",
+              "gachaBoxId": "gachabox1",
+              "orderId": 10,
+              "itemId": "furni_eastern_plant_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_11",
+              "gachaBoxId": "gachabox1",
+              "orderId": 11,
+              "itemId": "furni_eastern_pipeline_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_12",
+              "gachaBoxId": "gachabox1",
+              "orderId": 12,
+              "itemId": "furni_eastern_airCleaner_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_13",
+              "gachaBoxId": "gachabox1",
+              "orderId": 13,
+              "itemId": "furni_eastern_steps_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_14",
+              "gachaBoxId": "gachabox1",
+              "orderId": 14,
+              "itemId": "furni_eastern_sling_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_15",
+              "gachaBoxId": "gachabox1",
+              "orderId": 15,
+              "itemId": "furni_eastern_case_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_16",
+              "gachaBoxId": "gachabox1",
+              "orderId": 16,
+              "itemId": "furni_eastern_lamp_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 4,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_17",
+              "gachaBoxId": "gachabox1",
+              "orderId": 17,
+              "itemId": "furni_eastern_wallpaper_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_18",
+              "gachaBoxId": "gachabox1",
+              "orderId": 18,
+              "itemId": "furni_eastern_floor_01",
+              "itemType": "FURN",
+              "displayType": "RARE_2",
+              "perCount": 1,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_1",
+              "gachaBoxId": "gachabox1",
+              "orderId": 1,
+              "itemId": "p_char_4077_palico",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_3",
+              "perCount": 1,
+              "totalCount": 5,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_2",
+              "gachaBoxId": "gachabox1",
+              "orderId": 2,
+              "itemId": "7003",
+              "itemType": "TKT_GACHA",
+              "displayType": "RARE_3",
+              "perCount": 1,
+              "totalCount": 3,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_3",
+              "gachaBoxId": "gachabox1",
+              "orderId": 3,
+              "itemId": "mod_unlock_token",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_3",
+              "perCount": 1,
+              "totalCount": 2,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_4",
+              "gachaBoxId": "gachabox1",
+              "orderId": 4,
+              "itemId": "30115",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_3",
+              "perCount": 1,
+              "totalCount": 5,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox1_5",
+              "gachaBoxId": "gachabox1",
+              "orderId": 5,
+              "itemId": "30155",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_3",
+              "perCount": 1,
+              "totalCount": 5,
+              "gachaType": "LIMITED"
+            }
+          ],
+          "gachabox2": [
+            {
+              "goodId": "gachabox2_18",
+              "gachaBoxId": "gachabox2",
+              "orderId": 18,
+              "itemId": "31063",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_1",
+              "perCount": 1,
+              "totalCount": 0,
+              "gachaType": "UNLIMITED"
+            },
+            {
+              "goodId": "gachabox2_19",
+              "gachaBoxId": "gachabox2",
+              "orderId": 19,
+              "itemId": "30063",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_1",
+              "perCount": 1,
+              "totalCount": 0,
+              "gachaType": "UNLIMITED"
+            },
+            {
+              "goodId": "gachabox2_20",
+              "gachaBoxId": "gachabox2",
+              "orderId": 20,
+              "itemId": "30033",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_1",
+              "perCount": 1,
+              "totalCount": 0,
+              "gachaType": "UNLIMITED"
+            },
+            {
+              "goodId": "gachabox2_21",
+              "gachaBoxId": "gachabox2",
+              "orderId": 21,
+              "itemId": "4001",
+              "itemType": "GOLD",
+              "displayType": "RARE_1",
+              "perCount": 2000,
+              "totalCount": 0,
+              "gachaType": "UNLIMITED"
+            },
+            {
+              "goodId": "gachabox2_4",
+              "gachaBoxId": "gachabox2",
+              "orderId": 4,
+              "itemId": "31063",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 2,
+              "totalCount": 15,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_5",
+              "gachaBoxId": "gachabox2",
+              "orderId": 5,
+              "itemId": "30063",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 2,
+              "totalCount": 15,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_6",
+              "gachaBoxId": "gachabox2",
+              "orderId": 6,
+              "itemId": "30033",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 2,
+              "totalCount": 15,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_7",
+              "gachaBoxId": "gachabox2",
+              "orderId": 7,
+              "itemId": "4001",
+              "itemType": "GOLD",
+              "displayType": "RARE_2",
+              "perCount": 20000,
+              "totalCount": 25,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_8",
+              "gachaBoxId": "gachabox2",
+              "orderId": 8,
+              "itemId": "2004",
+              "itemType": "CARD_EXP",
+              "displayType": "RARE_2",
+              "perCount": 10,
+              "totalCount": 5,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_9",
+              "gachaBoxId": "gachabox2",
+              "orderId": 9,
+              "itemId": "2003",
+              "itemType": "CARD_EXP",
+              "displayType": "RARE_2",
+              "perCount": 20,
+              "totalCount": 5,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_10",
+              "gachaBoxId": "gachabox2",
+              "orderId": 10,
+              "itemId": "2002",
+              "itemType": "CARD_EXP",
+              "displayType": "RARE_2",
+              "perCount": 30,
+              "totalCount": 4,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_11",
+              "gachaBoxId": "gachabox2",
+              "orderId": 11,
+              "itemId": "3303",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 5,
+              "totalCount": 6,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_12",
+              "gachaBoxId": "gachabox2",
+              "orderId": 12,
+              "itemId": "3302",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 10,
+              "totalCount": 5,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_13",
+              "gachaBoxId": "gachabox2",
+              "orderId": 13,
+              "itemId": "30022",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 10,
+              "totalCount": 3,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_14",
+              "gachaBoxId": "gachabox2",
+              "orderId": 14,
+              "itemId": "30032",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 10,
+              "totalCount": 3,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_15",
+              "gachaBoxId": "gachabox2",
+              "orderId": 15,
+              "itemId": "30042",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 10,
+              "totalCount": 3,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_16",
+              "gachaBoxId": "gachabox2",
+              "orderId": 16,
+              "itemId": "3231",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 5,
+              "totalCount": 1,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_17",
+              "gachaBoxId": "gachabox2",
+              "orderId": 17,
+              "itemId": "3401",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_2",
+              "perCount": 100,
+              "totalCount": 20,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_1",
+              "gachaBoxId": "gachabox2",
+              "orderId": 1,
+              "itemId": "31064",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_3",
+              "perCount": 1,
+              "totalCount": 10,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_2",
+              "gachaBoxId": "gachabox2",
+              "orderId": 2,
+              "itemId": "30104",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_3",
+              "perCount": 1,
+              "totalCount": 10,
+              "gachaType": "LIMITED"
+            },
+            {
+              "goodId": "gachabox2_3",
+              "gachaBoxId": "gachabox2",
+              "orderId": 3,
+              "itemId": "30094",
+              "itemType": "MATERIAL",
+              "displayType": "RARE_3",
+              "perCount": 1,
+              "totalCount": 10,
+              "gachaType": "LIMITED"
+            }
+          ]
+        },
+        "mealWelcomeTxtDataMap": {
+          "text_1": "많이 먹어야 키 큰다냥!",
+          "text_2": "열심히 일했으니, 맛있는 걸로 보상하라냥!",
+          "text_3": "맛있는 거 먹을 때면, 늘 즐겁다냥!",
+          "text_4": "우리집 메뉴는 모두 특! 대! 자! 다! 냥!"
+        },
+        "zoneAdditionDataMap": {
+          "act24side_zone1": {
+            "zoneId": "act24side_zone1",
+            "zoneIcon": "act24side_1",
+            "unlockText": "미개방",
+            "displayTime": "2023-09-07 11:00:00"
+          },
+          "act24side_zone2": {
+            "zoneId": "act24side_zone2",
+            "zoneIcon": "act24side_2",
+            "unlockText": "[아오쿠레 산지] 완료 후 개방",
+            "displayTime": "2023-09-07 11:00:00"
+          }
+        },
+        "questStageList": [
+          {
+            "stageId": "act24side_ex01",
+            "stageRank": 1,
+            "sortId": 1,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex01#f#",
+            "stageRank": 1,
+            "sortId": 2,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex02",
+            "stageRank": 1,
+            "sortId": 3,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex02#f#",
+            "stageRank": 1,
+            "sortId": 4,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex03",
+            "stageRank": 1,
+            "sortId": 5,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex03#f#",
+            "stageRank": 1,
+            "sortId": 6,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex04",
+            "stageRank": 2,
+            "sortId": 7,
+            "isUrgentStage": true,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex04#f#",
+            "stageRank": 2,
+            "sortId": 8,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex05",
+            "stageRank": 2,
+            "sortId": 9,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex05#f#",
+            "stageRank": 2,
+            "sortId": 10,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex06",
+            "stageRank": 2,
+            "sortId": 11,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex06#f#",
+            "stageRank": 2,
+            "sortId": 12,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex07",
+            "stageRank": 3,
+            "sortId": 13,
+            "isUrgentStage": true,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex07#f#",
+            "stageRank": 3,
+            "sortId": 14,
+            "isUrgentStage": false,
+            "isDragonStage": false
+          },
+          {
+            "stageId": "act24side_ex08",
+            "stageRank": 3,
+            "sortId": 15,
+            "isUrgentStage": false,
+            "isDragonStage": true
+          },
+          {
+            "stageId": "act24side_ex08#f#",
+            "stageRank": 3,
+            "sortId": 16,
+            "isUrgentStage": false,
+            "isDragonStage": true
+          },
+          {
+            "stageId": "act24side_s01",
+            "stageRank": 3,
+            "sortId": 17,
+            "isUrgentStage": false,
+            "isDragonStage": true
+          }
+        ],
+        "missionDataList": {
+          "24sideActivity_1": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "숲속 대청소\n",
+            "taskClient": "청소를 좋아하는 어르신",
+            "taskClientDesc": "요즘 짐승들 때문에 아주 난리가 났어.\n어제 깨끗하게 청소했는데 오늘 아침 또 여기저기 낙엽이 생겼잖아.\n젊은이, 놈들을 좀 처리해주게."
+          },
+          "24sideActivity_2": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "소음 관리",
+            "taskClient": "다크서클이 생긴 작가",
+            "taskClientDesc": "시끄러워 죽겠어요!\n집 주변에 있는 록 크라운비스트가 밤만 되면 나무를 들이받아요.\n원고 마감일도 코앞인데, 제발 녀석들을 내쫓아 주세요!"
+          },
+          "24sideActivity_3": {
+            "taskTypeName": "토벌 퀘스트",
+            "taskTypeIcon": "huntingTask",
+            "taskType": "HUNTING_TASK",
+            "taskTitle": "바삭한 혼비스트카츠",
+            "taskClient": "퇴근하는 광부",
+            "taskClientDesc": "아, 너무 먹고 싶다.\n겉은 바삭하고, 속은 부드럽고, 육즙이 넘쳐흐르는 혼비스트카츠 말이야.\n부탁이야! 다시 그 맛을 느끼게 해줘!"
+          },
+          "24sideActivity_4": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "열기구의 꿈\n",
+            "taskClient": "초조한 수공예 애호가",
+            "taskClientDesc": "샤프파울비스트가 또 열기구를 터뜨렸어요……\n열기구를 타고 하늘을 나는 게 제 꿈인데, 절대 부서지면 안 돼요!\n당신! 뭘 해야 하는지 알겠죠?"
+          },
+          "24sideActivity_5": {
+            "taskTypeName": "토벌 퀘스트",
+            "taskTypeIcon": "huntingTask",
+            "taskType": "HUNTING_TASK",
+            "taskTitle": "생명의 의미는 충돌에",
+            "taskClient": "건장한 역사",
+            "taskClientDesc": "오옷, 서로 부딪히는 근육, 멈출 수 없는 삶의 질주.\n듣기론 트리케라비스트가 숲에서 가장 충돌을 잘한다면서?\n자, 나 대신 녀석의 뜨거운 충격을 받아다오!"
+          },
+          "24sideActivity_6": {
+            "taskTypeName": "토벌 퀘스트",
+            "taskTypeIcon": "huntingTask",
+            "taskType": "HUNTING_TASK",
+            "taskTitle": "눈씨름 도전",
+            "taskClient": "신이 난 라이브의 달인",
+            "taskClientDesc": "저의 팬이라면 분명히 알고 있을 거예요. 저의 최신 시리즈……\n눈씨름 도전! 도전 대상은 바로…… 샤프파울비스트!\n그 눈 부신 빛을 직시하면서 제가 최후의 승자가 될 거예요!"
+          },
+          "24sideActivity_7": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "남루한 옷차림",
+            "taskClient": "분노한 패션모델",
+            "taskClientDesc": "저기 있잖아요! 저는 그저 새 옷을 입어 보고 있었는데요.\n그런데 가스토비스트가 갑자기 나타나더니 옷을 전부 망가뜨렸어요!\n그 얄미운 짐승들을 모조리 쫓아내 주세요. 할 수 있겠죠?"
+          },
+          "24sideActivity_8": {
+            "taskTypeName": "토벌 퀘스트",
+            "taskTypeIcon": "huntingTask",
+            "taskType": "HUNTING_TASK",
+            "taskTitle": "전장에서의 계략\n",
+            "taskClient": "게임을 좋아하는 젊은이\n",
+            "taskClientDesc": "티라노비스트는 항상 맹렬한 공격을 막아내던데. 어떻게 한 걸까?\n그걸 배우면 내 타워디펜스 기술이 크게 향상할 텐데.\n당신, 잘 관찰하고 나한테 가르쳐 줘."
+          },
+          "24sideActivity_9": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "불을 짓밟은 용사",
+            "taskClient": "촌장 타키이 아타루",
+            "taskClientDesc": "앞길이 뜨거운 줄 알면서도 선뜻 나서다니.\n그런 용기를 가진 당신이라면 모든 강적을 이길 수 있습니다.\n당신의 개선을 기다리고 있겠습니다!"
+          },
+          "24sideActivity_10": {
+            "taskTypeName": "채집 퀘스트",
+            "taskTypeIcon": "collectionTask",
+            "taskType": "COLLECTION_TASK",
+            "taskTitle": "뼈가 말하는 성장\n",
+            "taskClient": "익명의 수집가\n",
+            "taskClientDesc": "부서진 뼛조각을 좀 수집해 주세요.\n이 재료에 깃든 생명의 의미는 저만 알고 있습니다.\n아, 물론 당신에게도 알려줄 거예요."
+          },
+          "24sideActivity_11": {
+            "taskTypeName": "채집 퀘스트",
+            "taskTypeIcon": "collectionTask",
+            "taskType": "COLLECTION_TASK",
+            "taskTitle": "목숨을 지키는 갑각",
+            "taskClient": "익명의 수집가",
+            "taskClientDesc": "원석충 껍데기를 좀 수집해 주세요.\n이 재료에 깃든 생명의 의미는 저만 알고 있습니다.\n아, 물론 당신에게도 알려줄 거예요."
+          },
+          "24sideActivity_12": {
+            "taskTypeName": "채집 퀘스트",
+            "taskTypeIcon": "collectionTask",
+            "taskType": "COLLECTION_TASK",
+            "taskTitle": "포식용 날카로운 이빨",
+            "taskClient": "익명의 수집가",
+            "taskClientDesc": "케라토비스트 송곳니를 좀 수집해 주세요.\n이 재료에 깃든 생명의 의미는 저만 알고 있습니다.\n아, 물론 당신에게도 알려줄 거예요."
+          },
+          "24sideActivity_13": {
+            "taskTypeName": "채집 퀘스트",
+            "taskTypeIcon": "collectionTask",
+            "taskType": "COLLECTION_TASK",
+            "taskTitle": "환경에 적응하는 모피",
+            "taskClient": "익명의 수집가",
+            "taskClientDesc": "트리케라비스트 가죽을 좀 수집해 주세요.\n이 재료에 깃든 생명의 의미는 저만 알고 있습니다.\n아, 물론 당신에게도 알려줄 거예요."
+          },
+          "24sideActivity_14": {
+            "taskTypeName": "채집 퀘스트",
+            "taskTypeIcon": "collectionTask",
+            "taskType": "COLLECTION_TASK",
+            "taskTitle": "눈물이 기억하는 생명",
+            "taskClient": "익명의 수집가",
+            "taskClientDesc": "'짐승의 눈물'을 좀 수집해 주세요.\n이 재료에 깃든 생명의 의미는 저만 알고 있습니다.\n아, 물론 당신에게도 알려줄 거예요."
+          },
+          "24sideActivity_15": {
+            "taskTypeName": "토벌 퀘스트",
+            "taskTypeIcon": "huntingTask",
+            "taskType": "HUNTING_TASK",
+            "taskTitle": "극한의 높이",
+            "taskClient": "높이뛰기 애호가",
+            "taskClientDesc": "내가 열심히 연습해야 겨우 도달할 수 있는 극한의 높이를……\n날짐승들은 그냥 손쉽게 넘어가잖아!\n이건 대놓고 나를 조롱하는 거야! 너 꼭 나 대신 복수해 줘야 해!"
+          },
+          "24sideActivity_16": {
+            "taskTypeName": "토벌 퀘스트",
+            "taskTypeIcon": "huntingTask",
+            "taskType": "HUNTING_TASK",
+            "taskTitle": "약점 연구",
+            "taskClient": "꼼꼼한 생물학 학생",
+            "taskClientDesc": "제가 하는 게 바로 짐승들의 약점을 연구하는 겁니다.\n제게 충분한 데이터를 주시면 논문에 감사 인사를 실을게요.\n제길, 내가 반드시 지질학 녀석보다 먼저 졸업한다!"
+          },
+          "24sideActivity_17": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "데이터 교란\n",
+            "taskClient": "낙담한 지질학 학생",
+            "taskClientDesc": "숲속의 진동이 또 지진 데이터 관측을 방해했어요.\n계속 이러다가는 논문을 완성하지 못하게 생겼어요……\n도와주세요! 저 진짜 졸업하고 싶어요!"
+          },
+          "24sideActivity_18": {
+            "taskTypeName": "토벌 퀘스트",
+            "taskTypeIcon": "huntingTask",
+            "taskType": "HUNTING_TASK",
+            "taskTitle": "정열의 교향곡",
+            "taskClient": "열정적인 지휘자",
+            "taskClientDesc": "사방팔방에서 약동하는 음표와 아름답고도 뜨거운 악장이여.\n이건…… 폭염 원석충만의 선율이에요.\n제가 다시 한번 귀 기울여 들을 수 있게 해 주세요."
+          },
+          "24sideActivity_19": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "피격 테스트\n",
+            "taskClient": "과학 기술회사 대표",
+            "taskClientDesc": "안녕하세요, 이건 귀하를 위한 지명 의뢰입니다.\n우리 회사의 최신 장비를 장착하고 충돌에서 살아남으시길 바랍니다.\n걱정하지 마세요, 귀하께서 장착하는 장비는 저희가 이미 보험을 들어놓았으니까요."
+          },
+          "24sideActivity_20": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "고소공포증",
+            "taskClient": "겁에 질린 부인",
+            "taskClientDesc": "저 사나운 샤프파울비스트가 얼마나 높이 나는지 좀 보세요……\n저는 녀석들이 떨어질까 봐 무서워 죽겠어요. 이게 바로 고소공포증이겠죠?\n제가 안쓰러우면 제발 녀석들이 날지 못하게 해주세요."
+          },
+          "24sideActivity_21": {
+            "taskTypeName": "토벌 퀘스트",
+            "taskTypeIcon": "huntingTask",
+            "taskType": "HUNTING_TASK",
+            "taskTitle": "누가 더 강할까!",
+            "taskClient": "머리가 단단한 촌민",
+            "taskClientDesc": "어이, 내 얘기 들어봤지? 세상에서 가장 단단한 머리를 가진 사람.\n근데 하드록 크라운비스트의 머리가 더 단단하다는 사람이 있더라? 난 절대 인정 못 해!\n녀석과 겨룰 방법이 없어?"
+          },
+          "24sideActivity_22": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "강자란 무엇인가?",
+            "taskClient": "본업에 돌아간 사냥꾼\n",
+            "taskClientDesc": "네가 실력이 있다는 건 인정해.\n하지만 강자가 되려면 더 어려운 도전도 이겨내야 하지.\n이 의뢰를 완성하면 제대로 인정받게 될 거다."
+          },
+          "24sideActivity_23": {
+            "taskTypeName": "토벌 퀘스트",
+            "taskTypeIcon": "huntingTask",
+            "taskType": "HUNTING_TASK",
+            "taskTitle": "군용 생물공학",
+            "taskClient": "과묵한 무기 설계사",
+            "taskClientDesc": "화살 가스토비스트의 가시는 구조가 독특하고 살상력이 엄청납니다.\n그걸 무기로 설계하면 아마 주문이 폭주할 거예요.\n좀 찾아주면 보상을 드릴게요."
+          },
+          "24sideActivity_24": {
+            "taskTypeName": "개척 퀘스트",
+            "taskTypeIcon": "explorationTask",
+            "taskType": "EXPLORATION_TASK",
+            "taskTitle": "강의 요청",
+            "taskClient": "카즈야",
+            "taskClientDesc": "헌터의 전투기술은 너무 어려워요……\n하지만 헌터가 되기 위해 절대 포기할 순 없어요!\n한 번만 더 진정한 헌터의 전투를 보여줄 수 있나요?"
+          }
+        },
+        "meldingDropDict": {
+          "act24side_01": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 8
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 8
+              },
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "occPercent": 3,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "occPercent": 4,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              }
+            ]
+          },
+          "act24side_02": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 8
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 8
+              },
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "occPercent": 3,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "occPercent": 4,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              }
+            ]
+          },
+          "act24side_03": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 8
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 8
+              },
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "occPercent": 3,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "occPercent": 4,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              }
+            ]
+          },
+          "act24side_04": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 8
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 8
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "occPercent": 3,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "occPercent": 1,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "occPercent": 4,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ]
+          },
+          "act24side_05": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 8
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 8
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "occPercent": 3,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "occPercent": 1,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "occPercent": 4,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ]
+          },
+          "act24side_06": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "occPercent": 1,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "occPercent": 3,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "occPercent": 1,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ]
+          },
+          "act24side_07": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "occPercent": 1,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "occPercent": 3,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "occPercent": 1,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ]
+          },
+          "act24side_08": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_1",
+                "dropType": 2
+              },
+              {
+                "occPercent": 1,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_2",
+                "dropType": 2
+              },
+              {
+                "occPercent": 2,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 2
+              },
+              {
+                "occPercent": 3,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 2
+              },
+              {
+                "occPercent": 1,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 2
+              }
+            ]
+          },
+          "act24side_09": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_6",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_6",
+                "dropType": 8
+              }
+            ]
+          },
+          "act24side_ex01": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 8
+              }
+            ]
+          },
+          "act24side_ex02": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_3",
+                "dropType": 8
+              }
+            ]
+          },
+          "act24side_ex03": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              }
+            ]
+          },
+          "act24side_ex04": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              }
+            ]
+          },
+          "act24side_ex05": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              }
+            ]
+          },
+          "act24side_ex06": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_4",
+                "dropType": 8
+              }
+            ]
+          },
+          "act24side_ex07": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_5",
+                "dropType": 8
+              }
+            ]
+          },
+          "act24side_ex08": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_6",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_6",
+                "dropType": 8
+              }
+            ]
+          },
+          "act24side_s01": {
+            "firstPassRewards": null,
+            "firstCompleteRewards": null,
+            "passRewards": null,
+            "completeRewards": null,
+            "displayRewards": [
+              {
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_6",
+                "dropType": 8
+              }
+            ],
+            "displayDetailRewards": [
+              {
+                "occPercent": 0,
+                "type": "ACTIVITY_ITEM",
+                "id": "act24side_melding_6",
+                "dropType": 8
+              }
+            ]
+          }
+        },
+        "stageMapPreviewDict": {
+          "act24side_09": [
+            "act24side_09_1",
+            "act24side_09_2"
+          ],
+          "act24side_ex08": [
+            "act24side_ex08_1",
+            "act24side_ex08_2"
+          ],
+          "act24side_ex08#f#": [
+            "act24side_ex08_1",
+            "act24side_ex08_2"
+          ],
+          "act24side_s01": [
+            "act24side_s01_1",
+            "act24side_s01_2"
+          ]
+        },
+        "constData": {
+          "stageUnlockToolDesc": "아이템 개방",
+          "mealLackMoney": "필요한 용문폐 수량 부족",
+          "mealDayTimesLimit": 1,
+          "toolMaximum": 2,
+          "stageCanNotUseToTool": [
+            "act24side_tr01"
+          ],
+          "gachaExtraProb": -1.0
+        }
+      }
+    }
   },
   "activityItems": {
+    "act24side": [
+      "act24side_melding_1",
+      "act24side_melding_2",
+      "act24side_melding_3",
+      "act24side_melding_4",
+      "act24side_melding_5",
+      "act24side_melding_6"
+    ],
     "act14mini": [
       "act14mini_token_fu"
     ],
@@ -88698,6 +92442,29 @@
       "name1": "오리지늄 광맥",
       "name2": "오리지늄 광석",
       "name3": "오리지늄 원석"
+    },
+    "act1flip": {
+      "ruleDesc": "매일 1회 소원빌 수 있으며, 확률적으로 추가 기회가 주어집니다. 소원 기회는 다음날에 초기화됩니다.",
+      "grandPrizeDesc": "모든 소원패를 뒤집으면 대상을 받을 수 있습니다",
+      "ignorePos": [
+        14,
+        15,
+        19,
+        20
+      ],
+      "gridAmount": 20,
+      "showPrizeId": [
+        "prize_16",
+        "prize_15"
+      ],
+      "grandRewards": {
+        "id": "itempack_gacha_1",
+        "count": 1,
+        "type": "ITEM_PACK"
+      },
+      "apSupplyOutOfDateDict": {
+        "ap_supply_lt_120": 1695581999
+      }
     }
   },
   "stageRewardsData": {
@@ -91064,6 +94831,40 @@
         }
       ],
       "startTs": 1692687600
+    },
+    {
+      "id": "dis_sandbox_1",
+      "type": "ACTIVITY",
+      "funcId": "act1sandbox",
+      "endTs": 1695279599,
+      "sortId": 42,
+      "itemId": "act1sandbox_milestone_point",
+      "timeNodes": [
+        {
+          "title": "생존 연산 <모래 속의 불> 이벤트 진행 중",
+          "ts": 1694052000
+        }
+      ],
+      "startTs": 1694052000
+    },
+    {
+      "id": "dis_side_24",
+      "type": "ACTIVITY",
+      "funcId": "act24side",
+      "endTs": 1695236399,
+      "sortId": 45,
+      "itemId": null,
+      "timeNodes": [
+        {
+          "title": "<불을 쫓는 낙엽> 이벤트 개방 중",
+          "ts": 1694052000
+        },
+        {
+          "title": "'아이루 의뢰데스크' 스테이지 개방 중",
+          "ts": 1694674800
+        }
+      ],
+      "startTs": 1694052000
     }
   ],
   "actFunData": {
@@ -95759,7 +99560,7 @@
         "pointId": "point_E_deposito",
         "areaId": "area_torre",
         "pointName": "펭귄 로지스틱스 거점",
-        "pointDesc": "문에 수상한 부호가 그려져 있는 걸 발견한 엑시아는 별생각 없이 용문에서 흔히 볼 수 있는 그라피티로 덮어버렸다. 그리고 며칠 뒤, 멀지 않은 곳에 있는 폐차고가 폭파되었다.",
+        "pointDesc": "문에 수상한 부호가 그려져 있는 걸 발견한 엑시아는 별생각 없이 용문에서 흔히 볼 수 있는 그래피티로 덮어버렸다. 그리고 며칠 뒤, 멀지 않은 곳에 있는 폐차고가 폭파되었다.",
         "pointIconId": "pointicon_deposito",
         "pointItaName": "DEPOSITO DELLA PENGUIN LOGISTICS"
       },
@@ -95839,7 +99640,7 @@
         "pointId": "point_I_quartiere",
         "areaId": "area_bellone",
         "pointName": "주택가",
-        "pointDesc": "이곳에 사는 한 아가씨가 패밀리의 남성과 교제한다고 자랑하자, 부친의 웃는 얼굴을 금세 알 수 없는 묘한 표정으로 변했다.",
+        "pointDesc": "이곳에 사는 한 아가씨가 패밀리의 남성과 교제한다고 자랑하자, 부친의 웃는 얼굴은 금세 알 수 없는 묘한 표정으로 변했다.",
         "pointIconId": "pointicon_normal",
         "pointItaName": "QUARTIERE RESIDENZIALE"
       }

@@ -1,0 +1,23 @@
+[HEADER(actId="act1sandbox", npcId="trap_435_trsrhuntr")] 
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="트레져헌터"]사르곤 사막에는 수많은 보물이 파묻혀 있어요. 만약 뭔가를 발견했다면 제가 대신 감정해 드릴게요.
+[Decision(option1="순금 원석 15개 지불하고 감정한다", value1="1.1", option2="감정하지 않는다", value2="1.2")]
+[predicate(references="1.1", selectableCondition="c1&&c0")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-15")]
+[AddItem(itemId="sandbox_0_craft_5", itemCount="-1")]
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="트레져헌터"]우와! 이, 이런 건 흔치 않은데……
+[character(name="avg_npc_805_1", offsetX="100", offsetY="100")]
+[name="트레져헌터"]어머, <황무지 상자: 실드 컨트롤러>군요! 여러분의 운이 부러운걸요! 잘 챙기세요!
+[Decision(option1="감정 끝난 아이템 획득", value1="2.1")]
+[predicate(references="2.1")]
+[AddItem(itemId="sandbox_0_tactical_13", itemCount="1")]
+[SetConditionProgress(conditionKey="market_trsrhuntr_interval", itemCount="0")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[predicate(references="1.2")]
+[SetConditionProgress(conditionKey="market_trsrhuntr_interval", itemCount="0")]
+[withdraw(charId="trap_435_trsrhuntr")]
+[End]
+[Condition(references="c1", key="itemGT", itemId="sandbox_0_gold", value="15")]
+[Condition(references="c0", key="itemGT", itemId="sandbox_0_craft_5", value="1")]

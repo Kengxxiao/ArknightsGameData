@@ -1,0 +1,56 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 活动act1sandbox教学关2_a
+[Battle.Pause]
+[Battle.LockFunction(mask="BATTLE_STATUS")]
+[Battle.LockFunction(mask="SYSTEM_MENU")]
+[InputBlocker(blockInput=true)]
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+벌목 도구는 모두 챙기셨나요? 또 필요한 게 있으시면 제가 지인 찬스 가격에 해드리죠.
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+목재와 다른 소재로 시설과 도구를 만들 수 있으며, 이는 여러분이 생존하는 데 많은 도움을 줍니다.
+[Battle.Pause(pause=false)]
+[Delay(time=1)]
+[Battle.Pause(pause=true)] 
+[Tutorial(focusX=177, focusY=-66, focusWidth=300, focusHeight=260, \
+          animStyle="Highlight",focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+여기 감시탑에 숲이 포착됐어요. 여러분, 힘내세요!
+[Battle.Pause(pause=false)]
+[Delay(time=16)]
+[Battle.Pause(pause=true)] 
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+벌목이 끝나면 나무 주변의 사람이 자동으로 목재를 주울 거예요.
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+오퍼레이터가 목재를 주울 수 있는 제한은 <@tu.kw>저지 가능 수</>에 따라 결정돼요.
+[Battle.Pause(pause=false)]
+[Delay(time=5)]
+[Battle.Pause(pause=true)] 
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+사르곤은 자원이 한정되어 귀한지라, 여러분이 자원을 채집하면 적들이 찾아올 거예요. 하지만, 너무 걱정하지 않으셔도 됩니다.
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+그들은 적의가 그리 강하진 않고, 대부분은 그저 자원을 빼앗으러 오는 것뿐이라, 설령 적들이 방어 포인트에 들어가더라도 여러분에게 피해를 주지 않을 거예요.
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+그리고, 여러분이 자발적으로 퇴각하든 쓰러지든 자원은 모두 그대로 챙길 수 있어요.
+[Battle.Pause(pause=false)]
+[Delay(time=15)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+[Tutorial(target="card_toggle", waitForSignal="put_down", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",searchBtnInChildren=true, \
+          protectTime=0.5, dialogHead="$avatar_trademan")] \
+여러분, 자원 채집이 힘드시죠? 여기에서 여러분이 보유한 각종 시설을 확인할 수 있어요. 이걸 보세요!
+[Tutorial(focusX=-138, focusY=61, focusWidth=120, focusHeight=120, \
+          animStyle="Highlight",anchor="BottomRight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+이건 당사가, 즉 저희 선밸리 공업에서 생산한 채집 허브예요!
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+채집 허브는 로봇을 조립하여 채집 허브 범위에 있는 특정 자원을 채집할 수 있어요.
+[Tutorial(protectTime=0.5, dialogHead="$avatar_trademan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+이것만 있으면 여러분의 채집 효율이 대폭 향상할 거예요. 이렇게 만난 것도 인연인데, 제가 여러분께 공짜로 쓸 기회를 드리죠!
+[InputBlocker(blockInput=false)]
+[Battle.EnsureMinCost(cost=5)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_trademan", animStyle="Drag", \
+          startX=-138, startY=61, startAnchor="BottomRight",endAnchor="BottomRight", endX=-338, endY=261)] \
+사용법은 매우 간단해요. <@tu.kw>적과 멀리</> 떨어진 곳을 찾은 뒤……
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_trademan", animStyle="Drag", \
+          startX=56, startY=33, endX=269, endY=33)] \
+이렇게 <@tu.kw>오른쪽</>으로 배치하면, 자동으로 여러분이 원하는 자원을 채집합니다!

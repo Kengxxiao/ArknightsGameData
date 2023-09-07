@@ -1,0 +1,29 @@
+[HEADER(actId="act1sandbox", npcId="trap_434_klmantc")] 
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="맨티코어 킬러"]이 중에 필요한 물건이 있어……?
+[Decision(option1="크랩 다릿살 6개 구매 (순금 원석 -15)", value1="1.1", option2="고깃덩이 3개 구매 (순금 원석 -15)", value2="1.2", option3="뼈다귀 다릿살 3개 구매 (순금 원석 -25)", value3="1.3", option4="거래 종료", value4="1.4")]
+[predicate(references="1.1", selectableCondition="c1")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-15")]
+[AddItem(itemId="sandbox_0_crab", itemCount="6")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="맨티코어 킬러"]나중에 또 뭔가를 찾으면 가져올게……
+[End]
+[predicate(references="1.2", selectableCondition="c2")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-15")]
+[AddItem(itemId="sandbox_0_venison", itemCount="3")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="맨티코어 킬러"]나중에 또 뭔가를 찾으면 가져올게……
+[End]
+[predicate(references="1.3", selectableCondition="c0")]
+[AddItem(itemId="sandbox_0_gold", itemCount="-25")]
+[AddItem(itemId="sandbox_0_beef", itemCount="3")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="맨티코어 킬러"]나중에 또 뭔가를 찾으면 가져올게……
+[End]
+[predicate(references="1.4")]
+[character(name="avg_npc_802_1", offsetX="125", offsetY="100")]
+[name="맨티코어 킬러"]나중에 또 뭔가를 찾으면 가져올게……
+[End]
+[Condition(references="c1", key="itemGT", itemId="sandbox_0_gold", value="15")]
+[Condition(references="c2", key="itemGT", itemId="sandbox_0_gold", value="15")]
+[Condition(references="c0", key="itemGT", itemId="sandbox_0_gold", value="25")]
