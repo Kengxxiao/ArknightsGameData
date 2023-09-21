@@ -7,7 +7,8 @@ local list =
   "HotFixes/TileHotfixer",
   "HotFixes/MhwrctSkill_1Hotfixer",
   "HotFixes/MhwrbgSkill_1Hotfixer",
-  "HotFixes/Yato2Skill_2Hotfixer"
+  "HotFixes/Yato2Skill_2Hotfixer",
+  "HotFixes/YostarSDKHotfixer"
 };
 
 return list;
