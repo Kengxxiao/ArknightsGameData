@@ -841,7 +841,8 @@ function MainlineBpViewModel:_GetUnlimitInRoundShowInfo(unlimitBpDataList, start
   if unlimitBpDataList == nil or startIndex < 1 then
     return resultData,resultNeedClaimCount,resultCurRoundLeftTokenNum;
   end
-  for i = startIndex, #unlimitBpDataList do
+  local listCount = #unlimitBpDataList;
+  for i = startIndex, listCount do
     local data = unlimitBpDataList[i];
     local tempLeft = left;
     left = left - data.tokenNum;
@@ -852,7 +853,14 @@ function MainlineBpViewModel:_GetUnlimitInRoundShowInfo(unlimitBpDataList, start
       resultCurRoundLeftTokenNum = tempLeft;
     end
 
-    if left <= 0 then
+    if left == 0 then
+      local nextIndex = i % listCount + 1;
+      local nextData = unlimitBpDataList[nextIndex];
+      resultData = nextData;
+      break;
+    end
+
+    if left < 0 then
       resultData = data;
       break;
     end
