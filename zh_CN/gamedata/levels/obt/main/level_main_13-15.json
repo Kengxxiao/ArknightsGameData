@@ -2262,6 +2262,30 @@
       "visitEveryCheckPoint": false
     },
     {
+      "motionMode": "E_NUM",
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "spawnRandomRange": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "spawnOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "checkpoints": null,
+      "allowDiagonalMove": true,
+      "visitEveryTileCenter": false,
+      "visitEveryNodeCenter": false,
+      "visitEveryCheckPoint": false
+    },
+    {
       "motionMode": "WALK",
       "startPosition": {
         "row": 1,
@@ -2710,8 +2734,8 @@
     {
       "motionMode": "WALK",
       "startPosition": {
-        "row": 1,
-        "col": 6
+        "row": 2,
+        "col": 7
       },
       "endPosition": {
         "row": 6,
@@ -2731,7 +2755,7 @@
           "time": 0.0,
           "position": {
             "row": 6,
-            "col": 6
+            "col": 7
           },
           "reachOffset": {
             "x": 0.0,
@@ -3238,13 +3262,34 @@
           "preDelay": 20.0,
           "actions": [
             {
-              "actionType": "SPAWN",
+              "actionType": "DISPLAY_ENEMY_INFO",
               "managedByScheduler": true,
               "key": "enemy_1368_spilot",
               "count": 1,
               "preDelay": 3.0,
               "interval": 1.0,
               "routeIndex": 18,
+              "blockFragment": false,
+              "autoPreviewRoute": true,
+              "autoDisplayEnemyInfo": false,
+              "isUnharmfulAndAlwaysCountAsKilled": false,
+              "hiddenGroup": null,
+              "randomSpawnGroupKey": null,
+              "randomSpawnGroupPackKey": null,
+              "randomType": "ALWAYS",
+              "weight": 0,
+              "dontBlockWave": false,
+              "isValid": false,
+              "extraMeta": null
+            },
+            {
+              "actionType": "SPAWN",
+              "managedByScheduler": true,
+              "key": "enemy_1368_spilot",
+              "count": 1,
+              "preDelay": 3.0,
+              "interval": 1.0,
+              "routeIndex": 19,
               "blockFragment": false,
               "autoPreviewRoute": true,
               "autoDisplayEnemyInfo": false,
@@ -3269,27 +3314,6 @@
               "key": "enemy_1363_spnshd",
               "count": 1,
               "preDelay": 0.0,
-              "interval": 1.0,
-              "routeIndex": 19,
-              "blockFragment": false,
-              "autoPreviewRoute": false,
-              "autoDisplayEnemyInfo": false,
-              "isUnharmfulAndAlwaysCountAsKilled": false,
-              "hiddenGroup": null,
-              "randomSpawnGroupKey": null,
-              "randomSpawnGroupPackKey": null,
-              "randomType": "ALWAYS",
-              "weight": 0,
-              "dontBlockWave": false,
-              "isValid": false,
-              "extraMeta": null
-            },
-            {
-              "actionType": "SPAWN",
-              "managedByScheduler": true,
-              "key": "enemy_1360_dfello",
-              "count": 1,
-              "preDelay": 15.0,
               "interval": 1.0,
               "routeIndex": 20,
               "blockFragment": false,
@@ -3329,11 +3353,32 @@
             {
               "actionType": "SPAWN",
               "managedByScheduler": true,
+              "key": "enemy_1360_dfello",
+              "count": 1,
+              "preDelay": 15.0,
+              "interval": 1.0,
+              "routeIndex": 22,
+              "blockFragment": false,
+              "autoPreviewRoute": false,
+              "autoDisplayEnemyInfo": false,
+              "isUnharmfulAndAlwaysCountAsKilled": false,
+              "hiddenGroup": null,
+              "randomSpawnGroupKey": null,
+              "randomSpawnGroupPackKey": null,
+              "randomType": "ALWAYS",
+              "weight": 0,
+              "dontBlockWave": false,
+              "isValid": false,
+              "extraMeta": null
+            },
+            {
+              "actionType": "SPAWN",
+              "managedByScheduler": true,
               "key": "enemy_1363_spnshd",
               "count": 1,
               "preDelay": 30.0,
               "interval": 1.0,
-              "routeIndex": 22,
+              "routeIndex": 23,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -3387,7 +3432,7 @@
         }
       ]
     },
-    "bonore_dfello1": {
+    "bonore_dfello": {
       "phases": [
         {
           "preDelay": 0.0,
@@ -3420,7 +3465,7 @@
         }
       ]
     },
-    "bonore_dfello": {
+    "bonore_spilot": {
       "phases": [
         {
           "preDelay": 0.0,
@@ -3428,7 +3473,7 @@
             {
               "actionType": "SPAWN",
               "managedByScheduler": true,
-              "key": "enemy_1360_dfello",
+              "key": "enemy_1368_spilot",
               "count": 1,
               "preDelay": 0.0,
               "interval": 1.0,
@@ -3509,12 +3554,12 @@
           {
             "key": "branch_id",
             "value": 0.0,
-            "valueStr": "bonore_dfello1"
+            "valueStr": "bonore_dfello"
           },
           {
-            "key": "branch_id",
+            "key": "SummonSpilot.branch_id",
             "value": 0.0,
-            "valueStr": "bonore_dfello"
+            "valueStr": "bonore_spilot"
           }
         ]
       }
