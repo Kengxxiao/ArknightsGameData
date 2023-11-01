@@ -36,6 +36,7 @@ local FloatParadeSignAnimPanel = require "Feature/Activity/FloatParade/FloatPara
 
 
 
+
 FloatParadeMainDlg = Class("FloatParadeMainDlg", DlgBase);
 FloatParadeMainDlg.ENTRY_ANIM = "float_parade_entry";
 
@@ -115,13 +116,16 @@ function FloatParadeMainDlg:_RenderBasicAndDayInfo()
   local endt = CS.Torappu.DateTimeUtil.TimeStampToDateTime(self.m_data.basicData.endTime);
   self._endTime.text = CS.Torappu.FormatUtil.FormatDateTimeyyyyMMddHHmm(endt);
   
+  local hubPath = CS.Torappu.ResourceUrls.GetFloatParadeHubPath(self.m_data.activityId);
+  
+  local sprite = self:LoadSpriteFromAutoPackHub(hubPath, self.m_data.actData.constData.cityNamePic);
+  self._cityName.sprite = sprite;
+  self._cityNameElement.preferredWidth = sprite.rect.width;
+  
   self._placeName.text = self.m_data.todayData.placeName;
   self._zoneName.text = self.m_data.todayGroupInfo.name;
   self._probTitle.text = self.m_data.actData.constData.variationTitle;
-  local suc, picPath = self._placePicHub:TryGetValue(self.m_data.todayData.placePic);
-  if suc then
-    self._placePic.sprite = self:LoadSprite(picPath);
-  end
+  self._placePic.sprite = self:LoadSpriteFromAutoPackHub(hubPath, self.m_data.todayData.placePic);
   local hasExtReward = self.m_data.todayData.extReward ~= nil;
   CS.Torappu.Lua.Util.SetActiveIfNecessary(self._extRewardFlag, hasExtReward);
 end
