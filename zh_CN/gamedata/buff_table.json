@@ -1672,6 +1672,66 @@
       }
     ]
   },
+  "ep_break_fire_enemy": {
+    "attributes": {
+      "abnormalFlags": null,
+      "abnormalImmunes": null,
+      "abnormalAntis": null,
+      "abnormalCombos": null,
+      "abnormalComboImmunes": null,
+      "attributeModifiers": [
+        {
+          "attributeType": "MAGIC_RESISTANCE",
+          "formulaItem": "ADDITION",
+          "value": -20.0,
+          "loadFromBlackboard": false,
+          "fetchBaseValueFromSourceEntity": false
+        }
+      ]
+    },
+    "buffKey": "ep_break_fire_enemy",
+    "loadFromDB": false,
+    "isDurableBuff": false,
+    "isSilenceable": false,
+    "isStunnable": false,
+    "isFreezable": false,
+    "isLevitatable": false,
+    "statusResistable": "AUTOMATIC",
+    "templateKey": "ep_break_fire_enemy",
+    "disableOverride": false,
+    "overrideKey": null,
+    "overrideType": "DEFAULT",
+    "maxStackCnt": 1,
+    "maxValidStackCnt": -1,
+    "overrideEffectKey": "common_firedamage_debuff",
+    "overrideOnEventPriority": false,
+    "onEventPriority": "DEFAULT",
+    "audioSignal": null,
+    "lifeTimeType": "LIMITED",
+    "takeSnapshotWhenExtend": false,
+    "durationKey": "ep_break_duration",
+    "lifeTime": 0.0,
+    "triggerLifeType": "IMMEDIATELY",
+    "triggerCnt": 0,
+    "triggerInterval": -1.0,
+    "waitFirstTriggerInterval": true,
+    "firstTriggerInterval": -1.0,
+    "priority": -1,
+    "priorityBBKeys": null,
+    "stripBlackboardParamsWithBuffKey": false,
+    "blackboard": [
+      {
+        "key": "duration",
+        "value": 10.0,
+        "valueStr": null
+      },
+      {
+        "key": "ep_fire_damage",
+        "value": 7000.0,
+        "valueStr": null
+      }
+    ]
+  },
   "disarmed_and_cant_use_skill": {
     "attributes": {
       "abnormalFlags": [
@@ -3103,5 +3163,48 @@
         "valueStr": null
       }
     ]
+  },
+  "disarmed_combat": {
+    "attributes": {
+      "abnormalFlags": [
+        "DISARMED_COMBAT"
+      ],
+      "abnormalImmunes": null,
+      "abnormalAntis": null,
+      "abnormalCombos": null,
+      "abnormalComboImmunes": null,
+      "attributeModifiers": null
+    },
+    "buffKey": "disarmed_combat",
+    "loadFromDB": false,
+    "isDurableBuff": false,
+    "isSilenceable": false,
+    "isStunnable": false,
+    "isFreezable": false,
+    "isLevitatable": false,
+    "statusResistable": "AUTOMATIC",
+    "templateKey": "empty",
+    "disableOverride": false,
+    "overrideKey": null,
+    "overrideType": "EXTEND",
+    "maxStackCnt": 1,
+    "maxValidStackCnt": -1,
+    "overrideEffectKey": "common_buff_thrill",
+    "overrideOnEventPriority": false,
+    "onEventPriority": "DEFAULT",
+    "audioSignal": null,
+    "lifeTimeType": "LIMITED",
+    "takeSnapshotWhenExtend": false,
+    "durationKey": "not_combat",
+    "lifeTime": 0.0,
+    "triggerLifeType": "IMMEDIATELY",
+    "triggerCnt": 0,
+    "triggerInterval": -1.0,
+    "waitFirstTriggerInterval": true,
+    "firstTriggerInterval": -1.0,
+    "priority": -1,
+    "priorityBBKeys": null,
+    "stripBlackboardParamsWithBuffKey": false,
+    "blackboard": null
   }
 }
