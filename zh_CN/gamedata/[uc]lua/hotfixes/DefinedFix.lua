@@ -2,7 +2,7 @@
 local list = 
 {
   
-  "HotFixes/ShopHotfixer",
+  "HotFixes/V045Hotfixer",
 };
 
 return list;
