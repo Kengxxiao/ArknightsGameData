@@ -1,0 +1,21 @@
+[header(actId="sandbox_1", npcId="")] 
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]终于忙完了，工作了这么多天感觉骨头都要散了。
+[decision(option1="森蚺小姐，你快帮帮我！", value1="1.1")]
+[predicate(references="1.1")]
+[decision(option1="大祭司到底喜欢吃什么啊？", value1="2.1")]
+[predicate(references="2.1")]
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]什么，他还在生气吗？
+[decision(option1="是的，气得一直掉毛。", value1="3.1")]
+[predicate(references="3.1")]
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]让我来吧，我知道怎么做才对他的口味。
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]不过，我得准备一些特殊的调料，你能先做一道<color=#d8d769>高压复焗浓汤</color>吗？
+[decision(option1="这菜我倒是做过。", value1="4.1", option2="离开。", value2="4.2")]
+[predicate(references="4.1", selectableCondition="c0")]
+[additem(itemId="sandbox_1_food_16", itemCount="-1")]
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]谢谢你帮我，到时候你就可以拿到自己想要的了。
+[withdraw(id="trap_466_tzumama", withoutAnim="FALSE")]
+[save]
+[end]
+[predicate(references="4.2")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_1_food_16", value="1")]

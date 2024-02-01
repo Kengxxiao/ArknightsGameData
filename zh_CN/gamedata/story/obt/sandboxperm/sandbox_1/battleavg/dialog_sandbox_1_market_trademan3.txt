@@ -1,0 +1,21 @@
+[header(actId="sandbox_1", npcId="")] 
+[uioperation(target="", item="sandbox_1_dimensioncoin", enable="TRUE")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]要玩“阿尔萨兰大竞猜”吗？新到的奖品，看一看瞧一瞧哟！转一次需要支付一份<color=#d8d769>晶莹碎片</color>，十次就是十份！
+[decision(option1="转十次", value1="1.1", option2="只是来问你感觉还好吗。", value2="1.2", option3="不了，我们还有别的事要做。", value3="1.3")]
+[predicate(references="1.1", selectableCondition="c0")]
+[additem(itemId="sandbox_1_dimensioncoin", itemCount="-10")]
+[gacha(gachaPool="pool_npc1", cnt="10", all="FALSE")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]哎呀，真是不错的运气！欢迎下次再来！
+[withdraw(id="trap_415_trademan", withoutAnim="FALSE")]
+[save]
+[end]
+[predicate(references="1.2", visibleCondition="!c1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]非常舒适，很难想象这附近还有如此让我心情愉悦的地方，为表感谢，我要送你们一个小小的礼物。
+[additem(itemId="sandbox_1_craft_7", itemCount="1")]
+[decision(option1="谢谢你的礼物。", value1="2.1")]
+[predicate(references="2.1")]
+[end]
+[predicate(references="1.3")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_1_dimensioncoin", value="10")]
+[condition(references="c1", key="itemGE", itemId="sandbox_1_craft_7", value="1")]

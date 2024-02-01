@@ -1,0 +1,33 @@
+[header(actId="sandbox_1", npcId="trap_472_tfalco")]
+[summontrap(x="2", y="6", charId="trap_472_tfalco", isChar="FALSE", dir="RIGHT")]
+[summontrap(x="4", y="8", charId="trap_467_ttuye", isChar="FALSE", dir="LEFT")]
+[summontrap(x="5", y="6", charId="trap_470_tmantic", isChar="FALSE", dir="LEFT")]
+[camerafocusto(offsetX="3", offsetY="7", time="1", scale="MID")]
+[foginview(id="rect1", leftBottomX="1", leftBottomY="4", rightUpX="7", rightUpY="10")]
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]你们真的，很强，谢谢你们。
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="TRUE"]我们只是做了该做的事。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]说话算数的人在阿尔萨兰已经是不错的人了。这些年，王酋们所做的事已经让我们不再相信给出承诺的人。
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="TRUE"]你们的头儿呢？
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]都在战斗中牺牲了。我们曾经依水而居，但纳卢塔巴提河断流了，我们中的一些人就去投靠北边的雨林部族了。
+[name="狮蝎", avatarId="char_215_mantic", isAvatarRight="TRUE"]在萨尔贡这样的事其实并不少见。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]在我很小的时候王酋就已经来了，他们承诺过很多，但都没有兑现。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]然后我和我的兄弟姐妹就被他们押到了这里做工，我们联合起来试图反抗......但都失败了。
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="TRUE"]都过去了。我们已经安排你的兄弟姐妹去和北方的部族会合了。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]我手头也没有什么可以拿来道谢的东西，只有这些前辈总结的采掘技巧。
+[playanim(id="trap_472_tfalco", anim="Attack", dir="RIGHT")]
+[delay(time="1")]
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]你们拿去看看吧。
+[additem(itemId="sandbox_1_craft_13", itemCount="1")]
+[decision(option1="你想过之后去哪里吗？", value1="1.1")]
+[predicate(references="1.1")]
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]不知道，但如果你们愿意，我也可以去你们的营地出一份力。
+[decision(option1="我们随时欢迎你。", value1="2.1")]
+[predicate(references="2.1")]
+[fognotinview(id="rect1")]
+[withdraw(id="trap_472_tfalco")]
+[withdraw(id="trap_467_ttuye")]
+[withdraw(id="trap_470_tmantic")]
+[delay(time="2")]
+[resetcamera(time="1")]
+[save]
+[end]

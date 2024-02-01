@@ -1,0 +1,49 @@
+[header(actId="sandbox_1", npcId="trap_415_trademan")]
+[summontrap(x="3", y="4", charId="trap_415_trademan", isChar="FALSE", dir="RIGHT")]
+[uioperation(target="main", item="", enable="False")]
+[camerafocusto(id="trap_415_trademan", scale="CLOSE", time="1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]我的朋友，请留步。
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]经过这些日子的相处，我明白你们是值得信赖的伙伴，所以我想托付你们一件事情，请不要拒绝。
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]我发誓，如果你们能帮忙，我会给你们丰厚的报酬。
+[decision(option1="你确定是丰厚的报酬？", value1="1.1")]
+[predicate(references="1.1")]
+[decision(option1="而不是丰厚的折扣？", value1="2.1")]
+[predicate(references="2.1")]
+[emoji(target="trap_415_trademan", emoji="common_bubble_happy")]
+[delay(time="1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]咳咳，您说话怎么突然这么尖锐，怪不适应的。
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]您大可放心，这次求助绝不是什么变着花样的酬宾活动，而是真正的有要事相托。
+[decision(option1="讲讲吧，我听着呢。", value1="3.1")]
+[predicate(references="3.1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]我有位朋友，总是热衷于去一些人迹罕至的地方探险，寻找那些掩埋在地下的宝藏，也时常会递些消息给我。
+[decision(option1="你说的是不是某位菲林？", value1="4.1")]
+[predicate(references="4.1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]您在说什么？
+[decision(option1="好吧，又是一个找宝藏的。", value1="5.1")]
+[predicate(references="5.1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]咳咳，总之上个月，她突然失去音讯，我怀疑她可能是遇上什么事情了。
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]如果你们能帮我寻找她的踪迹，我将感激不尽。
+[decision(option1="她最后出现的地方在哪里？", value1="6.1")]
+[predicate(references="6.1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]北方，一直向北走，那里有一片鲜少被踏足的土地。
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]据说那里藏有阿尔萨兰的宝藏，但因为地形险恶，没有人能验证那些传说。
+[decision(option1="......正好顺路。", value1="7.1")]
+[predicate(references="7.1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]我会为你们准备好足够的酬劳。
+[decision(option1="那倒是其次。", value1="8.1")]
+[predicate(references="8.1")]
+[playanim(id="trap_415_trademan", anim="Attack", dir="RIGHT")]
+[delay(time="1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]这难道不是最大的动力吗？
+[decision(option1="你都叫我们朋友了。", value1="9.1")]
+[predicate(references="9.1")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]哦......我心里感觉很温暖，祝你们一路顺风，我时刻等着你们的好消息。
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]这份澄亮石的分布图就作为我为你们准备的谢礼。
+[additem(itemId="sandbox_1_craft_4", itemCount="1")]
+（你获得了阿尔萨兰澄亮石分布图，现在可以采掘澄亮石了。）
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]相信我，如果你们去了那里，一定会用到的。
+[withdraw(id="trap_415_trademan")]
+[delay(time="3")]
+[resetcamera(time="1")]
+[save]
+[end]

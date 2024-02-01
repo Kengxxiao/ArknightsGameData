@@ -1,0 +1,35 @@
+[header(actId="sandbox_1", npcId="trap_471_tegmaus")]
+[summontrap(x="13", y="3", charId="trap_471_tegmaus", isChar="FALSE", dir="LEFT")]
+[summontrap(x="14", y="4", charId="trap_467_ttuye", isChar="FALSE", dir="LEFT")]
+[summonenemy(enemyId="enemy_7024_clking", x="10", y="4", endX="15", endY="3")]
+[move(enemyId="enemy_7024_clking", x="11", y="4")]
+[summonenemy(enemyId="enemy_7025_clbb", x="9", y="3", endX="15", endY="3")]
+[move(enemyId="enemy_7025_clbb", x="10", y="3")]
+[camerafocusto(offsetX="12", offsetY="4", time="2", scale="FAR")]
+[delay(time="1")]
+[foginview(leftBottomX="8", leftBottomY="2", rightUpX="15", rightUpY="7", id="fog_1")]
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="TRUE"]听说你们在很多地方都进行过巡演，看台上台下这配合的熟练程度，应该是用这样的方法偷了不少钱吧。
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]你们这些多管闲事的人真是煞风景，还是早些滚蛋吧。难道没有人告诉你们，在别人的地盘上要谨言慎行吗？
+[playanim(id="trap_471_tegmaus", anim="Attack", dir="LEFT")]
+[name="佩佩", avatarId="bavg_npc_001", isAvatarRight="TRUE"]你真的要在一半手下被打得鼻青脸肿的时候说狠话吗？
+[name="杂耍艺人助手", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]（小声）老板，他们中间有很多硬茬，不宜恋战，咱们还是快走吧。
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]哼，劝你们别再往前了。几天前，这里来了一位到处乱走的女士。
+[decision(option1="又是来找宝藏的？", value1="1.1")]
+[predicate(references="1.1")]
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]嘿嘿，一些不老实的客人会遭遇什么？不用我说，你们自己想想吧。
+[withdraw(id="enemy_7024_clking")]
+[name="杂耍艺人助手", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]老板，等等我！
+[withdraw(id="enemy_7025_clbb")]
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="FALSE"]到处乱走的女士？他们说的是谁？那位联络员拜托我们寻找的朋友？
+[playanim(id="trap_471_tegmaus", anim="Idle", dir="RIGHT")]
+[decision(option1="应该就是那个人。", value1="2.1")]
+[predicate(references="2.1")]
+[name="佩佩", avatarId="bavg_npc_001", isAvatarRight="FALSE"]不急，他们逃跑的方向和我们的目的地一致。
+[name="佩佩", avatarId="bavg_npc_001", isAvatarRight="FALSE"]我们迟早还会再碰上的。
+[withdraw(id="trap_471_tegmaus")]
+[withdraw(id="trap_467_ttuye")]
+[delay(time="3")]
+[fognotinview(id="fog_1")]
+[resetcamera(time="1")]
+[save]
+[end]

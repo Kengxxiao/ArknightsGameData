@@ -59,7 +59,7 @@ function Act4FunBattleFinishDlg:OnRenderPanel()
     headIcon.sprite = self:LoadSpriteFromAutoPackHub(hubPath,self.m_viewModel.headiconList[headIconIdx]);
   end
 
-  CS.Torappu.UI.UINotification.TextToast(toastText)
+  luaUtils.TextToast(toastText)
   self:_InitBGM()
 end
 
@@ -94,9 +94,9 @@ end
 
 function Act4FunBattleFinishDlg:EventOnToLiveUnableClick()
   if (self.m_viewModel.isNewStage) then
-    CS.Torappu.UI.UINotification.TextToast(StringRes.ACTFUN_GUIDE_STAGE_NOT_COMPLETE);
+    luaUtils.TextToast(StringRes.ACTFUN_GUIDE_STAGE_NOT_COMPLETE);
   else
-    CS.Torappu.UI.UINotification.TextToast(StringRes.ACTFUN_PHOTO_NOT_COMPLETE);
+    luaUtils.TextToast(StringRes.ACTFUN_PHOTO_NOT_COMPLETE);
   end
 end
 

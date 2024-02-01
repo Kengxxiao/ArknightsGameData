@@ -1,0 +1,80 @@
+[header(actId="sandbox_1", npcId="")] 
+[summontrap(x="5", y="8", charId="trap_472_tfalco", isChar="FALSE", dir="RIGHT")]
+[summontrap(x="8", y="9", charId="trap_467_ttuye", isChar="FALSE", dir="LEFT")]
+[camerafocusto(offsetX="7", offsetY="9", time="1", scale="MID")]
+[delay(time="0.5")]
+[foginview(id="rect1", leftBottomX="1", leftBottomY="7", rightUpX="12", rightUpY="12")]
+[name="？？？", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]......
+[decision(option1="女士，你还好吗？", value1="1.1")]
+[predicate(references="1.1")]
+[decision(option1="（给她一些食物）", value1="2.1", option2="（给她一些清水）", value2="2.2")]
+[predicate(references="2.1")]
+[name="？？？", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]谢谢你们，我已经困在这里好几天了，又累又饿。
+[decision(option1="该怎么称呼你？", value1="3.1")]
+[predicate(references="3.1")]
+[name="？？？", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]我的真名......早就遗失在过去了......叫我的绰号吧，红隼。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]你们快离开吧，我不希望自己的麻烦波及你们。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]我是从南边的采矿场逃出来的，后面有很多人在追我。
+[summonenemy(x="4", y="10", endX="9", endY="8", enemyId="enemy_1341_bthtms")]
+[camerafocusto(offsetX="6", offsetY="9", time="1", scale="FAR")]
+[delay(time="0.5")]
+[playanim(charId="trap_472_tfalco", looporidle="Idle", anim="Idle", dir="LEFT")]
+[name="采矿场监工", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]追了这么久，总算追到了，哼，我们那么多人折在你这女人手里，今天你别想活着离开这儿。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]哼，采矿场惨死在你们手中的矿工不计其数，我今天即使死在这里，能再拉你们几条命垫背，也很划算了。
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="FALSE"]我们要帮帮她吗？
+[decision(option1="当然要帮她。", value1="4.1", option2="最重要的是保证她的安全。", value2="4.2")]
+[predicate(references="4.1")]
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="FALSE"]那就上吧。
+[fognotinview(id="rect1")]
+[withdraw(id="trap_472_tfalco", withoutAnim="FALSE")]
+[withdraw(id="trap_467_ttuye", withoutAnim="FALSE")]
+[withdraw(id="enemy_1341_bthtms", withoutAnim="FALSE")]
+[delay(time="3")]
+[resetcamera(time="1")]
+[save]
+[end]
+[predicate(references="4.2")]
+[name="采矿场监工", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]哼，你们帮了这女人，那你们也别想跑。
+[fognotinview(id="rect1")]
+[withdraw(id="trap_472_tfalco", withoutAnim="FALSE")]
+[withdraw(id="enemy_1341_bthtms", withoutAnim="FALSE")]
+[withdraw(id="trap_467_ttuye", withoutAnim="FALSE")]
+[delay(time="3")]
+[resetcamera(time="1")]
+[save]
+[end]
+[predicate(references="2.2")]
+[name="？？？", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]谢谢你们，我已经困在这里好几天了，又累又饿。
+[decision(option1="该怎么称呼你？", value1="5.1")]
+[predicate(references="5.1")]
+[name="？？？", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]我的真名......早就遗失在过去了......叫我的绰号吧，红隼。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]你们快离开吧，我不希望自己的麻烦波及你们。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]我是从南边的采矿场逃出来的，后面有很多人在追我。
+[summonenemy(x="4", y="10", endX="9", endY="8", enemyId="enemy_1341_bthtms")]
+[camerafocusto(offsetX="6", offsetY="9", time="1", scale="FAR")]
+[delay(time="0.5")]
+[playanim(charId="trap_472_tfalco", looporidle="Idle", anim="Idle", dir="LEFT")]
+[name="采矿场监工", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]追了这么久，总算追到了，哼，我们那么多人折在你这女人手里，今天你别想活着离开这儿。
+[name="红隼", avatarId="char_4023_rfalcn", isAvatarRight="FALSE"]哼，采矿场惨死在你们手中的矿工不计其数，我今天即使死在这里，能再拉你们几条命垫背，也很划算了。
+[name="图耶", avatarId="char_402_tuye", offsetX="1", isAvatarRight="FALSE"]我们要帮帮她吗？
+[decision(option1="当然要帮她。", value1="6.1", option2="最重要的是保证她的安全。", value2="6.2")]
+[predicate(references="6.1")]
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="FALSE"]那就上吧。
+[fognotinview(id="rect1")]
+[withdraw(id="trap_472_tfalco", withoutAnim="FALSE")]
+[withdraw(id="trap_467_ttuye", withoutAnim="FALSE")]
+[withdraw(id="enemy_1341_bthtms", withoutAnim="FALSE")]
+[delay(time="3")]
+[resetcamera(time="1")]
+[save]
+[end]
+[predicate(references="6.2")]
+[name="采矿场监工", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]哼，你们帮了这女人，那你们也别想跑。
+[fognotinview(id="rect1")]
+[withdraw(id="trap_472_tfalco", withoutAnim="FALSE")]
+[withdraw(id="trap_467_ttuye", withoutAnim="FALSE")]
+[withdraw(id="enemy_1341_bthtms", withoutAnim="FALSE")]
+[delay(time="3")]
+[resetcamera(time="1")]
+[save]
+[end]

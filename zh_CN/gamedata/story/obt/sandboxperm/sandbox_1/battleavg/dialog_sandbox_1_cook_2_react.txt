@@ -1,0 +1,15 @@
+[header(actId="sandbox_1", npcId="")] 
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]是森蚺那丫头让你来找我的吗？
+[decision(option1="是的，让我带了<color=#d8d769>蟹肉碎拌饭</color>。", value1="1.1", option2="你先别急......", value2="1.2")]
+[predicate(references="1.1", selectableCondition="c0")]
+[additem(itemId="sandbox_1_food_1", itemCount="-1")]
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]要是你带来的食物我不满意，我可不会轻易地原谅她。
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]让我尝尝......
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]什么？！那丫头让你用这个打发我？她想得美！
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]给我费点心思重新弄道别的来！
+[withdraw(id="trap_468_tpriest", withoutAnim="FALSE")]
+[save]
+[end]
+[predicate(references="1.2")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_1_food_1", value="1")]

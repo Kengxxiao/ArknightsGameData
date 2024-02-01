@@ -1,0 +1,28 @@
+[header(actId="sandbox_1", npcId="trap_469_tpasngr")]
+[summontrap(charId="trap_469_tpasngr", dir="LEFT", x="16", y="10", isChar="False")]
+[foginview(leftBottomX="5", leftBottomY="7", rightUpX="19", rightUpY="14", id="fog_1")]
+[camerafocusto(id="trap_469_tpasngr", scale="MID", time="1")]
+[delay(time="1")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]想不到我们会再次相遇，您是怎么找到这里来的？
+[summonenemy(enemyId="enemy_7026_xbele", x="10", y="10", endX="6", endY="2")]
+[decision(option1="我们在追寻奇怪的巨像。", value1="1.1")]
+[predicate(references="1.1")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]您是说那尊离家出走的巨像吗？
+[playanim(id="trap_469_tpasngr", anim="Attack", dir="LEFT")]
+[camerafocusto(offsetX="11", offsetY="10", time="2", scale="FAR")]
+[delay(time="2")]
+[decision(option1="是啊，你呢？", value1="2.1")]
+[predicate(references="2.1")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]出乎意料地顺利，我已经非常接近了，和您一样接近。
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]看啊，这样宁静美好的画面，我还真是不忍心打扰。
+[playanim(id="enemy_7026_xbele", anim="Skill", dir="RIGHT")]
+[delay(time="1")]
+[decision(option1="它......看起来真的很快乐？", value1="3.1")]
+[predicate(references="3.1")]
+[delay(time="1")]
+[fognotinview(id="fog_1")]
+[withdraw(id="enemy_7026_xbele")]
+[withdraw(id="trap_469_tpasngr")]
+[resetcamera(time="1")]
+[save]
+[end]

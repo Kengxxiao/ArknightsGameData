@@ -1,0 +1,43 @@
+[HEADER(is_tutorial=true, is_skippable=false)] xb1教学关3
+
+[Battle.lockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.lockFunction(mask="BATTLE_STATUS")]
+
+[InputBlocker(blockInput=true)]
+[Delay(time=1.75)]
+
+[Battle.Pause]
+[Tutorial(dialogHead="$avatar_zumama")]和之前一样，我会帮助你们解决那些打扰我们的敌人。
+[Battle.EnsureMinCost(cost=5)]
+[InputBlocker(blockInput=true, cardIndex=3, validWidth=112, validHeight=116)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_zumama", animStyle="Drag", \
+          startX=-140, startY=61, startAnchor="BottomRight", endAnchor="Center", endX=0, endY=0)] \
+先尝试使用<@tu.kw>木材采集站</>吧，这个工具能让我们快速采集木材。
+[InputBlocker(blockInput=true)]
+[Delay(time=0.5)]
+[InputBlocker(blockInput=true, tileY=8, tileX=4, validWidth=178, validHeight=153)]
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_zumama", animStyle="Drag", \
+          startX=84, startY=10, endX=74, endY=206, dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+<@tu.kw>向上</>部署，让木材采集站的作业范围覆盖尽可能多的树木吧！
+[InputBlocker(blockInput=true)]
+[Battle.Pause(pause=false)]
+[Delay(time=6.35)]
+
+[Battle.Pause]
+[Tutorial(tileY=8, tileX=4, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_zumama", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+木材采集站每隔一段时间就会派出一辆采集车来进行采集。
+[Tutorial(tileY=8, tileX=4, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=1, dialogHead="$avatar_zumama", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+在采集到足够的木材后，采集车会自行将木材搬运回来，所以只要木材采集站不被破坏，很快就能采集完它作业范围内的所有木材。                                                                                                                                                                                                                                                                                                                                                                                                                    
+[Battle.Pause(pause=false)]
+[Delay(time=2.5)]
+
+[Battle.Pause]
+[Tutorial(focusX=25, focusY=-170, anchor="Center", focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_zumama")] \
+这次的敌人不好对付，接下来请一边使用工具采集木材，一边协助我抵挡敌人吧。
+[Battle.Pause(pause=false)]

@@ -1,0 +1,45 @@
+[header(actId="sandbox_1", npcId="trap_469_tpasngr")]
+[summontrap(charId="trap_467_ttuye", dir="LEFT", x="12", y="11", isChar="False")]
+[summonenemy(enemyId="enemy_7026_xbele", x="10", y="11", endX="19", endY="6")]
+[summonenemy(enemyId="enemy_7035_epasng", x="8", y="11", endX="19", endY="6")]
+[camerafocusto(offsetX="10", offsetY="11", time="1", scale="FAR")]
+[foginview(leftBottomX="5", leftBottomY="7", rightUpX="19", rightUpY="14", id="fog_1")]
+[delay(time="0.5")]
+[playanim(id="enemy_7026_xbele", anim="Special", looporidle="Special_Loop", dir="RIGHT")]
+[delay(time="1")]
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="FALSE"]这尊石像在神庙外守了无数岁月，难得有了自己的“生命”，能够开始一段自由的旅程，最后却被我们终结。
+[decision(option1="实在是令人唏嘘。", value1="1.1")]
+[predicate(references="1.1")]
+[decision(option1="异客先生，检查结果如何？", value1="2.1")]
+[predicate(references="2.1")]
+[camerafocusto(offsetX="9", offsetY="11", time="1", scale="MID")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]和我预料的差不多，果然，这套动力驱动单元的原型机就在它身上。
+[decision(option1="这就是一切的起因吗？", value1="3.1")]
+[predicate(references="3.1")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]是的。
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]感谢您的帮助，这是我自己的工具箱，一般情况不会外借，但我想您之后应该会用得到。
+[decision(option1="谢谢。", value1="4.1")]
+[predicate(references="4.1")]
+[additem(itemId="sandbox_1_craft_6", itemCount="1")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]我本以为老师的作品已在当年的纷争中遗失，没想到最后阴差阳错，竟然在绿洲中的一尊古老巨像身上找到了。
+[decision(option1="你要带走这套机器吗？", value1="5.1")]
+[predicate(references="5.1")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]当然，这是我此行的目的。
+[move(enemyId="enemy_7035_epasng", x="9", y="11")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]......老师的签名还留在上面......
+[decision(option1="异客先生？", value1="6.1")]
+[predicate(references="6.1")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]没什么，只是突然想到，我与这尊巨像之间也许没有什么差别。
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]不知为何前行，却因为同一个名字留下的痕迹，继续漫无目的地在这片大地游荡。
+[playanim(id="enemy_7035_epasng", anim="Special_Begin", looporidle="Special_Loop", dir="RIGHT")]
+[delay(time="1")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]......
+[playanim(id="enemy_7035_epasng", anim="Special_End", looporidle="Idle", dir="RIGHT")]
+[name="异客", avatarId="char_472_pasngr", isAvatarRight="FALSE"]请您带着其他人先离开吧，我想和它......再待一会儿。
+[withdraw(id="trap_467_ttuye")]
+[fognotinview(id="fog_1")]
+[withdraw(id="enemy_7026_xbele")]
+[withdraw(id="enemy_7035_epasng")]
+[resetcamera(time="1")]
+[save]
+[end]

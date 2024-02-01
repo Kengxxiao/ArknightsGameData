@@ -1,3 +1,5 @@
+local luaUtils = CS.Torappu.Lua.Util;
+
 Act4funPushMessageHandler = Class("Act4funPushMessageHandler");
 
 
@@ -7,7 +9,7 @@ function Act4funPushMessageHandler.HandleCameraUp(msgList)
     return;
   end
   for idx = 1, msgList.Count do
-    CS.Torappu.UI.UINotification.TextToast(constData.tokenLevelUpToastTxt);
+    luaUtils.TextToast(constData.tokenLevelUpToastTxt);
   end
 end
 
@@ -17,7 +19,7 @@ function Act4funPushMessageHandler.HandleFirstGoodEnd(msgList)
     return;
   end
   for idx = 1, msgList.Count do
-    CS.Torappu.UI.UINotification.TextToast(constData.goodEndingToastTxt);
+    luaUtils.TextToast(constData.goodEndingToastTxt);
   end
 end
 
@@ -27,7 +29,7 @@ function Act4funPushMessageHandler.HandlePassTrain(msgList)
     return;
   end
   for idx = 1, msgList.Count do
-    CS.Torappu.UI.UINotification.TextToast(constData.formalLevelUnlockToastTxt);
+    luaUtils.TextToast(constData.formalLevelUnlockToastTxt);
   end
 end
 

@@ -1,0 +1,13 @@
+[header(actId="sandbox_1", npcId="")] 
+【悬赏】我们和一群行脚艺人发生了冲突，他们抢走了我们的行李，帮我们报仇！
+[decision(option1="接受委托", value1="1.1", option2="前往该陌域的行程正在筹备。", value2="1.2", option3="我们还有更要紧的事。", value3="1.3")]
+[predicate(references="1.1", visibleCondition="!c0")]
+[orderrift(riftId="fixed_dungeon_5")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="1.2", visibleCondition="c1")]
+[end]
+[predicate(references="1.3")]
+[end]
+[condition(references="c0", key="checkriftordered")]
+[condition(references="c1", key="checkriftordered")]

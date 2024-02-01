@@ -1,0 +1,13 @@
+[header(actId="sandbox_1", npcId="")] 
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]什么，你们还想要雨林奇妙怪味糖吗？需要<color=#d8d769>两份奇妙糅合物</color>哦！
+[decision(option1="是的，我们需要！", value1="1.1", option2="你误会了，我们只是路过！", value2="1.2")]
+[predicate(references="1.1", selectableCondition="c0")]
+[additem(itemId="sandbox_1_food_0", itemCount="-2")]
+[additem(itemId="sandbox_1_food_44", itemCount="1")]
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]这次就先到这......
+[withdraw(id="trap_468_tpriest", withoutAnim="FALSE")]
+[save]
+[end]
+[predicate(references="1.2")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_1_food_0", value="2")]

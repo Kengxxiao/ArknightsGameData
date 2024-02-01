@@ -1,0 +1,43 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 新手局基地敌袭
+
+[Battle.lockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.lockFunction(mask="BATTLE_STATUS")]
+
+[InputBlocker(blockInput=true)]
+[Delay(time=2)]
+[Battle.Pause]
+[Tutorial(protectTime=0.5, dialogHead="$avatar_zumama")]这是我们第一次面对敌袭，不必紧张。
+[Battle.Pause(pause=false)]
+[SandboxBattle.CameraFocusTo(offsetY=3, offsetX=24, time=3)]
+[Delay(time=2)]
+[Battle.Pause]
+[Tutorial(protectTime=0.5, dialogHead="$avatar_zumama")]敌人会从驻扎地边缘的入口处出现。
+[Delay(time=0.5)]
+[Battle.Pause(pause=false)]
+
+[SandboxBattle.CameraFocusTo(offsetY=20, offsetX=24, time=2.5)]
+[Delay(time=3)]
+[SandboxBattle.CameraFocusTo(offsetY=20, offsetX=4, time=2)]
+[Delay(time=2.5)]
+[SandboxBattle.CameraFocusTo(offsetY=3, offsetX=4, time=2.5)]
+[Delay(time=3)]
+
+[Battle.Pause]
+[Tutorial(protectTime=0.5, dialogHead="$avatar_zumama")]他们会朝着<@tu.kw>风沙营垒</>所在的位置前进并发起进攻。
+
+[SandboxBattle.CameraFocusTo(offsetY=11, offsetX=14, time=2)]
+[Delay(time=2)]
+[Tutorial(tileY=12, tileX=14, focusWidth=200, focusHeight=200, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_zumama", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+如果风沙营垒被攻破，驻扎地就会陷落，整场演算也会失败。
+
+[SandboxBattle.CameraFocusTo(offsetY=6, offsetX=14, time=1)]
+[Delay(time=1)]
+[Tutorial(tileY=6, tileX=14, focusWidth=125, focusHeight=125, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_zumama", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这些设施能帮你暂时阻挡敌人的进攻，请合理利用这些设施部署干员来阻击敌人。
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_zumama", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+我随时待命，必要时请给我下达指令，现在开始行动吧！

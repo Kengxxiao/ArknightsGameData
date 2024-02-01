@@ -1,0 +1,12 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 能量饮料弹尽粮绝
+[SandboxV2.EnsureDungeonQuest(questId="trig_guide_no_energy")]
+[SandboxV2.EnsureDungeonStable]
+[Delay(time=0.5)]
+[SandboxV2.DungeonFocusNode(focusType="FOCUS_BY_NODE_ID", focusNodeId="nB32E")]
+[Tutorial(protectTime=0.8, dialogHead="$avatar_zumama")]坏消息，驻扎地正在被敌袭围困，但我们拥有的能量饮料不足以支撑干员们进行防御作战。
+[SandboxV2.OpenGainItemPage(itemId="sandbox_1_stamina",itemCount=4)]
+[Tutorial(waitForSignal="sandbox_v2_gain_item_page_routed", dialogHead="$avatar_zumama")]
+[Tutorial(protectTime=0.8, dialogHead="$avatar_zumama", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 好消息是，我特意为了应对这种情况提前准备了一些能量饮料，先拿着用吧。
+[SandboxV2.CloseGainItemPage]
+[Tutorial(protectTime=0.8, dialogHead="$avatar_zumama", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 好了，我们已经用完了我最后一点“存货”，以后为了避免再遇到这样的情况，我们还是提前制备一些能量饮料以防万一吧。
+[SandboxV2.EnsureDungeonStable]

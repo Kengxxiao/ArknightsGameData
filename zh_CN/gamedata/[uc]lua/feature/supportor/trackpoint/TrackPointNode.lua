@@ -32,7 +32,7 @@ end
 function TrackPointNode:_Update()
   self.m_status = self:_CalculateStatus();
   if self.m_uiNode and not self.m_uiNode:IsDestroyed() then
-    self.m_uiNode:OnStateChangd(self);
+    self.m_uiNode:OnStateChanged(self);
   end
   return self.m_status;
 end

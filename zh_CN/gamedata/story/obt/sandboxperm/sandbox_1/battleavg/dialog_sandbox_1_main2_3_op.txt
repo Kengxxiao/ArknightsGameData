@@ -1,0 +1,66 @@
+[header(actId="sandbox_1", npcId="trap_471_tegmaus")]
+[summontrap(x="8", y="7", charId="trap_471_tegmaus", isChar="FALSE", dir="RIGHT")]
+[summontrap(x="10", y="7", charId="trap_467_ttuye", isChar="FALSE", dir="LEFT")]
+[foginview(leftBottomX="5", leftBottomY="5", rightUpX="11", rightUpY="12", id="fog_1")]
+[camerafocusto(id="trap_471_tegmaus", offsetX="1", scale="CLOSE", time="1")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]站住，再靠过来我就不客气了哦。说吧，一路上都跟着我是想干什么！
+[decision(option1="这本手札是你的吗？", value1="1.1")]
+[predicate(references="1.1")]
+[playanim(id="trap_471_tegmaus", anim="Attack", dir="RIGHT", looporidle="Idle")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]你们追我这么久，就是为了把这本笔记还给我？
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="TRUE"]几天前，你留宿在一座神庙，把笔记落在了那里。女祭司说这本笔记你总是随身带着，应该很重要。
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="TRUE"]而我们的旅途正好与你离开的方向一致。所以跟了上来，把笔记还给你。
+[camerafocusto(id="trap_471_tegmaus", scale="CLOSE", time="1")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]谢谢，你们是需要报酬吗？说吧，开个价。
+[decision(option1="我们想知道古代遗迹的事。", value1="2.1")]
+[predicate(references="2.1")]
+[decision(option1="这和宝藏有什么关系？", value1="3.1")]
+[predicate(references="3.1")]
+[playanim(id="trap_471_tegmaus", anim="Attack", dir="RIGHT", looporidle="Idle")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]好奇心可是会害死人的哦？
+[decision(option1="你上通缉令的原因是这个？", value1="4.1")]
+[predicate(references="4.1")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]你们就不怕招惹上王酋军？他们也在寻找这些东西。
+[decision(option1="我们已经惹上了。", value1="5.1")]
+[predicate(references="5.1")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]好吧，如果你们想知道的话，就帮我再找半块“圆盘”好吗？
+[decision(option1="“圆盘”是什么东西？", value1="6.1")]
+[predicate(references="6.1")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]你们看过我的笔记吗？
+[decision(option1="我们当然看过！", value1="7.1", option2="有翻过，没仔细看。", value2="7.2")]
+[predicate(references="7.1")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]我不管你们看没看过，有没有理解，总而言之，它是一种石头制成的巨大圆盘。
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]传说中有人曾经在一座沙岛上见过它。
+[decision(option1="传说......岛上......", value1="8.1")]
+[predicate(references="8.1")]
+[decision(option1="好的，我们接受。", value1="9.1")]
+[predicate(references="9.1")]
+[decision(option1="我们该怎么称呼你？", value1="10.1")]
+[predicate(references="10.1")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]嗯......
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]就叫我佩佩吧。
+[withdraw(id="trap_471_tegmaus")]
+[withdraw(id="trap_467_ttuye")]
+[delay(time="3")]
+[fognotinview(id="fog_1")]
+[resetcamera(time="1")]
+[save]
+[end]
+[predicate(references="7.2")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]我不管你们看没看过，有没有理解，总而言之，它是一种石头制成的巨大圆盘。
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]传说中有人曾经在一座沙岛上见过它。
+[decision(option1="传说......岛上......", value1="11.1")]
+[predicate(references="11.1")]
+[decision(option1="好的，我们接受。", value1="12.1")]
+[predicate(references="12.1")]
+[decision(option1="我们该怎么称呼你？", value1="13.1")]
+[predicate(references="13.1")]
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]嗯......
+[name="？？？", avatarId="bavg_npc_001", isAvatarRight="FALSE"]就叫我佩佩吧。
+[withdraw(id="trap_471_tegmaus")]
+[withdraw(id="trap_467_ttuye")]
+[delay(time="3")]
+[fognotinview(id="fog_1")]
+[resetcamera(time="1")]
+[save]
+[end]

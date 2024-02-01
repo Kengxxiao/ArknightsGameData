@@ -1,0 +1,61 @@
+[header(actId="sandbox_1", npcId="trap_435_trsrhuntr")]
+[summontrap(charId="trap_467_ttuye", dir="LEFT", x="11", y="9", isChar="False")]
+[summontrap(charId="trap_435_trsrhuntr", dir="RIGHT", x="10", y="11", isChar="False")]
+[summonenemy(enemyId="enemy_7024_clking", x="9", y="11", endX="14", endY="6")]
+[summonenemy(enemyId="enemy_7025_clbb", x="8", y="11", endX="14", endY="6")]
+[camerafocusto(offsetX="10", offsetY="10", time="2", scale="FAR")]
+[foginview(leftBottomX="6", leftBottomY="7", rightUpX="14", rightUpY="12", id="fog_1")]
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]很好，你们成功获得了那两块宝石，现在把它们交给我，快点！
+[decision(option1="得加钱。", value1="1.1")]
+[predicate(references="1.1")]
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]好啊，这个呢，这个你们要不要？交易所贵客凭证，这够不够？
+[additem(itemId="sandbox_1_craft_9", itemCount="1")]
+[name="寻宝人", avatarId="bavg_npc_003", isAvatarRight="FALSE"]千万别这么做，他们得到宝石后会将整个晶洞破坏殆尽的！
+[decision(option1="宝石你拿去，快点放了她。", value1="2.1")]
+[predicate(references="2.1")]
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]看这晶莹剔透的模样，等我们献给王酋，他一定会重赏我们，说不定还能封我个官当当。
+[name="杂耍艺人助手", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]太好了，老板，我们再也不用过那种四处逃窜的日子了。
+[name="图耶", avatarId="char_402_tuye", isAvatarRight="TRUE"]（小声）如果你们不到处祸害别人的话，也不用四处逃窜啊。
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]趁我心情好，赶紧带着那女人滚吧，别留在这里碍眼。
+[decision(option1="我们走吧。", value1="3.1")]
+[predicate(references="3.1")]
+[name="寻宝人", avatarId="bavg_npc_003", isAvatarRight="FALSE"]......谢谢你们。
+[decision(option1="至少我们救下了你。", value1="4.1")]
+[predicate(references="4.1")]
+[playanim(id="trap_467_ttuye", anim="Idle", dir="RIGHT")]
+[delay(time="0.5")]
+[withdraw(id="trap_467_ttuye")]
+[withdraw(id="trap_435_trsrhuntr")]
+[delay(time="3")]
+[camerafocusto(offsetX="9", offsetY="11", time="1", scale="MID")]
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]看看它们这美丽的小模样，就像我即将发达的未来一样灿烂。
+[name="杂耍艺人助手", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]老板，让我们也瞅瞅。
+[playanim(id="enemy_7024_clking", anim="Attack", dir="LEFT", looporidle="Idle")]
+[delay(time="1")]
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]拿好了，可千万别摔着。
+[name="杂耍艺人助手", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]多漂亮啊......
+[summontrap(charId="trap_470_tmantic", dir="LEFT", x="10", y="11", isChar="False")]
+[executeactionarray(target="trap_470_tmantic", key="effect_mantic[hidden]")]
+[delay(time="0.5")]
+[name="？？？", avatarId="char_215_mantic", isAvatarRight="FALSE"]（......时机到了......）
+[name="？？？", avatarId="char_215_mantic", isAvatarRight="FALSE"]（就是现在！）
+[playanim(id="trap_470_tmantic", anim="Attack", dir="LEFT")]
+[delay(time="1")]
+(宝石碎裂声)
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]我的宝石！混账！你怎么敢！！
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]不是让你拿好吗！
+[name="杂耍艺人助手", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]老板，冤枉啊！
+[name="杂耍艺人助手", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]怎、怎么回事，我什么也没干啊，它、它就这么碎在我手心里了......
+[name="杂耍艺人", avatarId="bavg_enemy_common", isAvatarRight="FALSE"]不，不！！！
+[uioperation(target="main", enable="False")]
+[withdraw(id="enemy_7024_clking")]
+[withdraw(id="enemy_7025_clbb")]
+[delay(time="3")]
+[name="？？？", avatarId="char_215_mantic", isAvatarRight="FALSE"]（任务完成。）
+[name="？？？", avatarId="char_215_mantic", isAvatarRight="FALSE"]（该离开了......）
+[withdraw(id="char_215_mantic")]
+[delay(time="3")]
+[fognotinview(id="fog_1")]
+[resetcamera(time="1")]
+[save]
+[end]

@@ -1,0 +1,12 @@
+[header(actId="sandbox_1", npcId="")] 
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]你们好呀，按照你们指的路，我终于找到了你们所说的落脚地。不过如果你们现在要看新货的话，暂时还没有......
+[decision(option1="所以，在这里感觉还好吗？", value1="1.1", option2="那我们下次再来。", value2="1.2")]
+[predicate(references="1.1", visibleCondition="!c0")]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]非常舒适，很难想象这附近还有如此让我心情愉悦的地方，为表感谢，我要送你们一个小小的礼物。
+[additem(itemId="sandbox_1_craft_7", itemCount="1")]
+[decision(option1="谢谢你的礼物。", value1="2.1")]
+[predicate(references="2.1")]
+[end]
+[predicate(references="1.2")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_1_craft_7", value="1")]

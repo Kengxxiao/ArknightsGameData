@@ -245,7 +245,7 @@ function ReturnV2MainDlg.JumpToTarget(type, param)
   if type == CS.Torappu.ReturnV2JumpType.ZONE_GROUP then
     CS.Torappu.UI.UIRouteUtil.RouteToZoneViewType(CS.Torappu.UI.Stage.ZoneViewType.HOME);
   elseif type == CS.Torappu.ReturnV2JumpType.ROGUE then
-    local lockTarget = CS.Torappu.UI.UILockTarget.ROGUELIKE;
+    local lockTarget = CS.Torappu.UI.UILockTarget.PERM_MODE;
     if not _ToastIfLocked(lockTarget) then
       return;
     end
@@ -253,10 +253,19 @@ function ReturnV2MainDlg.JumpToTarget(type, param)
       return;
     end
     CS.Torappu.UI.UIRouteUtil.RouteToRoguelikeTopic(param);
+  elseif type == CS.Torappu.ReturnV2JumpType.SANDBOX then
+    local lockTarget = CS.Torappu.UI.UILockTarget.PERM_MODE;
+    if not _ToastIfLocked(lockTarget) then
+      return;
+    end
+    if param == nil or param == "" then
+      return;
+    end
+    CS.Torappu.UI.UIRouteUtil.RouteToSandboxPerm(param);
   elseif type == CS.Torappu.ReturnV2JumpType.CLIMB_TOWER then
     local toast = CS.Torappu.UI.ClimbTower.ClimbTowerUtil.GetClimbTowerFuncLockedToast();
     if toast ~= nil and toast ~= "" then
-      CS.Torappu.UI.UINotification.TextToast(toast);
+      luaUtils.TextToast(toast);
       return;
     end
     CS.Torappu.UI.UIRouteUtil.RouteToClimbTower();

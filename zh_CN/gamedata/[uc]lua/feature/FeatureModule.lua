@@ -82,3 +82,7 @@ require "Feature/Activity/UniqueOnly/UniqueOnlyUtil"
 require "Feature/Activity/MainlineBp/MainlineBpDefine";
 require "Feature/Activity/MainlineBp/MainlineBpUtil";
 require "Feature/Activity/MainlineBp/MainlineBpMainDlg";
+
+require "Feature/Activity/BlessOnly/BlessOnlyDefine"
+require "Feature/Activity/BlessOnly/BlessOnlyUtil"
+require "Feature/Activity/BlessOnly/BlessOnlyMainDlg"

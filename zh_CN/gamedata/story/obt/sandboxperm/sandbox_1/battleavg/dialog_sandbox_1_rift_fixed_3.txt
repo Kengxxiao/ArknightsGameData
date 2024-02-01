@@ -1,0 +1,13 @@
+[header(actId="sandbox_1", npcId="")] 
+【悬赏】我们途经此地的时候被一群人偷窃了，帮我们干掉这群窃贼！
+[decision(option1="接受委托", value1="1.1", option2="前往该陌域的行程正在筹备。", value2="1.2", option3="我们还有更要紧的事。", value3="1.3")]
+[predicate(references="1.1", visibleCondition="!c0")]
+[orderrift(riftId="fixed_dungeon_3")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="1.2", visibleCondition="c1")]
+[end]
+[predicate(references="1.3")]
+[end]
+[condition(references="c0", key="checkriftordered")]
+[condition(references="c1", key="checkriftordered")]

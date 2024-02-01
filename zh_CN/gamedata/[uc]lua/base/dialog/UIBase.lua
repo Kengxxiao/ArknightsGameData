@@ -422,3 +422,8 @@ end
 function UIBase:LoadSpriteFromAutoPackHub(hubPath, spriteName)
     return self.m_parent:LoadSpriteFromAutoPackHub(hubPath, spriteName);
 end
+
+
+function UIBase:LoadPrefab(path)
+    return self.m_parent:LoadPrefab(path);
+end

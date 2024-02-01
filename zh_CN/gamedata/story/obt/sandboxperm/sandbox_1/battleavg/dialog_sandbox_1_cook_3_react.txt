@@ -1,0 +1,22 @@
+[header(actId="sandbox_1", npcId="")] 
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]怎么，森蚺那丫头又让你来找我吗？
+[decision(option1="<color=#d8d769>高压复焗浓汤</color>，要尝尝吗？", value1="1.1", option2="没有，只是路过。", value2="1.2")]
+[predicate(references="1.1", selectableCondition="c0")]
+[additem(itemId="sandbox_1_food_16", itemCount="-1")]
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]真的？让我尝尝......嗯......
+[decision(option1="味道如何？", value1="2.1")]
+[predicate(references="2.1")]
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]这道菜是你做的吗？
+[decision(option1="是的。", value1="3.1")]
+[predicate(references="3.1")]
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]一般般吧，我感觉还是不满意。
+[decision(option1="可是你连盘子都舔了......", value1="4.1")]
+[predicate(references="4.1")]
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]说了不满意就是不满意，你们这些小年轻怎么回事？！一点都不懂我心思！
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]重新再给我端一道菜来！
+[withdraw(id="trap_468_tpriest", withoutAnim="FALSE")]
+[save]
+[end]
+[predicate(references="1.2")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_1_food_16", value="1")]

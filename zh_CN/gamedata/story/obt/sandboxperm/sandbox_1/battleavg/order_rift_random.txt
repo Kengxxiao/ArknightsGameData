@@ -1,0 +1,21 @@
+[header(actId="sandbox_1", npcId="")] 
+这是一份风险未知的邀约，你们愿意接受这份神秘的委托吗？
+[decision(option1="接受委托", value1="1.1", option2="替换委托", value2="1.2", option3="接受委托", value3="1.3", option4="离开", value4="1.4")]
+[predicate(references="1.1", visibleCondition="c0&&!c1")]
+<color=#d8d769>成功接受委托。</color>
+[orderrift(riftId="random_dungeon_1")]
+[end]
+[predicate(references="1.2", visibleCondition="c4&&c5")]
+<color=#d8d769>成功替换委托。</color>
+[orderrift(riftId="random_dungeon_1")]
+[end]
+[predicate(references="1.3", visibleCondition="!c6")]
+<color=#d8d769>暂时无法继续接受委托，请过段时日再来。</color>
+[end]
+[predicate(references="1.4")]
+[end]
+[condition(references="c0", key="checkcanorderrandomrift")]
+[condition(references="c1", key="checkriftordered")]
+[condition(references="c4", key="checkcanorderrandomrift")]
+[condition(references="c5", key="checkriftordered")]
+[condition(references="c6", key="checkcanorderrandomrift")]

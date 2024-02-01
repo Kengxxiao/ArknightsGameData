@@ -1,0 +1,57 @@
+[header(actId="sandbox_1", npcId="")] 
+存放着往日悬赏的讯息匣。
+[decision(option1="回顾往日委托", value1="1.1", option2="替换委托", value2="1.2", option3="离开", value3="1.3")]
+[predicate(references="1.1", visibleCondition="!c0")]
+<color=#d8d769>提示：选择对应委托可重新进入陌域，但无法再次获得首通报酬</color>
+[decision(option1="六日防御作战", value1="2.1", option2="物归原主作战", value2="2.2", option3="下一页", value3="2.3", option4="离开", value4="2.4")]
+[predicate(references="2.1")]
+[orderrift(riftId="fixed_dungeon_2")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="2.2")]
+[orderrift(riftId="fixed_dungeon_3")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="2.3")]
+[decision(option1="护送矿工作战", value1="3.1", option2="艺人杀手作战", value2="3.2", option3="离开", value3="3.3")]
+[predicate(references="3.1")]
+[orderrift(riftId="fixed_dungeon_4")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="3.2")]
+[orderrift(riftId="fixed_dungeon_5")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="3.3")]
+[end]
+[predicate(references="2.4")]
+[end]
+[predicate(references="1.2", visibleCondition="c1")]
+<color=#d8d769>提示：选择对应委托可重新进入陌域，但无法再次获得首通报酬</color>
+[decision(option1="六日防御作战", value1="4.1", option2="物归原主作战", value2="4.2", option3="下一页", value3="4.3", option4="离开", value4="4.4")]
+[predicate(references="4.1")]
+[orderrift(riftId="fixed_dungeon_2")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="4.2")]
+[orderrift(riftId="fixed_dungeon_3")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="4.3")]
+[decision(option1="护送矿工作战", value1="5.1", option2="艺人杀手作战", value2="5.2", option3="离开", value3="5.3")]
+[predicate(references="5.1")]
+[orderrift(riftId="fixed_dungeon_4")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="5.2")]
+[orderrift(riftId="fixed_dungeon_5")]
+<color=#d8d769>成功接受委托。</color>
+[end]
+[predicate(references="5.3")]
+[end]
+[predicate(references="4.4")]
+[end]
+[predicate(references="1.3")]
+[end]
+[condition(references="c0", key="checkriftordered")]
+[condition(references="c1", key="checkriftordered")]

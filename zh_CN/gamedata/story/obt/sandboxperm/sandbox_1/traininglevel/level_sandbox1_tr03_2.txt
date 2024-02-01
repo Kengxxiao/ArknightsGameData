@@ -1,0 +1,40 @@
+[HEADER(is_tutorial=true, is_skippable=false)] xb1教学关3_2
+
+[InputBlocker(blockInput=true)]
+[Battle.Pause]
+[Tutorial(protectTime=0.5, dialogHead="$avatar_aguard")]使用工具确实让采集效率提升了不少，大家一起来帮忙吧。
+[Battle.Pause(pause=false)]
+[SandboxBattle.CameraFocusTo(offsetY=9.2, offsetX=4, time=1)]
+[Delay(time=5)]
+
+[InputBlocker(blockInput=true)]
+[Battle.Pause]
+[Tutorial(protectTime=0.5, dialogHead="$avatar_zumama")]采集是很耗费体力的，大家肯定口渴了，我们想办法获取点<@tu.kw>清水</>吧。
+[Tutorial(protectTime=0.5, dialogHead="$avatar_zumama")]在野外生存，清水是非常重要的资源，但靠人力是无法获取清水的。
+[Tutorial(focusX=-139, focusY=61, focusWidth=118, focusHeight=122, anchor="BottomRight", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_zumama")] \
+这时候就需要使用<@tu.kw>蟹蟹抽水泵</>。
+[InputBlocker(blockInput=true, rightStart=true, cardIndex=0, validWidth=112, validHeight=116)]
+
+[Battle.EnsureMinCost(cost=5)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_zumama", animStyle="Drag", \
+          startX=-140, startY=61, startAnchor="BottomRight", endAnchor="Center", endX=-240, endY=-172)] \
+部署到这里！
+[InputBlocker(blockInput=true)]
+[Delay(time=1)]
+[InputBlocker(blockInput=true, validX=175, validY=-17, validWidth=703, validHeight=425)]
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_zumama", animStyle="Drag", \
+          startX=-12, startY=-22, endX=-5, endY=163)] \
+放心，无论朝向哪里，抽水泵都能正常工作。
+[InputBlocker(blockInput=true)]
+[Battle.Pause(pause=false)]
+[Delay(time=3)]
+
+[Battle.Pause]
+[Tutorial(tileY=7, tileX=2, focusWidth=125, focusHeight=125, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_zumama")] \
+部署后，蟹蟹抽水泵每隔一段时间就会为我们收集一些清水。但抽水泵有使用时间限制，使用一段时间后就会失效。
+[Tutorial(dialogHead="$avatar_zumama")]继续行动吧。
+[Battle.Pause(pause=false)]

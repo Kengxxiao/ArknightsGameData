@@ -1,0 +1,41 @@
+[header(actId="sandbox_1", npcId="trap_468_tpriest")]
+[summontrap(x="8", y="7", charId="trap_466_tzumama", isChar="FALSE", dir="LEFT")]
+[summontrap(x="7", y="6", charId="trap_468_tpriest", isChar="FALSE", dir="RIGHT")]
+[delay(time="1")]
+[uioperation(target="main", item="", enable="False")]
+[camerafocusto(offsetX="7", offsetY="7", time="1", scale="FAR")]
+[playanim(id="trap_466_tzumama", anim="Special_Begin", looporidle="Special_Loop", dir="LEFT")]
+[delay(time="1")]
+[playanim(id="trap_468_tpriest", anim="Special", dir="RIGHT")]
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]哇啊啊啊啊——！我的屁股——！
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]烫死了烫死了——！
+[decision(option1="老爷子，你没有事吧？", value1="1.1")]
+[predicate(references="1.1")]
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]放心，他没事。
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]喂，你这不咸不淡的语气怎么回事？我屁股上最好看的那几根羽毛都烧焦了！
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]啊，不是还能长出来吗？
+[name="大祭司", avatarId="bavg_npc_002", isAvatarRight="FALSE"]你这丫头真是气死我了，接下来的实验你自己一个人搞吧！别再来找我了！
+[withdraw(id="trap_468_tpriest")]
+[playanim(id="trap_466_tzumama", anim="Special_End", looporidle="Idle", dir="LEFT")]
+[delay(time="1")]
+[camerafocusto(id="trap_466_tzumama", scale="CLOSE", time="1")]
+[playanim(id="trap_466_tzumama", anim="Attack", dir="LEFT")]
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]唉，这可怎么办？他怎么突然就闹起脾气来了。
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]以前也没遇上过这样的情况啊？
+[decision(option1="你要不要赶紧哄哄老爷子。", value1="2.1")]
+[predicate(references="2.1")]
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]等我忙完这阵子吧，现在手上的事情实在太多了。
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]你可以先去帮我看看他的情况吗？或许......可以带些吃的？
+[decision(option1="听起来也是很麻烦的事......", value1="3.1")]
+[predicate(references="3.1")]
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]你看，他还留下了一本《在阿尔萨兰烹饪的一百个小诀窍》的小册子！
+[decision(option1="这玩意儿真的有用吗？", value1="4.1")]
+[predicate(references="4.1")]
+[additem(itemId="sandbox_1_craft_10", itemCount="1")]
+[name="森蚺", avatarId="char_416_zumama", isAvatarRight="FALSE"]我们做一道<color=#d8d769>蟹肉碎拌饭</color>吧。
+[decision(option1="好主意。", value1="5.1")]
+[predicate(references="5.1")]
+[withdraw(id="trap_466_tzumama", withoutAnim="TRUE")]
+[resetcamera(time="1")]
+[save]
+[end]
