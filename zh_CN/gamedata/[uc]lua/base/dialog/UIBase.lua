@@ -14,6 +14,14 @@
 UIBase = Class("UIBase");
 
 
+function UIBase.GetLuaLayout(go)
+    if go == nil then
+        return nil
+    end
+    return go:GetComponent("Torappu.Lua.LuaLayout")
+end 
+
+
 
 function UIBase:Initialize(gobj, parent)
   self.m_destroyed = false;

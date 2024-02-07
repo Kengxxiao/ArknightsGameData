@@ -35655,6 +35655,102 @@
                 ]
               }
             ]
+          },
+          "normal_mode_buff1": {
+            "id": "normal_mode_buff1",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "资源最大生命值降低25%",
+            "runes": [
+              {
+                "key": "char_attribute_mul",
+                "selector": {
+                  "professionMask": 1023,
+                  "buildableMask": "ALL",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "filter_tag",
+                    "value": 0.0,
+                    "valueStr": "SANDBOX_RES"
+                  },
+                  {
+                    "key": "max_hp",
+                    "value": 0.75,
+                    "valueStr": null
+                  }
+                ]
+              }
+            ]
+          },
+          "normal_mode_buff3": {
+            "id": "normal_mode_buff3",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "敌袭敌人最大生命值，攻击力降低50%",
+            "runes": [
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": 639,
+                  "buildableMask": "ALL",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "enemy_attribute_modify[in_rush]"
+                  },
+                  {
+                    "key": "char",
+                    "value": 0.0,
+                    "valueStr": "null"
+                  },
+                  {
+                    "key": "disable_in_sandbox_build",
+                    "value": 1.0,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "max_hp",
+                    "value": 0.5,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "atk",
+                    "value": 0.5,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "def",
+                    "value": 1.0,
+                    "valueStr": null
+                  }
+                ]
+              }
+            ]
           }
         },
         "itemRuneList": {},
@@ -51122,7 +51218,7 @@
       "itemId": "sandbox_1_wood",
       "itemType": "BUILDINGMAT",
       "itemName": "木材",
-      "itemUsage": "高强度的建筑材料，广泛应用于高级建筑建造。",
+      "itemUsage": "最基础的建筑材料，广泛应用于建筑建造。",
       "itemDesc": "之前有人把未脱水的木材当柴火烧，浓烟环绕了整个部落，白天犹如黑夜。",
       "itemRarity": 1,
       "sortId": 9020001,
@@ -51142,7 +51238,7 @@
       "itemId": "sandbox_1_iron",
       "itemType": "BUILDINGMAT",
       "itemName": "铁矿石",
-      "itemUsage": "最基础的建筑材料，广泛应用于建筑建造。",
+      "itemUsage": "高强度的建筑材料，广泛应用于高级建筑建造。",
       "itemDesc": "采矿时一定要注意避免吸入粉尘和有害气体，确保自身安全。",
       "itemRarity": 3,
       "sortId": 9020003,
@@ -51216,7 +51312,7 @@
       "itemDesc": "口感柔滑细腻，滋味醇和浓郁，十分受高档餐厅追捧。",
       "itemRarity": 3,
       "sortId": 9010006,
-      "obtainApproach": "击败<落沙晶蹄兽>获得\n兽栏产出"
+      "obtainApproach": "击败<落沙晶蹄兽>获得"
     },
     "sandbox_1_ttlmeat": {
       "itemId": "sandbox_1_ttlmeat",
@@ -51226,7 +51322,7 @@
       "itemDesc": "肉块与软骨紧密贴合，软硬一体，滋味别具一格，是荒地人最爱的食材。",
       "itemRarity": 3,
       "sortId": 9010007,
-      "obtainApproach": "击败<刺棱壳兽>获得\n兽栏产出"
+      "obtainApproach": "击败<刺棱壳兽>获得"
     },
     "sandbox_1_water": {
       "itemId": "sandbox_1_water",
@@ -51746,7 +51842,7 @@
       "itemDesc": "烹饪失败多次后命运给予的馈赠。\n它可以带你去另一片大地，一片时间或快或慢、感觉或有或无的大地。",
       "itemRarity": 4,
       "sortId": 5000054,
-      "obtainApproach": "<烹饪台>获得"
+      "obtainApproach": "探索获得"
     },
     "sandbox_1_building_1": {
       "itemId": "sandbox_1_building_1",
