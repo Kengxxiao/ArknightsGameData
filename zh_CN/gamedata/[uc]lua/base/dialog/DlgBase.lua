@@ -141,6 +141,13 @@ function DlgBase:GetLuaLayout()
   return self.m_layout
 end
 
+function DlgBase:ShowEnterEffect()
+end
+
+function DlgBase:IsEnterEffectEnd()
+  return true
+end
+
 
 function DlgBase:CreateViewModel(viewModelCls)
   if not viewModelCls then

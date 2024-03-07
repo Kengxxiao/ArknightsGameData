@@ -30,17 +30,7 @@ local HARD_MODE_NAME_KEY = "HARD_MODE_NAME"
 local SRV_CODE_EXPLORE_MODE = "/sandboxPerm/sandboxV2/exploreMode"
 
 local function _IsUEObjectDestroyed(obj)
-  if obj == nil then
-    return true
-  end
-  local ok, ret = xpcall(function()
-    return obj:IsDestroyed()
-  end, debug.traceback)
-  if not ok then
-    
-    return true
-  end
-  return ret
+  return eutil.IsDestroyed(obj)
 end
 
 local s_modeModules = {}

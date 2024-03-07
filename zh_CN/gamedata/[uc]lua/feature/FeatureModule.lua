@@ -69,7 +69,6 @@ require "Feature/Operation/Returnning/ReturnMainDlg"
 require "Feature/Operation/Returnning/ReturnWelcomeDlg"
 require "Feature/Operation/Returnning/ReturnRewardsDlg"
 
-require "Feature/Operation/ActFun/ActFunModule"
 
 require "Feature/Activity/SwitchOnly/SwitchOnlyDefine"
 require "Feature/Activity/SwitchOnly/SwitchOnlyDlg"
@@ -86,3 +85,5 @@ require "Feature/Activity/MainlineBp/MainlineBpMainDlg";
 require "Feature/Activity/BlessOnly/BlessOnlyDefine"
 require "Feature/Activity/BlessOnly/BlessOnlyUtil"
 require "Feature/Activity/BlessOnly/BlessOnlyMainDlg"
+
+require "Feature/SandboxV2/SandboxV2DiffDialog"

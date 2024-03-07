@@ -11742,6 +11742,118 @@
           ]
         }
       ]
+    },
+    "char_4123_ela": {
+      "charId": "char_4123_ela",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd_tag[020]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_clue_cost&faction[990]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4124_iana": {
+      "charId": "char_4124_iana",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd_tag[030]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd_bd[000]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4125_rdoc": {
+      "charId": "char_4125_rdoc",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd_tag[1020]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_all[026]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4126_fuze": {
+      "charId": "char_4126_fuze",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "train_spd_tag[1030]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_bd[000]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -12176,6 +12288,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "CONTROL",
       "description": "进驻控制中枢时，控制中枢内每个<$cc.g.R6><@cc.kw>彩虹小队</></>干员可使控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
+    },
+    "control_clue_cost&faction[990]": {
+      "buffId": "control_clue_cost&faction[990]",
+      "buffName": "反抗者",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_ela",
+      "sortId": 1005,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，更容易获得线索板上尚未拥有的线索，但控制中枢内除自身以外的其余干员心情每小时消耗<@cc.vdown>+0.25</>"
     },
     "control_mp_cost&bd1[000]": {
       "buffId": "control_mp_cost&bd1[000]",
@@ -12884,6 +13008,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "进驻制造站时，当前制造站内所有<$cc.sk.manu2><@cc.kw>莱茵科技类</></>、<$cc.sk.manu3><@cc.kw>红松骑士团类</></>技能也全都视作<@cc.kw>标准化类</>技能"
+    },
+    "manu_prod_bd[000]": {
+      "buffId": "manu_prod_bd[000]",
+      "buffName": "实干的寡言者",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_fuze",
+      "sortId": 3900,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，生产力<@cc.vup>+20%</>，每有<@cc.vup>1</>瓶<$cc.bd_tachanka><@cc.rem>乌萨斯特饮</></>，则仓库容量上限<@cc.vup>+2</>"
     },
     "manu_prod_spd_addition[030]": {
       "buffId": "manu_prod_spd_addition[030]",
@@ -15381,6 +15517,54 @@
       "roomType": "TRAINING",
       "description": "进驻训练室协助位时，基建内（不包含副手）每名<$cc.tag.knight><@cc.kw>骑士</></>干员为当前干员的专精技能训练速度<@cc.vup>+5%</>（最多生效<@cc.kw>8</>名）"
     },
+    "train_spd_tag[020]": {
+      "buffId": "train_spd_tag[020]",
+      "buffName": "战术指导·防守",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_defense",
+      "sortId": 9930,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，基建内（不包含副手）每名<$cc.g.Defence><@cc.kw>防守方</></>干员为当前干员的专精技能训练速度<@cc.vup>+10%</>（最多生效<@cc.kw>4</>名）"
+    },
+    "train_spd_tag[1020]": {
+      "buffId": "train_spd_tag[1020]",
+      "buffName": "战术指导·防守",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_defense",
+      "sortId": 9931,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，基建内（不包含副手）每名<$cc.g.Defence><@cc.kw>防守方</></>干员为当前干员的专精技能训练速度<@cc.vup>+10%</>（最多生效<@cc.kw>4</>名）"
+    },
+    "train_spd_tag[030]": {
+      "buffId": "train_spd_tag[030]",
+      "buffName": "战术指导·进攻",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_attack",
+      "sortId": 9932,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，基建内（不包含副手）每名<$cc.g.Attack><@cc.kw>进攻方</></>干员为当前干员的专精技能训练速度<@cc.vup>+10%</>（最多生效<@cc.kw>4</>名）"
+    },
+    "train_spd_tag[1030]": {
+      "buffId": "train_spd_tag[1030]",
+      "buffName": "战术指导·进攻",
+      "buffIcon": "training",
+      "skillIcon": "bskill_train_attack",
+      "sortId": 9933,
+      "buffColor": "#7d0022",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "TRAINING",
+      "description": "进驻训练室协助位时，基建内（不包含副手）每名<$cc.g.Attack><@cc.kw>进攻方</></>干员为当前干员的专精技能训练速度<@cc.vup>+10%</>（最多生效<@cc.kw>4</>名）"
+    },
     "train_spd_doubleProf[000]": {
       "buffId": "train_spd_doubleProf[000]",
       "buffName": "剑与手炮",
@@ -16941,6 +17125,18 @@
       "roomType": "DORMITORY",
       "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.15</>（同种效果取最高）"
     },
+    "dorm_rec_all[026]": {
+      "buffId": "dorm_rec_all[026]",
+      "buffName": "利他主义",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_all3",
+      "sortId": 5426,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.2</>（同种效果取最高）"
+    },
     "dorm_bd_num[000]": {
       "buffId": "dorm_bd_num[000]",
       "buffName": "无声共鸣",
@@ -17876,6 +18072,18 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "进驻会客室时，更容易获得线索板上已经拥有的线索"
+    },
+    "meet_spd_bd[000]": {
+      "buffId": "meet_spd_bd[000]",
+      "buffName": "情报专家",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_iana",
+      "sortId": 6990,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "进驻会客室时，线索搜集速度提升<@cc.vup>5%</>，同时每<@cc.vup>1</>点<$cc.bd_ash><@cc.rem>情报储备</></>额外提升<@cc.vup>5%</>"
     },
     "meet_spd_hast[000]": {
       "buffId": "meet_spd_hast[000]",
@@ -65278,6 +65486,626 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_artmuseum_headset_01": {
+        "id": "furni_artmuseum_headset_01",
+        "sortId": 1529,
+        "name": "艺术馆讲解系统",
+        "iconId": "furni_artmuseum_headset_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_1",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 160,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "配备了新式视线捕捉装置的讲解系统，能根据游客目光停留的位置自动开始讲解展品。\n不过系统里面一个解说文件都没有，戴上只能听见技术测试时使用的摇滚乐。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_weirdexhibit_01": {
+        "id": "furni_artmuseum_weirdexhibit_01",
+        "sortId": 1530,
+        "name": "“破浪”",
+        "iconId": "furni_artmuseum_weirdexhibit_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_1",
+        "width": 5,
+        "depth": 4,
+        "height": 10,
+        "comfort": 405,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者是一位居住在伊比利亚的阿戈尔人。\n刚问世时被认为代表了人类征服海洋的决心，后来又被贬为那场灾难的预兆。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_brochure_01": {
+        "id": "furni_artmuseum_brochure_01",
+        "sortId": 1531,
+        "name": "艺术馆宣传台",
+        "iconId": "furni_artmuseum_brochure_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_1",
+        "width": 4,
+        "depth": 2,
+        "height": 2,
+        "comfort": 130,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "摆满了宣传册和游览指南的宣传台。上面的日期仍旧停留在艺术馆开馆那天。\n日期其实无关紧要。展品过于耀眼，来客的目光不会在此停留。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_fence_01": {
+        "id": "furni_artmuseum_fence_01",
+        "sortId": 1532,
+        "name": "艺术馆围栏",
+        "iconId": "furni_artmuseum_fence_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_1",
+        "width": 2,
+        "depth": 3,
+        "height": 2,
+        "comfort": 140,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "看似封住通路的围栏。其实旁边空间很大，只要绕过去就好。\n这东西的设计意图很简单，雷内尔认为看见这东西就不敢往前走的人没资格进来。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_chandelier_01": {
+        "id": "furni_artmuseum_chandelier_01",
+        "sortId": 1533,
+        "name": "艺术馆照明系统",
+        "iconId": "furni_artmuseum_chandelier_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_2",
+        "width": 9,
+        "depth": 8,
+        "height": 2,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "在克里斯达尔艺术馆的一些展厅内使用的主照明系统。与艺术馆的整体装潢风格相比略显朴素。\n精心设计的灯罩以难以捉摸的角度偏转了光线，营造出一种令人困惑的氛围。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_sculpture_01": {
+        "id": "furni_artmuseum_sculpture_01",
+        "sortId": 1534,
+        "name": "“颁奖典礼”",
+        "iconId": "furni_artmuseum_sculpture_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_2",
+        "width": 6,
+        "depth": 5,
+        "height": 8,
+        "comfort": 460,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者是雷内尔·科瓦尔斯基。与雷内尔早年的某件习作主题相同。\n“落选者在听见结果后低下了头。看着他手中深深震撼我的作品，我第一次理解了什么叫‘公平、公正、公开’。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_notouch_01": {
+        "id": "furni_artmuseum_notouch_01",
+        "sortId": 1535,
+        "name": "隐藏展品“禁止触摸”",
+        "iconId": "furni_artmuseum_notouch_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "PARTITION",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_2",
+        "width": 5,
+        "depth": 1,
+        "height": 1,
+        "comfort": 130,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者是雷内尔·科瓦尔斯基。除了禁止标志，其余都是市场上的量产货。\n“米沃什，你说我在那个禁止触摸标志上加个触摸屏怎么样？”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_whaleexhibit_01": {
+        "id": "furni_artmuseum_whaleexhibit_01",
+        "sortId": 1536,
+        "name": "“解体或解构”",
+        "iconId": "furni_artmuseum_whaleexhibit_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILING",
+        "subType": "DECORATION_C",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_3",
+        "width": 9,
+        "depth": 3,
+        "height": 5,
+        "comfort": 170,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者不详。\n作品背面有一行小字：“或许我们已经循着肌理将其精准拆解，或许我们只是把它丑陋地切成了几块。”",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_pepperexhibit_01": {
+        "id": "furni_artmuseum_pepperexhibit_01",
+        "sortId": 1537,
+        "name": "“光和热”",
+        "iconId": "furni_artmuseum_pepperexhibit_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_2",
+        "width": 2,
+        "depth": 2,
+        "height": 3,
+        "comfort": 130,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者是一位旅居炎国尚蜀的拉特兰人。\n展台不仅会发光，还会散发出原作者最爱的辣椒油与甜甜圈混合而成的香气。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_stoneexhibit_01": {
+        "id": "furni_artmuseum_stoneexhibit_01",
+        "sortId": 1538,
+        "name": "“音链”",
+        "iconId": "furni_artmuseum_stoneexhibit_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_3",
+        "width": 3,
+        "depth": 3,
+        "height": 4,
+        "comfort": 165,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者是一位莱塔尼亚绘本作家。\n原本是艺术家为孩子制作的玩具。将铜质组件以不同方式组合，敲击时就能听见不同的乐音。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_fossil_01": {
+        "id": "furni_artmuseum_fossil_01",
+        "sortId": 1539,
+        "name": "“当代史”",
+        "iconId": "furni_artmuseum_fossil_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLDECO",
+        "subType": "NONE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_3",
+        "width": 2,
+        "depth": 1,
+        "height": 3,
+        "comfort": 60,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者是一位维多利亚考古学家。\n多年的发掘被证明是徒劳后，他愤而用手在泥板上按出了鳞兽的形状，用晚餐要吃的鳞兽压出了一个“手印”。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_bench_01": {
+        "id": "furni_artmuseum_bench_01",
+        "sortId": 1540,
+        "name": "艺术馆长椅",
+        "iconId": "furni_artmuseum_bench_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "SEATING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": true,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_3",
+        "width": 6,
+        "depth": 3,
+        "height": 2,
+        "comfort": 205,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "在一侧有着一道沟壑的长椅。不是藏品，但设计由雷内尔亲自操刀。\n“别坐短的那边，米沃什，短的那边是留给没人陪着逛艺术馆的家伙品味孤独用的。”",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_carpet_01": {
+        "id": "furni_artmuseum_carpet_01",
+        "sortId": 1541,
+        "name": "艺术馆地毯",
+        "iconId": "furni_artmuseum_carpet_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_4",
+        "width": 7,
+        "depth": 4,
+        "height": 1,
+        "comfort": 65,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "黑白花纹的地毯。黑色部分是普通织物，白色部分是编织进去的金属丝。\n“这本来也能成为艺术品的，可惜我们大概不会有光脚进屋的游客。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_twistexhibit_01": {
+        "id": "furni_artmuseum_twistexhibit_01",
+        "sortId": 1542,
+        "name": "“力量的延伸”",
+        "iconId": "furni_artmuseum_twistexhibit_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_3",
+        "width": 4,
+        "depth": 3,
+        "height": 10,
+        "comfort": 295,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者是一位雷姆必拓矿业大亨。\n“我踏入雷姆必拓时身上只有一根锈迹斑斑的撬棍。”这是他回忆录的第一句话。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_pillar_01": {
+        "id": "furni_artmuseum_pillar_01",
+        "sortId": 1543,
+        "name": "“脱轨”",
+        "iconId": "furni_artmuseum_pillar_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_4",
+        "width": 7,
+        "depth": 2,
+        "height": 10,
+        "comfort": 350,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者是一位多索雷斯工匠。\n工匠出于反感故意把订单要求的笔直柱子做成这样，可雷内尔仍欣然接纳了它，把它放进了自己的艺术馆。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_blackexhibit_01": {
+        "id": "furni_artmuseum_blackexhibit_01",
+        "sortId": 1544,
+        "name": "“请自由使用”",
+        "iconId": "furni_artmuseum_blackexhibit_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_4",
+        "width": 4,
+        "depth": 3,
+        "height": 5,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆的藏品之一，原作者是雷内尔·科瓦尔斯基。作品取材自他所见的某位亲戚的生活。\n酒是假的，水果是假的，但展品下面真的连着下水道。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_droplight_01": {
+        "id": "furni_artmuseum_droplight_01",
+        "sortId": 1545,
+        "name": "艺术馆吊灯",
+        "iconId": "furni_artmuseum_droplight_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_4",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 70,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "经过设计以融入室内装潢的吊灯。圆筒看起来是灯罩，其实是发光单元。\n雷内尔不想在顶棚上做两个一样的光源，他觉得那样会破坏整个展厅的节奏感。他是对的。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_plant_01": {
+        "id": "furni_artmuseum_plant_01",
+        "sortId": 1546,
+        "name": "艺术馆盆栽",
+        "iconId": "furni_artmuseum_plant_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_4",
+        "width": 3,
+        "depth": 3,
+        "height": 6,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "长势良好的盆栽。克里斯达尔艺术馆里用的是仿真品，这里摆着的则是活生生的观叶植物。\n房间里唯一的“真东西”。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_wallpaper_01": {
+        "id": "furni_artmuseum_wallpaper_01",
+        "sortId": 1547,
+        "name": "艺术馆全景显示屏",
+        "iconId": "furni_artmuseum_wallpaper_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_1",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "展现克里斯达尔艺术馆墙外景观的全景显示屏，甚至模拟了玻璃幕墙上会出现的水渍和灰尘。\n然而并没有显示漂满高尔夫球的游泳池。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_artmuseum_floor_01": {
+        "id": "furni_artmuseum_floor_01",
+        "sortId": 1548,
+        "name": "艺术馆地板",
+        "iconId": "furni_artmuseum_floor_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_artmuseum",
+        "groupId": "furni_set_artmuseum_1",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "克里斯达尔艺术馆内部广泛使用的地板。与艺术馆的整体装潢风格相比略显朴素。\n浅色的大理石地面并未让人觉得放松，反而制造了淡淡的疏离感。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_oct1st_deckChair_01": {
         "id": "furni_oct1st_deckChair_01",
         "sortId": 9998,
@@ -86499,6 +87327,163 @@
           "furni_SargonFair_wallpaper_01",
           "furni_SargonFair_floor_01"
         ]
+      },
+      "furni_set_artmuseum": {
+        "id": "furni_set_artmuseum",
+        "sortId": 89,
+        "name": "克里斯达尔展厅",
+        "themeType": "EVENT",
+        "desc": "根据克里斯达尔艺术馆内部某间私人展厅复原的概念房间。里面的展品都是现存艺术品的复制品。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_artmuseum_headset_01",
+            "pos0": 0,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_weirdexhibit_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_brochure_01",
+            "pos0": 3,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_fence_01",
+            "pos0": 7,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_chandelier_01",
+            "pos0": 5,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_sculpture_01",
+            "pos0": 8,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_notouch_01",
+            "pos0": 9,
+            "pos1": 8,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_whaleexhibit_01",
+            "pos0": 16,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_pepperexhibit_01",
+            "pos0": 15,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_stoneexhibit_01",
+            "pos0": 17,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_fossil_01",
+            "pos0": 21,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_bench_01",
+            "pos0": 20,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_carpet_01",
+            "pos0": 27,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_twistexhibit_01",
+            "pos0": 22,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_pillar_01",
+            "pos0": 24,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_blackexhibit_01",
+            "pos0": 30,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_droplight_01",
+            "pos0": 28,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_plant_01",
+            "pos0": 31,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_artmuseum_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_artmuseum_1",
+          "furni_set_artmuseum_2",
+          "furni_set_artmuseum_3",
+          "furni_set_artmuseum_4"
+        ],
+        "furnitures": [
+          "furni_artmuseum_headset_01",
+          "furni_artmuseum_weirdexhibit_01",
+          "furni_artmuseum_brochure_01",
+          "furni_artmuseum_fence_01",
+          "furni_artmuseum_chandelier_01",
+          "furni_artmuseum_sculpture_01",
+          "furni_artmuseum_notouch_01",
+          "furni_artmuseum_whaleexhibit_01",
+          "furni_artmuseum_pepperexhibit_01",
+          "furni_artmuseum_stoneexhibit_01",
+          "furni_artmuseum_fossil_01",
+          "furni_artmuseum_bench_01",
+          "furni_artmuseum_carpet_01",
+          "furni_artmuseum_twistexhibit_01",
+          "furni_artmuseum_pillar_01",
+          "furni_artmuseum_blackexhibit_01",
+          "furni_artmuseum_droplight_01",
+          "furni_artmuseum_plant_01",
+          "furni_artmuseum_wallpaper_01",
+          "furni_artmuseum_floor_01"
+        ]
       }
     },
     "groups": {
@@ -91589,6 +92574,66 @@
           "furni_SargonFair_stoneshelf_01",
           "furni_SargonFair_stockcart_01",
           "furni_SargonFair_chandelier_01"
+        ]
+      },
+      "furni_set_artmuseum_1": {
+        "id": "furni_set_artmuseum_1",
+        "sortId": 1,
+        "name": "“迷惑”",
+        "themeId": "furni_set_artmuseum",
+        "comfort": 280,
+        "count": 6,
+        "furniture": [
+          "furni_artmuseum_headset_01",
+          "furni_artmuseum_weirdexhibit_01",
+          "furni_artmuseum_brochure_01",
+          "furni_artmuseum_fence_01",
+          "furni_artmuseum_wallpaper_01",
+          "furni_artmuseum_floor_01"
+        ]
+      },
+      "furni_set_artmuseum_2": {
+        "id": "furni_set_artmuseum_2",
+        "sortId": 2,
+        "name": "“佯谬”",
+        "themeId": "furni_set_artmuseum",
+        "comfort": 225,
+        "count": 4,
+        "furniture": [
+          "furni_artmuseum_chandelier_01",
+          "furni_artmuseum_sculpture_01",
+          "furni_artmuseum_notouch_01",
+          "furni_artmuseum_pepperexhibit_01"
+        ]
+      },
+      "furni_set_artmuseum_3": {
+        "id": "furni_set_artmuseum_3",
+        "sortId": 3,
+        "name": "“试论”",
+        "themeId": "furni_set_artmuseum",
+        "comfort": 220,
+        "count": 5,
+        "furniture": [
+          "furni_artmuseum_twistexhibit_01",
+          "furni_artmuseum_whaleexhibit_01",
+          "furni_artmuseum_stoneexhibit_01",
+          "furni_artmuseum_fossil_01",
+          "furni_artmuseum_bench_01"
+        ]
+      },
+      "furni_set_artmuseum_4": {
+        "id": "furni_set_artmuseum_4",
+        "sortId": 4,
+        "name": "“悬置”",
+        "themeId": "furni_set_artmuseum",
+        "comfort": 220,
+        "count": 5,
+        "furniture": [
+          "furni_artmuseum_carpet_01",
+          "furni_artmuseum_pillar_01",
+          "furni_artmuseum_blackexhibit_01",
+          "furni_artmuseum_droplight_01",
+          "furni_artmuseum_plant_01"
         ]
       }
     },

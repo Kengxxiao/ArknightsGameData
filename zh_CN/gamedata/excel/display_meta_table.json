@@ -153,6 +153,16 @@
         "obtainApproach": "特殊方式获得"
       },
       {
+        "avatarId": "avatar_special_15",
+        "avatarType": "SPECIAL",
+        "avatarIdSort": 15,
+        "avatarIdDesc": "购买礼包获得\\n“防守”",
+        "avatarItemName": "“防守” ",
+        "avatarItemDesc": "阻截，迟滞，保持冷静。",
+        "avatarItemUsage": "用来彰显个性的图案，能够将之设置为头像。",
+        "obtainApproach": "特殊方式获得"
+      },
+      {
         "avatarId": "avatar_activity_OF",
         "avatarType": "ACTIVITY",
         "avatarIdSort": 1,
@@ -563,6 +573,16 @@
         "obtainApproach": "在生息演算模式中获得"
       },
       {
+        "avatarId": "avatar_activity_CR",
+        "avatarType": "ACTIVITY",
+        "avatarIdSort": 42,
+        "avatarIdDesc": "参与围攻签到活动获得\\n“一览无余”",
+        "avatarItemName": "“一览无余”",
+        "avatarItemDesc": "观察即是力量。",
+        "avatarItemUsage": "用来彰显个性的图案，能够将之设置为头像。",
+        "obtainApproach": "签到活动获得"
+      },
+      {
         "avatarId": "avatar_def_01",
         "avatarType": "DEFAULT",
         "avatarIdSort": 1,
@@ -738,7 +758,8 @@
           "avatar_special_11",
           "avatar_special_12",
           "avatar_special_13",
-          "avatar_special_14"
+          "avatar_special_14",
+          "avatar_special_15"
         ]
       },
       "ACTIVITY": {
@@ -785,7 +806,8 @@
           "avatar_activity_IW",
           "avatar_activity_AW",
           "avatar_activity_GA",
-          "avatar_activity_XB1_1"
+          "avatar_activity_XB1_1",
+          "avatar_activity_CR"
         ]
       },
       "DEFAULT": {
@@ -1021,6 +1043,20 @@
         "unlockDesList": [
           "[集成战略]探索者的银凇止境奖励"
         ]
+      },
+      {
+        "bgId": "bg_rainbowsix_1",
+        "bgType": "ACTIVITY",
+        "bgSortId": 14,
+        "bgStartTime": 1709784000,
+        "bgName": "显扬",
+        "bgMusicId": "music_bg_rainbowsix",
+        "bgDes": "人们一般抱着两类追求到访这种地方，一类是财富，另一类则是名望的显扬。",
+        "bgUsage": "一张照片，一段回忆，凝聚了泰拉大地的某个瞬间。",
+        "obtainApproach": "礼包购买",
+        "unlockDesList": [
+          "[采购中心]中购买安全演习纪念礼包获得"
+        ]
       }
     ],
     "themeList": [
@@ -1034,7 +1070,8 @@
         "tmUsage": "在不变动功能的情况下，对PRTS界面进行了重新设计。",
         "obtainApproach": "默认投放",
         "unlockDesList": [],
-        "isLimitObtain": false
+        "isLimitObtain": false,
+        "hideWhenLimit": false
       },
       {
         "id": "tm_rhodes_night",
@@ -1048,7 +1085,8 @@
         "unlockDesList": [
           "博士声望等级达到50级"
         ],
-        "isLimitObtain": false
+        "isLimitObtain": false,
+        "hideWhenLimit": false
       },
       {
         "id": "tm_rogue_3",
@@ -1062,7 +1100,8 @@
         "unlockDesList": [
           "[集成战略]探索者的银凇止境奖励"
         ],
-        "isLimitObtain": false
+        "isLimitObtain": false,
+        "hideWhenLimit": false
       },
       {
         "id": "tm_mainline_1",
@@ -1076,7 +1115,23 @@
         "unlockDesList": [
           "限时战备支援活动奖励"
         ],
-        "isLimitObtain": true
+        "isLimitObtain": true,
+        "hideWhenLimit": false
+      },
+      {
+        "id": "tm_rainbowsix_1",
+        "type": "ACTIVITY",
+        "sortId": 5,
+        "startTime": 1709784000,
+        "tmName": "围攻",
+        "tmDes": "战局瞬息万变。竖起耳朵，擦亮眼睛。",
+        "tmUsage": "在不变动功能的情况下，对PRTS界面进行了重新设计。",
+        "obtainApproach": "采购中心组合包",
+        "unlockDesList": [
+          "[采购中心]中购买安全演习纪念礼包获得"
+        ],
+        "isLimitObtain": true,
+        "hideWhenLimit": true
       }
     ],
     "themeLimitData": {
@@ -1089,9 +1144,118 @@
             "invalidObtainDesc": "暂未开放获取途径"
           }
         ]
+      },
+      "tm_rainbowsix_1": {
+        "id": "tm_rainbowsix_1",
+        "limitInfos": [
+          {
+            "startTime": 1709784000,
+            "endTime": 1712174399,
+            "invalidObtainDesc": "暂未开放获取途径"
+          }
+        ]
       }
     },
     "defaultBgMusicId": "music_bg_default",
     "themeStartTime": 1696104000
+  },
+  "nameCardV2Data": {
+    "fixedModuleData": {
+      "module_background": {
+        "id": "module_background",
+        "type": "BACKGROUND"
+      },
+      "module_illust": {
+        "id": "module_illust",
+        "type": "ILLUST"
+      },
+      "module_collect": {
+        "id": "module_collect",
+        "type": "COLLECT"
+      },
+      "module_avatar": {
+        "id": "module_avatar",
+        "type": "AVATAR"
+      }
+    },
+    "removableModuleData": {
+      "module_sign": {
+        "sortId": 1,
+        "subType": "SIGN",
+        "name": "个性签名",
+        "id": "module_sign",
+        "type": "REMOVABLE"
+      },
+      "module_assist": {
+        "sortId": 2,
+        "subType": "ASSIST",
+        "name": "助战干员",
+        "id": "module_assist",
+        "type": "REMOVABLE"
+      },
+      "module_medal": {
+        "sortId": 3,
+        "subType": "MEDAL",
+        "name": "蚀刻章",
+        "id": "module_medal",
+        "type": "REMOVABLE"
+      },
+      "module_mainline": {
+        "sortId": 4,
+        "subType": "MAINLINE",
+        "name": "主题曲进度",
+        "id": "module_mainline",
+        "type": "REMOVABLE"
+      }
+    },
+    "skinData": {
+      "nc_rhodes_default": {
+        "id": "nc_rhodes_default",
+        "name": "默认皮肤",
+        "type": "MAINLINE",
+        "sortId": 1,
+        "skinStartTime": 1709784000,
+        "skinDesc": "前后皆是漫漫长路，你将在何处找到自己的使命？",
+        "usageDesc": "在不变动功能的情况下，对prts进行了重新设计。",
+        "skinApproach": "默认投放",
+        "unlockConditionCnt": 0,
+        "unlockDescList": [],
+        "fixedModuleList": [
+          "module_background",
+          "module_illust",
+          "module_collect",
+          "module_avatar"
+        ],
+        "isTimeLimit": false,
+        "timeLimitInfoList": []
+      },
+      "nc_rhodes_light": {
+        "id": "nc_rhodes_light",
+        "name": "决意",
+        "type": "MAINLINE",
+        "sortId": 2,
+        "skinStartTime": 1709784000,
+        "skinDesc": "过去的秘密依然包裹在迷雾之中，但你已下定决心。",
+        "usageDesc": "在不变动功能的情况下，对prts进行了重新设计。",
+        "skinApproach": "达到对应等级解锁",
+        "unlockConditionCnt": 1,
+        "unlockDescList": [
+          "等级达到lv80"
+        ],
+        "fixedModuleList": [
+          "module_background",
+          "module_illust",
+          "module_collect",
+          "module_avatar"
+        ],
+        "isTimeLimit": false,
+        "timeLimitInfoList": []
+      }
+    },
+    "consts": {
+      "defaultNameCardSkinId": "nc_rhodes_default",
+      "canUidHide": false,
+      "removableModuleMaxCount": 7
+    }
   }
 }
