@@ -32385,6 +32385,79 @@
               }
             ]
           },
+          "sandbox_1_monthly_2": {
+            "id": "sandbox_1_monthly_2",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "敌人移动速度上升，我方受到的治疗效果与生命恢复效果+20%",
+            "runes": [
+              {
+                "key": "enemy_attribute_mul",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "move_speed",
+                    "value": 1.5,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "disable_in_sandbox_build",
+                    "value": 1.0,
+                    "valueStr": null
+                  }
+                ]
+              },
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": 639,
+                  "buildableMask": "ALL",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "heal_scale"
+                  },
+                  {
+                    "key": "heal_scale",
+                    "value": 1.2,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "disable_in_sandbox_build",
+                    "value": 1.0,
+                    "valueStr": null
+                  }
+                ]
+              }
+            ]
+          },
           "sandbox_1_warrior_lv01": {
             "id": "sandbox_1_warrior_lv01",
             "points": 0.0,
@@ -47455,6 +47528,47 @@
             "nodeId": "n12B9",
             "conditionGroup": "server_sandbox_1_monthly_1",
             "conditionDesc": "我方干员阻挡数+1\n敌人隐匿时移动速度上升",
+            "rewardItemList": [
+              {
+                "id": "mod_unlock_token",
+                "count": 1,
+                "type": "MATERIAL"
+              },
+              {
+                "id": "32001",
+                "count": 1,
+                "type": "MATERIAL"
+              },
+              {
+                "id": "2004",
+                "count": 20,
+                "type": "CARD_EXP"
+              },
+              {
+                "id": "3303",
+                "count": 20,
+                "type": "MATERIAL"
+              },
+              {
+                "id": "4001",
+                "count": 30000,
+                "type": "GOLD"
+              }
+            ]
+          },
+          {
+            "monthlyRushId": "sandbox_1_challenge_02",
+            "startTime": 1711915200,
+            "endTime": 1714507199,
+            "isLast": false,
+            "sortId": 2,
+            "rushGroupKey": "monthly_2",
+            "monthlyRushName": "惊兽奔腾",
+            "monthlyRushDes": "碾过我们的营帐的，可以是天灾、洪水、车队，也可以是狂躁的兽群。当然，最糟的是它们一起上。",
+            "weatherId": "weather_thunder",
+            "nodeId": "n12B9",
+            "conditionGroup": "server_sandbox_1_monthly_2",
+            "conditionDesc": "我方干员受到的治疗效果提升\n敌人移动速度提升",
             "rewardItemList": [
               {
                 "id": "mod_unlock_token",
