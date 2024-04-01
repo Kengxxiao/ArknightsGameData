@@ -22,7 +22,7 @@ function ActFunMainDlgGroup:OnInit()
     self:GetReward(reward)
   end
 
-  local initDlgCls = ActFun4MainDlg
+  local initDlgCls = ActFun5MainDlg
   if initDlgName == ActFun1MainDlg.DLG_NAME then
     initDlgCls = ActFun1MainDlg
   elseif initDlgName == ActFun2MainDlg.DLG_NAME then
@@ -31,6 +31,8 @@ function ActFunMainDlgGroup:OnInit()
     initDlgCls = ActFun3MainDlg
   elseif initDlgName == ActFun4MainDlg.DLG_NAME then
     initDlgCls = ActFun4MainDlg
+  elseif initDlgName == ActFun5MainDlg.DLG_NAME then
+    initDlgCls = ActFun5MainDlg
   end
 
   local initDlgStack = {initDlgCls};

@@ -15,3 +15,7 @@ require "Feature/Operation/ActFun/Act4fun/Act4funLiveData";
 require "Feature/Operation/ActFun/Act4fun/Act4funLivePanelBase";
 require "Feature/Operation/ActFun/Act4fun/Act4funLivePageDlg"
 require "Feature/Operation/ActFun/Act4fun/Act4funPushMessageHandler"
+
+
+require "Feature/Operation/ActFun/ActFun5MainDlg"
+require "Feature/Operation/ActFun/Act5fun/BattleFinish/Act5funBattleFinishDlg"
