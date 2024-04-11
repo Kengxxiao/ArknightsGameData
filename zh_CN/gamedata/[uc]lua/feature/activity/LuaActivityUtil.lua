@@ -21,6 +21,7 @@ local HOME_WEIGHT_SWITCH_ONLY = 560;
 local HOME_WEIGHT_CHECKIN_VS = 570;
 local HOME_WEIGHT_UNIQUE_ONLY = 580;
 local HOME_WEIGHT_BLESS_ONLY = 590;
+local HOME_WEIGHT_ACTACCESS = 595;
 
 local HOME_WEIGHT_MAIN_BUFF = 600;
 local HOME_WEIGHT_MAINLINE_BP = 610;
@@ -219,6 +220,24 @@ function LuaActivityUtil:_FindValidBlessOnly(validActs, uncompleteActs)
   end
 end
 
+
+
+function LuaActivityUtil:_FindValidCheckInAccess(validActs, uncompleteActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.CHECKIN_ACCESS);
+  if actList == nil then
+    return;
+  end
+
+  for i = 0, actList.Count - 1 do
+      local actId = actList[i];
+      local validAct = CS.Torappu.SortableString(actId, HOME_WEIGHT_ACTACCESS);
+      validActs:Add(validAct);
+      if self:_CheckIfActAccessUncomplete(actId) then
+        uncompleteActs:Add(validAct);
+      end
+  end
+end
+
 function LuaActivityUtil:_FindValidMainlineBpAct(validActs, uncompleteActs)
   local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.MAINLINE_BP);
   if actList == nil then
@@ -251,6 +270,7 @@ function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs)
   self:_FindValidUniqueOnly(validActs,uncompleteActs);
   self:_FindValidBlessOnly(validActs,uncompleteActs);
   self:_FindValidMainlineBpAct(validActs, uncompleteActs);
+  self:_FindValidCheckInAccess(validActs,uncompleteActs);
 end
 
 
@@ -296,6 +316,9 @@ local DEFINE_CLS_FUNCS = {
   end,
   BLESS_ONLY = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, BlessOnlyMainDlg)
+  end,
+  CHECKIN_ACCESS = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, ActCheckinAccessMainDlg)
   end,
 }
 
@@ -369,6 +392,8 @@ function LuaActivityUtil:CheckIfActivityUncomplete(type, actId)
     return self:_CheckIfBlessOnlyUncomplete(actId);
   elseif type == CS.Torappu.ActivityType.MAINLINE_BP then
     return self:_CheckIfMainlineBpUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.CHECKIN_ACCESS then
+    return self:_CheckIfActAccessUncomplete(actId);
   else
     return false;
   end
@@ -510,6 +535,14 @@ end
 
 function LuaActivityUtil:_CheckIfBlessOnlyUncomplete(actId)
   return BlessOnlyUtil.CheckBlessActIsUncomplete(actId);
+end
+
+function LuaActivityUtil:_CheckIfActAccessUncomplete(actId)
+  local suc, playerData = CS.Torappu.PlayerData.instance.data.activity.checkinAccessList:TryGetValue(actId);
+  if (suc) then
+    return playerData.currentStatus == 1
+  end
+  return false
 end
 
 

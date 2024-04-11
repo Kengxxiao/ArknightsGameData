@@ -1,6 +1,6 @@
 GlobalConfig = 
 {
-  CUR_FUNC_VER = "V048",
+  CUR_FUNC_VER = "V049",
 }
 
 

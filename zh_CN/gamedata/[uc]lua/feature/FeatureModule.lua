@@ -21,6 +21,8 @@ require "Feature/Activity/PrayOnly/PrayOnlyActDefines"
 
 require "Feature/Activity/ActFlip/ActFlipMainDlg"
 
+require "Feature/Activity/CheckinAccess/ActCheckinAccessMainDlg"
+
 require "Feature/Activity/LuaActivityUtil"
 
 require "Feature/Activity/Act3D5/Act3D5Dlg"
@@ -86,5 +88,3 @@ require "Feature/Activity/MainlineBp/MainlineBpMainDlg";
 require "Feature/Activity/BlessOnly/BlessOnlyDefine"
 require "Feature/Activity/BlessOnly/BlessOnlyUtil"
 require "Feature/Activity/BlessOnly/BlessOnlyMainDlg"
-
-require "Feature/SandboxV2/SandboxV2DiffDialog"

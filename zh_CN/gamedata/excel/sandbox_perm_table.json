@@ -518,16 +518,16 @@
                     "y": 122.0
                   },
                   {
-                    "x": -1007.0,
-                    "y": 598.0
+                    "x": -1174.0,
+                    "y": 573.0
                   },
                   {
                     "x": -1099.0,
                     "y": 796.0
                   },
                   {
-                    "x": -1267.0,
-                    "y": 1485.0
+                    "x": -831.000061,
+                    "y": 1335.0
                   },
                   {
                     "x": -1366.0,
@@ -722,8 +722,8 @@
                 },
                 "vertices": [
                   {
-                    "x": -1036.0,
-                    "y": 614.0
+                    "x": -1099.0,
+                    "y": 858.0
                   },
                   {
                     "x": -1377.0,
@@ -782,12 +782,12 @@
                     "y": 278.0
                   },
                   {
-                    "x": -531.0,
-                    "y": 541.0
+                    "x": -626.0,
+                    "y": 870.0
                   },
                   {
-                    "x": -817.0,
-                    "y": 562.0
+                    "x": -826.0,
+                    "y": 850.0
                   }
                 ],
                 "triangles": [
@@ -870,12 +870,12 @@
                 },
                 "vertices": [
                   {
-                    "x": -211.999985,
+                    "x": -354.0,
                     "y": 623.0
                   },
                   {
-                    "x": -569.0,
-                    "y": 537.0
+                    "x": -619.0,
+                    "y": 822.0
                   },
                   {
                     "x": -577.0,
@@ -19478,7 +19478,8 @@
           "daysBetweenAssessment": 3,
           "portableConstructUnlockLevel": 2,
           "outpostConstructUnlockLevel": 2,
-          "maxEnemyCountSameTimeInRush": 0,
+          "maxEnemyCountSameTimeInRush": 300,
+          "maxPreDelayTimeInRush": 30.0,
           "maxSaveCnt": 2,
           "firstSeasonDuration": 18,
           "seasonTransitionLoop": [
@@ -19611,7 +19612,20 @@
           "battleBgmBossRush": "sandbox_1_bossrushbattle",
           "imgLoadingNormalName": "sandbox_loading_normal",
           "imgLoadingBaseName": "sandbox_loading_base",
-          "imgUnloadingBaseName": "sandbox_loading_return"
+          "imgUnloadingBaseName": "sandbox_loading_return",
+          "isChallengeOpen": false,
+          "isRacingOpen": false,
+          "hasExploreMode": true,
+          "exploreModeBuffDescs": [
+            "资源最大生命值降低25%",
+            "食材和食品转化为能量饮料的效率提升100%",
+            "敌袭敌人最大生命值及攻击力降低50%",
+            "<color=#797717>*以上效果在陌域、险途中不生效；切换模式不改变繁荣点数转化效率</color>"
+          ],
+          "stringRes": {
+            "NORMAL_MODE_NAME": "标准模式",
+            "HARD_MODE_NAME": "挑战模式"
+          }
         },
         "riftConst": {
           "refreshRate": 3,
@@ -35897,6 +35911,609 @@
                 ]
               }
             ]
+          },
+          "sandbox_1_hidden_tutorial": {
+            "id": "sandbox_1_hidden_tutorial",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "显示隐藏组",
+            "runes": [
+              {
+                "key": "level_hidden_group_enable",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "h1"
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_day_3": {
+            "id": "challenge_day_3",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "野生动物最大生命值提高200%",
+            "runes": [
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": 1023,
+                  "buildableMask": "ALL",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "enemy_max_hp_down"
+                  },
+                  {
+                    "key": "max_hp",
+                    "value": 3.0,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "filter_tag",
+                    "value": 0.0,
+                    "valueStr": "wildanimal"
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_day_6": {
+            "id": "challenge_day_6",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "资源最大生命值提高200%",
+            "runes": [
+              {
+                "key": "char_attribute_mul",
+                "selector": {
+                  "professionMask": 1023,
+                  "buildableMask": "ALL",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "filter_tag",
+                    "value": 0.0,
+                    "valueStr": "SANDBOX_RES"
+                  },
+                  {
+                    "key": "max_hp",
+                    "value": 3.0,
+                    "valueStr": null
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_day_9": {
+            "id": "challenge_day_9",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "所有敌人受到的物理与法术伤害降低20%",
+            "runes": [
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "enemy_damage_scale[phy]"
+                  },
+                  {
+                    "key": "damage_scale",
+                    "value": 0.8,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "char",
+                    "value": 0.0,
+                    "valueStr": "null"
+                  }
+                ]
+              },
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "enemy_damage_scale[mag]"
+                  },
+                  {
+                    "key": "damage_scale",
+                    "value": 0.8,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "char",
+                    "value": 0.0,
+                    "valueStr": "null"
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_day_12": {
+            "id": "challenge_day_12",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "干员受到的元素损伤提高25%",
+            "runes": [
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": 639,
+                  "buildableMask": "ALL",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "ep_damage_scale"
+                  },
+                  {
+                    "key": "ep_damage_scale",
+                    "value": 1.25,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "enemy",
+                    "value": 0.0,
+                    "valueStr": "null"
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_day_15": {
+            "id": "challenge_day_15",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "可同时部署人数-2",
+            "runes": [
+              {
+                "key": "global_placable_char_num_add",
+                "selector": {
+                  "professionMask": 639,
+                  "buildableMask": "ALL",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "value",
+                    "value": -2.0,
+                    "valueStr": null
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_day_18": {
+            "id": "challenge_day_18",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "部署费用自然回复速度降低50%",
+            "runes": [
+              {
+                "key": "global_cost_recovery_mul",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "scale",
+                    "value": 2.0,
+                    "valueStr": null
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_day_21": {
+            "id": "challenge_day_21",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "领袖敌人的攻击力，生命值，防御力+20%",
+            "runes": [
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "enemy_atk_down"
+                  },
+                  {
+                    "key": "atk",
+                    "value": 1.2,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "enemy_level_type",
+                    "value": 0.0,
+                    "valueStr": "BOSS"
+                  },
+                  {
+                    "key": "disable_in_sandbox_build",
+                    "value": 1.0,
+                    "valueStr": null
+                  }
+                ]
+              },
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "enemy_def_down"
+                  },
+                  {
+                    "key": "def",
+                    "value": 1.2,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "enemy_level_type",
+                    "value": 0.0,
+                    "valueStr": "BOSS"
+                  },
+                  {
+                    "key": "disable_in_sandbox_build",
+                    "value": 1.0,
+                    "valueStr": null
+                  }
+                ]
+              },
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "enemy_max_hp_down"
+                  },
+                  {
+                    "key": "max_hp",
+                    "value": 1.2,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "enemy_level_type",
+                    "value": 0.0,
+                    "valueStr": "BOSS"
+                  },
+                  {
+                    "key": "disable_in_sandbox_build",
+                    "value": 1.0,
+                    "valueStr": null
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_day_24": {
+            "id": "challenge_day_24",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "可同时部署人数额外-2",
+            "runes": [
+              {
+                "key": "global_placable_char_num_add",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "value",
+                    "value": -2.0,
+                    "valueStr": null
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_day_27": {
+            "id": "challenge_day_27",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "干员再部署时间提升100%",
+            "runes": [
+              {
+                "key": "char_respawntime_mul",
+                "selector": {
+                  "professionMask": 639,
+                  "buildableMask": "ALL",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "scale",
+                    "value": 2.0,
+                    "valueStr": null
+                  }
+                ]
+              }
+            ]
+          },
+          "challenge_daily": {
+            "id": "challenge_daily",
+            "points": 0.0,
+            "mutexGroupKey": null,
+            "description": "按照天数提升敌人数值",
+            "runes": [
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "sandbox_2_enemy_attr_via_day_count"
+                  },
+                  {
+                    "key": "day_stack",
+                    "value": 9.0,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "max_hp",
+                    "value": 0.1,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "atk",
+                    "value": 0.1,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "def",
+                    "value": 0.1,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "char",
+                    "value": 0.0,
+                    "valueStr": "null"
+                  }
+                ]
+              },
+              {
+                "key": "env_gbuff_new_with_verify",
+                "selector": {
+                  "professionMask": "NONE",
+                  "buildableMask": "NONE",
+                  "charIdFilter": null,
+                  "enemyIdFilter": null,
+                  "enemyIdExcludeFilter": null,
+                  "enemyLevelTypeFilter": null,
+                  "skillIdFilter": null,
+                  "tileKeyFilter": null,
+                  "groupTagFilter": null,
+                  "filterTagFilter": null,
+                  "filterTagExcludeFilter": null,
+                  "subProfessionExcludeFilter": null,
+                  "mapTagFilter": null
+                },
+                "blackboard": [
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "sandbox_2_enemy_attr_via_day_count"
+                  },
+                  {
+                    "key": "day_stack",
+                    "value": 1.0,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "max_hp",
+                    "value": 0.01,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "atk",
+                    "value": 0.01,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "def",
+                    "value": 0.01,
+                    "valueStr": null
+                  },
+                  {
+                    "key": "key",
+                    "value": 0.0,
+                    "valueStr": "char"
+                  }
+                ]
+              }
+            ]
           }
         },
         "itemRuneList": {},
@@ -48429,8 +49046,8 @@
             "enemy_1063_rageth_2": "enemy_1252_lysytb_2",
             "enemy_1072_dlancer": "enemy_1330_cbrush",
             "enemy_1072_dlancer_2": "enemy_1330_cbrush_2",
-            "enemy_1073_dscout": "enemy_1331_cbsisy",
-            "enemy_1073_dscout_2": "enemy_1331_cbsisy_2",
+            "enemy_1073_dscout": "enemy_1331_cbsisy_3",
+            "enemy_1073_dscout_2": "enemy_1331_cbsisy_4",
             "enemy_1076_bsthmr": "enemy_1255_lybgpa",
             "enemy_1076_bsthmr_2": "enemy_1255_lybgpa_2",
             "enemy_1086_ltsodr": "enemy_1326_cbagen",
@@ -48507,8 +49124,8 @@
             "enemy_1306_mhtrtl_2": "enemy_1254_lypa_2",
             "enemy_1307_mhrhcr": "enemy_1254_lypa",
             "enemy_1307_mhrhcr_2": "enemy_1254_lypa_2",
-            "enemy_1309_mhboar": "enemy_1331_cbsisy",
-            "enemy_1309_mhboar_2": "enemy_1331_cbsisy_2",
+            "enemy_1309_mhboar": "enemy_1331_cbsisy_3",
+            "enemy_1309_mhboar_2": "enemy_1331_cbsisy_4",
             "enemy_1310_mhprpn": "enemy_1255_lybgpa",
             "enemy_1310_mhprpn_2": "enemy_1255_lybgpa_2",
             "enemy_1311_mhkryk": "enemy_1264_durgrd",
@@ -48519,8 +49136,8 @@
             "enemy_1501_demonk": "enemy_1256_lyacpa",
             "enemy_7001_blwzad": "enemy_1252_lysytb",
             "enemy_7001_blwzad_2": "enemy_1252_lysytb_2",
-            "enemy_7002_veingd": "enemy_1331_cbsisy",
-            "enemy_7002_veingd_2": "enemy_1331_cbsisy_2",
+            "enemy_7002_veingd": "enemy_1331_cbsisy_3",
+            "enemy_7002_veingd_2": "enemy_1331_cbsisy_4",
             "enemy_7003_catapt": "enemy_1256_lyacpa",
             "enemy_7016_shushu": "enemy_1253_lysytc",
             "enemy_7017_miner": "enemy_1254_lypa",
@@ -51388,6 +52005,64 @@
               "training_11"
             ]
           }
+        },
+        "racingData": {
+          "racerBasicInfo": {},
+          "racerTalentInfo": {},
+          "racerNameInfo": {},
+          "racerMedalInfo": {},
+          "enemyItemMap": {},
+          "racingItemInfo": {},
+          "constData": {
+            "attributeNameList": [],
+            "racerMaxValue": [],
+            "bagFullHintPercent": 0.0,
+            "tempBagFullHintPercent": 0.0,
+            "bagName": null,
+            "tempBagName": null,
+            "bagEmptyLeftDesc": null,
+            "bagEmptyRightDesc": null,
+            "tempBagEmptyLeftDesc": null,
+            "tempBagEmptyRightDesc": null,
+            "bornTalentIconId": null,
+            "bornTalentTitle": null,
+            "learnedTalentIconId": null,
+            "learnedTalentTitle": null,
+            "talentEmptyDesc": null,
+            "slugItemId": null,
+            "racingHpFactor": 0.0,
+            "racingSpeedFactor": 0.0,
+            "racingAccelerationFactor": 0.0,
+            "recoverMoveSpeed": 0.0,
+            "recoverHpFactor": 0.0,
+            "bleedingFactor": 0.0,
+            "maxSteeringFactor": 0.0,
+            "steeringMassLevelFactor": 0.0,
+            "steeringMoveSpeedFactor": 0.0,
+            "safeAngleCos": 0.0,
+            "safeCollisionForceLevel": 0.0,
+            "tileCollisionFactor": 0.0,
+            "collisionForceSector": null,
+            "collisionForceLevel": null,
+            "collisionSpeedLoss": null,
+            "collisionHpLoss": null,
+            "tileCollisionSpeedLoss": null,
+            "tileCollisionHpLoss": null,
+            "autoUseItemTimeRange": null,
+            "recoverAcceleration": 0.0
+          }
+        },
+        "challengeModeData": {
+          "challengeConst": {
+            "challengeModeDesc": null,
+            "dailyTitleDesc": null,
+            "debuffCountdownDesc": null,
+            "gainAllDebuffDesc": null,
+            "dailyUpAttributeDesc": null
+          },
+          "challengeModeUnlockData": {},
+          "challengeModeRewardData": {},
+          "challengeModeDifficultyData": []
         }
       }
     }
