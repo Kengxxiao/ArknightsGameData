@@ -1,0 +1,530 @@
+{
+  "costTransferred": 15,
+  "costTransferredExtra": 10,
+  "getMaxMsgCntInOneUpdate": 10,
+  "buffList": {
+    "PIONEER": {
+      "key": "cooperate_buff_pioneer_warrior",
+      "buffId": "buff_1",
+      "atRoot": true,
+      "title": "突破",
+      "description": "你的先锋和近卫干员击倒敌人回复<@ba.vup>{lv1.cost}</>点部署费用；协作者向你请求费用时，获得的部署费用提升至最多25点",
+      "Blackboard": [
+        {
+          "key": "lv1.cost",
+          "value": 3.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.cost",
+          "value": 4.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.cost",
+          "value": 6.0,
+          "valueStr": null
+        },
+        {
+          "key": "extraCost",
+          "value": 10.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "CASTER": {
+      "key": "cooperate_buff_caster_sniper",
+      "buffId": "buff_2",
+      "atRoot": true,
+      "title": "攻坚",
+      "description": "你的术师和狙击干员攻击被协作者的单位所阻挡的敌人时，无视<@ba.vup>{lv1.magic_resist_penetrate_fixed}</>点的法术抗性和<@ba.vup>{lv1.def_penetrate:0%}</>的防御力",
+      "Blackboard": [
+        {
+          "key": "lv1.magic_resist_penetrate_fixed",
+          "value": 60.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.magic_resist_penetrate_fixed",
+          "value": 80.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.magic_resist_penetrate_fixed",
+          "value": 100.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv1.def_penetrate",
+          "value": 0.6,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.def_penetrate",
+          "value": 0.8,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.def_penetrate",
+          "value": 1.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "MEDIC": {
+      "key": "cooperate_buff_medical_tank",
+      "buffId": "buff_3",
+      "atRoot": true,
+      "title": "守备",
+      "description": "你的医疗和重装干员防御力提升<@ba.vup>{lv1.def:0%}</>，对协作的单位治疗效果提升至<@ba.vup>{lv1.heal_scale:0%}</>",
+      "Blackboard": [
+        {
+          "key": "lv1.heal_scale",
+          "value": 1.4,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.heal_scale",
+          "value": 1.8,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.heal_scale",
+          "value": 2.2,
+          "valueStr": null
+        },
+        {
+          "key": "lv1.def",
+          "value": 0.3,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.def",
+          "value": 0.5,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.def",
+          "value": 1.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "SUPPORT": {
+      "key": "cooperate_buff_support_special",
+      "buffId": "buff_4",
+      "atRoot": false,
+      "title": "支援",
+      "description": "辅助和特种使部署在其攻击范围内的干员每秒回复技力<@ba.vup>+{lv1.sp_recovery_per_sec}</>",
+      "Blackboard": [
+        {
+          "key": "lv1.sp_recovery_per_sec",
+          "value": 1.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.sp_recovery_per_sec",
+          "value": 1.5,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.sp_recovery_per_sec",
+          "value": 2.5,
+          "valueStr": null
+        }
+      ]
+    },
+    "SNIPER": {
+      "key": "cooperate_buff_caster_sniper",
+      "buffId": "buff_2",
+      "atRoot": true,
+      "title": "攻坚",
+      "description": "你的术师和狙击干员攻击被协作者的单位所阻挡的敌人时，无视<@ba.vup>{lv1.magic_resist_penetrate_fixed}</>点的法术抗性和<@ba.vup>{lv1.def_penetrate:0%}</>的防御力",
+      "Blackboard": [
+        {
+          "key": "lv1.magic_resist_penetrate_fixed",
+          "value": 60.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.magic_resist_penetrate_fixed",
+          "value": 80.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.magic_resist_penetrate_fixed",
+          "value": 100.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv1.def_penetrate",
+          "value": 0.6,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.def_penetrate",
+          "value": 0.8,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.def_penetrate",
+          "value": 1.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "WARRIOR": {
+      "key": "cooperate_buff_pioneer_warrior",
+      "buffId": "buff_1",
+      "atRoot": true,
+      "title": "突破",
+      "description": "你的先锋和近卫击倒敌人回复<@ba.vup>{lv1.cost}</>点部署费用；协作者向你请求费用时，获得的部署费用提升至最多25点",
+      "Blackboard": [
+        {
+          "key": "lv1.cost",
+          "value": 3.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.cost",
+          "value": 4.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.cost",
+          "value": 6.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "TANK": {
+      "key": "cooperate_buff_medical_tank",
+      "buffId": "buff_3",
+      "atRoot": true,
+      "title": "守备",
+      "description": "你的医疗和重装干员防御力提升<@ba.vup>{lv1.def:0%}</>，对协作的单位治疗效果提升至<@ba.vup>{lv1.heal_scale:0%}</>",
+      "Blackboard": [
+        {
+          "key": "lv1.heal_scale",
+          "value": 1.4,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.heal_scale",
+          "value": 1.8,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.heal_scale",
+          "value": 2.2,
+          "valueStr": null
+        },
+        {
+          "key": "lv1.def",
+          "value": 0.3,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.def",
+          "value": 0.5,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.def",
+          "value": 1.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "SPECIAL": {
+      "key": "cooperate_buff_support_special",
+      "buffId": "buff_4",
+      "atRoot": false,
+      "title": "支援",
+      "description": "辅助和特种使部署在其攻击范围内的干员每秒回复技力<@ba.vup>+{lv1.sp_recovery_per_sec}</>",
+      "Blackboard": [
+        {
+          "key": "lv1.sp_recovery_per_sec",
+          "value": 1.0,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.sp_recovery_per_sec",
+          "value": 1.5,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.sp_recovery_per_sec",
+          "value": 2.5,
+          "valueStr": null
+        }
+      ]
+    },
+    "NONE": {
+      "key": "cooperate_buff_normal",
+      "buffId": "buff_5",
+      "atRoot": true,
+      "title": "协调",
+      "description": "你的全体干员攻击力、防御力、最大生命值提升<@ba.vup>{lv1.atk:0%}</>",
+      "Blackboard": [
+        {
+          "key": "lv1.atk",
+          "value": 0.1,
+          "valueStr": null
+        },
+        {
+          "key": "lv1.def",
+          "value": 0.1,
+          "valueStr": null
+        },
+        {
+          "key": "lv1.max_hp",
+          "value": 0.1,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.atk",
+          "value": 0.2,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.def",
+          "value": 0.2,
+          "valueStr": null
+        },
+        {
+          "key": "lv2.max_hp",
+          "value": 0.2,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.atk",
+          "value": 0.3,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.def",
+          "value": 0.3,
+          "valueStr": null
+        },
+        {
+          "key": "lv3.max_hp",
+          "value": 0.3,
+          "valueStr": null
+        }
+      ]
+    }
+  },
+  "cooperateBonusMap": {
+    "cooperate_character_limit_add": {
+      "key": "cooperate_character_limit_add",
+      "fail": true,
+      "weight": 0,
+      "description": "部署上限+1",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 1.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_modify_life_point": {
+      "key": "cooperate_modify_life_point",
+      "fail": true,
+      "weight": 0,
+      "description": "关卡生命值+5",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 5.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_cost_recovery_multi": {
+      "key": "cooperate_cost_recovery_multi",
+      "fail": true,
+      "weight": 0,
+      "description": "部署费用自然回复速度+20%",
+      "blackboard": [
+        {
+          "key": "delta_cost_increase_time",
+          "value": 0.8,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_respawn_time_multi": {
+      "key": "cooperate_respawn_time_multi",
+      "fail": true,
+      "weight": 0,
+      "description": "干员复活时间-10%",
+      "blackboard": [
+        {
+          "key": "respawn_time",
+          "value": -0.1,
+          "valueStr": null
+        },
+        {
+          "key": "remaining_respawn_time",
+          "value": 0.9,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_kazimierz_buff": {
+      "key": "cooperate_kazimierz_buff",
+      "fail": false,
+      "weight": 50,
+      "description": "卡西米尔干员部署后30秒攻击力+20%",
+      "blackboard": [
+        {
+          "key": "atk",
+          "value": 0.2,
+          "valueStr": null
+        },
+        {
+          "key": "duration",
+          "value": 30.0,
+          "valueStr": null
+        },
+        {
+          "key": "value",
+          "value": 5.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_sp_recover_ratio_multi": {
+      "key": "cooperate_sp_recover_ratio_multi",
+      "fail": true,
+      "weight": 0,
+      "description": "干员技力回复速度+20%",
+      "blackboard": [
+        {
+          "key": "sp",
+          "value": 0.2,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_atk_speed_multi": {
+      "key": "cooperate_atk_speed_multi",
+      "fail": true,
+      "weight": 0,
+      "description": "干员攻击速度+20%",
+      "blackboard": [
+        {
+          "key": "atk_speed",
+          "value": 0.2,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_profession_buff_add": {
+      "key": "cooperate_profession_buff_add",
+      "fail": false,
+      "weight": 100,
+      "description": "专项的增益效果提升",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 1.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_profession_buff_add_2": {
+      "key": "cooperate_profession_buff_add_2",
+      "fail": true,
+      "weight": 100,
+      "description": "专项的增益效果大幅度提升",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 2.0,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_buff_spareshot": {
+      "key": "cooperate_buff_spareShot",
+      "fail": false,
+      "weight": 50,
+      "description": "干员攻击时有50%概率不消耗弹药",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 4.0,
+          "valueStr": null
+        },
+        {
+          "key": "prob",
+          "value": 0.5,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_buff_abyssal": {
+      "key": "cooperate_buff_abyssal",
+      "fail": false,
+      "weight": 50,
+      "description": "深海干员的攻击/防御/生命+50%",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 4.0,
+          "valueStr": null
+        },
+        {
+          "key": "atk",
+          "value": 0.5,
+          "valueStr": null
+        },
+        {
+          "key": "def",
+          "value": 0.5,
+          "valueStr": null
+        },
+        {
+          "key": "max_hp",
+          "value": 0.5,
+          "valueStr": null
+        }
+      ]
+    },
+    "cooperate_buff_student": {
+      "key": "cooperate_buff_student",
+      "fail": false,
+      "weight": 50,
+      "description": "乌萨斯干员开启技能时，其他乌萨斯干员获得10点技力",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 4.0,
+          "valueStr": null
+        },
+        {
+          "key": "sp",
+          "value": 10.0,
+          "valueStr": null
+        }
+      ]
+    }
+  },
+  "endTileInfo": {
+    "MY_SIDE": {
+      "name": "我的目标点",
+      "description": "敌方进入后会扣除我的目标生命值；生命值归零时，进入的敌人会出现在协作者目标点"
+    },
+    "MATE_SIDE": {
+      "name": "协作者目标点",
+      "description": "敌方进入后会扣除协作者目标生命值；生命值归零时，进入的敌人会出现在我的目标点"
+    },
+    "SHARED": {
+      "name": "共同目标点",
+      "description": "敌方进入后会同时扣除双方目标生命值"
+    }
+  }
+}

@@ -15,6 +15,11 @@ function WardrobeSkinGroupDetailState:OnResume()
   self:Render()
 end
 
+function WardrobeSkinGroupDetailState:OnClose()
+  
+  self._wrappedViewPager:ClearFunc()
+end
+
 function WardrobeSkinGroupDetailState:_RenderCheck(data)
   for k,v in pairs(data.skinList) do
     if (WardrobeUtil.CheckSkinOnSale(v)) then
@@ -69,19 +74,16 @@ function WardrobeSkinGroupDetailState:CheckData(data)
   for k,kvImgInfo in pairs(data.data.kvImgIdList) do
     local publishTime = skinGroupTimeRef[kvImgInfo.linkedSkinGroupId]
     if publishTime < currentTime then
-      local sprite = CS.Torappu.UI.Wardrobe.WardrobeKVSpriteLoader.LoadSpriteFromHubStatic(kvImgInfo.kvImgId, CS.Torappu.ResourceUrls.GetSkinKvHubPath())
-      table.insert(spriteList,sprite)
+      table.insert(spriteList,kvImgInfo.kvImgId)
     end
   end
-  local sprite =  CS.Torappu.UI.Wardrobe.WardrobeKVSpriteLoader.LoadSpriteFromHubStatic(string.format("default_kv_%s",data.data.brandId),CS.Torappu.ResourceUrls.GetSkinKvHubPath())
-  if (sprite ~= nil) then
-    table.insert(spriteList,sprite)
-  end
+  table.insert(spriteList,string.format("default_kv_%s",data.data.brandId))
   local pos = self._content.anchoredPosition
   pos.y = 0
   self._content.anchoredPosition = pos
   self._triEffect:ToInitScale()
-  self._wrappedViewPager:InitRender(spriteList)
+  self.spriteList = spriteList
+  self._wrappedViewPager:InitRenderFunc(spriteList,CS.Torappu.ResourceUrls.GetSkinKvHubPath())
 end
 
 function WardrobeSkinGroupDetailState:GetTransInfo()

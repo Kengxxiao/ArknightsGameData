@@ -1,0 +1,474 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="bg_abyss_1",screenadapt="coverall", xScale=1.08, yScale=1.08,block=true)]
+[focusout(duration=0.5, type="bg", from=0, to=1, block=true)]
+[Delay(time=1)]
+[PlayMusic(key="$babel_loop", volume=0.8)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=0.5)]
+你可能记不清今天对你来说，究竟意味着什么。
+这会让你陷入十分危险的处境。
+......
+不。
+你必须想起来。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[charslot]
+[Background(image="bg_black", screenadapt="coverall", block=true)]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[name="模糊的声音"]......状态......正常......
+[name="模糊的声音"]......抱歉......
+[name="模糊的声音"]又让你受苦了。
+[Dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[charslot]
+[Image(image="avg_8_9",screenadapt="coverall")]
+[focusout(duration=0.5, type="cg" , from=0, to=1, block=true)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="？？？"]......
+[name="？？？"]博士，抓紧我的手。
+[name="？？？"]下次请不要再一声不吭地离开我了。
+[Dialog]
+[focusout(duration=1.5, type="cg" , from=1, to=0, block=true)]
+[delay(time=0.5)]
+[name="？？？"]你也不会再接受这种事了，对吧？
+[name="？？？"]嗯......怎么了，Dr.{@nickname}......
+[name="？？？"]为什么用这么陌生的眼神看着我？
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[bgeffect(name="$eb_dim_openeye",layer=1)]
+[image]
+[charslot]
+[Background(image="bg_abyss_1",screenadapt="coverall", xScale=1.08, yScale=1.08,block=true)]
+[focusout(duration=0.1, type="bg", from=1, to=0, block=true)]
+[charslot(slot="m",name="avg_npc_083")]
+[delay(time=1)]
+[playMusic(intro="$mist_intro", key="$mist_loop", volume=0.6)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=2)]
+[bgeffect]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="（“未知语言”）普瑞......赛斯......？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]欸，你又从哪里学来了这么奇怪的语言？
+[name="普瑞赛斯"]这次休眠你又偷偷将思维上传到某个旋臂末端的文明中了吗？
+[name="普瑞赛斯"]好了，再确认一下你的语言功能恢复得如何吧。
+[name="普瑞赛斯"]别说你睡了一场大觉，连我的名字都忘记了。
+[name="普瑞赛斯"]来，再叫一次我的名字，数据库会分析你的所有声音数据。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="普瑞......赛斯......", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]恢复得很快嘛，{@nickname}。
+[name="普瑞赛斯"]但是你的身体刚刚复苏，还没有完全适应。
+[name="普瑞赛斯"]急着乱动的话，小心NX-07把你按回床铺哦。它新换的指令很难解开，就连我都爱莫能助。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="你......我在哪里？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]当然还在“罗德岛”，我们的家。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="只有......我一个人？;罗德岛的......其他人呢......", values="1;2")]
+[Predicate(references="1;2")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]怎么会只有你呢？我也在这里呀。
+[Predicate(references="2")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]......你果然还是会这样问。
+[Predicate(references="1;2")]
+[name="普瑞赛斯"]变故发生得很快。防御矩阵损伤超过了百分之九十，受极端环境影响，修理单元也很难在短时间内恢复工作。
+[name="普瑞赛斯"]在你休眠后不久，许多同事就相继离开了这里......大家都很珍惜这星星坠落之前的时间，我很理解。
+[name="普瑞赛斯"]现在，的确只有我们两个了。当然，AMa-10也还在，而且精神很好，很活泼。
+[name="普瑞赛斯"]别担心，罗德岛剩下的部分还可以维系基本功能，我们还有一点时间。
+[name="普瑞赛斯"]{@nickname}，你在我身边的时候，我并不害怕结局。
+[name="普瑞赛斯"]无论是构成我们身体的物质崩毁，我们的意识停止变化，还是宇宙的法则颠倒，我都可以坦然接受。
+[name="普瑞赛斯"]只要你还在我身边就够了。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]你还在出神，是还没有从梦里醒来吗，{@nickname}？
+[Dialog]
+[PlaySound(key="$d_avg_cloakmovement", volume=1)]
+[Delay(time=1.5)]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+她握着你的手，贴在了自己的脸颊上。
+肌肤的触感温暖而真实，将你从梦里拉回现实。
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]如果是这样，我想知道你的梦。
+[name="普瑞赛斯"]不过，里面最好有我。
+[stopmusic(fadetime=2)]
+[Dialog]
+[charslot]
+[Decision(options="......;......梦吗......？;......很长的梦吗......？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Dialog]
+[focusout(duration=2, type="bg", from=0, to=1, block=true)]
+[delay(time=1)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Image(image="avg_9_2",x=50, y=30,xScale=1.15, yScale=1.15, fadetime=0)]
+[focusout(duration=0.1, type="cg", from=0, to=1, block=true)]
+[delay(time=1)]
+[PlayMusic(key="$memory_loop", volume=0.6)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[focusout(duration=1.5, type="cg", from=1, to=0, block=false)]
+[delay(time=2)]
+“泰拉”。
+那片大地......天灾......矿石病......
+可你已经漫步在那片大地上数年，一切都如此真实。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[charslot]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Image(image="avg_8_15",screenadapt="coverall")]
+[focusout(duration=0.1, type="bg", from=1, to=0, block=true)]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=1)]
+人群的欢呼依旧在你的耳边回荡。
+天灾不曾摧毁希望，在苦难的创伤之下，你依旧可触碰那恒久的余温。
+温暖的。动人的。你被簇拥在温柔的人群之中......
+“罗德岛”。
+你永远不会忘记的罗德岛。
+治愈过你伤痕的罗德岛......曾留下过遗憾的罗德岛......
+你不是依旧站在这里吗？
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+和他们一起，你去过冰雪覆盖之地。
+[Dialog]
+[image]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Background(image="24_g1_snowyforest", screenadapt="coverall", block=true)]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+也感受过沙滩的柔软。
+[Dialog]
+[image]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[largebg(imagegroup="bg_beach_1/bg_beach_2", solidwidth="920/920", solidheight=720,x=-180)]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+见证他们活着......
+[Dialog]
+[largebg]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Image(image="46_i01",screenadapt="coverall")]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+见证他们离去......
+[Dialog]
+[image]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Image(image="avg_6_13",screenadapt="coverall")]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+他们使你确信——
+在本该被焚尽的不公之地......理想亦应是信念。
+[Dialog]
+[charslot]
+[image]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Background(image="bg_23_G08", screenadapt="coverall", block=true)]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+陪伴理想主义者跨越热浪，无论是否被热浪灼伤。
+[Dialog]
+[charslot]
+[image]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Background(image="bg_topburning", screenadapt="coverall", block=true)]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+你看到帝国的龌龊，也感受到无力反抗命运的悲凉......
+[Dialog]
+[charslot]
+[image]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Background(image="32_g1_lentiavenue", screenadapt="coverall", block=true)]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=2)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+你不会忘记......
+[Dialog]
+[charslot]
+[image]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Image(image="avg_ac8mi_melancholic_kalts",screenadapt="coverall")]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+——她。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+她从未离开你。
+[Dialog]
+[charslot]
+[image]
+[cameraEffect(effect="Grayscale", keep=true, amount=0.8, fadetime=0)]
+[Image(image="avg_0_1",screenadapt="coverall")]
+[delay(time=0.5)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+她们都从未离开。
+[Dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[image]
+[Background(image="bg_black", screenadapt="coverall", block=true)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+“博士......”
+“博士！”
+[Dialog]
+[Decision(options="（“未知语言”）阿米娅......", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[image]
+[charslot]
+[Background(image="bg_abyss_1",screenadapt="coverall", xScale=1.08, yScale=1.08,block=true)]
+[cameraEffect(effect="Grayscale", keep=true, amount=0, fadetime=0)]
+[charslot(slot="m",name="avg_npc_083")]
+[delay(time=0.5)]
+[PlayMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.6)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=0.5)]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]博士！
+[name="普瑞赛斯"]你走神啦，嘴里又开始念叨这些不属于我们的语言。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="那些经历......很真实。;那不是梦。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]这不是很正常吗？
+[name="普瑞赛斯"]定义梦和现实的权力，一直都握于我们掌中，{@nickname}。
+[name="普瑞赛斯"]当我们的思维在寰宇中穿梭亿万光年，参加那些于冰冻旷野中向白矮星祭拜生命的仪式时，我们如何定义这等体验呢？
+[name="普瑞赛斯"]等你的思维回到这副躯体后，你又如何分辨亿万年后才会被捕获的信息是梦还是现实？
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]等等，你该不会真的在思考这件事吧？
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="普瑞赛斯......", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]怎么了，{@nickname}？
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="我不曾见过你，可为何你的名字，我却能脱口而出？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]不曾见过......你还是发现了啊。
+[name="普瑞赛斯"]我很高兴听到你这么说，这意味着你距离找到真正的我，已经很近了。
+[name="普瑞赛斯"]可我还是忍不住有些失望呢。
+[name="普瑞赛斯"]因为那个小小的意外，你的记忆......的确受到了无法逆转的损伤，就连我也无能为力。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="这里......也是罗德岛？;我以前来过这里吗？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]这里嘛......“不可知”。
+[name="普瑞赛斯"]我们一起建造这个地方的时候，曾经许下过一个共同的愿望。
+[name="普瑞赛斯"]等到群星的最后一丝温热消散，时间的路网完全陷入混乱的那一天，就让黑暗成为我们共同的被子吧。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="......听起来很像一座坟墓。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]等到这个世界，这片星空迎来最后的时刻......我们的宇宙本来就会变成一座巨大的坟墓。
+[name="普瑞赛斯"]没有任何一颗星球的角落里藏着希望。但凡有一颗宇宙碎片的微粒上藏着救赎的答案，它也一定已经被我们打捞起来了。
+[name="普瑞赛斯"]每一次的反抗都以提前毁灭告终，每一次的探索都只会带来更深重的绝望......
+[name="普瑞赛斯"]结论是那么简单。任何以正常物质为基础的生命形式都无法逃离。任何一种可知的技术，都无法战胜那绝对的终结。
+[name="普瑞赛斯"]抱歉，{@nickname}......
+[name="普瑞赛斯"]我只是，很久没有机会向你倾诉了。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="我们的关系......很亲密？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]亲密？我不会用这种词语来形容我们之间的关系。
+[name="普瑞赛斯"]这是对我们过去所经历的一切的贬低。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="我并不记得。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]没关系的，我并不生气。
+[name="普瑞赛斯"]就算你的大脑不再记得，你的意识深处，那些任何仪器都无法捕捉到的地方......一定还留存着我的痕迹。
+[name="普瑞赛斯"]不然的话......你怎么会任由我像这样，一直拉着你的手呢？
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="嗯......;过去我们也常常这么做吗？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]“牵手”——嗯，我们有很多种不同方式的“牵手”。很多时候并不需要借助躯体的某些具体部分。
+[name="普瑞赛斯"]我们第一次见面的时候......我正在环绕着一颗海洋星球飞行。我把恒星当作不变的锚，沿着昼夜分界线，飞了一圈又一圈。
+[name="普瑞赛斯"]恒星的死亡来得很快。我身下的海洋几乎在一瞬间离解了，露出了星球赤裸的暗红色脊骨。
+[name="普瑞赛斯"]有人从身后拉住了我，把我拽到了一处更安静的星云里。
+[name="普瑞赛斯"]那个人向我解释，知道我很可能不会有危险，但那个人来不及确认我的本体在哪个星场中，只能用自己的船打捞了我的意识信标。
+[name="普瑞赛斯"]那是我第一次登上那艘卵形的船。它并不大，可是很灵活，已经去过无数个星系。
+[name="普瑞赛斯"]我把船带到了一颗并不算热闹的行星上。我向船的主人展示了我面向大海的小实验室，并且走到了那个人的面前。
+[name="普瑞赛斯"]就像这样......我握住了对方的手。
+[name="普瑞赛斯"]“我叫普瑞赛斯，语言学家。我正在研究行星死去时发出的最后声波。我喜欢安静地独处，但也想和合适的人一起探索宇宙。”
+[name="普瑞赛斯"]接下来......
+[name="普瑞赛斯"]该你啦。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="我？自我介绍吗？", values="1")]
+[Predicate(references="1")]
+[Decision(options="我是......{@nickname}。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]真好啊，我们又认识了一回呢。
+[name="普瑞赛斯"]对了，你当时也有些犹豫。在那个时代......人们已经越来越少像这样亲密相处。
+[name="普瑞赛斯"]好在，我们是同类。你无私地向我分享了你的旅行见闻，并对我发起了邀请。
+[name="普瑞赛斯"]我们跳跃在时间与空间之中，去往宇宙的各个角落。有时是乘坐着你的船，更多时候是通过意识穿梭。
+[name="普瑞赛斯"]你向我描绘不同文明的兴衰迭起、隐藏在群星诞生与毁灭中的规律。
+[name="普瑞赛斯"]我们的思维在相互碰撞中无限迭代，直至驻足回首时才发现，我们已经超越了其他人太多太多......
+[Dialog]
+[charslot]
+她的手中翻转出一枚无比纯净的晶体。
+[Dialog]
+[Decision(options="......源石。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]我们争论与碰撞的结晶，凝结了无数先驱守望宇宙时留下的真理。
+[name="普瑞赛斯"]它是如此美丽......
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+她将源石轻轻地放在了你的手中，握住你的手，共同捧起这美轮美奂的造物。
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]所有人都说，我是那个创造了源石与未来，像“神明”一般的人。
+[name="普瑞赛斯"]但我一直都知道，真正的天才是你，{@nickname}。
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]你忘记了......但你不该忘记。
+[name="普瑞赛斯"]在创造它的路上，我不断地追赶你的脚步。
+[name="普瑞赛斯"]我害怕在某一次与你辩论时掉队，害怕让你发现我本不如你。
+[name="普瑞赛斯"]不，或许你发现了......也许你也曾放慢脚步等我，等待我追上你。
+[name="普瑞赛斯"]可现在，我永远都不会知道答案了......
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="你......很在意？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]在意，但我接受这个事实。倒不如说，这让我喜悦。
+[name="普瑞赛斯"]你依旧藏着许多令我着迷的秘密。
+[name="普瑞赛斯"]况且，对你而言，现在的我同样如此。
+[name="普瑞赛斯"]难道不是吗，{@nickname}？
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="我......的确还有很多的困惑。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]那就继续在这个地方寻找答案吧。
+[name="普瑞赛斯"]这是我们共同的造物，共同的过去，也藏着我们共同的秘密。
+[name="普瑞赛斯"]只要你和我同行——
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="抱歉，但现在我有更在意的事。;我必须先确认更重要的事。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]......
+[name="普瑞赛斯"]我本想和你分享一些我一直替你保存的东西。
+[name="普瑞赛斯"]那些你曾向我描绘，如今你自己却已全然忘记的理念和愿景......
+[name="普瑞赛斯"]我想让你知道我们所取得的成就。
+[name="普瑞赛斯"]也许这样，你能想起过去，想起我——
+[name="普瑞赛斯"]但我能看见你所想，我能感受你所思。
+[name="普瑞赛斯"]就像此刻，你的脑海中依旧萦绕着无穷的疑惑......
+[name="普瑞赛斯"]“阿米娅”“凯尔希”——
+[Dialog]
+[charslot(slot="m",name="avg_npc_083",focus="n")]
+[Decision(options="——！", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_npc_083",focus="m")]
+[name="普瑞赛斯"]我......不想让你为难，我尊重你的选择。
+[Dialog]
+[charslot(duration=1)]
+[delay(time=1)]
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+她的手触碰到了黑暗——
+[Dialog]
+[Image(image="50_i16",screenadapt="coverall",block=true)]
+[delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[delay(time=1)]
+[name="普瑞赛斯"]但我很确信......{@nickname}......
+[name="普瑞赛斯"]当你真正对一切感到困惑的时候，你会想起——答案一直都在这里。
+[name="普瑞赛斯"]我在这里。
+[Dialog]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=3, block=true)]
+[image]
+[Background(image="bg_white", screenadapt="coverall")]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0.5, block=true)]
+[Subtitle(text="<color=#000000>去吧，“博士”，去解开你的困惑。</color>", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="<color=#000000>你所有的愿望，我都能够实现。</color>", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="<color=#000000>而在所有宏大的搏动和微小的悸动都归于寂静之后——</color>", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="<color=#000000>我的身边将是你的归处。</color>", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[delay(time=1)]
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[charslot]
+[Image]
