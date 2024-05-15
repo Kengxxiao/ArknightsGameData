@@ -1,0 +1,109 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 要塞教学a3
+
+[Battle.lockFunction(mask="PAUSE_BUTTON_INTERACT")]
+
+[Battle.Pause]
+
+[CooperateBattle.CameraFocusTo(offsetX=8, offsetY=4, scale=0.8, time=0.5)]
+[Tutorial(dialogHead="$avatar_melan")]第一波进攻的敌方选手，我会尽力打倒。
+[Tutorial(dialogHead="$avatar_melan")]但后面还会有更猛烈的进攻......
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=1)]
+[Battle.Pause]
+
+
+[Tutorial(dialogHead="$avatar_adnach")]我来支援！
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=4, scale=1, time=0.5)]
+[Delay(time=0.5)]
+
+[Tutorial(dialogHead="$avatar_adnach")]看起来，场内布置了很多【折叠设施】。
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=1)]
+[Battle.Pause]
+
+[Tutorial(dialogHead="$avatar_stward")]把这些设施利用起来，可以帮助我们防守。
+[Tutorial(dialogHead="$avatar_stward")]派遣【折叠设施维护员】能帮忙维护这些设施。
+
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=3.5)]
+[Battle.Pause]
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=5.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=0, focusY=0, focusWidth=360, focusHeight=360, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这是【折叠式后勤站】，经过维护就可以展开成为赛场后勤站，提升同时可部署的干员人数，并缩短干员的再部署时间。
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=3.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=0, focusY=0, focusWidth=360, focusHeight=360, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这是【折叠式维护车】，经过维护就可以展开成为赛场维护车，为我们带来更多的折叠设施维护员。
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=4, scale=1, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(dialogHead="$avatar_stward")]折叠设施维护员工作一段时间后会下班，折叠设施需要经过三次维护才能投入使用。
+[Tutorial(dialogHead="$avatar_stward")]不过如果地形合适，也可以派遣多名维护员同时维护。
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=5)]
+[Battle.Pause]
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=5.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=0, focusY=0, focusWidth=240, focusHeight=240, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+后勤站已经展开了，可以投入使用！
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=3.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=0, focusY=0, focusWidth=240, focusHeight=240, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_adnach", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这里的维护车刚刚只有两名维护员在维护，还不能投入使用。
+
+[Tutorial(focusX=0, focusY=-120, focusWidth=400, focusHeight=100, anchor="Top", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_melan", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+没关系，现在还是两波进攻之间的休整阶段......
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=3.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[CooperateBattle.LockCamera(enable=false)]
+[InputBlocker(blockInput=true, cardIndex=0, validWidth=112, validHeight=116)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_stward", animStyle="Drag", \
+          startX=-300, startY=60, startAnchor="BottomRight", endAnchor="Center", endX=0, endY=0)] \
+趁还有休整时间，继续派遣折叠设施维护员吧！
+[InputBlocker(blockInput=true)]
+[Delay(time=0.5)]
+[InputBlocker(blockInput=true, tileX=3, tileY=3, validWidth=600, validHeight=600)]
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_stward")] \
+向<@tu.kw>折叠式维护车</>的方向部署维护员！
+
+[InputBlocker(blockInput=false)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=8)]
+[Battle.Pause]
+[InputBlocker(blockInput=true)]
+
+[Tutorial(dialogHead="$avatar_stward")]一切顺利，维护车应该可以投入使用了！
+[Tutorial(dialogHead="$avatar_stward")]如果操作失误，没有让维护员正确地朝向需要维护的设施，维护员会自主返回待部署区，等待下一次派遣。
+[Tutorial(dialogHead="$avatar_adnach")]场上目前还没有高台位，我们该怎么上场？
+[Tutorial(dialogHead="$avatar_stward")]抵御住下一波进攻，再次进入休整阶段时，赛场维护车就会为我们带来更多折叠设施维护员。
+[Tutorial(dialogHead="$avatar_stward")]到时候就可以派遣他们去维护【折叠式堡垒模块】，展开成为可部署高台干员的【堡垒筑台】，为更多干员创造上场的机会。
+[CooperateBattle.CameraFocusTo(offsetX=6, offsetY=4, scale=1, time=1)]
+[Delay(time=1)]
+[Tutorial(focusX=0, focusY=-180, focusWidth=200, focusHeight=60, anchor="Top", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_adnach", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+目前已经没有其他准备工作需要做了，可以迎接下一波进攻了！
+
+[CooperateBattle.LockCamera(enable=true)]
+
+[Battle.unlockFunction(mask="PAUSE_BUTTON_INTERACT")]

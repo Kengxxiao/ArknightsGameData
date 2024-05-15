@@ -1,0 +1,42 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 要塞教学b1
+
+[Battle.lockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.lockFunction(mask="CARD_LIST")]
+
+[CooperateBattle.CameraFocusTo(offsetX=9, offsetY=4.5, scale=1, time=0.5)]
+[Battle.Delay(time=1)]
+[Battle.Pause]
+
+[CooperateBattle.CameraFocusTo(offsetX=9, offsetY=4.5, scale=1, time=0.5)]
+[Delay(time=0.5)]
+
+[Tutorial(focusX=0, focusY=0, focusWidth=240, focusHeight=480, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_adnach", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这就是折叠式堡垒模块，经过维护能展开成为堡垒筑台。
+[Tutorial(dialogHead="$avatar_stward")]它也需要经过三次维护才能投入使用。
+[Tutorial(dialogHead="$avatar_stward")]对了，堡垒筑台不仅能部署高台干员，还可以改变敌方的行进路线。
+
+[CooperateBattle.CameraFocusTo(offsetX=11, offsetY=4.5, scale=1, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=0, focusY=0, focusWidth=240, focusHeight=480, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_adnach", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+前面的设施是......
+[Tutorial(dialogHead="$avatar_stward")]【折叠式城防路障】，只需要一次维护就能投入使用。
+[Tutorial(dialogHead="$avatar_stward")]维护完成后，它会展开成为【城防路障】，阻挡敌方的脚步。
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=1.5)]
+[Battle.Pause]
+
+[Tutorial(dialogHead="$avatar_stward")]协作者可以共同参与设施维护。
+[Tutorial(dialogHead="$avatar_stward")]之前投入使用的维护车带来了更多维护员，剩下的设施维护就交给博士了！
+[Tutorial(dialogHead="$avatar_adnach")]休整阶段的主要任务是维护设施，干员们还不需要上场。
+[Tutorial(dialogHead="$avatar_adnach")]等到下一波进攻开始，我们就可以登上已经展开的堡垒筑台，准备防守了。
+
+[CooperateBattle.CameraFocusTo(offsetX=10, offsetY=4, scale=1, time=0.5)]
+[Delay(time=0.5)]
+
+[Battle.unlockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.unlockFunction(mask="CARD_LIST")]

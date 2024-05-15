@@ -1,0 +1,27 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 要塞教学b2
+
+[Battle.lockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.lockFunction(mask="CARD_LIST")]
+
+[CooperateBattle.CameraFocusTo(offsetX=16, offsetY=4, scale=1.2, time=1.5)]
+[Battle.Delay(time=4)]
+
+[Battle.pause]
+[Tutorial(dialogHead="$avatar_melan")]下一波进攻要来了......大家小心！
+[Tutorial(dialogHead="$avatar_stward")]我们的场地设施可以发挥作用了！
+
+[CooperateBattle.CameraFocusTo(offsetX=16, offsetY=4, scale=0.6, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=160, focusY=120, focusWidth=240, focusHeight=240, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_adnach", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+等等，这两名敌方选手为什么直奔场地下方的后勤站？
+[Tutorial(dialogHead="$avatar_stward")]敌方的【铁头前锋】和【长臂投手】会破坏我们的场地设施。
+[Tutorial(dialogHead="$avatar_stward")]看起来，他们的注意力完全被场地下方的后勤站吸引了。
+[Tutorial(dialogHead="$avatar_melan")]在之后的堡垒守御比赛中，还是多注意下他们的行动比较好。
+
+[CooperateBattle.CameraFocusTo(offsetX=8, offsetY=4, scale=1, time=1.5)]
+[Delay(time=1)]
+
+[Battle.unlockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.unlockFunction(mask="CARD_LIST")]

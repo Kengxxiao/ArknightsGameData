@@ -1,0 +1,18 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 要塞镜头演出
+
+[Battle.lockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.lockFunction(mask="CARD_LIST")]
+[UIOperation(target="main", enable="false")]
+
+[InputBlocker(blockInput=true)]
+[Battle.Delay(time=2)]
+[CooperateBattle.CameraFocusTo(offsetX=4, offsetY=8, scale=1.2, time=2)]
+[Battle.elay(time=3)]
+[CooperateBattle.CameraFocusTo(offsetX=22, offsetY=8, scale=1.2, time=2)]
+[Battle.Delay(time=3)]
+[CooperateBattle.CameraFocusTo(offsetX=8, offsetY=8, scale=1, time=2)]
+[Battle.Delay(time=3)]
+
+[Battle.unlockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.unlockFunction(mask="CARD_LIST")]
+[UIOperation(target="main", enable="true")]

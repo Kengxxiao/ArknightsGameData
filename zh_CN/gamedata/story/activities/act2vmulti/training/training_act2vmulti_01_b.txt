@@ -1,0 +1,37 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 联机教学关1b
+
+[Battle.Pause]
+[InputBlocker(blockInput=true)]
+
+[PopupDialog(dialogHead="$avatar_amiya")]一场比赛分为两个阶段，每个阶段都有需要完成的目标。
+
+[Tutorial(target="panel_cooperate_normal_status",\
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+本场比赛第一阶段的目标是【生存】，我们需要在限定时间内抵挡敌方的进攻。
+
+[PopupDialog(dialogHead="$avatar_amiya")]虽然在同一片赛场上竞技，但我们各自需要防守不同的目标点。
+
+[Tutorial(focusX=-430, focusY=-70, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+博士，您需要防守的是蓝色的目标点。敌方进入蓝色目标点，将会扣减您的目标生命值。
+
+[Tutorial(focusX=430, focusY=-70, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+墨绿色的目标点由协作者——也就是我来防守。敌方进入墨绿色目标点，则会扣减我的目标生命值。
+
+[Battle.Pause(pause=false)]
+[Delay(time=1)]
+[Battle.Pause(pause=true)]
+
+[Tutorial(focusX=350, focusY=100, focusWidth=120, focusHeight=120, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+对了！协作者部署的干员会用特殊的颜色标记出来，这样您就不会混淆双方的干员了。
+
+[Tutorial(focusX=0, focusY=-70, focusWidth=180, focusHeight=180, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+最后，高亮的目标点由我们协作防守。敌方进入高亮的目标点，会同时扣减我们两个人的目标生命值。
