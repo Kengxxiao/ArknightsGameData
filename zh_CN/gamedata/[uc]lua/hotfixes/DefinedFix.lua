@@ -8,7 +8,10 @@ local list =
   "HotFixes/EnemyHotfixer",
   "HotFixes/Act2VMultiBattleFinishNormalViewHotfixer",
   "HotFixes/CooperateGameModeHotfixer",
-  "HotFixes/CooperateHintPanelHotfixer"
+  "HotFixes/CooperateHintPanelHotfixer",
+  "HotFixes/AuraAbilityHotfixer",
+  "HotFixes/HandbookInfoAvgHotfixer",
+  "HotFixes/EntityHotfixer"
 };
 
 return list;
