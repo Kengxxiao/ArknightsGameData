@@ -1,5 +1,5 @@
 [HEADER(is_tutorial=true)] 爬塔教学关卡02_a
-
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
 [Battle.Pause]
 
 [PopupDialog(dialogHead="$avatar_scave")] 呼叫杜宾教官，正在遭受不明人士攻击！
@@ -21,7 +21,6 @@
 我该怎么办？
 
 [PopupDialog(dialogHead="$avatar_doberm")] <@tu.kw>接力</>清道夫。这样即使她被击倒，她身上的战术装备也可以被全部继承下来。
-[Battle.LockFunction(mask="SYSTEM_MENU")]
 [InputBlocker(blockInput=false)]
 [Battle.EnsureMinCost(cost=11)]
 [Tutorial(waitForSignal="put_down", dialogHead="$avatar_grani", animStyle="Drag", \
@@ -31,7 +30,7 @@
           startX=-70, startY=-50, endX=250, endY=-50)] \
 好！就这样！
 [InputBlocker(blockInput=true)]
-[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
 
 [Battle.Pause(pause=false)]
 [Delay(time=2)]

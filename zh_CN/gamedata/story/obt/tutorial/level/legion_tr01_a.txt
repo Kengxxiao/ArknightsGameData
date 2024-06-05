@@ -1,6 +1,6 @@
 [HEADER(is_tutorial=true)] 爬塔教学关卡01_a
 
-
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
 [Battle.Pause]
 
 [PopupDialog(dialogHead="$avatar_jesica")] 我无法击破敌人的装甲！请求火力支援！
@@ -25,7 +25,6 @@
 [PopupDialog(dialogHead="$avatar_jesica")] 明白了！
 [PopupDialog(dialogHead="$avatar_doberm")] 另外，PRTS为大家配备了一种全新的“<@tu.kw>战术装备</>”。它可以使接力的干员继承被接力者的部分能力，从而获得<@tu.kw>增强</>。
 
-[Battle.LockFunction(mask="SYSTEM_MENU")]
 [Battle.LockFunction(mask="CHARACTER_MENU")]
 [InputBlocker(blockInput=false)]
 [Tutorial(waitForSignal="put_down", dialogHead="$avatar_doberm", animStyle="Drag", \
@@ -35,7 +34,6 @@
           startX=-70, startY=-50, endX=250, endY=-50)] \
 就是这样，<@tu.kw>选择方向</>。
 [InputBlocker(blockInput=true)]
-[Battle.UnlockFunction(mask="SYSTEM_MENU")]
 [Battle.UnlockFunction(mask="CHARACTER_MENU")]
 [Battle.Pause(pause=false)]
 [Delay(time=6)]
@@ -46,7 +44,6 @@
           protectTime=0.5, dialogHead="$avatar_doberm")] \
 是的，你身上的战术装备已经激活了，仔细看围绕在你身边的<@tu.kw>深色装备</>。
 [PopupDialog(dialogHead="$avatar_milu")] 原来如此。
-[Battle.LockFunction(mask="SYSTEM_MENU")]
 [Battle.LockFunction(mask="CHARACTER_MENU")]
 [InputBlocker(blockInput=false)]
 [Battle.UnlockFunction(mask="CHARACTER_MENU")]
@@ -55,7 +52,7 @@
           protectTime=0.5, dialogHead="$avatar_doberm")] \
 另外，博士，请你聚焦守林人。
 [InputBlocker(blockInput=true)]
-[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
 [Battle.LockFunction(mask="CHARACTER_MENU")]
 
 [Tutorial(focusX=242, focusY=-111, focusWidth=480, focusHeight=235, \

@@ -17,8 +17,24 @@ function WardrobeSortBySkinGroupState:JumpToDetail(skinGroup)
   self.parent:ToState(WardrobePageHolder.StateEnum.SkinGroupDetailStateIndex)
 end
 
+function WardrobeSortBySkinGroupState:PlayAnim()
+  
+  self.selfTween = self._animWrapper:PlayWithTween(WardrobeSortBySkinGroupState.ANIM_PARAM )  
+end
+
 function WardrobeSortBySkinGroupState:CheckData(data)
-  self._animWrapper:PlayWithTween(WardrobeSortBySkinGroupState.ANIM_PARAM )
+  if (self.sequence~= nil) then
+    self.sequence:Kill()
+  end
+  if (self.selfTween~=nil) then
+    self.selfTween:Kill()
+  end
+  self._animWrapper:SampleClipAtBegin(WardrobeSortBySkinGroupState.ANIM_PARAM)
+  self.sequence =  CS.DG.Tweening.DOTween.Sequence();
+  self.sequence:AppendInterval(0.05)
+  self.sequence:AppendCallback(function()
+      self:PlayAnim()
+  end)
   self:Delay(0.8,self.OnEffect)
 
   if (self.initFlag) then

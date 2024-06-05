@@ -19,6 +19,8 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
+
+
 local SwitchOnlyItemView = Class("SwitchOnlyItemView", UIWidget)
 function SwitchOnlyItemView:OnInitialize()
   self:AddButtonClickListener(self._getBtn, self._HandleGetReward);
@@ -77,7 +79,11 @@ function SwitchOnlyItemView:_RenderGot(got, unlocked)
   luaUtils.SetActiveIfNecessary(self._btnLock.gameObject, not got);
   luaUtils.SetActiveIfNecessary(self._availablePanel, unlocked and not got);
   if got then
-    self._reward_canvas.alpha = SwitchOnlyConst.REWARD_GOT_ALPHA;
+    if self._receivedAlpha == nil then
+      self._reward_canvas.alpha = SwitchOnlyConst.REWARD_GOT_ALPHA;
+    else
+      self._reward_canvas.alpha = self._receivedAlpha;
+    end
   else 
     self._reward_canvas.alpha = 1;
   end

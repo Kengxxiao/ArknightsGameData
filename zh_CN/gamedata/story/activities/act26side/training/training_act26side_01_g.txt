@@ -1,4 +1,6 @@
 [HEADER( is_tutorial=true, is_skippable=false, is_autoable=false)] 拉特兰圣像栈道教学_g
+
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
 [Battle.Pause]
 
 [Battle.UnlockFunction(mask="CHARACTER_INFO")]
@@ -10,13 +12,11 @@
           protectTime=0.5,  dialogHead="$avatar_amiya")] \
 别担心，我们可以用<@tu.kw>备用木材</>帮大家把路修好。
 
-
-[Battle.LockFunction(mask="SYSTEM_MENU")]
 [InputBlocker(blockInput=false)]
 [Tutorial(waitForSignal="put_down",animStyle="Drag", startX=-59, startY=66, endX=54, endY=-136, dialogY=50, startAnchor="BottomRight", endAnchor="Center", dialogHead="$avatar_amiya")]
 [InputBlocker(blockInput=true)]
 
-[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
 
 
 

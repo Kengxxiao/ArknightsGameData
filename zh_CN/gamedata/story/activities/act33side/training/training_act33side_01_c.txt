@@ -1,8 +1,7 @@
 [HEADER(is_tutorial=true, is_skippable=true)] 活动33side教学关1_b2
-
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
 [Battle.Pause]
 [InputBlocker(blockInput=false)]
-[Battle.LockFunction(mask="SYSTEM_MENU")]
 
 [Tutorial(protectTime=0.5,waitForSignal="put_down", dialogHead="$avatar_doberm", animStyle="Drag", \
           startX=-80, startY=100, startAnchor="BottomRight", endX=211, endY=-123)] \
@@ -11,3 +10,5 @@
 [Tutorial(waitForSignal="select_direction", dialogHead="$avatar_doberm", animStyle="Drag", \
           startX=230, startY=-103, endX=120, endY=-103)] \
 向左部署，准备迎敌。
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]

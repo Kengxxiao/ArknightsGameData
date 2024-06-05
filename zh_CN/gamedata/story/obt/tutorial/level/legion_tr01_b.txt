@@ -1,5 +1,5 @@
 [HEADER(is_tutorial=true)] 爬塔教学关卡01_b
-
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
 [Battle.Pause]
 
 [PopupDialog(dialogHead="$avatar_milu")] 呼叫杜宾教官，前方出现重装敌人。
@@ -7,7 +7,6 @@
 [Delay(time=3)]
 [Battle.Pause(pause=true)]
 [PopupDialog(dialogHead="$avatar_doberm")] 无需紧张。博士，我们可以消耗<@tu.kw>调用凭证</>，从预备区调度一名干员前来支援。
-[Battle.LockFunction(mask="SYSTEM_MENU")]
 [InputBlocker(blockInput=false)]
 [Tutorial(target="btn_draw_next_card", waitForSignal="draw_card", \
           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",searchBtnInChildren=true, \
@@ -26,7 +25,7 @@
 就是这样。
 [InputBlocker(blockInput=true)]
 [Battle.UnlockFunction(mask="CHARACTER_MENU")]
-[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
 [Battle.Pause(pause=false)]
 [Delay(time=2)]
 [Battle.Pause(pause=true)]

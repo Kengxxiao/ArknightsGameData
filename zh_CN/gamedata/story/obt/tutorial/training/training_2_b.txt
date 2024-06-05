@@ -1,4 +1,5 @@
 [HEADER(is_tutorial=true)] 训练关卡2b
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
 [Battle.Pause]
 
 [Battle.UnlockFunction(mask="CHARACTER_INFO")]
@@ -40,7 +41,6 @@
 点击将视角调回战场。
 [InputBlocker(blockInput=true)]
 
-[Battle.LockFunction(mask="SYSTEM_MENU")]
 [InputBlocker(blockInput=false)]
 [Tutorial(waitForSignal="put_down", dialogHead="$avatar_doberm", animStyle="Drag", \
           startX=-60, startY=60, startAnchor="BottomRight", endX=185, endY=-97)] \
@@ -51,5 +51,5 @@
 向上拖动让他的朝向设置为上。决定好方向以后干员才会真正被部署至战场。
 [InputBlocker(blockInput=true)]
 
-[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
 

@@ -1,5 +1,5 @@
 [HEADER(is_tutorial=true, is_skippable=true, is_autoable=false)] 活动25side教学关02_b
-
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
 [Battle.Pause]
 
 [InputBlocker(blockInput=true, black=0.2)]
@@ -23,7 +23,6 @@
 [PopupDialog(dialogHead="$avatar_nian", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]动作倒是麻利。那，听我指令。
 
 [InputBlocker(blockInput=false)]
-[Battle.LockFunction(mask="SYSTEM_MENU")]
 [Battle.EnsureMinCost(cost=10)]
 [Tutorial(waitForSignal="put_down", dialogHead="$avatar_nian", animStyle="Drag", \
           startX=-60, startY=60, startAnchor="BottomRight", endX=230, endY=45)] \
@@ -33,9 +32,8 @@
           startX=230, startY=45, endX=230, endY=-100)] \
 <@tu.kw>向下部署</>
 
-[Battle.UnlockFunction(mask="SYSTEM_MENU")]
-
 [InputBlocker(blockInput=true, black=0.2)]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
 
 [PopupDialog(dialogHead="$avatar_nian")]这样，加上我站在这里，这片田地就不用担心了。
 

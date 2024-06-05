@@ -16,6 +16,8 @@ local CheckinVsDefine = require("Feature/Activity/CheckinVs/CheckinVsDefine")
 
 
 
+
+
 CheckinVsMainDlg = Class("CheckinVsMainDlg", DlgBase)
 
 CheckinVsMainDlg.SHOW_GAINED_ITEMS_DELAY = 2
@@ -28,7 +30,7 @@ function CheckinVsMainDlg:OnInit()
   self._enterAnim:SampleClipAtBegin(self.ENTER_ANIM_NAME)
   local tween = self._enterAnim:PlayWithTween(self.ENTER_ANIM_NAME)
   tween:SetEase(Ease.Linear)
-  TorappuAudio.PlayUI(AudioConsts.ACT1SIGNVS_BOAT_ENTER)
+  TorappuAudio.PlayUI(self._boatEnterAudioName)
 
   CS.Torappu.Lua.LuaUIUtil.BindBackPressToButton(self._btnClose)
   self:AddButtonClickListener(self._btnClose, self._EventOnCloseClick)
@@ -173,7 +175,7 @@ function CheckinVsMainDlg:_HandleCheckinVsRsp(response, choice)
   else
     self.m_isAnimPlay = true
     self.m_mainView:PlayBoatAnim(choice)
-    TorappuAudio.PlayUI(AudioConsts.ACT1SIGNVS_BOAT_URGE)
+    TorappuAudio.PlayUI(self._boatUrgeAudioName)
     self:Delay(self.SHOW_GAINED_ITEMS_DELAY, function()
       if response.items ~= nil and #response.items > 0  then
         UIMiscHelper.ShowGainedItems(response.items)

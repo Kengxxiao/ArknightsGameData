@@ -55,10 +55,17 @@ local CheckinVsMainViewModel = require("Feature/Activity/CheckinVs/CheckinVsMain
 
 
 
+
+
+
+
+
+
+
+
+
 local CheckinVsMainView = Class("CheckinVsMainView", UIPanel)
 
-CheckinVsMainView.LOW_BOAT_POS_VAL = -80
-CheckinVsMainView.HIGH_BOAT_POS_VAL = -50
 CheckinVsMainView.SWEET_BOAT_ANIM_NAME = "act1signvs_boat_sweet"
 CheckinVsMainView.SALTY_BOAT_ANIM_NAME = "act1signvs_boat_salt"
 CheckinVsMainView.TITLE_FREE_SPRITE_NAME = "title_free_party"
@@ -246,24 +253,36 @@ function CheckinVsMainView:_InitBoatView()
   local socialState = self.m_viewModel.socialState
   local actDay = self.m_viewModel.actDay
   local canVote = self.m_viewModel.canVote
+  local isSweetAhead = false
+  local isSaltyAhead = false
+  local needShowBaseLine = true
   if actDay == 1 and canVote then
-    sweetBoatPos.y = self.LOW_BOAT_POS_VAL
-    saltyBoatPos.y = self.LOW_BOAT_POS_VAL
+    sweetBoatPos.y = tonumber(self._lowBoatPosVal)
+    saltyBoatPos.y = tonumber(self._lowBoatPosVal)
+    needShowBaseLine = false
   elseif socialState == CheckinVsDefine.TasteChoice.SWEET then
-    sweetBoatPos.y = self.HIGH_BOAT_POS_VAL
-    saltyBoatPos.y = self.LOW_BOAT_POS_VAL
+    sweetBoatPos.y = tonumber(self._highBoatPosVal)
+    saltyBoatPos.y = tonumber(self._lowBoatPosVal)
+    isSweetAhead = true
   elseif socialState == CheckinVsDefine.TasteChoice.SALTY then
-    sweetBoatPos.y = self.LOW_BOAT_POS_VAL
-    saltyBoatPos.y = self.HIGH_BOAT_POS_VAL
+    sweetBoatPos.y = tonumber(self._lowBoatPosVal)
+    saltyBoatPos.y = tonumber(self._highBoatPosVal)
+    isSaltyAhead = true
   else
-    sweetBoatPos.y = self.LOW_BOAT_POS_VAL
-    saltyBoatPos.y = self.LOW_BOAT_POS_VAL
+    sweetBoatPos.y = tonumber(self._lowBoatPosVal)
+    saltyBoatPos.y = tonumber(self._lowBoatPosVal)
   end
   self._sweetBoatContainerRt.anchoredPosition = sweetBoatPos
   self._saltyBoatContainerRt.anchoredPosition = saltyBoatPos
 
   local isVoteFinish = self.m_viewModel:IsVoteFinish()
   local isSaltyWin = socialState == CheckinVsDefine.TasteChoice.SALTY
+  SetGameObjectActive(self._sweetBoatBaseLineGo, needShowBaseLine and not isVoteFinish)
+  SetGameObjectActive(self._saltyBoatBaseLineGo, needShowBaseLine and not isVoteFinish)
+  SetGameObjectActive(self._dotLineLeftGo, not isVoteFinish)
+  SetGameObjectActive(self._dotLineRightGo, not isVoteFinish)
+  SetGameObjectActive(self._sweetAheadGo, isSweetAhead and not isVoteFinish)
+  SetGameObjectActive(self._saltyAheadGo, isSaltyAhead and not isVoteFinish)
   SetGameObjectActive(self._sweetWinnerBgGo, isVoteFinish and not isSaltyWin)
   SetGameObjectActive(self._sweetWinnerBannerGo, isVoteFinish and not isSaltyWin)
   SetGameObjectActive(self._saltyWinnerBgGo, isVoteFinish and isSaltyWin)
