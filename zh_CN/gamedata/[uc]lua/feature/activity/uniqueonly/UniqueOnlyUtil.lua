@@ -39,6 +39,19 @@ end
 
 
 
+function UniqueOnlyUtil.CheckIfHaveRewardClaimedByActId(actId)
+  if actId == nil then
+    return false;
+  end
+  local suc, playerActData = CS.Torappu.PlayerData.instance.data.activity.uniqueOnlyList:TryGetValue(actId);
+  if not suc then
+    return false;
+  end
+  return playerActData.reward == 0;
+end
+
+
+
 
 function UniqueOnlyUtil.CheckIfHaveItem(itemId, itemType)
   if itemId == nil or itemType == nil then

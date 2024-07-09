@@ -59,3 +59,25 @@ function BlessOnlyUtil.CheckBlessActIsUncomplete(actId)
   end
   return false;
 end
+
+
+
+function BlessOnlyUtil.CheckBlessActIsFinished(actId)
+  local playerData = BlessOnlyUtil.LoadPlayerData(actId);
+  if playerData == nil then
+    return false;
+  end
+
+  local festivalHistory = playerData.festivalHistory;
+  if festivalHistory ~= nil then
+    for csI = 0, festivalHistory.Count - 1 do
+      local fes = festivalHistory[csI];
+      if fes ~= nil and fes.state ~= 0 then
+        return false;
+      end
+    end
+  end
+
+  
+  return false;
+end

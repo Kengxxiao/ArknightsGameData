@@ -12209,6 +12209,69 @@
           ]
         }
       ]
+    },
+    "char_4146_nymph": {
+      "charId": "char_4146_nymph",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_all[017]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            },
+            {
+              "buffId": "dorm_rec_all[027]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_dorm_rec[002]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4147_mitm": {
+      "charId": "char_4147_mitm",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_wt&cost[003]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&meet[010]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -12935,6 +12998,18 @@
     "control_dorm_rec[001]": {
       "buffId": "control_dorm_rec[001]",
       "buffName": "战纹",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_leader",
+      "sortId": 1400,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，所有宿舍内所有干员的心情每小时恢复<@cc.vup>+0.05</>（同种效果取最高）"
+    },
+    "control_dorm_rec[002]": {
+      "buffId": "control_dorm_rec[002]",
+      "buffName": "巡心",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_leader",
       "sortId": 1400,
@@ -14468,6 +14543,18 @@
       "roomType": "TRADING",
       "description": "进驻贸易站时，订单获取效率<@cc.vup>+25%</>，会客室每级额外提供<@cc.vup>5%</>获取效率，最多提供<@cc.vup>40%</>效率"
     },
+    "trade_ord_spd&meet[010]": {
+      "buffId": "trade_ord_spd&meet[010]",
+      "buffName": "天生的顾问",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_spd&meet",
+      "sortId": 4040,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，订单获取效率<@cc.vup>+15%</>，会客室每级额外提供<@cc.vup>5%</>获取效率，最多提供<@cc.vup>30%</>效率"
+    },
     "trade_ord_spd&formula[000]": {
       "buffId": "trade_ord_spd&formula[000]",
       "buffName": "精准排期",
@@ -14863,6 +14950,18 @@
       "buffCategory": "OUTPUT",
       "roomType": "TRADING",
       "description": "进驻贸易站时，<@cc.kw>提升</>当前贸易站<@cc.kw>高品质贵金属订单</>的出现概率（工作时长影响概率），心情每小时消耗<@cc.vup>-0.25</>"
+    },
+    "trade_ord_wt&cost[003]": {
+      "buffId": "trade_ord_wt&cost[003]",
+      "buffName": "懂行",
+      "buffIcon": "trading",
+      "skillIcon": "bskill_tra_wt&cost1",
+      "sortId": 4004,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，<@cc.kw>小幅提升</>当前贸易站<@cc.kw>高品质贵金属订单</>的出现概率（工作时长影响概率），心情每小时消耗<@cc.vup>-0.25</>"
     },
     "trade_ord_spd&share[000]": {
       "buffId": "trade_ord_spd&share[000]",
@@ -17372,6 +17471,18 @@
       "roomType": "DORMITORY",
       "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.15</>（同种效果取最高）"
     },
+    "dorm_rec_all[017]": {
+      "buffId": "dorm_rec_all[017]",
+      "buffName": "静心仪式·α",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_all2",
+      "sortId": 5400,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.15</>（同种效果取最高）"
+    },
     "dorm_rec_all[020]": {
       "buffId": "dorm_rec_all[020]",
       "buffName": "冬将军",
@@ -17402,6 +17513,18 @@
       "buffIcon": "dormitory",
       "skillIcon": "bskill_dorm_all3",
       "sortId": 5423,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.2</>（同种效果取最高）"
+    },
+    "dorm_rec_all[027]": {
+      "buffId": "dorm_rec_all[027]",
+      "buffName": "静心仪式·β",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_all3",
+      "sortId": 5420,
       "buffColor": "#21cdcb",
       "textColor": "#ffffff",
       "buffCategory": "RECOVERY",
@@ -17962,7 +18085,7 @@
     },
     "hire_spd_cost[111]": {
       "buffId": "hire_spd_cost[111]",
-      "buffName": "特殊渠道 ",
+      "buffName": "特殊渠道",
       "buffIcon": "hire",
       "skillIcon": "bskill_hire_spd&cost4",
       "sortId": 8101,
@@ -69167,6 +69290,533 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_mindsanctum_corner_01": {
+        "id": "furni_mindsanctum_corner_01",
+        "sortId": 1627,
+        "name": "意外",
+        "iconId": "furni_mindsanctum_corner_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_1",
+        "width": 6,
+        "depth": 4,
+        "height": 10,
+        "comfort": 520,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是阶梯与门框的信息转译器，并非不想上锁，而是上不了锁。\n总有东西透过筛查被直接丢入心中，有时候不想打扫，某些信息便遗落在了这里。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 383,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_locket_01": {
+        "id": "furni_mindsanctum_locket_01",
+        "sortId": 1628,
+        "name": "遗忘",
+        "iconId": "furni_mindsanctum_locket_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_1",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 130,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是带锁方盒的拒绝机制，已经打包完毕，很快就会送走。\n里面装着她痛恨的东西，最终会连盒带钥匙一起处理掉。但如果真想找回来，也不是没有办法。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 118,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_chandelier_01": {
+        "id": "furni_mindsanctum_chandelier_01",
+        "sortId": 1629,
+        "name": "反应",
+        "iconId": "furni_mindsanctum_chandelier_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_1",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 60,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是装饰吊灯的即时反应，开灯，还是上锁？\n扣上的锁要被灯光灼烧许久才会打开，可有时候就是这样，眼还没眨，事就成了，这总让她烦恼。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 55,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_display_01": {
+        "id": "furni_mindsanctum_display_01",
+        "sortId": 1630,
+        "name": "处理",
+        "iconId": "furni_mindsanctum_display_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_1",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 165,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是锁具展示架的方案储备，不一样的盒子，当然要配不一样的锁。\n不是所有事都要盒子，都要关上，都要上锁，都要钥匙。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 150,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_light_01": {
+        "id": "furni_mindsanctum_light_01",
+        "sortId": 1631,
+        "name": "束阁之愤怒",
+        "iconId": "furni_mindsanctum_light_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLLAMP",
+        "subType": "NONE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_2",
+        "width": 4,
+        "depth": 1,
+        "height": 3,
+        "comfort": 100,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是装饰壁灯的愤怒。并不多，锁得很好，放得很高，钥匙也在很明显的位置。\n她不易怒，展现给别人的生气也基本上是喜乐的一部分，可如果她真打开了愤怒的锁，一定会发生很可怕的事。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 90,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_table_01": {
+        "id": "furni_mindsanctum_table_01",
+        "sortId": 1632,
+        "name": "张扬之喜悦",
+        "iconId": "furni_mindsanctum_table_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_2",
+        "width": 10,
+        "depth": 4,
+        "height": 6,
+        "comfort": 575,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是大桌子的喜悦。本身由各种各样的东西组成，占据了很大一块空间。\n她很容易爱别人，也常接受别人的爱——在卡兹戴尔，这种东西并不常见，因而尤为珍贵。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 423,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_carpet_01": {
+        "id": "furni_mindsanctum_carpet_01",
+        "sortId": 1633,
+        "name": "遍地之快乐",
+        "iconId": "furni_mindsanctum_carpet_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_2",
+        "width": 12,
+        "depth": 7,
+        "height": 1,
+        "comfort": 160,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是地毯的快乐。很大一块，不高调，总在脚下，如果积灰了记得打扫。\n快乐是她生活的底色，不得不说，平平无奇中，也可遇见快乐之源。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 145,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_key_01": {
+        "id": "furni_mindsanctum_key_01",
+        "sortId": 1634,
+        "name": "层封之哀伤",
+        "iconId": "furni_mindsanctum_key_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILING",
+        "subType": "DECORATION_C",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_2",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 130,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是悬顶吊饰的哀伤。支离破碎，用十分奇特的方式封了起来。\n她也有悲苦的时候，而且，哦，这些东西根本上不了锁，她只能在心中物理性地将它们固定住，并祈祷它们不要掉下来。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 118,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_chair_01": {
+        "id": "furni_mindsanctum_chair_01",
+        "sortId": 1635,
+        "name": "不动之理性",
+        "iconId": "furni_mindsanctum_chair_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "SEATING",
+        "subType": "CHAIR",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_2",
+        "width": 3,
+        "depth": 2,
+        "height": 6,
+        "comfort": 185,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是座椅的理性。总是安静地伫立在那里，决定钥匙与盒子的形状。\n总有非锁非钥的事，总有不应感性的去处，坐下来，由动变静，这是解决问题的第一步。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 153,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_mirror_01": {
+        "id": "furni_mindsanctum_mirror_01",
+        "sortId": 1636,
+        "name": "直面我",
+        "iconId": "furni_mindsanctum_mirror_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "DRESSING",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_3",
+        "width": 4,
+        "depth": 3,
+        "height": 7,
+        "comfort": 275,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是梳妆台的内省环节。就在这面镜中，可以看到自己的方方面面。\n好的，坏的，真的，假的，都会在镜子中显形。不用欺瞒自己，发现了，才能开始改变。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 203,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_column_01": {
+        "id": "furni_mindsanctum_column_01",
+        "sortId": 1637,
+        "name": "展现我",
+        "iconId": "furni_mindsanctum_column_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_3",
+        "width": 4,
+        "depth": 2,
+        "height": 9,
+        "comfort": 255,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是立柱的展示环节。可以把想要展出的东西挂在上面。\n真诚在上面挂了很久，完全没有要换下来的意思。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 188,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_ornament_01": {
+        "id": "furni_mindsanctum_ornament_01",
+        "sortId": 1638,
+        "name": "转动我",
+        "iconId": "furni_mindsanctum_ornament_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ART_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_3",
+        "width": 4,
+        "depth": 3,
+        "height": 4,
+        "comfort": 225,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是发条摆件的激励环节。摊上事了？不开心了？要不转两下，听听里面的声音？\n主动调整是一门深奥的学问，她还没掌握好度，但暂时没出什么差错。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 185,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_cabinet_01": {
+        "id": "furni_mindsanctum_cabinet_01",
+        "sortId": 1639,
+        "name": "品鉴我",
+        "iconId": "furni_mindsanctum_cabinet_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_3",
+        "width": 6,
+        "depth": 2,
+        "height": 8,
+        "comfort": 315,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是收藏柜的检讨环节。每一把钥匙都有去处，而对应的盒子就在这柜子里。\n重温发生过的那些点滴，感受心绪那微小却惊天动地的变化。在那之后，就会知道该做什么了。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 233,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_sofa_01": {
+        "id": "furni_mindsanctum_sofa_01",
+        "sortId": 1640,
+        "name": "无意识的入口",
+        "iconId": "furni_mindsanctum_sofa_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "BEDDING",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_4",
+        "width": 7,
+        "depth": 2,
+        "height": 4,
+        "comfort": 270,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是沙发床的传送器，能够把人送去另一间房间。\n一些表面上无法解决的事项，被送到了这里，如果这里也无法解决，就得去下一间房间寻求帮助。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 223,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_lamp_01": {
+        "id": "furni_mindsanctum_lamp_01",
+        "sortId": 1641,
+        "name": "已点亮的灵光",
+        "iconId": "furni_mindsanctum_lamp_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "FLOORLAMP",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_4",
+        "width": 3,
+        "depth": 2,
+        "height": 7,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是落地灯具的打火机，总是把稍纵即逝的火星温柔包裹在灯罩内。\n不应只纪念房间亮起的瞬间，更应牢记屋子亮堂的日日夜夜。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 165,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_wallpaper_01": {
+        "id": "furni_mindsanctum_wallpaper_01",
+        "sortId": 1642,
+        "name": "未定型的信息",
+        "iconId": "furni_mindsanctum_wallpaper_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是全景显示屏的接收器，正毫无保留地展现外界的方方面面。\n这里不仅有她的，还有他的，它的，ta......",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
+      "furni_mindsanctum_floor_01": {
+        "id": "furni_mindsanctum_floor_01",
+        "sortId": 1643,
+        "name": "不起眼的人格",
+        "iconId": "furni_mindsanctum_floor_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_mindsanctum",
+        "groupId": "furni_set_mindsanctum_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "似乎是地面的心灵基础，看似坚硬牢固，实则常有变动。\n构成“妮芙”这一个体最本质的部分之一。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 198,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": true,
+        "isOnly": -1,
+        "quantity": 1
+      },
       "furni_oct1st_deckChair_01": {
         "id": "furni_oct1st_deckChair_01",
         "sortId": 9998,
@@ -74769,6 +75419,37 @@
         "comfort": 75,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "猎人凝听深渊的鼓动，海水之下，脉搏之中。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_terracommericials_DreamingEssence_01": {
+        "id": "furni_terracommericials_DreamingEssence_01",
+        "sortId": 11088,
+        "name": "饰牌《迷梦》",
+        "iconId": "furni_terracommericials_DreamingEssence_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "只需一次呼吸，让嗅觉撕下现实的枯燥。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -91562,6 +92243,142 @@
           "furni_HunterInstitute_wallpaper_01",
           "furni_HunterInstitute_floor_01"
         ]
+      },
+      "furni_set_mindsanctum": {
+        "id": "furni_set_mindsanctum",
+        "sortId": 94,
+        "name": "心像空间",
+        "themeType": "NORMAL",
+        "desc": "一个之前从未存在过的房间，由一位工程部干员在受到妮芙心灵启示之后设计完成，体现了那位笞心魔对于心灵的见解。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_mindsanctum_corner_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_locket_01",
+            "pos0": 1,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_chandelier_01",
+            "pos0": 4,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_display_01",
+            "pos0": 6,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_light_01",
+            "pos0": 6,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_table_01",
+            "pos0": 9,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_carpet_01",
+            "pos0": 11,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_key_01",
+            "pos0": 12,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_chair_01",
+            "pos0": 15,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_mirror_01",
+            "pos0": 19,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_column_01",
+            "pos0": 24,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_ornament_01",
+            "pos0": 21,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_cabinet_01",
+            "pos0": 28,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_sofa_01",
+            "pos0": 26,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_lamp_01",
+            "pos0": 31,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_mindsanctum_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_mindsanctum_1",
+          "furni_set_mindsanctum_2",
+          "furni_set_mindsanctum_3",
+          "furni_set_mindsanctum_4"
+        ],
+        "furnitures": [
+          "furni_mindsanctum_corner_01",
+          "furni_mindsanctum_locket_01",
+          "furni_mindsanctum_chandelier_01",
+          "furni_mindsanctum_display_01",
+          "furni_mindsanctum_light_01",
+          "furni_mindsanctum_table_01",
+          "furni_mindsanctum_carpet_01",
+          "furni_mindsanctum_key_01",
+          "furni_mindsanctum_chair_01",
+          "furni_mindsanctum_mirror_01",
+          "furni_mindsanctum_column_01",
+          "furni_mindsanctum_ornament_01",
+          "furni_mindsanctum_cabinet_01",
+          "furni_mindsanctum_sofa_01",
+          "furni_mindsanctum_lamp_01",
+          "furni_mindsanctum_wallpaper_01",
+          "furni_mindsanctum_floor_01"
+        ]
       }
     },
     "groups": {
@@ -96951,6 +97768,63 @@
           "furni_HunterInstitute_waterbed_01",
           "furni_HunterInstitute_nightstand_01"
         ]
+      },
+      "furni_set_mindsanctum_1": {
+        "id": "furni_set_mindsanctum_1",
+        "sortId": 1,
+        "name": "认知窗口",
+        "themeId": "furni_set_mindsanctum",
+        "comfort": 205,
+        "count": 4,
+        "furniture": [
+          "furni_mindsanctum_corner_01",
+          "furni_mindsanctum_locket_01",
+          "furni_mindsanctum_chandelier_01",
+          "furni_mindsanctum_display_01"
+        ]
+      },
+      "furni_set_mindsanctum_2": {
+        "id": "furni_set_mindsanctum_2",
+        "sortId": 2,
+        "name": "情感表象",
+        "themeId": "furni_set_mindsanctum",
+        "comfort": 270,
+        "count": 5,
+        "furniture": [
+          "furni_mindsanctum_table_01",
+          "furni_mindsanctum_light_01",
+          "furni_mindsanctum_key_01",
+          "furni_mindsanctum_chair_01",
+          "furni_mindsanctum_carpet_01"
+        ]
+      },
+      "furni_set_mindsanctum_3": {
+        "id": "furni_set_mindsanctum_3",
+        "sortId": 3,
+        "name": "意志反馈",
+        "themeId": "furni_set_mindsanctum",
+        "comfort": 270,
+        "count": 4,
+        "furniture": [
+          "furni_mindsanctum_ornament_01",
+          "furni_mindsanctum_mirror_01",
+          "furni_mindsanctum_column_01",
+          "furni_mindsanctum_cabinet_01"
+        ]
+      },
+      "furni_set_mindsanctum_4": {
+        "id": "furni_set_mindsanctum_4",
+        "sortId": 4,
+        "name": "心灵框架",
+        "themeId": "furni_set_mindsanctum",
+        "comfort": 210,
+        "count": 4,
+        "furniture": [
+          "furni_mindsanctum_sofa_01",
+          "furni_mindsanctum_lamp_01",
+          "furni_mindsanctum_wallpaper_01",
+          "furni_mindsanctum_floor_01"
+        ]
       }
     },
     "types": {
@@ -97448,6 +98322,21 @@
         },
         {
           "skinId": "char_136_hsguma@summer#16"
+        },
+        {
+          "skinId": "char_282_catap@summer#17"
+        },
+        {
+          "skinId": "char_1020_reed2@summer#17"
+        },
+        {
+          "skinId": "char_2012_typhon@summer#17"
+        },
+        {
+          "skinId": "char_4032_provs@summer#17"
+        },
+        {
+          "skinId": "char_4062_totter@summer#17"
         }
       ]
     },
