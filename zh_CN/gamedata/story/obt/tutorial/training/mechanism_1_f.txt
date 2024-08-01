@@ -1,0 +1,17 @@
+[HEADER(is_tutorial=true, is_skippable=false, is_autoable=false)] 敌方索敌教学f
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause]
+
+[PopupDialog(dialogHead="$avatar_gravel")] 没关系，我在这里。
+[PopupDialog(dialogHead="$avatar_gravel")] 让我来——
+[InputBlocker(blockInput=false)]
+[Tutorial(focusX=580, focusY=296, focusWidth=108, focusHeight=111, waitForSignal="put_down", \
+          animStyle="Drag", startCardIndex=0, endTileX=7, endTileY=4, dialogY=250, startAnchor="BottomRight", endAnchor="Center", dialogHead="$avatar_gravel",\
+          focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5)] 只要我<@tu.kw>挡住</>这个敌人，他就会优先攻击我。
+
+[Battle.Pause]
+[InputBlocker(blockInput=true, tileX=7, tileY=4, validWidth=150, validHeight=170)]
+[Tutorial(waitForSignal="select_direction", animStyle="Drag", \
+          startTileX=7, startTileY=4, endTileX=9, endTileY=4)]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]

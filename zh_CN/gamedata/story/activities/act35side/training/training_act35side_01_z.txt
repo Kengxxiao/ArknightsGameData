@@ -1,0 +1,50 @@
+[HEADER(is_tutorial=true, is_skippable=true, is_autoable=false)] 活动35side教学关_01_z
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause]
+
+[InputBlocker(blockInput=true, black=0.2)]
+
+[Tutorial(tileX=5.5, tileY=3.3, focusWidth=400, focusHeight=300, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", protectTime=0.5, dialogHead="$avatar_popka")] \
+哎呀，这次结晶离我们<@tu.kw>太远了</>，怎么办！
+
+[Tutorial(tileX=6, tileY=2, focusWidth=100, focusHeight=100, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", protectTime=0.5, dialogHead="$avatar_popka")] \
+那里还有<@tu.kw>缺口</>，我们好像不能通过<@tu.kw>扩散净化</>的方法<@tu.kw>一次性全部消除</>。
+
+[Tutorial(tileX=7, tileY=2.8, focusWidth=120, focusHeight=260, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", protectTime=0.5, dialogHead="$avatar_popka")] \
+似乎我们还需要更多的人手在<@tu.kw>更远的地方</>净化结晶！
+
+[Battle.Pause(pause=false)]
+[Delay(time=1)]
+[Battle.Pause(pause=true)]
+
+
+[Tutorial(cardIndex=0, rightStart=true, focusWidth=110, focusHeight=110, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", anchor="BottomRight", \
+          protectTime=0.5, dialogHead="$avatar_doberm", dialogX="$f_lower_dialog_pos_x",  \
+          dialogY="$f_lower_dialog_pos_y")] \
+别担心，我们有<@tu.kw>纯净结晶</>。
+
+[InputBlocker(blockInput=false)]
+
+[Battle.EnsureMinCost(cost=10)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_doberm", animStyle="Drag", \
+      startCardIndex=0, startRightStart=true, endTileX=3, endTileY=2, dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+我们把纯净结晶<@tu.kw>放在这里</>。
+
+
+
+[InputBlocker(blockInput=true, black=0.2)]
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_doberm", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+它就像一座“<@tu.kw>桥梁</>”，连通我们需要净化的结晶让净化效果可以扩散得更远，这种纯净结晶也<@tu.kw>不会增强敌人</>的作战能力。
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_popka")] \
+我已经完全掌握应对这种结晶的方法了。
+
+[Tutorial(protectTime=0.5, dialogHead="$avatar_doberm", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+行动仍在继续，睁大眼睛，坚守阵线！
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]

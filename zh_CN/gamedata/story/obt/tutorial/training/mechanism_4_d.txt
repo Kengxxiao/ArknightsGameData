@@ -1,0 +1,28 @@
+[HEADER(is_tutorial=true, is_autoable=false, is_skippable=false)] 异常状态与抗性d
+
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause]
+[PopupDialog(dialogHead="$avatar_stward")] 又来了一个！
+[PopupDialog(dialogHead="$avatar_stward")] 德克萨斯的技能还不能使用，该怎么办......
+[PopupDialog(dialogHead="$avatar_stward")] 他要逃走了！
+[PopupDialog(dialogHead="$avatar_aosta")] 让我来试一试吧。
+
+[Battle.EnsureMinSp(charId="char_346_aosta", sp=100)]
+[InputBlocker(blockInput=true, tileX=6, tileY=2, validWidth=85, validHeight=85)]
+[Tutorial(tileX=6, tileY=2, focusWidth=85, focusHeight=85, waitForSignal="char_info", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_aosta", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 我不会放他过去的。
+[InputBlocker(blockInput=true)]
+
+[Tutorial(focusX=283, focusY=-130, focusWidth=382, focusHeight=72, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", anchor="Left", \
+          protectTime=0.5, dialogHead="$avatar_sys")] 干员奥斯塔能够造成束缚，被束缚的敌人将无法移动。
+
+[Delay(time=0.3)]
+[Tutorial(target="btn_skill", waitForSignal="use_skill", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_aosta")] 来，现在一起上吧。
+[InputBlocker(blockInput=true)]
+
+[PopupDialog(dialogHead="$avatar_stward")] 明白了，我会配合你。
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]

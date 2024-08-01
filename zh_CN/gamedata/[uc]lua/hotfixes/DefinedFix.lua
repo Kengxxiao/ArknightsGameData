@@ -3,8 +3,8 @@ local list =
 {
   
   "HotFixes/TestStubHotfixer",
-  "HotFixes/CastSkillWithLimitTimesHotfixer",
-  "HotFixes/RoguelikeTopicHotfixer"
+  "HotFixes/RemovableSharedRandomTileGlobalBuffHotfixer",
+  "HotFixes/NameCardEditHotfixer"
 };
 
 return list;

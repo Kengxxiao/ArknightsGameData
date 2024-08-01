@@ -9,7 +9,7 @@ function CollectionDailyTaskItem:Refresh(actId, cfg)
 
   local rewardData = CollectionActModel.me:FindPointRewardItem(actId);
   self._descLabel.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.ACTIVITY_3D5_HELP_DAILY_DESC, cfg.pointItemName);
-  self._itemDescLabel.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.ACTIVITY_3D5_HELP_DAILY_ITEM_DESC, cfg.pointItemName);
+  self._itemDescLabel.text = StringRes.ACT_COLLECTION_HELP_DAILY_ITEM_DESC;
   if not self.m_itemCell then
     local itemCard = CS.Torappu.UI.UIAssetLoader.instance.staticOutlinks.uiItemCard;
     self.m_itemCell = CS.UnityEngine.GameObject.Instantiate(itemCard, self._itemIconRoot):GetComponent("Torappu.UI.UIItemCard");

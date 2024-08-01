@@ -82,7 +82,7 @@ function CollectionMainDlg:_RefreshContent()
   self._pointCnt.text = tostring(pointCurCnt);
   self._pointIcon.sprite = CS.Torappu.UI.ItemUtil.LoadItemIconUI(pointItemData:GetItemType(), pointItemData.itemId, pointItemData.itemIconId);
 
-  self._helpBtnDesc.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.ACTIVITY_3D5_HELP_BTN_DESC, itemCfg.pointItemName);
+  self._helpBtnDesc.text = CS.Torappu.Lua.Util.Format(StringRes.ACT_COLLECTION_HELP_BTN_DESC, itemCfg.pointItemName);
 
   local completeIdx = 0;
   local lastCanGetIdx = 0;

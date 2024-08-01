@@ -1,0 +1,29 @@
+[HEADER(is_tutorial=true, is_autoable=false, is_skippable=false)] 造成元素损伤c
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+
+[Battle.Pause]
+
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+
+
+[PopupDialog(dialogHead="$avatar_threye")] 请让我来助您扫清阻碍。
+[PopupDialog(dialogHead="$avatar_threye")] 我是<@tu.kw>巫役</>，可以对敌人造成元素损伤。
+
+[Battle.EnsureMinSp(charId="char_4102_threye", sp=100)]
+[InputBlocker(blockInput=true, validX=100, validY=100, validWidth=110, validHeight=110)]
+[Tutorial(focusX=100, focusY=100, focusWidth=110, focusHeight=110, waitForSignal="char_info", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", anchor="Center", \
+          protectTime=0.5, dialogHead="$avatar_threye")] 这些敌人的命运，我已然洞见。
+[InputBlocker(blockInput=true)]
+
+[Delay(time=0.3)]
+[Tutorial(target="btn_skill", waitForSignal="use_skill", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_threye")] 
+[InputBlocker(blockInput=true)]
+
+[PopupDialog(dialogHead="$avatar_sys")] 干员凛视的技能可以造成<@tu.kw>凋亡损伤</>，凋亡损伤爆发时可以对敌人<@tu.kw>持续造成少量元素伤害</>，并且暂时赋予敌方逐渐衰减的<@tu.kw>虚弱</>效果。
+[PopupDialog(dialogHead="$avatar_sys")] 请注意，处于虚弱状态的敌人，<@tu.kw>攻击力会降低</>。
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]

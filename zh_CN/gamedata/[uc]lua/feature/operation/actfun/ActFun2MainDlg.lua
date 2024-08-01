@@ -261,5 +261,11 @@ function ActFun2MainDlg:EventOnStartBattleClick()
   actMeta.meta = bundle
 
   param.actMeta = actMeta
+  
+  local gameTagMeta = {
+    gameTag = CS.Torappu.Battle.GameTagMeta.ACTFUN
+  }
+  param.gameTagMeta = gameTagMeta
+
   CS.Torappu.BattleStartController.StartBattle(param)
 end

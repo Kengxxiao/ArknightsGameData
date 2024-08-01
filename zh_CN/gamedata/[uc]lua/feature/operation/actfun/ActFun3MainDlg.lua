@@ -235,6 +235,11 @@ function ActFun3MainDlg:StartAct3FunBattle(actId, stageId)
     isDeterministic = false,
     modeType = CS.Torappu.Battle.GameModeMeta.GameModeType.DANMAKU
   }
+
+  local gameTagMeta = {
+    gameTag = CS.Torappu.Battle.GameTagMeta.ACTFUN
+  }
+
   local param = {
     stageId = stageId,
     isPractise = false,
@@ -253,6 +258,7 @@ function ActFun3MainDlg:StartAct3FunBattle(actId, stageId)
     actMeta = actMeta,
     gameModeMeta = gameModeMeta,
     isOverrideBGM = true,
+    gameTagMeta = gameTagMeta,
   }
   CS.Torappu.BattleStartController.StartBattle(param)
 end

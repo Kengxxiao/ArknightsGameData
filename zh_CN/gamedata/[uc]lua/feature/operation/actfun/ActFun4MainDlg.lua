@@ -339,6 +339,10 @@ function ActFun4MainDlg:_StartActFun4Battle(actId, stageId)
     modeType = CS.Torappu.Battle.GameModeMeta.GameModeType.FUNLIVE,
     extraData = funLiveInput
   }
+  local gameTagMeta = {
+    gameTag = CS.Torappu.Battle.GameTagMeta.ACTFUN
+  }
+
   local param = {
     stageId = stageId,
     isPractise = false,
@@ -357,6 +361,7 @@ function ActFun4MainDlg:_StartActFun4Battle(actId, stageId)
     actMeta = actMeta,
     gameModeMeta = gameModeMeta,
     isOverrideBGM = true,
+    gameTagMeta = gameTagMeta,
   }
   CS.Torappu.BattleStartController.StartBattle(param)
 end

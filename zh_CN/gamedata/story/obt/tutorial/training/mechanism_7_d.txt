@@ -1,0 +1,28 @@
+[HEADER(is_tutorial=true, is_autoable=false, is_skippable=false)] 造成元素损伤d
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+
+[Battle.Pause]
+
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+
+[PopupDialog(dialogHead="$avatar_kaitou")] 与您约定的时间到了，我已就位。
+[PopupDialog(dialogHead="$avatar_kaitou")] 我是<@tu.kw>本源术师</>，在敌人凋亡损伤爆发阶段，我会造成更高的伤害。
+
+[Battle.EnsureMinSp(charId="char_499_kaitou", sp=100)]
+[InputBlocker(blockInput=true, validX=0, validY=100, validWidth=110, validHeight=110)]
+[Tutorial(focusX=0, focusY=100, focusWidth=110, focusHeight=110, waitForSignal="char_info", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", anchor="Center", \
+          protectTime=0.5, dialogHead="$avatar_kaitou")] 请您安排。
+[InputBlocker(blockInput=true)]
+
+[Delay(time=0.3)]
+[Tutorial(target="btn_skill", waitForSignal="use_skill", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_kaitou")]
+[InputBlocker(blockInput=true)]
+
+[PopupDialog(dialogHead="$avatar_sys")] 干员折光的技能在敌方处于凋亡损伤爆发期间时可以造成额外的元素伤害。
+[PopupDialog(dialogHead="$avatar_sys")] 因此，您可以开启凛视的技能来配合折光，以达成更佳的作战效果。
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]

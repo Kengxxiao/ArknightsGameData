@@ -74,39 +74,24 @@ end
 
 
 function CollectionActModel:GetActCfg(actid)
-  if actid == CollectionActID.act3d5 then
-    return
-    {
-      baseColor = ColorRes.COMMON_BLUE,
-      baseColorHex = "0075A9";
-      pointItemName = CS.Torappu.I18N.StringMap.Get("ACTIVITY_3D5_POINT_SIMPLE_NAME");
-      taskItemScale = 0.7;
-    };
-  elseif actid == CollectionActID.act4d5 then
-    return
-    {
-      baseColor = CS.UnityEngine.Color(0.973,0.412,0.000);
-      baseColorHex = "F86900";
-      pointItemName = CS.Torappu.I18N.StringMap.Get("ACTIVITY_4D5_POINT_SIMPLE_NAME");
-      taskItemScale = 0.5;
-    };
-  elseif actid == CollectionActID.act6d8 then
-    return
-    {
-      baseColor = CS.UnityEngine.Color(1.000,0.255,0.157);
-      baseColorHex = "ff4128";
-      pointItemName = CS.Torappu.I18N.StringMap.Get("ACTIVITY_6D8_POINT_SIMPLE_NAME");
-      taskItemScale = 0.5;
-    };
-  elseif actid == CollectionActID.act9d4 then
-    return
-    {
-      baseColor = CS.UnityEngine.Color(0.957,0.396,0.145);
-      baseColorHex = "f46525";
-      pointItemName = CS.Torappu.I18N.StringMap.Get("ACTIVITY_9D4_POINT_SIMPLE_NAME");
-      taskItemScale = 0.5;
-    };
+  local cfg = {
+    baseColor = CS.UnityEngine.Color.white;
+    baseColorHex = "000000";
+    pointItemName = "";
+    taskItemScale = 0.5;
+  }
+
+  local suc, homeActCfg = CS.Torappu.ActivityDB.data.homeActConfig:TryGetValue(actid);
+  if not suc then
+    return cfg;
   end
+
+  local pointItemViewModel = CollectionActModel.me:FindPointRewardItem(actid);
+
+  cfg.pointItemName = pointItemViewModel.name;
+  cfg.baseColorHex = homeActCfg.actTopBarColor;
+  cfg.baseColor = CS.Torappu.ColorRes.TweenHtmlStringToColor(homeActCfg.actTopBarColor);
+  return cfg;
 end
 
 ActivityServiceCode = 

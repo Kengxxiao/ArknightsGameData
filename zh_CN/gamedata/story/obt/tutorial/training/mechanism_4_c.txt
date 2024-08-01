@@ -1,0 +1,23 @@
+[HEADER(is_tutorial=true, is_autoable=false, is_skippable=false)] 异常状态与抗性c
+
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause]
+[PopupDialog(dialogHead="$avatar_stward")] 不好，被他逃走了！
+[Battle.EnsureMinSp(charId="char_102_texas", sp=100)]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true, tileX=4, tileY=3, validWidth=85, validHeight=85)]
+[Tutorial(tileX=4, tileY=3, focusWidth=85, focusHeight=85, waitForSignal="char_info", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_texas", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 交给我吧。
+[InputBlocker(blockInput=true)]
+
+[Tutorial(focusX=283, focusY=-130, focusWidth=382, focusHeight=72, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", anchor="Left", \
+          protectTime=0.5, dialogHead="$avatar_sys")] 干员德克萨斯的技能能够造成晕眩，被晕眩的敌人将无法攻击或移动。
+
+[Delay(time=0.3)]
+[Tutorial(target="btn_skill", waitForSignal="use_skill", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_texas")] 他逃不掉的。
+[InputBlocker(blockInput=true)]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
