@@ -4,7 +4,8 @@ local list =
   
   "HotFixes/TestStubHotfixer",
   "HotFixes/RemovableSharedRandomTileGlobalBuffHotfixer",
-  "HotFixes/NameCardEditHotfixer"
+  "HotFixes/NameCardEditHotfixer",
+  "HotFixes/CameraControllerHotfixer"
 };
 
 return list;
