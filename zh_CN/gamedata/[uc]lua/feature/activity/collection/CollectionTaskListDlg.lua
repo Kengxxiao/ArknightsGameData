@@ -6,13 +6,14 @@
 
 
 
-
-
+local CollectionTaskListAdapter = require("Feature/Activity/Collection/CollectionTaskListAdapter")
 CollectionTaskListDlg = DlgMgr.DefineDialog("CollectionTaskListDlg", "Activity/Collection/task_list_dlg");
 
 function CollectionTaskListDlg:OnInit()
-  self.m_limitItems = {}
   self.m_dailyItem = self:CreateWidgetByGO(CollectionDailyTaskItem, self._dailyItem);
+
+  self.m_listAdapter = self:CreateCustomComponent(CollectionTaskListAdapter, self._listAdapter, self);
+  self.m_listAdapter.missionList = {};
 end
 
 function CollectionTaskListDlg:OnClose()
@@ -44,41 +45,32 @@ function CollectionTaskListDlg:Refresh(activityId, close)
     local missionData = CollectionActModel.me:FindMission(missionId);
     
     if missionData then
-      local item = null;
-      if idx < #self.m_limitItems then
-        item = self.m_limitItems[idx+1];
-      else
-        item = self:CreateWidgetByPrefab(CollectionTimedTaskItem, self._limitItemPrefab);
-        table.insert(self.m_limitItems, item);
-      end
-
-      item:Refresh(missionData, actcfg);
-      table.insert(list, item);
+      table.insert(list, missionData);
     end
-      
+  end
+  
+  local playerMissions = CS.Torappu.PlayerData.instance.data.mission.missions;
+  local suc, typeMissions = playerMissions:TryGetValue(CS.Torappu.MissionPlayerDataGroup.MissionTypeString.ACTIVITY);
+  if not suc then
+    return;
   end
 
-  table.sort(list, function(a, b)
-    if a:Finished() == b:Finished() then
-      return a:SortId() < b:SortId();
-    end
-    return b:Finished();
-  end);
+  local comp = function(a, b) 
+    local a_finish = self:_CheckMissionFinished(typeMissions, a.id);
+    local b_finish = self:_CheckMissionFinished(typeMissions, b.id);
 
-  local co = coroutine.create(function()
-    for _, item in ipairs(list) do
-      item:CreateRewardIcon(actcfg);
-      item:RootGameObject().transform:SetParent(self._limitContainer, false);
-      coroutine.yield();
+    if a_finish == b_finish then
+      return a.sortId < b.sortId;
     end
-  end);
-  self:Frame(#list, self._RunCoroutine, co);
+    return b_finish;
+  end;
+    
+  table.sort(list, comp);
+  self.m_listAdapter.missionList = list;
+  self.m_listAdapter.actCfg = actcfg;
+  self.m_listAdapter:NotifyDataSourceChanged();
 
   self:_SynTime();
-end
-
-function CollectionTaskListDlg:_RunCoroutine(co)
-  coroutine.resume(co);
 end
 
 function CollectionTaskListDlg:_SynTime()
@@ -90,4 +82,12 @@ function CollectionTaskListDlg:_SynTime()
   local endTime = CS.Torappu.DateTimeUtil.TimeStampToDateTime(CollectionActModel.me:FindBasicInfo(self.m_activityId).endTime);
   local timeRemain = endTime - CS.Torappu.DateTimeUtil.currentTime;
   self._limitTaskTimeLabel.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.SHOP_REMAIN_COUNT, CS.Torappu.FormatUtil.FormatTimeDelta(timeRemain));
+end
+
+
+
+
+function CollectionTaskListDlg:_CheckMissionFinished(playerMissionDict, missionId) 
+  local suc, state = playerMissionDict:TryGetValue(missionId);
+  return suc and state.state == CS.Torappu.MissionHoldingState.FINISHED;
 end

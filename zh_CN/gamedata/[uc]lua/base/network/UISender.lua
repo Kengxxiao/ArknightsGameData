@@ -6,6 +6,7 @@ local rapidjson = require("rapidjson")
 UISender = ModelMgr.DefineModel("UISender")
 
 local ConcurrentType = CS.Torappu.UI.UISender.ConcurrentType
+local CSLuaSender = CS.Torappu.Lua.LuaSender
 
 
 
@@ -23,12 +24,12 @@ local function _GenDefaultOptions()
 end
 
 function UISender:OnInit()
-  CS.Torappu.Lua.LuaSender.LuaOnlyBindCallback(self)
+  CSLuaSender.LuaOnlyBindCallback(self)
   self.m_callbacks = {}
 end
 
 function UISender:OnDispose()
-  CS.Torappu.Lua.LuaSender.LuaOnlyBindCallback(nil)
+  CSLuaSender.LuaOnlyBindCallback(nil)
   self.m_callbacks = nil
 end
 
@@ -47,7 +48,7 @@ function UISender:SendGet(url, param, config)
     useMask = config.useMask
   end
 
-  local requestId = CS.Torappu.Lua.LuaSender.SendGet(url, param, useMask)
+  local requestId = CSLuaSender.SendGet(url, param, useMask)
 
   local callback = {}
   if config ~= nil then
@@ -75,6 +76,7 @@ end
 function UISender:SendRequest(serviceCode, body, config)
   local options = _GenDefaultOptions()
   
+  CSLuaSender.AchieveServiceMeta(serviceCode, body)
   options.serviceCode = serviceCode
   options.body = rapidjson.encode(body)
   if config ~= nil then
@@ -90,7 +92,7 @@ function UISender:SendRequest(serviceCode, body, config)
     options.overrideUrl = config.url
   end
 
-  local requestId = CS.Torappu.Lua.LuaSender.SendRequest(options)
+  local requestId = CSLuaSender.SendRequest(options)
   
   local callback = {}
   if config ~= nil then

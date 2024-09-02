@@ -18,7 +18,7 @@ local ColorRes = CS.Torappu.ColorRes;
 
 
 
-CollectionTimedTaskItem = Class("CollectionTimedTaskItem", UIWidget);
+local CollectionTimedTaskItem = Class("CollectionTimedTaskItem", UIWidget);
 
 
 
@@ -124,3 +124,5 @@ end
 function CollectionTimedTaskItem:SortId()
   return self.m_sortId;
 end
+
+return CollectionTimedTaskItem;
