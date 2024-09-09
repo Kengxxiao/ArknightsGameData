@@ -1,6 +1,6 @@
 
 
-CollectionDailyTaskItem = Class("CollectionDailyTaskItem", UIWidget);
+local CollectionDailyTaskItem = Class("CollectionDailyTaskItem", UIWidget);
 
 
 function CollectionDailyTaskItem:Refresh(actId, cfg)
@@ -57,3 +57,5 @@ function CollectionDailyTaskItem:Refresh(actId, cfg)
     end
   end
 end
+
+return CollectionDailyTaskItem;
