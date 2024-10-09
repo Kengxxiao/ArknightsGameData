@@ -12528,6 +12528,96 @@
           ]
         }
       ]
+    },
+    "char_1019_siege2": {
+      "charId": "char_1019_siege2",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "trade_ord_spd&par[000]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            },
+            {
+              "buffId": "trade_ord_spd&par[001]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": []
+        }
+      ]
+    },
+    "char_487_bobb": {
+      "charId": "char_487_bobb",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_all&unfull[000]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "dorm_rec_all&unfull[001]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4162_cathy": {
+      "charId": "char_4162_cathy",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_proc_probability&ext[000]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            },
+            {
+              "buffId": "workshop_proc_probability&ext[001]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "workshop_formula_cost[001]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
@@ -15555,6 +15645,30 @@
       "roomType": "TRADING",
       "description": "进驻贸易站时，订单获取效率<@cc.vup>+30%</>；当<@cc.kw>乌尔比安</>在基建内时（不包含副手），订单获取效率额外<@cc.vup>+10%</>"
     },
+    "trade_ord_spd&par[000]": {
+      "buffId": "trade_ord_spd&par[000]",
+      "buffName": "外贸决议·α",
+      "buffIcon": "trading",
+      "skillIcon": "trade_ord_spd&par1",
+      "sortId": 6124,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，订单获取效率<@cc.vup>+30%</>"
+    },
+    "trade_ord_spd&par[001]": {
+      "buffId": "trade_ord_spd&par[001]",
+      "buffName": "外贸决议·β",
+      "buffIcon": "trading",
+      "skillIcon": "trade_ord_spd&par2",
+      "sortId": 6125,
+      "buffColor": "#0075a9",
+      "textColor": "#ffffff",
+      "buffCategory": "OUTPUT",
+      "roomType": "TRADING",
+      "description": "进驻贸易站时，订单获取效率<@cc.vup>+30%</>；当前贸易站内存在<$cc.g.glasgow><@cc.kw>格拉斯哥帮</></>干员时，订单获取效率额外<@cc.vup>+10%</>"
+    },
     "workshop_proc_probability[000]": {
       "buffId": "workshop_proc_probability[000]",
       "buffName": "专注·α",
@@ -15711,6 +15825,30 @@
       "roomType": "WORKSHOP",
       "description": "进驻加工站加工<@cc.kw>任意类材料</>时，心情消耗为<@cc.kw>4</>以上的配方全部除以<@cc.vup>4</>心情消耗"
     },
+    "workshop_proc_probability&ext[000]": {
+      "buffId": "workshop_proc_probability&ext[000]",
+      "buffName": "工效模范·α",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p2",
+      "sortId": 7142,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>50%</>"
+    },
+    "workshop_proc_probability&ext[001]": {
+      "buffId": "workshop_proc_probability&ext[001]",
+      "buffName": "工效模范·β",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_p7",
+      "sortId": 7143,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，副产品的产出概率提升<@cc.vup>50%</>；如果<@cc.kw>白铁</>进驻在宿舍，则额外提升<@cc.vup>10%</>"
+    },
     "workshop_formula_bonus1[000]": {
       "buffId": "workshop_formula_bonus1[000]",
       "buffName": "因果",
@@ -15741,6 +15879,18 @@
       "buffIcon": "workshop",
       "skillIcon": "bskill_ws_cost_magallan",
       "sortId": 7112,
+      "buffColor": "#e3eb00",
+      "textColor": "#333333",
+      "buffCategory": "FUNCTION",
+      "roomType": "WORKSHOP",
+      "description": "进驻加工站加工<@cc.kw>任意类材料</>时，心情消耗为<@cc.kw>4</>以上的配方全部<@cc.vup>-2</>心情消耗"
+    },
+    "workshop_formula_cost[001]": {
+      "buffId": "workshop_formula_cost[001]",
+      "buffName": "自动化流水线",
+      "buffIcon": "workshop",
+      "skillIcon": "bskill_ws_cost",
+      "sortId": 7116,
       "buffColor": "#e3eb00",
       "textColor": "#333333",
       "buffCategory": "FUNCTION",
@@ -17966,6 +18116,30 @@
       "buffCategory": "RECOVERY",
       "roomType": "DORMITORY",
       "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.15</>，如果目标是<$cc.tag.dungeon><@cc.kw>莱欧斯小队</></>干员，则恢复效果额外<@cc.vup>+0.15</>（同种效果取最高）"
+    },
+    "dorm_rec_all&unfull[000]": {
+      "buffId": "dorm_rec_all&unfull[000]",
+      "buffName": "倾听者",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_all2",
+      "sortId": 5429,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.15</>（同种效果取最高）"
+    },
+    "dorm_rec_all&unfull[001]": {
+      "buffId": "dorm_rec_all&unfull[001]",
+      "buffName": "倾谈者",
+      "buffIcon": "dormitory",
+      "skillIcon": "bskill_dorm_unfull",
+      "sortId": 5430,
+      "buffColor": "#21cdcb",
+      "textColor": "#ffffff",
+      "buffCategory": "RECOVERY",
+      "roomType": "DORMITORY",
+      "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.2</>；同时该宿舍每有<@cc.kw>1</>名心情未满的干员，则恢复效果额外<@cc.vup>+0.01</>（同种效果取最高）"
     },
     "dorm_rec_all&single[000]": {
       "buffId": "dorm_rec_all&single[000]",
@@ -73060,6 +73234,533 @@
         "isOnly": 1,
         "quantity": 1
       },
+      "furni_trainStation_elevator_01": {
+        "id": "furni_trainStation_elevator_01",
+        "sortId": 1733,
+        "name": "站台电梯",
+        "iconId": "furni_trainStation_elevator_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_1",
+        "width": 5,
+        "depth": 4,
+        "height": 10,
+        "comfort": 460,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "在站台里挺过了一整场战争的电梯，修缮前一直卡在两个楼层中间。\n活泼的瓦伊凡和她的鲁珀队长只用几根安全索就把电梯间从卡住的地方拽了下来，吓坏了来修电梯的工人们。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_hatBox_01": {
+        "id": "furni_trainStation_hatBox_01",
+        "sortId": 1734,
+        "name": "被铭记的手提箱",
+        "iconId": "furni_trainStation_hatBox_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_2",
+        "width": 2,
+        "depth": 2,
+        "height": 2,
+        "comfort": 125,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "印着帮派名字的手提箱。和平平无奇的外表不符，里面装的似乎是帮派成员们的武器。\n钢爪、砍刀、指虎......还有一把保养得很好，和刚买来那天一样光亮的蝴蝶刀。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_steamEngine_01": {
+        "id": "furni_trainStation_steamEngine_01",
+        "sortId": 1735,
+        "name": "古旧蒸汽机",
+        "iconId": "furni_trainStation_steamEngine_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_1",
+        "width": 3,
+        "depth": 3,
+        "height": 6,
+        "comfort": 225,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "不知是谁从列车上拆下来的蒸汽机，已经无法修复。一位锅炉工的女儿把它布置在站台上。\n它轰隆作响，推动时代呼啸前行，时代却把它永远留在了这里。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_brand_01": {
+        "id": "furni_trainStation_brand_01",
+        "sortId": 1736,
+        "name": "站台时刻表",
+        "iconId": "furni_trainStation_brand_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "BOARD_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_1",
+        "width": 2,
+        "depth": 3,
+        "height": 7,
+        "comfort": 200,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "显示着每日列车情况的时刻表，旁边放着一把黑色的雨伞。\n很久以前，自救军曾经用雨伞的颜色来暗示敌人的动向，但战争终于过去，现在伞就是伞。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_scheduleDisplay_01": {
+        "id": "furni_trainStation_scheduleDisplay_01",
+        "sortId": 1737,
+        "name": "“未来已近”",
+        "iconId": "furni_trainStation_scheduleDisplay_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILING",
+        "subType": "DEVICE_C",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_2",
+        "width": 8,
+        "depth": 3,
+        "height": 4,
+        "comfort": 165,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "提醒旅客最近一班列车班次的显示器。不少旅客会挑特定班次的列车即将进站的时候来显示器下面拍照。\n最近甚至出现了在显示器正下方办下午茶聚会的情形。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_bench_01": {
+        "id": "furni_trainStation_bench_01",
+        "sortId": 1738,
+        "name": "站台长椅",
+        "iconId": "furni_trainStation_bench_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "SEATING",
+        "subType": "CHAIR",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_2",
+        "width": 6,
+        "depth": 3,
+        "height": 4,
+        "comfort": 270,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "修缮工人打造的站台长椅。外观朴实，但结实耐用。\n一位前城防军成员前去拜访某座疗养院。回来时他沉默不语，把没能送出的花束和面包忘在了长椅上。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_ladder_01": {
+        "id": "furni_trainStation_ladder_01",
+        "sortId": 1739,
+        "name": "故障检修梯",
+        "iconId": "furni_trainStation_ladder_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_1",
+        "width": 6,
+        "depth": 3,
+        "height": 6,
+        "comfort": 325,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "用废旧钢材组装的梯子，坚固而粗犷。\n工人们为站台修复投入了十二分的心血，以至于用于故障检修的梯子至今没派上用场，只好拿来放工具箱。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_cart_01": {
+        "id": "furni_trainStation_cart_01",
+        "sortId": 1740,
+        "name": "被铭记的手推车",
+        "iconId": "furni_trainStation_cart_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_2",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 195,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "一位老先生的行李手推车。上面的盆栽实际上是杂草，来自诺伯特区某个偏僻的墙角。\n他对着那面墙，颤抖着声音，一字一句地读完了于数月前发表、将学生作为合作作者的纹章学论文。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_plants_01": {
+        "id": "furni_trainStation_plants_01",
+        "sortId": 1741,
+        "name": "站台花箱",
+        "iconId": "furni_trainStation_plants_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "PLANT",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_3",
+        "width": 2,
+        "depth": 2,
+        "height": 4,
+        "comfort": 155,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "样式简单而不乏巧思的花箱，为站台增添了一抹绿意。\n种子来自布伦特伍德镇，是当地园丁在战后培育出的第一个新品种。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_chandelier_01": {
+        "id": "furni_trainStation_chandelier_01",
+        "sortId": 1742,
+        "name": "滑轮组吊灯",
+        "iconId": "furni_trainStation_chandelier_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_3",
+        "width": 3,
+        "depth": 2,
+        "height": 4,
+        "comfort": 90,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "明亮的吊灯，装饰性地使用了滑轮组的造型。\n“说是装饰性，其实只要稍微使点巧劲，藏在灯罩里的绳子就会——奶奶？您、您什么时候站在我背后的？”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_pillar_01": {
+        "id": "furni_trainStation_pillar_01",
+        "sortId": 1743,
+        "name": "站台立柱",
+        "iconId": "furni_trainStation_pillar_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "COLUMN",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_3",
+        "width": 2,
+        "depth": 3,
+        "height": 10,
+        "comfort": 230,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "站台上的装饰立柱，上面的宣传画描绘了伦蒂尼姆人对未来的想象。\n我们已经奉献了热血、眼泪、辛劳和汗水。我们即将享有光明的未来。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_boxshelf_01": {
+        "id": "furni_trainStation_boxshelf_01",
+        "sortId": 1744,
+        "name": "古典行李车",
+        "iconId": "furni_trainStation_boxshelf_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_3",
+        "width": 2,
+        "depth": 4,
+        "height": 7,
+        "comfort": 235,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "金属制行李车，上面的行李属于某位军医和他的同乡。\n恐惧、愠怒、悲伤......在温暖的夕阳下，这些暂时都不重要。重要的是战争结束了，士兵们应该回家。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_ticketOffice_01": {
+        "id": "furni_trainStation_ticketOffice_01",
+        "sortId": 1745,
+        "name": "移动售票亭",
+        "iconId": "furni_trainStation_ticketOffice_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "ORTHER_D",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_4",
+        "width": 8,
+        "depth": 5,
+        "height": 8,
+        "comfort": 645,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "在站台里挺过了一整场战争的售票亭，修复后兼做咨询台。\n圣马尔索的孩子们为久违的火车旅行感到兴奋。他们欢闹着，扮演着工人、典范军，还有一位只身对抗浪潮的教师。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_clock_01": {
+        "id": "furni_trainStation_clock_01",
+        "sortId": 1746,
+        "name": "站台时钟",
+        "iconId": "furni_trainStation_clock_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILING",
+        "subType": "DEVICE_C",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_4",
+        "width": 4,
+        "depth": 1,
+        "height": 4,
+        "comfort": 80,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "在站台里挺过了一整场战争的钟。此前一直停在战争开始的那一刻。\n而它如今重新指示起每一个平凡的时刻。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_Mailbox_01": {
+        "id": "furni_trainStation_Mailbox_01",
+        "sortId": 1747,
+        "name": "站台邮筒",
+        "iconId": "furni_trainStation_Mailbox_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_4",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 175,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "在站台里挺过了一整场战争的邮筒。重新漆过一遍。\n那些时日，人们把奢望和呓语投入其中，不为了通知别人，只为了告慰自己。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_wallpaper_01": {
+        "id": "furni_trainStation_wallpaper_01",
+        "sortId": 1748,
+        "name": "站台全景显示屏",
+        "iconId": "furni_trainStation_wallpaper_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "WALL",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_2",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "展现伦蒂尼姆站台外风景的全景显示屏。暮色温柔，列车奔驰。\n站台不会说话，它只是微笑着告别每一个出发。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
+      "furni_trainStation_floor_01": {
+        "id": "furni_trainStation_floor_01",
+        "sortId": 1749,
+        "name": "站台金属地面",
+        "iconId": "furni_trainStation_floor_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FLOOR",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_trainStation",
+        "groupId": "furni_set_trainStation_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "在站台里挺过了一整场战争的金属地面。一部分防滑纹已经磨秃了。\n现在人们不再为了躲避追捕在这里奔跑，他们飞奔，因为火车马上就要出发了。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 1
+      },
       "furni_oct1st_deckChair_01": {
         "id": "furni_oct1st_deckChair_01",
         "sortId": 9998,
@@ -78941,6 +79642,37 @@
         "comfort": 75,
         "usage": "能够用来装扮宿舍，提高宿舍的氛围",
         "description": "打开塑封口，准备迎接一场由夏日鲜橙掀起的风暴。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "quantity": 0
+      },
+      "furni_terratimes_Glasgow_01": {
+        "id": "furni_terratimes_Glasgow_01",
+        "sortId": 11091,
+        "name": "饰牌《帮派》",
+        "iconId": "furni_terratimes_Glasgow_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍，提高宿舍的氛围",
+        "description": "涂鸦，沙袋，啤酒罐。拳头，生活，还有命运。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -96700,6 +97432,142 @@
           "furni_rhodesKitchen_wallpaper_01",
           "furni_rhodesKitchen_floor_01"
         ]
+      },
+      "furni_set_trainStation": {
+        "id": "furni_set_trainStation",
+        "sortId": 100,
+        "name": "伦蒂尼姆火车站台",
+        "themeType": "EVENT",
+        "desc": "根据多位干员的描述复现的傍晚的火车站台。经常有维多利亚干员来此喝茶、闲谈，或是什么都不做，就只是安静地坐在那里。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_trainStation_elevator_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_hatBox_01",
+            "pos0": 8,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_steamEngine_01",
+            "pos0": 5,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_brand_01",
+            "pos0": 2,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_scheduleDisplay_01",
+            "pos0": 9,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_bench_01",
+            "pos0": 10,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_ladder_01",
+            "pos0": 9,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_cart_01",
+            "pos0": 15,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_plants_01",
+            "pos0": 20,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_chandelier_01",
+            "pos0": 17,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_pillar_01",
+            "pos0": 22,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_boxshelf_01",
+            "pos0": 21,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_ticketOffice_01",
+            "pos0": 25,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_clock_01",
+            "pos0": 25,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_Mailbox_01",
+            "pos0": 30,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_trainStation_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_trainStation_1",
+          "furni_set_trainStation_2",
+          "furni_set_trainStation_3",
+          "furni_set_trainStation_4"
+        ],
+        "furnitures": [
+          "furni_trainStation_elevator_01",
+          "furni_trainStation_hatBox_01",
+          "furni_trainStation_steamEngine_01",
+          "furni_trainStation_brand_01",
+          "furni_trainStation_scheduleDisplay_01",
+          "furni_trainStation_bench_01",
+          "furni_trainStation_ladder_01",
+          "furni_trainStation_cart_01",
+          "furni_trainStation_plants_01",
+          "furni_trainStation_chandelier_01",
+          "furni_trainStation_pillar_01",
+          "furni_trainStation_boxshelf_01",
+          "furni_trainStation_ticketOffice_01",
+          "furni_trainStation_clock_01",
+          "furni_trainStation_Mailbox_01",
+          "furni_trainStation_wallpaper_01",
+          "furni_trainStation_floor_01"
+        ]
       }
     },
     "groups": {
@@ -102435,6 +103303,63 @@
           "furni_rhodesKitchen_teaTable_01",
           "furni_rhodesKitchen_floor_01"
         ]
+      },
+      "furni_set_trainStation_1": {
+        "id": "furni_set_trainStation_1",
+        "sortId": 1,
+        "name": "一段回忆",
+        "themeId": "furni_set_trainStation",
+        "comfort": 300,
+        "count": 4,
+        "furniture": [
+          "furni_trainStation_elevator_01",
+          "furni_trainStation_steamEngine_01",
+          "furni_trainStation_brand_01",
+          "furni_trainStation_ladder_01"
+        ]
+      },
+      "furni_set_trainStation_2": {
+        "id": "furni_set_trainStation_2",
+        "sortId": 2,
+        "name": "一条长路",
+        "themeId": "furni_set_trainStation",
+        "comfort": 220,
+        "count": 5,
+        "furniture": [
+          "furni_trainStation_hatBox_01",
+          "furni_trainStation_scheduleDisplay_01",
+          "furni_trainStation_bench_01",
+          "furni_trainStation_cart_01",
+          "furni_trainStation_wallpaper_01"
+        ]
+      },
+      "furni_set_trainStation_3": {
+        "id": "furni_set_trainStation_3",
+        "sortId": 3,
+        "name": "一丝期冀",
+        "themeId": "furni_set_trainStation",
+        "comfort": 165,
+        "count": 4,
+        "furniture": [
+          "furni_trainStation_plants_01",
+          "furni_trainStation_chandelier_01",
+          "furni_trainStation_pillar_01",
+          "furni_trainStation_boxshelf_01"
+        ]
+      },
+      "furni_set_trainStation_4": {
+        "id": "furni_set_trainStation_4",
+        "sortId": 4,
+        "name": "一张车票",
+        "themeId": "furni_set_trainStation",
+        "comfort": 260,
+        "count": 4,
+        "furniture": [
+          "furni_trainStation_ticketOffice_01",
+          "furni_trainStation_clock_01",
+          "furni_trainStation_Mailbox_01",
+          "furni_trainStation_floor_01"
+        ]
       }
     },
     "types": {
@@ -104197,7 +105122,7 @@
       ],
       "requireStages": [
         {
-          "stageId": "easy_11-03",
+          "stageId": "sub_09-1-2",
           "rank": 2
         }
       ]
@@ -104331,7 +105256,7 @@
       ],
       "requireStages": [
         {
-          "stageId": "sub_05-4-3",
+          "stageId": "sub_04-4-1",
           "rank": 2
         }
       ]
@@ -104847,7 +105772,7 @@
       ],
       "requireStages": [
         {
-          "stageId": "easy_13-13",
+          "stageId": "sub_09-1-4",
           "rank": 2
         }
       ]
@@ -104981,7 +105906,7 @@
       ],
       "requireStages": [
         {
-          "stageId": "easy_13-04",
+          "stageId": "sub_09-1-3",
           "rank": 2
         }
       ]
