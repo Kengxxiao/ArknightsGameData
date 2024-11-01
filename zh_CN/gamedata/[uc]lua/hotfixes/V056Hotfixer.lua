@@ -62,6 +62,49 @@ local function Fix_BuildingStationManageEditQueueStateInitIfNot(self)
   CS.Torappu.Lua.LuaUIUtil.BindBackPressToButton(childButton)
 end
 
+local function Fix_BuildingWorkShop_TryToSetWorkCount(self, targetCount)
+  local char = self.workshopModel.stationaryCharacter
+  return self:TryToSetWorkCount(targetCount)
+end
+
+local function Fix_BuildingWorkShop_OnIngredientJumpBtnPressed(self, index)
+  local value = self._stateBean.property.Value;
+  if (value == nil) then
+    return;
+  end
+  local workshopModel = value.workshopModel;
+  if (workshopModel == nil) then
+    return;
+  end
+  local currentFormula = workshopModel.currentFormula;
+  if (currentFormula == nil) then
+    return;
+  end
+  local jumpTargetFormulaItem = nil
+  if (index == 0) then
+    jumpTargetFormulaItem = currentFormula.ingredient1
+  end
+  if (index == 1) then
+    jumpTargetFormulaItem = currentFormula.ingredient2
+  end
+  if (index == 2) then
+    jumpTargetFormulaItem = currentFormula.ingredient3
+  end
+  if (jumpTargetFormulaItem ==nil) then
+    return
+  end
+
+  local ingredientItemFormula = workshopModel:FindFormulaByItemId(jumpTargetFormulaItem.model.itemId);
+  if (ingredientItemFormula == nil) then
+    return;
+  end
+  if (not ingredientItemFormula.unlocked) then
+    CS.Torappu.UI.UINotification.LockToast(ingredientItemFormula.unlockMessage);
+    return;
+  end
+  self:OnIngredientJumpBtnPressed(index)
+end
+
 function V056Hotfixer:OnInit()
   xlua.private_accessible(ClsHotUpdater);
   self:Fix_ex(ClsHotUpdater, "_CalcUpdateResParams", function(newUpdateInfo, persistentResInfo, downloadPart)
@@ -77,6 +120,21 @@ function V056Hotfixer:OnInit()
     local ok, errorInfo = xpcall(Fix_BuildingStationManageEditQueueStateInitIfNot, debug.traceback, self)
     if not ok then
       LogError("[BuildingStationManageEditQueueStateHotfixer] fix _InitIfNot error:" .. errorInfo)
+    end
+  end)
+  self:Fix_ex(CS.Torappu.Building.UI.Workshop.BuildingWorkshopWholeViewModel, "TryToSetWorkCount", function(self,count)
+    local ok, value = xpcall(Fix_BuildingWorkShop_TryToSetWorkCount, debug.traceback, self,count)
+    if not ok then
+      LogError("[BuildingStationManageEditQueueStateHotfixer] fix TryToSetWorkCount error:" .. value)
+      return self:TryToSetWorkCount(count)
+    end
+    return value
+  end)
+  xlua.private_accessible(CS.Torappu.Building.UI.Workshop.BuildingWorkshopHomeState)
+  self:Fix_ex(CS.Torappu.Building.UI.Workshop.BuildingWorkshopHomeState, "OnIngredientJumpBtnPressed", function(self, index)
+    local ok, errorInfo = xpcall(Fix_BuildingWorkShop_OnIngredientJumpBtnPressed, debug.traceback, self, index)
+    if not ok then
+      LogError("[BuildingStationManageEditQueueStateHotfixer] fix OnIngredientJumpBtnPressed error:" .. errorInfo)
     end
   end)
 end
