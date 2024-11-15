@@ -130,6 +130,22 @@ local function Fix_StationManage_GetPreQueueStatus(buildingModel, slotId, queue)
   return queueInfoModel
 end
 
+local function Fix_FireworkCraftModel_LoadData(self, input)
+  if input.source == CS.Torappu.UI.Firework.FireworkCraft.FireworkCraftModel.OpenSource.STAGE then
+    local curTs = CS.Torappu.DateTimeUtil.timeStampNow;
+    local inputStageId = input.defaultStageId;
+    local inputStageData = CS.Torappu.StageDataUtil.GetStageOrNull(inputStageId, curTs);
+    if inputStageData == nil then
+      return
+    end
+    if inputStageData.difficulty == CS.Torappu.LevelData.Difficulty.FOUR_STAR then
+      local normalStageId = CS.Torappu.StageDB.instance:GetNormalStageId(inputStageId);
+      input.defaultStageId = normalStageId;
+    end
+  end
+  self:LoadData(input)
+end
+
 function V056Hotfixer:OnInit()
   xlua.private_accessible(ClsHotUpdater);
   self:Fix_ex(ClsHotUpdater, "_CalcUpdateResParams", function(newUpdateInfo, persistentResInfo, downloadPart)
@@ -170,6 +186,14 @@ function V056Hotfixer:OnInit()
       return TorappuBuildingUI.SM.StationManageUtil.GetPreQueueStatus(buildingModel, slotId, queue)
     end
     return value
+  end)
+  xlua.private_accessible(CS.Torappu.UI.Firework.FireworkCraft.FireworkCraftModel)
+  self:Fix_ex(CS.Torappu.UI.Firework.FireworkCraft.FireworkCraftModel, "LoadData", function(self, input)
+    local ok, value = xpcall(Fix_FireworkCraftModel_LoadData, debug.traceback, self, input)
+    if not ok then
+      LogError("fix FireworkCraftModel error:" .. value)
+      self:LoadData(input)
+    end
   end)
 end
 

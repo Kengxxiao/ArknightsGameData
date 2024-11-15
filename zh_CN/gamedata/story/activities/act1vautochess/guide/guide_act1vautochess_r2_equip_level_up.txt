@@ -1,0 +1,10 @@
+[HEADER(is_skippable=false, is_tutorial=true)] act1vautochess装备升级
+[Battle.LockAutoChessHud]
+[InputBlocker(blockInput=true)]
+[Battle.AutoChessOnlyAllow(reqConditionKey="buy_equip",bindKey="buy_equip", hint="请先完成教程")]
+[Delay(time=0.2)]
+[InputBlocker(blockInput=true, battleTarget="tile_first_shop_equip_chess", validWidth=70, validHeight=70)]
+[Tutorial(battleTarget="tile_first_shop_equip_chess", focusWidth=85, focusHeight=90,           waitForSignal="act1vautochess_shop_item_selected",           animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 装备也有更高级的版本，不同的是只需要<@tu.kw>两个</>相同装备即可合并。
+[InputBlocker(blockInput=true)]
+[Delay(time=0.5)]
+[Tutorial(target="btn_act1vautochess_shop_char_menu_buy",           waitForSignal="act1vautochess_battle_item_bought",          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] ——点击购买。

@@ -1,0 +1,25 @@
+[HEADER(is_skippable=false, is_tutorial=true)] act1vautochess商店升级
+[Battle.LockAutoChessHud]
+[InputBlocker(blockInput=true)]
+[Battle.AutoChessOnlyAllow(reqConditionKey="disabled",bindKey="deploy", hint="请先完成教程")]
+[Tutorial(focusX=40, focusY=80, focusWidth=1200, focusHeight=130, anchor="Bottom",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 这里是手牌区，购买的干员和道具都会存放在这里。
+[Battle.SetDragOperationLock(isLocked=true)]
+[Battle.SwitchToDefaultUIState]
+[Delay(time=0.5)]
+[InputBlocker(blockInput=false)]
+[Battle.SetDragOperationLock(isLocked=false)]
+[Tutorial(waitForSignal="act1vautochess_battle_field_char_putdown", dialogHead="$avatar_amiya", animStyle="Drag",           startBattleTarget="tile_first_hand_char_chess", endTileX=8, endTileY=4)] 干员的部署方式与其他模式没有区别，通过拖拽将干员从手牌区部署至战场。
+[Tutorial(waitForSignal="act1vautochess_battle_field_char_build")]
+[InputBlocker(blockInput=true)]
+[Delay(time=0.5)]
+[Tutorial(battleTarget="tile_first_battle_char_chess", focusWidth=85, focusHeight=90,           animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 已部署的干员可以直接拖拽改变部署位置。
+[PopupDialog(dialogHead="$avatar_amiya")] 本回合剩余的资金将被<@tu.kw>清零</>，<@tu.kw>无法留存</>至下一回合。我们需要尽量在回合结束前花费所有资金。让我们看看还有什么能够做的吧。
+[Battle.AutoChessOnlyDisable(reqConditionKey="disabled",bindKey="deploy")]
+[Battle.AutoChessOnlyAllow(reqConditionKey="ugrade_store", hint="请先完成教程")]
+[Delay(time=0.5)]
+[InputBlocker(blockInput=true, battleTarget="tile_trap_shop_upgrade", validWidth=70, validHeight=70)]
+[Tutorial(battleTarget="tile_trap_shop_upgrade", focusWidth=85, focusHeight=80,           waitForSignal="act1vautochess_util_trap_selected",           animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 驳船操作员是后勤部的专业干员，可以在操作员处消耗资金来<@tu.kw>升级</>驳船。
+[InputBlocker(blockInput=true)]
+[Delay(time=0.5)]
+[Tutorial(focusX=220, focusY=-170, focusWidth=435, focusHeight=350, anchor="Left",           animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 随着等级提高，驳船操作员会将更高阶的干员和补给加入补给池。
+[Tutorial(target="btn_act1vautochess_shop_char_menu_buy",           waitForSignal="act1vautochess_battle_shop_upgraded",           animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_amiya")] 点击按钮即可升级驳船。升级驳船需要消耗资金，请注意，升级驳船所需的资金会随着回合逐渐减少。所以请现在点击按钮进行<@tu.kw>升级</>。
