@@ -85,6 +85,10 @@ require "Feature/Activity/MainlineBp/MainlineBpDefine";
 require "Feature/Activity/MainlineBp/MainlineBpUtil";
 require "Feature/Activity/MainlineBp/MainlineBpMainDlg";
 
+require "Feature/Activity/CheckinVideo/CheckinVideoDefine";
+require "Feature/Activity/CheckinVideo/CheckinVideoUtil";
+require "Feature/Activity/CheckinVideo/CheckinVideoDlg";
+
 require "Feature/Activity/BlessOnly/BlessOnlyDefine"
 require "Feature/Activity/BlessOnly/BlessOnlyUtil"
 require "Feature/Activity/BlessOnly/BlessOnlyMainDlg"

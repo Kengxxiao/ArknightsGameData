@@ -345,6 +345,30 @@ end
 
 
 
+
+function LuaActivityUtil:_FindValidCheckinVideoActs(validActs, uncompleteActs, unfinishedActs, finishedActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.CHECKIN_VIDEO);
+  if actList == nil then
+    return;
+  end
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i];
+    local validAct = CS.Torappu.UI.ActivityUtil.SortableActivity(actId, HOME_WEIGHT_MAINLINE_BP);
+    validActs:Add(validAct);
+    if self:CheckIfActivityUncomplete(CS.Torappu.ActivityType.CHECKIN_VIDEO, actId) then
+      uncompleteActs:Add(validAct);
+    end
+    if self:_CheckIfActivityFinished(CS.Torappu.ActivityType.CHECKIN_VIDEO, validAct) then
+      finishedActs:Add(validAct)
+    else
+      unfinishedActs:Add(validAct)
+    end
+  end
+end
+
+
+
+
 function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs, unfinishedActs, finishedActs)
   
   _FindValidPrayOnlyActs(validActs, uncompleteActs, unfinishedActs, finishedActs)
@@ -360,6 +384,7 @@ function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs, unfinished
   self:_FindValidBlessOnly(validActs,uncompleteActs, unfinishedActs, finishedActs);
   self:_FindValidMainlineBpAct(validActs, uncompleteActs, unfinishedActs, finishedActs);
   self:_FindValidCheckInAccess(validActs,uncompleteActs, unfinishedActs, finishedActs);
+  self:_FindValidCheckinVideoActs(validActs, uncompleteActs, unfinishedActs, finishedActs);
 end
 
 
@@ -409,6 +434,9 @@ local DEFINE_CLS_FUNCS = {
   CHECKIN_ACCESS = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, ActCheckinAccessMainDlg)
   end,
+  CHECKIN_VIDEO = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, CheckinVideoDlg);
+  end
 }
 
 
@@ -483,6 +511,8 @@ function LuaActivityUtil:CheckIfActivityUncomplete(type, actId)
     return self:_CheckIfMainlineBpUncomplete(actId);
   elseif type == CS.Torappu.ActivityType.CHECKIN_ACCESS then
     return self:_CheckIfActAccessUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.CHECKIN_VIDEO then
+    return self:_CheckIfCheckinVideoUncomplete(actId);
   else
     return false;
   end
@@ -642,6 +672,21 @@ end
 
 
 
+function LuaActivityUtil:_CheckIfCheckinVideoUncomplete(actId)
+  local playerData = CheckinVideoUtil.LoadPlayerData(actId);
+  if playerData == nil or playerData.history == nil then
+    return false;
+  end
+  for index, historyInfo in pairs(playerData.history) do
+    if historyInfo == 1 then
+      return true;
+    end
+  end
+  return false;
+end
+
+
+
 
 
 function LuaActivityUtil:_CheckIfActivityFinished(type, validAct)
@@ -670,6 +715,8 @@ function LuaActivityUtil:_CheckIfActivityFinished(type, validAct)
     
   elseif type == CS.Torappu.ActivityType.CHECKIN_ACCESS then
 
+  elseif type == CS.Torappu.ActivityType.CHECKIN_VIDEO then
+    return self:_CheckIfCheckinVideoFinished(actId);
   end
   return false
 end
@@ -698,6 +745,29 @@ function LuaActivityUtil:_CheckIfSwitchOnlyFinished(actId)
     end
   end
   return true
+end
+
+
+
+function LuaActivityUtil:_CheckIfCheckinVideoFinished(actId)
+  local gameData = CheckinVideoUtil.LoadGameData(actId);
+  local playerData = CheckinVideoUtil.LoadPlayerData(actId);
+  if gameData == nil or gameData.checkInList == nil or playerData == nil then
+    return true;
+  end
+  local rewardCount = 0;
+  for index, data in pairs(gameData.checkInList) do
+    rewardCount = rewardCount + 1;
+  end
+  if playerData.history == nil or #playerData.history < rewardCount then
+    return false;
+  end
+  for index, historyInfo in pairs(playerData.history) do
+    if historyInfo == 1 then
+      return false;
+    end
+  end
+  return true;
 end
 
 

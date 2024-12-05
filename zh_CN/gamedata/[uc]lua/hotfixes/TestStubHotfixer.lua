@@ -10,7 +10,7 @@ function TestStubHotfixer:OnInit()
   if TEST then
     self:Fix_ex(CS.Torappu.HotfixTestStub, "GenerateDevInfo", function(devVersion, dataVer)
       local info = CS.Torappu.HotfixTestStub.GenerateDevInfo(devVersion, dataVer)
-      info = "HOTFIX_ENABLE\n" .. info
+      info = GlobalConfig.CUR_FUNC_VER .. "_HOTFIX_ENABLE\n" .. info
       return info
     end)
   end

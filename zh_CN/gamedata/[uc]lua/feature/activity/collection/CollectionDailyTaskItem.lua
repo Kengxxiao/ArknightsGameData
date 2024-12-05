@@ -3,7 +3,7 @@
 local CollectionDailyTaskItem = Class("CollectionDailyTaskItem", UIWidget);
 
 
-function CollectionDailyTaskItem:Refresh(actId, cfg)
+function CollectionDailyTaskItem:Refresh(actId, cfg, constDailyTaskItemOpenDayTs)
   self._itemDescBg.color = cfg.baseColor;
   self._pointIcon.color = cfg.baseColor;
 
@@ -47,8 +47,22 @@ function CollectionDailyTaskItem:Refresh(actId, cfg)
       end
       
     end
-    self._prgLabel.text = string.format("<color=\"#%s\">%d</color>/%d", cfg.baseColorHex, hasGet, total);
-    if hasGet >= total then
+
+    local notOpen = total <= 0;
+    if notOpen then 
+      local notOpenPrgFormat = string.format("<color=\"#%s\">-</color>/-", cfg.baseColorHex);
+      self._prgLabel.text = notOpenPrgFormat;
+    else
+      local openPrgFormat = string.format("<color=\"#%s\">%d</color>/%d", cfg.baseColorHex, hasGet, total);
+      self._prgLabel.text = openPrgFormat;
+    end
+    self._notOpenDescObj:SetActive(notOpen);
+    if notOpen then
+        local dateTime = CS.Torappu.DateTimeUtil.TimeStampToDateTime(constDailyTaskItemOpenDayTs);
+        self._openDayDescText.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.ACT_COLLECTION_DAILY_TASK_ITEM_TIME_OPEN_DESC, dateTime.Month, dateTime.Day,dateTime.Hour,dateTime.Minute);
+    end
+
+    if hasGet >= total and notOpen ~= true then
       self._flagText.text = "completed";
       self._flagText.color = cfg.baseColor
     else

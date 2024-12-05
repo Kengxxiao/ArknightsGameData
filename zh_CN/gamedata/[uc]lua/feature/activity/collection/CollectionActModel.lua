@@ -53,18 +53,6 @@ function CollectionActModel:GetMissionGroup(actId)
   return nil;
 end
 
- 
- 
-function CollectionActModel:FindMission(missionId )
-  local missionList = CS.Torappu.ActivityDB.data.missionData;
-  for idx, cur in pairs(missionList) do
-    if cur.id == missionId then
-      return cur;
-    end
-  end
-  return nil;
-end
-
 
 
 
@@ -79,6 +67,7 @@ function CollectionActModel:GetActCfg(actid)
     baseColorHex = "000000";
     pointItemName = "";
     taskItemScale = 0.5;
+    claimedRewardItemMaskColor = CS.Torappu.ColorRes.TweenHtmlStringToColor("636363FF");
   }
 
   local suc, homeActCfg = CS.Torappu.ActivityDB.data.homeActConfig:TryGetValue(actid);
@@ -97,6 +86,7 @@ end
 ActivityServiceCode = 
 {
   GET_COLLECTION_REWARD = "/activity/getActivityCollectionReward";
+  GET_COLLECTION_REWARDS = "/activity/getAllActivityCollectionReward";
   CHECK_COLLECTION_MISSIONS = "/activity/confirmActivityMissionList";
 }
 ActivityServiceCode = Readonly(ActivityServiceCode);
