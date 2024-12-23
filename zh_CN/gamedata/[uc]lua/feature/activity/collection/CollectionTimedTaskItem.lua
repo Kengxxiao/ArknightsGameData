@@ -24,7 +24,7 @@ local CollectionTimedTaskItem = Class("CollectionTimedTaskItem", UIWidget);
 
 function CollectionTimedTaskItem:Refresh( missionData, cfg )
   if missionData == nil then
-    return ;
+    return;
   end
 
   self.m_sortId = missionData.sortId;
@@ -97,7 +97,6 @@ function CollectionTimedTaskItem:CreateRewardIcon(cfg)
   if not self.m_itemCell then
     local itemCard = CS.Torappu.UI.UIAssetLoader.instance.staticOutlinks.uiItemCard;
     self.m_itemCell = CS.UnityEngine.GameObject.Instantiate(itemCard, self._rewardIconRoot):GetComponent("Torappu.UI.UIItemCard");
-    self.m_itemCell.isCardClickable = not self.m_finish;
     self.m_itemCell.showBackground = false;
     self.m_itemCell:CloseBtnTransition();
     local scaler = self.m_itemCell:GetComponent("Torappu.UI.UIScaler");
@@ -105,15 +104,22 @@ function CollectionTimedTaskItem:CreateRewardIcon(cfg)
     if scaler then
       scaler.scale = cfg.taskItemScale;
     end
+    self:AsignDelegate(self.m_itemCell, "onItemClick", function(this, index)
+      CS.Torappu.UI.UIItemDescFloatController.ShowItemDesc(self.m_itemCell.gameObject, self.m_rewardData);
+    end);
   end
 
-  local rewardData = self.m_rewardData;
-  self.m_itemCell:Render(0, rewardData);
-  self:AsignDelegate(self.m_itemCell, "onItemClick", function(this, index)
-    CS.Torappu.UI.UIItemDescFloatController.ShowItemDesc(self.m_itemCell.gameObject, rewardData);
-  end);
+  self.m_itemCell:Render(0, self.m_rewardData);
+  self:_RefreshItemStatus(cfg);
+end
+
+
+function CollectionTimedTaskItem:_RefreshItemStatus(cfg)
+  self.m_itemCell.isCardClickable = not self.m_finish;
   if self.m_finish and self.m_grp ~= nil then
     self.m_grp.alpha = 0.5;
+  else
+    self.m_grp.alpha = 1;
   end
 end
 
