@@ -1,0 +1,42 @@
+[HEADER(is_tutorial=true, is_skippable=false, is_autoable=false)] 电玩城喷泉大战教学_a
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.LockFunction(mask="CHARACTER_INFO")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true, black=0.2)]
+[Battle.SwitchToDefaultUIState]
+[Battle.Pause]
+[popupdialog(dialogHead="$avatar_sys")]【喷泉大战】通关指南
+[popupdialog(dialogHead="$avatar_sys")]在喷泉大战中，玩家的目标是尽可能多地在地块上铺上纯白水汽，【大战记分站】在技能开启时会按场上的<@tu.kw>纯白水汽数量</>进行记分。
+[Tutorial(tileX=4, tileY=4, focusWidth=108, focusHeight=111,           animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", anchor="Center",           protectTime=0.5, dialogHead="$avatar_sys")] 博士，这个喷泉是不是非常眼熟？
+[Tutorial(tileX=4, tileY=4, focusWidth=108, focusHeight=111,           animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", anchor="Center",           protectTime=0.5, dialogHead="$avatar_sys")] 这是在游戏中复现的汐斯塔的景观喷泉，<@tu.kw>部署在它四周</>的干员在攻击地面敌人时能在敌人脚下生成纯白水汽。
+[Tutorial(protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 在喷泉大战中，玩家并不需要把敌人全部消灭，敌人到达目标点后也<@tu.kw>不会扣除关卡生命值</>。
+[Tutorial(protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 玩家只需要尽可能在更多的地块上铺上纯白水汽，就能获得更高的关卡得分。
+[Tutorial(tileX=5, tileY=4, focusWidth=108, focusHeight=111,           animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", anchor="Center",           protectTime=0.5, dialogHead="$avatar_sys")] 博士，请先试着在喷泉旁部署干员作战，给地块铺上纯白水汽吧。	
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=1)]
+[Battle.Pause(pause=true)]
+[Battle.EnsureMinSp(charId="trap_187_arcgacha", sp=30)]
+[InputBlocker(blockInput=true, tileX=1, tileY=3, validWidth=105, validHeight=111)]
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[Tutorial(tileX=1, tileY=3, focusWidth=108, focusHeight=111,           animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", waitForSignal="char_info", charId="trap_187_arcgacha",           protectTime=0.5, dialogHead="$avatar_sys",dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 另外，扭蛋机里面也添加了新的支援道具。
+[Battle.LockFunction(mask="CHARACTER_INFO")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true)]
+[Delay(time=0.3)]
+[Tutorial(target="btn_skill", waitForSignal="use_skill",           animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 博士可以先抽一个试试。
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=1)]
+[Battle.Pause(pause=true)]
+[Tutorial(cardIndex=0, focusWidth=100, focusHeight=100, rightStart=true,           animStyle="Highlight", focusStyle="HighlightCircle", black=0.5,           protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 是游戏中最新推出的道具口渴乐乐！
+[InputBlocker(blockInput=false)]
+[Tutorial(waitForSignal="put_down",charId="trap_194_arcsoda", posX=8, posY=1,endTileX=8, endTileY=1, dialogHead="$avatar_sys", animStyle="Drag", startCardIndex=0, startRightStart=true)] 博士可以把它部署到不太容易铺上纯白水汽的区域。
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true, black=0.2)]
+[Tutorial(protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 口渴乐乐被干员<@tu.kw>打破</>以后会为周围的地块铺上纯白水汽。
+[Tutorial(protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 博士，请尽情利用这些道具来获取更高的关卡得分吧。
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]

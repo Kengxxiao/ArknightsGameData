@@ -1,0 +1,23 @@
+[HEADER(is_tutorial=true, is_skippable=false, is_autoable=false)] 电玩城喷泉大战教学_b
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.LockFunction(mask="CHARACTER_INFO")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true, black=0.2)]
+[Battle.SwitchToDefaultUIState]
+[Battle.Pause(pause=true)]
+[Tutorial(protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 注意，纯白水汽在场地上生成后，玩家并<@tu.kw>不能直接获得关卡得分</>。
+[Battle.EnsureMinSp(charId="trap_193_arctoll", sp=25)]
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true, tileX=1, tileY=5, validWidth=108, validHeight=111)]
+[Tutorial(tileX=1, tileY=5, focusWidth=108, focusHeight=111, waitForSignal="char_info",           animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", anchor="Center",           protectTime=0.5, dialogHead="$avatar_sys")] 玩家需要通过【大战记分站】来进行记分。
+[Battle.LockFunction(mask="CHARACTER_INFO")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true)]
+[Delay(time=0.3)]
+[InputBlocker(blockInput=true)]
+[Tutorial(target="btn_skill", waitForSignal="use_skill",           animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")] 它会在技能开启后会记分。
+[Tutorial(tileX=1, tileY=5, focusWidth=108, focusHeight=111,           focusStyle="HighlightCircle", black="$f_tut_black", anchor="Center",           protectTime=0.5, dialogHead="$avatar_sys")] 偷偷告诉博士一个秘密，随着水汽数量的增加，每个水汽获得的关卡得分也会<@tu.kw>递增</>。
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]

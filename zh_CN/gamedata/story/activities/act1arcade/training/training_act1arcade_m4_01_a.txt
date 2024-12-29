@@ -1,0 +1,64 @@
+[HEADER(is_tutorial=true, is_skippable=false)]电玩城计程车教学1_a
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.LockFunction(mask="CHARACTER_INFO")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true)]
+[Battle.SwitchToDefaultUIState]
+[Battle.Delay(time=1.1)]
+[Battle.Pause]
+[popupdialog(dialogHead="$avatar_sys")]【障碍飞车】通关指南
+[popupdialog(dialogHead="$avatar_sys")]在障碍飞车中，玩家的目标是让“两栖号”船车尽可能行驶更长的路程，并顺利到达<@tu.kw>灰色目标点</>。
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=2)]
+[Battle.Pause(pause=true)]
+[Tutorial(tileX=1, tileY=1, focusWidth=150, focusHeight=150,  animStyle="Highlight", focusStyle="HighlightCircle", dialogHead="$avatar_sys")] 这里是“两栖号”船车出发的两栖码头。  
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=2)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+[Tutorial(tileX=1, tileY=1, focusWidth=150, focusHeight=150,           animStyle="Highlight", focusStyle="HighlightCircle", black=0.5,           protectTime=0.2, dialogHead="$avatar_sys")] 两栖码头准备就绪后，就会自动开启技能发射一辆<@tu.kw>“两栖号”船车</>。
+[InputBlocker(blockInput=true)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=5)]
+[Battle.Pause(pause=true)]
+[Tutorial(tileX=3, tileY=1, focusWidth=180, focusHeight=180,  animStyle="Highlight", focusStyle="HighlightCircle", dialogHead="$avatar_sys")] “两栖号”船车发射后会沿着直线方向行驶，对碰撞到的敌人造成<@tu.kw>无视闪避的物理伤害</>与<@tu.kw>短暂晕眩</>。   
+[Tutorial(tileX=3, tileY=1, focusWidth=180, focusHeight=180,  animStyle="Highlight", focusStyle="HighlightCircle", dialogHead="$avatar_sys")] “两栖号”船车初始有一定的关卡得分，每行驶一定距离关卡得分就会增加。
+[Tutorial(tileX=8, tileY=5, focusWidth=120, focusHeight=120,  animStyle="Highlight", focusStyle="HighlightCircle", dialogHead="$avatar_sys",  dialogY="$f_lower_dialog_pos_y")] 当“两栖号”船车顺利到达<@tu.kw>灰色目标点</>时，玩家就可以获得这些关卡得分。  
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=3)]
+[Battle.Pause(pause=true)]
+[popupdialog(dialogHead="$avatar_sys")]“两栖号”船车如果驶进了<@tu.kw>不可通行</>的地形，就会被判出局，玩家也无法得到它的关卡得分。 
+[popupdialog(dialogHead="$avatar_sys")]不过，我们可以改变“两栖号”船车的行驶方向来避免这一情况的出现。
+[Battle.EnsureMinSp(charId="trap_187_arcgacha", sp=30)]
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true, tileX=6, tileY=3, validWidth=108, validHeight=111)]
+[Tutorial(tileX=6, tileY=3, focusWidth=108, focusHeight=111, waitForSignal="char_info", charId="trap_187_arcgacha",           animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", anchor="Center",           protectTime=0.5, dialogHead="$avatar_sys")] 看，这次扭蛋机中新增了道具——转向器。 
+[Battle.LockFunction(mask="CHARACTER_INFO")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true)]
+[Delay(time=0.3)]
+[Tutorial(target="btn_skill", waitForSignal="use_skill",           animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black",           protectTime=0.5, dialogHead="$avatar_sys")]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=0.3)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=false)]
+[Tutorial(tileX=5, tileY=1, focusWidth=108, focusHeight=111, waitForSignal="put_down", charId="trap_081_turngear",            posX=5, posY=1, animStyle="Drag", startCardIndex=0, startRightStart=true, endTileX=5, endTileY=1,           dialogHead="$avatar_sys", focusStyle="HighlightCircle", black="$f_tut_black",           protectTime=0.5)] 把它部署在这里。
+[Battle.Pause]
+[InputBlocker(blockInput=true, tileX=5, tileY=1, validWidth=150, validHeight=170)]
+[Tutorial(waitForSignal="select_direction", animStyle="Drag",           startTileX=5, startTileY=1, endTileX=5, endTileY=3)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=1.5)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+[popupdialog(dialogHead="$avatar_sys")]“两栖号”船车只要经过转向器或者<@tu.kw>我方单位</>，就会<@tu.kw>沿着其部署方向行驶</>。  
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=5)]
+[Battle.Pause(pause=true)]
+[popupdialog(dialogHead="$avatar_sys")]注意，“两栖号”船车如果遭到敌人攻击，它的生命值和关卡得分都会减少，博士需要及时清除障碍护送船车。
+[popupdialog(dialogHead="$avatar_sys")]另外，场上还会随机出现一些“搁浅零件”，“两栖号”船车经过它们可以获得对应的<@tu.kw>增益效果</>。  
+[popupdialog(dialogHead="$avatar_sys")]增益效果<@tu.kw>不止一种</>，博士可以在接下来的游戏中自行探索。
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[Battle.Pause(pause=false)]
