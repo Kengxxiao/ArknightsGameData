@@ -170,6 +170,10 @@ local function Fix_BuildingDataConverter_LoadWorkshopFormulaUnlockCondition(form
   return isUnlock, unlockCond;
 end
 
+local function Fix_CommonCharSelectDetailDefaultView_Reset(self, arg1)
+  self.m_targetChar = nil
+end
+
 function V057Hotfixer:OnInit()
   xlua.private_accessible(CS.Torappu.Activity.Act1VAutoChess.Act1VAutoChessChessShopQuickAssistOnlyItemView.VirtualView)
   self:Fix_ex(CS.Torappu.Activity.Act1VAutoChess.Act1VAutoChessChessShopQuickAssistOnlyItemView.VirtualView, "TryRefreshAssistItemView", function(self, arg1)
@@ -241,6 +245,14 @@ function V057Hotfixer:OnInit()
     end
     return unlock, unlockInfo;
   end);
+
+  xlua.private_accessible(CS.Torappu.UI.TemplateCharSelect.Common.CommonCharSelectDetailDefaultViewModel)
+  self:Fix_ex(CS.Torappu.UI.TemplateCharSelect.Common.CommonCharSelectDetailDefaultViewModel, "Reset", function(self, arg1)
+    local ok, errorInfo = xpcall(Fix_CommonCharSelectDetailDefaultView_Reset, debug.traceback, self, arg1)
+    if not ok then
+      LogError("fix CommonCharSelectDetailDefaultViewModel Reset error" .. errorInfo)
+    end
+  end)
   
 end
 
