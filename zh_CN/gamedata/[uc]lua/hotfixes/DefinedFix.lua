@@ -2,9 +2,11 @@
 local list = 
 {
   
+  "HotFixes/VCameraControllerHotfixer",
   "HotFixes/TestStubHotfixer",
-  "HotFixes/V057Hotfixer",
-  "HotFixes/RO4DLC2BounceAbilityHotfixer"
+  "HotFixes/ArchiveRelicModelHotfixer",
+  "HotFixes/RoguelikeActivityHistorySeedItemModelHotfixer",
+  "HotFixes/EtlchiHotfixer",
 };
 
 return list;

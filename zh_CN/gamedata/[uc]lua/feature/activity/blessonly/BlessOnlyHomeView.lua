@@ -1,4 +1,9 @@
 local FadeSwitchTween = CS.Torappu.UI.FadeSwitchTween
+local Ease = CS.DG.Tweening.Ease
+
+
+
+
 
 
 
@@ -41,6 +46,8 @@ function BlessOnlyHomeView:OnInit()
   self:AddButtonClickListener(self._fullScreenBtn, self._OnClickCloseHome);
   CS.Torappu.Lua.LuaUIUtil.BindBackPressToButton(self._closeHomeBtn);
 
+  self.m_hasEntryAnim = self._entryAnimWrapper ~= nil;
+
   self.m_switchTween = FadeSwitchTween(self._canvasGroup)
   self.m_switchTween:Reset(false)
 
@@ -55,8 +62,16 @@ function BlessOnlyHomeView:OnViewModelUpdate(data)
     return;
   end
 
-  
-  self.m_switchTween.isShow = data.panelState == BlessOnlyPanelState.HOME and not(data.isBlessListState);
+    
+  local isShow = data.panelState == BlessOnlyPanelState.HOME and not(data.isBlessListState);
+
+  if isShow and self.m_hasEntryAnim and data.playHomeEntryAnim then
+    self.m_switchTween:Reset(true);
+    self:_PlayEntryAnim();
+  else 
+    self.m_switchTween.isShow = isShow;
+  end
+ 
   if data.panelState ~= BlessOnlyPanelState.HOME then
     return;
   end
@@ -89,6 +104,15 @@ function BlessOnlyHomeView:InitEventFunc()
   self.m_fesPacket3:SetEventForBtn(self.onClickHomeReceivePacketBtn, self.onClickHomeCheckBlessBtn);
   self.m_fesPacket4:SetEventForBtn(self.onClickHomeReceivePacketBtn, self.onClickHomeCheckBlessBtn);
   self.m_dailyCheckInAdapter.onClickReceiveReward = self.onClickDailyCheckInBtn;
+end
+
+function BlessOnlyHomeView:_PlayEntryAnim()
+  if self.m_entryTween ~= nil and self.m_entryTween:IsPlaying() then
+    self.m_entryTween:Kill();
+  end
+  self._entryAnimWrapper:InitIfNot();
+  self._entryAnimWrapper:SampleClipAtBegin(self._entryAnimName);
+  self.m_entryTween = self._entryAnimWrapper:PlayWithTween(self._entryAnimName):SetEase(Ease.Linear);;
 end
 
 function BlessOnlyHomeView:_OnClickSwitchToCollection()

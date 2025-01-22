@@ -20,10 +20,6 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
-
-
-
-
 local BlessOnlyBlessCollectionView = Class("BlessOnlyBlessCollectionView", UIPanel);
 
 function BlessOnlyBlessCollectionView:OnInit()
@@ -46,17 +42,17 @@ function BlessOnlyBlessCollectionView:OnViewModelUpdate(data)
   if data == nil then
     return;
   end
+  self.m_actId = data:GetActId();
   self.m_switchTween.isShow = data.panelState == BlessOnlyPanelState.BLESS_COLLECTION;
   if data.panelState ~= BlessOnlyPanelState.BLESS_COLLECTION then
     return;
   end
 
-  local avatarSprite = luaUtils.GetPlayerAvatarSprite(data.avatarInfo);
-  self.m_avatarView:Render(avatarSprite);
+  self.m_avatarView:Render(data.avatarInfo);
   
   if self._crossAppShareAvatarContent ~= nil then
     local avatarModel = CS.Torappu.UI.CrossAppShare.CrossAppShareAvatarModel();
-    avatarModel:InitModel(true, avatarSprite);
+    avatarModel:InitModel(true, data.avatarInfo);
     self._crossAppShareAvatarContent.dynAssetModel = avatarModel;
   end
 
@@ -66,32 +62,29 @@ function BlessOnlyBlessCollectionView:OnViewModelUpdate(data)
 
   SetGameObjectActive(self._shareBtn.gameObject, CS.Torappu.UI.CrossAppShare.CrossAppShareUtil.CheckBtnInTimeByMissionId(data.shareMissionId, false));
   self.m_cachedShareMissionId = data.shareMissionId;
-  
-  local fesModel1 = data:GetPacketByOrder(1);
-  if fesModel1 ~= nil then
-    self:_RenderFesDisplay(fesModel1, self._blessText1, self._charAvatar1);
-  end
-  local fesModel2 = data:GetPacketByOrder(2);
-  if fesModel2 ~= nil then
-    self:_RenderFesDisplay(fesModel2, self._blessText2, self._charAvatar2);
-  end
-  local fesModel3 = data:GetPacketByOrder(3);
-  if fesModel3 ~= nil then
-    self:_RenderFesDisplay(fesModel3, self._blessText3, self._charAvatar3);
-  end
-  local fesModel4 = data:GetPacketByOrder(4);
-  if fesModel4 ~= nil then
-    self:_RenderFesDisplay(fesModel4, self._blessText4, self._charAvatar4);
-  end
+
+  self:_RenderFesAvatars(data);
 end
 
 
-
-
-function BlessOnlyBlessCollectionView:_RenderFesDisplay(fesModel, blessTextImg, charAvatar)
-  blessTextImg:SetSprite(self._atlasObject:GetSpriteByName(fesModel.fesBlessingText1));
+function BlessOnlyBlessCollectionView:_RenderFesAvatars(data)
   local hubPath = CS.Torappu.ResourceUrls.GetCharAvatarHubPath();
-  charAvatar.sprite = self:LoadSpriteFromAutoPackHub(hubPath, fesModel.defaultFesCharAvatarId);
+  local fesModel1 = data:GetPacketByOrder(1);
+  if fesModel1 ~= nil then
+    self._charAvatar1.sprite = self:LoadSpriteFromAutoPackHub(hubPath, fesModel1.defaultFesCharAvatarId);
+  end
+  local fesModel2 = data:GetPacketByOrder(2);
+  if fesModel2 ~= nil then
+    self._charAvatar2.sprite = self:LoadSpriteFromAutoPackHub(hubPath, fesModel2.defaultFesCharAvatarId);
+  end
+  local fesModel3 = data:GetPacketByOrder(3);
+  if fesModel3 ~= nil then
+    self._charAvatar3.sprite = self:LoadSpriteFromAutoPackHub(hubPath, fesModel3.defaultFesCharAvatarId);
+  end
+  local fesModel4 = data:GetPacketByOrder(4);
+  if fesModel4 ~= nil then
+    self._charAvatar4.sprite = self:LoadSpriteFromAutoPackHub(hubPath, fesModel4.defaultFesCharAvatarId);
+  end
 end
 
 function BlessOnlyBlessCollectionView:_OnClickCloseBtn()
@@ -103,13 +96,9 @@ end
 
 function BlessOnlyBlessCollectionView:_CreateBlessCollectionCollector()
   local param = CS.Torappu.UI.Act1Blessing.Act1BlessingBlessCollectionModelCollector.CollectParam();
-  param.blessTextImage1 = self._blessText1;
   param.charAvatar1 = self._charAvatar1;
-  param.blessTextImage2 = self._blessText2;
   param.charAvatar2 = self._charAvatar2;
-  param.blessTextImage3 = self._blessText3;
   param.charAvatar3 = self._charAvatar3;
-  param.blessTextImage4 = self._blessText4;
   param.charAvatar4 = self._charAvatar4;
   param.playerIdText = self._playerIdText;
   param.playerNameText = self._playerNameText;
@@ -132,7 +121,7 @@ function BlessOnlyBlessCollectionView:_OnClickShareBtn()
   if CS.Torappu.UI.UIPageController.isTransiting then
     return;
   end
-  local prefabPath = CS.Torappu.ResourceUrls.GetAct1BlessingRemakeBlessCollectionPath();
+  local prefabPath = CS.Torappu.ResourceUrls.GetActBlessOnlyRemakeBlessCollectionPath(self.m_actId);
   local collector = self:_CreateBlessCollectionCollector();
   local remakeController = self:LoadPrefab(prefabPath):GetComponent("Torappu.UI.CrossAppShare.CrossAppShareRemakeController");
 

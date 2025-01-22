@@ -656,6 +656,10 @@ function LuaActivityUtil:_CheckIfBlessOnlyUncomplete(actId)
   return BlessOnlyUtil.CheckBlessActIsUncomplete(actId);
 end
 
+function LuaActivityUtil:_CheckIfBlessOnlyFinished(actId)
+  return BlessOnlyUtil.CheckBlessActIsFinished(actId);
+end
+
 function LuaActivityUtil:_CheckIfActAccessUncomplete(actId)
   local suc, playerData = CS.Torappu.PlayerData.instance.data.activity.checkinAccessList:TryGetValue(actId);
   if (suc) then
@@ -712,7 +716,7 @@ function LuaActivityUtil:_CheckIfActivityFinished(type, validAct)
   elseif type == CS.Torappu.ActivityType.UNIQUE_ONLY then
     return self:_CheckIfUniqueOnlyFinished(actId)
   elseif type == CS.Torappu.ActivityType.BLESS_ONLY then
-    
+    return self:_CheckIfBlessOnlyFinished(actId)
   elseif type == CS.Torappu.ActivityType.CHECKIN_ACCESS then
 
   elseif type == CS.Torappu.ActivityType.CHECKIN_VIDEO then

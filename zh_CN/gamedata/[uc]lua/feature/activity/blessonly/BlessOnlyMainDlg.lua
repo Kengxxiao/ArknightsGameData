@@ -145,6 +145,7 @@ end
 function BlessOnlyMainDlg:_HandleDailyCheckinResponse(response) 
   local handler = CS.Torappu.UI.LuaUIMisc.ShowGainedItems(response.items, CS.Torappu.UI.UIGainItemFloatPanel.Style.DEFAULT, function()
     self.m_blessOnlyViewModel:UpdateData();
+    self.m_blessOnlyViewModel.playHomeEntryAnim = false;
     self.m_blessOnlyViewModel:NotifyUpdate();
   end);
   self:_AddDisposableObj(handler);
@@ -195,7 +196,7 @@ function BlessOnlyMainDlg:_HandleOpenPacketResponse(response)
 end
 
 function BlessOnlyMainDlg:_OnClosePacketPanel()
-  self.m_blessOnlyViewModel:ReturnToHomeState();
+  self.m_blessOnlyViewModel:ReturnToHomeStateFromPacket();
   self.m_blessOnlyViewModel:NotifyUpdate();
 end
 

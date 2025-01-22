@@ -80,8 +80,6 @@ end
 
 
 
-
-
 local BlessOnlyPacketModel = Class("BlessOnlyPacketModel");
 
 
@@ -92,8 +90,6 @@ function BlessOnlyPacketModel:LoadData(festivalInfo, actGameData)
   self.absoluteTime = festivalInfo.absoluteTime;
   self.relativeDate = festivalInfo.relativeDate;
   self.fesTitleText = festivalInfo.fesTitleText;
-  self.fesBlessingText1 = festivalInfo.fesBlessingText1;
-  self.fesBlessingText2 = festivalInfo.fesBlessingText2;
   self.diamondRewardCnt = festivalInfo.rewardCnt;
   self.adTips = festivalInfo.adTips;
   
@@ -189,6 +185,7 @@ function BlessOnlyPacketModel:CheckIsCurDay()
   local nowTimeStamp = luaUtils.GetCurrentTs();
   return nowTimeStamp > self.absoluteTime and nowTimeStamp < nextTimeStamp;
 end
+
 
 
 
@@ -331,6 +328,7 @@ end
 
 function BlessOnlyViewModel:_SetDefaultPanelState()
   if self:_CheckHasNoPacketToOpen() then
+    self.playHomeEntryAnim = true;
     self.panelState = BlessOnlyPanelState.HOME;
     self.openFestivalId = "";
     self.openFestivalOrder = 0;
@@ -381,6 +379,15 @@ function BlessOnlyViewModel:_SetHighPriorityFestivalId()
   self.highPriorityFestivalOrder = 0;
 end
 
+function BlessOnlyViewModel:_ReturnToHomeState()
+  self.openFestivalId = "";
+  self.openPacketModel = nil;
+  self.openFestivalOrder = 0;
+  self.panelState = BlessOnlyPanelState.HOME;
+  self.isContinueOpenPacket = false;
+  self:UpdateData();
+end
+
 
 function BlessOnlyViewModel:GetReceivedPacketCnt()
   local resCnt = 0;
@@ -421,13 +428,19 @@ function BlessOnlyViewModel:GetPacketCnt()
   return #self.m_packetList;
 end
 
+
+function BlessOnlyViewModel:GetActId()
+  return self.m_actId;
+end
+
 function BlessOnlyViewModel:CloseBlessList()
   if self.openPacketModel ~= nil then
     self.isBlessListState = false;
     self.openPacketModel.curIndex = 0;
   end
   if self.m_isFromHomeToBlessList then
-    self:ReturnToHomeState();
+    self.playHomeEntryAnim = false;
+    self:_ReturnToHomeState();
   else
     self:_SetDefaultPanelState();
     self.isContinueOpenPacket = self.panelState == BlessOnlyPanelState.PACKET;
@@ -526,16 +539,14 @@ function BlessOnlyViewModel:SwitchToBlessCollectionState()
   end
 end
 
-function BlessOnlyViewModel:ReturnToHomeState()
-  self.openFestivalId = "";
-  self.openPacketModel = nil;
-  self.openFestivalOrder = 0;
-  self.panelState = BlessOnlyPanelState.HOME;
-  self.isContinueOpenPacket = false;
-  self:UpdateData();
+function BlessOnlyViewModel:ReturnToHomeStateFromPacket()
+  self.playHomeEntryAnim = true;
+  self:_ReturnToHomeState();
 end
 
+
 function BlessOnlyViewModel:CloseBlessCollection()
+  self.playHomeEntryAnim = false;
   self.panelState = BlessOnlyPanelState.HOME;
 end
 

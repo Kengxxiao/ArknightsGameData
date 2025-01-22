@@ -17,6 +17,9 @@ local Ease = CS.DG.Tweening.Ease
 
 
 
+
+
+
 local BlessOnlyPacketView = Class("BlessOnlyPacketView", UIPanel);
 
 BlessOnlyPacketView.HIDE_ALPHA = 0;
@@ -36,7 +39,7 @@ function BlessOnlyPacketView:OnViewModelUpdate(data)
   if data == nil then
     return;
   end
-
+  self.m_actId = data:GetActId();
   local isCurShow = data.panelState == BlessOnlyPanelState.PACKET and not(data.isBlessListState);
   if (isCurShow ~= self.m_isShow or data.isContinueOpenPacket) and not(data.isBlessListState) then
     if isCurShow or data.isContinueOpenPacket then
@@ -61,8 +64,11 @@ function BlessOnlyPacketView:_ShowEntryPacket()
   self._animWrapper:InitIfNot();
   SetGameObjectActive(self._selfObject, true);
   self._animWrapper:SampleClipAtBegin(self._entryAnimName);
-  self.m_entryTween = self._animWrapper:PlayWithTween(self._entryAnimName):SetEase(Ease.Linear);
-  CS.Torappu.TorappuAudio.PlayUI(AudioConsts.ACT1BLESSING_PACKET_ENTRY);
+  self.m_entryTween = self._animWrapper:PlayWithTween(self._entryAnimName):SetEase(Ease.Linear):OnComplete(function()
+    self:_PlayLoopAnim();
+  end);
+  local audio = CS.Torappu.Lua.Util.Format(AudioConsts.BLESSONLY_PACKET_ENTRY, string.upper(self.m_actId));
+  CS.Torappu.TorappuAudio.PlayUI(audio);
 end
 
 function BlessOnlyPacketView:_HidePacket()
@@ -72,7 +78,19 @@ function BlessOnlyPacketView:_HidePacket()
   end
   self.m_hideTween = self._canvasGroup:DOFade(self.HIDE_ALPHA, self.HIDE_DURATION):OnComplete(function()
     SetGameObjectActive(self._selfObject, false);
+    self._canvasGroup.alpha = 1;
   end);
+end
+
+function BlessOnlyPacketView:_PlayLoopAnim()
+  if self._loopAnimName == nil or self._loopAnimName == "" then
+    return;
+  end
+  if self.m_loopTween ~= nil and self.m_loopTween:IsPlaying() then
+    return;
+  end
+  self._animWrapper:SampleClipAtBegin(self._loopAnimName);
+  self.m_loopTween = self._animWrapper:PlayWithTween(self._loopAnimName):SetEase(Ease.Linear):SetLoops(-1);
 end
 
 function BlessOnlyPacketView:_ShowOpenPacket()
@@ -80,15 +98,15 @@ function BlessOnlyPacketView:_ShowOpenPacket()
     return;
   end
   if self.m_openPacketTween ~= nil and self.m_openPacketTween:IsPlaying() then
-    self.m_openPacketTween:Kill();
-    self.m_openPacketTween = nil;
+    return;
   end
   self._animWrapper:InitIfNot();
   self._animWrapper:SampleClipAtBegin(self._openPacketAnimName);
   self.m_openPacketTween = self._animWrapper:PlayWithTween(self._openPacketAnimName):SetEase(Ease.Linear):OnComplete(function()
     self:_OnClickOpenPacketReward();
   end);
-  CS.Torappu.TorappuAudio.PlayUI(AudioConsts.ACT1BLESSING_OPEN_PACKET);
+  local audio = CS.Torappu.Lua.Util.Format(AudioConsts.BLESSONLY_OPEN_PACKET, string.upper(self.m_actId));
+  CS.Torappu.TorappuAudio.PlayUI(audio);
 end
 
 function BlessOnlyPacketView:_OnClickOpenPacketReward()

@@ -19,7 +19,6 @@ function BlessOnlyBlessListVerticalItem:Render(data, illustLoader)
   if data == nil or data.openPacketModel == nil or data.openPacketModel.curBlessItemModel == nil then 
     return;
   end
-
   local curBlessItemModel = data.openPacketModel.curBlessItemModel;
   self._charNameText.text = curBlessItemModel.charName;
   local blessingGroupRenderData = self._blessingAtlasObject:GetSpriteByName(data.openPacketModel.blessingGroup);
@@ -31,19 +30,15 @@ function BlessOnlyBlessListVerticalItem:Render(data, illustLoader)
     self.m_cachedBlessItemModel = curBlessItemModel;
 
     local skin = CS.Torappu.CharUISkinStruct(curBlessItemModel.charId, curBlessItemModel.charSkinId);
-    local scale = tonumber(self._illustScale);
+
     if self._crossAppShareIllustContent ~= nil then
       local illustModel = CS.Torappu.UI.CrossAppShare.CrossAppShareIllustModel();
-      illustModel:InitModel(true, skin, scale);
+      illustModel:InitModel(true, skin);
       self._crossAppShareIllustContent.dynAssetModel = illustModel;
     end
    
     eutil.ClearAllChildren(self._illustContainer);
     local illust = eutil.LoadStaticChrIllust(illustLoader, skin, self._illustContainer);
-
-    if illust ~= nil then 
-      illust.rectTransform.sizeDelta = illust.rectTransform.sizeDelta * scale;
-    end
   end
 end
 

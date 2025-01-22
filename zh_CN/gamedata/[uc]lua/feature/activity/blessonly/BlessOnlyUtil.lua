@@ -67,17 +67,45 @@ function BlessOnlyUtil.CheckBlessActIsFinished(actId)
   if playerData == nil then
     return false;
   end
-
   local festivalHistory = playerData.festivalHistory;
-  if festivalHistory ~= nil then
-    for csI = 0, festivalHistory.Count - 1 do
-      local fes = festivalHistory[csI];
-      if fes ~= nil and fes.state ~= 0 then
-        return false;
-      end
+  local checkInHistory = playerData.history;
+  if checkInHistory == nil or festivalHistory == nil then
+    return false;
+  end
+
+  local actData = BlessOnlyUtil.LoadGameData(actId);
+  if actData == nil or actData.festivalInfoList == nil or actData.checkInInfos == nil then
+    return false;
+  end
+  
+  local checkInCount = 0;
+  for index, data in pairs(actData.checkInInfos) do
+    checkInCount = checkInCount + 1;
+  end
+  if checkInHistory.Count ~= checkInCount then 
+    return false;
+  end
+
+  local fesCount = 0;
+  for index, data in pairs(actData.festivalInfoList) do
+    fesCount = fesCount + 1;
+  end
+  if festivalHistory.Count ~= fesCount then 
+    return false;
+  end
+
+  for csI = 0, festivalHistory.Count - 1 do
+    local fes = festivalHistory[csI];
+    if fes ~= nil and fes.state ~= 0 then   
+      return false;
     end
   end
 
-  
-  return false;
+  for csI = 0, checkInHistory.Count - 1 do
+    if checkInHistory[csI] ~= nil and checkInHistory[csI] ~= 0 then
+      return false;
+    end
+  end
+
+  return true;
 end

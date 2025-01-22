@@ -46,15 +46,20 @@ local FadeSwitchTween = CS.Torappu.UI.FadeSwitchTween;
 
 
 
+
+
+
+
+
 local BlessOnlyBlessListView = Class("BlessOnlyBlessListView", UIPanel);
 
 local PANEL_HIDE_DURATION = 0.16;
 
-local PANEL_ENTRY = "act1blessing_list_entry";
-local MOVE_LEFT_OUT = "act1blessing_list_switch_prev_hide";
-local MOVE_LEFT_IN = "act1blessing_list_switch_prev_entry";
-local MOVE_RIGHT_OUT = "act1blessing_list_switch_next_hide";
-local MOVE_RIGHT_IN = "act1blessing_list_switch_next_entry";
+local PANEL_ENTRY = "{0}_list_entry";
+local MOVE_LEFT_OUT = "{0}_list_switch_prev_hide";
+local MOVE_LEFT_IN = "{0}_list_switch_prev_entry";
+local MOVE_RIGHT_OUT = "{0}_list_switch_next_hide";
+local MOVE_RIGHT_IN = "{0}_list_switch_next_entry";
 
 function BlessOnlyBlessListView:OnInit()
   self:AddButtonClickListener(self._leftArrowBtn, self._OnClickLeftArrowBtn);
@@ -86,7 +91,7 @@ function BlessOnlyBlessListView:OnViewModelUpdate(data)
     return;
   end
   self.m_cachedViewModel = data;
-  
+  self.m_actId = data:GetActId();
   local isEnter = not(self.m_cachedIsShow) and data.isBlessListState;
   if isEnter then
     CS.Torappu.UI.UIPopupWindow.ShotBlurredImage(self._bgBlur);
@@ -116,12 +121,12 @@ function BlessOnlyBlessListView:OnViewModelUpdate(data)
     local inAnimName = "";
     if self:_CheckIsMoveLeft(packetModel.curIndex, #packetModel.blessItemList) then
       
-      outAnimName = MOVE_LEFT_OUT;
-      inAnimName = MOVE_LEFT_IN;
+      outAnimName = CS.Torappu.Lua.Util.Format(MOVE_LEFT_OUT, self.m_actId);
+      inAnimName = CS.Torappu.Lua.Util.Format(MOVE_LEFT_IN, self.m_actId);
     else
       
-      outAnimName = MOVE_RIGHT_OUT;
-      inAnimName = MOVE_RIGHT_IN;
+      outAnimName = CS.Torappu.Lua.Util.Format(MOVE_RIGHT_OUT, self.m_actId);
+      inAnimName = CS.Torappu.Lua.Util.Format(MOVE_RIGHT_IN, self.m_actId);
     end
     self._animWrapper:InitIfNot();
     self._animWrapper:SampleClipAtBegin(outAnimName);
@@ -143,6 +148,8 @@ function BlessOnlyBlessListView:_Render(data)
   if packetModel == nil then
     return;
   end
+  local indexChanged = self.m_cachedIndex ~= packetModel.curIndex;
+
   self.m_cachedPacketModel = packetModel;
   self.m_cachedIndex = packetModel.curIndex;
   self.m_sliderAdapter:NotifyDataSetChanged();
@@ -153,6 +160,10 @@ function BlessOnlyBlessListView:_Render(data)
     self.m_blessOnlyBlessListHorizontalItem:Render(data, self.illustLoader);
   elseif data.blessListState == BlessOnlyBlessListState.VERTICAL then
     self.m_blessOnlyBlessListVerticalItem:Render(data, self.illustLoader);
+  end
+
+  if self._charAvatarLeft ~= nil and self._charAvatarRight ~= nil and indexChanged then
+    self:_RenderCharAvatars(self._charAvatarLeft, self._charAvatarRight);
   end
   
   SetGameObjectActive(self._switchHorBtnPanel, data.blessListState == BlessOnlyBlessListState.VERTICAL);
@@ -167,8 +178,9 @@ function BlessOnlyBlessListView:_ShowEntry()
   end
   SetGameObjectActive(self._selfObject, true);
   self._animWrapper:InitIfNot();
-  self._animWrapper:SampleClipAtBegin(PANEL_ENTRY);
-  self.m_entryHideTween = self._animWrapper:PlayWithTween(PANEL_ENTRY):SetEase(Ease.Linear);;
+  local entryAnimName = CS.Torappu.Lua.Util.Format(PANEL_ENTRY, self.m_actId);
+  self._animWrapper:SampleClipAtBegin(entryAnimName);
+  self.m_entryHideTween = self._animWrapper:PlayWithTween(entryAnimName):SetEase(Ease.Linear);;
 end
 
 function BlessOnlyBlessListView:_ShowHide()
@@ -177,6 +189,7 @@ function BlessOnlyBlessListView:_ShowHide()
   end
   self.m_entryHideTween = self._canvasGroup:DOFade(0, PANEL_HIDE_DURATION):OnComplete(function()
     SetGameObjectActive(self._selfObject, false);
+    self._canvasGroup.alpha = 1;
   end);;
 end
 
@@ -275,15 +288,16 @@ function BlessOnlyBlessListView:_OnShareBtnClick()
   end
 
   local prefab, collector;
+
   if self.m_cachedViewModel.blessListState == BlessOnlyBlessListState.HORIZONTAL then
-    local horizontalPrefabPath = CS.Torappu.ResourceUrls.GetAct1BlessingRemakeHorizontalItemPath();
+    local horizontalPrefabPath = CS.Torappu.ResourceUrls.GetActBlessOnlyRemakeHorizontalItemPath(self.m_actId);
     collector = self.m_blessOnlyBlessListHorizontalItem:CreateRemakeCollector();
     prefab = self:LoadPrefab(horizontalPrefabPath):GetComponent("Torappu.UI.CrossAppShare.CrossAppShareRemakeController");
   elseif self.m_cachedViewModel.blessListState == BlessOnlyBlessListState.VERTICAL then
     if self.m_blessOnlyBlessListVerticalItem:CheckIsShareIllustModelNil() then
       return;
     end
-    local verticalPrefabPath = CS.Torappu.ResourceUrls.GetAct1BlessingRemakeVerticalItemPath();
+    local verticalPrefabPath = CS.Torappu.ResourceUrls.GetActBlessOnlyRemakeVerticalItemPath(self.m_actId);
     collector = self.m_blessOnlyBlessListVerticalItem:CreateRemakeCollector();
     prefab = self:LoadPrefab(verticalPrefabPath):GetComponent("Torappu.UI.CrossAppShare.CrossAppShareRemakeController");
   end
@@ -310,6 +324,37 @@ function BlessOnlyBlessListView:_CheckIsMoveLeft(curIndex, blessItemCnt)
     index = blessItemCnt;
   end
   return curIndex == index;
+end
+
+
+
+
+function BlessOnlyBlessListView:_RenderCharAvatars(charAvatarLeft, charAvatarRight)
+  if self.m_cachedPacketModel ==nil or self.m_cachedPacketModel.blessItemList == nil then
+    return;
+  end
+
+  local itemCount = #self.m_cachedPacketModel.blessItemList;
+
+  local leftIndex = self.m_cachedIndex - 1;
+  if leftIndex < 1 then 
+    leftIndex = itemCount;
+  end
+  local leftItemModel = self.m_cachedPacketModel.blessItemList[leftIndex];
+
+  local rightIndex = self.m_cachedIndex + 1;
+  if rightIndex > itemCount then 
+    rightIndex = 1;
+  end
+  local rightItemModel = self.m_cachedPacketModel.blessItemList[rightIndex];
+
+  if leftItemModel == nil or rightItemModel == nil then
+    return;
+  end
+
+  local hubPath = CS.Torappu.ResourceUrls.GetCharAvatarHubPath();
+  charAvatarLeft.sprite = self:LoadSpriteFromAutoPackHub(hubPath, leftItemModel.charAvatarId);
+  charAvatarRight.sprite = self:LoadSpriteFromAutoPackHub(hubPath, rightItemModel.charAvatarId);
 end
 
 return BlessOnlyBlessListView

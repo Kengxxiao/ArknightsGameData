@@ -13,11 +13,6 @@
 
 
 
-
-
-
-
-
 local BlessOnlyHomePacketView = Class("BlessOnlyHomePacketView", UIPanel);
 
 function BlessOnlyHomePacketView:OnInit()
@@ -37,12 +32,18 @@ function BlessOnlyHomePacketView:Render(data)
     return;
   end
 
-  SetGameObjectActive(self._disablePanel, viewModel.checkInState == BlessOnlyCheckInState.DISABLE);
+  local isOverTime = viewModel.isOverTime ~= nil and viewModel.isOverTime;
+  SetGameObjectActive(self._disablePanel, viewModel.checkInState == BlessOnlyCheckInState.DISABLE and not isOverTime);
+  SetGameObjectActive(self._overTimePanel, viewModel.checkInState == BlessOnlyCheckInState.DISABLE and isOverTime);
   SetGameObjectActive(self._availPanel, viewModel.checkInState == BlessOnlyCheckInState.AVAIL);
   SetGameObjectActive(self._receivedPanel, viewModel.checkInState == BlessOnlyCheckInState.RECEIVED);
   
   if viewModel.checkInState == BlessOnlyCheckInState.DISABLE then
-    self:_RenderDisablePanel(viewModel); 
+    if viewModel.isOverTime then 
+      self:_RenderOverTimePanel(viewModel); 
+    else 
+      self:_RenderDisablePanel(viewModel); 
+    end
   elseif viewModel.checkInState == BlessOnlyCheckInState.AVAIL then
     self:_RenderAvailPanel();
   elseif viewModel.checkInState == BlessOnlyCheckInState.RECEIVED then
@@ -52,26 +53,27 @@ end
 
 
 function BlessOnlyHomePacketView:_RenderDisablePanel(viewModel)
-  self._diamondImage.color = CS.Torappu.ColorRes.TweenHtmlStringToColor(self._disableColor);
-  if viewModel.isOverTime then
-    self._disableText.text = viewModel.overTimeTips;
-  else
+  if self._disableText ~= nil then
     self._disableText.text = viewModel.adTips;
   end
 end
 
+
+function BlessOnlyHomePacketView:_RenderOverTimePanel(viewModel)
+  if self._overTimeText ~= nil then
+    self._overTimeText.text = viewModel.overTimeTips;
+  end
+end
+
 function BlessOnlyHomePacketView:_RenderAvailPanel()
-  self._diamondImage.color = CS.Torappu.ColorRes.TweenHtmlStringToColor(self._availColor);
+  
 end
 
 
 function BlessOnlyHomePacketView:_RenderReceivedPanel(viewModel)
-  self._diamondImage.color = CS.Torappu.ColorRes.TweenHtmlStringToColor(self._receivedColor);
   local hubPath = CS.Torappu.ResourceUrls.GetCharAvatarHubPath();
   self._blessCharIcon.sprite = self:LoadSpriteFromAutoPackHub(hubPath, viewModel.defaultFesCharAvatarId);
   self._blessRewardCnt.text = CS.Torappu.Lua.Util.Format(StringRes.BLESSONLY_REWARD_CNT_DISPLAY, viewModel.diamondRewardCnt);
-  self._blessBlackBgText:SetSprite(self._atlasObject:GetSpriteByName(viewModel.fesBlessingText1))
-  self._blessWhiteBgText:SetSprite(self._atlasObject:GetSpriteByName(viewModel.fesBlessingText2));
 end
 
 function BlessOnlyHomePacketView:_OnClickReceivePacket()

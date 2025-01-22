@@ -257,7 +257,7 @@ function CollectionMainDlg:_HandleImageThemeColor()
 end
 
 function CollectionMainDlg:_HandleJumpToRelatedSystem()
-  if CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() or self.m_activityId == nil or self.m_constData == nil then
+  if CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() or self.m_constData == nil then
     return;
   end
 
@@ -272,15 +272,7 @@ function CollectionMainDlg:_HandleJumpToRelatedSystem()
     luaUtils.TextToast(toastText);
     return;
   end
-  local jumpBtnParam1 = self.m_constData.jumpBtnParam1;
-  if jumpBtnParam1 == nil or jumpBtnParam1 == "" then
-    return;
-  end
   CS.Torappu.UI.ActivityUtil.CollectionActivityJumpToRelatedSystem(self.m_activityId, self.m_canJump);
-  local page = CS.Torappu.UI.UIPageController.activePage;
-  if page ~= nil and page:GetType() == typeof(CS.Torappu.UI.Home.HomePage) then
-    page.autoPopupController:Reset(nil)
-  end
 end
 
 
@@ -317,6 +309,7 @@ function CollectionMainDlg:_SynPrg(collections, completeIdx, pointCurCnt, lastCa
   local helper = self._scrollView.content.gameObject:AddComponent(typeof(CS.Torappu.UI.ContentSizeFitterHelper));
   local this = self;
   self:AsignDelegate(helper, "eSizeChanged", function()
+    helper.eSizeChanged = nil;
     CS.UnityEngine.GameObject.Destroy(helper);
     if lastCanGetIdx > 0 then
       this._scrollView.horizontalNormalizedPosition = this:_CalculateItemScrollPrg(lastCanGetIdx, collen);
