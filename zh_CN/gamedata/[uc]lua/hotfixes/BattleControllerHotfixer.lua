@@ -1,30 +1,41 @@
 local BattleControllerHotfixer = Class("BattleControllerHotfixer", HotfixBase)
 
-local function SetTempLifePoint_Fix(self, value, side)
-  if not self.isPlaying then
-    return
+local function Fix_OnRallyPointLikeReborn(self, unit)
+  for i = 0, self.m_globalBuffs.Count - 1 do
+    if unit.id == "char_1040_blaze2" then
+      self.m_globalBuffs[i]:TryRemoveBuff(unit)
+    end
+    self.m_globalBuffs[i]:TryAddBuff(unit)
   end
-
-  local pSide = (side == CS.Torappu.PlayerSide.DEFAULT) and self.playerSide or side
-
-  local temp = self.m_tempLifePointDict[pSide]
-  local encrypted = CS.CodeStage.AntiCheat.ObscuredTypes.ObscuredInt.Encrypt(value)
-  temp:SetEncrypted(encrypted)
-  self.m_tempLifePointDict[pSide] = temp
 end
+
+local function Fix_OnEnemyRebornAfterFakeDeath(self, unit)
+  for i = 0, self.m_globalBuffs.Count - 1 do
+    if unit.id == "char_1040_blaze2" then
+      self.m_globalBuffs[i]:TryRemoveBuff(unit)
+    end
+    self.m_globalBuffs[i]:TryAddBuff(unit)
+  end
+end
+
 
 function BattleControllerHotfixer:OnInit()
-    xlua.private_accessible(CS.Torappu.Battle.BattleController)
+  xlua.private_accessible(CS.Torappu.Battle.BattleController)
+  self:Fix_ex(CS.Torappu.Battle.BattleController, "OnRallyPointLikeReborn",
+  function(self, unit)
+    local ok, errorInfo = xpcall(Fix_OnRallyPointLikeReborn, debug.traceback, self, unit)
+      if not ok then
+        LogError("fix BattleController OnRallyPointLikeReborn error" .. errorInfo)
+      end
+  end)
 
-    self:Fix_ex(CS.Torappu.Battle.BattleController, "SetTempLifePoint", function(self, value, side)
-        local ok, errorInfo = xpcall(SetTempLifePoint_Fix, debug.traceback, self, value, side)
-        if not ok then
-            LogError("[BattleControllerHotfixer] fix" .. errorInfo)
-        end
-    end)
-end
-
-function BattleControllerHotfixer:OnDispose()
+  self:Fix_ex(CS.Torappu.Battle.BattleController, "OnEnemyRebornAfterFakeDeath",
+  function(self, unit)
+    local ok, errorInfo = xpcall(Fix_OnEnemyRebornAfterFakeDeath, debug.traceback, self, unit)
+      if not ok then
+        LogError("fix BattleController OnEnemyRebornAfterFakeDeath error" .. errorInfo)
+      end
+  end)
 end
 
 return BattleControllerHotfixer

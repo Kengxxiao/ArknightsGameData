@@ -10,6 +10,8 @@ local list =
   "HotFixes/EtlchiHotfixer",
   "HotFixes/StagePageHotfixer",
   "HotFixes/CheckTheLeftSameDeployedTokenHotFixer",
+  "HotFixes/FuncFurnModelHotfixer",
+  "HotFixes/BattleControllerHotfixer"
 };
 
 return list;
