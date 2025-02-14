@@ -11,7 +11,8 @@ local function _EnsureDmgOrHealExecute(self, blackboard, sourceType, snapshot)
   local snapshotModifier = snapshot.modifier
   local snapshotSource = snapshot.source
   local localSnapshot = snapshot
-  if not snapshotModifier.isCancelled and snapshotModifier.damageType == CS.Torappu.Battle.DamageType.PURE and snapshotSource ~= nil and string.find(snapshotSource.name, "entlec") ~= nil then
+  local isEntlec = blackboard:GetFloatOrDefault("is_entlec", 0)
+  if not snapshotModifier.isCancelled and snapshotModifier.damageType == CS.Torappu.Battle.DamageType.PURE and isEntlec > 0.5 then
     snapshotModifier.value = blackboard:GetFpOrDefault("value", snapshotModifier.value)
     localSnapshot.modifier = snapshotModifier
     snapshot = localSnapshot
