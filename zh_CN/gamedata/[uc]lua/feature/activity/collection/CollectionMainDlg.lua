@@ -309,7 +309,7 @@ function CollectionMainDlg:_SynPrg(collections, completeIdx, pointCurCnt, lastCa
   local helper = self._scrollView.content.gameObject:AddComponent(typeof(CS.Torappu.UI.ContentSizeFitterHelper));
   local this = self;
   self:AsignDelegate(helper, "eSizeChanged", function()
-    helper.eSizeChanged = nil;
+    helper["eSizeChanged"] = nil;
     CS.UnityEngine.GameObject.Destroy(helper);
     if lastCanGetIdx > 0 then
       this._scrollView.horizontalNormalizedPosition = this:_CalculateItemScrollPrg(lastCanGetIdx, collen);

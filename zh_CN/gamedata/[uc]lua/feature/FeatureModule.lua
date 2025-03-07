@@ -71,7 +71,6 @@ require "Feature/Operation/Returnning/ReturnMainDlg"
 require "Feature/Operation/Returnning/ReturnWelcomeDlg"
 require "Feature/Operation/Returnning/ReturnRewardsDlg"
 
-require "Feature/Operation/ActFun/ActFunModule"
 
 require "Feature/Activity/SwitchOnly/SwitchOnlyDefine"
 require "Feature/Activity/SwitchOnly/SwitchOnlyDlg"

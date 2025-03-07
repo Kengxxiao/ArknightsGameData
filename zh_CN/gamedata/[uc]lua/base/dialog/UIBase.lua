@@ -217,9 +217,14 @@ function UIBase:AsignDelegate(obj, delegateName, func, ...)
     end
     
     self:_AddToDoWhenClose(function()
-        if obj ~= nil then
-            obj[delegateName] = nil;
+        local isDestroyed = CS.Torappu.Lua.Util.IsDestroyed(obj)
+        if isDestroyed then
+            if TEST and IsFieldNotNil(obj, delegateName) then
+                error("[InvalidOperation] The assigned object must not be destroyed before removing callback : " .. delegateName);
+            end
+            return
         end
+        obj[delegateName] = nil;
     end);
 end
 

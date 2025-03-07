@@ -132,6 +132,12 @@ end
 
 
 
+function DlgBase:LoadScriptableObject(path)
+    return self.m_parent:LoadScriptableObject(path);
+end
+
+
+
 
 function DlgBase:LoadSpriteFromAutoPackHub(hubPath, spriteName)
   return self.m_parent:LoadSpriteFromAutoPackHub(hubPath, spriteName);

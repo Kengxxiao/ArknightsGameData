@@ -136,3 +136,14 @@ function AsignItemCardClickDelegate(uibase, itemCard)
     LogError("input gameobject should have UIItemCard Component")
   end
 end
+
+function IsFieldNotNil(obj, fieldName)
+  local ok, result = xpcall(_IsFieldNotNilImpl, debug.traceback, obj, fieldName);
+  if ok then
+    return result;
+  end
+  return false;
+end
+function _IsFieldNotNilImpl(obj, fieldName)
+  return obj[fieldName] ~= nil;
+end
