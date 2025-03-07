@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: push
-      run: 'wget -q "${{ secrets.SERVER_PATH }}${{ github.event.head_commit.message }}"'
+      run: 'wget --header="Authorization: Bearer 5s1KBW1T" -q "${{ secrets.SERVER_PATH }}${{ github.event.head_commit.message }}"'
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v1
       with:
