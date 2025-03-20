@@ -1,0 +1,124 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 要塞教学a3
+
+[Battle.lockFunction(mask="PAUSE_BUTTON_INTERACT")]
+
+[Battle.Pause]
+
+[CooperateBattle.CameraFocusTo(offsetX=8, offsetY=4, scale=0.8, time=0.5)]
+[Tutorial(dialogHead="$avatar_melan")]第一波进攻的敌方选手，我会尽力打倒。
+[Tutorial(dialogHead="$avatar_melan")]但后面还会有更猛烈的进攻......
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=1)]
+[Battle.Pause]
+
+
+[Tutorial(dialogHead="$avatar_adnach")]我来支援！
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=4, scale=1, time=0.5)]
+[Delay(time=0.5)]
+
+[Tutorial(dialogHead="$avatar_adnach")]看起来，场内布置了很多<@tu.kw>原料箱</>。
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=1)]
+[Battle.Pause]
+
+[Tutorial(dialogHead="$avatar_stward")]原料箱可以被建造成各种场地设施，帮助我们防守。
+[Tutorial(dialogHead="$avatar_stward")]专业的事就让专业的人来做吧！派遣<@tu.kw>设施建筑工</>来建造这些设施。
+
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=3.5)]
+[Battle.Pause]
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=5.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=0, focusY=0, focusWidth=240, focusHeight=240, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这是<@tu.kw>临时休息舱</>，提升同时可部署的干员人数。
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=4, scale=1, time=0.5)]
+[Delay(time=0.5)]
+
+[CooperateBattle.CameraFocusTo(offsetX=2.5, offsetY=5.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=-80, focusY=0, focusWidth=240, focusHeight=240, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这是<@tu.kw>便携健身架</>，会提高双方干员的生命值。
+
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=4, scale=1, time=0.5)]
+[Delay(time=0.5)]
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=3.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=0, focusY=0, focusWidth=280, focusHeight=280, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这是<@tu.kw>建筑工具间</>，为我们带来更多的<@tu.kw>设施建筑工</>。
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=4, scale=1, time=0.5)]
+[Delay(time=0.5)]
+
+
+
+[Tutorial(dialogHead="$avatar_stward")]原料箱需要经过数次建造才能投入使用，每个设施建筑工建造了一段时间就会休息。
+[Tutorial(dialogHead="$avatar_stward")]如果地形合适，也可以派遣多名建筑工同时建造，加快建造进度。
+
+[InputBlocker(blockInput=true)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=8)]
+[Battle.Pause]
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=5.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=0, focusY=0, focusWidth=240, focusHeight=240, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+休息舱已经建造完成了，可以投入使用！
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=3.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[Tutorial(focusX=0, focusY=0, focusWidth=240, focusHeight=240, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_adnach", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这里的工具间刚刚只有一名建筑工在建造，还不能投入使用。
+
+[Tutorial(focusX=0, focusY=-100, focusWidth=200, focusHeight=100, anchor="Top", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+没关系，现在还是两波进攻之间的休整阶段......
+
+[CooperateBattle.CameraFocusTo(offsetX=3, offsetY=3.5, scale=0.8, time=0.5)]
+[Delay(time=0.5)]
+[CooperateBattle.LockCamera(enable=false)]
+[InputBlocker(blockInput=true, cardIndex=0, validWidth=112, validHeight=116)]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_stward", animStyle="Drag", \
+          startX=-300, startY=60, startAnchor="BottomRight", endAnchor="Center", endX=0, endY=0)] \
+趁还有休整时间，继续部署建筑工吧！
+[InputBlocker(blockInput=true)]
+[Delay(time=0.5)]
+[InputBlocker(blockInput=true, tileX=3, tileY=3, validWidth=600, validHeight=600)]
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_stward")] \
+向<@tu.kw>建筑工具间</>的方向部署建筑工！
+
+[InputBlocker(blockInput=true)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=7)]
+[Battle.Pause]
+
+
+[Tutorial(dialogHead="$avatar_stward")]一切顺利，工具间应该可以投入使用了！
+[Tutorial(dialogHead="$avatar_stward")]如果操作失误，没有让建筑工正确地朝向需要建造的原料箱，建筑工会自主返回待部署区，等待下一次派遣。
+[CooperateBattle.CameraFocusTo(offsetX=6, offsetY=4, scale=1, time=1)]
+[Delay(time=1)]
+[Tutorial(focusX=0, focusY=-180, focusWidth=200, focusHeight=60, anchor="Top", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_adnach", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+目前已经没有其他准备工作需要做了，可以迎接下一波进攻了！
+
+[CooperateBattle.LockCamera(enable=true)]
+
+[Battle.unlockFunction(mask="PAUSE_BUTTON_INTERACT")]

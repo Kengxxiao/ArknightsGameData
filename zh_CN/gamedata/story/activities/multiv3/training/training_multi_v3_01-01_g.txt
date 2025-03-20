@@ -1,0 +1,19 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 活动act1sandbox教学关1_b
+
+[Battle.Pause]
+[InputBlocker(blockInput=true)]
+
+[Tutorial(focusX=600, focusY=-300, focusWidth=250, focusHeight=250, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+实战中，您需要从五种专项中选择一个进入比赛。每个专项都会提供一种支援装置，让您在战斗中部署！
+
+[InputBlocker(blockInput=true, cardIndex=0, validWidth=112, validHeight=116)]
+[Battle.LockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Tutorial(waitForSignal="put_down", dialogHead="$avatar_amiya", animStyle="Drag", \
+          startX=-130, startY=60, startAnchor="BottomRight", endAnchor="Center", endX=0, endY=100)] \
+这是基础专项的支援装置<@tu.kw>赛场啦啦队</>，部署后可以使协作双方干员的<@tu.kw>攻击力提升</>！
+[Battle.UnlockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[InputBlocker(blockInput=true)]
+
+[PopupDialog(dialogHead="$avatar_amiya")]现在，我们一起击倒五名拾荒者，完成进阶目标吧！

@@ -1,0 +1,41 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 要塞教学c1
+
+[Battle.lockFunction(mask="PAUSE_BUTTON_INTERACT")]
+
+[Battle.Pause]
+[CooperateBattle.CameraFocusTo(offsetX=16, offsetY=5, scale=1.2, time=1.5)]
+[Delay(time=1)]
+
+
+
+
+[Tutorial(focusX=160, focusY=185, focusWidth=210, focusHeight=210, anchor="Center", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_stward", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+除普通的建筑工之外，每个波次开始时可能会出现被困在瓦砾堆中等待解救的<@tu.kw>高级设施建筑工</>
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=4)]
+[Battle.Pause]
+
+
+[Tutorial(dialogHead="$avatar_stward")]击倒周围负责看守的敌人，可以解救被困的高级建筑工。
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=2)]
+[Battle.Pause]
+
+[CooperateBattle.CameraFocusTo(offsetX=2.5, offsetY=5.5, scale=0.8, time=0.5)]
+[Delay(time=1)]
+
+[CooperateBattle.LockCamera(enable=false)]
+[Tutorial(dialogHead="$avatar_stward")]部署高级建筑工继续建设<@tu.kw>I级</>设施，可以使其<@tu.kw>升级</>提供更强的效果。
+[Tutorial(dialogHead="$avatar_stward")]比如<@tu.kw>便携健身架</>升至III级后，可以提升双方干员的攻击力和技力回复速度。
+
+
+[CooperateBattle.CameraFocusTo(offsetX=6, offsetY=4, scale=1, time=1)]
+[Delay(time=1)]
+
+[Tutorial(dialogHead="$avatar_stward")]让我们迎接敌人的最后一波进攻吧！
+[CooperateBattle.LockCamera(enable=true)]
+[Battle.unlockFunction(mask="PAUSE_BUTTON_INTERACT")]

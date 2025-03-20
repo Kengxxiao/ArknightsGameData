@@ -41,9 +41,34 @@ local function Fix_CreateInitRequest(self)
   requestParam.concurrentType = CS.Torappu.UI.UISender.ConcurrentType.ENQUEUE
   return isCreateSucc, request, requestParam
 end
+
+local function Fix_LoadData(self, input)
+  self:LoadData(input)
+
+  local targetData = self:FindTargetData(input.actData, input.mapData, 0)
+  if targetData ~= nil then
+    self.desc = targetData.battleDesc
+  end
+end
 function LoopRequestSenderHotfixer:OnInit()
   xlua.private_accessible(CS.Torappu.Activity.ActMultiV3.ActMultiV3QuickMatchState)
   xlua.private_accessible(CS.Torappu.UI.LoopRequestSender)
+
+  xlua.private_accessible(CS.Torappu.Activity.ActMultiV3.BattleFinish.BattleFinishNormalMapModel)
+  self:Fix_ex(CS.Torappu.Activity.ActMultiV3.BattleFinish.BattleFinishNormalMapModel, "LoadData", function(self, input)
+    local ok, errorInfo = xpcall(Fix_LoadData, debug.traceback, self, input)
+    if not ok then
+      LogError("Fix LoadData error" .. errorInfo)
+    end
+  end)
+
+  xlua.private_accessible(CS.Torappu.Activity.ActMultiV3.BattleFinish.BattleFinishDefenceMapModel)
+  self:Fix_ex(CS.Torappu.Activity.ActMultiV3.BattleFinish.BattleFinishDefenceMapModel, "LoadData", function(self, input)
+    local ok, errorInfo = xpcall(Fix_LoadData, debug.traceback, self, input)
+    if not ok then
+      LogError("Fix LoadData error" .. errorInfo)
+    end
+  end)
 
   self:Fix_ex(CS.Torappu.Activity.ActMultiV3.ActMultiV3QuickMatchState, "_CreateInitRequest", function(self)
     local ok, ret1, ret2, ret3 = xpcall(Fix_CreateInitRequest, debug.traceback, self)
