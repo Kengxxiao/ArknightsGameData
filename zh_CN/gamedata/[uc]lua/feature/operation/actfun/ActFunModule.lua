@@ -19,3 +19,6 @@ require "Feature/Operation/ActFun/Act4fun/Act4funPushMessageHandler"
 
 require "Feature/Operation/ActFun/ActFun5MainDlg"
 require "Feature/Operation/ActFun/Act5fun/BattleFinish/Act5funBattleFinishDlg"
+
+require "Feature/Operation/ActFun/ActFun6MainDlg"
+require "Feature/Operation/ActFun/Act6fun/BattleFinish/Act6funBattleFinishDlg"

@@ -1,5 +1,6 @@
 
 
+
 local rapidjson = require("rapidjson")
 local luaUtils = CS.Torappu.Lua.Util
 ActFunMainDlgGroup = DlgMgr.DefineDialog("ActFunMainDlgGroup", nil, BridgeDlgBase)
@@ -12,6 +13,7 @@ function ActFunMainDlgGroup:OnInit()
   self.m_recentActStr = ""
   self:SetPureGroup();
   self:AddButtonClickListener(self._btnClose, self._EventOnClose);
+  self:_SetBackgroundImg();
 
   local initDlgName = nil
   local rewardStr = nil
@@ -22,7 +24,7 @@ function ActFunMainDlgGroup:OnInit()
     self:GetReward(reward)
   end
 
-  local initDlgCls = ActFun5MainDlg
+  local initDlgCls = ActFun6MainDlg
   if initDlgName == ActFun1MainDlg.DLG_NAME then
     initDlgCls = ActFun1MainDlg
   elseif initDlgName == ActFun2MainDlg.DLG_NAME then
@@ -33,6 +35,8 @@ function ActFunMainDlgGroup:OnInit()
     initDlgCls = ActFun4MainDlg
   elseif initDlgName == ActFun5MainDlg.DLG_NAME then
     initDlgCls = ActFun5MainDlg
+  elseif initDlgName == ActFun6MainDlg.DLG_NAME then
+    initDlgCls = ActFun6MainDlg
   end
 
   local initDlgStack = {initDlgCls};
@@ -87,4 +91,14 @@ end
 
 function ActFunMainDlgGroup:GetRecentPlayedAct()
   return self.m_recentActStr
+end
+
+function ActFunMainDlgGroup:_SetBackgroundImg()
+    local bgId = CS.Torappu.PlayerData.instance.data.playerHomeBackground.selectedId;
+    local wrapperPath = CS.Torappu.ResourceUrls.GetHomeBackgroundAssetsWrapperPath(bgId);
+    local assets = self:LoadScriptableObject(wrapperPath)
+    if assets == nil then
+        return
+    end
+    self._bgImage.sprite = assets.imgCompress;
 end
