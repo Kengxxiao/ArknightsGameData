@@ -238,7 +238,8 @@ function ActFun2MainDlg:EventOnStartBattleClick()
   param.sysMenuStyle = CS.Torappu.Battle.UI.BattleSysMenuStyle.NO_REWARD
   param.bundleToJumpBack = nil
 
-  local stageIdStruct = CS.Torappu.UI.StageId(self._stageId, nil, false)
+  local stageType = CS.Torappu.UI.Stage.SpecialStageType.NORMAL;
+  local stageIdStruct = CS.Torappu.UI.StageId(self._stageId, nil, stageType)
   param.overrideStageIdStruct = stageIdStruct
 
   local illust = CS.Torappu.Battle.BattleFinishIllust()

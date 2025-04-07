@@ -13578,11 +13578,114 @@
           "buffData": []
         }
       ]
+    },
+    "char_4179_monstr": {
+      "charId": "char_4179_monstr",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "control_mp_cost[012]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "control_prod_spd[1000]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_4178_alanna": {
+      "charId": "char_4178_alanna",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "manu_token_prod_spd[000]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            },
+            {
+              "buffId": "manu_token_prod_spd[010]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "manu_prod_spd_double[000]",
+              "cond": {
+                "phase": "PHASE_2",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "char_445_wscoot": {
+      "charId": "char_445_wscoot",
+      "maxManpower": 8640000,
+      "buffChar": [
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd&clue[000]",
+              "cond": {
+                "phase": "PHASE_0",
+                "level": 1
+              }
+            }
+          ]
+        },
+        {
+          "buffData": [
+            {
+              "buffId": "meet_spd_notOwned&exchange[000]",
+              "cond": {
+                "phase": "PHASE_1",
+                "level": 1
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "buffs": {
     "control_prod_spd[000]": {
       "buffId": "control_prod_spd[000]",
+      "buffName": "最高权限",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_p_spd",
+      "sortId": 1603,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，所有制造站生产力<@cc.vup>+2%</>（同种效果取最高）"
+    },
+    "control_prod_spd[1000]": {
+      "buffId": "control_prod_spd[1000]",
       "buffName": "最高权限",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_p_spd",
@@ -13968,6 +14071,18 @@
     "control_mp_cost[011]": {
       "buffId": "control_mp_cost[011]",
       "buffName": "捍卫之道",
+      "buffIcon": "control",
+      "skillIcon": "bskill_ctrl_cost",
+      "sortId": 1112,
+      "buffColor": "#005752",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "CONTROL",
+      "description": "进驻控制中枢时，控制中枢内所有干员的心情每小时恢复<@cc.vup>+0.05</>"
+    },
+    "control_mp_cost[012]": {
+      "buffId": "control_mp_cost[012]",
+      "buffName": "博识生手",
       "buffIcon": "control",
       "skillIcon": "bskill_ctrl_cost",
       "sortId": 1112,
@@ -14635,7 +14750,7 @@
       "textColor": "#ffffff",
       "buffCategory": "OUTPUT",
       "roomType": "POWER",
-      "description": "进驻发电站时，每<@cc.vup>10</>架无人机上限<@cc.vup>+1%</>无人机充能速度"
+      "description": "进驻发电站时，每<@cc.vup>10</>架无人机上限<@cc.vup>+1%</>无人机充能速度（最多<@cc.vup>+25%</>）"
     },
     "power_count[000]": {
       "buffId": "power_count[000]",
@@ -15728,6 +15843,42 @@
       "buffCategory": "OUTPUT",
       "roomType": "MANUFACTURE",
       "description": "进驻制造站时，基建内（不包含副手及活动室使用者）每有1名<$cc.g.bs><@cc.kw>黑钢国际</></>干员（最多<@cc.kw>3</>名），<@cc.kw>贵金属</>类配方的生产力<@cc.vup>+2%</>，心情每小时消耗<@cc.vup>-0.15</>"
+    },
+    "manu_token_prod_spd[000]": {
+      "buffId": "manu_token_prod_spd[000]",
+      "buffName": "机械精通·α",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_token_spd1",
+      "sortId": 3734,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，每有<@cc.vup>1</>台<$cc.tag.op><@cc.kw>作业平台</></>进驻发电站，<@cc.kw>贵金属</>类配方的生产力<@cc.vup>+5%</>"
+    },
+    "manu_token_prod_spd[010]": {
+      "buffId": "manu_token_prod_spd[010]",
+      "buffName": "机械精通·β",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_token_spd2",
+      "sortId": 3734,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，每有<@cc.vup>1</>台<$cc.tag.op><@cc.kw>作业平台</></>进驻发电站，<@cc.kw>贵金属</>类配方的生产力<@cc.vup>+10%</>"
+    },
+    "manu_prod_spd_double[000]": {
+      "buffId": "manu_prod_spd_double[000]",
+      "buffName": "“搭把手！”",
+      "buffIcon": "manufacture",
+      "skillIcon": "bskill_man_spd_double",
+      "sortId": 3735,
+      "buffColor": "#ffd800",
+      "textColor": "#333333",
+      "buffCategory": "OUTPUT",
+      "roomType": "MANUFACTURE",
+      "description": "进驻制造站时，当与<@cc.kw>温米</>在同一个制造站时，<@cc.kw>贵金属</>类配方的生产力<@cc.vup>+15%</>"
     },
     "manu_formula_spd[200]": {
       "buffId": "manu_formula_spd[200]",
@@ -20960,6 +21111,30 @@
       "buffCategory": "FUNCTION",
       "roomType": "MEETING",
       "description": "进驻会客室时，如果会客室内只有自身处于工作状态时，连续消耗超过<@cc.kw>16</>点心情下一次<@cc.kw>必定</>获得<@cc.kw>罗德岛制药</>的线索"
+    },
+    "meet_spd&clue[000]": {
+      "buffId": "meet_spd&clue[000]",
+      "buffName": "广交义友",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd_clue",
+      "sortId": 6114,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "进驻会客室时，每个招募位（不包含初始招募位）提升<@cc.vup>5%</>线索搜集速度"
+    },
+    "meet_spd_notOwned&exchange[000]": {
+      "buffId": "meet_spd_notOwned&exchange[000]",
+      "buffName": "眼观六路",
+      "buffIcon": "meeting",
+      "skillIcon": "bskill_meet_spd_notOwned_exchange",
+      "sortId": 6115,
+      "buffColor": "#dd653f",
+      "textColor": "#ffffff",
+      "buffCategory": "FUNCTION",
+      "roomType": "MEETING",
+      "description": "进驻会客室时，处于线索交流时更容易获得线索板上尚未拥有的线索"
     }
   },
   "workshopBonus": {
@@ -81066,6 +81241,582 @@
         "enableRoomType": 4112,
         "quantity": 1
       },
+      "furni_kaltsroom_ceilinglight_01": {
+        "id": "furni_kaltsroom_ceilinglight_01",
+        "sortId": 1879,
+        "name": "三角无影灯",
+        "iconId": "furni_kaltsroom_ceilinglight_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_1",
+        "width": 2,
+        "depth": 3,
+        "height": 5,
+        "comfort": 95,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的无影灯，是罗德岛手术室内常见的样式。\n最为冰冷的灯光，也曾照亮过最为炽热的脉搏。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_sample_01": {
+        "id": "furni_kaltsroom_sample_01",
+        "sortId": 1880,
+        "name": "源石样本台",
+        "iconId": "furni_kaltsroom_sample_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_1",
+        "width": 3,
+        "depth": 4,
+        "height": 4,
+        "comfort": 225,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的样本比对台，陈列着凯尔希收集的诸多源石样本。\n离散的蛛丝马迹在此处汇聚，求索者可曾如愿找到救赎？",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_cabinet_01": {
+        "id": "furni_kaltsroom_cabinet_01",
+        "sortId": 1881,
+        "name": "通风器械柜",
+        "iconId": "furni_kaltsroom_cabinet_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_1",
+        "width": 6,
+        "depth": 2,
+        "height": 10,
+        "comfort": 360,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的器械柜，用以存放医疗器械和实验器材。\n采用动态无菌方案，特制排风系统可保证器械时刻处于无菌无尘环境。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_clock_01": {
+        "id": "furni_kaltsroom_clock_01",
+        "sortId": 1882,
+        "name": "“校正时光”",
+        "iconId": "furni_kaltsroom_clock_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLDECO",
+        "subType": "ORTHER_WD",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_2",
+        "width": 2,
+        "depth": 1,
+        "height": 4,
+        "comfort": 80,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的时钟组，曾由凯尔希亲自校正。\n第一面时钟显示罗德岛所在地时间，第二面显示航行时长，而最后那面，如今已经定格不再走动。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_display_01": {
+        "id": "furni_kaltsroom_display_01",
+        "sortId": 1883,
+        "name": "“生命节律”",
+        "iconId": "furni_kaltsroom_display_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_2",
+        "width": 4,
+        "depth": 1,
+        "height": 5,
+        "comfort": 155,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的显示屏，凯尔希曾用它来监测实验对象的活动。\n以往的实验影像仍在反复播放，其中鼓动的生命节律如今已不可动摇。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_sofa_01": {
+        "id": "furni_kaltsroom_sofa_01",
+        "sortId": 1884,
+        "name": "“指令：休憩”",
+        "iconId": "furni_kaltsroom_sofa_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "SEATING",
+        "subType": "SOFA",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_1",
+        "width": 8,
+        "depth": 4,
+        "height": 3,
+        "comfort": 360,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的会客用沙发，也是办公室主人休憩的地方。\n放缓你的呼吸，阖上你的双眸，去做一场梦吧——我们希望你此去仅是安眠。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_carpet_01": {
+        "id": "furni_kaltsroom_carpet_01",
+        "sortId": 1885,
+        "name": "“未失真”",
+        "iconId": "furni_kaltsroom_carpet_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_1",
+        "width": 11,
+        "depth": 6,
+        "height": 1,
+        "comfort": 130,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "原先放在手术室内的地垫，复杂的纹路是为了防滑而作的特殊设计，光是看着就眼花缭乱。\n而Mon3tr将其复原得分毫不差，也许说明她的记忆从未消逝。",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_ceilinglight_02": {
+        "id": "furni_kaltsroom_ceilinglight_02",
+        "sortId": 1886,
+        "name": "手术用照明阵列",
+        "iconId": "furni_kaltsroom_ceilinglight_02",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CEILINGLAMP",
+        "subType": "NONE",
+        "location": "CEILING",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_2",
+        "width": 14,
+        "depth": 4,
+        "height": 4,
+        "comfort": 290,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的大型照明阵列，能够给最为复杂的手术提供更为高效的照明。\n“仍可确信，时间的矢量未必与光奔向同一方向；仍可期望，我们终将再度相会于消逝的过往。”",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_shelf_01": {
+        "id": "furni_kaltsroom_shelf_01",
+        "sortId": 1887,
+        "name": "防尘器械架",
+        "iconId": "furni_kaltsroom_shelf_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_2",
+        "width": 6,
+        "depth": 2,
+        "height": 7,
+        "comfort": 290,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的医用器械架，透明防尘罩可隔绝污染。\n它们静置在此处，直到再次奔赴弃绝死亡的战场。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_carpet_02": {
+        "id": "furni_kaltsroom_carpet_02",
+        "sortId": 1888,
+        "name": "医疗标识地毯",
+        "iconId": "furni_kaltsroom_carpet_02",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CARPET",
+        "subType": "NONE",
+        "location": "CARPET",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_3",
+        "width": 4,
+        "depth": 3,
+        "height": 1,
+        "comfort": 40,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "小巧轻便的制式地毯，上面绘有罗德岛医疗部的标识。\n对于干员们来说，回归此处乃是最漫长的征途。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_cart_01": {
+        "id": "furni_kaltsroom_cart_01",
+        "sortId": 1889,
+        "name": "医疗部手推车",
+        "iconId": "furni_kaltsroom_cart_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "STORAGE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_3",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 175,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "罗德岛医疗部常见的双层手推车，多用于摆放药品和医疗器材。\n某次紧张的手术后，有一辆手推车和样本一起无意中被凯尔希留在了办公室，而后便承载了不少她生活的痕迹。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_table_01": {
+        "id": "furni_kaltsroom_table_01",
+        "sortId": 1890,
+        "name": "“进程”",
+        "iconId": "furni_kaltsroom_table_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "TABLE",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_3",
+        "width": 10,
+        "depth": 3,
+        "height": 5,
+        "comfort": 445,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的宽大实验台，曾用作凯尔希的办公桌。\n重建之后，它的管理者丝毫没有懈怠，罗德岛的各项进程重新回到了桌面。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_light_01": {
+        "id": "furni_kaltsroom_light_01",
+        "sortId": 1891,
+        "name": "“生命投影”",
+        "iconId": "furni_kaltsroom_light_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLLAMP",
+        "subType": "NONE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_4",
+        "width": 7,
+        "depth": 1,
+        "height": 9,
+        "comfort": 245,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的显示屏组，展示着某一次实验的切片投影。\n这里记录了Mon3tr与她的一次交谈。那是一份温柔的嘱托，也是一段不可动摇的誓言。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_chair_01": {
+        "id": "furni_kaltsroom_chair_01",
+        "sortId": 1892,
+        "name": "医疗部单人转椅",
+        "iconId": "furni_kaltsroom_chair_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "SEATING",
+        "subType": "CHAIR",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_3",
+        "width": 3,
+        "depth": 2,
+        "height": 3,
+        "comfort": 175,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "罗德岛医疗部常见的单人转椅，椅背上挂着那件你很熟悉的外套。\n有人将那件外套清洗干净挂在了这里，它仿佛仍在等待它的主人。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_cabinet_02": {
+        "id": "furni_kaltsroom_cabinet_02",
+        "sortId": 1893,
+        "name": "样本归档处",
+        "iconId": "furni_kaltsroom_cabinet_02",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "CABINET",
+        "subType": "NONE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_4",
+        "width": 3,
+        "depth": 4,
+        "height": 10,
+        "comfort": 340,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的样本柜，提供恒温环境以存放实验样本。\n在那场浩劫中，大量的罗德岛医疗数据因凯尔希的预案得以保全，现在尽数归档至此。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_sample_02": {
+        "id": "furni_kaltsroom_sample_02",
+        "sortId": 1894,
+        "name": "“生命切片”",
+        "iconId": "furni_kaltsroom_sample_02",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "DECORATION",
+        "subType": "DEVICE",
+        "location": "FLOOR",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": true,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_4",
+        "width": 2,
+        "depth": 2,
+        "height": 5,
+        "comfort": 175,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "造型奇特的储藏柜，储藏着Mon3tr不同生命阶段的生理切片。\n“嗯，你收藏童年照片的方式非常独特。”",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_wallpaper_01": {
+        "id": "furni_kaltsroom_wallpaper_01",
+        "sortId": 1895,
+        "name": "“文明幅员”",
+        "iconId": "furni_kaltsroom_wallpaper_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLPAPER",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_4",
+        "width": 34,
+        "depth": 1,
+        "height": 10,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭Mon3tr的回忆复原的全息显示屏，显示的似乎是历史诞生前的辽阔原野。\n荒原尚无人迹，文明的种子即将萌芽——这是她对这片大地最初的一瞥。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
+      "furni_kaltsroom_floor_01": {
+        "id": "furni_kaltsroom_floor_01",
+        "sortId": 1896,
+        "name": "“遗尘”",
+        "iconId": "furni_kaltsroom_floor_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "FLOOR",
+        "subType": "NONE",
+        "location": "NONE",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "furni_set_kaltsroom",
+        "groupId": "furni_set_kaltsroom_4",
+        "width": 34,
+        "depth": 10,
+        "height": 1,
+        "comfort": 240,
+        "usage": "能够用来装扮宿舍与活动室，提高对应房间的氛围",
+        "description": "凭干员们的回忆复原的医疗部地面，按原本规格采用了抑菌涂层，熟悉的配色令人安心。\n这里承载着一个治愈这片大地的理想。",
+        "obtainApproach": "家具商店限时购买",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4112,
+        "quantity": 1
+      },
       "furni_oct1st_deckChair_01": {
         "id": "furni_oct1st_deckChair_01",
         "sortId": 9998,
@@ -87488,6 +88239,38 @@
         "comfort": 75,
         "usage": "能够用来装扮宿舍、活动室与会客室，可提高前两者的氛围",
         "description": "试想，在阳光强烈的沙滩上晒太阳，你需要什么？",
+        "obtainApproach": "活动获得",
+        "processedProductId": "3401",
+        "processedProductCount": 0,
+        "processedByProductPercentage": 0,
+        "processedByProductGroup": [],
+        "canBeDestroy": false,
+        "isOnly": 1,
+        "enableRoomType": 4144,
+        "quantity": 0
+      },
+      "furni_terracommericials_Extra_PungentCoffeeBeans_01": {
+        "id": "furni_terracommericials_Extra_PungentCoffeeBeans_01",
+        "sortId": 11097,
+        "name": "饰牌《丰醇》",
+        "iconId": "furni_terracommericials_Extra_PungentCoffeeBeans_01",
+        "interactType": "NONE",
+        "musicId": "",
+        "type": "WALLDECO",
+        "subType": "PLAQUE",
+        "location": "WALL",
+        "category": "FURNITURE",
+        "validOnRotate": false,
+        "enableRotate": false,
+        "rarity": 2,
+        "themeId": "",
+        "groupId": "",
+        "width": 4,
+        "depth": 1,
+        "height": 2,
+        "comfort": 75,
+        "usage": "能够用来装扮宿舍、活动室与会客室，可提高前两者的氛围",
+        "description": "羽兽排出的咖啡豆会更香醇吗？品鉴师与研究员们仍未停止争论。",
         "obtainApproach": "活动获得",
         "processedProductId": "3401",
         "processedProductCount": 0,
@@ -107376,6 +108159,150 @@
           "furni_tarahouse_floor_01"
         ]
       },
+      "furni_set_kaltsroom": {
+        "id": "furni_set_kaltsroom",
+        "enableRoomType": 4112,
+        "sortId": 108,
+        "name": "“趁呼吸逗留”",
+        "themeType": "EVENT",
+        "desc": "根据Mon3tr等罗德岛干员的回忆复原的凯尔希的特殊办公区域。复原此处不在凯尔希的预案当中，但Mon3tr仍然认为，一切的重建应由此开始。",
+        "quickSetup": [
+          {
+            "furnitureId": "furni_kaltsroom_ceilinglight_01",
+            "pos0": 5,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_sample_01",
+            "pos0": 0,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_cabinet_01",
+            "pos0": 3,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_clock_01",
+            "pos0": 9,
+            "pos1": 6,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_display_01",
+            "pos0": 10,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_sofa_01",
+            "pos0": 5,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_carpet_01",
+            "pos0": 3,
+            "pos1": 2,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_ceilinglight_02",
+            "pos0": 15,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_shelf_01",
+            "pos0": 16,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_carpet_02",
+            "pos0": 22,
+            "pos1": 5,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_cart_01",
+            "pos0": 27,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_table_01",
+            "pos0": 17,
+            "pos1": 3,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_light_01",
+            "pos0": 24,
+            "pos1": 1,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_chair_01",
+            "pos0": 24,
+            "pos1": 7,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_cabinet_02",
+            "pos0": 31,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_sample_02",
+            "pos0": 32,
+            "pos1": 4,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_wallpaper_01",
+            "pos0": 0,
+            "pos1": 0,
+            "dir": 0
+          },
+          {
+            "furnitureId": "furni_kaltsroom_floor_01",
+            "pos0": 0,
+            "pos1": 10,
+            "dir": 0
+          }
+        ],
+        "groups": [
+          "furni_set_kaltsroom_1",
+          "furni_set_kaltsroom_2",
+          "furni_set_kaltsroom_3",
+          "furni_set_kaltsroom_4"
+        ],
+        "furnitures": [
+          "furni_kaltsroom_ceilinglight_01",
+          "furni_kaltsroom_sample_01",
+          "furni_kaltsroom_cabinet_01",
+          "furni_kaltsroom_clock_01",
+          "furni_kaltsroom_display_01",
+          "furni_kaltsroom_sofa_01",
+          "furni_kaltsroom_carpet_01",
+          "furni_kaltsroom_ceilinglight_02",
+          "furni_kaltsroom_shelf_01",
+          "furni_kaltsroom_carpet_02",
+          "furni_kaltsroom_cart_01",
+          "furni_kaltsroom_table_01",
+          "furni_kaltsroom_light_01",
+          "furni_kaltsroom_chair_01",
+          "furni_kaltsroom_cabinet_02",
+          "furni_kaltsroom_sample_02",
+          "furni_kaltsroom_wallpaper_01",
+          "furni_kaltsroom_floor_01"
+        ]
+      },
       "furniM_set_basicRoom": {
         "id": "furniM_set_basicRoom",
         "enableRoomType": 32,
@@ -113753,6 +114680,64 @@
           "furni_tarahouse_wallpaper_01",
           "furni_tarahouse_floor_01"
         ]
+      },
+      "furni_set_kaltsroom_1": {
+        "id": "furni_set_kaltsroom_1",
+        "sortId": 1,
+        "name": "“体温校准”",
+        "themeId": "furni_set_kaltsroom",
+        "comfort": 280,
+        "count": 5,
+        "furniture": [
+          "furni_kaltsroom_ceilinglight_01",
+          "furni_kaltsroom_sample_01",
+          "furni_kaltsroom_cabinet_01",
+          "furni_kaltsroom_carpet_01",
+          "furni_kaltsroom_sofa_01"
+        ]
+      },
+      "furni_set_kaltsroom_2": {
+        "id": "furni_set_kaltsroom_2",
+        "sortId": 2,
+        "name": "“脉搏同步”",
+        "themeId": "furni_set_kaltsroom",
+        "comfort": 200,
+        "count": 4,
+        "furniture": [
+          "furni_kaltsroom_clock_01",
+          "furni_kaltsroom_display_01",
+          "furni_kaltsroom_shelf_01",
+          "furni_kaltsroom_ceilinglight_02"
+        ]
+      },
+      "furni_set_kaltsroom_3": {
+        "id": "furni_set_kaltsroom_3",
+        "sortId": 3,
+        "name": "“知觉恢复”",
+        "themeId": "furni_set_kaltsroom",
+        "comfort": 185,
+        "count": 4,
+        "furniture": [
+          "furni_kaltsroom_table_01",
+          "furni_kaltsroom_carpet_02",
+          "furni_kaltsroom_chair_01",
+          "furni_kaltsroom_cart_01"
+        ]
+      },
+      "furni_set_kaltsroom_4": {
+        "id": "furni_set_kaltsroom_4",
+        "sortId": 4,
+        "name": "“记忆重构”",
+        "themeId": "furni_set_kaltsroom",
+        "comfort": 275,
+        "count": 5,
+        "furniture": [
+          "furni_kaltsroom_light_01",
+          "furni_kaltsroom_cabinet_02",
+          "furni_kaltsroom_sample_02",
+          "furni_kaltsroom_wallpaper_01",
+          "furni_kaltsroom_floor_01"
+        ]
       }
     },
     "types": {
@@ -116040,6 +117025,145 @@
       ],
       "requireStages": []
     },
+    "66": {
+      "sortId": 1998,
+      "formulaId": "66",
+      "rarity": 0,
+      "itemId": "30165",
+      "count": 1,
+      "goldCost": 400,
+      "apCost": 2880000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 71,
+          "itemId": "30014",
+          "itemCount": 1
+        },
+        {
+          "weight": 53,
+          "itemId": "30024",
+          "itemCount": 1
+        },
+        {
+          "weight": 53,
+          "itemId": "30034",
+          "itemCount": 1
+        },
+        {
+          "weight": 47,
+          "itemId": "30044",
+          "itemCount": 1
+        },
+        {
+          "weight": 47,
+          "itemId": "30054",
+          "itemCount": 1
+        },
+        {
+          "weight": 35,
+          "itemId": "30064",
+          "itemCount": 1
+        },
+        {
+          "weight": 61,
+          "itemId": "30074",
+          "itemCount": 1
+        },
+        {
+          "weight": 53,
+          "itemId": "30084",
+          "itemCount": 1
+        },
+        {
+          "weight": 53,
+          "itemId": "30094",
+          "itemCount": 1
+        },
+        {
+          "weight": 47,
+          "itemId": "30104",
+          "itemCount": 1
+        },
+        {
+          "weight": 61,
+          "itemId": "31014",
+          "itemCount": 1
+        },
+        {
+          "weight": 53,
+          "itemId": "31024",
+          "itemCount": 1
+        },
+        {
+          "weight": 47,
+          "itemId": "31034",
+          "itemCount": 1
+        },
+        {
+          "weight": 53,
+          "itemId": "31044",
+          "itemCount": 1
+        },
+        {
+          "weight": 53,
+          "itemId": "31054",
+          "itemCount": 1
+        },
+        {
+          "weight": 57,
+          "itemId": "31064",
+          "itemCount": 1
+        },
+        {
+          "weight": 53,
+          "itemId": "31074",
+          "itemCount": 1
+        },
+        {
+          "weight": 50,
+          "itemId": "31084",
+          "itemCount": 1
+        },
+        {
+          "weight": 57,
+          "itemId": "31094",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31094",
+          "count": 2,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31084",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31074",
+          "count": 1,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "main_15-08",
+          "rank": 2
+        }
+      ]
+    },
     "62": {
       "sortId": 1999,
       "formulaId": "62",
@@ -116140,6 +117264,11 @@
         {
           "weight": 50,
           "itemId": "31084",
+          "itemCount": 1
+        },
+        {
+          "weight": 57,
+          "itemId": "31094",
           "itemCount": 1
         }
       ],
@@ -116275,6 +117404,11 @@
           "weight": 50,
           "itemId": "31084",
           "itemCount": 1
+        },
+        {
+          "weight": 57,
+          "itemId": "31094",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -116409,6 +117543,11 @@
           "weight": 50,
           "itemId": "31084",
           "itemCount": 1
+        },
+        {
+          "weight": 57,
+          "itemId": "31094",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -116538,6 +117677,11 @@
           "weight": 50,
           "itemId": "31084",
           "itemCount": 1
+        },
+        {
+          "weight": 57,
+          "itemId": "31094",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -116662,6 +117806,11 @@
           "weight": 50,
           "itemId": "31084",
           "itemCount": 1
+        },
+        {
+          "weight": 57,
+          "itemId": "31094",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -116689,6 +117838,145 @@
         }
       ],
       "requireStages": []
+    },
+    "65": {
+      "sortId": 2094,
+      "formulaId": "65",
+      "rarity": 0,
+      "itemId": "31094",
+      "count": 1,
+      "goldCost": 300,
+      "apCost": 1440000,
+      "formulaType": "F_EVOLVE",
+      "buffType": "W_EVOLVE",
+      "extraOutcomeRate": 0.1,
+      "extraOutcomeGroup": [
+        {
+          "weight": 50,
+          "itemId": "30013",
+          "itemCount": 1
+        },
+        {
+          "weight": 42,
+          "itemId": "30023",
+          "itemCount": 1
+        },
+        {
+          "weight": 42,
+          "itemId": "30033",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "30043",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "30053",
+          "itemCount": 1
+        },
+        {
+          "weight": 25,
+          "itemId": "30063",
+          "itemCount": 1
+        },
+        {
+          "weight": 42,
+          "itemId": "30073",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "30083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "30093",
+          "itemCount": 1
+        },
+        {
+          "weight": 25,
+          "itemId": "30103",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31013",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31023",
+          "itemCount": 1
+        },
+        {
+          "weight": 36,
+          "itemId": "31033",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31043",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31053",
+          "itemCount": 1
+        },
+        {
+          "weight": 28,
+          "itemId": "31063",
+          "itemCount": 1
+        },
+        {
+          "weight": 28,
+          "itemId": "31073",
+          "itemCount": 1
+        },
+        {
+          "weight": 25,
+          "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
+        }
+      ],
+      "costs": [
+        {
+          "id": "31093",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "31083",
+          "count": 1,
+          "type": "MATERIAL"
+        },
+        {
+          "id": "30023",
+          "count": 1,
+          "type": "MATERIAL"
+        }
+      ],
+      "requireRooms": [
+        {
+          "roomId": "WORKSHOP",
+          "roomLevel": 3,
+          "roomCount": 1
+        }
+      ],
+      "requireStages": [
+        {
+          "stageId": "main_15-08",
+          "rank": 2
+        }
+      ]
     },
     "64": {
       "sortId": 2095,
@@ -116790,6 +118078,11 @@
         {
           "weight": 25,
           "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
           "itemCount": 1
         }
       ],
@@ -116925,6 +118218,11 @@
           "weight": 25,
           "itemId": "31083",
           "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -117058,6 +118356,11 @@
         {
           "weight": 25,
           "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
           "itemCount": 1
         }
       ],
@@ -117193,6 +118496,11 @@
           "weight": 25,
           "itemId": "31083",
           "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -117326,6 +118634,11 @@
         {
           "weight": 25,
           "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
           "itemCount": 1
         }
       ],
@@ -117461,6 +118774,11 @@
           "weight": 25,
           "itemId": "31083",
           "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -117594,6 +118912,11 @@
         {
           "weight": 25,
           "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
           "itemCount": 1
         }
       ],
@@ -117729,6 +119052,11 @@
           "weight": 25,
           "itemId": "31083",
           "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -117863,6 +119191,11 @@
           "weight": 25,
           "itemId": "31083",
           "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -117991,6 +119324,11 @@
         {
           "weight": 25,
           "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
           "itemCount": 1
         }
       ],
@@ -118121,6 +119459,11 @@
           "weight": 25,
           "itemId": "31083",
           "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -118249,6 +119592,11 @@
         {
           "weight": 25,
           "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
           "itemCount": 1
         }
       ],
@@ -118497,6 +119845,11 @@
           "weight": 25,
           "itemId": "31083",
           "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -118743,6 +120096,11 @@
         {
           "weight": 25,
           "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
           "itemCount": 1
         }
       ],
@@ -118991,6 +120349,11 @@
           "weight": 25,
           "itemId": "31083",
           "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -119237,6 +120600,11 @@
         {
           "weight": 25,
           "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
           "itemCount": 1
         }
       ],
@@ -119485,6 +120853,11 @@
           "weight": 25,
           "itemId": "31083",
           "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
+          "itemCount": 1
         }
       ],
       "costs": [
@@ -119731,6 +121104,11 @@
         {
           "weight": 25,
           "itemId": "31083",
+          "itemCount": 1
+        },
+        {
+          "weight": 31,
+          "itemId": "31093",
           "itemCount": 1
         }
       ],

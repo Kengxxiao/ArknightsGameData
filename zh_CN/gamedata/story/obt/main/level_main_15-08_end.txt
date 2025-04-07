@@ -1,0 +1,591 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[focusout(duration=1, type="bg", from=0, to=1, block=true)]
+[Background(image="60_g4_rhodesabyss_w",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0.6, r=0, g=0, b=0, fadetime=1, block=true)]
+[playsound(key="$d_avg_labamb", loop=true, channel="bgs",volume=0)]
+[SoundVolume(volume=0.7, channel="bgs",fadetime=2)]
+[Delay(time=2)]
+[Sticker(id="st1", multi = true, text="检索到管理员权限。",x=180,y=170, alignment="left", size=24, delay=0.04, width=700,block = true)]
+[Sticker(id="st1", multi = true, text="\n\n休眠重启进程准备中，3......2......1......",x=180,y=170, alignment="left", size=24, delay=0.04, width=700,block = true)]
+[Sticker(id="st1", multi = true, text="\n\nPRTS重启自检已完成——",x=180,y=170, alignment="left", size=24, delay=0.04, width=700,block = true)]
+[Sticker(id="st1")]
+[Delay(time=0.5)]
+[Sticker(id="st1", multi = true, text="<color=#ff0000>警告：检测到非法第三方嵌入程序。是否恢复至初始设置？</color>",x=180,y=170, alignment="left", size=24, delay=0.04, width=700,block = true)]
+[Sticker(id="st1")]
+[Delay(time=0.5)]
+[Sticker(id="st1", multi = true, text="管理员密钥思维信号认证通过，恢复中......",x=180,y=170, alignment="left", size=24, delay=0.04, width=700,block = true)]
+[Sticker(id="st1", multi = true, text="\n\n生命体征检测模块已启动，自动加载修复模块。修复中......",x=180,y=170, alignment="left", size=24, delay=0.04, width=700,block = true)]
+[Sticker(id="st1", multi = true, text="\n\n预计进度：",block = true)]
+[Sticker(id="st2", multi = true, text="■", hidelog=true, x=300, y=297, alignment="left", size=24, delay=0.04, width=700, duration=0.5, block = false)]
+[Delay(time=1)]
+[Sticker(id="st3", multi = true, text="■", hidelog=true, x=330, y=297, alignment="left", size=24, delay=0.04, width=700, duration=0.5, block = false)]
+[Delay(time=1)]
+[Sticker(id="st4", multi = true, text="■", hidelog=true, x=360, y=297, alignment="left", size=24, delay=0.04, width=700, duration=0.5, block = false)]
+[delay(time=0.5)]
+[Sticker(id="st4", duration=0.5, block = false)]
+[delay(time=0.5)]
+[Sticker(id="st4", multi = true, text="■", hidelog=true, x=360, y=297, alignment="left", size=24, delay=0.04, width=700, duration=0.5, block = false)]
+[delay(time=0.5)]
+[Sticker(id="st4", duration=0.5, block = false)]
+[delay(time=0.5)]
+[Sticker(id="st4", multi = true, text="■", hidelog=true, x=360, y=297, alignment="left", size=24, delay=0.04, width=700, duration=0.5, block = false)]
+[delay(time=0.5)]
+[Sticker(id="st4", duration=0.5, block = false)]
+[delay(time=0.5)]
+[Sticker(id="st4", multi = true, text="■", hidelog=true, x=360, y=297, alignment="left", size=24, delay=0.04, width=700, duration=0.5, block = false)]
+[delay(time=0.5)]
+[Sticker(id="st1", duration=2)]
+[Sticker(id="st2", duration=2)]
+[Sticker(id="st3", duration=2)]
+[Sticker(id="st4", duration=2)]
+[Dialog]
+[StopSound(channel="bgs", fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Delay(time=2)]
+[Background(image="bg_ceo",screenadapt="coverall")]
+[name="？？？"]......
+[name="？？？"]博士......
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="......;......阿米娅？", values="1;2")]
+[Predicate(references="1;2")]
+[focusout(duration=3, type="bg", from=1, to=0)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Delay(time=1)]
+[playMusic(intro="$warm_intro",key="$warm_loop", volume=0.6)]
+[charslot(slot="m",name="avg_1037_amiya3_1#8$2",duration=1)]
+[Delay(time=2)]
+[name="阿米娅"]博士，太好了......
+[name="阿米娅"]你终于醒过来了。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="醒过来？;......我昏迷了很久？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_1037_amiya3_1#1$2")]
+[name="阿米娅"]我们切断思维共享很突然，加上边界的信息冲击让我也很难维持稳定的状态，所以撤离过程算不上非常顺利。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="阿米娅，你的状况如何？;阿米娅......我现在的情况如何？", values="1;2")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_1037_amiya3_1#8$2")]
+[name="阿米娅"]我也刚刚完全恢复意识。
+[name="阿米娅"]不过博士完全不用担心我。有特蕾西娅小姐的保护，我的情况要好很多。
+[Predicate(references="2")]
+[charslot(slot="m",name="avg_1037_amiya3_1#7$2")]
+[name="阿米娅"]我也并不完全清楚。
+[charslot(slot="m",name="avg_1037_amiya3_1#1$2")]
+[name="阿米娅"]具体的情况得等到凯尔希医生为你做过全面检查后再下判断。
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_1037_amiya3_1#1$2")]
+[name="阿米娅"]幸好博士刚刚一直没有松开我的手，否则我会更担心你。
+[name="阿米娅"]博士，请不要随意行动，我们需要暂时留在凯尔希医生设立的应急观察区内。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="凯尔希？;应急观察区？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_1037_amiya3_1#1$2")]
+[name="阿米娅"]我们行动开始不久，凯尔希医生为了确保我们和罗德岛的安全，就完全净空了附近的区域，由她亲自守护。
+[name="阿米娅"]凯尔希医生并不希望我们在深入“文明的存续”时遭遇任何意外。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="她果然知道了......;我没有看到她——", values="1;2")]
+[Predicate(references="1;2")]
+[charslot]
+[name="接近的声音"]确定你们苏醒后的第一时间我就已经去安排思维基准线测试了。
+[name="接近的声音"]我已经为你和阿米娅做过初步诊断，并未发现明显损伤。
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot="m",name="avg_003_kalts_1#1$1",duration=1)]
+[Delay(time=1.5)]
+[name="凯尔希"]但思维的状况不像生物组织那般易于识别，我需要进一步确认。
+[name="凯尔希"]欢迎回来，博士。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="你看上去......很疲惫。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]你们行动的时候，发生了些小插曲我必须要分心处理。稍后我会向你同步现在的情况。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="我们也找到了些可能有用的信息。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]当务之急是确认你的安全。
+[name="凯尔希"]通过黑王冠进行思维共享本就是极为冒险的举动，我相信你们也已经激进地跨越了“边界”。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="是的。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]那么对于你的思维稳定和生理健康的确认就是我当前的首要责任。
+[name="凯尔希"]我不会允许过去的错误再一次发生，也不会允许任何会影响你生命安全的隐患继续存在。
+[name="凯尔希"]Dr.{@nickname}，现在请跟我来。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="......;你，你在生气？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]阿米娅，你同样需要参加思维基准线测试。
+[name="凯尔希"]但现在先好好休息。
+[charslot(slot="m",name="avg_1037_amiya3_1#10$2")]
+[name="阿米娅"]好，好的，凯尔希医生。
+[dialog]
+[charslot]
+[Decision(options="我不能让阿米娅陪我一起吗？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]这不在我的安排之中。博士，你的检查结束之后，我会迅速安排对阿米娅的检查。
+[name="凯尔希"]走吧。
+[dialog]
+[charslot]
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_1037_amiya3_1#10$2")]
+[name="阿米娅"]......
+[stopmusic(fadetime=2)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot]
+[Background(image="bg_infirmary",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[playMusic(intro="$mist_intro",key="$mist_loop", volume=0.6)]
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="这就是测试的仪器？;我怎么对这个仪器完全没有印象？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]医疗部开发的原型机，最初由我和特蕾西娅一同设计研发。
+[name="凯尔希"]但受限于我们对于思维和认知的研究水平，这项用于检测受试者思维稳定程度的技术一直无法正常投入使用。
+[name="凯尔希"]博士，现在情况特殊，我并没有什么其他更有效的检查措施。
+[name="凯尔希"]请进入旁边的隔离舱中。放松，不必紧张，我亲自测试过，并不会对身体造成明显的负担。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot]
+[Image(image="60_i06",screenadapt="coverall", xScale=1.1, yScale=1.1,x=60)]
+[ImageTween(xTo=-60, duration=120, block=false)]
+[cgitem(image="cgitem_60_i06_1", style="cg",sfrom = 1, sto = 1.1, sduration = 0,pfrom = "-30,0",pto = "0,0",pduration = 120,layer = 2)]
+[cgitem(image="cgitem_60_i06_2", style="cg",pfrom = "-90,0",pto = "-180,0",pduration = 120,layer = 1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[dialog]
+[Decision(options="有其他需要注意的吗？", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]没有，听从我的指示就行。我需要先校准仪器，放松跟随我的指引，但不要迟疑。
+[name="凯尔希"]博士，请重复一遍你的名字。
+[dialog]
+[Decision(options="{@nickname}。;......{@nickname}？", values="1;2")]
+[Predicate(references="1;2")]
+[Predicate(references="1")]
+[name="凯尔希"]很好，不错的开头。
+[Predicate(references="2")]
+[name="凯尔希"]不必紧张，博士。只是校准而已。
+[Predicate(references="1;2")]
+[name="凯尔希"]看到我后方的时间仪表了吗？试着在心中默念计时，尽量和上面的数字跳动同步。
+[dialog]
+[Decision(options="（默数，感受时间流逝）;我不明白这样做的意义，凯尔希......", values="1;2")]
+[Predicate(references="1;2")]
+[name="凯尔希"]这样可以帮助你强化现实认知。已经过去二十秒，有感受到任何不适吗？
+[dialog]
+[Decision(options="没有。;......说不上来。;仪器是出现了异常数值吗？", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[name="凯尔希"]我们先继续校准。
+[name="凯尔希"]现在你能否在思维中继续感知到阿米娅的存在。
+[dialog]
+[Decision(options="能够。;不能。", values="1;2")]
+[Predicate(references="1;2")]
+[Predicate(references="1")]
+[name="凯尔希"]应该是错误断开思维共享留下的思维残余。
+[Predicate(references="2")]
+[name="凯尔希"]很好，我们都开始熟悉这套流程了。
+[Predicate(references="1;2")]
+[name="凯尔希"]校准继续。你是否认同罗德岛的理念？
+[dialog]
+[Decision(options="认同。;不认同。", values="1;2")]
+[Predicate(references="1;2")]
+[Predicate(references="1")]
+[name="凯尔希"]很干脆，校准快结束了。
+[Predicate(references="2")]
+[name="凯尔希"]有趣的回答，但这不是测谎仪器。还是说你依旧期待得到更戏剧性的结果，Dr.{@nickname}？
+[Predicate(references="1;2")]
+[name="凯尔希"]我们继续。博士，你在思维边界见到了她。
+[dialog]
+[Decision(options="是。;谁？", values="1;2")]
+[Predicate(references="1;2")]
+[Predicate(references="1")]
+[name="凯尔希"]不出意外，但显然你比我想象中更冷静。
+[Predicate(references="2")]
+[name="凯尔希"]无需向我隐瞒，博士，你可以完全信任我。
+[Predicate(references="1;2")]
+[name="凯尔希"]最后一次校准。博士，你是否对那位与你相似的人产生了疑惑？
+[dialog]
+[Decision(options="是的。;并没有。", values="1;2")]
+[Predicate(references="1;2")]
+[Predicate(references="1")]
+[name="凯尔希"]合理的情绪，但我无法以任何方式或立场替你解答疑惑。你终究会自己找到答案。
+[name="凯尔希"]也许，你的心中已经有了主观猜测。虽然对此我无权干涉，但我相信你不会损害罗德岛的利益。
+[Predicate(references="2")]
+[name="凯尔希"]看来你的心中已经有了肯定的猜测，我不会对此发表任何评论。
+[Predicate(references="1;2")]
+[name="凯尔希"]结束了，博士。
+[name="凯尔希"]思维基准线测试的结果显示大体上你的思维稳定程度依旧维持在安全的阈值内，剩下的都是次要流程了。
+[dialog]
+[Decision(options="等等，这不是校准？", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]为了得到更准确的数据所采取的必要手段。
+[name="凯尔希"]我也相信以你的能力可以更敏锐地捕捉到我的想法，并加以伪装。
+[name="凯尔希"]你想要骗过这台原型机并不困难。
+[dialog]
+[Decision(options="那当然！;......呃，我们还在检查中吗，凯尔希？", values="1;2")]
+[Predicate(references="1;2")]
+[name="凯尔希"]Dr.{@nickname}，剩下的检查会很快自动完成，我有时间回答你的某些疑惑。
+[name="凯尔希"]但抱歉，部分问题我同样无法向你解答，你对此应当已经有清晰的认知。
+[dialog]
+[Decision(options="......“罗德岛”的来历？;为何你会提前预知我们行动的可能性？", values="1;2")]
+[Predicate(references="1;2")]
+[Predicate(references="1")]
+[name="凯尔希"]如果你指的是这艘舰船，它所存在的时间比我经历的历史更加漫长。
+[name="凯尔希"]某种意义上，它承载着希望，也因此拥有最完善的安全防护设计，足够支撑我们在这片大地的一切行动。
+[name="凯尔希"]它能够安然渡过数次最为严苛的灾难，并依旧保存下核心主体结构也正是依赖于其最初的设计。
+[name="凯尔希"]博士，迄今为止我们都依旧没有挖掘出它的全部潜力。
+[name="凯尔希"]但我必须承认，对完全开发罗德岛，我仍然持绝对谨慎的态度。
+[Predicate(references="2")]
+[name="凯尔希"]你是指我在边界中留下的那些线索？我并不能保证解开那些线索的人是你们。
+[name="凯尔希"]我也并不具备预测任何尚未发生之事的能力，我如此准备另有原因......
+[name="凯尔希"]受我尊敬的人演算了未来可能出现的种种情况，而我不会忘记那个人的话语。
+[name="凯尔希"]或许是我在潜移默化中也受到了影响。
+[Predicate(references="1;2")]
+[dialog]
+[Decision(options="我感受到你很紧张，凯尔希。", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Decision(options="你的紧张并非只是来自于当下晦暗不明的局势。", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]......
+[dialog]
+[Decision(options="我无法形容这种怪异的直觉。;我从未从你的身上感受到这种复杂的情绪。", values="1;2")]
+[Predicate(references="1;2")]
+[name="凯尔希"]接受检查的并不是我——
+你的身影倒映在透明的防护窗上，就像你与凯尔希还站在一起。
+你看向玻璃上的那个自己，却情不自禁地想起了边界里那个温柔对待身旁奇怪构造体的人......
+你的目光下意识地转移到了凯尔希身上。
+[name="凯尔希"]你为什么这样看着我，Dr.{@nickname}？
+[dialog]
+[Decision(options="你也曾无比信任我？", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]现在依旧如此，你已经证明过自己。
+[name="凯尔希"]Dr.{@nickname}，无论你在边界看到了什么，那都属于已经逝去的过往。
+[name="凯尔希"]你和罗德岛依旧走在正确的道路上，这就足够了。你我之间的关系，你我双方都有主观确定的权力。
+[name="凯尔希"]你无需在意我对你的看法，过去，现在，未来均是如此。我同样也尊重你对我们合作关系的理解——
+[dialog]
+[Decision(options="抱歉，凯尔希。", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Decision(options="这是为我和阿米娅的鲁莽行动道歉。", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Decision(options="我很清楚接下来需要做什么。", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Decision(options="凯尔希，我还有一个疑问。", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Decision(options="（未知语言）“或许那会是我们的祝福”......", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Decision(options="（未知语言）“还有最后馈赠的希望”。", values="1")]
+[Predicate(references="1")]
+[name="凯尔希"]......
+[dialog]
+[Decision(options="我无法理解这句话的意思。;我能感受到说话之人的善意。", values="1;2")]
+[Predicate(references="1;2")]
+[name="凯尔希"]那句话意味着“祝福”，以及“馈赠”。
+[dialog]
+[Decision(options="你指引我们见到了那个人。", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Decision(options="无论那是谁，你的信任绝不虚假。", values="1")]
+[Predicate(references="1")]
+[dialog]
+[Decision(options="那接下来，我们要处理的工作就还有很多。", values="1")]
+[Predicate(references="1")]
+[stopmusic(fadetime=2)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot]
+[image]
+[focusout(duration=0, type="bg", from=0, to=1, block=true)]
+[hidecgitem(image="cgitem_60_i06_1")]
+[hidecgitem(image="cgitem_60_i06_2")]
+[Background(image="60_g4_rhodesabyss_w",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[PlaySound(key="$d_avg_stonegrowing")]
+规则的源石结晶从空间中出现了。
+源石晶体的尖角上，先出现了一段短短的弧线。
+弧线伸展为弧面，继而形成了一个绝对光滑的球体。
+那是用来观察这片空间的眼瞳，它只负责记录它看见的一切，负责做出决策的器官尚未完全从源石中脱离。
+直到......现在。
+[dialog]
+[PlaySound(key="$d_avg_icecrystlncrse")]
+[charslot(slot="m",name="avg_npc_1727_1#1$1",duration=1.5)]
+[Delay(time=2.5)]
+[name="源石结晶体"]（沉默地感受）
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot]
+[focusout(duration=0, type="bg", from=0, to=0, block=true)]
+[Background(image="bg_ceo",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[playMusic(intro="$escape_intro",key="$escape_loop", volume=0.6)]
+[charslot(slot="m",name="avg_1037_amiya3_1#8$2",duration=1)]
+[Delay(time=2)]
+[name="阿米娅"]博士，凯尔希医生也判断我的思维状况没有大碍。
+[name="阿米娅"]不过她反倒很在意我们思维共享时，我有没有受到什么冲击。
+[Dialog]
+[charslot(slot="m",focus="n")]
+[Decision(options="她应该有自己的顾虑。", values="1")]
+[Predicate(references="1")]
+[charslot]
+[charslot(slot="m",name="avg_003_kalts_1#1$1",duration=0.5)]
+[Delay(time=1)]
+[name="凯尔希"]阿米娅，我们应当马上着手分析你们带出来的公式。
+[name="凯尔希"]如我先前所言，PRTS的异常仍然存在，极有可能在短时间发生更多的意外。
+[Dialog]
+[charslot(slot="m",focus="n")]
+[Decision(options="依旧无法完全恢复？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]可露希尔还在尝试，但希望不大。
+[name="凯尔希"]已经在提前部署备用指挥系统了，但同步到所有设备和个人仍然需要时间。
+[name="凯尔希"]至于你们从边界带回来的信息，我可以协助你们破译。
+[charslot(slot="m",name="avg_1037_amiya3_1#5$2")]
+[name="阿米娅"]凯尔希医生，你了解其中的含义？
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]需要看到完整的公式才能确认。
+[dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+你和阿米娅凭借着记忆一点点补全了那些画在走廊玻璃上的文字和公式，而你们完全不了解那样的语言。
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]按照前后的逻辑推测，这里模糊的部分应该是这样，我来补上。
+[name="凯尔希"]这里大意准确，但细节文字上有误记，纠正后应该是这样。  
+[Dialog]
+[charslot]
+[Decision(options="像是在拼图。", values="1")]
+[Predicate(references="1")]
+[charslot]
+[charslot(slot="m",name="avg_1037_amiya3_1#8$2")]
+[name="阿米娅"]幸好博士你在最后记住了我没来得及背下来的部分。
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]这样应该就可以了。
+[Dialog]
+[charslot(slot="m",focus="n")]
+[Decision(options="凯尔希，你了解其中的含义吗？", values="1")]
+[Predicate(references="1")]
+[charslot]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]这是一个未曾命名过的模型，其最初来源可以追溯到一个名为“安眠桥”的项目——
+[name="凯尔希"]该项目极为冒进地利用可自主转码的模型将所有可能的现实和物质界有机生命融合成单一的“元现实”。
+[name="凯尔希"]虽然最终结果并不顺利，但其中对于物质数据化的实验启发了后续一系列新的研究。这个模型就是其中之一。
+[name="凯尔希"]它在减少元信息在特殊媒介传输时的损耗，以及提高数据传输效率上的贡献极为惊人。
+[Dialog]
+[charslot(slot="m",focus="n")]
+[Decision(options="信息？;源石？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]Dr.{@nickname}，你意识到了关键。
+[name="凯尔希"]源石正是用于收集信息的介质，它能够对信息进行再编辑，然后不停增长，直至完成它的使命。
+[name="凯尔希"]源石本身极有可能也采用了这个模型。如果我们合理使用，应该也能在源石研究和矿石病治疗领域取得突破。
+[name="凯尔希"]我会转译这份资料作为绝密储存。
+[name="凯尔希"]但在完全弄清它的危害和用途之前，它不能出现在任何现实存在的蓝图或者信息储存介质中。
+[Dialog]
+[charslot]
+[Decision(options="能尽快完成转译吗？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_1037_amiya3_1#1$2")]
+[name="阿米娅"]博士，你是有什么计划吗？
+[Dialog]
+[charslot(slot="m",focus="n")]
+[Decision(options="还记得“源石弧”吗？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_1037_amiya3_1#7$2")]
+[name="阿米娅"]是在维多利亚的战争后，Logos先生和Mechanist先生提出过的那个项目？
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]通过外设装备，大幅提升精英干员在富源石环境下的适应性和战斗力。是激进的设想，难度也很大。
+[name="凯尔希"]现有版本已经是两年前的产物，也是我们所能优化的极限。
+[Dialog]
+[charslot(slot="m",focus="n")]
+[Decision(options="但现在我们有了新的可能。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]这次的确是很好的机会。至少在应对源石带来的威胁上，精英干员们可以更加从容。
+[name="凯尔希"]博士，我需要你配合我完成转译。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot]
+[Background(image="bg_rhodesengineeringroom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[PlaySound(key="$d_gen_explo_n")]
+[CameraShake(duration=1, xstrength=10, ystrength=8, vibrato=30, randomness=90, fadeout=false)]
+[Blocker(a=0.7, r=1, g=1, b=1, fadetime=0.1, block=true)]
+[Blocker(a=0, r=1, g=1, b=1, fadetime=0.2, block=true)]
+[Delay(time=1)]
+[charslot(slot="m",name="avg_npc_521_1#1$1",duration=0.5)]
+[Delay(time=1)]
+[name="Mechanist"]咳咳，幸亏有你的屏障。
+[name="Mechanist"]你确定刚才的源石回路是正确的吗？已经检查了三次，不应该失败啊......
+[charslot(slot="m",name="avg_4133_logos_1#1$1")]
+[name="Logos"]语义并无偏差，回路符合模拟。
+[name="Logos"]的确不应出现错误。
+[charslot(slot="m",name="avg_npc_521_1#1$1")]
+[name="Mechanist"]......呃，会不会还有一种可能，出错的不是我们？
+[charslot(slot="m",name="avg_4133_logos_1#1$1")]
+[name="Logos"]博士和凯尔希医生的蓝本也并无纰漏，咒言的模拟的确有效。
+[charslot(slot="m",name="avg_npc_521_1#1$1")]
+[name="Mechanist"]我意思是源石弧本身的材料出了问题！
+[name="Mechanist"]我记得可露希尔在仓库藏了些好东西——
+[charslot(slot="m",name="avg_4133_logos_1#8$1")]
+[name="Logos"]不是好主意。工程部已经被我们搞得一团乱了。
+[charslot(slot="m",name="avg_npc_521_1#1$1")]
+[name="Mechanist"]哈哈，这可是博士和凯尔希医生的命令。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[charslot]
+[charslot(slot="m",name="avg_1037_amiya3_1#1$2")]
+[CameraEffect(effect="Grayscale", fadetime=0, keep=true, initamount=0, amount=0.7, block=true)]
+[Background(image="bg_ceo",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[name="阿米娅"]但如何验证是否有效呢？
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]在能够保证绝对安全的前提下，有一个人适合完成测试。
+[Dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[charslot]
+[CameraEffect(effect="Grayscale", fadetime=0, amount=0, block=true)]
+[Background(image="bg_trainingcom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[charslot(slot="m",name="avg_017_huang_1#1$2",duration=1)]
+[Delay(time=2)]
+[name="煌"]嗯，感觉强度也没有太明显的变化嘛？
+[name="煌"]小猫，要不你再多用点力。
+[charslot(slot="m",name="avg_391_rosmon_1#1$2")]
+[name="迷迭香"]这并不完全受我控制。Raidian？
+[charslot(slot="m",name="avg_npc_1730_1#3$1")]
+[name="Raidian"]按实验章程，我只能逐级解锁源石弧与迷迭香的同步率。
+[name="Raidian"]这不仅是保护你，煌，也是在保护迷迭香。
+[charslot(slot="m",name="avg_017_huang_1#11$2")]
+[name="煌"]嘿嘿。我当然知道。
+[name="煌"]只是凯尔希医生说时间紧迫嘛，就想再快一点测出极限。你说呢，小猫？
+[charslot(slot="m",name="avg_391_rosmon_1#1$2")]
+[name="迷迭香"]我可以控制好。
+[charslot(slot="m",name="avg_npc_249_1$1")]
+[name="Touch"]无妨，我会控制风险。
+[name="Touch"]Raidian，麻烦随时准备覆写源石回路，切断迷迭香的控制。
+[charslot(slot="m",name="avg_npc_1730_1#2$1")]
+[name="Raidian"]......唔，你们真的很不让人省心。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[charslot]
+[charslot(slot="m",name="avg_1037_amiya3_1#1$2")]
+[CameraEffect(effect="Grayscale", fadetime=0, keep=true, initamount=0, amount=0.7, block=true)]
+[Background(image="bg_ceo",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[name="阿米娅"]凯尔希医生，完成所有的准备大概需要多长的时间？
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]一切的前提都是我和博士以最快的速度完成转译，并且分离出有效的技术蓝本。
+[Dialog]
+[charslot(slot="m",focus="n")]
+[Decision(options="三十六小时。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_003_kalts_1#1$1")]
+[name="凯尔希"]过于紧张了。
+[name="凯尔希"]这项技术中很多关键节点我们几乎没有实现的可能。
+[Dialog]
+[charslot]
+[Decision(options="事在人为。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_1037_amiya3_1#1$2")]
+[name="阿米娅"]我可以一并协助，有黑王冠在，我应该也能帮上忙。
+[name="阿米娅"]凯尔希医生，任何可以利用的力量都足以为罗德岛带来更多的优势，也许它在不久的将来就能改变局势。
+[stopmusic(fadetime=2)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot]
+[CameraEffect(effect="Grayscale", fadetime=0, amount=0, block=true)]
+[Background(image="60_g1_rhodescorridor_bc",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[playMusic(intro="$drift_intro",key="$drift_loop", volume=0.6)]
+[charslot(slot="m",name="avg_npc_1719_1#3$1",duration=1)]
+[Delay(time=2)]
+[charslot(slot = "m", focus = "n")]
+卡特斯感觉睡了很久很久。
+她的目光迷失在了深空的群星之中，而家乡的方向却毫无线索。她不愿放弃，直到疲惫地睡去。
+[dialog]
+[charslot(slot="m",name="avg_npc_1719_1#1$1",duration=1)]
+[Delay(time=2)]
+[charslot(slot = "m", focus = "n")]
+随后，光亮唤醒了她，她睁开了眼。
+身边空无一人。
+[name="冰冷的声音"]（未知语言）你迷失了。
+[charslot(slot="m",name="avg_npc_1719_1#9$1")]
+[name="希尔达"]......？！
+[charslot(slot = "m", focus = "n")]
+[name="冰冷的声音"]（未知语言）这里很久没有来过新的客人。
+[name="冰冷的声音"]（未知语言）还是说，你就是那个沦为废墟的行星上最后的幸存者？
+[charslot(slot="m",name="avg_npc_1719_1#10$1")]
+[name="希尔达"]......是屈光者的声音？可为什么——
+[charslot(slot = "m", focus = "n")]
+[name="冰冷的声音"]（未知语言）无论如何，欢迎你的到来。
+[name="冰冷的声音"]（未知语言）请来见我。
+[charslot(slot="m",name="avg_npc_1719_1#10$1")]
+[name="希尔达"]......
+[charslot(slot = "m", focus = "n")]
+她记得这个场景。在崩解之后，她本应死去，但光却重新涌进了她的眼睛。
+她来到了这里，来到了神人的国度......一切又再次发生了。
+[charslot(slot="m",name="avg_npc_1719_1#6$1")]
+[name="希尔达"]怎，怎么可能？
+[dialog]
+[charslot(duration=1)]
+她惊恐地眺望舷窗之外，她看到了那个死去的星球。
+[dialog]
+[playsound(key="$rungeneral",volume=0.6)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+穿梭在舰船之中，她再次与那位名为“屈光者”的存在相遇，还有那位在深空中孤独眺望死亡的幽灵......
+而她在这里生活过的每一寸痕迹都消失了。
+[dialog]
+[charslot(slot="m",name="avg_npc_1719_1#6$1",duration=0.5)]
+[Delay(time=1)]
+[name="希尔达"]不......不......不......
+[name="希尔达"]是我还在梦里吗？
+[charslot(slot = "m", focus = "n")]
+[name="温柔的声音"]这里不是梦。
+[name="温柔的声音"]但也称不上现实。
+[name="温柔的声音"]你一直想要找我，不是吗？
+[charslot(duration=1)]
+卡特斯看到了一只手伸到面前，轻轻地握住了自己的手——
+一如崩解时那只握住自己的手。
+她见到了“神”。
+[Dialog]
+[Delay(time=1)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[Image]
+[charslot]

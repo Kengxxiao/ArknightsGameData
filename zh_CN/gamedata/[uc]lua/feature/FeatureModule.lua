@@ -21,7 +21,8 @@ require "Feature/Activity/PrayOnly/PrayOnlyActDefines"
 
 require "Feature/Activity/ActFlip/ActFlipMainDlg"
 
-require "Feature/Activity/CheckinAccess/ActCheckinAccessMainDlg"
+require "Feature/Activity/CheckinAccess/CheckinAccessDefine"
+require "Feature/Activity/CheckinAccess/CheckinAccessMainDlg"
 
 require "Feature/Activity/LuaActivityUtil"
 

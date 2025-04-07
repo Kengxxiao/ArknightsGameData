@@ -432,7 +432,7 @@ local DEFINE_CLS_FUNCS = {
     DlgMgr.DefineDialog(clsName, config.dlgPath, BlessOnlyMainDlg)
   end,
   CHECKIN_ACCESS = function(clsName, config)
-    DlgMgr.DefineDialog(clsName, config.dlgPath, ActCheckinAccessMainDlg)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, CheckinAccessMainDlg)
   end,
   CHECKIN_VIDEO = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, CheckinVideoDlg);
@@ -660,12 +660,53 @@ function LuaActivityUtil:_CheckIfBlessOnlyFinished(actId)
   return BlessOnlyUtil.CheckBlessActIsFinished(actId);
 end
 
-function LuaActivityUtil:_CheckIfActAccessUncomplete(actId)
-  local suc, playerData = CS.Torappu.PlayerData.instance.data.activity.checkinAccessList:TryGetValue(actId);
-  if (suc) then
-    return playerData.currentStatus == 1
+function LuaActivityUtil:_CheckIfActAccessFinished(actId)
+  local playerData = CS.Torappu.PlayerData.instance.data.activity;
+  if string.isNullOrEmpty(actId) or playerData.checkinAccessList == nil then
+    return false;
   end
-  return false
+  local suc, jObject = playerData.checkinAccessList:TryGetValue(actId);
+  if not suc or jObject == nil then
+    return false;
+  end
+  local playerAccess = eutils.ConvertJObjectToLuaTable(jObject);
+  if playerAccess == nil or playerAccess.rewardsCount == nil then
+    return false;
+  end
+  local activityData = CS.Torappu.ActivityDB.data;
+  if activityData == nil then
+    return false;
+  end
+
+  local dynData = activityData.dynActs;
+  if dynData == nil then
+    return false;
+  end
+  local ok, jObject = dynData:TryGetValue(actId);
+  if not ok then
+    return false;
+  end
+  local actData = eutils.ConvertJObjectToLuaTable(jObject);
+  if actData == nil or actData.constData == nil or actData.constData.dayCount == nil then
+    return false;
+  end
+  return actData.constData.dayCount <= playerAccess.rewardsCount;
+end
+
+function LuaActivityUtil:_CheckIfActAccessUncomplete(actId)
+  local playerData = CS.Torappu.PlayerData.instance.data.activity;
+  if string.isNullOrEmpty(actId) or playerData.checkinAccessList == nil then
+    return false;
+  end
+  local suc, jObject = playerData.checkinAccessList:TryGetValue(actId);
+  if not suc then
+    return false;
+  end
+  local playerAccess = eutils.ConvertJObjectToLuaTable(jObject);
+  if playerAccess == nil or playerAccess.currentStatus == nil then
+    return false;
+  end
+  return playerAccess.currentStatus == 1;
 end
 
 
@@ -718,7 +759,7 @@ function LuaActivityUtil:_CheckIfActivityFinished(type, validAct)
   elseif type == CS.Torappu.ActivityType.BLESS_ONLY then
     return self:_CheckIfBlessOnlyFinished(actId)
   elseif type == CS.Torappu.ActivityType.CHECKIN_ACCESS then
-
+    return self:_CheckIfActAccessFinished(actId);
   elseif type == CS.Torappu.ActivityType.CHECKIN_VIDEO then
     return self:_CheckIfCheckinVideoFinished(actId);
   end
