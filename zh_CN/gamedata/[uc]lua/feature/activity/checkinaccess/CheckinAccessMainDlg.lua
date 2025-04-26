@@ -35,6 +35,9 @@ end
 
 
 function CheckinAccessMainDlg:_EventOnConfirmBtnClick()
+  if CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() then
+    return;
+  end
   local viewModel = self.m_viewModel;
   if viewModel == nil or viewModel.status ~= CheckinAccessStatus.CAN_CONFIRM or
       string.isNullOrEmpty(viewModel.actId) then
