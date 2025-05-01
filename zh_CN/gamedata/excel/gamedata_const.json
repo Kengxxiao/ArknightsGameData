@@ -994,6 +994,7 @@
     "vc.attention": "<color=#FFD800>{0}</color>",
     "act.missiontips": "<color=#d9bd6a>{0}</color>",
     "lv.hdbg": "<color=#7ba61f>{0}</color>",
+    "vecbreakv2.highlight": "<color=#d8741a>{0}</color>",
     "duel.ping.low": "<color=#7fa826>{0}</color>",
     "duel.ping.medium": "<color=#ec7a00>{0}</color>",
     "duel.ping.high": "<color=#ff3d3d>{0}</color>",
@@ -1063,7 +1064,7 @@
   "commonPotentialLvlUpCount": 4,
   "weeklyOverrideDesc": "",
   "voucherDiv": 5,
-  "recruitPoolVersion": 18,
+  "recruitPoolVersion": 19,
   "v006RecruitTimeStep1Refresh": 1577172600,
   "v006RecruitTimeStep2Check": 1577154600,
   "v006RecruitTimeStep2Flush": 1577649600,
@@ -1164,7 +1165,7 @@
     "ba.buffres": {
       "termId": "ba.buffres",
       "termName": "抵抗",
-      "description": "<$ba.stun>晕眩</>、<$ba.cold>寒冷</>、<$ba.frozen>冻结</>等异常状态的持续时间减半（同名效果不叠加）"
+      "description": "<$ba.stun>晕眩</>、<$ba.cold>寒冷</>、<$ba.frozen>冻结</>等异常状态的持续时间减半，<$ba.palsy>麻痹</>等效果每5秒流失1层（同名效果不叠加）"
     },
     "ba.invisible": {
       "termId": "ba.invisible",
@@ -1376,6 +1377,21 @@
       "termName": "物理脆弱",
       "description": "受到的物理伤害提升相应比例（同名效果取最高）"
     },
+    "ba.dt.neural2": {
+      "termId": "ba.dt.neural2",
+      "termName": "神经损伤·我方",
+      "description": "累计满时爆发（普通、精英敌人1000点、领袖2000点累计值），敌人立即受到6000点元素伤害且获得3层<$ba.palsy>麻痹</>。10秒冷却"
+    },
+    "ba.palsy": {
+      "termId": "ba.palsy",
+      "termName": "麻痹",
+      "description": "每层麻痹可以使敌人在普通攻击时打断本次攻击，上限3层；麻痹未被消耗时持续时间无限，拥有抵抗的单位每5秒流失1层"
+    },
+    "ba.addbullet": {
+      "termId": "ba.addbullet",
+      "termName": "补弹",
+      "description": "为其他人的弹药类技能补充弹药。单次弹药类技能的持续时间内，最多被补充该次技能所装有弹药数量上限的弹药"
+    },
     "cc.bd_A_1": {
       "termId": "cc.bd_A_1",
       "termName": "念力",
@@ -1586,6 +1602,11 @@
       "termName": "叙拉古",
       "description": "包含以下干员\n安洁莉娜、拉普兰德、普罗旺斯、红云、布洛卡、巫恋、铃兰、贾维、奥斯塔、斥罪、子月、伺夜、阿罗玛、忍冬、裁度、荒芜拉普兰德"
     },
+    "cc.g.laterano": {
+      "termId": "cc.g.laterano",
+      "termName": "拉特兰",
+      "description": "包含以下干员\n翎羽、安德切尔、送葬人、莫斯提马、安比尔、芳汀、空弦、菲亚梅塔、见行者、空构、隐现、塑心、蕾缪安、信仰搅拌机、CONFESS-47"
+    },
     "cc.c.abyssal2_1": {
       "termId": "cc.c.abyssal2_1",
       "termName": "特殊加成",
@@ -1689,7 +1710,7 @@
     "cc.tag.op": {
       "termId": "cc.tag.op",
       "termName": "作业平台",
-      "description": "包含以下干员\nLancet-2、Castle-3、THRM-EX、正义骑士号、Friston-3、PhonoR-0"
+      "description": "包含以下干员\nLancet-2、Castle-3、THRM-EX、正义骑士号、Friston-3、PhonoR-0、CONFESS-47"
     },
     "cc.tag.knight": {
       "termId": "cc.tag.knight",
@@ -1716,6 +1737,11 @@
       "termName": "嘉维尔",
       "description": "包含以下干员\n百炼嘉维尔、嘉维尔"
     },
+    "cc.angel": {
+      "termId": "cc.angel",
+      "termName": "能天使",
+      "description": "包含以下干员\n新约能天使、能天使"
+    },
     "cc.tra.pepe": {
       "termId": "cc.tra.pepe",
       "termName": "特别独占订单",
@@ -1723,14 +1749,14 @@
     }
   },
   "storyReviewUnlockItemLackTip": "事相碎片数量不足，请前往采购凭证区或活动期间商店获取",
-  "dataVersion": "60.6.0",
-  "resPrefVersion": "60d4d0",
+  "dataVersion": "61.0.0",
+  "resPrefVersion": "61d0d0",
   "announceWebBusType": "ak_announcement",
   "videoPlayerWebBusType": "ak_video_player",
   "gachaLogBusType": "ak_gacha_log",
-  "defaultMinContinuousBattleTimes": 1,
-  "defaultMaxContinuousBattleTimes": 6,
-  "continuousActionOpen": true,
+  "defaultMinMultipleBattleTimes": 1,
+  "defaultMaxMultipleBattleTimes": 6,
+  "multipleActionOpen": true,
   "subProfessionDamageTypePairs": {
     "notchar1": "NONE",
     "notchar2": "NONE",
@@ -1801,7 +1827,8 @@
     "alchemist": "PHYSICAL",
     "primprotector": "PHYSICAL",
     "skywalker": "PHYSICAL",
-    "soulcaster": "MAGICAL"
+    "soulcaster": "MAGICAL",
+    "primguard": "PHYSICAL"
   },
   "classicProtectChar": [
     "char_252_bibeak",

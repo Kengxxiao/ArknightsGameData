@@ -577,7 +577,7 @@ function LuaActivityUtil:_CheckIfCheckinVsUncomplete(actId)
     return false
   end
 
-  return playerActData.availSignCnt > 0
+  return playerActData.availSignCnt > 0 or playerActData.voteRewardState == 1
 end
 
 function LuaActivityUtil:_CheckIfCheckinAllUncomplete(actId)
@@ -693,6 +693,31 @@ function LuaActivityUtil:_CheckIfActAccessFinished(actId)
   return actData.constData.dayCount <= playerAccess.rewardsCount;
 end
 
+
+
+function LuaActivityUtil:_CheckIfCheckinVsFinished(actId)
+  local checkinVsPlayers = CS.Torappu.PlayerData.instance.data.activity.checkinVsActivityList
+  if checkinVsPlayers == nil then
+    return false
+  end
+  local suc, playerActData = checkinVsPlayers:TryGetValue(actId)
+  if not suc then
+    return false
+  end
+
+  local checkinVsActs = CS.Torappu.ActivityDB.data.activity.versusCheckInData
+  if checkinVsActs == nil then
+    return false
+  end
+  local suc1, actData = checkinVsActs:TryGetValue(actId)
+  if not suc1 then  
+    return false
+  end
+  local signTotalCnt = actData.checkInDict.Count
+
+  return playerActData.signedCnt >= signTotalCnt
+end
+
 function LuaActivityUtil:_CheckIfActAccessUncomplete(actId)
   local playerData = CS.Torappu.PlayerData.instance.data.activity;
   if string.isNullOrEmpty(actId) or playerData.checkinAccessList == nil then
@@ -751,7 +776,7 @@ function LuaActivityUtil:_CheckIfActivityFinished(type, validAct)
   elseif type == CS.Torappu.ActivityType.CHECKIN_ALL_PLAYER then
   
   elseif type == CS.Torappu.ActivityType.CHECKIN_VS then
-
+    return self:_CheckIfCheckinVsFinished(actId)
   elseif type == CS.Torappu.ActivityType.SWITCH_ONLY then
     return self:_CheckIfSwitchOnlyFinished(actId)
   elseif type == CS.Torappu.ActivityType.UNIQUE_ONLY then
