@@ -8,6 +8,8 @@ local list =
   "HotFixes/ActVecBreakV2SquadBuffSelectStateHotfixer",
   "HotFixes/CommonCharSelectCardDefaultViewModelHotfixer",
   "HotFixes/AbilityStandardHotfixer",
+  "HotFixes/HomeCharRotationPresetItemViewModelHotfixer",
+  "HotFixes/AnimationWrapperHotfixer"
 };
 
 return list;
