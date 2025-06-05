@@ -1,0 +1,13 @@
+[header(is_skippable=false, is_tutorial=true)]
+[battle.delay(time=0.3)]
+[battle.lockfunction(mask="SYSTEM_MENU_INTERACT")]
+[battle.pause(pause=true)]
+[tutorial(focusWidth=150, focusHeight=150, animStyle="Highlight", focusStyle="HighlightCircle", black="0.5", protectTime=0.5, dialogHead="$avatar_catap", tileY=3, tileX=1)]糟糕，敌人从摄影机拍摄不到的地方过来了！
+[popupdialog(dialogHead="$avatar_spot", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]放心，我来改变<@tu.kw>摄影机的朝向</>。
+[inputblocker(blockInput=false)]
+[battle.ensuremincost(cost=15)]
+[tutorial(animStyle="Drag", protectTime=0.5, waitForSignal="put_down", cardIndex=0, startCardIndex=0, endTileX=5, endTileY=2, charId="char_284_spot", posX=5, posY=2)]
+[tutorial(animStyle="Drag", waitForSignal="select_direction", startTileX=5, startTileY=2, endTileX=3, endTileY=2)]
+[inputblocker(blockInput=true)]
+[battle.unlockfunction(mask="SYSTEM_MENU_INTERACT")]
+[battle.pause(pause=false)]

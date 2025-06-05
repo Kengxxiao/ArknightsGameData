@@ -2858,6 +2858,171 @@
     {
       "motionMode": "WALK",
       "startPosition": {
+        "row": 4,
+        "col": 3
+      },
+      "endPosition": {
+        "row": 2,
+        "col": 0
+      },
+      "spawnRandomRange": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "spawnOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "checkpoints": [
+        {
+          "type": "WAIT_FOR_SECONDS",
+          "time": 50.0,
+          "position": {
+            "row": 0,
+            "col": 0
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        },
+        {
+          "type": "MOVE",
+          "time": 0.0,
+          "position": {
+            "row": 4,
+            "col": 4
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        },
+        {
+          "type": "MOVE",
+          "time": 0.0,
+          "position": {
+            "row": 6,
+            "col": 4
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        },
+        {
+          "type": "WAIT_FOR_SECONDS",
+          "time": 20.0,
+          "position": {
+            "row": 0,
+            "col": 0
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        },
+        {
+          "type": "MOVE",
+          "time": 0.0,
+          "position": {
+            "row": 6,
+            "col": 6
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        },
+        {
+          "type": "MOVE",
+          "time": 0.0,
+          "position": {
+            "row": 5,
+            "col": 6
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        },
+        {
+          "type": "WAIT_FOR_SECONDS",
+          "time": 40.0,
+          "position": {
+            "row": 0,
+            "col": 0
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        },
+        {
+          "type": "MOVE",
+          "time": 0.0,
+          "position": {
+            "row": 5,
+            "col": 4
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        },
+        {
+          "type": "MOVE",
+          "time": 0.0,
+          "position": {
+            "row": 3,
+            "col": 4
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        },
+        {
+          "type": "WAIT_FOR_SECONDS",
+          "time": 70.0,
+          "position": {
+            "row": 0,
+            "col": 0
+          },
+          "reachOffset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "randomizeReachOffset": false,
+          "reachDistance": 0.0
+        }
+      ],
+      "allowDiagonalMove": true,
+      "visitEveryTileCenter": false,
+      "visitEveryNodeCenter": false,
+      "visitEveryCheckPoint": false
+    },
+    {
+      "motionMode": "WALK",
+      "startPosition": {
         "row": 6,
         "col": 0
       },
@@ -6619,6 +6784,12 @@
       "id": "enemy_2017_csphts",
       "level": 0,
       "overwrittenData": null
+    },
+    {
+      "useDb": true,
+      "id": "enemy_2003_rockman",
+      "level": 0,
+      "overwrittenData": null
     }
   ],
   "waves": [
@@ -6844,6 +7015,27 @@
               "weight": 0,
               "dontBlockWave": false,
               "forceBlockWaveInBranch": false
+            },
+            {
+              "actionType": "SPAWN",
+              "managedByScheduler": true,
+              "key": "enemy_2003_rockman",
+              "count": 1,
+              "preDelay": 0.0,
+              "interval": 1.0,
+              "routeIndex": 10,
+              "blockFragment": false,
+              "autoPreviewRoute": false,
+              "autoDisplayEnemyInfo": true,
+              "isUnharmfulAndAlwaysCountAsKilled": false,
+              "hiddenGroup": "reforge",
+              "randomSpawnGroupKey": null,
+              "randomSpawnGroupPackKey": null,
+              "randomType": "ALWAYS",
+              "refreshType": "ALWAYS",
+              "weight": 0,
+              "dontBlockWave": false,
+              "forceBlockWaveInBranch": false
             }
           ]
         },
@@ -6857,7 +7049,7 @@
               "count": 1,
               "preDelay": 3.0,
               "interval": 1.0,
-              "routeIndex": 10,
+              "routeIndex": 11,
               "blockFragment": false,
               "autoPreviewRoute": true,
               "autoDisplayEnemyInfo": false,
@@ -6878,7 +7070,7 @@
               "count": 3,
               "preDelay": 6.0,
               "interval": 13.0,
-              "routeIndex": 11,
+              "routeIndex": 12,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -6899,7 +7091,7 @@
               "count": 3,
               "preDelay": 13.0,
               "interval": 11.0,
-              "routeIndex": 12,
+              "routeIndex": 13,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -6925,7 +7117,7 @@
               "count": 2,
               "preDelay": 0.0,
               "interval": 1.0,
-              "routeIndex": 13,
+              "routeIndex": 14,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -6946,7 +7138,7 @@
               "count": 2,
               "preDelay": 13.0,
               "interval": 4.0,
-              "routeIndex": 14,
+              "routeIndex": 15,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -6967,7 +7159,7 @@
               "count": 1,
               "preDelay": 3.0,
               "interval": 1.0,
-              "routeIndex": 15,
+              "routeIndex": 16,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -6988,7 +7180,7 @@
               "count": 2,
               "preDelay": 10.0,
               "interval": 5.0,
-              "routeIndex": 16,
+              "routeIndex": 17,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7009,7 +7201,7 @@
               "count": 2,
               "preDelay": 28.0,
               "interval": 3.0,
-              "routeIndex": 17,
+              "routeIndex": 18,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7035,7 +7227,7 @@
               "count": 1,
               "preDelay": 0.0,
               "interval": 1.0,
-              "routeIndex": 18,
+              "routeIndex": 19,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7056,7 +7248,7 @@
               "count": 1,
               "preDelay": 8.0,
               "interval": 1.0,
-              "routeIndex": 19,
+              "routeIndex": 20,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7077,7 +7269,7 @@
               "count": 1,
               "preDelay": 22.0,
               "interval": 1.0,
-              "routeIndex": 20,
+              "routeIndex": 21,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7098,7 +7290,7 @@
               "count": 1,
               "preDelay": 20.0,
               "interval": 1.0,
-              "routeIndex": 21,
+              "routeIndex": 22,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7119,7 +7311,7 @@
               "count": 1,
               "preDelay": 0.0,
               "interval": 1.0,
-              "routeIndex": 22,
+              "routeIndex": 23,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7140,7 +7332,7 @@
               "count": 2,
               "preDelay": 13.0,
               "interval": 1.0,
-              "routeIndex": 23,
+              "routeIndex": 24,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7161,7 +7353,7 @@
               "count": 1,
               "preDelay": 25.0,
               "interval": 1.0,
-              "routeIndex": 24,
+              "routeIndex": 25,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7182,7 +7374,7 @@
               "count": 1,
               "preDelay": 18.0,
               "interval": 1.0,
-              "routeIndex": 25,
+              "routeIndex": 26,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7203,7 +7395,7 @@
               "count": 1,
               "preDelay": 11.0,
               "interval": 1.0,
-              "routeIndex": 26,
+              "routeIndex": 27,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7229,7 +7421,7 @@
               "count": 1,
               "preDelay": 3.0,
               "interval": 1.0,
-              "routeIndex": 27,
+              "routeIndex": 28,
               "blockFragment": false,
               "autoPreviewRoute": true,
               "autoDisplayEnemyInfo": false,
@@ -7250,7 +7442,7 @@
               "count": 1,
               "preDelay": 3.0,
               "interval": 1.0,
-              "routeIndex": 28,
+              "routeIndex": 29,
               "blockFragment": false,
               "autoPreviewRoute": true,
               "autoDisplayEnemyInfo": false,
@@ -7271,7 +7463,7 @@
               "count": 1,
               "preDelay": 3.0,
               "interval": 1.0,
-              "routeIndex": 29,
+              "routeIndex": 30,
               "blockFragment": false,
               "autoPreviewRoute": true,
               "autoDisplayEnemyInfo": false,
@@ -7292,7 +7484,7 @@
               "count": 2,
               "preDelay": 7.0,
               "interval": 3.0,
-              "routeIndex": 30,
+              "routeIndex": 31,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7318,7 +7510,7 @@
               "count": 2,
               "preDelay": 0.0,
               "interval": 1.0,
-              "routeIndex": 31,
+              "routeIndex": 32,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7339,7 +7531,7 @@
               "count": 1,
               "preDelay": 10.0,
               "interval": 1.0,
-              "routeIndex": 32,
+              "routeIndex": 33,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7360,7 +7552,7 @@
               "count": 1,
               "preDelay": 22.0,
               "interval": 1.0,
-              "routeIndex": 33,
+              "routeIndex": 34,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7381,7 +7573,7 @@
               "count": 1,
               "preDelay": 5.0,
               "interval": 1.0,
-              "routeIndex": 34,
+              "routeIndex": 35,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7402,7 +7594,7 @@
               "count": 1,
               "preDelay": 0.0,
               "interval": 1.0,
-              "routeIndex": 35,
+              "routeIndex": 36,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7423,7 +7615,7 @@
               "count": 2,
               "preDelay": 12.0,
               "interval": 2.0,
-              "routeIndex": 36,
+              "routeIndex": 37,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7444,7 +7636,7 @@
               "count": 1,
               "preDelay": 20.0,
               "interval": 1.0,
-              "routeIndex": 37,
+              "routeIndex": 38,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7465,7 +7657,7 @@
               "count": 1,
               "preDelay": 25.0,
               "interval": 1.0,
-              "routeIndex": 38,
+              "routeIndex": 39,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7486,7 +7678,7 @@
               "count": 1,
               "preDelay": 0.0,
               "interval": 1.0,
-              "routeIndex": 39,
+              "routeIndex": 40,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7507,7 +7699,7 @@
               "count": 1,
               "preDelay": 12.0,
               "interval": 1.0,
-              "routeIndex": 40,
+              "routeIndex": 41,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7528,7 +7720,7 @@
               "count": 1,
               "preDelay": 23.0,
               "interval": 1.0,
-              "routeIndex": 41,
+              "routeIndex": 42,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7549,7 +7741,7 @@
               "count": 1,
               "preDelay": 35.0,
               "interval": 1.0,
-              "routeIndex": 42,
+              "routeIndex": 43,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7575,27 +7767,6 @@
               "count": 1,
               "preDelay": 12.0,
               "interval": 1.0,
-              "routeIndex": 43,
-              "blockFragment": false,
-              "autoPreviewRoute": false,
-              "autoDisplayEnemyInfo": false,
-              "isUnharmfulAndAlwaysCountAsKilled": false,
-              "hiddenGroup": null,
-              "randomSpawnGroupKey": null,
-              "randomSpawnGroupPackKey": null,
-              "randomType": "ALWAYS",
-              "refreshType": "ALWAYS",
-              "weight": 0,
-              "dontBlockWave": false,
-              "forceBlockWaveInBranch": false
-            },
-            {
-              "actionType": "SPAWN",
-              "managedByScheduler": true,
-              "key": "enemy_2009_csaudc",
-              "count": 1,
-              "preDelay": 30.0,
-              "interval": 1.0,
               "routeIndex": 44,
               "blockFragment": false,
               "autoPreviewRoute": false,
@@ -7615,7 +7786,7 @@
               "managedByScheduler": true,
               "key": "enemy_2009_csaudc",
               "count": 1,
-              "preDelay": 48.0,
+              "preDelay": 30.0,
               "interval": 1.0,
               "routeIndex": 45,
               "blockFragment": false,
@@ -7636,7 +7807,7 @@
               "managedByScheduler": true,
               "key": "enemy_2009_csaudc",
               "count": 1,
-              "preDelay": 0.0,
+              "preDelay": 48.0,
               "interval": 1.0,
               "routeIndex": 46,
               "blockFragment": false,
@@ -7657,7 +7828,7 @@
               "managedByScheduler": true,
               "key": "enemy_2009_csaudc",
               "count": 1,
-              "preDelay": 20.0,
+              "preDelay": 0.0,
               "interval": 1.0,
               "routeIndex": 47,
               "blockFragment": false,
@@ -7678,7 +7849,7 @@
               "managedByScheduler": true,
               "key": "enemy_2009_csaudc",
               "count": 1,
-              "preDelay": 34.0,
+              "preDelay": 20.0,
               "interval": 1.0,
               "routeIndex": 48,
               "blockFragment": false,
@@ -7699,9 +7870,30 @@
               "managedByScheduler": true,
               "key": "enemy_2009_csaudc",
               "count": 1,
-              "preDelay": 48.0,
+              "preDelay": 34.0,
               "interval": 1.0,
               "routeIndex": 49,
+              "blockFragment": false,
+              "autoPreviewRoute": false,
+              "autoDisplayEnemyInfo": false,
+              "isUnharmfulAndAlwaysCountAsKilled": false,
+              "hiddenGroup": null,
+              "randomSpawnGroupKey": null,
+              "randomSpawnGroupPackKey": null,
+              "randomType": "ALWAYS",
+              "refreshType": "ALWAYS",
+              "weight": 0,
+              "dontBlockWave": false,
+              "forceBlockWaveInBranch": false
+            },
+            {
+              "actionType": "SPAWN",
+              "managedByScheduler": true,
+              "key": "enemy_2009_csaudc",
+              "count": 1,
+              "preDelay": 48.0,
+              "interval": 1.0,
+              "routeIndex": 50,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7722,7 +7914,7 @@
               "count": 1,
               "preDelay": 30.0,
               "interval": 1.0,
-              "routeIndex": 50,
+              "routeIndex": 51,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7743,7 +7935,7 @@
               "count": 2,
               "preDelay": 15.0,
               "interval": 15.0,
-              "routeIndex": 51,
+              "routeIndex": 52,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7764,7 +7956,7 @@
               "count": 2,
               "preDelay": 35.0,
               "interval": 15.0,
-              "routeIndex": 52,
+              "routeIndex": 53,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7790,7 +7982,7 @@
               "count": 2,
               "preDelay": 15.0,
               "interval": 5.0,
-              "routeIndex": 53,
+              "routeIndex": 54,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7811,7 +8003,7 @@
               "count": 2,
               "preDelay": 0.0,
               "interval": 25.0,
-              "routeIndex": 54,
+              "routeIndex": 55,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7832,7 +8024,7 @@
               "count": 1,
               "preDelay": 0.0,
               "interval": 1.0,
-              "routeIndex": 55,
+              "routeIndex": 56,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,
@@ -7853,7 +8045,7 @@
               "count": 2,
               "preDelay": 20.0,
               "interval": 3.0,
-              "routeIndex": 56,
+              "routeIndex": 57,
               "blockFragment": false,
               "autoPreviewRoute": false,
               "autoDisplayEnemyInfo": false,

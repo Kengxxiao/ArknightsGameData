@@ -4,7 +4,56 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CollectionMainDlg = Class("CollectionMainDlg", BridgeDlgBase);
+
+local CollectionMainViewModel = require("Feature/Activity/Collection/CollectionMainViewModel")
+local CollectionSimpleMainView = require("Feature/Activity/CollectionSimpleMode/CollectionSimpleMainView")
 
 local function _SetActive(gameObj, isActive)
   luaUtils.SetActiveIfNecessary(gameObj, isActive);
@@ -13,6 +62,8 @@ end
 function CollectionMainDlg:OnInit()
   self.m_activityId = self.m_parent:GetData("actId");
   self.m_itemList = {};
+  self.m_viewModel = self:CreateViewModel(CollectionMainViewModel)
+  self.m_viewModel:LoadData(self.m_activityId)
 
   
   
@@ -32,6 +83,16 @@ function CollectionMainDlg:OnInit()
   self.m_actCfg = CollectionActModel.me:GetActCfg(self.m_activityId);
 
   
+  if self._simpleMainView then
+    
+    local simpleMainView = self:CreateWidgetByGO(CollectionSimpleMainView, self._simpleMainView)
+    simpleMainView.onMissionItemClaimed = Event.Create(self, self._EventOnClaimSingleMission)
+    simpleMainView.onClaimAllClicked = Event.Create(self, self._ConfirmAllMission)
+    simpleMainView.onJumpBtnClicked = Event.Create(self, self._HandleJumpToRelatedSystem)
+    simpleMainView:InitEventFunc()
+  end
+
+  
   self:_HandleImageThemeColor();
   
   self:_HandleBigBonusPointDesc();
@@ -40,23 +101,25 @@ function CollectionMainDlg:OnInit()
 
   self:_RefreshContent();
 
+  
   self:AddButtonClickListener(self._helpBtn, self._HandleOpenHelpPage);
   self:AddButtonClickListener(self._bgCloseArea, self._OnClickBgClose);
   self:AddButtonClickListener(self._claimAllBtn, self._HandleClaimAllReward);
   self:AddButtonClickListener(self._jumpBtn, self._HandleJumpToRelatedSystem);
+  self:AddButtonClickListener(self._redirectBtn, self._HandleScrollTo);
+
+  self.m_viewModel:NotifyUpdate()
 end
 
 function CollectionMainDlg:_OnClickBgClose()
   self:Close();
 end
 
-function CollectionMainDlg:_RefreshContent()
-  self:_CheckMissionStatus();
+function CollectionMainDlg:_RenderActEndTime()
+  if self._timeDesc == nil then
+    return
+  end
 
-  self:AddButtonClickListener(self._redirectBtn, self._HandleScrollTo);
-
-  
-  
   local activityData = CollectionActModel.me:FindBasicInfo(self.m_activityId);
   if activityData then
     local endt = CS.Torappu.DateTimeUtil.TimeStampToDateTime(activityData.endTime);
@@ -65,46 +128,57 @@ function CollectionMainDlg:_RefreshContent()
     local themeColStr = self.m_actCfg.baseColorHex;
     if themeColStr == "" or themeColStr == nil then
       self._timeDesc.text = CS.Torappu.Lua.Util.Format(
-        CS.Torappu.StringRes.ACTIVITY_3D5_TIME_DESC, 
-        endt.Year, 
-        endt.Month, 
-        endt.Day, 
-        endt.Hour, 
-        endt.Minute,
-        timeRemainTxt);
+          CS.Torappu.StringRes.ACTIVITY_3D5_TIME_DESC,
+          endt.Year,
+          endt.Month,
+          endt.Day,
+          endt.Hour,
+          endt.Minute,
+          timeRemainTxt);
     else
       self._timeDesc.text = CS.Torappu.Lua.Util.Format(
-        CS.Torappu.StringRes.ACT_COLLECTION_TIME_DESC, 
-        endt.Year, 
-        endt.Month, 
-        endt.Day, 
-        endt.Hour, 
-        endt.Minute,
-        themeColStr, 
-        timeRemainTxt);
+          CS.Torappu.StringRes.ACT_COLLECTION_TIME_DESC,
+          endt.Year,
+          endt.Month,
+          endt.Day,
+          endt.Hour,
+          endt.Minute,
+          themeColStr,
+          timeRemainTxt);
     end
   end
+end
 
-  
+function CollectionMainDlg:_RenderApSupplyTime()
+  if self._apSupplyTime == nil then
+    return
+  end
+
   self._apSupplyTime.text = "";
   if self.m_itemsInCfg.apSupplyOutOfDateDict then
     for apid, endtime in pairs(self.m_itemsInCfg.apSupplyOutOfDateDict) do
       local apItemData = CS.Torappu.UI.UIItemViewModel();
       apItemData:LoadGameData(apid, CS.Torappu.ItemType.NONE);
       local dateTime = CS.Torappu.DateTimeUtil.TimeStampToDateTime(endtime);
-      local timedesc = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.DATE_FORMAT_YYYY_MM_DD_HH_MM,dateTime.Year, dateTime.Month, dateTime.Day,dateTime.Hour,dateTime.Minute);
+      local timedesc = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.DATE_FORMAT_YYYY_MM_DD_HH_MM, dateTime.Year,
+          dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute);
       local str = CS.Torappu.I18N.StringMap.Get("ACTIVITY_3D5_APTIME_DESC");
       self._apSupplyTime.text = CS.Torappu.Lua.Util.Format(str, apItemData.name, timedesc);
       break;
     end
   end
+end
 
+function CollectionMainDlg:_RenderCollectionRewardInComplexMode()
+  if not self._pointTitle or not self._pointCnt or not self._pointIcon or not self._helpBtnDesc or
+      not self._itemPrefab or not self._itemContainer then 
+    return 
+  end
   
   local suc, collectStatus = CS.Torappu.PlayerData.instance.data.activity.collectionActivityList:TryGetValue(self.m_activityId);
   if not suc then 
-  collectStatus = CS.Torappu.PlayerActivity.PlayerCollectionTypeActivity();
+    collectStatus = CS.Torappu.PlayerActivity.PlayerCollectionTypeActivity();
   end
-  
   local pointId = "";
   if #self.m_collections > 0 then
     pointId = self.m_collections[1].pointId;
@@ -113,17 +187,13 @@ function CollectionMainDlg:_RefreshContent()
   if not suc then
     pointCurCnt = 0;
   end
-
   local pointItemData = CS.Torappu.UI.UIItemViewModel();
   pointItemData:LoadGameData(pointId, CS.Torappu.ItemType.NONE);
-
-  self._actDescLabel.text = CS.Torappu.StringRes.ACTIVITY_3D5_DESC;
   self._pointTitle.text = CS.Torappu.Lua.Util.Format(CS.Torappu.StringRes.ACTIVITY_3D5_POINT_TITLE, self.m_actCfg.pointItemName);
   self._pointCnt.text = tostring(pointCurCnt);
   self._pointIcon.sprite = CS.Torappu.UI.ItemUtil.LoadItemIconUI(pointItemData:GetItemType(), pointItemData.itemId, pointItemData.itemIconId);
-
   self._helpBtnDesc.text = CS.Torappu.Lua.Util.Format(StringRes.ACT_COLLECTION_HELP_BTN_DESC, self.m_actCfg.pointItemName);
-
+  
   local completeIdx = 0;
   local lastCanGetIdx = 0;
   for idx = 1, #self.m_collections do
@@ -135,7 +205,7 @@ function CollectionMainDlg:_RefreshContent()
     else
       item = self:CreateWidgetByPrefab(CollectionItem, self._itemPrefab, self._itemContainer);
       item:SetClaimCallback(function ()
-        self:_HandleClaimAllBtn();
+        self:_HandleClaimAllBtnInComplexMode();
       end);
       table.insert(self.m_itemList, item);
     end
@@ -151,12 +221,43 @@ function CollectionMainDlg:_RefreshContent()
       end
     end
   end
-
-  
-  self:_HandleClaimAllBtn();
-
   
   self:_SynPrg(self.m_collections, completeIdx, pointCurCnt, lastCanGetIdx);
+end
+
+function CollectionMainDlg:_RenderActivityDescLabel()
+  if self._actDescLabel == nil then
+    return
+  end
+
+  self._actDescLabel.text = CS.Torappu.StringRes.ACTIVITY_3D5_DESC;
+end
+
+function CollectionMainDlg:_RefreshContent()
+  local useSimpleMode = self.m_constData ~= nil and self.m_constData.isSimpleMode
+  if not useSimpleMode then
+    
+    self:_UpdateCanClaimRewardInfo();
+    
+    self:_RenderActEndTime();
+    
+    self:_RenderApSupplyTime();
+    
+    self:_RenderActivityDescLabel();
+    
+    self:_ConfirmAllMission();
+    
+    self:_RenderCollectionRewardInComplexMode();
+    
+    self:_HandleClaimAllBtnInComplexMode();
+  else
+    self:_UpdateCanClaimRewardInfo()
+    
+    self:_HandleClaimAllReward();
+  end
+
+  self.m_viewModel:UpdateData(self.m_activityId)
+  self.m_viewModel:NotifyUpdate()
 end
 
 function CollectionMainDlg:_HandleBigBonusPointDesc()
@@ -192,15 +293,19 @@ function CollectionMainDlg:_HandleJumpToRelatedSystemBtn()
   _SetActive(self._cantJumpBg, not self.m_canJump);
 end
 
-function CollectionMainDlg:_HandleClaimAllBtn()
-  self.m_showClaimAllBtn = self._claimAllPart ~= nil;
+function CollectionMainDlg:_HandleClaimAllBtnInComplexMode()
+  self.m_showClaimAllBtn = self._claimAllPart ~= nil and self._claimAllBtn ~= nil;
   if self.m_showClaimAllBtn == false then
-    return;  
+    return;
   end
+  _SetActive(self._claimAllBtn.gameObject, self.m_canClaimAll);
+  _SetActive(self._cantClaimAllBtnMask, not self.m_canClaimAll);
+end
 
+function CollectionMainDlg:_UpdateCanClaimRewardInfo()
   local suc, collectStatus = CS.Torappu.PlayerData.instance.data.activity.collectionActivityList:TryGetValue(self.m_activityId);
   if not suc then 
-  collectStatus = CS.Torappu.PlayerActivity.PlayerCollectionTypeActivity();
+    collectStatus = CS.Torappu.PlayerActivity.PlayerCollectionTypeActivity();
   end
   
   local pointId = "";
@@ -219,12 +324,10 @@ function CollectionMainDlg:_HandleClaimAllBtn()
     local reached = pointCurCnt >= info.pointCnt;
     self.m_canClaimAll = self.m_canClaimAll or (reached and not geted);
   end
-  _SetActive(self._claimAllBtn.gameObject, self.m_canClaimAll);
-  _SetActive(self._cantClaimAllBtnMask, not self.m_canClaimAll);
 end
 
 function CollectionMainDlg:_HandleClaimAllReward()
-  if self.m_showClaimAllBtn == false or self.m_canClaimAll == false  or CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() then
+  if not self.m_canClaimAll or CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() then
     return;
   end
   
@@ -280,6 +383,10 @@ end
 
 
 function CollectionMainDlg:_SynPrg(collections, completeIdx, pointCurCnt, lastCanGetIdx)
+  if self._itemPrefab == nil or self._prg == nil or self._scrollView == nil then
+    return
+  end
+
   local collen = #collections;
   local itemWidth = self._itemPrefab:rectTransform().sizeDelta.x;
   local prgMax = itemWidth * collen;
@@ -319,8 +426,10 @@ function CollectionMainDlg:_SynPrg(collections, completeIdx, pointCurCnt, lastCa
   end);
 end
 
-function CollectionMainDlg:_CheckMissionStatus()
-
+function CollectionMainDlg:_ConfirmAllMission()
+  if CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() then
+    return
+  end
   local missionGrp = CollectionActModel.me:GetMissionGroup(self.m_activityId);
   if missionGrp == nil then
     return;
@@ -368,12 +477,20 @@ function CollectionMainDlg:_CheckMissionStatus()
 end
 
 function CollectionMainDlg:_HandleOpenHelpPage()
+  if self._scrollView == nil then
+    return
+  end
+
   local dlg = self:GetGroup():AddChildDlg(CollectionTaskListDlg);
   dlg:Refresh(self.m_activityId, Event.Create(self, self._HandleHelpViewClose) );
   self._scrollView.gameObject:SetActive(false);
 end
 
 function CollectionMainDlg:_HandleHelpViewClose()
+  if self._scrollView == nil then
+    return
+  end
+
   self._scrollView.gameObject:SetActive(true);
 end
 
@@ -383,6 +500,9 @@ function CollectionMainDlg:_HandleScrollTo()
   local suc, itemsInCfg = CS.Torappu.ActivityDB.data.activity.defaultCollectionData:TryGetValue(self.m_activityId)
   if not suc then
     return;
+  end
+  if self._scrollView == nil then
+    return
   end
 
   for idx, collection in ipairs(self.m_collections) do
@@ -402,6 +522,10 @@ end
 
 
 function CollectionMainDlg:_CalculateItemScrollPrg(itemIdx, totalCount)
+  if self._scrollView == nil or self._itemPrefab == nil then
+    return 0
+  end
+
   local viewWidth = self._scrollView:rectTransform().sizeDelta.x;
   local itemWidth = self._itemPrefab:rectTransform().sizeDelta.x;
   local prgMax = itemWidth * totalCount - viewWidth;
@@ -411,4 +535,27 @@ function CollectionMainDlg:_CalculateItemScrollPrg(itemIdx, totalCount)
   else
     return to/prgMax;
   end
+end
+
+
+function CollectionMainDlg:_EventOnClaimSingleMission(missionId)
+  if CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() then
+    return
+  end
+  if missionId == nil then
+    return
+  end
+  local confirmedMissionIds = {missionId}
+  UISender.me:SendRequest(ActivityServiceCode.CHECK_COLLECTION_MISSIONS, 
+  {
+    missionIds = confirmedMissionIds,
+    activityId = self.m_activityId
+  }, 
+  {
+    onProceed = Event.Create(self, self._RefreshContent);
+
+    onBlock = Event.CreateStatic(function(error)
+      return true;
+    end);
+  });
 end

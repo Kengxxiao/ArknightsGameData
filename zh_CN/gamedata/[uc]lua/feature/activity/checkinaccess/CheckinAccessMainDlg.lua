@@ -35,7 +35,7 @@ end
 
 
 function CheckinAccessMainDlg:_EventOnConfirmBtnClick()
-  if CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() then
+  if luaUtils.CheckCrossDaysAndResync() then
     return;
   end
   local viewModel = self.m_viewModel;

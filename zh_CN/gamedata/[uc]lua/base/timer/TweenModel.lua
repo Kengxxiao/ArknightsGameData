@@ -127,6 +127,9 @@ TweenModel.EaseFunc = {};
 TweenModel.EaseFunc.easeOutQuad =  function(x)
   return 1 - (1 - x) * (1 - x);
 end
+TweenModel.EaseFunc.easeOutQuart = function(x)
+  return 1 - (1 - x) * (1 - x) * (1 - x) * (1 - x)
+end
 
 
 Readonly(TweenModel.EaseFunc);
