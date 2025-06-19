@@ -9,7 +9,9 @@ local list =
   "HotFixes/CommonCharCardCacheHotfixer",
   "HotFixes/Phatm2TokenHitRangeProviderHotfixer",
   "HotFixes/SceneAddLightHotfixer",
-  "HotFixes/MainTargetMultiRangedAttackHotfixer"
+  "HotFixes/MainTargetMultiRangedAttackHotfixer",
+  "HotFixes/AbilityEventCounterHotfixer",
+  "HotFixes/RoguelikeMenuZoneViewModelHotfixer",
 };
 
 return list;
