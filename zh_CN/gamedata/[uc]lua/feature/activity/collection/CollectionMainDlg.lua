@@ -205,6 +205,7 @@ function CollectionMainDlg:_RenderCollectionRewardInComplexMode()
     else
       item = self:CreateWidgetByPrefab(CollectionItem, self._itemPrefab, self._itemContainer);
       item:SetClaimCallback(function ()
+        self:_UpdateCanClaimRewardInfo();
         self:_HandleClaimAllBtnInComplexMode();
       end);
       table.insert(self.m_itemList, item);
