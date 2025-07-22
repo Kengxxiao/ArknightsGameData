@@ -26,13 +26,27 @@ local function Rogue4TravelLeaveToastGenDescFix(self, param)
     end
 end
 
+local function RoguelikeStashedTicketUseViewInitIfNotFix(self)
+    if self.m_hasInited then
+       return; 
+    end
+    self.m_hasInited = true;
+
+    local leaveBtnAnimBuilder = CS.Torappu.UI.AnimationSwitchTween.Builder(self._leaveBtnAnim);
+    leaveBtnAnimBuilder.ease = CS.DG.Tweening.Ease.OutQuad;
+    leaveBtnAnimBuilder.inactivateTargetIfHide = false;
+    self.m_leaveBtnAnimTween = leaveBtnAnimBuilder:Build();
+    self.m_leaveBtnAnimTween:Reset(false);
+end
+
 function UICommonHotfixer:OnInit()
     xlua.private_accessible(CS.Torappu.UI.RoguelikeTopic.Ending.RoguelikeTopicEndingSPOperatorViewModel)
     xlua.private_accessible(CS.Torappu.UI.Roguelike.RL04.RL04TravelLeaveToastView)
+    xlua.private_accessible(CS.Torappu.UI.Roguelike.RoguelikeStashedTicketUseView)
 
     self:Fix_ex(CS.Torappu.UI.RoguelikeTopic.Ending.RoguelikeTopicEndingSPOperatorViewModel, "_LoadCharStatus", RTEndingSPOperatorLoadCharStatusFix)
     self:Fix_ex(CS.Torappu.UI.Roguelike.RL04.RL04TravelLeaveToastView, "_GenDesc", Rogue4TravelLeaveToastGenDescFix)
-
+    self:Fix_ex(CS.Torappu.UI.Roguelike.RoguelikeStashedTicketUseView, "_InitIfNot", RoguelikeStashedTicketUseViewInitIfNotFix)
 end
 
 function UICommonHotfixer:OnDispose()
