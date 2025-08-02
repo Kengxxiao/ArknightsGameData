@@ -55,7 +55,6 @@ local function _CreateSwitch(canvasGroup)
   return ret
 end
 
-
 function PrayOnlyMainDlg:OnInit()
   local actId = self.m_parent:GetData("actId")
   self:_InitFromGameData(actId)

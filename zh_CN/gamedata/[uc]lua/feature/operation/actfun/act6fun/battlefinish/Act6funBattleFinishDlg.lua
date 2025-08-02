@@ -48,7 +48,6 @@ local function _SetActive(gameObj, isActive)
   luaUtils.SetActiveIfNecessary(gameObj, isActive);
 end
 
-
 function Act6FunBattleFinishDlg:OnInit()
   self.m_isAnimEnd = false;
   self.m_isSuc = false;
@@ -73,10 +72,8 @@ function Act6FunBattleFinishDlg:OnInit()
   self:_OnRenderPanel();
 end
 
-
 function Act6FunBattleFinishDlg:OnClose()
 end
-
 
 function Act6FunBattleFinishDlg:ShowEnterEffect()
   self:_PlayEnterAnim();

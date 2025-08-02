@@ -39,7 +39,6 @@ local ActFlipCardDlg = require("Feature/Activity/ActFlip/ActFlipCardDlg")
 local ActFlipViewModel = require("Feature/Activity/ActFlip/ActFlipViewModel")
 local ActFlipGrandDlg = require("Feature/Activity/ActFlip/ActFlipGrandDlg")
 
-
 function ActFlipMainDlg:OnInit()
   local actId = self.m_parent:GetData("actId")
   self:_InitFromGameData(actId)

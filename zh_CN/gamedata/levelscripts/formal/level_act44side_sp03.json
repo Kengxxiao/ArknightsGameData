@@ -1,0 +1,516 @@
+{
+  "key": "level_act44side_sp03",
+  "headerList": [
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+OnCustomLevelEventEnemyPtrWithInteger, Assembly-CSharp",
+      "integer": {
+        "path": "0_integer"
+      },
+      "eventKey": {
+        "constValue": "collide_enemy"
+      },
+      "enemyPtr": {
+        "path": "0_enemyPtr"
+      },
+      "nextId": 26,
+      "_validate": {}
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+OnCustomLevelEventEnemyPtr, Assembly-CSharp",
+      "eventKey": {
+        "constValue": "enemy_falldown"
+      },
+      "enemyPtr": {
+        "path": "2_enemyPtr"
+      },
+      "nextId": 14,
+      "_validate": {},
+      "_ID": 2
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+OnCustomLevelEventCharacterPtr, Assembly-CSharp",
+      "_eventKey": {
+        "constValue": "touch_character"
+      },
+      "_characterPtr": {
+        "path": "6__characterPtr"
+      },
+      "nextId": 10,
+      "_validate": {},
+      "_ID": 6
+    }
+  ],
+  "actionList": [
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+ModifyTempValueFloat, Assembly-CSharp",
+      "_targetKey": "total_score",
+      "_modifyValue": {
+        "paramSource": 100,
+        "path": "16__outputFloat"
+      },
+      "nextId": -1,
+      "_ID": 7
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+ModifyTempValueFloat, Assembly-CSharp",
+      "_targetKey": "total_score",
+      "_modifyValue": {
+        "paramSource": 100,
+        "path": "12__outputFloat"
+      },
+      "nextId": -1,
+      "_ID": 8
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetResultMultiplyIntWithInt, Assembly-CSharp",
+      "_inputIntegerFirst": {
+        "paramSource": 1,
+        "idRef": 9
+      },
+      "_inputIntegerSecond": {
+        "paramSource": 1,
+        "idRef": 1
+      },
+      "_outputInteger": {
+        "path": "10__outputInteger"
+      },
+      "nextId": 13,
+      "_ID": 10
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetResultAdditionFloatWithFloat, Assembly-CSharp",
+      "_inputIntegerFirst": {
+        "paramSource": 100,
+        "path": "13__outputFloat"
+      },
+      "_inputIntegerSecond": {
+        "paramSource": 1,
+        "idRef": 11
+      },
+      "_outputFloat": {
+        "path": "12__outputFloat"
+      },
+      "nextId": 8,
+      "_ID": 12
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+TransformIntToFloat, Assembly-CSharp",
+      "_inputInteger": {
+        "paramSource": 100,
+        "path": "10__outputInteger"
+      },
+      "_outputFloat": {
+        "path": "13__outputFloat"
+      },
+      "nextId": 12,
+      "_ID": 13
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+TransformIntToFloat, Assembly-CSharp",
+      "_inputInteger": {
+        "paramSource": 1,
+        "idRef": 5
+      },
+      "_outputFloat": {
+        "path": "14__outputFloat"
+      },
+      "nextId": 16,
+      "_ID": 14
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetResultAdditionFloatWithFloat, Assembly-CSharp",
+      "_inputIntegerFirst": {
+        "paramSource": 100,
+        "path": "14__outputFloat"
+      },
+      "_inputIntegerSecond": {
+        "paramSource": 1,
+        "idRef": 15
+      },
+      "_outputFloat": {
+        "path": "16__outputFloat"
+      },
+      "nextId": 7,
+      "_ID": 16
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+TransformIntToFloat, Assembly-CSharp",
+      "_inputInteger": {
+        "paramSource": 1,
+        "path": "0_integer",
+        "idRef": 31
+      },
+      "_outputFloat": {
+        "path": "20__outputFloat"
+      },
+      "nextId": 21,
+      "_ID": 20
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetResultMultiplyFloatWithFloat, Assembly-CSharp",
+      "_inputIntegerFirst": {
+        "paramSource": 100,
+        "path": "20__outputFloat"
+      },
+      "_inputIntegerSecond": {
+        "paramSource": 1,
+        "idRef": 22
+      },
+      "_outputInteger": {
+        "path": "21__outputInteger"
+      },
+      "nextId": 23,
+      "_ID": 21
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetResultAdditionFloatWithFloat, Assembly-CSharp",
+      "_inputIntegerFirst": {
+        "paramSource": 100,
+        "path": "21__outputInteger"
+      },
+      "_inputIntegerSecond": {
+        "constValue": 1.0
+      },
+      "_outputFloat": {
+        "path": "23__outputFloat"
+      },
+      "nextId": 24,
+      "_ID": 23
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetResultFloatLimitWithRange, Assembly-CSharp",
+      "_inputFloat": {
+        "paramSource": 100,
+        "path": "23__outputFloat"
+      },
+      "_inputFloatLimitMin": {},
+      "_inputFloatLimitMax": {
+        "paramSource": 1,
+        "idRef": 25
+      },
+      "_outputLimitedFloat": {
+        "path": "24__outputLimitedFloat"
+      },
+      "nextId": 27,
+      "_ID": 24
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+TransformIntToFloat, Assembly-CSharp",
+      "_inputInteger": {
+        "paramSource": 1,
+        "idRef": 19
+      },
+      "_outputFloat": {
+        "path": "26__outputFloat"
+      },
+      "nextId": 20,
+      "_ID": 26
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetResultMultiplyFloatWithFloat, Assembly-CSharp",
+      "_inputIntegerFirst": {
+        "paramSource": 100,
+        "path": "26__outputFloat"
+      },
+      "_inputIntegerSecond": {
+        "paramSource": 100,
+        "path": "24__outputLimitedFloat"
+      },
+      "_outputInteger": {
+        "path": "27__outputInteger"
+      },
+      "nextId": 29,
+      "_ID": 27
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetResultAdditionFloatWithFloat, Assembly-CSharp",
+      "_inputIntegerFirst": {
+        "paramSource": 100,
+        "path": "27__outputInteger"
+      },
+      "_inputIntegerSecond": {
+        "paramSource": 1,
+        "idRef": 28
+      },
+      "_outputFloat": {
+        "path": "29__outputFloat"
+      },
+      "nextId": 30,
+      "_ID": 29
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+ModifyTempValueFloat, Assembly-CSharp",
+      "_targetKey": "total_score",
+      "_modifyValue": {
+        "paramSource": 100,
+        "path": "29__outputFloat"
+      },
+      "nextId": -1,
+      "_ID": 30
+    }
+  ],
+  "getterList": [
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetEnemyId, Assembly-CSharp",
+      "enemyPtr": {
+        "paramSource": 100,
+        "path": "2_enemyPtr"
+      },
+      "_ID": 4
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetIndexFromStringListViaKey, Assembly-CSharp",
+      "_key": {
+        "paramSource": 1,
+        "idRef": 4
+      },
+      "_stringListName": "enemy_key",
+      "_ID": 3
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetIntegerFromListViaIndex, Assembly-CSharp",
+      "_index": {
+        "paramSource": 1,
+        "idRef": 3
+      },
+      "_integerListName": "enemy_falldown_grade",
+      "_ID": 5
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetCharacterBlockCnt, Assembly-CSharp",
+      "_characterPtr": {
+        "paramSource": 100,
+        "path": "6__characterPtr"
+      },
+      "_ID": 9
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetTempValueInt, Assembly-CSharp",
+      "key": {
+        "constValue": "character_grade"
+      },
+      "_ID": 1
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetTempValueFloat, Assembly-CSharp",
+      "key": {
+        "constValue": "total_score"
+      },
+      "_ID": 11
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetTempValueFloat, Assembly-CSharp",
+      "key": {
+        "constValue": "total_score"
+      },
+      "_ID": 15
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetEnemyId, Assembly-CSharp",
+      "enemyPtr": {
+        "paramSource": 100,
+        "path": "0_enemyPtr"
+      },
+      "_ID": 17
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetIndexFromStringListViaKey, Assembly-CSharp",
+      "_key": {
+        "paramSource": 1,
+        "idRef": 17
+      },
+      "_stringListName": "enemy_key",
+      "_ID": 18
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetIntegerFromListViaIndex, Assembly-CSharp",
+      "_index": {
+        "paramSource": 1,
+        "idRef": 18
+      },
+      "_integerListName": "enemy_push_ymgpck_grade",
+      "_ID": 19
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetTempValueFloat, Assembly-CSharp",
+      "key": {
+        "constValue": "push_ymgpck_add_grade_rate"
+      },
+      "_ID": 22
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetTempValueFloat, Assembly-CSharp",
+      "key": {
+        "constValue": "push_ymgpck_add_max_grade_rate"
+      },
+      "_ID": 25
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetTempValueFloat, Assembly-CSharp",
+      "key": {
+        "constValue": "total_score"
+      },
+      "_ID": 28
+    },
+    {
+      "$type": "Torappu.Battle.LevelScript.LevelScriptNodes+GetEventParamInt, Assembly-CSharp",
+      "key": {
+        "constValue": "integer"
+      },
+      "_ID": 31
+    }
+  ],
+  "tempValues": {
+    "value": [
+      {
+        "key": "total_score",
+        "value": {
+          "type": "Float",
+          "valueArray": [
+            {}
+          ]
+        }
+      },
+      {
+        "key": "character_grade",
+        "value": {
+          "type": "Int",
+          "valueArray": [
+            {
+              "valueBit64": 100
+            }
+          ]
+        }
+      },
+      {
+        "key": "push_ymgpck_add_grade_rate",
+        "value": {
+          "type": "Float",
+          "valueArray": [
+            {
+              "valueBit64": 1036831949
+            }
+          ]
+        }
+      },
+      {
+        "key": "push_ymgpck_add_max_grade_rate",
+        "value": {
+          "type": "Float",
+          "valueArray": [
+            {
+              "valueBit64": 1073741824
+            }
+          ]
+        }
+      },
+      {
+        "key": "max_play_time",
+        "value": {
+          "type": "Int",
+          "valueArray": [
+            {
+              "valueBit64": 100
+            }
+          ]
+        }
+      },
+      {
+        "key": "enemy_key",
+        "value": {
+          "type": "StringList",
+          "valueArray": [
+            {
+              "valueString": "enemy_101112_ymgds"
+            },
+            {
+              "valueString": "enemy_10113_ymgung"
+            },
+            {
+              "valueString": "enemy_10114_ymgsld"
+            },
+            {
+              "valueString": "enemy_10115_ymghol"
+            },
+            {
+              "valueString": "enemy_10116_ymgtop"
+            },
+            {
+              "valueString": "enemy_10117_ymggld"
+            },
+            {
+              "valueString": "enemy_10118_ymgprc"
+            },
+            {
+              "valueString": "enemy_10119_ymgbxm"
+            }
+          ]
+        }
+      },
+      {
+        "key": "enemy_push_ymgpck_grade",
+        "value": {
+          "type": "IntList",
+          "valueArray": [
+            {
+              "valueBit64": 10
+            },
+            {
+              "valueBit64": 20
+            },
+            {
+              "valueBit64": 30
+            },
+            {
+              "valueBit64": 40
+            },
+            {
+              "valueBit64": 50
+            },
+            {
+              "valueBit64": 60
+            },
+            {
+              "valueBit64": 70
+            },
+            {
+              "valueBit64": 80
+            }
+          ]
+        }
+      },
+      {
+        "key": "enemy_falldown_grade",
+        "value": {
+          "type": "IntList",
+          "valueArray": [
+            {
+              "valueBit64": 100
+            },
+            {
+              "valueBit64": 200
+            },
+            {
+              "valueBit64": 300
+            },
+            {
+              "valueBit64": 400
+            },
+            {
+              "valueBit64": 500
+            },
+            {
+              "valueBit64": 600
+            },
+            {
+              "valueBit64": 700
+            },
+            {
+              "valueBit64": 800
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -10,6 +10,7 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
+
 UniqueOnlyDlg = Class("UniqueOnlyDlg", DlgBase)
 
 local UniqueOnlyViewModel = require("Feature/Activity/UniqueOnly/UniqueOnlyViewModel");
@@ -100,4 +101,7 @@ function UniqueOnlyDlg:_RefreshUI()
   end
   
   SetGameObjectActive(self._objBtnClaim, self.m_viewModel.canClaimReward);
+  if (self._objCannotClaim ~= nil) then
+    SetGameObjectActive(self._objCannotClaim, not self.m_viewModel.canClaimReward);
+  end
 end

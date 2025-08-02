@@ -31,7 +31,6 @@ function Act4funLiveValuePanel:OnInit()
 end
 
 
-
 function Act4funLiveValuePanel:OnViewModelUpdate(data)
   local inValueSettle = data.currStep == Act4funLiveStep.VALUE_SETTLE;
 

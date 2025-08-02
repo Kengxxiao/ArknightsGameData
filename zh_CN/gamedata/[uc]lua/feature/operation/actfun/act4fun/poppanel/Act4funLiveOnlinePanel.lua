@@ -4,7 +4,6 @@ local Act4funLiveOnlinePanel = Class("Act4funLiveOnlinePanel", Act4funLivePopPan
 Act4funLiveOnlinePanel.ANIM_NAME = "act4fun_live_online";
 
 
-
 function Act4funLiveOnlinePanel:OnViewModelUpdate(data)
   local valid = data.currStep == Act4funLiveStep.ONLINE;
   self:SetVisible(valid);

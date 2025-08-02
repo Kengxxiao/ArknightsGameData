@@ -12,7 +12,6 @@ function Act4funLiveOfflinePanel:OnInit()
 end
 
 
-
 function Act4funLiveOfflinePanel:OnViewModelUpdate(data)
   local valid = data.currStep == Act4funLiveStep.OFFLINE;
   self:SetVisible(valid);

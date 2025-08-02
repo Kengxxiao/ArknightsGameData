@@ -3451,43 +3451,43 @@
           "char2": "npc_003_kalts"
         },
         {
-          "index": 142,
+          "index": 215,
           "lineType": 0,
           "char1": "char_002_amiya",
           "char2": "char_003_kalts"
         },
         {
-          "index": 143,
+          "index": 216,
           "lineType": 0,
           "char1": "char_003_kalts",
           "char2": "npc_001_doctor"
         },
         {
-          "index": 144,
+          "index": 217,
           "lineType": 0,
           "char1": "char_003_kalts",
           "char2": "char_345_folnic"
         },
         {
-          "index": 145,
+          "index": 218,
           "lineType": 0,
           "char1": "char_144_red",
           "char2": "char_003_kalts"
         },
         {
-          "index": 146,
+          "index": 219,
           "lineType": 0,
           "char1": "npc_010_chen",
           "char2": "char_002_amiya"
         },
         {
-          "index": 147,
+          "index": 220,
           "lineType": 0,
           "char1": "npc_010_chen",
           "char2": "char_1013_chen2"
         },
         {
-          "index": 148,
+          "index": 221,
           "lineType": 0,
           "char1": "char_4179_monstr",
           "char2": "char_003_kalts"
@@ -4237,6 +4237,7 @@
             "char_136_hsguma",
             "char_308_swire",
             "char_010_chen",
+            "char_1044_hsgma2",
             "npc_010_chen"
           ],
           "forceId": "lgd",
@@ -4282,7 +4283,10 @@
         {
           "color": "00dbe9",
           "charList": [
-            "char_118_yuki"
+            "char_118_yuki",
+            "char_4199_makiri",
+            "char_4202_haruka",
+            "char_4203_kichi"
           ],
           "forceId": "higashi",
           "pos": {
@@ -4295,7 +4299,29 @@
             "x": -415.1724,
             "y": -72.48943
           },
-          "colorBlocks": []
+          "colorBlocks": [
+            {
+              "id": "higashi0",
+              "forceId": "higashi",
+              "pos": {
+                "x": 450.0,
+                "y": -86.60254
+              },
+              "color": "00dbe9",
+              "connectionList": [
+                {
+                  "direction": 1,
+                  "charId": "char_118_yuki",
+                  "forceId": null
+                },
+                {
+                  "direction": 4,
+                  "charId": "char_4199_makiri",
+                  "forceId": null
+                }
+              ]
+            }
+          ]
         },
         {
           "color": "ff4a33",
@@ -4407,7 +4433,13 @@
             "x": 449.9998,
             "y": 86.6025
           },
-          "connectionList": [],
+          "connectionList": [
+            {
+              "direction": 4,
+              "charId": null,
+              "forceId": "higashi"
+            }
+          ],
           "haveOutLine": true
         },
         {
@@ -4421,11 +4453,6 @@
             {
               "direction": 2,
               "charId": "npc_2006_fmzuki",
-              "forceId": null
-            },
-            {
-              "direction": 4,
-              "charId": "char_1033_swire2",
               "forceId": null
             },
             {
@@ -4497,8 +4524,8 @@
               "forceId": null
             },
             {
-              "direction": 3,
-              "charId": "char_1033_swire2",
+              "direction": 4,
+              "charId": "char_1044_hsgma2",
               "forceId": null
             },
             {
@@ -4530,6 +4557,16 @@
             {
               "direction": 2,
               "charId": "char_136_hsguma",
+              "forceId": null
+            },
+            {
+              "direction": 3,
+              "charId": "char_1044_hsgma2",
+              "forceId": null
+            },
+            {
+              "direction": 4,
+              "charId": "char_1033_swire2",
               "forceId": null
             },
             {
@@ -5014,18 +5051,18 @@
           "charId": "char_1033_swire2",
           "scale": 1.0,
           "pos": {
-            "x": 0.0,
-            "y": -173.205078
+            "x": -300.0,
+            "y": -346.410156
           },
           "connectionList": [
             {
-              "direction": 0,
-              "charId": "char_136_hsguma",
+              "direction": 1,
+              "charId": "char_308_swire",
               "forceId": null
             },
             {
-              "direction": 1,
-              "charId": "npc_2005_wywu",
+              "direction": 2,
+              "charId": "char_1044_hsgma2",
               "forceId": null
             }
           ],
@@ -5074,6 +5111,90 @@
             {
               "direction": 1,
               "charId": "char_213_mostma",
+              "forceId": null
+            }
+          ],
+          "haveOutLine": true
+        },
+        {
+          "charId": "char_1044_hsgma2",
+          "scale": 1.0,
+          "pos": {
+            "x": -150.0,
+            "y": -259.807617
+          },
+          "connectionList": [
+            {
+              "direction": 0,
+              "charId": "char_308_swire",
+              "forceId": null
+            },
+            {
+              "direction": 1,
+              "charId": "char_136_hsguma",
+              "forceId": null
+            },
+            {
+              "direction": 5,
+              "charId": "char_1033_swire2",
+              "forceId": null
+            }
+          ],
+          "haveOutLine": true
+        },
+        {
+          "charId": "char_4202_haruka",
+          "scale": 1.0,
+          "pos": {
+            "x": 300.0,
+            "y": -346.410156
+          },
+          "connectionList": [
+            {
+              "direction": 2,
+              "charId": "char_4199_makiri",
+              "forceId": null
+            },
+            {
+              "direction": 4,
+              "charId": "char_4203_kichi",
+              "forceId": null
+            }
+          ],
+          "haveOutLine": true
+        },
+        {
+          "charId": "char_4203_kichi",
+          "scale": 1.0,
+          "pos": {
+            "x": 300.0,
+            "y": -519.615234
+          },
+          "connectionList": [
+            {
+              "direction": 1,
+              "charId": "char_4202_haruka",
+              "forceId": null
+            }
+          ],
+          "haveOutLine": true
+        },
+        {
+          "charId": "char_4199_makiri",
+          "scale": 1.0,
+          "pos": {
+            "x": 450.0,
+            "y": -259.807617
+          },
+          "connectionList": [
+            {
+              "direction": 1,
+              "charId": null,
+              "forceId": "higashi"
+            },
+            {
+              "direction": 5,
+              "charId": "char_4202_haruka",
               "forceId": null
             }
           ],
@@ -5253,39 +5374,87 @@
           "char2": "char_4193_lemuen"
         },
         {
-          "index": 149,
+          "index": 25,
+          "lineType": 0,
+          "char1": "char_1044_hsgma2",
+          "char2": "char_136_hsguma"
+        },
+        {
+          "index": 26,
+          "lineType": 0,
+          "char1": "char_1044_hsgma2",
+          "char2": "char_1033_swire2"
+        },
+        {
+          "index": 27,
+          "lineType": 0,
+          "char1": "char_1044_hsgma2",
+          "char2": "char_010_chen"
+        },
+        {
+          "index": 28,
+          "lineType": 0,
+          "char1": "char_1044_hsgma2",
+          "char2": "char_4202_haruka"
+        },
+        {
+          "index": 29,
+          "lineType": 0,
+          "char1": "char_1044_hsgma2",
+          "char2": "char_4199_makiri"
+        },
+        {
+          "index": 30,
+          "lineType": 0,
+          "char1": "char_4203_kichi",
+          "char2": "char_4202_haruka"
+        },
+        {
+          "index": 31,
+          "lineType": 0,
+          "char1": "char_4199_makiri",
+          "char2": "char_4202_haruka"
+        },
+        {
+          "index": 222,
           "lineType": 0,
           "char1": "npc_2005_wywu",
           "char2": "npc_010_chen"
         },
         {
-          "index": 150,
+          "index": 223,
           "lineType": 0,
           "char1": "char_136_hsguma",
           "char2": "npc_010_chen"
         },
         {
-          "index": 151,
+          "index": 224,
           "lineType": 0,
           "char1": "char_308_swire",
           "char2": "npc_010_chen"
         },
         {
-          "index": 152,
+          "index": 225,
           "lineType": 0,
           "char1": "npc_010_chen",
           "char2": "char_002_amiya"
         },
         {
-          "index": 153,
+          "index": 226,
           "lineType": 0,
           "char1": "char_1013_chen2",
           "char2": "npc_010_chen"
         },
         {
-          "index": 154,
+          "index": 227,
           "lineType": 0,
           "char1": "char_4080_lin",
+          "char2": "npc_010_chen"
+        },
+        {
+          "index": 228,
+          "lineType": 0,
+          "char1": "char_1044_hsgma2",
           "char2": "npc_010_chen"
         }
       ],
@@ -12345,7 +12514,10 @@
             "char_475_akafyu",
             "char_478_kirara",
             "char_437_mizuki",
-            "char_4016_kazema"
+            "char_4016_kazema",
+            "char_4202_haruka",
+            "char_4203_kichi",
+            "char_4199_makiri"
           ],
           "forceId": "higashi",
           "pos": {
@@ -12404,6 +12576,24 @@
             "y": -97.39739
           },
           "colorBlocks": []
+        },
+        {
+          "color": "ff4a33",
+          "charList": [
+            "char_1044_hsgma2"
+          ],
+          "forceId": "lgd",
+          "pos": {
+            "x": -600.0,
+            "y": -173.205078
+          },
+          "isThisGroup": false,
+          "connectPos": 3,
+          "focusPos": {
+            "x": 134.955261,
+            "y": 148.6567
+          },
+          "colorBlocks": []
         }
       ],
       "charList": [
@@ -12423,6 +12613,11 @@
             {
               "direction": 3,
               "charId": "char_337_utage",
+              "forceId": null
+            },
+            {
+              "direction": 4,
+              "charId": "char_4199_makiri",
               "forceId": null
             }
           ],
@@ -12480,6 +12675,16 @@
             {
               "direction": 2,
               "charId": "char_362_saga",
+              "forceId": null
+            },
+            {
+              "direction": 4,
+              "charId": "char_4203_kichi",
+              "forceId": null
+            },
+            {
+              "direction": 5,
+              "charId": "char_4199_makiri",
               "forceId": null
             }
           ],
@@ -12660,6 +12865,94 @@
             }
           ],
           "haveOutLine": true
+        },
+        {
+          "charId": "char_4202_haruka",
+          "scale": 1.0,
+          "pos": {
+            "x": -150.0,
+            "y": -259.807617
+          },
+          "connectionList": [
+            {
+              "direction": 1,
+              "charId": "char_4199_makiri",
+              "forceId": null
+            },
+            {
+              "direction": 2,
+              "charId": "char_4203_kichi",
+              "forceId": null
+            }
+          ],
+          "haveOutLine": true
+        },
+        {
+          "charId": "char_4203_kichi",
+          "scale": 1.0,
+          "pos": {
+            "x": 0.0,
+            "y": -173.205078
+          },
+          "connectionList": [
+            {
+              "direction": 0,
+              "charId": "char_4199_makiri",
+              "forceId": null
+            },
+            {
+              "direction": 1,
+              "charId": "char_337_utage",
+              "forceId": null
+            },
+            {
+              "direction": 5,
+              "charId": "char_4202_haruka",
+              "forceId": null
+            }
+          ],
+          "haveOutLine": true
+        },
+        {
+          "charId": "char_4199_makiri",
+          "scale": 1.0,
+          "pos": {
+            "x": -150.0,
+            "y": -86.60254
+          },
+          "connectionList": [
+            {
+              "direction": 1,
+              "charId": "char_118_yuki",
+              "forceId": null
+            },
+            {
+              "direction": 2,
+              "charId": "char_337_utage",
+              "forceId": null
+            },
+            {
+              "direction": 3,
+              "charId": "char_4203_kichi",
+              "forceId": null
+            },
+            {
+              "direction": 4,
+              "charId": "char_4202_haruka",
+              "forceId": null
+            }
+          ],
+          "haveOutLine": true
+        },
+        {
+          "charId": "char_1044_hsgma2",
+          "scale": 1.0,
+          "pos": {
+            "x": -450.0,
+            "y": -259.807617
+          },
+          "connectionList": [],
+          "haveOutLine": true
         }
       ],
       "lineList": [
@@ -12668,6 +12961,30 @@
           "lineType": 0,
           "char1": "char_118_yuki",
           "char2": "npc_2006_fmzuki"
+        },
+        {
+          "index": 43,
+          "lineType": 0,
+          "char1": "char_4202_haruka",
+          "char2": "char_4199_makiri"
+        },
+        {
+          "index": 44,
+          "lineType": 0,
+          "char1": "char_1044_hsgma2",
+          "char2": "char_4202_haruka"
+        },
+        {
+          "index": 45,
+          "lineType": 0,
+          "char1": "char_4199_makiri",
+          "char2": "char_1044_hsgma2"
+        },
+        {
+          "index": 46,
+          "lineType": 0,
+          "char1": "char_4203_kichi",
+          "char2": "char_4202_haruka"
         }
       ],
       "minScale": 0.75,

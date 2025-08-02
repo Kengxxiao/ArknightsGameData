@@ -18,13 +18,11 @@ Act4FunBattleFinishDlg = DlgMgr.DefineDialog("Act4FunBattleFinishDlg", "Activity
 local Act4funBattleFinishViewModel = require("Feature/Operation/ActFun/Act4fun/BattleFinish/Act4funBattleFinishViewModel");
 local Act4funLivePhotoCard = require "Feature/Operation/ActFun/Act4fun/Photo/Act4funLivePhotoCard";
 
-
 function Act4FunBattleFinishDlg:OnInit()
   self.m_viewModel = Act4funBattleFinishViewModel.new();
   self.m_viewModel:InitData();
   self:OnRenderPanel();
 end
-
 
 function Act4FunBattleFinishDlg:OnClose()
 end
@@ -59,7 +57,6 @@ function Act4FunBattleFinishDlg:OnRenderPanel()
     headIcon.sprite = self:LoadSpriteFromAutoPackHub(hubPath,self.m_viewModel.headiconList[headIconIdx]);
   end
 
-  luaUtils.TextToast(toastText)
   self:_InitBGM()
 end
 

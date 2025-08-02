@@ -70,7 +70,6 @@ function Act4funLiveCommentScView:Render(model)
   self:_RefreshContent();
 end
 
-
 function Act4funLiveCommentScView:OnInit()
   self.m_timer = 0;
   self.m_viewCache = {};

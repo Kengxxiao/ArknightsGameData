@@ -39,7 +39,6 @@ local RECORD_TRACK_TYPE = "ACT5FUN_NEW_RECORD"
 local KEY_TRACK_NEW_RECORD = "key_track_new_record"
 local DEFAULT_SUPER_SCORE = 999999999
 
-
 function ActFun5MainDlg:OnInit()
   self:_InitFromGameData(self._aprilFoolId)
   self:_InitBGM()

@@ -78,7 +78,6 @@ local TOKEN_TRACK_TYPE = "ACT4FUN_TOKEN_LEVEL_UP"
 local KEY_TRACK_TOKEN_LEVEL_UP = "key_track_token_level_up"
 local REWARD_CARD_SCALE = 0.38
 
-
 function ActFun4MainDlg:OnInit()
   self:_InitFromGameData()
   self:_InitBGM()

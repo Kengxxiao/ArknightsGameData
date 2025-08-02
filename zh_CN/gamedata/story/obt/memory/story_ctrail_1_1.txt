@@ -1,0 +1,557 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Background(image="bg_desert_3",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$d_avg_wind", volume=1, loop=true, channel="a")]
+[Delay(time=2)]
+天气很好，能见度相当不错，风力适中。
+短距离飞行测试已经全部完成......接下来，就是第一次正式飞行实验，预定飞行距离十公里。
+......
+[Dialog]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=1, block=true)]
+[gridbg(imagegroup="53_g16_sunnyday_L1/53_g16_sunnyday_R1/53_g16_sunnyday_L2/53_g16_sunnyday_R2", solidwidth="1280/1280/1280/1280", solidheight="720/720/720/720",x=-900,fadetime=2)]
+[largebgtween(duration = 30,yFrom = 300, yTo = 250,block = false)]
+[Delay(time=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=4, block=true)]
+比预想的还要顺利！只剩下最后两公里了，要确认好降落地点的状态。
+顺风，速度稍微有点快，最好降下——
+风力增强得好快？好强的上升气流——
+[Dialog]
+[PlaySound(key="$blizzard", volume=1, loop=true, channel="a")]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=1, block=true)]
+[gridbg(imagegroup="47_g14_skyovercast_L1/47_g14_skyovercast_R1/47_g14_skyovercast_L2/47_g14_skyovercast_R2", solidwidth="1280/1280/1280/1280", solidheight="720/720/720/720",x=-900,fadetime=2)]
+[largebgtween(duration = 30,xfrom=-900,xto=-800,yFrom = 300, yTo = 250,block = false)]
+[CameraShake(duration=-1, xstrength=5, ystrength=5, vibrato=30, randomness=90, fadeout=false, block=false)]
+[Delay(time=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=4, block=true)]
+云层堆积得太快了？！不，那不是普通的积雨云——
+得马上避开！！
+不、转向和下降都、气流——
+[Dialog]
+[CameraShake(duration=3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[gridbg]
+[charslot]
+[Background(image="bg_black",screenadapt="coverall")]
+[Delay(time=2)]
+[PlaySound(key="$d_avg_heartratemonitor", volume=0.1, loop=true, channel="b")]
+[stopsound(channel="a",fadetime=15)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[Subtitle(text="......", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Soundvolume(volume=0.5,channel="b",fadetime=2)]
+[Subtitle(text="呼吸......鼻子里面......好冷......什么声音......好想关掉......", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="“......云......”", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="谁......", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="“......小云......迪娅......”", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="好困......还想睡......", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="“............克劳迪娅......”", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="妈妈......我再......睡一会儿......", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[Subtitle(text="......", x=300, y=370, alignment="center", size=24, delay=0.04, width=700)]
+[subtitle]
+[stopsound(channel="a",fadetime=2)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_vipward",screenadapt="coverall")]
+[Delay(time=2)]
+[Soundvolume(volume=1,channel="b",fadetime=2)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]今天是第四天了，小云，感觉怎么样？
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="none")]
+[name="克劳迪娅"]腿还是很胀......不过，妈妈，我有事想问你。
+[name="克劳迪娅"]你们......是不是有事瞒着我？除了骨折，我......没有别的问题吗？
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]......
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="none")]
+[name="克劳迪娅"]那天，我撞上的突发强对流......还有那个云团的状态......虽然规模不算大，但那是......天灾云吧？
+[name="克劳迪娅"]......妈妈，告诉我吧。
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]......好。克劳迪娅，你确实感染了矿石病。
+[name="母亲"]......
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="none")]
+[name="克劳迪娅"]......
+[name="克劳迪娅"]有......多严重？我还能......活多久？
+[Dialog]
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[Delay(time=2)]
+[stopsound(channel="b",fadetime=2)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="29_g3_cottage",screenadapt="coverall")]
+[Delay(time=2)]
+[playMusic(key="$saferoom_loop", volume=0.6)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[playsound(key="$doorknockquite")]
+[Delay(time=2.5)]
+[name="母亲"]小云，你在工作间里吧？我可以进来吗？
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]你有什么事吗，妈妈？
+[name="克劳迪娅"]我不想被打扰......
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="m")]
+[name="克劳迪娅"]我已经没有那么多时间了......我有很多工作要做......好不容易腿好了......
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="none")]
+[name="母亲"]克劳迪娅......我明白，你当然有锁上房门的权利。但昨天你答应过我，我们会好好谈一谈。
+[charslot(slot="m",name="avg_4165_ctrail_1#6$2",focus="m")]
+[name="克劳迪娅"]我......一定要现在吗？我不是不想和你说话，妈妈，我只是......很忙。改天可以吗？
+[charslot(slot="m",name="avg_4165_ctrail_1#6$2",focus="none")]
+[name="母亲"]昨天，你答应了我；上周，你答应了我两次。
+[name="母亲"]我愿意等到你觉得可以打开门的那一天......不过，今天你爸爸会回来，你知道他没法待太久，很快又得出发。
+[name="母亲"]如果今天不行，下次你再有机会见到他，可能又是几个月之后了。
+[name="母亲"]我们一起准备下今天的晚饭......好吗？你知道我不擅长摆弄厨房里的那些家伙......
+[name="母亲"]回家之后，我们还没有一起吃过饭呢。
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]......
+[Dialog]
+[charslot]
+[playsound(key="$dooropenquite")]
+[charslot(slot="m",name="avg_npc_524_1#1$1",duration=2)]
+[Delay(time=2.5)]
+[name="母亲"]嗯......你在调整燃料箱的尺寸？看起来不错。
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="m")]
+[name="克劳迪娅"]......不，完全不行......
+[charslot(slot="m",name="avg_4165_ctrail_1#6$2",focus="m")]
+[name="克劳迪娅"]妈妈......
+[name="克劳迪娅"]我......好累。
+[Dialog]
+[charslot]
+克劳迪娅坐在一个木箱上，母亲走到了她身边，克劳迪娅没有放下手上的工具，只是把额头抵在了妈妈的肚子上。
+熟悉的毛衣，熟悉的触感，熟悉的洗涤剂味道。可为什么，一切都像是变了......
+[charslot(slot="m",name="avg_4165_ctrail_1#6$2",focus="m")]
+[name="克劳迪娅"]我知道......我把自己关在工作间里，你们一定很担心......
+[name="克劳迪娅"]可不这么做，我就，我就完全没办法平静。
+[name="克劳迪娅"]......即使这样做了，我也没办法平静。
+[Dialog]
+[charslot]
+母亲没有说话，只是轻轻地把手放在了克劳迪娅的毛线帽上，手掌的边缘蹭过了克劳迪娅的耳朵，是温热的。
+[Dialog]
+[charslot(slot="l",name="avg_4165_ctrail_1#6$2",duration=1.5)]
+[charslot(slot="r",name="avg_npc_524_1#1$1",duration=1.5)]
+[Delay(time=2.5)]
+[charslot(slot="l",name="avg_4165_ctrail_1#6$2",focus="l")]
+[name="克劳迪娅"]我好害怕，妈妈......
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]没关系的，小云，我们知道这件事对你打击很大......无论你是想尝试别的道路，还是想再试试，努力克服对飞行的恐惧......
+[charslot(slot="l",name="avg_4165_ctrail_1#1$2",focus="l")]
+[name="克劳迪娅"]不，妈妈。我不是害怕飞行......
+[charslot(slot="l",name="avg_4165_ctrail_1#6$2",focus="l")]
+[name="克劳迪娅"]我是怕......我是怕死。
+[name="克劳迪娅"]你知道我一直想做的那件事......
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]......一次完整的羽兽迁徙伴飞？
+[charslot(slot="l",name="avg_4165_ctrail_1#2$2",focus="l")]
+[name="克劳迪娅"]嗯。从哥伦比亚到雷姆必拓，再从雷姆必拓回到哥伦比亚......
+[charslot(slot="l",name="avg_4165_ctrail_1#1$2",focus="l")]
+[name="克劳迪娅"]虽然现在，整片大地连一张足够完整精确的羽兽迁徙地图都还没有人画出来过。
+[name="克劳迪娅"]我一直以为，如果一生只为这一件事努力，也许最后我会有机会做到......
+[name="克劳迪娅"]可是我的一生......为什么会突然变得这么短呢？
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]......
+[name="母亲"]......医生说，你的感染并不算严重......矿石病......矿石病......说不定再过几年，矿石病就能......
+[Dialog]
+[charslot]
+克劳迪娅没有忽略母亲不自然的停顿。她明白，即使是想要安慰她，身为科学工作者的母亲也无法说出那近乎妄想的陈述。
+[charslot(slot="l",name="avg_4165_ctrail_1#6$2",focus="l")]
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="l")]
+[name="克劳迪娅"]......妈妈，我只是想要时间，稍微......足够的时间。
+[name="克劳迪娅"]可为什么连仅有的这点时间......我也不能有？
+[charslot(slot="l",name="avg_4165_ctrail_1#8$2",focus="l")]
+[name="克劳迪娅"]......
+[name="克劳迪娅"]我还是继续调整飞行器吧。燃料箱也好，结构架也好，引擎也好，喷气口也好，总归会有点用......总归......
+[name="克劳迪娅"]不对，燃料箱这样弄还是不对，我要拆下来再重做一遍......
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]......今天先休息一晚，好不好？我真的很不会做饭，我们总不能让爸爸回来吃罐头吧？
+[Dialog]
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="none")]
+[playsound(key="$d_gen_transmissionget")]
+[Delay(time=1.5)]
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]是他的消息，算算时间也差不多了......嗯？
+[name="母亲"]......小云，你爸爸说，他捡到了一窝快孵化的羽兽蛋，但是母羽受伤很重，没能救回来。
+[name="母亲"]我猜......他会把它们带回来。
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="33_g8_srcroom",screenadapt="coverall")]
+[Delay(time=2)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[charslot(slot="l",name="avg_4165_ctrail_1#1$2",focus="l")]
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="l")]
+[name="克劳迪娅"]这样......应该差不多？
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]嗯，用这些灯泡作为热源，然后是垫料......唔，再加一层吧。我那条围巾放在哪儿了，小云你记得吗......
+[charslot(slot="l",name="avg_4165_ctrail_1#1$2",focus="l")]
+[name="克劳迪娅"]我觉得用毛巾也行，我拿两条毛巾过来。
+[Dialog]
+[charslot(slot="l",afrom=1,ato=0,duration=1)]
+[charslot(slot="l",posfrom="0,0", posto="-100,0",duration=1.5)]
+[delay(time=2.5)]
+[PlaySound(key="$d_avg_clothmovement", volume=0.6)]
+[Delay(time=2)]
+[charslot(slot="l",name="avg_4165_ctrail_1#1$2",afrom=0,ato=1,duration=1)]
+[charslot(slot="l",posfrom="-100,0", posto="0,0",duration=1.5)]
+[delay(time=2.5)]
+[charslot(slot="l",name="avg_4165_ctrail_1#1$2",focus="l")]
+[name="克劳迪娅"]嗯......铺好了。
+[name="克劳迪娅"]不知道还来不来得及......
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]应该还行？毕竟你爸爸一路都把它们捂在肚皮上。
+[name="母亲"]不过......我的截稿日快到了。看这些蛋的情况，可能这一两天就要破壳了，小云，你能照顾它们吗？
+[charslot(slot="l",name="avg_4165_ctrail_1#5$2",focus="l")]
+[name="克劳迪娅"]欸？可、可以呀，既然妈妈要忙的话......
+[Dialog]
+[charslot]
+克劳迪娅趴在简易孵化箱的边缘。热灯泡的光暖烘烘地照在白色的蛋壳上，反光亮得有点刺眼，可她目不转睛地盯着。
+也许是错觉，她好像听到了轻微的摩擦声，像是某一张小小的喙抬了起来，蹭到了内壳......
+[Dialog]
+[charslot(slot="l",name="avg_4165_ctrail_1#6$2",focus="l")]
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="l")]
+[name="克劳迪娅"]......你们真能活下来吗......
+[Dialog]
+[charslot]
+她说得很小声。
+她希望妈妈没有听见这句话。
+[Dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="31_g3_mini12_farmland",screenadapt="coverall")]
+[Delay(time=2)]
+[playMusic(key="$calm_loop", volume=0.6)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[playsound(key="$d_gen_walk_n")]
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",duration=2)]
+[Delay(time=3.5)]
+[name="克劳迪娅"]嘿，该出门了，你们需要晒太阳，明白吗？
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="none")]
+[name="羽兽们"]（嘈杂的啁啾）
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="m")]
+[name="克劳迪娅"]不然你们的骨头和羽毛就不能变硬变坚固，那可是很危险的！
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="none")]
+[name="羽兽们"]（吵闹的啁啾）
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]好吧，好吧，现在跟着我......
+[Dialog]
+[playsound(key="$d_gen_walk_n")]
+[charslot(duration=2)]
+[Delay(time=2.5)]
+克劳迪娅在田野里快步走着，每走几步就要回头看一眼。小羽兽们扑棱着翅膀跟着她，自然而然地列成了一队。
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]没错，没错，就像这样。
+[name="克劳迪娅"]现在的太阳正好，如果阳光太烈了也不行，你们会脱水的......
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="none")]
+[name="羽兽们"]（好奇的啁啾）
+[charslot(slot="m",name="avg_4165_ctrail_1#5$2",focus="m")]
+[name="克劳迪娅"]喂！别去那边，我前几天在那里看到了流浪云兽！
+[name="克劳迪娅"]这里这里这里，过来过来过来——
+[Dialog]
+[PlaySound(key="$rungeneral", volume=1)]
+[charslot(slot="m",afrom=1,ato=0,duration=1)]
+[charslot(slot="m",posfrom="0,0", posto="-100,0",duration=1.5)]
+[delay(time=2.5)]
+[charslot]
+[playsound(key="$bodyfalldown1")]
+[CameraShake(duration=1, xstrength=10, ystrength=12, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Delay(time=1)]
+[name="母亲"]噢——
+[charslot(slot="m",name="avg_4165_ctrail_1#5$2",focus="m")]
+[name="克劳迪娅"]妈妈！
+[Dialog]
+[charslot]
+[PlaySound(key="$d_avg_clothmovement", volume=0.6)]
+[charslot(slot="m",name="avg_npc_524_1#1$1",afrom=0,ato=1,duration=1)]
+[charslot(slot="m",posfrom="0,-50", posto="0,0",duration=1.5)]
+[delay(time=2.5)]
+[name="母亲"]我没事。
+[name="母亲"]印随行为......
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]嗯，它们把我当成它们的妈妈了。
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]我记得......以前是不是也发生过？
+[name="母亲"]那时候你还很小......自己就像一只雏羽，可屁股后面还跟着两只小羽兽。
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="m")]
+[name="克劳迪娅"]嗯，八岁的时候，你和爸爸带我去雷姆必拓的那一次......
+[name="克劳迪娅"]那次捡到羽兽蛋的是我。我本来想学着像羽兽那样孵蛋，是妈妈你教我搭了孵化箱......
+[charslot(slot="m",name="avg_4165_ctrail_1#2$2",focus="m")]
+[name="克劳迪娅"]我还记得我们的帐篷裂了一条口子，爸爸补帐篷的时候让我帮忙......
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]我在帐篷里面把裂口的地方拉住，那两只小羽兽趁我动不了，顺着我的胳膊跳上来，从裂口钻出去了......
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]然后你就在帐篷里尖叫起来，把爸爸吓坏了，哈哈。
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="m")]
+[name="克劳迪娅"]我怕它们跑到外面会出事嘛......
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]结果我一跑出帐篷，它们就扑腾着冲我跑来了。
+[name="克劳迪娅"]呵呵......就和现在差不多呢。
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]......嗯。
+[name="母亲"]小云......
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]怎么了，妈妈？
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]没什么，我和你一起陪它们晒晒太阳吧。
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]啊！是不是你的文章写完啦？那要庆祝一下，晚饭多做个菜吗？
+[Dialog]
+[charslot]
+[name="羽兽们"]（兴奋的啁啾）
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]呃，还没有......好了！有编辑催我就足够了，小云你就别问了。还有你们，你们也不许问！
+[name="母亲"]我就不能出来散散步嘛......
+[charslot(slot="m",name="avg_4165_ctrail_1#10$2",focus="m")]
+[name="克劳迪娅"]噗......好哦，妈妈。
+[Dialog]
+[playsound(key="$d_gen_walk_n")]
+[charslot(duration=2)]
+[Delay(time=2.5)]
+夕阳的光线渐渐橙红，她们走在羽兽的啁啾之中。
+女人牵着女儿的手，她很想问克劳迪娅一些问题，但又有点不敢问。
+她担心她只是一时之间忘了，她担心自己会让这个孩子又想起来。
+有些疑问一旦在心中滋生，就再也挥之不去，她明白这一点。
+如果可以，她会希望她的女儿永远不需要面对人生的这一面......尤其不必以这样的方式。
+克劳迪娅突然换了一只手牵住母亲，她倒着走，这样就可以时刻盯着小羽兽们的每一步。
+[Dialog]
+[charslot(slot="l",name="avg_4165_ctrail_1#9$2",duration=1.5)]
+[charslot(slot="r",name="avg_npc_524_1#1$1",duration=1.5)]
+[Delay(time=2.5)]
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]克劳迪娅。
+[charslot(slot="l",name="avg_4165_ctrail_1#5$2",focus="l")]
+[name="克劳迪娅"]妈妈？
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]你了解这种羽兽的生活史吗？
+[charslot(slot="l",name="avg_4165_ctrail_1#9$2",focus="l")]
+[name="克劳迪娅"]嗯，大概知道，前几天我又查了一些细节。
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]破壳之后大约两到三周，它们就有了飞行的能力和生理冲动；最晚到第四周......
+[charslot(slot="l",name="avg_4165_ctrail_1#9$2",focus="l")]
+[name="克劳迪娅"]嗯。我知道，妈妈。
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]你打算......不，没事，没什么。
+[name="母亲"]我们家照顾这窝羽兽肯定没问题。无论怎么样，它们都可以好好过完这一生。
+[charslot(slot="l",name="avg_4165_ctrail_1#1$2",focus="l")]
+[name="克劳迪娅"]妈妈，你是想说，它们不用飞起来也可以吗？
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]......
+[charslot(slot="l",name="avg_4165_ctrail_1#6$2",focus="l")]
+[name="克劳迪娅"]那你又为什么要向我提起这件事呢......
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]......克劳迪娅，我最近才明白......
+[name="母亲"]不，我以为我早就明白，但最近我才真正体会到，同一种东西对不同的人来说，可能会多么地不一样......
+[name="母亲"]我都不知道我竟然会这么......小心翼翼。
+[name="母亲"]我竟然会这么害怕......害怕一句话，一种我从来都觉得无害的话。
+[name="母亲"]“振作起来”......那会成为又一个负担吗？
+[name="母亲"]......
+[name="母亲"]我有时觉得我是被一些不理智的情感支配了，是激素或者神经作用，是极端情形中的应激反应，是触发了特定条件下的行为模式......
+[name="母亲"]但无论怎么解释——
+[name="母亲"]我唯独做不到，想象你再受一点点痛苦。
+[name="母亲"]妈妈很没用吧。明明受到伤害的人是你。
+[charslot(slot="l",name="avg_4165_ctrail_1#1$2",focus="l")]
+[name="克劳迪娅"]......
+[charslot(slot="r",name="avg_npc_524_1#1$1",focus="r")]
+[name="母亲"]对不起，抱歉，克劳迪娅，别安慰我。不该是你安慰我。
+[name="母亲"]我们再走走吧，我很久没这样散步了。
+[Dialog]
+[charslot]
+克劳迪娅只是默默牵住了母亲的手。
+那会是痛苦吗......？但她没来得及继续想下去——
+两只小羽兽挨到她近处，一只用力挤向另一只，被挤的那一只惊得差点钻到克劳迪娅的脚下，克劳迪娅连忙抬起脚，单腿跳了几步。
+差点被踩到的小羽兽扑腾了几下翅膀，也许它是在模仿抬起脚的克劳迪娅？
+有一个瞬间，克劳迪娅以为它要飞起来了——
+但并没有，扑扇了几下翅膀后，它还是像之前那样蹦跶着，想要去蹭克劳迪娅的脚踝。
+[name="羽兽"]（依赖的啁啾）
+[Dialog]
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",duration=1.5)]
+[Delay(time=2.5)]
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]......
+[Dialog]
+[charslot]
+克劳迪娅松开母亲的手，弯腰把它捧了起来。
+也许是因为视野高度突然改变，雏羽有些瑟缩，克劳迪娅感觉到手里热热的一团羽毛在发抖。
+但它终究还是探出了头，向左瞧瞧，向右瞧瞧，然后......
+它是在看天空吗？克劳迪娅想。
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]妈妈。
+[Dialog]
+[charslot]
+她仍然看着手中的羽兽。
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="m")]
+[name="克劳迪娅"]也许我会痛苦吧......毕竟......各种各样的事都会发生。
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]但我并不害怕飞行。
+[charslot(slot="m",name="avg_4165_ctrail_1#10$2",focus="m")]
+[name="克劳迪娅"]不论发生什么，我是不会害怕飞行的。
+[Dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="29_g3_cottage",screenadapt="coverall")]
+[Delay(time=2)]
+[playMusic(intro="$path_intro", key="$path_loop", volume=0.6)] 
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[playsound(key="$d_avg_fixcarjingle")]
+[Delay(time=3.5)]
+[charslot(slot="m",name="avg_4165_ctrail_1#11$2",focus="m")]
+[name="克劳迪娅"]锤子呢......啊，我干嘛焊那么紧......
+[Dialog]
+[charslot]
+[playsound(key="$d_gen_walk_n")]
+[charslot(slot="m",name="avg_npc_524_1#1$1",duration=2)]
+[Delay(time=3.5)]
+[name="母亲"]......
+[charslot(slot="m",name="avg_4165_ctrail_1#5$2",focus="m")]
+[name="克劳迪娅"]或者凿子......欸，妈妈？
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]你没有关门......所以我就......
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]嗯......没事，应该要不了多久就能搞定。会吵到你吗？
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]当然不会......不过，你好像有阵子没来这里了？
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]前阵子在忙嘛......毕竟它们都跟着我，我要是总待在工作间，它们就晒不够太阳了。
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]那今天......？
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]做点准备。
+[name="克劳迪娅"]妈妈上次也提到了吧。我这几天又挨个检查了一遍，飞羽都已经长得差不多了。算算时间，已经有点晚了。
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="m")]
+[name="克劳迪娅"]呃，虽然爬到树上把它们一只只往下扔......说不定也行......不行，我觉得不行，太危险了！
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]总而言之......我需要我的飞行器。
+[name="克劳迪娅"]之前把飞行器都改得乱七八糟了......其实有用的改装没多少，还得敲掉或者改回原样。
+[name="克劳迪娅"]我现在需要的，是一台经过测试的、能够稳定起飞的飞行器。
+[charslot(slot="m",name="avg_4165_ctrail_1#10$2",focus="m")]
+[name="克劳迪娅"]这样就好。
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]......嗯。我能帮上忙吗？
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]如果你知道我把锤子放在哪里了的话......
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]嗯哼，我确实知道。
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_wilderness_m",screenadapt="coverall")]
+[Delay(time=2)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+天气很好。虽然还有一点晨雾残留，但很快就会在逐渐明亮的阳光中散去。
+有微风。克劳迪娅抓起一把草叶，松手；草叶落下，风向东南。
+羽兽们叽叽喳喳地跟在她身后。它们的“妈妈”今天看起来有点不一样......
+但这并不妨碍它们同往常一样，亦步亦趋、挨挨挤挤地跟在她身后。
+然后她停了下来，面朝着它们。克劳迪娅让妈妈留在了远处，但在开始之前，她觉得自己想要......说点什么。
+羽兽们当然听不懂，但......
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]嘿，听我说......
+[name="克劳迪娅"]我们今天要，学习飞行。
+[charslot(slot="m",name="avg_4165_ctrail_1#8$2",focus="m")]
+[name="克劳迪娅"]其实我也在想，就算没有我，也许你们也会模仿别的羽兽，或者凭着自己天生的冲动展开双翼。
+[name="克劳迪娅"]就算没有成年羽兽带领你们，你们终究......是会飞起来的。
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]等你们能够飞起来，不久之后，你们还要学会迁徙。我会带你们到已知的、你们族群迁徙路线上的途经点。
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]理想的状况当然是，当找到属于你们的羽兽群时，你们已经能够自如地飞行了，这样你们就能跟上它们......
+[charslot(slot="m",name="avg_4165_ctrail_1#2$2",focus="m")]
+[name="克劳迪娅"]其实我很想陪着你们完成迁徙。一次完整的、历时三年的迁徙。一直以来......一直以来，这都是我最大的愿望。
+[name="克劳迪娅"]但现在我做不到......
+[charslot(slot="m",name="avg_4165_ctrail_1#1$2",focus="m")]
+[name="克劳迪娅"]......
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]不说这些了。今天你们，我们只需要......飞起来。
+[Dialog]
+[charslot]
+[PlaySound(key="$d_avg_wind", volume=0, loop=true, channel="a")]
+克劳迪娅能感觉到阳光照射的角度在慢慢升高，空气和她身体表面的温度也一同缓缓上升。
+清晨的风穿过胁下，她开始助跑，像是要乘到空气之上。
+她启动了飞行器。
+大地向下、向后，缓慢而平稳地离去。
+她听到身后扑翼的声音，比她想象中的还要响亮，啁啾声变成了鸣叫，在抬升着她的气流中振动，她能听见这一切。
+[Dialog]
+[Soundvolume(volume=0.6,channel="a",fadetime=2)]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=1, block=true)]
+[gridbg(imagegroup="53_g16_sunnyday_L1/53_g16_sunnyday_R1/53_g16_sunnyday_L2/53_g16_sunnyday_R2", solidwidth="1280/1280/1280/1280", solidheight="720/720/720/720",x=-900,fadetime=2)]
+[largebgtween(duration = 30,yFrom = 300, yTo = 250,block = false)]
+[Delay(time=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=4, block=true)]
+越来越高，越来越高。
+调整喷气角度，左倾，右倾，她知道自己画出了流畅的曲线。
+身后飞翔的羽兽把轨迹缀成了一条点状线。
+很多事情都远去了，和大地上逐渐变小的事物一起。
+她只是享受着风，就和第一次投入天空一样。
+穿过云的影子时，那个幽灵般的问题也像影子一样俯身而来。
+“尽管如此，尽管如此，你还能像这样飞多久......？”
+“你能抵达终点吗？”
+可是太奇怪了。
+在空气和羽兽啼鸣的围拥中，这些之前压得她喘不过气的问题好像，变得轻了......
+只要一声心跳就可以震落。
+[name="克劳迪娅"]我在想什么呢......
+[name="克劳迪娅"]就算是之前，难道我就知道一定能完成吗......
+[name="克劳迪娅"]明明一直都是这样的......一直都是这样的啊。
+[name="克劳迪娅"]我只是想要......飞起来而已。
+[name="克劳迪娅"]就算飞不到雷姆必拓，能越过拉特兰也可以，能抵达维多利亚也可以......
+[name="克劳迪娅"]就算飞不到汐斯塔，能到谢拉格也可以，能飞出哥伦比亚也可以......
+[name="克劳迪娅"]路线图也是一段一段画出来的。
+又是一声啼鸣破开风声。
+克劳迪娅决定把那当作赞同。
+[Dialog]
+[stopsound(channel="a",fadetime=2)]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[gridbg]
+[Background(image="31_g3_mini12_farmland",screenadapt="coverall")]
+[Delay(time=2)]
+[playMusic(key="$normal_loop", volume=0.6)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=2, block=true)]
+[Delay(time=2)]
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]妈妈，我有事想和你说。
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]什么事，宝贝？
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]你知道罗德岛吗？
+[name="克劳迪娅"]我最近查了一下，他们有一类治疗项目......我觉得，也许我可以申请。
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]小云......
+[charslot(slot="m",name="avg_4165_ctrail_1#9$2",focus="m")]
+[name="克劳迪娅"]我还查了一下相关新闻......看起来，罗德岛本舰会进行跨国航行，说不定我能借这个机会，调查大地上不同区域的羽兽迁徙情况。
+[charslot(slot="m",name="avg_4165_ctrail_1#10$2",focus="m")]
+[name="克劳迪娅"]你觉得呢，妈妈？
+[charslot(slot="m",name="avg_npc_524_1#1$1",focus="m")]
+[name="母亲"]......好啊。不过，要让我看看这个治疗项目的探访条款，你不介意我偶尔去蹭个车吧？
+[Dialog]
+[charslot(slot="m",name="avg_4165_ctrail_1#10$2",focus="m")]
+[Delay(time=2)]
+[charslot(slot="m",name="avg_4165_ctrail_1#3$2",focus="m")]
+[Delay(time=2)]
+[PlaySound(key="$d_avg_clothmovement", volume=0.6)]
+[charslot(slot="m",afrom=1,ato=0,duration=1)]
+[charslot(slot="m",posfrom="0,0", posto="50,0",duration=1.5)]
+[delay(time=2.5)]
+克劳迪娅抱住了母亲。
+熟悉的毛衣，熟悉的触感，熟悉的洗涤剂味道。
+是啊，有些事情发生了一点点变化。
+但有些事情是不会变的，克劳迪娅想。
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[image]
+[charslot]

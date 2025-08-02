@@ -8,7 +8,6 @@ ActFunMainDlgGroup = DlgMgr.DefineDialog("ActFunMainDlgGroup", nil, BridgeDlgBas
 ActFunMainDlgGroup.KEY_INITDLG = "init_dlg"
 ActFunMainDlgGroup.KEY_REWARD = "first_reward"
 
-
 function ActFunMainDlgGroup:OnInit()
   self.m_recentActStr = ""
   self:SetPureGroup();
@@ -67,7 +66,6 @@ function  ActFunMainDlgGroup:_ConverFromItemBundle(bundle)
   return item
 end
 
-
 function ActFunMainDlgGroup:OnClose()
   self:_ClearBGM()
 end
@@ -100,5 +98,5 @@ function ActFunMainDlgGroup:_SetBackgroundImg()
     if assets == nil then
         return
     end
-    self._bgImage.sprite = assets.imgCompress;
+    self._bgImage.sprite = CS.Torappu.DataConvertUtil.CalcHomeBackgroundBlurImg(bgId, assets);
 end

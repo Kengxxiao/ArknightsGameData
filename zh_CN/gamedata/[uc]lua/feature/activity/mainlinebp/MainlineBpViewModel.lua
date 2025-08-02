@@ -632,7 +632,7 @@ function MainlineBpViewModel:_LoadBpData()
     if unlockGroupStageId ~= nil and unlockGroupStageId ~= "" then
       local stageData = CS.Torappu.StageDataUtil.GetStageIgnoreTime(unlockGroupStageId);
       if stageData == nil then
-        luaUtils.LogError("[MainlineBp][_LoadBpData] Cannot find stage data of [" .. item.stageId .. "].");
+        luaUtils.LogError("[MainlineBp][_LoadBpData] Cannot find stage data of [" .. unlockGroupStageId .. "].");
         break;
       end
       unlockStageTips = luaUtils.Format(StringRes.MAINLINE_BP_LIMIT_BP_STAGE_LOCK_TIPS, stageData.code);

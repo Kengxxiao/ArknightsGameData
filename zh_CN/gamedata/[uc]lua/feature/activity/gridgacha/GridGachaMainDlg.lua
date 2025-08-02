@@ -88,7 +88,6 @@ local function CalculatePosition(row, column)
   return 10 * row + column + 1;
 end
 
-
 function GridGachaMainDlg:OnInit()
   self.m_gridGachaText = {}
   local actId = self.m_parent:GetData("actId");

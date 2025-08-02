@@ -43,13 +43,11 @@ local SOUND_SIGNAL_FAIL = "ON_ACT3FUN_FAIL";
 local SOUND_SIGNAL_EXFAIL = "ON_ACT3FUN_EXFAIL";
 local DELAY_BGM = 4
 local MAX_RANK_COUNT = 20
-
 function ActFun3BattleFinishDlg:OnInit()
   self.m_viewModel = ActFun3BattleFinishViewModel.new();
   self.m_viewModel:InitData();
   self:OnRenderPanel();
 end
-
 
 function ActFun3BattleFinishDlg:OnClose()
   self:_ClearBGM()

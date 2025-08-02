@@ -41,7 +41,6 @@ local RECORD_TRACK_TYPE = "ACT5FUN_NEW_RECORD"
 local KEY_TRACK_NEW_RECORD = "key_track_new_record"
 local MASK_FADE_TIME = 0.23
 
-
 function Act5FunBattleFinishDlg:OnInit()
   self.m_isAnimEnd = false
   self.m_needNewRecordTrack = false
@@ -66,16 +65,13 @@ function Act5FunBattleFinishDlg:_InitBGM()
   CS.Torappu.UI.UIMusicManager.SyncPlayingMusic()
 end
 
-
 function Act5FunBattleFinishDlg:OnClose()
 end
-
 
 function Act5FunBattleFinishDlg:ShowEnterEffect()
   self:_PlayEnterAnim()
   self:_PlayEnterAudio()
 end
-
 
 function Act5FunBattleFinishDlg:IsEnterEffectEnd()
   return self.m_isAnimEnd

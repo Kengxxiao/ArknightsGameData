@@ -3,9 +3,7 @@ local list =
 {
   
   "HotFixes/TestStubHotfixer",
-  "HotFixes/UICommonHotfixer",
-  "HotFixes/BattleDataConverterHotfixer",
-  "HotFixes/ContinuousRangeWithConditionsHotfixer",
+  "HotFixes/DurbusAbilityHotfixer",
 };
 
 return list;

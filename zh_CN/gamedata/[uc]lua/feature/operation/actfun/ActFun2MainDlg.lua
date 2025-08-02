@@ -46,7 +46,6 @@ local function _SetActive(gameObj, isActive)
   luaUtils.SetActiveIfNecessary(gameObj, isActive)
 end
 
-
 function ActFun2MainDlg:OnInit()
   local realActId = self.m_parent:GetData("actId")
   self.m_realActId = realActId 

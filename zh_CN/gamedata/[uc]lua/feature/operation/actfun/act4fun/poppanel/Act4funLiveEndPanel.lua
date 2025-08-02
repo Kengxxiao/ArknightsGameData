@@ -19,7 +19,6 @@ function Act4funLiveEndPanel:OnInit()
 end
 
 
-
 function Act4funLiveEndPanel:OnViewModelUpdate(data)
   local currStep = data.currStep;
   local v = currStep == Act4funLiveStep.REQ_LIVE_END or currStep == Act4funLiveStep.LIVE_END;

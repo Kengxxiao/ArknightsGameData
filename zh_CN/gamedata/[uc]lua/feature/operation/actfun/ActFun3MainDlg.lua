@@ -57,7 +57,6 @@ local ANIM_KEY_FEEDBACK = "anim_actfun3_feedback"
 local SATAGE1_NAME = "BF-1"
 local SATAGE2_NAME = "BF-2"
 
-
 function ActFun3MainDlg:OnInit()
   self:_InitFromGameData(self._aprilFoolId)
   self:_InitBGM()

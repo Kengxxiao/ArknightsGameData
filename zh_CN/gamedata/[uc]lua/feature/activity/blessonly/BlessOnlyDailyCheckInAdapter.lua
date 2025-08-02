@@ -20,7 +20,7 @@ function BlessOnlyDailyCheckInAdapter:OnRender(transform, index)
 end
 
 function BlessOnlyDailyCheckInAdapter:InitEventFunc()
-  checkInItem.onClickReceiveReward = self.onClickReceiveReward;
+  
 end
 
 

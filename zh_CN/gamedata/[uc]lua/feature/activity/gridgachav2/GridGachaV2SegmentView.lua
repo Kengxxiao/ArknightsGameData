@@ -13,7 +13,6 @@ local function _SetActive(gameObj, isActive)
   luaUtils.SetActiveIfNecessary(gameObj, isActive);
 end
 
-
 function GridGachaV2SegmentView:OnInitialize()
   _SetActive(self._panelNotGet, true);
   _SetActive(self._panelMiss, false);

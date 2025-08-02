@@ -66,7 +66,6 @@ local function _InitSound(signal)
   CS.Torappu.TorappuAudio.PlayUI(signal);
 end
 
-
 function GridGachaV2MainDlg:OnInit()
   local actId = self.m_parent:GetData("actId");
   self:_InitFromGameData(actId);

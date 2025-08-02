@@ -1,0 +1,20 @@
+[HEADER(is_tutorial=true, is_autoable=false, is_skippable=false)]
+
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.SwitchToDefaultUIState]
+[Delay(time=0.5)]
+[Battle.Pause]
+[Battle.EnsureMinSp(charId="trap_252_pckstp", sp=30)]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[InputBlocker(blockInput=true, tileX=1, tileY=7, validWidth=85, validHeight=85)]
+[Tutorial(tileX=1, tileY=7, focusWidth=85, focusHeight=85, waitForSignal="char_info", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_hsguma", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 我老家有些人管这个发射器叫“天命来袭”，顾名思义，用了这个，总有一刻能逆天改命。
+[InputBlocker(blockInput=true)]
+
+[Delay(time=0.3)]
+[Tutorial(target="btn_skill", waitForSignal="use_skill", \
+          animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_hsguma")] 博士要试试吗？打开它就能释放出“某种天命”。
+[InputBlocker(blockInput=true)]
+[Battle.lockFunction(mask="CHARACTER_MENU")]

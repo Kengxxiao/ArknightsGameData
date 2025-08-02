@@ -45,8 +45,10 @@ function UniqueOnlyItemCardView:Render(viewModel)
     local sprite = self._atlasUniqueAct:GetSpriteByName(viewModel.itemNameIconId);
     self._imgItemNameIcon:SetSprite(sprite);
   end
-
-  SetGameObjectActive(self._objGotMask, hasItemGot);
+  
+  if self._objGotMask ~= nil then
+    SetGameObjectActive(self._objGotMask, hasItemGot);
+  end
 end
 
 return UniqueOnlyItemCardView;

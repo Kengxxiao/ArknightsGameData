@@ -23,7 +23,6 @@ local Act4funLiveCommentItemView = require("Feature/Operation/ActFun/Act4fun/Liv
 Act4funLiveCommentPanel.COMMENT_ITEM_TYPE = 100;
 local ITEM_SIZE = 57;
 
-
 function Act4funLiveCommentPanel:OnInit()
   self:MoveInOut(true, true);
   self.m_scView = self:CreateWidgetByGO(Act4funLiveCommentScView, self._panelSc);

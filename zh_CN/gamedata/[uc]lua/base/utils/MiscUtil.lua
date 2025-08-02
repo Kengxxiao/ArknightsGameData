@@ -6,7 +6,7 @@ end
 
 
 function Checkint(value)
-  return math.round(checknumber(value))
+  return math.round(CheckNumber(value, 10))
 end
 
 

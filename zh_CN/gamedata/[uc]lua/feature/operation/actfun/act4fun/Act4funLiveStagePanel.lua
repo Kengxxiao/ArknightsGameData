@@ -13,7 +13,6 @@ local Act4funLivePhotoCard = require "Feature/Operation/ActFun/Act4fun/Photo/Act
 local Act4funLiveStagePanel = Class("Act4funLiveStagePanel", Act4funLivePanelBase);
 Act4funLiveStagePanel.WORD_BG_DEFAULT = "talk_background";
 
-
 function Act4funLiveStagePanel:OnInit()
   self.m_photoCard = self:CreateWidgetByPrefab(Act4funLivePhotoCard, self._photoCardPrefab, self._photoCardContainer);
 
