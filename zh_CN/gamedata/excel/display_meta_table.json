@@ -1191,6 +1191,17 @@
         "dynAvatarId": null
       },
       {
+        "avatarId": "avatar_activity_SL",
+        "avatarType": "ACTIVITY",
+        "avatarIdSort": 65,
+        "avatarIdDesc": "【火山旅梦】记录修复\\n“火山旅梦”",
+        "avatarItemName": "“火山旅梦”",
+        "avatarItemDesc": "穿过熔岩与海浪，踏上注定的旅途。",
+        "avatarItemUsage": "用来彰显个性的图案，能够将之设置为头像。",
+        "obtainApproach": "记录修复获得",
+        "dynAvatarId": null
+      },
+      {
         "avatarId": "avatar_dyn_01",
         "avatarType": "DYNAMIC",
         "avatarIdSort": 1,
@@ -1514,7 +1525,8 @@
           "avatar_activity_ED_1",
           "avatar_activity_CW",
           "avatar_activity_HE",
-          "avatar_activity_TG"
+          "avatar_activity_TG",
+          "avatar_activity_SL"
         ]
       },
       "DEFAULT": {
@@ -2004,6 +2016,32 @@
         "unlockDesList": [
           "[集成战略]萨卡兹的无终奇语奖励"
         ]
+      },
+      {
+        "bgId": "bg_volcano_1",
+        "bgSortId": 23,
+        "bgStartTime": 1755158400,
+        "bgName": "泉湾",
+        "bgDes": "水汽氤氲，在发梢凝成细小的水珠。跟着音乐的节拍甩甩头，给自己下一场欢快的雨。",
+        "bgUsage": "一张照片，一段回忆，凝聚了泰拉大地的某个瞬间。",
+        "isMultiForm": true,
+        "changeRule": "TIME",
+        "multiFormList": [
+          {
+            "multiFormBgId": "bg_volcano_1",
+            "sortId": 0,
+            "bgMusicId": "music_bg_volcano_night"
+          },
+          {
+            "multiFormBgId": "bg_volcano_1_form_2",
+            "sortId": 1,
+            "bgMusicId": "music_bg_volcano_day"
+          }
+        ],
+        "obtainApproach": "礼包购买",
+        "unlockDesList": [
+          "[采购中心]中购买梦港泉湾组合包获得"
+        ]
       }
     ],
     "themeList": [
@@ -2220,6 +2258,34 @@
         "isLimitObtain": true,
         "hideWhenLimit": true,
         "rarity": "TIER_5"
+      },
+      {
+        "id": "tm_volcano_1",
+        "type": "ACTIVITY",
+        "sortId": 10,
+        "startTime": 1755158400,
+        "tmName": "梦乡",
+        "tmDes": "身边的一切都飘浮起来......灯光也随着心情变化。在这里，什么都不用忧虑。",
+        "tmUsage": "在不变动功能的情况下，对PRTS界面进行了重新设计。",
+        "isMultiForm": true,
+        "changeRule": "TIME",
+        "multiFormList": [
+          {
+            "multiFormTmId": "tm_volcano_1",
+            "sortId": 0
+          },
+          {
+            "multiFormTmId": "tm_volcano_1_form_2",
+            "sortId": 1
+          }
+        ],
+        "obtainApproach": "采购中心组合包",
+        "unlockDesList": [
+          "[采购中心]中购买梦港泉湾组合包获得"
+        ],
+        "isLimitObtain": true,
+        "hideWhenLimit": true,
+        "rarity": "TIER_6"
       }
     ],
     "backgroundLimitData": {
@@ -2282,6 +2348,18 @@
             "displayAfterEndTime": false
           }
         ]
+      },
+      "bg_volcano_1": {
+        "bgId": "bg_volcano_1",
+        "limitInfos": [
+          {
+            "limitInfoId": "bg_volcano_1#1",
+            "startTime": 1755158400,
+            "endTime": 1756929599,
+            "invalidObtainDesc": "暂无获取途径",
+            "displayAfterEndTime": false
+          }
+        ]
       }
     },
     "themeLimitData": {
@@ -2339,6 +2417,16 @@
             "invalidObtainDesc": "暂未开放获取途径"
           }
         ]
+      },
+      "tm_volcano_1": {
+        "id": "tm_volcano_1",
+        "limitInfos": [
+          {
+            "startTime": 1755158400,
+            "endTime": 1756929599,
+            "invalidObtainDesc": "暂未开放获取途径"
+          }
+        ]
       }
     },
     "multiFormInfoData": [
@@ -2348,7 +2436,36 @@
         "tmDesc": "实时形态将随时间自动更替"
       }
     ],
-    "timeRuleData": {},
+    "timeRuleData": {
+      "bg_volcano_1": [
+        {
+          "id": "bg_volcano_1",
+          "startHour": 0
+        },
+        {
+          "id": "bg_volcano_1_form_2",
+          "startHour": 6
+        },
+        {
+          "id": "bg_volcano_1",
+          "startHour": 18
+        }
+      ],
+      "tm_volcano_1": [
+        {
+          "id": "tm_volcano_1",
+          "startHour": 0
+        },
+        {
+          "id": "tm_volcano_1_form_2",
+          "startHour": 6
+        },
+        {
+          "id": "tm_volcano_1",
+          "startHour": 18
+        }
+      ]
+    },
     "defaultBgMusicId": "music_bg_default",
     "themeStartTime": 1696104000
   },
@@ -4583,6 +4700,24 @@
             "id": "avatar_special_MissC",
             "count": 1,
             "type": "PLAYER_AVATAR"
+          }
+        ]
+      },
+      "mail_summer_2025_1": {
+        "id": "mail_summer_2025_1",
+        "type": "NORMAL",
+        "sortId": 79,
+        "displayReceiveTs": 1754121600,
+        "year": 0,
+        "dateDelta": -1,
+        "senderId": "char_1044_hsgma2",
+        "title": "来自斩业星熊的邀约",
+        "content": "博士，近来可好？\n最近天气炎热，工作也不多，近卫局的各位都有点提不起劲。不巧Missy不在，只能由我想办法，而我能想到的就只有给大家放假了——万幸效果不错，大家休假回来，都多出不少干劲。\n我最近也会回东国一趟。要是找到什么好酒，等我回来，不知博士能否抽空和我一聚，小酌几杯？",
+        "rewardList": [
+          {
+            "id": "itempack_gold_2",
+            "count": 1,
+            "type": "ITEM_PACK"
           }
         ]
       }
