@@ -53,7 +53,8 @@ function CollectionTimedTaskItem:Refresh( missionData, cfg )
   if self.m_finish then
     self._flagText.text = "completed";
     self._flagText.color = cfg.baseColor
-
+    
+    self._flagIcon.color = CS.UnityEngine.Color.white;
     self._prgBG.color = CS.UnityEngine.Color.white;
     self._prgCntLabel.color = cfg.baseColor;
     self._statusLabel.text = CS.Torappu.StringRes.ACTIVITY_3D5_HELP_STATUS_DESC1;

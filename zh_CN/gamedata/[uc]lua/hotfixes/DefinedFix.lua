@@ -3,7 +3,7 @@ local list =
 {
   
   "HotFixes/TestStubHotfixer",
-  "HotFixes/DurbusAbilityHotfixer",
+  "HotFixes/Act45SideHotfixer",
   "HotFixes/CroslyHotfixer",
 };
 

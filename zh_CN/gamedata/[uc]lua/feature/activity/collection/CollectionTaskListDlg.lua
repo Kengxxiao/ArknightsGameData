@@ -72,8 +72,10 @@ function CollectionTaskListDlg:Refresh(activityId, close)
   if not suc then
     return;
   end
+  self.m_constDailyTaskDisabled = false;
   self.m_constDailyTaskItemOpenDayTs = 0;
   if itemsInCfg.consts ~= nil then
+    self.m_constDailyTaskDisabled = itemsInCfg.consts.dailyTaskDisabled;
     self.m_constDailyTaskItemOpenDayTs = itemsInCfg.consts.dailyTaskStartTime;
   end
 
@@ -111,7 +113,7 @@ function CollectionTaskListDlg:Refresh(activityId, close)
   end;
     
   table.sort(self.m_missionList, comp);
-  self:_RebuildVirtualViews();
+  self:_RebuildVirtualViews(self.m_constDailyTaskDisabled);
   self.m_adapter:NotifyRebuildAll();
 end
 
@@ -123,18 +125,23 @@ function CollectionTaskListDlg:_CheckMissionFinished(playerMissionDict, missionI
   return suc and state.state == CS.Torappu.MissionHoldingState.FINISHED;
 end
 
-function CollectionTaskListDlg:_RebuildVirtualViews()
+
+function CollectionTaskListDlg:_RebuildVirtualViews(dailyTaskDisabled)
   self.m_adapter:RemoveAllViews();
-  self.m_adapter:AddView({
-    viewType = CollectionTaskItemType.DAILTY_TITLE,
-    data = {},
-    size = itemSizeTable[CollectionTaskItemType.DAILTY_TITLE]
-  });
-  self.m_adapter:AddView({
-    viewType = CollectionTaskItemType.DAILTY_ITEM,
-    data = {},
-    size = itemSizeTable[CollectionTaskItemType.DAILTY_ITEM]
-  });
+  
+  if not dailyTaskDisabled then
+    self.m_adapter:AddView({
+      viewType = CollectionTaskItemType.DAILTY_TITLE,
+      data = {},
+      size = itemSizeTable[CollectionTaskItemType.DAILTY_TITLE]
+    });
+    self.m_adapter:AddView({
+      viewType = CollectionTaskItemType.DAILTY_ITEM,
+      data = {},
+      size = itemSizeTable[CollectionTaskItemType.DAILTY_ITEM]
+    });
+  end
+  
   self.m_adapter:AddView({
     viewType = CollectionTaskItemType.TIMED_TITLE,
     data = {},
