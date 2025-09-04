@@ -878,6 +878,9 @@
   "diamondToShdRate": 180,
   "requestSameFriendCD": 14400,
   "baseMaxFriendNum": 65,
+  "maxStarFriendNum": 5,
+  "maxSquadAssistDisplayNum": 9,
+  "friendStarEditTrackTs": 1756958400,
   "hardDiamondDrop": 1,
   "instFinDmdShdCost": 80,
   "easyCrystalBonus": 0,
@@ -935,6 +938,8 @@
     "ba.xf": "<color=#0291FF>{0}</color>",
     "ba.xg": "<color=#FF00FF>{0}</color>",
     "ba.gild": "<color=#2FAC78>{0}</color>",
+    "ba.enemy": "<color=#D83C3C>{0}</color>",
+    "ba.drop": "<color=#36ACFF>{0}</color>",
     "eb.key": "<color=#00FFFF>{0}</color>",
     "eb.danger": "<color=#FF0000>{0}</color>",
     "ro.get": "<color=#0098DC>{0}</color>",
@@ -1016,6 +1021,17 @@
     "acdm.hudtip": "<color=#04d3a3>{0}</color>",
     "acdm.buff": "<color=#2da186>{0}</color>",
     "acdm.tracker": "<color=#2da186>{0}</color>",
+    "trap.number": "<color=#018FCE>{0}</color>",
+    "trap.debuff": "<color=#d83c3c>{0}</color>",
+    "trap.monster": "<color=#d83c3c>{0}</color>",
+    "trap.combine": "<color=#018FCE>{0}</color>",
+    "trap.drop": "<color=#018FCE>{0}</color>",
+    "strategy.number": "<color=#018FCE>{0}</color>",
+    "strategy.text": "<color=#018FCE>{0}</color>",
+    "strategy.text2": "<color=#767676>{0}</color>",
+    "gacha.text": "<color=#f3e468>{0}</color>",
+    "buff.number": "<color=#ede160>{0}</color>",
+    "level.highlight": "<color=#ede161>{0}</color>",
     "lv.act20side": "<color=#F7BC44>{0}</color>",
     "lv.act20sre": "<color=#F7BC44>{0}</color>",
     "lv.mhitem": "<color=#A57F5B>{0}</color>",
@@ -1040,6 +1056,11 @@
     "ba.hrd": "<color=#DA2536>{0}</color>",
     "firework.npc": "<color=#810d17>{0}</color>",
     "act.spreward": "<color=#FF5001>{0}</color>",
+    "char.oblv": "<color=#7799cc>{0}</color>",
+    "char.mort": "<color=#779977>{0}</color>",
+    "char.dolr": "<color=#bb9955>{0}</color>",
+    "char.amor": "<color=#aa4477>{0}</color>",
+    "char.tmor": "<color=#335566>{0}</color>",
     "act.timelimit": "<color=#ffe300>{0}</color>",
     "vc.text": "<color=#898989>{0}</color>",
     "vc.endtime": "<color=#ff0327>{0}</color>",
@@ -1403,6 +1424,21 @@
       "termName": "诱导",
       "description": "无法被阻挡并向目标位置移动"
     },
+    "ba.permanentatk": {
+      "termId": "ba.permanentatk",
+      "termName": "持续攻击",
+      "description": "无论攻击范围内是否有攻击目标，都会持续进行攻击"
+    },
+    "ba.fever": {
+      "termId": "ba.fever",
+      "termName": "Fever",
+      "description": "Fever累计至450点时，任意一位<$ba.mujica>Ave Mujica</>成员手动触发技能后，在场所有<$ba.mujica>Ave Mujica</>成员20秒内会持续释放当前技能"
+    },
+    "ba.mujica": {
+      "termId": "ba.mujica",
+      "termName": "Ave Mujica",
+      "description": "包括丰川祥子、八幡海铃、三角初华、祐天寺若麦、若叶睦"
+    },
     "cc.bd_A_1": {
       "termId": "cc.bd_A_1",
       "termName": "念力",
@@ -1762,11 +1798,26 @@
       "termId": "cc.tra.pepe",
       "termName": "特别独占订单",
       "description": "由佩佩提供的特殊贵金属订单，该订单的获取时长固定，收益恒定，所需赤金交付数为0"
+    },
+    "cc.bd_mujica": {
+      "termId": "cc.bd_mujica",
+      "termName": "热情值",
+      "description": "可影响<$cc.bd_mujica_1><@cc.rem>丰富工作经验</></>、<$cc.bd_mujica_2><@cc.rem>演技的怪物</></>相关技能\n由以下干员的基建技能提供\n八幡海铃、三角初华、祐天寺若麦、若叶睦"
+    },
+    "cc.bd_mujica_1": {
+      "termId": "cc.bd_mujica_1",
+      "termName": "丰富工作经验",
+      "description": "拥有该基建技能的干员\n丰川祥子"
+    },
+    "cc.bd_mujica_2": {
+      "termId": "cc.bd_mujica_2",
+      "termName": "演技的怪物",
+      "description": "拥有该基建技能的干员\n若叶睦"
     }
   },
   "storyReviewUnlockItemLackTip": "事相碎片数量不足，请前往采购凭证区或活动期间商店获取",
-  "dataVersion": "64.4.0",
-  "resPrefVersion": "64d0d0",
+  "dataVersion": "65.0.0",
+  "resPrefVersion": "65d0d0",
   "announceWebBusType": "ak_announcement",
   "videoPlayerWebBusType": "ak_video_player",
   "gachaLogBusType": "ak_gacha_log",
@@ -1853,6 +1904,10 @@
     "char_402_tuye",
     "char_4043_erato"
   ],
+  "feverGameData": {
+    "feverDuration": 20.0,
+    "feverNeed": 450.0
+  },
   "birthdaySettingDesc": "检测到信息缺失，请补全你的出生日期。\n<size=21><color=#0075a9>罗德岛将在生日当天通过邮件为你配发额外物资。</color></size>",
   "birthdaySettingConfirmDesc": "Dr.{0}，你的出生日期是{1}月{2}日，是否立即提交？\n\n<color=#b84040>生日确定后将无法更改</color>",
   "birthdaySettingLeapConfirmDesc": "Dr.{0}，你的出生日期是{1}月{2}日，是否立即提交？\n\n<color=#b84040>生日确定后将无法更改，在非闰年，你的物资将在{3}月{4}日通过邮件配发</color>",
