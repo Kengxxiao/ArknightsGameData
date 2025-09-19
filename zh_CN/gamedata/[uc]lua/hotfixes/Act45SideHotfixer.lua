@@ -61,20 +61,37 @@ local function Act45SideConfirmCharsFix(self)
   self:_ConfirmChars()
 end
 
-local function  StoryReviewActivityDetailItemFix(self, storyModel, outOfTime)
+local function StoryReviewActivityDetailItemFix(self, storyModel, outOfTime)
   self:ApplyData(storyModel, outOfTime)
   local oldBrief = self._storyInfo.text;
   self._storyInfo.text = CS.Torappu.AVGTextManager.instance:Translate(oldBrief);
+end
+
+local function Act45SideMailViewOnValueChangedFix(self, property)
+  local viewModel = property.Value;
+  if viewModel == nil then
+    return;
+  end
+
+  local AnimType = CS.Torappu.Activity.Act45Side.Act45SideMailViewModel.AnimType;
+  if viewModel.animType ~= AnimType.ENTER then
+    local animName = self._enter.animationName;
+    self._enter.animationWrapper:SampleClipAtEnd(animName);
+  end
+  self:OnValueChanged(property);
 end
 
 function Act45SideHotfixer:OnInit()
   xlua.private_accessible(CS.Torappu.Activity.Act45Side.Act45SideCharUnlockDialog)
   xlua.private_accessible(CS.Torappu.Activity.Act45Side.Act45SideMailDialog)
   xlua.private_accessible(CS.Torappu.UI.StoryReview.StoryReviewActivityDetailItemView)
+  xlua.private_accessible(CS.Torappu.Activity.Act45Side.Act45SideMailView)
+
 
   self:Fix_ex(CS.Torappu.Activity.Act45Side.Act45SideCharUnlockDialog, "_ConfirmChars", Act45SideConfirmCharsFix)
   self:Fix_ex(CS.Torappu.Activity.Act45Side.Act45SideMailDialog, "_ConfirmMails", Act45SideConfirmMailsFix)
   self:Fix_ex(CS.Torappu.UI.StoryReview.StoryReviewActivityDetailItemView, "ApplyData", StoryReviewActivityDetailItemFix)
+  self:Fix_ex(CS.Torappu.Activity.Act45Side.Act45SideMailView, "OnValueChanged", Act45SideMailViewOnValueChangedFix)
 end
 
 function Act45SideHotfixer:OnDispose()
