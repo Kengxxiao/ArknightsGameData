@@ -1,0 +1,164 @@
+[HEADER(is_tutorial=true, is_skippable=true)] 次生预案教学关1_a
+
+[InputBlocker(blockInput=true)]
+[Delay(time=1.5)]
+[Battle.Pause]
+[InputBlocker(blockInput=true, black=0.4)]
+
+[PopupDialog(dialogHead="$avatar_closure")]喂，阿米娅，听得到吗？通讯信号已经建立，和大家打个招呼吧，博士。
+
+[PopupDialog(dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]博士，还有可露希尔！先遣队都到齐了，听候博士指挥。
+
+[PopupDialog(dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]只是......目前的后勤物资比较紧张，我们只能就地取材开展建设了。
+
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+
+[Battle.Pause(pause=false)]
+[InputBlocker(blockInput=true, black=0)]
+[Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+
+[InputBlocker(blockInput=true, cardIndex=1, rightStart=true, validWidth=112, validHeight=116)]
+
+[Tutorial(waitForSignal="put_down", charId="char_002_amiya",posX=1,posY=3, \
+          dialogHead="$avatar_closure", animStyle="Drag", \
+          startCardIndex=1, startRightStart=true, endTileX=1, endTileY=3)] \
+博士，快部署阿米娅，试着先击败那只源石虫吧。
+
+[Delay(time=0.5)]
+
+[InputBlocker(blockInput=true, tileX=2,tileY=3, validWidth=160, validHeight=160)]
+
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_amiya", animStyle="Drag", \
+          startTileX=2, startTileY=3, endTileX=3, endTileY=3, dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+
+[Battle.Pause(pause=false)]
+[InputBlocker(blockInput=true)]
+[Battle.Delay(time=6)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true, black=0)]
+
+[Tutorial(dialogHead="$avatar_amiya",dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]已击败目标！我好像又积攒了一些新的<@tu.kw>作战经验</>，<@tu.kw>培训等级</>也提升了。
+
+[Tutorial(dialogHead="$avatar_closure")]不止那些，现在我们可以开始对<@tu.kw>环境进行改造</>了。
+
+[Tutorial(focusWidth=100, focusHeight=100, \
+          dialogHead="$avatar_closure", animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          cardIndex=0, rightStart=true)] \
+          博士应该看到刚刚出现的<@tu.kw>生产模块</>了吧？
+
+[InputBlocker(blockInput=true, cardIndex=0, rightStart=true, validWidth=112, validHeight=116)]
+
+[Tutorial(waitForSignal="char_info",focusWidth=100, focusHeight=100, \
+          dialogHead="$avatar_closure", animStyle="Click", focusStyle="HighlightCircle", black="$f_tut_black", \
+          cardIndex=0, rightStart=true)] \
+          没错，我给复杂的生产系统都换了个相对简单易懂的形式。
+
+[InputBlocker(blockInput=false)]
+[Battle.LockFunction(mask="SYSTEM_MENU")]
+
+[Tutorial(waitForSignal="put_down",charId="trap_1500_lhgras", posX=4, posY=3, focusWidth=100, focusHeight=100, \
+          dialogHead="$avatar_closure", animStyle="Click", focusStyle="HighlightCircle", \
+          tileX=4, tileY=3, black=0)] \
+          现在试着部署那片<@tu.kw>草丛</>吧，直接<@tu.kw>点击</>或者拖动操作都可以哦。
+
+[Battle.Pause(pause=false)]
+[InputBlocker(blockInput=true)]
+[Battle.Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true, black=0)]
+
+[Tutorial(dialogHead="$avatar_amiya",dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]指令已收到......地形改造完成。
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU")]
+
+[Tutorial(focusX=40, focusY=130, focusWidth=100, focusHeight=100, anchor="Left", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]\
+          看，<@tu.kw>部署草丛</>会为我们提供一些<@tu.kw>培训手册</>。
+
+[Tutorial(focusX=130,focusY=20, focusWidth=200, focusHeight=200, anchor="Left", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]\
+          击败不同的敌人，会获得不同的资源。
+          
+[Tutorial(dialogHead="$avatar_closure", protectTime=0.5)]同样，妥善利用我准备的这些<@tu.kw>生产装置</>，也能产出许多资源。
+
+[InputBlocker(blockInput=true, black=0)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=6)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+
+[Tutorial(dialogHead="$avatar_amiya",dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y", black=0, protectTime=0.5)]小心，更多敌人出现了！不过，我还没有观察到目标点的位置。
+
+[Tutorial(dialogHead="$avatar_closure", black=0, protectTime=0.5)]这是因为在前哨支点的战斗中，我们<@tu.kw>不再需要守护目标点</>了。
+
+[Tutorial(dialogHead="$avatar_closure", black=0, protectTime=0.5)]敌人会按照固定路线在场地中行进。
+
+[Tutorial(focusX=-100,focusY=0, focusWidth=120, focusHeight=120, anchor="Top", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", protectTime=0.5)]\
+          如果场地内<@tu.kw>同时存在过多的敌人</>，我们的生产建设就会受到影响，<@tu.kw>目标生命值也会不断流失</>。
+[Tutorial(focusX=-100,focusY=0, focusWidth=120, focusHeight=120, anchor="Top", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y", protectTime=0.5)]\
+          也就是说，我们需要及时将这些敌人清除掉，减少敌人的数量。
+
+[InputBlocker(blockInput=true)]
+[Battle.Pause(pause=false)]
+[Tutorial(waitForSignal="act1vhalfidle_battle_gain_equip")]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+
+[Tutorial(focusX=-35,focusY=110,  focusWidth=90, focusHeight=90, anchor="Right",  \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]\
+          欸，这是什么？好像是某种可以提供<@tu.kw>增益</>的物件。
+
+[Tutorial(target="pool_act1vhalfidle_equip_thumbnail_btn", \
+          waitForSignal="act1vhalfidle_battle_open_equip_panel", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")]\
+          在博士的指挥界面里，这些可以提供临时增益的物件被我统称为<@tu.kw>“战术插件”</>。
+
+[Delay(time=0.3)]
+[Tutorial(target="pool_act1vhalfidle_equip_in_bag_btn", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")]\
+          试着点击一下，装备这个<@tu.kw>战术插件</>吧。
+          
+[Tutorial(focusX=-120,focusY=0,  focusWidth=300, focusHeight=300, anchor="Right", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")]\
+          博士最多可以同时装备<@tu.kw>三个</>不同类型的<@tu.kw>战术插件</>，给正在战斗的干员们提供增益。
+
+[Delay(time=0.3)]
+[Tutorial(target="pool_act1vhalfidle_equip_thumbnail_btn", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure")]\
+          在指挥界面点击，就可以关闭战术插件面板了。
+          
+[Tutorial(dialogHead="$avatar_closure",dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y", black=0, protectTime=0.5)]<@tu.kw>战术插件</>和<@tu.kw>生产模块</>是非常重要的助力，相信博士肯定能妥善运用它们。
+
+[InputBlocker(blockInput=true)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=6)]
+[InputBlocker(blockInput=true, black=0)]
+[Battle.Pause(pause=true)]
+
+[Tutorial(tileX=6,tileY=2,  focusWidth=140, focusHeight=140, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]\
+          眼前这一只源石虫，似乎有些特别？
+
+[Tutorial(dialogHead="$avatar_closure",dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y", black=0, protectTime=0.5)]它就是这片区域的<@tu.kw>领袖敌人</>了！每个关卡都会出现领袖敌人，这些重要目标会影响关卡的完成度。
+
+[Tutorial(focusX=0,focusY=-100,  focusWidth=150, focusHeight=150, anchor="Top", \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_closure", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]荒地上的环境非常艰险，我们在每个关卡的<@tu.kw>作战时间都会受到限制</>。
+
+[Tutorial(dialogHead="$avatar_closure",dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y", black=0, protectTime=1)]每次<@tu.kw>部署生产模块</>进行环境改造，区域内的领袖敌人都会被惊动并<@tu.kw>提前出现</>。
+
+[Tutorial(dialogHead="$avatar_amiya",dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y", black=0, protectTime=0.5)]博士，让我们击败它，建立起我们的第一座前哨支点吧！
