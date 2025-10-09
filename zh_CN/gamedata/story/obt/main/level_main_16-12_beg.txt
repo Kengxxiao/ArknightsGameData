@@ -1,0 +1,610 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Background(image="66_g3_miningarea",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=2)]
+[playMusic(key="$saferoom_loop", volume=0.6)]
+[charslot(slot="m",name="avg_4208_wintim_1#1$1",duration=1)]
+[Delay(time=2)]
+[name="科谢尼娅"]前面就是第一次发现“奥卡”的矿洞了。
+[name="科谢尼娅"]按理说，在那不久之后这里就被严格管控起来了......但是现在看来，像是完全废弃了。
+[name="科谢尼娅"]不过，好消息是矿洞里的活性源石粉尘含量也在停工后迅速下降了，只要不去直接接触失去活性的源石结晶，不会有太大的感染风险。
+[charslot(slot="m",name="avg_4179_monstr_1#10$1")]
+[name="Mon3tr"]博士，我没有检测到别的生命信号——看上去不用打架就可以进去了。
+[charslot]
+[dialog]
+[Decision(options="我们尚不清楚这里是什么情况。; 纠察队和卫兵随时都有可能回来。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="抓紧时间。;我们快去快回。", values="1;2")]
+[Predicate(references="1;2")]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[playsound(key="$d_gen_walk_n")]
+[delay(time=1)]
+[name="Mon3tr"]科谢尼娅，你确定是这个方向吗？
+[name="Mon3tr"]我什么也没看到。
+[name="科谢尼娅"]抱歉，我只下来过一次......
+[name="科谢尼娅"]让我先找找应急能源开关的位置。
+[Dialog]
+[delay(time=1.5)]
+[name="科谢尼娅"]哦，在这儿。
+[Dialog]
+[delay(time=1)]
+[PlaySound(key="$d_avg_spotlightc")]
+[Background(image="66_g5_deepmine",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+[charslot(slot="m",name="avg_4208_wintim_1#9$1",duration=0.5)]
+[delay(time=1)]
+[name="科谢尼娅"]呼，看来没错。接下来继续往矿车运行的反方向走就行。
+[charslot(slot="m",name="avg_4179_monstr_1#8$1")]
+[name="Mon3tr"]反方向？我以为我们要下到更深处去。
+[charslot(slot="m",name="avg_4208_wintim_1#1$1")]
+[name="科谢尼娅"]前面连接的是其他地方，并不是矿洞。我也不知道那边具体是做什么的，但应该只走货物不走人。
+[charslot(slot="m",name="avg_4179_monstr_1#5$1")]
+[name="Mon3tr"]矿车呢？还能用吗？
+[dialog]
+[charslot(slot="m",name="avg_4208_wintim_1#1$1")]
+[PlaySound(key="$d_avg_goldbarhit")]
+[delay(time=1.5)]
+[name="科谢尼娅"]矿车本身没有问题，但被搁置太久了，应急能源大概只够提供照明，我们还是不去尝试的好。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="没错。; 我们走下去就行。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot]
+[charslot(slot="m",name="avg_4179_monstr_1#4$1")]
+[name="Mon3tr"]唔。
+[charslot(slot="m",name="avg_4179_monstr_1#10$1")]
+[name="Mon3tr"]你们两个，上矿车。
+[charslot(slot="m",name="avg_4208_wintim_1#6$1")]
+[name="科谢尼娅"]什么？
+[dialog]
+[charslot]
+[Decision(options="矿车里可没有安全带！;我们可以自己走下去！", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_4179_monstr_1#10$1")]
+[name="Mon3tr"]上矿车，博士。这样节省时间。
+[charslot(slot="m",name="avg_4208_wintim_1#6$1")]
+[name="科谢尼娅"]但矿车启动不了——
+[charslot(slot="m",name="avg_4179_monstr_1#10$1")]
+[name="Mon3tr"]别担心，我来解决。
+[name="Mon3tr"]博士，需要我扶你上去吗？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="......我自己来！", values="1")]
+[Predicate(references="1")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[curtain(direction = 0,fillfrom = 0.01,fillto = 0.15, fadetime=0.01)]
+[curtain(direction = 4,fillfrom = 0.01,fillto = 0.15, fadetime=0.01)]
+[delay(time=0.25)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="Mon3tr"]准备好了吗？
+[name="科谢尼娅"]可是，Mon3tr小姐，你准备做什——
+[dialog]
+[CameraShake(duration=0.5, xstrength=10, ystrength=5, vibrato=10, randomness=90, fadeout=true, block=false)]
+[playsound(key="$d_avg_tramcarwheel_loop", loop=true, channel="kc")]
+[delay(time=0.5)]
+[StopSound(channel="kc", fadetime=0.5)]
+[name="科谢尼娅"]——呃？！
+[dialog]
+[charslot]
+[Decision(options="我们绝对会被晃飞出去。;矿车绝对会被你弄散架的。", values="1;2")]
+[Predicate(references="1;2")]
+[name="Mon3tr"]我保证不会的，你们坐稳就行。
+[name="Mon3tr"]我们要出发了！
+[dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=100, block=false)]
+[CameraShake(duration=-1, xstrength=1, ystrength=1, vibrato=10, randomness=90, fadeout=true, block=false)]
+[playsound(key="$d_avg_tramcarwheel_loop", loop=true, channel="kc")]
+[delay(time=1.5)]
+[name="科谢尼娅"]还好，矿洞看上去还正常，没有出现坍塌。
+[name="科谢尼娅"]不过......下来之前我们应该先烤烤火的。矿洞深处的湿度比外面要高许多，几乎是伊比利亚沿海和乌萨斯内陆的区别。
+[name="科谢尼娅"]当然，矿井内外的温差也很大......你们感觉还好吗？
+[name="Mon3tr"]我当然没什么问题啦。博士呢？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="感觉......感觉我的脑子被晃得很均匀。;Mon3tr，你好像玩得很开心！", values="1;2")]
+[Predicate(references="1;2")]
+[name="Mon3tr"]我控制速度了啊？
+[name="科谢尼娅"]Mon3tr小姐是一位很好的驾驶员，或者说推车工人。
+[name="Mon3tr"]哼，看来不是我的问题。
+[dialog]
+[charslot]
+[Decision(options="科谢尼娅，我有一个问题。;矿区第一次发现“奥卡”是什么时候？", values="1;2")]
+[Predicate(references="1;2")]
+[name="科谢尼娅"]具体时间我并不清楚，在一个月前，第一份“奥卡”样本才被送到研究所。
+[name="科谢尼娅"]那也是我知道源石矿井中出现这种......闻所未闻的新物质的时刻。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="可是很奇怪......", values="1")]
+[Predicate(references="1")]
+[Decision(options="像这种矿井中出现的物质......;研究所是如何把它和“人体实验”联系起来的？", values="1;2")]
+[Predicate(references="1;2")]
+[name="科谢尼娅"]就在这个发现了“奥卡”的矿洞里，感染者出现了匪夷所思的异变。
+[name="科谢尼娅"]感染者的感染程度奇高无比的同时，却保持着正常的生命体征，甚至算得上“健康”......
+[name="Mon3tr"]症状听起来很熟悉。
+[name="科谢尼娅"]你们在别的地方也遇到了这样的病人？他们也接触过“奥卡”？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="或许还有别的可能。;我们还不能确定......", values="1;2")]
+[Predicate(references="1;2")]
+[name="科谢尼娅"]总之......乌萨斯官方想要复制这样的“奇迹”。
+[name="科谢尼娅"]我猜，他们是想要不惧病痛、不会反抗的劳动力，甚至是......另一种特殊的军队。
+[dialog]
+[charslot]
+[Decision(options="乌萨斯官方会有这样的反应并不令人意外......;他们还没有意识到这样做的危害。", values="1;2")]
+[Predicate(references="1;2")]
+[name="Mon3tr"]博士，科谢尼娅，我们好像接近了。
+[CameraShake(duration=1, xstrength=1, ystrength=1, vibrato=10, randomness=90, fadeout=true, block=false)]
+[StopSound(channel="kc", fadetime=1)]
+[name="Mon3tr"]矿车的轨道就到这里了，接下来我们得步行了。
+[dialog]
+三人摸黑徒步向前走去。
+[dialog]
+[stopmusic(fadetime=2)]
+[playsound(key="$d_avg_rainlight_loop", loop=true, channel="bgs",volume=0)]
+[SoundVolume(volume=0.5, channel="bgs",fadetime=2)]
+比光线先进入知觉的依然是声音。水声，滞重的水声。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[delay(time=1)]
+[curtain]
+[SoundVolume(volume=1, fadetime=3,channel="bgs")]
+[Background(image="66_g6_magnetofluidwaterfall",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+三人抬起头，缓慢睁开眼睛。
+他们很快意识到洞内的光亮并不来自外界，它来自眼前地上静止不动的液体，以及视线尽头淋漓的——瀑布。
+液体有着黑曜石般的光泽，在下落过程中折射从高处缝隙中透出的光亮，让洞窟崎岖的内部明亮得如同下过小雨的清晨。
+[playMusic(intro="$tech_intro",key="$tech_loop", volume=0.6)]
+[dialog]
+[charslot]
+[Decision(options="......逆向河。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4208_wintim_1#6$1")]
+[name="科谢尼娅"]你看出来了？
+[charslot(slot="m",name="avg_4208_wintim_1#1$1")]
+[name="科谢尼娅"]是的，类似逆向河，“奥卡”本应溢出的部分无法沿倾斜面向外流淌，因此只能往回流，直到像这样“静止”。
+[name="科谢尼娅"]但它其实保持着某种程度上的流动性，即使没有外力影响。这可能也是他们把它命名为“奥卡”的原因，像河流一样。
+[charslot(slot="m",name="avg_4179_monstr_1#1$1")]
+[name="Mon3tr"]这里到处都是这种液体。
+[name="Mon3tr"]根本看不出这里是矿洞，简直就像是一个天然溶洞。
+[charslot(slot="m",name="avg_4208_wintim_1#1$1")]
+[name="科谢尼娅"]更神奇的是，“奥卡”本身，就像是水一样。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="这是什么意思？;这怎么可能？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_4208_wintim_1#1$1")]
+[name="科谢尼娅"]不......只是一个比方。
+[name="科谢尼娅"]沉淀一段时间之后，“奥卡”呈现出的状态非常稳定，甚至可以被当作通用溶剂使用。
+[charslot(slot="m",name="avg_4208_wintim_1#6$1")]
+[CameraShake(duration=0.3, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="科谢尼娅"]请等一下！就算是这样我们也不能直接用手去接触——
+[charslot(slot="m",name="avg_4208_wintim_1#7$1")]
+[name="科谢尼娅"]啊......
+[charslot]
+[dialog]
+[playsound(key="$d_avg_walk_water", loop=true, channel="w")]
+[delay(time=0.5)]
+[StopSound(channel="w", fadetime=0)]
+Mon3tr弯腰，用试管从地上收集起一些液体。她没戴手套，也未做任何防护。
+湿漉漉的双手晃动着试管中的液体，她的表情凝重起来。
+[dialog]
+[charslot]
+[Decision(options="Mon3tr？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4208_wintim_1#6$1")]
+[name="科谢尼娅"]Mon3tr小姐，你不该直接接触——我带了防护设备，你想要样本的话可以告诉我，让我来采集！
+[charslot(slot="m",name="avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]（小声）......博士，我知道这是什么了。
+[charslot(slot="m",name="avg_4208_wintim_1#8$1")]
+[name="科谢尼娅"]什么？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="......", values="1")]
+[Predicate(references="1")]
+[Decision(options="科谢尼娅，样本采集......;那能麻烦你去采集一下瀑布那边的样本吗？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_4208_wintim_1#1$1")]
+[name="科谢尼娅"]啊，可以。
+[name="科谢尼娅"]你们就在这里等我，我很快回来。
+[charslot(slot="m",name="avg_4208_wintim_1#4$1")]
+[name="科谢尼娅"]......要小心。
+[dialog]
+[playsound(key="$d_avg_shallowswalk", loop=true, channel="w1")]
+[charslot(duration=1)]
+[delay(time=1.5)]
+[StopSound(channel="w1", fadetime=0.5)]
+[delay(time=2)]
+[charslot(slot="m",name="avg_4179_monstr_1#2$1",duration=1)]
+[delay(time=2)]
+[name="Mon3tr"]这种被称为“奥卡”的流体......实际上就是“源石”。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="源石......;为什么会是这个样子？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]这解释起来稍微有些复杂。
+[name="Mon3tr"]博士，你还记得莱茵生命研究的“递质”，或者伊比利亚炼金术中常被提及的“心相原质”吗？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="我记得。;它们之间有关系？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]这可能就是它们的原型，或者说原始素材。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="“递质”和“心相原质”的共通点......;它们都是某种“媒介”。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]没错，能直接与人体产生反应，或留存信息的“媒介”。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="所以这两种产物才都呈现为流体？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4179_monstr_1#1$1")]
+[name="Mon3tr"]我认为是这样的......
+[name="Mon3tr"]博士，你应该已经了解，源石既是“信息”的载体，也是“能量”的载体。
+[charslot(slot="m",name="avg_4179_monstr_1#4$1")]
+[name="Mon3tr"]“递质”与“心相原质”，都是用特定的手段重新刻录了源石能量，用以保留不同信息的产物。
+[name="Mon3tr"]而出现在这里的“奥卡”，是以一种更高效的手段抽空了源石中的能量后，残余的空白物质......
+[charslot(slot="m",name="avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]所以，它甚至真的就是一种“通用溶剂”。或许这也可以解释那些接触过“奥卡”的感染者为何会出现“变异”。
+[name="Mon3tr"]简单来说，“奥卡”作为一种失去了能量的源石，中和了感染者体内的源石活性，同时也为源石的持续生长创造了前所未有的优越条件。
+[name="Mon3tr"]这或许能暂时维持感染者的生命体征，但是无法改变他们注定很快就会死去的结果。
+[charslot(slot="m",name="avg_4179_monstr_1#9$1")]
+[name="Mon3tr"]而那些被注入了“奥卡”的普通人，由于体内几乎毫无活性源石，产生了强烈的排异反应，所以无一幸存......
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="它大规模出现在这里......;那就意味着......", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_4179_monstr_1#9$1")]
+[name="Mon3tr"]这就是我们最应该担忧的事......
+[name="Mon3tr"]博士，科罗萨主矿脉正在枯竭。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="......;......;......", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[charslot(slot="m",name="avg_4179_monstr_1#1$1")]
+[name="Mon3tr"]我们听到的那些传闻，乌萨斯正在加快开采源石的速度......实际上是在掩饰矿脉枯竭的事实。
+[name="Mon3tr"]从这里，乌萨斯最北端的矿区开始，枯竭的速度还会不断加快。
+[name="Mon3tr"]我可以大概估算出，四个月之内，乌萨斯境内的源石矿储量将会下降到原有的百分之三十......
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="这才是女大公封锁矿区的真正原因。;这件事根本不可能一直隐瞒下去。", values="1;2")]
+[Predicate(references="1;2")]
+甚至不用问出那个问题，你和Mon3tr对视，脑海中不约而同地浮现出一个名字。
+那唯一一个有能力做到这件事的人的名字——
+[dialog]
+[Decision(options="普瑞赛斯。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]除了她，也不可能有其他人了。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="她为什么要这样做？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]矿脉枯竭的进程无法被干涉，也无法被逆转。
+[name="Mon3tr"]乌萨斯必定会走向崩溃。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="恐怕不只是乌萨斯。", values="1")]
+[Predicate(references="1")]
+[Decision(options="这种体量的资源枯竭必然会影响整个泰拉。", values="1")]
+[Predicate(references="1")]
+[Decision(options="难道这就是她想要的？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4179_monstr_1#8$1")]
+[name="Mon3tr"]博士，博士！我想到了。
+[name="Mon3tr"]“奥卡”也是前文明的遗留......还是你们曾经实验的副产物。
+[charslot(slot="m",name="avg_4179_monstr_1#4$1")]
+[name="Mon3tr"]如果矿脉枯竭是因为她做了些什么，那这里面可能存在一些有用的信息。
+[charslot(slot="m",name="avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]博士，你试试看能不能读取。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="我该怎么......？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]现在条件有限，直接把你的手放进去，就像我刚才采集样本时那样。
+[name="Mon3tr"]放心，它不会对你产生伤害的。
+[charslot]
+[dialog]
+[delay(time=0.5)]
+[playsound(key="$d_avg_walk_water", loop=true, channel="w")]
+[delay(time=0.5)]
+[StopSound(channel="w", fadetime=0)]
+依着Mon3tr的指示，你蹲下身去，把双手都沉入名为“奥卡”的液体当中。
+你等待了一会儿。
+[dialog]
+[Decision(options="没感觉到有什么不同。", values="1")]
+[Predicate(references="1")]
+你等待着变化，或者回应，就像先前数次发生过的“奇迹”一样。
+然而最终却什么也没有发生。
+来自前文明的产物似乎在拒绝、否认你们之间存在某种联系。
+[dialog]
+[Decision(options="我们脚下这些会不会已经失去储存信息的功能了？;或者说，她根本没有想留给我们的信息。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot="m",name="avg_4179_monstr_1#5$1")]
+[name="Mon3tr"]......唔，不是没可能。
+[dialog]
+[charslot]
+[playsound(key="$d_avg_walk_water", loop=true, channel="ww")]
+[PlaySound(key="$d_avg_walkfast")]
+[charslot(slot="m",name="avg_4208_wintim_1#6$1",duration=0.5)]
+[delay(time=1)]
+[StopSound(channel="ww", fadetime=0)]
+[name="科谢尼娅"]Mon3tr小姐，博士！
+[name="科谢尼娅"]快过来，我发现了一些新东西！
+[name="科谢尼娅"]在瀑布后面有个空洞，爬上去，站到那里——
+[charslot(slot="m",name="avg_4208_wintim_1#4$1")]
+[name="科谢尼娅"]我发现矿洞中存在一种特殊频率的声音，它很不自然——不，是绝对不自然！
+[name="科谢尼娅"]就仿佛......它在试图通过声波传达某种信息！
+[charslot(slot="m",name="avg_4179_monstr_1#8$1")]
+[name="Mon3tr"]啊......？
+[dialog]
+[charslot]
+[Decision(options="我们去看看。", values="1")]
+[Predicate(references="1")]
+[stopmusic(fadetime=2)]
+[Dialog]
+[StopSound(channel="bgs", fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[delay(time=1)]
+[playsound(key="$d_avg_magneticwaterfall_loop", loop=true, channel="bgs")]
+[SoundVolume(volume=0.6, channel="bgs",fadetime=2)]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[PlaySound(key="$d_avg_doorknob",volume=1)]
+[bgeffect(name="$eb_glow_42i11_01",layer=1,x=-600,y=-400)]
+[Image(image="66_i06",fadetime=3, xScale=1.3, yScale=1.3,screenadapt="coverall")]
+[ImageTween( xScaleFrom=1.3, yScaleFrom=1.3, xScaleTo=1, yScaleTo=1, duration=60)]
+[delay(time=2)]
+[playMusic(intro="$newhope01_intro",key="$newhope01_loop", volume=0.6)]
+[delay(time=2)]
+[PlaySound(key="$d_avg_airbuzz_1")]
+[name="Mon3tr"]这是——
+[name="Mon3tr"]瀑布中间还有这样的地方？
+[dialog]
+[Decision(options="确实......很壮观。", values="1")]
+[Predicate(references="1")]
+[name="科谢尼娅"]来，你们仔细听！在所有液体击打岩石的声音里，总有几段频率特别的声音，仿佛在吸引人注意。它们非常不同，你们一定能听见！
+[name="科谢尼娅"]我刚才有试着解读我听到的那几段，这花了一些时间，因为要把时高时低的声音完全记录下来——
+[dialog]
+[PlaySound(key="$d_avg_airbuzz_2")]
+[delay(time=2)]
+[name="科谢尼娅"]就是这个！你们听到了吗？
+[name="Mon3tr"]我只听到了雨声！甚至听不清你说话——
+[name="Mon3tr"]博士？
+你只是闭上了双眼，任由所有的声音将你包裹。
+直到明确听到了那不断变换频率的声音。
+[dialog]
+[PlaySound(key="$d_avg_airbuzz_3")]
+[delay(time=2)]
+[Decision(options="我......", values="1")]
+[Predicate(references="1")]
+[Decision(options="我听见了。", values="1")]
+[Predicate(references="1")]
+[name="Mon3tr"]——你是说你听见了吗——
+[dialog]
+[PlaySound(key="$d_avg_airbuzz_4")]
+[delay(time=1)]
+那些陡然闯入知觉的声音，时而由数段频率高的声波组成，时而简短且凌厉，像一张韵调别致的乐谱。
+但你很快就确定，它理应是某种编码，或者是语言。
+[PlaySound(key="$d_avg_airbuzz_5")]
+你尽力捕捉了自己能忆起的所有语言，将它们分门别类，一一对应之后，你意识到这只是同个词语在不同语言中的变体。
+[name="科谢尼娅"]好吧，我抄写下来了......
+[name="科谢尼娅"]虽然只是直觉，但如果按照不同移动城市之间使用的通用编码规则来识别这些声音......
+[name="科谢尼娅"]我觉得它应该是一个单词，是用很多语言写出来的同一个单词。我可以认出乌萨斯语和高卢语！我觉得这两个词的意思都是——
+[dialog]
+[StopSound(channel="bgs", fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[image]
+[bgeffect]
+[Background(image="bg_black",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[delay(time=1.5)]
+[Sticker(id="st1", text="“未知语言”", x=300,y=340, alignment="center", size=24, delay=0.001, width=700,block = true,duration=1)]
+[Sticker(id="st1",duration=1,block = false)]
+[delay(time=1.5)]
+......
+[dialog]
+[Sticker(id="st1", text="“спорить”", x=300,y=340, alignment="center", size=24, delay=0.001, width=700,block = true,duration=1)]
+[Sticker(id="st1",duration=1,block = false)]
+[delay(time=1.5)]
+[Sticker(id="st1", text="“dibattito”", x=300,y=340, alignment="center", size=24, delay=0.001, width=700,block = true,duration=1)]
+[Sticker(id="st1",duration=1,block = false)]
+[delay(time=1.5)]
+......
+[dialog]
+[Sticker(id="st1", text="“débat”", x=300,y=340, alignment="center", size=24, delay=0.001, width=700,block = true,duration=1)]
+[Sticker(id="st1",duration=1,block = false)]
+[delay(time=1.5)]
+[Sticker(id="st1", text="“debate”", x=300,y=340, alignment="center", size=24, delay=0.001, width=700,block = true,duration=1)]
+[Sticker(id="st1",duration=1,block = false)]
+[delay(time=1.5)]
+......
+是的。留在矿井中的流体用敲击岩石的形式向你传递了同一个词语——
+[dialog]
+[stopmusic(fadetime=2)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[charslot]
+[Background(image="bg_white",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Sticker(id="st1", text="<color=#000000>“辩论”。</color>", x=320,y=340, alignment="center", size=24, delay=0.001, width=700,block = true,duration=1.5)]
+[Sticker(id="st2", text="<color=#000000>“辩论”。</color>", x=320,y=340, alignment="center", size=30, delay=0.001, width=700,block = false,duration=3)]
+[Dialog]
+[playsound(key="$d_avg_jumpscare",volume=0.6)]
+[bgeffect(name="$eb_blackmask",layer=1)]
+[delay(time=0.5)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[charslot]
+[Sticker(id="st1")]
+[Sticker(id="st2")]
+[bgeffect]
+[Background(image="bg_0_rhodes3",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[delay(time=1)]
+是了，Dr.{@nickname}。
+如果你依然认为自己的选择是正确的。
+如果你依然坚定地相信你描述的未来。
+那就用现实来驳斥我，向我证明......
+你坚持的......
+[dialog]
+[Sticker(id="st1", text="“希望”。", x=300,y=340, alignment="center", size=24, delay=0.001, width=700,block = true,duration=1.5)]
+[Sticker(id="st1",duration=1,block = false)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[delay(time=1)]
+[Image(image="66_i06")]
+[playMusic(intro="$newhope02_intro",key="$newhope02_loop", volume=0.6)]
+[playsound(key="$d_avg_magneticwaterfall_loop", loop=true, channel="bgs")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+[Decision(options="......这是一个邀请。", values="1")]
+[Predicate(references="1")]
+[name="Mon3tr"]你说什么？
+[dialog]
+[Decision(options="我说，这是一个邀请。", values="1")]
+[Predicate(references="1")]
+[Decision(options="一个我必须接受的邀请。", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[StopSound(channel="bgs", fadetime=2)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[delay(time=1)]
+[image]
+[playsound(key="$d_avg_rainlight_loop", loop=true, channel="bgs")]
+[Background(image="66_g6_magnetofluidwaterfall",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+[charslot(slot="m",name="avg_4179_monstr_1#1$1")]
+[name="Mon3tr"]（小声）你认为这是普瑞赛斯留给你的信息？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="是的。; 我明白她的意思......", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="我们应该尽快撤离了。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4179_monstr_1#1$1")]
+[name="Mon3tr"]等科谢尼娅采集完样本，我们就回研究所吧。
+[name="Mon3tr"]得想个办法和阿米娅他们取得联络......
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="不知道阿米娅他们怎么样了。; 希望阿米娅已经和Raidian他们取得联系了。", values="1;2")]
+[Predicate(references="1;2")]
+[stopmusic(fadetime=2)]
+[playsound(key="$d_avg_giantmonster_treadwater", loop=true, channel="gf")]
+[delay(time=1.5)]
+[StopSound(channel="gf", fadetime=0.3)]
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="......你有没有听到什么声音？", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4179_monstr_1#1$1")]
+[name="Mon3tr"]什么样的声音？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="重物踩在水里移动的声音。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4179_monstr_1#1$1")]
+[name="Mon3tr"]瀑布的水声一直挺大的。
+[charslot(slot="m",name="avg_4179_monstr_1#8$1")]
+[name="Mon3tr"]博士，你确定不是耳鸣吗？也许是因为刚才需要你大脑同时处理的信息太多，知觉滞留......
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[playsound(key="$d_avg_giantmonster_treadwater", loop=true, channel="gf")]
+[delay(time=2)]
+[StopSound(channel="gf", fadetime=0.3)]
+[charslot(slot="m",name="avg_4179_monstr_1#5$1")]
+[name="Mon3tr"]......等等。
+[name="Mon3tr"]科谢尼娅？是你吗？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="那不是科谢尼娅的脚步声，体重和节奏都不对。", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4179_monstr_1#8$1")]
+[name="Mon3tr"]那是......什么——
+[Background(image="66_g6_magnetofluidwaterfall",screenadapt="coverall")]
+[Dialog]
+[charslot]
+[effect(name="$e_sandfall_01",layer=1,y=350)]
+[delay(time=1)]
+[playsound(key="$d_avg_giantmonster_treadwater")]
+[playMusic(intro="$shatterpoint_01_intro",key="$shatterpoint_01_loop", volume=0.6)]
+[PlaySound(key="$d_avg_stonegrowing",volume=1)]
+[CameraShake(duration=1, xstrength=5, ystrength=5, vibrato=50, randomness=90, fadeout=true, block=false)]
+[cgitem(image="cgitem_66_i11_1", style="cg",pfrom = "-400,0",pto = "-400,0",pduration = 2, afrom = 0, ato = 1, aduration = 0.5,layer = 3)]
+[delay(time=2)]
+[backgroundTween(xScaleFrom=1, yScaleFrom=1, xScaleTo=1.1, yScaleTo=1.1, duration=0.3,block=false)]
+[curtain(direction = 0,fillfrom = 0.01,fillto = 0.07, fadetime=0.3)]
+[curtain(direction = 4,fillfrom = 0.01,fillto = 0.07, fadetime=0.3)]
+[CameraShake(duration=1, xstrength=5, ystrength=5, vibrato=50, randomness=90, fadeout=true, block=false)]
+[cgitem(image="cgitem_66_i11_2", style="cg",pfrom = "400,0",pto = "400,0",pduration = 2, afrom = 0, ato = 1, aduration = 0.5,layer = 2)]
+[delay(time=2)]
+[CameraShake(duration=1, xstrength=5, ystrength=5, vibrato=50, randomness=90, fadeout=true, block=false)]
+[backgroundTween(xScaleFrom=1.1, yScaleFrom=1.1, xScaleTo=1.2, yScaleTo=1.2, duration=0.3,block=false)]
+[curtain(direction = 0,fillfrom = 0.07,fillto = 0.14, fadetime=0.3)]
+[curtain(direction = 4,fillfrom = 0.07,fillto = 0.14, fadetime=0.3)]
+[delay(time=2)]
+[CameraShake(duration=1, xstrength=10, ystrength=10, vibrato=50, randomness=50, fadeout=true, block=false)]
+[Image(image="66_i11",fadetime=1,screenadapt="coverall", xScale=1.15, yScale=1.15)]
+[delay(time=3)]
+[Background]
+[ImageTween(xScaleTo=1.7, yScaleTo=1.7, duration=0.6)]
+[PlaySound(key="$d_avg_giantmonster_growl",volume=1)]
+[curtain(direction = 0,fillfrom = 0.14,fillto = 0, fadetime=1)]
+[curtain(direction = 4,fillfrom = 0.14,fillto = 0, fadetime=1)]
+[CameraShake(duration=3, xstrength=20, ystrength=20, vibrato=50, randomness=50, fadeout=true, block=false)]
+[Image(image="66_i11",fadetime=1,screenadapt="coverall", xScale=1, yScale=1)]
+[ImageTween(xScaleTo=1.3, yScaleTo=1.3, duration=60)]
+[delay(time=5)]
+癫狂的呼号，急促的呼吸，獠牙之间的黏液不断滴穿水面。
+暗红的源石贯穿了它整个身躯，似乎是由于这坚硬的钳制，才使它必须像人一样站立。
+而后，你看到它擎起巨大的前掌——
+不，不能说是前掌。因为那完全是一双干枯的、人的双手。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="......被源石感染的裂兽。", values="1")]
+[Predicate(references="1")]
+[delay(time=1)]
+[name="科谢尼娅"]我采集完样本了！
+[name="科谢尼娅"]你们......怎么站在这里不动？
+与认知不符的怪异裂兽正站在她身后。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="科谢尼娅，快过来！", values="1")]
+[Predicate(references="1")]
+[name="Mon3tr"]跑，科谢尼娅！往前跑，不要回头看！
+[name="Mon3tr"]我得去带她回来。博士，你去矿车那边，我们在那里会合！
+[name="Mon3tr"]博士，快走！
+[name="科谢尼娅"]什——
+[PlaySound(key="$d_avg_shallowsrun",volume=1)]
+[CameraShake(duration=-1, xstrength=5, ystrength=5, vibrato=5, randomness=50, fadeout=true, block=false)]
+研究员奔跑起来的同时，忍不住回过头去。
+她只来得及咽下尖叫。
+[name="科谢尼娅"]——陛下在上——
+[name="科谢尼娅"]那究竟是什么东西？！
+[Dialog]
+[Delay(time=2)]
+[StopSound(channel="bgs", fadetime=2)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[CameraShake(duration=0, xstrength=10, ystrength=10, vibrato=20, randomness=50, fadeout=true, block=false)]
+[stopmusic(fadetime=2)]
+[hidecgitem]
+[Image]
+[charslot]  

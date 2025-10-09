@@ -1,5 +1,5 @@
-require "Base/Utils/MiscUtil"
 require "Base/Utils/ClassAbout"
+require "Base/Utils/MiscUtil"
 require "Base/Utils/StringUtil"
 require "Base/Utils/Event"
 require "Base/Utils/LogUtil"

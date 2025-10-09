@@ -69,6 +69,21 @@ function ToLuaArray(list)
   return array;
 end
 
+
+
+
+
+function ToCSArray(table, CSType)
+  if table == nil or CSType == nil then
+    return nil
+  end
+  local csArray = CS.System.Array.CreateInstance(CSType, #table);
+  for i, v in ipairs(table) do
+    csArray[i - 1] = v;
+  end
+  return csArray;
+end
+
 function CheckTimeAvailWithTimeStamp(startTime, endTime)
   local currentTime = CS.Torappu.DateTimeUtil.timeStampNow
   if (startTime ~= -1) and (currentTime < startTime) then
@@ -147,3 +162,42 @@ end
 function _IsFieldNotNilImpl(obj, fieldName)
   return obj[fieldName] ~= nil;
 end
+
+
+
+
+
+
+
+
+
+
+KeepWaiting = Class("KeepWaiting")
+
+
+
+function KeepWaiting:ctor()
+  self.m_keepWaiting = true
+end
+
+
+
+function KeepWaiting:Finish()
+  self.m_keepWaiting = false
+end
+
+
+
+
+function KeepWaiting:KeepWaiting()
+  return self.m_keepWaiting
+end
+
+
+
+
+
+
+
+
+

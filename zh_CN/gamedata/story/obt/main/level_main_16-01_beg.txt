@@ -1,0 +1,592 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[stopmusic]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Decision(options="我们需要找到一条能安全抵达研究所的路。;极境？", values="1;2")]
+[Predicate(references="1;2")]
+[avgdisplay(id="1", name="act3mainss_01", style="animekv", slot="bgover", x=-200, y=80, scalex=1.2, scaley=1.2, entryfrom=0, entryto=0.2, duration=5, block=false)]
+[avgdisplay(id="1", name="act3mainss_01", style="animekv", slot="bgover", xto=0, yto=0, scalexto=0.9, scaleyto=0.9, duration=30)]
+[PlaySound(key="$d_avg_snowstormflp", volume=0, loop=true, channel="sn")]
+[SoundVolume(volume=1, channel="sn",fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=3, block=true)]
+[Delay(time=1)]
+[animtext(id = "at1", name = "group_location_stamp", style="avg_only_heavy", pos = "-400,-200", block = false)]<p=1>乌萨斯远北中心矿区</>
+[delay(time=3)]
+[animtextclean]
+[delay(time=1)]
+[name="极境"]我带的这些设备好像都失灵了，检测不出这片污染区的具体范围。
+[name="极境"]这里看上去像是矿场的住宿区，要说危险，也就是可能还留在里面的人了，毕竟这里有邪魔污染......
+[name="Mantra"]......
+[name="极境"]队长说可以确定附近一整片矿场内都没有人类的精神活动痕迹，动物的也没有。
+[name="极境"]污染范围的话，至少没有覆盖前方的研究所入口，而是主要往南方延伸了。
+[name="极境"]我们可以从北边绕路过去，这样大概会比原计划多出三个小时的路程，但基本还在可控范围内。
+[name="Mantra"]（点头）
+[dialog]
+[StopSound(channel="sn", fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[avgdisplay(id="1")]
+[PlayMusic(key="$saferoom_loop", volume=0.6)]
+[Background(image="66_g3_miningarea",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "m", name = "avg_4179_monstr_1#10$1", duration=1, isblock=true)]
+[name="Mon3tr"]哇......
+[name="Mon3tr"]早就想感叹了，你们也太有默契了！
+[charslot(slot = "m", name = "avg_1037_amiya3_1#8$1")]
+[name="阿米娅"]毕竟极境先生和Mantra女士已经是很多年的搭档了。
+[charslot(slot = "m", name = "char_401_elysm_na_1#2")]
+[name="极境"]哈哈哈......至少在和队长配合这方面，我也算是罗德岛资历最深的干员了。
+[name="极境"]毕竟队长“说话”的负担还是不小的，不是紧急的时候，还是由我帮忙传达吧。
+[charslot(slot = "m", name = "char_401_elysm_na_1#5")]
+[multiline(name="极境")]怎么说，博士？现在出发的话应该可以在太阳落山前——
+[charslot(slot = "m", name = "char_401_elysm_na_1#8")]
+[multiline(name="极境",end=true)]不对，这个季节，乌萨斯远北真的还有日落这种说法吗......
+[dialog]
+[charslot]
+[Decision(options="我们现在就出发。;路线的变动，也应该同步给我们的那位朋友。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "r", name = "avg_1037_amiya3_1#1$1")]
+[Delay(time=0.5)]
+[PlaySound(key="$d_avg_armyboots_walk", volume=1, loop=true, channel="ar")]
+[StopSound(channel="ar", fadetime=1.5)]
+[charslot(slot = "l", name = "avg_npc_1966_1#4$1", duration=1.5, isblock=true)]
+[Delay(time=0.5)]
+[charslot(slot = "r", name = "avg_1037_amiya3_1#1$1", focus="r")]
+[name="阿米娅"]阿洛伊泽小姐，您掉队了。
+[charslot(slot = "l", name = "avg_npc_1966_1#3$1", focus="l")]
+[name="阿洛伊泽"]抱歉，只是对矿场设备做了一些检查，和我们同行的理由无关。
+[charslot(slot = "l", name = "avg_npc_1966_1#1$1", focus="l")]
+[name="阿洛伊泽"]怎么了？你们为什么停留这么久？
+[name="阿洛伊泽"]从地图上看，我们已经离研究所很近了。难道你们发现了什么——
+[name="阿洛伊泽"]......吗？
+[dialog]
+[delay(time=1)]
+[charslot(slot = "l", name = "avg_npc_1966_1#4$1", focus="l")]
+[name="阿洛伊泽"]这是......“国度”的残留。
+[name="阿洛伊泽"]......内卫来过这里。
+[charslot(slot = "r", name = "avg_1037_amiya3_1#6$1", focus="r")]
+[name="阿米娅"]您看上去并不惊讶？
+[charslot(slot = "l", name = "avg_npc_1966_1#12$1", focus="l")]
+[name="阿洛伊泽"]希望你不是在责怪我刻意隐瞒，阿米娅小姐，否则我会很伤心的。
+[charslot(slot = "r", name = "avg_1037_amiya3_1#6$1", focus="r")]
+[name="阿米娅"]我希望至少在我们合作的时候，您会与我们共享必要的情报。
+[name="阿米娅"]对于内卫在这里的行踪，您知道什么吗？
+[charslot(slot = "l", name = "avg_npc_1966_1#3$1", focus="l")]
+[name="阿洛伊泽"]首先，除了陛下，不会有任何人有权限获悉内卫的去向，遑论我这样人微言轻的小小中士了。
+[name="阿洛伊泽"]但老实说，当远北那位最有名望的女大公以戒严为名关闭矿场的时候，内卫出现在这里，就已经算不上令人意外的事了......
+[charslot(slot = "r", name = "avg_1037_amiya3_1#1$1", focus="r")]
+[name="阿米娅"]可是，如果内卫已经在这里展开调查，那您的工作又是什么呢？
+[charslot(slot = "l", name = "avg_npc_1966_1#1$1", focus="l")]
+[name="阿洛伊泽"]你很敏锐，阿米娅小姐。
+[name="阿洛伊泽"]远北中心矿区感染者异变的消息引起了不小的波澜，有许多人都对此感到好奇。
+[name="阿洛伊泽"]当然，乌萨斯许多人都有对此感到好奇的权利，但并不都享有得到同样一份情报的权利。
+[charslot(slot = "l", name = "avg_npc_1966_1#12$1", focus="l")]
+[name="阿洛伊泽"]请谅解，我还是应该谨记自己的身份，不可说出过于失礼的话——希望这样的解释不会让你们感到困惑，阿米娅小姐。
+[charslot(slot = "r", name = "avg_1037_amiya3_1#7$1", focus="r")]
+[name="阿米娅"]不......我可以理解您的立场。
+[charslot(slot = "l", name = "avg_npc_1966_1#1$1", focus="l")]
+[name="阿洛伊泽"]我从来没有掩饰过，对于我这样的近卫军来说，这同样是一份值得争取的履历。
+[charslot(slot = "l", name = "avg_npc_1966_1#2$1", focus="l")]
+[name="阿洛伊泽"]只不过我原以为这一趟出行的工作会轻松很多......
+[name="阿洛伊泽"]但是很显然这样的期望已经破灭，内卫下场，无论如何都算不上好兆头。
+[charslot(slot = "r", name = "avg_1037_amiya3_1#8$1", focus="r")]
+[name="阿米娅"]即便如此，您还是决定继续与我们同行？
+[charslot(slot = "l", name = "avg_npc_1966_1#1$1", focus="l")]
+[name="阿洛伊泽"]当然。不管怎么说也是自己挑选的差事，半途而废可就不体面了。
+[name="阿洛伊泽"]在继续出发之前，我们可以恢复对彼此的信任了吗？
+[charslot(slot = "r", name = "avg_1037_amiya3_1#8$1", focus="r")]
+[name="阿米娅"]我们会继续合作。
+[name="阿米娅"]就像我们认识的时候那样......
+[dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background]
+[gridbg(imagegroup="38_g21_skystarry_L1/38_g21_skystarry_R1/38_g21_skystarry_L2/38_g21_skystarry_R2", solidwidth="1280/1280/1280/1280", solidheight="720/720/720/720", x=-105, fadetime=1)]
+[largebgtween(duration = 40,yFrom = 720, yTo = 360,block = false)]
+[PlaySound(key="$d_avg_snowstormflp", volume=0, loop=true, channel="sn")]
+[SoundVolume(volume=1, channel="sn",fadetime=2)]
+[Delay(time=1)]
+[PlaySound(key="$d_avg_crowdrun", volume=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[animtext(id = "at1", name = "group_location_stamp", style="avg_both", pos = "-400,-200", block = false)]<p=1>乌萨斯远北地区，布列斯克</><p=2>三天前</>
+[delay(time=3)]
+[animtextclean]
+[delay(time=1)]
+[Decision(options="极境！告知我们方向！", values="1")]
+[Predicate(references="1")]
+[playsound(key="$transmission", volume=1)]
+[Delay(time=1)]
+[name="极境"]该死......通讯信号有延迟，我们的加密频段好像被干扰了！
+[name="极境"]先不管了......你们的西侧有一支十人的卫兵小队，在下一个路口向右转！
+[name="Mon3tr"]你在说什么！我们的右边就是西面！
+[name="极境"]我刚才说的是右转？哎呀——
+[name="极境"]总之，看到市政厅了吗？往它的反方向走！
+[name="阿米娅"]我看到了，可是前面那个路口是地块断开连接的区域——
+[name="极境"]什么？！
+[name="极境"]该死，地图上根本没有标示！
+[name="极境"]可是现在四面八方都是卫兵，那边确实是唯一的突破口了！
+[name="Mon3tr"]收到。
+[name="Mon3tr"]阿米娅，你能跟上吗？
+[name="阿米娅"]没问题！
+[name="Mon3tr"]博士，抓紧了！
+[dialog]
+[Decision(options="我在努力——", values="1")]
+[Predicate(references="1")]
+[name="Mon3tr"]那可能还是不太够。没关系，我抓紧你了！
+[dialog]
+[PlaySound(key="$d_avg_clothmovement", volume=1)]
+[SoundVolume(volume=0.2, channel="sn", fadetime=0.5)]
+[largebgtween(duration = 1, yTo = 900, block = false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.5, block=true)]
+[charslot]
+[Background(image="66_g1_bleskstreet",screenadapt="coverall", xScale=1.2, yScale=1.2)]
+[Delay(time=1)]
+[largebg]
+[backgroundTween(yFrom = -80, yTo = 60, duration=0.5, block=false)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.5, block=false)]
+[PlaySound(key="$d_avg_Qinggong", volume=1)]
+[Delay(time=0.5)]
+[backgroundTween(yFrom = 60, yTo = 0, duration=1.5, block=false)]
+[Delay(time=2)]
+[PlaySound(key="$d_gen_walk_n")]
+[charslot(slot = "m", name = "avg_4179_monstr_1#3$1", duration=1.5, isblock=true)]
+[Delay(time=0.5)]
+[name="Mon3tr"]呼......
+[charslot(slot = "m", name = "avg_4179_monstr_1#8$1")]
+[name="Mon3tr"]博士，你还好吗？
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="还好。;我已经差不多习惯了。;下次我就可以试试自己跳了。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[charslot(slot = "m", name = "avg_4179_monstr_1#12$1")]
+[name="Mon3tr"]哈哈，你看上去还是很精神的嘛！那我就放心啦！
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]极境先生，我们已经抵达预定位置。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#5$1")]
+[name="阿米娅"]极境先生？
+[StopSound(channel="sn", fadetime=2)]
+[PlayMusic(intro="$nervous_intro", key="$nervous_loop", volume=0.6)]
+[PlaySound(key="$d_avg_recorderglitch", volume=1)]
+[charslot(slot = "m", focus="n")]
+[name="断断续续的杂音"]......不要......滋......停......转移......滋——
+[name="断断续续的杂音"]......有......滋滋......队......
+[dialog]
+[PlaySound(key="$transmission", volume=1)]
+[Delay(time=1.5)]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#3$1")]
+[name="阿米娅"]通讯断了。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]终端上显示极境先生的位置还在移动，但是没有办法与他建立联络。
+[name="阿米娅"]好像自从我们进入布列斯克城区以来，城内的短距离通讯一直不稳定。
+[name="阿米娅"]我们也没办法确定是因为乌萨斯远北的极端天气，还是人为的干扰。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="不过我更好奇......;布列斯克为何派这么多人围追堵截“城际贸易商”？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#7$1")]
+[name="阿米娅"]这一点也很奇怪......
+[name="阿米娅"]可露希尔小姐帮我们伪造的身份证明从来没有出过错。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="有可能他们本来在戒备的人并不是我们。;有可能他们出于别的原因盯上了我们。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="但是话说回来......", values="1")]
+[Predicate(references="1")]
+[Decision(options="布列斯克本来应该是一座安宁的城市。;城中常驻这样的防卫力量本身就很可疑。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]这的确和我们之前得到的情报不相符......这样下去，我们根本没有办法进入矿区。
+[name="阿米娅"]博士，我们是不是应该先和Mantra小队会合，再一起商议——
+[dialog]
+[charslot]
+[PlaySound(key="$transmission", volume=1)]
+[interlude(maskid = "group_interclude_vertical_common" ,size = "290,760",tsfrom="0,1", tsto ="1,1",tsduration = 0.5, switch = true, style = 0,offset = "0,0", channel = 3)]
+[interlude(channel = 3, switch = true, type = 3, slot = "m", pfrom = "0,0", pto="0,0", name = "char_401_elysm_na_1#7", duration = 0)]
+[delay(time=0.5)]
+[name="极境"]博士！终于联系上了！
+[name="极境"]不要停留！又有卫兵朝你们那边过去了！
+[dialog]
+[PlaySound(key="$d_gen_transmissionget", volume=1)]
+[interlude(channel = 3, clear = true, tsto="0,1", tsduration=0.5)]
+[delay(time=1)]
+[Decision(options="我想，我已经知道了......", values="1")]
+[Predicate(references="1")]
+[PlaySound(key="$d_gen_soldiersrun", volume=1)]
+[charslot(slot = "r", name = "avg_npc_1973_1#1$1", posfrom="80,0", posto="80,0", duration=1)]
+[charslot(slot = "l", name = "avg_npc_1973_1#1$1", posfrom="-80,0", posto="-80,0", duration=1)]
+[delay(time=0.5)]
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1", duration=1.5, isblock=true)]
+[delay(time=2)]
+[charslot]
+[charslot(slot = "m", name = "avg_4179_monstr_1#6$1")]
+[name="Mon3tr"]来得这么快——
+[name="Mon3tr"]阿米娅，你也站到我身后！
+[charslot(slot = "m", name = "avg_1037_amiya3_1#5$1")]
+[name="阿米娅"]不，我们不能直接动手！
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]可耻的闯入者，都把手举起来！
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="各位，请先冷静一点。;我们究竟违反了什么禁令，需要这么大动干戈？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]你们未经许可擅自进入工业区，又企图闯入私人所属的工厂，违反了布列斯克入城条例和乌萨斯城市治安管理办法。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]这位先生，请您确认一下，入城条例上没有写外来人员不能进入工业区——
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]这是今天颁布的新条例，从你们进入布列斯克开始就生效了。
+[name="远北卫兵"]现在，我们将依法对你们进行收押处理，然后治安官会根据具体情况判断该将你们遣返还是流放。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]如果我们无意间违反了布列斯克的新规定，我们很抱歉。
+[name="阿米娅"]我们只是为了寻找一位城际贸易商，这些都清楚地写在我们入城时提交的行程表上。
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]建议你把这些话留着去对治安官说。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="我们并无恶意。;对我们双方来说，或许会有更节省时间的办法。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="我相信“远北明珠”布列斯克的待客之道。;我相信那位女大公和传闻中一样仁慈。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]收起你那一套吧，与我无关。我只做我的工作。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#10$1")]
+[name="阿米娅"]先生......
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]请吧。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]不，先生。我们不能再耽误了。
+[name="阿米娅"]抱歉。
+[charslot]
+你看到阿米娅微微侧身，不露痕迹地将你挡在身后，Mon3tr正在观察周围的环境，试图寻找一条可以逃离的路线。
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]......不识好歹。
+[name="远北卫兵"]动手。
+[dialog]
+[charslot]
+[PlaySound(key="$d_gen_soldiersrun", volume=1)]
+[charslot(slot = "l", name = "avg_npc_1973_1#1$1", posfrom="-300,0", posto="0,0", duration=0.5)]
+[delay(time=0.2)]
+[charslot(slot = "r", name = "avg_npc_1973_1#1$1", posfrom="300,0", posto="0,0", duration=0.5)]
+[delay(time=1.5)]
+[charslot]
+[PlaySound(key="$char_Mon3tr")]
+[CameraShake(duration=0.8, xstrength=50, ystrength=50, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "m", name = "avg_4179_monstr_1#13$3")]
+[name="Mon3tr"]（咆哮示警）
+[charslot]
+[charslot(slot = "r", name = "avg_npc_1973_1#1$1", focus="r")]
+[charslot(slot = "l", name = "avg_npc_1972_1#1$1", focus="n")]
+[name="犹豫的卫兵"]呃......呃！
+[charslot(slot = "l", name = "avg_npc_1972_1#1$1", focus="l")]
+[name="远北卫兵"]都愣着做什么，上啊！
+[name="远北卫兵"]一个菲林小姑娘，难道会把你们都吃了不成？
+[charslot(slot = "r", name = "avg_npc_1973_1#1$1", focus="r")]
+[name="犹豫的卫兵"]头......头儿，不是，你看那后面。
+[name="犹豫的卫兵"]那看起来像是个——是个——
+[charslot(slot = "l", name = "avg_npc_1972_1#1$1", focus="l")]
+[name="远北卫兵"]说话不要支支吾吾的！
+[charslot(slot = "r", name = "avg_npc_1973_1#1$1", focus="r")]
+[name="犹豫的卫兵"]——近卫军！
+[CameraShake(duration=0.5, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "l", name = "avg_npc_1972_1#1$1", focus="l")]
+[name="远北卫兵"]瞎扯！近卫军那些官老爷都在圣骏堡待得好好的，哪会到布列斯克来？
+[charslot(slot = "r", name = "avg_npc_1973_1#1$1", focus="r")]
+[name="犹豫的卫兵"]可是——可是那衣裳——
+[dialog]
+[charslot]
+[PlaySound(key="$d_avg_highheelfts", volume=1)]
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1", duration=1.5, isblock=true)]
+[Delay(time=0.5)]
+[name="近卫军？"]不好意思了，先生。我想这回她还真没说错。
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]你......
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="近卫军？"]阿洛伊泽·戈尔奇科娃，近卫军前锋营中士，从圣骏堡来。
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]你......打算做什么？
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]向您提出一个很简单的请求，通融一下，放了这几位可怜的客人吧。
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]......你跟他们是一伙的？
+[charslot(slot = "m", name = "avg_npc_1966_1#12$1")]
+[name="阿洛伊泽"]很不幸，他们的确是我的朋友。既然您知道了我的来历，那想必会给我一个面子的，对吗？
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]这里又不是圣骏堡，我凭什么要给你面子？
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]凭我已经见过了治安官，补齐了手续？
+[charslot]
+乌萨斯青年挥动着手中的纸张，在昏暗的极夜天幕下，没人看得清那上面究竟写着什么。
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]你——
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]如果我是您，我不会拿自己的前途赌气。
+[name="阿洛伊泽"]认不清路的游客时时都有，卖近卫军人情的机会可不多——对了，可以请教一下您的名字吗，或者是您的军籍编号？
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1")]
+[name="远北卫兵"]......好的，戈尔奇科娃中士，我会把今天发生的一切如实告知治安官的，你可以走了。
+[name="远北卫兵"]我祝您的特权和皇帝陛下一样永垂不朽。
+[charslot(slot = "m", name = "avg_npc_1966_1#12$1")]
+[name="阿洛伊泽"]谢谢您的祝福，先生。
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]但没有人配享有和陛下一样不朽的荣光，我们每个人都会在某个特定的时刻谢幕退场的。
+[name="阿洛伊泽"]至于这几位客人，我就先带走了。
+[dialog]
+[PlaySound(key="$d_avg_highheelfts", volume=1)]
+[charslot(duration=1.5, isblock=true)]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, style = "slider", inverse = true, fadetime=2, block=true)]
+[PlaySound(key="$d_avg_snowstormflp", volume=0, loop=true, channel="sn")]
+[SoundVolume(volume=0.6, channel="sn",fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, style = "slider", inverse = true, fadetime=2, block=true)]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]女士，感谢您帮我们解围......可是，您到底是——
+[charslot(slot = "m", name = "avg_npc_1966_1#12$1")]
+[name="阿洛伊泽"]嘘，他们可还没走远呢。
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]另外，可爱的卡特斯小姐，你可以叫我阿洛伊泽。
+[name="阿洛伊泽"]女士太疏远，“那个近卫军”“那个家伙”又太粗鲁，我想，按我们现在的交情，直呼名字是最好的。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="感谢你的帮助，阿洛伊泽小姐。;你对付那些卫兵很有一手。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#3$1")]
+[name="阿洛伊泽"]那些卫兵八成以为你们是一般的商旅，可以抓了狠狠敲诈一笔，就像敲诈那些来这里观光猎奇的哥伦比亚人。
+[name="阿洛伊泽"]可惜你们不是，对不对？
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="还是让我们有话直说吧。;你为什么要帮助我们？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]不错，我喜欢直接，你们的问题我都会回答的，但不是在这里。
+[charslot(slot = "m", name = "avg_npc_1966_1#3$1")]
+[name="阿洛伊泽"]等你们的同伴到齐，我们可以换个不容易被打扰的地方继续聊。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="我们没有太多时间。", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]放心，就你们的目的而言，这绝不算浪费时间。
+[dialog]
+[StopSound(channel="sn", fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="bg_ibindoor",screenadapt="coverall")]
+[Delay(time=1)]
+[PlaySound(key="$d_avg_cavewaterdrop", volume=0, loop=true, channel="ca")]
+[SoundVolume(volume=1, channel="ca",fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.6)]
+[PlaySound(key="$d_avg_highheelfts", volume=1)]
+[charslot(slot = "m", name = "avg_npc_1966_1#3$1", duration=1.5, isblock=true)]
+[Delay(time=0.5)]
+[name="阿洛伊泽"]差不多就到这里吧。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]......这里是？
+[charslot(slot = "m", name = "avg_npc_1966_1#3$1")]
+[name="阿洛伊泽"]只是一座废弃的居民楼。据我所知，卫兵并不会顾及这片几乎无人居住的老城区。
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]空置的城市地块听上去有些奢侈，可情况就是这样。不论《圣骏堡时报》如何遮掩，远北城市的人口近些年一直在减少是不争的事实。
+[name="阿洛伊泽"]等再过段时间，这里彻底变成无人区，这座建筑所在的地块就会被卸除，报废在荒地上，和所有的废弃地块一样。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]阿洛伊泽小姐，我们需要尽快明确您找上我们的目的。
+[charslot(slot = "m", name = "avg_4179_monstr_1#6$3")]
+[name="Mon3tr"]（警惕地注视）
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]呃......可以请各位放轻松一点吗？
+[name="阿洛伊泽"]现在是你们人多势众，我哪里有威胁到各位的本事呢？
+[charslot(slot = "m", name = "avg_npc_1966_1#10$1")]
+[name="阿洛伊泽"]还有，藏在门外的那位斐迪亚女士，可以请您告诉您的同伴，我没有撒谎吗？
+[charslot(slot = "m", focus="n")]
+[name="极境"]队长说，这里没有其他人，区域内安全。
+[dialog]
+[Decision(options="选在这里谈话，看上去你也有掩人耳目的理由。;我本来期待“近卫军”至少会请我们去吃顿晚饭。", values="1;2")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]这原来是我一位朋友的房子，她想要在远北完成一部乌萨斯民族史诗的理想被这边寒冷的天气打败了——她现在在圣骏堡过得很好。
+[name="阿洛伊泽"]不过感谢她，这里至少能挡住外面的风雪，或者耳目。
+[name="阿洛伊泽"]且不论我自己，相信各位还是想要避免一些麻烦的。
+[dialog]
+[Predicate(references="2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#12$1")]
+[name="阿洛伊泽"]您很幽默，这位藏在兜帽下面的客人。懂得幽默的人一般都很聪明。
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]等我们一会谈完重要的事，如果各位还有兴致的话，招待你们一顿晚餐还是没什么问题的。
+[dialog]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]总之，我刚才已经做过自我介绍了，现在我是否有幸得知各位的名字呢？
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]我们是来自维多利亚的......
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]你们还是想说，你们要去工业区找的、与你们对接的城际贸易商，是一位孀居的夫人，化名是奥莉加？
+[name="阿洛伊泽"]很稳妥的说辞，完全可以骗过绝大部分城市的入城管理部门。
+[charslot(slot = "m", name = "avg_npc_1966_1#12$1")]
+[name="阿洛伊泽"]可是不管怎么说，在移动城市内使用军用级加密通讯的“商队”可不多见。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]是您拦截了我们的通讯？
+[charslot(slot = "m", name = "avg_npc_1966_1#13$1")]
+[name="阿洛伊泽"]不，不......那有点太粗鲁了。
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]或许是这边的极光吧，也可能是最近才升级的防御设备——你们的确是运气不佳，赶上了布列斯克情况最为特殊的时候。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]......
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]我已经坦诚相告了，如果各位还有所隐瞒的话，可就不便于我们进一步交流了。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="我们来自一家医药公司。;罗德岛。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]看，坦诚相待也没那么困难，对吧？
+[charslot(slot = "m", name = "avg_npc_1966_1#3$1")]
+[name="阿洛伊泽"]罗德岛......我曾经在来自各个地方的感染者相关的传闻中多次听到过这个名字。
+[name="阿洛伊泽"]只看根据这些故事东拼西凑出的形象，你们堪称传奇。
+[name="阿洛伊泽"]先不论真假，我最近一次见到这个名字，是在你们发表的那篇研究感染者异变的论文里。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="这个领域看上去离你很远。;没想到你会关心矿石病的学术研究。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#2$1")]
+[name="阿洛伊泽"]很惭愧，但并不是每一个圣骏堡的新贵族都不学无术。
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]无论具体政策如何，在任何一个国家感染者都不是一个可以忽视的问题——稍有常识的人都该认识到你们取得了多么重要的学术成果。
+[name="阿洛伊泽"]我唯一好奇的是，有了这样突破性的发现，却没有相应的商业行为，罗德岛看上去有些低调过头了。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="这就是你找上我们的原因？;这并不能解释你为何能得知我们的行踪。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]哦，这并不难理解。我想这个时候想要进入远北中心矿区的人都有一样的理由。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]您的意思是说，您也要进入远北中心矿区？
+[charslot(slot = "m", name = "avg_npc_1966_1#11$1")]
+[name="阿洛伊泽"]怎么，你们不是吗？
+[charslot(slot = "m", name = "avg_1037_amiya3_1#7$1")]
+[name="阿米娅"]我们......的确需要。
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]那就对了。
+[name="阿洛伊泽"]你们没有进入矿区的途径，而我恰好需要一些有专业知识的矿石病专家——恰到好处的合作关系。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="所以，你想要我们和你一起进入矿区？", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_npc_1966_1#12$1")]
+[name="阿洛伊泽"]很显然啊。
+[name="阿洛伊泽"]毕竟从圣骏堡来的家伙想介入远北事务，这里的管理者不会乐见其成。
+[name="阿洛伊泽"]现在，商队这个身份没办法帮你们，也没办法帮我，让我们去掉中间环节，原地握手合作，这也不失为一种解法。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]可是，您想进入矿区做什么？又需要我们做什么？
+[charslot(slot = "m", name = "avg_npc_1966_1#10$1")]
+[name="阿洛伊泽"]呃......我说得还不够清楚吗？
+[name="阿洛伊泽"]我希望罗德岛可以陪同我前往矿区，协同调查感染者事务。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]感染者事务？具体是指......
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]哦......这位天真的卡特斯小姐，我的耐心算得上充足但到底有限——这时候我们就没必要装傻了吧。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]不，我是认真向您求问。
+[name="阿米娅"]我们有一支流动医疗队在远北中心矿区失联了，我们需要找到他们。
+[name="阿米娅"]我们的确不知道您说的“感染者事务”到底是什么，希望您能说得更明白些。
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[multiline(name="阿洛伊泽")]你们想要进入矿区只是为了——
+[charslot(slot = "m", name = "avg_npc_1966_1#11$1")]
+[multiline(name="阿洛伊泽",end=true)]等等，所以你们真的不知道？
+[name="阿洛伊泽"]不应该啊。据我所知，你们这几年建在乌萨斯各地的医疗点数量激增——
+[charslot]
+青年脸上，单纯的疑惑取代了怀疑，最后变成了恍然大悟。
+她很快理解了自己预设中的错误。
+[charslot(slot = "m", name = "avg_npc_1966_1#11$1")]
+[name="阿洛伊泽"]——不。你刚才说，“流动医疗队”......
+[charslot(slot = "m", name = "avg_npc_1966_1#3$1")]
+[name="阿洛伊泽"]没有固定的办事处，也就没有固定的人脉和情报往来。我不知道罗德岛出了什么问题，但看上去你们现在的情报能力相当受限。
+[name="阿洛伊泽"]正因为是在乌萨斯，你们才没那么大能耐；也正因为不知道，所以才会一无所知地四处碰壁......是不是？
+[name="阿洛伊泽"]......
+[charslot(slot = "m", name = "avg_npc_1966_1#2$1")]
+[name="阿洛伊泽"]该死，我太心急了。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="我们不清楚你说的乌萨斯感染者事务。;这与布列斯克当下的异常状态有关吗？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#10$1")]
+[name="阿洛伊泽"]......算了，你们就当我没说过。刚才的人情算送你们了，不用谢啊。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]等等！
+[name="阿米娅"]您既然已经找上了我们，那说明在这件事上我们至少有合作的可能。
+[name="阿米娅"]能不能至少请您告诉我们，矿区究竟发生了什么事......
+[charslot(slot = "m", name = "avg_npc_1966_1#10$1")]
+[name="阿洛伊泽"]我真是......唉！我真该过过脑子再做选择。
+[name="阿洛伊泽"]我还以为你们是听到了些风声才会挤破脑袋拼了命也要进矿区。你们应该懂的，那种一手信息，在黑市很值钱。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]我们不是那种组织......但现在这不重要。
+[name="阿米娅"]与感染者有关的事，和我们有着天然的联系，这也是您最后选择找上我们的原因之一，不是吗？
+[name="阿米娅"]请您告诉我们吧。
+[charslot(slot = "m", name = "avg_npc_1966_1#2$1")]
+[name="阿洛伊泽"]......算了！反正现在我已经来了，总得有人做点什么，哪怕是为了一群感染者。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]感染者也是乌萨斯人。
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1")]
+[name="阿洛伊泽"]你说得对，卡特斯小姐，感染者也是乌萨斯人，更不用说那些皇帝陛下亲口允诺了“要生活而不是活着”的矿工。
+[name="阿洛伊泽"]这些矿工才是乌萨斯这台战争机器能持续运作的基础，而那些腐化的旧贵族和受其影响而朽坏了的人们，却还没能意识到。
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]可他们必须知道了，乌萨斯需要改变。
+[name="阿洛伊泽"]......
+[charslot(slot = "m", name = "avg_npc_1966_1#2$1")]
+[name="阿洛伊泽"]天哪，我都说了什么......还好那些嘴利得能喷毒的同僚都不在这儿，否则我该被笑话死了。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]您不该为此感到羞耻。
+[charslot(slot = "m", name = "avg_npc_1966_1#3$1")]
+[name="阿洛伊泽"]说出去的话就像泼出去的水，在这样的天气里会立刻被冻上的。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]所以，这件感染者事务究竟是什么呢？听上去它似乎和感染者矿工有关？
+[charslot(slot = "m", name = "avg_npc_1966_1#6$1")]
+[name="阿洛伊泽"]听着，如果你们敢把这件事宣扬出去......
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]我向您保证，无论您接下来要告诉我们的是什么，我们都不会泄密。
+[name="阿米娅"]与乌萨斯为敌没有任何益处，这点我们非常清楚。
+[charslot(slot = "m", name = "avg_npc_1966_1#3$1")]
+[name="阿洛伊泽"]让我稍微思考一下，到底该从何说起......
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]你们应该知道，布列斯克与远北中心矿区毗邻，也是乌萨斯北方最大的移动城市。
+[name="阿洛伊泽"]因此，布列斯克负责分布在远北各地总共三万平方公里的矿区还有二十万感染者的管理工作。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]......
+[dialog]
+[charslot]
+[charslot(slot = "m", focus="n")]
+[Decision(options="对这里的基本情况我们还是清楚的。;这样的管理体系出了什么样的问题？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]请不要这样盯着我......抱歉，我知道这样的说法会引起你们的反感。
+[name="阿洛伊泽"]可是现在的皇帝陛下并不希望将这些感染者矿工当作廉价的劳力，相反，他下达的政策给予了布列斯克相当多的关照。
+[name="阿洛伊泽"]近几年来，布列斯克一直处于相对平稳的状态，直到三个月前......
+[name="阿洛伊泽"]是了，这就要说到贵公司的专业领域，以及那篇论文了。
+[charslot(slot = "m", name = "avg_npc_1966_1#5$1")]
+[name="阿洛伊泽"]三个月前，在远北中心矿区发现了大量“变异感染者”，他们的症状与论文中描述的非常相似。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#5$1")]
+[name="阿米娅"]（三个月前？那不是......）
+[dialog]
+[charslot]
+[Decision(options="你是说......;这就是布列斯克处于戒严状态的原因？", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="中心矿区出现了多少“发生变异”的感染者？", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_npc_1966_1#5$1")]
+[name="阿洛伊泽"]这就是问题所在......
+[name="阿洛伊泽"]现在没有人知道，在中心矿区，还剩下多少“正常的”感染者。
+[dialog]
+[StopSound(channel="ca", fadetime=2)]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[charslot]
+[Background]
+[Image]

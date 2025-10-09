@@ -113,6 +113,10 @@ function UICommonItemCard:ChangeItemCardStyle(styleConfig)
   if styleConfig.mainColor ~= nil then
     self.m_itemCard.mainColor = styleConfig.mainColor;
   end
+
+  if styleConfig.fadeDuration ~= nil then
+    self.m_itemCard.blockFadeDuration = styleConfig.fadeDuration;
+  end
 end
 
 return UICommonItemCard 

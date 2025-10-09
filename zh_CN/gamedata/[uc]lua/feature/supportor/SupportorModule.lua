@@ -10,3 +10,6 @@ require "Feature/Supportor/LuaDataBinder"
 require "Feature/Supportor/PushMessage/UIPushMessageHandler"
 
 require "Feature/Supportor/UI/UIMiscHelper"
+require "Feature/Supportor/UI/UITabPager"
+
+require "Feature/Supportor/Tools/DataRequestWidget"

@@ -3,6 +3,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CSJudgeDialogHandle = Class("CSJudgeDialogHandle");
 
 function CSJudgeDialogHandle:Initialize()
@@ -19,7 +33,6 @@ function CSJudgeDialogHandle:_ClearDialog()
     self.m_csDlg:ClearOption();
   end
 end
-
 
 
 

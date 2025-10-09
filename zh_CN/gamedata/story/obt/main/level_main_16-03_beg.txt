@@ -1,0 +1,800 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[stopmusic]
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[CameraEffect(effect="Grayscale", amount=0.8, keep=true)]
+[PlayMusic(intro="$darkness01_intro", key="$darkness01_loop", volume=0.6)]
+[Background(image="bg_rhodescom",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[animtext(id = "at1", name = "group_location_stamp", style="avg_only_heavy", pos = "-400,-200", block = false)]<p=1>罗德岛新基地，会议室</>
+[delay(time=3)]
+[animtextclean]
+[delay(time=1)]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#5$1", duration=1, isblock=true)]
+[name="阿米娅"]关于石棺的线索？
+[charslot(slot = "m", name = "avg_4179_monstr_1#4$1")]
+[name="Mon3tr"]我们目前掌握的石棺的最后动向，是乌萨斯官方在切尔诺伯格-龙门事件之后，回收了全套石棺系统。
+[name="Mon3tr"]至于他们后续到底准备如何运用石棺，似乎是保密更为严格的项目，凯尔希的情报里也完全没有记录。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="我们可没办法直接向乌萨斯官方申请借用石棺......;我们还有什么可以锁定石棺位置的方法？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]当年切尔诺伯格研究所被破坏之后，从官方的名单上来看，除了那位谢尔盖，整个研究所没有其他幸存者。
+[name="Mon3tr"]但是通过研究谢尔盖的后续经历，我们可以发现些许线索。
+[name="Mon3tr"]在那之后，谢尔盖又成立了全新的研究石棺的研究所。就在这个研究所短暂运行的那段时间里，我们发现了一个特殊的人——
+[charslot(slot = "m", name = "avg_4179_monstr_1#1$1")]
+[name="Mon3tr"]阿尔乔姆·恰达耶夫。
+[name="Mon3tr"]这个人在谢尔盖的研究所里担任副所长，但是他过往的履历却一片空白，没有任何可信的学术和政治背景。
+[name="Mon3tr"]或许我们可以合理推断......
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="这个人和谢尔盖有特殊的关系？;这个人和研究所有特殊的关系？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]不管是哪一种情况，这个人都有可能是突破口。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#7$1")]
+[name="阿米娅"]我们要找的，就是这位阿尔乔姆？
+[charslot(slot = "m", name = "avg_4179_monstr_1#3$1")]
+[name="Mon3tr"]不，情况还要更复杂一点......
+[charslot(slot = "m", name = "avg_4179_monstr_1#1$1")]
+[name="Mon3tr"]谢尔盖的研究所关闭之后，这个人的去向也很难追踪。
+[name="Mon3tr"]而根据凯尔希的私人情报，去年冬天，阿尔乔姆在圣骏堡皇家疗养院去世了，死于心脏衰竭。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="他到最后都和乌萨斯保持着不错的关系。;或许我们可以调查与他相关的人。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_4179_monstr_1#10$1")]
+[name="Mon3tr"]聪明的判断！我也是这样想的。
+[name="Mon3tr"]所以我们要找的，是与这位阿尔乔姆有关的另一位研究员。
+[name="Mon3tr"]科谢尼娅·马尔科芙娜·涅留朵娃。
+[charslot(slot = "m", name = "avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]相比之下，这位研究员的履历要详细得多。在石棺事件发生前，她曾短暂地作为伊利亚的副手在切城研究所工作过，与凯尔希打过交道。
+[name="Mon3tr"]根据我们了解到的最新消息，目前，她正在乌萨斯远北地区，布列斯克下辖的远北中心矿区研究所里工作。
+[name="Mon3tr"]而那里，正是阿尔乔姆临终前寄出的最后几封信件的收件地址。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="听上去并不是一个十分可靠的线索......;却也是我们唯一的线索。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="我们应该去那座研究所找她。", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_171_bldsk_1#10$1")]
+[name="华法琳"]博士，我必须要提醒你。
+[name="华法琳"]虽然我们已经下定决心要把凯尔希带回来，但我们必须考量每一次任务的风险。
+[name="华法琳"]罗德岛现在经不起多少损失了......
+[dialog]
+[charslot]
+[Decision(options="可是......", values="1")]
+[Predicate(references="1")]
+[PlaySound(key="$d_gen_walk_n")]
+[charslot(slot = "m", name = "avg_npc_1730_1#3$1", duration=1.5, isblock=true)]
+[Delay(time=0.5)]
+[name="Raidian"]让我去吧。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#5$1")]
+[name="阿米娅"]Raidian？
+[charslot(slot = "m", name = "avg_npc_1730_1#2$1")]
+[name="Raidian"]乌萨斯至今依然是非常危险的地方，并且，这次任务我们掌握的情报十分有限。
+[name="Raidian"]而罗德岛重建工作刚刚起步，很多事务还需要博士和阿米娅参与决策。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#5$1")]
+[name="阿米娅"]Raidian，我可以......
+[charslot(slot = "m", name = "avg_npc_1730_1#1$1")]
+[name="Raidian"]我知道，阿米娅已经是很厉害的大人了，但正因为这样，留守罗德岛这项最重要的任务要交给阿米娅才行。
+[charslot(slot = "m", name = "avg_npc_1730_1#3$1")]
+[name="Raidian"]拉特兰传回的消息同样令人不安，博士势必要去处理。让罗德岛在新家园站稳脚跟，是我们当下最要紧的任务。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]你说得对......
+[charslot(slot = "m", name = "avg_npc_1730_1#1$1")]
+[name="Raidian"]如果只是潜入任务，那肯定是Misery的小队更加擅长，但还要收集情报的话，还是我的小队更为专精。
+[name="Raidian"]何况，回乌萨斯行动的话，也没有比我更合适的人选了，对吧？
+[charslot(slot = "m", name = "avg_npc_1723_1#3$1")]
+[name="可露希尔"]听上去，Raidian的分析还是很有道理的......
+[charslot(slot = "m", name = "avg_npc_1723_1#1$1")]
+[name="可露希尔"]博士，你决定吧。
+[dialog]
+[charslot]
+[Decision(options="这次任务很危险。;一定要注意安全，Raidian。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="罗德岛不能再失去任何人了。", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_npc_1730_1#1$1")]
+[name="Raidian"]当然啦，我们会以流动医疗队的形式谨慎行动的。
+[name="Raidian"]我不在的时候，大家都要照顾好自己哦。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#9$1")]
+[name="阿米娅"]嗯......
+[charslot(slot = "m", name = "avg_1037_amiya3_1#8$1")]
+[name="阿米娅"]希望每一个人，都能平安回家......
+[dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background]
+[CameraEffect(effect="Grayscale", amount=0, keep=true)]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[name="苍老的声音"]“......我愿意默想，并分担他的痛苦。”
+[name="苍老的声音"]“一个人的痛苦是每个人的痛苦，一个人的罪过是每个人的罪过......”
+[name="苍老的声音"]“愿有罪的人都能诚心忏悔，其罪过都可被原谅，其灵魂都可被救赎......”
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0.1, block=true)]
+[charslot]
+[Background(image="66_g4_miningarea_polluted",screenadapt="coverall")]
+[Delay(time=1)]
+[PlayMusic(key="$wasteland_loop", volume=0.6)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[animtext(id = "at1", name = "group_location_stamp", style="avg_both", pos = "-400,-200", block = false)]<p=1>乌萨斯远北中心矿区</><p=2>五天前</>
+[delay(time=3)]
+[animtextclean]
+[delay(time=1)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="痛苦的嚎叫"]呃啊——！
+[name="痛苦的嚎叫"]啊啊————！
+[dialog]
+[charslot(slot = "r", name = "avg_4207_branch_1#1$1", focus="r")]
+[delay(time=0.5)]
+[PlaySound(key="$d_gen_walk_n", volume=1, loop=true, channel="w")]
+[StopSound(channel="w", fadetime=1)]
+[charslot(slot = "l", name = "avg_npc_1964_1#1$1", posfrom="-100,0", posto="0,0", duration=1, isblock=true)]
+[charslot(slot = "l", name = "avg_npc_1964_1#1$1", focus="l")]
+[name="年迈的老妇"]啊......
+[charslot(slot = "r", name = "avg_4207_branch_1#2$1", focus="r")]
+[name="少年矿工"]没事的......奶奶，您，别害怕。
+[name="少年矿工"]是，雷尔金，老师......他已经把，追过来的纠察队，都赶走了。
+[name="少年矿工"]我们，暂时安全了。
+[charslot(slot = "l", name = "avg_npc_1964_1#1$1", focus="l")]
+[name="年迈的老妇"]是啊......暂时。
+[name="年迈的老妇"]我们还能往哪去呢，我们该上哪去寻求安宁呢......？
+[charslot(slot = "r", name = "avg_4207_branch_1#10$1", focus="r")]
+[name="少年矿工"]奶奶......您、您饿了吗......？我去问问霍里，再要一块面包。
+[charslot(slot = "l", name = "avg_npc_1964_1#1$1", focus="l")]
+[name="年迈的老妇"]我没事......乖孩子，我没事的。
+[name="年迈的老妇"]去看看雷尔金吧......
+[name="年迈的老妇"]他做了最多的事，他的心灵也会变得千疮百孔的......
+[name="年迈的老妇"]去看看他吧，不要让他再背负更多......
+[charslot(slot = "r", name = "avg_4207_branch_1#10$1", focus="r")]
+[name="少年矿工"]老师，他......
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, style = "slider", inverse = true, fadetime=2, block=true)]
+[charslot]
+[Blocker(a=0, r=0, g=0, b=0, style = "slider", inverse = true, fadetime=2, block=true)]
+[PlaySound(key="$d_gen_walk_n")]
+[charslot(slot = "m", name = "avg_npc_1963_1#3$1", duration=1.5, isblock=true)]
+[Delay(time=0.5)]
+[name="青年矿工"]......呼......
+[charslot]
+昏暗的天幕下，青年肃杀的面容趋于平静。
+阵雪很快消弭了矿镐上热血的温度，眼前畏缩的敌人已全然溃退。
+[name="恐惧的纠察队队员"]别......别杀我！你们不能动我，我已经投降了！
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="青年矿工"]但我们还没有接受。
+[name="青年矿工"]告诉我，像你们这样的追兵，还有多少？
+[charslot(slot = "m", focus="n")]
+[name="恐惧的纠察队队员"]天杀的，我不——我不知道！
+[name="恐惧的纠察队队员"]每一支纠察队都是独立的，相互之间没什么联系！
+[charslot(slot = "m", name = "avg_npc_1963_1#10$1")]
+[name="青年矿工"]再告诉我一点我不知道的事，不然我没有让你活着的理由。
+[charslot(slot = "m", focus="n")]
+[name="恐惧的纠察队队员"]别，别动手！听我说！
+[name="恐惧的纠察队队员"]你们身上的芯片！检测芯片！
+[charslot(slot = "m", name = "avg_npc_1963_1#6$1")]
+[name="青年矿工"]芯片？你是说检测感染程度的芯片？
+[charslot(slot = "m", focus="n")]
+[name="恐惧的纠察队队员"]哈......哈哈哈......
+[name="恐惧的纠察队队员"]“高尚的雷尔金”“英雄的雷尔金”，你真的这么天真？
+[name="恐惧的纠察队队员"]你们身上的芯片，会把坐标位置传回矿区研究所和最近的卫兵哨所，在你们私自离开矿区，或者芯片从身体里脱离的一瞬间——
+[name="恐惧的纠察队队员"]“砰”！
+[name="恐惧的纠察队队员"]炸掉一条腿算便宜的，两条腿也不是没可能，毕竟这样你们就哪儿也去不了了，哈哈！
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]......
+[charslot(slot = "m", focus="n")]
+[name="恐惧的纠察队队员"]雷尔金，你放弃吧......你们以为杀了一支纠察队，就可以逃出这片矿场了？
+[name="恐惧的纠察队队员"]你们哪都去不了......乌萨斯会永远追杀你们。
+[name="恐惧的纠察队队员"]投降吧，这是保证你们不至于死得太悲惨的唯一办法。
+[PlaySound(key="$d_avg_axeimp", volume=1)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "m", name = "avg_npc_1969_1#1$1")]
+[name="激动的矿工"]雷尔金，别听他张嘴就来！芯片要是会爆炸，早就有驮兽因为芯片缺胳膊缺腿了！
+[name="激动的矿工"]纠察队都是畜生不如的东西，他们嘴里的真话就跟冬天的蚜虫一样少！我还没变成感染者的时候就见多了！
+[dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[charslot(slot = "m", action="zoom", poszoom = "0.5,0.5", scale=1.1, duration = 1)]
+[charslot(duration=1)]
+[delay(time=1.5)]
+[charslot]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$d_avg_punch")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.05, block=true)]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[Blocker(a=0, r=255, g=255, b=255, fadetime=0, block=true)]
+[Blocker(a=1, r=255, g=255, b=255, fadetime=0.05, block=true)]
+[PlaySound(key="$d_avg_punch02")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0.05, block=true)]
+[name="恐惧的纠察队队员"]呃——！
+[name="激动的矿工"]雷尔金，你今天已经做得够多了，让我来杀了他！
+[charslot(slot = "m", name = "avg_npc_1963_1#3$1")]
+[name="雷尔金"]......
+[dialog]
+[charslot]
+[PlaySound(key="$rungeneral", volume=1, loop=true, channel="r")]
+[StopSound(channel="r", fadetime=1)]
+[charslot(slot = "m", name = "avg_4207_branch_1#6$1", posfrom="-200,0", posto="0,0", duration=0.5, isblock=true)]
+[Delay(time=0.5)]
+[name="少年矿工"]不、不要！
+[name="少年矿工"]不要再、再——杀人了！
+[charslot(slot = "m", name = "avg_4207_branch_1#5$1")]
+[name="少年矿工"]我们......没事！没、没有人，重伤......
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "m", name = "avg_4207_branch_1#6$1")]
+[name="少年矿工"]老师！
+[charslot(slot = "m", name = "avg_npc_1963_1#3$1")]
+[name="雷尔金"]......
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]先放开他。
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "m", name = "avg_npc_1969_1#1$1")]
+[name="激动的矿工"]“小枝条”，你让开！你干什么为这东西求情？
+[name="激动的矿工"]宝丽娜就是被这帮畜生逼死的，不过是因为她庇护了一个没登记的孩子......她被吊死的时候还怀着孕呢！
+[name="激动的矿工"]他们做过多少丧良心的事，你都忘了？
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="“小枝条”"]我......我......
+[charslot(slot = "m", focus="n")]
+[name="恐惧的纠察队队员"]呃，咳、咳咳！
+[name="恐惧的纠察队队员"]哈哈，谢谢你，“小枝条”。
+[name="恐惧的纠察队队员"]我记得你......你是最温顺的孩子，你会有一个好下场的，就算他们所有人——
+[dialog]
+[charslot]
+[PlaySound(key="$d_avg_bldwhoosh", volume=1)]
+[Blocker(a=0.5, r=0.92, g=0.4, b=0.3, fadetime=0.1, block=true)]
+[PlaySound(key="$d_avg_broadswordblood", volume=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[CameraShake(duration=0.5, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "m", name = "avg_4207_branch_1#6$1")]
+[name="“小枝条”"]老师！
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]......至少我没让他在雪地里失血而死。
+[name="雷尔金"]站稳了，别乔克。到后面去，去帮我把那位医生找来。
+[name="雷尔金"]保尔，你去找尼克托，告诉他，让所有想离开矿区的人都集中到南宿舍区。
+[charslot(slot = "m", name = "avg_npc_1963_1#5$1")]
+[name="雷尔金"]让大家做好准备，我们身上的芯片必须拆除。
+[charslot(slot = "m", name = "avg_npc_1969_1#1$1")]
+[name="激动的矿工"]你真信那家伙说的话？
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]无论如何，我们都必须先拆掉芯片。就算爆炸是假的，定位也是真的。
+[name="雷尔金"]已经有纠察队找上来了，我们还无法确定下一波是什么时候，这样下去我们会非常被动。
+[charslot(slot = "m", name = "avg_npc_1969_1#1$1")]
+[name="激动的矿工"]好......我听你的。
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(duration=1.5, isblock=true)]
+[delay(time=0.5)]
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]老师，您、您答应......答应过，我......
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]啊，你还在这里。
+[name="雷尔金"]我没答应过你任何事，别乔克。
+[name="雷尔金"]而且，如果其他纠察队的畜生都死了，他究竟凭什么例外？凭他的傲慢，凭他的讥诮？
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]不是的......
+[charslot(slot = "m", name = "avg_npc_1963_1#3$1")]
+[name="雷尔金"]......算了，你不懂。忘了我刚才说的话吧。
+[dialog]
+[delay(time=1)]
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]对了，你把这个拿着。
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]这是......什么？
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]一个秒表，我在研究所里找到的，应该还能用。之后有空了，我教你认。
+[name="雷尔金"]以后，你不用再数着没有意义的数字过活，担心数漏一个就有人死在矿井下了。
+[name="雷尔金"]至于现在......去吧，别乔克。去帮我把人找来。
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]老师，您的手，在抖......
+[charslot(slot = "m", name = "avg_npc_1963_1#3$1")]
+[name="雷尔金"]别说了。去做你该做的事。
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]......那么，至少，让我......
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]愿您的......灵魂......得到......拯救。
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]即使你看见那些人怎么对待我们，也看见我是怎么要了他们的命？
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]是......是的。
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]不要轻易祝福，更不要轻易宽恕，别乔克。即使是对我。
+[name="雷尔金"]快去吧，我们没有时间了。
+[dialog]
+[charslot]
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[delay(time=1)]
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(duration=1.5, isblock=true)]
+[delay(time=0.5)]
+[charslot(slot = "m", name = "avg_npc_1963_1#3$1")]
+[name="雷尔金"]......
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="34_g10_tent_inside",screenadapt="coverall")]
+[charslot(slot = "l", name = "avg_npc_1730_1#3$1")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[name="Raidian"]......雷尔金先生。
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1, loop=true, channel="w")]
+[StopSound(channel="w", fadetime=1)]
+[charslot(slot = "r", name = "avg_npc_1963_1#1$1", posfrom="200,0", posto="0,0", duration=1, isblock=true)]
+[charslot(slot = "r", name = "avg_npc_1963_1#1$1", focus="r")]
+[name="雷尔金"]你好，塞拉菲娜女士。
+[name="雷尔金"]虽然我们认识的时间不长，但我愿意相信，既然你的医疗小队愿意来到这片偏远的地方帮助治疗感染者，你们一定是可以托付信任的人。
+[name="雷尔金"]很抱歉，我现在不得不拜托你一件事。
+[charslot(slot = "l", name = "avg_npc_1730_1#4$1", focus="l")]
+[name="Raidian"]请说吧，只要是我能帮得上的事......
+[charslot(slot = "r", name = "avg_npc_1963_1#1$1", focus="r")]
+[name="雷尔金"]我刚才得知，这里的每一位矿工，体内都存在一枚随时可能爆炸的定位芯片。为了摆脱纠察队的追捕，我们必须想办法把芯片取出来。
+[name="雷尔金"]我准备从自己开始。
+[name="雷尔金"]如果我成功了，请你协助我帮其他人进行手术；如果它不幸爆炸了，请你对我实施急救。
+[charslot(slot = "r", name = "avg_npc_1963_1#3$1", focus="r")]
+[name="雷尔金"]如果我因此死了......也请你把这件事告诉其他还在等着我的人。
+[name="雷尔金"]现在，请你先离开这里——
+[charslot(slot = "l", name = "avg_npc_1730_1#3$1", focus="l")]
+[name="Raidian"]不，先让我检查一下，可以吗？
+[charslot(slot = "r", name = "avg_npc_1963_1#1$1", focus="r")]
+[name="雷尔金"]请吧。
+[dialog]
+[charslot(slot = "r", focus="n")]
+[PlaySound(key="$d_avg_clothtrailground", volume=1)]
+[delay(time=1.5)]
+[charslot(slot = "l", name = "avg_npc_1730_1#2$1", focus="l")]
+[name="Raidian"]......很不幸，芯片可能会爆炸的说法是真的。
+[name="Raidian"]你体内的芯片的确携带了微型的烈性源石炸药，一旦芯片无法接收到矿区内或人体内的电信号，就会触发爆炸......
+[name="Raidian"]如果大家想要从这片矿区撤离，拆除芯片恐怕是必要的。
+[charslot(slot = "r", name = "avg_npc_1963_1#6$1", focus="r")]
+[name="雷尔金"]厉害。你的源石技艺？
+[charslot(slot = "l", name = "avg_npc_1730_1#3$1", focus="l")]
+[name="Raidian"]嗯......
+[name="Raidian"]也许，我可以暂时操控相同的电信号骗过芯片的信号接收器。但我必须提醒你，这样做依然有很大的风险。
+[charslot(slot = "r", name = "avg_npc_1963_1#2$1", focus="r")]
+[name="雷尔金"]总不能等到每件事都万无一失再行动......有你这个办法就够了。
+[charslot(slot = "l", name = "avg_npc_1730_1#4$1", focus="l")]
+[name="Raidian"]稍等。
+[dialog]
+[charslot(slot = "l", posfrom="0,0", posto="150,0", duration=1)]
+[delay(time=1.5)]
+[playsound(key="$d_avg_clothmovement",volume=1)]
+[charslot(slot = "r", posfrom="0,0", posto="0,-50", afrom=1, ato=0, duration=1, isblock=true)]
+[delay(time=0.5)]
+[charslot]
+Raidian开始用源石技艺，使能量束以相同频率与芯片中的信号接收器共振。
+雷尔金点头，坐下来攥住刀柄，感受冰凉、光滑、坚硬，使它与掌心的茧相碰。
+[charslot(slot = "m", focus="n")]
+[name="雷尔金"]医生，你最好还是离我更远一点。
+[charslot(slot = "m", name = "avg_npc_1730_1#2$1")]
+[name="Raidian"]不了。这是第一次尝试，我必须实时监控情况。
+[name="Raidian"]我可以通过神经电信号引导你手臂的动作，要小心，不要破坏芯片。
+[charslot(slot = "m", focus="n")]
+[name="雷尔金"]了不起......我有点遗憾没能早些认识你。
+[name="雷尔金"]......希望我们还有交谈的机会吧。
+[dialog]
+[charslot]
+雷尔金在匕首上倒了些酒，用刀刃对准腿上的疤痕，将其嵌入血肉里。
+[dialog]
+[musicvolume(volume=0.2, fadetime=2)]
+[Blocker(a=0.5, r=0.92, g=0.4, b=0.3, fadetime=0.1, block=true)]
+[PlaySound(key="$d_avg_attack_heavy", volume=1)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[charslot]
+[PlaySound(key="$d_gen_heartbeat", volume=1, loop=true, channel="d")]
+[Delay(time=1)]
+[StopSound(channel="d", fadetime=4)]
+[delay(time=1)]
+[musicvolume(volume=0.6, fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[name="雷尔金"]......呼......
+[name="雷尔金"]......成功了，对吧？
+青年矿工几乎要一跃而起，甚至忘记了自己鲜血淋漓的伤口。
+[charslot(slot = "m", name = "avg_npc_1730_1#4$1")]
+[name="Raidian"]请先冷静点，你的伤口需要包扎。
+[dialog]
+[charslot]
+[playsound(key="$d_avg_clothmovement",volume=0.5)]
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1", posfrom="0,-50", posto="0,0", afrom=0, ato=1, duration=1.5, isblock=true)]
+[delay(time=0.5)]
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]哦，当然，谢谢你医生，我欠了你一条命。
+[name="雷尔金"]你很厉害，我从来没有见过像你这样厉害的医生，你甚至让我想起了乌萨斯的军人。
+[charslot(slot = "m", name = "avg_npc_1730_1#4$1")]
+[name="Raidian"]......我不理解你的意思。
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]抱歉，请不要误会，这是我能想到的最高尚的赞誉。
+[name="雷尔金"]我是说，那些真正的乌萨斯军人——与那些纠察队的畜生不同，他们赶走了入侵的梦魇，推翻了骏鹰的暴政，是真正的英雄。
+[charslot(slot = "m", name = "avg_npc_1963_1#8$1")]
+[name="雷尔金"]对了，伊戈尔大帝的传记，你读过吗？
+[charslot(slot = "m", name = "avg_npc_1730_1#3$1")]
+[name="Raidian"]我们该继续准备其他人的手术了——总共有多少人？
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]......恐怕是会让你和你的同伴有些劳累的数量。
+[charslot(slot = "m", name = "avg_npc_1730_1#3$1")]
+[name="Raidian"]我操控的电信号能完全覆盖这一片区域，我的同伴们可以协同进行手术。这样的话，我估计我们需要在这里停留一段时间了。
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]我们的时间紧张。
+[name="雷尔金"]医疗小队优先去帮助老人和孩子，然后教其他人该怎样做。把手术刀发给他们吧，我的同伴们从来不软弱。
+[charslot(slot = "m", name = "avg_npc_1730_1#4$1")]
+[name="Raidian"]雷尔金先生，请你不要代替医生做决定。
+[charslot(slot = "m", name = "avg_npc_1963_1#6$1")]
+[name="雷尔金"]啊，不，医生，我并不是想指挥你。
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]既然我已经担起了带领大家逃出这片矿区的责任，那我就需要做出相应的决定。
+[name="雷尔金"]随时可能追上来的纠察队，还有恶劣的天气、紧缺的物资——都是要命的东西。
+[name="雷尔金"]我希望我们可以达成共识。
+[charslot(slot = "m", name = "avg_npc_1730_1#3$1")]
+[name="Raidian"]......无论如何，都要谨防感染。我的小队会监督大家做好消毒工作。
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]那就让我们开始吧。
+[name="雷尔金"]“先动起来，再谈将来。”
+[dialog]
+[stopmusic(fadetime=2)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="66_g3_miningarea",screenadapt="coverall")]
+[Delay(time=1)]
+[PlayMusic(key="$darkness_03_loop", volume=0.6)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "m", name = "avg_npc_1967_1#6$1")]
+[name="尼克托"]呕——！
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "m", name = "avg_npc_1967_1#3$1")]
+[name="尼克托"]咳咳！呕......咳——！
+[charslot(slot = "m", name = "avg_npc_1963_1#9$1")]
+[name="雷尔金"]这就受不了了？
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]你之前在圣骏堡吃熏肉肠的时候，是不是从来没有想过它们是怎样做出来的？或者你有没有去看过卫星城里的屠宰场？
+[charslot(slot = "m", name = "avg_npc_1967_1#5$1")]
+[name="尼克托"]去你的！*乌萨斯粗口*，雷尔金，你真该死！
+[name="尼克托"]我吞了一肚子雪也盖不住鼻腔里的血腥味——下次我一定找机会在你的汤里掺最新鲜的驮兽血！
+[charslot(slot = "m", name = "avg_npc_1971_1#1$1")]
+[name="霍里"]新鲜的驮兽血很贵，一桶要卖到一百多切尔文，我们现在买不起......
+[charslot(slot = "m", name = "avg_npc_1967_1#5$1")]
+[name="尼克托"]该死，我就是打个比方......霍里，我都不知道你还当过高级餐厅的厨师。
+[charslot(slot = "m", name = "avg_npc_1971_1#3$1")]
+[name="霍里"]我儿子在当卡车司机的时候运过这种东西，圣骏堡的贵族们相信驮兽幼崽的血可以用来美容。
+[name="霍里"]他在信里给我讲过很多圣骏堡的事，但上一次来信已经是七年前了。希望他过得还好......
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]那我要拜托你小心点了，别让尼克托对我的晚餐动手脚。
+[charslot(slot = "m", name = "avg_npc_1971_1#1$1")]
+[name="霍里"]我会小心的。没有人可以对大家的晚餐动手脚。
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(duration=1.5, isblock=true)]
+[delay(time=0.5)]
+[charslot(slot = "l", name = "avg_npc_1967_1#5$1", focus="l")]
+[charslot(slot = "r", name = "avg_npc_1963_1#2$1", focus="n")]
+[name="尼克托"]希望这不会是我们吃的最后一顿晚饭，不然我一定会诅咒你的，雷尔金。
+[charslot(slot = "r", name = "avg_npc_1963_1#2$1", focus="r")]
+[name="雷尔金"]随你怎么说，今天我的心情很好。
+[charslot(slot = "r", name = "avg_npc_1963_1#8$1", focus="r")]
+[name="雷尔金"]......我很久没有觉得像这样自由过了。
+[name="雷尔金"]我们终于卸下了镣铐，我们是自由的。我们想做的事、想去的地方、我们的生活，都只由我们自己决定。
+[charslot(slot = "l", name = "avg_npc_1967_1#5$1", focus="l")]
+[name="尼克托"]你大可以找个更安定的时候再吟诗......
+[dialog]
+[delay(time=1)]
+[charslot(slot = "l", name = "avg_npc_1967_1#1$1", focus="l")]
+[name="尼克托"]雷尔金，我们接下来该怎么办？
+[charslot(slot = "r", name = "avg_npc_1963_1#1$1", focus="r")]
+[name="雷尔金"]我们的计划没有变。
+[name="雷尔金"]去南边，去乌卡边境，找到那个由感染者建立，也只属于感染者的农庄。那里会有我们所有人的容身之处。
+[charslot(slot = "l", name = "avg_npc_1967_1#1$1", focus="l")]
+[name="尼克托"]你就是愿意无理由地相信那个不知真假的“整合运动”......
+[charslot(slot = "r", name = "avg_npc_1963_1#2$1", focus="r")]
+[name="雷尔金"]不，我当然有理由相信。
+[name="雷尔金"]前些年我还在乌卡边境值守的时候，听到过许多关于他们的可信消息。
+[name="雷尔金"]他们收容感染者，免费分发药物，还把许多想要欺凌感染者的纠察队打得落荒而逃——我相信有人和我们的理想是一致的。
+[charslot(slot = "l", name = "avg_npc_1967_1#1$1", focus="l")]
+[name="尼克托"]我只会怀疑这是感染者自欺欺人的幻想，或者是军队编出来索要税收的理由。
+[charslot(slot = "r", name = "avg_npc_1963_1#1$1", focus="r")]
+[name="雷尔金"]我只会好奇，像这样的旗帜为什么直到现在才被举起来。
+[name="雷尔金"]如果......如果我们发现他们不存在，就该由我们举起这面旗帜。
+[charslot(slot = "l", name = "avg_npc_1967_1#2$1", focus="l")]
+[name="尼克托"]呵......我原本以为在边境的军旅生涯会让你长些别的教训。
+[name="尼克托"]想象一下，要是当年你救的是那位伯爵大人，而不是那个感染者，你现在恐怕已经是中尉，甚至是上尉了。
+[name="尼克托"]像我们今天遇上的纠察队，只要你勾勾手指，他们就会爬过来亲吻你的靴子。
+[charslot(slot = "r", name = "avg_npc_1963_1#2$1", focus="r")]
+[name="雷尔金"]那我很感激我做出的选择，否则我不会有机会看清这个国家的真实面貌，也不会认识到自己这一生最重要的使命。
+[charslot(slot = "r", name = "avg_npc_1963_1#10$1", focus="r")]
+[name="雷尔金"]我们的人民已经在愚弄和蒙蔽下活了太久，他们认为自己眼前的生活就是理所应当的，完全忘了自己应得的是什么！
+[name="雷尔金"]这不只是感染者和普通人的矛盾，假如有一天乌萨斯的感染者都死绝了，他们也会按另一套标准把一部分人送到矿场。
+[charslot(slot = "r", name = "avg_npc_1963_1#10$1", focus="r")]
+[name="雷尔金"]凭什么有些人生来就能拥有一切，另外一些人一辈子只能苟且求生？他们辛苦劳动取得的成果到底供养了谁？
+[charslot(slot = "l", name = "avg_npc_1967_1#1$1", focus="l")]
+[name="尼克托"]可是说到底，又是谁规定了什么是“应得”的？
+[name="尼克托"]也许这片大地现在的样貌就是真理，假使存在另外一个泰拉，假使文明进程推倒重来一万遍，也跳不出这套结构。
+[charslot(slot = "r", name = "avg_npc_1963_1#3$1", focus="r")]
+[name="雷尔金"]不......我不相信。
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "r", name = "avg_npc_1963_1#5$1", focus="r")]
+[name="雷尔金"]当你睁眼看到发生在我们周围的一切时，你难道不会愤怒吗？当我们本能地感到愤怒的时候，那便说明这一切是错误的！
+[name="雷尔金"]尼克托，以你的经历，你应该明白的。
+[charslot(slot = "l", name = "avg_npc_1967_1#5$1", focus="l")]
+[name="尼克托"]别提那些陈年旧事了......
+[charslot(slot = "l", name = "avg_npc_1967_1#1$1", focus="l")]
+[name="尼克托"]得了......就算像你说的那样，我们现在离边境还有多远？这一路上我们还会遇到多少事？
+[charslot(slot = "r", name = "avg_npc_1963_1#1$1", focus="r")]
+[name="雷尔金"]我已经有了一个计划——你以为我为什么要让你收集这些芯片？
+[name="雷尔金"]虽然它们不像其他的芯片那样，摘出来就爆炸了，但这也意味着它们的定位功能还没有消失。
+[charslot(slot = "l", name = "avg_npc_1967_1#4$1", focus="l")]
+[name="尼克托"]你......
+[charslot(slot = "r", name = "avg_npc_1963_1#2$1", focus="r")]
+[name="雷尔金"]总之，这些东西让我们吃了不少苦头，那我们为什么不利用它们反将纠察队一军呢？
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "l", name = "avg_npc_1967_1#5$1", focus="l")]
+[name="尼克托"]这和我们决定逃出去前说的不一样！
+[name="尼克托"]雷尔金，你应该清楚大家的状态。现在还能动弹的人有多少？有原先的一半吗？
+[name="尼克托"]我们能击败这些纠察队一次两次，但我们不可能对抗整个乌萨斯！制造更多的流血冲突只会让我们陷入完全的被动！
+[charslot(slot = "r", name = "avg_npc_1963_1#1$1", focus="r")]
+[name="雷尔金"]我们想要活下去，走到这一步就只是时间问题。
+[name="雷尔金"]多杀一个纠察队的走卒，我们手中就至少能多一个备用的呼吸器。
+[name="雷尔金"]夺来的物资能帮助我们走出冰原，也能帮别乔克那样的孩子多活些时日。
+[charslot(slot = "r", name = "avg_npc_1963_1#10$1", focus="r")]
+[name="雷尔金"]而且，我们能离开的契机是什么，你难道忘了？
+[name="雷尔金"]即使那东西都算不上是个人，也是我们一起让它没了命。
+[charslot(slot = "l", name = "avg_npc_1967_1#5$1", focus="l")]
+[name="尼克托"]......我不知道你在说什么。
+[name="尼克托"]我们甚至还没走出矿区，你就已经变得完全不可理喻了！
+[charslot(slot = "r", name = "avg_npc_1963_1#3$1", focus="r")]
+[name="雷尔金"]尼克托，我不愿意吵架——
+[dialog]
+[charslot]
+[PlaySound(key="$d_gen_walk_n")]
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1", posfrom="-200,0", posto="0,0", duration=1.5, isblock=true)]
+[Delay(time=0.5)]
+[name="别乔克"]老，老师......？
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]还有，尼克托先生，您，也在......
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]怎么了？
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]没、没事。我只是来看看，老师有没有吃饭......
+[charslot(slot = "m", name = "avg_npc_1967_1#1$1")]
+[name="尼克托"]哦，那你可以少操一份心了，他的肚子已经被他宏伟的理想填饱了。
+[charslot(slot = "m", name = "avg_npc_1963_1#8$1")]
+[name="雷尔金"]哈哈......他说得也不算错。
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]多关注一下那几位医生朋友吧，今天最辛苦的是他们。
+[charslot(slot = "m", name = "avg_4207_branch_1#1$1")]
+[name="别乔克"]我刚刚，去看过他们了。他们，都准备，休息了。
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]好的，你也辛苦了。
+[name="雷尔金"]伤口怎么样，还疼吗？
+[charslot(slot = "m", name = "avg_4207_branch_1#1$1")]
+[name="别乔克"]我......还好。大家，都一样。
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]是啊，我们每个人都很勇敢......
+[name="雷尔金"]去休息吧，去填饱肚子，然后好好睡一觉。
+[charslot(slot = "m", name = "avg_4207_branch_1#10$1")]
+[name="别乔克"]嗯......我们，食物有限，我的饭量，不大......
+[name="别乔克"]老师，您也要，注意身体......
+[dialog]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(duration=1.5, isblock=true)]
+[delay(time=0.5)]
+[charslot(slot = "m", name = "avg_npc_1967_1#1$1")]
+[name="尼克托"]雷尔金，“小枝条”很信任你，她一直把你当作老师。
+[name="尼克托"]......大家都是信任你的，他们都在等着你带他们走出去。
+[charslot(slot = "m", name = "avg_npc_1963_1#1$1")]
+[name="雷尔金"]我知道，所以我告诉她的每一句话，都是我发自内心认同的真理。
+[name="雷尔金"]我也在带领大家走向我认为正确的路。
+[charslot(slot = "m", name = "avg_npc_1967_1#3$1")]
+[name="尼克托"]但愿吧......
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]放轻松点，尼克托。今天是我们取得第一场胜利的日子，是一个好兆头，没必要这样愁眉苦脸。
+[name="雷尔金"]当一个人因觉醒而决定出发的时候，就是一个伟大的开始。
+[charslot(slot = "m", name = "avg_npc_1967_1#1$1")]
+[name="尼克托"]又是《伊戈尔传》里说的？
+[charslot(slot = "m", name = "avg_npc_1963_1#2$1")]
+[name="雷尔金"]不，是我自己说的。
+[name="雷尔金"]相信我，尼克托，我们在做一件伟大的事。
+[dialog]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Background(image="34_g10_tent_inside",screenadapt="coverall")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[charslot(slot = "l", name = "avg_npc_501_1#1$1", focus="l")]
+[charslot(slot = "r", name = "avg_npc_1730_1#3$1", focus="n")]
+[name="罗德岛医疗干员"]队长，所有人的手术都已经做完了。
+[name="罗德岛医疗干员"]条件实在有限，有些人开始发烧了，实在没办法避免......
+[charslot(slot = "r", name = "avg_npc_1730_1#7$1", focus="r")]
+[name="Raidian"]知道了，之后我会去和他们的领袖协商，尽可能保障伤员的食物和水的供应。
+[name="Raidian"]今天你们都辛苦了，尽快休息，也要保证自己的健康。
+[charslot(slot = "l", name = "avg_npc_501_1#1$1", focus="l")]
+[name="罗德岛医疗干员"]队长，我们接下来还要......
+[charslot(slot = "r", name = "avg_npc_1730_1#3$1", focus="r")]
+[name="Raidian"]如今远北全面戒严，天气也会影响通讯状况，我们很难与外界取得联系。
+[name="Raidian"]这里发生的事一定会引来乌萨斯的注意，我们不能留下，必须尽快离开。
+[charslot(slot = "l", name = "avg_npc_501_1#1$1", focus="l")]
+[name="罗德岛医疗干员"]可是，我们确定要与他们一起行动吗？
+[name="罗德岛医疗干员"]队长，我很担心，这样下去我们会面临与乌萨斯对立的局面......
+[charslot(slot = "r", name = "avg_npc_1730_1#2$1", focus="r")]
+[name="Raidian"]当然，罗德岛没有立场与乌萨斯为敌，但是此时此刻在这里的，也只是许多想要活下去的人。
+[name="Raidian"]改变感染者的处境，这始终是罗德岛的志向。
+[name="Raidian"]更何况，这段时间我们也接受过他们不少帮助。
+[charslot(slot = "r", name = "avg_npc_1730_1#3$1", focus="r")]
+[name="Raidian"]先不用担心了，尽可能做好应对意外事件的准备，我会继续尝试与城中据点取得联系。
+[name="Raidian"]如果他们可以接收到我们之前发出的消息......希望他们前来支援时，也能发现我们留下的线索吧。
+[dialog]
+[stopmusic(fadetime=3)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=3, block=true)]
+[charslot]
+[Background(image="66_g1_bleskstreet",screenadapt="coverall")]
+[PlaySound(key="$d_avg_snowstormflp", volume=1, loop=true, channel="sn")]
+[Delay(time=1)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[Delay(time=1)]
+[animtext(id = "at1", name = "group_location_stamp", style="avg_both", pos = "-400,-200", block = false)]<p=1>乌萨斯远北地区，布列斯克</><p=2>三天前</>
+[delay(time=3)]
+[animtextclean]
+[delay(time=1)]
+[name="路过的报童"]卖报——《布列斯克时报》——
+[dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[charslot(slot = "l", name = "avg_1037_amiya3_1#1$1", posfrom="-200,0", posto="0,0", duration=1.5)]
+[delay(time=1)]
+[PlaySound(key="$rungeneral", volume=1, loop=true, channel="r")]
+[StopSound(channel="r", fadetime=1)]
+[charslot(slot = "r", name = "avg_npc_240", posfrom="200,0", posto="50,0", duration=0.5)]
+[delay(time=0.5)]
+[charslot(slot = "r", focus="r")]
+[name="路过的报童"]姐姐......要来一份报纸吗？
+[charslot(slot = "l", name = "avg_1037_amiya3_1#8$1", focus="l")]
+[name="阿米娅"]哦，好、好的......多少钱？
+[charslot(slot = "r", focus="r")]
+[name="路过的报童"]二十帕拉......可以吗？
+[charslot(slot = "l", name = "avg_1037_amiya3_1#8$1", focus="l")]
+[name="阿米娅"]好......
+[name="阿米娅"]不过我好像没有零钱了......这个给你吧。
+[charslot(slot = "r", focus="r")]
+[name="路过的报童"]谢谢姐姐！你真是好人！
+[dialog]
+[charslot(slot = "l", posfrom="0,0", posto="200,0", afrom=1, ato=1, duration=1.5)]
+[delay(time=2)]
+[charslot(slot = "r", focus="n")]
+阿米娅小心翼翼地将一枚一切尔文的硬币放在孩子的手心里，拿到钱的孩子好像生怕对方后悔一样，一溜烟地消失在街角。
+[dialog]
+[PlaySound(key="$rungeneral", volume=1, loop=true, channel="r")]
+[StopSound(channel="r", fadetime=1)]
+[charslot(slot = "r", name = "avg_npc_240", posfrom="50,0", posto="-500,0", afrom=1, ato=0, duration=0.5)]
+[delay(time=1.5)]
+[charslot(slot = "r", afrom=1, ato=0, duration=0)]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#7$1")]
+[name="阿米娅"]......
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="阿米娅？;你在看什么？", values="1;2")]
+[Predicate(references="1;2")]
+[StopSound(channel="sn", fadetime=2)]
+[PlayMusic(intro="$loneliness_intro", key="$loneliness_loop", volume=0.6)]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]那个孩子身上的衣服......好薄。
+[name="阿米娅"]布列斯克，比我印象里的乌萨斯，还要冷一点。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="上一次来乌萨斯的时候是冬天。;布列斯克比切尔诺伯格还要更靠北。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]我还记得那个时候......
+[name="阿米娅"]那是我第一次见到那样激烈的战场，甚至紧张得忘了害怕......
+[name="阿米娅"]我当时以为，再也不会有比那更危险的时刻了。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="结果在那之后，我们又经历了很多。", values="1")]
+[Predicate(references="1")]
+[Decision(options="至少现在没有天灾和追兵。;至少现在我很清楚地知道自己是谁。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#8$1")]
+[name="阿米娅"]嗯......
+[charslot(slot = "m", name = "avg_1037_amiya3_1#7$1")]
+[name="阿米娅"]博士，说起来，我们好像很少有机会像这样静静地观察一座城市。
+[name="阿米娅"]不管是切尔诺伯格、龙门，还是伦蒂尼姆，我们的记忆里好像都充满了动乱和战火......
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="这才是这片大地本该有的样子。;我们应该记住这座城市现在的样子。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="看看今天的报纸吧。;上面有报道矿区封锁的原因吗？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#3$1")]
+[name="阿米娅"]（摇头）
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]或许只有等阿洛伊泽小姐和那位女大公进行交涉后，才能知道更多了。
+[name="阿米娅"]她说会为我们申请进入矿区的许可，可是，她到底会怎么做呢......
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="她有意让我们意识到我们掌握的消息十分有限。;她想让我们处于被动的局面。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]前面就是女大公的办公地了。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#7$1")]
+[name="阿米娅"]从我们之前收集到的信息来看，这位女大公名叫叶莉萨维塔·康斯坦丁诺夫娜·拉齐萨拉。
+[name="阿米娅"]和许多人印象中的乌萨斯贵族不同，这位女大公治理辖地的政策是以“仁慈”出名——不论是对普通人还是对感染者。
+[name="阿米娅"]从各个渠道打听到的消息里都提到了她的好名声。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="有这样的好名声，只是“仁慈”是不够的。;这位女大公应该也是个足够聪明的人。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="她的办公场所似乎不算宏伟。;看上去像是民居。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]布列斯克的建筑普遍比较低矮与规整，可能是乌萨斯远北特有的风格。
+[name="阿米娅"]不过，从地图上看，周边建筑都呈现出拱卫这栋楼的趋势，至少从城市规划角度来说，它确实有着相对独特的地理位置。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="所以，我们还是在这里了。;这次甚至没让我们进去等。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="一位雷厉风行的年轻女士。;一位颇有声望的地区领导者。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]博士，你在担心吗？
+[name="阿米娅"]说实话，我也是。即使阿洛伊泽小姐表明了态度，她的真实目的也并不清晰——
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="（摇头）;不觉得现在的情况很熟悉吗？", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#8$1")]
+[name="阿米娅"]......啊。你是在说龙门那次？
+[name="阿米娅"]陈小姐的确算得上是雷厉风行。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="难道不是“很难应付”了？", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#11$1")]
+[name="阿米娅"]让我们把它当成“严格”的另一种说法吧。
+[name="阿米娅"]在这点上，陈小姐无论对人对己都是一样的，不管是那时，还是现在。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#8$1")]
+[name="阿米娅"]对了！其实在出发前，我们还收到过陈小姐的消息。虽然她没有说自己的具体动向，但至少听上去状态还不错。
+[name="阿米娅"]她听说了之前发生的事，承诺如果罗德岛需要，她就会回来。
+[dialog]
+[charslot(slot = "m", focus="n")]
+[Decision(options="我们结识了许多朋友。;也有许多人离开了我们。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#7$1")]
+[name="阿米娅"]我还记得，和陈小姐一起行动的时候，代表罗德岛与魏长官交涉的，其实是凯尔希医生。
+[name="阿米娅"]......
+[charslot(slot = "m", name = "avg_1037_amiya3_1#2$1")]
+[name="阿米娅"]博士，我还是会担心，自己做不到像凯尔希医生那样处理问题，或者促成与他人的合作。
+[name="阿米娅"]而且，我们对乌萨斯如今的情况、对这位女大公，都知之甚少。
+[name="阿米娅"]博士，我......
+[dialog]
+[charslot]
+[Decision(options="我们没必要去做只有凯尔希才能做到的事。", values="1")]
+[Predicate(references="1")]
+[Decision(options="就做你自己吧，阿米娅。;我们会有办法的。", values="1;2")]
+[Predicate(references="1;2")]
+[PlaySound(key="$d_avg_snowbootwalk", volume=1)]
+[charslot(slot = "m", name = "avg_npc_1972_1#1$1", duration=1.5)]
+[delay(time=2)]
+[name="远北卫兵"]请问，哪一位是罗德岛的Dr.{@nickname}？
+[name="远北卫兵"]女大公殿下有请。
+[dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[charslot]
+[Background]
+[Image]

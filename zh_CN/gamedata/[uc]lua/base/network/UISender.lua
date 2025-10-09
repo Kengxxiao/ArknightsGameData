@@ -1,3 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 local rapidjson = require("rapidjson")
 
 
@@ -66,13 +86,6 @@ end
 
 
 
-
-
-
-
-
-
-
 function UISender:SendRequest(serviceCode, body, config)
   local options = _GenDefaultOptions()
   
@@ -99,6 +112,7 @@ function UISender:SendRequest(serviceCode, body, config)
     callback.onProceed = config.onProceed
     callback.onBlock = config.onBlock
     callback.onFinal = config.onFinal
+    callback.awaiter = config.awaiter
   end
   if self.m_callbacks == nil then
     self.m_callbacks = {}
@@ -154,9 +168,18 @@ function UISender:_GetCallback(requestId)
 end
 
 function UISender:ExportRemoveRequest(requestId)
-  if self.m_callbacks ~= nil then
-    self.m_callbacks[requestId] = nil 
+  if self.m_callbacks == nil then
+    return
   end
+  
+  local callback = self.m_callbacks[requestId]
+  if callback == nil then
+    return
+  end
+  if callback.awaiter ~= nil then
+    callback.awaiter:Finish()
+  end
+  self.m_callbacks[requestId] = nil 
 end
 
 

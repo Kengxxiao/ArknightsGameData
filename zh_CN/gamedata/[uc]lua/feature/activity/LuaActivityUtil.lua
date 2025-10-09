@@ -11,6 +11,7 @@ function LuaActivityUtil:OnDispose()
   CS.Torappu.UI.LuaActivityUtil.BindInterface(nil)
 end
 
+local HOME_WEIGHT_TEAM_QUEST = 350;
 local HOME_WEIGHT_DAILY_PRAY = 500;
 local HOME_WEIGHT_GRID_GACHA = 510;
 local HOME_WEIGHT_GRID_GACHA_V2 = 520;
@@ -22,6 +23,7 @@ local HOME_WEIGHT_CHECKIN_VS = 570;
 local HOME_WEIGHT_UNIQUE_ONLY = 580;
 local HOME_WEIGHT_BLESS_ONLY = 590;
 local HOME_WEIGHT_ACTACCESS = 595;
+local HOME_WEIGHT_RECRUIT_ONLY = 596;
 
 local HOME_WEIGHT_MAIN_BUFF = 600;
 local HOME_WEIGHT_MAINLINE_BP = 610;
@@ -221,6 +223,31 @@ end
 
 
 
+function LuaActivityUtil:_FindValidTeamQuestActs(validActs, uncompleteActs, unfinishedActs, finishedActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.TEAM_QUEST)
+  if actList == nil then
+    return
+  end
+
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i]
+    local validAct = CS.Torappu.UI.ActivityUtil.SortableActivity(actId, HOME_WEIGHT_TEAM_QUEST)
+    validActs:Add(validAct)
+    if not self:_CheckIfTeamQuestMilestoneAllGot(actId) then
+      uncompleteActs:Add(validAct)
+    end
+    if self:_CheckIfActivityFinished(CS.Torappu.ActivityType.TEAM_QUEST, validAct) then
+      finishedActs:Add(validAct)
+    else
+      unfinishedActs:Add(validAct)
+    end
+  end
+end
+
+
+
+
+
 function LuaActivityUtil:_FindValidSwitchOnly(validActs, uncompleteActs, unfinishedActs, finishedActs)
   local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.SWITCH_ONLY);
   if actList == nil then
@@ -266,6 +293,30 @@ function LuaActivityUtil:_FindValidUniqueOnly(validActs, uncompleteActs, unfinis
   end
 end
 
+
+
+
+
+function LuaActivityUtil:_FindValidRecruitOnly(validActs, uncompleteActs, unfinishedActs, finishedActs)
+  local actList = CS.Torappu.UI.ActivityUtil.FindValidActs(CS.Torappu.ActivityType.RECRUIT_ONLY);
+  if actList == nil then
+    return;
+  end
+
+  for i = 0, actList.Count - 1 do
+    local actId = actList[i];
+    local validAct = CS.Torappu.UI.ActivityUtil.SortableActivity(actId, HOME_WEIGHT_RECRUIT_ONLY);
+    validActs:Add(validAct);
+    if self:_CheckIfRecruitOnlyUncomplete(actId) then
+      uncompleteActs:Add(validAct);
+    end
+    if self:_CheckIfActivityFinished(CS.Torappu.ActivityType.RECRUIT_ONLY, validAct) then
+      finishedActs:Add(validAct)
+    else
+      unfinishedActs:Add(validAct)
+    end
+  end
+end
 
 
 
@@ -385,6 +436,8 @@ function LuaActivityUtil:FindValidHomeActs(validActs, uncompleteActs, unfinished
   self:_FindValidMainlineBpAct(validActs, uncompleteActs, unfinishedActs, finishedActs);
   self:_FindValidCheckInAccess(validActs,uncompleteActs, unfinishedActs, finishedActs);
   self:_FindValidCheckinVideoActs(validActs, uncompleteActs, unfinishedActs, finishedActs);
+  self:_FindValidTeamQuestActs(validActs, uncompleteActs, unfinishedActs, finishedActs);
+  self:_FindValidRecruitOnly(validActs,uncompleteActs, unfinishedActs, finishedActs);
 end
 
 
@@ -436,7 +489,13 @@ local DEFINE_CLS_FUNCS = {
   end,
   CHECKIN_VIDEO = function(clsName, config)
     DlgMgr.DefineDialog(clsName, config.dlgPath, CheckinVideoDlg);
-  end
+  end,
+  TEAM_QUEST = function(clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, TeamQuestMainDlg)
+  end,
+  RECRUIT_ONLY = function (clsName, config)
+    DlgMgr.DefineDialog(clsName, config.dlgPath, RecruitOnlyDlg)
+  end,
 }
 
 
@@ -513,6 +572,10 @@ function LuaActivityUtil:CheckIfActivityUncomplete(type, actId)
     return self:_CheckIfActAccessUncomplete(actId);
   elseif type == CS.Torappu.ActivityType.CHECKIN_VIDEO then
     return self:_CheckIfCheckinVideoUncomplete(actId);
+  elseif type == CS.Torappu.ActivityType.TEAM_QUEST then
+    return self:_CheckIfTeamQuestHasTrackPoint(actId);
+  elseif type == CS.Torappu.ActivityType.RECRUIT_ONLY then
+    return self:_CheckIfRecruitOnlyUncomplete(actId);
   else
     return false;
   end
@@ -578,6 +641,16 @@ function LuaActivityUtil:_CheckIfCheckinVsUncomplete(actId)
   end
 
   return playerActData.availSignCnt > 0 or playerActData.voteRewardState == 1
+end
+
+
+
+
+function LuaActivityUtil:_CheckIfTeamQuestHasTrackPoint(actId)
+  local TeamQuestMainDlgViewModel = require("Feature/Activity/TeamQuest/ViewModel/TeamQuestMainDlgViewModel")
+  local viewModel = TeamQuestMainDlgViewModel.new()
+  viewModel:InitData(actId)
+  return viewModel.isUncomplete
 end
 
 function LuaActivityUtil:_CheckIfCheckinAllUncomplete(actId)
@@ -652,6 +725,10 @@ function LuaActivityUtil:_CheckIfUniqueOnlyUncomplete(actId)
   return false;
 end
 
+function LuaActivityUtil:_CheckIfRecruitOnlyUncomplete(actId)
+  return not RecruitOnlyUtil.CheckIfRecruitOnlyConsumedByActId(actId);
+end
+
 function LuaActivityUtil:_CheckIfBlessOnlyUncomplete(actId)
   return BlessOnlyUtil.CheckBlessActIsUncomplete(actId);
 end
@@ -716,6 +793,50 @@ function LuaActivityUtil:_CheckIfCheckinVsFinished(actId)
   local signTotalCnt = actData.checkInDict.Count
 
   return playerActData.signedCnt >= signTotalCnt
+end
+
+
+
+function LuaActivityUtil:_CheckIfTeamQuestFinished(actId)
+  return self:_CheckIfTeamQuestMilestoneAllGot(actId)
+end
+
+
+
+function LuaActivityUtil:_CheckIfTeamQuestMilestoneAllGot(actId)
+  local playerTeamQuestActs = CS.Torappu.PlayerData.instance.data.activity.teamQuestActivityList
+  if playerTeamQuestActs == nil then
+    return false
+  end
+  local suc1, jObject = playerTeamQuestActs:TryGetValue(actId)
+  if not suc1 or jObject == nil then
+    return false
+  end
+
+  local playerActData = eutils.ConvertJObjectToLuaTable(jObject)
+  if playerActData == nil or playerActData.milestone == nil  then
+    return false
+  end
+
+  local activityData = CS.Torappu.ActivityDB.data
+  if activityData == nil or activityData.dynActs == nil then
+    return false
+  end
+
+  local suc2, jObject = activityData.dynActs:TryGetValue(actId)
+  if not suc2 then
+    return false
+  end
+
+  local actData = eutils.ConvertJObjectToLuaTable(jObject)
+  if actData == nil or actData.milestoneList == nil then
+    return false
+  end
+
+  local gotMilestoneCnt = #playerActData.milestone.got
+  local allMilestoneCnt = #actData.milestoneList
+
+  return gotMilestoneCnt >= allMilestoneCnt
 end
 
 function LuaActivityUtil:_CheckIfActAccessUncomplete(actId)
@@ -787,6 +908,10 @@ function LuaActivityUtil:_CheckIfActivityFinished(type, validAct)
     return self:_CheckIfActAccessFinished(actId);
   elseif type == CS.Torappu.ActivityType.CHECKIN_VIDEO then
     return self:_CheckIfCheckinVideoFinished(actId);
+  elseif type == CS.Torappu.ActivityType.TEAM_QUEST then
+    return self:_CheckIfTeamQuestFinished(actId)
+  elseif type == CS.Torappu.ActivityType.RECRUIT_ONLY then
+    return self:_CheckIfRecruitOnlyFinished(actId);
   end
   return false
 end
@@ -844,4 +969,10 @@ end
 
 function LuaActivityUtil:_CheckIfUniqueOnlyFinished(actId)
   return UniqueOnlyUtil.CheckIfHaveRewardClaimedByActId(actId)
+end
+
+
+
+function LuaActivityUtil:_CheckIfRecruitOnlyFinished(actId)
+  return RecruitOnlyUtil.CheckIfRecruitOnlyConsumedByActId(actId);
 end

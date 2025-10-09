@@ -11,6 +11,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 UIBase = Class("UIBase");
 
 
@@ -191,6 +209,25 @@ function UIBase:AddButtonClickListener(btn, func, ...)
             btn.onClick:Invoke();
         end
     end);
+end
+
+
+
+function UIBase:AddInputFieldListener(inputField, func)
+    if inputField == nil then
+        return
+    end
+
+    local this = self
+    inputField.onValueChanged:AddListener(function (strVal)
+        func(this, strVal)
+    end)
+
+    self:_AddToDoWhenClose(function ()
+        if not CS.Torappu.Lua.Util.IsDestroyed(inputField) then
+            inputField.onValueChanged:RemoveAllListeners()
+        end
+    end)
 end
 
 

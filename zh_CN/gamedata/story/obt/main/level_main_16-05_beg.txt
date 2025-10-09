@@ -1,0 +1,394 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Delay(time=1)]
+[Background(image="66_g10_instituteinterior",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Delay(time=2)]
+[dialog]
+[animtext(id = "at1", name = "group_location_stamp", style="avg_only_heavy", pos = "-400,-200", block = false)]<p=1>乌萨斯，远北中心矿区研究所</>
+[delay(time=3)]
+[animtextclean]
+[delay(time=1)]
+[playMusic(intro="$ponder_intro",key="$ponder_loop", volume=0.6)]
+[charslot(slot = "left", name = "avg_4208_wintim_1#1$2",duration=1)]
+[charslot(slot = "right", name = "avg_4179_monstr_1#1$1",duration=1)]
+[delay(time=2)]
+[charslot(slot = "right", name = "avg_4179_monstr_1#8$1",focus="r")]
+[name="Mon3tr"]她刚刚......是不是说了“内卫”？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="我听到她说的是......; 杀死内卫。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "right", name = "avg_4179_monstr_1#5$1",focus="r")]
+[name="Mon3tr"]她的意思是......这种叫“奥卡”的物质，杀死了内卫？
+[name="Mon3tr"]这可能吗？难道这是某种比“国度”更恐怖的邪魔产物？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="一种从矿井中发现的未知物质。; 研究所用它分别在感染者和非感染者身上做了实验。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="实验结果显示，它会使感染者的病情加重。", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "right", name = "avg_4179_monstr_1#2$1",focus="r")]
+[name="Mon3tr"]也许，这是这里的研究员对某种物质的特殊称呼，在见到实物之前，我们都没法下定论。
+[charslot(slot = "right", name = "avg_4179_monstr_1#6$1",focus="r")]
+[name="Mon3tr"]科谢尼娅，科谢尼娅！看着我，你还能想起些什么吗？
+[charslot(slot = "left", name = "avg_4208_wintim_1#1$2",focus="l")]
+[name="科谢尼娅"]我......你是......
+[charslot(slot = "m", focus = "n")]
+Mon3tr以为这次呼唤会与之前一样毫无收获，但女人迷蒙的双眼却忽地睁大了。
+紧接着，她反手死死抓住眼前人的衣服，把Mon3tr拽到身前。
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot(slot = "left", name = "avg_4208_wintim_1#6$2",focus="l")]
+[name="科谢尼娅"]你是——您是所长？凯尔希所长？
+[name="科谢尼娅"]是您来接我了吗？我想回去，我还想见到老师——
+[charslot(slot = "left", name = "avg_4208_wintim_1#7$2",focus="l")]
+[name="科谢尼娅"]我想见伊利亚老师......还有柳达......呜......
+[name="科谢尼娅"]但他们......他们还会想见我吗？我这样懦弱，什么也做不到......我还配见到他们吗？
+[name="科谢尼娅"]呜......呜呜——啊！！！
+[charslot(slot = "right", name = "avg_4179_monstr_1#9$1",focus="r")]
+[name="Mon3tr"]我......我——
+[charslot(slot = "m", focus = "n")]
+然而没等Mon3tr作出回应，女人又兀自放手，跌坐回去。
+[charslot(slot = "left", name = "avg_4208_wintim_1#8$2",focus="l")]
+[name="科谢尼娅"]不，不对......
+[name="科谢尼娅"]你不是凯尔希所长。我再也没见到过她，就像我再也没见到过其他人。她不该在这里。
+[name="科谢尼娅"]我甚至见过她后来的同伴，他们......他们......
+[charslot(slot = "right", name = "avg_4179_monstr_1#8$1",focus="r")]
+[name="Mon3tr"]你见过？你见过谁？是不是一位个子小小的、总是面带微笑的黎博利？
+[charslot(slot = "left", name = "avg_4208_wintim_1#1$2",focus="l")]
+[name="科谢尼娅"]黎博利......是啊，我见过她。
+[charslot(slot = "right", name = "avg_4179_monstr_1#8$1",focus="r")]
+[name="Mon3tr"]她去哪儿了？
+[charslot(slot = "left", name = "avg_4208_wintim_1#1$2",focus="l")]
+[name="科谢尼娅"]我不知道......
+[name="科谢尼娅"]那群杀死内卫的人......那些感染者，她之前和那些人在一起。
+[name="科谢尼娅"]他们会死！所有人都会死！
+[charslot(slot = "left", name = "avg_4208_wintim_1#7$2",focus="l")]
+[name="科谢尼娅"]呜......我不知道——我不知道......
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="她需要镇静剂。; 她有脱水症状。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "right", name = "avg_4179_monstr_1#1$1",focus="r")]
+[name="Mon3tr"]那这些信息——
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="矿工出逃与内卫有关。; Mantra说过内卫造成的污染在向南蔓延。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="答案已经很明显了。", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "right", name = "avg_4179_monstr_1#5$1",focus="r")]
+[name="Mon3tr"]可是，内卫真的被杀了吗？被一群矿工？这有可能吗？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="或许我们应该考虑......; 如果这是真的，那将意味着什么。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "right", name = "avg_4179_monstr_1#5$1",focus="r")]
+[name="Mon3tr"]那位女大公封锁矿区的真正目的，是为了隐藏有个内卫死在了她的辖区的事实？
+[charslot(slot = "right", name = "avg_4179_monstr_1#8$1",focus="r")]
+[name="Mon3tr"]但这不可能！无论是皇帝还是集团军，都不会善罢甘休的，如果她真的想要掩盖这件事，一开始就不会答应让我们进入矿区。
+[charslot(slot = "right", name = "avg_4179_monstr_1#4$1",focus="r")]
+[name="Mon3tr"]还有那位近卫军，她知道这件事吗？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="没错......; 这些正是我们需要担心的事。", values="1;2")]
+[Predicate(references="1;2")]
+[Decision(options="先通知Mantra和阿米娅吧。", values="1")]
+[Predicate(references="1")]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[charslot]
+[charslot(slot = "m", name = "avg_4204_mantra_1#1$1")]
+[Background(image="66_g9_institutecorridor",screenadapt="coverall")]
+[playsound(key="$d_gen_transmissionget")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[name="Mantra"]收到，博士。
+[name="Mantra"]我们这里同样有些发现，与你们得到的情报相符。
+[name="Mantra"]有打斗痕迹的场所，遗落了一些医疗用品。
+[name="Mantra"]是罗德岛的制式。
+[name="Mantra"]我们马上与你们会合。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[charslot]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[Background(image="bg_Morgue",screenadapt="coverall")]
+[playsound(key="$d_gen_transmissionget")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1.5, block=true)]
+[name="阿米娅"]明白......博士。
+[name="阿米娅"]我们马上就到。
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]怎么了？你的同伴那边有什么发现？
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]恐怕需要我们会合后才能说明。
+[name="阿米娅"]阿洛伊泽小姐，这里还有什么需要注意的线索吗？
+[charslot(slot = "m", name = "avg_npc_1966_1#10$1")]
+[name="阿洛伊泽"]我所知有限，得不出什么更有效的信息，有必要的话，一会让那位博士亲自来查看一下也无妨。
+[name="阿洛伊泽"]不过这倒是更加让我确信了军方毫无底线这件事......
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]阿洛伊泽小姐，我想问，对于发生在矿区的事，您还知道什么吗？
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]嗯？你是想问什么？这座研究所里的实验还是发生变异的感染者？
+[charslot(slot = "m", name = "avg_npc_1966_1#10$1")]
+[name="阿洛伊泽"]......怎么了？
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]......
+[charslot(slot = "m", focus = "n",name = "avg_npc_1966_1#10$1")]
+[PlaySound(key="$d_avg_crystalmagic_loop")]
+阿米娅向来抗拒在这样的情况下，以这种方式使用自己的能力，但她仍旧尝试着去触碰了眼前这位近卫军的思绪。
+阿洛伊泽的心头满是阴霾和疑惑，却并未掺杂心虚。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#1$1")]
+[name="阿米娅"]没什么，我们走吧。
+[stopmusic(fadetime=2)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[delay(time=1)]
+[Background(image="66_g10_instituteinterior",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[delay(time=1)]
+[playMusic(intro="$darkness01_intro",key="$darkness01_loop", volume=0.6)]
+[charslot(slot = "m", name = "avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]博士，这些资料......还有遗书，该怎么办？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="这份遗书没有提及太多与石棺有关的内容。; 那位近卫军提供了不少情报，我们也该适当地回报。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot]
+[playsound(key="$d_avg_openftstpwalk")]
+[playsound(key="$d_avg_churchfootstep",delay=0.3,volume=0.5,channel="2")]
+[name="靠近的声音"]是在这边吗？还真是难找......
+[name="靠近的声音"]果然，藏得这么深，一定有秘密——
+[dialog]
+[delay(time=1)]
+[charslot(slot = "m", name = "avg_npc_1966_1#1$1",duration=0.5)]
+[delay(time=1)]
+[charslot(slot = "m", name = "avg_npc_1966_1#10$1")]
+[name="阿洛伊泽"]——等等，这是谁？
+[charslot(slot = "m", focus = "n", name = "avg_4208_wintim_1#2$2")]
+近卫军的目光投向斜靠在墙边，面色苍白，双目紧闭的女人。
+[charslot]
+[charslot(slot = "m", name = "avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]一个没有撤离的研究员，科谢尼娅。
+[name="Mon3tr"]研究所与流动医疗队可能有往来，我们想问她我们那些同伴的去向，但她精神恍惚，脱水严重，不宜继续接受询问。
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]那地上这些蜡烛和线路又是......？
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]......我猜，这是她为自我了断所做的准备。博士，这里到底发生了什么？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="我们及时赶到，阻止了爆炸发生。; 情况很复杂。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot]
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]你手上拿着的那些文件是什么？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="遗书，你也看看吧。; （递给她）", values="1;2")]
+[Predicate(references="1;2")]
+[playsound(key="$d_avg_paper2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[delay(time=1.5)]
+[name="阿洛伊泽"]......一事无成的研究员，名叫“奥卡”的神秘物质......人体实验。
+[name="阿洛伊泽"]看上去，我们在下面见到的那些死者，是被这个“奥卡”杀死的。
+[charslot(slot = "m", name = "char_401_elysm_na_1#6")]
+[name="极境"]这里真的在做人体实验？
+[charslot(slot = "m", name = "char_401_elysm_na_1#7")]
+[name="极境"]该死，我当时只是一说——
+[charslot(slot = "m", name = "avg_4204_mantra_1#2$1")]
+[name="Mantra"]（摇头）
+[charslot(slot = "m", name = "avg_npc_1966_1#5$1")]
+[name="阿洛伊泽"]哼，看来女大公果真隐瞒了很多东西。
+[name="阿洛伊泽"]但是这个实验的目的是什么？这里的研究员会使用这种卑劣的手段，我并不意外，但他们总该有所图才是！
+[name="阿洛伊泽"]这位研究员本人呢？她什么也没说吗？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="看上去有些研究资料已经被人为销毁了。; 但不确定是矿工还是这里的研究员自己所为。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]所以，我们还是不知道那些变异感染者诞生的原因。
+[name="阿洛伊泽"]不过，起码现在我们知道这里还有活下来的矿工逃走了，除开这位研究员，那些逃走的矿工很可能就是整件事的唯一切入点了。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="那些感染者矿工在洗劫了研究所后离开了。; 他们往南去了，这是唯一的线索。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]我们该抓紧时间了......这位研究员恢复到可以接受询问的状态还需要多久？
+[charslot(slot = "m", name = "avg_4179_monstr_1#2$1")]
+[name="Mon3tr"]很难预估。她脱水严重，刚见面时精神状况也很糟糕，我们得先为她治疗。
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]真麻烦......
+[name="阿洛伊泽"]我们还不清楚矿工已经出逃了多久，既然知道了方向，就必须抓紧时间追上去。
+[name="阿洛伊泽"]可我们不可能带着没有行动能力的伤员上路。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="我和Mon3tr留下看顾科谢尼娅。; 你们去追踪离开的矿工队伍。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_npc_1966_1#10$1")]
+[name="阿洛伊泽"]呃......你们确定要单独留在这里？
+[name="阿洛伊泽"]虽然这是你们的自由，但我还是有必要提醒你们。
+[name="阿洛伊泽"]现在没人知道远北这些矿区都处于什么样的状态，同样也没人能保障你们的安全。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="我们有能力保护好自己的安全。", values="1")]
+[Predicate(references="1")]
+[Decision(options="你们可以相信阿米娅的指挥。", values="1")]
+[Predicate(references="1")]
+[charslot]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#5$1")]
+[name="阿米娅"]博士？
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="你可以的，阿米娅。; 相信你自己的判断。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot]
+[charslot(slot = "m", name = "avg_4204_mantra_1#1$1")]
+[name="Mantra"]我会和阿米娅一起。
+[name="Mantra"]博士，希望你们顺利。
+[dialog]
+[charslot(slot = "m", focus = "n")]
+[Decision(options="等科谢尼娅恢复行动能力，我们就去找你们会合。; 离开污染区之后，通讯应该会逐渐恢复。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot]
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]那就这样。
+[charslot(slot = "m", name = "avg_1037_amiya3_1#6$1")]
+[name="阿米娅"]博士，如果通讯一直没有恢复，那我们找到那群矿工之后就回研究所和你们会合。
+[charslot(slot = "m", name = "avg_4204_mantra_1#1$1")]
+[name="Mantra"]（点头）
+[charslot(slot = "m", name = "avg_npc_1966_1#4$1")]
+[name="阿洛伊泽"]行，后备计划也有了，我们赶紧出发。
+[stopmusic(fadetime=2)]
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[delay(time=1)]
+[Background(image="bg_battlefield",screenadapt="coverall")]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[animtext(id = "at1", name = "group_location_stamp", style="avg_both", pos = "-400,-200", block = false)]<p=1>乌萨斯远北中心矿区</><p=2>三天前</>
+[delay(time=3)]
+[animtextclean]
+[delay(time=1)]
+[playsound(key="$d_avg_truckengine", loop=true, channel="bgs",volume=0)]
+[SoundVolume(volume=0.8, channel="bgs",fadetime=2)]
+[delay(time=2)]
+[StopSound(channel="bgs", fadetime=1)]
+[delay(time=1)]
+[playMusic(intro="$escape_intro",key="$escape_loop", volume=0.6)]
+[name="激动的纠察队队员"]就在这边......快过来！
+[dialog]
+[charslot(slot="l",name="avg_npc_082",duration=0.5)]
+[delay(time=1)]
+[name="疑惑的纠察队队员"]哎，你跑什么！这破定位时灵时不灵的，指不定根本就不在这儿。
+[name="疑惑的纠察队队员"]上次有个矿场的驮兽为了找草吃跑出了界，愣是让它跑了十多里路这东西才往岗哨发送信号，谁知道这次是不是也是一样的情况？
+[dialog]
+[playsound(key="$d_avg_snowbootwalk")]
+[charslot(slot="r",name="avg_npc_082",duration=1)]
+[delay(time=1.5)]
+[charslot(slot="r",name="avg_npc_082",focus="r")]
+[name="散漫的纠察队队员"]按理说这些人不该出现在南出口周围，这条路早就封了——
+[charslot(slot="l",name="avg_npc_082",focus="l")]
+[name="疑惑的纠察队队员"]嗯？你怎么会从那边过来？
+[name="疑惑的纠察队队员"]不对，你不是我们队的吧，你在这儿做什么？
+[charslot(slot="r",name="avg_npc_082",focus="r")]
+[name="散漫的纠察队队员"]我还想问你呢。这儿不在你们队的管辖范围内吧？
+[charslot(slot="l",name="avg_npc_082",focus="l")]
+[name="疑惑的纠察队队员"]现在早就不兴那套辖区不辖区的东西了，谁先接到消息，先找到逃跑的感染者，那功劳就是谁的。
+[name="疑惑的纠察队队员"]让开，别挡道。
+[charslot(slot="r",name="avg_npc_082",focus="r")]
+[name="散漫的纠察队队员"]照你的说法，是我们先来的，那这功劳理应是我们的。
+[charslot(slot="l",name="avg_npc_082",focus="l")]
+[name="疑惑的纠察队队员"]谁找到就*乌萨斯粗口*算谁的。
+[charslot]
+[dialog]
+[delay(time=0.5)]
+[charslot(slot="m",name="avg_npc_082",duration=1)]
+[delay(time=1.5)]
+[name="纠察队队长"]托夏，干什么呢？别跟他废话，找人要紧。
+[charslot]
+[name="激动的纠察队队员"]在这边！他们都躲在——哈哈哈哈啊哈哈！
+[charslot(slot="m",name="avg_npc_082")]
+[name="疑惑的纠察队队员"]他发现什么了笑成这样？
+[charslot(slot="m",name="avg_npc_082")]
+[name="纠察队队长"]走，去看看。
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[charslot]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=2, block=true)]
+[name="激动的纠察队队员"]前面有个不深不浅的洞，那几个矿工就躲在里面，还以为我们发现不了——
+[name="激动的纠察队队员"]天哪，哈哈哈哈哈啊哈哈......这太好笑了。
+[charslot(slot="l",name="avg_npc_082",focus="l")]
+[name="纠察队队长"]哼。他们以为那是什么，战壕吗？
+[name="纠察队队长"]托夏，戈沙，带上所有人，你们赶紧去把那些驮兽不如的蠢货给我弄出来。
+[dialog]
+[charslot(slot="r",name="avg_npc_082",duration=0.5)]
+[delay(time=1)]
+[charslot(slot="r",name="avg_npc_082",focus="r")]
+[name="散漫的纠察队队员"]从定位上看，这些逃窜的感染者矿工数量还不少呢，需要帮忙吗？
+[charslot(slot="l",name="avg_npc_082",focus="l")]
+[name="纠察队队长"]你们队有多少人？
+[charslot(slot="r",name="avg_npc_082",focus="r")]
+[name="散漫的纠察队队员"]不多，算上我也就六个人。
+[charslot(slot="l",name="avg_npc_082",focus="l")]
+[name="纠察队队长"]太多了。
+[charslot(slot="r",name="avg_npc_082",focus="r")]
+[name="散漫的纠察队队员"]随你怎么说。咱们是这附近仅剩的两支空闲队伍，而且是我们先到的这里。
+[name="散漫的纠察队队员"]这碗羹，你们不分也得分。
+[dialog]
+[charslot]
+[stopmusic(fadetime=2)]
+[Delay(time=0.5)]
+[charslot(slot = "l",action="zoom", poszoom = "0.5,0.5", scale=0.95,duration = 0, name = "avg_npc_082",afrom=0,ato=0)]
+[charslot(slot = "r",action="zoom", poszoom = "0.5,0.5", scale=0.95,duration = 0, name = "avg_npc_082",afrom=0,ato=0)]
+[charslot(slot = "right",posfrom = "120,0", posto = "0,0",duration = 0.7,afrom=0,ato=1,focus="m")]
+[Delay(time=0.5)]
+[charslot(slot = "l",posfrom = "-120,0", posto = "0,0",duration = 0.7,afrom=0,ato=1,focus="m")]
+[Delay(time=1)]
+[charslot(duration=0.5)]
+[Delay(time=0.6)]
+[charslot]
+[charslot(slot="l",name="avg_npc_082",posfrom = "50,0", posto = "50,0",duration = 0.7)]
+[Delay(time=0.5)]
+[charslot(slot="r",name="avg_npc_082",posfrom = "-50,0", posto = "-50,0",duration = 0.7)]
+[Delay(time=1.5)]
+[charslot]
+[charslot(slot="l",name="avg_npc_082",focus="l")]
+[charslot(slot="r",name="avg_npc_082",focus="l")]
+[name="纠察队队长"]......
+[charslot(slot="r",name="avg_npc_082",focus="r")]
+[name="散漫的纠察队队员"]怎么——
+[playMusic(intro="$calamity_intro",key="$calamity_loop", volume=0.6)]
+[CameraShake(duration=0.5, xstrength=20, ystrength=20, vibrato=30, randomness=90, fadeout=true, block=false)]
+[charslot]
+[name="激动的纠察队队员"]——啊！！！
+[charslot]
+尖叫声打破了两支队伍的对峙。
+[PlaySound(key="$fightgeneral",volume=0.7)]
+[CameraShake(duration=0.3, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[PlaySound(key="$d_avg_punch_xshield",channel="2",delay=0.3)]
+[playsound(key="$d_avg_riot", loop=true, channel="bgs",volume=0)]
+[SoundVolume(volume=0.2, channel="bgs",fadetime=2)]
+紧随其后的，是肢体搏斗、钝器砸碎骨肉的声响。
+[charslot(slot="m",name="avg_npc_082")]
+[name="纠察队队长"]发生什么——
+[charslot]
+[name="激动的纠察队队员"]救命！救我！他们都疯了——
+[name="激动的纠察队队员"]这些该死的感染者都*乌萨斯粗口*疯了！
+[dialog]
+[charslot]
+[Delay(time=1)]
+[playsound(key="$d_avg_snowbootwalk")]
+[charslot(slot="m",name="avg_npc_1963_1#10$1",duration=1.5)]
+[delay(time=2)]
+[name="雷尔金"]你说得对......
+[charslot(slot="m",name="avg_npc_1963_1#5$1")]
+[name="雷尔金"]我会让你们见识一下，感染者的愤怒，还有疯狂。
+[Dialog]
+[StopSound(channel="bgs", fadetime=2)]
+[Delay(time=2)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=2, block=true)]
+[stopmusic(fadetime=2)]
+[hidecgitem]
+[Image]
+[charslot] 

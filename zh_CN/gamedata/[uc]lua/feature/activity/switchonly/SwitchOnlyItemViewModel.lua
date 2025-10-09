@@ -5,6 +5,7 @@
 
 
 
+
 local SwitchOnlyItemViewModel = Class("SwitchOnlyItemViewModel");
 
 function SwitchOnlyItemViewModel:ctor()
