@@ -6,7 +6,9 @@ local list =
   "HotFixes/Act1vHalfidleHotfixer",
   "HotFixes/Mainline16ManagerHotfixer",
   "HotFixes/BattleControllerHotfixer",
-  "HotFixes/ParamVariablePoolHotfixer"
+  "HotFixes/ParamVariablePoolHotfixer",
+  "HotFixes/HomeThemeApNumbersViewHotfixer",
+  "HotFixes/MultiV3Hotfixer"
 };
 
 return list;
