@@ -139,7 +139,7 @@ function CheckinVideoDlg:_EventOnShareBtnClicked()
     return;
   end
 
-  local hubPath = CS.Torappu.ResourceUrls.GetCheckinVideoImageHubPath(actId);
+  local hubPath = CS.Torappu.ResourceUrls.GetCheckinVideoImageHubPath(viewModel.actId);
   if string.isNullOrEmpty(hubPath) then
     LogError("[CheckinVideoDlg.Share] Cannot find current image hub path.");
     return;

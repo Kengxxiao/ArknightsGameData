@@ -881,7 +881,7 @@ end
 
 
 function LuaActivityUtil:_CheckIfActivityFinished(type, validAct)
-  actId = validAct.actId.str
+  local actId = validAct.actId.str
   if type == nil or actId == nil then
     return false
   end
