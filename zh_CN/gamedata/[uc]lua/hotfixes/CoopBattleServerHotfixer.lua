@@ -2,7 +2,7 @@ local CoopBattleServerHotfixer = Class("CoopBattleServerHotfixer", HotfixBase)
 
 local function Fix_DoRev(self, step)
     if step.index ~= self.m_receivedStep then
-        CS.UnityEngine.DLog.LogError(string.Format("[CoopBattleServer] step index wrong:{0}=>{1}", m_receivedStep, step.index))
+        CS.UnityEngine.DLog.LogError(string.format("[CoopBattleServer] step index wrong:%d=>%d", self.m_receivedStep, step.index))
     end
     self:_DoRev(step)
 end
