@@ -8,7 +8,8 @@ local list =
   "HotFixes/HomeThemeApNumbersViewHotfixer",
   "HotFixes/V067UIFixer",
   "HotFixes/CoopBattleServerHotfixer",
-  "HotFixes/BuffTileHotfixer"
+  "HotFixes/BuffTileHotfixer",
+  "HotFixes/HomeThemeChangeStateHotfixer"
 };
 
 return list;
