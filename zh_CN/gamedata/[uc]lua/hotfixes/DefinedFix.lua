@@ -9,7 +9,8 @@ local list =
   "HotFixes/V067UIFixer",
   "HotFixes/CoopBattleServerHotfixer",
   "HotFixes/BuffTileHotfixer",
-  "HotFixes/HomeThemeChangeStateHotfixer"
+  "HotFixes/HomeThemeChangeStateHotfixer",
+  "HotFixes/AutoChessDragStateHotfixer"
 };
 
 return list;
