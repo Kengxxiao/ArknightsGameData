@@ -10,7 +10,8 @@ local list =
   "HotFixes/CoopBattleServerHotfixer",
   "HotFixes/BuffTileHotfixer",
   "HotFixes/HomeThemeChangeStateHotfixer",
-  "HotFixes/AutoChessDragStateHotfixer"
+  "HotFixes/AutoChessDragStateHotfixer",
+  "HotFixes/AutoChessShopHotfixer"
 };
 
 return list;
