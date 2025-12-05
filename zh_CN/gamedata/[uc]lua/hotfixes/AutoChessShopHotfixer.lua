@@ -46,6 +46,11 @@ local function _AddUnusedBackupCharFix(self, actId, forChess, alreadyAdd)
   end
 end
 
+local function _ClearBattleSceneDataFix(self)
+  self:Reset()
+  self.battleSceneData = CS.Torappu.UI.AutoChess.AutoChessBattleSceneData()
+end
+
 function AutoChessShopHotfixer:OnInit()
     xlua.private_accessible(CS.Torappu.UI.AutoChess.CharSelect.AutoChessCharSelectPoolViewModel)
 
@@ -53,6 +58,13 @@ function AutoChessShopHotfixer:OnInit()
         local ok, ret = xpcall(_AddUnusedBackupCharFix, debug.traceback, self, actId, forChess, alreadyAdd)
         if not ok then
             LogError("[AutoChessDragStateHotfixer] fix" .. ret)
+        end
+    end)
+
+    self:Fix_ex(CS.Torappu.UI.AutoChess.Server.AutoChessServiceBattleInfo, "Reset", function(self)
+        local ok, ret = xpcall(_ClearBattleSceneDataFix, debug.traceback, self)
+        if not ok then
+            LogError("[AutoChessShopHotfixer] fix" .. ret)
         end
     end)
 end

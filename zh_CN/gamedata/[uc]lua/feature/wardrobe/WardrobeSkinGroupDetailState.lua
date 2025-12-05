@@ -93,6 +93,7 @@ end
 function WardrobeSkinGroupDetailState:OnClick(skinId)
   local skinList = {}
   local skinShopList = {}
+  local pageReferrer = CS.Torappu.UI.Skin.SkinPage.PageReferrer.WARDROBE
   for k,v in pairs(self.onSaleData)do
     table.insert(skinShopList,v.shopData)
   end
@@ -100,7 +101,7 @@ function WardrobeSkinGroupDetailState:OnClick(skinId)
     table.insert(skinList,v.data.skinId)
   end
   if (#skinList + #skinShopList > 0) then
-    CS.Torappu.UI.Skin.SkinPage.OpenPageForMultiSkinList(skinId,skinShopList,skinList)
+    CS.Torappu.UI.Skin.SkinPage.OpenPageForMultiSkinList(skinId,skinShopList,skinList,pageReferrer)
   end
 end
 

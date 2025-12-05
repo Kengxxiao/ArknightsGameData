@@ -229,6 +229,7 @@ function TeamQuestMainDlg:_OpenFriendNameCard(nameCardRsp)
   local nameCardParam = CS.Torappu.UI.Friend.NameCardDisplayPage.Params()
   nameCardParam.isSelf = false 
   nameCardParam.friendData = nameCardRsp.nameCard
+  nameCardParam.friendData.registerTs = luaUtils.ToDateTime(nameCardRsp.nameCard.registerTs)
   options.args = nameCardParam
   self:OpenPage3(CS.Torappu.UI.UIPageNames.NAME_CARD_DISPLAY_PAGE, options)
 end

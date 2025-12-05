@@ -54,6 +54,7 @@ function WardrobeSortByTimeState:OnClick(time,skinId)
 	local skinIdList = {}
 	local skinShopList = {}
 	local timeGroupSkinList = self.stateBean.skinList
+  local pageReferrer = CS.Torappu.UI.Skin.SkinPage.PageReferrer.WARDROBE
 
 	for indexTime,skinList in pairs(timeGroupSkinList)do
 		if (indexTime.year == time.year and indexTime.period == time.period) then
@@ -68,7 +69,7 @@ function WardrobeSortByTimeState:OnClick(time,skinId)
 		end
 	end
 	if (#skinIdList + #skinShopList > 0) then
-		CS.Torappu.UI.Skin.SkinPage.OpenPageForMultiSkinList(skinId,skinShopList,skinIdList)
+		CS.Torappu.UI.Skin.SkinPage.OpenPageForMultiSkinList(skinId,skinShopList,skinIdList,pageReferrer)
 	end
 end
 
