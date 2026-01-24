@@ -39,7 +39,11 @@ local function OnExtraInfoLua(self, code, msg)
 end
 
 local function _StartSceneLua(self, sceneName, options)
-    self:_StartScene(sceneName, options)
+    if options then
+        self:_StartScene(sceneName, options)
+    else
+        self:_StartScene(sceneName)
+    end
     SDKHelper.instance:ClearSdkViewState()
 end
 local function InvokeLicenseLua(self, callback)
@@ -57,6 +61,20 @@ local function SDKLoginImplLua(self, nextStep)
     self:_SDKLoginImpl(nextStep)
     SDKHelper.instance:UnmaskSdkViewState(SDKHelper.SDKViewState.SDK_VIEW_LOGIN)
 end
+
+local function OnProcessLua(self)
+    local list = self.m_wheelHandlerList
+    if list == nil then
+        return
+    end
+    for i = list.Count - 1, 0, -1 do
+        local handler = list[i]
+        if handler ~= nil then
+            list:RemoveAt(i)
+        end
+    end
+end
+
 function PCHotfixer:OnInit()
     if CS.Torappu.DeviceInfoUtil:IsPCMode() then
         xlua.private_accessible(CS.HGSDK.V2.HGSDKV2LoginDialog)
@@ -113,6 +131,14 @@ function PCHotfixer:OnInit()
             end
         end)
     end 
+    if not CS.Torappu.DeviceInfoUtil:IsPCMode() then
+        self:Fix_ex(CS.Torappu.Common.TorappuPCInputHelper , "OnProcess", function(self)
+            local ok, ret = xpcall(OnProcessLua, debug.traceback, self)
+            if not ok then
+                LogError("[PCHotfixer] fix" .. ret)
+            end
+        end)
+    end
 end
 
 function PCHotfixer:OnDispose()
