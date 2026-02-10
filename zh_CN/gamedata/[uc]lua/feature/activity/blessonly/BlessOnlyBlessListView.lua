@@ -111,32 +111,36 @@ function BlessOnlyBlessListView:OnViewModelUpdate(data)
     return;
   end
 
-  if isEnter or self.m_cachedIndex == packetModel.curIndex then
+  local indexChanged = self.m_cachedIndex ~= packetModel.curIndex;
+  self.m_cachedIndex = packetModel.curIndex;
+  if isEnter or not indexChanged then
     self:_Render(data);
   else
-    if self.m_switchBlessSequence ~= nil and self.m_switchBlessSequence:IsPlaying() then
-      self.m_switchBlessSequence:Kill();
+    if indexChanged then
+      if self.m_switchBlessSequence ~= nil and self.m_switchBlessSequence:IsPlaying() then
+        self.m_switchBlessSequence:Kill();
+      end
+      local outAnimName = "";
+      local inAnimName = "";
+      if self:_CheckIsMoveLeft(packetModel.curIndex, #packetModel.blessItemList) then
+        
+        outAnimName = CS.Torappu.Lua.Util.Format(MOVE_LEFT_OUT, self.m_actId);
+        inAnimName = CS.Torappu.Lua.Util.Format(MOVE_LEFT_IN, self.m_actId);
+      else
+        
+        outAnimName = CS.Torappu.Lua.Util.Format(MOVE_RIGHT_OUT, self.m_actId);
+        inAnimName = CS.Torappu.Lua.Util.Format(MOVE_RIGHT_IN, self.m_actId);
+      end
+      self._animWrapper:InitIfNot();
+      self._animWrapper:SampleClipAtBegin(outAnimName);
+      self.m_switchBlessSequence = CS.DG.Tweening.DOTween.Sequence();
+      self.m_switchBlessSequence:Append(self._animWrapper:PlayWithTween(outAnimName));
+      self.m_switchBlessSequence:AppendCallback(function()
+        self:_Render(data);
+        self._animWrapper:SampleClipAtBegin(inAnimName);
+      end);
+      self.m_switchBlessSequence:Append(self._animWrapper:PlayWithTween(inAnimName));
     end
-    local outAnimName = "";
-    local inAnimName = "";
-    if self:_CheckIsMoveLeft(packetModel.curIndex, #packetModel.blessItemList) then
-      
-      outAnimName = CS.Torappu.Lua.Util.Format(MOVE_LEFT_OUT, self.m_actId);
-      inAnimName = CS.Torappu.Lua.Util.Format(MOVE_LEFT_IN, self.m_actId);
-    else
-      
-      outAnimName = CS.Torappu.Lua.Util.Format(MOVE_RIGHT_OUT, self.m_actId);
-      inAnimName = CS.Torappu.Lua.Util.Format(MOVE_RIGHT_IN, self.m_actId);
-    end
-    self._animWrapper:InitIfNot();
-    self._animWrapper:SampleClipAtBegin(outAnimName);
-    self.m_switchBlessSequence = CS.DG.Tweening.DOTween.Sequence();
-    self.m_switchBlessSequence:Append(self._animWrapper:PlayWithTween(outAnimName));
-    self.m_switchBlessSequence:AppendCallback(function()
-      self:_Render(data);
-      self._animWrapper:SampleClipAtBegin(inAnimName);
-    end);
-    self.m_switchBlessSequence:Append(self._animWrapper:PlayWithTween(inAnimName));
   end
 
   return;
@@ -148,10 +152,9 @@ function BlessOnlyBlessListView:_Render(data)
   if packetModel == nil then
     return;
   end
-  local indexChanged = self.m_cachedIndex ~= packetModel.curIndex;
+  
 
   self.m_cachedPacketModel = packetModel;
-  self.m_cachedIndex = packetModel.curIndex;
   self.m_sliderAdapter:NotifyDataSetChanged();
   
   self.m_horFadeTween.isShow = data.blessListState == BlessOnlyBlessListState.HORIZONTAL;
@@ -162,7 +165,7 @@ function BlessOnlyBlessListView:_Render(data)
     self.m_blessOnlyBlessListVerticalItem:Render(data, self.illustLoader);
   end
 
-  if self._charAvatarLeft ~= nil and self._charAvatarRight ~= nil and indexChanged then
+  if self._charAvatarLeft ~= nil and self._charAvatarRight ~= nil then
     self:_RenderCharAvatars(self._charAvatarLeft, self._charAvatarRight);
   end
   

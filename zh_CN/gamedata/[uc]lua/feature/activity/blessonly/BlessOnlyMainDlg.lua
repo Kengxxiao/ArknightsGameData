@@ -55,11 +55,13 @@ end
 
 
 function BlessOnlyMainDlg:_OnClickBlessListLeftArrow()
+  CS.Torappu.TorappuAudio.PlayUI(CS.Torappu.Audio.Consts.InternalSounds[CS.Torappu.Audio.UiInternalSoundType.TabSwitchBtn]);
   self.m_blessOnlyViewModel:MoveBlessListLeft();
   self.m_blessOnlyViewModel:NotifyUpdate();
 end
 
 function BlessOnlyMainDlg:_OnClickBlessListRightArrow()
+  CS.Torappu.TorappuAudio.PlayUI(CS.Torappu.Audio.Consts.InternalSounds[CS.Torappu.Audio.UiInternalSoundType.TabSwitchBtn]);
   self.m_blessOnlyViewModel:MoveBlessListRight();
   self.m_blessOnlyViewModel:NotifyUpdate();
 end

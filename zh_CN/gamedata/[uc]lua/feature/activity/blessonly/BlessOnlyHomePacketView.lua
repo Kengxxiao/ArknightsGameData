@@ -73,7 +73,9 @@ end
 function BlessOnlyHomePacketView:_RenderReceivedPanel(viewModel)
   local hubPath = CS.Torappu.ResourceUrls.GetCharAvatarHubPath();
   self._blessCharIcon.sprite = self:LoadSpriteFromAutoPackHub(hubPath, viewModel.defaultFesCharAvatarId);
-  self._blessRewardCnt.text = CS.Torappu.Lua.Util.Format(StringRes.BLESSONLY_REWARD_CNT_DISPLAY, viewModel.diamondRewardCnt);
+  if self._blessRewardCnt ~= nil then
+    self._blessRewardCnt.text = CS.Torappu.Lua.Util.Format(StringRes.BLESSONLY_REWARD_CNT_DISPLAY, viewModel.diamondRewardCnt);
+  end
 end
 
 function BlessOnlyHomePacketView:_OnClickReceivePacket()

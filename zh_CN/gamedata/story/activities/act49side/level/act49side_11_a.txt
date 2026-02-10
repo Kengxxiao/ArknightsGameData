@@ -1,0 +1,329 @@
+[header(actId="act49side")]
+[executeactionarray(target="trap_330_ycwang", key="stop_sp_recovery")]
+[executeactionarray(target="char_2024_chyue", key="stop_sp_recovery")]
+[executeactionarray(target="char_2015_dusk", key="stop_sp_recovery")]
+[executeactionarray(target="char_2014_nian", key="stop_sp_recovery")]
+[executeactionarray(target="char_2025_shu", key="stop_sp_recovery")]
+[executeactionarray(target="char_2026_yu", key="stop_sp_recovery")]
+[executeactionarray(target="char_2023_ling", key="stop_sp_recovery")]
+[summonenemy(enemyId="enemy_3014_wangw", y="4", x="6", endX="6", endY="4")]
+[summonenemy(enemyId="enemy_3017_ycsho", y="7", x="7", endX="7", endY="7")]
+[summonenemy(enemyId="enemy_3018_yczzh", y="5", x="2", endX="2", endY="5")]
+[summonenemy(enemyId="enemy_3019_ycyzh", y="4", x="11", endX="11", endY="4")]
+[summonenemy(enemyId="enemy_3020_ycwei", y="1", x="5", endX="4", endY="0")]
+[createeffect(id="enemy_3020_ycwei", key="enemy_suiwei_buff_01")]
+[createeffect(id="enemy_3019_ycyzh", key="enemy_suiyzh_buff_01")]
+[createeffect(id="enemy_3018_yczzh", key="enemy_suizzh_buff_01")]
+[createeffect(id="enemy_3017_ycsho", key="enemy_suisho_buff_01")]
+[delay(time="2")]
+
+[name="岁", avatarId="avg_npc_2129_2", isAvatarRight="FALSE"]够了！这荒唐的棋局，也该有个尽头了！
+[delay(time="2")]
+
+[playanim(enemyId="enemy_3018_yczzh", anim="Skill_1_Begin_Start", looporidle="Skill_1_Begin_Loop", dir="DOWN")]
+[playanim(enemyId="enemy_3017_ycsho", anim="Skill_1_Begin", looporidle="Skill_1_Loop", dir="DOWN")]
+[playanim(enemyId="enemy_3019_ycyzh", anim="Skill_1_Begin_Start", looporidle="Skill_1_Begin_Loop", dir="DOWN")]
+[playanim(enemyId="enemy_3020_ycwei", anim="Skill_1_Begin_Start", looporidle="Skill_1_Begin_Loop", dir="DOWN")]
+
+[delay(time="2.6")]
+
+[playanim(charId="trap_330_ycwang", anim="Idle", looporidle="Idle", dir="LEFT")]
+[playanim(charId="trap_330_ycwang", anim="Idle", looporidle="Idle", dir="RIGHT")]
+[playanim(charId="trap_330_ycwang", anim="Idle", looporidle="Idle", dir="DOWN")]
+[delay(time="0.4")]
+
+[camerafocusto(offsetX="6", offsetY="2.5", time="2", scale="MID")]
+[delay(time="2")]
+[playanim(charId="trap_330_ycwang", anim="Die", looporidle="Die", dir="DOWN")]
+[delay(time="0.4")]
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]呵，尽头？这还是你曾经告诉我的......棋盘广阔无尽，我与你之间的胜负，又何止在名为“望”的这一盘？
+[playanim(charId="trap_330_ycwang", anim="Idle_2", looporidle="Idle_2", dir="DOWN")]
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]与你对弈的，也不止我一人。
+
+[summontrap(x="8", y="2", charId="char_2025_shu", isChar="TRUE", dir="LEFT")]
+[createeffect(id="char_2025_shu", key="common_immortal_01")]
+[delay(time="1")]
+[playanim(charId="char_2025_shu", anim="Skill_3_Begin", looporidle="Skill_3_Idle", dir="LEFT")]
+[delay(time="0.267")]
+[createeffect(id="trap_330_ycwang", key="shu_skill_03_hit")]
+[createeffect(id="trap_330_ycwang", key="shu_skill_03_range")]
+[createeffect(id="trap_330_ycwang", key="shu_talent_buff_01")]
+[createeffect(id="trap_330_ycwang", key="shu_talent_buff_02")]
+[delay(time="0.5")]
+[name="“黍”", avatarId="char_2025_shu", isAvatarRight="FALSE"]这是你自己种下的因果，交还与你。
+[delay(time="0.1")]
+[playanim(charId="char_2025_shu", anim="Idle", looporidle="Idle", dir="UP")]
+[delay(time="0.5")]
+
+[summontrap(x="8", y="1", charId="char_2014_nian", isChar="TRUE", dir="LEFT")]
+[createeffect(id="char_2014_nian", key="common_immortal_01")]
+[delay(time="0.5")]
+[name="“年”", avatarId="char_2014_nian", isAvatarRight="FALSE"]臭棋篓子二哥，你早说自己需要帮忙，我们不早就来了？
+[delay(time="0.1")]
+[createeffect(id="trap_330_ycwang", key="nian_skill_01_hit")]
+[createeffect(id="trap_330_ycwang", key="nian_skill_03_buff")]
+[delay(time="0.1")]
+[playanim(charId="char_2014_nian", anim="Idle", looporidle="Idle", dir="UP")]
+
+
+
+[resetcamera(time="1.5")]
+[delay(time="1.5")]
+
+// anim part a
+[playanim(enemyId="enemy_3018_yczzh", anim="Skill_1_Begin_End", looporidle="Skill_1_Begin_End", dir="DOWN")]
+[playanim(enemyId="enemy_3019_ycyzh", anim="Skill_1_Begin_End", looporidle="Skill_1_Begin_End", dir="DOWN")]
+[playanim(enemyId="enemy_3020_ycwei", anim="Skill_1_Begin_End", looporidle="Skill_1_Begin_End", dir="DOWN")]
+[createeffect(id="enemy_3017_ycsho", key="enemy_suisho_skill_start_01")]
+[delay(time="0.3")]
+[finisheffect(key="enemy_suisho_skill_start_01")]
+
+[delay(time="1")]
+[setposition(enemyId="enemy_3018_yczzh", y="6", x="2")]
+[setposition(enemyId="enemy_3019_ycyzh", y="6", x="2")]
+[setposition(enemyId="enemy_3020_ycwei", y="6", x="2")]
+
+[playanim(enemyId="enemy_3017_ycsho", anim="Skill_1_Attack", noIdleWhenFinish="TRUE", dir="DOWN")]
+[playanim(enemyId="enemy_3018_yczzh", anim="Skill_1_Attack", noIdleWhenFinish="TRUE", dir="UP")]
+[playanim(enemyId="enemy_3019_ycyzh", anim="Skill_1_Attack", noIdleWhenFinish="TRUE", dir="UP")]
+[playanim(enemyId="enemy_3020_ycwei", anim="Skill_1_Attack", noIdleWhenFinish="TRUE", dir="DOWN")]
+
+[delay(time="0.6")]
+
+[camerashake(vibrato=3, randomness=0.1, duration=0.2, strengthX=0.1, strengthY=0, strengthZ=-0.1)]
+
+[createeffect(id="enemy_3018_yczzh", key="enemy_suizzh_skill_start_01")]
+[createeffect(id="enemy_3019_ycyzh", key="enemy_suiyzh_skill_start_01")]
+
+[createeffect(id="enemy_3017_ycsho", key="enemy_suisho_skill_start_02")]
+[createeffect(id="trap_330_ycwang", key="enemy_suisho_attack_hit_01")]
+
+[createeffect(id="trap_330_ycwang", key="enemy_suiwei_skill_hit_01")]
+[finisheffect(key="shu_talent_buff_01")]
+[finisheffect(key="shu_talent_buff_02")]
+[finisheffect(key="nian_skill_03_buff")]
+
+[delay(time="0.6")]
+
+[setposition(enemyId="enemy_3018_yczzh", y="2", x="5")]
+[setposition(enemyId="enemy_3019_ycyzh", y="11", x="4")]
+[setposition(enemyId="enemy_3020_ycwei", y="5", x="0")]
+[playanim(enemyId="enemy_3017_ycsho", anim="Skill_1_End", looporidle="Idle", dir="DOWN")]
+[playanim(enemyId="enemy_3018_yczzh", anim="Skill_1_End", looporidle="Idle", dir="DOWN")]
+[playanim(enemyId="enemy_3019_ycyzh", anim="Skill_1_End", looporidle="Idle", dir="DOWN")]
+[playanim(enemyId="enemy_3020_ycwei", anim="Skill_1_End", looporidle="Idle", dir="DOWN")]
+[delay(time="1.33")]
+
+[camerafocusto(offsetX="6", offsetY="2.5", time="2", scale="MID")]
+[delay(time="2")]
+
+[summontrap(x="7", y="1", charId="char_2023_ling", isChar="TRUE", dir="LEFT")]
+[createeffect(id="char_2023_ling", key="common_immortal_01")]
+[delay(time="0.5")]
+[name="“令”", avatarId="char_2023_ling", isAvatarRight="FALSE"]这场梦倒是潇洒，诗酒风雨，送你一程。
+[delay(time="0.1")]
+[createeffect(id="trap_330_ycwang", key="ling_skill_03_buff_front_01")]
+[delay(time="0.1")]
+[playanim(charId="char_2023_ling", anim="Idle", looporidle="Idle", dir="UP")]
+
+[summontrap(x="9", y="2", charId="char_2026_yu", isChar="TRUE", dir="LEFT")]
+[createeffect(id="char_2026_yu", key="common_immortal_01")]
+[delay(time="0.5")]
+[name="“余”", avatarId="char_2026_yu", isAvatarRight="FALSE"]二哥，打架前也要记得吃饱肚子呀。
+[delay(time="0.1")]
+[createeffect(id="trap_330_ycwang", key="yu_skill3_range_01")]
+[delay(time="0.1")]
+[playanim(charId="char_2026_yu", anim="Idle", looporidle="Idle", dir="UP")]
+
+
+[summontrap(x="3", y="2", charId="char_2015_dusk", isChar="TRUE", dir="RIGHT")]
+[createeffect(id="char_2015_dusk", key="common_immortal_01")]
+[delay(time="0.5")]
+[name="“夕”", avatarId="char_2015_dusk", isAvatarRight="FALSE"]星藏点雪，拙山尽起！
+[delay(time="0.1")]
+[createeffect(id="trap_330_ycwang", key="dusk_skill_03_buff")]
+[delay(time="0.1")]
+[playanim(charId="char_2015_dusk", anim="Idle", looporidle="Idle", dir="UP")]
+
+[summontrap(x="4", y="2", charId="char_2024_chyue", isChar="TRUE", dir="RIGHT")]
+[createeffect(id="char_2024_chyue", key="common_immortal_01")]
+[delay(time="0.5")]
+[name="“朔”", avatarId="char_2024_chyue", isAvatarRight="FALSE"]最后的战场，我们同在。
+[delay(time="0.5")]
+[createeffect(id="trap_330_ycwang", key="chyue_skill_03_range")]
+[delay(time="0.1")]
+[playanim(charId="char_2024_chyue", anim="Idle", looporidle="Idle", dir="UP")]
+[delay(time="1")]
+
+[playanim(charId="trap_330_ycwang", anim="Skill_3_Begin", looporidle="Skill_3_Idle", dir="DOWN")]
+[delay(time="1.167")]
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]他们都已找到了各自的路，他们每一个，都远胜你无数。
+[playanim(charId="trap_330_ycwang", anim="Skill_3_Idle", looporidle="Skill_3_Idle", dir="UP")]
+[delay(time="1")]
+
+[resetcamera(time="1.5")]
+[delay(time="1.5")]
+
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]现在你还觉得，这局棋，是你占优吗？
+[name="岁", avatarId="avg_npc_2129_2", isAvatarRight="FALSE"]怎么会......怎么会！
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]而我，也不过是用这副冷子残枰，送你最后一程而已！
+
+[playanim(enemyId="enemy_3018_yczzh", anim="Die_Attack", looporidle="Idle", dir="DOWN")]
+[playanim(enemyId="enemy_3017_ycsho", anim="Die_Attack", looporidle="Idle", dir="DOWN")]
+[playanim(enemyId="enemy_3019_ycyzh", anim="Die_Attack", looporidle="Idle", dir="DOWN")]
+[playanim(enemyId="enemy_3020_ycwei", anim="Die_Attack", looporidle="Idle", dir="DOWN")]
+
+[delay(time="2")]
+
+[playanim(charId="trap_330_ycwang", anim="Skill_3_Attack_B", looporidle="Skill_3_Idle", dir="UP")]
+
+[delay(time="0.3")]
+
+[finisheffect(key="ling_skill_03_buff_front_01")]
+[finisheffect(key="dusk_skill_03_buff")]
+
+[delay(time="0.7")]
+
+[createeffect(id="enemy_3017_ycsho", key="wang_skill_03_range_start")]
+[createeffect(id="enemy_3018_yczzh", key="wang_skill_03_range_start")]
+[createeffect(id="enemy_3019_ycyzh", key="wang_skill_03_range_start")]
+[createeffect(id="enemy_3020_ycwei", key="wang_skill_03_range_start")]
+[createeffect(id="enemy_3017_ycsho", key="token_wang_skill_03_hit_03")]
+[createeffect(id="enemy_3018_yczzh", key="token_wang_skill_03_hit_03")]
+[createeffect(id="enemy_3019_ycyzh", key="token_wang_skill_03_hit_03")]
+[createeffect(id="enemy_3020_ycwei", key="token_wang_skill_03_hit_03")]
+[delay(time="0.2")]
+
+[camerashake(vibrato=4, randomness=0.1, duration=0.2, strengthX=0.1, strengthY=0.1, strengthZ=0.1)]
+
+[playanim(enemyId="enemy_3018_yczzh", anim="Stress", looporidle="Idle", dir="DOWN")]
+[playanim(enemyId="enemy_3017_ycsho", anim="Stress", looporidle="Idle", dir="DOWN")]
+[playanim(enemyId="enemy_3019_ycyzh", anim="Stress", looporidle="Idle", dir="DOWN")]
+[playanim(enemyId="enemy_3020_ycwei", anim="Stress", looporidle="Idle", dir="DOWN")]
+
+[createeffect(id="enemy_3017_ycsho", key="enemy_suisho_broken_01")]
+[createeffect(id="enemy_3018_yczzh", key="enemy_suizzh_broken_01")]
+[createeffect(id="enemy_3019_ycyzh", key="enemy_suiyzh_broken_01")]
+[createeffect(id="enemy_3020_ycwei", key="enemy_suiwei_broken_01")]
+
+[finisheffect(key="shu_skill_03_range")]
+[finisheffect(key="yu_skill3_range_01")]
+[finisheffect(key="chyue_skill_03_range")]
+
+[withdraw(id="char_2025_shu", withoutAnim="TRUE")]
+[withdraw(id="char_2023_ling", withoutAnim="TRUE")]
+[withdraw(id="char_2014_nian", withoutAnim="TRUE")]
+[withdraw(id="char_2015_dusk", withoutAnim="TRUE")]
+[withdraw(id="char_2026_yu", withoutAnim="TRUE")]
+[withdraw(id="char_2024_chyue", withoutAnim="TRUE")]
+
+[delay(time="0.1")]
+
+[name="岁", avatarId="enemy_1582_suisho", isAvatarRight="FALSE"]......！！！
+
+[delay(time="0.5")]
+
+[camerafocusto(offsetX="6", offsetY="3.5", time="2", scale="MID")]
+[delay(time="1")]
+
+[name="岁", avatarId="avg_npc_2129_1", isAvatarRight="FALSE"]不，还没完，还有机会......
+[name="岁", avatarId="avg_npc_2129_1", isAvatarRight="FALSE"]什么超脱，什么各自的路！那不过是他们从我这里窃取的力量，而你早已油尽灯枯——
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]——油尽灯枯，就和你一样。
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]你的记忆已全数被自己挥霍，而今这副辽远的棋枰上，我们同等渺小。
+[delay(time="1")]
+[playanim(charId="trap_330_ycwang", anim="Skill_3_Begin", looporidle="Skill_3_Idle", dir="UP")]
+[createeffect(id="trap_330_ycwang", key="wang_skill_03_range_start")]
+[playanim(charId="trap_330_ycwang", anim="Skill_3_Attack_A", looporidle="Skill_3_Idle", dir="UP")]
+[delay(time="1")]
+[createeffect(id="enemy_3014_wangw", key="token_wang_skill_03_hit_03")]
+[withdraw(id="enemy_3014_wangw", withoutAnim="TRUE")]
+[camerashake(vibrato=4, randomness=0.1, duration=0.1, strengthX=-0.1, strengthY=-0.1, strengthZ=-0.1)]
+[summontrap(x="6", y="4", charId="trap_287_baizi", isChar="FALSE", dir="DOWN")]
+[createeffect(id="trap_330_ycwang", key="wang_skill_03_range")]
+[name="岁", avatarId="avg_npc_2129_1", isAvatarRight="FALSE"]什么？！
+[name="岁", avatarId="avg_npc_2129_2", isAvatarRight="FALSE"]你竟敢——你不能......
+
+[delay(time="2")]
+
+[playanim(charId="trap_330_ycwang", anim="Skill_3_End", looporidle="Idle", dir="UP")]
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]我们已不需要你。
+[playanim(charId="trap_330_ycwang", anim="Attack_1_A", looporidle="Idle", dir="UP")]
+[delay(time="0.1")]
+[summontrap(x="5", y="4", charId="token_10064_wang_stone1", isChar="FALSE", dir="DOWN")]
+[createeffect(id="token_10064_wang_stone1", key="wang_passive_01_start")]
+
+[delay(time="1")]
+
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]天下苍生已不需要你。
+[playanim(charId="trap_330_ycwang", anim="Attack_1_A", looporidle="Idle", dir="UP")]
+[delay(time="0.1")]
+[summontrap(x="6", y="5", charId="token_10064_wang_stone1", isChar="FALSE", dir="DOWN")]
+[createeffect(id="token_10064_wang_stone1", key="wang_passive_01_start")]
+
+[delay(time="1")]
+
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]就连你心心念念的演化与未来，也已经不需要你。
+[playanim(charId="trap_330_ycwang", anim="Attack_1_A", looporidle="Idle", dir="UP")]
+[delay(time="0.1")]
+[summontrap(x="7", y="4", charId="token_10064_wang_stone1", isChar="FALSE", dir="DOWN")]
+[createeffect(id="token_10064_wang_stone1", key="wang_passive_01_start")]
+
+[delay(time="1")]
+
+[playanim(charId="trap_330_ycwang", anim="Skill_3_End", looporidle="Idle_2", dir="DOWN")]
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]当你面前的这位敌手，也不需要你的时候......
+[name="望", avatarId="char_2027_wang", isAvatarRight="FALSE"]你的命数已然注定。
+[playanim(charId="trap_330_ycwang", anim="Attack_1_B", looporidle="Die", dir="DOWN")]
+[delay(time="1")]
+[createeffect(id="trap_330_ycwang", key="common_immortal_01")]
+[delay(time="0.5")]
+[createeffect(id="trap_330_ycwang", key="common_immortal_01")]
+[delay(time="0.1")]
+[withdraw(id="trap_330_ycwang", withoutAnim="TRUE")]
+[delay(time="0.1")]
+[summontrap(x="6", y="3", charId="token_10064_wang_stone1", isChar="FALSE", dir="DOWN")]
+[createeffect(id="token_10064_wang_stone1", key="wang_passive_01_start")]
+[delay(time="2")]
+
+[createeffect(id="trap_287_baizi", key="token_wang_skill_03_hit")]
+[createeffect(id="trap_287_baizi", key="token_wang_skill_03_hit_02")]
+
+[delay(time="1")]
+
+[withdraw(id="trap_287_baizi")]
+
+[delay(time="3")]
+
+[resetcamera(time="1.5")]
+[delay(time="1.5")]
+
+[createeffect(id="enemy_3017_ycsho", key="enemy_suisho_die_01")]
+[createeffect(id="enemy_3018_yczzh", key="enemy_suizzh_die_01")]
+[createeffect(id="enemy_3019_ycyzh", key="enemy_suiyzh_die_01")]
+[createeffect(id="enemy_3020_ycwei", key="enemy_suiwei_die_01")]
+
+[finisheffect(id="enemy_3017_ycsho", key="enemy_suisho_buff_01")]
+[finisheffect(id="enemy_3018_yczzh", key="enemy_suizzh_buff_01")]
+[finisheffect(id="enemy_3019_ycyzh", key="enemy_suiyzh_buff_01")]
+[finisheffect(id="enemy_3020_ycwei", key="enemy_suiwei_buff_01")]
+[finisheffect(id="enemy_3017_ycsho", key="enemy_suisho_broken_01")]
+[finisheffect(id="enemy_3018_yczzh", key="enemy_suizzh_broken_01")]
+[finisheffect(id="enemy_3019_ycyzh", key="enemy_suiyzh_broken_01")]
+[finisheffect(id="enemy_3020_ycwei", key="enemy_suiwei_broken_01")]
+
+[playanim(enemyId="enemy_3017_ycsho", anim="Die", looporidle="Die", dir="DOWN")]
+[playanim(enemyId="enemy_3018_yczzh", anim="Die", looporidle="Die", dir="DOWN")]
+[playanim(enemyId="enemy_3019_ycyzh", anim="Die", looporidle="Die", dir="DOWN")]
+[playanim(enemyId="enemy_3020_ycwei", anim="Die", looporidle="Die", dir="DOWN")]
+
+[camerashake(vibrato=4, randomness=0.2, duration=1.5, strengthX=0.1, strengthY=0.1, strengthZ=0)]
+
+[delay(time="4")]
+
+[withdraw(id="enemy_3017_ycsho", withoutAnim="TRUE")]
+[withdraw(id="enemy_3018_yczzh", withoutAnim="TRUE")]
+[withdraw(id="enemy_3019_ycyzh", withoutAnim="TRUE")]
+[withdraw(id="enemy_3020_ycwei", withoutAnim="TRUE")]
+[delay(time="1")]
+
+[end]
