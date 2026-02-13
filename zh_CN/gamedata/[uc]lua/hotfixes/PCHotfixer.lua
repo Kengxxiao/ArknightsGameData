@@ -3,6 +3,9 @@ local SDKHelper = CS.Torappu.SDK.SDKHelper
 local SDKViewState = SDKHelper.SDKViewState
 
 local ShopCashPurchaseUtil = CS.Torappu.ShopCashPurchaseUtil
+local HotUpdateMgr = CS.Torappu.Resource.HotUpdateMgr
+local ResPreferenceController = CS.Torappu.Resource.ResPreferenceController
+local LoginViewController = CS.Torappu.UI.Login.LoginViewController
 
 local function _Fix_Pay(storeId, orderInfo)
   SDKHelper.instance:MaskSdkViewState(SDKViewState.SDK_VIEW_PAY)
@@ -30,10 +33,28 @@ local function _FixSDKHandleExtraInfo(self, extraData)
   end
 end
 
+local function _Fix_ResetBeforeLoginStart()
+  LoginViewController._ResetBeforeLoginStart()
+  HotUpdateMgr.SetUpdate(ResPreferenceController.TYPE_VIDEO, true)
+end
+
 function PCHotfixer:OnInit()
+  
+  if CS.Torappu.DeviceInfoUtil:IsPCMode() then
+    xlua.private_accessible(LoginViewController)
+    self:Fix_ex(LoginViewController, "_ResetBeforeLoginStart", function()
+      local ok, err = xpcall(_Fix_ResetBeforeLoginStart, debug.traceback)
+      if not ok then
+        LogError("[PCHotfixer] _ResetBeforeLoginStart fix: " .. tostring(err))
+        LoginViewController._ResetBeforeLoginStart()
+      end
+    end)
+  end
+
   if not CS.Torappu.DeviceInfoUtil:IsPCMode() or CS.U8.SDK.U8SDKInterface.Instance.isNativePlugin then
     return
   end
+
   
   xlua.private_accessible(ShopCashPurchaseUtil)
 
