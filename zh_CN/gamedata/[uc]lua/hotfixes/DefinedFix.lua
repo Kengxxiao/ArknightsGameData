@@ -3,9 +3,12 @@ local list =
 {
   
   "HotFixes/TestStubHotfixer",
-  "HotFixes/BackgroundMultiFormHotfixer",
   "HotFixes/CGGalleryHotfixer",
-  "HotFixes/PCHotfixer"
+  "HotFixes/AutoChessUtilHotfixer",
+  "HotFixes/AdvancedSelectorWithEnemyOptionsHotfixer",
+  "HotFixes/PCHotfixer",
+  "HotFixes/AbilityEventCounterHotfixer",
+  "HotFixes/WangVisualStoneCtrlAbilityHotfixer"
 };
 
 return list;

@@ -178,5 +178,6 @@ function UIVirtualViewAdapter:RemoveAllViews()
   if bridge == nil then
     return
   end
+    self.m_dataList = {}
   bridge:RemoveAllViews()
 end

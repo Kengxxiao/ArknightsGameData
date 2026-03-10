@@ -8737,6 +8737,18 @@
       "wang_skill_03_buff_02",
       "wang_skill_03_range",
       "wang_skill_03_range_start"
+    ],
+    "skchr_liesel_1": [
+      "liesel_skill_02_buff_01",
+      "liesel_skill_02_buff_02",
+      "liesel_skill_02_buff_03",
+      "liesel_skill_02_hit_01",
+      "liesel_skill_02_start_01"
+    ],
+    "skchr_liesel_2": [
+      "liesel_skill_01_hit_01",
+      "liesel_skill_01_start_01",
+      "liesel_skill_01_start_02"
     ]
   },
   "miscConfig": {
@@ -8758,109 +8770,8 @@
         "forceUseFirstModeIds": [
           "char_1502_crosly"
         ],
-        "enemyPreviewBuff": {
-          "attributes": {
-            "abnormalFlags": [
-              22,
-              20,
-              3,
-              7,
-              5,
-              18,
-              1
-            ],
-            "abnormalImmunes": [],
-            "abnormalAntis": [],
-            "abnormalCombos": [],
-            "abnormalComboImmunes": [],
-            "attributeModifiers": []
-          },
-          "buffKey": "[AutoChess] unmoveable",
-          "loadFromDB": false,
-          "isDurableBuff": false,
-          "isDamageMissable": false,
-          "isSilenceable": false,
-          "isStunnable": false,
-          "isFreezable": false,
-          "isLevitatable": false,
-          "statusResistable": 2,
-          "templateKey": "empty",
-          "disableOverride": false,
-          "overrideKey": "",
-          "overrideType": 0,
-          "maxStackCnt": 1,
-          "refreshRemainingTimeWhenStackMax": false,
-          "clearAllStackCntWhenTimeUp": false,
-          "maxValidStackCnt": -1,
-          "independentCharacterSource": false,
-          "overrideEffectKey": "",
-          "overrideOnEventPriority": false,
-          "onEventPriority": 0,
-          "audioSignal": "",
-          "lifeTimeType": 2,
-          "takeSnapshotWhenExtend": false,
-          "durationKey": "",
-          "lifeTime": 0.0,
-          "triggerLifeType": 0,
-          "triggerCnt": 0,
-          "triggerInterval": -1.0,
-          "waitFirstTriggerInterval": true,
-          "firstTriggerInterval": -1.0,
-          "priority": -1,
-          "priorityBBKeys": [],
-          "stripBlackboardParamsWithBuffKey": false,
-          "blackboard": [],
-          "showOverrideOptions": true,
-          "isNotLoadFromDB": true,
-          "isOverrideOnEventPriority": false,
-          "isLifeTimeLimited": false,
-          "isNotTriggerLifeTypeImmediately": false,
-          "isWaitFirstTriggerInterval": false,
-          "isTriggerLifeTypeLimited": false,
-          "isExtendBuff": false,
-          "isAutoPriority": true
-        },
-        "frozenEffectId": "buff_autochess_frozen",
-        "goldenEffectId": "trap_acgarm_buff_loop_01",
+        "enemyPreviewBuff": null,
         "mlyssWtrmanTransformBuff": "mlyss_wtrman_during_anim",
-        "sceneEffectMap": {
-          "EFFECT_REFRESH": {
-            "effectId": "map_act1vautochess_refresh_01"
-          },
-          "EFFECT_GAIN_CHESS": {
-            "effectId": "trap_acgarm_start_01"
-          },
-          "EFFECT_DESTORY_EQUIP": {
-            "effectId": "trap_acgarm_die_01"
-          },
-          "EFFECT_CHARACTER_DISAPPEAR": {
-            "effectId": "trap_acgarm_die_01"
-          },
-          "EFFECT_STRENGTH": {
-            "effectId": "trap_acgarm_start_01_up"
-          },
-          "EFFECT_GOLD_COST_REDUCE": {
-            "effectId": "trap_acgarm_buff_05"
-          },
-          "EFFECT_GOLDEN_CHESS": {
-            "effectId": "trap_acgarm_buff_loop_01"
-          },
-          "EFFECT_FROZEN_TRAP": {
-            "effectId": "buff_autochess_frozen"
-          },
-          "EFFECT_DUPLICATE_CHARACTER": {
-            "effectId": "trap_acgarm_buff_loop_02"
-          },
-          "EFFECT_UPGRADE_TILE": {
-            "effectId": "map_act1vautochess_levelup_01"
-          },
-          "EFFECT_EXP_CHANGED": {
-            "effectId": "trap_acgarm_buff_05"
-          },
-          "EFFECT_UPGRADE_LINKED": {
-            "effectId": "trap_acgarm_start_01_up_trail"
-          }
-        },
         "trainingNPCInfos": [
           {
             "uidIndex": 2,
@@ -9180,7 +9091,7 @@
                 "choiceId": "equip_free_1_tr",
                 "options": [
                   {
-                    "id": "chess_item_2_01_e_a",
+                    "id": "chess_item_3_06_e_a",
                     "slotId": 0,
                     "price": 0
                   },
@@ -9195,12 +9106,12 @@
                     "price": 0
                   },
                   {
-                    "id": "chess_item_3_04_e_a",
+                    "id": "chess_item_3_11_e_a",
                     "slotId": 3,
                     "price": 0
                   },
                   {
-                    "id": "chess_item_3_04_e_a",
+                    "id": "chess_item_3_11_e_a",
                     "slotId": 4,
                     "price": 0
                   },
@@ -9748,15 +9659,15 @@
           2,
           3
         ],
-        "effectManagerCfg": {
+        "effectConfig": {
+          "goldenEffectId": "trap_acgarm_buff_loop_01",
           "buildableTileHintEffect": "map_act1autochess_place_01",
           "maskEffectWhenGainChess": "map_act1autochess_gainchess_01",
           "deckRegionEffect": "map_act1autochess_target_01",
           "tempChessRegionClearWarningEffect": "map_act1autochess_warning_01",
           "garrisonHintEffect": "common_067_trail_01",
           "chessUpgradeHintEffect": "trap_acgarm_start_01_up_trail",
-          "bossRoundMaskEffectAnchorPosForLeftPlayer": null,
-          "bossRoundMaskEffectAnchorPosForRightPlayer": null
+          "equipComboHintEffect": null
         },
         "tutorialManagerCfg": {
           "bossRoundFocusMapBoundPos": [
@@ -9769,7 +9680,110 @@
           ]
         }
       }
-    }
+    },
+    "prdBaseProbs": [
+      0.0,
+      0.00016,
+      0.00062,
+      0.00139,
+      0.00245,
+      0.0038,
+      0.00544,
+      0.00736,
+      0.00955,
+      0.01202,
+      0.01475,
+      0.01774,
+      0.02098,
+      0.02448,
+      0.02823,
+      0.03222,
+      0.03645,
+      0.04092,
+      0.04562,
+      0.05055,
+      0.0557,
+      0.06108,
+      0.06668,
+      0.07249,
+      0.07851,
+      0.08474,
+      0.09118,
+      0.09783,
+      0.10467,
+      0.11171,
+      0.11895,
+      0.12638,
+      0.134,
+      0.14181,
+      0.14981,
+      0.15798,
+      0.16633,
+      0.17491,
+      0.18362,
+      0.19249,
+      0.20155,
+      0.21092,
+      0.22037,
+      0.2299,
+      0.23954,
+      0.24931,
+      0.25987,
+      0.27045,
+      0.28101,
+      0.29155,
+      0.3021,
+      0.31268,
+      0.32329,
+      0.33412,
+      0.34737,
+      0.3604,
+      0.37322,
+      0.38584,
+      0.39828,
+      0.41054,
+      0.42265,
+      0.4346,
+      0.44642,
+      0.4581,
+      0.46967,
+      0.48113,
+      0.49248,
+      0.50746,
+      0.52941,
+      0.55072,
+      0.57143,
+      0.59155,
+      0.61111,
+      0.63014,
+      0.64865,
+      0.66667,
+      0.68421,
+      0.7013,
+      0.71795,
+      0.73418,
+      0.75,
+      0.76543,
+      0.78049,
+      0.79518,
+      0.80952,
+      0.82353,
+      0.83721,
+      0.85058,
+      0.86364,
+      0.8764,
+      0.88889,
+      0.9011,
+      0.91304,
+      0.92473,
+      0.93617,
+      0.94737,
+      0.95833,
+      0.96907,
+      0.97959,
+      0.9899,
+      1.0
+    ]
   },
   "particleEffectManagerConfigs": {
     "act1vhalfidle": {

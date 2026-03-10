@@ -5004,6 +5004,11 @@
             "id": "nc_as2025_EchoesoftheLegends",
             "availStartTime": 1745481600,
             "availEndTime": 1747857599
+          },
+          {
+            "id": "nc_as2025_EchoesoftheLegends",
+            "availStartTime": 1774555200,
+            "availEndTime": 1775764799
           }
         ]
       },
@@ -5040,6 +5045,11 @@
             "id": "nc_as2025_DivineReverie",
             "availStartTime": 1745481600,
             "availEndTime": 1747857599
+          },
+          {
+            "id": "nc_as2025_DivineReverie",
+            "availStartTime": 1774555200,
+            "availEndTime": 1775764799
           }
         ]
       },
@@ -5076,6 +5086,11 @@
             "id": "nc_as2025_GlazedGrace",
             "availStartTime": 1745481600,
             "availEndTime": 1747857599
+          },
+          {
+            "id": "nc_as2025_GlazedGrace",
+            "availStartTime": 1774555200,
+            "availEndTime": 1775764799
           }
         ]
       },
@@ -5112,6 +5127,11 @@
             "id": "nc_as2025_TheWildEra",
             "availStartTime": 1745481600,
             "availEndTime": 1747857599
+          },
+          {
+            "id": "nc_as2025_TheWildEra",
+            "availStartTime": 1774555200,
+            "availEndTime": 1775764799
           }
         ]
       },
@@ -5148,6 +5168,11 @@
             "id": "nc_as2025_BloomsofTime",
             "availStartTime": 1745481600,
             "availEndTime": 1747857599
+          },
+          {
+            "id": "nc_as2025_BloomsofTime",
+            "availStartTime": 1774555200,
+            "availEndTime": 1775764799
           }
         ]
       },
@@ -8570,7 +8595,7 @@
         "keyCodes": [
           1
         ],
-        "canBeSetted": false
+        "canBeSetted": true
       },
       "keyWindows": {
         "keyId": "keyWindows",
@@ -8584,292 +8609,387 @@
       }
     },
     "keySettingData": {
-      "CHANGE_SPEED": {
-        "funcId": "CHANGE_SPEED",
-        "funcName": "战斗内变速",
+      "default": {
+        "groupId": "default",
+        "name": "default",
+        "funcType": "NORMAL",
+        "keyEffectGroup": "ALL",
+        "isHidden": true,
+        "relatedActType": "ENUM",
+        "gameModeTag": "",
+        "sortId": 0,
+        "startTs": -1,
+        "itemList": [
+          {
+            "funcId": "defaultReturn",
+            "funcName": "defaultReturn",
+            "canBeSet": false,
+            "defaultKeyId": "bannedEscape",
+            "sortId": 0
+          }
+        ]
+      },
+      "normalBattle": {
+        "groupId": "normalBattle",
+        "name": "基础设置",
         "funcType": "BATTLE",
         "keyEffectGroup": "BATTLE",
-        "canBeSet": true,
-        "defaultKeyId": "alphaF",
-        "sortId": 1
+        "isHidden": false,
+        "relatedActType": "ENUM",
+        "gameModeTag": null,
+        "sortId": 1,
+        "startTs": -1,
+        "itemList": [
+          {
+            "funcId": "changeSpeed",
+            "funcName": "战斗内变速",
+            "canBeSet": true,
+            "defaultKeyId": "alphaF",
+            "sortId": 1
+          },
+          {
+            "funcId": "releaseSkill",
+            "funcName": "释放技能",
+            "canBeSet": true,
+            "defaultKeyId": "alphaE",
+            "sortId": 2
+          },
+          {
+            "funcId": "retreatChar",
+            "funcName": "撤退干员",
+            "canBeSet": true,
+            "defaultKeyId": "alphaQ",
+            "sortId": 3
+          },
+          {
+            "funcId": "pauseBattle",
+            "funcName": "暂停",
+            "canBeSet": true,
+            "defaultKeyId": "keySpace",
+            "sortId": 4
+          },
+          {
+            "funcId": "battleLeftPopup",
+            "funcName": "放弃行动",
+            "canBeSet": true,
+            "defaultKeyId": "alphaV",
+            "sortId": 5
+          }
+        ]
       },
-      "RELEASE_SKILL": {
-        "funcId": "RELEASE_SKILL",
-        "funcName": "释放技能",
-        "funcType": "BATTLE",
-        "keyEffectGroup": "BATTLE",
-        "canBeSet": true,
-        "defaultKeyId": "alphaE",
-        "sortId": 2
-      },
-      "RETREAT_CHAR": {
-        "funcId": "RETREAT_CHAR",
-        "funcName": "撤退干员",
-        "funcType": "BATTLE",
-        "keyEffectGroup": "BATTLE",
-        "canBeSet": true,
-        "defaultKeyId": "alphaQ",
-        "sortId": 3
-      },
-      "ESC": {
-        "funcId": "ESC",
-        "funcName": "暂停",
-        "funcType": "BATTLE",
-        "keyEffectGroup": "BATTLE",
-        "canBeSet": false,
-        "defaultKeyId": "bannedEscape",
-        "sortId": 4
-      },
-      "HOME_KEY": {
-        "funcId": "HOME_KEY",
-        "funcName": "导航栏",
+      "normalFunc": {
+        "groupId": "normalFunc",
+        "name": "基础设置",
         "funcType": "NORMAL",
         "keyEffectGroup": "OUT_BATTLE",
-        "canBeSet": true,
-        "defaultKeyId": "keyTab",
-        "sortId": 5
+        "isHidden": false,
+        "relatedActType": "ENUM",
+        "gameModeTag": null,
+        "sortId": 2,
+        "startTs": -1,
+        "itemList": [
+          {
+            "funcId": "homeKey",
+            "funcName": "导航栏",
+            "canBeSet": true,
+            "defaultKeyId": "keyTab",
+            "sortId": 1
+          }
+        ]
       },
-      "MOVE_FORWARD": {
-        "funcId": "MOVE_FORWARD",
-        "funcName": "向前移动",
+      "baseFunc": {
+        "groupId": "baseFunc",
+        "name": "隐藏键位",
         "funcType": "NORMAL",
         "keyEffectGroup": "ALL",
-        "canBeSet": true,
-        "defaultKeyId": "alphaW",
-        "sortId": 6
+        "isHidden": true,
+        "relatedActType": "ENUM",
+        "gameModeTag": null,
+        "sortId": 3,
+        "startTs": -1,
+        "itemList": [
+          {
+            "funcId": "moveForward",
+            "funcName": "向前移动",
+            "canBeSet": false,
+            "defaultKeyId": "bannedUpArrow",
+            "sortId": 1
+          },
+          {
+            "funcId": "moveBackward",
+            "funcName": "向后移动",
+            "canBeSet": false,
+            "defaultKeyId": "bannedDownArrow",
+            "sortId": 2
+          },
+          {
+            "funcId": "moveToLeft",
+            "funcName": "向左移动",
+            "canBeSet": false,
+            "defaultKeyId": "bannedLeftArrow",
+            "sortId": 3
+          },
+          {
+            "funcId": "moveToRight",
+            "funcName": "向右移动",
+            "canBeSet": false,
+            "defaultKeyId": "bannedRightArrow",
+            "sortId": 4
+          }
+        ]
       },
-      "MOVE_BACKWARD": {
-        "funcId": "MOVE_BACKWARD",
-        "funcName": "向后移动",
-        "funcType": "NORMAL",
-        "keyEffectGroup": "ALL",
-        "canBeSet": true,
-        "defaultKeyId": "alphaS",
-        "sortId": 7
-      },
-      "MOVE_TO_LEFT": {
-        "funcId": "MOVE_TO_LEFT",
-        "funcName": "向左移动",
-        "funcType": "NORMAL",
-        "keyEffectGroup": "ALL",
-        "canBeSet": true,
-        "defaultKeyId": "alphaA",
-        "sortId": 8
-      },
-      "MOVE_TO_RIGHT": {
-        "funcId": "MOVE_TO_RIGHT",
-        "funcName": "向右移动",
-        "funcType": "NORMAL",
-        "keyEffectGroup": "ALL",
-        "canBeSet": true,
-        "defaultKeyId": "alphaD",
-        "sortId": 9
+      "autoChess": {
+        "groupId": "autoChess",
+        "name": "卫戍协议",
+        "funcType": "BATTLE",
+        "keyEffectGroup": "BATTLE",
+        "isHidden": false,
+        "relatedActType": "AUTOCHESS_SEASON",
+        "gameModeTag": "autochess",
+        "sortId": 4,
+        "startTs": 1773475200,
+        "itemList": [
+          {
+            "funcId": "autochessRefresh",
+            "funcName": "刷新",
+            "canBeSet": true,
+            "defaultKeyId": "alphaD",
+            "sortId": 1
+          },
+          {
+            "funcId": "autochessFreeze",
+            "funcName": "冻结",
+            "canBeSet": true,
+            "defaultKeyId": "alphaS",
+            "sortId": 2
+          },
+          {
+            "funcId": "autochessLevelUp",
+            "funcName": "升级",
+            "canBeSet": true,
+            "defaultKeyId": "alphaG",
+            "sortId": 3
+          },
+          {
+            "funcId": "autochessShop",
+            "funcName": "调度中心",
+            "canBeSet": true,
+            "defaultKeyId": "alphaA",
+            "sortId": 4
+          },
+          {
+            "funcId": "autochessReady",
+            "funcName": "准备就绪",
+            "canBeSet": true,
+            "defaultKeyId": "alphaC",
+            "sortId": 5
+          },
+          {
+            "funcId": "autochessSale",
+            "funcName": "出售",
+            "canBeSet": true,
+            "defaultKeyId": "alphaX",
+            "sortId": 6
+          },
+          {
+            "funcId": "autochessViewEnemy",
+            "funcName": "查看敌人",
+            "canBeSet": true,
+            "defaultKeyId": "alphaW",
+            "sortId": 7
+          }
+        ]
       }
     },
     "constData": {
       "cannotSetKeyNotice": "该按键无法被设置为快捷键",
       "resetKeyNotice": "是否确认重置设置？"
-    },
-    "keyHideSettingData": {
-      "MOVE_FORWARD": {
-        "funcId": "MOVE_FORWARD",
-        "funcName": "向前移动",
-        "funcType": "NORMAL",
-        "keyEffectGroup": "ALL",
-        "canBeSet": false,
-        "defaultKeyId": "bannedUpArrow",
-        "sortId": 0
-      },
-      "MOVE_BACKWARD": {
-        "funcId": "MOVE_BACKWARD",
-        "funcName": "向后移动",
-        "funcType": "NORMAL",
-        "keyEffectGroup": "ALL",
-        "canBeSet": false,
-        "defaultKeyId": "bannedDownArrow",
-        "sortId": 0
-      },
-      "MOVE_TO_LEFT": {
-        "funcId": "MOVE_TO_LEFT",
-        "funcName": "向左移动",
-        "funcType": "NORMAL",
-        "keyEffectGroup": "ALL",
-        "canBeSet": false,
-        "defaultKeyId": "bannedLeftArrow",
-        "sortId": 0
-      },
-      "MOVE_TO_RIGHT": {
-        "funcId": "MOVE_TO_RIGHT",
-        "funcName": "向右移动",
-        "funcType": "NORMAL",
-        "keyEffectGroup": "ALL",
-        "canBeSet": false,
-        "defaultKeyId": "bannedRightArrow",
-        "sortId": 0
-      }
     }
   },
   "resolutionSettingList": [
     {
       "sortId": 0,
-      "resolutionWidth": -2,
-      "resolutionHeight": -2,
+      "resolutionWidth": -1,
+      "resolutionHeight": -1,
       "resolutionText": "无边框全屏",
-      "isFullScreen": true
+      "isFullScreen": true,
+      "isBorderless": true
     },
     {
       "sortId": 1,
       "resolutionWidth": -1,
       "resolutionHeight": -1,
       "resolutionText": "窗口全屏",
-      "isFullScreen": true
+      "isFullScreen": true,
+      "isBorderless": false
     },
     {
       "sortId": 2,
       "resolutionWidth": 640,
       "resolutionHeight": 480,
       "resolutionText": "640*480",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 3,
       "resolutionWidth": 720,
       "resolutionHeight": 480,
       "resolutionText": "720*480",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 4,
       "resolutionWidth": 800,
       "resolutionHeight": 600,
       "resolutionText": "800*600",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 5,
       "resolutionWidth": 1024,
       "resolutionHeight": 768,
       "resolutionText": "1024*768",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 6,
       "resolutionWidth": 1152,
       "resolutionHeight": 864,
       "resolutionText": "1152*864",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 7,
       "resolutionWidth": 1176,
       "resolutionHeight": 664,
       "resolutionText": "1176*664",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 8,
       "resolutionWidth": 1280,
       "resolutionHeight": 720,
       "resolutionText": "1280*720",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 9,
       "resolutionWidth": 1280,
       "resolutionHeight": 768,
       "resolutionText": "1280*768",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 10,
       "resolutionWidth": 1280,
       "resolutionHeight": 800,
       "resolutionText": "1280*800",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 11,
       "resolutionWidth": 1280,
       "resolutionHeight": 960,
       "resolutionText": "1280*960",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 12,
       "resolutionWidth": 1360,
       "resolutionHeight": 768,
       "resolutionText": "1360*768",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 13,
       "resolutionWidth": 1440,
       "resolutionHeight": 1080,
       "resolutionText": "1440*1080",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 14,
       "resolutionWidth": 1600,
       "resolutionHeight": 900,
       "resolutionText": "1600*900",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 15,
       "resolutionWidth": 1600,
       "resolutionHeight": 1024,
       "resolutionText": "1600*1024",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 16,
       "resolutionWidth": 1600,
       "resolutionHeight": 1200,
       "resolutionText": "1600*1200",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 17,
       "resolutionWidth": 1680,
       "resolutionHeight": 1050,
       "resolutionText": "1680*1050",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 18,
       "resolutionWidth": 1920,
       "resolutionHeight": 1080,
       "resolutionText": "1920*1080",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 19,
       "resolutionWidth": 1920,
       "resolutionHeight": 1200,
       "resolutionText": "1920*1200",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 20,
       "resolutionWidth": 2048,
       "resolutionHeight": 1080,
       "resolutionText": "2048*1080",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 21,
       "resolutionWidth": 2560,
       "resolutionHeight": 1440,
       "resolutionText": "2560*1440",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     },
     {
       "sortId": 22,
       "resolutionWidth": 3840,
       "resolutionHeight": 2160,
       "resolutionText": "3840*2160",
-      "isFullScreen": false
+      "isFullScreen": false,
+      "isBorderless": false
     }
   ],
   "artGalleryCollectData": {

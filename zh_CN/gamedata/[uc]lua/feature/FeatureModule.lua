@@ -58,24 +58,18 @@ require "Feature/Activity/MainlineBuff/MainlineBuffMainDlg"
 
 require "Feature/Wardrobe/WardrobeModule"
 
-require "Feature/Operation/ReturnV2/ReturnV2Model";
-require "Feature/Operation/ReturnV2/ReturnV2MainDlgViewModel"
-require "Feature/Operation/ReturnV2/ReturnV2MainDlg";
-require "Feature/Operation/ReturnV2/ReturnV2Define";
-require "Feature/Operation/ReturnV2/ReturnV2WelcomeDlg"
-require "Feature/Operation/ReturnV2/ReturnV2RewardsDlg"
-require "Feature/Operation/ReturnV2/ReturnV2TrackPoint";
+require "Feature/Operation/Returning/ReturnDefine";
+require "Feature/Operation/Returning/ReturnMainDlg";
+require "Feature/Operation/Returning/ReturnMainDlgViewModel";
+require "Feature/Operation/Returning/ReturnMissionListDlg";
+require "Feature/Operation/Returning/ReturnModel";
+require "Feature/Operation/Returning/ReturnPageDlg";
+require "Feature/Operation/Returning/ReturnPointDetailDlg";
+require "Feature/Operation/Returning/ReturnWelcomeDlg";
+require "Feature/Operation/Returning/ReturnWelcomeRewardDetailDlg";
+require "Feature/Operation/Returning/ReturnNoticeDlg";
+require "Feature/Operation/Returning/ReturnPanelTrackPoint";
 
-require "Feature/Operation/Returnning/ReturnDefine"
-require "Feature/Operation/Returnning/ReturnService"
-require "Feature/Operation/Returnning/ReturnModel"
-require "Feature/Operation/Returnning/ReturnTrackPoint"
-require "Feature/Operation/Returnning/ReturnPageDlg"
-require "Feature/Operation/Returnning/ReturnMainDlg"
-require "Feature/Operation/Returnning/ReturnWelcomeDlg"
-require "Feature/Operation/Returnning/ReturnRewardsDlg"
-
-require "Feature/Operation/ActFun/ActFunModule"
 
 require "Feature/Activity/SwitchOnly/SwitchOnlyDefine"
 require "Feature/Activity/SwitchOnly/SwitchOnlyDlg"
