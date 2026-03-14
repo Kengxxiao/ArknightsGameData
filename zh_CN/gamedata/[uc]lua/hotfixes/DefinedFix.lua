@@ -7,6 +7,7 @@ local list =
   "HotFixes/AutoChessUtilHotfixer",
   "HotFixes/AdvancedSelectorWithEnemyOptionsHotfixer",
   "HotFixes/PCHotfixer",
+  "HotFixes/PCKeyDefaultRestoreHotfixer",
   "HotFixes/AbilityEventCounterHotfixer",
   "HotFixes/WangVisualStoneCtrlAbilityHotfixer"
 };
