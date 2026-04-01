@@ -15,6 +15,7 @@ local luaUtils = CS.Torappu.Lua.Util;
 
 
 
+
 ActFunCollectionDlg = DlgMgr.DefineDialog("ActFunCollectionDlg", "Activity/ActFun/actfun_collection_dlg", DlgBase)
 local AprilFoolCollectionItem = require("Feature/Operation/ActFun/ActFunCollectionItem");
 
@@ -25,6 +26,7 @@ function ActFunCollectionDlg:OnInit()
   self:_BindAndRenderItem(self._layout4Item, self:_CheckCollection2023Completed(), ActFun4MainDlg)
   self:_BindAndRenderItem(self._layout5Item, self:_CheckCollection2024Completed(), ActFun5MainDlg)
   self:_BindAndRenderItem(self._layout6Item, self:_CheckCollection2025Completed(), ActFun6MainDlg)
+  self:_BindAndRenderItem(self._layout7Item, self:_CheckCollection2026Completed(), ActFun7MainDlg)
 end
 
 function ActFunCollectionDlg:_BindAndRenderItem(layoutItem, isActCompleted, cls)
@@ -99,6 +101,27 @@ function ActFunCollectionDlg:_CheckCollection2025Completed()
   local gameRewardDict = gameData.act6FunData.achievementRewardList;
   for rewardId, rewardData in pairs(gameRewardDict) do
     if not playerRecvList:Contains(rewardId) then
+      return false
+    end
+  end
+  return true
+end
+
+function ActFunCollectionDlg:_CheckCollection2026Completed()
+  local playerData = CS.Torappu.PlayerData.instance.data.playerAprilFool;
+  if playerData == nil or playerData.actFun7 == nil or playerData.actFun7.stages == nil then
+    return false
+  end
+  local gameData = CS.Torappu.ActivityDB.data.actFunData;
+  if gameData == nil or gameData.act7FunData == nil or gameData.act7FunData.stageRewardList == nil then
+    return false
+  end
+  local stageRewardList = gameData.act7FunData.stageRewardList
+
+  for i = 0, stageRewardList.Count - 1 do
+    local stageId = stageRewardList[i]
+    local res, stageState = playerData.actFun7.stages:TryGetValue(stageId)
+    if not res or stageState:GetHashCode() < CS.Torappu.PlayerBattleRank.PASS:GetHashCode() then
       return false
     end
   end

@@ -7,6 +7,7 @@ ActFunMainDlgGroup = DlgMgr.DefineDialog("ActFunMainDlgGroup", nil, BridgeDlgBas
 
 ActFunMainDlgGroup.KEY_INITDLG = "init_dlg"
 ActFunMainDlgGroup.KEY_REWARD = "first_reward"
+ActFunMainDlgGroup.KEY_NEXT_STAGE = "unlock_next_stage"
 
 function ActFunMainDlgGroup:OnInit()
   self.m_recentActStr = ""
@@ -20,10 +21,11 @@ function ActFunMainDlgGroup:OnInit()
   if inputBundle ~= nil then
     initDlgName = inputBundle:GetString(ActFunMainDlgGroup.KEY_INITDLG)
     local reward = inputBundle:GetDataBundleList(ActFunMainDlgGroup.KEY_REWARD)
-    self:GetReward(reward)
+    local hasNextStage = inputBundle:GetBool(ActFunMainDlgGroup.KEY_NEXT_STAGE)
+    self:PlayCallback(reward, hasNextStage)
   end
 
-  local initDlgCls = ActFun6MainDlg
+  local initDlgCls = ActFun7MainDlg
   if initDlgName == ActFun1MainDlg.DLG_NAME then
     initDlgCls = ActFun1MainDlg
   elseif initDlgName == ActFun2MainDlg.DLG_NAME then
@@ -36,14 +38,17 @@ function ActFunMainDlgGroup:OnInit()
     initDlgCls = ActFun5MainDlg
   elseif initDlgName == ActFun6MainDlg.DLG_NAME then
     initDlgCls = ActFun6MainDlg
+  elseif initDlgName == ActFun7MainDlg.DLG_NAME then
+    initDlgCls = ActFun7MainDlg
   end
 
   local initDlgStack = {initDlgCls};
   self:GetGroup():InitList(initDlgStack);
 end
 
-function ActFunMainDlgGroup:GetReward(rewardBundles)
+function ActFunMainDlgGroup:PlayCallback(rewardBundles, hasNextStage)
   if rewardBundles == nil then 
+    self:TextNextStageToast(hasNextStage)
     return
   end
   local rewardViewModels = {}
@@ -54,7 +59,18 @@ function ActFunMainDlgGroup:GetReward(rewardBundles)
       table.insert(rewardViewModels, reward)
     end
   end
-  CS.Torappu.Activity.ActivityUtil.DoShowGainedItems(rewardViewModels)
+
+  CS.Torappu.Activity.ActivityUtil.DoShowGainedItemsWithCallback(rewardViewModels, function ()
+    self:TextNextStageToast(hasNextStage)
+  end)
+end
+
+function ActFunMainDlgGroup:TextNextStageToast(hasNextStage)
+  if not hasNextStage then 
+    return
+  end
+  local toastText = CS.Torappu.I18N.I18nUtils.GetText(CS.Torappu.TextRes.COMMON_MISSION_UNLOCKED_TOAST)
+  luaUtils.TextToast(toastText)
 end
 
 function  ActFunMainDlgGroup:_ConverFromItemBundle(bundle)

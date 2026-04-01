@@ -22,3 +22,6 @@ require "Feature/Operation/ActFun/Act5fun/BattleFinish/Act5funBattleFinishDlg"
 
 require "Feature/Operation/ActFun/ActFun6MainDlg"
 require "Feature/Operation/ActFun/Act6fun/BattleFinish/Act6funBattleFinishDlg"
+
+require "Feature/Operation/ActFun/ActFun7MainDlg"
+require "Feature/Operation/ActFun/Act7fun/BattleFinish/Act7funBattleFinishDlg"

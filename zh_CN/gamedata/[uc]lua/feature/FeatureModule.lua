@@ -70,6 +70,7 @@ require "Feature/Operation/Returning/ReturnWelcomeRewardDetailDlg";
 require "Feature/Operation/Returning/ReturnNoticeDlg";
 require "Feature/Operation/Returning/ReturnPanelTrackPoint";
 
+require "Feature/Operation/ActFun/ActFunModule"
 
 require "Feature/Activity/SwitchOnly/SwitchOnlyDefine"
 require "Feature/Activity/SwitchOnly/SwitchOnlyDlg"
