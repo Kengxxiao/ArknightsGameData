@@ -1,0 +1,23 @@
+[header(actId="sandbox_2", npcId="")]
+资源前哨站受损，要使用资源维修吗？维修好后可以带来一定的增益。
+[decision(option1="使用10份清水，获得生命恢复加成。", value1="1.1", option2="使用15份木材，获得技力回复加成。", value2="1.2", option3="使用6份石材，获得攻击速度加成。", value3="1.3", option4="还是算了吧。", value4="1.4")]
+[predicate(references="1.1", selectableCondition="c0")]
+[deliveritem(itemId="sandbox_2_water", value=10)]
+[sandboxv3summontrap(x="1", y="1", charId="trap_524_xb2onf", isChar="FALSE", dir="LEFT", skillIndex="1")]
+资源前哨站修复完成！
+[end]
+[predicate(references="1.2", selectableCondition="c1")]
+[deliveritem(itemId="sandbox_2_wood", value=15)]
+[sandboxv3summontrap(x="1", y="1", charId="trap_524_xb2onf", isChar="FALSE", dir="LEFT", skillIndex="2")]
+资源前哨站修复完成！
+[end]
+[predicate(references="1.3", selectableCondition="c2")]
+[deliveritem(itemId="sandbox_2_stone", value=6)]
+[sandboxv3summontrap(x="1", y="1", charId="trap_524_xb2onf", isChar="FALSE", dir="LEFT", skillIndex="3")]
+资源前哨站修复完成！
+[end]
+[predicate(references="1.4")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_2_water", value="10")]
+[condition(references="c1", key="itemGE", itemId="sandbox_2_wood", value="15")]
+[condition(references="c2", key="itemGE", itemId="sandbox_2_stone", value="6")]

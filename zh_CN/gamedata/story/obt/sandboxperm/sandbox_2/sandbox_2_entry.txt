@@ -1,0 +1,128 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=0, block=true)]
+[stopmusic]
+[Dialog]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Delay(time=1)]
+[playMusic(key="$calm_loop", volume=0.6)]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=4, block=true)]
+[delay(time=1)]
+[name="可露希尔"]博士？阿米娅？你们还在忙吗？
+[dialog]
+[PlaySound(key="$dooropenquite", volume=1)]
+[delay(time=2)]
+[PlaySound(key="$d_gen_walk_n", volume=1)]
+[charslot(slot="m",name="avg_4228_closur_1#1$1",focus="m",duration=2)]
+[delay(time=3)]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#12$1")]
+[name="阿米娅"]可露希尔小姐！很快就不忙了，这个会议已经快结束了......
+[charslot(slot = "m", name = "avg_1037_amiya3_1#10$1")]
+[name="阿米娅"]啊，博士，你还好吗？
+[dialog]
+[charslot]
+[Decision(options="（努力地呼吸着）;（沉重地眨眼着）;（虚弱地沉默着）", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[charslot(slot="m",name="avg_4228_closur_1#2$1",focus="m")]
+[name="可露希尔"]唔，我觉得好像有点不太好。
+[charslot(slot="m",name="avg_4228_closur_1#2$1",focus="m")]
+[name="可露希尔"]上一次看到博士累成这样，好像还是在地块上建饲养区的时候——
+[dialog]
+[charslot]
+[Decision(options="（试图阻止）", values="1")]
+[Predicate(references="1")]
+[charslot(slot="m",name="avg_4228_closur_1#11$1",focus="m")]
+[name="可露希尔"]博士和一头不想回兽栏的小角跳兽纠缠了半天，结果最后还是被一头顶翻了。
+[charslot(slot="m",name="avg_4228_closur_1#11$1",focus="m")]
+[name="可露希尔"]如果不是Mon3tr来帮忙，那头角跳兽还以为博士是在和它玩游戏呢。
+[dialog]
+[charslot]
+[Decision(options="（力竭地闭上了眼睛）", values="1")]
+[Predicate(references="1")]
+[charslot(slot = "m", name = "avg_1037_amiya3_1#10$1")]
+[name="阿米娅"]博士......？
+[dialog]
+[charslot]
+[Decision(options="没事，我在这里坐一会就好。;我已经没什么要补充的了，凯尔希还有什么要说的吗？", values="1;2")]
+[Predicate(references="1;2")]
+[musicvolume(volume=0.2, fadetime=2)]
+[delay(time=1)]
+会议室中莫名的安静令你突然感到了心慌，你回头，凯尔希的座位不知何时变得空荡荡的。
+[dialog]
+[charslot]
+[Decision(options="凯尔希？;——凯尔希？", values="1;2")]
+[Predicate(references="1;2")]
+[musicvolume(volume=0.6, fadetime=4)]
+但好在，那个熟悉的身影很快又出现在了你的面前。
+[dialog]
+[PlaySound(key="$dooropenquite", volume=1)]
+[delay(time=2)]
+[charslot(slot = "m", name = "avg_1052_kalts2_1#1$1",duration=2)]
+[delay(time=3)]
+[name="凯尔希"]看来你真的很累了，博士。
+[charslot(slot = "m", name = "avg_1052_kalts2_1#1$1")]
+[name="凯尔希"]我刚才说我要去倒一杯水。
+[dialog]
+[charslot]
+[Decision(options="我还以为......;......;（掩饰地咳嗽）", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[Decision(options="（立刻坐直身子以示状态良好）;凯尔希，接下来的事情交给我吧，你好好休息。;你今天已经处理很多工作了，先去休息吧，凯尔希。", values="1;2;3")]
+[Predicate(references="1;2;3")]
+[charslot(slot = "m", name = "avg_1052_kalts2_1#1$1")]
+[name="凯尔希"]嗯。
+[charslot(slot = "m", name = "avg_1052_kalts2_1#1$1")]
+[name="凯尔希"]不过博士，自从我们再见面以后，这样的话你已经说了很多遍了。
+[dialog]
+[charslot]
+[Decision(options="......是吗......;我没有意识到......", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1052_kalts2_1#1$1")]
+[name="凯尔希"]不用担心我，博士。
+[charslot(slot = "m", name = "avg_1052_kalts2_1#4$1")]
+[name="凯尔希"]可露希尔，听说你一直在找我？
+[charslot(slot="m",name="avg_4228_closur_1#1$1",focus="m")]
+[name="可露希尔"]对啊，这段时间找到你可不容易，干员们给你送的礼物就快把办公室堆满啦。怎么样，罗德岛新基地的模样不差吧？
+[charslot(slot = "m", name = "avg_1052_kalts2_1#8$1")]
+[name="凯尔希"]比我想象中的还要完善很多。
+[charslot(slot="m",name="avg_4228_closur_1#14$1",focus="m")]
+[name="可露希尔"]嘿嘿，虽然花的预算比预计中多了那么一点点，但我也觉得最终的效果还是很不错的！
+[charslot(slot="m",name="avg_4228_closur_1#1$1",focus="m")]
+[name="可露希尔"]总的来说，现在的地块分为五个类型，以核心地块为首，剩余四个分别是医疗区、生活区、工程区和港口。
+[charslot(slot="m",name="avg_4228_closur_1#1$1",focus="m")]
+[name="可露希尔"]我们在医疗区建立了一套自己的药物生产线，还在住院部的外面造了一个小花园，现在天气好的话，病人们可以直接在那里晒晒太阳。
+[charslot(slot="m",name="avg_4228_closur_1#1$1",focus="m")]
+[name="可露希尔"]生活区呢按照本舰的样子建了食堂、疗养庭院......我们还建了全新的宿舍楼，住宿环境比原先好了不少，干员们都很喜欢。
+[charslot(slot="m",name="avg_4228_closur_1#1$1",focus="m")]
+[name="可露希尔"]我们又多收购了一个地块作为移动的港口，工业区也重新规划了产线，以后不论是能源物资还是武器，都会比原先充裕不少。
+[charslot(slot="m",name="avg_4228_closur_1#3$1",focus="m")]
+[name="可露希尔"]总体情况差不多就是这样，那段日子“小嘟嘟”忙得都快冒烟了，所以凯尔希，我会申请今年给大家多发奖金的！
+[dialog]
+[charslot]
+[PlaySound(key="$rungeneral", volume=1)]
+[charslot(slot="m",name="avg_4179_monstr_1#11$1",duration=3)]
+[delay(time=3)]
+[name="Mon3tr"]凯尔希，我的外勤任务结束了！
+[charslot(slot="m",name="avg_4179_monstr_1#11$1")]
+[name="Mon3tr"]你看，我还新学会了一招！
+[charslot(slot="m",name="avg_4179_monstr_1#7$1")]
+[CameraShake(duration=0.5, xstrength=30, ystrength=30, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="Mon3tr"]（激烈的咆哮）
+[charslot(slot = "m", name = "avg_1037_amiya3_1#5$1")]
+[name="阿米娅"]——！
+[charslot(slot="m",name="avg_4228_closur_1#7$1",focus="m")]
+[name="可露希尔"]（小声）博士，你觉不觉得凯尔希回来之后，Mon3tr好像比原先活泼了一点？
+[dialog]
+[charslot]
+[Decision(options="（点头）;（小声）我觉得可能不止一点。", values="1;2")]
+[Predicate(references="1;2")]
+[charslot(slot = "m", name = "avg_1052_kalts2_1#1$1")]
+[name="凯尔希"]嗯？你们在说什么？
+[charslot(slot="m",name="avg_4228_closur_1#1$1",focus="m")]
+[name="可露希尔"]咳咳，没事不重要！给，凯尔希，这是重建罗德岛的任务报告，现在，你就听我详细地汇报一遍吧。
+[charslot(slot="m",name="avg_4228_closur_1#1$1",focus="m")]
+[name="可露希尔"]那个时候，我们......
+[Dialog]
+[Blocker(a=0, r=0,g=0, b=0, fadetime=0, block=true)]
+[Blocker(a=1, r=0,g=0, b=0, fadetime=4, block=true)]
+[stopmusic(fadetime=2)]
+[charslot]
+[Image]

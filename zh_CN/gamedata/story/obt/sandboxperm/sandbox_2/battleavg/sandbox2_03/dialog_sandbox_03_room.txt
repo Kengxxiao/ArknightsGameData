@@ -1,0 +1,13 @@
+[header(actId="sandbox_2", npcId="")] 
+[name="慕斯", avatarId="char_185_frncat", isAvatarRight="FALSE"]新鲜的大米生产出来啦！哎？施工队的大家也想尝尝米花吗？
+[decision(option1="向施工队交付1份大米。", value1="1.1", option2="还是算了吧。", value2="1.2")]
+[predicate(references="1.1", selectableCondition="c0")]
+[deliveritem(itemId="sandbox_2_rice", value=1)]
+[withdrawsource(withoutAnim=true)]
+[name="慕斯", avatarId="char_185_frncat", isAvatarRight="FALSE"]这下我们就可以去稻田里啦。
+[name="慕斯", avatarId="char_185_frncat", isAvatarRight="FALSE"]啊，这片区域有<color=#d8d769>野生动物</color>在活动，还有一个<color=#d8d769>巢穴</color>，里面好像有不少野生动物......
+[name="可露希尔", avatarId="char_4228_closur", isAvatarRight="FALSE"]野生动物也会掉落材料，这么丰富的资源，不要浪费了哦！
+[end]
+[predicate(references="1.2")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_2_rice", value="1")]

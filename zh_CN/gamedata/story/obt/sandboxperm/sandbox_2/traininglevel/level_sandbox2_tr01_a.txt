@@ -1,0 +1,91 @@
+[HEADER(is_tutorial=true, is_skippable=true)] 教学关a
+
+[InputBlocker(blockInput=true)]
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]
+[Delay(time=0.5)]
+
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause]
+
+[PopupDialog(dialogHead="$avatar_huang")] 看来工程部遇到了点问题，小猫，我们需要带些资源回去。
+
+[PopupDialog(dialogHead="$avatar_rosmon")] 终端上说，分配给我们的任务是砍树。
+
+[Tutorial(cardIndex=0, focusWidth=100, focusHeight=100, \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, protectTime=0.5, dialogHead="$avatar_huang")] \
+来！让我试试<@tu.kw>采集基站</>的效率怎么样！
+
+[InputBlocker(blockInput=false)]
+[Battle.EnsureMinCost(cost=10)]
+[InputBlocker(blockInput=true, cardIndex=0, validWidth=100, validHeight=100)]
+[Tutorial(waitForSignal="put_down", charId="trap_513_xb2bas", posX=3, posY=7, dialogHead="$avatar_huang", animStyle="Drag", \
+          startCardIndex=0, startAnchor="BottomRight", endTileX=3, endTileY=7)] \
+找到一个合适的地方<@tu.kw>部署</>，我们就从这里开始吧。
+
+[InputBlocker(blockInput=true)]
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]
+[Delay(time=5)]
+
+[Battle.Pause]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+
+[Tutorial(tileX=4, tileY=7, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_rosmon")] \
+这些<@tu.kw>采集专员</>会自动采集和搬运攻击范围内的资源呢。
+[PopupDialog(dialogHead="$avatar_closur")] 但你们也要小心，如果<@tu.kw>采集基站</>被敌人击倒，我们的行动就会宣告失败。
+
+[InputBlocker(blockInput=true)]
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]
+[Delay(time=5)]
+
+[Battle.Pause]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+
+[PopupDialog(dialogHead="$avatar_huang")] 明白了，让我也试试链锯砍树的效率怎么样！
+[Tutorial(tileX=1, tileY=9, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_huang", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+哎，这个岩石像身上的资源看起来不错，一起带走吧。
+[Tutorial(tileX=1, tileY=9, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_huang", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+好沉——小猫，帮我一下！
+[Tutorial(tileX=1, tileY=9, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_rosmon", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+嗯，每个人能背负的<@tu.kw>资源数量</>取决于自身的<@tu.kw>阻挡数</>，<@tu.kw>撤退</>时资源就会被成功搬运回来。
+
+[InputBlocker(blockInput=true)]
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]
+[Delay(time=1)]
+
+[PopupDialog(dialogHead="$avatar_closur")] <@tu.kw>采集专员</>也可以将干员身上的资源取回，你们也可以试一试。
+
+[Battle.Pause]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+
+[Tutorial(target="sandbox_2_focus_workbench", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_closur")] \
+在这里制作<@tu.kw>通讯装置</>，就可以扩展<@tu.kw>采集基站</>的攻击范围，延申<@tu.kw>采集专员</>的搬运范围。
+
+[Tutorial(target="sandbox_2_focus_daily_target", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_closur", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+对了，当<@tu.kw>建设值</>达到目标时，关卡会获得胜利。
+
+[Tutorial(target="sandbox_2_focus_remaining_time", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_closur", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+不过也需要注意，当<@tu.kw>行动时间结束</>时，你们的建设将会中止。
+
+[Tutorial(target="sandbox_2_focus_task", \
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_closur", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+好啦，要叮嘱的就是这些，接下来你们要做的就是完成任务来提升<@tu.kw>建设值</>，解锁新建筑，完成每个地块的建设吧！
+[Battle.Pause(pause=false)]

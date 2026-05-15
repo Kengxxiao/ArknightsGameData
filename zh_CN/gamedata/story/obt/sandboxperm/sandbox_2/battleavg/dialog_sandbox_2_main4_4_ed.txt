@@ -1,0 +1,38 @@
+[header(actId="sandbox_2", npcId="trap_628_xb2cls")]
+[summontrap(charId="trap_628_xb2cls", dir="RIGHT", x="2", y="10", isChar="FALSE")]
+[summontrap(charId="trap_626_xb2tex", dir="LEFT", x="5", y="9", isChar="FALSE")]
+[summonenemy(enemyId="enemy_7083_xbswrd", x="5", y="9", endCol="4", endRow="9")]
+[move(enemyId="enemy_7083_xbswrd", x="4", y="9")]
+[summonenemy(enemyId="enemy_7081_xbmedc", x="4", y="8", endCol="4", endRow="8",enemyAliasId="enemy_7081_xbmedc#1")]
+[summonenemy(enemyId="enemy_7081_xbmedc", x="4", y="7", endCol="4", endRow="7",enemyAliasId="enemy_7081_xbmedc#2")]
+[summonenemy(enemyId="enemy_7081_xbmedc", x="4", y="6", endCol="4", endRow="6",enemyAliasId="enemy_7081_xbmedc#3")]
+[executeactionarray(target="trap_626_xb2tex", key="disable_global_skill_cast")]
+[delay(time="1")]
+[camerafocusto(offsetX="5", offsetY="9", scale="DEFAULT", time="1")]
+[delay(time="1")]
+[playanim(id="enemy_7083_xbswrd", anim="Attack", dir="LEFT")]
+[delay(time="1")]
+[name="工程部干员", avatarId="char_603_csnipe", isAvatarRight="FALSE"]地块清障已完成，线路已重新铺设......
+[name="工程部干员", avatarId="char_603_csnipe", isAvatarRight="FALSE"]物流线路测试完成，港口正式开始试运行。
+[name="工程部干员", avatarId="char_603_csnipe", isAvatarRight="FALSE"]物资运输已开始！
+[playanim(id="enemy_7081_xbmedc", anim="Attack_1", dir="LEFT")]
+[delay(time="1")]
+[name="医疗部干员", avatarId="char_605_cmedic", isAvatarRight="FALSE"]药物物资已收到。
+[name="后勤部干员", avatarId="char_601_cguard", isAvatarRight="FALSE"]干员服饰和食材已收到。
+[name="工程部干员", avatarId="char_603_csnipe", isAvatarRight="FALSE"]工程零件已收到。
+[name="工程部干员", avatarId="char_603_csnipe", isAvatarRight="FALSE"]呼......可露希尔小姐，试运行效率达标，港口可以随时投入正式运行。
+[emoji(emoji="common_bubble_happy", target="trap_628_xb2cls")]
+[name="可露希尔", avatarId="char_4228_closur", isAvatarRight="FALSE"]收到！
+
+可露希尔点开自己的终端页面。
+流程表上密密麻麻的任务清单和待办事件，随着时间的流逝已经一个一个画上了完成的符号。
+她把表拉到最后一栏，画上了最后一个勾。
+
+[withdraw(id="trap_628_xb2cls")]
+[withdraw(id="trap_626_xb2tex")]
+[withdraw(id="enemy_7083_xbswrd")]
+[withdraw(id="enemy_7081_xbmedc")]
+[delay(time="1")]
+[resetcamera(time="1")]
+[save]
+[end]

@@ -7,6 +7,12 @@ local BBT = CS.Torappu.SandboxV3BaseBuildType
 local Map = CS.Torappu.Battle.Map
 local BPS = CS.Torappu.Battle.SandboxV3.BuildPlaceTypeScore
 local BT = BSM.BuildingType
+local SandboxV3BuildUtils = CS.Torappu.Battle.SandboxV3.SandboxV3BuildUtils
+local SandboxV3BuildScoreType = CS.Torappu.SandboxV3BuildScoreType
+local BlackboardKeys = CS.Torappu.BlackboardKeys
+local SandboxConstsEnemy = CS.Torappu.Battle.Sandbox.SandboxConsts.ENEMY
+local BattleInOut = CS.Torappu.Battle.BattleInOut
+local RuneTable = CS.Torappu.RuneTable
 
 
 
@@ -300,6 +306,103 @@ local function _CalculateScoreHotfix(self)
   return score
 end
 
+local function dictTryAddStringInt(dict, key, val)
+  if dict == nil or key == nil then
+    return
+  end
+  if dict:ContainsKey(key) then
+    return
+  end
+  dict:Add(key, val)
+end
+
+local function _onGameStartImpl(self, arg)
+  local scoreRecord = self.scoreRecord
+  local bm = self.m_buildManager
+  scoreRecord.wonders:Clear()
+  local inputWonders = bm.input.wonder
+  local buildScoreData = bm.dataV3.buildScoreData
+  if buildScoreData ~= nil then
+    local iter = buildScoreData:GetEnumerator()
+    while iter:MoveNext() do
+      local kv = iter.Current
+      local key = kv.Key
+      local scoreData = kv.Value
+      if scoreData ~= nil and scoreData.paramType == SandboxV3BuildScoreType.LEVEL then
+        local score = 0
+        if inputWonders ~= nil and inputWonders:Contains(key) then
+          score = scoreData.buildScore
+        end
+        scoreRecord.wonders:Add(key, score)
+      end
+    end
+  end
+  scoreRecord.debris:Clear()
+  local battleSaves = bm.input.battleSaves
+  if battleSaves ~= nil and battleSaves.debris ~= nil then
+    local debrisList = battleSaves.debris
+    for i = 0, debrisList.Count - 1 do
+      scoreRecord.debris:Add(debrisList[i])
+    end
+  end
+  scoreRecord.npcs:Clear()
+  local extraNpcs = bm.input.npcInputs
+  if extraNpcs ~= nil then
+    for i = 0, extraNpcs.Count - 1 do
+      local npcTrap = extraNpcs[i]
+      local npcCfgId = npcTrap.npcCfgId
+      if npcCfgId ~= nil and npcCfgId ~= "" then
+        local ok, npcScore = SandboxV3BuildUtils.GetNpcScore(npcCfgId, bm.dataV3)
+        if ok then
+          dictTryAddStringInt(scoreRecord.npcs, npcTrap.trapId, npcScore)
+        end
+      end
+    end
+  end
+  local runes = BattleInOut.instance.input.runeInput
+  if runes == nil then
+    self:_RefreshScore()
+    return
+  end
+  local packList = runes.runes
+  if packList == nil and xlua and xlua.cast then
+    pcall(function()
+      xlua.cast(runes, RuneTable.PackedRuneInput)
+      packList = runes.runes
+    end)
+  end
+  if packList ~= nil then
+    for pi = 0, packList.Count - 1 do
+      local pack = packList[pi]
+      if pack ~= nil and pack.runes ~= nil then
+        for ri = 0, pack.runes.Count - 1 do
+          local rune = pack.runes[ri]
+          if rune ~= nil then
+            local okTag, runeTag = rune.blackboard:TryGetString(BlackboardKeys.RUNE_TAG)
+            if okTag and runeTag == SandboxConstsEnemy then
+              local okNpc, npcId = rune.blackboard:TryGetString(SandboxConstsEnemy)
+              if okNpc and npcId ~= nil and npcId ~= "" then
+                local okScore, npcScore = SandboxV3BuildUtils.GetNpcScore(npcId, bm.dataV3)
+                if okScore then
+                  dictTryAddStringInt(scoreRecord.npcs, npcId, npcScore)
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  self:_RefreshScore()
+end
+
+local function _OnGameStartHotfix(self, arg)
+  local ok, err = pcall(_onGameStartImpl, self, arg)
+  if not ok and LogError then
+    LogError("[BuildingScoreManagerHotfixer] _OnGameStart: " .. tostring(err))
+  end
+end
+
 function BuildingScoreManagerHotfixer:OnInit()
   if HOTFIX_ENABLE then
     if xlua and xlua.private_accessible then
@@ -310,6 +413,7 @@ function BuildingScoreManagerHotfixer:OnInit()
     self:Fix_ex(BSM, "GetBuildPlaceScore", _GetBuildPlaceScoreHotfix)
     self:Fix_ex(BSM, "_GetBuildPlaceScore", _GetBuildPlaceScoreListHotfix)
     self:Fix_ex(BSM, "_CalculateScore", _CalculateScoreHotfix)
+    self:Fix_ex(BSM, "_OnGameStart", _OnGameStartHotfix)
   end
 end
 

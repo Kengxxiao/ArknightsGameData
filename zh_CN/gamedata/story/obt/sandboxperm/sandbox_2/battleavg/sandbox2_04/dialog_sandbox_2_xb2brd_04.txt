@@ -1,0 +1,20 @@
+[header(actId="sandbox_2", npcId="")] 
+小羽兽挥舞着翅膀，看上去对你包裹里的东西很感兴趣。
+[decision(option1="你递给了小羽兽5份清水。", value1="1.1", option2="你递给了小羽兽3份石板。", value2="1.2", option3="我也没有什么可以给你的。", value3="1.3")]
+[predicate(references="1.1", selectableCondition="c0")]
+[deliveritem(itemId="sandbox_2_water", value="5")]
+小羽兽对你给的东西很满意，从它脚下的宝物堆中挑出来了一件给你。
+[additem(itemId="sandbox_2_building_defence_1", itemCount="2")]
+[withdrawsource(withoutAnim=true)]
+[end]
+[predicate(references="1.2", selectableCondition="c1")]
+[deliveritem(itemId="sandbox_2_brick", value="3")]
+小羽兽对你给的东西很满意，从它脚下的宝物堆中挑出来了一件给你。
+[additem(itemId="sandbox_2_building_infrastructure_4", itemCount="5")]
+[withdrawsource(withoutAnim=true)]
+[end]
+[predicate(references="1.3")]
+......
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_2_water", value="5")]
+[condition(references="c1", key="itemGE", itemId="sandbox_2_brick", value="3")]

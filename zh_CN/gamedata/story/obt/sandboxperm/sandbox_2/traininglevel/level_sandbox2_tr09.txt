@@ -1,0 +1,46 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 09_a
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+
+[InputBlocker(blockInput=false)]
+[Battle.EnsureMinCost(cost=10)]
+[Tutorial(waitForSignal="put_down", charId="trap_513_xb2bas", dialogHead="$avatar_closur", protectTime=1)] \
+博士，我更新了一下系统，有些事情需要和你同步一下！先在这里部署罗德岛采集基站吧。
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=5)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+
+[PopupDialog(dialogHead="$avatar_closur", protectTime=1)] 为了保证干员们回来后能见到一个全新的罗德岛，我们在建设的时候也要注意一下美观度，嘿嘿。
+
+[PopupDialog(dialogHead="$avatar_closur", protectTime=1)] 建造页面中的<@tu.kw>生产设施</>和<@tu.kw>景观建筑</>都会对美观度有加成。
+
+[SandboxBattle.LockCamera(enable=false)] 
+[InputBlocker(blockInput=true, tileX=2, tileY=8, validWidth=100, validHeight=80)]
+[Tutorial(waitForSignal="char_info", charId="trap_557_xb2fnt", tileX=2, tileY=8, focusWidth=100, focusHeight=100, dialogHead="$avatar_closur", animStyle="Click", focusStyle="HighlightCircle", black=0.5, protectTime=2, dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这是景观建筑——<@tu.kw>澄澈清泉</>，它现在为我们的基地提供了一定的美观度。
+[SandboxBattle.LockCamera(enable=true)] 
+
+[InputBlocker(blockInput=true)]
+[Tutorial(focusX=242, focusY=-111, focusWidth=480, focusHeight=235, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",anchor="Left", \
+          protectTime=1, dialogHead="$avatar_closur")] \
+<@tu.kw>景观建筑</>在场时会持续为我们带来<@tu.kw>粗制赤金收入</>。
+
+[InputBlocker(blockInput=true)]
+[Tutorial(focusX=200, focusY=-25, focusWidth=120, focusHeight=70, anchor="Top",\
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=2, dialogHead="$avatar_closur", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这里展示了当前<@tu.kw>美观度</>。
+
+[PopupDialog(dialogHead="$avatar_closur", protectTime=1)] 每一天结束时美观度会带来额外的<@tu.kw>晶莹碎片</>，我们在休整期使用它来购买物资。
+[Tutorial(focusX=0, focusY=-100, focusWidth=300, focusHeight=200, anchor="Top",\
+          animStyle="Highlight", focusStyle="HighlightRect", black=0.5, \
+          protectTime=2, dialogHead="$avatar_closur", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+点击这里可以展开查看美观度带来的额外收入。
+
+[PopupDialog(dialogHead="$avatar_closur")] 提升美观度，来完成更多的任务吧。
+
+[InputBlocker(blockInput=false)]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]

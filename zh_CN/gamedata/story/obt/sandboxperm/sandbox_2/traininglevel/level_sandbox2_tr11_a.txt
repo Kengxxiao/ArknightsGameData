@@ -1,0 +1,50 @@
+[HEADER(is_tutorial=true, is_skippable=true)] 11_a
+[InputBlocker(blockInput=true)]
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]
+[Delay(time=1)]
+
+[Battle.Pause]
+[InputBlocker(blockInput=false)]
+[Battle.EnsureMinCost(cost=10)]
+[InputBlocker(blockInput=true, cardIndex=0, validWidth=100, validHeight=100)]
+[Tutorial(waitForSignal="put_down", charId="trap_513_xb2bas", posX=1, posY=10, dialogHead="$avatar_broca", animStyle="Drag", \
+          startCardIndex=0, startAnchor="BottomRight", endTileX=1, endTileY=10)]
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=5)]
+
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+[Tutorial(tileX=2, tileY=8, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_broca", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这次是圈养野生动物的任务......你们知道怎么抓野生动物吗？看上去不简单啊......
+
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true, cardIndex=6, validWidth=1000, validHeight=100)]
+[Tutorial(waitForSignal="put_down", charId="trap_597_xb2cage", posX=1, posY=8, dialogHead="$avatar_aosta", animStyle="Drag", \
+          startCardIndex=6, startAnchor="BottomRight", endX=-100, endY=-50)] \
+工作手册上说，将野生动物置于捕猎笼的<@tu.kw>攻击范围</>内，就能抓到它们。被捕获后也可以查看野生动物产出的效率。
+
+[InputBlocker(blockInput=false)]
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_aosta", animStyle="Drag", \
+          startX=-60, startY=-45, endX=240, endY=-45)] \
+
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+[Tutorial(tileX=4, tileY=8, focusWidth=150, focusHeight=150, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_chiave", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+让小爷我也来看看！嗯，被捕获的野生动物<@tu.kw>养在兽栏里</>后就能自动产出资源！
+
+[InputBlocker(blockInput=true)]
+[PopupDialog(dialogHead="$avatar_aosta")] 被捕获后可以查看它们产出的效率。
+[PopupDialog(dialogHead="$avatar_chiave")] 哈哈，听起来不难嘛！那这些任务不是一下子就能完成吗？
+[PopupDialog(dialogHead="$avatar_aosta")] 给，我还带了一些圈养野生动物相关的图纸。
+[PopupDialog(dialogHead="$avatar_aosta")] 第一个任务应该很快就能完成了。
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]

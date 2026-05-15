@@ -1,0 +1,11 @@
+[header(actId="sandbox_2", npcId="")] 
+前方地块尚未清理，要招募施工队前来处理吗？新地块存在未知风险，请做好准备。
+[decision(option1="向施工队交付10份粗制赤金。", value1="1.1", option2="还是算了吧。", value2="1.2")]
+[predicate(references="1.1", selectableCondition="c0")]
+[deliveritem(itemId="sandbox_2_gold", value=10)]
+[withdrawsource(withoutAnim=true)]
+清理完成，新地块开启！
+[end]
+[predicate(references="1.2")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_2_gold", value="10")]

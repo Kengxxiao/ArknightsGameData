@@ -1,0 +1,17 @@
+[header(actId="sandbox_2", npcId="")] 
+前方林地尚未清理，要招募施工队前来处理吗？似乎有成群野生动物活动的踪迹，请做好准备。
+[decision(option1="向施工队交付10份粗制赤金。", value1="1.1", option2="向施工队交付10份木材。", value2="1.2", option3="还是算了吧。", value3="1.3")]
+[predicate(references="1.1", selectableCondition="c0")]
+[deliveritem(itemId="sandbox_2_gold", value=10)]
+[withdrawsource(withoutAnim=true)]
+清理完成，新地块开启！
+[end]
+[predicate(references="1.2", selectableCondition="c1")]
+[deliveritem(itemId="sandbox_2_wood", value=10)]
+[withdrawsource(withoutAnim=true)]
+清理完成，新地块开启！
+[end]
+[predicate(references="1.3")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_2_gold", value="10")]
+[condition(references="c1", key="itemGE", itemId="sandbox_2_wood", value="10")]

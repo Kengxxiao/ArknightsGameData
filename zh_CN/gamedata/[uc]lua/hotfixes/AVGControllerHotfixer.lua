@@ -1,103 +1,84 @@
 local AVGControllerHotfixer = Class("AVGControllerHotfixer", HotfixBase)
 
-local function _FindDecisionPanel(controller)
+local TAG = "[AVGControllerHotfixer] "
+
+local function _LogError(message)
+  if LogError ~= nil then
+    LogError(TAG .. tostring(message))
+    return
+  end
+  if CS ~= nil and CS.UnityEngine ~= nil and CS.UnityEngine.Debug ~= nil then
+    CS.UnityEngine.Debug.LogError(TAG .. tostring(message))
+  end
+end
+
+local function _SafeBool(value)
+  return value == true
+end
+
+local function _IsVideoOnly(controller)
+  local ok, result = pcall(function()
+    local story = controller.m_story
+    return story ~= nil and story.isVideoOnly
+  end)
+  return ok and _SafeBool(result)
+end
+
+local function _ShouldEnableReaderMode(controller)
   if controller == nil then
-    return nil
+    return false
   end
-  local comps = controller.m_components
-  if comps == nil then
-    return nil
-  end
-  for i = 0, comps.Length - 1 do
-    local comp = comps[i]
-    if comp ~= nil and comp:GetType() == typeof(CS.Torappu.AVG.DecisionPanel) then
-      return comp
+
+  return _SafeBool(controller.enableReader)
+      and not _SafeBool(controller.isRunningTutorial)
+      and not _SafeBool(controller.isTheaterMode)
+      and not _IsVideoOnly(controller)
+      and CS.Torappu.GameFlowController.CheckIsInStoryScene()
+end
+
+local function _OnStoryBegin(controller, story)
+  controller:OnStoryBegin(story)
+
+  if _IsVideoOnly(controller) then
+    local settingBtn = controller._settingBtn
+    if settingBtn ~= nil then
+      settingBtn:SetActive(false)
     end
   end
-  return nil
 end
 
-local function _TryGetDecisionExecutorFromPanel(decisionPanel)
-  if decisionPanel == nil then
-    return nil
-  end
+local function _InstallWithHotfixBase(self)
+  xlua.private_accessible(CS.Torappu.AVG.AVGController)
 
-  local panelExecutors = decisionPanel.m_executorWrappers
-
-  if panelExecutors == nil then
-    return nil
-  end
-
-  for e = 0, panelExecutors.Length - 1 do
-    local ex = panelExecutors[e]
-    if ex ~= nil and ex.command == "decision" then
-      return ex
-    end
-  end
-
-  return nil
-end
-
-
-
-local function _SnapshotDecisionExecutors(csList)
-  if csList == nil or csList.Count <= 0 then
-    return nil
-  end
-  local snapshot = {}
-  for i = 0, csList.Count - 1 do
-    snapshot[i + 1] = csList[i]
-  end
-  return snapshot
-end
-
-local function _FinishDecisionExecutors(snapshot, decisionPanel, decisionExecutor)
-  local finishedDecisionPanel = false
-  for i = #snapshot, 1, -1 do
-    local executor = snapshot[i]
-    if executor ~= nil then
-      if (not finishedDecisionPanel) and decisionPanel ~= nil and decisionExecutor ~= nil and executor == decisionExecutor then
-        finishedDecisionPanel = true
-        decisionPanel:FinishCommand()
-      else
-        executor:ForceEnd()
+  local ok, err = pcall(function()
+    self:Fix_ex(CS.Torappu.AVG.AVGController, "ShouldEnableReaderMode", function(controller)
+      local ok, result = xpcall(_ShouldEnableReaderMode, debug.traceback, controller)
+      if not ok then
+        _LogError("ShouldEnableReaderMode fix failed: " .. tostring(result))
+        return false
       end
-    end
-  end
-end
-
-local function _TryFinishDecisionExecutors(controller, snapshot)
-  if controller == nil then
-    return
-  end
-  if snapshot == nil or #snapshot == 0 then
-    return
+      return result
+    end)
+  end)
+  if not ok then
+    _LogError("Install ShouldEnableReaderMode hotfix failed: " .. tostring(err))
   end
 
-  local decisionPanel = _FindDecisionPanel(controller)
-  local decisionExecutor = _TryGetDecisionExecutorFromPanel(decisionPanel)
-  _FinishDecisionExecutors(snapshot, decisionPanel, decisionExecutor)
-end
-
-local function OnDecisionSelectedFix(self, decisionValue, decisionIndex)
-  local snapshot = _SnapshotDecisionExecutors(self.m_decisionExecutors)
-  self:OnDecisionSelected(decisionValue, decisionIndex)
-  _TryFinishDecisionExecutors(self, snapshot)
-  snapshot = nil
+  ok, err = pcall(function()
+    self:Fix_ex(CS.Torappu.AVG.AVGController, "OnStoryBegin", function(controller, story)
+      local ok, err = xpcall(_OnStoryBegin, debug.traceback, controller, story)
+      if not ok then
+        _LogError("OnStoryBegin fix failed: " .. tostring(err))
+      end
+    end)
+  end)
+  if not ok then
+    _LogError("Install OnStoryBegin hotfix failed: " .. tostring(err))
+  end
 end
 
 function AVGControllerHotfixer:OnInit()
-  xlua.private_accessible(CS.Torappu.AVG.AVGController)
-  xlua.private_accessible(CS.Torappu.AVG.ExecutorComponent)
-  xlua.private_accessible(CS.Torappu.AVG.DecisionPanel)
-  self:Fix_ex(CS.Torappu.AVG.AVGController, "OnDecisionSelected", function(self,decisionValue, decisionIndex)
-    local ok, errorInfo = xpcall(OnDecisionSelectedFix, debug.traceback, self, decisionValue,
-        decisionIndex)
-    if not ok then
-      LogError("[AVGControllerHotfixer] OnDecisionSelected fix: " .. tostring(errorInfo))
-      self:OnDecisionSelected(decisionValue, decisionIndex)
-    end
-  end)
+  _InstallWithHotfixBase(self)
 end
 
 function AVGControllerHotfixer:OnDispose()

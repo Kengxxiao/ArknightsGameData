@@ -1,0 +1,18 @@
+[header(actId="sandbox_2", npcId="")] 
+前方地块尚未清理，要招募施工队前来处理吗？新地块存在未知风险，请做好准备。
+[name="煌", avatarId="char_017_huang", isAvatarRight="FALSE"]招募施工队所需要的资源看上去通过完成任务等方式可以获得。
+[decision(option1="向施工队交付5份粗制赤金。", value1="1.1", option2="向施工队交付10份石材。", value2="1.2", option3="还是算了吧。", value3="1.3")]
+[predicate(references="1.1", selectableCondition="c0")]
+[deliveritem(itemId="sandbox_2_gold", value=5)]
+[withdrawsource(withoutAnim=true)]
+清理完成，新地块开启！
+[end]
+[predicate(references="1.2", selectableCondition="c1")]
+[deliveritem(itemId="sandbox_2_stone", value=10)]
+[withdrawsource(withoutAnim=true)]
+清理完成，新地块开启！
+[end]
+[predicate(references="1.3")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_2_gold", value="5")]
+[condition(references="c1", key="itemGE", itemId="sandbox_2_stone", value="10")]

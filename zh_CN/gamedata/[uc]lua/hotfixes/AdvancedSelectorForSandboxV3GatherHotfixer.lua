@@ -7,16 +7,15 @@ local FilterType = SelectorCls.SandboxV3GatherFilterType
 local MotionMode = CS.Torappu.MotionMode
 
 local function _OnPostFilter(self, candidates)
-  local ret = self:OnPostFilter(candidates)
-  if ret and ret.Count > 0 and Map.hasInstance and self._filterType == FilterType.SEARCH_RES then
-    for i = ret.Count - 1, 0, -1 do
-      local candidate = ret[i]
+  self:OnPostFilter(candidates)
+  if candidates and candidates.Count > 0 and Map.hasInstance and self._filterType == FilterType.SEARCH_RES then
+    for i = candidates.Count - 1, 0, -1 do
+      local candidate = candidates[i]
       if not Map.instance:CheckReachable(MotionMode.WALK, self.owner.gridPosition, candidate.gridPosition, false) then
-        ret:RemoveAt(i)
+        candidates:RemoveAt(i)
       end
     end
   end
-  return ret
 end
 
 function AdvancedSelectorForSandboxV3GatherHotfixer:OnInit()

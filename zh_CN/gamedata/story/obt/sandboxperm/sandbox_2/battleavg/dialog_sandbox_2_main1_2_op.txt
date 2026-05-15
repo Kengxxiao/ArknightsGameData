@@ -1,0 +1,75 @@
+[header(actId="sandbox_2", npcId="enemy_7079_xbshap")]
+[summonenemy(enemyId="enemy_7079_xbshap", x="7", y="9", endCol="8", endRow="9")]
+[move(enemyId="enemy_7079_xbshap", x="8", y="9")]
+[summontrap(charId="trap_625_xb2smy", dir="LEFT", x="9", y="9", isChar="False")]
+[summonenemy(enemyId="enemy_7113_xb2mcnrhd", x="11", y="9", endCol="10", endRow="9")]
+[move(enemyId="enemy_7113_xb2mcnrhd", x="10", y="9")]
+[summonenemy(enemyId="enemy_7114_xb2mcnrsh", x="6", y="9", endCol="7", endRow="9")]
+[move(enemyId="enemy_7114_xb2mcnrsh", x="7", y="9")]
+
+[camerafocusto(offsetX="8", offsetY="9", scale="DEFAULT", time="1")]
+[delay(time="1")]
+[playanim(id="trap_625_xb2smy", anim="Special", dir="LEFT")]
+[delay(time="1")]
+[emoji(emoji="common_bubble_think", target="trap_625_xb2smy")]
+[name="Stormeye", avatarId="char_511_asnipe", isAvatarRight="FALSE"]捕猎吗......
+[name="Stormeye", avatarId="char_511_asnipe", isAvatarRight="FALSE"]我和巨声负责攻击，你和叶毯负责帮我们运回射中的猎物。
+[emoji(emoji="common_bubble_confuse", target="enemy_7079_xbshap")]
+[name="Sharp", avatarId="char_508_aguard", isAvatarRight="FALSE"]怎么不是我和叶毯打，你们来运？
+[camerafocusto(offsetX="9", offsetY="9", scale="CLOSE", time="0.5")]
+[playanim(id="trap_625_xb2smy", anim="Special", dir="LEFT")]
+[delay(time="1")]
+[name="Stormeye", avatarId="char_511_asnipe", isAvatarRight="FALSE"]因为你跑不过我的箭。
+[camerafocusto(offsetX="8", offsetY="9", scale="CLOSE", time="0.5")]
+[playanim(id="enemy_7079_xbshap", anim="Special", dir="RIGHT")]
+[delay(time="1")]
+[name="Sharp", avatarId="char_508_aguard", isAvatarRight="FALSE"]你也跑不过我的刀。
+[camerafocusto(offsetX="8", offsetY="9", scale="DEFAULT", time="1")]
+[delay(time="1")]
+[name="Stormeye", avatarId="char_511_asnipe", isAvatarRight="FALSE"]那就看谁捉得多？
+[name="Sharp", avatarId="char_508_aguard", isAvatarRight="FALSE"]前进方向不变，剩余距离九公里，出发。
+[playanim(id="trap_625_xb2smy", anim="Idle", dir="RIGHT")]
+[delay(time="0.1")]
+[withdraw(id="enemy_7079_xbshap")]
+[withdraw(id="trap_625_xb2smy")]
+
+[delay(time="1")]
+
+[playanim(id="enemy_7113_xb2mcnrhd", anim="Skill", dir="RIGHT")]
+[playanim(id="enemy_7114_xb2mcnrsh", anim="Die", dir="LEFT")]
+[emoji(emoji="common_bubble_happy", target="enemy_7114_xb2mcnrsh")]
+[name="叶毯", avatarId="bavg_npc_007_xb2mcnrsh", isAvatarRight="FALSE"]嘿嘿，出发！
+
+[uiOperation(target="main", enable="False")]
+
+[withdraw(id="enemy_7114_xb2mcnrsh")]
+[withdraw(id="enemy_7113_xb2mcnrhd")]
+[delay(time="2")]
+
+
+[summonenemy(enemyId="enemy_7117_xb2mcnist", x="7", y="11", endCol="8", endRow="11")]
+[move(enemyId="enemy_7117_xb2mcnist", x="8", y="11")]
+[summonenemy(enemyId="enemy_8011_mcndog_3", x="6", y="11", endCol="7", endRow="11")]
+[move(enemyId="enemy_8011_mcndog_3", x="7", y="11")]
+
+[camerafocusto(offsetX="8", offsetY="11", scale="DEFAULT", time="2")]
+[delay(time="2")]
+
+[name="Mechanist", avatarId="char_610_acfend", isAvatarRight="FALSE"]Sharp和Stormeye的小队据说满载而归......
+[name="Mechanist", avatarId="char_610_acfend", isAvatarRight="FALSE"]煌和迷迭香好像也直接清空了一片林地......
+[emoji(emoji="common_bubble_think", target="enemy_7117_xb2mcnist")]
+[name="Mechanist", avatarId="char_610_acfend", isAvatarRight="FALSE"]......
+[playanim(id="enemy_7117_xb2mcnist", anim="B_Skill_1", dir="LEFT")]
+[delay(time="1")]
+[name="Mechanist", avatarId="char_610_acfend", isAvatarRight="FALSE"]你会种地吗？
+[playanim(id="enemy_8011_mcndog_3", anim="Attack", dir="LEFT")]
+[delay(time="2")]
+[emoji(emoji="common_bubble_confuse", target="enemy_8011_mcndog_3")]
+[withdraw(id="enemy_7113_xb2mcnrhd")]
+[withdraw(id="enemy_7114_xb2mcnrsh")]
+[withdraw(id="enemy_7117_xb2mcnist")]
+[withdraw(id="enemy_8011_mcndog_3")]
+[delay(time="1")]
+[resetcamera(time="1")]
+[save]
+[end]

@@ -1,0 +1,19 @@
+[header(actId="sandbox_2", npcId="")] 
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]又见面了！我这里有最新推出的巨大岩石再生站图纸，只要建造好就能在周围生成源源不断的巨大岩石，当然，已经造好的巨大岩石再生站我这里也有！要不要看看？
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]这次不用您花钱，只需要用木板来换就好！
+[decision(option1="用10份木板换取巨大岩石再生站图纸", value1="1.1", option2="用4份木板换取巨大岩石再生站", value2="1.2", option3="还是算了吧。", value3="1.3")]
+[predicate(references="1.1", selectableCondition="c0&&!cx")]
+[deliveritem(itemId="sandbox_2_plank", value=10)]
+[additem(itemId="sandbox_2_recipe_producer_2", itemCount=1)]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]感谢您的慷慨！
+[end]
+[predicate(references="1.2", selectableCondition="c1")]
+[deliveritem(itemId="sandbox_2_plank", value=4)]
+[additem(itemId="sandbox_2_building_producer_2", itemCount=1)]
+[name="联络员", avatarId="trap_415_trademan", isAvatarRight="FALSE"]和您做生意就是舒服！
+[end]
+[predicate(references="1.3")]
+[end]
+[condition(references="c0", key="itemGE", itemId="sandbox_2_plank", value="10")]
+[condition(references="cx", key="itemGE", itemId="sandbox_2_recipe_producer_2", value="1")]
+[condition(references="c1", key="itemGE", itemId="sandbox_2_plank", value="4")]

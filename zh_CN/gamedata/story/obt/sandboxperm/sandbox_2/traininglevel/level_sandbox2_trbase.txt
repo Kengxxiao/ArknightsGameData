@@ -1,0 +1,78 @@
+[HEADER(is_tutorial=true, is_skippable=false)] 基地教学
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause]
+[inputblocker(blockInput=true)]
+[PopupDialog(dialogHead="$avatar_closur")] 博士，终于等到你返回基地了！我们将会在这片移动地块上<@tu.kw>建设罗德岛新基地</>，安保系统已经搭建完成，这里<@tu.kw>绝对不会有敌人的袭扰</>。
+
+[PopupDialog(dialogHead="$avatar_closur")] 建设罗德岛新基地共分为<@tu.kw>五</>期工程，我们当下的资源只够建设第<@tu.kw>一</>期。先从眼下的事务着手吧。
+
+[tutorial(focusWidth=110, focusHeight=110, animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", protectTime=2, dialogHead="$avatar_closur",  cardIndex=0)]这是<@tu.kw>清杂机械羽兽</>，一组就可以清理一片待清理地块。
+
+[InputBlocker(blockInput=true, cardIndex=0, validWidth=112, validHeight=116)]
+[Tutorial(waitForSignal="put_down", charId="trap_622_xb2clr", posX=21, posY=15, dialogHead="$avatar_closur", animStyle="Drag", startCardIndex=0, startAnchor="BottomRight", endTileX=21, endTileY=15)]
+[InputBlocker(blockInput=true)]
+[Battle.Pause(pause=false)]
+[Delay(time=5)]
+
+[PopupDialog(dialogHead="$avatar_closur")] 这个呢就是我的心血之作，也是基地建设的重头戏——能源产线系统！
+
+[Battle.Pause(pause=false)]
+[Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+
+[InputBlocker(blockInput=true, cardIndex=2, validWidth=112, validHeight=116)]
+[Tutorial(waitForSignal="put_down", charId="trap_604_xb2ofb2", posX=21, posY=15, dialogHead="$avatar_closur", animStyle="Drag", \
+          startCardIndex=2, startAnchor="BottomRight", endTileX=21, endTileY=15)]要想实现能源自给自足，我们首先需要的是能源转化装置。
+
+[Battle.Pause(pause=false)]
+[Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+
+[SandboxBattle.LockCamera(enable=false)] 
+[InputBlocker(blockInput=true, tileY=15, tileX=21, validWidth=40, validHeight=40)]
+[Tutorial(waitForSignal="char_info", charId="trap_604_xb2ofb2", tileX=21, tileY=15, focusWidth=100, focusHeight=100, \
+          dialogHead="$avatar_closur", animStyle="Click", focusStyle="HighlightCircle", black=0.5, \
+          protectTime=0.5, dialogHead="$avatar_closur", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+将<@tu.kw>木材能源转化装置</>造好后，还需要将它激活才能产出能源。
+[SandboxBattle.LockCamera(enable=true)] 
+
+[InputBlocker(blockInput=true)]
+
+[Battle.Pause(pause=false)]
+[Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+
+[Tutorial(focusX=242, focusY=-111, focusWidth=480, focusHeight=235, animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",anchor="Left", protectTime=2, dialogHead="$avatar_closur")] 怎么激活它呢？好问题！在它的攻击范围内建造一个<@tu.kw>木材处理中心</>就好啦！
+[InputBlocker(blockInput=true, cardIndex=1, validWidth=112, validHeight=116)]
+[Tutorial(waitForSignal="put_down", charId="trap_635_xb2owdp", posX=21, posY=14, dialogHead="$avatar_closur", animStyle="Drag", \
+          startCardIndex=1, startAnchor="BottomRight", endTileX=21, endTileY=14)]
+[Battle.Pause(pause=false)]
+[Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=true)]
+
+[Tutorial(focusX=500, focusY=-50, focusWidth=300, focusHeight=100, anchor="TopLeft", animStyle="Highlight", focusStyle="HighlightRect", black=0.5, protectTime=1, dialogHead="$avatar_closur", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 现在我们成功提升了能源产能，但因为还没有核心能源基站，所以整条产线并没有完全运转。
+
+[Tutorial(focusWidth=110, focusHeight=110, animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", protectTime=1, dialogHead="$avatar_closur",  cardIndex=0)] 接下来博士只需要建造<@tu.kw>核心能源基站</>，就能够通过能源产出资源啦。
+
+[Battle.Pause(pause=false)]
+[Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+
+[InputBlocker(blockInput=true, cardIndex=0, validWidth=112, validHeight=116)]
+[Tutorial(waitForSignal="char_info", cardIndex=0, focusWidth=100, focusHeight=100, dialogHead="$avatar_closur", animStyle="Click", focusStyle="HighlightCircle", black=0.5, protectTime=0.5, dialogHead="$avatar_closur", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 
+
+[InputBlocker(blockInput=true)]
+
+[Battle.Pause(pause=false)]
+[Delay(time=0.5)]
+[Battle.Pause(pause=true)]
+
+[Tutorial(focusX=242, focusY=-111, focusWidth=480, focusHeight=235, animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black",anchor="Left", protectTime=2, dialogHead="$avatar_closur")] 它会将能源以一定比例转化为建设元件，<@tu.kw>升级后甚至能产出建设装置</>。博士把它放在<@tu.kw>任意位置</>都可以。但提醒一下，这个建筑<@tu.kw>仅此一个</>哦！
+
+[PopupDialog(dialogHead="$avatar_closur",protectTime=2)] 如果布置不满意，<@tu.kw>拆除</>建筑就可以啦，建筑拆除后<@tu.kw>无损耗地返回手牌</>。
+
+[PopupDialog(dialogHead="$avatar_closur",protectTime=2)] 想要更多的建筑和清杂机械羽兽，可在左侧面板中的罗德岛后勤部商店购买，接下来请博士尽情布置基地吧。
+
+[Battle.Pause(pause=false)]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
