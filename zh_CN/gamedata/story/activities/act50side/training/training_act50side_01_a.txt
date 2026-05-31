@@ -1,0 +1,27 @@
+[header(is_skippable=false, is_tutorial=true)]
+[battle.delay(time=2)]
+[battle.lockfunction(mask="SYSTEM_MENU_INTERACT")]
+[battle.pause(pause=true)]
+[popupdialog(dialogHead="$avatar_kroos", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]哇，那边有一只好大的反壳龟。
+[popupdialog(dialogHead="$avatar_kroos", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]我已经迫不及待要去狩猎了！
+[inputblocker(blockInput=false)]
+[battle.ensuremincost(cost=11)]
+[tutorial(animStyle="Drag", protectTime=0.5, waitForSignal="put_down", cardIndex=0, startCardIndex=1, endTileX=6, endTileY=2, charId="char_124_kroos", posX=6, posY=2)]
+[tutorial(animStyle="Drag", waitForSignal="select_direction", startTileX=7, startTileY=2, endTileX=5, endTileY=2)]
+[inputblocker(blockInput=true)]
+
+[battle.pause(pause=false)]
+[battle.delay(time=0.5)]
+[battle.pause(pause=true)]
+[popupdialog(dialogHead="$avatar_fang", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]别忘了我们是来练习使用<@tu.kw>翔虫</>的。
+
+[inputblocker(blockInput=false)]
+[battle.ensuremincost(cost=10)]
+[tutorial(animStyle="Drag", protectTime=0.5, waitForSignal="put_down", cardIndex=0, startCardIndex=0, endTileX=5, endTileY=1, charId="char_123_fang", posX=5, posY=1)]
+[tutorial(animStyle="Drag", waitForSignal="select_direction", startTileX=4, startTileY=1, endTileX=6, endTileY=1)]
+[inputblocker(blockInput=true)]
+
+
+
+[battle.unlockfunction(mask="SYSTEM_MENU_INTERACT")]
+[battle.pause(pause=false)]

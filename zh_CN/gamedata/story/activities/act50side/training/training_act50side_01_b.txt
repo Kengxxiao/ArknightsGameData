@@ -1,0 +1,37 @@
+[header(is_skippable=true, is_tutorial=true)]
+[skipnode(mode="nofirstskip")]
+[battle.delay(time=1.1)]
+[battle.lockfunction(mask="SYSTEM_MENU_INTERACT")]
+[battle.pause(pause=true)]
+[popupdialog(dialogHead="$avatar_kroos", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]看，机会来了！
+[popupdialog(dialogHead="$avatar_fang", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]我知道，让我来试试翔虫的威力！这种翔虫可以让我方干员再部署并改变部署方向，翔虫释放的翔虫技可以<@tu.kw>对敌人造成伤害并累计御龙进度</>。
+
+[inputblocker(blockInput=false)]
+[battle.ensuremincost(cost=10)]
+[tutorial(animStyle="Drag", protectTime=0.5, waitForSignal="put_down", cardIndex=0, startCardIndex=0, endTileX=5, endTileY=1, charId="trap_274_pyctrn", posX=5, posY=1)]
+[tutorial(animStyle="Drag", waitForSignal="select_direction", startTileX=5, startTileY=0, endTileX=5, endTileY=2)]
+[inputblocker(blockInput=true)]
+
+
+[battle.pause(pause=false)]
+[battle.delay(time=2)]
+[battle.pause(pause=true)]
+[popupdialog(dialogHead="$avatar_fang", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]成功命中！
+[skipnode(mode="skip")]
+[tutorial(focusWidth=150, focusHeight=150, animStyle="Highlight", focusStyle="HighlightCircle", black="0.5", protectTime=0.5, dialogHead="$avatar_fang", tileY=2, tileX=5)]敌人进入了<@tu.kw>御龙准备状态</>，现在可以使用待部署区中的<@tu.kw>御龙稻草人</>了。
+
+[inputblocker(blockInput=false)]
+[battle.ensuremincost(cost=1)]
+[tutorial(animStyle="Drag", protectTime=0.5, waitForSignal="put_down", cardIndex=0, startCardIndex=0, endTileX=1, endTileY=2, charId="trap_281_ctlrol", posX=1, posY=2)]
+[inputblocker(blockInput=true)]
+
+[battle.pause(pause=false)]
+[battle.delay(time=0.5)]
+[battle.pause(pause=true)]
+[popupdialog(dialogHead="$avatar_kroos", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]反壳龟，加油啊，快点滚动到<@tu.kw>御龙稻草人的位置</>！
+[skipnode(mode="nofirstskip")]
+[SkipToThis]
+
+
+[battle.unlockfunction(mask="SYSTEM_MENU_INTERACT")]
+[battle.pause(pause=false)]
