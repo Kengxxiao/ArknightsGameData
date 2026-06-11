@@ -9,6 +9,7 @@ local list =
   "HotFixes/SandboxV3BasementDetailStateHotfixer",
   "HotFixes/SandboxV3BuildSaveManagerHotfixer",
   "HotFixes/ConvexHullHotfixer",
+  "HotFixes/Act24sideQuestStateHotfixer",
 };
 
 return list;
