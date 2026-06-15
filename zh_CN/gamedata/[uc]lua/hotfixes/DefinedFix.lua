@@ -10,6 +10,8 @@ local list =
   "HotFixes/SandboxV3BuildSaveManagerHotfixer",
   "HotFixes/ConvexHullHotfixer",
   "HotFixes/Act24sideQuestStateHotfixer",
+  "HotFixes/RebuildCharacterOnTileInRangeHotfixer",
+  "HotFixes/RebuildCharacterOnRandomTileHotfixer",
 };
 
 return list;
