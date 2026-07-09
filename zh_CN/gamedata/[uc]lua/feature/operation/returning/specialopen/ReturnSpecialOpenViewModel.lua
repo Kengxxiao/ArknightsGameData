@@ -218,17 +218,21 @@ end
 
 
 function ReturnSpecialOpenViewModel:_FindFirstSelection()
-  local resourceModel = self:_GetOpenTypeModel(ReturnAllOpenType.RESOURCE);
-  if resourceModel ~= nil and resourceModel.openState ~= ReturnSpecialOpenState.END then
-    return ReturnAllOpenType.RESOURCE;
+  local typeOrder = { ReturnAllOpenType.RESOURCE, ReturnAllOpenType.CAMP };
+  
+  for _, openType in ipairs(typeOrder) do
+    local model = self:_GetOpenTypeModel(openType);
+    if model ~= nil and model.openState ~= ReturnSpecialOpenState.END then
+      return openType;
+    end
   end
-
-  local campModel = self:_GetOpenTypeModel(ReturnAllOpenType.CAMP);
-  if campModel ~= nil and campModel.openState ~= ReturnSpecialOpenState.END then
-    return ReturnAllOpenType.CAMP;
+  
+  for _, openType in ipairs(typeOrder) do
+    local model = self:_GetOpenTypeModel(openType);
+    if model ~= nil then
+      return openType;
+    end
   end
-
-  LogError("[ReturnV2] No valid all open type.");
   return ReturnAllOpenType.RESOURCE;
 end
 
