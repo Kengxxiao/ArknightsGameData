@@ -8,6 +8,7 @@ local list =
   "HotFixes/UICharacterTabGroupAddtionHotfixer",
   "HotFixes/AphrisRangeHotfixer",
   "HotFixes/PCInputFontRegistryHotfixer",
+  "HotFixes/RL06ShopHotfixer",
 };
 
 return list;
