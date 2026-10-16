@@ -7,6 +7,8 @@ local list =
   "HotFixes/AVGStickerTextViewHotfixer",
   "HotFixes/Act52SideBattleManagerHotfixer",
   "HotFixes/BuildingRecycleBoostRemainHotfixer",
+  "HotFixes/FriendShowQRDialogHotfixer",
+  "HotFixes/PCMouseMgrHotfixer",
 };
 
 return list;
