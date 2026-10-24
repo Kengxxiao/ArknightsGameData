@@ -1,0 +1,41 @@
+[HEADER(is_tutorial=true, is_skippable=false, is_autoable=false)]电玩城大鱼吃小鱼模式教学关1_a
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.LockFunction(mask="CHARACTER_INFO")]
+[Battle.LockFunction(mask="CHARACTER_MENU")]
+[Battle.LockFunction(mask="CARD_LIST")]
+[Battle.LockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.LockFunction(mask="SPEED_SWITCHER_BUTTON_INTERACT")]
+[InputBlocker(blockInput=true, black=0.2)]
+[Battle.SwitchToDefaultUIState]
+[Delay(time=1.5)]
+[Battle.Pause]
+[Tutorial(protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 【<@tu.kw>饥饿虫虫</>】通关指南
+[Tutorial(protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 在饥饿虫虫中，博士的目标是部署<@tu.kw>“再吃一口”源石虫</>，吞噬等级不高于自己的敌人来升级并获取更高得分。
+[Battle.UnlockFunction(mask="CARD_LIST")]
+[InputBlocker(blockInput=false)]
+[Tutorial(tileX=7, tileY=1, focusWidth=108, focusHeight=111, waitForSignal="put_down", charId="trap_242_fshcave",           posX=7, posY=1, animStyle="Drag", startCardIndex=1, startRightStart=true, endTileX=7, endTileY=1,           dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY=250, focusStyle="HighlightCircle", black="$f_tut_black",           protectTime=0.5)] 首先，需要部署<@tu.kw>温暖的巢穴</>，让<@tu.kw>“再吃一口”源石虫</>出发。
+[InputBlocker(blockInput=true, tileX=7, tileY=1, validWidth=150, validHeight=170)]
+[Tutorial(waitForSignal="select_direction", animStyle="Drag",           startTileX=7, startTileY=1, endTileX=5, endTileY=1,           dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY=250)] 
+[InputBlocker(blockInput=true, black=0.2)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=5)]
+[Battle.Pause(pause=true)]
+[InputBlocker(blockInput=false)]
+[Tutorial(tileX=1, tileY=1, focusWidth=108, focusHeight=111, waitForSignal="put_down", charId="trap_243_tempturn",           posX=1, posY=1, animStyle="Drag", startCardIndex=0, startRightStart=true, endTileX=1, endTileY=1,           dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY=250, focusStyle="HighlightCircle", black="$f_tut_black",           protectTime=0.5)] 博士可以部署<@tu.kw>路过的磐蟹</>，它可以临时改变<@tu.kw>“再吃一口”源石虫</>的前进方向。
+[InputBlocker(blockInput=true, tileX=1, tileY=1, validWidth=150, validHeight=170)]
+[Tutorial(waitForSignal="select_direction", animStyle="Drag",           startTileX=1, startTileY=1, endTileX=1, endTileY=3,           dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY=250)] 这一次朝向选择<@tu.kw>向上</>，注意<@tu.kw>路过的磐蟹</>使用一次后会<@tu.kw>消失</>。
+[InputBlocker(blockInput=true, black=0.2)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=3)]
+[Battle.Pause(pause=true)]
+[Tutorial(tileX=2, tileY=7, focusWidth=108, focusHeight=111,           animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", anchor="Center",           protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 小心，部分敌人的等级高于<@tu.kw>“再吃一口”源石虫</>，身上带有<@tu.kw>危险标识</>，会吞噬它；但当<@tu.kw>“再吃一口”源石虫</>提升等级后，也可以反过来吞噬这些敌人。
+[Tutorial(protectTime=0.5, dialogHead="$avatar_sys", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] 避开危险的敌人然后出发吧！
+[SkipToThis]
+[InputBlocker(blockInput=false)]
+[Battle.UnlockFunction(mask="CHARACTER_INFO")]
+[Battle.UnlockFunction(mask="CHARACTER_MENU")]
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.UnlockFunction(mask="CARD_LIST")]
+[Battle.UnlockFunction(mask="PAUSE_BUTTON_INTERACT")]
+[Battle.UnlockFunction(mask="SPEED_SWITCHER_BUTTON_INTERACT")]
+[Battle.Pause(pause=false)]

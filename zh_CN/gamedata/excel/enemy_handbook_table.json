@@ -49416,11 +49416,7 @@
       "hideInStage": true,
       "abilityList": [
         {
-          "text": "无法被阻挡",
-          "textFormat": "NORMAL"
-        },
-        {
-          "text": "日照信仰与日蚀信仰的进度会随时间逐渐增长。受到法术伤害时会增长日照信仰的进度，满溢转变为艾穆拉伊，祝日降临；受到物理伤害时会增长日蚀信仰的进度，满溢时转变为托斯卡特尔，末日敕令",
+          "text": "日照与日蚀信仰随时间增长。受到法术伤害会增长日照信仰，满溢时转变为艾穆拉伊，祝日降临；受到物理伤害会增长日蚀信仰，满溢时转变为托斯卡特尔，末日敕令；两种形态下若对应信仰再次满溢会进入强化形态，持续一段时间",
           "textFormat": "NORMAL"
         },
         {
@@ -49428,25 +49424,61 @@
           "textFormat": "NORMAL"
         },
         {
-          "text": "转变形态后，对两个目标所在位置召唤陨石，陨石坠落后对目标及其周围造成高额物理伤害，并生成一个<祭台>；若转变为强化形态，则额外锁定两个目标",
+          "text": "信仰满溢后，对两个目标所在位置召唤陨石，陨石对目标及其周围造成高额物理伤害，并在目标周围生成一个<祭台>（至多存在5个）；若转变为强化形态，则额外锁定两个目标",
           "textFormat": "NORMAL"
         },
         {
-          "text": "第二形态",
+          "text": "【乌托邦的崛起】生命值首次降为0时，依据最后切换的形态，转变为对应强化形态且之后不再转变；移除场上其他敌人，改变战场区域的地形",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "沉沦之人",
           "textFormat": "TITLE"
         },
         {
-          "text": "转变为对应的强化形态且不再转变形态",
+          "text": "无法被阻挡",
           "textFormat": "NORMAL"
         },
         {
-          "text": "【乌托邦的崛起】移除场上敌人，改变战场区域的地形",
+          "text": "艾穆拉伊，祝日降临",
+          "textFormat": "TITLE"
+        },
+        {
+          "text": "受到的法术伤害大幅降低，日蚀信仰的增长速度降低；攻击造成<$ba.dt.burning>灼燃损伤</>，同时攻击两个目标",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "【耀日的恩宠】蓄力后朝一个目标释放，并额外链接至多2个单位，对链上的单位持续造成法术伤害",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "强化形态下不可阻挡，免疫<$ba.root>束缚</>、<$ba.sluggish>停顿</>，属性大幅提升，攻击范围扩大，【耀日的恩宠】额外链接2个目标，且对链上的单位造成<$ba.dt.burning>灼燃损伤</>",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "托斯卡特尔，末日敕令",
+          "textFormat": "TITLE"
+        },
+        {
+          "text": "受到的物理伤害大幅降低，日照信仰的增长速度降低；普通攻击为3连击，且会同时攻击自身周围的目标",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "我方干员撤退或被击倒时自身回复一定比例生命值",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "【熄日的祭仪】与我方单位处于同一直线时蓄力砍出剑气，对剑气碰到的首个目标及其周围造成高额物理伤害",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "强化形态下不可阻挡，免疫<$ba.root>束缚</>、<$ba.sluggish>停顿</>，属性大幅提升，普通攻击变为5连击",
           "textFormat": "NORMAL"
         }
       ],
       "linkEnemies": [
-        "enemy_2160_shadve",
-        "enemy_2161_shadvj"
+        "enemy_2157_shadvr_1",
+        "enemy_2157_shadvr_2"
       ],
       "damageType": [
         "NO_DAMAGE"
@@ -49499,7 +49531,7 @@
       ],
       "linkEnemies": [
         "enemy_2157_shadvr",
-        "enemy_2161_shadvj"
+        "enemy_2157_shadvr_2"
       ],
       "damageType": [
         "MAGIC"
@@ -49556,7 +49588,7 @@
       ],
       "linkEnemies": [
         "enemy_2157_shadvr",
-        "enemy_2160_shadve"
+        "enemy_2157_shadvr_1"
       ],
       "damageType": [
         "PHYSIC"
@@ -54608,6 +54640,180 @@
       "linkEnemies": [],
       "damageType": [
         "NO_DAMAGE"
+      ],
+      "invisibleDetail": false
+    },
+    "enemy_5508_hrgyfsh": {
+      "enemyId": "enemy_5508_hrgyfsh",
+      "enemyIndex": "PM13",
+      "enemyTags": null,
+      "sortId": 1755,
+      "name": "“再吃一口”源石虫",
+      "enemyLevel": "NORMAL",
+      "description": "游戏《饥饿虫虫》中的角色，只会向前爬行，梦想是吃下许多源石，成为大地上最大的源石虫！",
+      "attackType": null,
+      "ability": null,
+      "isInvalidKilled": true,
+      "overrideKillCntInfos": {},
+      "hideInHandbook": false,
+      "hideInStage": true,
+      "abilityList": [
+        {
+          "text": "会\"吞噬\"比自己弱小的敌人",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "每\"吞噬\"一定数量敌人后自身体型变大",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "体型越大，可以\"吞噬\"敌人的种类越多",
+          "textFormat": "NORMAL"
+        }
+      ],
+      "linkEnemies": [],
+      "damageType": [
+        "NO_DAMAGE"
+      ],
+      "invisibleDetail": false
+    },
+    "enemy_5509_revfish": {
+      "enemyId": "enemy_5509_revfish",
+      "enemyIndex": "PM14",
+      "enemyTags": null,
+      "sortId": 1756,
+      "name": "闪耀源石",
+      "enemyLevel": "NORMAL",
+      "description": "游戏《饥饿虫虫》中的道具，非常漂亮，能让吃下它的源石虫获得无可比拟的力量。",
+      "attackType": null,
+      "ability": null,
+      "isInvalidKilled": false,
+      "overrideKillCntInfos": {},
+      "hideInHandbook": false,
+      "hideInStage": true,
+      "abilityList": [
+        {
+          "text": "被<“再吃一口”源石虫>\"吞噬\"后使<“再吃一口”源石虫>获得一段时间无敌效果",
+          "textFormat": "NORMAL"
+        }
+      ],
+      "linkEnemies": [
+        "enemy_5508_hrgyfsh"
+      ],
+      "damageType": [
+        "PHYSIC"
+      ],
+      "invisibleDetail": false
+    },
+    "enemy_5511_bigfish": {
+      "enemyId": "enemy_5511_bigfish",
+      "enemyIndex": "PM15",
+      "enemyTags": null,
+      "sortId": 1757,
+      "name": "“大吨位！”源石虫",
+      "enemyLevel": "ELITE",
+      "description": "游戏《饥饿虫虫》中的角色，这一带的老大，当心点，抢走源石会让它生气暴走！",
+      "attackType": null,
+      "ability": null,
+      "isInvalidKilled": false,
+      "overrideKillCntInfos": {},
+      "hideInHandbook": false,
+      "hideInStage": true,
+      "abilityList": [
+        {
+          "text": "每间隔一段时间进入暴走状态",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "处于暴走状态期间，移动速度和攻击速度大幅提升，之后逐渐恢复",
+          "textFormat": "NORMAL"
+        }
+      ],
+      "linkEnemies": [],
+      "damageType": [
+        "PHYSIC"
+      ],
+      "invisibleDetail": false
+    },
+    "enemy_5512_stkslm": {
+      "enemyId": "enemy_5512_stkslm",
+      "enemyIndex": "PM16",
+      "enemyTags": null,
+      "sortId": 1758,
+      "name": "源石碎块",
+      "enemyLevel": "NORMAL",
+      "description": "游戏《饥饿虫虫》中的角色，随意滚动的小块源石，累积起来的分量不容小觑。",
+      "attackType": null,
+      "ability": null,
+      "isInvalidKilled": false,
+      "overrideKillCntInfos": {},
+      "hideInHandbook": false,
+      "hideInStage": true,
+      "abilityList": [
+        {
+          "text": "自身提供的关卡得分会随着已被吃掉的同名敌人数量递增",
+          "textFormat": "NORMAL"
+        }
+      ],
+      "linkEnemies": [],
+      "damageType": [
+        "PHYSIC"
+      ],
+      "invisibleDetail": false
+    },
+    "enemy_5513_porter": {
+      "enemyId": "enemy_5513_porter",
+      "enemyIndex": "PM17",
+      "enemyTags": null,
+      "sortId": 1759,
+      "name": "“抢零食！”鳞兽",
+      "enemyLevel": "ELITE",
+      "description": "游戏《饥饿虫虫》中的角色，它也喜欢收集源石，别让它得逞。",
+      "attackType": null,
+      "ability": null,
+      "isInvalidKilled": false,
+      "overrideKillCntInfos": {},
+      "hideInHandbook": false,
+      "hideInStage": true,
+      "abilityList": [
+        {
+          "text": "可以“吞噬”路过的敌人并按一定倍率累计关卡得分",
+          "textFormat": "NORMAL"
+        }
+      ],
+      "linkEnemies": [],
+      "damageType": [
+        "PHYSIC"
+      ],
+      "invisibleDetail": false
+    },
+    "enemy_5514_poslam": {
+      "enemyId": "enemy_5514_poslam",
+      "enemyIndex": "PM18",
+      "enemyTags": null,
+      "sortId": 1760,
+      "name": "喷泉“甜蜜气泡”",
+      "enemyLevel": "NORMAL",
+      "description": "游戏《喷泉大战》中的角色，风情街里的纯真毛绒绒生物。极度受人喜爱，想和它合一次影可得排上好几小时的队！",
+      "attackType": null,
+      "ability": null,
+      "isInvalidKilled": false,
+      "overrideKillCntInfos": {},
+      "hideInHandbook": false,
+      "hideInStage": true,
+      "abilityList": [
+        {
+          "text": "受到数次攻击后获得无敌效果，并向前冲刺留下纯白水汽，持续一段时间",
+          "textFormat": "NORMAL"
+        },
+        {
+          "text": "自身拥有较高比例的物理法术伤害减免",
+          "textFormat": "NORMAL"
+        }
+      ],
+      "linkEnemies": [],
+      "damageType": [
+        "PHYSIC"
       ],
       "invisibleDetail": false
     },
