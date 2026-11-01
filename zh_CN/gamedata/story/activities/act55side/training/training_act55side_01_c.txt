@@ -1,0 +1,37 @@
+[header(is_skippable=false, is_tutorial=true)]
+
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause]
+[inputblocker(blockInput=true, black=0.3)]
+
+
+[Tutorial(tileX=1, tileY=2, focusWidth=140, focusHeight=140, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+没有自爆榴弹的话，就只能通过部署远程干员来清理这些暗阱了。
+
+[popupdialog(dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]苦艾已经赶来支援。
+
+[Battle.EnsureMinCost(cost=22)]
+[InputBlocker(blockInput=false)]
+
+[Tutorial(waitForSignal="put_down", charId="char_405_absin", posX=1, posY=2, \
+          dialogHead="$avatar_crosly", animStyle="Drag", startCardIndex=1, startRightStart=true, \
+          endTileX=1, endTileY=2, dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+将她部署到这处变成暗阱的战壕上吧。
+
+[Tutorial(waitForSignal="select_direction", dialogHead="$avatar_crosly", animStyle="Drag", \
+          startTileX=1, startTileY=2, endTileX=2, endTileY=2, \
+          dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+接着，调整她的部署方向，使干员的攻击范围能够覆盖敌人的行进路线。
+
+[inputblocker(blockInput=true, black=0.3)]
+[Battle.Pause(pause=false)]
+[Battle.Delay(time=1)]
+[Battle.Pause]
+
+[popupdialog(dialogHead="$avatar_absin", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]啊，脚下的木板是松动的……它陷下去了！我暂时无法行动，请指示——
+[popupdialog(dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]直接清除暗阱会触发反制，使清除者晕眩一段时间。没关系，在这期间，我们会掩护你。
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]

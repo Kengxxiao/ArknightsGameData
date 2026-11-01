@@ -1,0 +1,35 @@
+[header(is_skippable=false, is_tutorial=true)]
+
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause]
+[inputblocker(blockInput=true, black=0.3)]
+
+[Tutorial(tileX=3, tileY=5, focusWidth=140, focusHeight=140, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+但如果有些战壕被翻板覆盖，就会形成暗阱。
+
+[Tutorial(tileX=2, tileY=4, focusWidth=220, focusHeight=220, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+这种时候可以用自爆榴弹来清除它们，使其变回正常的战壕。
+
+[Tutorial(cardIndex=0, rightStart=true, focusWidth=110, focusHeight=110, \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+自爆榴弹是工人们设计制作的，爆炸时不但能清除暗阱，还能使周围所有单位晕眩。
+
+[Battle.EnsureMinCost(cost=20)]
+[InputBlocker(blockInput=false)]
+
+[Tutorial(waitForSignal="put_down", charId="trap_341_dsjtzd", posX=2, posY=4, \
+          dialogHead="$avatar_crosly", animStyle="Drag", startCardIndex=0, startRightStart=true, \
+          endTileX=2, endTileY=4, dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+把自爆榴弹部署在这里，清除这些暗阱吧。
+
+[inputblocker(blockInput=true, black=0.3)]
+
+[popupdialog(dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]不过，自爆榴弹需要一段时间的准备才会爆炸。
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]

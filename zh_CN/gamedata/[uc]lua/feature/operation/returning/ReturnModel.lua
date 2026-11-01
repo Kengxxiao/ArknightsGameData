@@ -49,6 +49,11 @@ function ReturnModel:GetReturnStatus()
   return status;
 end
 
+
+function ReturnModel:GetOpenServerStatus()
+  return OpenServerV3Model.me:GetOpenServerStatus();
+end
+
 function ReturnModel:CheckIfHasMissionReward()
   local playerData = self:GetPlayerData();
   if playerData == nil or playerData.currentV2 == nil then

@@ -1,4 +1,3 @@
-local luaUtils = CS.Torappu.Lua.Util;
 local ReturnAllOpenType = CS.Torappu.ReturnAllOpenType;
 local BackflowSpecialOpenType = CS.Torappu.EventTrack.EventLogTrace.EventLogBackflowTraceContext.BackflowSpecialOpenType;
 
@@ -320,63 +319,7 @@ end
 
 
 function ReturnMainDlg.JumpToTarget(type, param)
-  if CS.Torappu.UI.UISyncDataUtil.instance:CheckCrossDaysAndResync() then
-    return;
-  end
-  if type == CS.Torappu.ReturnJumpType.ZONE_GROUP then
-    CS.Torappu.UI.UIRouteUtil.RouteToZoneViewType(CS.Torappu.UI.Stage.ZoneViewType.HOME);
-  elseif type == CS.Torappu.ReturnJumpType.ROGUE then
-    local lockTarget = CS.Torappu.UI.UILockTarget.PERM_MODE;
-    if not _ToastIfLocked(lockTarget) then
-      return;
-    end
-    if param == nil or param == "" then
-      return;
-    end
-    CS.Torappu.UI.UIRouteUtil.RouteToRoguelikeTopic(param);
-  elseif type == CS.Torappu.ReturnJumpType.SANDBOX then
-    local lockTarget = CS.Torappu.UI.UILockTarget.PERM_MODE;
-    if not _ToastIfLocked(lockTarget) then
-      return;
-    end
-    if param == nil or param == "" then
-      return;
-    end
-    CS.Torappu.UI.UIRouteUtil.RouteToSandboxPerm(param);
-  elseif type == CS.Torappu.ReturnJumpType.CLIMB_TOWER then
-    local toast = CS.Torappu.UI.ClimbTower.ClimbTowerUtil.GetClimbTowerFuncLockedToast();
-    if toast ~= nil and toast ~= "" then
-      luaUtils.TextToast(toast);
-      return;
-    end
-    CS.Torappu.UI.UIRouteUtil.RouteToClimbTower();
-  elseif type == CS.Torappu.ReturnJumpType.CAMPAIGN then
-    local lockTarget = CS.Torappu.UI.UILockTarget.CAMPAIGN_ENTRY;
-    if not _ToastIfLocked(lockTarget) then
-      return;
-    end
-    local playerCampaign = CS.Torappu.PlayerData.instance.data.campaign;
-    local stageId = playerCampaign.open.rotate;
-    local zoneId = CS.Torappu.CampaignDataUtil.GetStageZone(stageId);
-    if stageId == nil or stageId == "" or zoneId == nil or zoneId == "" then
-      return;
-    end
-    CS.Torappu.UI.UIRouteUtil.RouteToCampaign(zoneId, stageId);
-  elseif type == CS.Torappu.ReturnJumpType.BUILDING then
-    local lockTarget = CS.Torappu.UI.UILockTarget.BUILDING_ENTRY;
-    if not _ToastIfLocked(lockTarget) then
-      return;
-    end
-    CS.Torappu.UI.UIRouteUtil.RouteToTarget(CS.Torappu.UI.UIRouteTarget.BUILDING);
-  elseif type == CS.Torappu.ReturnJumpType.RECRUIT_BUILD then
-    CS.Torappu.UI.UIRouteUtil.RouteToTarget(CS.Torappu.UI.UIRouteTarget.RECRUIT_BUILD);
-  elseif type == CS.Torappu.ReturnJumpType.DAILY_MISSION then
-    local lockTarget = CS.Torappu.UI.UILockTarget.MISSION_DAILY;
-    if not _ToastIfLocked(lockTarget) then
-      return;
-    end
-    CS.Torappu.UI.UIRouteUtil.RouteToMission(CS.Torappu.Mission.MissionPageType.DAILYMISSION);
-  end
+  OperationJumpUtil.JumpToTarget(OperationJumpUtil.GetReturnOperationJumpType(type), param);
 end
 
 function _ToastIfLocked(lockTarget)

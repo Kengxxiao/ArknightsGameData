@@ -1,0 +1,89 @@
+[HEADER(is_skippable=false, is_tutorial=true)] 自走棋商品库引导（Deploy，有助战）
+
+[Activity.ResetToEntry]
+[Tutorial(waitForSignal="auto_chess_entry_anim_done")]
+
+[Tutorial(target="auto_chess_deploy_btn", searchBtnInChildren=false, \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="char_002_amiya")] \
+这里是商品库，我们可以在这里查看和调整主题干员，来看看
+
+[Tutorial(waitForSignal="auto_chess_deploy_view_routed")]
+
+[PopupDialog(dialogHead="$avatar_amiya")]本次参与模拟的干员被称为<@tu.kw>预设干员</>，将在此界面进行调配。已拥有的干员可以直接使用，没有任何限制。
+
+[PopupDialog(dialogHead="$avatar_amiya")]若尚未持有预设干员，则会使用以<@tu.kw>精英干员</>为蓝本的原型干员进行补位。当然，也可向好友申请借用干员作为填补。
+
+[Tutorial(target="panel_auto_chess_deploy_first_level_tag", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+卫戍协议中不同阶级的干员练度将被限制并固定，阶级越高，其在模拟中发挥的实力便越强。
+
+[Tutorial(target="panel_auto_chess_deploy_first_char_click_part", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+模拟中每位非自选干员都具备独特的能力，可点击干员进行查看。
+
+[Tutorial(waitForSignal="auto_chess_deploy_char_detail_routed")]
+
+[Tutorial(target="panel_auto_chess_deploy_char_detail_status_switch", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+同一干员存在初始和精锐两种状态，在模拟中通过合并三位相同干员可将干员从初始状态晋级为精锐状态，解锁使用模组的能力。
+
+[Tutorial(target="panel_auto_chess_deploy_first_char_skill_area", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+在此可以快速调整干员的技能配置。
+
+[Tutorial(target="panel_auto_chess_deploy_char_detail_bond", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+有效使用特质可以强化盟约效果，活用盟约可以极大增强博士在模拟中的实力。
+
+[Tutorial(target="panel_auto_chess_deploy_char_detail_confirm", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+现在，请点击确认并返回上一级界面。
+
+[Tutorial(waitForSignal="auto_chess_deploy_view_routed")]
+
+[Tutorial(target="panel_auto_chess_deploy_first_char_skill_edit", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+这里可以快捷调整干员使用的技能
+
+[Tutorial(target="btn_auto_chess_deploy_filter_mode_toggle", searchBtnInChildren=true, \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+这里可以按不同的筛选方式查阅干员，当前是按照阶级来查看，除此之外还可以按照盟约来查阅筛选，我们点击一下
+
+[Tutorial(waitForSignal="auto_chess_deploy_bond_mode_ready")]
+
+[Tutorial(target="panel_auto_chess_deploy_first_bond_tag", \
+          animStyle="Highlight", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+现在切换为羁绊查看了，这里可以看到该盟约下的干员
+
+[Tutorial(target="btn_auto_chess_deploy_diy_card_item", \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+点击这里可以编入自编干员，我们看看
+
+[Tutorial(waitForSignal="auto_chess_deploy_diy_panel_ready")]
+
+[PopupDialog(dialogHead="$avatar_amiya")]本次五六阶干员开放<@tu.kw>两个</>自选编队干员的名额，需要注意的是，自选编队仅可放置<@tu.kw>六星干员</>，在放入后调度中心随机资源的范围将被扩大。在进入单局后每个阶级最多选择<@tu.kw>2位</>加入战局。
+
+[Tutorial(target="btn_auto_chess_deploy_diy_close_btn", searchBtnInChildren=true, \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+点击退出
+
+[Tutorial(target="btn_auto_chess_deploy_top_quick_assist", searchBtnInChildren=true, \
+          animStyle="Click", focusStyle="HighlightRect", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_amiya")] \
+若当前未持有参加模拟的预设干员，可借用好友设置到助战的对应干员以填补，让我们来看看。
+
+[Tutorial(waitForSignal="auto_chess_deploy_quick_assist_view_routed")]
+
+[PopupDialog(dialogHead="$avatar_amiya")]可以在这里向好友借用干员进行补位，每次模拟开始时会自动向好友发起借用请求。若好友的助战栏中已设置对应干员，则可自动借用到位。

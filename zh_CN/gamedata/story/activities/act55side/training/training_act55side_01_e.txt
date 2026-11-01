@@ -1,0 +1,17 @@
+[header(is_skippable=false, is_tutorial=true)]
+
+[Battle.LockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause]
+[inputblocker(blockInput=true, black=0.3)]
+
+[Tutorial(tileX=5, tileY=1, focusWidth=140, focusHeight=140, \
+          animStyle="Highlight", focusStyle="HighlightCircle", black="$f_tut_black", \
+          protectTime=0.5, dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")] \
+敌人进入战壕时，同样会晕眩一段时间。可以恰当利用敌人进入战壕的时机，来为我方争取输出时间。
+
+[popupdialog(dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]总之，敌人的行进路线会围绕战壕的状态进行改变。
+
+[popupdialog(dialogHead="$avatar_crosly", dialogX="$f_lower_dialog_pos_x", dialogY="$f_lower_dialog_pos_y")]其余增援干员也在路上，接下来，我会把这里交给博士。
+
+[Battle.UnlockFunction(mask="SYSTEM_MENU_INTERACT")]
+[Battle.Pause(pause=false)]

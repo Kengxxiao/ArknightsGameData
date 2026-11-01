@@ -4753,7 +4753,32 @@
       "visitEveryCheckPoint": false
     }
   ],
-  "extraRoutes": [],
+  "extraRoutes": [
+    {
+      "motionMode": "E_NUM",
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "spawnRandomRange": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "spawnOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "checkpoints": null,
+      "allowDiagonalMove": true,
+      "visitEveryTileCenter": false,
+      "visitEveryNodeCenter": false,
+      "visitEveryCheckPoint": false
+    }
+  ],
   "enemies": [],
   "enemyDbRefs": [
     {
@@ -5463,9 +5488,66 @@
       "advancedWaveTag": null
     }
   ],
-  "branches": null,
+  "branches": {
+    "predefined_character": {
+      "phases": [
+        {
+          "preDelay": 0.0,
+          "actions": [
+            {
+              "actionType": "ACTIVATE_PREDEFINED",
+              "managedByScheduler": true,
+              "key": "char_2012_typhon#1",
+              "count": 1,
+              "preDelay": 0.0,
+              "interval": 1.0,
+              "routeIndex": 0,
+              "blockFragment": false,
+              "autoPreviewRoute": false,
+              "autoDisplayEnemyInfo": false,
+              "isUnharmfulAndAlwaysCountAsKilled": false,
+              "hiddenGroup": null,
+              "randomSpawnGroupKey": null,
+              "randomSpawnGroupPackKey": null,
+              "randomType": "ALWAYS",
+              "refreshType": "ALWAYS",
+              "weight": 0,
+              "dontBlockWave": false,
+              "forceBlockWaveInBranch": false
+            }
+          ]
+        }
+      ]
+    }
+  },
   "predefines": {
-    "characterInsts": [],
+    "characterInsts": [
+      {
+        "position": {
+          "row": 3,
+          "col": 7
+        },
+        "direction": "UP",
+        "hidden": true,
+        "alias": "char_2012_typhon#1",
+        "uniEquipIds": null,
+        "showSpIllust": false,
+        "masterInfos": null,
+        "inst": {
+          "characterKey": "char_2012_typhon",
+          "level": 90,
+          "phase": "PHASE_2",
+          "favorPoint": 0,
+          "potentialRank": 0
+        },
+        "skillIndex": 2,
+        "mainSkillLvl": 10,
+        "skinId": "",
+        "tmplId": null,
+        "overrideSkillBlackboard": null,
+        "overrideTalents": null
+      }
+    ],
     "tokenInsts": [
       {
         "position": {
@@ -5487,7 +5569,32 @@
         },
         "skillIndex": 0,
         "mainSkillLvl": 1,
-        "skinId": null,
+        "skinId": "",
+        "tmplId": null,
+        "overrideSkillBlackboard": null,
+        "overrideTalents": null
+      },
+      {
+        "position": {
+          "row": 5,
+          "col": 3
+        },
+        "direction": "UP",
+        "hidden": false,
+        "alias": "trap_346_msos#1",
+        "uniEquipIds": null,
+        "showSpIllust": false,
+        "masterInfos": null,
+        "inst": {
+          "characterKey": "trap_346_msos",
+          "level": 1,
+          "phase": "PHASE_0",
+          "favorPoint": 0,
+          "potentialRank": 0
+        },
+        "skillIndex": 0,
+        "mainSkillLvl": 1,
+        "skinId": "",
         "tmplId": null,
         "overrideSkillBlackboard": null,
         "overrideTalents": null
@@ -5496,7 +5603,12 @@
     "characterCards": [],
     "tokenCards": []
   },
-  "hardPredefines": null,
+  "hardPredefines": {
+    "characterInsts": [],
+    "tokenInsts": [],
+    "characterCards": [],
+    "tokenCards": []
+  },
   "excludeCharIdList": null,
   "randomSeed": 586487713,
   "operaConfig": null,

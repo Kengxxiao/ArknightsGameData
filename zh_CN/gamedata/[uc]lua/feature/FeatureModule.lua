@@ -58,6 +58,19 @@ require "Feature/Activity/MainlineBuff/MainlineBuffMainDlg"
 
 require "Feature/Wardrobe/WardrobeModule"
 
+require "Feature/Operation/Common/OperationJumpUtil";
+
+require "Feature/Operation/OpenServerV3/OpenServerV3Define";
+require "Feature/Operation/OpenServerV3/OpenServerV3MainDlg";
+require "Feature/Operation/OpenServerV3/OpenServerV3MainDlgViewModel";
+require "Feature/Operation/OpenServerV3/OpenServerV3Model";
+require "Feature/Operation/OpenServerV3/OpenServerV3TrackPoint";
+require "Feature/Operation/OpenServerV3/OpenServerV3PageDlg";
+require "Feature/Operation/OpenServerV3/StageCampaign/OpenServerV3StageCampaignDlg"
+require "Feature/Operation/OpenServerV3/StageCampaign/OpenServerV3StageCampaignDlgViewModel"
+require "Feature/Operation/OpenServerV3/StageStory/OpenServerV3StageStoryDlg"
+require "Feature/Operation/OpenServerV3/StageStory/OpenServerV3StageStoryDlgViewModel"
+
 require "Feature/Operation/Returning/ReturnDefine";
 require "Feature/Operation/Returning/ReturnMainDlg";
 require "Feature/Operation/Returning/ReturnMainDlgViewModel";

@@ -3340,7 +3340,56 @@
       "visitEveryCheckPoint": false
     }
   ],
-  "extraRoutes": [],
+  "extraRoutes": [
+    {
+      "motionMode": "E_NUM",
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "spawnRandomRange": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "spawnOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "checkpoints": null,
+      "allowDiagonalMove": true,
+      "visitEveryTileCenter": false,
+      "visitEveryNodeCenter": false,
+      "visitEveryCheckPoint": false
+    },
+    {
+      "motionMode": "E_NUM",
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "spawnRandomRange": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "spawnOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "checkpoints": null,
+      "allowDiagonalMove": true,
+      "visitEveryTileCenter": false,
+      "visitEveryNodeCenter": false,
+      "visitEveryCheckPoint": false
+    }
+  ],
   "enemies": [],
   "enemyDbRefs": [
     {
@@ -4161,14 +4210,148 @@
       "advancedWaveTag": null
     }
   ],
-  "branches": null,
+  "branches": {
+    "predefined_character": {
+      "phases": [
+        {
+          "preDelay": 0.0,
+          "actions": [
+            {
+              "actionType": "ACTIVATE_PREDEFINED",
+              "managedByScheduler": true,
+              "key": "char_4088_hodrer#1",
+              "count": 1,
+              "preDelay": 0.0,
+              "interval": 1.0,
+              "routeIndex": 0,
+              "blockFragment": false,
+              "autoPreviewRoute": false,
+              "autoDisplayEnemyInfo": false,
+              "isUnharmfulAndAlwaysCountAsKilled": false,
+              "hiddenGroup": null,
+              "randomSpawnGroupKey": null,
+              "randomSpawnGroupPackKey": null,
+              "randomType": "ALWAYS",
+              "refreshType": "ALWAYS",
+              "weight": 0,
+              "dontBlockWave": false,
+              "forceBlockWaveInBranch": false
+            },
+            {
+              "actionType": "ACTIVATE_PREDEFINED",
+              "managedByScheduler": true,
+              "key": "char_4087_ines#1",
+              "count": 1,
+              "preDelay": 0.0,
+              "interval": 1.0,
+              "routeIndex": 1,
+              "blockFragment": false,
+              "autoPreviewRoute": false,
+              "autoDisplayEnemyInfo": false,
+              "isUnharmfulAndAlwaysCountAsKilled": false,
+              "hiddenGroup": null,
+              "randomSpawnGroupKey": null,
+              "randomSpawnGroupPackKey": null,
+              "randomType": "ALWAYS",
+              "refreshType": "ALWAYS",
+              "weight": 0,
+              "dontBlockWave": false,
+              "forceBlockWaveInBranch": false
+            }
+          ]
+        }
+      ]
+    }
+  },
   "predefines": {
+    "characterInsts": [
+      {
+        "position": {
+          "row": 5,
+          "col": 8
+        },
+        "direction": "LEFT",
+        "hidden": true,
+        "alias": "char_4088_hodrer#1",
+        "uniEquipIds": null,
+        "showSpIllust": false,
+        "masterInfos": null,
+        "inst": {
+          "characterKey": "char_4088_hodrer",
+          "level": 90,
+          "phase": "PHASE_2",
+          "favorPoint": 0,
+          "potentialRank": 0
+        },
+        "skillIndex": 0,
+        "mainSkillLvl": 10,
+        "skinId": "",
+        "tmplId": null,
+        "overrideSkillBlackboard": null,
+        "overrideTalents": null
+      },
+      {
+        "position": {
+          "row": 3,
+          "col": 8
+        },
+        "direction": "LEFT",
+        "hidden": true,
+        "alias": "char_4087_ines#1",
+        "uniEquipIds": null,
+        "showSpIllust": false,
+        "masterInfos": null,
+        "inst": {
+          "characterKey": "char_4087_ines",
+          "level": 90,
+          "phase": "PHASE_2",
+          "favorPoint": 0,
+          "potentialRank": 0
+        },
+        "skillIndex": 0,
+        "mainSkillLvl": 10,
+        "skinId": "",
+        "tmplId": null,
+        "overrideSkillBlackboard": null,
+        "overrideTalents": null
+      }
+    ],
+    "tokenInsts": [
+      {
+        "position": {
+          "row": 3,
+          "col": 5
+        },
+        "direction": "UP",
+        "hidden": false,
+        "alias": "trap_346_msos#1",
+        "uniEquipIds": null,
+        "showSpIllust": false,
+        "masterInfos": null,
+        "inst": {
+          "characterKey": "trap_346_msos",
+          "level": 1,
+          "phase": "PHASE_0",
+          "favorPoint": 0,
+          "potentialRank": 0
+        },
+        "skillIndex": 0,
+        "mainSkillLvl": 1,
+        "skinId": null,
+        "tmplId": null,
+        "overrideSkillBlackboard": null,
+        "overrideTalents": null
+      }
+    ],
+    "characterCards": [],
+    "tokenCards": []
+  },
+  "hardPredefines": {
     "characterInsts": [],
     "tokenInsts": [],
     "characterCards": [],
     "tokenCards": []
   },
-  "hardPredefines": null,
   "excludeCharIdList": null,
   "randomSeed": 1358674848,
   "operaConfig": null,

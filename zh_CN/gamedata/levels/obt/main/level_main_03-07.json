@@ -326,7 +326,7 @@
         "effects": null
       },
       {
-        "tileKey": "tile_road",
+        "tileKey": "tile_rcm_crate",
         "heightType": "LOWLAND",
         "buildableType": "MELEE",
         "passableMask": "ALL",
@@ -542,7 +542,7 @@
         "effects": null
       },
       {
-        "tileKey": "tile_road",
+        "tileKey": "tile_rcm_crate",
         "heightType": "LOWLAND",
         "buildableType": "MELEE",
         "passableMask": "ALL",
@@ -740,7 +740,7 @@
         "effects": null
       },
       {
-        "tileKey": "tile_road",
+        "tileKey": "tile_rcm_crate",
         "heightType": "LOWLAND",
         "buildableType": "MELEE",
         "passableMask": "ALL",
@@ -2191,7 +2191,56 @@
       "visitEveryCheckPoint": false
     }
   ],
-  "extraRoutes": [],
+  "extraRoutes": [
+    {
+      "motionMode": "E_NUM",
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "spawnRandomRange": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "spawnOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "checkpoints": null,
+      "allowDiagonalMove": true,
+      "visitEveryTileCenter": false,
+      "visitEveryNodeCenter": false,
+      "visitEveryCheckPoint": false
+    },
+    {
+      "motionMode": "E_NUM",
+      "startPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "endPosition": {
+        "row": 0,
+        "col": 0
+      },
+      "spawnRandomRange": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "spawnOffset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "checkpoints": null,
+      "allowDiagonalMove": true,
+      "visitEveryTileCenter": false,
+      "visitEveryNodeCenter": false,
+      "visitEveryCheckPoint": false
+    }
+  ],
   "enemies": [],
   "enemyDbRefs": [
     {
@@ -3166,7 +3215,59 @@
       "advancedWaveTag": null
     }
   ],
-  "branches": null,
+  "branches": {
+    "predefined_character": {
+      "phases": [
+        {
+          "preDelay": 0.0,
+          "actions": [
+            {
+              "actionType": "ACTIVATE_PREDEFINED",
+              "managedByScheduler": true,
+              "key": "char_1041_angel2#1",
+              "count": 1,
+              "preDelay": 0.0,
+              "interval": 1.0,
+              "routeIndex": 0,
+              "blockFragment": false,
+              "autoPreviewRoute": false,
+              "autoDisplayEnemyInfo": false,
+              "isUnharmfulAndAlwaysCountAsKilled": false,
+              "hiddenGroup": null,
+              "randomSpawnGroupKey": null,
+              "randomSpawnGroupPackKey": null,
+              "randomType": "ALWAYS",
+              "refreshType": "ALWAYS",
+              "weight": 0,
+              "dontBlockWave": false,
+              "forceBlockWaveInBranch": false
+            },
+            {
+              "actionType": "ACTIVATE_PREDEFINED",
+              "managedByScheduler": true,
+              "key": "char_4133_logos#1",
+              "count": 1,
+              "preDelay": 0.0,
+              "interval": 1.0,
+              "routeIndex": 1,
+              "blockFragment": false,
+              "autoPreviewRoute": false,
+              "autoDisplayEnemyInfo": false,
+              "isUnharmfulAndAlwaysCountAsKilled": false,
+              "hiddenGroup": null,
+              "randomSpawnGroupKey": null,
+              "randomSpawnGroupPackKey": null,
+              "randomType": "ALWAYS",
+              "refreshType": "ALWAYS",
+              "weight": 0,
+              "dontBlockWave": false,
+              "forceBlockWaveInBranch": false
+            }
+          ]
+        }
+      ]
+    }
+  },
   "predefines": {
     "characterInsts": [],
     "tokenInsts": [
@@ -3214,14 +3315,19 @@
         },
         "skillIndex": 0,
         "mainSkillLvl": 1,
-        "skinId": null,
+        "skinId": "",
         "tmplId": null,
         "overrideSkillBlackboard": null,
         "overrideTalents": null
       }
     ]
   },
-  "hardPredefines": null,
+  "hardPredefines": {
+    "characterInsts": [],
+    "tokenInsts": [],
+    "characterCards": [],
+    "tokenCards": []
+  },
   "excludeCharIdList": null,
   "randomSeed": 972307216,
   "operaConfig": null,
