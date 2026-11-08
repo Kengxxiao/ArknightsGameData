@@ -1,0 +1,9 @@
+[HEADER(is_skippable=false, is_tutorial=true, dont_clear_gameobjectpool_onstart = true)] 卫戍战斗-第二回合休整期
+[InputBlocker(blockInput=true)]
+[Battle.SwitchToDefaultUIState]
+[Delay(time=0.5)]
+[InputBlocker(blockInput=false)]
+[Battle.AutoChessRegisterBattleChar(key="tutorial_main_char", selectMode="TILE", tileRow=3, tileCol=4)]
+[Battle.AutoChessRegisterHandInst(key="tutorial_equip", itemType="EQUIP", selectMode="RIGHTMOST")]
+[Battle.AutoChessSetEquipTutorial(equipKey="tutorial_equip", charKey="tutorial_main_char")]
+[Tutorial(waitForSignal="signal_auto_chess_battle_equip_on_character",           dialogHead="$avatar_amiya", animStyle="Drag",           startBattleTarget="key_auto_chess_tutorial_drag_start", endBattleTarget="key_auto_chess_tutorial_drag_end")] 干员晋升之后，已经配置的装备会被卸下，另外获取同名装备使装备晋级之后也会取消配置，我们需要重新进行装备配置。

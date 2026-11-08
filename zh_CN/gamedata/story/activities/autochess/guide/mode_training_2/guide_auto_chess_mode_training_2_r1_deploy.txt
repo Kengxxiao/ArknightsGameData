@@ -1,0 +1,8 @@
+[HEADER(is_skippable=false, is_tutorial=true, dont_clear_gameobjectpool_onstart = true)] 卫戍战斗-第一回合休整期
+[InputBlocker(blockInput=true)]
+[Battle.SwitchToDefaultUIState]
+[Delay(time=0.5)]
+[InputBlocker(blockInput=false)]
+[Battle.AutoChessRegisterHandInst(key="tutorial_main_char", itemType="CHAR", selectMode="RIGHTMOST")]
+[Battle.AutoChessSetDeployTutorial(charKey="tutorial_main_char", tileRow=3, tileCol=4)]
+[Tutorial(waitForSignal="signal_auto_chess_battle_place_on_battlefield",           dialogHead="$avatar_amiya", animStyle="Drag",           startBattleTarget="key_auto_chess_tutorial_drag_start", endBattleTarget="key_auto_chess_tutorial_drag_end")] 博士应该很熟悉部署干员的方式吧？没错！只要<@tu.kw>拖拽干员</>就可以把他们从整备区部署到战场区。

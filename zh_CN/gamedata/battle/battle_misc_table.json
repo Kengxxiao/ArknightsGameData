@@ -10179,53 +10179,282 @@
     "defaultDozeAnim": "Idle",
     "slowDownTemplateKey": "slow_down",
     "AUTOCHESS": {
-      "idleEffectMap": {},
-      "defaultAnimMap": {},
-      "forceUseModeIds": {},
+      "idleEffectMap": {
+        "token_10030_mlyss_wtrman": "token_10030_mlyss_wtrman_c0"
+      },
+      "defaultAnimMap": {
+        "token_10030_mlyss_wtrman": "Idle"
+      },
+      "forceUseModeIds": {
+        "char_1502_crosly": 0,
+        "char_1029_yato2": 0,
+        "token_10028_vigil_wolf": 1
+      },
       "enemyPreviewBuff": null,
-      "mlyssWtrmanTransformBuff": null,
+      "mlyssWtrmanTransformBuff": "mlyss_wtrman_during_anim",
       "effectConfig": {
-        "goldenEffectId": null,
-        "buildableTileHintEffect": null,
-        "maskEffectWhenGainChess": null,
-        "deckRegionEffect": null,
-        "tempChessRegionClearWarningEffect": null,
-        "garrisonHintEffect": null,
-        "chessUpgradeHintEffect": null,
-        "equipComboHintEffect": null,
-        "equipCntEffect": null,
-        "preloadEffects": null
+        "goldenEffectId": "trap_acgarm_buff_loop_01",
+        "buildableTileHintEffect": "map_act1autochess_place_01",
+        "maskEffectWhenGainChess": "map_act1autochess_gainchess_01",
+        "deckRegionEffect": "map_act1autochess_target_01",
+        "tempChessRegionClearWarningEffect": "map_act1autochess_warning_01",
+        "garrisonHintEffect": "map_v079_buff01",
+        "chessUpgradeHintEffect": "trap_acgarm_start_01_up_trail",
+        "equipComboHintEffect": "common_071_map_2pieceset_01",
+        "equipCntEffect": {
+          "char_618_acrbot": [
+            "",
+            "char_acrbot_ability_01_2",
+            "char_acrbot_ability_01_3",
+            "char_acrbot_ability_01_4",
+            "char_acrbot_ability_01_5",
+            "char_acrbot_ability_01_6",
+            "char_acrbot_ability_01_7"
+          ]
+        },
+        "preloadEffects": [
+          "trap_acgarm_buff_loop_01",
+          "map_act1autochess_place_01",
+          "map_act1autochess_gainchess_01",
+          "map_act1autochess_target_01",
+          "map_act1autochess_warning_01",
+          "map_v079_buff01",
+          "map_v079_buff02",
+          "map_v079_buff03",
+          "map_v079_buff04",
+          "trap_acgarm_start_01_up_trail",
+          "common_071_map_2pieceset_01"
+        ]
       },
       "tutorialManagerCfg": {
-        "bossRoundFocusMapBoundPos": null,
-        "bossRoundFocusBossPos": null
+        "bossRoundFocusMapBoundPos": [
+          4,
+          11
+        ],
+        "bossRoundFocusBossPos": [
+          20,
+          10
+        ]
       },
       "mapSettings": {
-        "areaRect": {},
-        "overrideLevelDataOffset": [],
-        "defaultBattleOffset": {
-          "row": 0,
-          "col": 0
+        "areaRect": {
+          "ENEMY_PREVIEW_0": "((1,12),(5,18))",
+          "ENEMY_PREVIEW_1": "((30,12),(34,18))",
+          "ENEMY_PREVIEW_2": "((30,47),(34,53))",
+          "ENEMY_PREVIEW_3": "((1,47),(5,53))",
+          "ENEMY_PREVIEW_BOSS_0": "((22,7),(26,13))",
+          "ENEMY_PREVIEW_BOSS_1": "((22,41),(26,47))",
+          "CHAR_HAND_0": "((0,0),(0,9))",
+          "CHAR_HAND_1": "((29,0),(29,9))",
+          "CHAR_HAND_2": "((29,35),(29,44))",
+          "CHAR_HAND_3": "((0,35),(0,44))",
+          "CHAR_HAND_BOSS_LEFT_0": "((15,0),(15,9))",
+          "CHAR_HAND_BOSS_RIGHT_0": "((15,11),(15,20))",
+          "CHAR_HAND_BOSS_LEFT_1": "((15,34),(15,43))",
+          "CHAR_HAND_BOSS_RIGHT_1": "((15,45),(15,54))",
+          "CHAR_HAND_HELP_0": "((8,17),(8,26))",
+          "CHAR_HAND_HELP_1": "((8,28),(8,37))",
+          "EQUIP_HAND_0": "((1,4),(1,8))",
+          "EQUIP_HAND_1": "((30,4),(30,8))",
+          "EQUIP_HAND_2": "((30,39),(30,43))",
+          "EQUIP_HAND_3": "((1,39),(1,43))",
+          "EQUIP_HAND_BOSS_LEFT_0": "((16,4),(16,8))",
+          "EQUIP_HAND_BOSS_RIGHT_0": "((16,12),(16,16))",
+          "EQUIP_HAND_BOSS_LEFT_1": "((16,38),(16,42))",
+          "EQUIP_HAND_BOSS_RIGHT_1": "((16,46),(16,50))",
+          "BATTLE_SELF_0": "((2,2),(6,10))",
+          "BATTLE_SELF_1": "((31,2),(35,10))",
+          "BATTLE_SELF_2": "((31,37),(35,45))",
+          "BATTLE_SELF_3": "((2,37),(6,45))",
+          "BATTLE_HELP_LEFT": "((9,19),(13,26))",
+          "BATTLE_HELP_RIGHT": "((9,27),(13,35))",
+          "BATTLE_BOSS_LEFT_0": "((17,2),(21,10))|((16,3),(16,3))",
+          "BATTLE_BOSS_RIGHT_0": "((17,11),(21,18))|((16,17),(16,17))",
+          "BATTLE_BOSS_LEFT_1": "((17,36),(21,44))|((16,37),(16,37))",
+          "BATTLE_BOSS_RIGHT_1": "((17,45),(21,52))|((16,51),(16,51))",
+          "ALL_NORMAL_0": "((0,0),(6,19))",
+          "ALL_NORMAL_1": "((29,0),(35,19))",
+          "ALL_NORMAL_2": "((29,35),(35,54))",
+          "ALL_NORMAL_3": "((0,35),(6,54))",
+          "ALL_HELP": "((8,17),(13,37))",
+          "ALL_BOSS_0": "((15,0),(27,20))",
+          "ALL_BOSS_1": "((15,34),(27,54))"
         },
-        "mapFlipWidth": 0
+        "overrideLevelDataOffset": [
+          {
+            "areaType": 31,
+            "position": {
+              "row": 16,
+              "col": 2
+            }
+          },
+          {
+            "areaType": 32,
+            "position": {
+              "row": 16,
+              "col": 11
+            }
+          },
+          {
+            "areaType": 33,
+            "position": {
+              "row": 16,
+              "col": 36
+            }
+          },
+          {
+            "areaType": 34,
+            "position": {
+              "row": 16,
+              "col": 45
+            }
+          }
+        ],
+        "defaultBattleOffset": {
+          "row": 2,
+          "col": 2
+        },
+        "mapFlipWidth": 11
       },
       "cameraSettings": {
-        "cameraPos": {},
-        "moveTime": 0.0
+        "cameraPos": {
+          "PREPARE_NORMAL_HAND_0": "(-22,-15.5,-2.5,1)",
+          "PREPARE_NORMAL_HAND_1": "(-22,13.5,-2.5,1)",
+          "PREPARE_NORMAL_HAND_2": "(13,13.5,-2.5,1)",
+          "PREPARE_NORMAL_HAND_3": "(13,-15.5,-2.5,1)",
+          "PREPARE_NORMAL_SHOP_0": "(-21.5,-17.5,-4,1)",
+          "PREPARE_NORMAL_SHOP_1": "(-21.5,11.5,-4,1)",
+          "PREPARE_NORMAL_SHOP_2": "(13.5,11.5,-4,1)",
+          "PREPARE_NORMAL_SHOP_3": "(13.5,-17.5,-4,1)",
+          "PREPARE_NORMAL_ENEMY_0": "(-11.5,-13.7,-0.3,1)",
+          "PREPARE_NORMAL_ENEMY_1": "(-11.5,15.3,-0.3,1)",
+          "PREPARE_NORMAL_ENEMY_2": "(23.5,15.3,-0.3,1)",
+          "PREPARE_NORMAL_ENEMY_3": "(23.5,-13.7,-0.3,1)",
+          "PREPARE_BOSS_HAND_LEFT_0": "(-22,-0.5,-2.5,1)",
+          "PREPARE_BOSS_SHOP_LEFT_0": "(-22,-2.5,-4,1)",
+          "PREPARE_BOSS_HAND_RIGHT_0": "(-11,-0.5,-2.5,1)",
+          "PREPARE_BOSS_SHOP_RIGHT_0": "(-10.6,-2.5,-4,1)",
+          "PREPARE_BOSS_HAND_LEFT_1": "(12,-0.5,-2.5,1)",
+          "PREPARE_BOSS_SHOP_LEFT_1": "(12,-2.5,-4,1)",
+          "PREPARE_BOSS_HAND_RIGHT_1": "(23,-0.5,-2.5,1)",
+          "PREPARE_BOSS_SHOP_RIGHT_1": "(23.4,-2.5,-4,1)",
+          "PREPARE_BOSS_ENEMY_0": "(-16.29,6.7,-0.3,1)",
+          "PREPARE_BOSS_ENEMY_1": "(17.7,6.7,-0.3,1)",
+          "BATTLE_SELF_0": "(-22.4,-14.7,-1.5,1)",
+          "BATTLE_SELF_1": "(-22.4,14.3,-1.5,1)",
+          "BATTLE_SELF_2": "(12.6,14.3,-1.5,1)",
+          "BATTLE_SELF_3": "(12.6,-14.7,-1.5,1)",
+          "BATTLE_HELP_LEFT": "(-5.4,-6.7,-1,1)",
+          "BATTLE_HELP_MID": "(0,-8,-4,1)",
+          "BATTLE_HELP_RIGHT": "(5.6,-6.7,-1,1)",
+          "BATTLE_BOSS_LEFT_0": "(-22.4,0.3,-1.5,1)",
+          "BATTLE_BOSS_MID_0": "(-17,-1,-4,1)",
+          "BATTLE_BOSS_RIGHT_0": "(-11.4,0.3,-1.5,1)",
+          "BATTLE_BOSS_LEFT_1": "(11.6,0.3,-1.5,1)",
+          "BATTLE_BOSS_MID_1": "(17,-1,-4,1)",
+          "BATTLE_BOSS_RIGHT_1": "(22.6,0.3,-1.5,1)"
+        },
+        "moveTime": 0.25
       },
       "sceneSettings": {
-        "defaultScenes": [],
-        "multiPlayerScenes": []
+        "defaultScenes": [
+          {
+            "sceneType": 0,
+            "indexOffset": 0,
+            "offset": {
+              "row": 0,
+              "col": 0
+            }
+          },
+          {
+            "sceneType": 1,
+            "indexOffset": -1,
+            "offset": {
+              "row": 8,
+              "col": 17
+            }
+          },
+          {
+            "sceneType": 2,
+            "indexOffset": 0,
+            "offset": {
+              "row": 15,
+              "col": 0
+            }
+          }
+        ],
+        "multiPlayerScenes": [
+          {
+            "sceneType": 0,
+            "indexOffset": 0,
+            "offset": {
+              "row": 0,
+              "col": 0
+            }
+          },
+          {
+            "sceneType": 0,
+            "indexOffset": 1,
+            "offset": {
+              "row": 29,
+              "col": 0
+            }
+          },
+          {
+            "sceneType": 0,
+            "indexOffset": 2,
+            "offset": {
+              "row": 29,
+              "col": 35
+            }
+          },
+          {
+            "sceneType": 0,
+            "indexOffset": 3,
+            "offset": {
+              "row": 0,
+              "col": 35
+            }
+          },
+          {
+            "sceneType": 1,
+            "indexOffset": -1,
+            "offset": {
+              "row": 8,
+              "col": 17
+            }
+          },
+          {
+            "sceneType": 2,
+            "indexOffset": 0,
+            "offset": {
+              "row": 15,
+              "col": 0
+            }
+          },
+          {
+            "sceneType": 2,
+            "indexOffset": 1,
+            "offset": {
+              "row": 15,
+              "col": 34
+            }
+          }
+        ]
       },
       "emotionalChessOffset": {
-        "row": 0,
-        "col": 0
+        "row": 2,
+        "col": -1
       },
       "emotionalChessSpIdleWaitTime": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 10.0,
+        "y": 15.0
       },
-      "bondCheerLevels": null
+      "bondCheerLevels": [
+        100,
+        300,
+        500
+      ]
     },
     "prdBaseProbs": [
       0.0,

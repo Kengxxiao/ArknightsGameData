@@ -3,7 +3,9 @@ local AutoChessBattleUIHUDModel = CS.Torappu.UI.AutoChess.Battle.AutoChessBattle
 local AutoChessBattlePlayerStatusGroupModel = CS.Torappu.UI.AutoChess.Battle.AutoChessBattlePlayerStatusGroupModel
 local AutoChessBattleMapLayer = CS.Torappu.Battle.AutoChess.AutoChessGameStatus.AutoChessBattleMapLayer
 local ActAutoChessEntryViewModel = CS.Torappu.Activity.AutoChess.ActAutoChessEntryViewModel
+local ActAutoChessHandbookTopBarView = CS.Torappu.Activity.AutoChess.ActAutoChessHandbookTopBarView
 local AutoChessLocalCache = CS.Torappu.UI.AutoChess.AutoChessLocalCache
+local AutoChessUtil = CS.Torappu.UI.AutoChess.AutoChessUtil
 local AVGController = CS.Torappu.AVG.AVGController
 local eutil = CS.Torappu.Lua.Util
 
@@ -139,10 +141,118 @@ local function _InitEntryViewModelFixes(self)
   end)
 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+local _HandbookBandTrackLogTag = "[AutoChessHotfixer][HandbookBandTrack]"
+
+local _BandTrackModelTypeName = "Torappu.Activity.AutoChess.ActAutoChessHandbookTopBarView+BandTrackPointModel"
+
+local _checkAllBandTrackActId = nil
+
+local function _CheckAllBandTrackFix(actId)
+  if type(actId) ~= "string" then
+    actId = _checkAllBandTrackActId
+  end
+  if type(actId) ~= "string" or actId == "" then
+    return false
+  end
+  local actData = AutoChessUtil.GetActAutoChessData(actId)
+  if actData == nil then
+    return false
+  end
+  local bandDict = actData.bandDataListDict
+  if bandDict == nil then
+    return false
+  end
+  
+  local count = bandDict.Count
+  for i = 0, count - 1 do
+    local bandId = bandDict:Get(i).Key
+    if AutoChessUtil.CheckBandTrack(bandId) then
+      return true
+    end
+  end
+  return false
+end
+
+local function _UpdateStateFix(self, param)
+  
+  if type(param) ~= "string" then
+    self.isShow = false
+    return
+  end
+  _checkAllBandTrackActId = param
+  local ok, show = xpcall(AutoChessUtil.CheckAllBandTrack, debug.traceback, param)
+  if not ok then
+    
+    show = AutoChessUtil.CheckAllBandTrack()
+  end
+  _checkAllBandTrackActId = nil
+  self.isShow = show == true
+end
+
+local function _OnValueChangedFix(self, property)
+  self:OnValueChanged(property)
+  local model = property.Value
+  if model == nil then
+    return
+  end
+  local trackProperty = self.m_trackPointProperty
+  local trackModel = trackProperty ~= nil and trackProperty.Value or nil
+  if trackModel == nil then
+    return
+  end
+  trackModel:UpdateState(model:GetActId())
+  
+  trackProperty.Value = trackModel
+end
+
+local function _InitHandbookBandTrackFixes(self)
+  xlua.private_accessible(ActAutoChessHandbookTopBarView)
+  xlua.private_accessible(_BandTrackModelTypeName)
+
+  self:Fix_ex(AutoChessUtil, "CheckAllBandTrack", function(actId)
+    local ok, result = xpcall(_CheckAllBandTrackFix, debug.traceback, actId)
+    if not ok then
+      eutil.LogHotfixError(_HandbookBandTrackLogTag .. " CheckAllBandTrack: " .. result)
+      return AutoChessUtil.CheckAllBandTrack()
+    end
+    return result
+  end)
+
+  self:Fix_ex(_BandTrackModelTypeName, "UpdateState", function(self, param)
+    local ok, err = xpcall(_UpdateStateFix, debug.traceback, self, param)
+    if not ok then
+      eutil.LogHotfixError(_HandbookBandTrackLogTag .. " UpdateState: " .. err)
+      self:UpdateState(param)
+    end
+  end)
+
+  self:Fix_ex(ActAutoChessHandbookTopBarView, "OnValueChanged", function(self, property)
+    local ok, err = xpcall(_OnValueChangedFix, debug.traceback, self, property)
+    if not ok then
+      eutil.LogHotfixError(_HandbookBandTrackLogTag .. " OnValueChanged: " .. err)
+      self:OnValueChanged(property)
+    end
+  end)
+end
+
 function AutoChessHotfixer:OnInit()
   _InitObTargetFixes(self)
   _InitUIControllerFixes(self)
   _InitEntryViewModelFixes(self)
+  _InitHandbookBandTrackFixes(self)
 end
 
 function AutoChessHotfixer:OnDispose()

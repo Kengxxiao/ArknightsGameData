@@ -1,32 +1,45 @@
-local eutil = CS.Torappu.Lua.Util
+
+
 local SpineAnimatorHotfixer = Class("SpineAnimatorHotfixer", HotfixBase)
 
+local SpineAnimator = CS.Torappu.Battle.SpineAnimator
+local Vector3 = CS.UnityEngine.Vector3
+local Quaternion = CS.UnityEngine.Quaternion
 
-local function PlayAnimationFix(self, data, forceFromStart, speed)	
-	result = self:PlayAnimation(data, forceFromStart, speed)
-	self.skeleton.cacheFixedBoundsCenterOnce = false;
-    return result
-end
 
-local function StartFix(self)	
-	self:Start()
-	CS.Torappu.Battle.CameraController.instance.camera.transparencySortMode = CS.UnityEngine.TransparencySortMode.Orthographic
+local function _ReattachConstMuzzlesToHost(self, host)
+  local dirTrans = host ~= nil and host.directionTransform or nil
+  if dirTrans == nil then
+    return
+  end
+  local muzzles = self.m_constMuzzles
+  if muzzles == nil then
+    return
+  end
+  local animTrans = self.transform
+  for i = 0, muzzles.Length - 1 do
+    local muzzle = muzzles[i]
+    if muzzle ~= nil then
+      local t = muzzle.transform
+      if not t:IsChildOf(animTrans) and t.parent ~= dirTrans then
+        local offset = t.localPosition
+        t:SetParent(dirTrans, false )
+        
+        t.localScale = Vector3.one
+        t.localRotation = Quaternion.identity
+        t.localPosition = offset
+      end
+    end
+  end
 end
 
 function SpineAnimatorHotfixer:OnInit()
-	self:Fix_ex(CS.Torappu.Battle.SpineAnimator, "PlayAnimation", function(self, data, forceFromStart, speed)
-        return PlayAnimationFix(self, data, forceFromStart, speed)
-    end)
-
-    self:Fix_ex(CS.Torappu.Battle.CameraController, "Start", function (self)
-	    local ok, errorInfo = xpcall(StartFix, debug.traceback, self)
-	    if not ok then
-	        eutil.LogError("[CameraController] StartFix " .. errorInfo)
-	    end
-    end)
-end
-
-function SpineAnimatorHotfixer:OnDispose()
+  
+  xlua.private_accessible(SpineAnimator)
+  self:Fix_ex(SpineAnimator, "Init", function(self, host)
+    self:Init(host)
+    _ReattachConstMuzzlesToHost(self, host)
+  end)
 end
 
 return SpineAnimatorHotfixer

@@ -1,0 +1,9 @@
+[HEADER(is_skippable=false, is_tutorial=true, dont_clear_gameobjectpool_onstart = true)] 卫戍战斗-第一回合休整期
+[InputBlocker(blockInput=true)]
+[Battle.SwitchToDefaultUIState]
+[Delay(time=0.5)]
+[InputBlocker(blockInput=false)]
+[Battle.AutoChessRegisterBattleChar(key="tutorial_main_char", selectMode="TILE", tileRow=3, tileCol=4)]
+[Battle.AutoChessRegisterHandInst(key="tutorial_equip", itemType="EQUIP", selectMode="RIGHTMOST")]
+[Battle.AutoChessSetEquipTutorial(equipKey="tutorial_equip", charKey="tutorial_main_char")]
+[Tutorial(waitForSignal="signal_auto_chess_battle_equip_on_character",           dialogHead="$avatar_amiya", animStyle="Drag",           startBattleTarget="key_auto_chess_tutorial_drag_start", endBattleTarget="key_auto_chess_tutorial_drag_end")] 博士需要注意，装备一旦获得之后就<@tu.kw>无法售出</>，不需要的装备只能进行销毁。接下来博士可以把我们刚刚获得的装备拖拽并配置到干员身上，就可以完成装备配置了。
